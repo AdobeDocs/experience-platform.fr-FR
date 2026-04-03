@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;spark sql;spark sql;spark;fonctions spark sql;fonctions;
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;Service de requête;spark sql;spark sql;spark;fonctions spark sql;fonctions;
 solution: Experience Platform
-title: Fonctions Spark SQL dans Query Service
-description: Découvrez les fonctions Spark SQL prises en charge pour étendre la fonctionnalité SQL.
+title: Fonctions Spark SQL dans le service de requête
+description: Découvrez les fonctions Spark SQL prises en charge qui étendent les fonctionnalités de SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 93%
@@ -13,9 +13,9 @@ ht-degree: 93%
 
 # Fonctions [!DNL Spark] SQL
 
-Vous pouvez utiliser plusieurs fonctions Spark SQL intégrées pour étendre les fonctionnalités SQL avec Adobe Experience Platform Query Service. Ce document répertorie les fonctions Spark SQL prises en charge par Query Service.
+Vous pouvez utiliser plusieurs fonctions Spark SQL intégrées pour étendre les fonctionnalités de SQL avec Adobe Experience Platform Query Service. Ce document répertorie les fonctions Spark SQL prises en charge par le service de requête.
 
-Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utilisation et des exemples, consultez la [documentation sur les fonctions Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
+Pour plus d’informations sur ces fonctions, notamment leur syntaxe, leur utilisation et des exemples, consultez la documentation sur les fonctions [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utili
 | [`abs`](https://spark.apache.org/docs/latest/api/sql/index.html#abs) | Renvoie la valeur absolue de l’entrée |
 | [`acos`](https://spark.apache.org/docs/latest/api/sql/index.html#acos) | Renvoie la valeur de l’inverse du cosinus |
 | [`approx_count_distinct`](https://spark.apache.org/docs/latest/api/sql/index.html#approx_count_distinct) | Renvoie la cardinalité estimée par HyperLogLog++ |
-| [`approx_percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#approx_percentile) | Renvoie la valeur approximative du centile au pourcentage donné |
+| [`approx_percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#approx_percentile) | Renvoie la valeur approximative du percentile au pourcentage donné |
 | [`asin`](https://spark.apache.org/docs/latest/api/sql/index.html#asin) | Renvoie la valeur de l’inverse du sinus |
 | [`atan`](https://spark.apache.org/docs/latest/api/sql/index.html#atan) | Renvoie la valeur inverse de la tangente |
 | [`atan2`](https://spark.apache.org/docs/latest/api/sql/index.html#atan2) | Renvoie l’angle entre le plan de l’axe X positif et les points donnés par les coordonnées |
@@ -66,8 +66,8 @@ Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utili
 | [`monotonically_increasing_id`](https://spark.apache.org/docs/latest/api/sql/index.html#monotonically_increasing_id) | Renvoie des ID à augmentation monotone |
 | [`negative`](https://spark.apache.org/docs/latest/api/sql/index.html#negative) |  Renvoie la valeur négative |
 | [`percent_rank`](https://spark.apache.org/docs/latest/api/sql/index.html#percent_rank) | Renvoie le classement en pourcentage d’une valeur |
-| [`percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile) | Renvoie le centile exact à un pourcentage donné |
-| [`percentile_approx`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile_approx) | Renvoie le centile approximatif à un pourcentage donné |
+| [`percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile) | Renvoie le percentile exact à un pourcentage donné |
+| [`percentile_approx`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile_approx) | Renvoie le percentile approximatif à un pourcentage donné |
 | [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Renvoie pi |
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | Renvoie le modulo positif entre deux valeurs |
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Renvoie la valeur positive |
@@ -129,7 +129,7 @@ Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utili
 | [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Renvoie le jour du mois |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Renvoie le jour de la semaine (1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Renvoie le jour de l’année |
-| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Renvoie la date sous UNIX® heure |
+| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Renvoie la date en heure UNIX® |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | Renvoie la date en heure UTC |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | Renvoie l’heure de l’entrée |
 | [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | Renvoie le dernier jour du mois auquel la date appartient |
@@ -141,10 +141,10 @@ Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utili
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Renvoie la seconde de la chaîne |
 | [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Convertit la chaîne en date. **Note :** la chaîne **doit** être au format `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Convertit la chaîne en date et heure. **Note :** la chaîne **doit** être au format `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Convertit la chaîne en horodatage UNIX® |
+| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Convertit la chaîne en date et heure UNIX® |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Convertit la chaîne en date et heure UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Tronque la date |
-| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Renvoie l’horodatage UNIX® |
+| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Renvoie la date et heure UNIX® |
 | [`weekday`](https://spark.apache.org/docs/latest/api/sql/index.html#weekday) | Jour de la semaine (0-6) |
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Renvoie la semaine de l’année pour une date donnée |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Renvoie l’année de la chaîne |
@@ -166,7 +166,7 @@ Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utili
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | Crée un tableau contenant le nombre de fois comptabilisées de la valeur. |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | Trie le tableau |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | Rejoint le tableau, sans aucun doublon |
-| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Combine les valeurs de tableaux donnés avec les valeurs de la collection d’origine à un index donné. |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Combine les valeurs de tableaux donnés avec les valeurs de la collection d’origine à un index donné |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | Renvoyer la taille du tableau |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | Renvoyer l’élément en position |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | Séparer les éléments du tableau en plusieurs lignes, à l’exception de la valeur nulle |
@@ -175,10 +175,10 @@ Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utili
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Aplatit un tableau de tableaux |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Séparer le tableau des structures dans un tableau, à l’exclusion de la valeur nulle |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Séparer le tableau des structures dans un tableau, y compris la valeur nulle |
-| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Séparez les éléments d’un tableau en plusieurs lignes avec des positions, à l’exception de null |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Séparer les éléments d’un tableau en plusieurs lignes avec des positions, à l’exclusion de la valeur nulle |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Inverser les éléments du tableau |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Renvoyer une permutation aléatoire du tableau |
-| [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Sous-définit un tableau |
+| [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Crée un sous-ensemble du tableau |
 | [`sort_array`](https://spark.apache.org/docs/latest/api/sql/index.html#sort_array) | Trier un tableau selon un ordre donné |
 | [`zip_with`](https://spark.apache.org/docs/latest/api/sql/index.html#zip_with) | Fusionne les deux tableaux en un seul tableau, avant d’appliquer une fonction |
 
@@ -217,7 +217,7 @@ Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utili
 | [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | Obtenir des données à partir de JSON |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | Renvoyer la valeur de hachage |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | Convertir l’argument en valeur hexadécimale |
-| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Modifie la chaîne en cas de titre. |
+| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Remplace la chaîne par la casse du titre |
 | [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Modifie la chaîne pour tout mettre en minuscules |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | Complète le côté gauche d’une chaîne |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | Créer un mappage |
