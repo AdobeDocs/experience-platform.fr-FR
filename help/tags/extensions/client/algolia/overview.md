@@ -2,7 +2,7 @@
 title: Présentation de l’extension Algolia Tags
 description: Découvrez l’extension Balises Algolia dans Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 6eee26df3841a7829625361fc726bf59a278f867
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1954'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Présentation de l’extension [!DNL Algolia] Tags
 
-L’extension [!DNL Algolia] Tags permet aux spécialistes marketing de configurer facilement des règles qui envoient des données d’interaction utilisateur aux [!DNL Algolia], ce qui vous permet de proposer des expériences IA Search et Discovery plus personnalisées.
+L’extension [!DNL Algolia] Tags permet aux marketeurs de configurer facilement des règles qui envoient des données d’interaction utilisateur à [!DNL Algolia], ce qui vous permet de proposer des expériences Recherche optimisée par l&#39;IA et Discovery plus personnalisées.
 
 Cette extension est optimisée par une fonctionnalité clé :
 
@@ -27,7 +27,7 @@ Pour vous connecter [!DNL Algolia] Adobe Experience Platform, vous aurez besoin 
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| ID de l’application | Votre ID d’application se trouve dans la section [&#x200B; Clés API &#x200B;](https://www.algolia.com/account/api-keys/all) de votre tableau de bord [!DNL Algolia]. | 0ABCDEFG12 |
+| ID de l’application | Votre ID d’application se trouve dans la section [ Clés API ](https://www.algolia.com/account/api-keys/all) de votre tableau de bord [!DNL Algolia]. | 0ABCDEFG12 |
 | Clé API de recherche | Votre clé d’API de recherche se trouve dans la section [Clés d’API](https://www.algolia.com/account/api-keys/all) de votre tableau de bord de [!DNL Algolia]. | 1234a12345678901b1234567890c1ab1 |
 
 ## Installation et configuration de l’extension [!DNL Algolia] Insights {#install-configure}
@@ -311,7 +311,7 @@ Les événements *Cliqué après la recherche* ou *Converti après la recherche*
 * [Envoi  [!DNL Algolia]  événements Insights](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
 * [[!DNL Algolia] Référentiel GitHub de l’extension Launch](https://github.com/algolia/algolia-launch-extension)
 * [Documentation InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
-* [[!DNL Algolia]  Documentation de l’API Insights &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+* [[!DNL Algolia]  Documentation de l’API Insights ](https://www.algolia.com/doc/rest-api/insights/)
 * [Référentiel de code d’extension Algolia Launch](https://github.com/algolia/algolia-launch-extension)
 
 ## Étapes suivantes {#next-steps}
