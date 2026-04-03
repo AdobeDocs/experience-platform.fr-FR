@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des politiques dʼutilisation des données
 description: Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 92%
@@ -52,12 +52,13 @@ Lorsque des données sont utilisées dans le service de votre organisation, les 
 
 Voir l’annexe du présent document pour obtenir une liste des [actions marketing définies par Adobe disponibles](#core-actions). Vous pouvez également définir vos propres actions marketing personnalisées à l’aide de l’API [!DNL Policy Service] ou de l’interface utilisateur d’[!DNL Experience Platform]. Vous trouverez plus d’informations sur l’utilisation des actions marketing et des politiques dans la section suivante.
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=fr).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestion des politiques d’utilisation des données {#manage}
