@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '6009'
 ht-degree: 8%
@@ -63,7 +63,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | ltrim | Supprime l’espace au début de la chaîne. | <ul><li>STRING : **Obligatoire** chaîne dont vous souhaitez supprimer l’espace.</li></ul> | ltrim(STRING) | ltrim(«  hello ») | &quot;hello&quot; |
 | rtrim | Supprime l’espace à la fin de la chaîne. | <ul><li>STRING : **Obligatoire** chaîne dont vous souhaitez supprimer l’espace.</li></ul> | rtrim(STRING) | rtrim(« hello  ») | &quot;hello&quot; |
 | trim | Supprime les espaces blancs du début et de la fin de la chaîne. | <ul><li>STRING : **Obligatoire** chaîne dont vous souhaitez supprimer l’espace.</li></ul> | trim(STRING) | trim(«  hello  ») | &quot;hello&quot; |
-| est égal à | Compare deux chaînes pour vérifier si elles sont égales. Cette fonction respecte la casse. | <ul><li>STRING1 : **Obligatoire** première chaîne à comparer.</li><li>STRING2 : **Obligatoire** deuxième chaîne à comparer.</li></ul> | STRING1. &#x200B;égal à(&#x200B;STRING2) | « string1 ». &#x200B;equals&#x200B;(« STRING1 ») | False |
+| est égal à | Compare deux chaînes pour vérifier si elles sont égales. Cette fonction respecte la casse. | <ul><li>STRING1 : **Obligatoire** première chaîne à comparer.</li><li>STRING2 : **Obligatoire** deuxième chaîne à comparer.</li></ul> | STRING1. &#x200B;égal à(STRING2) | « string1 ». &#x200B;equals&#x200B;(« STRING1 ») | False |
 | equalsIgnoreCase | Compare deux chaînes pour vérifier si elles sont égales. Cette fonction n’est **pas** sensible à la casse. | <ul><li>STRING1 : **Obligatoire** première chaîne à comparer.</li><li>STRING2 : **Obligatoire** deuxième chaîne à comparer.</li></ul> | STRING1. &#x200B;equalsIgnoreCase&#x200B;(STRING2) | « string1 ». &#x200B;equalsIgnoreCase&#x200B;(« STRING1) | vrai |
 
 {style="table-layout:auto"}
@@ -101,7 +101,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| get_url_protocol | Retourne le protocole à partir de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie la valeur null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le protocole doit être extrait.</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(« https://platform&#x200B;.adobe.com/home ») | https |
+| get_url_protocol | Retourne le protocole à partir de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie la valeur null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le protocole doit être extrait.</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(« &#x200B;.adobe.com/home ») | https |
 | get_url_host | Renvoie l’hôte de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie la valeur null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle l’hôte doit être extrait.</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(« https://platform&#x200B;.adobe.com/home ») | platform.adobe.com |
 | get_url_port | Renvoie le port de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie la valeur null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le port doit être extrait.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(« sftp://example.com//home/&#x200B;joe/employee.csv ») | 22 |
 | get_url_path | Renvoie le chemin d’accès de l’URL donnée. Par défaut, le chemin d’accès complet est renvoyé. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le chemin d’accès doit être extrait.</li><li>FULL_PATH : *facultatif* valeur booléenne qui détermine si le chemin d’accès complet est renvoyé. Si elle est définie sur false, seule la fin du chemin est renvoyée.</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(« sftp://example.com//&#x200B;home/joe/employee.csv ») | « //home/joe/&#x200B;employee.csv » |
@@ -121,13 +121,13 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Récupère l’heure actuelle. | | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Récupère l’heure Unix actuelle. | | timestamp() | timestamp() | 1571850624571 |
-| format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** date d’entrée, sous la forme d’un objet ZonedDateTime, que vous souhaitez formater.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que la date soit modifiée.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, « `yyyy-MM-dd HH:mm:ss` ») | `2019-10-23 11:24:35` |
+| format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** date d’entrée, sous la forme d’un objet ZonedDateTime, que vous souhaitez formater.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que la date soit modifiée.</li></ul> | format(DATE, FORMAT) | format(2019-10-:24:00+00:00, « `yyyy-MM-dd HH:mm:ss` ») | `2019-10-23 11:24:35` |
 | dformat | Convertit une date et une heure en chaîne de date selon un format spécifié. | <ul><li>TIMESTAMP : **obligatoire** date et heure à formater. Il est écrit en millisecondes.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que l’horodatage soit défini.</li></ul> | format(TIMESTAMP, FORMAT) | dformat(1571829875000, « `yyyy-MM-dd'T'HH:mm:ss.SSSX` ») | `2019-10-23T11:24:35.000Z` |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li><li>FORMAT : **Obligatoire** chaîne représentant le format de la date source.**Remarque :** il ne s’agit **pas** du format dans lequel vous souhaitez convertir la chaîne de date. </li><li>DEFAULT_DATE : **Obligatoire** date par défaut renvoyée, si la date fournie est nulle.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(« 2019-10-23 11:24 », « yyyy-MM-dd HH:mm », now()) | `2019-10-23T11:24:00Z` |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li><li>FORMAT : **Obligatoire** chaîne représentant le format de la date source.**Remarque :** il ne s’agit **pas** du format dans lequel vous souhaitez convertir la chaîne de date. </li></ul> | date(DATE, FORMAT) | date(« 2019-10-23 11:24 », « aaaa-MM-jj HH:mm ») | `2019-10-23T11:24:00Z` |
-| date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li></ul> | date(DATE) | date(« 2019-10-23 11:24 ») | « 2019-10-23T11:24:00Z » |
-| date_part | Récupère les parties de la date. Les valeurs de composant suivantes sont prises en charge : <br><br>« year »<br>« yyyy »<br>« yy »<br><br>« quarter »<br>« qq »<br>« q »<br><br>« month »<br>« mm »<br>« m »<br><br>« dayofyear »<br>« y »<br>« day »<br><br> »<br> »<br>« d »<br><br>« week »<br> »<br>« w »<br><br> »<br>« weekday »<br>« dw »<br><br> »<br>« hour »<br>« hh »<br> »<br><br>« hh24 »<br> »<br>« hh12 »<br><br>« minute »<br> »<br> »<br><br>« n »<br>« « second »« ss »« s »« milliseconde | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>DATE : **Obligatoire** date au format standard.</li></ul> | date_part&#x200B;(COMPONENT, DATE) | date_part(« MM », date(« 2019-10-17 11:55:12 »)) | 10 |
-| set_date_part | Remplace un composant à une date donnée. Les composants suivants sont acceptés : <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>VALEUR : **Obligatoire** valeur à définir pour le composant à une date donnée.</li><li>DATE : **Obligatoire** date au format standard.</li></ul> | set_date_part&#x200B;(COMPONENT, VALUE, DATE) | set_date_part(« m », 4, date(« 2016-11-09T11:44:44.797 ») | « 2016-04-09T11:44:44Z » |
+| date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li></ul> | date(DATE) | date(« 2019-10-23 11:24 ») | « 2019-10-:24:00Z » |
+| date_part | Récupère les parties de la date. Les valeurs de composant suivantes sont prises en charge : <br><br>« year »<br>« yyyy »<br>« yy »<br><br>« quarter »<br>« qq »<br>« q »<br><br>« month »<br>« mm »<br>« m »<br><br>« dayofyear »<br>« y »<br>« day »<br><br>« <br>« <br>« d »<br><br>« week »<br>« <br>« w »<br><br>« <br>« weekday »<br>« dw »<br><br>« <br>« hour »<br>« hh »<br>« <br><br>« hh24 »<br>« <br>« hh12 »<br><br>« minute »<br>« <br>« <br><br>« n »<br>« « second »« ss »« s »« milliseconde | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>DATE : **Obligatoire** date au format standard.</li></ul> | date_part&#x200B;(COMPONENT, DATE) | date_part(« MM », date(« 2019-10-17 11:55:12 »)) | 10 |
+| set_date_part | Remplace un composant à une date donnée. Les composants suivants sont acceptés : <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>VALEUR : **Obligatoire** valeur à définir pour le composant à une date donnée.</li><li>DATE : **Obligatoire** date au format standard.</li></ul> | set_date_part&#x200B;(COMPONENT, VALUE, DATE) | set_date_part(« m », 4, date(« 2016-11-:44:44.797 ») | « 2016-04-:44:44Z » |
 | make_date_time | Crée une date à partir de parties. Cette fonction peut également être induite à l’aide de make_timestamp. | <ul><li>YEAR : **Obligatoire** L&#39;année, écrite dans 4 chiffres.</li><li>MOIS : **obligatoire** le mois. Les valeurs autorisées sont comprises entre 1 et 12.</li><li>JOUR : **obligatoire** le jour. Les valeurs autorisées sont comprises entre 1 et 31.</li><li>HEURE : **obligatoire** l’heure. Les valeurs autorisées sont comprises entre 0 et 23.</li><li>MINUTE : **Obligatoire** La minute. Les valeurs autorisées sont comprises entre 0 et 59.</li><li>NANOSECONDE : **obligatoire** valeurs de la nanoseconde. Les valeurs autorisées sont 0 à 999999999.</li><li>TIMEZONE : **obligatoire** fuseau horaire de la date et de l’heure.</li></ul> | make_date_time&#x200B;(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time&#x200B;(2019, 10, 17, 11, 55, 12, 999, « America/Los_Angeles ») | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Convertit une date de n’importe quel fuseau horaire en une date au format UTC. | <ul><li>DATE : **Obligatoire** date que vous tentez de convertir.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | Convertit une date d’un fuseau horaire à un autre. | <ul><li>DATE : **Obligatoire** date que vous tentez de convertir.</li><li>ZONE : **Obligatoire** fuseau horaire dans lequel vous essayez de convertir la date.</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_zone(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
@@ -310,8 +310,10 @@ Pour plus d’informations sur les valeurs de champ de l’appareil, veuillez li
 
 {style="table-layout:auto"}
 
-<!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
-| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
+<!-- 
+| aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | 
+-->
 
 ### Copie d’objet {#object-copy}
 
@@ -368,7 +370,7 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | --- | --- |
 | space | %20 |
 | ! | %21 |
-| « | %22 |
+| &quot; | %22 |
 | # | %23 |
 | $ | %24 |
 | % | %25 |
@@ -387,11 +389,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5J |
+| ] | %5J |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
