@@ -1,9 +1,9 @@
 ---
 title: Mises à niveau de l’architecture vers Real-Time CDP B2B edition
 description: Lisez ce document pour en savoir plus sur les mises à niveau complètes de l’architecture vers Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 1%
@@ -65,7 +65,7 @@ Les fonctionnalités suivantes ont été mises à jour dans le cadre des mises �
 
 Dans le cadre de la nouvelle mise à niveau de l’architecture, les filtres d’événement d’expérience ne peuvent plus être utilisés dans une audience unique à entités multiples qui inclut des attributs B2B.
 
-Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [&#x200B; ajouter des audiences et des audiences de référence &#x200B;](../segmentation/ui/segment-builder.md#adding-audiences)
+Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [ ajouter des audiences et des audiences de référence ](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Par exemple :
 
@@ -138,7 +138,8 @@ Dans la nouvelle architecture, le point d’entrée « créer une tâche de segm
 
 Vous pouvez désormais récupérer les schémas de compte et d’opportunité en tant qu’entités de dimension de recherche uniquement après qu’ils ont terminé le processus de résolution quotidienne des entités. Les enregistrements nouvellement ingérés ne seront pas disponibles pour l’enrichissement de profil ou les définitions de segment tant que le cycle de résolution d’entité suivant ne sera pas terminé (généralement toutes les 24 heures).
 
-<!-- ### Deprecation of audience creation via API for B2B entities
+<!-- 
+### Deprecation of audience creation via API for B2B entities
 
 Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
@@ -151,7 +152,8 @@ Creation of audiences using B2B entities via API is being deprecated. The list o
 * Marketing List
 * Marketing List Member
 
-Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. 
+-->
 
 ### Modifications des importations d’audiences à entités multiples dans l’outil Sandbox
 
