@@ -2,9 +2,9 @@
 title: Présentation du tableau de bord de surveillance
 description: Découvrez comment utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: cca405c58551a52a044ac513921298637974e88e
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '951'
 ht-degree: 4%
 
 ---
@@ -38,11 +38,11 @@ Ce document nécessite une compréhension du fonctionnement des composants suiva
 
 ## Guide du tableau de bord de surveillance
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Surveillance]** sous [!UICONTROL Gestion des données] dans le volet de navigation de gauche.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Monitoring]** sous [!UICONTROL Data Management] dans le volet de navigation de gauche.
 
 ![Tableau de bord de surveillance dans l’interface utilisateur d’Experience Platform.](../assets/ui/monitor-overview/monitoring.png)
 
-Sélectionnez **[!UICONTROL Type de données]** puis utilisez le menu déroulant pour sélectionner le type de données à afficher. Les types de données sont définis par les classes de schéma du modèle de données d’expérience (XDM) afin de s’assurer que leurs données suivent un format standard lors de leur ingestion dans Experience Platform. Pour plus d’informations, consultez la documentation suivante :
+Sélectionnez **[!UICONTROL Data Type]** puis utilisez le menu déroulant pour sélectionner le type de données à afficher. Les types de données sont définis par les classes de schéma du modèle de données d’expérience (XDM) afin de s’assurer que leurs données suivent un format standard lors de leur ingestion dans Experience Platform. Pour plus d’informations, consultez la documentation suivante :
 
 * [Type de données de compte B2B](../../rtcdp/b2b-tutorial.md)
 * [Type de données du prospect](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ Vous pouvez filtrer votre vue en fonction des types de données suivants :
 
 >[!TAB Tous]
 
-Sélectionnez **[!UICONTROL Tout]** pour mettre à jour votre tableau de bord et afficher les mesures sur toutes les données ingérées dans Experience Platform au cours d’une période donnée.
+Sélectionnez **[!UICONTROL All]** pour mettre à jour votre tableau de bord et afficher les mesures sur toutes les données ingérées dans Experience Platform au cours d’une période donnée.
 
 ![Type de données de surveillance défini sur « Tous ».](../assets/ui/monitor-overview/all.png)
 
 >[!TAB Client et compte]
 
-Sélectionnez **[!UICONTROL Client et compte]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données de client et de compte qui ont été ingérées dans Experience Platform au cours d’une période donnée.
+Sélectionnez **[!UICONTROL Customer & Account]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données client et de compte qui ont été ingérées dans Experience Platform au cours d’une période donnée.
 
 ![Type de données de surveillance défini sur « Client et compte ».](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB Enrichissement du profil de compte]
 
-Sélectionnez **[!UICONTROL Enrichissement du profil du compte]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données d’enrichissement du profil. **Remarque** : vous ne pouvez afficher les mesures d’enrichissement du profil de compte que si vous êtes autorisé à [&#x200B; des données B2B](../../rtcdp/b2b-tutorial.md).
+Sélectionnez **[!UICONTROL Account profile enrichment]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données d’enrichissement du profil. **Remarque** : vous ne pouvez afficher les mesures d’enrichissement du profil de compte que si vous êtes autorisé à [ des données B2B](../../rtcdp/b2b-tutorial.md).
 
 ![Le type de données de surveillance est défini sur « Enrichissement du profil de compte ».](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -77,31 +77,31 @@ Utilisez l’en-tête supérieur du tableau de bord pour une expérience de surv
 
 >[!TAB Lac de données]
 
-Sélectionnez **[!UICONTROL Lac de données]** pour afficher les mesures relatives à votre taux d’ingestion du lac de données. Lisez le guide sur la [surveillance de l’ingestion du lac de données](monitor-sources.md) pour plus d’informations.
+Sélectionnez **[!UICONTROL Data lake]** pour afficher les mesures sur votre taux d’ingestion du lac de données. Lisez le guide sur la [surveillance de l’ingestion du lac de données](monitor-sources.md) pour plus d’informations.
 
 ![Tableau de bord de surveillance dans l’interface utilisateur avec la carte lac de données sélectionnée.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB  Identités ]
 
-Sélectionnez **[!UICONTROL Identités]** pour afficher le taux de réussite du traitement de vos données d’identité. Lisez le guide sur la [surveillance des données d’identité](monitor-identities.md) pour plus d’informations.
+Sélectionnez **[!UICONTROL Identities]** pour afficher le taux de réussite du traitement de vos données d’identité. Lisez le guide sur la [surveillance des données d’identité](monitor-identities.md) pour plus d’informations.
 
 ![Tableau de bord de surveillance dans l’interface utilisateur avec la carte d’identités sélectionnée.](../assets/ui/monitor-overview/identities.png)
 
 >[!TAB Profils]
 
-Sélectionnez **[!UICONTROL Profils]** pour afficher le taux de réussite du traitement des données de votre profil. Lisez le guide sur la [surveillance des données de profil](monitor-profiles.md) pour plus d’informations.
+Sélectionnez **[!UICONTROL Profiles]** pour afficher le taux de succès du traitement des données de profil. Lisez le guide sur la [surveillance des données de profil](monitor-profiles.md) pour plus d’informations.
 
 ![Tableau de bord de surveillance dans l’interface utilisateur avec la carte de profils sélectionnée.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB Audiences]
 
-Sélectionnez **[!UICONTROL Audiences]** pour afficher les mesures sur vos audiences et vos tâches de segmentation. Lisez le guide sur la [surveillance des données d’audience](monitor-audiences.md) pour plus d’informations.
+Sélectionnez **[!UICONTROL Audiences]** pour afficher les mesures sur vos audiences et tâches de segmentation. Lisez le guide sur la [surveillance des données d’audience](monitor-audiences.md) pour plus d’informations.
 
 ![Tableau de bord de surveillance dans l’interface utilisateur avec la carte audiences sélectionnée.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB Destinations]
 
-Sélectionnez **[!UICONTROL Destinations]** pour afficher les mesures sur vos [!UICONTROL Taux d’activation de diffusion en continu] et [!UICONTROL Échecs d’exécution de flux de données par lots]. Lisez le guide sur la [surveillance des données de destination](monitor-destinations.md) pour plus d’informations.
+Sélectionnez **[!UICONTROL Destinations]** pour afficher les mesures sur vos [!UICONTROL Streaming activate rate] et [!UICONTROL Batch failed dataflow runs]. Lisez le guide sur la [surveillance des données de destination](monitor-destinations.md) pour plus d’informations.
 
 ![Tableau de bord de surveillance dans l’interface utilisateur avec la carte de destinations sélectionnée.](../assets/ui/monitor-overview/destinations.png)
 
@@ -109,17 +109,17 @@ Sélectionnez **[!UICONTROL Destinations]** pour afficher les mesures sur vos [!
 
 ### Configuration de la période de surveillance {#configure-monitoring-time-frame}
 
-Par défaut, le tableau de bord de surveillance affiche les mesures relatives aux données ingérées au cours des dernières 24 heures. Pour mettre à jour la période, sélectionnez **[!UICONTROL Dernières 24 heures]**.
+Par défaut, le tableau de bord de surveillance affiche les mesures relatives aux données ingérées au cours des dernières 24 heures. Pour mettre à jour la période, sélectionnez **[!UICONTROL Last 24 hours]**.
 
 ![Tableau de bord de surveillance dans l’interface utilisateur avec la configuration de l’heure sélectionnée.](../assets/ui/monitor-overview/select-time.png)
 
 Vous pouvez configurer une nouvelle période pour votre vue de surveillance des données dans la boîte de dialogue qui s’affiche. Vous avez la possibilité de créer une période personnalisée ou de sélectionner l’une des options préconfigurées suivantes :
 
-* [!UICONTROL Dernières 24 heures]
-* [!UICONTROL 7 derniers jours]
-* [!UICONTROL 30 derniers jours]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]**.
 
 ![Fenêtre contextuelle de configuration de la période dans le tableau de bord de surveillance.](../assets/ui/monitor-overview/update-time.png)
 
@@ -133,6 +133,8 @@ En lisant ce document, vous pouvez désormais naviguer dans le tableau de bord d
 * [Surveiller les données d’audience](monitor-audiences.md).
 * [Surveiller les données des destinations](monitor-destinations.md).
 
-<!-- >[!TAB Prospect]
+<!-- 
+>[!TAB Prospect]
 
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). 
+-->
