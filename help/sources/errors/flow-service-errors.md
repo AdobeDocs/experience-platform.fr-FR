@@ -2,10 +2,10 @@
 title: Messages d’erreur du service de flux
 description: Prenez connaissance des messages d’erreur que vous pouvez rencontrer lors de l’utilisation du service de flux pour les sources.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 98%
+source-wordcount: '1666'
+ht-degree: 97%
 
 ---
 
@@ -47,9 +47,9 @@ Le tableau suivant décrit les erreurs de validation interne dans le service de 
 | `1418-400` | Requête non valide | La connexion de base avec l’ID « 35dcaad3-122a-4278 » ne peut pas être supprimée, car elle est utilisée dans un ou plusieurs flux. Assurez-vous que les flux correspondants sont supprimés avant de supprimer une connexion de base. |
 | `1419-400` | Requête non valide | Erreur lors de la validation du mappage avec l’ID 45d90285d2d249acb87a72a2f12f7401, version 0. Cela peut être dû à des autorisations inadéquates sur les champs mappés. Vérifiez le mappage ou contactez l’administration. |
 | `1420-400` | Requête non valide | L’état actuel « disabling » ne peut pas être mis à jour. |
-| `1421-400` | Requête non valide | L’état actuel « updating » ne peut pas faire l’objet d’une transition. |
-| `1422-400` | Requête non valide | L’action « disable » ne peut pas être appliquée à l’état actuel {state}. Mettez à jour l’action et réessayez. |
-| `1423-400` | Requête non valide | Un champ baseSpec non géré a été fourni dans ConnectionSpecFiltering. Mettez à jour le champ {field} et réessayez. |
+| `1421-400` | Requête non valide | L’état actuel « mise à jour en cours » ne peut pas faire l’objet d’une transition. |
+| `1422-400` | Requête non valide | L’action « disable » ne peut pas être appliquée à l’état actuel {state}. Mettez à jour l’action et réessayez. |
+| `1423-400` | Requête non valide | Un champ baseSpec non géré a été fourni dans ConnectionSpecFiltering. Mettez à jour la {field} du champ et réessayez. |
 | `1424-400` | Requête non valide | OrderBy n’est pas pris en charge dans les requêtes entre sandbox. |
 | `1425-400` | Requête non valide | Erreur lors de la correspondance entre le schéma du jeu de données cible 64ef1a3c0ef et le schéma du mappage 91ac5a2c0eb. Le schéma avec le même ID et la même version doit être utilisé dans le jeu de données de mappage et le jeu de données cible. |
 | `1426-400` | Requête non valide | Le jeton utilisateur n’est pas autorisé à créer ou mettre à jour la spécification de connexion. Vérifiez que le jeton utilisateur dispose des autorisations nécessaires et réessayez. |
