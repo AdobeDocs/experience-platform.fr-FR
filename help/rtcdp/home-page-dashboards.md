@@ -4,7 +4,7 @@ title: Page d’accueil et tableaux de bord Real-Time Customer Data Platform
 description: Découvrez les différents tableaux de bord, la page d’accueil et la première expérience client d’Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 12%
@@ -27,7 +27,7 @@ Le widget [!UICONTROL Getting started with Real-Time Customer Profile] est divis
 
 * **Ingérer des données dans Experience Platform** : ce widget vous dirige vers le catalogue des sources. Utilisez le catalogue de sources pour sélectionner une source et ingérer vos données dans Experience Platform. Sélectionnez **[Configurer les sources]** pour accéder au catalogue de sources. Pour plus d’informations, consultez la [vue d’ensemble des sources](../sources/home.md).
 * **Structures de données de modèle** : ce widget vous dirige vers la présentation des schémas. Utilisez la présentation des schémas pour rechercher des schémas existants ou créer un plan directeur qui décrit la structure de vos données. Sélectionnez **[!UICONTROL Create schema]** pour accéder à l’interface de création de schéma. Pour plus d’informations, consultez la [présentation des schémas](../xdm/home.md).
-* **Créer des audiences** : ce widget vous dirige vers le créateur de segments dans l’interface utilisateur. Utilisez le Créateur de segments pour interagir avec les éléments de données Profil et définir les critères de votre définition de segment. Sélectionnez **[!UICONTROL Create audience]** pour accéder au créateur de segments. Pour plus d’informations, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../segmentation/home.md).
+* **Créer des audiences** : ce widget vous dirige vers le créateur de segments dans l’interface utilisateur. Utilisez le Créateur de segments pour interagir avec les éléments de données Profil et définir les critères de votre définition de segment. Sélectionnez **[!UICONTROL Create audience]** pour accéder au créateur de segments. Pour plus d’informations, reportez-vous à la [ présentation de Segmentation Service ](../segmentation/home.md).
 * **Envoyer les données aux destinations** : ce widget vous dirige vers le catalogue des destinations. Utilisez le catalogue des destinations pour sélectionner une destination à laquelle vous pouvez ensuite vous connecter et envoyer des audiences. Sélectionnez **[!UICONTROL Set up destinations]** pour accéder au catalogue des destinations. Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../destinations/home.md).
 
 ![Page d’accueil de l’interface utilisateur d’Experience Platform affichant le widget de prise en main](assets/platform-home/getting-started-widget.png)
@@ -51,7 +51,7 @@ Le tableau des scores indique le nombre total actuel de schémas, de jeux de don
 * **Total des schémas** : le compteur **Total des schémas** affiche le nombre de schémas dans le système. Ce compteur est mis à jour lors de la création d’un schéma. Pour plus d’informations, consultez la [présentation des schémas](../xdm/home.md).
 * **Total des jeux de données** : le compteur **Total des jeux de données** affiche le nombre de jeux de données dans le système et la quantité de données dans Experience Platform. Ce compteur est mis à jour lorsqu’un jeu de données est créé. Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
 * **Nombre total de profils** : le nombre **Profils** indique le nombre total de profils de votre organisation dans Experience Platform. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce nombre utilise la [politique de fusion](profile/merge-policies.md) par défaut définie dans la configuration de la politique de fusion dans le profil client en temps réel. Le nombre de profils est mis à jour une fois toutes les 24 heures. Sélectionnez **[!UICONTROL Profiles]** pour accéder à la page Aperçu des profils et afficher toutes les mesures de votre profil. Pour plus d’informations sur les profils, consultez la [présentation du profil client en temps réel](../profile/home.md).
-* **Nombre total d’audiences** : le compteur **Nombre total d’audiences** affiche le nombre total d’audiences créées pour votre organisation. Ce nombre est mis à jour lors de la création de nouvelles audiences. Pour plus d’informations sur les audiences, consultez la [&#x200B; présentation de Segmentation Service &#x200B;](../segmentation/home.md).
+* **Nombre total d’audiences** : le compteur **Nombre total d’audiences** affiche le nombre total d’audiences créées pour votre organisation. Ce nombre est mis à jour lors de la création de nouvelles audiences. Pour plus d’informations sur les audiences, consultez la [ présentation de Segmentation Service ](../segmentation/home.md).
 
 ### Éléments récents
 
@@ -76,7 +76,8 @@ Enfin, le widget Ressources vous fournit des ressources de documentation supplé
 * [Connexion des destinations](../destinations/home.md)
 * [Gérer l’accès](../access-control/abac/overview.md)
 
-<!-- ### Successful profile records
+<!-- 
+### Successful profile records
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
@@ -108,4 +109,5 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of failed profile records is updated hourly. -->
+The number of failed profile records is updated hourly. 
+-->
