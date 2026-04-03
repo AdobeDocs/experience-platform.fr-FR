@@ -2,7 +2,7 @@
 title: Informations sensibles et personnelles dans XDM
 description: Découvrez les points clés concernant les informations personnelles sensibles (SPI) et les informations d’identification personnelle (PII) dans le modèle de données d’expérience (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%
@@ -40,7 +40,8 @@ Experience Platform vous permet de définir vos propres groupes de champs et typ
 * [Créer un groupe de champs personnalisé](../ui/resources/field-groups.md#create)
 * [Créer un type de données personnalisé](../ui/resources/data-types.md#create)
 
-<!-- (To include once features are available)
+<!-- 
+(To include once features are available)
 * Marking fields as sensitive
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
@@ -54,4 +55,4 @@ Experience Platform vous permet de définir vos propres groupes de champs et typ
 
 Ce document couvrait des considérations clés concernant les données sensibles et personnelles dans XDM. Pour plus d’informations sur la manière de modéliser vos schémas pour répondre au mieux à vos cas d’utilisation métier, reportez-vous au guide sur [les bonnes pratiques pour la modélisation des données](./best-practices.md).
 
-Pour plus d’informations sur les fonctionnalités de gouvernance des données et de confidentialité dans Experience Platform, consultez la présentation de la [&#x200B; gouvernance, confidentialité et sécurité &#x200B;](../../landing/governance-privacy-security/overview.md).
+Pour plus d’informations sur les fonctionnalités de gouvernance des données et de confidentialité dans Experience Platform, consultez la présentation de la [ gouvernance, confidentialité et sécurité ](../../landing/governance-privacy-security/overview.md).
