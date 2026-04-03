@@ -2,10 +2,10 @@
 title: Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller - OS656
 description: Découvrez comment tirer le meilleur parti de Adobe Experience Platform Data Distiller en enrichissant les données du profil client en temps réel et en utilisant des informations comportementales pour créer des audiences ciblées. Cette ressource comprend un échantillon de jeu de données et une étude de cas montrant comment appliquer le modèle Récence, Fréquence, Monétaire (RFM) pour la segmentation de la clientèle.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 0%
+source-wordcount: '3664'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ Grâce à l’étude de cas Luma, vous allez analyser les données comportementa
 
 ## Prérequis
 
-Pour exécuter ce cas d’utilisation, votre instance Adobe Experience Platform doit disposer d’une licence pour [Data Distiller](./overview.md). Pour plus d’informations, contactez votre représentant Adobe.
+Pour exécuter ce cas d’utilisation, votre instance Adobe Experience Platform doit disposer d’une licence pour [Data Distiller](./overview.md). Contactez votre représentant ou représentante Adobe pour plus d’informations.
 
 Vous devez également connaître l’identifiant client de votre **organisation**, qui est requis pour exécuter des requêtes. Votre identifiant client est la première partie de l’URL lorsque vous vous connectez à Experience Platform, qui apparaît immédiatement après le symbole @.
 
@@ -65,34 +65,35 @@ Pour charger un fichier CSV dans Adobe Experience Platform, procédez comme suit
 
 #### Créer un jeu de données à partir d’un fichier CSV {#create-a-dataset}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le rail de navigation de gauche, suivi de **[!UICONTROL Créer un jeu de données]**. Sélectionnez ensuite **[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]** dans les options disponibles.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le rail de navigation de gauche, puis **[!UICONTROL Create dataset]**. Sélectionnez ensuite **[!UICONTROL Create dataset from CSV file]** dans les options disponibles.
 
-Le panneau [!UICONTROL Configurer le jeu de données] s’affiche. Dans le champ **[!UICONTROL Nom]**, saisissez le nom du jeu de données sous la forme « luma_web_data » et sélectionnez **[!UICONTROL Suivant]**.
+Le panneau [!UICONTROL Configure Dataset] s’affiche. Dans le champ **[!UICONTROL Name]** , saisissez le nom du jeu de données sous la forme « luma_web_data » et sélectionnez **[!UICONTROL Next]**.
 
-Le panneau [!UICONTROL Ajouter des données] s’affiche. Faites glisser et déposez le fichier CSV dans la zone **[!UICONTROL Ajouter des données]** ou sélectionnez **[!UICONTROL Choisir un fichier]** pour parcourir le fichier et le charger.
+Le panneau [!UICONTROL Add data] s’affiche. Faites glisser et déposez le fichier CSV dans la zone de **[!UICONTROL Add data]** ou sélectionnez **[!UICONTROL Choose File]** pour parcourir et charger le fichier.
 
 Pour en savoir plus sur ce processus, consultez le [tutoriel sur l’ingestion par lots](../../ingestion/tutorials/ingest-batch-data.md) et le [workflow de création de jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide de l’interface utilisateur des jeux de données.
 
 #### Vérifier et terminer le chargement {#review-and-complete-upload}
 
-Une fois le fichier chargé, un aperçu des données s’affiche au bas de l’interface utilisateur. Sélectionnez **[!UICONTROL Terminer]** pour terminer le chargement.
+Une fois le fichier chargé, un aperçu des données s’affiche au bas de l’interface utilisateur. Sélectionnez **[!UICONTROL Finish]** pour terminer le chargement.
 
 ![La section « Ajouter des données » du workflow « Créer un jeu de données à partir d’un fichier CSV » avec un aperçu des données et l’option « Terminer » mise en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 La vue des activités du jeu de données « luma_web_data » s’affiche. Le chargement manuel du fichier CSV
-est ingéré sous la forme d’un lot et identifié par un [!UICONTROL Identifiant de lot]. Un panneau sur le côté droit affiche le nom du tableau comme `luma_web_data`.
+est ingéré sous la forme d’un lot et identifié par un [!UICONTROL Batch ID]. Un panneau sur le côté droit affiche le nom du tableau comme `luma_web_data`.
 
 >[!TIP]
 >
 >Lors de l’écriture de requêtes dans Data Distiller, utilisez le nom de la table au lieu du nom du jeu de données. Le nom du jeu de données est uniquement utilisé pour naviguer dans l’interface utilisateur.
 
-![&#x200B; L’onglet « Activité du jeu de données » pour le jeu de données « luma_web_data » nouvellement créé avec le nom de la table, l’ID de lot et « Prévisualiser le jeu de données » mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
+![ L’onglet « Activité du jeu de données » pour le jeu de données « luma_web_data » nouvellement créé avec le nom de la table, l’ID de lot et « Prévisualiser le jeu de données » mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
+<!-- 
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-Une fois le traitement des données terminé, sélectionnez [!UICONTROL Prévisualiser le jeu de données] dans le coin supérieur droit pour prévisualiser le jeu de données. Voici comment l’aperçu du jeu de données s’affiche :
+Une fois le traitement des données terminé, sélectionnez [!UICONTROL Preview dataset] dans le coin supérieur droit pour prévisualiser le jeu de données. Voici comment l’aperçu du jeu de données s’affiche :
 
 ![Aperçu du jeu de données du jeu de données « luma_web_data ».](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -118,7 +119,7 @@ Utilisez Data Distiller pour vérifier la qualité et l’exhaustivité des jeux
 
 #### Exécuter une requête d’exploration de base {#basic-exploration-queries}
 
-Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Requêtes]** dans le rail de navigation de gauche, puis sélectionnez **[!UICONTROL Créer une requête]**. Le Query Editor s’affiche.
+Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Queries]** dans le rail de navigation de gauche, puis sélectionnez **[!UICONTROL Create Query]**. Le Query Editor s’affiche.
 
 Collez la requête suivante dans l’éditeur et exécutez-la :
 
@@ -126,7 +127,7 @@ Collez la requête suivante dans l’éditeur et exécutez-la :
 SELECT * FROM luma_web_data; 
 ```
 
-Les résultats de la requête sont affichés sous le Query Editor dans l’onglet **[!UICONTROL Résultats]**. Pour développer les résultats dans une nouvelle boîte de dialogue, sélectionnez **[!UICONTROL Afficher les résultats]**. Les résultats ressemblent à l’image ci-dessous.
+Les résultats de la requête sont affichés sous l’éditeur de requêtes dans l’onglet **[!UICONTROL Results]** . Pour développer les résultats dans une nouvelle boîte de dialogue, sélectionnez **[!UICONTROL View results]**. Les résultats ressemblent à l’image ci-dessous.
 
 ![Boîte de dialogue Résultats de la requête pour les résultats d’exploration des requêtes de base.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
@@ -438,7 +439,7 @@ Dans cette instruction SQL :
 
 >[!NOTE]
 >
->L’espace de noms « E-mail » est un [espace de noms d’identité standard](../../identity-service/features/namespaces.md#standard) dans Adobe Experience Platform. Lors de la définition de champs d’identité, assurez-vous que l’espace de noms approprié est spécifié pour faciliter une résolution d’identité précise. &#x200B;
+>L’espace de noms « E-mail » est un [espace de noms d’identité standard](../../identity-service/features/namespaces.md#standard) dans Adobe Experience Platform. Lors de la définition de champs d’identité, assurez-vous que l’espace de noms approprié est spécifié pour faciliter la résolution précise des identités. &#x200B;
 >
 >Pour plus d’informations sur la définition des champs d’identité et l’utilisation des espaces de noms d’identité, reportez-vous à la [documentation du service d’identités](../../identity-service/home.md) ou au guide sur la [définition d’un champ d’identité dans l’interface utilisateur de Adobe Experience Platform](../../xdm/ui/fields/identity.md).
 
@@ -470,11 +471,11 @@ FROM rfm_model_segment;
 
 Le résultat de cette requête ressemble aux créations de jeux de données précédentes de ce playbook, mais avec un identifiant différent.
 
-Après avoir créé le jeu de données, accédez à **[!UICONTROL Jeux de données]** > **[!UICONTROL Parcourir]** > `adls_rfm_profile` pour vérifier que le jeu de données est vide.
+Après avoir créé le jeu de données, accédez à **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` pour vérifier que le jeu de données est vide.
 
 ![L’espace de travail des jeux de données avec les détails du jeu de données « adls_rfm_profile » affiché et le bouton (bascule) activé pour le profil mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-Vous pouvez également accéder à **[!UICONTROL Schémas]** > **[!UICONTROL Parcourir]** > `adls_rfm_profile` pour afficher le diagramme Schéma de profil individuel XDM de votre jeu de données nouvellement créé et de ses groupes de champs personnalisés.
+Vous pouvez également accéder à **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` pour afficher le diagramme Schéma de profil individuel XDM de votre jeu de données nouvellement créé et de ses groupes de champs personnalisés.
 
 ![L’espace de travail XDM avec le diagramme « adls_rfm_profile » affiché dans la zone de travail du schéma.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -503,30 +504,30 @@ Maintenant que votre code SQL génère un jeu de données dérivé et l’active
 
 #### Planifier l’exécution de la requête
 
-Après avoir enregistré votre requête SQL, accédez à l’onglet **[!UICONTROL Modèles]** pour afficher la requête enregistrée et lancer le processus de planification. Il existe deux façons de planifier une requête :
+Après avoir enregistré votre requête SQL, accédez à l’onglet **[!UICONTROL Templates]** pour afficher la requête enregistrée et lancer le processus de planification. Il existe deux façons de planifier une requête :
 
-Sélectionnez **[!UICONTROL Ajouter un planning]** dans la barre latérale droite.
+Sélectionnez **[!UICONTROL Add Schedule]** dans la barre latérale droite.
 
 ![Onglet Modifier de l’espace de travail Requêtes avec l’option Ajouter un planning mise en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-Vous pouvez également sélectionner l’onglet **[!UICONTROL Plannings]** sous le nom du modèle, puis sélectionner **[!UICONTROL Ajouter un planning]**.
+Vous pouvez également sélectionner l’onglet **[!UICONTROL Schedules]** sous le nom du modèle, puis sélectionner **[!UICONTROL Add Schedule]**.
 
 ![Onglet Plannings de l’espace de travail Requêtes avec Ajouter un planning mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
 Pour plus d’informations sur la planification de requêtes, consultez la documentation [Plannings de requête](../ui/query-schedules.md).
 
-La vue [!UICONTROL Détails de la planification] s’affiche. À partir de là, saisissez les détails suivants pour configurer le planning :
+La vue [!UICONTROL Schedule details] s’affiche. À partir de là, saisissez les détails suivants pour configurer le planning :
 
-- **[!UICONTROL Fréquence D’Exécution]** : **Hebdomadaire**
-- **[!UICONTROL Jour d&#39;exécution]** : **lundi et mardi**
-- **[!UICONTROL Heure d’exécution de la planification]** : **10 h 10 UTC**
-- **[!UICONTROL Période de planification]** : **17 mars au 30 avril 2025**
+- **[!UICONTROL Execution Frequency]** : **hebdomadaire**
+- **[!UICONTROL Day of Execution]** : **lundi et mardi**
+- **[!UICONTROL Schedule Execution Time]** : **10 :10 UTC**
+- **[!UICONTROL Schedule Period]** : **Du 17 Mars Au 30 Avril 2025**
 
-Sélectionnez **[!UICONTROL Enregistrer]** pour confirmer le planning.
+Sélectionnez **[!UICONTROL Save]** pour confirmer la planification.
 
 ![Détails du planning avec les paramètres configurés et Enregistrer mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-Après avoir enregistré le planning, vous pouvez accéder à tout moment à l’onglet **[!UICONTROL Requêtes planifiées]** pour surveiller les tâches planifiées de la Distiller de données. Pour plus d’informations sur l’[affichage du statut d’exécution des requêtes, des messages d’erreur et des alertes](../ui/monitor-queries.md), consultez le document Surveillance des requêtes planifiées .
+Après avoir enregistré la planification, vous pouvez accéder à tout moment à l’onglet **[!UICONTROL Scheduled Queries]** pour surveiller les tâches de Distiller de données planifiées. Pour plus d’informations sur l’[affichage du statut d’exécution des requêtes, des messages d’erreur et des alertes](../ui/monitor-queries.md), consultez le document Surveillance des requêtes planifiées .
 
 Une fois configurée, la requête SQL s’exécute automatiquement aux intervalles définis, garantissant ainsi que les données restent à jour sans nécessiter d’intervention manuelle.
 
@@ -543,9 +544,9 @@ Choisissez l’approche qui convient le mieux à votre workflow.
 
 #### Solution 1 : Audience SQL via Data Distiller {#data-distiller-sql-audience}
 
-Utilisez la commande `CREATE AUDIENCE AS SELECT` pour définir une nouvelle audience. L’audience créée est enregistrée dans un jeu de données et enregistrée dans l’espace de travail **[!UICONTROL Audiences]** sous **[!UICONTROL Distiller de données]**.
+Utilisez la commande `CREATE AUDIENCE AS SELECT` pour définir une nouvelle audience. L’audience créée est enregistrée dans un jeu de données et enregistrée dans l’espace de travail **[!UICONTROL Audiences]** sous **[!UICONTROL Data Distiller]**.
 
-Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous l’origine [!UICONTROL Distiller de données] dans l’espace de travail [!UICONTROL Audiences]. Dans [Audience Portal](../../segmentation/ui/audience-portal.md), vous pouvez afficher, gérer et activer vos audiences selon vos besoins.
+Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous l’origine [!UICONTROL Data Distiller] dans l’espace de travail [!UICONTROL Audiences]. Dans [Audience Portal](../../segmentation/ui/audience-portal.md), vous pouvez afficher, gérer et activer vos audiences selon vos besoins.
 
 ![Audience Portal présentant les audiences disponibles.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
@@ -646,19 +647,19 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 Utilisez des attributs RFM pour segmenter les utilisateurs en fonction de leur comportement et de leurs caractéristiques. Cette section vous guide tout au long de l’interface utilisateur de Adobe Experience Platform pour définir une audience à l’aide des scores RFM.
 
-Pour vérifier que les données ont été chargées dans le profil client en temps réel, accédez à **[!UICONTROL Clients] > [!UICONTROL Profils] > [!UICONTROL Parcourir]**. Sélectionnez **[!UICONTROL Espace de noms d’identité]** comme `Email` et saisissez `user0076@example.com`. Vérifiez les détails du profil pour vous assurer qu’il contient les attributs RFM attendus.
+Pour vérifier que les données ont été chargées dans le profil client en temps réel, accédez à **[!UICONTROL Customers]> [!UICONTROL Profiles] >[!UICONTROL Browse]**. Sélectionnez **[!UICONTROL Identity Namespace]** comme `Email` et saisissez `user0076@example.com`. Vérifiez les détails du profil pour vous assurer qu’il contient les attributs RFM attendus.
 
 ![Espace de travail Profils affichant les profils disponibles avec un filtre Identité principale d’e-mail et Valeur d’e-mail appliqué.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
 ![Vue Attributs de profil affichant les attributs d’un profil spécifique.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
-Pour parcourir les audiences existantes, sélectionnez **[!UICONTROL Audiences]** dans le panneau de navigation de gauche et assurez-vous que l’onglet **[!UICONTROL Parcourir]** est sélectionné. La liste des audiences disponibles dans le sandbox s’affiche. La sélection d’une audience affiche sa description, les règles de qualification et le nombre de profils inclus.
+Pour parcourir les audiences existantes, sélectionnez **[!UICONTROL Audiences]** dans le panneau de navigation de gauche et assurez-vous que l’onglet **[!UICONTROL Browse]** est sélectionné. La liste des audiences disponibles dans le sandbox s’affiche. La sélection d’une audience affiche sa description, les règles de qualification et le nombre de profils inclus.
 
-Pour créer une audience, sélectionnez **[!UICONTROL Créer une audience]** dans le coin supérieur droit. Une boîte de dialogue s’affiche avec deux options. Sélectionnez **[!UICONTROL Créer une règle]** puis **[!UICONTROL Créer]**.
+Pour créer une audience, sélectionnez **[!UICONTROL Create Audience]** dans le coin supérieur droit. Une boîte de dialogue s’affiche avec deux options. Sélectionnez **[!UICONTROL Build Rule]** suivi de **[!UICONTROL Create]**.
 
 ![La boîte de dialogue Créer une audience avec l’option Créer une règle sélectionnée et Créer mise en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
-L’interface utilisateur Composition d’audience permet d’accéder aux attributs de profil. Accédez à **[!UICONTROL Attributs] > [!UICONTROL Profil individuel XDM]** pour afficher les attributs disponibles.
+L’interface utilisateur Composition d’audience permet d’accéder aux attributs de profil. Accédez à **[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]** pour afficher les attributs disponibles.
 
 Pour plus d’informations sur l’utilisation de la composition de l’audience, consultez le guide [Guide de l’interface utilisateur de la composition de l’audience](../../segmentation/ui/audience-composition.md). Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [guide de l’interface utilisateur du créateur de segments](../../segmentation/ui/segment-builder.md).
 
@@ -672,6 +673,6 @@ Pour créer une audience à l’aide d’attributs RFM, faites glisser l’attri
 
 ![Création d’une audience dans l’interface utilisateur de composition d’audience.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
-Pour finaliser l’audience, sélectionnez **[!UICONTROL Enregistrer et publier]** dans le coin supérieur droit. Après l’enregistrement, l’audience nouvellement créée apparaît dans l’espace de travail [!UICONTROL Audiences], où vous pouvez consulter son résumé et ses critères de qualification.
+Pour finaliser l’audience, sélectionnez **[!UICONTROL Save and Publish]** dans le coin supérieur droit. Après l’enregistrement, l’audience nouvellement créée apparaît dans l’espace de travail [!UICONTROL Audiences], où vous pouvez consulter son résumé et ses critères de qualification.
 
 Utilisez le créateur de segments pour accéder aux attributs RFM dérivés et concevoir des audiences supplémentaires. Activez l’audience SQL nouvellement créée en fonction des scores RFM et envoyez-la à n’importe quelle destination préférée, y compris Adobe Journey Optimizer.
