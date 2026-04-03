@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 38%
+ht-degree: 48%
 
 ---
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur ce service, consultez la [présentation de la gou
 
 ## Destinations {#destinations}
 
-Dans [Real-Time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles fonctionnalités**
 
@@ -60,11 +60,11 @@ Pour en savoir plus, consultez la [présentation des destinations](../../destina
 | --- | --- |
 | Notifications d’événement Adobe I/O | [!DNL Observability Insights] utilise Adobe I/O Events pour créer des notifications d’événement pour plusieurs services Experience Platform. Les payloads de notification sont envoyées à un webhook configuré que vous pouvez ensuite utiliser pour automatiser d’autres processus en aval. |
 
-Pour plus d’informations sur le service[&#128279;](../../observability/home.md) consultez la [!DNL Observability Insights]  présentation .
+Pour plus d’informations sur le service[[!DNL Observability Insights]  consultez la ](../../observability/home.md) présentation .
 
 ## [!DNL Privacy Service] {#privacy}
 
-Plusieurs réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles ou de les supprimer de vos banques de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec [!DNL Privacy Service], vous pouvez envoyer des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite l’automatisation de la conformité aux réglementations de confidentialité légales et au sein de l’organisation.
+Diverses réglementations légales et organisationnelles donnent le droit d’accéder aux données personnelles et de les supprimer des banques de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface d’utilisation pour vous aider à gérer ces requêtes de données de votre clientèle. Grâce à [!DNL Privacy Service], vous pouvez envoyer des demandes d’accès et de suppression de données clientèle personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la mise en conformité concernant les réglementations légales et organisationnelles liées à la confidentialité.
 
 **Nouvelles fonctionnalités**
 
@@ -72,7 +72,7 @@ Plusieurs réglementations légales et organisationnelles donnent aux utilisateu
 | ------- | ----------- |
 | Respect de la loi LGPD (Brésil) | Des tâches relatives à la confidentialité peuvent maintenant être créées dans le cadre de la réglementation brésilienne [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces tâches sont suivies sous le code de réglementation `lgpd_bra`. |
 
-Voir la présentation de [Privacy Service](../../privacy-service/home.md) pour plus d’informations sur le service.
+Pour plus dʼinformations sur ce service, voir la [vue d’ensemble de Privacy Service](../../privacy-service/home.md).
 
 ## Profil client en temps réel {#profile}
 
@@ -82,13 +82,13 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | ------- | ----------- |
 | Visionneuse de profils | La visionneuse de profils, dans l’interface utilisateur d’Experience Platform, a été mise à jour pour devenir un tableau de bord avec une personnalisation complète. L’utilisateur a désormais la possibilité d’effectuer les tâches suivantes : <ul><li>Mettez à jour les attributs standard et personnalisés sélectionnés dans le widget informations de base.</li><li>Création, modification et suppression de widgets personnalisés</li><li>Redimensionnement et réorganisation des widgets</li></ul> |
 
-Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [&#x200B; présentation du profil client en temps réel &#x200B;](../../profile/home.md).
+Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [ présentation du profil client en temps réel ](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
 Adobe Experience Platform Segmentation Service propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir des données [!DNL Real-Time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Experience Platform], ce qui les rend facilement accessibles depuis n’importe quelle application Adobe.
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 **Nouvelles fonctionnalités**
 
@@ -97,7 +97,7 @@ Adobe Experience Platform Segmentation Service propose une interface utilisa
 | Tâches d’exportation | Un indicateur a été ajouté pour permettre l’évaluation des segments dans le cadre d’une tâche d’exportation. Par conséquent, les utilisateurs et utilisatrices peuvent exécuter à la fois la segmentation et les exportations dans une seule tâche. |
 | Politiques de fusion | Plusieurs politiques de fusion peuvent être incluses dans une seule tâche de segmentation par lots. |
 
-Pour plus d’informations sur les [!DNL Segmentation Service], consultez la [&#x200B; présentation de la segmentation &#x200B;](../../segmentation/home.md)
+Pour plus d’informations sur les [!DNL Segmentation Service], consultez la [ présentation de la segmentation ](../../segmentation/home.md)
 
 ## Sources {#sources}
 
