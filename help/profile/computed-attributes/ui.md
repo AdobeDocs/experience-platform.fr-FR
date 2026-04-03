@@ -2,7 +2,7 @@
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 7%
@@ -19,7 +19,7 @@ Dans Adobe Experience Platform, les attributs calculés sont des fonctions utili
 
 Ce document fournit un guide sur la création et la mise à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
-## Commencer
+## Prise en main
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différents services de [!DNL Experience Platform] impliqués dans la gestion des [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
@@ -47,7 +47,7 @@ Pour sélectionner les champs visibles, vous pouvez sélectionner ![l’icône C
 | [!UICONTROL Created] | Date et heure de création de l’attribut calculé. |
 | [!UICONTROL Last modified] | Date et heure de la dernière modification de l’attribut calculé. |
 
-Vous pouvez également filtrer les attributs calculés affichés en fonction du statut du cycle de vie. Sélectionnez l’icône ![funnel](/help/images/icons/filter.png).
+Vous pouvez également filtrer les attributs calculés affichés en fonction du statut du cycle de vie. Sélectionnez l’icône ![](/help/images/icons/filter.png).
 
 ![L’icône de filtre est mise en surbrillance.](./images/ui/select-filter.png)
 
@@ -61,7 +61,7 @@ De plus, vous pouvez sélectionner un attribut calculé pour afficher des inform
 
 Pour créer un attribut calculé, sélectionnez **[!UICONTROL Create computed attribute]** pour lancer le processus de création d’un attribut calculé.
 
-![Le bouton [!UICONTROL Create computed attributes] est mis en surbrillance et indique aux utilisateurs comment accéder à la page Créer un attribut calculé &#x200B;](./images/ui/create.png).
+![Le bouton [!UICONTROL Create computed attributes] est mis en surbrillance et indique aux utilisateurs comment accéder à la page Créer un attribut calculé ](./images/ui/create.png).
 
 La page **[!UICONTROL Create computed attribute]** s’affiche. Sur cette page, vous pouvez ajouter les informations de base de l’attribut calculé que vous souhaitez créer.
 
