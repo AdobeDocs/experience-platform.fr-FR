@@ -2,7 +2,7 @@
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '3390'
 ht-degree: 38%
@@ -71,7 +71,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher un instantané des données liées aux licences de l’entreprise pour Experience Platform. Les données du tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. L’instantané n’est ni une approximation ni un échantillon des données et le tableau de bord n’est pas mis à jour en temps réel.
 
-Pour plus d’informations, consultez le guide sur l’utilisation [&#x200B; du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+Pour plus d’informations, consultez le guide sur l’utilisation [ du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Bonnes pratiques relatives à la gestion des données
 
@@ -169,10 +169,10 @@ Le magasin de profils se compose des composants suivants :
 
 | Composant de magasin de profils | Description |
 | --- | --- |
-| Fragments de profil | Chaque profil client est composé de plusieurs **fragments de profil** qui ont été fusionnés afin d’obtenir une vue unique de ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs **fragments de profil** associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Experience Platform, ils sont assemblés à l’aide du graphique d’identités afin de créer un profil unique pour ce client. Les **fragments de profil** se composent d’un espace de noms d’identité comme identifiant, avec les données d’enregistrement et/ou les données de série temporelle associées. |
+| Fragments de profil | Chaque profil client est composé de plusieurs **fragments de profil** qui ont été fusionnés afin d’obtenir une vue unique de ce client ou cette cliente. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs **fragments de profil** associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Experience Platform, ils sont assemblés à l’aide du graphique d’identités afin de créer un profil unique pour ce client. Les **fragments de profil** se composent d’un espace de noms d’identité comme identifiant, avec les données d’enregistrement et/ou les données de série temporelle associées. |
 | Données d’enregistrement (attributs) | Un profil est la représentation d’un sujet, d’une organisation ou d’un individu. Il est composé de nombreux **attributs** (également appelés **données d’enregistrement**). Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse e-mail. Le volume des **données d’enregistrement** est généralement faible/modéré, mais leur valeur reste élevée pendant de longues périodes. |
 | Données de série temporelle (comportement) | Les **données de série temporelle** fournissent des informations sur le comportement d’un utilisateur. Représentées par la classe de schéma standard du modèle de données d’expérience (XDM) [!DNL ExperienceEvent], les données de série temporelle peuvent décrire des événements tels que l’ajout d’articles à un panier, l’utilisation de liens et la lecture de vidéos. La valeur du comportement peut diminuer au fil du temps. |
-| Espace de noms d’identité (identités) | Une fois réunies, les données client sont fusionnées en un profil unique grâce aux **espaces de noms d’identité** et à la possibilité d’assembler ces identités lors de l’acquisition d’informations supplémentaires sur le client. Pour plus d’informations, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| Espace de noms d’identité (identités) | Une fois réunies, les données clients sont fusionnées dans un profil unique grâce aux **espaces de noms d’identité** et à la possibilité d’assembler ces identités lors de l’acquisition d’informations supplémentaires sur le client ou la cliente. Pour plus d’informations, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 
 {style="table-layout:auto"}
 
@@ -182,16 +182,18 @@ Plusieurs rapports sont disponibles pour vous aider à comprendre la composition
 
 * **API Dataset Overlap Report** : indique les jeux de données qui contribuent le plus à l’audience adressable. Vous pouvez utiliser ce rapport pour identifier les jeux de données [!DNL ExperienceEvent] pour lesquels définir une expiration. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md).
 * **API Identity Overlap Report** : indique les espaces de noms d’identité qui contribuent le plus à l’audience adressable. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement d’identités](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+
+<!-- 
+* **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 ### Expirations des données de profils pseudonymes {#pseudonymous-profile-expirations}
 
-Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [&#x200B; Présentation de l’expiration des données de profils pseudonymes &#x200B;](../../profile/pseudonymous-profiles.md).
+Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [ Présentation de l’expiration des données de profils pseudonymes ](../../profile/pseudonymous-profiles.md).
 
 ### Interface utilisateur du jeu de données - Conservation du jeu de données d’événement d’expérience {#data-retention}
 
-Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [&#x200B; volume total de données &#x200B;](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [ volume total de données ](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Expirations des événements d’expérience de profil {#event-expirations}
 
