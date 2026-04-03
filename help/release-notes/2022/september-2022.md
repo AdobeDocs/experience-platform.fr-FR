@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
 description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2723'
 ht-degree: 86%
@@ -84,7 +84,7 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les différents types d’événements spécifiques aux ressources suivis par les journaux d’audit dans Experience Platform, reportez-vous à la [&#x200B; présentation des journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur les différents types d’événements spécifiques aux ressources suivis par les journaux d’audit dans Experience Platform, reportez-vous à la [ présentation des journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -112,7 +112,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | [[!DNL Snap Conversions API] Extension](https://exchange.adobe.com/apps/ec/108550) Snap Conversions API pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur l’authentification et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html) Snapchat Marketing API dédiée.  |
 | [User-Agent Client Hints in Web SDK](/help/collection/use-cases/client-hints.md) | Web SDK prend désormais en charge [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Les conseils clients permettent aux propriétaires de site web d’accéder aux mêmes informations que celles disponibles dans la chaîne [!DNL User-Agent], mais d’une manière plus respectueuse de la vie privée. |
 | Migration page par page de Web SDK | Vous pouvez désormais migrer vos propriétés web existantes à partir d’autres bibliothèques Experience Cloud, telles que [!DNL at.js], vers le SDK Web, une page à la fois. Vous pouvez ainsi adopter une approche progressive dans la migration du SDK Web, sans qu’il soit nécessaire de migrer toutes vos pages à la fois. |
-| Prise en charge des flux de données d’[[!DNL Adobe Journey Optimizer] &#x200B;](../../datastreams/overview.md#aep) | Le service Adobe Experience Platform pour les flux de données prend désormais en charge [!DNL Adobe Journey Optimizer]. Cette option vous permet d’utiliser des canaux entrants web et basés sur des applications dans [!DNL Adobe Journey Optimizer]. |
+| Prise en charge des flux de données d’[[!DNL Adobe Journey Optimizer] ](../../datastreams/overview.md#aep) | Le service Adobe Experience Platform pour les flux de données prend désormais en charge [!DNL Adobe Journey Optimizer]. Cette option vous permet d’utiliser des canaux entrants web et basés sur des applications dans [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 
@@ -134,7 +134,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal ainsi qu’un environnement pour l’orchestration visuelle de campagnes, la gestion d’interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=fr). Notez que cette intégration fonctionne avec [Adobe Campaign version 8.4 ou ultérieure](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=fr#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal ainsi qu’un environnement pour l’orchestration visuelle de campagnes, la gestion d’interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=fr). Notez que cette intégration fonctionne avec [Adobe Campaign version 8.4 ou ultérieure](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | La destination [!DNL Salesforce CRM] a été mise à jour afin de prendre en charge à la fois les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
 
 {style="table-layout:auto"}
@@ -177,7 +177,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Groupe de champs | (Multiple) | [Mise à jour des titres de plusieurs composants Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) par souci de cohérence. |
 | Groupe de champs | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Mise à jour des espaces de noms de plusieurs champs vers `xdm`. |
 | Groupe de champs | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Ajout d’un nouveau champ, `isReadSegmentTriggerStartEvent`. |
-| Groupe de champs | [[!UICONTROL Forecasted Weathers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Modification du champ `xdm:uvIndex` en un type entier, puis ajout de l’espace de nommage `xdm` à plusieurs champs dans lesquels il était manquant. |
+| Groupe de champs | [[!UICONTROL Forecasted Weathers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Modification du champ `xdm:uvIndex` en un type entier, puis ajout de l’espace de noms `xdm` à plusieurs champs dans lesquels il était manquant. |
 | Groupe de champs | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` et `xdm:implementationDetails` ont été supprimés du groupe de champs. |
 | Type de données | (Multiple) | [Mise à jour de plusieurs noms de propriétés de média](https://github.com/adobe/xdm/pull/1626/files) sur plusieurs types de données par souci de cohérence. |
 | Type de données | [[!UICONTROL Implementation details]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | Ajout de noms connus pour le Flutter. |
@@ -206,16 +206,16 @@ Le Service d’identités d’Adobe Experience Platform vous permet de mieux c
 
 Pour en savoir plus sur Identity Service, consultez la [présentation d’Identity Service](../../identity-service/home.md).
 
-## Query Service {#query-service}
+## Service de requête {#query-service}
 
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
+Le service de requête vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur d’Experience Platform ou les deux. Actuellement, il n’est possible de s’abonner aux alertes de requêtes qu’à l’aide de l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Exemples de jeux de données | Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/key-concepts/dataset-samples.md). |
+| API d’abonnement aux alertes | Le service de requête Adobe Experience Platform vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur d’Experience Platform ou les deux. Actuellement, il n’est possible de s’abonner aux alertes de requêtes qu’à l’aide de l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| Exemples de jeux de données | Les échantillons de jeux de données du service de requête vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/key-concepts/dataset-samples.md). |
 
 Pour plus d’informations sur Query Service [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md) de Query Service.
 
