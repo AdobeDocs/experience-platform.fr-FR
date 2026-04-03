@@ -2,9 +2,9 @@
 title: Visionneuse de graphiques d’identités
 description: Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la manière dont un client interagit avec votre marque sur différents canaux.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1379'
 ht-degree: 6%
 
 ---
@@ -21,9 +21,9 @@ Le document suivant décrit les étapes à suivre pour accéder à la visionneus
 
 La vidéo suivante est destinée à vous aider à comprendre la visionneuse de graphiques d’identités.
 
->[!VIDEO](https://video.tv.adobe.com/v/345654/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
-## Commencer
+## Prise en main
 
 L’utilisation de la visionneuse de graphiques d’identités nécessite une compréhension des différents services Adobe Experience Platform impliqués. Avant de commencer à travailler avec la visionneuse de graphiques d’identités, consultez la documentation relative aux services suivants :
 
@@ -38,11 +38,11 @@ L’utilisation de la visionneuse de graphiques d’identités nécessite une co
 
 ## Accès à la visionneuse de graphiques d’identités {#access-identity-graph-viewer}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Graphique d’identités]** dans la liste des onglets de l’en-tête.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Identity Graph]** dans la liste des onglets de l’en-tête.
 
 ![Espace de travail Identités de l’interface utilisateur d’Experience Platform, avec l’onglet Graphique d’identités sélectionné.](../images/graph-viewer/identity-graph.png)
 
-Pour afficher un graphique d’identités, indiquez un espace de noms d’identité et sa valeur correspondante, puis sélectionnez **[!UICONTROL Affichage]**.
+Pour afficher un graphique d’identités, indiquez un espace de noms d’identité et sa valeur correspondante, puis sélectionnez **[!UICONTROL View]**.
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ L’interface de la visionneuse de graphiques d’identités se compose de plusi
 
 ![Interface de la visionneuse de graphiques d’identités.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-Le graphique d’identités affiche toutes les identités liées à la combinaison espace de noms d’identité et valeur que vous avez saisie. Chaque nœud est constitué d’un espace de noms d’identité et de sa valeur correspondante. Vous pouvez sélectionner, maintenir la touche enfoncée et faire glisser n’importe quel nœud pour interagir avec le graphique. Vous pouvez également placer le pointeur de la souris sur un nœud pour afficher des informations sur la valeur d’identité correspondante. Sélectionnez **[!UICONTROL Afficher le graphique]** pour masquer ou afficher le graphique.
+Le graphique d’identités affiche toutes les identités liées à la combinaison espace de noms d’identité et valeur que vous avez saisie. Chaque nœud est constitué d’un espace de noms d’identité et de sa valeur correspondante. Vous pouvez sélectionner, maintenir la touche enfoncée et faire glisser n’importe quel nœud pour interagir avec le graphique. Vous pouvez également placer le pointeur de la souris sur un nœud pour afficher des informations sur la valeur d’identité correspondante. Sélectionnez **[!UICONTROL View graph]** pour masquer ou afficher le graphique.
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ Sélectionnez un lien dans le graphique pour afficher le jeu de données et l’
 
 ![Lien d’identité entre les nœuds e-mail et GAID sélectionnés.](../images/graph-viewer/identity-link.png)
 
-Le tableau [!UICONTROL Identités] fournit une vue différente de vos données d’identité, répertoriant l’espace de noms d’identité et la combinaison de valeurs d’identité sous la forme d’un tableau. La sélection d’un nœud dans le graphique met à jour l’élément de ligne en surbrillance dans le tableau [!UICONTROL Identités].
+Le tableau [!UICONTROL Identities] fournit une vue différente de vos données d’identité, répertoriant l’espace de noms d’identité et la combinaison de valeurs d’identité sous la forme d’un tableau. La sélection d’un nœud dans le graphique met à jour l’élément de ligne en surbrillance dans le tableau [!UICONTROL Identities].
 
 ![Le tableau Identités avec la liste des identités liées dans le graphique.](../images/graph-viewer/identities-table.png)
 
-Utilisez le menu déroulant pour trier les données du graphique et mettre en surbrillance les informations sur un espace de noms d’identité spécifique. Par exemple, sélectionnez **[!UICONTROL E-mail]** dans le menu pour afficher les données spécifiques à l’espace de noms d’identité de l’e-mail.
+Utilisez le menu déroulant pour trier les données du graphique et mettre en surbrillance les informations sur un espace de noms d’identité spécifique. Par exemple, sélectionnez **[!UICONTROL Email]** dans le menu pour afficher les données spécifiques à l’espace de noms d’identité de l’e-mail.
 
 ![Le tableau Identités trié pour afficher uniquement les données d’e-mail.](../images/graph-viewer/sort-email.png)
 
@@ -81,7 +81,7 @@ Le rail de droite affiche des informations sur une identité sélectionnée, y c
 Le tableau suivant fournit des informations supplémentaires sur les propriétés de la source de données affichées dans le rail de droite :
 
 | Source de données | Description |
-| --- | --- | 
+| --- | --- |
 | ID de lot | Identifiant généré automatiquement et correspondant aux données du lot. |
 | Identifiant du jeu de données | Identifiant généré automatiquement et correspondant à votre jeu de données. |
 | Nom du jeu de données | Nom du jeu de données contenant les données par lot. |
@@ -89,19 +89,19 @@ Le tableau suivant fournit des informations supplémentaires sur les propriété
 
 ![Le rail de droite, qui affiche les données d’identité, ainsi que la source de données d’informations.](../images/graph-viewer/right-rail.png)
 
-Vous pouvez également utiliser la *[!UICONTROL Source de données]* pour afficher la liste des sources de données qui contribuent à vos identités. Sélectionnez [!UICONTROL Source de données] pour obtenir une vue tabulaire de vos jeux de données et de vos identifiants de lot.
+Vous pouvez également utiliser le *[!UICONTROL Data source]* pour afficher la liste des sources de données qui contribuent à vos identités. Sélectionnez [!UICONTROL Data source] pour obtenir une vue tabulaire de vos jeux de données et de vos identifiants de lot.
 
 ![Onglet Source de données sélectionné.](../images/graph-viewer/data-source-table.png)
 
-Utilisez le curseur pour filtrer les données du graphique selon l’heure à laquelle les identités ont été établies pour la première fois. Par défaut, la visionneuse de graphiques d’identités affiche toutes les identités liées dans le graphique. Maintenez le curseur enfoncé et faites-le glisser pour ajuster l’heure à la dernière date et heure auxquelles une nouvelle identité a été liée au graphique. Dans l’exemple ci-dessous, le graphique indique que le lien d’identité le plus récent (GAID) a été établi le **[!UICONTROL 08/19/2020 à 16:29:29]**.
+Utilisez le curseur pour filtrer les données du graphique selon l’heure à laquelle les identités ont été établies pour la première fois. Par défaut, la visionneuse de graphiques d’identités affiche toutes les identités liées dans le graphique. Maintenez le curseur enfoncé et faites-le glisser pour ajuster l’heure à la dernière date et heure auxquelles une nouvelle identité a été liée au graphique. Dans l’exemple ci-dessous, le graphique indique que le lien d’identité le plus récent (GAID) a été établi sur **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
 ![Curseur d’horodatage de la visionneuse de graphiques sélectionné.](../images/graph-viewer/slider-one.png)
 
-Réglez le curseur pour voir qu’un autre lien d’identité (e-mail) a été établi le **[!UICONTROL 08/19/2020 à 16:25:30]**.
+Réglez le curseur pour vérifier qu’un autre lien d’identité (e-mail) a été établi sur **[!UICONTROL 08/19/2020, 4:25:30 PM]**.
 
 ![Curseur d’horodatage de la visionneuse de graphiques ajusté au dernier nouveau lien établi.](../images/graph-viewer/slider-two.png)
 
-Vous pouvez également régler le curseur pour afficher la première itération du graphique. Dans l’exemple ci-dessous, la visionneuse de graphiques d’identités indique que le graphique a été créé le **[!UICONTROL 08/19/2020, 16:11:49]** avec ses premiers liens ECID, E-mail et Téléphone.
+Vous pouvez également régler le curseur pour afficher la première itération du graphique. Dans l’exemple ci-dessous, la visionneuse de graphiques d’identités indique que le graphique a été créé pour la première fois le **[!UICONTROL 08/19/2020, 4:11:49 PM]**, ses premiers liens étant ECID, E-mail et Téléphone.
 
 ![Curseur d’horodatage de la visionneuse de graphiques adapté au premier nouveau lien établi.](../images/graph-viewer/slider-three.png)
 
@@ -121,7 +121,7 @@ Des erreurs peuvent se produire lors de l’accès à la visionneuse de graphiqu
 
 ### Accès à la visionneuse de graphiques d’identités à partir de jeux de données
 
-Vous pouvez également accéder à la visionneuse de graphiques d’identités à l’aide de l’interface des jeux de données. Sur la page Jeux de données [!UICONTROL Parcourir], sélectionnez un jeu de données avec lequel vous souhaitez interagir, puis sélectionnez **[!UICONTROL Prévisualiser le jeu de données]**
+Vous pouvez également accéder à la visionneuse de graphiques d’identités à l’aide de l’interface des jeux de données. Sur la page de [!UICONTROL Browse] des jeux de données, sélectionnez un jeu de données avec lequel vous souhaitez interagir, puis sélectionnez **[!UICONTROL Preview dataset]**
 
 ![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
 
@@ -135,7 +135,7 @@ Dans la fenêtre d’aperçu, sélectionnez une icône d’empreinte digitale po
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les identités dans Experience Platform, reportez-vous à la [&#x200B; présentation du service d’identités &#x200B;](../home.md)
+En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les identités dans Experience Platform, reportez-vous à la [ présentation du service d’identités ](../home.md)
 
 ## Journal des modifications
 
