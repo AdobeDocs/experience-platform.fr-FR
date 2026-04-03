@@ -1,9 +1,9 @@
 ---
 title: Point d’entrée de requêtes accélérées
-description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées de Query Service.
+description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées du service de requête.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 97%
@@ -18,7 +18,7 @@ Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [guid
 
 ## Prise en main
 
-Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter la documentation [packaging](../packaging.md) et [guardrails](../guardrails.md#query-accelerated-store), ainsi que la documentation [licensing](../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Consultez les documents [packaging](../packaging.md) et [mécanismes de sécurisation](../guardrails.md#query-accelerated-store), et [licence](../data-distiller/license-usage.md) relatifs au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 Les sections suivantes détaillent les appels d’API nécessaires pour accéder sans état à la boutique de requêtes accélérées via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
@@ -207,7 +207,7 @@ Une réponse réussie renvoie un statut HTTP 200 avec le schéma ad hoc créé p
 |---|---|
 | `queryId` | La valeur de l’identifiant de la requête créée. |
 | `resultsMeta` | Cet objet contient les métadonnées pour chaque colonne renvoyée dans les résultats afin que les utilisateurs et utilisatrices connaissent le nom et le type de chaque colonne. |
-| `resultsMeta._adhoc` | Schéma de modèle de données d’expérience (XDM) ad hoc avec des champs dont l’espace de nom est réservé à une utilisation par un seul jeu de données. |
+| `resultsMeta._adhoc` | Schéma de modèle de données d’expérience (XDM) ad hoc avec des champs dont l’espace de noms est réservé à une utilisation par un seul jeu de données. |
 | `resultsMeta._adhoc.type` | Type de données du schéma ad hoc. |
 | `resultsMeta._adhoc.meta:xdmType` | Il s’agit d’une valeur générée par le système pour le type de champ XDM. Pour plus d’informations sur les types disponibles, consultez la documentation sur les [types XDM disponibles](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Il s’agit des noms des colonnes du jeu de données interrogé. |
