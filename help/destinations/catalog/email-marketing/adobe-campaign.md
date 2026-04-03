@@ -3,7 +3,7 @@ keywords: e-mail;E-mail;e-mail;destinations d’e-mail;adobe campaign;campaign
 title: Connexion Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 29%
@@ -37,7 +37,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -58,13 +58,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Lors de la configuration de destinations de marketing par e-mail avec stockage SFTP, Adobe vous recommande d’ajouter certaines plages d’adresses IP à votre place sur la liste autorisée.
 
-Consultez la section place sur la liste autorisée des adresses IP pour les destinations SFTP[&#x200B; si vous devez ajouter des adresses IP Adobe à votre place sur la liste autorisée.](../cloud-storage/ip-address-allow-list.md)
+Consultez la section place sur la liste autorisée des adresses IP pour les destinations SFTP[ si vous devez ajouter des adresses IP Adobe à votre place sur la liste autorisée.](../cloud-storage/ip-address-allow-list.md)
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Manage Destinations]** [Access Control](/help/access-control/home.md#permissions). Lisez la [&#x200B; présentation du contrôle d’accès &#x200B;](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises
+>Pour vous connecter à la destination, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Manage Destinations]** [Access Control](/help/access-control/home.md#permissions). Lisez la [ présentation du contrôle d’accès ](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -104,14 +104,14 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profils par lots &#x200B;](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profils par lots ](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#destination-attributes}
 
-Lors de l’activation des audiences vers cette destination, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, voir [&#x200B; Bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
+Lors de l’activation des audiences vers cette destination, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination. Pour plus d’informations, voir [ Bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail](overview.md#best-practices).
 
 ## Données exportées {#exported-data}
 
@@ -122,10 +122,10 @@ Pour les destinations [!DNL Adobe Campaign], [!DNL Experience Platform] crée un
 >[!IMPORTANT]
 >
 >* Lorsque vous effectuez cette intégration, gardez à l’esprit les limites de stockage [!DNL SFTP], les limites de stockage de la base de données et les limites de profil actif selon votre contrat de [!DNL Adobe Campaign].
->* Vous devez planifier, importer et mapper vos segments exportés dans [!DNL Adobe Campaign] à l’aide de workflows [!DNL Campaign]. Voir [Configuration d’un import récurrent](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=fr) dans [!DNL Adobe Campaign Classic] documentation et [À propos des activités de gestion des données](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=fr) dans [!DNL Adobe Campaign Standard] documentation.
+>* Vous devez planifier, importer et mapper vos segments exportés dans [!DNL Adobe Campaign] à l’aide de workflows [!DNL Campaign]. Voir [Configuration d’un import récurrent](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=fr) dans [!DNL Adobe Campaign Classic] documentation et [À propos des activités de gestion des données](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) dans [!DNL Adobe Campaign Standard] documentation.
 >* La méthode préférée pour envoyer des données à [!DNL Adobe Campaign] est via [!DNL Amazon S3] ou [!DNL Azure Blob].
 
 Après la connexion de [!DNL Experience Platform] à votre stockage [!DNL Amazon S3] ou [!DNL Azure Blob], vous devez configurer l’importation des données depuis l’emplacement de stockage vers [!DNL Adobe Campaign]. Pour découvrir comment y parvenir, consultez les pages de documentation [!DNL Adobe Campaign] suivantes :
 
 * [Prise en main de l’import et de l’export de données](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=fr) et [Chargement de données (fichier)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=fr) dans la documentation de [!DNL Adobe Campaign Classic].
-* [Prise en main des processus et de la gestion des données](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=fr) et [Chargement de fichier](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=fr) dans la documentation de [!DNL Adobe Campaign Standard].
+* [Prise en main des processus et de la gestion des données](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) et [Chargement de fichier](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) dans la documentation de [!DNL Adobe Campaign Standard].
