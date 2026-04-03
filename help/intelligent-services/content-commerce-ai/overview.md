@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation du balisage de contenu
 description: Le balisage de contenu est un ensemble de services d’IA qui vous permet d’extraire des fonctionnalités intelligentes de votre contenu, d’organiser, de rationaliser le flux de contenu et de fournir à vos clients des expériences plus percutantes et personnalisées.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
