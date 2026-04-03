@@ -2,7 +2,7 @@
 title: Guide de configuration des règles de liaison du graphique d’identités
 description: Découvrez les différents types d’implémentation que vous pouvez configurer à l’aide des règles de liaison de graphique d’identités.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -240,7 +240,7 @@ Vous ingérez un CRMID non haché (hors ligne) et un CRMID haché (en ligne). Il
 Configurez les paramètres suivants dans l’interface de simulation de graphique avant de simuler votre graphique.
 
 | Nom d’affichage | Symbole d’identité | Type d’identité | Unique par graphe | Priorité d’espace de noms |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -281,6 +281,7 @@ CRMID: Jane, CRMIDhash: aaaa
 ![Graphique d’appareil partagé avec une erreur dans le processus de hachage, conduisant à un CRMID haché non unique.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -339,7 +340,8 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
 ### Cas d’utilisation : vos données incluent trois espaces de noms uniques
 
@@ -396,7 +398,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 Les implémentations avancées impliquent des scénarios graphiques complexes et à plusieurs couches. Ces types d’implémentation incluent l’utilisation de la **priorité de l’espace de noms** afin d’identifier les liens corrects qui doivent être supprimés pour éviter la réduction du graphique.
 
-**Priorité des espaces de noms** est une métadonnée qui classe les espaces de noms en fonction de leur importance. Si un graphique contient deux identités, chacune ayant un espace de noms unique différent, Identity Service utilise la priorité de l’espace de noms pour décider quels liens supprimer. Pour plus d’informations, consultez la documentation [&#x200B; sur la priorité des espaces de noms &#x200B;](../identity-graph-linking-rules/namespace-priority.md).
+**Priorité des espaces de noms** est une métadonnée qui classe les espaces de noms en fonction de leur importance. Si un graphique contient deux identités, chacune ayant un espace de noms unique différent, Identity Service utilise la priorité de l’espace de noms pour décider quels liens supprimer. Pour plus d’informations, consultez la documentation [ sur la priorité des espaces de noms ](../identity-graph-linking-rules/namespace-priority.md).
 
 La priorité des espaces de noms joue un rôle essentiel dans les scénarios graphiques complexes. Les graphiques peuvent comporter plusieurs calques : un utilisateur final peut être associé à plusieurs ID de connexion qui peuvent être hachés. En outre, différents ECID peuvent être liés à différents ID de connexion. Pour vous assurer que le lien approprié, au niveau approprié, est supprimé, vos configurations de priorité d’espace de noms doivent être correctes.
 
