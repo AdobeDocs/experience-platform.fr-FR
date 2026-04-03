@@ -4,7 +4,7 @@ title: Prise en main de Real-Time Customer Data Platform
 description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre implémentation d’Adobe Real-Time Customer Data Platform.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 62%
@@ -64,7 +64,7 @@ Ce tutoriel comprend les étapes suivantes :
 
 Lorsque les clients consultent votre site pour la première fois, vous ignorez tout d’eux.
 
-![image](assets/luma-site.png)
+![Image](assets/luma-site.png)
 
 Lors de leur navigation, les données sont capturées en temps réel et envoyées non seulement à une suite de rapports dans Adobe Analytics, mais également directement à Adobe Experience Platform. À mesure que les données sont collectées, vous commencez à former une vue unique du consommateur, basée sur les données comportementales dans [!DNL Experience Platform's real-time customer profile].
 
@@ -88,7 +88,7 @@ Plus le client interagit avec le site web, plus la vue devient précise. Supposo
 
 Lorsqu’il se connecte, il s’identifie sous le nom de Sarah Rose.
 
-![image](assets/luma-login.png)
+![Image](assets/luma-login.png)
 
 Deux identités sont fusionnées :
 
@@ -111,7 +111,7 @@ Sarah bénéficie d’une expérience de page d’accueil personnalisée diffus�
 
 Elle voit le contenu pertinent, grâce à la personnalisation optimisée par Adobe Sensei dans Adobe Target, qui prend en compte ses achats précédents et son intérêt pour les vêtements et l’équipement de course à pied. Luma adapte également le contenu du catalogue pour hommes en fonction de l’équipement de course à pied masculin en fonction de sa dernière navigation.
 
-Plus bas sur la page, Sarah découvre les produits phares, ainsi que de nouvelles suggestions basées sur les derniers articles consultés.
+Plus bas sur la page, Sarah découvre les produits phares, ainsi que de nouvelles recommandations basées sur les derniers articles consultés.
 
 Ce contenu personnalisé permet à Sarah de trouver les articles qui l’intéressent rapidement. Cela augmente les conversions et offre une expérience client plus agréable.
 
@@ -129,7 +129,7 @@ Real-Time Customer Data Platform, optimisé par Adobe Experience Platform, est c
 
 L’équipe de Luma dispose de toutes les données comportementales et clients à un seul et même endroit.
 
-![image](assets/luma-dash.png)
+![Image](assets/luma-dash.png)
 
 Elle peut ingérer des données à partir de toutes les sources suivantes :
 
@@ -150,7 +150,7 @@ Par exemple, pour ingérer les données CRM de Luma, filtrez le catalogue par *C
 
 1. Autorisez la connexion.
 
-   ![image](assets/luma-source-auth.png)
+   ![Image](assets/luma-source-auth.png)
 
 1. Choisissez ce que vous souhaitez importer depuis une liste recommandée de tables XDM mappées au préalable.
 
@@ -169,7 +169,7 @@ Par exemple, pour ingérer les données CRM de Luma, filtrez le catalogue par *C
 
 1. Définissez un planning.
 
-   ![image](assets/luma-source-sched.png)
+   ![Image](assets/luma-source-sched.png)
 
 C’est fait. Vous venez d’ajouter [!DNL Microsoft CRM] en tant que source de données dans [!DNL Experience Platform].
 
@@ -240,7 +240,7 @@ Sélectionnez **[!UICONTROL Send to destinations]**.
 Dans Real-Time CDP, Luma peut agir de manière transparente sur ses audiences pour la personnalisation.\
 Nous voyons ici toutes les destinations disponibles auxquelles Luma peut envoyer cette destination, qu’il s’agisse de solutions Adobe ou de solutions autres qu’Adobe.
 
-![image](assets/luma-dest.png)
+![Image](assets/luma-dest.png)
 
 ### Sélection des destinations
 
