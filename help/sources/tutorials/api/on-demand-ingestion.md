@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;flow servic
 title: Créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 description: Découvrez comment créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 10%
@@ -16,13 +16,13 @@ Les exécutions de flux représentent une instance d’exécution de flux. Par e
 
 L’ingestion à la demande vous permet de créer une exécution de flux pour un flux de données donné. Cela permet à vos utilisateurs de créer une exécution de flux, en fonction de paramètres donnés, et de créer un cycle d’ingestion, sans jetons de service. La prise en charge de l’ingestion à la demande est disponible uniquement pour les sources par lots.
 
-Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’API [[!DNL Flow Service] .](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 
 >[!TIP]
 >
 >Toute nouvelle tentative d’exécution de flux ne traite que les fichiers dont la date et l’heure sont comprises dans la plage de l’exécution d’origine.
 
-## Commencer
+## Prise en main
 
 >[!NOTE]
 >
@@ -125,7 +125,8 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | This property displays a status summary for the flow run. | -->
+| `metrics` | This property displays a status summary for the flow run. | 
+-->
 
 ## Créer une exécution de flux pour une source basée sur des fichiers
 
