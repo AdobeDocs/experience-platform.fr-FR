@@ -1,38 +1,38 @@
 ---
-title: Gestion des valeurs proposées dans l’API
+title: Gestion des valeurs suggérées dans l’API
 description: Découvrez comment ajouter des valeurs suggérées à un champ de chaîne dans l’API Schema Registry.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
 
 ---
 
-# Gestion des valeurs suggérées dans l’API
+# Gérer les valeurs suggérées dans l’API
 
-Pour tout champ de chaîne dans le modèle de données d’expérience (XDM), vous pouvez définir une **énumération** qui limite les valeurs que le champ peut ingérer à un ensemble prédéfini. Si vous tentez d’ingérer des données dans un champ d’énumération et que la valeur ne correspond à aucune de celles définies dans sa configuration, l’ingestion sera refusée.
+Pour tout champ de chaîne du modèle de données d’expérience (XDM), vous pouvez définir une **énumération** qui limite les valeurs que le champ peut ingérer à un ensemble prédéfini. Si vous tentez d’ingérer des données dans un champ d’énumération et que la valeur ne correspond à aucun de ceux définis dans sa configuration, l’ingestion est refusée.
 
-Contrairement aux énumérations, l’ajout de **valeurs suggérées** à un champ de chaîne ne limite pas les valeurs qu’il peut ingérer. Au lieu de cela, les valeurs suggérées affectent les valeurs prédéfinies disponibles dans l’ [interface utilisateur de segmentation](../../segmentation/ui/overview.md) lors de l’inclusion du champ de chaîne en tant qu’attribut.
+Contrairement aux énumérations, l’ajout de **valeurs suggérées** à un champ de chaîne ne limite pas les valeurs qu’il peut ingérer. Au lieu de cela, les valeurs suggérées affectent les valeurs prédéfinies disponibles dans l’[interface utilisateur de segmentation](../../segmentation/ui/overview.md) lors de l’inclusion du champ de chaîne comme attribut.
 
 >[!NOTE]
 >
->Il existe un délai d’environ cinq minutes pour que les valeurs suggérées d’un champ soient répercutées dans l’interface utilisateur de segmentation.
+>Il existe un délai d’environ cinq minutes pour que les valeurs suggérées mises à jour d’un champ soient reflétées dans l’interface utilisateur de segmentation.
 
-Ce guide explique comment gérer les valeurs suggérées à l’aide de l’ [API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Pour savoir comment procéder dans l’interface utilisateur de Adobe Experience Platform, consultez le [guide de l’interface utilisateur sur les énumérations et les valeurs suggérées](../ui/fields/enum.md).
+Ce guide explique comment gérer les valeurs suggérées à l’aide de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Pour savoir comment le faire dans l’interface utilisateur de Adobe Experience Platform, consultez le guide de l’interface utilisateur [ sur les énumérations et les valeurs suggérées](../ui/fields/enum.md).
 
 ## Conditions préalables
 
-Ce guide suppose que vous connaissez les éléments de la composition des schémas dans XDM et que vous savez utiliser l’API Schema Registry pour créer et modifier des ressources XDM. Si vous avez besoin d’une introduction, reportez-vous à la documentation suivante :
+Ce guide suppose que vous connaissez les éléments de composition de schémas dans XDM et que vous savez comment utiliser l’API Schema Registry pour créer et modifier des ressources XDM. Reportez-vous à la documentation suivante si vous avez besoin d’une introduction :
 
 * [Principes de base de la composition des schémas](../schema/composition.md)
 * [Guide du registre des schémas API](../api/overview.md)
 
-Il est également vivement recommandé de consulter les [règles d’évolution pour les énumérations et les valeurs suggérées](../ui/fields/enum.md#evolution) si vous mettez à jour des champs existants. Si vous gérez des valeurs suggérées pour les schémas qui participent à une union, consultez les [&#x200B; règles de fusion des énumérations et des valeurs suggérées](../ui/fields/enum.md#merging).
+Il est également vivement recommandé de consulter les [ règles d’évolution pour les énumérations et les valeurs suggérées ](../ui/fields/enum.md#evolution) si vous mettez à jour des champs existants. Si vous gérez les valeurs suggérées pour les schémas qui participent à une union, reportez-vous à la section [règles de fusion des énumérations et des valeurs suggérées](../ui/fields/enum.md#merging).
 
 ## Composition
 
-Dans l’API, les valeurs contraintes d’un champ **enum** sont représentées par un tableau `enum`, tandis qu’un objet `meta:enum` fournit des noms d’affichage conviviaux pour ces valeurs :
+Dans l’API , les valeurs contraintes d’un champ **enum** sont représentées par un tableau `enum`, tandis qu’un objet `meta:enum` fournit des noms d’affichage conviviaux pour ces valeurs :
 
 ```json
 "exampleStringField": {
@@ -51,9 +51,9 @@ Dans l’API, les valeurs contraintes d’un champ **enum** sont représentées 
 }
 ```
 
-Pour les champs d’énumération, le registre des schémas ne permet pas d’étendre `meta:enum` au-delà des valeurs fournies sous `enum`, car toute tentative d’ingestion de valeurs de chaîne en dehors de ces contraintes ne serait pas validée.
+Pour les champs d’énumération, le registre des schémas ne permet pas d’étendre les `meta:enum` au-delà des valeurs fournies sous `enum`, car toute tentative d’ingestion de valeurs de chaîne en dehors de ces contraintes ne passerait pas la validation.
 
-Vous pouvez également définir un champ de chaîne qui ne contient pas de tableau `enum` et n’utilise que l’objet `meta:enum` pour représenter les **valeurs suggérées** :
+Vous pouvez également définir un champ de chaîne qui ne contient pas de tableau `enum` et qui utilise uniquement l’objet `meta:enum` pour indiquer les **valeurs suggérées** :
 
 ```json
 "exampleStringField": {
@@ -67,21 +67,23 @@ Vous pouvez également définir un champ de chaîne qui ne contient pas de table
 }
 ```
 
-Comme la chaîne ne dispose pas d’un tableau `enum` pour définir des contraintes, sa propriété `meta:enum` peut être étendue pour inclure de nouvelles valeurs.
+Étant donné que la chaîne ne dispose pas d’un tableau `enum` pour définir des contraintes, sa propriété `meta:enum` peut être étendue pour inclure de nouvelles valeurs.
 
-<!-- ## Manage suggested values for standard fields
+<!-- 
+## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). 
+-->
 
-## Ajout de valeurs suggérées à un champ standard {#add-suggested-standard}
+## Ajouter les valeurs suggérées à un champ standard {#add-suggested-standard}
 
-Pour étendre le `meta:enum` d’un champ de chaîne standard, vous pouvez créer un [descripteur de nom convivial](../api/descriptors.md#friendly-name) pour le champ en question dans un schéma particulier.
+Pour étendre la `meta:enum` d’un champ de chaîne standard, vous pouvez créer un [descripteur de nom convivial](../api/descriptors.md#friendly-name) pour le champ en question dans un schéma particulier.
 
 >[!NOTE]
 >
->Les valeurs proposées pour les champs de chaîne ne peuvent être ajoutées qu’au niveau du schéma. En d’autres termes, étendre le `meta:enum` d’un champ standard dans un schéma n’affecte pas les autres schémas qui utilisent le même champ standard.
+>Les valeurs suggérées pour les champs de chaîne ne peuvent être ajoutées qu’au niveau du schéma. En d’autres termes, l’extension de la `meta:enum` d’un champ standard dans un schéma n’affecte pas les autres schémas qui utilisent le même champ standard.
 
-La requête suivante ajoute des valeurs suggérées au champ `eventType` standard (fourni par la [classe XDM ExperienceEvent](../classes/experienceevent.md)) pour le schéma identifié sous `sourceSchema` :
+La requête suivante ajoute les valeurs suggérées au champ de `eventType` standard (fourni par la classe [XDM ExperienceEvent](../classes/experienceevent.md)) pour le schéma identifié sous `sourceSchema` :
 
 ```curl
 curl -X POST \
@@ -112,7 +114,7 @@ curl -X POST \
       }'
 ```
 
-Après l’application du descripteur, le registre des schémas répond avec ce qui suit lors de la récupération du schéma (réponse tronquée pour l’espace) :
+Après l’application du descripteur, le registre des schémas répond avec les éléments suivants lors de la récupération du schéma (réponse tronquée pour des raisons d’espace) :
 
 ```json
 {
@@ -134,7 +136,7 @@ Après l’application du descripteur, le registre des schémas répond avec ce 
 
 >[!NOTE]
 >
->Si le champ standard contient déjà des valeurs sous `meta:enum`, les nouvelles valeurs du descripteur ne remplacent pas les champs existants et sont ajoutées à la place :
+>Si le champ standard contient déjà des valeurs sous `meta:enum`, les nouvelles valeurs du descripteur ne remplacent pas les champs existants et sont ajoutées sur à la place :
 >
 >```json
 >"standardField": {
@@ -150,7 +152,8 @@ Après l’application du descripteur, le registre des schémas répond avec ce 
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+<!-- 
+### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -210,21 +213,22 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+``` 
+-->
 
-## Gestion des valeurs proposées pour un champ personnalisé {#suggested-custom}
+## Gestion des valeurs suggérées pour un champ personnalisé {#suggested-custom}
 
-Pour gérer l’ `meta:enum` d’un champ personnalisé, vous pouvez mettre à jour la classe parent, le groupe de champs ou le type de données du champ par le biais d’une requête de PATCH.
+Pour gérer la `meta:enum` d’un champ personnalisé, vous pouvez mettre à jour la classe parente, le groupe de champs ou le type de données du champ par le biais d’une requête PATCH.
 
 >[!WARNING]
 >
->Contrairement aux champs standard, la mise à jour de `meta:enum` d’un champ personnalisé affecte tous les autres schémas qui utilisent ce champ. Si vous ne souhaitez pas que les modifications se propagent entre les schémas, envisagez plutôt de créer une ressource personnalisée :
+>Contrairement aux champs standard, la mise à jour de la `meta:enum` d’un champ personnalisé affecte tous les autres schémas qui utilisent ce champ. Si vous ne souhaitez pas que les modifications se propagent entre les schémas, pensez à créer une nouvelle ressource personnalisée :
 >
 >* [Créer une classe personnalisée](../api/classes.md#create)
->* [Créer un groupe de champs personnalisé](../api/field-groups.md#create)
->* [&#x200B; Créez un type de données personnalisé &#x200B;](../api/data-types.md#create)
+>* [Créer un groupe de champs personnalisés](../api/field-groups.md#create)
+>* [Créer un type de données personnalisé](../api/data-types.md#create)
 
-La requête suivante met à jour le `meta:enum` d’un champ &quot;niveau de fidélité&quot; fourni par un type de données personnalisé :
+La requête suivante met à jour la `meta:enum` d’un champ « niveau de fidélité » fourni par un type de données personnalisé :
 
 ```curl
 curl -X PATCH \
@@ -249,7 +253,7 @@ curl -X PATCH \
       ]'
 ```
 
-Après avoir appliqué la modification, le registre des schémas répond avec ce qui suit lors de la récupération du schéma (réponse tronquée pour l’espace) :
+Après application de la modification, le registre des schémas répond avec les éléments suivants lors de la récupération du schéma (réponse tronquée pour des raisons d’espace) :
 
 ```json
 {
@@ -274,4 +278,4 @@ Après avoir appliqué la modification, le registre des schémas répond avec ce
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les valeurs suggérées pour les champs de chaîne dans l’API Schema Registry. Pour plus d’informations sur la création de différents types de champs, consultez le guide sur la [définition de champs personnalisés dans l’API](./custom-fields-api.md) .
+Ce guide explique comment gérer les valeurs suggérées pour les champs de chaîne dans l’API Schema Registry. Pour plus d’informations sur la création de différents types de champs[ consultez le guide sur la ](./custom-fields-api.md)définition de champs personnalisés dans l’API).
