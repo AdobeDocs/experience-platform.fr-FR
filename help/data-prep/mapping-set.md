@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des jeux de mappages
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '979'
+ht-degree: 93%
 
 ---
 
