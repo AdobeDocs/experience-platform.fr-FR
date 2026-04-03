@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de dépannage du service d’identités
 description: Ce document fournit des réponses aux questions fréquentes sur le service d’identités d’Adobe Experience Platform, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 96%
@@ -17,7 +17,7 @@ Ce document fournit des réponses aux questions fréquentes sur Adobe Experienc
 
 Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences digitales percutantes en temps réel. Pour plus d’informations, voir la [Présentation du service d’identités](./home.md).
 
-## FAQ
+## Questions fréquentes
 
 Voici une liste de réponses aux questions fréquentes sur [!DNL Identity Service].
 
@@ -49,7 +49,7 @@ Pour savoir comment étiqueter un champ XDM en tant que champ d’identité à l
 
 ## Dans quels cas un champ ne doit-il pas être étiqueté comme champ d’identité ?
 
-Les champs d’identité doivent être réservés aux valeurs propres à chaque individu. Prenons l’exemple d’un jeu de données pour un programme de fidélisation des clients. Le champ « niveau de fidélité » (or, argent, bronze) n’est pas un champ d’identité utile, contrairement à l’identifiant de fidélité, qui est une valeur unique.
+Les champs d’identité doivent être réservés aux valeurs propres à chaque individu. Prenons l’exemple d’un jeu de données pour un programme de fidélisation de la clientèle. Le champ « niveau de fidélité » (or, argent, bronze) n’est pas un champ d’identité utile, contrairement à l’identifiant de fidélité, qui est une valeur unique.
 
 Les champs tels que les codes postaux et les adresses IP ne doivent pas être étiquetés comme champs d’identité pour les individus, car ces valeurs peuvent s’appliquer à plusieurs personnes. Ces types de champs doivent être étiquetés comme champs d’identité uniquement pour les stratégies marketing au niveau des foyers.
 
@@ -71,13 +71,13 @@ Les champs d’identité doivent être associés à un espace de noms d’identi
 
 Pour obtenir des instructions détaillées sur la définition d’un espace de noms lors de la création d’un descripteur d’identité à l’aide de l’API, reportez-vous à la section relative à la [création d’un descripteur](../xdm/tutorials/create-schema-ui.md) dans le guide de développement du registre des schémas. Pour marquer un champ de schéma comme identité dans l’interface utilisateur, suivez les étapes du [tutoriel de l’éditeur de schéma](../xdm/tutorials/create-schema-api.md).
 
-## Quels sont les espaces de noms d’identité standards fournis par Experience Platform ? {#standard-namespaces}
+## Quels sont les espaces de noms d’identité standard fournis par Experience Platform ? {#standard-namespaces}
 
 Les espaces de noms d’identité standard sont des espaces de noms disponibles pour toutes les organisations. Pour obtenir une liste des espaces de noms standard disponibles, consultez la [présentation des espaces de noms d’identité](./features/namespaces.md).
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 
-À l’aide de l’[API Service d’identités](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Service d’identités.
+À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
 
 ## Comment créer un espace de noms personnalisé pour mon organisation ?
 
@@ -96,7 +96,8 @@ Le service d’identités dispose d’espaces de noms standard pour prendre en c
 Lorsque vous envoyez des données personnelles identifiables hachées au service d’identités, vous devez utiliser la même méthode de chiffrement pour vos jeux de données. Cela permet de s’assurer qu’une valeur d’identité commune à plusieurs jeux de données génère les mêmes valeurs hachées, et que ces valeurs sont en mesure d’être correctement mises en correspondance et liées dans le graphique d’identités.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -111,13 +112,14 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## Pourquoi ne puis-je pas accéder à la page de graphique d’identité ou aux API ?
 
 Votre administrateur Experience Platform doit vous fournir l’autorisation `view-identity-graph` pour que vous puissiez afficher les données du graphique d’identité. Sans cette autorisation, vous recevrez un message de refus d’autorisation sur la page de la visionneuse de graphiques d’identité et lors de l’appel aux API Experience Platform. Pour plus d’informations sur les autorisations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
-## Dépannage
+## Résolution des problèmes
 
 La section suivante fournit des suggestions en matière de dépannage pour les codes d’erreur spécifiques et les comportements inattendus que vous pouvez rencontrer lors de l’utilisation de l’API [!DNL Identity Service].
 
