@@ -3,7 +3,7 @@ title: Point d’entrée de l’API Audiences
 description: Utilisez le point d’entrée audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour des audiences par programmation pour votre organisation.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 Une audience est un ensemble de personnes qui partagent des comportements et/ou des caractéristiques similaires. Ces collections de personnes peuvent être générées à l’aide de Adobe Experience Platform ou à partir de sources externes. Vous pouvez utiliser le point d’entrée `/audiences` dans l’API Segmentation, ce qui vous permet de récupérer, créer, mettre à jour et supprimer des audiences par programmation.
 
-## Commencer
+## Prise en main
 
 Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
@@ -183,7 +183,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
 ```
 
 | Propriété | Type d’audience | Description |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Les deux | Identifiant en lecture seule généré par le système pour l’audience. |
 | `audienceId` | Les deux | Si l’audience est une audience générée par Platform, il s’agit de la même valeur que la `id`. Si l’audience est générée en externe, cette valeur est fournie par le client. |
 | `schema` | Les deux | Schéma du modèle de données d’expérience (XDM) de l’audience. |
@@ -191,9 +191,9 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
 | `sandbox` | Les deux | Informations sur le sandbox auquel appartient l’audience. Vous trouverez plus d’informations sur les sandbox dans la [présentation des sandbox](../../sandboxes/home.md). |
 | `name` | Les deux | Nom de l’audience. |
 | `description` | Les deux | Description de l’audience. |
-| `expression` | Généré par Platform | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [&#128279;](../pql/overview.md). |
+| `expression` | Généré par Platform | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [](../pql/overview.md). |
 | `mergePolicyId` | Généré par Platform | L’identifiant de la politique de fusion à laquelle l’audience est associée. Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Généré par Platform | Indique comment l’audience sera évaluée. Les méthodes d’évaluation possibles sont par lots, synchrones (diffusion en continu) ou continues (Edge). Vous trouverez plus d’informations sur les méthodes d’évaluation dans la [&#x200B; présentation de la segmentation &#x200B;](../home.md) |
+| `evaluationInfo` | Généré par Platform | Indique comment l’audience sera évaluée. Les méthodes d’évaluation possibles sont par lots, synchrones (diffusion en continu) ou continues (Edge). Vous trouverez plus d’informations sur les méthodes d’évaluation dans la [ présentation de la segmentation ](../home.md) |
 | `dependents` | Les deux | Tableau d’ID d’audience qui dépendent de l’audience actuelle. Cette option est utile si vous créez une audience qui est un segment d’un segment. |
 | `dependencies` | Les deux | Tableau d’identifiants d’audience dont dépend l’audience. Cette option est utile si vous créez une audience qui est un segment d’un segment. |
 | `type` | Les deux | Champ généré par le système qui indique si l’audience est générée par Platform ou est une audience générée en externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
@@ -205,7 +205,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
 
 +++
 
-## Création d’une audience {#create}
+## Créer une nouvelle audience {#create}
 
 Vous pouvez créer une audience en effectuant une requête POST vers le point d’entrée `/audiences`.
 
@@ -246,11 +246,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Propriété | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | Nom de l’audience. |
 | `description` | Description de l’audience. |
 | `type` | Champ qui indique si l’audience est générée par Platform ou si elle est générée de manière externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
-| `expression` | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [&#128279;](../pql/overview.md). |
+| `expression` | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [](../pql/overview.md). |
 | `schema` | Schéma du modèle de données d’expérience (XDM) de l’audience. |
 | `labels` | Utilisation des données au niveau de l’objet et libellés de contrôle d’accès basés sur les attributs pertinents pour l’audience. |
 
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Paramètre | Description |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | Identifiant de l’audience que vous essayez de récupérer. Notez qu’il s’agit du champ `id` et **’est pas** le champ `audienceId`. |
 
 **Requête**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Propriété | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | Identifiant de l’audience. Pour les audiences générées en externe, cette valeur peut être fournie par l’utilisateur ou l’utilisatrice. |
 | `name` | Nom de l’audience. |
 | `namespace` | Espace de noms de l’audience. |
@@ -767,4 +767,4 @@ Une réponse réussie renvoie un état HTTP 207 avec des informations sur les au
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des audiences à l’aide de l’API Adobe Experience Platform. Pour plus d’informations sur la gestion des audiences à l’aide de l’interface utilisateur, consultez le [&#x200B; guide de l’interface utilisateur de segmentation](../ui/overview.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des audiences à l’aide de l’API Adobe Experience Platform. Pour plus d’informations sur la gestion des audiences à l’aide de l’interface utilisateur, consultez le [ guide de l’interface utilisateur de segmentation](../ui/overview.md).
