@@ -47,7 +47,7 @@ Pour vous guider, attendez que la durée de vie maximale du cookie AMCV soit éc
 
 ## Mises à jour des caractéristiques Audience Manager
 
-Lorsque des données au format XDM sont envoyées dans Audience Manager pendant la migration, ces données doivent être converties en signaux. Vos caractéristiques doivent être mises à jour pour refléter les nouvelles clés fournies par XDM. Ce processus est facilité par l’utilisation de l’outil [ BAAAM ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management).
+Lorsque des données au format XDM sont envoyées dans Audience Manager pendant la migration, ces données doivent être converties en signaux. Vos caractéristiques doivent être mises à jour pour refléter les nouvelles clés fournies par XDM. Ce processus est facilité par l’utilisation de l’outil [&#x200B; BAAAM &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management).
 
 ## Migration d’ID tiers {#third-party-id}
 
@@ -85,4 +85,4 @@ alloy("configure", {
 
 ## Activer la migration des identifiants visiteur à l’aide de l’extension de balise Web SDK
 
-Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [ Paramètres de configuration des identités ](/help/tags/extensions/client/web-sdk/configure/identity.md).
+Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [&#x200B; Paramètres de configuration des identités &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md).

@@ -65,7 +65,7 @@ Avant d’inclure une valeur dans `identityMap`, préparez-la selon le format at
 | **Téléphone (E.164)** | Formatez le nombre en [E.164](https://en.wikipedia.org/wiki/E.164) : un `+` de début, l&#39;indicatif du pays et le numéro de l&#39;abonné sans espaces ni ponctuation. | `+15551234567` |
 | **FPID** | Générez une chaîne [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Consultez [Identifiants d’appareil propriétaires](./fpid.md) pour connaître les exigences de génération. | `123e4567-e89b-42d3-9456-426614174000` |
 
-Pour obtenir la liste complète des espaces de noms standard et leurs définitions, voir [ Présentation des espaces de noms d’identité ](/help/identity-service/features/namespaces.md#standard).
+Pour obtenir la liste complète des espaces de noms standard et leurs définitions, voir [&#x200B; Présentation des espaces de noms d’identité &#x200B;](/help/identity-service/features/namespaces.md#standard).
 
 >[!TIP]
 >
@@ -269,4 +269,4 @@ Si votre implémentation utilise des [règles de liaison de graphiques d’ident
 
 >[!NOTE]
 >
->Le `identityMap` n’est envoyé que lorsque le SDK Web adresse une requête à Edge Network, qui est validée par l’état de consentement du visiteur. Si votre implémentation utilise `defaultConsent: "pending"`, les identités ne sont pas envoyées tant que le consentement n’a pas été accordé. Voir [ Consentement et identité ](./consent.md) pour plus d’informations.
+>Le `identityMap` n’est envoyé que lorsque le SDK Web adresse une requête à Edge Network, qui est validée par l’état de consentement du visiteur. Si votre implémentation utilise `defaultConsent: "pending"`, les identités ne sont pas envoyées tant que le consentement n’a pas été accordé. Voir [&#x200B; Consentement et identité &#x200B;](./consent.md) pour plus d’informations.
