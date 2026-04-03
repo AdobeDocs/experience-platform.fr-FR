@@ -4,7 +4,7 @@ title: Point d’entrée de l’API des tâches de segmentation
 description: Le point d’entrée des tâches de segment de l’API Segmentation Service de Adobe Experience Platform vous permet de gérer par programmation les tâches de segment pour votre organisation.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 18%
@@ -21,7 +21,7 @@ Ce guide fournit des informations pour vous aider à mieux comprendre les tâche
 
 Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
-## Obtention d’une liste de tâches de segmentation {#retrieve-list}
+## Récupération d’une liste de tâches de segmentation {#retrieve-list}
 
 Vous pouvez récupérer une liste de toutes les tâches de segmentation pour votre organisation en envoyant une requête GET au point d’entrée `/segment/jobs`.
 
@@ -358,7 +358,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | Propriété | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | Valeur `id` de la tâche de segmentation que vous souhaitez récupérer. |
 
 **Requête**
@@ -583,7 +583,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | Propriété | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | Valeur `id` de la tâche de segmentation que vous souhaitez supprimer. |
 
 **Requête**
