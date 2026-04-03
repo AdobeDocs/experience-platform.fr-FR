@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api jeu de données;gestion de lʼutilisation des données;api utilisation des données
 solution: Experience Platform
-title: Gestion des étiquettes dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
-description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
+title: Gestion des libellés dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
+description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des libellés dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 91%
 
 ---
 
-# Gestion des étiquettes dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
+# Gestion des libellés dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 
-[[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
+[[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) vous permet dʼappliquer et de modifier des libellés dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
 
 >[!IMPORTANT]
 >
 >L’application de libellés au niveau du jeu de données est uniquement prise en charge pour les cas d’utilisation de la gouvernance des données. Si vous essayez de créer des politiques d’accès pour les données, vous devez [appliquer des libellés au schéma](../../xdm/tutorials/labels.md) sur lequel le jeu de données est basé. Consultez la présentation du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) pour plus d’informations.
 
-Ce document explique la gestion des étiquettes pour les jeux de données et les champs à lʼaide de [!DNL Dataset Service API]. Pour obtenir des instructions sur la gestion des étiquettes dʼutilisation des données elles-mêmes à lʼaide dʼappels API, consultez le [guide de point d’entrée des étiquettes](../api/labels.md) pour [!DNL Policy Service API].
+Ce document explique la gestion des libellés pour les jeux de données et les champs à lʼaide de [!DNL Dataset Service API]. Pour obtenir des instructions sur la gestion des libellés dʼutilisation des données elles-mêmes à lʼaide dʼappels API, consultez le [guide de point d’entrée des étiquettes](../api/labels.md) pour [!DNL Policy Service API].
 
 ## Prise en main
 
@@ -27,9 +27,9 @@ Avant de lire ce guide, suivez les étapes décrites dans la [section Prise en m
 
 Pour réaliser des appels vers les points d’entrée décrits dans ce document, vous devez disposer de la valeur `id` unique pour un jeu de données spécifique. Si vous ne possédez pas cette valeur, consultez le guide qui [répertorie les objets de Catalogue](../../catalog/api/list-objects.md) afin de trouver les identifiants de vos jeux de données existants.
 
-## Recherche dʼétiquettes pour un jeu de données {#look-up}
+## Recherche de libellés pour un jeu de données {#look-up}
 
-Vous pouvez rechercher les étiquettes dʼutilisation des données qui ont été appliquées à un jeu de données existant en envoyant une requête GET à lʼAPI [!DNL Dataset Service].
+Vous pouvez rechercher les libellés dʼutilisation des données qui ont été appliqués à un jeu de données existant en envoyant une requête GET à lʼAPI [!DNL Dataset Service].
 
 **Format d’API**
 
@@ -39,7 +39,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Valeur `id` unique du jeu de données dont vous souhaitez rechercher les étiquettes. |
+| `{DATASET_ID}` | Valeur `id` unique du jeu de données dont vous souhaitez rechercher les libellés. |
 
 **Requête**
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les étiquettes dʼutilisation des données qui ont été appliquées au jeu de données.
+Une réponse réussie renvoie les libellés dʼutilisation des données qui ont été appliqués au jeu de données.
 
 ```json
 {
@@ -77,8 +77,8 @@ Une réponse réussie renvoie les étiquettes dʼutilisation des données qui on
 
 | Propriété | Description |
 | --- | --- |
-| `labels` | Liste dʼétiquettes dʼutilisation des données qui ont été appliquées au jeu de données. |
-| `optionalLabels` | Liste de champs individuels au sein du jeu de données auxquels sont appliquées des étiquettes dʼutilisation de données. |
+| `labels` | Liste de libellés dʼutilisation des données qui ont été appliqués au jeu de données. |
+| `optionalLabels` | Liste de champs individuels au sein du jeu de données auxquels sont appliquées des libellés dʼutilisation de données. |
 
 ## Appliquer des libellés à un jeu de données {#apply}
 
@@ -93,7 +93,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Valeur `id` unique du jeu de données pour lequel vous créez des étiquettes. |
+| `{DATASET_ID}` | Valeur `id` unique du jeu de données pour lequel vous créez des libellés. |
 
 **Requête**
 
@@ -105,7 +105,7 @@ Lors dʼappels API mettant à jour les libellés existants dʼun jeu de données
 >
 >Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais dʼune requête PUT, qui ne nécessite pas d’en-tête `If-Match`. Une fois que des libellés ont été ajoutés à un jeu de données, la valeur de `etag` la plus récente est requise pour mettre à jour ou supprimer les libellés plus tard<br>Avant d’exécuter la méthode PUT, vous devez effectuer une requête GET sur les libellés du jeu de données. Veillez à ne mettre à jour que les champs spécifiques destinés à être modifiés dans la requête, en laissant le reste inchangé. En outre, assurez-vous que l’appel PUT conserve les mêmes entités parentes que l’appel GET. Toute incohérence entraînerait une erreur pour le client.
 
-Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure. 
+Pour récupérer la version la plus récente de lʼentité libellé-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure. 
 
 ```shell
 curl -X POST \
@@ -143,7 +143,7 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 
 >[!IMPORTANT]
 >
->L’utilisation de la propriété `optionalLabels` dans les requêtes POST a été abandonnée. Il n’est plus possible d’ajouter des étiquettes de données aux champs du jeu de données. L’opération POST renvoie une erreur si une valeur `optionalLabel` est présente. Cependant, vous pouvez supprimer des libellés de champs individuels à l’aide d’une requête PUT et de la propriété `optionalLabels`. Pour plus d’informations, consultez la section consacrée à la [suppression de libellés d’un jeu de données](#remove).
+>L’utilisation de la propriété `optionalLabels` dans les requêtes POST a été abandonnée. Il n’est plus possible d’ajouter des libellés de données aux champs du jeu de données. L’opération POST renvoie une erreur si une valeur `optionalLabel` est présente. Cependant, vous pouvez supprimer des libellés de champs individuels à l’aide d’une requête PUT et de la propriété `optionalLabels`. Pour plus d’informations, consultez la section consacrée à la [suppression de libellés d’un jeu de données](#remove).
 
 ```json
 {
@@ -163,7 +163,7 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 } 
 ```
 
-## Suppression des étiquettes dʼun jeu de données {#remove}
+## Suppression des libellés dʼun jeu de données {#remove}
 
 Pour supprimer des libellés du champ précédemment appliqués, mettez à jour la ou les valeurs `optionalLabels` existantes avec un sous-ensemble des libellés du champ existants ou une liste vide pour les supprimer entièrement. Envoyez une requête PUT à l’API [!DNL Dataset Service] pour mettre à jour ou supprimer les libellés précédemment appliqués.
 
@@ -179,11 +179,11 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Valeur `id` unique du jeu de données pour lequel vous créez des étiquettes. |
+| `{DATASET_ID}` | Valeur `id` unique du jeu de données pour lequel vous créez des libellés. |
 
 **Requête**
 
-Dans le jeu de données ci-dessous sur lequel l’opération PUT est appliquée, le paramètre optionalLabel possède la valeur C1 dans le champ propriétés/personne/propriétés/addresse et le paramètre optionalLabels possède les valeurs C1 et C2 dans le champ /propriétés/personne/propriétés/nom/propriétés/NomComplet. Suite à l’opération PUT, le premier champ n’a pas de libellé (le libellé C1 a été supprimé) et le second champ n’a qu’un libellé C1 (le libellé C2 a été supprimé).
+Dans le jeu de données ci-dessous sur lequel l’opération PUT est appliquée, le paramètre optionalLabel possède la valeur C1 dans le champ propriétés/personne/propriétés/adresse et le paramètre optionalLabels possède les valeurs C1 et C2 dans le champ /propriétés/personne/propriétés/nom/propriétés/NomComplet. Suite à l’opération PUT, le premier champ n’a pas de libellé (le libellé C1 a été supprimé) et le second champ n’a qu’un libellé C1 (le libellé C2 a été supprimé).
 
 Dans l’exemple de scénario ci-dessous, une requête PUT est envoyée pour supprimer les libellés ajoutés à des champs individuels. Avant que la demande ne soit effectuée, le champ `fullName` disposait des libellés `C1` et `C2` et le champ `address` possédait déjà un libellé `C1`. La requête PUT remplace les libellés `C1, C2` existants du champ `fullName` par un libellé `C1` à l’aide du paramètre `optionalLabels.labels`. La requête remplace également le libellé `C1` du champ `address` par un ensemble vide de libellés de champ.
 
