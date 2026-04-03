@@ -34,7 +34,7 @@ Le tableau suivant présente l’effet combiné de la `defaultConsent` et de la 
 
 >[!NOTE]
 >
->Les cookies d’identité et de consentement sont définis même lorsqu’un visiteur opt-out. Ces cookies sont nécessaires pour respecter les préférences de collecte de données du visiteur. Consultez [Cookies Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) pour obtenir la liste complète des cookies définis par Web SDK.
+>Les cookies d’identité et de consentement sont définis même lorsqu’un visiteur opt-out. Ces cookies sont nécessaires pour respecter les préférences de collecte de données du visiteur. Consultez [Cookies Web SDK](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk) pour obtenir la liste complète des cookies définis par Web SDK.
 
 Lorsqu’un visiteur accorde à nouveau son consentement après l’avoir précédemment révoqué (en appelant `setConsent` avec `"general": "in"` après `"general": "out"`), le SDK Web reprend l’envoi des événements et utilise l’ECID existant du cookie s’il n’a pas expiré. L’identité du visiteur est conservée.
 
