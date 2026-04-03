@@ -2,7 +2,7 @@
 description: Cette page illustre comment l’appel API est utilisé pour supprimer une configuration de serveur de destination existante avec Adobe Experience Platform Destination SDK.
 title: Suppression d’une configuration de serveur de destination
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 85%
@@ -50,7 +50,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Requête
++++ Requête
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -60,9 +60,13 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Réponse
++++
+
++++ Réponse
 
 Une réponse réussie renvoie le statut HTTP 200 avec une réponse HTTP vide.
+
++++
 
 ## Gestion des erreurs d’API {#error-handling}
 
