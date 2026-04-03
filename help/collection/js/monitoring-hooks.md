@@ -2,7 +2,7 @@
 title: Surveillance des hooks pour Adobe Experience Platform Web SDK
 description: Découvrez comment utiliser les hooks de surveillance fournis par Adobe Experience Platform Web SDK pour déboguer votre implémentation et capturer les journaux Web SDK.
 exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
@@ -151,7 +151,7 @@ onNetworkResponse(data) {
 | `data.body` | Chaîne | Corps de réponse au format chaîne. |
 | `data.parsedBody` | Objet | Objet contenant le corps de la réponse analysée. Si une erreur se produit lors de l’analyse du corps de la réponse, ce paramètre n’est pas défini. |
 | `data.status` | Chaîne | Code de réponse au format entier. |
-| `data.retriesAttempted` | Nombre entier | Nombre de reprises tentées lors de l’envoi de la requête. Zéro signifie que la requête a réussi au premier essai. |
+| `data.retriesAttempted` | Entier | Nombre de reprises tentées lors de l’envoi de la requête. Zéro signifie que la requête a réussi au premier essai. |
 
 ## `onNetworkError` {#onNetworkError}
 
