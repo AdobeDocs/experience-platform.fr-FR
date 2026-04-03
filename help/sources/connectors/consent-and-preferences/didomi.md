@@ -4,7 +4,7 @@ description: Découvrez comment connecter Didomi à Adobe Experience Platform à
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Suivez les étapes préalables décrites ci-dessous pour connecter votre compte 
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ### Configuration des autorisations sur Experience Platform
 
@@ -80,7 +80,7 @@ Pour créer un jeu de données, sélectionnez [!UICONTROL Datasets] dans le vole
 Pour garantir la compatibilité avec Experience Platform, votre webhook doit répondre aux exigences suivantes.
 
 | Champ | Description | Exemple |
-| --- | --- | --- | 
+| --- | --- | --- |
 | Secret client | Clé secrète associée à vos informations d’identification API Adobe. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
 | Clé API | Clé API publique utilisée pour authentifier les requêtes envoyées aux services Adobe. |  |
 | Type d&#39;octroi | Méthode par laquelle une application obtient un jeton d’accès du serveur d’autorisation. Définissez cette valeur sur `client_credentials`. | `client_credentials` |
@@ -94,7 +94,7 @@ Pour garantir la compatibilité avec Experience Platform, votre webhook doit ré
 Configurez ensuite les options suivantes pour votre [!DNL webhook].
 
 | Champ | Description | Valeur |
-| ---| --- | --- | 
+| ---| --- | --- |
 | En-têtes de requête | En-têtes personnalisés pour la [!DNL webhook]. Veillez à inclure le `x-adobe-flow-id` . Vous pouvez récupérer cette valeur une fois votre [flux de données créé](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url). | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | Aplatir | Cette propriété doit être vérifiée car elle garantit que les données [!DNL webhook] sont envoyées en tant qu’objet plat. | Activé |
 | Types d’événement | Sélectionnez le groupe spécifique d’événements [!DNL Didomi] (`event.*` ou `user.*`) qui doit déclencher la [!DNL webhook]. Utilisez `event.*` pour suivre les modifications de consentement ou de préférence, et `user.*` pour suivre les mises à jour du profil utilisateur. Cette sélection est nécessaire pour s’assurer que seuls les événements compatibles sont envoyés à Adobe. Adobe ne prend en charge qu’un seul schéma par flux de données. Par conséquent, la sélection des deux types d’événements peut provoquer des erreurs d’ingestion. | La liste des types d’événements pris en charge est la suivante : <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
