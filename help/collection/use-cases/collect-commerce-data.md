@@ -2,9 +2,9 @@
 title: Collectez des informations sur le commerce, les produits et les commandes à l’aide de Adobe Experience Platform Web SDK.
 description: Découvrez comment ajouter des données relatives à des produits ou à un panier à l’aide de Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 37%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 37%
 
 Si votre entreprise vend des produits ou des services, vous pouvez utiliser cette page comme guide sur la manière de suivre ces produits et services.
 
-Cette page utilise le groupe de champs Schéma XDM [Commerce](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md).
+Cette page utilise le groupe de champs Schéma XDM [](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md).
 
 Ce groupe de champs se compose de deux parties principales :
 
@@ -34,16 +34,16 @@ Cette section décrit les champs disponibles dans l’objet `commerce`.
 
 | Mesure | Recommandation | Description |
 |---|---|---|
-| [`cartAbandons`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcartabandons) | Facultative | Un panier n’est plus accessible ou ne peut plus être acheté par l’utilisateur. |
+| [`cartAbandons`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcartabandons) | Facultatif | Un panier n’est plus accessible ou ne peut plus être acheté par l’utilisateur. |
 | [`checkouts`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcheckouts) | Hautement recommandé | Un utilisateur ne recherche plus de produits mais est en train d’acheter un produit. |
 | [`productListAdds`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistadds) | Hautement recommandé | Un produit est ajouté à une liste. Veillez à définir le produit dans `productListItems` en même temps. |
-| [`productListOpens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistopens) | Facultative | Une liste de produits est créée. Par exemple, un nouveau panier est créé. |
+| [`productListOpens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistopens) | Facultatif | Une liste de produits est créée. Par exemple, un nouveau panier est créé. |
 | [`productListRemovals`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistremovals) | Hautement recommandé | Un produit est supprimé d’une liste de produits. |
-| [`productListReopens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistreopens) | Facultative | Une liste de produits est réactivée par l’utilisateur. Cette action se produit souvent dans les campagnes de remarketing. |
+| [`productListReopens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistreopens) | Facultatif | Une liste de produits est réactivée par l’utilisateur. Cette action se produit souvent dans les campagnes de remarketing. |
 | [`productListViews`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistviews) | Hautement recommandé | Une liste de produits est consultée. |
 | [`productViews`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductviews) | Hautement recommandé | Une vue d’un produit s’est produite. Veillez à définir le produit consulté dans `productListItems`. |
 | [`purchases`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmpurchases) | Hautement recommandé | Une commande est acceptée. Doit avoir une liste de produits. |
-| [`saveForLaters`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmsaveforlaters) | Facultative | Un produit est enregistré pour une utilisation ultérieure. |
+| [`saveForLaters`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmsaveforlaters) | Facultatif | Un produit est enregistré pour une utilisation ultérieure. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Cette section décrit les champs disponibles dans l’objet `commerce`.
 
 Développez la section ci-dessous pour afficher un exemple de commande Web SDK utilisant un champ de l’objet `commerce` .
 
-+++`productViews`
++++ productViews
 
 Un appel de `sendEvent` Web SDK de base définissant le champ `productViews` sur `1` :
 
@@ -91,7 +91,7 @@ Cette section décrit tous les champs pris en charge par l’objet `order`.
 
 Développez la section ci-dessous pour afficher un exemple de commande Web SDK utilisant l’objet `commerce`.
 
-+++Exemple d’objet `Order`
++++ Exemple d’objet `Order`
 
 Un appel de `sendEvent` Web SDK définissant l’objet `order` qui s’applique à plusieurs produits dans le tableau `productListItems` :
 
@@ -151,7 +151,7 @@ La liste de produits indique quels produits sont liés à l’action corresponda
 
 Développez les sections ci-dessous pour afficher des exemples de commandes Web SDK utilisant l’objet `productListItems`.
 
-+++`productListItems` exemple
++++ `productListItems` exemple
 
 Un appel de `sendEvent` Web SDK définissant la `productViews` de plusieurs produits dans le tableau `productListItems` :
 
@@ -179,7 +179,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` exemple
++++ `productListAdds` exemple
 
 Un appel de `sendEvent` Web SDK définissant l’événement `productListAdds` pour plusieurs produits dans le tableau de `productListItems` :
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` exemple
++++ `checkouts` exemple
 
 Un appel de `sendEvent` Web SDK définissant l’événement `checkouts` pour plusieurs produits dans le tableau de `productListItems` :
 
