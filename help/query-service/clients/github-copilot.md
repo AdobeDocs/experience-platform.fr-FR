@@ -2,7 +2,7 @@
 title: Connecter le pilote GitHub et Visual Studio Code à Query Service
 description: Découvrez comment connecter le Copilote GitHub et Visual Studio Code à Adobe Experience Platform Query Service.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Avant d’utiliser cet outil intégré, vous devez comprendre quelles données sont partagées avec GitHub. Les données partagées incluent des informations contextuelles sur le code et les fichiers modifiés (« invites ») et des détails sur les actions de l&#39;utilisateur (« données d&#39;engagement de l&#39;utilisateur »).  Veuillez consulter la déclaration de confidentialité de [[!DNL GitHub Copilot]](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) pour en savoir plus sur les données qu&#39;ils collectent. Vous devez également tenir compte des implications en matière de sécurité de l’implication de services tiers, car vous êtes responsable de la conformité aux politiques de gouvernance des données de votre entreprise. Adobe n’est pas responsable des problèmes liés aux données qui peuvent résulter de l’utilisation de cet outil. Pour plus d’informations, consultez la documentation de GitHub .
+>Avant d’utiliser cet outil intégré, vous devez comprendre quelles données sont partagées avec GitHub. Les données partagées incluent des informations contextuelles sur le code et les fichiers modifiés (« invites ») et des détails sur les actions de l&#39;utilisateur (« données d&#39;engagement de l&#39;utilisateur »).  Veuillez consulter la déclaration de confidentialité de [[!DNL GitHub Copilot] pour en savoir plus sur les données qu&#39;ils collectent. ](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) Vous devez également tenir compte des implications en matière de sécurité de l’implication de services tiers, car vous êtes responsable de la conformité aux politiques de gouvernance des données de votre entreprise. Adobe n’est pas responsable des problèmes liés aux données qui peuvent résulter de l’utilisation de cet outil. Pour plus d’informations, consultez la documentation de GitHub .
 
 [!DNL GitHub Copilot], optimisé par OpenAI Codex, est un outil piloté par l’IA qui améliore votre expérience de codage en suggérant des fragments de code et des fonctions entières directement dans votre éditeur. Intégré à [!DNL Visual Studio Code] ([!DNL VS Code]), [!DNL Copilot] peut accélérer considérablement votre workflow, en particulier lorsque vous travaillez avec des requêtes complexes. Suivez ce guide pour savoir comment connecter [!DNL GitHub Copilot] et [!DNL VS Code] à Query Service afin d’écrire et de gérer vos requêtes avec une plus grande efficacité. Pour plus d’informations sur [!DNL Copilot], consultez [la page produit Copilot de GitHub](https://github.com/pricing) et la [documentation [!DNL Copilot] officielle](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot).
 
@@ -136,10 +136,11 @@ Vous pouvez également discuter directement avec [!DNL Copilot] à propos de vot
 
 ![Fenêtre de conversation intégrée avec vue diff](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## Vue de conversation dédiée {#dedicated-chat}
 
@@ -147,7 +148,7 @@ Vous pouvez utiliser une interface de chat plus traditionnelle avec une barre la
 
 ![Barre latérale de conversation [!DNL GitHub Copilot] avec l’icône de conversation mise en surbrillance.](../images/clients/github-copilot/chat-sidebar.png)
 
-Vous pouvez également accéder à l’historique de la conversation en sélectionnant l’icône d’historique (![&#x200B; L’icône d’historique.](../images/clients/github-copilot/history-icon.png)) en haut du panneau de conversation.
+Vous pouvez également accéder à l’historique de la conversation en sélectionnant l’icône d’historique (![ L’icône d’historique.](../images/clients/github-copilot/history-icon.png)) en haut du panneau de conversation.
 
 ## Étapes suivantes
 
