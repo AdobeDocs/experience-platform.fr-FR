@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2023
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2081'
-ht-degree: 81%
+source-wordcount: '2020'
+ht-degree: 82%
 
 ---
 
@@ -20,9 +20,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Préparation des données](#data-prep)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience](#xdm)
-- [Query Service](#query-service)
+- [Service de requête](#query-service)
 - [Édition B2B de Real-Time Customer Data Platform](#b2b)
-- [Segmentation Service](#segmentation)
+- [Service de segmentation](#segmentation)
 - [Sources](#sources)
 
 ## Tableaux de bord {#dashboards}
@@ -50,7 +50,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Nouveau workflow de démarrage rapide pour l’API Meta Conversions (Beta) | Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Le [workflow de démarrage rapide pour l’API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=fr#quick-start) permet aux clientes et clients de collecter et de transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples. |
 | Nouveau workflow de démarrage rapide pour le SDK mobile (Beta) | Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Le [workflow de démarrage rapide pour le SDK mobile](https://developer.adobe.com/client-sdks/documentation/) vous permet d’implémenter rapidement le SDK mobile et de valider les événements mobiles de base en quelques étapes simples. |
 | Extension de transfert d’événement [!DNL Braze] | L’extension de transfert d’événement [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) vous permet de tirer parti des données capturées dans le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide des API de suivi des utilisateurs et utilisatrices [!DNL Braze]. |
-| Extension de transfert d’événement [!DNL Epsilon] | L’extension [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=fr) vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans l’Edge Network Adobe Experience Platform et les envoyer à [!DNL Epsilon] à l’aide de l’API d’événement [!DNL Epsilon]. |
+| Extension de transfert d’événement [!DNL Epsilon] | L’extension [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans l’Edge Network Adobe Experience Platform et les envoyer à [!DNL Epsilon] à l’aide de l’API d’événement [!DNL Epsilon]. |
 | Extension de transfert d’événement [!DNL Mixpanel] | L’extension [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) permet aux clientes et clients d’exploiter le transfert d’événement pour capturer des informations d’événement dans le réseau Edge d’Adobe Experience Platform et les envoyer à Mixpanel à l’aide de l’API de suivi des événements. |
 
 {style="table-layout:auto"}
@@ -76,17 +76,17 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| Connexion GA [[!DNL Adobe Commerce] &#x200B;](../../destinations/catalog/personalization/adobe-commerce.md) | Le connecteur de destination [!DNL Adobe Commerce] (désormais généralement disponible) vous permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce], pour offrir une expérience personnalisée dynamique à vos clientes et clients. |
-| Connexion GA [[!DNL Snap Inc] &#x200B;](../../destinations/catalog/advertising/snap-inc.md) | Le connecteur de destination [!DNL Snap Inc] (à présent généralement disponible) permet aux personnes spécialisées dans le marketing d’importer des segments d’utilisateurs et d’utilisatrices créés dans Experience Platform vers [!DNL Snapchat Ads] et de les utiliser pour cibler leurs annonces. |
+| Connexion GA [[!DNL Adobe Commerce] ](../../destinations/catalog/personalization/adobe-commerce.md) | Le connecteur de destination [!DNL Adobe Commerce] (désormais généralement disponible) vous permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce], pour offrir une expérience personnalisée dynamique à vos clientes et clients. |
+| Connexion GA [[!DNL Snap Inc] ](../../destinations/catalog/advertising/snap-inc.md) | Le connecteur de destination [!DNL Snap Inc] (à présent généralement disponible) permet aux personnes spécialisées dans le marketing d’importer des segments d’utilisateurs et d’utilisatrices créés dans Experience Platform vers [!DNL Snapchat Ads] et de les utiliser pour cibler leurs annonces. |
 | [Connexion Oracle Eloqua (API)](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Utilisez la connexion basée sur l’API vers [!DNL Oracle Eloqua] pour planifier et exécuter des campagnes tout en offrant une expérience personnalisée à vos clientes et clients pour leurs prospects dans [!DNL Oracle Eloqua]. |
 | [Connexion à  [!DNL Amazon Ads]  (Beta)](../../destinations/catalog/advertising/amazon-ads.md) | L’intégration d’[!DNL Amazon Ads] à Adobe Experience Platform permet une intégration clé en main aux produits d’[!DNL Amazon Ads], y compris à [!DNL Amazon DSP (ADSP)]. En utilisant la destination [!DNL Amazon Ads] dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir les audiences de l’annonceur pour le ciblage et l’activation sur l’[!DNL Amazon DSP]. |
-| Connexion [[!DNL Marketo Measure Ultimate] &#x200B;](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anciennement Bizible) donne aux personnes spécialisées dans le marketing un aperçu des actions marketing les plus efficaces pour générer du chiffre d’affaires et optimiser le retour sur investissement de leur entreprise. La destination active les flux de données B2B (business-to-business) d’Adobe Experience Platform vers [!DNL Marketo Measure]. La carte n’est disponible que pour les clientes et clients de [!DNL Marketo Measure Ultimate]. |
+| Connexion [[!DNL Marketo Measure Ultimate] ](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anciennement Bizible) donne aux personnes spécialisées dans le marketing un aperçu des actions marketing les plus efficaces pour générer du chiffre d’affaires et optimiser le retour sur investissement de leur entreprise. La destination active les flux de données B2B (business-to-business) d’Adobe Experience Platform vers [!DNL Marketo Measure]. La carte n’est disponible que pour les clientes et clients de [!DNL Marketo Measure Ultimate]. |
 | [Connexion à TikTok](../../destinations/catalog/social/tiktok.md) | Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. |
 | [Connexion à Zendesk](../../destinations/catalog/crm/zendesk.md) | Utilisez cette destination pour créer et mettre à jour des identités dans un segment en tant que contacts dans [!DNL Zendesk]. |
 
 {style="table-layout:auto"}
 
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+**Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
 | Fonction | Description |
 | ----------- | ----------- |
@@ -105,13 +105,13 @@ Pour des informations plus générales sur les destinations, consultez la [prés
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
-XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences clientes par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Recommandation CSV en schéma | Vous pouvez désormais charger vos fichiers locaux pour créer des schémas générés par le machine learning qui éliminent la nécessité de créer manuellement un schéma. Dans l’espace de travail [!UICONTROL Sources], téléchargez un exemple de fichier CSV pour que les algorithmes de machine learning d’Adobe vous suggèrent un schéma en fonction des champs cibles. Pour plus d’informations, consultez la [documentation](../../ingestion/tutorials/map-csv/recommendations.md). |
+| Recommandation CSV en schéma | Vous pouvez désormais charger vos fichiers locaux pour créer des schémas générés par le machine learning qui éliminent la nécessité de créer manuellement un schéma. Dans l’espace de travail [!UICONTROL Sources], chargez un exemple de fichier CSV pour que les algorithmes de machine learning d’Adobe vous suggèrent un schéma en fonction des champs cibles. Pour plus d’informations, consultez la [documentation](../../ingestion/tutorials/map-csv/recommendations.md). |
 
 {style="table-layout:auto"}
 
@@ -119,13 +119,13 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Article de l’offre]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
-| Classe | [[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1678/files) | Élément pouvant faire l’objet d’une prise de décision. La sortie d’un processus de prise de décision est composée d’un ou de plusieurs éléments de décision. |
-| Classe | [[!UICONTROL Délai d’expiration du serveur de session multimédia]](https://github.com/adobe/xdm/pull/1676/files) | Cette valeur indique le temps écoulé, en secondes, entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |
-| Groupe de champs | [[!UICONTROL Attributs calculés du profil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés des services Adobe internes aux données client entrantes. Elle ne doit pas être utilisée par les clients pour ingérer des données. |
-| Type de données | [[!UICONTROL Objet remboursé]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
-| Type de données | [[!UICONTROL Données de catégorie]](https://github.com/adobe/xdm/pull/1677/files) | Ce nouveau type de données représente la catégorie d’un produit. |
-| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification Target. Il contient un ensemble de champs de métadonnées qui classent les activités et expériences Target. |
+| Classe | [[!UICONTROL Offer Item]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
+| Classe | [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1678/files) | Élément pouvant faire l’objet d’une prise de décision. La sortie d’un processus de prise de décision est composée d’un ou de plusieurs éléments de décision. |
+| Classe | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | Cette valeur indique le temps écoulé, en secondes, entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |
+| Groupe de champs | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés des services Adobe internes aux données client entrantes. Elle ne doit pas être utilisée par les clients pour ingérer des données. |
+| Type de données | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
+| Type de données | [[!UICONTROL Category data]](https://github.com/adobe/xdm/pull/1677/files) | Ce nouveau type de données représente la catégorie d’un produit. |
+| Schéma | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification Target. Il contient un ensemble de champs de métadonnées qui classent les activités et expériences Target. |
 
 {style="table-layout:auto"}
 
@@ -133,25 +133,25 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [[!UICONTROL &#x200B; Détails du composant de contenu &#x200B;]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL &#x200B; Détails du composant de contenu &#x200B;] |
-| Groupe de champs | [[!UICONTROL Balises d’entité AJO]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO aux [!UICONTROL champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
-| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour les [[!UICONTROL champs communs des événements d’étape Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
-| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour [!UICONTROL Rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
-| Groupe de champs | [!UICONTROL Événement de modification Workfront] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
-| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL &#x200B; Montant du remboursement &#x200B;] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
-| Type de données | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
-| Type de données | [&#128279;](https://github.com/adobe/xdm/pull/1677/files) d’élément de liste de produits | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
-| Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout du champ de chaîne `pev3` qui [indique le type de flux de médias utilisé pour la création de rapports](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la propriété `pccr` qui indique si une redirection s’est produite. |
-| Type de données | [!UICONTROL Liste des demandes internes] | Fournit les [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Ils comprennent le nom, l’ID et la description. |
+| Groupe de champs | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL Content Component Details] |
+| Groupe de champs | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO à [!UICONTROL AJO Entity Fields], qui correspondent à un Parcours ou à une campagne |
+| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) |
+| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files). |
+| Groupe de champs | [!UICONTROL Workfront Change Event] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
+| Type de données | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL Refund Amount] a été ajouté pour indiquer le montant remboursé pour l&#39;article, le cas échéant. |
+| Type de données | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] a été ajouté à la liste des remboursements pour cette commande. |
+| Type de données | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
+| Type de données | [!UICONTROL Session details information] | Ajout du champ de chaîne `pev3` qui [indique le type de flux de médias utilisé pour la création de rapports](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la propriété `pccr` qui indique si une redirection s’est produite. |
+| Type de données | [!UICONTROL Requisition List] | Fournit les [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Ils comprennent le nom, l’ID et la description. |
 | Type de données | [!UICONTROL Commerce] | Le type de données [Commerce a été mis à jour](https://github.com/adobe/xdm/pull/1675/files) afin d&#39;inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
 
-## Query Service {#query-service}
+## Service de requête {#query-service}
 
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
+Le service de requête vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer dans le profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 
@@ -161,7 +161,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
+Pour plus d’informations sur le service de requête, consultez la section [Présentation du service de requête](../../query-service/home.md).
 
 ## Édition B2B de Real-Time Customer Data Platform {#b2b}
 
@@ -179,7 +179,7 @@ Pour en savoir plus sur l’édition B2B de Real-time CDP, consultez la [prése
 
 ## Service de segmentation {#segmentation}
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -204,7 +204,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | Disponibilité Beta de [!DNL Chatlio] | La source [!DNL Chatlio] est maintenant disponible en version Beta. Utilisez la source [!DNL Chatlio] pour diffuser vos données d’événements de [!DNL Chatlio] à Experience Platform. Pour plus d’informations, consultez la [[!DNL Chatlio] présentation](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
 | Disponibilité Beta de [!DNL Customer.io] | La source [!DNL Customer.io] est maintenant disponible en version Beta. Utilisez la source [!DNL Customer.io] pour diffuser les données d’événements client vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Customer.io] présentation](../../sources/connectors/marketing-automation/customerio-webhook.md). |
 | Disponibilité Beta de [!DNL Pendo] | La source [!DNL Pendo] est maintenant disponible en version Beta. Utilisez la source [!DNL Pendo] pour diffuser les données d’événements client vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Pendo] présentation](../../sources/connectors/analytics/pendo-webhook.md). |
-| Prise en charge des brouillons de flux de données | Vous pouvez désormais utiliser l’API Flow Service pour définir vos flux de données sur l’état de brouillon. Vous pouvez ensuite modifier les informations du brouillon de flux de données et le publier. Pour plus d’informations, consultez le guide sur la [définition des flux de données sources en tant que brouillons](../../sources/tutorials/api/draft.md). |
+| Prise en charge des brouillons de flux de données | Vous pouvez désormais utiliser l’API Flow Service pour définir vos flux de données sur l’état de brouillon. Les flux de données à l’état de brouillon peuvent ensuite être mis à jour et publiés avec de nouvelles informations. Pour plus d’informations, consultez le guide sur la [définition des flux de données sources en tant que brouillons](../../sources/tutorials/api/draft.md). |
 
 {style="table-layout:auto"}
 
