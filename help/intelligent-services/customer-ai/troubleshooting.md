@@ -6,20 +6,20 @@ title: Dépannage des erreurs de l’IA dédiée aux clients
 description: Trouvez des réponses aux erreurs courantes de l’IA dédiée aux clients.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 31%
+source-wordcount: '1745'
+ht-degree: 26%
 
 ---
 
 # Dépannage des erreurs de l’IA dédiée aux clients
 
-L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Instances de service]**, une colonne pour le **[!UICONTROL STATUT DE LA DERNIÈRE EXÉCUTION]** affiche l’un des messages suivants : **[!UICONTROL Succès]**, **[!UICONTROL Problème de formation]**, et **[!UICONTROL Échec]**.
+L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Service instances]**, une colonne pour **[!UICONTROL LAST RUN STATUS]** affiche l’un des messages suivants : **[!UICONTROL Success]**, **[!UICONTROL Training issue]** et **[!UICONTROL Failed]**.
 
 ![Statut de la dernière exécution indiquant la réussite, un problème de formation ou un échec.](./images/errors/last-run-status.png)
 
-Dans le cas où **[!UICONTROL Échec]** ou **[!UICONTROL Problème d’entraînement]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient le **[!UICONTROL statut de votre dernière exécution]** et les **[!UICONTROL détails de la dernière exécution]**. Les **[!UICONTROL détails de la dernière exécution]** contiennent des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
+Dans le cas où **[!UICONTROL Failed]** ou **[!UICONTROL Training issue]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient vos **[!UICONTROL Last run status]** et **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contient des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
 
 ![](./images/errors/last-run-details.png){width=300}
 
@@ -37,7 +37,7 @@ Pour contourner ce problème, vous devez ajouter experience.adobe.com en tant qu
 
 ## La qualité du modèle est médiocre.
 
-Si vous recevez l’erreur « [!UICONTROL La qualité du modèle est médiocre. Nous vous recommandons de créer une application avec la configuration modifiée.] ». Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
+Si vous recevez l’erreur « [!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration] ». Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
 
 ![](./images/errors/model-quality.png){width=300}
 
@@ -73,4 +73,4 @@ Si limiter la population d’éligibilité n’a pas fonctionné ou si cela n’
 | 411 | AUCUNE DONNÉE D’ENTRÉE APRÈS ETL | Aucune donnée de comportement ou de profil utilisateur n’est disponible pour que le modèle puisse être utilisé entre `{{etl_start_date}}` et `{{etl_end_date}}`. Assurez-vous que le jeu de données contient suffisamment de données. (Code d’erreur : VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) | Aucune donnée de comportement ou de profil d’utilisateur n’est disponible pour que le modèle l’utilise entre 2020-04-01 et 2021-04-01. Assurez-vous que le jeu de données contient suffisamment de données. (Code d’erreur : VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) |
 | 412 | AUCUN ÉVÉNEMENT APRÈS ETL | Aucune donnée de comportement de l’utilisateur n’est disponible pour que le modèle puisse utiliser entre `{{etl_start_date}}` et `{{etl_end_date}}`. Assurez-vous que le jeu de données contient suffisamment de données. | Aucune donnée sur le comportement de l’utilisateur n’est disponible pour que le modèle puisse l’utiliser entre 2020-04-01 et 2021-04-01. Assurez-vous que le jeu de données contient suffisamment de données. (Code d’erreur : VALIDATION-412 NO_EVENT_DATA_AFTER_ETL) |
 | 413 | VALEUR UNIQUE DANS L’OBJECTIF | CustomerAI nécessite que le jeu de données contienne des événements admissibles et non admissibles pour la définition de l’objectif de prédiction. Le jeu de données d’entrée contient uniquement des événements admissibles compris entre `{{etl_window_start}}` et `{{etl_window_end}}`. <br><br>Solutions suggérées : <br>1. Modifiez la définition de l’objectif de prédiction <br>2. Vérifiez l’exhaustivité des données ou utilisez une méthode différente qui inclut des exemples d’événements non admissibles pour l’objectif de prédiction (Code d’erreur : VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE) | CustomerAI nécessite que le jeu de données contienne des événements admissibles et non admissibles pour la définition de l’objectif de prédiction. Le jeu de données d’entrée contient uniquement des événements admissibles entre 2020-04-01 et 2021-04-01.<br><br>Solutions suggérées :<br>1. Modifiez la définition de l’objectif de prédiction.<br>2. Vérifiez l’exhaustivité des données ou utilisez une autre qui inclut des exemples d’événements non admissibles pour l’objectif de prédiction. (Code d’erreur : VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE) |
-| 414 | AUCUN FACTEUR D’INFLUENCE | Le modèle de facteur d&#39;influence a généré une sortie inattendue. Nous vous recommandons de créer une application avec une configuration modifiée. (Code d’erreur : VALIDATION-414 NO_INFLUENTIAL_FACTORS) | Le modèle de facteur d&#39;influence a généré une sortie inattendue. Nous vous recommandons de créer une application avec une configuration modifiée. (Code d’erreur : VALIDATION-414 NO_INFLUENTIAL_FACTORS) |
+| 414  | AUCUN FACTEUR D’INFLUENCE | Le modèle de facteur d&#39;influence a généré une sortie inattendue. Nous vous recommandons de créer une application avec une configuration modifiée. (Code d’erreur : VALIDATION-414 NO_INFLUENTIAL_FACTORS) | Le modèle de facteur d&#39;influence a généré une sortie inattendue. Nous vous recommandons de créer une application avec une configuration modifiée. (Code d’erreur : VALIDATION-414 NO_INFLUENTIAL_FACTORS) |
