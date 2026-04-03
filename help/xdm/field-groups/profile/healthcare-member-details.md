@@ -1,64 +1,64 @@
 ---
-title: Groupe de champs de schéma Détails du membre HealthCare
-description: Découvrez le groupe de champs Détails du membre HealthCare .
+title: Groupe de champs de schéma des détails des membres du secteur de la santé
+description: Découvrez le groupe de champs de schéma Détails des membres du service de santé .
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '610'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Détails du membre du service de santé] groupe de champs de schéma
+# [!UICONTROL Healthcare Member Details] groupe de champs de schéma
 
-[!UICONTROL Healthcare Member Details] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui capture les détails d&#39;une personne qui a ou va recevoir des services ou des soins médicaux, tels que les coordonnées, le médecin en soins primaires et les informations sur le plan.
+[!UICONTROL Healthcare Member Details] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui recueille les informations sur une personne qui a reçu ou qui bénéficiera d’un service ou de soins médicaux, telles que les coordonnées, le médecin traitant principal et les informations sur le plan.
 
-![Structure de groupe de champs](../../images/field-groups/healthcare-member-details/structure.png)
+![Structure du groupe de champs](../../images/field-groups/healthcare-member-details/structure.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `billingAddress` | [[!UICONTROL Adresse postale]](../../data-types/postal-address.md) | Adresse de facturation de la personne. |
-| `faxPhone` | [[!UICONTROL Numéro de téléphone]](../../data-types/phone-number.md) | Numéro de fax de la personne. |
-| `homeAddress` | [[!UICONTROL Adresse postale]](../../data-types/postal-address.md) | Adresse de la personne. |
-| `homePhone` | [[!UICONTROL Numéro de téléphone]](../../data-types/phone-number.md) | Numéro de téléphone du domicile de la personne. |
-| `mailingAddress` | [[!UICONTROL Adresse postale]](../../data-types/postal-address.md) | Adresse postale de la personne. |
-| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et relations liés à la santé de la personne. Pour plus d’informations sur la structure de l’objet, reportez-vous à la sous-section [ci-dessous](#memberDetails) . |
-| `mobilePhone` | [[!UICONTROL Numéro de téléphone]](../../data-types/phone-number.md) | Numéro de téléphone portable de la personne. |
-| `person` | [[!UICONTROL Personne]](../../data-types/person.md) | Acteur, contact ou propriétaire individuel lié à l’appartenance à la personne au service de santé. |
-| `personalEmail` | [[!UICONTROL Adresse électronique]](../../data-types/email-address.md) | Adresse électronique personnelle de la personne. |
-| `shippingAddress` | [[!UICONTROL Adresse postale]](../../data-types/postal-address.md) | Adresse de livraison de la personne. |
+| `billingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse de facturation de la personne. |
+| `faxPhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de fax de la personne. |
+| `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse personnelle de la personne. |
+| `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone personnel de la personne. |
+| `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse postale de la personne. |
+| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. Pour plus d’informations sur la structure de l’objet[ consultez la ](#memberDetails)sous-section ci-dessous. |
+| `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone mobile de la personne. |
+| `person` | [[!UICONTROL Person]](../../data-types/person.md) | Acteur, contact ou propriétaire individuel lié à l’adhésion de la personne au système de santé. |
+| `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Adresse e-mail personnelle de la personne. |
+| `shippingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse de livraison de la personne. |
 
 {style="table-layout:auto"}
 
 ## `memberDetails` {#memberDetails}
 
-`memberDetails` est un objet qui contient des informations détaillées sur les attributs et relations liés à la santé de la personne. La structure de `memberDetails` est décrite ci-dessous.
+`memberDetails` est un objet qui contient des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. La structure de `memberDetails` est décrite ci-dessous.
 
-![structure memberDetails](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![ structure memberDetails ](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `emergencyContact` | Objet | Capture les informations de contact d’urgence suivantes pour la personne : <ul><li>`fullName` : (chaîne). Nom complet du contact d’urgence.</li><li>`phone` : (chaîne). Numéro de téléphone du contact d’urgence.</li><li>`relationshipToMember` : (chaîne). Relation du contact d’urgence avec la personne.</li></ul> |
-| `medications` | Tableau d’objets | Répertorie les détails des médicaments actuels et passés associés à la personne. Chaque élément du tableau est un objet qui capture les détails suivants : <ul><li>`refillLocation` : ([[!UICONTROL Adresse postale]](../../data-types/postal-address.md)) L’emplacement de remplissage du médicament.</li><li>`ID` : (chaîne) ID du médicament.</li><li>`isCurrent` : (booléen). Indique si le traitement est actuel ou passé.</li><li>`numberOfRefills` : (nombre entier) nombre de remplissages prescrits par le fournisseur de ce médicament.</li><li>`startDate` : (DateTime) date à laquelle la personne a commencé à prendre le traitement.</li></ul> |
-| `multipleBirth` | Objet | Capture les détails des naissances multiples : <ul><li>`isMultipleBirth` : (booléen). Indique si la personne a donné plusieurs naissances.</li><li>`multipleBirthNumber` : (nombre entier) nombre de bébés nés si `isMultipleBirth` est vrai.</li></ul> |
-| `plans` | Tableau d’objets | Répertorie les détails des plans médicaux actuels et antérieurs associés à la personne. Chaque élément du tableau est un objet qui capture les détails suivants : <ul><li>`coverageEndDate` : (DateTime) date à laquelle la couverture du plan se termine.</li><li>`coverageStartDate` : (DateTime) date à laquelle la couverture du plan commence.</li><li>`isActive` : (booléen). Indique si le plan est actif.</li><li>`planId` : (chaîne). ID de plan.</li></ul> |
-| `primaryCarePhysicians` | Tableau d’objets | Répertorie les détails des médecins de soins primaires associés à la personne. Chaque élément du tableau est un objet qui capture les détails suivants : <ul><li>`endDate` : (DateTime) date à laquelle le médecin traitant a mis fin aux soins de la personne.</li><li>`fullname` : (chaîne). Nom complet du médecin.</li><li>`providerId` : (chaîne). Identifiant unique du médecin.</li><li>`startDate` : (DateTime) date à laquelle le médecin traitant a commencé à prendre soin de la personne.</li></ul> |
-| `specialists` | Tableau d’objets | Répertorie les détails des spécialistes des soins de santé associés à la personne. Chaque élément du tableau est un objet qui capture les détails suivants : <ul><li>`fullname` : (chaîne). Nom complet du spécialiste.</li><li>`providerId` : (chaîne). Identifiant unique du spécialiste.</li><li>`specialty` : (chaîne). Spécialité du fournisseur (anesthésiologie, urologie, radiologie, dermatologie, etc.).</li></ul> |
-| `beneficiaryRelationship` | Chaîne | La relation du bénéficiaire avec le membre du service de santé si la personne est une personne à charge (par exemple : elle-même, son conjoint, un enfant, etc.). |
+| `emergencyContact` | Objet | Capture les coordonnées d’urgence suivantes pour la personne : <ul><li>`fullName` : (chaîne). Nom complet du contact d’urgence.</li><li>`phone` : (chaîne). Numéro de téléphone du contact d’urgence.</li><li>`relationshipToMember` : (chaîne). Relation du contact d’urgence à la personne.</li></ul> |
+| `medications` | Tableau d’objets | Répertorie les détails des médicaments actuels et passés associés à la personne. Chaque élément de tableau est un objet qui capture les détails suivants : <ul><li>`refillLocation` : ([[!UICONTROL Postal address]](../../data-types/postal-address.md)) Emplacement de remplissage du médicament.</li><li>`ID` : (chaîne) identifiant du médicament.</li><li>`isCurrent` : (booléen). Indique si le médicament est actuel ou antérieur.</li><li>`numberOfRefills` : (Entier) Nombre de renouvellements prescrits par le fournisseur de ce médicament.</li><li>`startDate` : (Date et heure) date à laquelle la personne a commencé à prendre le médicament.</li></ul> |
+| `multipleBirth` | Objet | Capture les détails liés aux naissances multiples : <ul><li>`isMultipleBirth` : (booléen). Indique si la personne a donné plusieurs naissances.</li><li>`multipleBirthNumber` : (entier). Nombre de bébés nés si `isMultipleBirth` est vrai.</li></ul> |
+| `plans` | Tableau d’objets | Répertorie les détails des plans médicaux actuels et passés associés à la personne. Chaque élément de tableau est un objet qui capture les détails suivants : <ul><li>`coverageEndDate` : (DateTime) date de fin de couverture du plan.</li><li>`coverageStartDate` : (DateTime) date à laquelle la couverture du plan commence.</li><li>`isActive` : (booléen). Indique si le plan est actif.</li><li>`planId` : (chaîne). Identifiant du plan.</li></ul> |
+| `primaryCarePhysicians` | Tableau d’objets | Répertorie les coordonnées des médecins généralistes associés à la personne. Chaque élément de tableau est un objet qui capture les détails suivants : <ul><li>`endDate` : (Date et heure) date à laquelle le médecin généraliste a arrêté de prendre soin de la personne.</li><li>`fullname` : (chaîne). Nom complet du médecin.</li><li>`providerId` : (chaîne). Identifiant unique du médecin.</li><li>`startDate` : (Date et heure) date à laquelle le médecin généraliste a commencé à s’occuper de la personne.</li></ul> |
+| `specialists` | Tableau d’objets | Répertorie les informations sur les spécialistes des soins de santé associés à la personne. Chaque élément de tableau est un objet qui capture les détails suivants : <ul><li>`fullname` : (chaîne). Nom complet du spécialiste.</li><li>`providerId` : (chaîne). Identifiant unique du spécialiste.</li><li>`specialty` : (chaîne). Spécialité du prestataire (anesthésiologie, urologie, radiologie, dermatologie, etc.).</li></ul> |
+| `beneficiaryRelationship` | Chaîne | Relation de bénéficiaire avec le affilié si la personne est une personne à charge (par exemple, soi-même, son conjoint, son enfant, etc.). |
 | `billingAccountID` | Chaîne | Identifiant unique du compte de facturation de la personne. |
 | `dateAgeCollected` | DateTime | Date à laquelle l’âge de la personne a été collecté. |
-| `deceasedDate` | DateTime | Date à laquelle la personne est morte si elle est décédée. |
+| `deceasedDate` | DateTime | Date à laquelle la personne est décédée. |
 | `isDeceased` | Booléen | Indique si la personne est décédée. |
-| `isDependent` | Booléen | Indique si la personne est une personne à charge. |
-| `nationality` | Chaîne | La relation juridique entre la personne et son état, représentée à l’aide du code ISO 3166-1 Alpha-2. |
-| `preferredAvailability` | Chaîne | Disponibilité du jour et de l’heure de votre choix pour un rendez-vous. |
+| `isDependent` | Booléen | Indique si la personne est à charge. |
+| `nationality` | Chaîne | Relation juridique entre la personne et son état, représenté à l’aide du code ISO 3166-1 Alpha-2. |
+| `preferredAvailability` | Chaîne | Jour et heure de disponibilité préférés de la personne pour un rendez-vous. |
 | `primaryMemberID` | Chaîne | Identifiant unique de l’abonné principal si la personne est une personne à charge. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
+Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
+* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-Reportez-vous à la documentation du schéma de l’industrie pour plus d’informations sur la façon dont ce groupe de champs peut être utilisé pour répondre aux [&#x200B; cas d’utilisation courants du secteur de la santé](../../schema/industries/healthcare.md).
+Pour plus d’informations sur l’utilisation de ce groupe de champs pour des cas d’utilisation courants du secteur de la [santé](../../schema/industries/healthcare.md), consultez la documentation sur les schémas du secteur .
