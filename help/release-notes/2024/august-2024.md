@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2024
 description: Les notes de mise à jour d’août 2024 pour Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 95%
+source-wordcount: '1556'
+ht-degree: 90%
 
 ---
 
@@ -22,9 +22,9 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Experi
 - [Contrôle d’accès basé sur les attributs](#abac)
 - [Ingestion des données](#data-ingestion)
 - [Destinations](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
-- [Segmentation Service](#segmentation)
+- [Service de segmentation](#segmentation)
 - [Sources](#sources)
 
 ## Contrôle d’accès basé sur les attributs {#abac}
@@ -64,20 +64,20 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gère plusieurs instances différentes pour leur tableau de bord et leurs points d’entrée REST. Les clients et clientes [!UICONTROL Braze] doivent utiliser le point d’entrée REST correct en fonction de l’instance sur laquelle se fait votre approvisionnement. Cette version ajoute un nouveau point d’entrée US-07 que vous pouvez sélectionner lors de la connexion à [!UICONTROL Braze]. |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gère un certain nombre d’instances différentes pour leur tableau de bord et leurs points d’entrée REST. [!UICONTROL Braze] clients doivent utiliser le point d’entrée REST approprié en fonction de l’instance pour laquelle vous disposez des privilèges d’accès. Cette version ajoute un nouveau point d’entrée US-07 que vous pouvez sélectionner lors de la connexion à [!UICONTROL Braze]. |
 
 {style="table-layout:auto"}
 
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+**Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
 | L’export de fichiers à la demande vers des destinations par lot est désormais disponible de façon générale. | L’option permettant d’exporter des fichiers à la demande vers des destinations par lots est désormais disponible pour l’ensemble de la clientèle. Pour plus d’informations, consultez la [documentation appropriée](../../destinations/ui/export-file-now.md). |
 | Modifier les plannings d’export pour plusieurs audiences exportées à l’[étape de planification](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’option permettant de modifier les plannings d’export pour plusieurs audiences exportées directement à partir de l’étape de planification du workflow d’activation des audiences est désormais disponible pour l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform qui illustre l’option Modifier le planning de l’étape de planification.](assets/august/edit-schedule.png "Option Modifier le planning à l’étape de planification."){width="250" align="center" zoomable="yes"} |
 | Modifier les noms de fichiers pour plusieurs audiences exportées à l’[étape de planification](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’option permettant de modifier les noms de plusieurs fichiers exportés directement à partir de l’étape de planification du workflow d’activation de l’audience est désormais disponible pour l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Modifier le nom de fichier de l’étape de planification.](assets/august/edit-file-name.png "Option Modifier le nom de fichier à l’étape de planification."){width="250" align="center" zoomable="yes"} |
-| Supprimer plusieurs audiences d’un flux de données de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-remove). | L’option de suppression de plusieurs audiences des flux de données existants de la page **[!UICONTROL Détails de la destination]** est désormais disponible pour l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Supprimer les audiences de la page Détails de la destination.](assets/august/bulk-remove-audiences.png "Option Supprimer des audiences de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
-| Exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-export). | L’option permettant d’exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page **[!UICONTROL Détails de la destination]** est désormais disponible pour l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform mettant en surbrillance l’option Exporter le fichier maintenant de la page Détails de la destination.](assets/august/bulk-export-file-now.png "Option Exporter le fichier maintenant de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
-| Modifier les noms de fichiers de plusieurs audiences exportées à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Vous pouvez désormais modifier les noms de plusieurs fichiers exportés directement à partir de la page **[!UICONTROL Détails de la destination]**. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Modifier le nom de fichier de la page Détails de la destination.](assets/august/edit-file-name-destination-details.png "Option Modifier le nom de fichier de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
+| Supprimer plusieurs audiences d’un flux de données de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-remove). | L’option permettant de supprimer plusieurs audiences des flux de données existants de la page **[!UICONTROL Destination Details]** est désormais disponible pour tous les clients. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Supprimer les audiences de la page Détails de la destination.](assets/august/bulk-remove-audiences.png "Option Supprimer des audiences de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
+| Exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-export). | L’option permettant d’exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page **[!UICONTROL Destination Details]** est désormais disponible pour tous les clients. ![Image de l’interface d’utilisation d’Experience Platform mettant en surbrillance l’option Exporter le fichier maintenant de la page Détails de la destination.](assets/august/bulk-export-file-now.png "Option Exporter le fichier maintenant de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
+| Modifier les noms de fichiers de plusieurs audiences exportées à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Vous pouvez désormais modifier les noms de plusieurs fichiers exportés directement à partir de la page **[!UICONTROL Destination Details]**. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Modifier le nom de fichier de la page Détails de la destination.](assets/august/edit-file-name-destination-details.png "Option Modifier le nom de fichier de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
 | Supprimer plusieurs jeux de données d’un flux de données de la page [Détails de la destination](../../destinations/ui/export-datasets.md#remove-dataset). | L’option de suppression de plusieurs jeux de données d’un flux de données est désormais disponible pour toutes l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Supprimer les jeux de données de la page Détails de la destination.](assets/august/bulk-remove-datasets.png "Option Supprimer les jeux de données de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -86,7 +86,7 @@ Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinatio
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
-XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences clientes par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
@@ -96,7 +96,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [vue d’ensemble du système XDM](../../xdm/home.md).
 
 ## Service d’identités {#identity-service}
 
@@ -136,7 +136,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mises à jour du connecteur source Adobe Analytics | La page de l’activité du jeu de données n’affiche pas d’informations sur les lots, car le connecteur source Analytics est entièrement géré par Adobe. Vous pouvez vérifier que les données circulent en examinant les mesures relatives aux enregistrements ingérés. Pour plus d’informations, consultez le guide sur la création d’une [connexion source pour les données Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Mises à jour du connecteur source Adobe Analytics | La page de l’activité du jeu de données n’affiche pas d’informations sur les lots, car le connecteur source Analytics est entièrement géré par Adobe. Vous pouvez surveiller le flux des données en examinant les mesures relatives aux enregistrements ingérés. Pour plus d’informations, consultez le guide sur la création d’une [connexion source pour les données Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 **Documentation mise à jour**
 
