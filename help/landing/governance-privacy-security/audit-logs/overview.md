@@ -4,7 +4,7 @@ description: Découvrez comment les journaux d’audit vous permettent de savoir
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1579'
 ht-degree: 32%
@@ -46,30 +46,30 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 
 | Ressource | Actions |
 | --- | --- |
-| [Politique de contrôle d’accès (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Compte (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Instance IA dédiée à l’attribution](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li></ul> |
+| [Politique de contrôle d’accès (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| [Compte (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| [Instance IA dédiée à l’attribution](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Activer</li><li>Désactiver</li></ul> |
 | [Journaux d’audit](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exporter</li></ul> |
-| [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| Attribut calculé | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Instance IA dédiée aux clients](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li></ul> |
-| [Jeu de données](../../../catalog/datasets/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activez pour [profil client en temps réel](../../../profile/home.md)</li><li>Désactiver pour le profil</li><li>Ajouter des données</li><li>Supprimer le lot</li></ul> |
-| [Flux de données](../../../datastreams/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>[Modifier le mappage](../../../datastreams/data-prep.md)</li></ul> |
-| [Types des données](../../../xdm/schema/composition.md#data-type) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Destination](../../../destinations/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression du jeu de données</li><li>Activer le profil</li><li>Supprimer le profil</li></ul> |
-| [Groupe de champs](../../../xdm/schema/composition.md#field-group) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| Attribut calculé | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| [Instance IA dédiée aux clients](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Activer</li><li>Désactiver</li></ul> |
+| [Jeu de données](../../../catalog/datasets/overview.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Activez pour [profil client en temps réel](../../../profile/home.md)</li><li>Désactiver pour le profil</li><li>Ajouter des données</li><li>Supprimer le lot</li></ul> |
+| [Flux de données](../../../datastreams/overview.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>[Modifier le mappage](../../../datastreams/data-prep.md)</li></ul> |
+| [Types des données](../../../xdm/schema/composition.md#data-type) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| [Destination](../../../destinations/home.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression du jeu de données</li><li>Activer le profil</li><li>Supprimer le profil</li></ul> |
+| [Groupe de champs](../../../xdm/schema/composition.md#field-group) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
 | [Graphique d’identités](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Affichage</li></ul> |
-| [Espace de noms d’identité](../../../identity-service/features/namespaces.md) | <ul><li>Créer</li><li>Mise à jour </li></ul> |
-| [Politique de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Profil de produit](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Espace de noms d’identité](../../../identity-service/features/namespaces.md) | <ul><li>Créer</li><li>Mise à jour</li></ul> |
+| [Politique de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| [Profil de produit](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
 | [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
-| [Modèle de requête &#x200B;](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer l’utilisateur</li></ul> |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
-| [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
-| [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer pour le profil</li></ul> |
+| [Modèle de requête ](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer l’utilisateur</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Réinitialiser</li><li>Supprimer</li></ul> |
+| [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li></ul> |
+| [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Activer pour le profil</li></ul> |
 | [Segment](../../../segmentation/home.md) | <ul><li>Créer</li><li>Supprimer</li><li>Activation de segment</li><li>Suppression de segment</li></ul> |
-| [Flux de données Source](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression du jeu de données</li><li>Activation du profil</li><li>Suppression du profil</li></ul> |
+| [Flux de données ](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Créer</li><li>Mise à jour</li><li>Supprimer</li><li>Activer</li><li>Désactiver</li><li>Activation du jeu de données</li><li>Suppression du jeu de données</li><li>Activation du profil</li><li>Suppression du profil</li></ul> |
 | [Ordre de travail](../../../hygiene/home.md) | <ul><li>Créer</li></ul> |
 
 ## Accès aux journaux d’audit
@@ -111,7 +111,7 @@ Les filtres suivants sont disponibles pour les événements d’audit dans l’i
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Category] | Utilisez le menu déroulant pour filtrer les résultats affichés par [&#x200B; catégorie &#x200B;](#category). |
+| [!UICONTROL Category] | Utilisez le menu déroulant pour filtrer les résultats affichés par [ catégorie ](#category). |
 | [!UICONTROL Action] | Filtrez par action. Les actions disponibles pour chaque service sont visibles dans le tableau des ressources ci-dessus. |
 | [!UICONTROL User] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
 | [!UICONTROL Status] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Allow] ou [!UICONTROL Deny]. Lorsque l’événement principal est [!UICONTROL Allow], il peut avoir associé un ou plusieurs événements améliorés affichant des **[!UICONTROL Success]** ou des **[!UICONTROL Failure]**. Par exemple, une action réussie affiche [!UICONTROL Allow] sur l’événement principal et [!UICONTROL Success] sur l’événement amélioré associé. |
@@ -169,7 +169,7 @@ Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuv
 
 ## Gestion des journaux d’audit pour Adobe Admin Console
 
-Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/fr/enterprise/using/audit-logs.html) suivant.
+Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/enterprise/using/audit-logs.html) suivant.
 
 ## Étapes suivantes et ressources supplémentaires
 
@@ -177,4 +177,4 @@ Ce guide explique comment gérer les journaux d’audit dans Experience Platform
 
 Pour mieux comprendre les journaux d’audit dans Experience Platform, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/344646?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
