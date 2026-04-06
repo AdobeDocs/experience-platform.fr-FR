@@ -21,9 +21,9 @@ La collecte de [!UICONTROL Chapter Details] est un type de données standard du 
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | entier | Oui | Durée du chapitre, en secondes. |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | chaîne | Non | Nom du chapitre et/ou du segment. |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | entier | Oui | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | entier | Oui | Position (index, entier) du chapitre à l’intérieur du contenu. |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=fr#chapter-length) | `length` | entier | Oui | Durée du chapitre, en secondes. |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=fr#chapter-name) | `friendlyName` | chaîne | Non | Nom du chapitre et/ou du segment. |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=fr#chapter-offset) | `offset` | entier | Oui | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=fr#chapter-position) | `index` | entier | Oui | Position (index, entier) du chapitre à l’intérieur du contenu. |
 
 {style="table-layout:auto"}
