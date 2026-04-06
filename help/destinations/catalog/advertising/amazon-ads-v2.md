@@ -17,7 +17,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [ (héritée) [!DNL Amazon Ads]](./amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [ (hérité) [!DNL Amazon Ads]](./amazon-ads.md).
+>[!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [&#x200B; (héritée) [!DNL Amazon Ads]](./amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [&#x200B; (hérité) [!DNL Amazon Ads]](./amazon-ads.md).
 >
 >Après la fin avril 2026, [!DNL Amazon Ads v2] sera renommé [!DNL Amazon Ads] et la carte héritée sera masquée, laissant une seule carte de destination dans le catalogue. Les flux de données hérités existants continueront à fonctionner et vous pouvez les gérer dans l’onglet **[!UICONTROL Browse]** au-delà de cette date.
 
@@ -92,7 +92,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
