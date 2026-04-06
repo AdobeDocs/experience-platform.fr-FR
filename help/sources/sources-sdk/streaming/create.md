@@ -72,7 +72,7 @@ Une fois que vous avez rassemblé les artefacts requis, copiez et collez le mod�
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/fr-FR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/fr-FR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ Une réponse réussie renvoie la spécification de connexion nouvellement créé
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/fr-FR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false
