@@ -357,7 +357,7 @@ Pour supprimer un lot, l’identifiant du lot doit être inclus dans le corps de
 >
 > La raison pour laquelle vous ne pouvez pas supprimer les lots des jeux de données basés sur des schémas d’enregistrement est que les lots de jeux de données de type enregistrement remplacent les enregistrements précédents et ne peuvent donc pas être « défaits » ni supprimés. La seule façon de supprimer l’impact des lots erronés pour les jeux de données basés sur des schémas d’enregistrement consiste à réingérer le lot avec les données correctes afin de remplacer les enregistrements incorrects.
 
-Pour plus d’informations sur le comportement des enregistrements et des séries temporelles, consultez la [ section sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans la présentation de la [!DNL XDM System].
+Pour plus d’informations sur le comportement des enregistrements et des séries temporelles, consultez la [&#x200B; section sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans la présentation de la [!DNL XDM System].
 
 **Format d’API**
 

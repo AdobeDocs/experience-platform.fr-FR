@@ -83,7 +83,7 @@ Créez une [règle](../../../ui/managing-resources/rules.md) dans votre proprié
 
 Après la sélection, des commandes supplémentaires apparaissent pour configurer plus en détail l’événement. Vous devez mapper les propriétés d’événement [!DNL Twitter] aux éléments de données que vous avez précédemment créés. Pour plus d’informations, consultez la section [[!DNL Twitter] API de conversions web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
-![ de création d’une règle d’événement de conversion.[!DNL Twitter]](../../../images/extensions/server/twitter/action-configuration.png)
+![&#x200B; de création d’une règle d’événement de conversion.[!DNL Twitter]](../../../images/extensions/server/twitter/action-configuration.png)
 
 **[!UICONTROL User Identification]**
 

@@ -22,7 +22,7 @@ Ce connecteur est disponible dans le catalogue des destinations pour les clients
 Pour utiliser cette connexion de destination, vérifiez que vous avez accès aux éléments suivants :
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de l’extension dans Adobe Commerce.
+- [&#128279;](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de l’extension dans Adobe Commerce.
 - [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/products/commerce.html)
 
 Dans Experience Platform, créez les éléments suivants :
@@ -52,7 +52,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -66,7 +66,7 @@ Audiences prises en charge par type de données d’audience :
 
 Pour vous connecter à la destination [!DNL Adobe Commerce] :
 
-1. Dans l’interface d’[](https://experience.adobe.com/platform/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+1. Dans l’interface d’[&#128279;](https://experience.adobe.com/platform/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 1. Sélectionnez **[!UICONTROL Personalization]**.
 1. Sélectionnez la destination Adobe Commerce à mettre en surbrillance, puis sélectionnez **[!UICONTROL Set up]**.
 1. Suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
@@ -102,7 +102,7 @@ Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experien
 
 Une fois les audiences [!DNL Real-Time CDP] activées sur votre compte [!DNL Adobe Commerce], elles sont disponibles lorsque vous accédez à la barre latérale _Admin_, puis à **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
 
-![Tableau de bord des audiences ](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
+![Tableau de bord des audiences &#x200B;](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

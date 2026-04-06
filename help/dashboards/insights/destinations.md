@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la ](../guides/destinations.md#activated-audiences) Documentation sur le widget Audiences activées .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la &#x200B;](../guides/destinations.md#activated-audiences) Documentation sur le widget Audiences activées .
 
 ## Audiences activées dans toutes les destinations {#activated-audiences-across-all-destinations}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la ](../guides/destinations.md#common-audiences) Documentation sur le widget des audiences courantes .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la &#x200B;](../guides/destinations.md#common-audiences) Documentation sur le widget des audiences courantes .
 
 ## Statut de destination {#destination-status}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la documentation du widget ](../guides/destinations.md#destinations-count)Nombre de destinations.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#destinations-count)Nombre de destinations.
 
 ## Intégrité de l’audience mappée {#mapped-audience-health}
 
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la documentation du widget ](../guides/destinations.md#mapped-audience-health)Intégrité de l’audience mappée.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#mapped-audience-health)Intégrité de l’audience mappée.
 
 ## Audiences mappées {#mapped-audiences}
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la documentation du widget ](../guides/destinations.md#mapped-audiences)Audiences mappées.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#mapped-audiences)Audiences mappées.
 
 <!-- 
 Commented out until the Jan release as the SQL IS MISSING:
@@ -394,7 +394,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la documentation du widget ](../guides/destinations.md#most-used-destinations)Destinations les plus utilisées.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#most-used-destinations)Destinations les plus utilisées.
 
 ## Audiences récemment activées {#recently-activated-audiences}
 
@@ -425,7 +425,7 @@ LIMIT
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la documentation sur le widget ](../guides/destinations.md#recently-activated-audiences) Audiences récemment activées .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation sur le widget &#x200B;](../guides/destinations.md#recently-activated-audiences) Audiences récemment activées .
 
 ## Audiences récemment activées par destination {#recently-activated-audiences-by-destination}
 
@@ -485,7 +485,7 @@ LIMIT
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [ consultez la ](../guides/destinations.md#recently-created-destinations) Documentation sur le widget des destinations récemment créées .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la &#x200B;](../guides/destinations.md#recently-created-destinations) Documentation sur le widget des destinations récemment créées .
 
 <!-- 
 Commented out until the Jan release as SQL MISSING FROM WIKI:

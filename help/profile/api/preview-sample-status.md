@@ -323,7 +323,7 @@ Une réponse réussie renvoie le statut HTTP 200 et inclut un tableau `data`, av
 | `fullIDsFragmentCount` | Nombre total de fragments de profil dans l’espace de noms. |
 | `fullIDsCount` | Nombre total de profils fusionnés dans l’espace de noms. |
 | `fullIDsPercentage` | Le `fullIDsCount` en pourcentage du total des profils fusionnés (la valeur `totalRows` telle qu’elle est renvoyée dans le [dernier état d’échantillon](#view-last-sample-status)), exprimé au format décimal. |
-| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [&#128279;](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | `value` | Valeur `id` pour l’espace de noms . Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de l’[API Identity Service](../../identity-service/api/list-namespaces.md). |
 
 +++

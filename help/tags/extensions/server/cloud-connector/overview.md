@@ -156,6 +156,6 @@ Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Save to
 
 ## Étapes suivantes
 
-Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [ Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
+Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [&#x200B; Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
 
 Pour plus d’informations sur les fonctionnalités de transfert d’événement d’Experience Platform, consultez la [présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).

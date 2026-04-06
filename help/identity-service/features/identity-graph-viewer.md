@@ -135,7 +135,7 @@ Dans la fenêtre d’aperçu, sélectionnez une icône d’empreinte digitale po
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les identités dans Experience Platform, reportez-vous à la [ présentation du service d’identités ](../home.md)
+En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les identités dans Experience Platform, reportez-vous à la [&#x200B; présentation du service d’identités &#x200B;](../home.md)
 
 ## Journal des modifications
 

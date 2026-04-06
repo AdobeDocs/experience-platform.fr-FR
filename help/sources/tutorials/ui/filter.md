@@ -43,11 +43,11 @@ Vous pouvez filtrer vos flux de données sources à l’aide des paramètres sui
 
 | Filtre | Description |
 | --- | --- |
-| [plateforme ](#filter-dataflows-by-source-platform) | Filtrez vos flux de données en fonction de la source avec laquelle ils ont été créés. |
+| [plateforme &#x200B;](#filter-dataflows-by-source-platform) | Filtrez vos flux de données en fonction de la source avec laquelle ils ont été créés. |
 | [Balises](#filter-dataflows-by-tags) | Filtrez vos flux de données en fonction des balises qui leur sont appliquées. |
 | [Statut](#filter-dataflows-by-status) | Filtrez vos flux de données en fonction de leur statut actuel. |
-| [ Jeu de données cible ](#filter-dataflows-by-target-dataset) | Filtrez vos flux de données en fonction du jeu de données cible avec lequel ils ont été créés. |
-| [ Nom du compte ](#filter-dataflows-by-account-name) | Filtrez vos flux de données en fonction du nom du compte auquel ils correspondent. |
+| [&#x200B; Jeu de données cible &#x200B;](#filter-dataflows-by-target-dataset) | Filtrez vos flux de données en fonction du jeu de données cible avec lequel ils ont été créés. |
+| [&#x200B; Nom du compte &#x200B;](#filter-dataflows-by-account-name) | Filtrez vos flux de données en fonction du nom du compte auquel ils correspondent. |
 | [Créé par](#filter-dataflows-by-user) | Filtrez vos flux de données en fonction de la personne qui les a créés. |
 | [Date de création](#filter-dataflows-by-creation-date) | Filtrez vos flux de données en fonction de la date de leur création. |
 | [Date de modification](#filter-dataflows-by-modification-date) | Filtrez vos flux de données en fonction de la date de leur dernière mise à jour. |

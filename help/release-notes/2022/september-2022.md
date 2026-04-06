@@ -84,7 +84,7 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les différents types d’événements spécifiques aux ressources suivis par les journaux d’audit dans Experience Platform, reportez-vous à la [ présentation des journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur les différents types d’événements spécifiques aux ressources suivis par les journaux d’audit dans Experience Platform, reportez-vous à la [&#x200B; présentation des journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -112,7 +112,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | [[!DNL Snap Conversions API] Extension](https://exchange.adobe.com/apps/ec/108550) Snap Conversions API pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur l’authentification et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html) Snapchat Marketing API dédiée.  |
 | [User-Agent Client Hints in Web SDK](/help/collection/use-cases/client-hints.md) | Web SDK prend désormais en charge [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Les conseils clients permettent aux propriétaires de site web d’accéder aux mêmes informations que celles disponibles dans la chaîne [!DNL User-Agent], mais d’une manière plus respectueuse de la vie privée. |
 | Migration page par page de Web SDK | Vous pouvez désormais migrer vos propriétés web existantes à partir d’autres bibliothèques Experience Cloud, telles que [!DNL at.js], vers le SDK Web, une page à la fois. Vous pouvez ainsi adopter une approche progressive dans la migration du SDK Web, sans qu’il soit nécessaire de migrer toutes vos pages à la fois. |
-| Prise en charge des flux de données d’[[!DNL Adobe Journey Optimizer] ](../../datastreams/overview.md#aep) | Le service Adobe Experience Platform pour les flux de données prend désormais en charge [!DNL Adobe Journey Optimizer]. Cette option vous permet d’utiliser des canaux entrants web et basés sur des applications dans [!DNL Adobe Journey Optimizer]. |
+| Prise en charge des flux de données d’[[!DNL Adobe Journey Optimizer] &#x200B;](../../datastreams/overview.md#aep) | Le service Adobe Experience Platform pour les flux de données prend désormais en charge [!DNL Adobe Journey Optimizer]. Cette option vous permet d’utiliser des canaux entrants web et basés sur des applications dans [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 

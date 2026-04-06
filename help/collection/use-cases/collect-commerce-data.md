@@ -13,7 +13,7 @@ ht-degree: 37%
 
 Si votre entreprise vend des produits ou des services, vous pouvez utiliser cette page comme guide sur la manière de suivre ces produits et services.
 
-Cette page utilise le groupe de champs Schéma XDM [](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md).
+Cette page utilise le groupe de champs Schéma XDM [&#128279;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md).
 
 Ce groupe de champs se compose de deux parties principales :
 

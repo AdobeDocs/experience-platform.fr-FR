@@ -18,7 +18,7 @@ ht-degree: 44%
 
 Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-Pour plus d’informations sur la création de modèles via l’interface utilisateur d’[ consultez la documentation sur les modèles de requête de l’interface utilisateur ](../ui/query-templates.md).
+Pour plus d’informations sur la création de modèles via l’interface utilisateur d’[&#x200B; consultez la documentation sur les modèles de requête de l’interface utilisateur &#x200B;](../ui/query-templates.md).
 
 ### Récupération d’une liste de modèles de requête
 

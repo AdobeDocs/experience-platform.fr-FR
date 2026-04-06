@@ -22,7 +22,7 @@ Ce document explique comment configurer l’extension et les règles à l’aide
 
 ## Conditions préalables
 
-Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours ](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
+Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours &#x200B;](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
 
 Un compte Mailchimp est requis pour utiliser cette extension. Vous pouvez créer un compte [ici](https://login.mailchimp.com/signup/). Dans le tableau de bord du compte Mailchimp, notez les valeurs suivantes à utiliser dans ce guide :
 
@@ -136,7 +136,7 @@ Vous pouvez désormais utiliser cette extension et l’action Ajouter un événe
 
 ## Validation des données
 
-Lorsque vous utilisez des extensions de transfert d’événement, l’[](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) est très utile. Dans la section Journaux , sous Journaux Edge , vous pouvez voir les requêtes effectuées par vos règles de transfert d’événement après leur déclenchement. Les captures d’écran suivantes montrent une requête envoyée à l’API Mailchimp par l’extension .
+Lorsque vous utilisez des extensions de transfert d’événement, l’[&#128279;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) est très utile. Dans la section Journaux , sous Journaux Edge , vous pouvez voir les requêtes effectuées par vos règles de transfert d’événement après leur déclenchement. Les captures d’écran suivantes montrent une requête envoyée à l’API Mailchimp par l’extension .
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 

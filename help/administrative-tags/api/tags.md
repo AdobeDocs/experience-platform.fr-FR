@@ -807,4 +807,4 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse vide.
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [ guide des catégories de balises](../ui/tags-categories.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [&#x200B; guide des catégories de balises](../ui/tags-categories.md).

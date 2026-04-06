@@ -138,7 +138,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 #### Entité Dimension
 
-Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [ segmentation d’entités multiples ](../segmentation/tutorials/multi-entity-segmentation.md).
+Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [&#x200B; segmentation d’entités multiples &#x200B;](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces schémas non [!DNL XDM Individual Profile] sont appelés « entités de dimension » (également appelées « entités de recherche ») et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil par le biais de l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 

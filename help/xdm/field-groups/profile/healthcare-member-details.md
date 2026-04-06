@@ -22,7 +22,7 @@ ht-degree: 3%
 | `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse personnelle de la personne. |
 | `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone personnel de la personne. |
 | `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse postale de la personne. |
-| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. Pour plus d’informations sur la structure de l’objet[ consultez la ](#memberDetails)sous-section ci-dessous. |
+| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. Pour plus d’informations sur la structure de l’objet[&#x200B; consultez la &#x200B;](#memberDetails)sous-section ci-dessous. |
 | `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone mobile de la personne. |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | Acteur, contact ou propriétaire individuel lié à l’adhésion de la personne au système de santé. |
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Adresse e-mail personnelle de la personne. |
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 `memberDetails` est un objet qui contient des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. La structure de `memberDetails` est décrite ci-dessous.
 
-![ structure memberDetails ](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![&#x200B; structure memberDetails &#x200B;](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ ht-degree: 3%
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
+* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
 Pour plus d’informations sur l’utilisation de ce groupe de champs pour des cas d’utilisation courants du secteur de la [santé](../../schema/industries/healthcare.md), consultez la documentation sur les schémas du secteur .

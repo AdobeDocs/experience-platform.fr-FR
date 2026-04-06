@@ -98,12 +98,12 @@ Experience Platform offre toute une gamme de fonctionnalités d’hygiène des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE ]{type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans tous les entrepôts de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de gestion du cycle de vie des données de Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour le jeu de données à supprimer.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
+| {type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans tous les entrepôts de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de gestion du cycle de vie des données de Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour le jeu de données à supprimer.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
 | Expirations de jeux de données | Limitez vos données et gardez le contrôle de vos contrats de licence avec l’expiration automatisée du jeu de données. Réduisez les volumes de données en supprimant des jeux de données entiers et en définissant une date et une heure pour le jeu de données à supprimer. Pour plus d’informations, consultez la [documentation sur l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md). |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [ présentation de l’hygiène des données ](../../hygiene/home.md).
+Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [&#x200B; présentation de l’hygiène des données &#x200B;](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -180,7 +180,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md)
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md)
 
 ## Service d’identités {#identity-service}
 

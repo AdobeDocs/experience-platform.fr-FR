@@ -129,7 +129,7 @@ Une fois le workflow prérequis terminé, les utilisateurs autorisés peuvent [g
 
 Pour une sécurité renforcée, Query Service fournit une prise en charge native des connexions SSL pour chiffrer les communications client/serveur. Experience Platform prend en charge différentes options SSL pour répondre à vos besoins en matière de sécurité des données et équilibrer la charge de traitement du chiffrement et de l’échange de clés.
 
-Pour plus d’informations, notamment sur la connexion à l’aide de la valeur de paramètre SSL [, consultez le guide sur les options ](../clients/ssl-modes.md)SSL disponibles pour les connexions clientes tierces à Query Service`verify-full`.
+Pour plus d’informations, notamment sur la connexion à l’aide de la valeur de paramètre SSL [, consultez le guide sur les options &#x200B;](../clients/ssl-modes.md)SSL disponibles pour les connexions clientes tierces à Query Service`verify-full`.
 
 ### Chiffrement et clés gérées par le client (CMK) {#encryption-and-customer-managed-keys}
 
@@ -174,7 +174,7 @@ Vous trouverez ci-dessous une liste de trois journaux de serveur étendus conten
 1. **Journaux de session** : le système crée un journal d’entrée de session pour un utilisateur lorsqu’il se connecte à Query Service, qu’il exécute ou non une requête.
 1. **Journaux de connexion client tiers** : un journal d’audit de connectivité est généré lorsqu’un utilisateur connecte correctement Query Service à un client tiers.
 
-Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [ présentation des journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [&#x200B; présentation des journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Utilisation des données {#data-usage}
 
@@ -192,7 +192,7 @@ Après avoir accédé au schéma, vous pouvez [appliquer des libellés à des ch
 
 ## Confidentialité {#privacy}
 
-[](../../privacy-service/home.md) vous aide à gérer les demandes d’accès et de suppression des données des clients conformément aux réglementations légales en matière de confidentialité. Pour ce faire, il recherche des identifiants préexistants dans les données et accède ou supprime ces données en fonction de la tâche de confidentialité demandée. Les données doivent disposer de libellés appropriés afin que le service puisse déterminer les champs auxquels accéder ou ceux qu’il doit supprimer au cours des tâches relatives à la confidentialité. Les données soumises à des demandes d’accès à des informations personnelles doivent contenir des informations d’identité client afin de lier les différents éléments de données avec la personne à laquelle la demande d’accès à des informations personnelles s’applique. Query Service peut enrichir les données qu’il utilise avec un identifiant unique dans le but de satisfaire les tâches liées à la confidentialité.
+[&#128279;](../../privacy-service/home.md) vous aide à gérer les demandes d’accès et de suppression des données des clients conformément aux réglementations légales en matière de confidentialité. Pour ce faire, il recherche des identifiants préexistants dans les données et accède ou supprime ces données en fonction de la tâche de confidentialité demandée. Les données doivent disposer de libellés appropriés afin que le service puisse déterminer les champs auxquels accéder ou ceux qu’il doit supprimer au cours des tâches relatives à la confidentialité. Les données soumises à des demandes d’accès à des informations personnelles doivent contenir des informations d’identité client afin de lier les différents éléments de données avec la personne à laquelle la demande d’accès à des informations personnelles s’applique. Query Service peut enrichir les données qu’il utilise avec un identifiant unique dans le but de satisfaire les tâches liées à la confidentialité.
 
 Les demandes d’accès à des informations personnelles peuvent être envoyées au lac de données ou à la banque de données Profile. Les enregistrements supprimés du lac de données n’entraînent pas la suppression des profils qui ont été effectués à partir de ces enregistrements. En outre, une tâche de confidentialité visant à supprimer des informations personnelles du lac de données ne supprime pas leur profil, de sorte que toute information (qui contient cet identifiant de profil) ingérée après la fin de la tâche de confidentialité met à jour ce profil comme d’habitude. Cela réaffirme la nécessité d’identifier correctement les données utilisées dans les schémas ad hoc.
 

@@ -22,7 +22,7 @@ Ce document présente les différents mécanismes que vous pouvez utiliser pour 
 Le document ci-dessous fait référence aux fonctions suivantes d’Experience Platform :
 
 * [Service d’identités](../home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
-   *  [Graphique d’identités](./identity-graph-viewer.md) : Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la façon dont un client interagit avec votre marque sur différents canaux.
+   * [Graphique d’identités](./identity-graph-viewer.md) : Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la façon dont un client interagit avec votre marque sur différents canaux.
    * [Espaces de noms d’identité](./namespaces.md) : les espaces de noms d’identité sont des composants du service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de « name<span>@email.com » comme adresse e-mail ou « 443522 » comme CRMID numérique.
 * [Service de catalogue](../../catalog/home.md) : découvrez le traçabilité des données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
 * [Hygiène des données](../../hygiene/home.md) : gérez vos données client stockées en planifiant des expirations de jeux de données automatisées ou en supprimant des enregistrements individuels d’un jeu de données ou de tous les jeux de données.
@@ -31,7 +31,7 @@ Le document ci-dessous fait référence aux fonctions suivantes d’Experience P
 
 ## Suppressions d’identité unique
 
-Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser les mécanismes fournis par [](../../privacy-service/home.md) pour des cas d’utilisation tels que les demandes de suppression de données de la part des clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD).
+Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser les mécanismes fournis par [&#128279;](../../privacy-service/home.md) pour des cas d’utilisation tels que les demandes de suppression de données de la part des clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD).
 
 Les sections ci-dessous décrivent les mécanismes que vous pouvez utiliser pour les demandes de suppression d’identité uniques dans Experience Platform.
 
@@ -60,7 +60,7 @@ Vous pouvez utiliser Catalog Service pour envoyer des demandes de suppression de
 
 ### Expiration des jeux de données dans l’hygiène des données
 
-L’espace de travail [[!UICONTROL Data Hygiene] dans l’interface utilisateur de Adobe Experience Platform, vous permet de planifier l’expiration des jeux de données. ](../../hygiene/ui/overview.md) Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Pour plus d’informations, consultez le guide sur la [gestion des expirations de jeux de données à l’aide de l’espace de travail [!UICONTROL Data Hygiene]](../../hygiene/ui/dataset-expiration.md).
+L’espace de travail [[!UICONTROL Data Hygiene] dans l’interface utilisateur de Adobe Experience Platform, vous permet de planifier l’expiration des jeux de données. &#x200B;](../../hygiene/ui/overview.md) Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Pour plus d’informations, consultez le guide sur la [gestion des expirations de jeux de données à l’aide de l’espace de travail [!UICONTROL Data Hygiene]](../../hygiene/ui/dataset-expiration.md).
 
 Le tableau ci-dessous présente les différences entre la suppression de jeux de données dans Catalog Service et dans l’hygiène des données :
 

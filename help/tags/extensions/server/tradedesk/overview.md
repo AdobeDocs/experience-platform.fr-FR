@@ -23,7 +23,7 @@ Lisez ce document pour savoir comment installer l’extension et utiliser ses fo
 
 ## Conditions préalables {#prerequisites}
 
-Pour configurer le [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API], vous devez disposer d’un ID publicitaire, d’un ID UPixel et d’un ID de suivi appropriés issus de votre compte ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
+Pour configurer le [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API], vous devez disposer d’un ID publicitaire, d’un ID UPixel et d’un ID de suivi appropriés issus de votre compte &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
 
 >[!INFO]
 >

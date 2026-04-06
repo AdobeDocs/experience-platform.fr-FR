@@ -84,7 +84,7 @@ Pour plus d’informations sur Query Service [!DNL Dashboards], consultez la [[!
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
+Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] &#x200B;](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
