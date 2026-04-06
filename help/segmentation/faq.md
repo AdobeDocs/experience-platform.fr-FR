@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 7a9c017c2dc7901c7995e5c6fcd178a4fe8709e0
 workflow-type: tm+mt
-source-wordcount: '4853'
-ht-degree: 25%
+source-wordcount: '4809'
+ht-degree: 24%
 
 ---
 
@@ -417,8 +417,6 @@ La segmentation en flux continu fonctionne sur toutes les données ingérées à
 ### Comment les segments sont-ils définis comme segmentation par lots ou en flux continu ?
 
 Une définition de segment est définie comme une segmentation Edge, par lots ou en flux continu selon une combinaison de type de requêtes et de durée d’historique des événements. Vous trouverez une liste des segments qui seront évalués en tant que segment en flux continu dans la [section types de requête de segmentation en flux continu](#query-types).
-
-Notez que si une définition de segment contient **à la fois** une expression `inSegment` et une chaîne d’événement unique directe, elle ne peut pas être éligible à la segmentation en flux continu. Si vous souhaitez que ce segment soit éligible à la segmentation en flux continu, vous devez faire de la chaîne d’événement unique directe son propre segment.
 
 ### Pourquoi le nombre de segments « total qualifié » continue-t-il à augmenter alors que le nombre sous « X derniers jours » reste à zéro dans la section de détails de définition de segment ?
 

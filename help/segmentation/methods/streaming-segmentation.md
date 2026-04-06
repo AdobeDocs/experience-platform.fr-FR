@@ -3,100 +3,14 @@ solution: Experience Platform
 title: Guide de segmentation en flux continu
 description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 20%
+source-wordcount: '2117'
+ht-degree: 19%
 
 ---
 
 # Guide de segmentation en flux continu
-
->[!BEGINSHADEBOX]
-
->[!NOTE]
->
->Les critères d’éligibilité de la segmentation en flux continu ont été mis à jour le 20 mai 2025.
-
-+++Mises à jour d’éligibilité
-
->[!IMPORTANT]
->
->Toutes les définitions de segment existantes qui sont actuellement évaluées à l’aide de la segmentation Edge ou en flux continu continueront à fonctionner en l’état, sauf si elles sont modifiées ou mises à jour.
-
-## Ensemble de règles {#ruleset}
-
-Les définitions de segment **nouvelles ou modifiées** qui correspondent aux ensembles de règles suivants **plus** seront évaluées à l’aide de la segmentation Edge ou en flux continu. Au lieu de cela, elles seront évaluées à l’aide de la segmentation par lots.
-
-- Un événement unique avec une fenêtre temporelle de plus de 24 heures.
-   - Activez une audience avec tous les profils qui ont consulté une page web au cours des 3 derniers jours.
-- Un événement unique sans fenêtre temporelle
-   - Activez une audience avec tous les profils qui ont consulté une page web.
-
-## Fenêtre temporelle {#time-window}
-
-Pour évaluer une audience avec segmentation en flux continu, elle **doit** être limitée dans une fenêtre temporelle de 24 heures.
-
-## Inclusion de données par lot dans des audiences en flux continu {#include-batch-data}
-
->[!NOTE]
->
->Pour que la segmentation en flux continu reste précise lors de l’utilisation des données par lot, assurez-vous que les données par lot sont **uniquement** conservées dans l’audience par lot et sont référencées dans l’audience en flux continu.
-
-Avant cette mise à jour, vous pouviez créer une définition d’audience de diffusion en continu qui combinait des sources de données par lots et en flux continu. Cependant, avec la dernière mise à jour, la création d’une audience avec des sources de données par lots et par flux sera évaluée à l’aide de la segmentation par lots.
-
-Si vous devez évaluer une définition de segment à l’aide de la segmentation en flux continu ou Edge qui correspond à l’ensemble de règles mis à jour, vous devez créer explicitement un lot et un ensemble de règles en flux continu et les combiner à l’aide d’un segment de segments. Ce jeu de règles par lot **doit** est basé sur un schéma de profil.
-
-Supposons, par exemple, que vous ayez deux audiences, avec une audience contenant des données de schéma de profil et l’autre des données de schéma d’événement d’expérience de logement :
-
-| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Résidents californiens | Profile | Lot | L&#39;adresse personnelle est dans l&#39;état de la Californie | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-Si vous souhaitez utiliser le composant par lot dans votre audience de diffusion en continu, vous devez faire référence à l’audience par lot à l’aide d’un segment de segments.
-
-Voici un exemple d’ensemble de règles qui combine les deux audiences :
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
-CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
-WHEN(<= 24 hours before now)])
-```
-
-L’audience résultante *sera* évaluée à l’aide de la segmentation en flux continu, car elle exploite l’appartenance de l’audience par lots en se référant au composant d’audience par lots.
-
-Cependant, si vous souhaitez combiner deux audiences avec des données d’événement, vous **ne pouvez pas** vous contenter de combiner les deux événements. Vous devez créer les deux audiences, puis créer une autre audience qui utilise `inSegment` pour faire référence à ces deux audiences.
-
-Supposons, par exemple, que vous ayez deux audiences, avec les deux audiences hébergeant des données de schéma d’événement d’expérience :
-
-| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandons récents | Événement d’expérience | Lot | A au moins un événement d’abandon au cours des dernières 24 heures | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-Dans ce cas, vous devez créer une troisième audience comme suit :
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
-```
-
->[!IMPORTANT]
->
->Toutes les définitions de segment existantes qui correspondent aux ensembles de règles restent évaluées à l’aide de la segmentation en flux continu ou Edge jusqu’à ce qu’elles soient modifiées.
->
->En outre, toutes les définitions de segment existantes qui répondent actuellement aux autres critères d’évaluation de segmentation en flux continu ou Edge resteront évaluées avec la segmentation en flux continu ou Edge.
-
-## Politique de fusion {#merge-policy}
-
-Toutes les définitions de segment **nouvelles ou modifiées** qui remplissent les critères de segmentation Edge ou en flux continu **doivent** doivent être sur la politique de fusion « Active-on-Edge ».
-
-S’il n’existe aucun jeu de politiques de fusion actif, vous devez [configurer votre politique de fusion](../../profile/merge-policies/ui-guide.md#configure) et la définir sur Active-On-Edge (active sur le bord).
-
-
-+++
-
->[!ENDSHADEBOX]
 
 La segmentation en flux continu est la possibilité d’évaluer les audiences dans Adobe Experience Platform en temps quasi réel tout en se concentrant sur la richesse des données.
 
@@ -128,6 +42,11 @@ Une définition de segment **non** est éligible pour la segmentation en flux co
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Par exemple, vous pouvez enchaîner les éléments suivants dans un seul ensemble de règles : `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
 - La définition de segment utilise « Ignorer l’année » dans le cadre de ses contraintes de temps.
+- La définition de segment correspond aux ensembles de règles suivants :
+   - Un événement unique avec une fenêtre temporelle de plus de 24 heures.
+      - Par exemple, « Activer une audience avec tous les profils qui ont consulté une page web au cours des 3 derniers jours ».
+   - Un événement unique sans fenêtre temporelle
+      - Par exemple, « Activer une audience avec tous les profils qui ont consulté une page web ».
 
 Veuillez noter les instructions suivantes qui s’appliquent aux requêtes de segmentation en flux continu :
 
@@ -472,3 +391,90 @@ Ce guide explique le fonctionnement des définitions de segment activées pour l
 Pour en savoir plus sur l’utilisation de l’interface utilisateur d’Adobe Experience Platform, veuillez lire le [guide d’utilisation de la segmentation](./overview.md).
 
 Pour les questions fréquentes sur la segmentation en flux continu, veuillez lire la section [segmentation en flux continu) de la FAQ](../faq.md#streaming-segmentation).
+
+## Annexe
+
+Cette section fournit des informations supplémentaires sur la segmentation en flux continu.
+
+### Mise à jour de l’éligibilité du 20 mai 2025 {#may-20-eligibility-update}
+
+La section suivante décrit, pour des raisons de postérité, les détails complets de la mise à jour d’éligibilité pour la segmentation en flux continu qui s’est produite lors de la version de mai 2025 d’Experience Platform.
+
++++Mises à jour d’éligibilité
+
+>[!IMPORTANT]
+>
+>Toutes les définitions de segment existantes qui sont actuellement évaluées à l’aide de la segmentation Edge ou en flux continu continueront à fonctionner en l’état, sauf si elles sont modifiées ou mises à jour.
+
+## Ensemble de règles {#ruleset}
+
+Les définitions de segment **nouvelles ou modifiées** qui correspondent aux ensembles de règles suivants **plus** seront évaluées à l’aide de la segmentation Edge ou en flux continu. Au lieu de cela, elles seront évaluées à l’aide de la segmentation par lots.
+
+- Un événement unique avec une fenêtre temporelle de plus de 24 heures.
+   - Activez une audience avec tous les profils qui ont consulté une page web au cours des 3 derniers jours.
+- Un événement unique sans fenêtre temporelle
+   - Activez une audience avec tous les profils qui ont consulté une page web.
+
+## Fenêtre temporelle {#time-window}
+
+Pour évaluer une audience avec segmentation en flux continu, elle **doit** être limitée dans une fenêtre temporelle de 24 heures.
+
+## Inclusion de données par lot dans des audiences en flux continu {#include-batch-data}
+
+>[!NOTE]
+>
+>Pour que la segmentation en flux continu reste précise lors de l’utilisation des données par lot, assurez-vous que les données par lot sont **uniquement** conservées dans l’audience par lot et sont référencées dans l’audience en flux continu.
+
+Avant cette mise à jour, vous pouviez créer une définition d’audience de diffusion en continu qui combinait des sources de données par lots et en flux continu. Cependant, avec la dernière mise à jour, la création d’une audience avec des sources de données par lots et par flux sera évaluée à l’aide de la segmentation par lots.
+
+Si vous devez évaluer une définition de segment à l’aide de la segmentation en flux continu ou Edge qui correspond à l’ensemble de règles mis à jour, vous devez créer explicitement un lot et un ensemble de règles en flux continu et les combiner à l’aide d’un segment de segments. Ce jeu de règles par lot **doit** est basé sur un schéma de profil.
+
+Supposons, par exemple, que vous ayez deux audiences, avec une audience contenant des données de schéma de profil et l’autre des données de schéma d’événement d’expérience de logement :
+
+| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Résidents californiens | Profile | Lot | L&#39;adresse personnelle est dans l&#39;état de la Californie | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Si vous souhaitez utiliser le composant par lot dans votre audience de diffusion en continu, vous devez faire référence à l’audience par lot à l’aide d’un segment de segments.
+
+Voici un exemple d’ensemble de règles qui combine les deux audiences :
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+L’audience résultante *sera* évaluée à l’aide de la segmentation en flux continu, car elle exploite l’appartenance de l’audience par lots en se référant au composant d’audience par lots.
+
+Cependant, si vous souhaitez combiner deux audiences avec des données d’événement, vous **ne pouvez pas** vous contenter de combiner les deux événements. Vous devez créer les deux audiences, puis créer une autre audience qui utilise `inSegment` pour faire référence à ces deux audiences.
+
+Supposons, par exemple, que vous ayez deux audiences, avec les deux audiences hébergeant des données de schéma d’événement d’expérience :
+
+| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Abandons récents | Événement d’expérience | Lot | A au moins un événement d’abandon au cours des dernières 24 heures | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Dans ce cas, vous devez créer une troisième audience comme suit :
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
+>[!IMPORTANT]
+>
+>Toutes les définitions de segment existantes qui correspondent aux ensembles de règles restent évaluées à l’aide de la segmentation en flux continu ou Edge jusqu’à ce qu’elles soient modifiées.
+>
+>En outre, toutes les définitions de segment existantes qui répondent actuellement aux autres critères d’évaluation de segmentation en flux continu ou Edge resteront évaluées avec la segmentation en flux continu ou Edge.
+
+## Politique de fusion {#merge-policy}
+
+Toutes les définitions de segment **nouvelles ou modifiées** qui remplissent les critères de segmentation Edge ou en flux continu **doivent** doivent être sur la politique de fusion « Active-on-Edge ».
+
+S’il n’existe aucun jeu de politiques de fusion actif, vous devez [configurer votre politique de fusion](../../profile/merge-policies/ui-guide.md#configure) et la définir sur Active-On-Edge (active sur le bord).
+
++++
+
+>[!ENDSHADEBOX]
