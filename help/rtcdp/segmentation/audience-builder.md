@@ -2,11 +2,11 @@
 title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
+source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1146'
 ht-degree: 9%
 
 ---
@@ -54,13 +54,13 @@ L’onglet [!UICONTROL Attributes] vous permet de parcourir les attributs de com
 
 ![L’onglet Attributs s’affiche dans le Créateur d’audience](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->Les données récapitulatives sont en **disponibilité limitée**.
+>Les données récapitulatives sont en **disponibilité limitée** et peuvent être utilisées dans B2B edition et dans l’édition B2P.
 
 Lors de la sélection d’un attribut, vous pouvez afficher des données de résumé en sélectionnant l’icône [informations](../../images/icons/info.png). Les données récapitulatives incluent des informations telles que les principales valeurs, une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
 
-La section **[!UICONTROL Populated]** indique le nombre d’enregistrements sur lesquels l’attribut est renseigné par rapport au nombre total d’enregistrements disponibles, ainsi que le pourcentage de comptes ayant une valeur pour ce champ.
+La section **[!UICONTROL Populated]** indique le pourcentage de comptes ayant une valeur pour ce champ.
 
 La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, le nombre d’enregistrements ayant la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente. Le nombre d’enregistrements pour chaque champ est déterminé par l’instantané de profil, qui fournit une vue consolidée des enregistrements une fois toutes les données du jeu de données de contribution fusionnées.
 
@@ -74,11 +74,17 @@ Si un attribut est renseigné par moins de 25 % des comptes, l’icône ![avis d
 
 ![Fenêtre contextuelle qui affiche une version des données récapitulatives pour un attribut lorsqu’elles sont renseignées par moins de 25 % des comptes.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+Lorsque vous ajoutez un attribut avec des données de résumé, vous pouvez également voir les données de résumé dans la zone de travail de création des règles.
+
+![L’attribut avec les données de résumé s’affiche.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+Vous pouvez utiliser la liste déroulante pour sélectionner l’une des valeurs principales ou saisir votre valeur, qui peut être automatiquement résolue sur l’une des valeurs principales.
+
+![La liste déroulante dans laquelle vous pouvez ajouter la valeur de l’attribut est mise en surbrillance.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->Les données récapitulatives ne sont disponibles que si l’attribut appartient au schéma Compte, Personne ou Opportunité . En outre, les premières valeurs ne s’affichent que si le champ ne contient **pas** trop de valeurs différentes et si les valeurs de ces champs sont généralement répétées.
->
->Ces données récapitulatives sont mises à jour **quotidiennement**.
+>Les données récapitulatives sont mises à jour **quotidiennement**. En outre, les données récapitulatives ne sont **pas** prises en charge pour les attributs dont les valeurs sont des tableaux ou des paires clé/valeur.
 
 En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
 
