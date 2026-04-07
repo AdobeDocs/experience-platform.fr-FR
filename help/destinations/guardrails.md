@@ -172,7 +172,7 @@ En savoir plus sur l’[export de jeux de données](/help/destinations/ui/export
 
 ### Mécanismes de sécurisation de Destination SDK {#destination-sdk-guardrails}
 
-[](/help/destinations/destination-sdk/overview.md) est une suite d’API de configuration permettant de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée, en fonction des données et des formats d’authentification de votre choix. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
+[&#128279;](/help/destinations/destination-sdk/overview.md) est une suite d’API de configuration permettant de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée, en fonction des données et des formats d’authentification de votre choix. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
