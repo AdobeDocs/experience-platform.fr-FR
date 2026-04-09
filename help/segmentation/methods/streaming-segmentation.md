@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de segmentation en flux continu
 description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
+source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
 workflow-type: tm+mt
 source-wordcount: '2117'
 ht-degree: 19%
@@ -476,5 +476,3 @@ Toutes les définitions de segment **nouvelles ou modifiées** qui remplissent l
 S’il n’existe aucun jeu de politiques de fusion actif, vous devez [configurer votre politique de fusion](../../profile/merge-policies/ui-guide.md#configure) et la définir sur Active-On-Edge (active sur le bord).
 
 +++
-
->[!ENDSHADEBOX]

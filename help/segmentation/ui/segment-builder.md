@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6574'
-ht-degree: 44%
+source-wordcount: '6708'
+ht-degree: 43%
 
 ---
 
@@ -153,7 +153,7 @@ Vous pouvez utiliser les opérateurs suivants pour les types de données respect
 | Plage de roulement | La valeur s’est produite entre les deux dates relatives. | La date du dernier achat est comprise entre sept jours et trois jours. |
 | Dans suivant | La valeur est survenue au cours de la période suivante sélectionnée. | L’abandon du panier aura lieu dans 2 jours |
 
-Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [&#x200B; Contraintes de temps &#x200B;](#time-constraints).
+Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [ Contraintes de temps ](#time-constraints).
 
 +++
 
@@ -177,7 +177,7 @@ En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’
 
 Les attributs calculés sont des champs calculés à partir d’autres attributs à l’aide d’agrégations ou de formules. Vous pouvez utiliser des attributs calculés si vous avez besoin de données agrégées telles que des sommes, des décomptes ou des moyennes sur plusieurs événements ou si vous créez des audiences fréquemment utilisées qui nécessitent des calculs complexes.
 
-Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [&#x200B; présentation des attributs calculés &#x200B;](/help/profile/computed-attributes/overview.md).
+Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [ présentation des attributs calculés ](/help/profile/computed-attributes/overview.md).
 
 ### Événements
 
@@ -349,7 +349,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
@@ -407,7 +407,7 @@ La liste des contraintes de temps disponibles est la suivante :
 
 | Contrainte horaire | Description | Peut activer ignorer l’année | Exemple |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | L’attribut ou l’événement comparé **doit** se produire aujourd’hui. | Oui | ![Exemple de contrainte de temps « Today » utilisée.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Today | L’attribut ou l’événement comparé **doit** se produire aujourd’hui. Il s’agit de la contrainte de temps par défaut sélectionnée. | Oui | ![Exemple de contrainte de temps « Today » utilisée.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Hier | L’attribut ou l’événement comparé **doit** se produire hier. | Oui | ![Exemple de la contrainte de temps « Hier » utilisée.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | Ce mois-ci | L’attribut ou l’événement comparé **doit** se produire ce mois calendaire. | Oui | ![Exemple de contrainte de temps « Ce mois-ci » utilisée.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | Cette année | L’attribut ou l’événement comparé **doit** se produire cette année civile. | Non | ![Exemple de contrainte de temps « Cette année » utilisée.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -422,6 +422,16 @@ La liste des contraintes de temps disponibles est la suivante :
 | Dans suivant | L’attribut ou l’événement comparé doit se produire au cours de la période suivante sélectionnée. Les périodes sélectionnées comprennent les minutes, les heures, les jours, les semaines, les mois et les années. | Non | ![Exemple de contrainte de temps « In next » utilisée.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Existe | L’attribut existe. | Non | ![Exemple de contrainte de temps « Exists » utilisée.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | N’existe pas | L’attribut n’existe pas. | Non | ![Exemple de contrainte de temps « N’existe pas » utilisée.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Now | L’attribut ou l’événement comparé **doit** se produit au moment même où l’audience est évaluée. Cette contrainte de temps ne peut être utilisée qu’en tant qu’option de niveau secondaire, dans les contraintes de temps telles que « Avant » ou « Après ». | Oui | ![Exemple de contrainte de temps « Maintenant » utilisée.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>La différence entre la contrainte de temps « Aujourd’hui » et la contrainte de temps « Maintenant » est subtile, mais significative.
+>
+>- Utilisez la contrainte d’heure « Aujourd’hui » pour vérifier si l’attribut ou l’événement comparé se produit à **minuit** la journée en cours.
+>- Utilisez la contrainte de temps « Maintenant » pour vérifier si l’attribut ou l’événement comparé se produit **en ce moment**.
+>
+>Cependant, il existe une exception majeure : si vous utilisez « Today » comme contrainte de temps de niveau supérieur, cela signifie que vous vérifiez si l’attribut ou l’événement s’est produit à **n’importe quel** moment aujourd’hui.
 
 +++
 
