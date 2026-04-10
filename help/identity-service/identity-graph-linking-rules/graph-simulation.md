@@ -2,9 +2,9 @@
 title: Guide de l’interface utilisateur de la simulation graphique
 description: Découvrez comment utiliser la simulation de graphiques dans l’interface utilisateur d’Identity Service.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 22c0678ded73e9f840957707c14aed7c761138a2
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1493'
 ht-degree: 4%
 
 ---
@@ -16,165 +16,172 @@ ht-degree: 4%
 >title="Simulation de graphes"
 >abstract="Simulez des graphes pour comprendre comment le service d’identités lie les identités et comment l’algorithme d’optimisation des identités fonctionne."
 
-[!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités selon une combinaison particulière d’identités et la configuration de l’algorithme [Identity Optimization](./identity-optimization-algorithm.md).
+[!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités en fonction des identités que vous fournissez et la manière dont vous configurez l’algorithme [Identity Optimization](./identity-optimization-algorithm.md).
 
-Regardez la vidéo suivante pour plus d’informations sur l’utilisation de l’interface [!DNL Graph Simulation] dans l’espace de travail de l’interface utilisateur d’Identity Service :
+Utilisez-le pour tester en toute sécurité le comportement du graphique avant d’appliquer des [!DNL Identity Graph Linking Rules] aux données de production. En définissant des exemples d’événements et en configurant l’algorithme d’optimisation des identités, y compris les priorités des espaces de noms et les paramètres « unique par graphique », vous pouvez voir si les identités fusionnent dans un graphique ou restent distinctes, puis ajuster votre configuration si nécessaire. Utilisez cette fonctionnalité pour effectuer les actions suivantes :
 
->[!VIDEO](https://video.tv.adobe.com/v/3444045/?captions=fre_fr&learn=on&enablevpops)
+* Empêcher la réduction du graphique (par exemple, lorsque plusieurs personnes partagent un appareil ou un numéro de téléphone)
+* Régler les priorités des espaces de noms (par exemple, si EMAIL ou CRM_ID doivent être dominants)
+* Évaluez l’impact potentiel des identifiants de faible qualité ou réutilisés sur le groupement dans votre environnement.
 
-Lisez ce document pour découvrir comment utiliser [!DNL Graph Simulation] pour mieux comprendre le comportement du graphique d’identités et le fonctionnement de l’algorithme du graphique.
+Vous pouvez également répéter les modifications de configuration et les problèmes d’identité de débogage qui s’affichent dans les applications en aval. Par exemple, si les tailles d’audience ou les profils fusionnés ne semblent pas corrects, vous pouvez recréer les événements pertinents dans [!DNL Graph Simulation] pour voir comment vos règles actuelles façonnent le graphique et essayer d’autres méthodes plus sûres.
 
-## Découvrir l’interface [!DNL Graph Simulation] {#interface}
+Les scénarios d’exemple intégrés vous aident à expliquer le comportement des identités et le risque de réduction des graphiques aux parties prenantes et à prendre en charge l’adhésion à la qualité des données et la gouvernance des identités.
 
-Vous pouvez accéder à [!DNL Graph Simulation] dans l’interface utilisateur de Adobe Experience Platform. Sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Graph Simulation]** dans l’en-tête supérieur.
+## Comprendre l’interface [!DNL Graph Simulation]
 
-![Interface de simulation graphique dans l’interface utilisateur de Adobe Experience Platform.](../images/graph-simulation/graph-simulation.png)
+Pour accéder à [!DNL Graph Simulation], accédez à l’espace de travail Service d’identités dans l’interface utilisateur de Adobe Experience Platform, puis sélectionnez **[!UICONTROL Graph Simulation]**.
 
-L’interface [!DNL Graph Simulation] se divise en trois sections :
+![Espace de travail de simulation de graphique dans Identity Service présentant les zones Activité, Configuration des algorithmes et Graphique simulé pour la création et la prévisualisation d’un graphique d’identité.](../images/graph-simulation/graph-simulation-interface.png)
+
+L’interface se compose de trois sections principales :
 
 >[!BEGINTABS]
 
->[!TAB Événements]
+>[!TAB Activité]
 
-Événements : utilisez le panneau **[!UICONTROL Events]** pour ajouter des identités afin de simuler un graphique. Une identité complète doit avoir un espace de noms d’identité et sa valeur d’identité correspondante. Vous devez ajouter au moins deux identités pour simuler un graphique. Vous pouvez également sélectionner **[!UICONTROL Load Example]** pour saisir un événement préconfiguré et la configuration de l’algorithme.
+Utilisez le panneau **[!UICONTROL Activity]** pour ajouter des identités afin de simuler un graphique. Chaque identité a besoin d’un espace de noms et d’une valeur. Vous devez ajouter au moins deux identités pour exécuter une simulation. Vous pouvez également sélectionner **[!UICONTROL Load]** pour importer un événement et une configuration d’algorithme préconfigurés ou pour ouvrir un graphique existant.
 
-![Panneau Événements de l’outil Simulation de graphique.](../images/graph-simulation/events.png)
+![Panneau d’activité avec des champs pour ajouter des identités entièrement qualifiées (espace de noms et valeur) et une commande Charger pour importer une configuration enregistrée ou un graphique existant.](../images/graph-simulation/activities-panel.png)
 
 >[!TAB Configuration des algorithmes]
 
-Configuration des algorithmes : utilisez le panneau **[!UICONTROL Algorithm configuration]** pour ajouter et configurer l’algorithme d’optimisation de vos espaces de noms. Vous pouvez faire glisser et déposer un espace de noms pour modifier leur rang de priorité respectif. Vous pouvez également sélectionner **[!UICONTROL Unique Per Graph]** pour déterminer si un espace de noms est unique.
+Utilisez le panneau **[!UICONTROL Algorithm configuration]** pour ajouter et configurer l’algorithme d’optimisation de vos espaces de noms. Faites glisser et déposez des lignes d’espace de noms pour modifier l’ordre de priorité. Vous pouvez également sélectionner **[!UICONTROL Unique Per Graph]** pour indiquer si un espace de noms doit être unique dans le graphique.
 
-![Configuration de l’algorithme de l’outil Simulation de graphique.](../images/graph-simulation/algorithm-configuration.png)
+![Panneau de configuration des algorithmes répertoriant les espaces de noms par ordre de priorité avec des poignées de déplacement et des options Uniques par graphique pour chaque ligne.](../images/graph-simulation/algo-panel.png)
 
->[!TAB Visionneuse de graphiques simulés]
+>[!TAB Graphique simulé ]
 
-Visionneuse de graphiques simulés : la visionneuse de graphiques simulés affiche le graphique obtenu en fonction des événements que vous avez ajoutés et de l’algorithme que vous avez configuré. Une ligne droite entre deux identités signifie qu’un lien est établi. Une ligne pointillée indique qu’un lien a été supprimé.
+Utilisez l’affichage **[!UICONTROL Simulated graph]** pour consulter le graphique généré à partir de vos activités et des paramètres de l’algorithme. Une ligne continue entre deux identités signifie que le lien est conservé ; une ligne pointillée signifie que l’algorithme a supprimé ce lien.
 
-![Panneau de visionneuse de graphiques simulés, avec un exemple de graphique simulé.](../images/graph-simulation/simulated-graph.png)
+![Zone de travail de graphique simulé avec des nœuds d’identité ; les lignes pleines affichent les liens actifs et les lignes pointillées affichent les liens supprimés par l’algorithme.](../images/graph-simulation/simulation-panel.png)
 
 >[!ENDTABS]
 
-## Ajouter des événements {#add-events}
+## Workflow [!DNL Graph Simulation]
 
-Pour commencer, sélectionnez **[!UICONTROL Add events]**.
+### Ajouter des activités
 
-![Le bouton Ajouter des événements est sélectionné.](../images/graph-simulation/add-events.png)
+Pour commencer à simuler des graphiques d’identités, sélectionnez **[!UICONTROL Add Activity]**.
 
-Une fenêtre pop-up s’affiche par [!UICONTROL Event #1]. À partir de là, saisissez votre combinaison espace de noms d’identité et valeur d’identité . Vous pouvez utiliser le menu déroulant pour sélectionner un espace de noms d’identité. Vous pouvez également saisir les premières lettres d’un espace de noms, puis sélectionner les options fournies dans le menu déroulant. Une fois que vous avez sélectionné votre espace de noms, indiquez une valeur d’identité correspondant à votre espace de noms.
+![Section Activité avec Ajouter une activité mise en surbrillance pour ouvrir la boîte de dialogue d’un nouvel événement d’identité.](../images/graph-simulation/add-activity.png)
 
-![La fenêtre #1 d’événement avec une interface vide.](../images/graph-simulation/event-one.png)
+Lorsque la fenêtre pop-up de [!UICONTROL Activity #1] s’affiche, choisissez un espace de noms d’identité et saisissez sa valeur. Vous pouvez choisir un espace de noms dans la liste déroulante ou saisir quelques lettres pour filtrer la liste. Après avoir sélectionné un espace de noms, saisissez la valeur d’identité correspondante.
 
 >[!TIP]
 >
->La valeur d’identité saisie lors des exercices [!DNL Graph Simulation] n’a pas besoin d’être une valeur d’identité réelle et peut être constituée de simples espaces réservés.
+>Il n’est pas nécessaire d’utiliser de vraies valeurs d’identité lors de l’utilisation de [!DNL Graph Simulation].
 
-Une fois votre première identité terminée, sélectionnez l’icône d’ajout (**`+`**) pour ajouter une seconde identité.
+L’interface [!UICONTROL Activity] se met à jour pour afficher votre première activité.
 
-![La première identité complète de {Email: tom@acme.com} est saisie dans le panneau Événements de la simulation graphique.](../images/graph-simulation/event-one-added.png)
+![Liste des activités affichant les #1 d’activité avec un espace de noms choisi et une valeur d’identité après l’ajout du premier événement.](../images/graph-simulation/activity-one.png)
 
-Répétez ensuite les mêmes étapes et ajoutez une deuxième identité. Deux identités entièrement qualifiées sont requises pour générer un graphique d’identités. Dans l’exemple ci-dessous, un ECID est ajouté en tant qu’espace de noms et est fourni avec une valeur de `111`. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Sélectionnez à nouveau **[!UICONTROL Add Activity]** et effectuez une deuxième activité. Vous avez besoin d’au moins deux identités entièrement qualifiées (espace de noms plus valeur) pour générer un graphique.
 
-![Une deuxième identité de {ECID: 111} est ajoutée à l’événement #1.](../images/graph-simulation/first-event.png)
+![Liste des activités avec deux événements (Activity #1 et Activity #2), chacun avec un espace de noms et une valeur, prêts pour la simulation.](../images/graph-simulation/activity-two.png)
 
-L’interface [!UICONTROL Events] se met à jour pour afficher votre premier événement, qui est dans ce cas : `{Email: tom@acme.com, ECID: 111}`.
-
-![Interface des événements mise à jour avec {Email: tom@acme.com, ECID: 111}.](../images/graph-simulation/add-second-event.png)
-
-Répétez ensuite les mêmes étapes pour ajouter un deuxième événement. Pour Event #2, ajoutez `{Email: summer@acme.com}` comme première identité, puis ajoutez le même `{ECID: 111}` que la seconde identité, créant ainsi un second événement de : `{Email: summer@acme.com}, {ECID: 111}`. Lorsque vous avez terminé, vous devriez avoir deux événements, un pour `{Email: tom@acme.com, ECID: 111}` et un pour `{Email: summer@acme.com}, {ECID: 111}`.
-
-![Interface des événements mise à jour avec deux événements.](../images/graph-simulation/two-events.png)
-
-### Charger l’exemple {#load-example}
-
-Sélectionnez **[!UICONTROL Load example]** pour configurer un exemple de graphique avec un algorithme prédéfini et une configuration d’événement.
-
-![L’option Charger l’exemple est sélectionnée.](../images/graph-simulation/load-example.png)
-
-Une fenêtre pop-up s’affiche, vous fournissant les scénarios graphiques disponibles parmi lesquels choisir :
-
-| Exemple de graphique | Description | Exemple |
-| --- | --- | --- |
-| Appareil partagé | L’appareil partagé fait référence aux scénarios où deux utilisateurs différents se connectent au même appareil unique. | Un mari et une femme partagent une iPad pour la navigation sur Internet et le commerce électronique. |
-| Téléphone non valide (non unique) | Un téléphone non valide ou non unique fait référence à des scénarios où deux utilisateurs différents utilisent le même numéro de téléphone pour créer un compte. | Une mère et sa fille utilisent leur numéro de téléphone personnel commun pour s’inscrire à un compte de commerce électronique. |
-| Valeurs d’identité « incorrectes » | Les valeurs d’identité « incorrectes » font référence aux scénarios où Identity Service génère des IDFA non uniques en raison d’une implémentation erronée. | Le SDK Web envoie par erreur une valeur `user_null` pour chaque événement en raison de problèmes d’implémentation du code. |
-
-![Une fenêtre qui affiche les exemples préconfigurés disponibles : appareil partagé, téléphone non valide et valeurs d’identité incorrectes.](../images/graph-simulation/example-options.png)
-
-Sélectionnez l’une des options pour charger des [!DNL Graph Simulation] avec des événements et un algorithme préconfigurés. Vous pouvez toujours effectuer d’autres configurations pour n’importe quel exemple de scénario graphique préchargé.
-
-![Événements et algorithme configurés pour un téléphone non valide.](../images/graph-simulation/example-loaded.png)
-
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Simulate]**.
-
-![Exemple de graphique simulé pour un téléphone non valide.](../images/graph-simulation/example-simulated.png)
-
-### Utiliser la version texte {#use-text-version}
-
-Vous pouvez également utiliser le mode texte pour configurer des événements. Pour utiliser le mode texte, sélectionnez l’icône des paramètres, puis sélectionnez **[!UICONTROL Text (Advanced users)]**.
-
-![Icône de paramètres sélectionnée.](../images/graph-simulation/settings.png)
-
-Vous pouvez saisir manuellement vos identités en mode texte. Utilisez le signe deux-points (`:`) pour distinguer la valeur d’identité correspondant à l’espace de noms saisi, puis utilisez une virgule (`,`) pour séparer vos identités. Pour distinguer différents événements les uns des autres, utilisez une nouvelle ligne pour chaque événement.
-
-![Panneau Événements utilisant la version en mode texte.](../images/graph-simulation/text-version.png)
-
-### Modifier l’événement {#edit-event}
-
-Pour modifier un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Edit]**.
-
-![&#x200B; Icône Modifier l’événement sélectionnée.](../images/graph-simulation/edit.png)
-
-### Supprimer l’événement {#delete-event}
-
-Pour supprimer un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Delete]**.
-
-![&#x200B; Icône Supprimer l’événement sélectionnée.](../images/graph-simulation/delete.png)
-
-## Configurer l’algorithme {#configure-algorithm}
+### Configurer l’algorithme
 
 >[!IMPORTANT]
 >
->L’algorithme que vous configurez détermine la manière dont Identity Service traite les espaces de noms que vous avez saisis dans vos événements. Toute configuration que vous rassemblez dans le [!DNL Graph Simulation UI] n’est pas enregistrée dans les paramètres d’identité.
+>L’algorithme que vous configurez contrôle la manière dont Identity Service traite les espaces de noms dans vos activités. Rien de ce que vous configurez dans le [!DNL Graph Simulation UI] n’est enregistré dans les paramètres d’identité du service d’identités.
 
-Une fois que vous avez ajouté vos événements, vous pouvez configurer l’algorithme qui sera utilisé pour simuler votre graphique. Pour commencer, sélectionnez **[!UICONTROL Add config]**.
+Une fois vos activités en place, configurez l’algorithme de la simulation. Sélectionnez **[!UICONTROL Add config]**.
 
-![Panneau de configuration de l’algorithme.](../images/graph-simulation/add-config.png)
+![Zone de configuration des algorithmes avec Ajouter une configuration sélectionnée pour commencer à ajouter des règles de priorité d’espace de noms et d’unicité.](../images/graph-simulation/add-config.png)
 
-Une ligne de configuration vide s’affiche. Tout d’abord, saisissez le même espace de noms que celui utilisé pour vos événements. Dans ce cas, commencez par saisir un e-mail. Une fois que vous avez saisi votre espace de noms, les colonnes pour [!UICONTROL Identity Symbol] et [!UICONTROL Identity Type] sont automatiquement renseignées.
+Ajoutez chaque espace de noms que l’algorithme doit prendre en compte. Utilisez la liste déroulante pour effectuer une recherche, ou saisissez les premières lettres pour affiner la liste.
 
-![Première entrée de configuration.](../images/graph-simulation/add-namespace.png)
+* **Priorité des espaces de noms** : vous contrôlez l’ordre d’importance de chaque espace de noms dans votre graphique d’identités. Par exemple, si votre graphique utilise CRMID, ECID, e-mail et Apple IDFA, vous pouvez définir leur priorité de manière à refléter ce qui doit être pris en compte en premier lors de la liaison d’identités. L’espace de noms en haut de votre liste aura la priorité la plus élevée.
+* **Espace de noms unique** : lorsqu’un espace de noms est marqué comme unique, Identity Service s’assure qu’une seule identité avec cet espace de noms apparaît dans un graphique. Par exemple, si E-mail est défini comme unique, chaque graphique ne contient qu’une seule identité E-mail. Si plusieurs identités avec le même e-mail sont présentes, la connexion la plus ancienne sera supprimée pour conserver l’unicité.
 
-Répétez ensuite les mêmes étapes et ajoutez votre deuxième espace de noms, qui est dans ce cas l’ECID. Une fois tous vos espaces de noms renseignés, vous pouvez commencer à configurer leurs priorités et leur unicité.
+Faites glisser les lignes d’espace de noms dans l’ordre de priorité : la ligne supérieure a la priorité la plus élevée et la ligne inférieure la plus basse. Pour traiter un espace de noms comme unique dans le graphique, cochez sa case **[!UICONTROL Unique Per Graph]**.
 
-* **Priorité des espaces de noms** : la priorité d’un espace de noms détermine son importance relative par rapport aux autres espaces de noms d’un graphique d’identités donné. Par exemple, si votre graphique d’identité comporte quatre espaces de noms différents : CRMID, ECID, E-mail et Apple IDFA, vous pouvez configurer des priorités afin de déterminer un ordre d’importance pour les quatre espaces de noms.
-* **Espace de noms unique** : si un espace de noms est désigné comme unique, Identity Service génère des graphiques avec la mise en garde qu’une seule identité avec un espace de noms unique donné peut exister. Par exemple, si l’espace de noms E-mail est désigné comme espace de noms unique, un graphique ne peut avoir qu’une seule identité avec E-mail. S’il existe plusieurs identités avec l’espace de noms E-mail , le lien le plus ancien est supprimé.
+Lorsque vous êtes prêt, sélectionnez **[!UICONTROL Simulate]**.
 
-Pour configurer la priorité des espaces de noms, sélectionnez les lignes d’espace de noms et faites-les glisser dans l’ordre de priorité de votre choix, la ligne supérieure représentant la priorité la plus élevée et la ligne inférieure représentant la priorité la plus faible. Pour désigner un espace de noms comme unique, cochez la case **[!UICONTROL Unique Per Graph]** .
+![Configuration de l’algorithme avec réorganisation des espaces de noms par priorité, cases à cocher uniques par graphique définies selon les besoins et Simulation disponible pour exécuter la simulation.](../images/graph-simulation/add-namespaces.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Simulate]**.
+### Afficher le graphique simulé
 
-![Tous les espaces de noms configurés.](../images/graph-simulation/all-namespaces.png)
-
-## Afficher le graphique simulé
-
-La section [!UICONTROL Simulated Graph] affiche le ou les graphiques d’identités générés en fonction des événements que vous avez ajoutés et de l’algorithme que vous avez configuré.
+La section [!UICONTROL Simulated Graph] affiche le ou les graphiques générés à partir de vos activités et de la configuration des algorithmes.
 
 | Icônes du graphique | Description |
 | --- | --- |
 | Ligne continue | Une ligne continue représente un lien établi entre deux identités. |
 | Ligne pointillée | Une ligne pointillée représente un lien supprimé entre deux identités. |
-| Numéro sur la ligne | Un nombre sur une ligne représente l’horodatage du moment où ce lien donné a été généré. Le nombre le plus bas (1) représente le premier lien établi. |
+| Numéro sur la ligne | Un nombre sur une ligne indique le moment où ce lien a été formé par rapport aux autres. Le numéro le plus bas (1) est le premier lien. |
 
-Dans l’exemple de graphique ci-dessous, une ligne pointillée existe entre `{Email: tom@acme.com}` et `{ECID: 111}` pour les raisons suivantes :
+![Sortie de graphique simulé : identités en tant que nœuds, liens étiquetés avec des numéros de séquence le cas échéant, correspondant à la légende en trait plein et en pointillé.](../images/graph-simulation/simulated-graph.png)
 
-* L’e-mail a été désigné comme unique lors de l’étape de configuration de l’algorithme. Par conséquent, une seule identité avec un espace de noms E-mail peut exister dans un graphique.
-* Le lien entre `{Email: tom@acme.com}` et `{ECID: 111}` était la première identité établie (#1 d’événement). Il s’agit du lien le plus ancien et il est donc supprimé.
+## Fonctionnalités supplémentaires
 
-![Panneau de visionneuse de graphiques simulés, avec un exemple de graphique simulé.](../images/graph-simulation/simulated-graph.png)
+Vous pouvez également modifier ou supprimer des activités, saisir des activités en mode texte, charger un exemple de scénario ou extraire un graphique existant à partir d’Identity Service.
+
+### Modifier l’activité {#edit-activity}
+
+Pour modifier une activité, sélectionnez les points de suspension (`...`) à côté d’une activité donnée, puis sélectionnez **[!UICONTROL Edit]**.
+
+![Menu d’actions de ligne à côté d’une activité ouverte avec l’option Modifier sélectionnée pour modifier l’espace de noms ou la valeur de cette activité.](../images/graph-simulation/edit.png)
+
+### Supprimer l’activité {#delete-activity}
+
+Pour supprimer une activité, sélectionnez les points de suspension (`...`) à côté d’une activité donnée, puis sélectionnez **[!UICONTROL Delete]**.
+
+![Menu Actions de ligne en regard d&#39;une activité ouverte avec l&#39;option Supprimer sélectionnée pour supprimer cette activité de la simulation.](../images/graph-simulation/delete.png)
+
+### Utiliser le mode texte {#use-text-mode}
+
+Vous pouvez utiliser le mode texte pour configurer vos activités. Pour utiliser le mode texte, sélectionnez l’icône des paramètres, puis sélectionnez **[!UICONTROL Text (Advanced users)]**.
+
+![Contrôle des paramètres ouvert pour afficher le texte (utilisateurs avancés) pour le passage des activités en mode texte.](../images/graph-simulation/use-text-mode.png)
+
+En mode texte, saisissez chaque identité comme `namespace:value`. Séparez plusieurs identités dans le même événement par une virgule (`,`). Commencez une nouvelle ligne pour chaque événement.
+
+![Activités affichées en texte brut : chaque ligne est un événement, les identités écrites sous forme d’espace de noms:value des paires séparées par des virgules.](../images/graph-simulation/text-mode-display.png)
+
+### Charger l’exemple {#load-example}
+
+Sélectionnez **[!UICONTROL Load example]** pour charger un graphique prêt à l’emploi avec des activités prédéfinies et des paramètres d’algorithme.
+
+![Contrôle de chargement utilisé pour ouvrir les options, y compris le chargement d’un exemple de scénario intégré avec des activités et un algorithme prédéfinis.](../images/graph-simulation/load.png)
+
+Une boîte de dialogue répertorie les scénarios que vous pouvez ouvrir :
+
+| Exemple de graphique | Description | Exemple |
+| --- | --- | --- |
+| Appareil partagé | Deux utilisateurs différents se connectent sur le même appareil. | Un mari et une femme partagent une iPad pour la navigation et le commerce électronique. |
+| Téléphone non valide (non unique) | Deux utilisateurs différents s’enregistrent avec le même numéro de téléphone. | Une mère et sa fille utilisent un numéro de téléphone personnel partagé pour s’inscrire à des comptes de commerce électronique. |
+| Valeurs d’identité « incorrectes » | Les erreurs d’implémentation envoient des identifiants en double ou d’espace réservé (par exemple, le même IDFA pour de nombreux utilisateurs). | Web SDK envoie une valeur `user_null` sur chaque activité en raison d’un défaut de code. |
+
+![Exemple de boîte de dialogue de sélecteur de graphiques répertoriant l’appareil partagé, le téléphone non valide (non unique) et les valeurs d’identité « incorrectes » avec de courtes descriptions pour chaque scénario.](../images/graph-simulation/example-graph.png)
+
+Choisissez un scénario pour charger des [!DNL Graph Simulation] avec les activités et les paramètres d’algorithme correspondants. Vous pouvez éditer le résultat comme n&#39;importe quelle simulation.
+
+![Simulation de graphique après le chargement d’un exemple de scénario : les panneaux de configuration Activité et Algorithme sont préremplis avec le graphique simulé obtenu.](../images/graph-simulation/shared-device.png)
+
+### Charger le graphique existant {#load-existing-graph}
+
+Vous pouvez utiliser [!DNL Graph Simulation] pour charger un graphique existant et afficher ses activités, la configuration des algorithmes et le graphique.
+
+Sélectionnez **[!UICONTROL Load]**, puis sélectionnez **[!UICONTROL Existing graph]**.
+
+![Menu Chargement développé avec Graphique existant sélectionné pour importer un graphique déjà stocké dans Identity Service.](../images/graph-simulation/load-existing.png)
+
+Dans la boîte de dialogue, saisissez un espace de noms et une valeur d’identité appartenant au graphique à inspecter.
+
+![Identifiez la boîte de dialogue du graphique existant avec les champs pour saisir un espace de noms et une valeur d’identité appartenant au graphique à charger.](../images/graph-simulation/identify-graph.png)
+
+Lorsque le chargement réussit, [!DNL Graph Simulation] affiche le graphique contenant cette identité.
+
+>[!TIP]
+>
+>Après avoir configuré vos paramètres sur le premier écran [Paramètres d’identité](./identity-settings-ui.md), vous pouvez utiliser l’option **charger les graphiques existants** pour simuler votre graphique en fonction de ces paramètres exacts. La simulation utilisera la configuration que vous avez définie.
+
+![La simulation de graphique est renseignée à partir d’un graphique existant : les activités, les paramètres d’algorithme et la vue de graphique simulé reflètent le graphique d’identité chargé.](../images/graph-simulation/existing-graph-loaded.png)
 
 ## Étapes suivantes
 
-Grâce à la lecture de ce document, vous savez désormais comment utiliser l’outil [!DNL Graph Simulation] pour mieux comprendre comment vos données d’identité sont traitées selon un ensemble particulier de règles et de configurations. Pour plus d’informations, consultez les documents suivants :
+Vous pouvez utiliser [!DNL Graph Simulation] pour voir comment Identity Service lie les identités selon différentes règles avant de modifier les paramètres de production. Pour aller plus loin, consultez la documentation suivante :
 
 * [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
