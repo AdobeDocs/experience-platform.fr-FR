@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
+source-git-commit: 2be649980ecff5931ae61060ff43f6c98abe16d2
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1348'
 ht-degree: 71%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 71%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -74,8 +74,8 @@ ht-degree: 71%
       * [Partage d’audiences Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
       * [Connexion à la composition d’audiences fédérées](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinations publicitaires{#advertising}
-      * [(Beta) Connexion à l’audience Acxiom](./catalog/advertising/acxiom-audience-connection.md)
-      * [(Beta) Connexion à l’audience Acxiom RealID](./catalog/advertising/acxiom-real-id-audience-connection.md)
+      * [Connexion à l’audience Acxiom](./catalog/advertising/acxiom-audience-connection.md)
+      * [Connexion à l’audience Acxiom RealID](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
       * [Connexion Adobe Advertising DSP](./catalog/advertising/adobe-advertising-dsp-connection.md)
       * [Connexion DSP Adobe Advertising Cloud héritée](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
@@ -94,7 +94,7 @@ ht-degree: 71%
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
-      * {hide-from-toc}[&#x200B; (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
+      * {hide-from-toc}[ (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
