@@ -2,12 +2,11 @@
 title: Databricks
 description: Découvrez les étapes préalables requises pour connecter Databricks à Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2026-03-14T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '606'
 ht-degree: 3%
 
 ---
@@ -16,9 +15,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* La source [!DNL Databricks] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
->
->* La source [!DNL Databricks] est en version Beta. Lisez les [termes et conditions](../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Databricks] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
 
 [!DNL Databricks] est une plateforme cloud conçue pour l’analyse de données, le machine learning et l’IA. Vous pouvez utiliser [!DNL Databricks] pour intégrer et fournir un environnement holistique afin de créer, déployer et gérer des solutions de données à grande échelle.
 
@@ -159,7 +156,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Compte d’enregistrement | Nom de votre compte de stockage. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
 | Jeton SAS | Jeton de signature d’accès partagé pour votre [!DNL Azure Blob Storage]. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
 
-![Interface utilisateur des briques de données sur Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+![Interface utilisateur des briques de données dans Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
 Si elle n’est pas fournie, l’activité de copie dans l’exécution du flux échoue et renvoie l’erreur suivante :
 
