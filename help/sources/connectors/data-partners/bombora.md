@@ -3,9 +3,9 @@ title: Intention de Bombora
 description: Découvrez la source d’intention Bombora sur Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1591'
 ht-degree: 11%
 
 ---
@@ -42,7 +42,7 @@ Lisez les sections suivantes pour connaître les étapes préalables requises av
 
 ### Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [place sur la liste autorisée d’adresse IP](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP[ pour plus d’informations.](../../ip-address-allow-list.md)
 
 ### Configuration des autorisations sur Experience Platform
 
@@ -79,13 +79,13 @@ Le schéma [!DNL Bombora] est appelé **B2B Bombora Account Intent**. Il s’agi
 
 * Classe - [!DNL Bombora Account Intent] XDM
 * Espace de noms - [!DNL Bombora Account Intent] B2B
-* Identité du Principal - `intentID`
+* Identité du Principal - `intentID` (**champ obligatoire**)
 * Relations - Compte B2B
 
 | Nom du champ | Type de données | Description |
-|------------------------|-----------|----------------------------------------------------------------------------------------|
+| --- | --- | --- |
 | `extSourceSystemAudit` | OBJET | Ce champ est utilisé par le système pour le contrôle du système source. |
-| `_id` | CHAÎNE | Ce champ est utilisé par le système comme identifiant unique. |
+| `_id` | CHAÎNE | Ce champ est généré par le système. |
 | `accountDomain` | CHAÎNE | Ce champ contient le domaine du compte. |
 | `accountID` | CHAÎNE | Ce champ contient l’identifiant de compte B2B auquel cet enregistrement d’intention est associé. |
 | `bomboraAccountName` | CHAÎNE | Ce champ contient l’ID de la société dans Bombora. |
