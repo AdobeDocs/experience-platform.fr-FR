@@ -1,19 +1,15 @@
 ---
 title: sendPushSubscription
 description: Enregistrez les abonnements aux notifications push avec Adobe Experience Platform.
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
+source-git-commit: 76ba5719bd922c4ff9bff6fda4a359b18f549c5e
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 4%
+source-wordcount: '398'
+ht-degree: 3%
 
 ---
 
-
 # `sendPushSubscription` {#send-push-subscription}
-
->[!AVAILABILITY]
->
->Les notifications push pour le Web SDK sont actuellement en version **bêta**. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 La commande `sendPushSubscription` enregistre les abonnements aux notifications push auprès de Adobe Experience Platform. Cette commande gère la récupération des détails d’abonnement push à partir du navigateur et les envoie à votre flux de données configuré. Il est disponible dans les versions 2.29.0 ou ultérieures de Web SDK.
 
@@ -115,4 +111,4 @@ L’extension de balise Web SDK équivalente à ce champ utilise l’action [[!U
 >
 >* [Configurer les notifications push](configure/pushnotifications.md)
 >* [Spécification de l’API Web Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
->* [&#x200B; API Service Worker &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+>* [ API Service Worker ](https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API)

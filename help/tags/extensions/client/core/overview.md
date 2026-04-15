@@ -2,10 +2,10 @@
 title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 0750a684c7383bd3f7cb18749078989ad5571816
 workflow-type: tm+mt
-source-wordcount: '5380'
-ht-degree: 95%
+source-wordcount: '5387'
+ht-degree: 94%
 
 ---
 
@@ -122,7 +122,7 @@ L’événement se déclenche si un type d’événement personnalisé se produi
 
 #### Data Element Changed
 
-L’événement se déclenche en cas de modification d’un élément de données spécifié. Vous devez fournir un nom pour l’élément de données. Vous pouvez sélectionner lʼélément de données en saisissant son nom dans le champ de texte ou en sélectionnant lʼicône de lʼélément de données à droite du champ de texte et en effectuant ensuite une sélection dans une liste fournie dans la boîte de dialogue qui sʼaffiche.
+L’événement se déclenche en cas de modification d’un élément de données spécifié. Les sondages pour les modifications se produisent une fois par seconde. Vous devez fournir un nom pour l’élément de données. Vous pouvez sélectionner lʼélément de données en saisissant son nom dans le champ de texte ou en sélectionnant lʼicône de lʼélément de données à droite du champ de texte et en effectuant ensuite une sélection dans une liste fournie dans la boîte de dialogue qui sʼaffiche.
 
 #### Appel direct {#direct-call-event}
 
@@ -372,7 +372,7 @@ Spécifiez la source du trafic du visiteur qui doit être true (vrai) pour que l
 
 ### Technologie
 
-#### Browser
+#### Navigateur
 
 Sélectionnez le navigateur que le visiteur doit utiliser pour que l’action soit déclenchée.
 
@@ -497,7 +497,7 @@ Indiquez le paramètre d’URL utilisé dans l’URL.
 1. Indiquez la valeur utilisée pour le paramètre d’URL.
 1. (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 
-#### Subdomain
+#### Sous-domaine
 
 Indiquez un ou plusieurs sous-domaines qui doivent exister dans l’URL.
 
@@ -524,7 +524,7 @@ Indiquez le nombre maximal de fois où la condition renvoie true (vrai). Vous av
 * Visitor
 * Seconds
 * Minutes
-* Days
+* Jours
 * Weeks
 * Months
 
