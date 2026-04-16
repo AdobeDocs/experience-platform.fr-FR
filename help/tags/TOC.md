@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '828'
 ht-degree: 80%
 
 ---
@@ -57,6 +57,7 @@ ht-degree: 80%
 * Transfert d’événement {#event-forwarding}
    * [Vue d’ensemble](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
+   * [Configuration guidée](./ui/event-forwarding/guided-setup.md)
    * [Configuration des secrets](./ui/event-forwarding/secrets.md)
    * [Surveillance (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
