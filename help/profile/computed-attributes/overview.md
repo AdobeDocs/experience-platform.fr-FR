@@ -2,9 +2,9 @@
 title: Présentation des attributs calculés
 description: Les attributs calculés sont des fonctions permettant d’agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées dans la segmentation, l’activation et la personnalisation.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2eb87601d7090bf6bda8098458f9e01690a02b6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1179'
 ht-degree: 8%
 
 ---
@@ -20,7 +20,9 @@ Les attributs calculés permettent de convertir rapidement les données comporte
 - Normalisation des données comportementales de profil agrégées pour une utilisation sur plusieurs plateformes et applications
 - Amélioration de la gestion des données avec la consolidation des données des anciens événements de profil en informations comportementales significatives
 
-Ces agrégats sont calculés en fonction des jeux de données d’événements d’expérience activés pour Profile et ingérés dans Adobe Experience Platform. Chaque attribut calculé est un attribut de profil créé sur votre schéma d’union des profils et est regroupé sous le groupe de champs « SystemComputedAttribute » de votre schéma d’union.
+Ces agrégats sont calculés en fonction des jeux de données d’événements d’expérience activés pour Profile créés par l’utilisateur et ingérés dans Adobe Experience Platform. Cela signifie que les jeux de données générés par le système qui sont créés via des jetons de service via SDK, tels que les jeux de données système Adobe Journey Optimizer **ne peuvent pas** être utilisés.
+
+Chaque attribut calculé est un attribut de profil créé sur votre schéma d’union des profils et est regroupé sous le groupe de champs « SystemComputedAttribute » de votre schéma d’union.
 
 Voici quelques exemples de cas d’utilisation :
 
@@ -49,7 +51,7 @@ Les attributs calculés vous permettent de définir des agrégats d’événemen
 | Fonction | Description | Types de données pris en charge | Exemple d’utilisation |
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | Une fonction qui **additionne** la valeur spécifiée pour les événements qualifiés. | Entiers, Nombres, Longs | Somme de tous les achats des 7 derniers jours |
-| NOMBRE | Une fonction qui **compte** le nombre d’événements qui se sont produits pour la règle donnée. | S/O | Nombre d’achats au cours des 3 derniers mois |
+| NOMBRE | Une fonction qui **compte** le nombre d’événements qui se sont produits pour la règle donnée. | S.O. | Nombre d’achats au cours des 3 derniers mois |
 | MIN | Une fonction qui trouve la valeur **minimum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Données de premier achat au cours des 7 derniers jours<br/>Montant minimum de la commande au cours des 4 dernières semaines |
 | MAX | Une fonction qui trouve la valeur **maximum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Dernières données d’achat au cours des 7 derniers jours<br/>Montant maximal de la commande au cours des 4 dernières semaines |
 | LAST_RECENT | Une fonction qui trouve la valeur d’attribut spécifiée à partir du dernier événement qualifié. Cette fonction fournit **à la fois** la valeur ainsi que l’horodatage de l’attribut . | Toutes les valeurs primitives, tableaux de valeurs primitives | Dernier produit consulté au cours des 7 derniers jours |
