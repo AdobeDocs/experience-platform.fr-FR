@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Utilisez ce guide pour sécuriser vos données avec Amazon Web Services (AWS) Key Management Service (KMS) en créant, gérant et contrôlant des clés de chiffrement pour Adobe Experience Platform. Cette intégration simplifie la conformité, rationalise les opérations grâce à l&#39;automatisation et élimine le besoin de gérer votre propre infrastructure de gestion clé.
 
-Pour obtenir des instructions spécifiques à Customer Journey Analytics, reportez-vous à la documentation du CMK Customer Journey Analytics [](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Pour obtenir des instructions spécifiques à Customer Journey Analytics, reportez-vous à la documentation du CMK Customer Journey Analytics [&#128279;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -44,7 +44,7 @@ Ce guide nécessite que vous ayez déjà accès à un compte Amazon Web Services
 
 ### Sélectionner une région prise en charge {#select-supported-region}
 
-AWS KMS est disponible dans des régions spécifiques. Assurez-vous d’opérer dans une région où KMS est pris en charge. Vous pouvez afficher une liste complète des régions prises en charge dans la liste des points d’entrée et quotas AWS KMS [](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
+AWS KMS est disponible dans des régions spécifiques. Assurez-vous d’opérer dans une région où KMS est pris en charge. Vous pouvez afficher une liste complète des régions prises en charge dans la liste des points d’entrée et quotas AWS KMS [&#128279;](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
 
 Assurez-vous que votre clé de chiffrement AWS KMS se trouve dans la même région que votre instance Adobe Experience Platform afin de maintenir la conformité aux exigences de résidence des données, d’optimiser les performances et d’éviter des coûts supplémentaires inter-régions. Les régions mal alignées peuvent entraîner des problèmes d’accessibilité et d’intégration des données.
 
@@ -60,7 +60,7 @@ Si la simulation renvoie une erreur ou si vous n’êtes pas sûr de vos autoris
 
 ### Vérifier la configuration de votre compte AWS
 
-Vérifiez que votre compte AWS est activé pour utiliser les services AWS KMS. L&#39;accès KMS est activé par défaut pour la plupart des comptes, mais vous pouvez vérifier la configuration de votre compte en consultant la [console de gestion ](https://aws.amazon.com/console/). Pour plus d’informations, consultez le [guide du développeur du service de gestion des clés ](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html).
+Vérifiez que votre compte AWS est activé pour utiliser les services AWS KMS. L&#39;accès KMS est activé par défaut pour la plupart des comptes, mais vous pouvez vérifier la configuration de votre compte en consultant la [console de gestion &#x200B;](https://aws.amazon.com/console/). Pour plus d’informations, consultez le [guide du développeur du service de gestion des clés &#x200B;](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html).
 
 ### Accédez à AWS KMS pour commencer la configuration des clés
 
@@ -124,7 +124,7 @@ Dans la section **[!DNL Key deletion]** , cochez la case pour accorder aux admin
 
 Sélectionnez **[!DNL Next]** pour continuer le workflow.
 
-![ L’étape Définir les autorisations administratives clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
+![&#x200B; L’étape Définir les autorisations administratives clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
 
 ## Octroi de l’accès aux utilisateurs clés {#assign-key-users}
 
@@ -134,7 +134,7 @@ De ce point de vue, vous pouvez également [!DNL Add another AWS account] ; tout
 
 Sélectionnez **[!DNL Next]** pour continuer le workflow.
 
-![ L’étape Définir les autorisations d’utilisation des clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
+![&#x200B; L’étape Définir les autorisations d’utilisation des clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
 
 ## Vérifier la configuration des clés {#review}
 
