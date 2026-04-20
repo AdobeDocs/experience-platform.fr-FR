@@ -44,7 +44,7 @@ Dans la section Configurer les propriétés , sélectionnez **[!UICONTROL New]**
 
 Sélectionnez **[!UICONTROL Add]** pour le [!DNL Meta Conversion API] dans la section Ajouter des extensions . Sur la page Configurer les informations de [!DNL Meta], vous avez la possibilité de saisir manuellement vos **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta System User Access Token]** et **[!UICONTROL Data Layer Path]**, ou d’utiliser l’option **[!UICONTROL Connect to Meta]**.
 
-![Page Configurer les informations de Meta présentant l’option Se connecter à Meta ](../../images/ui/guided-setup/connect-to-meta.png)
+![Page Configurer les informations de Meta présentant l’option Se connecter à Meta &#x200B;](../../images/ui/guided-setup/connect-to-meta.png)
 
 #### Connexion à [!DNL Meta] à l’aide de vos informations d’identification {#meta-credentials}
 
@@ -124,4 +124,4 @@ Sélectionnez **[!UICONTROL Send PageView Event]** pour envoyer un événement d
 
 Ce guide explique comment utiliser l’outil de configuration guidé pour créer et configurer des propriétés pour le [!DNL Meta Conversions API].
 
-Pour plus d’informations sur la mise en œuvre efficace de votre intégration[!DNL Meta][ consultez la documentation  [!DNL Conversions API] sur ](https://www.facebook.com/business/help/308855623839366?id=818859032317965)les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../home.md).
+Pour plus d’informations sur la mise en œuvre efficace de votre intégration[!DNL Meta][&#x200B; consultez la documentation  [!DNL Conversions API] sur &#x200B;](https://www.facebook.com/business/help/308855623839366?id=818859032317965)les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../home.md).
