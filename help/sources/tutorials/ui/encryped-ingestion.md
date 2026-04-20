@@ -2,7 +2,7 @@
 title: Ingestion de données chiffrées dans le Workspace de l’interface utilisateur des sources
 description: Découvrez comment ingérer des données chiffrées dans l’espace de travail de l’interface utilisateur des sources.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: c52a0e3910697b420f88425388431a4ad3d53072
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 9%
@@ -37,7 +37,7 @@ Avant de poursuivre ce tutoriel, veuillez lire les documents ci-après pour mieu
 ## Créer une paire de clés de chiffrement {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
->id="platform_sources_encrypted_encryptionKeyId"
+>id="platform_sources_encrypted_encryptionkeyid"
 >title="ID de clé de chiffrement"
 >abstract="Indiquez l’ID de clé de chiffrement correspondant à la clé de chiffrement qui a été utilisée pour chiffrer vos données source."
 
@@ -133,7 +133,7 @@ Authentifiez-vous avec la source d’espace de stockage de votre choix. Au cours
 
 Sélectionnez ensuite un exemple de fichier à partir de vos données source. Puisque vos données sont chiffrées, Experience Platform a besoin d’un exemple de fichier pour créer un schéma XDM qui peut être mappé à vos données source.
 
-![&#x200B; Le champ « Ce fichier est-il chiffré ? » Activez le bouton bascule et cliquez sur le bouton « Sélectionner un fichier d’exemple »](../../images/tutorials/edi/select_sample_file.png).
+![ Le champ « Ce fichier est-il chiffré ? » Activez le bouton bascule et cliquez sur le bouton « Sélectionner un fichier d’exemple »](../../images/tutorials/edi/select_sample_file.png).
 
 Une fois que vous avez sélectionné votre fichier d’exemple, configurez les paramètres de vos données, tels que le format de données, le délimiteur et le type de compression correspondants. Patientez quelques instants le temps que l’interface d’aperçu effectue entièrement le rendu, puis sélectionnez **[!UICONTROL Save]**.
 
@@ -160,4 +160,4 @@ Vous pouvez continuer à [effectuer des mises à jour sur votre flux de données
 
 ## Étapes suivantes
 
-En lisant ce document, vous pouvez désormais ingérer des données chiffrées à partir de votre source de lots d’espace de stockage dans le cloud vers Experience Platform. Pour plus d’informations sur l’ingestion de données chiffrées à l’aide des API, consultez le guide sur l’[ingestion de données chiffrées à l’aide de l’API  [!DNL Flow Service] &#x200B;](../api/encrypt-data.md). Pour obtenir des informations générales sur les sources dans Experience Platform, lisez la [présentation des sources](../../home.md).
+En lisant ce document, vous pouvez désormais ingérer des données chiffrées à partir de votre source de lots d’espace de stockage dans le cloud vers Experience Platform. Pour plus d’informations sur l’ingestion de données chiffrées à l’aide des API, consultez le guide sur l’[ingestion de données chiffrées à l’aide de l’API  [!DNL Flow Service] ](../api/encrypt-data.md). Pour obtenir des informations générales sur les sources dans Experience Platform, lisez la [présentation des sources](../../home.md).
