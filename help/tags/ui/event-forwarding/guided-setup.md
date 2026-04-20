@@ -1,9 +1,10 @@
 ---
 title: Configuration guidée du transfert d’événement
 description: Découvrez comment configurer le transfert d’événement à l’aide de la configuration guidée.
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+exl-id: c155dec0-9130-4452-834a-08d98a15b006
+source-git-commit: a2dd6b2a5ec8ccf4ca93e845c5b7b2b39d8d1599
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -31,6 +32,10 @@ Pour commencer à utiliser la fonctionnalité, sélectionnez **[!UICONTROL Get S
 
 ![Page d’accueil du transfert d’événement affichant la carte Prise en main dans l’interface utilisateur de Collections de données](../../images/ui/guided-setup/get-started.png)
 
+>[!INFO]
+>
+>Vous pouvez également accéder directement à la configuration guidée à partir de la page d’accueil Collections de données .
+
 ### Création d’une propriété de balises {#new-property}
 
 Dans la section Configurer les propriétés , sélectionnez **[!UICONTROL New]** et saisissez les détails du nouveau **[!UICONTROL Property Domain]**.
@@ -39,7 +44,7 @@ Dans la section Configurer les propriétés , sélectionnez **[!UICONTROL New]**
 
 Sélectionnez **[!UICONTROL Add]** pour le [!DNL Meta Conversion API] dans la section Ajouter des extensions . Sur la page Configurer les informations de [!DNL Meta], vous avez la possibilité de saisir manuellement vos **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta System User Access Token]** et **[!UICONTROL Data Layer Path]**, ou d’utiliser l’option **[!UICONTROL Connect to Meta]**.
 
-![Page Configurer les informations de Meta présentant l’option Se connecter à Meta &#x200B;](../../images/ui/guided-setup/connect-to-meta.png)
+![Page Configurer les informations de Meta présentant l’option Se connecter à Meta ](../../images/ui/guided-setup/connect-to-meta.png)
 
 #### Connexion à [!DNL Meta] à l’aide de vos informations d’identification {#meta-credentials}
 
@@ -119,4 +124,4 @@ Sélectionnez **[!UICONTROL Send PageView Event]** pour envoyer un événement d
 
 Ce guide explique comment utiliser l’outil de configuration guidé pour créer et configurer des propriétés pour le [!DNL Meta Conversions API].
 
-Pour plus d’informations sur la mise en œuvre efficace de votre intégration[!DNL Meta][&#x200B; consultez la documentation  [!DNL Conversions API] sur &#x200B;](https://www.facebook.com/business/help/308855623839366?id=818859032317965)les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../home.md).
+Pour plus d’informations sur la mise en œuvre efficace de votre intégration[!DNL Meta][ consultez la documentation  [!DNL Conversions API] sur ](https://www.facebook.com/business/help/308855623839366?id=818859032317965)les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../home.md).
