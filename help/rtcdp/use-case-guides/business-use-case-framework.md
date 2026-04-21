@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ Il n’est pas nécessaire de commencer par « exécuter » pour créer de la va
 
 ## Commencer
 
-Téléchargez le modèle de framework et les ressources connexes pour organiser un atelier structuré et produire une feuille de route hiérarchisée et mesurable, prête à être activée.
+Téléchargez [le modèle de framework et les ressources connexes](../assets/S651-use-case-framework-template.pdf) pour organiser un atelier structuré et produire une feuille de route hiérarchisée et mesurable, prête à être activée.
+
