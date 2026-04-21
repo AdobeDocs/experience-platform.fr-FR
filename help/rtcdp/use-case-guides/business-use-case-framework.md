@@ -1,11 +1,9 @@
 ---
 title: Utilisation de cas d’utilisation de l’expérience client pour atteindre les objectifs commerciaux
 description: Utilisez un cadre pratique prêt pour l’atelier afin de définir, de hiérarchiser et d’activer les cas d’utilisation d’expérience client liés à des résultats commerciaux mesurables. Appliquez un modèle simple Pourquoi → Qui/Quoi/Où → Comment pour aligner les équipes, guider l’exécution et obtenir un impact.
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
