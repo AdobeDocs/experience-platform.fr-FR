@@ -133,7 +133,7 @@ Authentifiez-vous avec la source d’espace de stockage de votre choix. Au cours
 
 Sélectionnez ensuite un exemple de fichier à partir de vos données source. Puisque vos données sont chiffrées, Experience Platform a besoin d’un exemple de fichier pour créer un schéma XDM qui peut être mappé à vos données source.
 
-![ Le champ « Ce fichier est-il chiffré ? » Activez le bouton bascule et cliquez sur le bouton « Sélectionner un fichier d’exemple »](../../images/tutorials/edi/select_sample_file.png).
+![&#x200B; Le champ « Ce fichier est-il chiffré ? » Activez le bouton bascule et cliquez sur le bouton « Sélectionner un fichier d’exemple »](../../images/tutorials/edi/select_sample_file.png).
 
 Une fois que vous avez sélectionné votre fichier d’exemple, configurez les paramètres de vos données, tels que le format de données, le délimiteur et le type de compression correspondants. Patientez quelques instants le temps que l’interface d’aperçu effectue entièrement le rendu, puis sélectionnez **[!UICONTROL Save]**.
 
@@ -160,4 +160,4 @@ Vous pouvez continuer à [effectuer des mises à jour sur votre flux de données
 
 ## Étapes suivantes
 
-En lisant ce document, vous pouvez désormais ingérer des données chiffrées à partir de votre source de lots d’espace de stockage dans le cloud vers Experience Platform. Pour plus d’informations sur l’ingestion de données chiffrées à l’aide des API, consultez le guide sur l’[ingestion de données chiffrées à l’aide de l’API  [!DNL Flow Service] ](../api/encrypt-data.md). Pour obtenir des informations générales sur les sources dans Experience Platform, lisez la [présentation des sources](../../home.md).
+En lisant ce document, vous pouvez désormais ingérer des données chiffrées à partir de votre source de lots d’espace de stockage dans le cloud vers Experience Platform. Pour plus d’informations sur l’ingestion de données chiffrées à l’aide des API, consultez le guide sur l’[ingestion de données chiffrées à l’aide de l’API  [!DNL Flow Service] &#x200B;](../api/encrypt-data.md). Pour obtenir des informations générales sur les sources dans Experience Platform, lisez la [présentation des sources](../../home.md).
