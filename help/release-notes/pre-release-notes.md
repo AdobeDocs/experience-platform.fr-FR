@@ -45,9 +45,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| [!BADGE Beta ]{type=Informative} [Correspondance client Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Faites correspondre les clients par adresse e-mail et reprenez contact avec eux dans l’ensemble du [!DNL Microsoft Advertising Network], y compris grâce aux annonces Search et Audience. Liez votre compte [!DNL Microsoft Advertising] à Real-Time CDP pour automatiser la création et la gestion des listes de correspondance client directement depuis Experience Platform. |
-| [!BADGE ]{type=Informative} [Audience Personnalisée Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Envoyez des audiences d’Experience Platform vers [!DNL Reddit Ads]. Connectez votre compte [!DNL Reddit], mappez des identités et activez des audiences pour atteindre les personnes qui explorent activement leurs intérêts sur [!DNL Reddit]. |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [ (héritée) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [ (hérité) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
+| [!BADGE Beta &#x200B;]{type=Informative} [Correspondance client Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Faites correspondre les clients par adresse e-mail et reprenez contact avec eux dans l’ensemble du [!DNL Microsoft Advertising Network], y compris grâce aux annonces Search et Audience. Liez votre compte [!DNL Microsoft Advertising] à Real-Time CDP pour automatiser la création et la gestion des listes de correspondance client directement depuis Experience Platform. |
+| {type=Informative} [Audience Personnalisée Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Envoyez des audiences d’Experience Platform vers [!DNL Reddit Ads]. Connectez votre compte [!DNL Reddit], mappez des identités et activez des audiences pour atteindre les personnes qui explorent activement leurs intérêts sur [!DNL Reddit]. |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [&#x200B; (héritée) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [&#x200B; (hérité) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Utilisez [!DNL Rokt] pour connecter les audiences Experience Platform à la prise de décision en temps réel pilotée par l’IA, améliorant ainsi les performances des campagnes grâce à un ciblage, une suppression et une personnalisation plus précis. |
 
 {style="table-layout:auto"}
@@ -74,7 +74,7 @@ XDM est une spécification open source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [ Présentation du système XDM ](../xdm/home.md).
+Pour plus d’informations, consultez la [&#x200B; Présentation du système XDM &#x200B;](../xdm/home.md).
 
 ## Service de requête {#query-service}
 
@@ -102,7 +102,7 @@ Pour plus d’informations, consultez la [présentation de Query Service](../que
 
 {style="table-layout:auto"}
 
-Pour plus d&#39;informations, lisez la présentation de Real-Time CDP [](../rtcdp/home.md).
+Pour plus d&#39;informations, lisez la présentation de Real-Time CDP [&#128279;](../rtcdp/home.md).
 
 ## Sandbox {#sandboxes}
 
