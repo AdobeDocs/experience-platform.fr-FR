@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
+source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 22%
+source-wordcount: '1344'
+ht-degree: 19%
 
 ---
 
@@ -45,10 +45,13 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} [Correspondance client Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Faites correspondre les clients par adresse e-mail et reprenez contact avec eux dans l’ensemble du [!DNL Microsoft Advertising Network], y compris grâce aux annonces Search et Audience. Liez votre compte [!DNL Microsoft Advertising] à Real-Time CDP pour automatiser la création et la gestion des listes de correspondance client directement depuis Experience Platform. |
-| {type=Informative} [Audience Personnalisée Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Envoyez des audiences d’Experience Platform vers [!DNL Reddit Ads]. Connectez votre compte [!DNL Reddit], mappez des identités et activez des audiences pour atteindre les personnes qui explorent activement leurs intérêts sur [!DNL Reddit]. |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [&#x200B; (héritée) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [&#x200B; (hérité) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
+| [!BADGE Beta ]{type=Informative} [Correspondance client Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Faites correspondre les clients par adresse e-mail et reprenez contact avec eux dans l’ensemble du [!DNL Microsoft Advertising Network], y compris grâce aux annonces Search et Audience. Liez votre compte [!DNL Microsoft Advertising] à Real-Time CDP pour automatiser la création et la gestion des listes de correspondance client directement depuis Experience Platform. Pour obtenir l’accès, contactez votre gestionnaire de compte Adobe. |
+| [!BADGE ]{type=Informative} [Audience Personnalisée Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Envoyez des audiences d’Experience Platform vers [!DNL Reddit Ads]. Connectez votre compte [!DNL Reddit], mappez des identités et activez des audiences pour atteindre les personnes qui explorent activement leurs intérêts sur [!DNL Reddit]. |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [ (héritée) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [ (hérité) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Utilisez [!DNL Rokt] pour connecter les audiences Experience Platform à la prise de décision en temps réel pilotée par l’IA, améliorant ainsi les performances des campagnes grâce à un ciblage, une suppression et une personnalisation plus précis. |
+| Prise en charge des audiences externes pour [ Criteo ](../destinations/catalog/advertising/criteo.md) | Activez les audiences d’origines autres que Segmentation Service vers [!DNL Criteo], y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Voir la section [audiences prises en charge](../destinations/catalog/advertising/criteo.md#supported-audiences) pour plus d’informations. |
+| [Connexion à l’audience Acxiom](../destinations/catalog/advertising/acxiom-audience-connection.md) | La destination [!DNL Acxiom Audience Connection] est désormais disponible pour tous. Utilisez-le pour améliorer les audiences avec la technologie [!DNL Acxiom's Real ID] et les activer sur d’autres plateformes, notamment [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] et [!DNL Viant]. |
+| [Connexion à l’audience Acxiom Real ID](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | La destination [!DNL Acxiom Real ID Audience Connection] est désormais disponible pour tous. Utilisez-la pour activer des audiences à l’aide de [!DNL Acxiom's Real ID] comme clé de correspondance sur le même ensemble de plateformes prises en charge, notamment [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] et [!DNL Viant]. |
 
 {style="table-layout:auto"}
 
@@ -57,6 +60,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Correction | Description |
 | --- | --- |
 | Prise en charge de la surveillance Personalization personnalisée | Le tableau de bord de surveillance des destinations prend désormais en charge les destinations [!DNL Custom Personalization]. La note de limitation indiquant que les [!DNL Custom Personalization] exclues de la surveillance a été supprimée. |
+| Nombre de profils dans la révision de l’activation | L’étape de révision de l’activation affiche désormais le nombre de profils pour les audiences déjà activées. Le nombre de profils s’affiche également pour les destinations de diffusion en streaming, et pas seulement pour les destinations par lots. |
+| Visibilité de l’expiration du jeton d’[!DNL Pinterest] | La destination [!DNL Pinterest] fait désormais surface avec le délai d’expiration du jeton renvoyé directement par [!DNL Pinterest], afin que vous puissiez voir quand la réauthentification est nécessaire. |
+| L’exportation du fichier est maintenant désactivée pour les plannings non valides | L’action **[!UICONTROL Export file now]** est désormais désactivée lorsque le planning d’audience est non valide ou obsolète. Une info-bulle explique pourquoi l’action n’est pas disponible. |
+| Correctif de visibilité de colonne dans le workflow d’activation | Correction d’un problème en raison duquel la modification des colonnes visibles dans une table affectait incorrectement les autres tables du workflow d’activation. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +81,7 @@ XDM est une spécification open source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [&#x200B; Présentation du système XDM &#x200B;](../xdm/home.md).
+Pour plus d’informations, consultez la [ Présentation du système XDM ](../xdm/home.md).
 
 ## Service de requête {#query-service}
 
@@ -102,7 +109,7 @@ Pour plus d’informations, consultez la [présentation de Query Service](../que
 
 {style="table-layout:auto"}
 
-Pour plus d&#39;informations, lisez la présentation de Real-Time CDP [&#128279;](../rtcdp/home.md).
+Pour plus d&#39;informations, lisez la présentation de Real-Time CDP [](../rtcdp/home.md).
 
 ## Sandbox {#sandboxes}
 
