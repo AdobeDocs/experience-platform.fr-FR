@@ -39,7 +39,7 @@ Une fois que les visiteurs et visiteuses de votre site se sont vus attribuer des
 
 Le [!DNL Adobe Privacy JavaScript Library] fournit plusieurs fonctions qui vous permettent de récupérer et de supprimer les identités client stockées dans le navigateur. La bibliothèque peut être configurée pour récupérer les informations d’identité de plusieurs applications Adobe, dont ECID. Grâce à l’utilisation de rappels ou de promesses, vous pouvez gérer par programmation les identifiants récupérés avec succès et les envoyer à l’API [!DNL Privacy Service].
 
-Pour plus d’informations sur [!DNL Privacy JS Library], y compris des exemples de code pour plusieurs cas d’utilisation courants, reportez-vous à la section [ Présentation de la bibliothèque JS d’Adobe Privacy](js-library.md).
+Pour plus d’informations sur [!DNL Privacy JS Library], y compris des exemples de code pour plusieurs cas d’utilisation courants, reportez-vous à la section [&#x200B; Présentation de la bibliothèque JS d’Adobe Privacy](js-library.md).
 
 ## Étapes suivantes
 

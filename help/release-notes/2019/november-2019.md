@@ -44,14 +44,14 @@ Avec Real-Time CDP, vous pouvez :
 * générer des informations exploitables et adapter les audiences grâce à l’IA et au machine learning optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
 * proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
-Pour plus d’informations, consultez la documentation de [](../../rtcdp/overview.md).
+Pour plus d’informations, consultez la documentation de [&#128279;](../../rtcdp/overview.md).
 
 **Fonctionnalités clés**
 
 | Fonctionnalité | Description |
 |---|---|
 | Destinations | Intégrations préconfigurées aux plateformes de destination prises en charge par Adobe [!DNL Real-Time Customer Data Platform] qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
-| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-Time Customer Data Platform (Real-Time CDP) comprend un tableau de bord des mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures ](#real-time-customer-data-platform-metrics) ci-dessous. |
+| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-Time Customer Data Platform (Real-Time CDP) comprend un tableau de bord des mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures &#x200B;](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
 **[!DNL Real-Time Customer Data Platform]des mesures**
@@ -62,7 +62,7 @@ La page d’accueil n’est qu’un des emplacements où les cartes de mesures a
 
 Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. À mesure que les données sont collectées, le tableau de bord se met automatiquement à jour pour afficher des informations sur ces données.
 
-Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [](../../rtcdp/home-page-dashboards.md)
+Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [&#128279;](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
@@ -189,4 +189,4 @@ Adobe Experience Platform [!DNL Segmentation Service] propose une interface util
 
 * Aucun.
 
-Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [ présentation de Segmentation Service](../../segmentation/home.md).
+Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [&#x200B; présentation de Segmentation Service](../../segmentation/home.md).

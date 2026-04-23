@@ -72,7 +72,7 @@ ht-degree: 80%
       * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
       * [Actualisation de page d’action](https://exchange.adobe.com/apps/ec/102848)
       * [Suivi d’Adform Website](https://exchange.adobe.com/apps/ec/103195)
-      * [](https://exchange.adobe.com/apps/ec/100155)
+      * [&#128279;](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [Vue d’ensemble](./extensions/client/analytics/overview.md)
          * [Modules partagés](./extensions/client/analytics/shared-modules.md)
@@ -157,7 +157,7 @@ ht-degree: 80%
          * [Vue d’ensemble](./extensions/client/target-v2/overview.md)
          * [Notes de mise à jour](./extensions/client/target-v2/release-notes.md)
       * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
-      * [](https://exchange.adobe.com/apps/ec/100640)
+      * [&#128279;](https://exchange.adobe.com/apps/ec/100640)
       * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
       * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
       * Informations [!DNL Algolia] {#algolia-insights}
