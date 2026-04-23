@@ -2,10 +2,10 @@
 title: Paramètres des notifications push
 description: Configurez les paramètres de notification push pour l’extension de balise Web SDK.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 6%
+source-wordcount: '178'
+ht-degree: 11%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 6%
 >id="platform_tags_websdk_pushnotifications"
 >title="Notifications push"
 >abstract="Définit une clé publique VALIDE pour l’authentification par notification push."
-
->[!AVAILABILITY]
->
->Les notifications push pour le Web SDK sont actuellement en version **bêta**. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 Cette section de configuration vous permet de définir une clé publique VALIDE pour l’authentification par notification push.
 

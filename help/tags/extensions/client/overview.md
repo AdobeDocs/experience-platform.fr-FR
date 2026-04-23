@@ -2,9 +2,9 @@
 title: Référence des extensions de balises
 description: Recherchez la documentation relative aux extensions de balises dans Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '423'
 ht-degree: 20%
 
 ---
@@ -21,34 +21,33 @@ Voici une liste reprenant la documentation relative aux extensions de balises c�
 * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
 * [Actualisation de page d’action](https://exchange.adobe.com/apps/ec/102848)*
 * [Suivi d’Adform Website](https://exchange.adobe.com/apps/ec/103195)*
-* [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
+* [](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics et Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics et Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics et Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Chaîne de produit Adobe Analytics](./product-string/overview.md)
-* [Créateur de chaînes de produit Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)*
+* [Créateur de chaînes de produit ](https://exchange.adobe.com/apps/ec/101461)*
 * [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Couche de données client Adobe](./client-data-layer/overview.md)
 * [Adobe ContextHub](./contexthub/overview.md)
-* [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
+* [](https://exchange.adobe.com/apps/ec/107493)*
 * [Service Adobe Experience Cloud ID](./id-service/overview.md)
 * [Démo Adobe Experience Platform](./platform-demo/overview.md)
-* [SDK Web Adobe Experience Platform](./web-sdk/overview.md)
+* [SDK web Adobe Experience Platform](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
-* [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
+* [](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobe Media Analytics for Audio and Video](./media-analytics/overview.md)
 * [Adobe Media Analytics (3.x SDK)](./media-analytics-3x/overview.md)
 * [Confidentialité d’Adobe](./privacy/overview.md)
-* [Sélecteur de suite de rapports Adobe](https://exchange.adobe.com/apps/ec/100640)*
+* [Sélecteur de suite de rapports ](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
-* [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Notificateur Airbreak JS](https://exchange.adobe.com/apps/ec/103342)*
-* [&#x200B; Amplitude &#x200B;](https://exchange.adobe.com/apps/ec/108010)*
+* [ Amplitude ](https://exchange.adobe.com/apps/ec/108010)*
 * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)*
 * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)*
 * [Awin Conversion Tag](https://exchange.adobe.com/apps/ec/103240)*
@@ -58,7 +57,7 @@ Voici une liste reprenant la documentation relative aux extensions de balises c�
 * [[!DNL BrightCove] du suivi vidéo](./brightcove/overview.md)
 * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)*
 * [Identifiant Source du canal](https://exchange.adobe.com/apps/ec/101412)*
-* [&#x200B; Cheetah Experiences &#x200B;](https://exchange.adobe.com/apps/ec/102759)*
+* [ Cheetah Experiences ](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Plug-ins Analytics courants](./plugins/overview.md)
 * [Plug-ins Web SDK courants](web-sdk-plugins/web-sdk-plugins.md)
@@ -76,7 +75,7 @@ Voici une liste reprenant la documentation relative aux extensions de balises c�
 * [Visionneuses Dynamic Media](https://exchange.adobe.com/apps/ec/103048)*
 * [Assistant EDDL](https://exchange.adobe.com/apps/ec/107691)*
 * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)*
-* [ForeSee &#x200B;](https://exchange.adobe.com/apps/ec/100164)*
+* [ForeSee ](https://exchange.adobe.com/apps/ec/100164)*
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Engagement prédictif Genesys](https://exchange.adobe.com/apps/ec/106148)*
 * [Couche de données Google](./google-data-layer/overview.md)
@@ -88,13 +87,13 @@ Voici une liste reprenant la documentation relative aux extensions de balises c�
 * [Table de mappage](https://exchange.adobe.com/apps/ec/103136)*
 * [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
-* [Gestionnaire de propriétés de Principal &#x200B;](https://exchange.adobe.com/apps/ec/102992)*
+* [Gestionnaire de propriétés de Principal ](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*
-* [&#x200B; Nielsen Digital SDK &#x200B;](https://exchange.adobe.com/apps/ec/101361)*
+* [ Nielsen Digital SDK ](https://exchange.adobe.com/apps/ec/101361)*
 * [Gestion du consentement OneTrust pour les cookies](https://exchange.adobe.com/apps/ec/100340)*
 * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)*
 * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)*
-* [Suivi Des Conversions Pinterest](https://exchange.adobe.com/apps/ec/100523)*
+* [Suivi Des Conversions ](https://exchange.adobe.com/apps/ec/100523)*
 * [Pixel Loader](https://exchange.adobe.com/apps/ec/100152)*
 * [Commentaires sur le site Web de Qualtrics](https://exchange.adobe.com/apps/ec/101569)*
 * [Mesure quantique](https://exchange.adobe.com/apps/ec/101535)*
@@ -113,7 +112,7 @@ Voici une liste reprenant la documentation relative aux extensions de balises c�
 * [Lecture Vimeo](https://exchange.adobe.com/apps/ec/108937)*
 * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)*
 * [Compositeur XDM](https://exchange.adobe.com/apps/ec/106062)*
-* [&#x200B; Yahoo Dot &#x200B;](https://exchange.adobe.com/apps/ec/106062)*
+* [ Yahoo Dot ](https://exchange.adobe.com/apps/ec/106062)*
 * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)*
 * [[!DNL Youtube] Lecture](https://exchange.adobe.com/apps/ec/103174)*
 * [[!DNL YouTube] du suivi vidéo](./youtube/overview.md)

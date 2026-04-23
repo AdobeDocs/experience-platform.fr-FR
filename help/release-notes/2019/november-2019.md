@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1889'
-ht-degree: 61%
+source-wordcount: '1888'
+ht-degree: 60%
 
 ---
 
@@ -44,14 +44,14 @@ Avec Real-Time CDP, vous pouvez :
 * générer des informations exploitables et adapter les audiences grâce à l’IA et au machine learning optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
 * proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
-Pour plus d’informations, consultez la documentation de [Real-Time Customer Data Platform](../../rtcdp/overview.md).
+Pour plus d’informations, consultez la documentation de [](../../rtcdp/overview.md).
 
 **Fonctionnalités clés**
 
 | Fonctionnalité | Description |
 |---|---|
-| Destinations  | Intégrations préconfigurées aux plateformes de destination prises en charge par Adobe [!DNL Real-Time Customer Data Platform] qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
-| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-Time Customer Data Platform (Real-Time CDP) comprend un tableau de bord des mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures Real-Time Customer Data Platform](#real-time-customer-data-platform-metrics) ci-dessous. |
+| Destinations | Intégrations préconfigurées aux plateformes de destination prises en charge par Adobe [!DNL Real-Time Customer Data Platform] qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
+| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-Time Customer Data Platform (Real-Time CDP) comprend un tableau de bord des mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures ](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
 **[!DNL Real-Time Customer Data Platform]des mesures**
@@ -62,7 +62,7 @@ La page d’accueil n’est qu’un des emplacements où les cartes de mesures a
 
 Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. À mesure que les données sont collectées, le tableau de bord se met automatiquement à jour pour afficher des informations sur ces données.
 
-Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [&#128279;](../../rtcdp/home-page-dashboards.md)
+Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
@@ -128,7 +128,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 | Fonctionnalité | Description |
 | ---------- | ------------ |
 | Schéma de notification | Un nouveau schéma qui représente les données de notification envoyées pendant le processus d’ingestion des données. |
-| Schémas DSP d’Adobe AdCloud | Cinq nouveaux schémas ont été ajoutés pour représenter les métadonnées de la plateforme DSP (Demand Side Platform) Adobe Advertising Cloud : positionnement, campagne, package, annonceur, compte. |
+| Schémas DSP d’Adobe AdCloud | Cinq nouveaux schémas ont été ajoutés pour représenter les métadonnées de la plateforme côté demande (DSP) d’Adobe Advertising : Emplacement, Campagne, Package, Annonceur, Compte. |
 | Groupes de champs de schéma Détails d’implémentation d’ExperienceEvent | Nouveaux groupes de champs ExperienceEvent qui ajoutent un champ standard pour stocker des informations sur le logiciel utilisé pour collecter l’événement. |
 | [!DNL Profile Privacy] des groupes de champs | Nouveaux groupes de champs de profil qui ajoutent des champs pour accepter les signaux d’exclusion généraux et d’exclusion des ventes/du partage pour les [!DNL Real-Time Customer Profile]. |
 | Contraintes de format de `xdm:alternateDisplayInfo` | Les champs « Titre » et « Description » de `xdm:alternateDisplayInfo` doivent tous deux être des chaînes pour être validés. |
@@ -189,4 +189,4 @@ Adobe Experience Platform [!DNL Segmentation Service] propose une interface util
 
 * Aucun.
 
-Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [&#x200B; présentation de Segmentation Service](../../segmentation/home.md).
+Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [ présentation de Segmentation Service](../../segmentation/home.md).

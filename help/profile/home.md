@@ -2,7 +2,7 @@
 title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 90%
@@ -113,7 +113,7 @@ Vous pouvez configurer [!DNL Experience Platform] pour envoyer les données d’
 
 >[!NOTE]
 >
->Les données collectées par l’intermédiaire des solutions Adobe, notamment [!DNL Analytics Cloud], [!DNL Marketing Cloud] et [!DNL Advertising Cloud], débordent dans [!DNL Experience Platform] et sont ingérées dans le [!DNL Profile].
+>Les données collectées par l’intermédiaire des solutions Adobe, notamment [!DNL Analytics Cloud], [!DNL Marketing Cloud] et [!DNL Adobe Advertising], débordent dans [!DNL Experience Platform] et sont ingérées dans le [!DNL Profile].
 
 ### Mesures d’ingestion de profil
 

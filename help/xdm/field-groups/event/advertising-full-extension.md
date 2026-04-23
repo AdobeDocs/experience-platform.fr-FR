@@ -1,23 +1,24 @@
 ---
-title: Groupe de champs de schéma d’extension complète Adobe Advertising Cloud ExperienceEvent
-description: Découvrez le groupe de champs de schéma d’extension complète Adobe Advertising Cloud ExperienceEvent.
+title: Groupe de champs de schéma d’extension complète Adobe Advertising ExperienceEvent
+description: Découvrez le groupe de champs de schéma d’extension complète Adobe Advertising ExperienceEvent.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: adfd0220b8bc53c44abc76a711b148a7e03edb7a
+exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1558'
 ht-degree: 11%
 
 ---
 
-# [!UICONTROL Extension complète Adobe Advertising Cloud ExperienceEvent] groupe de champs de schéma
+# [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] groupe de champs de schéma
 
 >[!AVAILABILITY]
 >
->Le groupe de champs [!UICONTROL &#x200B; Extension complète Adobe Advertising Cloud ExperienceEvent &#x200B;] est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Le groupe de champs [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-[!UICONTROL &#x200B; Extension complète Adobe Advertising Cloud ExperienceEvent &#x200B;] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), qui capture les mesures courantes collectées par Adobe Advertising (anciennement appelée « [!DNL Advertising Cloud] »).
+[!UICONTROL Adobe Advertising ExperienceEvent Full Extension] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), qui capture les mesures courantes collectées par Adobe Advertising (anciennement appelée « [!DNL Advertising Cloud] »).
 
-Ce document décrit la structure et le cas d’utilisation du groupe de champs de l’extension [!DNL Advertising Cloud].
+Ce document décrit la structure et le cas d’utilisation du groupe de champs de l’extension [!DNL Advertising].
 
 >[!NOTE]
 >
@@ -27,18 +28,18 @@ Ce document décrit la structure et le cas d’utilisation du groupe de champs d
 
 Le groupe de champs fournit un seul objet `_experience` à un schéma, qui contient lui-même un seul objet `adcloud`.
 
-![Champs de niveau supérieur pour le groupe de champs [!DNL Advertising Cloud]](../../images/field-groups/advertising-full-extension/full-schema.png "Champs de niveau supérieur pour le groupe  [!DNL Advertising Cloud]  champs")
+![Champs de niveau supérieur pour le groupe de champs [!DNL Advertising]](../../images/field-groups/advertising-full-extension/full-schema.png "Champs de niveau supérieur pour le groupe  [!DNL Advertising]  champs")
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `adDeliveryDetails` | Objet | Ajoutez les détails de diffusion. Pour plus d’informations sur le contenu de cet objet[&#x200B; reportez-vous à la `adDeliveryDetails`sous-section ci-dessous de l’objet &#x200B;](#adDeliveryDetails) . |
-| `advertisement` | Objet | Détails de la publicité numérique. Pour plus d’informations sur le contenu de cet objet[&#x200B; consultez la &#x200B;](#advertisement)sous-section ci-dessous sur l’objet de publicité . |
-| `campaign` | Objet | Détails de la hiérarchie de la campagne. Pour plus d’informations sur le contenu de cet objet[&#x200B; reportez-vous à la &#x200B;](#campaign-campaign)sous-section ci-dessous sur l’objet Campaign . |
+| `adDeliveryDetails` | Objet | Ajoutez les détails de diffusion. Pour plus d’informations sur le contenu de cet objet[ reportez-vous à la `adDeliveryDetails`sous-section ci-dessous de l’objet ](#adDeliveryDetails) . |
+| `advertisement` | Objet | Détails de la publicité numérique. Pour plus d’informations sur le contenu de cet objet[ consultez la ](#advertisement)sous-section ci-dessous sur l’objet de publicité . |
+| `campaign` | Objet | Détails de la hiérarchie de la campagne. Pour plus d’informations sur le contenu de cet objet[ reportez-vous à la ](#campaign-campaign)sous-section ci-dessous sur l’objet Campaign . |
 | `conversionDetails` | Objet | Détails de conversion d’une publicité. Pour plus d’informations sur le contenu de cet objet, consultez la [sous-section ci-dessous](#conversionDetails). |
 | `eventType` | Chaîne | Type d’événement Adobe Advertising. |
-| `fees` | Objet | Détails des frais Advertising. Pour plus d’informations sur le contenu de cet objet[&#x200B; consultez la &#x200B;](#fees)sous-section ci-dessous sur l’objet des frais. |
+| `fees` | Objet | Détails des frais Advertising. Pour plus d’informations sur le contenu de cet objet[ consultez la ](#fees)sous-section ci-dessous sur l’objet des frais. |
 | `inventory` | Objet | Détails de l’inventaire. Pour plus d’informations sur le contenu de cet objet, consultez la [sous-section ci-dessous](#inventory). |
-| `productDetails` | Objet | Détails de l’annonce du produit. Pour plus d’informations sur le contenu de cet objet[&#x200B; reportez-vous à la &#x200B;](#productDetails)sous-section ci-dessous de l’objet productDetails. |
+| `productDetails` | Objet | Détails de l’annonce du produit. Pour plus d’informations sur le contenu de cet objet[ reportez-vous à la ](#productDetails)sous-section ci-dessous de l’objet productDetails. |
 | `stitchId` | Chaîne | Identifiant des serveurs de publicités d’Adobe Advertising pour effectuer le suivi des conversions par clic sur les navigateurs qui bloquent les cookies tiers. |
 
 ## `adDeliveryDetails` {#adDeliveryDetails}
@@ -86,7 +87,7 @@ L’objet campaign définit la hiérarchie de la campagne publicitaire, y compri
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `accountId` | Chaîne | Identifiant du compte. |
-| `dspId` | Chaîne | Identifiant du Demand Side Platform (DSP) dans lequel la campagne est définie. En règle générale, cet identifiant correspond à l’identifiant d’Adobe Advertising Cloud DSP. |
+| `dspId` | Chaîne | Identifiant du Demand Side Platform (DSP) dans lequel la campagne est définie. En règle générale, cet identifiant correspond à l’identifiant d’Adobe Advertising DSP. |
 | `campaignId` | Chaîne | Identifiant de la campagne. |
 | `placementId` | Chaîne | Identifiant de l’emplacement. |
 | `packageId` | Chaîne | Identifiant du package Advertising DSP. |
@@ -103,8 +104,8 @@ L’objet conversionDetails capture les informations de suivi pour les conversio
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `trackingCode` | Chaîne | Code de suivi de conversion de l’événement. Pour obtenir la liste des formats possibles, voir [Formats d’ID AMO](https://experienceleague.adobe.com/fr/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
-| `trackingIdentities` | Chaîne | Identifiant d’événement (EF) ou détails d’identité de suivi pour un événement. Pour obtenir une liste des formats possibles, voir [Formats d’ID EF](https://experienceleague.adobe.com/fr/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingCode` | Chaîne | Code de suivi de conversion de l’événement. Pour obtenir la liste des formats possibles, voir [Formats d’ID AMO](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
+| `trackingIdentities` | Chaîne | Identifiant d’événement (EF) ou détails d’identité de suivi pour un événement. Pour obtenir une liste des formats possibles, voir [Formats d’ID EF](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Objet | Mappage des propriétés de conversion, représenté sous la forme d’un tableau de chaînes de paire clé-valeur (telles que `subscriptions=253`). |
 
 ## `fees` {#fees}
@@ -142,10 +143,10 @@ L’objet d’inventaire enregistre des détails sur l’opportunité d’invent
 | --- | --- | --- |
 | `sessionId` | Chaîne | Identifiant de session associé à un événement d’expérience, utilisé pour lier des événements indépendants qui se sont produits au cours de la même session. |
 | `feedID` | Chaîne | Identifiant composite de l’éditeur, d’Ad Exchange et d’autres fonctionnalités. |
-| `sspPartnerCode` | Chaîne | Partenaire (échange) par l’intermédiaire duquel Adobe Advertising Cloud reçoit l’opportunité d’inventaire. |
+| `sspPartnerCode` | Chaîne | Partenaire (échange) par lequel Adobe Advertising reçoit l’opportunité d’inventaire. |
 | `siteID` | Chaîne | Identifiant du site web où l’impression publicitaire a été diffusée. |
 | `costCurrency` | Chaîne | Code de devise ISO 4217 utilisé pour payer un partenaire pour une opportunité publicitaire. La valeur doit suivre le modèle d’expression régulière ^[A-Z]{3}$ (trois lettres majuscules). Par exemple : USD, EUR. |
-| `inventorySourceId` | Chaîne | Identifiant de la source d’inventaire Adobe Advertising Cloud sur laquelle cette opportunité a été diffusée. |
+| `inventorySourceId` | Chaîne | Identifiant de la source d’inventaire Adobe Advertising sur laquelle cette opportunité a été diffusée. |
 | `segment` | Objet | Détails associés aux règles de segmentation utilisateur. Ses propriétés sont les suivantes :<ul><li>`attributablePartnerId` (chaîne) : identifiant du fournisseur de segments propriétaire de l’attribut attributeSegmentId.</li><li>`attributableSegmentId` (chaîne) : segment crédité pour le ciblage utilisateur dans la règle de ciblage de l’emplacement. Il est utilisé à des fins de suivi des coûts et des partenaires payeurs.</li><li>`segments` (chaîne) : intersection des segments d’utilisateur a\) auxquels l’utilisateur appartenait et b\) que l’annonce ciblait. Il ne s’agit pas de la liste complète des segments auxquels l’utilisateur appartenait au moment de la mise aux enchères.</li></ul> |
 | `optimizationTag` | Chaîne | Balise liée à l’optimisation. |
 | `attributableDeviceGraphId` | Chaîne | Identifiant du graphique d’appareil attribué à un événement de conversion. |
@@ -167,6 +168,6 @@ L’objet `productDetails` contient des informations sur les produits présenté
 
 ## Étapes suivantes
 
-Ce document couvrait la structure et le cas d’utilisation du groupe de champs de l’extension [!DNL Advertising Cloud]. Pour plus d’informations sur le groupe de champs lui-même, consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
+Ce document couvrait la structure et le cas d’utilisation du groupe de champs de l’extension [!DNL Adobe Advertising]. Pour plus d’informations sur le groupe de champs lui-même, consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
 
 Si vous utilisez ce groupe de champs pour collecter des données [!DNL Advertising] à l’aide de Adobe Experience Platform Web SDK, consultez le guide sur [la configuration d’un flux de données](../../../datastreams/overview.md) pour savoir comment mapper des données à XDM côté serveur.

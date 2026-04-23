@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour le profil client en temps réel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1746'
-ht-degree: 22%
+source-wordcount: '1743'
+ht-degree: 21%
 
 ---
 
@@ -38,7 +38,7 @@ Ce guide nécessite une connaissance pratique des composants [!DNL Experience Pl
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
+Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un Adobe Advertising ID ou un Adobe Target ID.
 
 Le service d’identités conserve un stock d’espaces de noms d’identité définis globalement (standard) et par l’utilisateur ou l’utilisatrice (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
@@ -46,7 +46,7 @@ Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experi
 
 ## Envoi de requêtes {#submit}
 
-Les sections ci-dessous décrivent comment effectuer des demandes d’accès à des informations personnelles pour [!DNL Real-Time Customer Profile] en utilisant l’API ou l’interface utilisateur [!DNL Privacy Service]. Avant de lire ces sections, vous devez consulter ou connaître la documentation de l’[API Privacy Service](../privacy-service/api/getting-started.md) ou de l’[interface utilisateur Privacy Service](../privacy-service/ui/overview.md). Ces documents fournissent des étapes complètes sur la manière d’envoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données d’identité utilisateur envoyées dans les payloads de requête.
+Les sections ci-dessous décrivent comment effectuer des demandes d’accès à des informations personnelles pour [!DNL Real-Time Customer Profile] en utilisant l’API ou l’interface utilisateur [!DNL Privacy Service]. Avant de lire ces sections, vous devez consulter ou connaître la documentation de l’[API ](../privacy-service/api/getting-started.md) ou de l’[interface utilisateur Privacy Service](../privacy-service/ui/overview.md). Ces documents fournissent des étapes complètes sur la manière d’envoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données d’identité utilisateur envoyées dans les payloads de requête.
 
 >[!IMPORTANT]
 >
@@ -67,7 +67,7 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 
 >[!NOTE]
 >
->Pour plus d’informations sur les effets de l’utilisation de [&#x200B; et de &#x200B;](#profile-v-identity) dans le tableau de `ProfileService` `identity` reportez-vous à la section sur les `include`requêtes de profil et requêtes d’identité plus loin dans ce document.
+>Pour plus d’informations sur les effets de l’utilisation de [ et de ](#profile-v-identity) dans le tableau de `ProfileService``identity` reportez-vous à la section sur les `include`requêtes de profil et requêtes d’identité plus loin dans ce document.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la banque de [!DNL Profile]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant l’espace de noms d’identité `Email` standard et l’autre à l’aide d’un espace de noms d’identité `Customer_ID` personnalisé. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans le tableau `include` :
 
@@ -186,7 +186,7 @@ Supposons, par exemple, que vous stockiez des données d’attributs du client d
 
 L’un des jeux de données utilise `customer_id` comme identifiant principal, tandis que les deux autres utilisent `email_id`. Si vous deviez envoyer une demande d’accès à des informations personnelles (accès ou suppression) en utilisant uniquement `email_id` comme valeur d’ID utilisateur, seuls les attributs `firstName`, `lastName` et `mlScore` seraient traités, tandis que `address` ne seraient pas affectés.
 
-Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [&#x200B; principes de base de la composition des schémas &#x200B;](../xdm/schema/composition.md#identity).
+Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [ principes de base de la composition des schémas ](../xdm/schema/composition.md#identity).
 
 ## Traitement des demandes de suppression {#delete}
 

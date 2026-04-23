@@ -2,7 +2,7 @@
 title: Déploiement de balises JavaScript pour la gestion du consentement client
 description: Découvrez comment gérer les signaux d’opt-in et d’opt-out des clients pour diverses solutions d’Adobe dans Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 94%
@@ -19,9 +19,9 @@ Les développeurs dʼextension Adobe Experience Platform utilisent les extensi
 
 Ce document contient des informations sur la façon d’empêcher le déclenchement des balises Adobe tant que le consentement n’est pas obtenu.
 
-## Advertising Cloud
+## Adobe Advertising
 
-Adobe Experience Platform ne déclenche pas automatiquement [!DNL Advertising Cloud]. [!DNL Advertising Cloud] se déclenche uniquement si vous le lui indiquez spécifiquement dans une action de règle. Utilisez les conditions de règle pour déterminer ce qu’il convient de déclencher et quand. Par exemple, pour utiliser des cookies afin de déterminer l’état d’inclusion, définissez un élément de données pour lire ce cookie et utilisez-le comme condition dans la règle pour déterminer quand déclencher l’action Track Conversion (Suivi des conversions).
+Adobe Experience Platform ne déclenche pas automatiquement [!DNL Adobe Advertising]. [!DNL Advertising] se déclenche uniquement si vous le lui indiquez spécifiquement dans une action de règle. Utilisez les conditions de règle pour déterminer ce qu’il convient de déclencher et quand. Par exemple, pour utiliser des cookies afin de déterminer l’état d’inclusion, définissez un élément de données pour lire ce cookie et utilisez-le comme condition dans la règle pour déterminer quand déclencher l’action Track Conversion (Suivi des conversions).
 
 Les intégrations avec les gestionnaires de consentement (tels que OneTrust) peuvent définir et suivre les cookies de consentement pour les clients, qui peuvent ensuite être utilisés dans le créateur de règles.
 
