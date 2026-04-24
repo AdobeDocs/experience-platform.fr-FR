@@ -17,7 +17,7 @@ La propriété `edgeDomain` vous permet de modifier le domaine dans lequel le SD
 >
 >Cette propriété ne modifie pas l’emplacement de définition des cookies. Le SDK Web définit toujours des [cookies propriétaires](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr), quel que soit l’endroit où il envoie finalement les données.
 
-La valeur que vous utilisez pour `edgeDomain` dépend de votre participation au programme de certificat géré par Adobe [](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) :
+La valeur que vous utilisez pour `edgeDomain` dépend de votre participation au programme de certificat géré par Adobe [&#128279;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) :
 
 **Si votre entreprise participe au programme de certificat géré par Adobe**, définissez la valeur sur le domaine propriétaire sélectionné lors de la configuration du certificat. En règle générale, cette valeur est un sous-domaine détenu par votre organisation. Par exemple : `data.example.com`. Les enregistrements CNAME de votre organisation transfèrent ces données vers Adobe.
 
