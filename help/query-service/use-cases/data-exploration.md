@@ -2,9 +2,9 @@
 title: Explorer, dépanner et vérifier l’ingestion par lots avec SQL
 description: Découvrez comment comprendre et gérer le processus d’ingestion des données dans Adobe Experience Platform. Ce document explique comment vérifier les lots et interroger les données ingérées.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fac5ebd3f81e6f4b9f601ab1d9252402cad52b6
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Pour faciliter votre compréhension des concepts abordés dans ce document, vous
 - **Ingestion des données** : consultez la [présentation de l’ingestion des données](../../ingestion/home.md) pour découvrir les principes de base de l’ingestion des données dans Experience Platform, y compris les différentes méthodes et processus impliqués.
 - **Ingestion par lots** : consultez la présentation de l’API [ingestion par lots](../../ingestion/batch-ingestion/overview.md) pour découvrir les concepts de base de l’ingestion par lots. Plus précisément, ce qu’est un « lot » et comment il fonctionne dans le processus d’ingestion de données d’Experience Platform.
 - **Métadonnées système dans les jeux de données** : consultez la [présentation du service de catalogue](../../catalog/home.md) pour savoir comment les champs de métadonnées système sont utilisés pour effectuer le suivi et l’interrogation des données ingérées.
-- **Modèle de données d’expérience (XDM)** : consultez la [présentation de l’interface utilisateur des schémas](../../xdm/ui/overview.md) et les [&#x200B; des principes de base de la composition des schémas](../../xdm/schema/composition.md) pour en savoir plus sur les schémas XDM et sur la manière dont ils représentent et valident la structure et le format des données ingérées dans Experience Platform.
+- **Modèle de données d’expérience (XDM)** : consultez la [présentation de l’interface utilisateur des schémas](../../xdm/ui/overview.md) et les [ des principes de base de la composition des schémas](../../xdm/schema/composition.md) pour en savoir plus sur les schémas XDM et sur la manière dont ils représentent et valident la structure et le format des données ingérées dans Experience Platform.
 
 ## Accéder aux métadonnées du lot de jeux de données {#access-dataset-batch-metadata}
 
@@ -37,13 +37,13 @@ Ensuite, pour afficher les champs système du jeu de données, exécutez une ins
 
 ![Interface utilisateur de DBVisualizer avec le tableau movie_data et ses colonnes de métadonnées affichées et mises en surbrillance.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Lorsque des données sont ingérées dans Experience Platform, une partition logique leur est attribuée en fonction des données entrantes. Cette partition logique est représentée par `_acp_system_metadata.sourceBatchId`. Cet identifiant permet de regrouper et d’identifier logiquement les lots de données avant qu’ils ne soient traités et stockés.
+Lorsque des données sont ingérées dans Experience Platform, une partition logique leur est attribuée en fonction des données entrantes. Cette partition logique est représentée par `_acp_system_metadata.acp_sourceBatchId`. Cet identifiant permet de regrouper et d’identifier logiquement les lots de données avant qu’ils ne soient traités et stockés.
 
 Une fois les données traitées et ingérées dans le lac de données, une partition physique représentée par `_ACP_BATCHID` lui est attribuée. Cet identifiant reflète la partition de stockage réelle dans le lac de données où se trouvent les données ingérées.
 
 ### Utilisation de SQL pour comprendre les partitions logiques et physiques {#understand-partitions}
 
-Pour comprendre comment les données sont regroupées et distribuées après ingestion, utilisez la requête suivante afin de compter le nombre de partitions physiques distinctes (`_ACP_BATCHID`) pour chaque partition logique (`_acp_system_metadata.sourceBatchId`).
+Pour comprendre comment les données sont regroupées et distribuées après ingestion, utilisez la requête suivante afin de compter le nombre de partitions physiques distinctes (`_ACP_BATCHID`) pour chaque partition logique (`_acp_system_metadata.acp_sourceBatchId`).
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data
@@ -92,21 +92,21 @@ Ensuite, validez et vérifiez les enregistrements qui ont été ingérés dans l
 
 >[!TIP]
 >
->Pour récupérer l’ID de lot et les enregistrements de requête associés à cet ID de lot, vous devez d’abord créer un lot dans Experience Platform. Si vous souhaitez tester le processus vous-même, vous pouvez ingérer des données CSV dans Experience Platform. Lisez le guide sur la façon de [mapper un fichier CSV à un schéma XDM existant à l’aide de recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md).
+>To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Experience Platform. If you want to test the process yourself, you can ingest CSV data into Experience Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Une fois que vous avez ingéré un lot, vous devez accéder à l’onglet [!UICONTROL Activité des jeux de données] du jeu de données dans lequel vous avez ingéré des données.
+Once you have ingested a batch, you must navigate to the [!UICONTROL Datasets activity tab] for the dataset you ingested data into.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir le tableau de bord [!UICONTROL Jeux de données]. Sélectionnez ensuite le nom du jeu de données dans l’onglet [!UICONTROL Parcourir] pour accéder à l’écran [!UICONTROL Activité du jeu de données].
+In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left-navigation to open the [!UICONTROL Datasets] dashboard. Next, select the name of the dataset from the [!UICONTROL Browse] tab to access the [!UICONTROL Dataset activity] screen.
 
-![Tableau de bord Jeux de données de l’interface utilisateur d’Experience Platform avec Jeux de données en surbrillance dans le volet de navigation de gauche.](../images/use-cases/datasets-workspace.png)
+![The Experience Platform UI Datasets dashboard with Datasets highlighted in left navigation.](../images/use-cases/datasets-workspace.png)
 
-La vue [!UICONTROL Activité du jeu de données] s’affiche. Cette vue contient les détails du jeu de données sélectionné. Elle inclut tous les lots ingérés qui s’affichent au format tableau.
+The [!UICONTROL Dataset activity] view appears. This view contains details of your selected dataset. It includes any ingested batches which are displayed in a table format.
 
-Sélectionnez un lot dans la liste des lots disponibles et copiez le [!UICONTROL Identifiant du lot] dans le panneau des détails à droite.
+Select a batch from the list of available batches and copy the [!UICONTROL Batch ID] from the details panel on the right.
 
-![Interface utilisateur des jeux de données Experience Platform affichant les enregistrements ingérés avec un identifiant de lot en surbrillance.](../images/use-cases/batch-id.png)
+![The Experience Platform Datasets UI showing the ingested records with a batch ID highlighted.](../images/use-cases/batch-id.png)
 
-Ensuite, utilisez la requête suivante pour récupérer tous les enregistrements qui ont été inclus dans le jeu de données dans le cadre de ce lot :
+Next, use the following query to retrieve all the records that were included in the dataset as part of that batch:
 
 ```sql
 SELECT * FROM movie_data
@@ -114,18 +114,18 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-Le mot-clé `_ACP_BATCHID` est utilisé pour filtrer l’[!UICONTROL ID de lot].
+The `_ACP_BATCHID` keyword is used to filter the [!UICONTROL Batch ID].
 
 >[!TIP]
 >
->La clause `LIMIT` est utile si vous souhaitez limiter le nombre de lignes affichées, mais une condition de filtre est plus souhaitable.
+>The `LIMIT` clause is helpful if you want to restrict the number of rows displayed, but a filter condition is more desirable.
 
-Lorsque vous exécutez cette requête dans le Query Editor, les résultats sont tronqués à 100 lignes. Query Editor est conçu pour offrir des aperçus rapides et faciliter la recherche. Pour récupérer jusqu’à 50 000 lignes, vous pouvez utiliser un outil tiers tel que DBVisualizer ou DBeaver.
+When you execute this query in the Query Editor, the results are truncated to 100 rows. The Query Editor is designed for quick previews and investigation. To retrieve up to 50,000 rows, you can use a third-party tool like DBVisualizer or DBeaver.
 
 ## Étapes suivantes {#next-steps}
 
-En lisant ce document, vous avez appris les principes de base de la vérification et de la validation des enregistrements dans les lots ingérés dans le cadre du processus d’ingestion de données. Vous avez également obtenu des informations sur l’accès aux métadonnées des lots de jeux de données, la compréhension des partitions logiques et physiques et l’interrogation de lots spécifiques à l’aide de commandes SQL. Ces connaissances peuvent vous aider à assurer l’intégrité des données et à optimiser le stockage de vos données sur Experience Platform.
+By reading this document, you learned the essentials of verifying and validating records in ingested batches as part of the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Experience Platform.
 
-Ensuite, vous devez vous entraîner à ingérer des données pour appliquer les concepts appris. Ingérez un exemple de jeu de données dans Experience Platform avec les fichiers d’exemple fournis ou vos propres données. Si vous ne l’avez pas déjà fait, consultez le tutoriel sur la [ingestion de données dans Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Experience Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
-Vous pouvez également apprendre à [connecter et vérifier Query Service à diverses applications de bureau clientes](../clients/overview.md) afin d’améliorer vos fonctionnalités d’analyse des données.
+Alternatively, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md) to enhance your data analysis capabilities.

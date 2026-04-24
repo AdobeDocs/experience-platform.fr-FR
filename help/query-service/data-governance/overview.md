@@ -1,47 +1,47 @@
 ---
-title: Gouvernance des données dans Query Service
-description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
+title: Data Governance in Query Service
+description: This overview covers the major elements of data governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: c98ae492b12fb5b9596f19a3d64785090439f7e1
 workflow-type: tm+mt
-source-wordcount: '3131'
-ht-degree: 1%
+source-wordcount: '3182'
+ht-degree: 3%
 
 ---
 
-# Gouvernance des données dans Query Service
+# Data governance in Query Service
 
-Adobe Experience Platform rassemble des données issues de plusieurs systèmes d’entreprise et vous permet de nettoyer, de mettre en forme, de manipuler et d’enrichir les données par le biais de Query Service en fonction de vos besoins. Cela permet aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients plus efficacement. Assurer une gouvernance adéquate des données est un aspect essentiel du traitement des informations personnelles, car certaines données peuvent être soumises à des restrictions d’utilisation basées sur les politiques organisationnelles et les réglementations légales. Il est essentiel de s’assurer que vos données ingérées et leurs opérations associées sont conformes aux politiques d’utilisation des données définies.
+Adobe Experience Platform brings data from multiple enterprise systems together and allows you to clean, shape, manipulate and enrich the data through Query Service according to your needs. This allows marketers to identify, understand, and engage customers in a better way. Ensuring adequate data governance is a critical aspect of handling personal information as certain data may be subject to usage restrictions based on organizational policies and legal regulations. It is critical to ensure that your ingested data and its related operations are compliant with the defined data usage policies.
 
-La gouvernance des données dans Query Service vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Cela joue un rôle essentiel pour vous assurer que les politiques d’utilisation ont été appliquées conformément aux réglementations définies par votre entreprise.
+Data governance within Query Service allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. This plays a key role when ensuring the usage policies have been applied according to the regulations defined by your business.
 
-Il est recommandé aux entreprises qui effectuent régulièrement le traitement des données de mettre en œuvre et d’appliquer ces directives afin de créer un environnement soucieux de la confidentialité pour tous les utilisateurs et utilisatrices.
+Organizations that routinely conduct data processing are recommended to outline, practice, and enforce these guidelines to create a privacy-conscious environment for all users.
 
-Les catégories suivantes sont essentielles au respect des réglementations de conformité des données lors de l’utilisation de Query Service :
+The following categories are instrumental in adhering to data compliance regulations when using Query Service:
 
 1. Sécurité
 1. Journal
-1. Utilisation des données
+1. Data usage
 1. Confidentialité
 1. Hygiène des données
 
-Ce document examine chacun des différents domaines de gouvernance et montre comment faciliter la conformité des données lors de l’utilisation de Query Service. Consultez la [présentation de la gouvernance, de la confidentialité et de la sécurité](../../landing/governance-privacy-security/overview.md) pour obtenir des informations plus générales sur la manière dont Experience Platform vous permet de gérer les données clients et de garantir la conformité.
+This document examines each of the different areas of governance and demonstrates how to facilitate data compliance when using Query Service. See the [governance, privacy, and security overview](../../landing/governance-privacy-security/overview.md) for broader information on how Experience Platform allows you to manage customer data and ensure compliance.
 
 ## Sécurité {#security}
 
-La sécurité des données est le processus de protection des données contre tout accès non autorisé et de sécurisation de l’accès tout au long de leur cycle de vie. L’accès sécurisé est conservé dans Experience Platform par l’application de rôles et d’autorisations grâce à des fonctionnalités telles que le contrôle d’accès basé sur les rôles et le contrôle d’accès basé sur les attributs. Les informations d’identification, SSL et le chiffrement des données sont également utilisés pour assurer la protection des données dans Experience Platform.
+Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, and data encryption are also used to ensure data protection across Experience Platform.
 
-La sécurité de Query Service est divisée en plusieurs catégories :
+Security in regard to Query Service is divided into the following categories:
 
-* [Contrôle d’accès](#access-control) : l’accès est contrôlé par des rôles et des autorisations, y compris des autorisations au niveau des jeux de données et des colonnes.
-* Sécurisation des données par le biais de la [connectivité](#connectivity) : les données sont sécurisées via Experience Platform et des clients externes en établissant une connexion limitée avec des informations d’identification arrivant à expiration ou non.
-* Sécurisation des données par [chiffrement et clés gérées par le client ou la cliente (CMK)](#encryption-and-customer-managed-keys) : accès contrôlé par chiffrement lorsque les données sont inactives.
+* [Access control](#access-control): Access is controlled through roles and permissions including dataset and column-level permissions.
+* Securing data through [connectivity](#connectivity): Data is secured through Experience Platform and external clients by achieving a limited connection with expiring credentials, or non-expiring credentials.
+* Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest.
 
 ### Contrôle d’accès {#access-control}
 
-Le contrôle d’accès dans Adobe Experience Platform vous permet d’utiliser [Adobe Admin Console](https://adminconsole.adobe.com/) pour gérer l’accès aux fonctionnalités de Query Service à l’aide d’autorisations basées sur les rôles. De même, vous pouvez contrôler l’accès à des attributs de données spécifiques par le biais de la gestion des libellés sur les schémas et les champs de données.
+Access control in Adobe Experience Platform is managed by role-based permissions that determine which users can use Query Service features. Similarly, you can control access to specific data attributes through label management on schemas and data fields.
 
-Cette section décrit les autorisations de contrôle d’accès requises qu’un utilisateur doit posséder pour utiliser pleinement les fonctionnalités de Query Service. Consultez les documents [gestion des autorisations](../../access-control/ui/permissions.md) et [gestion des utilisateurs](../../access-control/ui/users.md) pour obtenir des instructions détaillées sur l’attribution de l’accès à un profil de produit.
+This section outlines the required access control permissions that a user must have in order to fully utilize Query Service features. See the documents on [managing permissions](../../access-control/ui/permissions.md) and [managing users](../../access-control/ui/users.md) for detailed instructions on assigning access to a product profile.
 
 #### Autorisations appropriées
 
@@ -80,69 +80,69 @@ Une fois le niveau d’accès approprié appliqué à l’aide des libellés et 
 
 1. Si l’accès à l’une des colonnes d’un schéma a été refusé à un utilisateur, celui-ci se voit également refuser l’autorisation de lire ou d’écrire sur la colonne restreinte. Cela s’applique aux scénarios courants suivants :
 
-   * **Cas 1** : lorsqu’un utilisateur ou une utilisatrice tente d’exécuter une requête affectant uniquement une colonne restreinte, le système renvoie une erreur indiquant que la colonne n’existe pas.
-   * **Cas 2** : lorsqu’un utilisateur ou une utilisatrice tente d’exécuter une requête avec plusieurs colonnes, y compris une colonne restreinte, le système renvoie une sortie pour toutes les colonnes non restreintes uniquement.
+   * **Case 1**: When a user tries to execute a query affecting only a restricted column, the system throws an error that the column doesn&#39;t exist.
+   * **Case 2**: When a user tries to execute a query with multiple columns including a restricted column, the system returns output for all non-restricted columns only.
 
-1. Si un utilisateur ou une utilisatrice tente d’accéder à un champ calculé, il ou elle doit avoir accès à tous les champs utilisés dans la composition, ou le système lui refuse également l’accès au champ calculé.
+1. If a user tries to access a calculated field, the user is required to have access to all the fields used in the composition or the system denies access to the calculated field as well.
 
-#### Contrôles d’accès pour les vues
+#### Access controls for views
 
-Query Service permet d’utiliser le langage SQL ANSI standard pour les instructions [`CREATE VIEW`](../sql/syntax.md#create-view). Pour les workflows de données hautement sensibles, vous devez appliquer les contrôles appropriés lors de la création de vues.
+Query Service provides the ability to use standard ANSI SQL for [`CREATE VIEW`](../sql/syntax.md#create-view) statements. For highly sensitive data workflows, you must enforce appropriate controls when creating views.
 
-Le mot-clé `CREATE VIEW` définit une vue d&#39;une requête, mais la vue n&#39;est pas matérialisée physiquement. Au lieu de cela, la requête est exécutée chaque fois que la vue est référencée dans une requête. Lorsqu’un utilisateur crée une vue à partir d’un jeu de données, les règles de contrôle d’accès basées sur les rôles et les attributs pour le jeu de données parent ne sont **appliquées de manière hiérarchique** Par conséquent, vous devez définir explicitement des autorisations sur chacune des colonnes lors de la création d’une vue.
+The `CREATE VIEW` keyword defines a view of a query but the view is not physically materialized. Instead, the query is run every time the view is referenced in a query. When a user creates a view from a dataset, the role- and attribute-based access control rules for the parent dataset are **not** hierarchically applied. As a result, you must explicitly set permissions on each of the columns when a view is created.
 
-#### Création de restrictions d’accès basées sur les champs sur des jeux de données accélérés {#create-field-based-access-restrictions-on-accelerated-datasets}
+#### Create field-based access restrictions on accelerated datasets {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Grâce à la fonctionnalité de contrôle d’accès basé sur les attributs [attribute-based access control](../../access-control/abac/overview.md) vous pouvez définir des portées d’utilisation des données ou de l’organisation sur les jeux de données de faits et de dimensions dans la [boutique accélérée](../data-distiller/sql-insights/send-accelerated-queries.md). Cela permet aux administrateurs et administratrices de gérer l’accès à des segments spécifiques et de mieux gérer l’accès accordé aux utilisateurs et utilisatrices ou groupes d’utilisateurs et d’utilisatrices.
+With the [attribute-based access control capability](../../access-control/abac/overview.md) you can define organizational or data usage scopes on fact and dimension datasets in the [accelerated store](../data-distiller/sql-insights/send-accelerated-queries.md). This allows administrators to manage access to specific segments and better manage the access given to users or groups of users.
 
-Pour créer des restrictions d’accès basées sur les champs sur des jeux de données accélérés, vous pouvez utiliser les requêtes CTAS de Query Service pour créer des jeux de données accélérés et structurer ces jeux de données en fonction des schémas XDM ou des schémas ad hoc existants. Les administrateurs peuvent ensuite [ajouter et modifier des libellés d’utilisation des données pour le schéma](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [schéma ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Vous pouvez appliquer, créer et modifier des libellés à vos schémas à partir de l’espace de travail [!UICONTROL Labels] dans l’interface utilisateur de [!UICONTROL Schemas].
+To create field-based access restrictions on accelerated datasets, you can use Query Service CTAS queries to create accelerated datasets and structure these datasets based on existing XDM schemas or ad hoc schemas. Administrators can then [add and edit data usage labels for the schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) or [ad hoc schema](./ad-hoc-schema-labels.md#edit-governance-labels). You can apply, create, and edit labels to your schemas from the [!UICONTROL Labels] workspace in the [!UICONTROL Schemas] UI.
 
-Les libellés d’utilisation des données peuvent également être [appliqués ou modifiés directement sur le jeu de données](../../data-governance/labels/user-guide.md#add-labels) via l’interface utilisateur des jeux de données, ou créés à partir de l’espace de travail [!UICONTROL Labels] du contrôle d’accès . Pour plus d’informations, consultez le guide sur la façon de [créer un libellé](../../access-control/abac/ui/labels.md).
+Data usage labels can also be [applied or edited directly onto the dataset](../../data-governance/labels/user-guide.md#add-labels) through the Datasets UI, or created from the Access Control [!UICONTROL Labels] workspace. See the guide on how to [create a new label](../../access-control/abac/ui/labels.md) for more information.
 
-L’accès des utilisateurs et utilisatrices à des colonnes individuelles peut ensuite être contrôlé par les libellés d’utilisation des données joints et les jeux d’autorisations appliqués aux rôles affectés aux utilisateurs et utilisatrices.
+User access to individual columns can then be controlled by the attached data usage labels and the permission sets applied to the roles that are assigned to users.
 
 ### Connectivité {#connectivity}
 
-Query Service est accessible via l’interface utilisateur d’Experience Platform ou en formant une connexion avec des clients compatibles externes. L’accès à tous les fronts disponibles est contrôlé par un ensemble d’informations d’identification.
+Query Service is accessible through the Experience Platform UI or by forming a connection with external compatible clients. Access to all available fronts is controlled by a set of credentials.
 
-#### Connectivité via des clients externes
+#### Connectivity through external clients
 
-L’accès à Query Service à l’aide d’un client tiers nécessite des informations d’identification pour l’autorisation. Ces informations d’identification sont obligatoires pour accéder à Query Service avec l’un des clients externes compatibles. Vous pouvez vous connecter à des clients externes à l’aide des informations d’identification [expirantes](#expiring-credentials) ou [non expirantes](#non-expiring-credentials).
+Access to Query Service using a third-party client requires credentials for authorization. These credentials are mandatory to access Query Service with any of the compatible external clients. You can connect to external clients by using either [expiring credentials](#expiring-credentials) or [non-expiring credentials](#non-expiring-credentials).
 
-#### Durée de connexion limitée via les informations d’identification arrivant à expiration {#expiring-credentials}
+#### Limited connection time via expiring credentials {#expiring-credentials}
 
-[Informations d’identification arrivant à expiration](../ui/credentials.md) permet aux utilisateurs de former une connexion temporaire avec un client externe. Cet ensemble d’informations d’identification n’est valide que pendant 24 heures. L’expiration de ces types d’informations d’identification est visible avec l’onglet Informations d’identification dans le tableau de bord de Query Service.
+[Expiring credentials](../ui/credentials.md) allow users to form a temporary connection with an external client. This set of credentials is only valid for 24 hours. The expiry of these types of credentials can be seen along with the credential tab in the Query Service dashboard.
 
-![Onglet Informations d’identification de l’espace de travail Query Service avec les informations d’identification arrivant à expiration en surbrillance.](../images/data-governance/overview/expiring-credentials.png)
+![The credentials tab in Query Service workspace with expiring credentials highlighted.](../images/data-governance/overview/expiring-credentials.png)
 
 #### Informations d’identification n’expirant pas {#non-expiring-credentials}
 
-[Informations d’identification non expirantes](../ui/credentials.md#non-expiring-credentials) vous permettent de former une connexion permanente avec un client externe, ce qui facilite la connexion à Query Service sans avoir besoin d’un mot de passe manuel.
+[Non-expiring credentials](../ui/credentials.md#non-expiring-credentials) allow you to form a permanent connection with an external client, making it easier to connect to Query Service without the need for a manual password.
 
-Pour activer l’option de génération d’informations d’identification non expirantes, vous devez suivre le [workflow prérequis](../ui/credentials.md#prerequisites) indiqué. Dans le cadre de ce processus, l’administrateur de votre organisation doit configurer les autorisations pour le profil de produit, ce qui permet à l’administrateur de contrôler les comptes ayant accès à l’utilisation d’informations d’identification non expirantes.
+To enable the option of generating non-expiring credentials, you must follow the outlined [pre-requisite workflow](../ui/credentials.md#prerequisites). As part of this process, your organization administrator is required to configure permissions for the product profile, giving the administrator control over which accounts have access to use non-expiring credentials.
 
-Des rôles peuvent être attribués aux comptes d’utilisateurs et d’utilisatrices techniques autorisés avec des informations d’identification non expirantes afin d’assurer une gouvernance des données appropriée en définissant la portée de leur accès en lecture et écriture en fonction de leurs responsabilités et besoins. Consultez la section précédente sur l’[utilisation d’autorisations basées sur les rôles par le biais du contrôle d’accès](#access-control) pour gérer l’accès à Query Service.
+Technical user accounts permitted with non-expiring credentials can be assigned roles to ensure appropriate data governance by defining the scope of their read and write access based on their responsibilities and needs. See the earlier section on [using role-based permissions through access control](#access-control) to manage access to Query Service.
 
-Une fois le workflow prérequis terminé, les utilisateurs autorisés peuvent [générer les informations d’identification de connexion requises](../ui/credentials.md#generate-credentials).
+Once the prerequisite workflow has been completed, authorized users can now [generate the required connection credentials](../ui/credentials.md#generate-credentials).
 
-#### Chiffrement des données SSL
+#### SSL data encryption
 
-Pour une sécurité renforcée, Query Service fournit une prise en charge native des connexions SSL pour chiffrer les communications client/serveur. Experience Platform prend en charge différentes options SSL pour répondre à vos besoins en matière de sécurité des données et équilibrer la charge de traitement du chiffrement et de l’échange de clés.
+For increased security, Query Service provides native support for SSL connections to encrypt client/server communications. Experience Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange.
 
-Pour plus d’informations, notamment sur la connexion à l’aide de la valeur de paramètre SSL [, consultez le guide sur les options &#x200B;](../clients/ssl-modes.md)SSL disponibles pour les connexions clientes tierces à Query Service`verify-full`.
+See the guide on available [SSL options for third-party client connections to Query Service](../clients/ssl-modes.md) for more information, including how to connect using the `verify-full` SSL parameter value.
 
-### Chiffrement et clés gérées par le client (CMK) {#encryption-and-customer-managed-keys}
+### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys}
 
-Le chiffrement est l’utilisation d’un processus algorithmique pour transformer les données en texte codé et illisible afin de s’assurer que les informations sont protégées et inaccessibles sans clé de déchiffrement.
+Encryption is the use of an algorithmic process to transform data into encoded and unreadable text to ensure the information is protected and inaccessible without a decryption key.
 
-La conformité des données de Query Service garantit que les données sont toujours chiffrées. Les données en transit sont toujours conformes au protocole HTTPS et les données au repos sont chiffrées dans un magasin du lac de données d’Azure à l’aide de clés au niveau du système. Pour plus d’informations, consultez la documentation sur [comment les données sont chiffrées dans Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md). Pour plus d’informations sur la manière dont les données au repos sont chiffrées dans le stockage du lac de données Azure, consultez la [documentation officielle d’Azure](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption).
+Query Service data compliance ensures that data is always encrypted. Data-in-transit is always HTTPS compliant, and data-at-rest is encrypted in an Azure Data Lake store using system-level keys. See the documentation on [how data is encrypted in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) for more information. For details on how data at rest is encrypted in Azure Data Lake Storage, see the [official Azure documentation](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption).
 
-Les données en transit sont toujours conformes au protocole HTTPS. De même, lorsque les données sont au repos dans le lac de données, le chiffrement est effectué avec la clé de gestion du client (CMK), qui est déjà prise en charge par la gestion du lac de données. La version actuellement prise en charge est TLS1.2. Consultez la documentation [clés gérées par le client (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) pour savoir comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
+Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. See the [customer-managed keys (CMK) documentation](../../landing/governance-privacy-security/customer-managed-keys/overview.md) to learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
 
 
 ## Journal {#audit}
 
-Query Service enregistre l’activité de l’utilisateur et classe cette activité dans différents types de journaux. Les journaux fournissent des informations sur **qui** a effectué **quoi** action et **quand**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
+Query Service records user activity and categorizes that activity in different log types. Les journaux fournissent des informations sur **qui** a effectué **quoi** action et **quand**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
 
 Toutes les catégories de journal peuvent être demandées par un utilisateur d’Experience Platform selon ses besoins. Cette section fournit des détails sur le type d’informations capturées pour Query Service et l’endroit où ces informations sont accessibles.
 
@@ -174,7 +174,7 @@ Vous trouverez ci-dessous une liste de trois journaux de serveur étendus conten
 1. **Journaux de session** : le système crée un journal d’entrée de session pour un utilisateur lorsqu’il se connecte à Query Service, qu’il exécute ou non une requête.
 1. **Journaux de connexion client tiers** : un journal d’audit de connectivité est généré lorsqu’un utilisateur connecte correctement Query Service à un client tiers.
 
-Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [&#x200B; présentation des journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [ présentation des journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Utilisation des données {#data-usage}
 
@@ -192,7 +192,7 @@ Après avoir accédé au schéma, vous pouvez [appliquer des libellés à des ch
 
 ## Confidentialité {#privacy}
 
-[&#128279;](../../privacy-service/home.md) vous aide à gérer les demandes d’accès et de suppression des données des clients conformément aux réglementations légales en matière de confidentialité. Pour ce faire, il recherche des identifiants préexistants dans les données et accède ou supprime ces données en fonction de la tâche de confidentialité demandée. Les données doivent disposer de libellés appropriés afin que le service puisse déterminer les champs auxquels accéder ou ceux qu’il doit supprimer au cours des tâches relatives à la confidentialité. Les données soumises à des demandes d’accès à des informations personnelles doivent contenir des informations d’identité client afin de lier les différents éléments de données avec la personne à laquelle la demande d’accès à des informations personnelles s’applique. Query Service peut enrichir les données qu’il utilise avec un identifiant unique dans le but de satisfaire les tâches liées à la confidentialité.
+[Privacy Service](../../privacy-service/home.md) vous aide à gérer les demandes d’accès et de suppression des données des clients conformément aux réglementations légales en matière de confidentialité. Pour ce faire, il recherche des identifiants préexistants dans les données et accède ou supprime ces données en fonction de la tâche de confidentialité demandée. Les données doivent disposer de libellés appropriés afin que le service puisse déterminer les champs auxquels accéder ou ceux qu’il doit supprimer au cours des tâches relatives à la confidentialité. Les données soumises à des demandes d’accès à des informations personnelles doivent contenir des informations d’identité client afin de lier les différents éléments de données avec la personne à laquelle la demande d’accès à des informations personnelles s’applique. Query Service peut enrichir les données qu’il utilise avec un identifiant unique dans le but de satisfaire les tâches liées à la confidentialité.
 
 Les demandes d’accès à des informations personnelles peuvent être envoyées au lac de données ou à la banque de données Profile. Les enregistrements supprimés du lac de données n’entraînent pas la suppression des profils qui ont été effectués à partir de ces enregistrements. En outre, une tâche de confidentialité visant à supprimer des informations personnelles du lac de données ne supprime pas leur profil, de sorte que toute information (qui contient cet identifiant de profil) ingérée après la fin de la tâche de confidentialité met à jour ce profil comme d’habitude. Cela réaffirme la nécessité d’identifier correctement les données utilisées dans les schémas ad hoc.
 
