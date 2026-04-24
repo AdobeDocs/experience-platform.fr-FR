@@ -174,7 +174,7 @@ Vous trouverez ci-dessous une liste de trois journaux de serveur étendus conten
 1. **Journaux de session** : le système crée un journal d’entrée de session pour un utilisateur lorsqu’il se connecte à Query Service, qu’il exécute ou non une requête.
 1. **Journaux de connexion client tiers** : un journal d’audit de connectivité est généré lorsqu’un utilisateur connecte correctement Query Service à un client tiers.
 
-Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [ présentation des journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [&#x200B; présentation des journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Utilisation des données {#data-usage}
 
