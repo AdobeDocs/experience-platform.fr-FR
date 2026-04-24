@@ -3,9 +3,9 @@ title: Présentation De L’Extension Transfert D’Événements Algolia
 description: Découvrez comment configurer et utiliser l’extension de transfert d’événement Algolia dans Adobe Experience Platform. Transférez les données de comportement des utilisateurs via l’API Insights, configurez des règles, mappez des champs XDM et vérifiez la diffusion des événements.
 last-substantial-update: 2025-05-09T00:00:00Z
 exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 61aeec69f782968a8c157b604ba1cd9e990b7f02
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -69,15 +69,15 @@ Veillez à ajouter le groupe de champs d’événement [!DNL Algolia] à votre s
 
 ![Configuration du groupe de champs d’événement en Algérie](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
-### Ajoutez le groupe de champs d’événement [!DNL Algolia] à votre schéma {#add-algolia-field-group}
+### Ajouter le groupe de champs [!UICONTROL Algolia Event Details] à votre schéma {#add-algolia-field-group}
 
-Pour ajouter le groupe de champs d’événement [!DNL Algolia] :
+Pour ajouter le groupe de champs [!UICONTROL Algolia Event Details] :
 
 Accédez à **[!UICONTROL Schemas]** et sélectionnez **[!UICONTROL Browse]**.
 
 Ajoutez un nouveau schéma ou mettez à jour un schéma existant que vous utilisez pour envoyer des événements web et passez la souris sur l’icône **[!UICONTROL Add]**. Saisissez *[!DNL Algolia]* dans la zone de recherche pour affiner les résultats.
 
-Sélectionnez le groupe de champs Détails de l’événement de **[!DNL Algolia]** > bouton **[!UICONTROL Add field group]** > **[!UICONTROL Save]**.
+Sélectionnez le groupe de champs **[!UICONTROL Algolia Event Details]** > bouton **[!UICONTROL Add field group]** > **[!UICONTROL Save]**.
 
 ![Configuration du groupe de champs de profil Algolia dans Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
@@ -165,7 +165,7 @@ Pour plus d’informations sur le débogage de votre implémentation à l’aide
 
 ## Ressources supplémentaires
 
-- [[!DNL Algolia]  Documentation de l’API Insights &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+- [[!DNL Algolia]  Documentation de l’API Insights ](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Documentation sur les événements](https://www.algolia.com/doc/guides/sending-events/getting-started/)
 - [[!DNL Adobe Experience Platform] Documentation sur le transfert d’événement](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr)
 - [[!DNL Algolia] Présentation des fonctionnalités de l’IA](https://www.algolia.com/products/ai-search/)
