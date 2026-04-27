@@ -2,10 +2,10 @@
 title: Configuration de la détection des robots pour les flux de données
 description: Découvrez comment configurer la détection des robots pour les flux de données, afin de différencier le trafic humain et non humain.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 0%
+source-wordcount: '1485'
+ht-degree: 1%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 0%
 Le trafic non humain provenant de programmes automatisés, de web scrapers, d’araignées et de scanners scriptés peut rendre difficile l’identification d’événements provenant de visiteurs humains. Ce type de trafic peut avoir un impact négatif sur des mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects.
 
 La détection des robots vous permet d’identifier les événements générés par les [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) et [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) comme étant générés par des araignées et des robots connus.
+
+>[!NOTE]
+>
+>Utilisez l’[!DNL Bot Detection Service] pour identifier et filtrer le trafic non humain (robots) de vos données. Cela réduit le bruit dans les jeux de données collectés et permet de s’assurer que vos analyses et rapports reflètent de véritables interactions utilisateur.
 
 En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP spécifiques, des plages d’adresses IP et des en-têtes de requête à classer en tant qu’événements de robots. Vous obtiendrez ainsi une mesure plus précise de l’activité des utilisateurs sur votre site ou application mobile.
 
@@ -33,7 +37,7 @@ Ce score de robots aide les solutions recevant la demande à identifier correcte
 >
 >La détection des robots ne supprime aucune requête de robot. Il met uniquement à jour le schéma XDM avec le score des robots et transfère l’événement au service [datastream](configure.md) que vous avez configuré.
 >
->Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre service [de filtrage des robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=fr) et n’utilise pas le score défini par Edge Network. Les deux services utilisent la même [liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), de sorte que la notation des robots est identique.
+>Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre service [de filtrage des robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) et n’utilise pas le score défini par Edge Network. Les deux services utilisent la même [liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), de sorte que la notation des robots est identique.
 
 ## Considérations techniques {#technical-considerations}
 
@@ -45,7 +49,7 @@ Avant d’activer la détection de robots sur vos flux de données, gardez à l�
 
 ## Conditions préalables {#prerequisites}
 
-Pour que la détection des robots fonctionne sur votre flux de données, vous devez ajouter le groupe de champs **[!UICONTROL Bot Detection Information]** à votre schéma. Consultez la documentation [Schéma XDM](../xdm/ui/resources/schemas.md#add-field-groups) pour savoir comment ajouter des groupes de champs à un schéma.
+Pour que la détection des robots fonctionne sur votre flux de données, vous devez ajouter le groupe de champs **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** à votre schéma. Consultez la documentation [Schéma XDM](../xdm/ui/resources/schemas.md#add-field-groups) pour savoir comment ajouter des groupes de champs à un schéma.
 
 ## Configuration de la détection des robots pour les flux de données {#configure}
 
@@ -119,54 +123,54 @@ Pour créer une règle de détection des robots, procédez comme suit :
 
    >[!TIP]
    >
-   >Les conditions IP sont basées sur une opération `OR` logique. Une requête est marquée comme provenant d’un robot si elle correspond à l’une des conditions d’adresse IP que vous avez définies.
+   >The IP conditions are based on a logical `OR` operation. A request is marked as originating from a bot if it matches any of the IP conditions that you defined.
 
-4. Si vous souhaitez ajouter des conditions d’en-tête à votre règle, sélectionnez **[!UICONTROL Add header conditions group]**, puis sélectionnez les en-têtes que la règle doit utiliser.
+4. If you want to add header conditions to your rule, select **[!UICONTROL Add header conditions group]**, and then select the headers which you want the rule to use.
 
-   ![Écran de règle de détection de robots avec les conditions d’en-tête mises en surbrillance.](assets/bot-detection/header-conditions.png)
+   ![Bot detection rule screen with the header conditions highlighted.](assets/bot-detection/header-conditions.png)
 
-   Ajoutez ensuite les conditions à utiliser pour l’en-tête sélectionné.
+   Then, add the conditions to be used for the selected header.
 
-   ![Écran de règle de détection de robots avec les conditions d’en-tête mises en surbrillance.](assets/bot-detection/header-condition-rule.png)
+   ![Bot detection rule screen with the header conditions highlighted.](assets/bot-detection/header-condition-rule.png)
 
-5. Après avoir configuré les règles de détection de robots souhaitées, sélectionnez **[!UICONTROL Save]** pour appliquer les règles à votre flux de données.
+5. After configuring the desired bot detection rules, select **[!UICONTROL Save]** to have the rules applied to your datastream.
 
-   ![Écran de règle de détection de robots avec les conditions d’en-tête mises en surbrillance.](assets/bot-detection/bot-detection-save.png)
+   ![Bot detection rule screen with the header conditions highlighted.](assets/bot-detection/bot-detection-save.png)
 
 
-## Exemples de règles de détection de robots {#examples}
+## Bot detection rule examples {#examples}
 
-Pour vous familiariser avec la détection de robots, vous pouvez utiliser les exemples présentés ci-dessous pour créer des règles de détection de robots.
+To help you get started with bot detection, you can use the examples detailed below to create bot detection rules.
 
-### Détection de robots basée sur une adresse IP {#one-ip}
+### Bot detection based on one IP address {#one-ip}
 
-Pour marquer toutes les requêtes provenant d’une adresse IP spécifique comme du trafic de robots, créez une règle de détection de robots qui évalue une seule adresse IP, comme illustré dans l’image ci-dessous.
+To mark all requests originating from a specific IP address as bot traffic, create a new bot detection rule which evaluates a single IP address, as shown in the image below.
 
-![Règle de détection des robots basée sur une seule adresse IP.](assets/bot-detection/bot-detection-one-ip.png)
+![Bot detection rule based on one IP address.](assets/bot-detection/bot-detection-one-ip.png)
 
-### Détection de robots basée sur deux adresses IP {#two-ip}
+### Bot detection based on two IP addresses {#two-ip}
 
-Pour marquer toutes les requêtes provenant de l’une des deux adresses IP spécifiques comme du trafic de robots, créez une règle de détection de robots qui évalue deux adresses IP, comme illustré dans l’image ci-dessous.
+To mark all requests originating from either of two specific IP addresses as bot traffic, create a new bot detection rule which evaluates two IP addresses, as shown in the image below.
 
-![Règle de détection des robots basée sur deux adresses IP.](assets/bot-detection/bot-detection-two-ips.png)
+![Bot detection rule based on two IP addresses.](assets/bot-detection/bot-detection-two-ips.png)
 
-### Détection de robots basée sur une plage d&#39;adresses IP {#range}
+### Bot detection based on a range of IP addresses {#range}
 
-Pour marquer toutes les requêtes provenant de n’importe quelle adresse IP dans une plage spécifique comme du trafic de robots, créez une règle de détection de robots qui évalue une plage entière d’adresses IP, comme illustré dans l’image ci-dessous.
+To mark all requests originating from any IP address in a specific range as bot traffic, create a new bot detection rule which evaluates an entire IP address range, as shown in the image below.
 
-![Règle de détection des robots basée sur la plage d’adresses IP.](assets/bot-detection/bot-detection-range.png)
+![Bot detection rule based on IP range.](assets/bot-detection/bot-detection-range.png)
 
-### Détection de robots basée sur une adresse IP et un en-tête de requête {#ip-header}
+### Bot detection based on an IP address and a request header {#ip-header}
 
-Pour marquer toutes les requêtes provenant d’une adresse IP spécifique et contenant un en-tête de requête spécifique comme du trafic de robots, créez une règle de détection de robots comme illustré dans l’image ci-dessous.
+To mark all requests originating from a specific IP address and containing a specific request header as bot traffic, create a new bot detection rule as shown in the image below.
 
-Cette règle vérifie si la requête provient d’une adresse IP spécifique et si l’en-tête de la requête `referer` commence par `www.adobe.com`.
+This rule checks if the request originates from a specific IP address and if the `referer` request header starts with `www.adobe.com`.
 
-![Règle de détection des robots basée sur l’adresse IP et l’en-tête de requête.](assets/bot-detection/bot-detection-header-ip.png)
+![Bot detection rule based on IP address and request header.](assets/bot-detection/bot-detection-header-ip.png)
 
-### Détection de robots basée sur plusieurs conditions {#multiple-conditions}
+### Bot detection based on multiple conditions {#multiple-conditions}
 
-Vous pouvez créer des règles de détection de robots basées sur :
+You can create bot detection rules based on:
 
 * **Plusieurs conditions différentes** : différentes conditions sont évaluées comme une opération de `AND` logique, ce qui signifie que les conditions doivent être remplies simultanément pour que la requête soit identifiée comme provenant d’un robot.
 * **Conditions multiples du même type** : les conditions du même type sont évaluées comme une opération de `OR` logique, ce qui signifie que si l’une des conditions est remplie, la requête est identifiée comme provenant d’un robot.
