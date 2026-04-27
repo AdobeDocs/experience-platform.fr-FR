@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1113'
 ht-degree: 88%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 88%
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
    - Fidélité {#loyalty}
       - [Événements de streaming capillaire](connectors/loyalty/capillary.md)
-      - [Kobie](connectors/loyalty/kobie.md)
+      - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automatisation du marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -323,8 +323,6 @@ ht-degree: 88%
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
-         - [Kobie (lot)](tutorials/ui/create/loyalty/kobie-batch.md)
-         - [Kobie (streaming)](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur Source Batch Talon.One](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automatisation du marketing {#marketing-automation}
@@ -412,4 +410,4 @@ ht-degree: 88%
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

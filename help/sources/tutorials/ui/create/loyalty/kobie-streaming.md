@@ -1,32 +1,34 @@
 ---
 title: Diffuser des données de Kobie vers Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de Kobie vers Adobe Experience Platform à l’aide de l’interface utilisateur.
-badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 3cba7ab5ddadc0f3b940f25280eb66a85725d1a6
+exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 15%
+source-wordcount: '881'
+ht-degree: 14%
 
 ---
 
-# Diffuser des données de [!DNL Kobie] vers Experience Platform à l’aide de l’interface utilisateur
+# Diffuser des données de [!DNL Kobie Streaming Events] vers Experience Platform à l’aide de l’interface utilisateur
 
-Lisez ce guide pour savoir comment connecter et diffuser vos données de [!DNL Kobie] vers Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)] est une plateforme MACH hautement configurable, sécurisée et évolutive qui s’adapte à votre stratégie de fidélité, ce qui accélère le délai de rentabilisation, améliore l’efficacité et protège votre marque grâce à une gouvernance de niveau entreprise. Grâce à des intégrations transparentes entre les plateformes CDP, les systèmes de gestion de la relation client (CRM), CMS, etc., [!DNL KALC] permet aux spécialistes marketing de fournir une personnalisation en temps réel sur chaque canal tout en offrant la flexibilité et la traçabilité nécessaires pour évoluer à mesure que votre fidélité à la marque augmente.
 
-## Prise en main
-
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
-
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
-   * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+Lisez ce guide pour savoir comment connecter et diffuser vos données de [!DNL Kobie Streaming Events] vers Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur.
 
 >[!IMPORTANT]
 >
->Lisez la [[!DNL Kobie] présentation](../../../../connectors/loyalty/kobie.md) pour découvrir les étapes préalables à suivre avant de connecter votre compte à Experience Platform.
+>Pour plus d’informations sur la configuration et le mappage des prérequis, contactez directement votre représentant [!DNL Kobie Client Services].
+
+## Prise en main
+
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
+
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+   * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
+   * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ## Parcourir le catalogue des sources
 
@@ -79,13 +81,13 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 | --- | --- |
 | Nom du flux de données | Nom du flux de données. Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Mappage
 
-Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [&#x200B; dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
+Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [ dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
 
 ![Étape de mappage du workflow](../../../../images/tutorials/create/kobie/mapping.png)
 

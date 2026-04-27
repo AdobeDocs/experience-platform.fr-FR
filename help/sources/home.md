@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 47%
+source-wordcount: '1764'
+ht-degree: 48%
 
 ---
 
@@ -225,7 +225,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données à partir 
 
 ### Fidélité {#loyalty}
 
-Vous pouvez utiliser les sources suivantes pour ingérer la fidélité des données à Experience Platform.
+Vous pouvez utiliser les sources suivantes pour ingérer des données de fidélité dans Experience Platform.
 
 | Source | Type d’ingestion | Cloud |
 | --- | --- | --- |
