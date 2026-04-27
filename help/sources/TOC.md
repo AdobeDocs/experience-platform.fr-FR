@@ -5,7 +5,7 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
+source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 88%
@@ -107,7 +107,7 @@ ht-degree: 88%
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
    - Fidélité {#loyalty}
       - [Événements de streaming capillaire](connectors/loyalty/capillary.md)
-      - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [Kobie](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automatisation du marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
