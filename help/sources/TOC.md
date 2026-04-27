@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
+source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1115'
 ht-degree: 88%
 
 ---
@@ -107,7 +107,6 @@ ht-degree: 88%
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
    - Fidélité {#loyalty}
       - [Événements de streaming capillaire](connectors/loyalty/capillary.md)
-      - [Kobie](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automatisation du marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -323,6 +322,7 @@ ht-degree: 88%
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
+         - [Événements de streaming mobile](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur Source Batch Talon.One](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automatisation du marketing {#marketing-automation}
