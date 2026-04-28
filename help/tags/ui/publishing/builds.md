@@ -2,10 +2,10 @@
 title: Versions
 description: Découvrez le concept des builds et leur fonctionnement dans Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 5b7e4d350a9e57ab4edf418642131d6bae598618
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 86%
+source-wordcount: '1080'
+ht-degree: 60%
 
 ---
 
@@ -17,7 +17,7 @@ Il s’agit d’un ensemble des modifications que vous avez spécifiées dans vo
 
 La version se compose de fichiers de code côté client qui se font référence les uns aux autres. Ces fichiers sont transférés vers votre emplacement d’hébergement à l’aide de l’environnement et de l’hôte que vous avez choisis pour la bibliothèque. Le code que vous déployez sur votre site désigne ce même emplacement afin que les fichiers puissent se charger lorsqu’un utilisateur accède à votre site ou à votre application.
 
-## Contenu du fichier
+## Contenu du fichier {#file-contents}
 
 Une bibliothèque définit un ensemble distinct de ressources de balise (extensions, règles et éléments de données) qui doivent y être incluses.
 
@@ -34,7 +34,7 @@ Les versions se composent du fichier de bibliothèque principal et potentielleme
 
 Les plus petits fichiers contiennent du code et une configuration pour des actions individuelles chargées sur la page, le cas échéant. Lorsqu’une règle est déclenchée et que ses conditions sont évaluées de telle sorte que les actions doivent être exécutées, le code et la configuration nécessaires pour cette action spécifique sont récupérés depuis l’un des fichiers les plus petits. Cela signifie que seul le code nécessaire pour effectuer les actions nécessaires est chargé sur la page, rendant ainsi la bibliothèque principale aussi petite que possible.
 
-## Format du fichier
+## Format du fichier {#file-format}
 
 Le format du fichier par défaut des versions est un ensemble de fichiers contenant tout le code requis pour que vos extensions, vos éléments de données et vos règles s’exécutent comme vous le souhaitez.
 
@@ -48,7 +48,7 @@ Quel que soit le format de fichier, la version est toujours fournie à l’empla
 
 Pour terminer une version, sélectionnez une bibliothèque et cliquez sur l’option Version disponible à ce niveau du processus de publication (Créer à des fins de développement, Créer à des fins d’évaluation, etc.)
 
-## Minimisation
+## Minimisation {#minification}
 
 La minimisation réduit les coûts liés à la bande passante et améliore la vitesse en supprimant les données inutiles à l’exécution depuis un fichier.
 
@@ -75,3 +75,46 @@ Si un développeur d’extensions fournit du code miniaturisé avec son extensio
 Pour plus d’informations sur la miniaturisation, voir [cet article de chemin d’empilement](https://blog.stackpath.com/glossary/minification/).
 
 Lors de la génération d’une version, Platform crée d’abord la bibliothèque non miniaturisée, puis la miniaturise entièrement en une fois.
+
+## Afficher les détails de la version {#build-details}
+
+>[!IMPORTANT]
+>
+>Une bibliothèque stocke les révisions de vos ressources de balises, mais une **version** est un instantané ponctuel de cette bibliothèque contenant les fichiers qui sont diffusés sur votre site.
+
+Vous pouvez accéder aux versions et aux détails de version à partir d’une **bibliothèque** ou d’un **environnement** pour afficher les versions actives actuelles et inspecter ce que contient une version (extensions, éléments de données et règles).
+
+### Affichage des détails de version à partir d’une bibliothèque
+
+Dans la propriété des balises, ouvrez le **[!UICONTROL Publishing Flow]** et sélectionnez une bibliothèque.
+
+![Flux de publication dans l’interface utilisateur des collections de données mettant en surbrillance une bibliothèque.](../publishing/images/builds/library.png)
+
+Dans le panneau des détails, vous pouvez vérifier les éléments suivants :
+
+* **[!UICONTROL Last Build Environment]** — Lien vers l&#39;environnement qui a reçu la dernière build. Indique si cette bibliothèque est la version actuelle de cet environnement (**actuelle** ou **non actuelle**).
+* **[!UICONTROL Current Builds]** — Versions actuellement actives sur leur environnement. Pour les bibliothèques publiées, la version de production en direct est indiquée par l’icône en forme d’éclair dans cette section.
+* Pour chaque version répertoriée, vous pouvez afficher :
+   * **[!UICONTROL Status]** - Date de création de la version.
+   * **[!UICONTROL Environment]** - Environnement dans lequel la version a été déployée.
+   * **[!UICONTROL User]** - Utilisateur qui a créé la version.
+
+![Détails de la bibliothèque affichés dans le panneau de droite](../publishing/images/builds/library-details.png)
+
+### Affichage des versions d’un environnement
+
+Une version est associée à un environnement et à la bibliothèque qui a été créée dans cet environnement. C’est la version qui contient réellement les ressources compilées.
+
+Sélectionnez le **[!UICONTROL Environment]** dans le panneau des détails. Le panneau Détails de l’environnement affiche une liste des versions récentes, la version active actuelle et les bibliothèques associées.
+
+![Panneau Détails de l’environnement mettant en surbrillance les versions actuelles.](../publishing/images/builds/environment.png)
+
+Sélectionnez ensuite une version pour en ouvrir les détails. Les détails de la version affichent les **Extensions**, **Éléments de données** et **Règles** inclus dans cette version.
+
+![Créer des détails mettant en surbrillance les extensions, les éléments de données et les règles.](../publishing/images/builds/build.png)
+
+>[!NOTE]
+>
+>Une version peut inclure plus que les ressources répertoriées sur la seule bibliothèque. Les **Extensions**, **Éléments de données** et **Règles** inclus dans la version incluent le contenu de la bibliothèque ainsi que le contenu en amont. Il s’agit de l’instantané complet qui est publié sur le site ou dans l’application.
+
+Utilisez le panneau des détails pour revenir à la **[!UICONTROL Environment]** ou à la **[!UICONTROL Library]**.
