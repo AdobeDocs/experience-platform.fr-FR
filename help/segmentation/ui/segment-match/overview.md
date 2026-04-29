@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de la correspondance des segments
 description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
+source-git-commit: bf5a474d7ba6ef27d196bc88c10ff9f19151e111
 workflow-type: tm+mt
-source-wordcount: '2000'
-ht-degree: 67%
+source-wordcount: '2123'
+ht-degree: 62%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 67%
 
 >[!IMPORTANT]
 >
->Adobe a introduit [!DNL Segment Match] en 2021 pour permettre aux clients de collaborer et d’échanger des audiences. Début 2025, Adobe a introduit [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/home), qui est l’approche à plus long terme permettant de répondre à ce cas d’utilisation.
+>Adobe a introduit [!DNL Segment Match] en 2021 pour permettre aux clients de collaborer et d’échanger des audiences. Début 2025, Adobe a introduit [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), qui est l’approche à plus long terme permettant de répondre à ce cas d’utilisation.
 >
->* Pour les clients situés aux États-Unis, au Canada, en Australie, en Nouvelle-Zélande et dans la région EMEA : Adobe recommande aux clients Real-Time CDP Prime et Ultimate de faire passer les cas d’utilisation de collaboration en matière de données de [!DNL Segment Match] à Real-Time CDP Collaboration. Consultez la [documentation](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/home) et le [guide de démarrage rapide](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/quick-start-guide) pour Real-Time CDP Collaboration et contactez l’équipe de votre compte Adobe pour en savoir plus.
+>* Pour les clients situés aux États-Unis, au Canada, en Australie, en Nouvelle-Zélande et dans la région EMEA : Adobe recommande aux clients Real-Time CDP Prime et Ultimate de faire passer les cas d’utilisation de collaboration en matière de données de [!DNL Segment Match] à Real-Time CDP Collaboration. Consultez la [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) et le [guide de démarrage rapide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) pour Real-Time CDP Collaboration et contactez l’équipe de votre compte Adobe pour en savoir plus.
 >* Pour les clients de toutes les autres zones géographiques : [!DNL Segment Match] est l’option recommandée jusqu’à la sortie de Real-Time CDP Collaboration dans ces zones géographiques en 2026.
 
 La correspondance de segments Adobe Experience Platform est un service de partage de segments qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité. [!DNL Segment Match] utilise les normes de confidentialité et les identifiants personnels Experience Platform tels que les e-mails hachés, les numéros de téléphone hachés et les identifiants d’appareils comme les IDFA et les GAID.
@@ -29,7 +29,7 @@ Avec [!DNL Segment Match], vous pouvez :
 * Appliquer des libellés d’utilisation des données pour contrôler si les données peuvent être partagées avec des partenaires.
 * Maintenir la gestion du cycle de vie des audiences partagées après la publication d’un flux et continuer à effectuer un échange dynamique de données grâce à la possibilité d’ajouter, de supprimer et d’annuler le partage.
 
-[!DNL Segment Match] utilise un processus de chevauchement des identités pour s’assurer que le partage de segments est effectué de manière sécurisée et axée sur la confidentialité. Une **identité chevauchée** est une identité qui possède une correspondance à la fois dans votre segment et dans celui de votre partenaire sélectionné. Avant de partager un segment entre un expéditeur et un destinataire, le processus de chevauchement des identités recherche un chevauchement des espaces de noms et des contrôles de consentement entre l’expéditeur et le(s) destinataire(s). Les deux vérifications de chevauchement doivent réussir pour qu’un segment soit partagé.
+[!DNL Segment Match] utilise un processus de chevauchement des identités pour s’assurer que le partage de segments est effectué de manière sécurisée et axée sur la confidentialité. Une **identité chevauchée** est une identité qui possède une correspondance à la fois dans votre segment et dans celui de votre partenaire sélectionné. Avant de partager un segment entre un profil d’expédition et de destination, le processus de chevauchement des identités recherche un chevauchement des espaces de noms et des contrôles de consentement entre ces deux profils. Les deux vérifications de chevauchement doivent réussir pour qu’un segment soit partagé.
 
 Les sections suivantes apportent des informations supplémentaires sur [!DNL Segment Match], y compris des détails sur sa configuration et son workflow de bout en bout.
 
@@ -51,7 +51,7 @@ La liste des espaces de noms pris en charge est la suivante :
 
 | Espace de noms | Description |
 | --------- | ----------- |
-| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Experience Platform propose deux méthodes de prise en charge du hachage lors de la collecte de données, par le biais de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support) et par le biais de [préparation des données](../../../data-prep/functions.md#hashing). |
+| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Experience Platform propose deux méthodes de prise en charge du hachage lors de la collecte de données, par le biais de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) et par le biais de [préparation des données](../../../data-prep/functions.md#hashing). |
 | Téléphone (SHA256_E.164) | Un espace de noms représentant des numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | ECID | Un espace de noms représentant une valeur d’ID Experience Cloud (ECID). Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Pour plus d’informations, consultez la [présentation ECID](../../../identity-service/features/ecid.md). |
 | IDFA Apple (ID pour les annonceurs) | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
@@ -59,11 +59,11 @@ La liste des espaces de noms pris en charge est la suivante :
 
 ### Configurer le consentement
 
-Vous devez fournir une configuration de consentement et définir sa valeur par défaut sur `opt-in` ou `opt-out` pour une vérification de consentement.
+Vous devez fournir une configuration de consentement et définir sa valeur par défaut sur opt-in ou opt-out pour une vérification de consentement.
 
-La vérification de consentement pour l’accord préalable et le droit d’opposition détermine si vous pouvez utiliser le consentement par défaut relatif au partage des données utilisateur. Si la configuration de consentement par défaut est définie sur `opt-out`, les données utilisateur peuvent ensuite être partagées, sauf si un utilisateur s’y oppose explicitement. Si la valeur par défaut est définie sur `opt-in`, les données utilisateur ne peuvent pas être partagées, à moins qu’un utilisateur n’y consente explicitement.
+La vérification de consentement pour l’accord préalable et le droit d’opposition détermine si vous pouvez utiliser le consentement par défaut relatif au partage des données utilisateur. Si la configuration de consentement par défaut est définie sur opt-in, les données utilisateur peuvent alors être partagées, sauf si un utilisateur s’y oppose explicitement. Si la valeur par défaut est opt-out, les données utilisateur ne peuvent pas être partagées, à moins qu’un utilisateur n’y consente explicitement.
 
-La configuration de consentement par défaut pour [!DNL Segment Match] est définie sur `opt-out`. Pour appliquer un modèle d’accord préalable à vos données, envoyez une demande par e-mail à votre équipe Adobe en charge des comptes.
+La configuration de consentement par défaut pour la correspondance de segments est définie sur opt-out. Pour appliquer un modèle d’accord préalable à vos données, envoyez une demande par e-mail à votre équipe Adobe en charge des comptes.
 
 Pour plus d’informations sur l’attribut `share` utilisé pour définir la valeur de consentement du partage des données, consultez la documentation suivante sur le [groupe de champs confidentialité et consentements](../../../xdm/field-groups/profile/consents.md). Pour plus d’informations sur le groupe de champs spécifique utilisé pour capturer le consentement des consommateurs pour la collecte et l’utilisation de données liées à la confidentialité, à la personnalisation et aux préférences marketing, consultez [les exemples GitHub de consentement pour la confidentialité, la personnalisation et les préférences marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
