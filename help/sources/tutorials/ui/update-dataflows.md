@@ -2,9 +2,9 @@
 description: Découvrez comment mettre à jour un flux de données de sources existant dans l’interface utilisateur d’Experience Platform.
 title: Mettre à jour un flux de données de connexion Source dans l’interface utilisateur
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
+source-git-commit: 2139566a7c44de8736f7433ba826796dad44715f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '893'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ Lisez ce tutoriel pour savoir comment mettre à jour un flux de données existan
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -47,7 +47,7 @@ Vous accédez au workflow des sources où vous pouvez procéder à la mise à jo
 
 >[!NOTE]
 >
->La fonction de modification du mappage n’est actuellement pas prise en charge pour les sources suivantes : Adobe Analytics, Adobe Audience Manager, API HTTP et [!DNL Marketo Engage].
+>La fonctionnalité de modification du mappage n’est actuellement pas prise en charge pour les sources suivantes : Adobe Analytics, Adobe Audience Manager et l’API HTTP.
 
 Au cours de ce processus, vous pouvez également mettre à jour les jeux de mappages associés à votre flux de données.  L’interface de mappage affiche le mappage existant de votre flux de données et non un nouveau jeu de mappages recommandé. Les mises à jour de mappage ne sont appliquées qu’aux exécutions de flux de données planifiées à l’avenir. Les jeux de mappages d’un flux de données planifié pour une ingestion unique ne peuvent pas être mis à jour.
 
