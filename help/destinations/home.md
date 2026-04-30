@@ -2,10 +2,10 @@
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 7f69bbafa5ccd6759b5afcc2b99cbec32220ad3b
 workflow-type: tm+mt
-source-wordcount: '1298'
-ht-degree: 45%
+source-wordcount: '1379'
+ht-degree: 44%
 
 ---
 
@@ -63,10 +63,10 @@ Le tableau suivant décrit les autorisations et combinaisons d’autorisations r
 | ---- | ---- |
 | **[!UICONTROL View Destinations]** | Pour accéder à l’onglet Destinations dans l’interface utilisateur d’Experience Platform, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Destinations]** [Access Control](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Pour vous connecter aux destinations, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Identity Graph]** | Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Identity Graph]** | Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]** access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -100,6 +100,12 @@ Après avoir établi une connexion à une destination et terminé le workflow d�
 
 Vous pouvez également vérifier si les données arrivent à votre destination. La plupart des pages de documentation des destinations du catalogue ont une section *Valider l’exportation des données*, qui indique comment vous pouvez vérifier dans la plateforme de destination que les données sont importées depuis Experience Platform. Consultez un exemple de cette section pour la destination [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
+## Chiffrement des données {#encryption}
+
+Toutes les données en transit exportées depuis [!DNL Experience Platform] vers les destinations passent par des connexions sécurisées et chiffrées à l’aide de [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) ou d’une version ultérieure. Le protocole TLS utilisé par [!DNL Experience Platform] dans les communications sortantes prend également en charge [Server Name Indication (SNI)](https://www.rfc-editor.org/rfc/rfc6066#page-6).
+
+Pour plus d’informations sur la manière dont les données sont ingérées, chiffrées et conservées, voir [chiffrement des données dans Experience Platform](../landing/governance-privacy-security/encryption.md).
+
 ## Restrictions de gouvernance des données concernant l’activation des données vers les destinations {#data-governance}
 
 La gouvernance des données est appliquée aux destinations Experience Platform par le biais des actions suivantes :
@@ -117,7 +123,7 @@ Pour plus d’informations sur la sélection d’actions marketing dans le workf
 * [Destinations de compte Advertising - Connexion d’audience Bombora ABM](./catalog/advertising/bombora.md)
 * [Destinations du compte Advertising - Connexion à Demandbase](./catalog/advertising/demandbase.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-* [Destinations de marketing par e-mail &#x200B;](./catalog/email-marketing/overview.md)
+* [Destinations de marketing par e-mail](./catalog/email-marketing/overview.md)
 * [Destinations sociales](./catalog/social/overview.md)
 
 Pour plus d’informations sur les violations de politique de données dans le workflow d’activation d’audience, consultez l’étape **[!UICONTROL Review]** dans les guides suivants :
