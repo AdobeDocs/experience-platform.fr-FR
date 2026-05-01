@@ -3,9 +3,9 @@ title: Intention de Bombora
 description: Découvrez la source d’intention Bombora sur Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1775'
 ht-degree: 11%
 
 ---
@@ -42,7 +42,7 @@ Lisez les sections suivantes pour connaître les étapes préalables requises av
 
 ### Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP[&#x200B; pour plus d’informations.](../../ip-address-allow-list.md)
+Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP](../../ip-address-allow-list.md) pour plus d’informations.[
 
 ### Configuration des autorisations sur Experience Platform
 
@@ -195,7 +195,7 @@ Lorsqu’un domaine d’entreprise est mis à jour, la nouvelle valeur de domain
 
 +++Réponse
 
-La correspondance de domaines dans Experience Platform est basée sur une correspondance exacte de la valeur du champ de domaine nettoyé. Experience Platform supprime automatiquement les préfixes (par exemple https:/<span>/www.) et conserve le domaine de niveau supérieur (par exemple adobe.com). La correspondance nécessite une valeur de domaine exacte, sans prise en charge de la correspondance approximative pour les sous-domaines.
+La correspondance de domaines dans Experience Platform est basée sur une correspondance exacte de la valeur du champ de domaine nettoyé. Experience Platform supprime automatiquement les préfixes (par exemple, https:/<span>/www.) et conserve le domaine de niveau supérieur (par exemple, adobe.com). La correspondance nécessite une valeur de domaine exacte, sans prise en charge de la correspondance approximative pour les sous-domaines.
 
 +++
 
@@ -204,5 +204,28 @@ La correspondance de domaines dans Experience Platform est basée sur une corres
 +++Réponse
 
 Les données d’intention peuvent être utilisées dans [Audiences de compte](../../../segmentation/types/account-audiences.md) pour améliorer le ciblage, la segmentation et la personnalisation. En tirant parti des signaux d’intention, les entreprises peuvent identifier et interagir avec les comptes qui manifestent un grand intérêt pour des sujets spécifiques, ce qui optimise la portée du marketing et des ventes.
+
++++
+
+### Le groupe de champs [!DNL Account Key] standard est-il compatible avec le schéma [!DNL Bombora Account Intent] ?
+
++++Réponse
+
+Non. Utilisez le champ `accountID` pour établir des relations avec le schéma Compte B2B . Cela évite d’avoir à introduire l’ensemble du groupe de champs dans le schéma de référence ou source.
++++
+
+### Comment le schéma [!DNL Bombora Account Intent] établit-il une relation avec le schéma Compte B2B ?
+
++++Réponse
+
+Le schéma [!DNL Bombora Account Intent] utilise le champ `accountID` pour établir la liaison à l’enregistrement de compte B2B correspondant. Ce champ est automatiquement renseigné lors de l’ingestion lorsqu’un domaine correspondant est trouvé dans les deux jeux de données. Plus précisément, le `accountID` dans le schéma [!DNL Bombora] fait référence au `accountKey.sourceKey` dans le schéma Compte B2B standard.
+
++++
+
+### Pourquoi le schéma [!DNL Bombora Account Intent] utilise-t-il `accountID` au lieu de la structure de groupe de champs [!DNL Account Key] type ?
+
++++Réponse
+
+Les schémas [!DNL Bombora Intent] se concentrent sur l’efficacité du stockage et du traitement. Plutôt que d’utiliser un groupe de champs entier, le schéma utilise un champ unique rationalisé (`accountID`) pour établir des relations. Cela réduit la complexité et s’aligne sur des modèles de traitement optimaux pour les données d’intention.
 
 +++
