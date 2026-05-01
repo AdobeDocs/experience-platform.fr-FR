@@ -42,7 +42,7 @@ Lisez les sections suivantes pour connaître les étapes préalables requises av
 
 ### Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP](../../ip-address-allow-list.md) pour plus d’informations.[
+Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP[&#128279;](../../ip-address-allow-list.md) pour plus d’informations.
 
 ### Configuration des autorisations sur Experience Platform
 
