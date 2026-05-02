@@ -2,25 +2,25 @@
 title: Créer des configurations de flux de données dynamiques
 description: Découvrez comment créer des configurations de flux de données dynamiques pour acheminer vos données vers divers services Experience Cloud en fonction de règles.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1040'
 ht-degree: 3%
 
 ---
 
 # Créer des configurations de flux de données dynamiques
 
-Par défaut, Experience Platform Edge Network envoie tous les événements qui atteignent un flux de données à tous les [services](configure.md#add-services) Experience Cloud que vous avez activés pour vos flux de données. Selon vos cas d’utilisation, ce workflow peut ne pas toujours être idéal pour vous.
+Par défaut, le [!DNL Adobe Experience Platform Edge Network] envoie tous les événements qui atteignent un flux de données à tous les [!DNL Experience Cloud] [services](/help/datastreams/configure.md#add-services) que vous avez activés pour vos flux de données. Selon vos cas d’utilisation, il peut ne pas toujours s’agir du workflow idéal.
 
-Les configurations dynamiques de train de données répondent à ce problème par le biais d’ensembles de règles configurables par l’utilisateur que vous définissez pour chaque service activé pour votre train de données, qui déterminent quelle solution Experience Cloud doit recevoir chaque type de données.
+Les configurations dynamiques de train de données corrigent ce problème par le biais d’ensembles de règles que vous définissez pour chaque service activé pour votre train de données, qui contrôlent [!DNL Experience Cloud] solution reçoit chaque type de données.
 
 ## Conditions préalables {#prerequisites}
 
 Pour créer une configuration dynamique pour votre flux de données, vous devez remplir deux conditions :
 
-* Vous devez avoir créé *au moins* un flux de données à utiliser. Pour plus d’informations, consultez la documentation sur la [création d’un flux de données](configure.md).
-* Vous devez avoir *au moins* un service Experience Cloud ajouté à votre flux de données. Pour plus d’informations, consultez la documentation sur la [ajout d’un service](configure.md#add-services) à un flux de données .
+* Vous devez avoir créé *au moins* un flux de données à utiliser. Pour plus d’informations, consultez la documentation sur la [création d’un flux de données](/help/datastreams/configure.md).
+* Vous devez avoir *au moins* un service [!DNL Experience Cloud] ajouté à votre flux de données. Pour plus d’informations, consultez la documentation sur la [ajout d’un service](/help/datastreams/configure.md#add-services) à un flux de données .
 
 Après avoir créé un flux de données et y avoir ajouté un service Experience Cloud, vous pouvez [créer une configuration dynamique](#create-dynamic-configuration).
 
@@ -32,19 +32,19 @@ Les configurations de flux de données dynamiques comportent des limites et des 
 |---------|------------|------|
 | Nombre maximal de configurations de trains de données dynamiques par train de données pour les services Experience Platform | 5 | Mécanisme de sécurisation des performances |
 | Nombre maximal de configurations de trains de données dynamiques par train de données pour le transfert d’événement | 5 | Mécanisme de sécurisation des performances |
-| Nombre maximal de configurations de trains de données dynamiques par train de données pour Adobe Analytics | 5 | Mécanisme de sécurisation des performances |
-| Nombre maximal de configurations de trains de données dynamiques par train de données pour Adobe Target | 5 | Mécanisme de sécurisation des performances |
-| Nombre maximal de configurations de trains de données dynamiques par train de données pour Adobe Audience Manager | 5 | Mécanisme de sécurisation des performances |
+| Nombre maximal de configurations de trains de données dynamiques par train de données pour [!DNL Adobe Analytics] | 5 | Mécanisme de sécurisation des performances |
+| Nombre maximal de configurations de trains de données dynamiques par train de données pour [!DNL Adobe Target] | 5 | Mécanisme de sécurisation des performances |
+| Nombre maximal de configurations de trains de données dynamiques par train de données pour [!DNL Adobe Audience Manager] | 5 | Mécanisme de sécurisation des performances |
 | Nombre maximal de conditions (prédicats) que vous pouvez combiner dans une seule règle | 100 | Mécanisme de sécurisation des performances |
 | Durée maximale autorisée pour évaluer toutes les configurations de trains de données dynamiques par train de données avant expiration | 25 ms | Mécanisme de sécurisation mis en œuvre par le système |
 
 ## Configurations de train de données dynamiques et remplacements de la configuration de train de données {#dynamic-versus-overrides}
 
-Les configurations dynamiques de train de données et [&#x200B; remplacements de configuration de train de données](overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
+Les configurations dynamiques de train de données et [ remplacements de configuration de train de données](/help/datastreams/overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
 
-Cela signifie que vous ne pouvez pas utiliser de configurations de train de données dynamiques avec des remplacements de configurations de train de données. Il faut choisir l&#39;un ou l&#39;autre.
+Vous ne pouvez pas utiliser de configurations de train de données dynamiques avec des remplacements de configurations de train de données. Il faut choisir l&#39;un ou l&#39;autre.
 
-Si vous activez à la fois les configurations de train de données dynamique et les remplacements de configuration de train de données, les remplacements de configuration sont prioritaires et les règles de configuration de train de données dynamique sont ignorées.
+Si vous activez les deux, les remplacements de configuration sont prioritaires et le système ignore les règles de configuration des trains de données dynamiques.
 
 ## Création d’une configuration de train de données dynamique {#create-dynamic-configuration}
 
@@ -72,13 +72,13 @@ Après avoir [créé un flux de données](configure.md) et [ajouté un service](
 
    ![Interface utilisateur des flux de données présentant le créateur de règles de configuration dynamique avec les ressources en cours de déplacement.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Dans la section **[!UICONTROL Configuration]** , activez/désactivez les services que vous souhaitez activer ou désactiver pour chaque règle, selon que vous souhaitez ou non envoyer les données à chaque service. Si vous désactivez ce bouton, le routage des services est désactivé et *aucune donnée* n’est envoyée au service en aval.
+1. Dans la section **[!UICONTROL Configuration]** , activez ou désactivez les services pour chaque règle, selon que vous souhaitez que les données soient envoyées ou non à chaque service. Si vous désactivez un service, le routage est désactivé et *aucune donnée* n’est envoyée au service en aval.
 
    ![Interface utilisateur des flux de données présentant la règle de configuration dynamique avec les bascules de service.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. Une fois la configuration des règles terminée, sélectionnez **[!UICONTROL Save]**.
 
-## Considérations sur la priorité des règles {#considerations}
+## Considérations sur la priorité des règles {#rule-priority}
 
 Vous pouvez définir plusieurs règles pour chaque configuration de train de données dynamique. Cependant, si vos données correspondent aux conditions de plusieurs règles, seule la première règle correspondante de la liste est prise en compte, et toutes les autres règles correspondantes sont ignorées.
 
@@ -86,7 +86,7 @@ Pour obtenir le comportement de routage des données souhaité, prêtez attentio
 
 Pour configurer l’ordre des règles, faites glisser et déposez les fenêtres des règles dans l’ordre de votre choix.
 
-![GIF montrant comment modifier l&#39;ordre des règles par glisser-déposer.](assets/configure-dynamic-datastream/move-rules.gif)
+![Réorganisation des règles de flux de données dynamiques à l’aide du glisser-déposer.](assets/configure-dynamic-datastream/move-rules.gif)
 
 ## Critères d’éligibilité des règles {#eligibility-criteria}
 
@@ -116,8 +116,8 @@ Les règles peuvent utiliser les opérateurs suivants, selon le type de données
 | **Nombre (Long, Entier, Court, Octet)** | `equals`, `does not equal`, `greater than`, `less than`, `greater than or equal to`, `less than or equal to`, `exists`, `does not exist` |
 | **booléen** | `equals true/false`, `does not equal true/false` |
 | **Enum** | `equals`, `does not equal`, `exists`, `does not exist` |
-| **Date** | `today`, `yesterday`, `this month`, `this year`, `custom date`, `in last`, `from`, `during`, `within`, `before`, `after`, `rolling range`, `in next`, `exists` `does not exist` |
-| **Logique** | `INCLUDE`, `ANY/ALL` (équivalent à AND/OR) |
+| **Date** | `today`, `yesterday`, `this month`, `this year`, `custom date`, `in last`, `from`, `during`, `within`, `before`, `after`, `rolling range`, `in next`, `exists`, `does not exist` |
+| **Logique** | `INCLUDE`, `ANY/ALL` (équivalent à [!DNL AND]/[!DNL OR]) |
 
 >[!NOTE]
 >
@@ -127,17 +127,17 @@ Les règles peuvent utiliser les opérateurs suivants, selon le type de données
 
 Lors de la création de règles pour les configurations dynamiques de train de données, il est important de comprendre les exigences structurelles qui assurent des performances optimales et la compatibilité du système. La structure des règles a une incidence directe sur l’efficacité du traitement et du routage de vos données dans le système.
 
-**Utilisez uniquement des expressions aplaties**. Vous devez définir des règles sous la forme d’expressions logiques aplaties. Les expressions logiques imbriquées (utilisant des conteneurs ou plusieurs niveaux de ET/OU) ne sont pas prises en charge. Si vous avez besoin d’une logique complexe, divisez-la en plusieurs règles aplaties.
+**Utilisez uniquement des expressions aplaties**. Vous devez définir des règles sous la forme d’expressions logiques aplaties. Les expressions logiques imbriquées (utilisant des conteneurs ou plusieurs niveaux de [!DNL AND]/[!DNL OR]) ne sont pas prises en charge. Si vous avez besoin d’une logique complexe, divisez-la en plusieurs règles aplaties.
 
-Prenons l’exemple de la règle complexe illustrée dans l’image ci-dessous.
+Prenons l’exemple de la règle complexe suivante.
 
-![Image de l’interface utilisateur de Platform montrant une règle complexe.](assets/configure-dynamic-datastream/complex-rule.png)
+![Exemple de règle complexe imbriquée avec plusieurs conditions ET/OU.](assets/configure-dynamic-datastream/complex-rule.png)
 
 Vous pouvez décomposer cette règle en plusieurs règles plus simples :
 
-![Image de l’interface utilisateur de Platform montrant la première règle simplifiée.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Première règle simplifiée, remplaçant la règle complexe imbriquée.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Image de l’interface utilisateur de Platform montrant la deuxième règle simplifiée.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Deuxième règle simplifiée, remplaçant la règle complexe imbriquée.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Évitez les règles complexes**. Des règles plus simples garantissent une évaluation plus rapide et une meilleure maintenabilité.
 
@@ -145,11 +145,7 @@ Vous pouvez décomposer cette règle en plusieurs règles plus simples :
 
 Le respect des bonnes pratiques lors de la création de règles de configuration de flux de données dynamiques garantit des performances optimales, la fiabilité du système et des configurations gérables. Ces instructions vous aident à éviter les pièges courants et à créer des règles efficaces qui fonctionnent en toute transparence avec l’architecture de la plateforme.
 
-* **Gardez les règles simples et plates.** Si vous devez exprimer une logique complexe, utilisez plusieurs règles au lieu de l’imbrication.
+* **Simplifiez et aplatissez les règles.** Si vous devez exprimer une logique complexe, utilisez plusieurs règles au lieu d’imbriquer.
 * **Utiliser uniquement [types de données pris en charge](#supported-data-types) et [opérateurs](#supported-operators).**
-* **Testez les performances de vos règles.** Des règles trop complexes ou non prises en charge peuvent entraîner leur rejet par le système ou nuire aux performances du système.
-
-
-
-
+* **Tester les performances de vos règles.** Des règles trop complexes ou non prises en charge peuvent entraîner leur rejet par le système ou nuire aux performances du système.
 
