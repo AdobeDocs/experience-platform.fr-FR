@@ -177,7 +177,7 @@ Pour créer une règle de mappage, sélectionnez **[!UICONTROL Add new mapping]*
 
 ![Ajout d’un nouveau mappage.](assets/data-prep/add-new-mapping.png)
 
-Sélectionnez l’icône de source (![icône du sélecteur de champ ](/help/images/icons/source.png)), puis, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source à mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Select]** pour continuer.
+Sélectionnez l’icône de source (![icône du sélecteur de champ &#x200B;](/help/images/icons/source.png)), puis, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source à mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Select]** pour continuer.
 
 ![Sélection du champ à mapper dans le schéma source.](assets/data-prep/source-mapping.png)
 

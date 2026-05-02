@@ -127,7 +127,7 @@ Pour créer une règle de détection des robots, procédez comme suit :
 
 4. Si vous souhaitez ajouter des conditions d’en-tête à votre règle, sélectionnez **[!UICONTROL Add header conditions group]**, puis sélectionnez les en-têtes que la règle doit utiliser.
 
-   ![Écran de règle de détection des robots affichant l’option Ajouter un groupe de conditions d’en-tête ](assets/bot-detection/header-conditions.png).
+   ![Écran de règle de détection des robots affichant l’option Ajouter un groupe de conditions d’en-tête &#x200B;](assets/bot-detection/header-conditions.png).
 
    Ajoutez ensuite les conditions à utiliser pour l’en-tête sélectionné.
 

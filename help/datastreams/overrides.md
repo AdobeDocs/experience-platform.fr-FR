@@ -62,7 +62,7 @@ Les remplacements de configuration de train de données vous permettent de modif
 
 Pour configurer les remplacements de train de données pour un train de données [!DNL Adobe Target], vous devez d’abord créer un train de données [!DNL Adobe Target]. Suivez la procédure pour [configurer un train de données](/help/datastreams/configure.md) avec le service [Adobe Target](/help/datastreams/configure.md#target).
 
-Après avoir créé le flux de données, modifiez le service [](/help/datastreams/configure.md#target) que vous avez ajouté et utilisez la section **[!UICONTROL Property Token Overrides]** pour ajouter les remplacements de flux de données souhaités. Ajoutez un jeton de propriété par ligne.
+Après avoir créé le flux de données, modifiez le service [&#128279;](/help/datastreams/configure.md#target) que vous avez ajouté et utilisez la section **[!UICONTROL Property Token Overrides]** pour ajouter les remplacements de flux de données souhaités. Ajoutez un jeton de propriété par ligne.
 
 ![Copie d’écran de l’interface utilisateur des trains de données montrant les paramètres du service Adobe Target, avec les remplacements de jetons de propriété mis en surbrillance.](assets/overrides/override-target.png)
 
@@ -74,7 +74,7 @@ Les remplacements de train de données [!DNL Adobe Target] sont maintenant confi
 
 Pour configurer les remplacements de train de données pour un train de données [!DNL Adobe Analytics], vous devez d’abord créer un train de données [Adobe Analytics](/help/datastreams/configure.md#analytics). Suivez la procédure pour [configurer un train de données](/help/datastreams/configure.md) avec le service [Adobe Analytics](/help/datastreams/configure.md#analytics).
 
-Après avoir créé le flux de données, modifiez le service [](/help/datastreams/configure.md#analytics) que vous avez ajouté et utilisez la section **[!UICONTROL Report Suite Overrides]** pour ajouter les remplacements de flux de données souhaités.
+Après avoir créé le flux de données, modifiez le service [&#128279;](/help/datastreams/configure.md#analytics) que vous avez ajouté et utilisez la section **[!UICONTROL Report Suite Overrides]** pour ajouter les remplacements de flux de données souhaités.
 
 Sélectionnez **[!UICONTROL Show Batch Mode]** pour activer la modification par lots des remplacements de suites de rapports. Vous pouvez copier et coller une liste de remplacements de suites de rapports. Saisissez une suite de rapports par ligne.
 
@@ -88,7 +88,7 @@ Les remplacements de train de données [!DNL Adobe Analytics] sont maintenant co
 
 Pour configurer les remplacements de trains de données pour les jeux de données d’événements Experience Platform, vous devez d’abord créer un train de données [Adobe Experience Platform](/help/datastreams/configure.md#aep). Suivez la procédure pour [configurer un train de données](/help/datastreams/configure.md) avec le service [Adobe Experience Platform](/help/datastreams/configure.md#aep).
 
-Après avoir créé le flux de données, modifiez le service [](/help/datastreams/configure.md#aep) que vous avez ajouté et sélectionnez l’option **[!UICONTROL Add Event Dataset]** pour ajouter un ou plusieurs jeux de données d’événement de remplacement.
+Après avoir créé le flux de données, modifiez le service [&#128279;](/help/datastreams/configure.md#aep) que vous avez ajouté et sélectionnez l’option **[!UICONTROL Add Event Dataset]** pour ajouter un ou plusieurs jeux de données d’événement de remplacement.
 
 ![Copie d’écran de l’interface utilisateur des trains de données présentant les paramètres du service Adobe Experience Platform, avec les remplacements de jeux de données d’événement mis en surbrillance.](assets/overrides/override-aep.png)
 
