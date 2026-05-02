@@ -48,7 +48,7 @@ Ce guide explique comment mapper vos données dans l’interface utilisateur. Po
 
 Pour une démonstration rapide du processus de préparation des données pour la collecte de données, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345564?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on)
 
 ## Fournir des exemples de données {#select-data}
 
