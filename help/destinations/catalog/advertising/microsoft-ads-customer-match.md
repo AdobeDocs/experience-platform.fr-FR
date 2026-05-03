@@ -8,8 +8,8 @@ hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 27%
+source-wordcount: '1642'
+ht-degree: 31%
 
 ---
 
@@ -62,7 +62,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -94,8 +94,8 @@ Lorsque vous tentez de vous authentifier à l’aide d’un compte professionnel
 
 Une fois que l’administrateur informatique a approuvé la demande sur le portail Azure, vous pouvez revenir à Experience Platform et vous authentifier à l’aide de votre compte de travail. Pour obtenir des conseils, consultez la documentation de Microsoft :
 
-* [Examiner les demandes de consentement de l’administrateur et prendre des mesures](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
-* [Configurer le workflow de consentement administrateur](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [Examiner les demandes de consentement des administrateurs et prendre des mesures en conséquence](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [Configuration du workflow de consentement administrateur](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
 * [Configurer la manière dont les utilisateurs consentent aux applications](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
 
 Si l’administrateur informatique n’a pas encore approuvé la demande, l’authentification échoue avec l’erreur suivante : `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
@@ -111,7 +111,7 @@ Lors de la configuration de la destination, vous devez fournir les informations 
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -120,25 +120,25 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Identifiant client"
->abstract="Votre identifiant client Microsoft Advertising, également appelé identifiant de compte Manager. Il s’agit de l’identifiant de niveau supérieur dans Microsoft Advertising qui peut comporter plusieurs comptes d’annonceurs (ID de compte client)."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Trouver votre ID de client"
+>abstract="Votre ID de client ou cliente Microsoft Advertising, également appelé ID de compte gestionnaire. Il s’agit de l’identifiant de niveau supérieur dans Microsoft Advertising qui peut comporter plusieurs comptes d’annonceurs (ID de compte clientèle)."
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Trouver votre ID de client ou cliente"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
->title="ID de compte client"
->abstract="Votre ID de compte client Microsoft Advertising, également appelé ID de compte publicitaire. Ceci identifie un compte publicitaire spécifique sous votre ID de client."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Trouver votre ID de compte client"
+>title="ID de compte clientèle"
+>abstract="Votre ID de compte clientèle Microsoft Advertising, également appelé ID de compte d’annonceur. Il identifie un compte d’annonceur spécifique sous votre ID de client ou cliente."
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Trouver votre ID de compte clientèle"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
 >title="Durée de l’abonnement"
->abstract="Nombre de jours pendant lesquels un utilisateur reste dans la liste de correspondance client. Les valeurs acceptées sont comprises entre 1 et 390 jours."
+>abstract="Nombre de jours pendant lesquels un utilisateur ou une utilisatrice reste dans la liste de correspondance clientèle. Les valeurs acceptées sont comprises entre 1 et 390 jours."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
->title="Disponibilité de la liste de correspondance client"
->abstract="Choisissez si la liste de correspondance des clients est disponible pour un compte d’annonceur unique ou pour tous les comptes sous le compte de responsable. Sélectionnez ID de client pour que la liste soit disponible pour tous les comptes d’annonceurs sous votre ID de client. Sélectionnez ID de compte client pour restreindre la liste à l’ID de compte client spécifique."
->additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="En savoir plus sur le partage de listes d’audiences dans Microsoft Advertising"
+>title="Disponibilité de la liste de correspondance clientèle"
+>abstract="Choisissez si la liste de correspondance clientèle est disponible pour un compte d’annonceur unique ou pour tous les comptes sous le compte gestionnaire. Sélectionnez l’ID de client ou cliente pour que la liste soit disponible pour tous les comptes d’annonceurs sous votre ID de client ou cliente. Sélectionnez l’ID de compte clientèle pour restreindre la liste à l’ID de compte clientèle spécifique."
+>additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="En savoir plus sur le partage de listes d’audiences dans Microsoft Advertising"
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
@@ -146,7 +146,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Customer ID]** : votre ID de client [!DNL Microsoft Ads] (CID). Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID client.
 * **[!UICONTROL Customer Account ID]** : ID de votre compte client [!DNL Microsoft Ads]. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID de compte client.
-* **[!UICONTROL Membership Duration]** : nombre de jours pendant lesquels un utilisateur reste dans la liste de correspondance client. Les valeurs acceptées sont comprises entre 1 et 390 jours.
+* **[!UICONTROL Membership Duration]** : nombre de jours pendant lesquels un utilisateur reste dans la liste de correspondance client. Les valeurs acceptées sont comprises entre 1 et 390 jours.
 * **[!UICONTROL Customer Match List Availability]** : sélectionnez la disponibilité de la liste de correspondance des clients. En [!DNL Microsoft Advertising], un ID de client peut comporter plusieurs ID de compte client (comptes publicitaires). Sélectionnez **[!UICONTROL Customer ID (all advertising accounts)]** pour que la liste soit disponible pour tous les comptes d’annonceurs sous votre ID client ou **[!UICONTROL Customer Account ID (single advertising account)]** pour limiter la liste à l’ID de compte client spécifique que vous avez fourni ci-dessus. Consultez la [documentation Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727) pour plus d’informations.
 
   ![Image de l’interface utilisateur de Platform montrant les champs de détails de destination pour la destination de correspondance client Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
@@ -162,7 +162,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]** access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -177,7 +177,7 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 >
 >Vous devez mapper des adresses e-mail en texte brut (non hachées) en tant que champs **source**. Les identités source préhachées telles que `Emails (SHA256, lowercased)` ne sont pas prises en charge. Experience Platform hache toujours les adresses e-mail avant de les exporter vers [!DNL Microsoft Ads].
 
-Image de l’interface utilisateur ![&#x200B; montrant l’étape de mappage avec l’e-mail IdentityMap mappé à l’e-mail Identity.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
+Image de l’interface utilisateur ![ montrant l’étape de mappage avec l’e-mail IdentityMap mappé à l’e-mail Identity.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
 ## Données exportées {#exported-data}
 

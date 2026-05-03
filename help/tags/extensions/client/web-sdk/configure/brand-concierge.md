@@ -1,15 +1,15 @@
 ---
-title: Paramètres de configuration de Brand Concierge
+title: Paramètres de configuration de Brand Concierge
 description: Configurez la persistance de session et les délais d’expiration de diffusion pour la conversation Brand Concierge.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '191'
 ht-degree: 21%
 
 ---
 
-# Paramètres de configuration de Brand Concierge {#brand-concierge}
+# Paramètres de configuration de Brand Concierge {#brand-concierge}
 
 >[!AVAILABILITY]
 >
@@ -18,7 +18,7 @@ ht-degree: 21%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_brandconcierge"
 >title="Brand Concierge"
->abstract="Paramètres de configuration lors de l’utilisation de Brand Concierge sur votre propriété"
+>abstract="Paramètres de configuration lors de l’utilisation de Brand Concierge sur votre propriété."
 
 La section **[!UICONTROL Brand Concierge]** vous permet de contrôler le comportement des sessions de conversation Brand Concierge dans l’extension de balise Web SDK.
 

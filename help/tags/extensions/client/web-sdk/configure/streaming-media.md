@@ -1,20 +1,20 @@
 ---
-title: Paramètres de configuration du streaming multimédia
+title: Paramètres de configuration des médias en streaming
 description: Personnalisez la manière dont l’extension de balise Web SDK collecte les données de médias en flux continu.
 exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 4%
+source-wordcount: '313'
+ht-degree: 11%
 
 ---
 
-# Paramètres de configuration du streaming multimédia {#streaming-media}
+# Paramètres de configuration des médias en streaming {#streaming-media}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_streamingmedia"
->title="Streaming de médias"
->abstract="Détermine la manière dont les données multimédia en flux continu sont collectées pendant les sessions de lecture multimédia."
+>title="Médias en streaming"
+>abstract="Détermine la manière dont les données des médias en streaming sont collectées pendant les sessions de lecture multimédia."
 
 La fonctionnalité de collecte de médias vous permet de collecter des données relatives aux sessions de médias, telles que les lectures de médias, les pauses, les fins de session et d’autres événements associés. Une fois collectées, vous pouvez envoyer ces données à Adobe Experience Platform ou Adobe Analytics pour générer des rapports. Cette fonctionnalité fournit une solution complète pour suivre et comprendre le comportement de consommation des médias sur votre site web.
 

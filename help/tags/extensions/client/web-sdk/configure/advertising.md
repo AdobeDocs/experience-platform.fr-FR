@@ -1,15 +1,15 @@
 ---
-title: Paramètres de configuration d’Adobe Advertising
+title: Paramètres de configuration d’Adobe Advertising
 description: Activez ou désactivez la fonctionnalité Demand-side Platform.
 exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 7%
+source-wordcount: '219'
+ht-degree: 31%
 
 ---
 
-# Paramètres de configuration d’Adobe Advertising {#advertising}
+# Paramètres de configuration d’Adobe Advertising {#advertising}
 
 >[!AVAILABILITY]
 >
@@ -18,7 +18,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advertising"
 >title="Adobe Advertising"
->abstract="Configurez les paramètres des intégrations Adobe Advertising. Notez qu’aucune configuration publicitaire n’est nécessaire pour activer la mesure des clics publicitaires. Aucune autre action n’est requise de la part des clients Search, Social et Commerce. Toutefois, les utilisateurs de Demand-side Platform (DSP) doivent configurer les annonceurs dans cette section pour mesurer les conversions d’affichage publicitaire."
+>abstract="Configurez les paramètres des intégrations Adobe Advertising. Notez qu’aucune configuration publicitaire n’est nécessaire pour activer la mesure des clics publicitaires. Aucune autre action n’est requise de la part des clientes et clients Search, Social et Commerce. Toutefois, les utilisateurs et utilisatrices de la plateforme côté demande (DSP) doivent configurer les annonceurs dans cette section afin de mesurer les conversions d’affichage publicitaire."
 
 La section **[!UICONTROL Adobe Advertising]** vous permet d’activer ou de désactiver la fonctionnalité Demand-side Platform (DSP) si elle est utilisée dans votre mise en œuvre. Vous ne devez définir ce champ que si votre implémentation utilise un DSP.
 

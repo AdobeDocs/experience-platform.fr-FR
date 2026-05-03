@@ -5,12 +5,12 @@ description: Gérez les utilisateurs et les groupes d’utilisateurs via l’int
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 7%
+source-wordcount: '937'
+ht-degree: 9%
 
 ---
 
-# Gestion des utilisateurs et ajout de groupes d’utilisateurs {#manage-users}
+# Gérer les utilisateurs et utilisatrices et ajouter des groupes d’utilisateurs et d’utilisatrices {#manage-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
@@ -173,5 +173,5 @@ Vous savez maintenant comment afficher les détails et les rôles d’un utilisa
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446400/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->

@@ -1,20 +1,20 @@
 ---
-title: Paramètres de configuration de Personalization
+title: Paramètres de configuration de la personnalisation
 description: Configurez les paramètres de personnalisation dans l’extension de balise Web SDK.
 exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 1%
+source-wordcount: '486'
+ht-degree: 4%
 
 ---
 
-# Paramètres de configuration de Personalization {#personalization}
+# Paramètres de configuration de la personnalisation {#personalization}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_personalization"
 >title="Personnalisation"
->abstract="Détermine comment l’extension de balise traite le contenu personnalisé."
+>abstract="Détermine la manière dont l’extension des balises traite le contenu personnalisé."
 
 Cette section de configuration vous permet de déterminer comment masquer certaines parties de la page lors du chargement du contenu personnalisé. Lorsqu’ils sont configurés correctement, ces paramètres garantissent que vos visiteurs voient le contenu personnalisé approprié.
 
@@ -32,7 +32,7 @@ Les options disponibles sont les suivantes :
 
 Utilisez cette option pour permettre à Web SDK de lire et d’écrire les `mbox` hérités et les cookies `mboxEdgeCluster` utilisés par les bibliothèques `at.js` 1.x ou 2.x. Ce paramètre permet de conserver les profils des visiteurs intacts lorsqu’ils se déplacent entre les pages à l’aide de Web SDK ou de `at.js` sur le même site Web. Si aucune `at.js` n’est implémentée sur votre site, il n’est pas nécessaire d’activer cette case à cocher. La bibliothèque JavaScript équivalente à cette case à cocher est [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
 
-Lors de l’activation de cette option, veillez à activer également le [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/fr/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) dans `targetGlobalSettings()`.
+Lors de l’activation de cette option, veillez à activer également le [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) dans `targetGlobalSettings()`.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

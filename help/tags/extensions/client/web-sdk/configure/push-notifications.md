@@ -4,7 +4,7 @@ description: Configurez les paramètres de notification push pour l’extension 
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
 source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '180'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_pushnotifications"
 >title="Notifications push"
->abstract="Définit une clé publique VALIDE pour l’authentification par notification push."
+>abstract="Définit une clé publique VAPID pour l’authentification par notification push."
 
 Cette section de configuration vous permet de définir une clé publique VALIDE pour l’authentification par notification push.
 

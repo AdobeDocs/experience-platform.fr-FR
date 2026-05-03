@@ -1,11 +1,11 @@
 ---
 title: Paramètres de configuration des identités
-description: Définissez la manière dont l’extension de balise identifie les visiteurs.
+description: Définissez la manière dont l’extension des balises identifie les visiteurs et visiteuses.
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
 source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 10%
+source-wordcount: '271'
+ht-degree: 11%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_identity"
 >title="Identité"
->abstract="Définissez la manière dont l’extension de balise identifie les visiteurs."
+>abstract="Définissez la manière dont l’extension des balises identifie les visiteurs et visiteuses."
 
 Cette section de configuration vous permet de définir le comportement de Web SDK en ce qui concerne la gestion de l’identification des utilisateurs.
 
