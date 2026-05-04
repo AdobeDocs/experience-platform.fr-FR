@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de la préparation des données
 description: Ce document présente Data Prep dans Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4df6f85701f2a509b3f9c7ceddb8d002dd81c6f0
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 98%
+source-wordcount: '800'
+ht-degree: 95%
 
 ---
 
@@ -42,7 +42,20 @@ Pour en savoir plus sur les champs calculés, consultez le [guide des champs cal
 
 ### Échapper les caractères spéciaux {#escape-special-characters}
 
-Vous pouvez échapper les caractères spéciaux d’un champ à l’aide de `${...}`. Toutefois, les fichiers JSON qui contiennent des champs avec un point (`.`) ne sont pas pris en charge par ce mécanisme. Lors de l’interaction avec des hiérarchies, si un attribut enfant comporte un point (`.`), vous devez utiliser une barre oblique inverse (`\`) pour échapper les caractères spéciaux. Par exemple, `address` est un objet qui contient l’attribut `street.name`. Il peut donc être appelé `address.street\.name` au lieu de `address.street.name`.
+Vous pouvez échapper les caractères spéciaux d’un champ à l’aide de `${...}`. Toutefois, les fichiers JSON qui contiennent des champs avec un point (`.`) ne sont pas pris en charge par ce mécanisme.
+
+Lors de l’interaction avec des hiérarchies, si un attribut enfant comporte un point (`.`), vous devez utiliser une barre oblique inverse (`\`) pour échapper les caractères spéciaux. Par exemple, le `address` suivant est un objet contenant l’attribut `street.name` :
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+Pour référencer ce champ dans un mappage, vous devez utiliser `${address.street\.name}`.
 
 ## Jeu de mappages
 
