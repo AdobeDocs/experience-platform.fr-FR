@@ -43,7 +43,7 @@ Après l’enregistrement d’une connexion en continu, vous, en tant que produc
 
 L’exemple suivant vous montre comment envoyer plusieurs messages vers un jeu de données spécifique au sein d’une requête HTTP unique. Insérez l’identifiant du jeu de données dans l’en-tête du message pour que ce message soit directement ingéré.
 
-Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Datasets]** , en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Info]** . Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
+Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [&#128279;](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Datasets]** , en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Info]** . Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
 
 Au lieu d’utiliser un jeu de données existant, vous pouvez créer un nouveau jeu de données. Pour plus d’informations sur la création d’un jeu de données à l’aide d’API, lisez le tutoriel [Création d’un jeu de données à l’aide d’API](../../catalog/api/create-dataset.md).
 
@@ -552,7 +552,7 @@ Utilisez cette méthode lorsque vous :
 - Travaillent avec des exportations basées sur des fichiers provenant de systèmes en amont.
 - Préférez l’ingestion planifiée ou en bloc.
 
-Voir [ Guide d’ingestion par lots](../batch-ingestion/api-overview.md) pour obtenir des instructions détaillées.
+Voir [&#x200B; Guide d’ingestion par lots](../batch-ingestion/api-overview.md) pour obtenir des instructions détaillées.
 
 >[!ENDTABS]
 
