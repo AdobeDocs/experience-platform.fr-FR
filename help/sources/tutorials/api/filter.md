@@ -2,9 +2,9 @@
 title: Filtrer les données au niveau des lignes pour un Source à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: cf5c460f1db4970217b881688c994787696d1ce1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '2086'
 ht-degree: 13%
 
 ---
@@ -112,7 +112,7 @@ Une réponse réussie renvoie le code d’état 200 et les spécifications de co
 
 +++
 
-#### Opérateurs de comparaison  {#comparison-operators}
+#### Opérateurs de comparaison {#comparison-operators}
 
 | Opérateur | Description |
 | --- | --- |
@@ -394,7 +394,7 @@ curl -X POST \
 
 +++Réponse
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source qui vient d’être créée.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source.
 
 ```json
 {
@@ -405,9 +405,180 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 +++
 
+## Filtrer [!DNL Salesforce] flux de données
+
+L’exemple suivant montre de bout en bout comment appliquer un filtrage au niveau des lignes à un flux de données [!DNL Salesforce] existant à l’aide de l’API [!DNL Flow Service].
+
+### Langue de requête et séquence d’échappement
+
+Lors de l’utilisation des informations d’identification du client OAuth 2.0 avec des sources [!DNL Salesforce], le filtrage au niveau des lignes est effectué à l’aide de SOQL ([!DNL Salesforce] Object Query Language).
+
+* Les noms de colonnes dans les filtres SOQL utilisent les noms exacts de l’API de champ [!DNL Salesforce], sans accents graves ni autres caractères spéciaux.
+* Les valeurs de chaîne doivent être placées entre guillemets simples, comme l’exige la syntaxe SOQL.
+* Pour les valeurs booléennes, utilisez les mots-clés `true` ou `false` au lieu des valeurs numériques (`0` ou `1`).
+* Les valeurs date et dateTime dans les clauses `WHERE` doivent être écrites sous la forme de littéraux date ou dateTime SOQL non entre guillemets, plutôt que sous la forme de chaînes entre guillemets, lorsque le filtre indique qu&#39;elles représentent des types date/heure.
+
+Pour le filtrage au niveau des lignes basé sur PQL, chaque nœud littéral dont la valeur est un `boolean` ou un `dateTime` doit inclure un `literalType` afin que les valeurs soient interprétées et traduites correctement.
+
+Exemples PQL :
+
+>[!BEGINTABS]
+
+>[!TAB Exemple PQL 1]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "like",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "Name"
+      },
+      {
+        "nodeType": "literal",
+        "value": "ro%"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB Exemple PQL 2]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": ">",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "CreatedDate" },
+      {
+        "nodeType": "literal",
+        "literalType": "DateTime",
+        "value": "2024-05-15T00:00:00Z"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB Exemple PQL 3]
+
+```json
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "=",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "IsDeleted" },
+      {
+        "nodeType": "literal",
+        "literalType": "boolean",
+        "value": false
+      }
+    ]
+  }
+}
+```
+
+>[!ENDTABS]
+
+#### Récupérer les spécifications de connexion pour [!DNL Salesforce]
+
+Pour récupérer les informations sur la spécification de connexion d’une source [!DNL Salesforce], envoyez une requête GET au point d’entrée `/connectionSpecs` de l’API [!DNL Flow Service] et indiquez le nom de la propriété de votre source dans vos paramètres de requête.
+
+**Format d’API**
+
+```http
+GET /connectionSpecs/{QUERY_PARAMS}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Vous pouvez récupérer la spécification de connexion [!DNL Salesforce] en appliquant la propriété `name` et en spécifiant `"salesforce"` dans votre recherche. |
+
++++Requête
+
+La requête suivante récupère les spécifications de connexion pour [!DNL Salesforce].
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="salesforce"' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}'
+```
+
++++Réponse
+
+Une réponse réussie renvoie le code d’état 200 et les spécifications de connexion pour [!DNL Salesforce], y compris des informations sur son langage de requête pris en charge et ses opérateurs logiques.
+
+
+```json
+ "attributes": {
+    "filterAtSource": {
+      "enabled": true,
+      "queryLanguage": "SQL",
+      "logicalOperators": [
+        "and",
+        "or",
+        "not"
+      ],
+      "comparisonOperators": [
+        "=",
+        "!=",
+        "<",
+        "<=",
+        ">",
+        ">=",
+        "like",
+        "in",
+        "isNull",
+        "isNotNull"
+      ],
+      "columnNameEscapeChar": "`",
+      "valueEscapeChar": "'",
+      "v2": {
+        "oAuth2ClientCredential": {
+          "queryLanguage": "SOQL",
+          "logicalOperators": [
+            "and",
+            "or",
+            "not"
+          ],
+          "comparisonOperators": [
+            "=",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "like",
+            "in",
+            "isNull",
+            "isNotNull"
+          ],
+          "columnNameEscapeChar": "",
+          "valueEscapeChar": "'"
+        }
+      }
+    }
+  }
+```
+
++++
+
 ## Filtrage des entités d’activité pour les [!DNL Marketo Engage] {#filter-for-marketo}
 
-Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source &#x200B;](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
+Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source ](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] types d’activité standard {#marketo-standard-activity-types}
 

@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
+source-git-commit: 9b191535ba96c8791a4528361a1945ae27c6456c
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 19%
+source-wordcount: '1428'
+ht-degree: 23%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 19%
 Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Destinations](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Service de requête](#query-service)
 - [Real-Time CDP](#rtcdp)
 - [Sandbox](#sandboxes)
@@ -45,11 +45,11 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} [Correspondance client Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Faites correspondre les clients par adresse e-mail et reprenez contact avec eux dans l’ensemble du [!DNL Microsoft Advertising Network], y compris grâce aux annonces Search et Audience. Liez votre compte [!DNL Microsoft Advertising] à Real-Time CDP pour automatiser la création et la gestion des listes de correspondance client directement depuis Experience Platform. Pour obtenir l’accès, contactez votre gestionnaire de compte Adobe. |
-| {type=Informative} [Audience Personnalisée Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Envoyez des audiences d’Experience Platform vers [!DNL Reddit Ads]. Connectez votre compte [!DNL Reddit], mappez des identités et activez des audiences pour atteindre les personnes qui explorent activement leurs intérêts sur [!DNL Reddit]. |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [&#x200B; (héritée) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [&#x200B; (hérité) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
+| [!BADGE Beta ]{type=Informative} [Correspondance client Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Faites correspondre les clients par adresse e-mail et reprenez contact avec eux dans l’ensemble du [!DNL Microsoft Advertising Network], y compris grâce aux annonces Search et Audience. Liez votre compte [!DNL Microsoft Advertising] à Real-Time CDP pour automatiser la création et la gestion des listes de correspondance client directement depuis Experience Platform. Pour obtenir l’accès, contactez votre gestionnaire de compte Adobe. |
+| [!BADGE ]{type=Informative} [Audience Personnalisée Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Envoyez des audiences d’Experience Platform vers [!DNL Reddit Ads]. Connectez votre compte [!DNL Reddit], mappez des identités et activez des audiences pour atteindre les personnes qui explorent activement leurs intérêts sur [!DNL Reddit]. |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [ (héritée) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [ (hérité) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Utilisez [!DNL Rokt] pour connecter les audiences Experience Platform à la prise de décision en temps réel pilotée par l’IA, améliorant ainsi les performances des campagnes grâce à un ciblage, une suppression et une personnalisation plus précis. |
-| Prise en charge des audiences externes pour [&#x200B; Criteo &#x200B;](../destinations/catalog/advertising/criteo.md) | Activez les audiences d’origines autres que Segmentation Service vers [!DNL Criteo], y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Voir la section [audiences prises en charge](../destinations/catalog/advertising/criteo.md#supported-audiences) pour plus d’informations. |
+| Prise en charge des audiences externes pour [ Criteo ](../destinations/catalog/advertising/criteo.md) | Activez les audiences d’origines autres que Segmentation Service vers [!DNL Criteo], y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Voir la section [audiences prises en charge](../destinations/catalog/advertising/criteo.md#supported-audiences) pour plus d’informations. |
 | [Connexion à l’audience Acxiom](../destinations/catalog/advertising/acxiom-audience-connection.md) | La destination [!DNL Acxiom Audience Connection] est désormais disponible pour tous. Utilisez-le pour améliorer les audiences avec la technologie [!DNL Acxiom's Real ID] et les activer sur d’autres plateformes, notamment [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] et [!DNL Viant]. |
 | [Connexion à l’audience Acxiom Real ID](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | La destination [!DNL Acxiom Real ID Audience Connection] est désormais disponible pour tous. Utilisez-la pour activer des audiences à l’aide de [!DNL Acxiom's Real ID] comme clé de correspondance sur le même ensemble de plateformes prises en charge, notamment [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] et [!DNL Viant]. |
 
@@ -57,7 +57,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 **Correctifs et améliorations**
 
-| Correction | Description |
+| Corriger | Description |
 | --- | --- |
 | Prise en charge de la surveillance Personalization personnalisée | Le tableau de bord de surveillance des destinations prend désormais en charge les destinations [!DNL Custom Personalization]. La note de limitation indiquant que les [!DNL Custom Personalization] exclues de la surveillance a été supprimée. |
 | Nombre de profils dans la révision de l’activation | L’étape de révision de l’activation affiche désormais le nombre de profils pour les audiences déjà activées. Le nombre de profils s’affiche également pour les destinations de diffusion en streaming, et pas seulement pour les destinations par lots. |
@@ -81,7 +81,7 @@ XDM est une spécification open source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [&#x200B; Présentation du système XDM &#x200B;](../xdm/home.md).
+Pour plus d’informations, consultez la [ Présentation du système XDM ](../xdm/home.md).
 
 ## Service de requête {#query-service}
 
@@ -105,11 +105,11 @@ Pour plus d’informations, consultez la [présentation de Query Service](../que
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Real-Time CDP MCP (Beta) | Utilisez le MCP Real-Time CDP pour importer Real-Time CDP dans les agents d’IA et les clients compatibles avec MCP, ce qui vous permet d’interagir avec les outils Real-Time CDP directement via votre expérience LLM native. En connectant un client compatible avec MCP (tel que Claude, ChatGPT, Claude Code, Codex, Curseur ou VS Code) à `https://rtcdp-mcp.adobe.io/mcp`, vous pouvez utiliser le langage naturel pour inspecter les audiences, la configuration de destination et l’historique d’exécution de l’activation, sans écrire d’appels d’API REST Experience Platform ni parcourir plusieurs workflows d’interface utilisateur. Après vous être connecté à Adobe à l’aide d’un navigateur, vous disposez d’un accès en lecture seule aux outils suivants : <ul><li>Rechercher des audiences existantes</li><li>Prévisualiser L’Appartenance À Une Audience</li><li>Liste des types de destination</li><li>Liste des comptes configurés</li><li>Liste des destinations configurées</li><li>Liste des connexions Source</li><li>Liste des connexions cibles</li><li>Inspecter les exécutions d’activation</li></ul>. Chaque requête nécessite des paramètres `imsOrgId` et `sandboxName` pour s’assurer que les actions sont limitées à votre organisation et à votre sandbox. Notez que les opérations d’écriture ne sont pas prises en charge dans cette version de Beta. |
+| Real-Time CDP MCP (Beta) | Utilisez le MCP Real-Time CDP pour importer Real-Time CDP dans les agents d’IA et les clients compatibles avec MCP, ce qui vous permet d’interagir avec les outils Real-Time CDP directement via votre expérience LLM native. En connectant un client compatible MCP (tel que Claude, ChatGPT, Claude Code, Codex, Curseur ou VS Code) au point d’entrée fourni par votre représentant Adobe, vous pouvez utiliser un langage naturel pour inspecter les audiences, la configuration de destination et l’historique d’exécution de l’activation, sans écrire d’appels d’API REST Experience Platform ni parcourir plusieurs workflows d’interface utilisateur. Après vous être connecté à Adobe à l’aide d’un navigateur, vous disposez d’un accès en lecture seule aux outils suivants : <ul><li>Rechercher des audiences existantes</li><li>Prévisualiser L’Appartenance À Une Audience</li><li>Liste des types de destination</li><li>Liste des comptes configurés</li><li>Liste des destinations configurées</li><li>Liste des connexions Source</li><li>Liste des connexions cibles</li><li>Inspecter les exécutions d’activation</li></ul>. Chaque requête nécessite des paramètres `imsOrgId` et `sandboxName` pour s’assurer que les actions sont limitées à votre organisation et à votre sandbox. Notez que les opérations d’écriture ne sont pas prises en charge dans cette version de Beta. |
 
 {style="table-layout:auto"}
 
-Pour plus d&#39;informations, lisez la présentation de Real-Time CDP [&#128279;](../rtcdp/home.md).
+Pour plus d&#39;informations, lisez la présentation de Real-Time CDP [](../rtcdp/home.md).
 
 ## Sandbox {#sandboxes}
 
