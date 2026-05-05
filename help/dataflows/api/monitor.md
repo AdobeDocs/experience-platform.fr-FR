@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;flux de données de surveillance;api de service de flux;service de flux
+keywords: Experience Platform;accueil;rubriques les plus consultées;flux de données de surveillance;API de service de flux;service de flux
 solution: Experience Platform
 title: Surveiller les flux de données à l’aide de l’API Flow Service
 type: Tutorial
 description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '770'
 ht-degree: 57%
 
 ---
@@ -20,25 +20,25 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution des flux à l’aide de l’[[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) .
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez le connecteur de votre choix dans la [présentation des sources](../../sources/home.md) ou [présentation des destinations](../../destinations/catalog/overview.md) et suivez les étapes décrites avant de lancer ce tutoriel.
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 - [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées aux applications couramment utilisées. Elles permettent l’activation transparente des données d’Experience Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-- [Sources &#x200B;](../../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+- [Sources](../../sources/home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour surveiller avec succès les exécutions de flux à l’aide de l’API [!DNL Flow Service].
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -201,3 +201,5 @@ Une réponse réussie renvoie des informations concernant votre exécution de fl
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur la surveillance des flux de données pour les sources, consultez le tutoriel [surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md). Pour plus d’informations sur la surveillance des flux de données pour les destinations, consultez le tutoriel [surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md).
+
+Pour envoyer plusieurs entités XDM à un flux de données, utilisez un tableau `messages` dans votre requête HTTP ou chargez un fichier (CSV, JSON ou Parquet) contenant plusieurs enregistrements. Pour obtenir des conseils détaillés et connaître les bonnes pratiques, lisez [ Comment envoyer plusieurs entités XDM à un flux de données ](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).

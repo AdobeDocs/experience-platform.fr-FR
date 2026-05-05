@@ -5,10 +5,10 @@ title: Envoyer plusieurs messages dans une seule requête HTTP
 type: Tutorial
 description: Ce document fournit un tutoriel permettant d’envoyer plusieurs messages vers Adobe Experience Platform dans une seule requête HTTP à l’aide de l’ingestion par flux.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '1483'
-ht-degree: 58%
+source-wordcount: '1724'
+ht-degree: 51%
 
 ---
 
@@ -18,7 +18,7 @@ Lorsque vous diffusez des données en continu vers Adobe Experience Platform, 
 
 Ce document fournit un tutoriel permettant d’envoyer plusieurs messages à [!DNL Experience Platform] dans une seule requête HTTP à l’aide de l’ingestion par flux.
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform [!DNL Data Ingestion]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
@@ -39,11 +39,11 @@ Vous devez d’abord créer une connexion en continu avant de pouvoir commencer 
 
 Après l’enregistrement d’une connexion en continu, vous, en tant que producteur de données, disposerez d’une URL unique qui peut être utilisée pour diffuser des données vers Experience Platform.
 
-## Diffusion en continu vers un jeu de données
+## Diffusion en continu vers un jeu de données {#stream-to-dataset}
 
 L’exemple suivant vous montre comment envoyer plusieurs messages vers un jeu de données spécifique au sein d’une requête HTTP unique. Insérez l’identifiant du jeu de données dans l’en-tête du message pour que ce message soit directement ingéré.
 
-Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [Experience Platform](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Datasets]** , en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Info]** . Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
+Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Datasets]** , en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Info]** . Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
 
 Au lieu d’utiliser un jeu de données existant, vous pouvez créer un nouveau jeu de données. Pour plus d’informations sur la création d’un jeu de données à l’aide d’API, lisez le tutoriel [Création d’un jeu de données à l’aide d’API](../../catalog/api/create-dataset.md).
 
@@ -519,6 +519,42 @@ Les messages en échec sont identifiés par un code d’état d’erreur dans le
 Les messages invalides sont collectés et stockés dans un lot « erreur » au sein du jeu de données spécifié par `{DATASET_ID}`.
 
 Pour plus d’informations sur la récupération des messages par lots en échec, lisez le guide [Récupération des messages en échec](../quality/retrieve-failed-batches.md).
+
+### Envoyer plusieurs entités XDM à un flux de données {#send-multiple-xdm-entities-to-a-dataflow}
+
+Pour envoyer plusieurs entités XDM à un flux de données, vous pouvez effectuer l’une des opérations suivantes :
+
+- Envoyez une ou plusieurs entités dans un tableau `messages` dans une requête HTTP au point d’entrée de diffusion en continu.
+- Chargez un fichier avec plusieurs entités à l’aide de l’ingestion par lots.
+
+Choisissez la méthode qui correspond à votre volume de données et à votre cas d’utilisation.
+
+>[!BEGINTABS]
+
+>[!TAB Regrouper des entités dans une requête HTTP]
+
+Vous pouvez inclure plusieurs entités XDM dans un tableau `messages` dans une requête HTTP unique au point d’entrée d’ingestion en flux continu. Tous les messages peuvent cibler des jeux de données et des schémas identiques ou différents, à condition qu’ils appartiennent tous à la **même** organisation et au même sandbox.
+
+Utilisez cette option lorsque vous souhaitez :
+
+- Réduisez les requêtes en envoyant plusieurs entités XDM dans un seul appel HTTP.
+- Diffusez des données en temps réel via le point d’entrée d’ingestion.
+
+Pour plus d’informations et des instructions détaillées sur l’envoi de la requête, lisez la section [diffusion en continu vers un jeu de données](#stream-to-dataset).
+
+>[!TAB Charger un fichier de commandes]
+
+Vous pouvez charger un fichier de commandes contenant une ou plusieurs entités XDM dans un flux de données. Tous les fichiers chargés sous le même lot sont traités ensemble en tant qu’unité d’ingestion unique.
+
+Utilisez cette méthode lorsque vous :
+
+- Ingérez des volumes de données plus importants (par exemple, des fichiers CSV, JSON ou Parquet).
+- Travaillent avec des exportations basées sur des fichiers provenant de systèmes en amont.
+- Préférez l’ingestion planifiée ou en bloc.
+
+Voir [ Guide d’ingestion par lots](../batch-ingestion/api-overview.md) pour obtenir des instructions détaillées.
+
+>[!ENDTABS]
 
 ## Confirmation des messages ingérés
 
