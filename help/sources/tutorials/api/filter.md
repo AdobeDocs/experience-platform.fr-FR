@@ -578,7 +578,7 @@ Une réponse réussie renvoie le code d’état 200 et les spécifications de co
 
 ## Filtrage des entités d’activité pour les [!DNL Marketo Engage] {#filter-for-marketo}
 
-Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source ](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
+Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source &#x200B;](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] types d’activité standard {#marketo-standard-activity-types}
 
