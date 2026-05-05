@@ -39,7 +39,7 @@ Ce connecteur envoie des données à [!DNL The Trade Desk] pour l’activation d
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
-Selon le type d’identifiants ingérés dans [!DNL Adobe Experience Platform], vous devez respecter les exigences correspondantes. Lisez la [ Présentation des espaces de noms d’identité ](/help/identity-service/features/namespaces.md) pour plus d’informations.
+Selon le type d’identifiants ingérés dans [!DNL Adobe Experience Platform], vous devez respecter les exigences correspondantes. Lisez la [&#x200B; Présentation des espaces de noms d’identité &#x200B;](/help/identity-service/features/namespaces.md) pour plus d’informations.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -83,7 +83,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -104,6 +104,7 @@ Si vous choisissez de hacher les adresses e-mail vous-même, veillez à respecte
       * Point (`.`) (code ASCII 46). Par exemple, normalisez « jane.doe@gmail.com » en « janedoe@gmail.com ».
      * Le caractère plus (« + ») (code ASCII 43) et tous les caractères suivants. Par exemple, normalisez « janedoe+home@gmail.com » en « janedoe@gmail.com ».
   
+
 ## Normalisation des numéros de téléphone et exigences de hachage {#phone-hashing}
 
 Voici ce que vous devez savoir sur le téléchargement de numéros de téléphone :
@@ -151,7 +152,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 |---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
-| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [ exportations par lots ](/help/destinations/destination-types.md#file-based). |
+| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [&#x200B; exportations par lots &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -176,7 +177,7 @@ Avant de pouvoir envoyer ou activer des données d’audience vers une destinati
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment remplir les détails de destination.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Lors de la connexion à la destination , la définition d’une politique de gouvernance des données est complètement facultative. Veuillez consulter la présentation de la gouvernance des données Experience Platform](/help/data-governance/policies/overview.md) pour plus d’informations.[
+Lors de la connexion à la destination , la définition d’une politique de gouvernance des données est complètement facultative. Veuillez consulter la présentation de la gouvernance des données Experience Platform[&#128279;](/help/data-governance/policies/overview.md) pour plus d’informations.
 
 ## Activer des audiences vers cette destination {#activate}
 
