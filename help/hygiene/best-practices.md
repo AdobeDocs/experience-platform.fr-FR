@@ -2,9 +2,9 @@
 title: Bonnes pratiques relatives à la gestion avancée du cycle de vie des données
 description: Découvrez comment gérer efficacement les demandes d’hygiène des données dans Adobe Experience Platform à l’aide de l’interface utilisateur de gestion avancée du cycle de vie des données et de l’API Data Hygiene. Ce guide couvre les bonnes pratiques telles que la maximisation des identités par requête, la spécification de jeux de données individuels et la limitation de l’API pour éviter les ralentissements. Le document comprend des instructions pour configurer le nettoyage automatique des jeux de données, comment surveiller les statuts des ordres de travail et des méthodes détaillées de récupération des réponses. Suivez ces pratiques pour rationaliser le traitement de vos demandes et optimiser les temps de réponse.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Ce guide nécessite une compréhension pratique de l’espace de travail du cycl
 
 ## Instructions de création d’ordres de travail {#work-order-creation-guidelines}
 
-Vous pouvez utiliser le point d’entrée `/workorder` dans l’API Data Hygiene pour gérer par programmation les requêtes de suppression d’enregistrements dans Experience Platform. Avec ce point d’entrée, vous pouvez créer une requête de suppression, vérifier son statut ou mettre à jour une requête existante. Consultez le document [&#x200B; Point d’entrée d’ordre de travail &#x200B;](./api/workorder.md) pour savoir comment effectuer ces actions à l’aide de l’API.
+Vous pouvez utiliser le point d’entrée `/workorder` dans l’API Data Hygiene pour gérer par programmation les requêtes de suppression d’enregistrements dans Experience Platform. Avec ce point d’entrée, vous pouvez créer une requête de suppression, vérifier son statut ou mettre à jour une requête existante. Consultez le document [ Point d’entrée d’ordre de travail ](./api/workorder.md) pour savoir comment effectuer ces actions à l’aide de l’API. Les demandes de suppression d’enregistrements sont traitées par lots avant le début du traitement et peuvent prendre jusqu’à 30 jours (SLA standard) ou 15 jours (Privacy and Security Shield ou Healthcare Shield). Pour une explication complète de ce qui se passe à chaque étape, consultez la section [ Chronologies de suppression des enregistrements ](./home.md#record-delete-transparency).
 
 >[!TIP]
 >

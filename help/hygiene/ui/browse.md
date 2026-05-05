@@ -2,10 +2,10 @@
 title: Parcourir les ordres de travail relatifs au cycle de vie des données
 description: Découvrez comment afficher et gérer les ordres de travail de cycle de vie des données existants dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 65%
+source-wordcount: '846'
+ht-degree: 62%
 
 ---
 
@@ -86,6 +86,10 @@ Différentes informations et commandes sont fournies en fonction du type d’ord
 ### Détails de suppression des enregistrements {#record-delete}
 
 Les détails d’une demande de suppression d’enregistrement incluent son statut actuel et le temps écoulé depuis que la demande a été effectuée. Chaque requête comprend également une section **[!UICONTROL Status by service]** qui fournit des détails d’état individuels sur chaque service en aval impliqué dans la suppression. Sur le rail de droite, vous pouvez utiliser des contrôles pour mettre à jour le nom et la description de l’ordre de travail.
+
+>[!TIP]
+>
+>Les demandes de suppression d’enregistrements sont traitées par lots avant le début du traitement et peuvent prendre jusqu’à 30 jours sous le SLA standard. Pour une répartition des actions qui se produisent à chaque étape, voir [Chronologies de suppression des enregistrements](../home.md#record-delete-transparency).
 
 ![Image illustrant la page de détails d’un ordre de travail de suppression d’enregistrement](../images/ui/browse/record-delete-details.png)
 
