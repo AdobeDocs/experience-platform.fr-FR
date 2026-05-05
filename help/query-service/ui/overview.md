@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Guide de l’UI du service de requête
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs au sein de votre organisation.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '2409'
-ht-degree: 21%
+source-wordcount: '2471'
+ht-degree: 20%
 
 ---
 
 # Guide de l’interface utilisateur de Query Service
 
-Le service de requête Adobe Experience Platform fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs et utilisatrices au sein de votre organisation. Pour accéder à l’interface utilisateur dans [Adobe Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche. La [!UICONTROL Queries] [!UICONTROL Overview] s’affiche.
+Le service de requête Adobe Experience Platform fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs et utilisatrices au sein de votre organisation. Pour accéder à l’interface utilisateur dans [](https://platform.adobe.com), sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche. La [!UICONTROL Overview] [!UICONTROL Queries] s’affiche.
 
 ![L’espace de travail de Query Service avec Requêtes et l’onglet Aperçu mis en surbrillance.](../images/ui/overview/queries-overview.png)
 
@@ -42,17 +42,29 @@ La section [!UICONTROL Data Distiller capabilities] fournit des liens vers la do
 
 ![Espace de travail de Query Service avec la section Fonctionnalités de Distiller de données mise en surbrillance.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Accélérateurs {#accelerators}
+
+L’onglet **[!UICONTROL Accelerators]** de l’espace de travail Requêtes fournit un catalogue de modèles SQL paramétrés créés par Adobe pour les cas d’utilisation analytiques courants. Chaque accélérateur apparaît sous la forme d’une ligne dans une table avec un nom, un aperçu SQL et des métadonnées.
+
+Sélectionnez un accélérateur pour l’ouvrir dans le Query Editor. Fournissez des valeurs de paramètre et exécutez la requête pour générer des résultats. Les accélérateurs sont en lecture seule et gérés par Adobe pour assurer la cohérence. Pour modifier la logique, créez une copie modifiable à l’aide de **[!UICONTROL Create custom template]**. Consultez le guide [Accélérateurs de Distiller de données](./accelerators.md) pour savoir comment découvrir, exécuter, planifier et personnaliser des accélérateurs.
+
 ### Accélérateurs de Data Distiller recommandés {#recommended-accelerators}
 
-Sélectionnez un lien rapide pour accéder à la [!UICONTROL Templates] de tableaux de bord de Distiller de données appropriée. Chaque accélérateur fournit des outils et des visualisations puissants pour vous aider à analyser les données d’audience, à optimiser la segmentation et à améliorer les stratégies de ciblage.
+La section **[!UICONTROL Recommended Data Distiller accelerators]** de l’onglet Aperçu permet d’accéder rapidement aux accélérateurs couramment utilisés. Ils apparaissent sous forme de cartes et prennent en charge deux workflows :
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)** : depuis ce tableau de bord, vous pouvez analyser les intersections d’audience entre plusieurs segments d’audience pour découvrir des informations précieuses et optimiser les stratégies de segmentation. Vous pouvez également exporter vos informations à des fins d’analyse hors ligne ou de création de rapports.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)** : depuis ce tableau de bord, vous pouvez comparer et mettre en contraste les mesures d’audience clés côte à côte pour analyser deux groupes d’audiences en détail. Ces informations vous aident à comprendre la taille de l’audience, la croissance et d’autres indicateurs clés de performances, ce qui vous permet d’affiner la segmentation et d’optimiser les stratégies de ciblage avec des décisions axées sur les données.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)** : utilisez le tableau de bord [!UICONTROL Audience trends] pour visualiser l’évolution de vos audiences au fil du temps grâce à des mesures clés telles que la croissance de l’audience, le nombre d’identités et les profils d’identité uniques. Suivez les tendances pour découvrir de précieuses informations sur le comportement de l’audience, ce qui vous permet d’affiner la segmentation, d’améliorer l’engagement et d’optimiser les stratégies de ciblage pour des campagnes plus efficaces.
-Suivez les mesures d’audience au fil du temps pour surveiller les modifications de la taille de l’audience, la croissance des identités et l’engagement global.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)** : utilisez le tableau de bord Chevauchements d’identités d’audience pour analyser les chevauchements d’identités dans les audiences sélectionnées. Les visualisations et les données tabulées fournissent des informations pour optimiser la combinaison d’identités, réduire la redondance et améliorer la segmentation. Ces informations permettent un ciblage plus efficace, une personnalisation améliorée et des interactions client rationalisées.
+- **Accélérateurs liés aux tableaux de bord** ouvrez-les dans l’espace de travail Tableaux de bord avec des visualisations préconfigurées. Elles ne nécessitent pas d’entrée de paramètre ou d’exécution manuelle de requête.
+- **Les accélérateurs basés sur des requêtes** s’ouvrent dans le Query Editor, où vous fournissez des valeurs de paramètre, exécutez la requête ou planifiez-la.
 
-![Espace de travail de Query Service avec la section Accélérateurs de Distiller de données mise en surbrillance.](../images/ui/overview/data-distiller-accelerators.png)
+Sélectionnez une carte pour ouvrir l’accélérateur. Utilisez cette section pour accéder rapidement aux workflows courants ou accédez à l’onglet **[!UICONTROL Accelerators]** pour parcourir l’ensemble du catalogue. Pour obtenir la liste complète des accélérateurs et des instructions détaillées, consultez l’[onglet Accélérateurs](./accelerators.md#discovery-paths) ou le [guide des accélérateurs de Distiller de données](./accelerators.md).
+
+Les accélérateurs liés au tableau de bord suivants sont disponibles :
+
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)** : analysez les intersections entre les segments d’audience pour identifier les modèles de chevauchement et affiner la segmentation.
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)** : comparaison des mesures clés entre deux audiences, notamment la taille, la composition et les modifications au fil du temps.
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)** : suivez l’évolution des mesures d’audience au fil du temps, y compris la taille de l’audience et le nombre d’identités.
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)** : examiner la manière dont les types d’identité se chevauchent dans les audiences pour prendre en charge la combinaison d’identités et la précision de segmentation.
+
+![Présentation de Query Service présentant la section Accélérateurs de Distiller de données avec les cartes d’accélération recommandées.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Exemples Data Distiller {#data-distiller-examples}
 
@@ -72,7 +84,7 @@ La section Mesures clés affiche des visualisations de données importantes qui 
 
 #### Définir un filtre de date {#set-date-filter}
 
-Pour appliquer un filtre de date global à ces visualisations, sélectionnez l’icône de filtre (![Icône Filtrer.](../../images/icons/filter-icon-white.png)) et ajustez la période dans la boîte de dialogue **[!UICONTROL Filters]**. Appliquez ce filtre afin de personnaliser les mesures affichées pour une période spécifique et d’améliorer la pertinence de votre analyse.
+Pour appliquer un filtre de date global à ces visualisations, sélectionnez l’icône de filtre (![Icône Filtrer.](../../images/icons/filter-icon-white.png)) et ajustez la période dans la boîte de dialogue **[!UICONTROL Filters]** . Appliquez ce filtre afin de personnaliser les mesures affichées pour une période spécifique et d’améliorer la pertinence de votre analyse.
 
 ![Boîte de dialogue Filtres pour les graphiques de mesures clés dans le Workspace de Query Service.](../images/ui/overview/filters-dialog.png)
 
@@ -100,7 +112,7 @@ Utilisez le Query Editor pour écrire et exécuter des requêtes sans utiliser d
 
 ![Le tableau de bord Requêtes avec l’option Créer une requête mise en surbrillance.](../images/ui/overview/overview-create-query.png)
 
-Au fur et à mesure que vous tapez dans Query Editor, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms de champ dans les tables. Une fois la requête rédigée, sélectionnez l’icône de lecture (![&#x200B; Icône de lecture.](../../images/icons/play.png)) pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que Query Service fait actuellement et indique quand une requête a été renvoyée. L’onglet **[!UICONTROL Result]**, en regard de [!UICONTROL Console], affiche les résultats de la requête. Pour plus d’informations sur l’utilisation de Query Editor[&#x200B; consultez le &#x200B;](./user-guide.md)guide de Query Editor.
+Au fur et à mesure que vous tapez dans Query Editor, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms de champ dans les tables. Une fois la requête rédigée, sélectionnez l’icône de lecture (![L’icône de lecture.](../../images/icons/play.png)) pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que Query Service fait actuellement et indique quand une requête a été renvoyée. L’onglet **[!UICONTROL Result]**, en regard de [!UICONTROL Console], affiche les résultats de la requête. Pour plus d’informations sur l’utilisation de Query Editor](./user-guide.md) consultez le [guide de Query Editor.
 
 ![Espace de travail du Query Editor.](../images/ui/overview/query-editor.png)
 
@@ -178,7 +190,7 @@ L’onglet **[!UICONTROL Log]** fournit une liste des requêtes qui ont été ex
 
 >[!NOTE]
 >
->Sélectionnez l’icône en forme de crayon (![une icône en forme de crayon.](/help/images/icons/edit.png)) à partir de n’importe quelle ligne du journal de requête pour accéder à Query Editor. La requête est prérenseignée pour une modification pratique.
+>Sélectionnez l’icône en forme de crayon (![une icône en forme de crayon.](/help/images/icons/edit.png)) à partir de n’importe quelle ligne du journal des requêtes pour accéder à Query Editor. La requête est prérenseignée pour une modification pratique.
 
 Pour plus d’informations sur les fichiers journaux générés automatiquement par un événement de requête, consultez la [documentation sur les journaux de requête](./query-logs.md).
 

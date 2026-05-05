@@ -3,11 +3,10 @@ title: Gestion des sessions Query Service dans Adobe Experience Platform
 description: Découvrez comment les administrateurs peuvent afficher, surveiller et mettre fin aux sessions Query Service actives pour libérer de la capacité inactive et maintenir des workflows Data Distiller fiables.
 keywords: Experience Platform;Query Service;sessions;gestion de session;Distiller de données;admin
 solution: Experience Platform
-badgeLimitedAvailability: label="Disponibilité limitée" type="Informative"
 exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
-source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
+source-git-commit: f9b5e32da94625623926102fb236ba2d17bdecea
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->La gestion des sessions pour Query Service est actuellement à disponibilité limitée et n’est disponible que pour les organisations disposant de droits **Data Distiller**. Pour demander l’accès, contactez l’équipe chargée de votre compte Adobe.
+>La gestion des sessions pour Query Service n’est disponible que pour les organisations disposant de droits **Data Distiller**. Pour demander l’accès, contactez l’équipe chargée de votre compte Adobe.
 
 Utilisez ce guide pour gérer les sessions Query Service actives à partir de l’interface utilisateur de Adobe Experience Platform. La gestion des sessions permet aux administrateurs de surveiller les sessions Query Editor simultanées dans les sandbox et de libérer de la capacité lorsque les utilisateurs laissent les sessions ouvertes.
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guide du service de requête
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 71d8268a209036291c41da3fef84a331aec2172b
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 68%
+source-wordcount: '439'
+ht-degree: 67%
 
 ---
 
@@ -105,6 +105,7 @@ ht-degree: 68%
    - [Présentation de l’interface utilisateur](ui/overview.md)
    - [Guide d’utilisation du requêteur](ui/user-guide.md)
    - [Modèles de requête](ui/query-templates.md)
+   - [Accélérateurs de Distiller de données](ui/accelerators.md)
    - [Requêtes paramétrées](ui/parameterized-queries.md)
    - [Plannings de requête](ui/query-schedules.md)
    - [Journaux de requête](ui/query-logs.md)
@@ -146,4 +147,4 @@ ht-degree: 68%
 - [Questions fréquentes](troubleshooting-guide.md)
 - [Liste autorisée d’adresses IP](ip-address-allowlist.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
