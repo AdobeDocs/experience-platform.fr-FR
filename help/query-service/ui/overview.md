@@ -13,7 +13,7 @@ ht-degree: 20%
 
 # Guide de l’interface utilisateur de Query Service
 
-Le service de requête Adobe Experience Platform fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs et utilisatrices au sein de votre organisation. Pour accéder à l’interface utilisateur dans [](https://platform.adobe.com), sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche. La [!UICONTROL Overview] [!UICONTROL Queries] s’affiche.
+Le service de requête Adobe Experience Platform fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs et utilisatrices au sein de votre organisation. Pour accéder à l’interface utilisateur dans [&#128279;](https://platform.adobe.com), sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche. La [!UICONTROL Overview] [!UICONTROL Queries] s’affiche.
 
 ![L’espace de travail de Query Service avec Requêtes et l’onglet Aperçu mis en surbrillance.](../images/ui/overview/queries-overview.png)
 
@@ -112,7 +112,7 @@ Utilisez le Query Editor pour écrire et exécuter des requêtes sans utiliser d
 
 ![Le tableau de bord Requêtes avec l’option Créer une requête mise en surbrillance.](../images/ui/overview/overview-create-query.png)
 
-Au fur et à mesure que vous tapez dans Query Editor, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms de champ dans les tables. Une fois la requête rédigée, sélectionnez l’icône de lecture (![L’icône de lecture.](../../images/icons/play.png)) pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que Query Service fait actuellement et indique quand une requête a été renvoyée. L’onglet **[!UICONTROL Result]**, en regard de [!UICONTROL Console], affiche les résultats de la requête. Pour plus d’informations sur l’utilisation de Query Editor](./user-guide.md) consultez le [guide de Query Editor.
+Au fur et à mesure que vous tapez dans Query Editor, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms de champ dans les tables. Une fois la requête rédigée, sélectionnez l’icône de lecture (![L’icône de lecture.](../../images/icons/play.png)) pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que Query Service fait actuellement et indique quand une requête a été renvoyée. L’onglet **[!UICONTROL Result]**, en regard de [!UICONTROL Console], affiche les résultats de la requête. Pour plus d’informations sur l’utilisation de Query Editor[&#128279;](./user-guide.md) consultez le guide de Query Editor.
 
 ![Espace de travail du Query Editor.](../images/ui/overview/query-editor.png)
 

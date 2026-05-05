@@ -93,7 +93,7 @@ Après avoir exécuté un accélérateur et confirmé les résultats, vous pouve
 
 Pour créer un jeu de données à partir des résultats, sélectionnez **[!UICONTROL Save]** pour enregistrer l’accélérateur en tant que modèle, puis sélectionnez **[!UICONTROL Run as CTAS]**. La boîte de dialogue **[!UICONTROL Enter output dataset details]** s’affiche. Saisissez un nom de jeu de données et une description facultative, puis confirmez pour créer le jeu de données. Cette action crée un jeu de données et y écrit les résultats.
 
-![ Boîte de dialogue [!UICONTROL Enter output dataset details] avec un nom et une description de jeu de données renseignés.](../images/ui/accelerators/output-dataset-details-dialog.png)
+![&#x200B; Boîte de dialogue [!UICONTROL Enter output dataset details] avec un nom et une description de jeu de données renseignés.](../images/ui/accelerators/output-dataset-details-dialog.png)
 
 ## Planification d’un accélérateur {#schedule-accelerator}
 
