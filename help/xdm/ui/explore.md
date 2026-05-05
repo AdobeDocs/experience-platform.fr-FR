@@ -5,9 +5,9 @@ title: Explorer les ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur d’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ca90fd3f8615e21fb4c44104c2de7679db1e1025
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 ![Espace de travail des schémas avec plusieurs onglets mis en surbrillance.](../images/ui/explore/tabs.png)
 
-L’icône de filtre (![Icône de filtre Image](/help/images/icons/filter.png)) affiche des commandes dans le rail de gauche pour réduire les résultats répertoriés. Les filtres de ressources sont disponibles pour les schémas et les relations dans les onglets **[!UICONTROL Browse]** et **[!UICONTROL Relationships]**, respectivement.
+L’icône de filtre (![Icône de filtre Image](/help/images/icons/filter.png)) affiche des commandes dans le rail de gauche pour réduire les résultats répertoriés. Les filtres de ressources sont disponibles pour les schémas et les relations dans les onglets **[!UICONTROL Browse]** et **[!UICONTROL Relationships]**, respectivement. Sur l’onglet **[!UICONTROL Field groups]** , utilisez les filtres décrits à la section [Métadonnées et filtrage des groupes de champs](#field-group-metadata-and-filtering) pour limiter la liste par classe et balises de secteur compatibles.
 
 Dans l’onglet [!UICONTROL Browse] de l’espace de travail [!UICONTROL Schemas], vous pouvez filtrer l’inventaire des schémas. Utilisez le bouton **[!UICONTROL Included in Profile]** pour afficher uniquement les schémas qui ont été activés pour une utilisation dans [Real-Time Customer Profile](../../profile/home.md). Utilisez le bouton **[!UICONTROL Show adhoc schemas]** pour filtrer la liste des schémas créés avec un espace de noms de champs à utiliser uniquement par un seul jeu de données.
 
-![Onglet [!UICONTROL Schemas] de l’espace de travail [!UICONTROL Browse] avec le panneau Filtres mis en surbrillance.](../images/ui/explore/filters.png)
+![Onglet [!UICONTROL Browse] de l’espace de travail [!UICONTROL Schemas] avec le panneau Filtres mis en surbrillance.](../images/ui/explore/filters.png)
 
 Dans l’onglet [!UICONTROL Relationship] de l’espace de travail [!UICONTROL Schemas], vous pouvez filtrer la liste des relations en fonction de quatre critères. Les filtres incluent [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class] et le [!UICONTROL Destination class]. Le tableau ci-dessous fournit une description des filtres.
 
@@ -75,7 +75,7 @@ Ces actions sont cohérentes sur les deux points d’entrée pour les types de r
 
 Selon le type de ressource et vos autorisations, les actions suivantes peuvent être disponibles :
 
-- **[!UICONTROL Delete]** — Supprimer définitivement une ressource personnalisée de votre organisation (lorsque les contraintes le permettent). Si la suppression est bloquée, voir [&#x200B; Contraintes &#x200B;](#delete-constraints).
+- **[!UICONTROL Delete]** — Supprimer définitivement une ressource personnalisée de votre organisation (lorsque les contraintes le permettent). Si la suppression est bloquée, voir [ Contraintes ](#delete-constraints).
 - **[!UICONTROL Download sample file]** — Générer un fichier de données d&#39;exemple en fonction de la structure des ressources. Étape par étape : [générer des exemples de données XDM](./sample.md).
 - **[!UICONTROL Copy JSON structure]** — Copiez la définition de la ressource au format JSON pour la réutilisation, l&#39;exportation ou le contrôle. Procédure pas à pas : [Exporter des schémas XDM](./export.md).
 - **[!UICONTROL Add to package]** — Incluez la ressource dans un package sandbox pour l&#39;exportation ou l&#39;importation dans des sandbox. Etape par étape : [Exporter des objets dans un package](../../sandboxes/ui/sandbox-tooling.md#export-objects).
@@ -138,7 +138,7 @@ Tous les champs de type objet contenant des sous-propriétés sont réduits par 
 
 ### Classe standard et indicateur de groupe de champs {#standard-class-and-field-group-indicator}
 
-Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas (icône de cadenas ![A).](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas (![icône de cadenas A.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
 
 ![Éditeur de schémas avec l’icône de cadenas mise en surbrillance](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -148,7 +148,7 @@ Consultez la documentation [Ajouter des champs personnalisés aux groupes de cha
 
 Certains noms de champ sont précédés d’un trait de soulignement, tels que `_repo` et `_id`. Il s’agit d’espaces réservés pour les champs que le système génère et attribue automatiquement au fur et à mesure de l’ingestion des données.
 
-Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent &#x200B;](../api/getting-started.md#know-your-tenant_id) un espace de noms.
+Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent ](../api/getting-started.md#know-your-tenant_id) un espace de noms.
 
 ### Types de données {#data-types}
 
@@ -164,7 +164,7 @@ Si un champ de tableau est basé sur un type d’objet, vous pouvez sélectionne
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Field properties]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, des valeurs par défaut, des modèles, des formats, si le champ est obligatoire ou non, etc.
+Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Field properties]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, des valeurs par défaut, des modèles, des formats, si le champ est obligatoire, etc. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [ Libellés dans la vue de structure ](#field-group-labels-in-structure).
 
 ![Champ sélectionné à partir du type de données Commerce avec les propriétés du champ mises en surbrillance.](../images/ui/explore/field-properties.png)
 
@@ -182,7 +182,7 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 >[!NOTE]
 >
->Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval[&#x200B; consultez le guide sur la &#x200B;](./fields/identity.md) définition des champs d’identité .
+>Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval](./fields/identity.md) consultez le guide sur la [ définition des champs d’identité .
 
 ### Champs de relation {#relationship}
 
@@ -195,6 +195,92 @@ Pour afficher l’espace de noms d’identité de l’identité principale du sc
 ![Boîte de dialogue Modifier la relation avec les paramètres de relation affichés.](../images/ui/explore/edit-relationship-dialog.png)
 
 Pour plus d’informations sur l’utilisation des relations dans les schémas XDM, consultez le tutoriel sur la [création d’une relation dans l’interface utilisateur](../tutorials/relationship-ui.md).
+
+## Explorer les groupes de champs : utilisation et métadonnées {#explore-field-groups}
+
+Accédez à **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** pour explorer les groupes de champs. Dans l’onglet **[!UICONTROL Field groups]** , des fonctionnalités supplémentaires vous aident à comprendre où un groupe de champs est utilisé sur l’ensemble des schémas et ce qu’il inclut, comme la compatibilité, les champs obligatoires (qui appliquent les exigences d’ingestion) et les signaux de gouvernance.
+
+Ces fonctionnalités vous permettent d’évaluer l’impact avant d’apporter des modifications et d’identifier plus efficacement les groupes de champs pertinents lors de la conception du schéma.
+
+### Afficher l’utilisation du schéma pour les groupes de champs {#view-schema-usage-for-field-groups}
+
+Dans le tableau **[!UICONTROL Field groups]**, sélectionnez un groupe de champs pour ouvrir sa vue détaillée. La zone de travail se met à jour pour afficher la structure du groupe de champs, et le rail des propriétés affiche des informations supplémentaires sur la ressource sélectionnée.
+
+#### Schémas utilisant ce groupe de champs
+
+Dans le rail de propriétés de droite, la section **[!UICONTROL Schemas using this field group]** répertorie les schémas qui incluent actuellement le groupe de champs .
+
+![Rail des propriétés du groupe de champs affichant les schémas utilisant cette section de groupe de champs.](../images/ui/explore/field-group-properties.png)
+
+- Si le groupe de champs est utilisé par trois schémas ou moins, tous les noms de schéma s’affichent.
+- S’il est utilisé par plus de trois schémas, seuls certains noms sont affichés, ainsi qu’une option permettant d’afficher la liste complète.
+
+Sélectionnez un nom de schéma pour ouvrir sa vue détaillée dans un nouvel onglet et inspecter la manière dont le groupe de champs est implémenté dans ce schéma.
+
+#### Afficher plus et la liste complète des schémas
+
+S’il existe plus de schémas que ce qui peut être affiché en ligne, sélectionnez **[!UICONTROL View more]** pour ouvrir la boîte de dialogue complète.
+
+![L’option Afficher plus dans la section Schémas utilisant ce groupe de champs.](../images/ui/explore/view-more-schemas.png)
+
+La boîte de dialogue **[!UICONTROL Schemas using this field group]** s’affiche, affichant la liste complète des schémas qui utilisent le groupe de champs .
+
+![La boîte de dialogue Schémas utilisant ce groupe de champs affiche la liste des schémas et leurs colonnes.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+Dans la boîte de dialogue **[!UICONTROL Schemas using this field group]**, vous pouvez effectuer les opérations suivantes :
+
+- Parcourir tous les schémas qui utilisent le groupe de champs
+- Parcourir les grands ensembles de résultats
+- Sélectionnez un schéma pour ouvrir sa vue détaillée dans un nouvel onglet
+
+Vous pouvez afficher les détails du schéma, tels que le nom, la classe et d’autres attributs du schéma.
+
+Ce workflow est destiné uniquement à l’analyse et à l’exploration d’impact **.** Elle ne modifie pas les schémas ou les groupes de champs. Pour modifier la structure du schéma, voir [Création et modification de schémas dans l’interface utilisateur](./resources/schemas.md).
+
+### Métadonnées et filtrage des groupes de champs {#field-group-metadata-and-filtering}
+
+L’onglet **[!UICONTROL Field groups]** fournit des outils de métadonnées et de filtrage pour vous aider à localiser et à évaluer les groupes de champs avant de les sélectionner.
+
+#### Parcourir le tableau et les filtres
+
+Le tableau d’inventaire des groupes de champs comprend des colonnes supplémentaires qui exposent les métadonnées directement dans la vue Liste, telles que **[!UICONTROL Compatible classes]**, qui indique à quelles classes un groupe de champs peut être appliqué. Les groupes de champs ne peuvent être ajoutés qu’aux schémas qui utilisent l’une des classes compatibles répertoriées, en fonction du comportement des données qu’ils représentent (par exemple, les données basées sur des enregistrements ou des séries temporelles). Le tableau peut s’afficher **[!UICONTROL All]** lorsque le groupe de champs est compatible avec toutes les classes. **[!UICONTROL Industry tags]** aider à catégoriser les groupes de champs pour la découverte.
+
+Pour affiner la liste, sélectionnez l’icône de filtre (![Icône de filtre Image](/help/images/icons/filter.png)) pour ouvrir le panneau de filtrage dans le rail de gauche. L’image suivante montre l’ouverture du panneau de filtrage dans le rail de gauche.
+
+![Onglet Groupes de champs affichant les classes compatibles, les balises de secteur et le panneau de filtrage.](../images/ui/explore/field-group-filters.png)
+
+Dans le panneau de filtrage, vous pouvez :
+
+- **[!UICONTROL Compatible classes]** — Utilisez la liste déroulante pour filtrer les groupes de champs par compatibilité de classe
+- **[!UICONTROL Industry tags]** — Utilisez des cases à cocher pour filtrer par une ou plusieurs catégories de secteur
+
+Lors de la navigation, sélectionnez une ligne dans le tableau pour mettre à jour le rail d’informations. Le rail d’informations affiche des métadonnées telles que les classes compatibles et les balises de secteur afin que vous puissiez consulter les détails clés sans ouvrir le groupe de champs.
+
+#### Métadonnées des détails du groupe de champs
+
+Lorsque vous ouvrez un groupe de champs, le rail des propriétés affiche des métadonnées supplémentaires associées à la ressource.
+
+Le rail des propriétés peut afficher les métadonnées suivantes :
+
+- **[!UICONTROL Compatible classes]** — Classes que le groupe de champs peut étendre
+- **[!UICONTROL Required attributes]** — Attributs qui doivent avoir des valeurs valides lorsque le groupe de champs l’exige lors de l’ingestion des données. Les exigences dépendent de la structure des données et les enregistrements dont les valeurs requises sont manquantes ou non valides ne sont pas validés
+- **[!UICONTROL Labels]** — Les libellés ne s’affichent pas au niveau du groupe de champs. Sélectionnez un champ pour afficher les détails du libellé dans le rail de **[!UICONTROL Field properties]**
+
+Ces informations vous aident à comprendre les contraintes et les exigences avant d’utiliser ou de modifier le groupe de champs.
+
+#### Libellés dans la vue Structure
+
+Lorsqu’un groupe de champs est ouvert dans la zone de travail, vous pouvez afficher les informations de libellé directement dans la structure. Sélectionnez l’icône des paramètres (![Icône des paramètres.](../../images/icons/settings.png)) dans la barre d’outils de la zone de travail et **[!UICONTROL Show labels on tree]** permettre d’afficher les indicateurs de libellé sur les champs de la zone de travail.
+
+![Zone de travail du groupe de champs affichant la boîte de dialogue des options d’affichage de l’arborescence avec Afficher les libellés de l’arborescence mise en surbrillance.](../images/ui/explore/show-labels-on-tree.png)
+
+Sélectionnez un champ dans la zone de travail pour afficher les détails des libellés dans le rail de **[!UICONTROL Field properties]**, y compris les libellés appliqués à ce champ.
+
+![Zone de travail du groupe de champs affichant les libellés des champs et les détails des libellés dans le rail des propriétés des champs.](../images/ui/explore/field-group-labels.png)
+
+Les libellés sont regroupés par catégorie (par exemple, libellés d’identité et sensibles) et offrent une visibilité sur les contraintes de gouvernance ou d’accès appliquées aux données.
+
+Ces indicateurs sont utilisés à des fins de visibilité uniquement et ne modifient pas la structure du schéma. Pour plus d’informations, voir [Gestion des libellés d’utilisation des données pour un schéma](../tutorials/labels.md).
 
 ## Étapes suivantes
 

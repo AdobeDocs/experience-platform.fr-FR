@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création et modification de groupes de champs de schéma dans l’interface utilisateur
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 9%
@@ -23,6 +23,8 @@ Dans le modèle de données d’expérience (XDM), les groupes de champs de sch�
 Un groupe de champs définit la ou les classes avec lesquelles il est compatible, en fonction du comportement des données que le groupe de champs représente (enregistrement ou série temporelle). Cela signifie que tous les groupes de champs ne sont pas disponibles pour être utilisés avec toutes les classes.
 
 Adobe Experience Platform fournit de nombreux groupes de champs standard qui couvrent un large éventail de cas d’utilisation marketing. Cependant, vous pouvez également créer et modifier vos propres groupes de champs personnalisés pour définir des concepts supplémentaires liés à votre entreprise dans vos schémas XDM. Ce guide présente la création, la modification et la gestion de groupes de champs personnalisés pour votre organisation dans l’interface utilisateur d’Experience Platform.
+
+Pour parcourir les groupes de champs dans la bibliothèque de schémas et comprendre l’utilisation des schémas, le filtrage et les métadonnées qui affectent la conception des schémas et l’ingestion des données, consultez [Explorer les ressources de schéma dans l’interface utilisateur](../explore.md).
 
 >[!NOTE]
 >
@@ -79,10 +81,6 @@ Pour ajouter des champs à un groupe de champs personnalisé, commencez par sél
 ![](../../images/ui/resources/field-groups/add-field.png)
 
 Un espace réservé **[!UICONTROL Untitled Field]** apparaît dans la zone de travail, et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition de champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration de différents types de champs.
-
-Sous **[!UICONTROL Assign to]**, sélectionnez l’option **[!UICONTROL Field Group]** , puis utilisez la liste déroulante pour sélectionner le groupe de champs de votre choix dans la liste. Vous pouvez commencer à saisir le nom du groupe de champs pour affiner les résultats.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Sous **[!UICONTROL Assign to]**, sélectionnez l’option **[!UICONTROL Field Group]** , puis utilisez la liste déroulante pour sélectionner le groupe de champs de votre choix dans la liste. Vous pouvez commencer à saisir le nom du groupe de champs pour affiner les résultats.
 
