@@ -13,7 +13,7 @@ ht-degree: 21%
 
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
-Ces activités peuvent être effectuées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL Data Lifecycle] ](#ui) ou de l’[API Data Hygiene](#api). Lorsqu’une tâche du cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
+Ces activités peuvent être effectuées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL Data Lifecycle] &#x200B;](#ui) ou de l’[API Data Hygiene](#api). Lorsqu’une tâche du cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Les demandes [suppression d’enregistrements](./ui/record-delete.md) et d’exp
 >
 >Pour plus d’informations de référence :
 >- Pour surveiller votre utilisation actuelle par rapport aux limites de quota, consultez le [Guide de référence des quotas](./api/quota.md).
->- Pour les règles de droits, les limites mensuelles, la chronologie SLA et les politiques de gestion des exceptions, consultez les guides [ Guide du quota de suppression d’enregistrements (IU)](./ui/record-delete.md#quotas) et [ Guide du quota d’ordres de travail (API)](./api/workorder.md#quotas).
+>- Pour les règles de droits, les limites mensuelles, la chronologie SLA et les politiques de gestion des exceptions, consultez les guides [&#x200B; Guide du quota de suppression d’enregistrements (IU)](./ui/record-delete.md#quotas) et [&#x200B; Guide du quota d’ordres de travail (API)](./api/workorder.md#quotas).
 
 Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données](./ui/dataset-expiration.md) est créée :
 
@@ -72,4 +72,4 @@ Pour les durées de file d’attente basées sur les droits et les valeurs SLA m
 
 ## Étapes suivantes {#next-steps}
 
-Ce document présente les fonctionnalités du cycle de vie des données d’Experience Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, consultez le [guide de l’interface utilisateur du cycle de vie des données](./ui/overview.md). Pour créer des tâches de cycle de vie des données par programmation, consultez le [ Guide de l’API Data Hygiene ](./api/overview.md).
+Ce document présente les fonctionnalités du cycle de vie des données d’Experience Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, consultez le [guide de l’interface utilisateur du cycle de vie des données](./ui/overview.md). Pour créer des tâches de cycle de vie des données par programmation, consultez le [&#x200B; Guide de l’API Data Hygiene &#x200B;](./api/overview.md).
