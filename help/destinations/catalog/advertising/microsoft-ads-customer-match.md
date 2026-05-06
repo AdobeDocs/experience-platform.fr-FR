@@ -3,10 +3,8 @@ keywords: publicité ; microsoft ads ; correspondance client ;
 title: Connexion à Microsoft Ads Customer Match
 description: Utilisez la destination Correspondance client des publicités Microsoft pour faire correspondre les clients par adresse e-mail et renouer le dialogue avec eux sur le réseau Microsoft Advertising, y compris les publicités Search et Audience.
 badge: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 50bd5be385f62a290fefae60c6ed286d893e430a
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 31%
@@ -62,7 +60,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -177,7 +175,7 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 >
 >Vous devez mapper des adresses e-mail en texte brut (non hachées) en tant que champs **source**. Les identités source préhachées telles que `Emails (SHA256, lowercased)` ne sont pas prises en charge. Experience Platform hache toujours les adresses e-mail avant de les exporter vers [!DNL Microsoft Ads].
 
-Image de l’interface utilisateur ![&#x200B; montrant l’étape de mappage avec l’e-mail IdentityMap mappé à l’e-mail Identity.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
+Image de l’interface utilisateur ![ montrant l’étape de mappage avec l’e-mail IdentityMap mappé à l’e-mail Identity.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
 ## Données exportées {#exported-data}
 
