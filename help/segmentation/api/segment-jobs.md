@@ -4,10 +4,10 @@ title: Point d’entrée de l’API des tâches de segmentation
 description: Le point d’entrée des tâches de segment de l’API Segmentation Service de Adobe Experience Platform vous permet de gérer par programmation les tâches de segment pour votre organisation.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 66ee03814585364826d8d9416530f0a976481b6e
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 18%
+source-wordcount: '1240'
+ht-degree: 19%
 
 ---
 
@@ -377,7 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée. Une liste complète de toutes les définitions de segment s’affiche dans l’attribut `children.segments`.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée. Une liste complète de toutes les définitions de segment s’affiche dans l’attribut `children.segments`.
 
 +++ Exemple de réponse pour récupérer une tâche de segmentation.
 
@@ -451,8 +451,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
 | `metrics` | Objet contenant des informations de diagnostic sur la tâche de segmentation. |
 
 +++
-
->[!ENDTABS]
 
 ## Récupération en bloc des tâches de segment {#bulk-get}
 
