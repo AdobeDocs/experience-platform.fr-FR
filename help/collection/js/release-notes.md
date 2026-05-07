@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '2752'
-ht-degree: 59%
+source-wordcount: '2963'
+ht-degree: 57%
 
 ---
 
@@ -16,19 +16,29 @@ ht-degree: 59%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.32.0 - mardi 23 mars 2026
+## Version 2.33.0 - 7 Mai 2026
 
-- Les utilitaires principaux partagés sont désormais publiés sous la forme d’un package npm autonome ([&#128279;](https://www.npmjs.com/package/@adobe/alloy-core)) à utiliser par les extensions et les intégrations.
+- Correction d’un problème où les événements adBreak, Chapter et QoE de Media Analytics liés renvoyaient des erreurs d’API.
+- Ajout d’Adobe Advertising `stitchId` aux événements d’expérience sortants lors de la configuration d’Advertising.
+- Amélioration des performances des commandes `sendEvent` en supprimant un bloc sur le traitement de la destination d’identifiant.
+- Correction d’un problème en raison duquel la résolution d’identité publicitaire chargeait des scripts et des iframes tiers, même lorsque la publicité n’était pas configurée.
+- Ajout de la possibilité de lire `adobe_mc` paramètre de transfert d’identité à partir du hachage (auparavant, il se trouvait uniquement dans les paramètres de requête).
+- Correction d’un problème en raison duquel `adobe_mc` ne pouvait pas être lu lorsque l’URL était codée plusieurs fois.
+- Incluez XDM sur tous les événements Brand Concierge sortants.
+
+## Version 2.32.0 - 23 Mars 2026
+
+- Les utilitaires principaux partagés sont désormais publiés sous la forme d’un package npm autonome ([](https://www.npmjs.com/package/@adobe/alloy-core)) à utiliser par les extensions et les intégrations.
 - Inclut désormais le fuseau horaire IANA dans le champ XDM `xdm.placeContext.ianaTimezone` lorsque `placeContext` est inclus dans la variable de configuration [`context`](/help/collection/js/commands/configure/context.md).
 - Brand Concierge : correction d’un problème d’ID de session lorsque [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) est désactivé.
 
-## Version 2.31.1 - jeudi 11 février 2026
+## Version 2.31.1 - 11 Février 2026
 
 - Correction d’un problème en raison duquel le SDK web se bloquait lorsqu’il y avait plusieurs paramètres de `s_kwcid` ou de `ef_id` liés à la publicité dans l’URL.
 - Correction d’un problème en raison duquel les données Advertising étaient envoyées et les cookies créés avant que le consentement ne soit donné.
 - Correction d’un problème dans Safari en raison duquel les flux Brand Concierge n’étaient pas analysés correctement.
 
-## Version 2.31.0 - mardi 9 février 2026
+## Version 2.31.0 - 9 Février 2026
 
 **Nouvelles fonctionnalités**
 
@@ -121,7 +131,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Correction et améliorations**
 
-- Correction d’un problème de dépendance lié au moteur de règles [&#128279;](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations client. Web SDK nécessite désormais [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 ou ultérieure.
+- Correction d’un problème de dépendance lié au moteur de règles [](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations client. Web SDK nécessite désormais [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 ou ultérieure.
 
 ## Version 2.24.0 - vendredi 31 octobre 2024
 
@@ -267,7 +277,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.13.1 - 13 octobre 2022
 
-- Correction d’un problème en raison duquel la migration des visiteurs et visiteuses ne fonctionnait pas si « window.Visitor » était défini après la configuration. Ce problème se pose en particulier lors de l’utilisation des balises Adobe.
+- Correction d’un problème en raison duquel la migration des visiteurs ne fonctionnait pas si la fenêtre était activée.Le visiteur est défini après la configuration. Ce problème se pose en particulier lors de l’utilisation des balises Adobe.
 - Correction d’un problème en raison duquel `device.screenWidth` et `device.screenHeight` étaient renseignées comme des chaînes dans certains environnements.
 
 ## Version 2.13.0 - 28 septembre 2022
@@ -276,7 +286,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 - Ajout de la prise en charge de la migration complète page par page. Le profil Adobe Target est désormais conservé lorsqu’un visiteur ou un visiteuse passe d’une page at.js à une page SDK web.
 - Ajout de la prise en charge configurable des [Indicateurs clients d’agent utilisateur à forte entropie](../use-cases/client-hints.md).
-- Ajout de la prise en charge de la commande [`applyResponse`](commands/applyresponse.md) . Cela permet une personnalisation hybride via l’API [&#128279;](https://developer.adobe.com/data-collection-apis/docs/api/).
+- Ajout de la prise en charge de la commande [`applyResponse`](commands/applyresponse.md) . Cela permet une personnalisation hybride via l’API [](https://developer.adobe.com/data-collection-apis/docs/api/).
 - Les liens du mode QA fonctionnent désormais sur plusieurs pages.
 
 **Correctifs et améliorations**
