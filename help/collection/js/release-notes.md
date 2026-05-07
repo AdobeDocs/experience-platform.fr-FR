@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
+source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
 workflow-type: tm+mt
-source-wordcount: '2963'
-ht-degree: 57%
+source-wordcount: '2988'
+ht-degree: 56%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 57%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.33.1 - 7 Mai 2026
+
+- Correction d’un problème où les composants requis, tels que le contexte, étaient exclus du lot SDK et empêchaient l’envoi d’événements.
 
 ## Version 2.33.0 - 7 Mai 2026
 
@@ -28,7 +32,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.32.0 - 23 Mars 2026
 
-- Les utilitaires principaux partagés sont désormais publiés sous la forme d’un package npm autonome ([&#128279;](https://www.npmjs.com/package/@adobe/alloy-core)) à utiliser par les extensions et les intégrations.
+- Les utilitaires principaux partagés sont désormais publiés sous la forme d’un package npm autonome ([](https://www.npmjs.com/package/@adobe/alloy-core)) à utiliser par les extensions et les intégrations.
 - Inclut désormais le fuseau horaire IANA dans le champ XDM `xdm.placeContext.ianaTimezone` lorsque `placeContext` est inclus dans la variable de configuration [`context`](/help/collection/js/commands/configure/context.md).
 - Brand Concierge : correction d’un problème d’ID de session lorsque [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) est désactivé.
 
@@ -131,7 +135,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Correction et améliorations**
 
-- Correction d’un problème de dépendance lié au moteur de règles [&#128279;](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations client. Web SDK nécessite désormais [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 ou ultérieure.
+- Correction d’un problème de dépendance lié au moteur de règles [](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations client. Web SDK nécessite désormais [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 ou ultérieure.
 
 ## Version 2.24.0 - vendredi 31 octobre 2024
 
@@ -286,7 +290,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 - Ajout de la prise en charge de la migration complète page par page. Le profil Adobe Target est désormais conservé lorsqu’un visiteur ou un visiteuse passe d’une page at.js à une page SDK web.
 - Ajout de la prise en charge configurable des [Indicateurs clients d’agent utilisateur à forte entropie](../use-cases/client-hints.md).
-- Ajout de la prise en charge de la commande [`applyResponse`](commands/applyresponse.md) . Cela permet une personnalisation hybride via l’API [&#128279;](https://developer.adobe.com/data-collection-apis/docs/api/).
+- Ajout de la prise en charge de la commande [`applyResponse`](commands/applyresponse.md) . Cela permet une personnalisation hybride via l’API [](https://developer.adobe.com/data-collection-apis/docs/api/).
 - Les liens du mode QA fonctionnent désormais sur plusieurs pages.
 
 **Correctifs et améliorations**
