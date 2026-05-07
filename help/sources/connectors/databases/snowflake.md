@@ -3,9 +3,9 @@ title: Présentation du connecteur Source de Snowflake
 description: Découvrez comment connecter Snowflake à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: fdc66601db3e8ae8fb55503b9e32d88ed48381cf
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1705'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ Cette section décrit les tâches de configuration que vous devez effectuer avan
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ### Collecter les informations d’identification requises
 
@@ -72,7 +72,11 @@ Fournissez des valeurs pour les informations d’identification suivantes pour c
 
 >[!WARNING]
 >
->L’authentification de base (ou authentification par clé de compte) de la source [!DNL Snowflake] sera abandonnée en novembre 2025. Vous devez passer à l’authentification par paire de clés pour continuer à utiliser la source et à ingérer des données de votre base de données vers Experience Platform. Pour plus d’informations sur l’obsolescence, consultez le [[!DNL Snowflake] guide des bonnes pratiques sur la réduction des risques liés à la compromission des informations d’identification](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>L’authentification de base (également appelée authentification par clé de compte) de la source [!DNL Snowflake] est **entièrement obsolète pour les connexions à Experience Platform dans les régions Azure**—vous devez utiliser l’authentification par paire de clés pour toutes les connexions nouvelles et existantes basées sur Azure.
+>
+>Pour les sources [!DNL Snowflake] qui se connectent à Experience Platform dans **les régions AWS**, l’authentification de base est toujours prise en charge pour l’instant, mais elle est en cours d’obsolescence et sera supprimée à l’avenir. Il est vivement recommandé de migrer vers l’authentification par paire de clés dès que possible pour assurer une connectivité continue.
+>
+>Pour plus d’informations sur l’obsolescence et les conseils, consultez le [[!DNL Snowflake] guide des bonnes pratiques sur la réduction des risques de compromission des informations d’identification](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 | Informations d’identification | Description |
 | --- | --- |

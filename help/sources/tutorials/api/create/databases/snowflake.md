@@ -3,10 +3,10 @@ title: Connecter Snowflake à Experience Platform à l’aide de l’API Flow Se
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
+source-git-commit: 7ccb8f7c6cfe6e3d030e79bc03ea0136003e5dfa
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 18%
+source-wordcount: '776'
+ht-degree: 26%
 
 ---
 
@@ -20,7 +20,7 @@ Lisez ce guide pour savoir comment connecter votre compte source [!DNL Snowflake
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -35,11 +35,7 @@ La section suivante fournit des informations supplémentaires que vous devez con
 
 Lisez la [[!DNL Snowflake] présentation](../../../../connectors/databases/snowflake.md#prerequisites) pour plus d’informations sur l’authentification.
 
-## Connecter [!DNL Snowflake] à Experience Platform sur Azure {#azure}
-
->[!WARNING]
->
->L’authentification de base (ou authentification par clé de compte) de la source [!DNL Snowflake] sera abandonnée en novembre 2025. Vous devez passer à l’authentification par paire de clés pour continuer à utiliser la source et à ingérer des données de votre base de données vers Experience Platform. Pour plus d’informations sur l’obsolescence, consultez le [[!DNL Snowflake] guide des bonnes pratiques sur la réduction des risques liés à la compromission des informations d’identification](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+## Connexion de [!DNL Snowflake] à Experience Platform sur Azure {#azure}
 
 Pour plus d’informations sur la connexion de votre source [!DNL Snowflake] à Experience Platform sur Azure, lisez les étapes ci-dessous.
 
@@ -60,57 +56,6 @@ POST /connections
 ```
 
 >[!BEGINTABS]
-
->[!TAB ConnectionString]
-
-+++Requête
-
-La requête suivante permet de créer une connexion de base pour [!DNL Snowflake] :
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "Snowflake base connection",
-      "description": "Snowflake base connection",
-      "auth": {
-          "specName": "ConnectionString",
-          "params": {
-              "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Propriété | Description |
-| -------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion utilisée pour la connexion à votre instance [!DNL Snowflake]. Le modèle de chaîne de connexion pour [!DNL Snowflake] est `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
-| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Snowflake] : `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
-
-+++
-
-+++Réponse
-
-Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
-
-```json
-{
-    "id": "2fce94c1-9a93-4971-8e94-c19a93097129",
-    "etag": "\"d403848a-0000-0200-0000-5e978f7b0000\""
-}
-```
-
-+++
-
 
 >[!TAB Authentification par paire de clés avec clé privée chiffrée]
 
@@ -366,7 +311,7 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 >[!ENDTABS]
 
-Ce tutoriel vous a permis de créer une connexion de base à [!DNL Snowflake] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Snowflake] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
