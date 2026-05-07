@@ -26,7 +26,7 @@ Si vous disposez déjà d’une connexion [!DNL Salesforce Service Cloud] valide
 
 ### Collecter les informations d’identification requises
 
-Lisez le [ guide d’authentification ](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials) pour plus d’informations sur la récupération de vos informations d’identification.
+Lisez le [&#x200B; guide d’authentification &#x200B;](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials) pour plus d’informations sur la récupération de vos informations d’identification.
 
 ## Connecter votre compte [!DNL Salesforce Service Cloud]
 
