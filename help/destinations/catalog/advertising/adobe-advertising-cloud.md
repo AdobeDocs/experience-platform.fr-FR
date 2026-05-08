@@ -18,9 +18,9 @@ Il s’agit de l’extension [!DNL Adobe Advertising] pour l’implémentation d
 
 [!DNL Adobe Advertising] est une extension publicitaire en [!DNL Adobe Experience Platform].
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
-![Extension ](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Extension &#x200B;](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Conditions préalables {#prerequisites}
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans Experience P
 
 Pour installer l’extension [!DNL Adobe Advertising], procédez comme suit :
 
-Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
