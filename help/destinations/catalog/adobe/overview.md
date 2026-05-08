@@ -1,12 +1,12 @@
 ---
 keywords: destinations;solutions experience cloud;target;destination target;ad cloud;publicité;audience manager;destination adobe target;target;destination audience manager;
 title: Présentation des destinations Adobe
-description: Gérez l’expérience de vos clients en connectant vos données dans Experience Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc
+description: Gérez l’expérience de vos clients en connectant vos données dans Experience Platform à d’autres solutions d’entreprise Adobe CX pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 28%
+source-wordcount: '243'
+ht-degree: 32%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 28%
 
 ## Vue d’ensemble {#overview}
 
-Gérez l’expérience de vos clients en connectant vos données en [!DNL Adobe Experience Platform] à d’autres solutions [!DNL Adobe Experience Cloud] pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
+Gérez l’expérience de vos clients en connectant vos données en [!DNL Adobe Experience Platform] à d’autres solutions [!DNL Adobe CX Enterprise] pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 
 ## Destinations Adobe prises en charge {#supported-destinations}
 
