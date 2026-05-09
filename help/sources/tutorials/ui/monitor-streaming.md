@@ -35,7 +35,7 @@ La page [!UICONTROL Dataflows] contient une liste de tous les flux de données e
 
 Sélectionnez le nom du flux de données à afficher.
 
-![ flux de données ](../../images/tutorials/monitor-streaming/dataflows.png)
+![&#x200B; flux de données &#x200B;](../../images/tutorials/monitor-streaming/dataflows.png)
 
 Le tableau suivant contient des informations supplémentaires sur les statuts d’exécution des flux de données :
 

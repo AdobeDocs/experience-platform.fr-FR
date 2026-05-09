@@ -13,7 +13,7 @@ ht-degree: 6%
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de votre compte. Ceux-ci sont présentés tels qu’ils sont capturés lors d’instantanés quotidiens. Ce guide explique comment accéder au tableau de bord [!UICONTROL Account Profiles] et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
-Ce document présente les fonctionnalités du tableau de bord [!UICONTROL Account Profiles] et détaille les informations standard disponibles. Consultez le guide de l’interface utilisateur de ](../../rtcdp/accounts/account-profile-ui-guide.md) pour obtenir des détails complets sur ses fonctionnalités disponibles.[[!UICONTROL Account Profiles]
+Ce document présente les fonctionnalités du tableau de bord [!UICONTROL Account Profiles] et détaille les informations standard disponibles. Consultez le guide de l’interface utilisateur de [&#128279;](../../rtcdp/accounts/account-profile-ui-guide.md) pour obtenir des détails complets sur ses fonctionnalités disponibles.[!UICONTROL Account Profiles]
 
 ## Prise en main
 
@@ -49,7 +49,7 @@ L’onglet [!UICONTROL Overview] est composé de widgets qui fournissent des mes
 
 ### Configuration du service de correspondance des prospects et des comptes {#lead-to-account-matching-service}
 
-Sélectionnez **[!UICONTROL Settings]** pour configurer le service de correspondance des prospects et des comptes dans la boîte de dialogue [!UICONTROL Account settings]. Pour plus d’informations sur la configuration de la correspondance de votre prospect et de votre compte, consultez le [ guide de l’interface utilisateur](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Pour en savoir plus sur la correspondance des prospects et des comptes, reportez-vous à la documentation [correspondance des prospects et des comptes) dans Real-Time CDP B2B ](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Sélectionnez **[!UICONTROL Settings]** pour configurer le service de correspondance des prospects et des comptes dans la boîte de dialogue [!UICONTROL Account settings]. Pour plus d’informations sur la configuration de la correspondance de votre prospect et de votre compte, consultez le [&#x200B; guide de l’interface utilisateur](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Pour en savoir plus sur la correspondance des prospects et des comptes, reportez-vous à la documentation [correspondance des prospects et des comptes) dans Real-Time CDP B2B &#x200B;](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ![Tableau de bord Profils de compte avec les paramètres mis en surbrillance.](../images/account-profiles/settings.png)
 
@@ -239,4 +239,4 @@ Pour résoudre ce problème, vous devez ingérer les données d’entité B2B, t
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant savoir comment localiser le tableau de bord [!UICONTROL Account Profiles] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur d’Experience Platform, reportez-vous à la [ présentation des profils de compte ](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, B2B edition.
+En suivant ce document, vous devriez maintenant savoir comment localiser le tableau de bord [!UICONTROL Account Profiles] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur d’Experience Platform, reportez-vous à la [&#x200B; présentation des profils de compte &#x200B;](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, B2B edition.

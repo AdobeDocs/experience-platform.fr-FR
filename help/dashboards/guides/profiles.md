@@ -293,7 +293,7 @@ Pour en savoir plus, consultez la [section sur les politiques de fusion plus hau
 >
 >Le widget [!UICONTROL Profile count] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Browse] dans la section [!UICONTROL Profiles] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante de cette différence est que l’onglet [!UICONTROL Browse] référence le nombre total de profils fusionnés en fonction de la politique de fusion par défaut de votre organisation, tandis que le widget [!UICONTROL Profile count] référence le nombre total de profils fusionnés en fonction de la politique de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
 >
->Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Browse] . Vous pouvez voir quand le widget [!UICONTROL Profile count] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur l’onglet [!UICONTROL Browse] , voir la section [ Nombre de profils dans le guide de l’interface utilisateur du profil client en temps réel](../../profile/ui/user-guide.md#profile-count).
+>Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Browse] . Vous pouvez voir quand le widget [!UICONTROL Profile count] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur l’onglet [!UICONTROL Browse] , voir la section [&#x200B; Nombre de profils dans le guide de l’interface utilisateur du profil client en temps réel](../../profile/ui/user-guide.md#profile-count).
 
 ![Le tableau de bord Profils Experience Platform avec le widget Nombre de profils en surbrillance.](../images/profiles/profile-count.png)
 
@@ -327,7 +327,7 @@ Le widget **[!UICONTROL Profile count change]** affiche le nombre de profils fus
 
 Le widget **[!UICONTROL Profiles count change trend]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Experience Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’aurait pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Pour en savoir plus, consultez la section [ sur les politiques de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, consultez la section [&#x200B; sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 Le widget **[!UICONTROL Profiles count change trend]** affiche un bouton « légendes » en haut à droite du widget. Pour ouvrir la boîte de dialogue de légendes automatiques, sélectionnez **[!UICONTROL Captions]**.
 
@@ -356,7 +356,7 @@ Ce widget vous permet de gérer vos besoins d’activation de destination en pr�
 
 Le widget **[!UICONTROL Profiles by identity]** affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
-Pour en savoir plus, consultez la section [ sur les politiques de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, consultez la section [&#x200B; sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 ![Le tableau de bord d’aperçu des profils avec le widget Profils par identité mis en surbrillance.](../images/profiles/profiles-by-identity.png)
 
@@ -366,7 +366,7 @@ Pour ouvrir la boîte de dialogue de légendes automatiques, sélectionnez **[!U
 
 Un modèle de machine learning génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
-Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [&#128279;](../../identity-service/home.md).
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -381,7 +381,7 @@ Utilisez les menus déroulants du widget pour sélectionner les identités à co
 
 Pour plus d’informations sur les fragments de profil, reportez-vous à la section [fragments de profil contre profils fusionnés](../../profile/home.md#profile-fragments-vs-merged-profiles) dans la présentation du profil client en temps réel.
 
-Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [&#128279;](../../identity-service/home.md).
 
 ![Présentation du tableau de bord Profils avec le widget Chevauchement des identités en surbrillance.](../images/profiles/identity-overlap.png)
 

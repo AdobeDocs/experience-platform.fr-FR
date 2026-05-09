@@ -221,7 +221,7 @@ Gérez les paramètres d’expiration et de rétention des jeux de données à l
 >
 >Pour appliquer ou mettre à jour des règles de conservation pour un jeu de données ExperienceEvent, votre rôle d’utilisateur doit inclure l’autorisation **[!UICONTROL Manage datasets]**. Ce contrôle d’accès basé sur les rôles garantit que seuls les utilisateurs autorisés peuvent modifier les paramètres de conservation des jeux de données.
 >
->Pour plus d’informations sur l’attribution d’autorisations dans ](../../access-control/home.md#platform-permissions) reportez-vous à la [ Présentation du contrôle d’accès .
+>Pour plus d’informations sur l’attribution d’autorisations dans [&#128279;](../../access-control/home.md#platform-permissions) reportez-vous à la  Présentation du contrôle d’accès .
 
 >[!TIP]
 >

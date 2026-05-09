@@ -55,7 +55,7 @@ Avec un espace de noms unique (dans ce cas, un CRMID au lieu de deux espaces de 
 
 ### Configuration de la priorité des espaces de noms
 
-Si vous utilisez le [connecteur source ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
+Si vous utilisez le [connecteur source &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
 
 ### Événement d’expérience XDM {#xdm-experience-events}
 
@@ -253,7 +253,7 @@ Utilisez le tableau de bord des identités pour obtenir des informations sur l�
 
 Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL View more]** pour obtenir des informations supplémentaires et vérifier qu’il n’existe aucun graphique réduit.
 
-![ Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
+![&#x200B; Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
 
 Utilisez la fenêtre qui s’affiche pour afficher des informations sur les graphiques réduits. Dans cet exemple, e-mail et téléphone sont marqués comme espace de noms unique. Par conséquent, votre sandbox ne contient aucun graphique réduit.
 

@@ -30,7 +30,7 @@ L’interface utilisateur de Privacy Service vous permet de coordonner les deman
 >
 >Vous devez disposer d’une Adobe ID pour vous authentifier auprès de l’interface utilisateur de [!DNL Privacy Service].
 
-Pour accéder à l’interface utilisateur, connectez-vous à [](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Privacy Service]** dans le menu Accès rapide.
+Pour accéder à l’interface utilisateur, connectez-vous à [&#128279;](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Privacy Service]** dans le menu Accès rapide.
 
 ![Tableau de bord Experience Cloud avec Privacy Service mis en surbrillance.](../images/ui-overview/quick-access.png)
 

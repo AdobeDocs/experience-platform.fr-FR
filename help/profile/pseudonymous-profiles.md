@@ -131,12 +131,12 @@ Dans un cas d’utilisation standard, définissez l’expiration des données d�
 
 +++ Réponse
 
-- Le système de suppression « premier entré, premier sorti »](../identity-service/guardrails.md) d’Identity Service [ supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
+- Le système de suppression « premier entré, premier sorti »[&#128279;](../identity-service/guardrails.md) d’Identity Service  supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
 - Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (magasin de profils), l’expiration des données de profils pseudonymes supprime ce profil du magasin de profils.
 
 +++
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous savez comment afficher et créer des expirations de données de profils pseudonymes. Pour plus d’informations sur la gestion des données dans Experience Platform dans son ensemble, consultez le [ Guide des bonnes pratiques relatives aux droits de licence de gestion des données ](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous savez comment afficher et créer des expirations de données de profils pseudonymes. Pour plus d’informations sur la gestion des données dans Experience Platform dans son ensemble, consultez le [&#x200B; Guide des bonnes pratiques relatives aux droits de licence de gestion des données &#x200B;](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
