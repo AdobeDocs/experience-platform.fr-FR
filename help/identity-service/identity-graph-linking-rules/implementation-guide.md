@@ -94,7 +94,7 @@ Pendant votre processus de pré-implémentation, vous devez vous assurer que les
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/fr/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Vous ne devez **pas** envoyer une payload comme ci-dessous :
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/fr/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoy
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/",
+            "URL": "https://business.adobe.com/fr/",
             "name": "Adobe Business"
         }
     }

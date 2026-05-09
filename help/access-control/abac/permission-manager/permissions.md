@@ -23,7 +23,7 @@ Utilisez des requêtes simples dans le [!UICONTROL Permission Manager] pour cré
 >id="platform_permission_manager"
 >title="Gestionnaire d’autorisations"
 >abstract="Utilisez les sélecteurs de liste déroulante sur la page pour obtenir des rapports de niveau d’accès de différents niveaux de granularité pour les utilisateurs et utilisatrices et les rôles."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=fr" text="Permission manager" -->
 
 Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Users]**.
 
