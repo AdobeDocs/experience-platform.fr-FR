@@ -4,12 +4,11 @@ title: Présentation de Pinterest Ads Source
 description: Découvrez comment connecter Pinterest Ads à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badge: Beta
 hide: true
-hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 6%
+source-wordcount: '1017'
+ht-degree: 9%
 
 ---
 
@@ -19,7 +18,7 @@ ht-degree: 6%
 >
 >La source [!DNL Pinterest Ads] est en version Beta. Lisez la [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système publicitaire tiers. La prise en charge des fournisseurs de publicité inclut [!DNL Pinterest Ads].
 
@@ -27,13 +26,13 @@ Experience Platform prend en charge l’ingestion de données provenant d’un s
 
 Avec [!DNL Pinterest Ads], vous pouvez atteindre les utilisateurs par le biais de publicités ciblées pour découvrir et acheter vos produits. Les épingles de [!DNL Pinterest Ads] sont parrainées pour recevoir une exposition supplémentaire dans les résultats de recherche pertinents. Les utilisateurs abonnés à [!DNL Pinterest Business] peuvent choisir de promouvoir les épingles les plus performantes existantes, de créer une nouvelle image ou vidéo, ou même de promouvoir une image qui a été épinglée à partir d’un site web. [!DNL Pinterest Ads] propose plusieurs formats d’annonce publicitaire pour vous aider à atteindre vos objectifs de campagne spécifiques.
 
-## API [!DNL Pinterest] {#pinterest-apis}
+## [!DNL Pinterest] API {#pinterest-apis}
 
 La source de [!DNL Pinterest Ads] utilise les API [!DNL Pinterest] pour récupérer vos données [!DNL Pinterest Ads], ainsi que toutes les performances et mesures. Les points d’entrée d’API pris en charge sont les suivants :
 
-* [Analyse de Campaign](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
-* [Analyse des groupes publicitaires](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
-* [Analyses des publicités](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
+* [Analyse des campagnes](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
+* [Analyses des groupes publicitaires](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
+* [Analyses publicitaires](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
 Utilisez la source de [!DNL Pinterest Ads] pour importer vos données de [!DNL Pinterest] dans Experience Platform, où vous pouvez ensuite exécuter des analyses de données. Les données sont renvoyées à partir de la date d’ingestion pendant une période antidatée de 90 jours. [!DNL Pinterest Ads] utilise des jetons porteur comme mécanisme d’authentification pour communiquer avec les API [!DNL Pinterest].
 

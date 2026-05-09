@@ -6,9 +6,9 @@ breadcrumb-title: Collecte de données
 user-guide-description: Découvrez comment envoyer des données à Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '170'
 ht-degree: 37%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 37%
    + [Identifiants d’appareils propriétaires](identity/fpid.md)
    + [Partage inter-domaines](identity/cross-domain-sharing.md)
    + [Des applications mobiles au Web/WebViews mobile](identity/mobile-to-web.md)
-   + [Prise en charge des identités unifiées](identity/unified-identity-support.md)
+   + {hide-from-toc}[Prise en charge des identités unifiées](identity/unified-identity-support.md)
    + [Consentement et identité](identity/consent.md)
-   + [Dépannage](identity/troubleshooting.md)
+   + [Résolution des problèmes](identity/troubleshooting.md)
 + BrightScript {#brightscript}
    + [Présentation de BrightScript](brightscript/brs-overview.md)
 + JavaScript {#js}

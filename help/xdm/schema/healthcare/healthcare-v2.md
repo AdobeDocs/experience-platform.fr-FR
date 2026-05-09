@@ -3,11 +3,10 @@ title: Modèle De Données Des Soins De Santé V2
 description: Découvrez quelques cas d’utilisation courants des soins de santé et les bonnes classes, les groupes de champs associés et les types de données à utiliser.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
-hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '523'
 ht-degree: 3%
 
 ---

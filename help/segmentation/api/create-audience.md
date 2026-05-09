@@ -2,12 +2,11 @@
 title: Créer un point d’entrée de l’API Audience
 description: Découvrez comment créer des métadonnées pour une audience externe à l’aide de l’API .
 hide: true
-hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 33%
+source-wordcount: '278'
+ht-degree: 37%
 
 ---
 
@@ -24,7 +23,7 @@ Le point d’entrée de `/audiences` POST peut être utilisé pour créer les m�
 Pour utiliser les API Experience Platform, vous devez avoir suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
+- x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :

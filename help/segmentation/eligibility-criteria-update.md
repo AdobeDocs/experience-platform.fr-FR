@@ -2,11 +2,10 @@
 title: Mise À Jour Des Critères D’Éligibilité De Segmentation
 description: Découvrez les mises à jour des critères d’éligibilité de segmentation qui affectent les types d’audiences qui peuvent être évalués à l’aide de la segmentation Edge et en flux continu.
 hide: true
-hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '588'
 ht-degree: 4%
 
 ---

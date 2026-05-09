@@ -2,12 +2,11 @@
 title: Détails du modèle d’optimisation de l’heure d’envoi
 description: Découvrez le modèle d’IA utilisé pour l’optimisation de l’heure d’envoi dans Adobe Journey Optimizer.
 hide: true
-hidefromtoc: true
 exl-id: 95e1fc8f-1817-40d7-aa55-93daa50f43c0
-source-git-commit: d1c7d1038b45bae4c014e3488f55a427c9cb02ed
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 7%
+source-wordcount: '1253'
+ht-degree: 10%
 
 ---
 
@@ -19,13 +18,13 @@ ht-degree: 7%
 * **Date de publication du modèle** : septembre 2024
 * **Objectif du modèle** : le modèle d’optimisation de l’heure d’envoi de Adobe Journey Optimizer choisit l’heure d’envoi optimale pour les e-mails et les messages push afin d’optimiser l’engagement des consommateurs, en fonction du comportement historique d’ouverture et de clic de vos consommateurs.
 * **Utilisateurs prévus** : les principaux utilisateurs de ce modèle sont les professionnels du marketing, les chefs de produit et les équipes d’engagement des clients qui tirent parti de Adobe Journey Optimizer pour piloter les stratégies marketing axées sur les données.
-* **Cas d’utilisation** : il est préférable d’utiliser l’optimisation de l’heure d’envoi sur des communications marketing moins urgentes, par exemple, une publicité hebdomadaire, des informations promotionnelles sur un nouveau produit ou des informations sur une vente d’un mois. L’optimisation de l’heure d’envoi n’est disponible que pour les types d’action intégrés E-mail et Push de Journey Optimizer et n’est actuellement pas disponible pour les messages envoyés par le biais d’actions personnalisées ou pour d’autres types d’action.
+* **Cas d’utilisation** : il est préférable d’utiliser l’optimisation de l’heure d’envoi sur des communications marketing moins urgentes, par exemple, une publicité hebdomadaire, des informations promotionnelles sur un nouveau produit ou des informations sur une vente d’un mois. L’optimisation de l’heure d’envoi n’est disponible que pour les types d’action intégrés E-mail et Push de Journey Optimizer et n’est actuellement pas disponible pour les messages envoyés par le biais d’actions personnalisées ou pour d’autres types d’action.
 * **Mauvaise utilisation potentielle** : l’optimisation de l’heure d’envoi ne doit pas être utilisée pour les messages opérationnels urgents et sensibles au temps, comme une confirmation de commande, une notification de réinitialisation de mot de passe ou une notification de changement de porte d’embarquement.
 
 ## Détails du modèle {#model-details}
 
 * **Type de modèle** : le modèle d’optimisation de l’heure d’envoi ingère les données de comportement des clients Adobe Journey Optimizer de votre organisation et examine les événements d’ouverture et de clic au niveau de l’utilisateur pour prédire à quel moment vos clients sont les plus susceptibles d’interagir avec vos messages. Le comportement d’ouverture et de clic au niveau du consommateur pour chaque heure de la semaine est pondéré et combiné avec le comportement de consommateur global et similaire à l’aide d’un estimateur de [!DNL Bayesian]. Les prédictions [!DNL Bayesian] pour chaque heure de la semaine sont ensuite classées, ce qui donne lieu à une « carte thermique » pour chaque mesure (ouvertures d’e-mails, clics d’e-mail et ouvertures par notification push), pour chaque client, afin de prédire les heures de la semaine pendant lesquelles le contact avec chaque client est le plus et le moins susceptible d’obtenir le résultat d’engagement souhaité.
-* **Input** : l’optimisation de l’heure d’envoi utilise les données de fuseau horaire du client dans le champ `timeZone` du groupe de champs [!UICONTROL Détails des préférences], le cas échéant, pour déterminer le fuseau horaire d’un client. Si le fuseau horaire d’un client n’est pas disponible dans le champ `timeZone` , l’optimisation de l’heure d’envoi tente d’en déduire le fuseau horaire du client, en fonction de la correspondance de fuseau horaire la plus courante avec la première adresse postale trouvée stockée dans le profil du client à l’aide du type de données [&#x200B; adresse postale &#x200B;](../../xdm/data-types/postal-address.md). L’optimisation de l’heure d’envoi effectue des prédictions pour chaque client en fonction de trois types de données comportementales :
+* **Input** : l’optimisation de l’heure d’envoi utilise les données de fuseau horaire du client dans le champ `timeZone` du groupe de champs [!UICONTROL Preference Details], le cas échéant, pour déterminer le fuseau horaire d’un client. Si le fuseau horaire d’un client n’est pas disponible dans le champ `timeZone` , l’optimisation de l’heure d’envoi tente d’en déduire le fuseau horaire du client, en fonction de la correspondance de fuseau horaire la plus courante avec la première adresse postale trouvée stockée dans le profil du client à l’aide du type de données [ adresse postale ](../../xdm/data-types/postal-address.md). L’optimisation de l’heure d’envoi effectue des prédictions pour chaque client en fonction de trois types de données comportementales :
    * Comportement d’ouverture et de clic de vos consommateurs dans l’ensemble.
    * Comportement d’ouverture et de clic des consommateurs semblables dans le même fuseau horaire.
    * Comportement d’ouverture et de clic de ce consommateur individuel.

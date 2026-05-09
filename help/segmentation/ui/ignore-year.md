@@ -2,11 +2,10 @@
 solution: Experience Platform
 title: Ignorer la mise à jour de la contrainte de temps d'année
 description: Découvrez comment résoudre un problème lié à la contrainte de temps Ignorer l’année .
-hidefromtoc: true
 exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '248'
 ht-degree: 8%
 
 ---

@@ -1,56 +1,55 @@
 ---
-title: Type de données du canal
-description: Découvrez le type de données Modèle de données d’expérience de publication (XDM).
+title: Type de données de dosage
+description: Découvrez le type de données Modèle de données d’expérience de dosage (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
-hidefromtoc: true
 exl-id: 56eda38b-a7f7-40da-af08-73cfe9db0c7e
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 6%
+source-wordcount: '306'
+ht-degree: 5%
 
 ---
 
 # Type de données [!UICONTROL Dosage]
 
-[!UICONTROL Dosage] est un type de données standard du modèle de données d’expérience (XDM) qui décrit comment le médicament est/a été pris ou doit être pris. Ce type de données est créé conformément aux spécifications de la version 5 de HL7 FHIR.
+[!UICONTROL Dosage] est un type de données standard du modèle de données d’expérience (XDM) qui décrit comment le médicament est/a été pris ou doit être pris. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
-![Structure de type de données du canal](../../../images/healthcare/data-types/dosage/dosage.png)
+![Structure du type de données de dosage](../../../images/healthcare/data-types/dosage/dosage.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Instructions supplémentaires] | `additionalInstruction` | Tableau de [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Instructions ou avertissements supplémentaires pour le patient. |
-| [!UICONTROL Selon Les Besoins Pour] | `asNeededFor` | Tableau de [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Décrit le problème pour lequel les médicaments doivent être pris en fonction des besoins. |
-| [!UICONTROL Dose Et Taux] | `doseAndRate` | Tableau d’objets | La quantité de médicaments administrés, à administrer ou la quantité typique à administrer. Pour plus d’informations, consultez la [section ci-dessous](#dose-and-rate) . |
-| [!UICONTROL Nombre max. de points par administration] | `maxDosePerAdministration` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | La limite supérieure des médicaments par administration. |
-| [!UICONTROL Dose max. par durée de vie] | `maxDosePerLifetime` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | La limite supérieure des médicaments par vie du patient. |
-| [!UICONTROL Dose max. par période] | `maxDosePerPeriod` | Tableau de [[!UICONTROL Ratio]](../data-types/ratio.md) | La limite supérieure du traitement par unité de temps. |
-| [!UICONTROL Méthode] | `method` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | La technique pour administrer les médicaments. |
-| [!UICONTROL Route] | `route` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Comment le médicament doit entrer dans le corps. |
-| [!UICONTROL Body Site] | `site` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Le site du corps pour administrer le médicament. |
-| [!UICONTROL Minutage] | `timing` | [[!UICONTROL Minutage]](../data-types/timing.md) | Quand les médicaments devraient être administrés. |
-| [!UICONTROL Selon Les Besoins] | `asNeeded` | Booléen | Indicateur pour savoir si le médicament doit être pris selon les besoins. |
-| [!UICONTROL Instructions sur le patient] | `patientInstruction` | Chaîne | Les instructions en termes d&#39;être compris par le patient ou le consommateur. |
-| [!UICONTROL Séquence] | `Integer` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | L’ordre des instructions de dosage. |
-| [!UICONTROL Texte] | `text` | Chaîne | Planifiez les instructions de dosage du texte. |
+| [!UICONTROL Additional Instructions] | `additionalInstruction` | Tableau de [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Instructions supplémentaires ou mises en garde adressées au patient. |
+| [!UICONTROL As Needed For] | `asNeededFor` | Tableau de [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Décrit le problème pour lequel le médicament doit être pris selon les besoins. |
+| [!UICONTROL Dose And Rate] | `doseAndRate` | Tableau d’objets | La quantité de médicament administrée, à administrer, ou la quantité type à administrer. Voir la [section ci-dessous](#dose-and-rate) pour plus d’informations |
+| [!UICONTROL Max Dose Per Administration] | `maxDosePerAdministration` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | La limite supérieure du médicament par administration. |
+| [!UICONTROL Max Dose Per Lifetime] | `maxDosePerLifetime` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | La limite supérieure du médicament par vie du patient. |
+| [!UICONTROL Max Dose Per Period] | `maxDosePerPeriod` | Tableau de [[!UICONTROL Ratio]](../data-types/ratio.md) | La limite supérieure des médicaments par unité de temps. |
+| [!UICONTROL Method] | `method` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Technique d’administration des médicaments. |
+| [!UICONTROL Route] | `route` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Comment le médicament doit pénétrer dans l’organisme. |
+| [!UICONTROL Body Site] | `site` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Site du corps où le médicament doit être administré. |
+| [!UICONTROL Timing] | `timing` | [[!UICONTROL Timing]](../data-types/timing.md) | Quand le médicament doit-il être administré. |
+| [!UICONTROL As Needed] | `asNeeded` | Booléen | Un indicateur indiquant si le médicament doit être pris selon les besoins. |
+| [!UICONTROL Patient Instructions] | `patientInstruction` | Chaîne | Instructions dans des termes à comprendre par le patient ou le consommateur. |
+| [!UICONTROL Sequence] | `Integer` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | L’ordre des instructions posologiques. |
+| [!UICONTROL Text] | `text` | Chaîne | Planifiez les instructions de dosage textuelles. |
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/dosage.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/dosage.schema.json)
 
 ## `doseAndRate` {#dose-and-rate}
 
-`doseAndRate` est fourni sous la forme d’un tableau d’objets. La structure de chaque objet est décrite ci-dessous.
+`doseAndRate` est fourni sous la forme d’un tableau d’objets . La structure de chaque objet est décrite ci-dessous.
 
-![dose et structure de taux](../../../images/healthcare/data-types/dosage/dose-and-rate.png)
+![structure des doses et des débits](../../../images/healthcare/data-types/dosage/dose-and-rate.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Dose Quantity] | `doseQuantity` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | La quantité de médicaments par dose. |
-| [!UICONTROL Dose Range] | `doseRange` | [[!UICONTROL Plage]](../data-types/range.md) | La quantité de médicaments par dose. |
-| [!UICONTROL Quantité de taux] | `rateQuantity` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | La quantité de médicaments par unité de temps. |
-| [!UICONTROL Plage de taux] | `rateRange` | [[!UICONTROL Plage]](../data-types/range.md) | La quantité de médicaments par unité de temps. |
-| [!UICONTROL Ratio de taux] | `rateRatio` | [[!UICONTROL Ratio]](../data-types/ratio.md) | La quantité de médicaments par unité de temps. |
-| [!UICONTROL Type] | `type` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Le type de dose ou de taux spécifié. |
+| [!UICONTROL Dose Quantity] | `doseQuantity` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | La quantité de médicament par dose. |
+| [!UICONTROL Dose Range] | `doseRange` | [[!UICONTROL Range]](../data-types/range.md) | La quantité de médicament par dose. |
+| [!UICONTROL Rate Quantity] | `rateQuantity` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | La quantité de médicaments par unité de temps. |
+| [!UICONTROL Rate Range] | `rateRange` | [[!UICONTROL Range]](../data-types/range.md) | La quantité de médicaments par unité de temps. |
+| [!UICONTROL Rate Ratio] | `rateRatio` | [[!UICONTROL Ratio]](../data-types/ratio.md) | La quantité de médicaments par unité de temps. |
+| [!UICONTROL Type] | `type` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Le type de dose ou de débit spécifié. |

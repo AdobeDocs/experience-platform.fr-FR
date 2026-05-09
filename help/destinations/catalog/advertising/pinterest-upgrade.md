@@ -2,11 +2,10 @@
 title: Migration de la destination Pinterest vers la nouvelle API. Action du client requise.
 description: Pinterest rend obsolète l’API de l’annonceur v4 actuellement utilisée par la destination Pinterest dans Real-Time CDP. Découvrez vos éléments d’action pour passer facilement à la nouvelle API sans interrompre vos campagnes Pinterest.
 hide: true
-hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -37,7 +36,7 @@ Oui, avant le 18 janvier 2024, vous devez vous authentifier auprès de la nouvel
 
 1. Accédez à **[!UICONTROL Destinations > Accounts]** et utilisez le filtre à l’écran pour filtrer la destination Pinterest uniquement.
    ![Filtrer les comptes Pinterest uniquement](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. Sur la destination **&#x200B;**, sélectionnez le symbole des trois points ... et sélectionnez **[!UICONTROL Edit details]**.
+2. Sur la destination ****, sélectionnez le symbole des trois points ... et sélectionnez **[!UICONTROL Edit details]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. Sélectionnez **[!UICONTROL Reconnect OAuth]** et connectez-vous à votre compte Pinterest.
    ![Sélectionnez Reconnecter OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)

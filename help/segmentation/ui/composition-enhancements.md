@@ -2,11 +2,10 @@
 title: Améliorations de la composition de l’audience
 description: Découvrez les améliorations apportées à la composition de l’audience avec l’enrichissement de l’audience et une activation plus rapide.
 hide: true
-hidefromtoc: true
 exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
-source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---

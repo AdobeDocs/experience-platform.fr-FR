@@ -2,11 +2,10 @@
 title: Surveiller les audiences en flux continu
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les audiences évaluées à l’aide de la segmentation en flux continu
 hide: true
-hidefromtoc: true
 exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
-source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '370'
 ht-degree: 19%
 
 ---

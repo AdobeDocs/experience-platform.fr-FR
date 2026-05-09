@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 description: Découvrez comment mettre à jour la date de fin des flux de données d’exportation de jeux de données avec une date de fin actuelle fixée au 1er mai 2025.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---

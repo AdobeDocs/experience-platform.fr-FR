@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 73%
+source-wordcount: '246'
+ht-degree: 69%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 73%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [&#x200B; Mécanismes de sécurisation de la segmentation &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr#segmentation-guardrails)
+- [Mécanismes de sécurisation de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - [Validation de l’audience](./validation.md)
 - API Segmentation {#api}
    - [Vue d’ensemble](api/overview.md)
    - [Prise en main](api/getting-started.md)
-   - [Création de métadonnées d’audience](api/create-audience.md)
+   - {hide-from-toc}[Créer des métadonnées d’audience](api/create-audience.md)
    - [Audiences](api/audiences.md)
    - [Tâches d’exportation](api/export-jobs.md)
    - [Audiences externes](api/external-audiences.md)
@@ -36,11 +36,11 @@ ht-degree: 73%
    - [Tableau de bord Audience](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
    - [Composition d’audiences](ui/audience-composition.md)
-   - [Améliorations de la composition de l’audience](ui/composition-enhancements.md)
+   - {hide-from-toc}[Améliorations de la composition de l’audience](ui/composition-enhancements.md)
    - [Créateur de segments](ui/segment-builder.md)
    - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
-   - [Mise à jour de la contrainte temporelle Ignorer l’année](ui/ignore-year.md)
-   - [Remaniement des contraintes de temps](ui/segment-refactoring.md)
+   - {hide-from-toc}[Ignorer la mise à jour de la contrainte de temps d’année](ui/ignore-year.md)
+   - {hide-from-toc}[ Refactorisation des contraintes de temps ](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
       - [Vue d’ensemble de la correspondance de segments](ui/segment-match/overview.md)
       - [Résolution des problèmes](ui/segment-match/troubleshooting.md)
@@ -81,7 +81,7 @@ ht-degree: 73%
    - [Fonctions de filtre](pql/filter-functions.md)
    - [Quantificateurs logiques](pql/logical-quantifiers.md)
    - [Fonctions diverses](pql/misc-functions.md)
-- [Mise à jour des critères d’éligibilité](./eligibility-criteria-update.md)
+- {hide-from-toc}[Mise à jour des critères d’éligibilité](./eligibility-criteria-update.md)
 - [Questions fréquentes](./faq.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

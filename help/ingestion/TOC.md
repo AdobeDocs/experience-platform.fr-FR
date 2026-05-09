@@ -5,10 +5,10 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Importez vos données dans Experience Platform via une ingestion par lots ou en flux continu.
 feature: Data Ingestion
 role: Developer
-source-git-commit: f1d851afae5ad271e3c7d9d887f614058a262874
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 95%
+source-wordcount: '169'
+ht-degree: 88%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 95%
 
 - [Présentation de Data Ingestion](home.md)
 - Ingestion en flux continu {#streaming}
-   - [Présentation](streaming-ingestion/overview.md)
+   - [Vue d’ensemble](streaming-ingestion/overview.md)
    - [Connecteur Kafka](streaming-ingestion/kafka.md)
-   - [Dépannage](streaming-ingestion/troubleshooting.md)
-   - [Adresse IP Plaçant sur la liste autorisée](streaming-ingestion/allowlisting.md)
+   - [Résolution des problèmes](streaming-ingestion/troubleshooting.md)
+   - {hide-from-toc}[Adresse IP Plaçant sur la liste autorisée ](streaming-ingestion/allowlisting.md)
 - Ingestion par lots{#batch}
    - [Prise en main des API d’ingestion par lots](batch-ingestion/getting-started.md)
    - [Présentation de l’API](batch-ingestion/overview.md)
    - [Guide du développeur d’API](batch-ingestion/api-overview.md)
    - [Ingestion par lots partielle](batch-ingestion/partial.md)
-   - [Dépannage](batch-ingestion/troubleshooting.md)
+   - [Résolution des problèmes](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}
    - Mappage d’un fichier CSV à XDM {#map-csv}
-      - [Présentation](./tutorials/map-csv/overview.md)
+      - [Vue d’ensemble](./tutorials/map-csv/overview.md)
       - [Mapper un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
       - [Mapper un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)
    - [Ingestion de données par lots à l’aide de l’interface utilisateur](tutorials/ingest-batch-data.md)
@@ -40,7 +40,7 @@ ht-degree: 95%
    - [Diffusion par flux de données de série temporelle](tutorials/streaming-time-series-data.md)
    - [Diffusion en continu de plusieurs messages](tutorials/streaming-multiple-messages.md)
 - Qualité et surveillance des données{#quality}
-   - [Présentation](quality/overview.md)
+   - [Vue d’ensemble](quality/overview.md)
    - [Surveillance de l’ingestion des données](quality/monitor-data-ingestion.md)
    - [Récupération des diagnostics d’erreur](quality/error-diagnostics.md)
    - [Récupération des lots en échec](quality/retrieve-failed-batches.md)
@@ -49,4 +49,4 @@ ht-degree: 95%
 - [Connecteurs source](source-connectors.md)
 - [Référence de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Référence de l’API d’ingestion en flux continu](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
