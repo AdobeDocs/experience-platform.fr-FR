@@ -5,8 +5,8 @@ description: Découvrez comment cibler de nouvelles audiences à forte valeur aj
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2250'
-ht-degree: 10%
+source-wordcount: '2365'
+ht-degree: 11%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Les informations semblables et les audiences semblables sont automatiquement désactivées pour les environnements qui affichent une faible utilisation. Une faible utilisation est définie comme le fait de ne pas afficher d’informations semblables au cours des trois derniers mois ou de ne pas créer d’audience semblable au cours des six derniers mois.
+>Les informations semblables et les audiences semblables sont automatiquement désactivées pour les environnements qui affichent une faible utilisation. Une faible utilisation est définie comme le fait de ne pas afficher d’informations similaires au cours des trois derniers mois ou de ne pas créer d’audiences similaires au cours des six derniers mois.
 >
 >Si les informations semblables sont désactivées pour votre environnement, vous pouvez demander l’accès en envoyant un e-mail à l’équipe d’assistance clientèle d’Adobe, y compris votre identifiant d’organisation et les détails de l’environnement dans votre message.
 >
@@ -123,7 +123,7 @@ La section Audiences semblables affiche une liste de toutes les audiences sembla
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Facteurs d’influence"
->abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à une audience qui sont importants pour expliquer la similarité d’un profil aux profils membres de l’audience de base.Les libellés et politiques d’utilisation des données peuvent être utilisés pour exclure certaines données en tant que facteurs d’influence dans les modèles analogues."
+>abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à une audience qui sont importants pour expliquer la similarité d’un profil aux profils membres de l’audience de base. Les libellés et politiques d’utilisation des données peuvent être utilisés pour exclure certaines données en tant que facteurs d’influence dans les modèles analogues."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/types/lookalike-audiences#exclude" text="Exclure des données"
 
 La section Facteurs d’influence affiche les 100 principaux facteurs qui influencent le modèle similaire pour l’audience de base sélectionnée. Ces facteurs d’influence sont les attributs de profil, les événements d’expérience et les appartenances à l’audience qui sont les plus importants pour expliquer les similitudes dans l’audience de base. Comprendre les facteurs d’influence principaux vous permet de mieux personnaliser votre contenu marketing pour cette audience et pour toute audience semblable que vous créez à partir de celle-ci. Notez que tous les facteurs d’influence qui affectent le modèle similaire ne s’affichent pas.
@@ -207,4 +207,4 @@ Par défaut, si une audience de base n’a pas de libellés de contrat, le proce
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [&#x200B; Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [ Guide de l’interface utilisateur de Segmentation Service](./overview.md).

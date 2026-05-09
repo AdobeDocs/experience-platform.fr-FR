@@ -4,7 +4,7 @@ title: Configurer des options de formatage de fichier pour les destinations bas�
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1195'
 ht-degree: 45%
 
 ---
@@ -121,7 +121,7 @@ Utilisez ce contrôle pour définir la représentation sous forme de chaîne d&#
 Consultez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections effectuées dans l’interface utilisateur.
 
 * Exemple de sortie avec [!UICONTROL null] sélectionné : `male,NULL,TestLastName`. Dans ce cas, Experience Platform transforme la valeur vide en valeur nulle.
-* Exemple de sortie avec **» »** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform transforme la valeur vide en une paire de guillemets doubles.
+* Exemple de sortie avec **«  »** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform transforme la valeur vide en une paire de guillemets doubles.
 * Exemple de sortie avec [!UICONTROL Empty string] sélectionné : `male,,TestLastName`. Dans ce cas, l&#39;Experience Platform conserve la valeur vide et l&#39;exporte telle quelle (sans guillemets doubles).
 
 >[!TIP]
@@ -146,7 +146,7 @@ Utilisez ce contrôle pour définir la représentation sous forme de chaîne d�
 Consultez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections effectuées dans l’interface utilisateur.
 
 * Exemple de sortie avec [!UICONTROL null] sélectionné : `male,NULL,TestLastName`. Dans ce cas, aucune transformation ne se produit et le fichier CSV contient la valeur null.
-* Exemple de sortie avec **» »** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform remplace la valeur nulle par des guillemets doubles autour d’une chaîne vide.
+* Exemple de sortie avec **«  »** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform remplace la valeur nulle par des guillemets doubles autour d’une chaîne vide.
 * Exemple de sortie avec [!UICONTROL Empty string] sélectionné : `male,,TestLastName`. Dans ce cas, Experience Platform remplace la valeur null par une chaîne vide (sans guillemets doubles).
 
 ### Format de compression {#compression-format}

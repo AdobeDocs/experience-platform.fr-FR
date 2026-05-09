@@ -6,7 +6,7 @@ description: Intelligent Services permet aux analystes et spécialistes du mark
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '513'
 ht-degree: 96%
 
 ---
@@ -22,7 +22,7 @@ Intelligent Services permet aux analystes et spécialistes du marketing d’exp
 
 La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À lʼaide dʼexemples de cas dʼutilisation opérationnelle, cette vidéo explique un processus de haut niveau et décrit les fonctionnalités de lʼIA dédiée à lʼattribution (Attribution AI) et de lʼIA dédiée aux clients (Customer AI).
 
->[!VIDEO](https://video.tv.adobe.com/v/36549?captions=fre_fr&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Avantages des services intelligents
 

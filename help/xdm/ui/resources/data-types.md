@@ -7,8 +7,8 @@ description: Découvrez comment créer et modifier des types de données dans l�
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 6%
+source-wordcount: '1384'
+ht-degree: 7%
 
 ---
 
@@ -55,7 +55,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 Dans l’onglet **[!UICONTROL Data types]** , sélectionnez **[!UICONTROL Create data type]**.
 
-![Onglet [!UICONTROL Schemas] de l’espace de travail [!UICONTROL Data types] avec le [!UICONTROL Create data type] en surbrillance.](../../images/ui/resources/data-types/create.png)
+![Onglet [!UICONTROL Data types] de l’espace de travail [!UICONTROL Schemas] avec le [!UICONTROL Create data type] en surbrillance.](../../images/ui/resources/data-types/create.png)
 
 La [!DNL Schema Editor] s’affiche, affichant la structure actuelle du nouveau type de données dans la zone de travail. Dans la partie droite de l’éditeur, vous pouvez fournir un nom d’affichage et une description facultative du type de données. Veillez à fournir un nom unique et concis pour votre type de données, car c’est ainsi qu’il sera identifié lors de son ajout à un schéma.
 

@@ -5,7 +5,7 @@ description: Découvrez comment utiliser des politiques de fusion à l’aide de
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2334'
+source-wordcount: '2340'
 ht-degree: 39%
 
 ---
@@ -32,7 +32,7 @@ Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Exp
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Stratégie de fusion introuvable"
->abstract="Cela signifie qu’Experience Platform n’a pas pu trouver la politique de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Vérifiez que le bon identifiant de stratégie de fusion figure dans l’URL.</li><li>Assurez-vous de disposer de la bonne combinaison d’organisation et de sandbox pour accéder à la stratégie de fusion souhaitée.</li></ul>"
+>abstract="Cela signifie qu’Experience Platform n’a pas pu trouver la politique de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Vérifiez que le bon identifiant de politique de fusion figure dans l’URL.</li><li>Assurez-vous de disposer de la bonne combinaison d’organisation et de sandbox pour accéder à la stratégie de fusion souhaitée.</li></ul>"
 
 Dans l’interface utilisateur de [!DNL Experience Platform], vous pouvez commencer à utiliser des politiques de fusion en sélectionnant **[!UICONTROL Profiles]** dans le volet de navigation de gauche, puis en sélectionnant l’onglet **[!UICONTROL Merge Policies]** .
 
@@ -217,4 +217,4 @@ Pour en savoir plus sur la manière dont la gouvernance des données est réalis
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé et configuré des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Experience Platform et pour créer des audiences à partir des données de profil. Consultez la [&#x200B; présentation de la segmentation &#x200B;](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation des audiences à l’aide de l’interface utilisateur et des API [!DNL Experience Platform].
+Maintenant que vous avez créé et configuré des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Experience Platform et pour créer des audiences à partir des données de profil. Consultez la [ présentation de la segmentation ](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation des audiences à l’aide de l’interface utilisateur et des API [!DNL Experience Platform].

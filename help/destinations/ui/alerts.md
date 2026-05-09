@@ -5,8 +5,8 @@ title: S’abonner aux alertes de destination contextuelles
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 12%
+source-wordcount: '924'
+ht-degree: 15%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 12%
 
 Utilisez des [!DNL Adobe Experience Platform] pour vous abonner à des alertes basées sur des événements concernant les activités [!DNL Adobe Experience Platform]. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../../observability/api/overview.md) pour vérifier si une tâche est terminée, si un certain jalon a été atteint dans un workflow ou si des erreurs se sont produites.
 
-Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux.
+Vous pouvez vous abonner aux alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux de données.
 
 Ce document décrit les étapes à suivre pour vous abonner aux messages d’alerte pour vos flux de données de destination.
 

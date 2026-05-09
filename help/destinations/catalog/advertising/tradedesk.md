@@ -5,8 +5,8 @@ description: Trade Desk est une plateforme en libre-service permettant aux achet
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 20%
+source-wordcount: '1401'
+ht-degree: 26%
 
 ---
 
@@ -60,7 +60,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -85,7 +85,7 @@ Les conditions préalables dépendent des types d’identité que vous prévoyez
 
 **Pour le ciblage basé sur les cookies sur[!DNL The Trade Desk]**, assurez-vous qu’un mappage entre ECID et [!DNL Trade Desk ID] est établi. Procédez comme suit :
 
-1. **Activer la fonctionnalité de synchronisation des identifiants** : si c’est la première fois que vous configurez [!DNL The Trade Desk ID] activation et que vous n’avez pas activé la fonctionnalité de synchronisation des [identifiants](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID dans le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants.
+1. **Activer la fonctionnalité de synchronisation des identifiants** : si c’est la première fois que vous configurez [!DNL The Trade Desk ID] activation et que vous n’avez pas activé la fonctionnalité de synchronisation des [identifiants](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID dans le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants.
    * Si vous avez précédemment configuré des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant existantes sont automatiquement transférées vers Experience Platform.
 
 2. **Instrumenter vos pages web** : implémentez du code sur vos pages web pour créer des mappages entre [!DNL The Trade Desk ID] et l’ECID Adobe. Experience Platform peut ainsi associer des identifiants Trade Desk à vos profils client.
@@ -94,7 +94,7 @@ Les conditions préalables dépendent des types d’identité que vous prévoyez
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -104,7 +104,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Account ID]** : votre [!DNL The Trade Desk] [!UICONTROL Account ID].
+* **[!UICONTROL Account ID]** : votre [!UICONTROL Account ID] [!DNL The Trade Desk].
 * **[!UICONTROL Server Location]** : demandez à votre représentant [!DNL The Trade Desk] quel serveur régional vous devez utiliser. Vous trouverez ci-dessous les serveurs régionaux disponibles que vous pouvez choisir :
 
    * **[!UICONTROL APAC]**
@@ -125,7 +125,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -138,7 +138,7 @@ Lors du mappage des audiences, Adobe vous recommande d’utiliser le nom de l’
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Jeux de mappages préconfigurés"
->abstract="Nous avons préconfiguré ces quatre jeux de mappages pour vous. Lorsque vous activez des données vers The Trade Desk, les profils qualifiés pour les audiences activées n’ont pas nécessairement besoin que les quatre identités soient présentes sur les profils, car cette destination fonctionnera avec l’une des identités cibles affichées ici. <br> Pour le ciblage par cookies basé sur l’identifiant Trade Desk, vous devez disposer d’un ECID présent sur le profil et d’un mappage de synchronisation des identifiants entre l’identifiant Trade Desk et l’ECID."
+>abstract="Nous avons préconfiguré ces quatre jeux de mappages pour vous. Lorsque vous activez des données vers The Trade Desk, les profils qualifiés pour les audiences activées n’ont pas nécessairement besoin que les quatre identités soient présentes sur les profils, car cette destination fonctionnera avec l’une des identités cibles affichées ici. <br> Pour le ciblage basé sur les cookies basé sur l’identifiant The Trade Desk, vous avez besoin d’un ECID présent sur le profil et d’un mappage de synchronisation des identifiants entre l’identifiant The Trade Desk et l’ECID."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
 
 Les mappages d’identité suivants sont **préconfigurés et automatiquement renseignés** pour vous dans le workflow d’activation des audiences :

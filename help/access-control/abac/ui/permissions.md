@@ -5,8 +5,8 @@ description: Découvrez comment configurer des rôles via l’interface Autorisa
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 36%
+source-wordcount: '1676'
+ht-degree: 39%
 
 ---
 
@@ -116,7 +116,7 @@ Pour supprimer un utilisateur d’un rôle, sélectionnez l’icône **X** en re
 
 La vidéo suivante est destinée à vous aider à comprendre la création d’un rôle et la gestion des utilisateurs et utilisatrices pour ce rôle.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475975/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Gérer les informations d’identification d’API pour un rôle {#manage-api-credentials-for-role}
 
@@ -166,7 +166,7 @@ Les groupes d’utilisateurs consistent en plusieurs utilisateurs qui ont été 
 
 Sélectionnez l’onglet **[!UICONTROL User groups]** pour ouvrir l’espace de travail des groupes d’utilisateurs du rôle, puis sélectionnez **[!UICONTROL Add Groups]** pour affecter des groupes d’utilisateurs au rôle.
 
-![Espace de travail Groupes d’utilisateurs du rôle avec l’option Ajouter des groupes &#x200B;](../../images/flac-ui/flac-user-groups.png)
+![Espace de travail Groupes d’utilisateurs du rôle avec l’option Ajouter des groupes ](../../images/flac-ui/flac-user-groups.png)
 
 La boîte de dialogue **[!UICONTROL Add Groups]** s’affiche. Sélectionnez dans la liste les groupes d’utilisateurs que vous souhaitez ajouter au rôle. Vous pouvez également utiliser la barre de recherche pour rechercher le groupe d’utilisateurs en saisissant le nom du groupe, puis sélectionner **[!UICONTROL Save]**
 

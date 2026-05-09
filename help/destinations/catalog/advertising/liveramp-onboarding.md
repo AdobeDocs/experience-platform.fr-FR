@@ -5,8 +5,8 @@ last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1988'
-ht-degree: 53%
+source-wordcount: '2116'
+ht-degree: 56%
 
 ---
 
@@ -51,7 +51,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -91,7 +91,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 * **[!UICONTROL Password]** : mot de passe de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL PGP/GPG encryption key]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**&#x200B;de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
+* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 **SFTP avec authentification par clé SSH** {#sftp-ssh}
 
@@ -106,7 +106,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 
 * **[!UICONTROL PGP/GPG encryption key]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**&#x200B;de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
+* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -145,7 +145,7 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 
 À l’étape [!UICONTROL Scheduling], créez un planning d’exportation pour chaque audience, avec les paramètres présentés ci-dessous.
 
-* **[!UICONTROL File export options]** : [!UICONTROL Export full files]. Les [exportations de fichiers incrémentiels](../../ui/activate-batch-profile-destinations.md#export-incremental-files) ne sont actuellement pas prises en charge pour la destination [!DNL LiveRamp].
+* **[!UICONTROL File export options]**: [!UICONTROL Export full files]. Les [exportations de fichiers incrémentiels](../../ui/activate-batch-profile-destinations.md#export-incremental-files) ne sont actuellement pas prises en charge pour la destination [!DNL LiveRamp].
 * **[!UICONTROL Frequency]** : [!UICONTROL Daily], [!UICONTROL Weekly] ou [!UICONTROL Monthly]
 * **[!UICONTROL Date]** : sélectionnez les heures de début et de fin de l’exportation comme vous le souhaitez.
 

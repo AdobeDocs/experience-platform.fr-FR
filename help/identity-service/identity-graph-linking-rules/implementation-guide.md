@@ -4,7 +4,7 @@ description: Découvrez les étapes recommandées à suivre lors de l’impléme
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1944'
+source-wordcount: '1953'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ En l’absence d’espace de noms unique pour représenter vos identifiants de p
 
 Avec un espace de noms unique (dans ce cas, un CRMID au lieu de deux espaces de noms disparates), Identity Service peut identifier le dernier identifiant de personne associé à l’ECID. Dans cet exemple, en raison de l’existence d’un CRMID unique, Identity Service peut reconnaître un scénario « appareil partagé », où deux entités partagent le même appareil.
 
-![Scénario de graphique d’appareil partagé, où deux identifiants de personne sont liés au même ECID, mais l’ancien lien est supprimé.](../images/graph-examples/crmid_only_multi.png "Scénario de graphique d’appareil partagé, où deux identifiants de personne sont liés au même ECID, mais l’ancien lien est supprimé."){zoomable="yes"}
+![Scénario de graphique d’appareil partagé, dans lequel deux identifiants de personne sont liés au même ECID, mais l’ancien lien est supprimé.](../images/graph-examples/crmid_only_multi.png "Scénario de graphique d’appareil partagé, dans lequel deux identifiants de personne sont liés au même ECID, mais l’ancien lien est supprimé."){zoomable="yes"}
 
 +++
 
 ### Configuration de la priorité des espaces de noms
 
-Si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
+Si vous utilisez le [connecteur source ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
 
 ### Événement d’expérience XDM {#xdm-experience-events}
 
@@ -94,7 +94,7 @@ Pendant votre processus de pré-implémentation, vous devez vous assurer que les
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/fr/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,14 +133,14 @@ Vous ne devez **pas** envoyer une payload comme ci-dessous :
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/fr/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
 }
 ```
 
-Cependant, il est important de noter que si vous pouvez envoyer deux identifiants de personne, il n’existe aucune garantie qu’une réduction indésirable du graphique sera évitée en raison d’erreurs d’implémentation ou de données. Considérez le scénario suivant :
+Cependant, il est important de noter que si vous pouvez envoyer deux identifiants de personne, il n’existe aucune garantie qu’une réduction indésirable du graphique sera évitée en raison d’erreurs d’implémentation ou de données. Prenons l’exemple suivant :
 
 * `timestamp1` = John se connecte -> le système capture les `CRMID: John, ECID: 111`. Toutefois, `customerID: John` n’est pas présent dans ce payload d’événement.
 * `timestamp2` = Jane se connecte -> le système capture les `customerID: Jane, ECID: 111`. Toutefois, `CRMID: Jane` n’est pas présent dans ce payload d’événement.
@@ -169,7 +169,7 @@ Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoy
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/fr/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -221,7 +221,7 @@ Pour obtenir des instructions sur la création d’un schéma, consultez le guid
 
 ## Créer un jeu de données {#dataset}
 
-Créez ensuite un jeu de données afin de fournir une structure pour les données que vous allez ingérer. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’une table, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données fonctionnent en tandem avec les schémas. Pour ingérer des données dans le profil client en temps réel, votre jeu de données doit être activé pour l’ingestion de profil. Pour que votre jeu de données soit activé pour Profil, il doit référencer un schéma activé pour Ingestion de profil.
+Créez ensuite un jeu de données afin de fournir une structure pour les données que vous allez ingérer. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données fonctionnent en tandem avec les schémas. Pour ingérer des données dans le profil client en temps réel, votre jeu de données doit être activé pour l’ingestion de profil. Pour que votre jeu de données soit activé pour Profil, il doit référencer un schéma activé pour Ingestion de profil.
 
 Pour plus d’informations sur la création d’un jeu de données, consultez le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
 
@@ -253,7 +253,7 @@ Utilisez le tableau de bord des identités pour obtenir des informations sur l�
 
 Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL View more]** pour obtenir des informations supplémentaires et vérifier qu’il n’existe aucun graphique réduit.
 
-![&#x200B; Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
+![ Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
 
 Utilisez la fenêtre qui s’affiche pour afficher des informations sur les graphiques réduits. Dans cet exemple, e-mail et téléphone sont marqués comme espace de noms unique. Par conséquent, votre sandbox ne contient aucun graphique réduit.
 

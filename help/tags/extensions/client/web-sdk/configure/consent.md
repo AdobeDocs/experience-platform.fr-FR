@@ -4,8 +4,8 @@ description: Configurez les paramètres de consentement et de confidentialité p
 exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 13%
 
 ---
 

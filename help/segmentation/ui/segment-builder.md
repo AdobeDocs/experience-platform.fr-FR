@@ -5,7 +5,7 @@ description: Le créateur de segments de l’interface utilisateur d’Adobe Ex
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6708'
+source-wordcount: '6786'
 ht-degree: 43%
 
 ---
@@ -153,7 +153,7 @@ Vous pouvez utiliser les opérateurs suivants pour les types de données respect
 | Plage de roulement | La valeur s’est produite entre les deux dates relatives. | La date du dernier achat est comprise entre sept jours et trois jours. |
 | Dans suivant | La valeur est survenue au cours de la période suivante sélectionnée. | L’abandon du panier aura lieu dans 2 jours |
 
-Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [&#x200B; Contraintes de temps &#x200B;](#time-constraints).
+Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [ Contraintes de temps ](#time-constraints).
 
 +++
 
@@ -177,7 +177,7 @@ En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’
 
 Les attributs calculés sont des champs calculés à partir d’autres attributs à l’aide d’agrégations ou de formules. Vous pouvez utiliser des attributs calculés si vous avez besoin de données agrégées telles que des sommes, des décomptes ou des moyennes sur plusieurs événements ou si vous créez des audiences fréquemment utilisées qui nécessitent des calculs complexes.
 
-Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [&#x200B; présentation des attributs calculés &#x200B;](/help/profile/computed-attributes/overview.md).
+Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [ présentation des attributs calculés ](/help/profile/computed-attributes/overview.md).
 
 ### Événements
 
@@ -349,7 +349,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
@@ -472,8 +472,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 
 >[!NOTE]
 >
->Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
@@ -485,7 +484,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 
 Les audiences sont évaluées dans l’ordre dans lequel elles sont répertoriées. Les conteneurs permettent de contrôler l’ordre d’exécution grâce à l’utilisation de requêtes imbriquées.
 
-Une fois que vous avez ajouté au moins une mosaïque à la zone de travail du créateur de règles, vous pouvez commencer à ajouter des conteneurs. Pour créer un nouveau conteneur, sélectionnez les points de suspension (...) dans le coin supérieur droit du volet, puis sélectionnez **[!UICONTROL Add container]**.
+Une fois que vous avez ajouté au moins une mosaïque à la zone de travail du créateur de règles, vous pouvez commencer à ajouter des conteneurs. Pour créer un nouveau conteneur, sélectionnez les points de suspension (...) dans le coin supérieur droit de la mosaïque, sélectionnez **[!UICONTROL Add container]**.
 
 ![Le bouton « Ajouter un conteneur » est mis en surbrillance, ce qui vous permet d’ajouter un conteneur en tant qu’enfant du premier conteneur.](../images/ui/segment-builder/add-container.png)
 

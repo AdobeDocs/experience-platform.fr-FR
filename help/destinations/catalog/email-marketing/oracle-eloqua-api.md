@@ -5,8 +5,8 @@ last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2118'
-ht-degree: 23%
+source-wordcount: '2286'
+ht-degree: 21%
 
 ---
 
@@ -27,7 +27,7 @@ Le service marketing d’une plateforme en ligne souhaite diffuser une campagne 
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL Oracle Eloqua], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créés dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL Oracle Eloqua], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créés dans [!DNL Experience Platform].
 
 Consultez la documentation Experience Platform pour le groupe de champs de schéma [Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
@@ -43,7 +43,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination [!D
 
 | Informations d’identification | Description |
 | --- | --- |
-| `Company Name` | Nom de la société associée à votre compte [!DNL Oracle Eloqua]. <br>Vous utiliserez ultérieurement les `Company Name` [!DNL Oracle Eloqua] et `Username` comme chaîne concaténée à utiliser comme **[!UICONTROL Username]** lors de l’[authentification à la destination](#authenticate). |
+| `Company Name` | Nom de la société associée à votre compte [!DNL Oracle Eloqua]. <br>Vous utiliserez ultérieurement les `Username` `Company Name` et [!DNL Oracle Eloqua] comme chaîne concaténée à utiliser comme **[!UICONTROL Username]** lors de l’[authentification à la destination](#authenticate). |
 | `Username` | Nom d’utilisateur de votre compte [!DNL Oracle Eloqua]. |
 | `Password` | Mot de passe de votre compte [!DNL Oracle Eloqua]. |
 | `Pod` | [!DNL Oracle Eloqua] prend en charge plusieurs centres de données, chacun disposant d’un nom de domaine unique. [!DNL Oracle Eloqua] les appelle « gousses », il y en a actuellement sept au total - p01, p02, p03, p04, p06, p07 et p08. Pour savoir sur quel POD vous vous trouvez, connectez-vous à [!DNL Oracle Eloqua] et notez l’URL dans votre navigateur après vous être connecté. Par exemple, si l’URL de votre navigateur est `secure.p01.eloqua.com`, votre `pod` est `p01`. Reportez-vous à la page [Définition de votre POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) pour obtenir des conseils supplémentaires. |
@@ -92,7 +92,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -128,7 +128,7 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, recherchez [!DNL 
 Renseignez les champs obligatoires ci-dessous. Reportez-vous à la section [Collecter [!DNL Oracle Eloqua] informations d’identification](#gather-credentials) pour obtenir des conseils.
 
 * **[!UICONTROL Password]** : mot de passe de votre compte [!DNL Oracle Eloqua].
-* **[!UICONTROL Username]** : chaîne concaténée composée de votre nom de société [!DNL Oracle Eloqua] et du nom d’utilisateur [!DNL Oracle Eloqua].<br>La valeur concaténée prend la forme d’`{COMPANY_NAME}\{USERNAME}`.<br> Remarque, n’utilisez pas d’accolades ni d’espaces et conservez les `\`. <br>Par exemple, si le nom de votre société [!DNL Oracle Eloqua] est `MyCompany` et [!DNL Oracle Eloqua] nom d’utilisateur est `Username`, la valeur concaténée que vous utiliserez dans le champ **[!UICONTROL Username]** est `MyCompany\Username`.
+* **[!UICONTROL Username]** : chaîne concaténée composée de votre nom d’entreprise [!DNL Oracle Eloqua] et du nom d’utilisateur [!DNL Oracle Eloqua].<br>La valeur concaténée se présente sous la forme `{COMPANY_NAME}\{USERNAME}`.<br> N’utilisez pas d’accolades ni d’espaces et conservez les `\`. <br>Par exemple, si le nom de votre société [!DNL Oracle Eloqua] est `MyCompany` et [!DNL Oracle Eloqua] nom d’utilisateur est `Username`, la valeur concaténée que vous utiliserez dans le champ **[!UICONTROL Username]** est `MyCompany\Username`.
 
 Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Connect to destination]**.
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment s’authentifier.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
@@ -162,7 +162,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -197,7 +197,7 @@ Pour mapper vos champs XDM aux champs de destination [!DNL Oracle Eloqua], proc�
 >[!IMPORTANT]
 >
 >* Les attributs spécifiés dans le **[!UICONTROL Target field]** doivent être nommés exactement comme spécifié dans le [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html), car ces attributs formeront le corps de la requête.
->* Les attributs spécifiés dans le **[!UICONTROL Source field]** ne suivent aucune restriction de ce type. Vous pouvez la mapper en fonction de vos besoins. Toutefois, si le format des données n’est pas correct lors de l’envoi à [!DNL Oracle Eloqua], une erreur se produira. Par exemple, vous pouvez mapper l’espace de noms d’identité **[!UICONTROL Source field]** `contact key`, `ABC ID`, etc. à **[!UICONTROL Target field]** : `EloquaId` après s’être assuré que les valeurs d’identifiant correspondent au format accepté par [!DNL Oracle Eloqua].
+>* Les attributs spécifiés dans le **[!UICONTROL Source field]** ne suivent aucune restriction de ce type. Vous pouvez la mapper en fonction de vos besoins. Toutefois, si le format des données n’est pas correct lors de l’envoi à [!DNL Oracle Eloqua], une erreur se produira. Par exemple, vous pouvez mapper l’espace de noms d’identité **[!UICONTROL Source field]** `contact key`, `ABC ID`, etc. à **[!UICONTROL Target field]** : `EloquaId` après vous être assuré que les valeurs de l’identifiant correspondent au format accepté par [!DNL Oracle Eloqua].
 >* Le mappage `EloquaID` est obligatoire pour mettre à jour les attributs correspondant à l’identité.
 >* Le mappage `emailAddress` est obligatoire. Sans cela, l’API renvoie une erreur comme illustré ci-dessous :
 >
@@ -252,7 +252,7 @@ Consultez les pages [[!DNL Oracle Eloqua] Codes d’état HTTP](https://docs.ora
 
 Pour plus d’informations, consultez la documentation [!DNL Oracle Eloqua] :
 
-* [Automatisation Du Marketing Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
+* [Automatisation Du Marketing D’Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [API REST pour le service Oracle Eloqua Marketing Cloud](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
 ### Journal des modifications {#changelog}

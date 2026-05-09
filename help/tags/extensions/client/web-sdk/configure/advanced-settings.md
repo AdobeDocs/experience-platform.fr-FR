@@ -4,8 +4,8 @@ description: Configurez les paramètres avancés de l’extension de balise Web 
 exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 3%
+source-wordcount: '153'
+ht-degree: 22%
 
 ---
 

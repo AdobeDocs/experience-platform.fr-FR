@@ -6,7 +6,7 @@ description: Les politiques d’utilisation des données sont des règles qui d�
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1230'
 ht-degree: 92%
 
 ---
@@ -58,7 +58,7 @@ Voir l’annexe du présent document pour obtenir une liste des [actions marketi
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=fr).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestion des politiques d’utilisation des données {#manage}

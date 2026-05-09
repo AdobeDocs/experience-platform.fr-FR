@@ -6,8 +6,8 @@ description: La gouvernance des données d’Adobe Experience Platform fournit
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
-source-wordcount: '2380'
-ht-degree: 48%
+source-wordcount: '2423'
+ht-degree: 49%
 
 ---
 
@@ -102,7 +102,7 @@ L’onglet **[!UICONTROL Browse]** réapparaît, qui répertorie désormais la n
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instructions"
->abstract="<ul><li>Assurez-vous d’ingérer les données relatives aux préférences dans vos schémas d’union via le connecteur source OneTrust ou le schéma XDM standard pour le consentement.</li><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche, puis cliquez sur <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#create-governance-policy">Créer une stratégie</a>.</li><li>Dans la section <b>Si</b>, indiquez les conditions ou actions qui déclencheront la vérification de la stratégie.</li><li>Dans la section <b>Alors</b>, indiquez les attributs de consentement devant être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.</li><li>Sélectionnez <b>Enregistrer</b> pour créer la stratégie. Pour activer immédiatement la stratégie, activez le bouton (bascule) <b>Statut</b> dans le rail de droite.</li><li>Experience Platform applique automatiquement vos stratégies de consentement activées lorsque vous activez des segments vers des destinations et fournit des détails sur la manière dont chaque stratégie affecte la taille de votre audience.</li><li>Pour obtenir de l’aide sur cette fonctionnalité, consultez le guide sur la <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#consent-policy">création de stratégies de consentement</a> sur Experience League.</li></ul>"
+>abstract="<ul><li>Assurez-vous d’ingérer les données relatives aux préférences dans vos schémas d’union via le connecteur source OneTrust ou le schéma XDM standard pour le consentement.</li><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche, puis cliquez sur <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#create-governance-policy">Créer une stratégie</a>.</li><li>Dans la section <b>Si</b>, indiquez les conditions ou actions qui déclencheront la vérification de la politique.</li><li>Dans la section <b>Alors</b>, indiquez les attributs de consentement devant être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.</li><li>Sélectionnez <b>Enregistrer</b> pour créer la stratégie. Pour activer immédiatement la stratégie, activez le bouton (bascule) <b>Statut</b> dans le rail de droite.</li><li>Experience Platform applique automatiquement vos politiques de consentement activées lorsque vous activez des segments vers des destinations et fournit des détails sur la manière dont chaque politique affecte la taille de votre audience.</li><li>Pour obtenir de l’aide sur cette fonctionnalité, consultez le guide sur la <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#consent-policy">création de stratégies de consentement</a> sur Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -145,7 +145,7 @@ Si vous sélectionnez plusieurs conditions, vous pouvez utiliser l’icône qui 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Condition Alors"
->abstract="Une fois votre condition « Si » définie, utilisez la section « Alors » pour sélectionner au moins un attribut de consentement dans le schéma d’union. Vous devez parcourir les champs de conteneur (objet, mappage, tableau) pour atteindre les champs primitifs (chaîne, nombre, valeur booléenne, etc.) pour la création de règles. Cet attribut primitif est l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette politique."
+>abstract="Une fois votre condition « Si » définie, utilisez la section « Alors » pour sélectionner au moins un attribut de consentement dans le schéma d’union. Vous devez parcourir les champs de conteneur (objet, mappage, tableau) pour atteindre les champs primitifs (chaîne, nombre, booléen, etc.) afin de créer des règles. Cet attribut primitif est l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette politique."
 
 Sous la section **[!UICONTROL Then]** , sélectionnez au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette politique. Vous pouvez choisir l’une des options suggérées ou sélectionner **[!UICONTROL View all]** pour sélectionner directement l’attribut dans le schéma d’union.
 
@@ -177,7 +177,7 @@ Pour maintenir la qualité et la cohérence des données, l’interface utilisat
 
 Pour définir la condition, cochez les cases correspondant aux valeurs que la politique doit évaluer.
 
-![&#x200B; La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
+![ La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
 
 #### Mapper des champs de type données pour une condition de politique {#map-data-type-fields}
 
@@ -285,4 +285,4 @@ Ce document offre un aperçu de la gestion des politiques d’utilisation des do
 
 La vidéo qui suit montre comment utiliser les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform] :
 
->[!VIDEO](https://video.tv.adobe.com/v/37130?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

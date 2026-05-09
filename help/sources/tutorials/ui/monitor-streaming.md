@@ -5,7 +5,7 @@ title: Surveillance des flux de données pour les sources de diffusion en contin
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '1000'
 ht-degree: 16%
 
 ---
@@ -35,7 +35,7 @@ La page [!UICONTROL Dataflows] contient une liste de tous les flux de données e
 
 Sélectionnez le nom du flux de données à afficher.
 
-![&#x200B; flux de données &#x200B;](../../images/tutorials/monitor-streaming/dataflows.png)
+![ flux de données ](../../images/tutorials/monitor-streaming/dataflows.png)
 
 Le tableau suivant contient des informations supplémentaires sur les statuts d’exécution des flux de données :
 

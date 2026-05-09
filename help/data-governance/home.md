@@ -6,7 +6,7 @@ description: La gouvernance des données d’Adobe Experience Platform vous pe
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 9b1630a4876c0bcd7331f8da264e4f19ce00b59a
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1686'
 ht-degree: 62%
 
 ---
@@ -53,15 +53,15 @@ Les spécialistes marketing sont le point de terminaison de la gouvernance des d
 
 ## Cadre de gouvernance des données {#data-governance-framework}
 
-Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création des politiques d’utilisation des données. Une fois les libellés de données appliqués et les politiques d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données. 
+Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création des politiques d’utilisation des données. Une fois les libellés de données appliqués et les politiques d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données.
 
-Le cadre de gouvernance des données comporte trois éléments clés : les libellés, les politiques et l’application. 
+Le cadre de gouvernance des données comporte trois éléments clés : les libellés, les politiques et l’application.
 
 1. **Libellés :** classent les données en fonction des considérations liées à la confidentialité et aux conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques de l’organisation.
 1. **Politiques :** décrivez les types d’actions marketing qu’il est autorisé ou non d’effectuer sur des données spécifiques.
 1. **Application :** utilise le cadre de la politique pour conseiller et appliquer les stratégies sur différents modèles d’accès aux données.
 
-## Libellés d’utilisation des données {#data-usage-labels}
+## Étiquettes d’utilisation des données {#data-usage-labels}
 
 La gouvernance des données permet aux gestionnaires de données d’appliquer des libellés d’utilisation au niveau du champ du schéma pour classer les données en fonction du type de politiques qui s’applique.
 
@@ -109,7 +109,7 @@ La section suivante fournit des informations supplémentaires concernant la gouv
 
 ### Terminologie de la gouvernance des données {#data-governance-terminology}
 
-Le tableau suivant présente les termes clés liés à la gouvernance des données ainsi qu’au cadre de gouvernance des données. 
+Le tableau suivant présente les termes clés liés à la gouvernance des données ainsi qu’au cadre de gouvernance des données.
 
 | Terme | Définition |
 |---|---|
@@ -130,14 +130,14 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 
 ## Ressources supplémentaires
 
-La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernance des données. 
+La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernance des données.
 
 >[!IMPORTANT]
 >
 >La vidéo fait référence à l’application de libellés à des champs de jeux de données individuels. Ce workflow est obsolète. [Les libellés doivent maintenant être appliqués au niveau du champ de schéma](./e2e.md#labels). Les concepts présentés dans la vidéo restent exacts, mais le processus d’étiquetage a changé.
 
->[!VIDEO](https://video.tv.adobe.com/v/33154?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 La vidéo suivante explique comment appliquer des libellés d’utilisation des données à vos schémas ou à l’intégralité d’un jeu de données dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422795/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

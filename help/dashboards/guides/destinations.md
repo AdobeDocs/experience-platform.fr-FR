@@ -6,8 +6,8 @@ type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3048'
-ht-degree: 47%
+source-wordcount: '3056'
+ht-degree: 48%
 
 ---
 
@@ -33,7 +33,7 @@ La date et l’heure de l’instantané le plus récent s’affichent en haut de
 
 >[!NOTE]
 >
->Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord Destinations et l’onglet [!UICONTROL Overview] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [!UICONTROL Catalog] . Pour en savoir plus sur l’onglet [!UICONTROL Catalog] , consultez le guide d’[[!UICONTROL Destinations] Workspace &#x200B;](../../destinations/ui/destinations-workspace.md).
+>Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord Destinations et l’onglet [!UICONTROL Overview] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [!UICONTROL Catalog] . Pour en savoir plus sur l’onglet [!UICONTROL Catalog] , consultez le guide d’[[!UICONTROL Destinations] Workspace ](../../destinations/ui/destinations-workspace.md).
 
 ![Présentation des destinations de l’interface utilisateur d’Experience Platform avec l’instantané le plus récent en surbrillance.](../images/destinations/snapshot-timestamp.png)
 
@@ -145,9 +145,9 @@ Le widget **[!UICONTROL Recently activated audiences]** fournit une liste des au
 
 La date de [!UICONTROL Updated] affichée indique la dernière fois que l’audience a été activée vers la destination et correspond au dernier instantané quotidien. En d’autres termes, si vous activez une audience vers la destination, la date mise à jour ne changera pas tant que l’instantané suivant n’aura pas été pris.
 
-Sélectionner le nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL View All]** pour accéder à l’onglet [!UICONTROL Audiences] de [!UICONTROL Browse] , puis sélectionner le nom d’une audience pour en afficher les détails.
+Sélectionner le nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL View All]** pour accéder à l’onglet [!UICONTROL Browse] de [!UICONTROL Audiences] , puis sélectionner le nom d’une audience pour en afficher les détails.
 
-Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md).
+Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [ présentation de Segmentation Service ](../../segmentation/home.md).
 
 ![Onglet Aperçu du tableau de bord Destinations avec le widget Audiences récemment activées en surbrillance.](../images/destinations/recently-activated-audiences.png)
 
@@ -294,7 +294,7 @@ Le widget [!UICONTROL Activated audiences across all destinations] fournit le no
 
 ![Le widget Audiences activées dans toutes les destinations.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Browse] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Browse] , consultez la documentation &#x200B;](../../destinations/ui/destinations-workspace.md#browse).
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Browse] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Browse] , consultez la documentation ](../../destinations/ui/destinations-workspace.md#browse).
 
 Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 

@@ -6,8 +6,8 @@ description: Ce document fournit la procédure à suivre pour réaliser différe
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 36%
+source-wordcount: '1106'
+ht-degree: 37%
 
 ---
 
@@ -53,7 +53,7 @@ Une fois qu’un sandbox est sélectionné, l’écran actualise le sandbox que 
 
 La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430301/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 Pour créer un nouveau sandbox, sélectionnez **[!UICONTROL Create sandbox]** dans le coin supérieur droit de l’écran.
 

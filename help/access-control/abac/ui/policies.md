@@ -5,14 +5,14 @@ description: Gérez les politiques de contrôle d’accès via l’interface Aut
 exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 14%
+source-wordcount: '641'
+ht-degree: 16%
 
 ---
 
 # Gestion des politiques de contrôle d’accès
 
-Les politiques de contrôle d’accès sont des instructions qui rassemblent des attributs pour établir des actions admissibles et non admissibles. Adobe fournit une politique par défaut qui peut être activée immédiatement ou lorsque votre organisation est prête à commencer à contrôler l’accès à des objets spécifiques en fonction de [&#x200B; libellés &#x200B;](./labels.md){target="_blank"}. La politique par défaut, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, utilise les libellés appliqués aux ressources pour refuser l’accès à moins que les utilisateurs et utilisatrices ne soient dans un rôle avec un libellé correspondant.
+Les politiques de contrôle d’accès sont des instructions qui rassemblent des attributs pour établir des actions admissibles et non admissibles. Adobe fournit une politique par défaut qui peut être activée immédiatement ou lorsque votre organisation est prête à commencer à contrôler l’accès à des objets spécifiques en fonction de [ libellés ](./labels.md){target="_blank"}. La politique par défaut, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, utilise les libellés appliqués aux ressources pour refuser l’accès à moins que les utilisateurs et utilisatrices ne soient dans un rôle avec un libellé correspondant.
 
 >[!IMPORTANT]
 >

@@ -5,7 +5,7 @@ description: Découvrez comment vous connecter à une destination dans Adobe Ex
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1222'
 ht-degree: 56%
 
 ---
@@ -39,7 +39,7 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Configurer mise en surbrillance.](../assets/ui/connect-destinations/set-up.png)
 
-   ![&#x200B; Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
+   ![ Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Si vous avez sélectionné **[!UICONTROL Set up]**, passez à l’étape suivante, pour [s’authentifier](#authenticate) à la destination.
 

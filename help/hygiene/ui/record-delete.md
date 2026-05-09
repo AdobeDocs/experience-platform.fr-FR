@@ -4,14 +4,14 @@ description: Découvrez comment supprimer des enregistrements dans l’interface
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2555'
 ht-degree: 12%
 
 ---
 
 # Demandes de suppression d’enregistrements (workflow de l’interface utilisateur) {#record-delete}
 
-Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer &#x200B;](./overview.md) enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
+Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer ](./overview.md) enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
 
 >[!IMPORTANT]
 >
@@ -34,7 +34,7 @@ Pour plus d’informations sur les identités dans Experience Platform, consulte
 >Les suppressions d’enregistrements agissent exclusivement sur le champ **identité principale** défini dans le schéma du jeu de données. Les restrictions suivantes s’appliquent :
 >
 >* **Les identités Secondaires ne sont pas analysées.** Si un jeu de données contient plusieurs champs d’identité, seule l’identité principale est utilisée pour la correspondance. Les enregistrements ne peuvent pas être ciblés ou supprimés en fonction d&#39;identités non principales.
->* **Les enregistrements sans identité principale renseignée sont ignorés.** Si aucune métadonnée d’identité principale n’est renseignée pour un enregistrement, celui-ci ne peut pas être supprimé.
+>* **Les enregistrements sans identité principale renseignée sont ignorés.** Si un enregistrement ne comporte pas de métadonnées d’identité principales, il ne peut pas être supprimé.
 >* **Les données ingérées avant la configuration de l’identité ne sont pas éligibles.** Si le champ Identité principale a été ajouté à un schéma après l’ingestion des données, les enregistrements précédemment ingérés ne peuvent pas être supprimés par ce workflow.
 
 ## Création d’une requête {#create-request}
@@ -100,7 +100,7 @@ Comme tous les champs d’identité d’Experience Platform, une identité princ
 >
 >Si vous ne connaissez pas l’espace de noms d’identité d’un jeu de données spécifique, vous pouvez le trouver dans l’interface utilisateur d’Experience Platform. Dans l’espace de travail **[!UICONTROL Datasets]** , sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’espace de noms d’identité s’affiche avec le nom et la description du schéma.
 >
->![&#x200B; Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
+>![ Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
 
 Il existe deux options pour fournir des identités lors de la suppression d’enregistrements :
 
@@ -283,6 +283,6 @@ Pour découvrir comment la capture de données de modification fonctionne avec l
 
 ## Étapes suivantes
 
-Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [&#x200B; Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
+Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [&#128279;](../api/workorder.md).
+Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail ](../api/workorder.md).[

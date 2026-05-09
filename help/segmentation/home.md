@@ -5,7 +5,7 @@ description: Découvrez Adobe Experience Platform Segmentation Service et le rô
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1716'
 ht-degree: 88%
 
 ---

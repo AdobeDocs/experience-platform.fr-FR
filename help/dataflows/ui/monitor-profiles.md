@@ -6,14 +6,14 @@ type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1240'
-ht-degree: 11%
+source-wordcount: '1244'
+ht-degree: 12%
 
 ---
 
 # Surveillance des flux de données pour les profils dans l’interface utilisateur
 
-Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 Le tableau de bord de surveillance vous fournit une représentation visuelle de l’activité des données dans Profile, y compris le statut des profils de vos données. Ce tutoriel explique comment utiliser le tableau de bord de surveillance pour surveiller les profils de vos données à l’aide de l’interface utilisateur d’Experience Platform, ce qui vous permet de suivre l’état du traitement des profils.
 

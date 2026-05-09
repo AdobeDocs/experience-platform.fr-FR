@@ -6,8 +6,8 @@ description: Dans l’interface utilisateur (IU) de Adobe Experience Platform, v
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 2%
+source-wordcount: '1196'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Dans l’interface utilisateur (IU) de Adobe Experience Platform, vous pouvez facilement afficher n’importe quel schéma d’union de votre organisation et prévisualiser les champs, les identités, les relations et les schémas de contribution pour une classe spécifique. Ce guide fournit des informations détaillées sur la manière d’afficher et d’explorer les schémas d’union à l’aide de l’interface utilisateur d’Experience Platform.
 
-## Commencer {#getting-started}
+## Prise en main {#getting-started}
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différents services [!DNL Experience Platform] impliqués dans la gestion des données du profil client en temps réel. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
@@ -88,7 +88,7 @@ Si vous sélectionnez une identité individuelle dans la liste, le schéma affic
 
 Le champ Identité est mis en surbrillance dans le schéma d’union et les détails de l’identité sont affichés dans la partie droite de l’écran. Les détails incluent une liste des schémas contributeurs contenant le champ d’identité et vous pouvez effectuer une analyse en profondeur pour trouver des liens vers les jeux de données liés à ce schéma qui ingèrent des données dans le champ d’identité sélectionné.
 
-![&#x200B; L’identité sélectionnée est mise en surbrillance. Des détails sur l’identité sélectionnée s’affichent dans la barre latérale droite.](../images/union-schema/select-identity.png)
+![ L’identité sélectionnée est mise en surbrillance. Des détails sur l’identité sélectionnée s’affichent dans la barre latérale droite.](../images/union-schema/select-identity.png)
 
 ## Afficher les relations {#view-relationships}
 

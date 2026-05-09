@@ -6,14 +6,14 @@ description: Découvrez les schémas du modèle de données d’expérience (XDM
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: e4a30f7e483b90d5420ddcc1caffcee2089eda3f
 workflow-type: tm+mt
-source-wordcount: '4371'
-ht-degree: 24%
+source-wordcount: '4466'
+ht-degree: 25%
 
 ---
 
 # Principes de base de la composition des schémas
 
-Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans Experience Platform, consultez la [&#x200B; présentation du système XDM &#x200B;](../home.md).
+Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans Experience Platform, consultez la [ présentation du système XDM ](../home.md).
 
 ## Compréhension des schémas {#understanding-schemas}
 
@@ -44,7 +44,7 @@ Les données pouvant être utilisées dans Experience Platform sont regroupées
 * **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **Données de série temporelle** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 
-Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à ce dernier lors de sa création initiale.
+Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois.
 
 Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un objet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
@@ -61,12 +61,12 @@ Pour faciliter ce processus, les champs clés de vos schémas peuvent être marq
 
 Les champs généralement désignés comme champs « [!UICONTROL Identity] » sont les suivants : adresse e-mail, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identification uniques. Tenez compte des identifiants uniques spécifiques à votre organisation, car il peut également s’agir de bons champs « [!UICONTROL Identity] ».
 
-Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [&#x200B; présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [&#x200B; sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
+Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [ présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [ sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
 
 Il existe deux manières d’envoyer des données d’identité à Experience Platform :
 
 1. Ajouter des descripteurs d’identité à des champs individuels, par le biais de l’interface utilisateur [Éditeur de schémas](../ui/fields/identity.md) ou à l’aide de l’API [Schema Registry](../api/descriptors.md#create)
-2. En utilisant un champ de [`identityMap`](#identityMap)
+2. En utilisant un champ de ](#identityMap)[`identityMap`
 
 #### `identityMap` {#identityMap}
 
@@ -109,7 +109,7 @@ Voici un exemple de mappage d’identités simple :
 }
 ```
 
-Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [&#x200B; liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
+Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [ liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
 
 >[!NOTE]
 >
@@ -136,7 +136,7 @@ Le tableau suivant détaille les modifications prises en charge lors de la modif
 | --- | --- |
 | <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Introduction de nouveaux champs obligatoires*</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer au profil</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation du schéma de la participation au profil</li><li>Modification du champ d’identité principale sur un schéma activé pour Profil et contenant des données ingérées</li></ul> |
 
-\**Reportez-vous à la section ci-dessous pour des considérations importantes concernant [la définition de nouveaux champs obligatoires](#post-ingestion-required-fields).*
+\** Reportez-vous à la section ci-dessous pour des considérations importantes concernant [la définition de nouveaux champs obligatoires](#post-ingestion-required-fields).*
 
 ### Champs obligatoires
 
@@ -166,9 +166,9 @@ Experience Platform utilise une approche de composition dans laquelle des blocs
 
 Les schémas sont composés à l’aide de la formule suivante :
 
-**Classe + Groupe de champs de schéma&ast; = Schéma XDM**
+**Classe + Groupe de champs de schéma&amp;ast; = Schéma XDM**
 
-&ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
+&amp;ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
 
 ### Classe {#class}
 
@@ -257,7 +257,7 @@ Pour obtenir la liste la plus récente des types de données XDM standard dispon
 Un champ est le bloc de création le plus basique d’un schéma. Les champs fournissent des contraintes concernant le type de données qu’ils peuvent contenir en définissant un type de données spécifique. Ces types de données de base définissent un seul champ, tandis que les types de données mentionnés précédemment vous permettent de définir plusieurs sous-champs et de réutiliser la même structure à champs multiples dans différents schémas. Donc, en plus de définir le « type de données » d’un champ comme l’un des types de données défini dans le registre, Experience Platform prend en charge des types scalaires de base comme :
 
 * Chaîne
-* Entier
+* Nombre entier
 * Double
 * Booléen
 * Tableau
@@ -271,8 +271,8 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 * Enum
 * Long
-* Short
-* Byte
+* Court
+* Octet
 * Date
 * Date-time
 * Map
@@ -311,8 +311,8 @@ Tous les fichiers de données ingérés dans Experience Platform doivent être 
 
 Si vous importez des audiences de systèmes externes dans Experience Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
 
-* [[!UICONTROL Segment definition] class &#x200B;](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
-* [[!UICONTROL Segment Membership Details] le groupe de champs &#x200B;](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL XDM Individual Profile] pour associer des profils client à des audiences spécifiques.
+* [[!UICONTROL Segment definition] class ](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
+* [[!UICONTROL Segment Membership Details] le groupe de champs ](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL XDM Individual Profile] pour associer des profils client à des audiences spécifiques.
 
 ## Étapes suivantes
 
@@ -369,7 +369,7 @@ Les avantages et inconvénients de l’utilisation d’objets sur des champs à 
 **Inconvénients** :
 
 * Les champs deviennent plus imbriqués.
-* Lors de l’utilisation d’Experience Platform Query Service [&#128279;](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
+* Lors de l’utilisation d’Experience Platform Query Service [](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
 
 #### Champs à structure libre
 

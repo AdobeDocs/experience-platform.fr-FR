@@ -4,8 +4,8 @@ description: Découvrez comment utiliser la simulation de graphiques dans l’in
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 22c0678ded73e9f840957707c14aed7c761138a2
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 4%
+source-wordcount: '1507'
+ht-degree: 3%
 
 ---
 

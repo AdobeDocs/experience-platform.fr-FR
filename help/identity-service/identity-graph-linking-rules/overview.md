@@ -4,8 +4,8 @@ description: Découvrez les règles de liaison du graphique d’identités dans 
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '1605'
-ht-degree: 11%
+source-wordcount: '1712'
+ht-degree: 16%
 
 ---
 
@@ -41,12 +41,12 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
 <!-- 
 CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -56,7 +56,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Vue d’ensemble des règles de liaison des graphiques d’identités" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448274/?captions=fre_fr&format=jpeg&nocache=1747851655227" alt="Vue d’ensemble des règles de liaison des graphiques d’identités"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Vue d’ensemble des règles de liaison des graphiques d’identités"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -79,7 +79,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Règles de liaison des graphiques d’identités - Simulation de graphique" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444045/?captions=fre_fr&format=jpeg&nocache=1747851655237" alt="Règles de liaison des graphiques d’identités - Simulation de graphique"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Règles de liaison des graphiques d’identités - Simulation de graphique"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -102,7 +102,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Règles de liaison des graphiques d’identités - Paramètres d’identité" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475964/?captions=fre_fr&format=jpeg&nocache=1747851655218" alt="Règles de liaison des graphiques d’identités - Paramètres d’identité"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Règles de liaison des graphiques d’identités - Paramètres d’identité"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -143,7 +143,7 @@ Il existe des instances où plusieurs connexions peuvent se produire sur un seul
 | Kiosque public | Les voyageurs à l’aéroport se connectent en utilisant leur carte de fidélité pour enregistrer leurs bagages et imprimer leur carte d’embarquement. |
 | Centre d’appel | Le personnel du centre d’appels se connecte sur un seul appareil au nom des clients qui appellent le service clientèle pour résoudre des problèmes. |
 
-![Diagramme de certains appareils partagés courants.](../images/identity-settings/shared-devices.png "Diagramme de certains appareils partagés courants."){zoomable="yes"}
+![Diagramme de certains appareils partagés communs.](../images/identity-settings/shared-devices.png "Diagramme de certains appareils partagés communs."){zoomable="yes"}
 
 Dans ces cas, d’un point de vue graphique, si aucune limite n’est activée, un seul ECID est lié à plusieurs CRMID.
 
@@ -156,7 +156,7 @@ Avec [!DNL Identity Graph Linking Rules], vous pouvez réaliser les actions suiv
 
 Il existe également des cas d’utilisateurs qui fournissent de fausses valeurs comme des numéros de téléphone et/ou des adresses e-mail lors de l’enregistrement. Dans ces cas, si les limites ne sont pas activées, les identités liées au téléphone/e-mail finiront par être liées à plusieurs CRMID différents.
 
-![Diagramme qui représente les scénarios d’e-mail ou de téléphone non valides.](../images/identity-settings/invalid-email-phone.png "Diagramme qui représente les scénarios d’e-mail ou de téléphone non valides."){zoomable="yes"}
+![Diagramme qui représente des scénarios d’e-mail ou de téléphone non valides.](../images/identity-settings/invalid-email-phone.png "Diagramme qui représente des scénarios d’e-mail ou de téléphone non valides."){zoomable="yes"}
 
 Avec [!DNL Identity Graph Linking Rules], vous pouvez réaliser les actions suivantes :
 

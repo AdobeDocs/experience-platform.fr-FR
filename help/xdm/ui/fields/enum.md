@@ -6,7 +6,7 @@ description: Découvrez comment définir des énumérations et les valeurs sugg�
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1227'
 ht-degree: 8%
 
 ---
@@ -30,7 +30,7 @@ Lorsque vous [définissez un nouveau champ](./overview.md#define) dans l’inter
 
 Ce document explique comment définir des énumérations et les valeurs suggérées dans l’espace de travail de l’interface utilisateur de [!UICONTROL Schemas]. Pour un aperçu rapide sur les énumérations et les valeurs suggérées, y compris sur la manière de les configurer dans l’interface utilisateur et leurs effets en aval, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/3413677/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Définition d’une énumération {#enum}
 

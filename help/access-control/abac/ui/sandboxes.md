@@ -5,8 +5,8 @@ description: Gérez les sandbox via l’interface Autorisations dans Adobe Exper
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: 8c9503c9923372ef919d485d4ec0e3ebda5a2413
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 26%
+source-wordcount: '317'
+ht-degree: 28%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 26%
 >id="platform_permissions_sandboxes_about"
 >title="Que sont les sandbox ?"
 >abstract="Les sandbox sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. L’accès aux sandbox est géré par l’intermédiaire des rôles."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/home" text="Présentation des sandbox"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Présentation des sandbox"
 
 Les sandbox sont des partitions virtuelles au sein d’une seule instance de Adobe Experience Platform qui intègrent de manière transparente le processus de développement de vos applications d’expérience digitale. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../../sandboxes/home.md).
 

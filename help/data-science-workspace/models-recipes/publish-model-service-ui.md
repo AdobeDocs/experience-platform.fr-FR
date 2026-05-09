@@ -7,7 +7,7 @@ description: Le Workspace de science des données de Adobe Experience Platform v
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '510'
 ht-degree: 32%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 32%
 
 Le Workspace de science des données de Adobe Experience Platform vous permet de publier votre modèle formé et évalué en tant que service, ce qui permet aux utilisateurs de votre organisation de noter des données sans avoir à créer leurs propres modèles.
 
-## Commencer
+## Prise en main
 
 Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 

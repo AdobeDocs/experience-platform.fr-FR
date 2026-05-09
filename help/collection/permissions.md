@@ -4,8 +4,8 @@ description: Présentation générale de la gestion des autorisations et du cont
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 28%
+source-wordcount: '1356'
+ht-degree: 29%
 
 ---
 
@@ -20,7 +20,7 @@ La [collecte de données dans Adobe Experience Platform](home.md) se compose de 
 
 Ce guide vous explique comment gérer les autorisations pour les fonctionnalités de collecte de données.
 
-## Commencer
+## Prise en main
 
 Pour configurer le contrôle d’accès pour la collecte de données, vous devez disposer de droits d’administrateur pour une organisation qui dispose d’une intégration de produit avec la collecte de données Adobe Experience Platform. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un **administrateur de profils de produit**. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les **administrateurs de produit** (qui peuvent gérer tous les profils au sein d’un produit) et les **administrateurs système** (aucune restriction). Consultez l’article sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html) dans le guide d’administration d’Adobe Enterprise pour plus d’informations.
 
@@ -39,8 +39,8 @@ Les autorisations sous Adobe Experience Platform incluent l’accès aux flux de
 | Sandbox | (S/O) | Selon les [sandbox](../sandboxes/home.md) qui ont été créés sous votre organisation, vous pouvez contrôler l’accès à chacun d’eux par le biais de cette catégorie d’autorisations dans Admin Console. |
 | Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier des [schémas de modèle de données d’expérience (XDM)](../xdm/home.md). |
 | Modélisation des données | Affichage des schémas | Accorde un accès en lecture seule aux schémas. |
-| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier des [espaces de noms d’identité](../identity-service/features/namespaces.md). |
-| Identity Management | Affichages des espaces de noms d’identité | Accorde un accès en lecture seule aux espaces de noms d’identité. |
+| Identity Management | Gérer les espaces de noms d’identité | Permet d’afficher, de créer et de modifier des [espaces de noms d’identité](../identity-service/features/namespaces.md). |
+| Identity Management | Afficher des espaces de noms d’identité | Accorde un accès en lecture seule aux espaces de noms d’identité. |
 | Collecte de données | Gérer les flux de données | Permet d’afficher, de créer et de modifier des [flux de données](../datastreams/overview.md). |
 | Collecte de données | Afficher les flux de données | Accorde un accès en lecture seule aux flux de données. |
 
@@ -55,13 +55,13 @@ Les autorisations sous Collecte de données Adobe Experience Platform contrôlen
 | Plateformes | Web | Accorde l’accès aux [propriétés web](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées à d’autres droits de propriété. |
 | Plateformes | Mobile | Accorde l’accès aux [propriétés mobiles](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées à d’autres droits de propriété. |
 | Plateformes | Edge | Accorde l’accès aux [propriétés Edge de transfert d’événement](../tags/ui/event-forwarding/getting-started.md) lorsqu’elles sont combinées à d’autres droits de propriété. |
-| Propriétés | (S/O) | Selon les propriétés qui ont été créées dans votre organisation, vous pouvez contrôler l’accès à chacune d’elles par le biais de cette catégorie d’autorisations dans Admin Console.<br><br>Les droits de propriété attribués à un utilisateur s’appliquent uniquement aux propriétés auxquelles il a été autorisé à accéder via cette catégorie d’autorisations. |
-| Droits de propriété | Approuver | Permet d’approuver une version de bibliothèque dans le cadre du [&#x200B; flux de publication &#x200B;](../tags/ui/publishing/publishing-flow.md). |
-| Droits de propriété | Développer | Permet de développer une version de bibliothèque dans le cadre du [&#x200B; flux de publication &#x200B;](../tags/ui/publishing/publishing-flow.md). |
+| Propriétés | (S/O) | Selon les propriétés qui ont été créées dans votre organisation, vous pouvez contrôler l’accès à chacune d’elles par le biais de cette catégorie d’autorisations dans Admin Console.<br><br>Les droits de propriété attribués à un utilisateur s’appliquent uniquement aux propriétés auxquelles il a accès par le biais de cette catégorie d’autorisations. |
+| Droits de propriété | Approuver | Permet d’approuver une version de bibliothèque dans le cadre du [ flux de publication ](../tags/ui/publishing/publishing-flow.md). |
+| Droits de propriété | Développer | Permet de développer une version de bibliothèque dans le cadre du [ flux de publication ](../tags/ui/publishing/publishing-flow.md). |
 | Droits de propriété | Modifier la propriété | Permet de modifier la configuration de base des propriétés auxquelles un utilisateur a accès. |
 | Droits de propriété | Gérer les environnements | Permet de gérer les [environnements](../tags/ui/publishing/environments.md) pour les propriétés auxquelles un utilisateur a accès. |
-| Droits de propriété | Gérer les extensions | Permet de gérer les [&#x200B; extensions &#x200B;](../tags/ui/managing-resources/extensions/overview.md) pour les propriétés auxquelles un utilisateur a accès. |
-| Droits de propriété | Publier | Permet de publier une version de bibliothèque dans le cadre du [&#x200B; flux de publication &#x200B;](../tags/ui/publishing/publishing-flow.md). |
+| Droits de propriété | Gérer les extensions | Permet de gérer les [ extensions ](../tags/ui/managing-resources/extensions/overview.md) pour les propriétés auxquelles un utilisateur a accès. |
+| Droits de propriété | Publier | Permet de publier une version de bibliothèque dans le cadre du [ flux de publication ](../tags/ui/publishing/publishing-flow.md). |
 | Droits d’entreprise | Développement dʼextensions | Permet de créer et de modifier des packages d’extension qui appartiennent à votre organisation, y compris les versions privées et les demandes de publication publique. |
 | Droits d’entreprise | Gérer les configurations d’application | Cette autorisation ne s’applique que si vous disposez d’une licence pour Adobe Journey Optimizer ou une autre solution qui accorde l’accès aux messages in-app et aux notifications push. Cela vous permet de gérer les applications dont Adobe Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 | Droits d’entreprise | Gérer les propriétés | Permet de créer et de gérer des balises (propriété web), un transfert d’événement (propriété Edge) et des propriétés mobiles. |
@@ -74,7 +74,7 @@ Les autorisations sous Collecte de données Adobe Experience Platform contrôlen
 
 ## Gérer les autorisations {#manage}
 
-Les autorisations pour la collecte de données sont gérées par le biais de deux désignations de produit : **Adobe Experience Platform** et **Collecte de données Adobe Experience Platform**.
+Les autorisations pour la collecte de données sont gérées par le biais de deux désignations de produit : **** et **Collecte de données Adobe Experience Platform**.
 
 Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autorisations appropriées sous chaque produit dans Admin Console :
 

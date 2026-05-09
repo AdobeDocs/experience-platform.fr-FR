@@ -5,8 +5,8 @@ description: La composition d’audiences dans l’interface utilisateur d’Ado
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2293'
-ht-degree: 55%
+source-wordcount: '2321'
+ht-degree: 54%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 >[!BEGINSHADEBOX]
 
-Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=fr) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
+Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
 
 >[!ENDSHADEBOX]
 
@@ -151,7 +151,7 @@ Si vous excluez par audience, vous pouvez sélectionner l’audience à exclure 
 
 Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Add]** pour ajouter l’audience à exclure à votre bloc d’exclusion.
 
-![Une liste d’audiences s’affiche. Dans cette boîte de dialogue, vous pouvez sélectionner l’audience à ajouter.](../images/ui/audience-composition/select-audience.png)
+![Une liste d’audiences s’affiche. Vous pouvez sélectionner l’audience à ajouter à partir de cette boîte de dialogue.](../images/ui/audience-composition/select-audience.png)
 
 ### Exclure par attribut {#exclude-attribute}
 
@@ -208,7 +208,7 @@ Le bloc **[!UICONTROL Enrich]** est ajouté. Lors de la sélection du bloc, les 
 
 Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . &#x200B;](../images/ui/audience-composition/enrich-select-dataset.png)
+![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . ](../images/ui/audience-composition/enrich-select-dataset.png)
 
 La fenêtre contextuelle **[!UICONTROL Select dataset]** s’affiche. Sélectionnez le jeu de données à ajouter pour l’enrichissement, puis **[!UICONTROL Select]** pour ajouter le jeu de données pour l’enrichissement.
 

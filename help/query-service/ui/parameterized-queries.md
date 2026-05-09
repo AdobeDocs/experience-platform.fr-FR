@@ -4,7 +4,7 @@ description: Découvrez comment utiliser des requêtes paramétrées dans l’in
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '682'
 ht-degree: 13%
 
 ---
@@ -20,7 +20,7 @@ Query Service prend en charge l’utilisation de requêtes paramétrées dans Qu
 
 ## Conditions préalables
 
-Avant de poursuivre avec ce guide, lisez le [&#x200B; Guide de l’interface utilisateur de Query Editor &#x200B;](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
+Avant de poursuivre avec ce guide, lisez le [ Guide de l’interface utilisateur de Query Editor ](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ SELECT
 
 Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Pour plus d’instructions, consultez la section relative à [accès à Query Editor](./user-guide.md#accessing-query-editor).
 
-Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite l’onglet **[!UICONTROL Query parameters]** en regard de la [!UICONTROL Console] ajouter la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous omettez d’ajouter une valeur à l’une des clés requises. Une icône d’alerte (![une icône d’alerte.](/help/images/icons/alert.png)) apparaît dans la section Paramètres de requête en regard des champs d’entrée de [!UICONTROL Value] vides.
+Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite l’onglet **[!UICONTROL Query parameters]** en regard de la [!UICONTROL Console] ajouter la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous omettez d’ajouter une valeur à l’une des clés requises. Une icône d’alerte (![une icône d’alerte.](/help/images/icons/alert.png)) apparaît dans la section Paramètres de requête en regard de tout champ d’entrée de [!UICONTROL Value] vide.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Les valeurs de paramètre sont enregistrées lorsque vous planifiez une requête
 
 >[!TIP]
 >
->Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée[&#x200B; consultez le &#x200B;](../sql/prepared-statements.md) guide de syntaxe des instructions préparées .
+>Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée](../sql/prepared-statements.md) consultez le [ guide de syntaxe des instructions préparées .
 
 ## Étapes suivantes
 

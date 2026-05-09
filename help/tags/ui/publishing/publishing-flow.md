@@ -5,7 +5,7 @@ exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
 source-wordcount: '1362'
-ht-degree: 84%
+ht-degree: 82%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 84%
 >title="Flux de publication"
 >abstract="Découvrez les niveaux d’autorisation requis des utilisateurs et utilisatrices pour le flux de publication, y compris les droits de développement, d’approbation et de publication."
 
-Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test des versions et dʼapprobation pour la production.
+Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test de versions et d’approbation pour la production.
 
 Les actions disponibles que vous pouvez réaliser sur une bibliothèque dépendent de l’état de la bibliothèque et du niveau d’autorisation que vous possédez. En outre, l’état d’une bibliothèque affecte également les ressources qu’elle contient (règles, éléments de données et extensions) en fonction de ce qui se trouve en amont dans le flux de publication.
 
@@ -89,8 +89,8 @@ Le tableau suivant décrit les actions disponibles pour une bibliothèque à l�
 
 | Action | Description |
 | --- | --- |
-| [!UICONTROL Open] | Affichez le contenu de la bibliothèque. Les modifications ne sont pas autorisées pour les bibliothèques qui se trouvent en dehors de la colonne [!UICONTROL Development]. Si des modifications sont nécessaires, la bibliothèque doit être refusée afin de pouvoir apporter des modifications dans l’état [!UICONTROL Development]. |
-| [!UICONTROL Build and Publish to Production] | Annulez l’attribution de la bibliothèque à son environnement d’évaluation, affectez-la à l’environnement de production et déployez-la.<br><br>**Important** : lorsque cette option est sélectionnée, votre bibliothèque est activée dans votre environnement de production. Assurez-vous que la bibliothèque contient les modifications souhaitées avant de sélectionner cette option. |
+| [!UICONTROL Open] | Affichez le contenu de la bibliothèque. Les modifications ne sont pas autorisées pour les bibliothèques qui se trouvent en dehors de la colonne [!UICONTROL Development]. Si des modifications sont nécessaires, la bibliothèque doit être refusée afin que des modifications puissent être apportées dans l’état [!UICONTROL Development]. |
+| [!UICONTROL Build and Publish to Production] | Annulez l’affectation de la bibliothèque à partir de l’environnement d’évaluation, affectez la bibliothèque à l’environnement de production et déployez-la.<br><br>**Important** : lorsque cette option est sélectionnée, votre bibliothèque est activée dans votre environnement de production. Assurez-vous que la bibliothèque contient les modifications souhaitées avant de sélectionner cette option. |
 | [!UICONTROL Reject] | Annulez l’attribution de la bibliothèque à son environnement d’évaluation et déplacez-la dans la colonne [!UICONTROL Development] pour effectuer d’autres modifications. |
 
 ### [!UICONTROL Published] {#published}

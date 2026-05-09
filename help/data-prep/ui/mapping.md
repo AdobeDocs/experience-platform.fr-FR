@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; guide de lʼinterface utilisateur ; mappeur ; mappage ; data prep ; préparation des données ; préparer des données ;
+keywords: Experience Platform;accueil;rubriques populaires;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de lʼui;mappeur;mappage;data prep;préparation des données;préparer des données;
 title: Guide de l’interface utilisateur de la préparation des données
 description: Découvrez comment utiliser les fonctions de préparation de données dans l’interface utilisateur d’Experience Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1419'
 ht-degree: 28%
 
 ---
@@ -23,7 +23,7 @@ Lisez ce guide pour savoir comment utiliser les fonctions de mappage [préparati
 
 Ce tutoriel nécessite une connaissance pratique des composants Experience Platform suivants :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
+* [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [Service d’identités](../../identity-service/home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.

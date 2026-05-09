@@ -1,11 +1,11 @@
 ---
 title: Définition d’une relation entre deux schémas dans Real-Time Customer Data Platform B2B edition
 description: Découvrez comment définir une relation multiple-à-un entre deux schémas dans Adobe Real-Time Customer Data Platform B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1776'
 ht-degree: 14%
 
 ---
@@ -33,7 +33,7 @@ Ce tutoriel décrit les étapes à suivre pour définir une relation multiple-à
 >
 >Ce tutoriel se concentre sur la manière d’établir manuellement des relations entre les schémas B2B dans l’interface utilisateur d’Experience Platform. Si vous importez des données à partir d’une connexion source B2B, vous pouvez utiliser un utilitaire de génération automatique pour créer les schémas, identités et relations requis à la place. Consultez la documentation sur les sources relative aux espaces de noms et aux schémas B2B pour plus d’informations sur [l’utilisation de l’utilitaire de génération automatique](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite une compréhension pratique de [!DNL XDM System] et de l’éditeur de schémas dans l’interface utilisateur de [!DNL Experience Platform]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
@@ -56,9 +56,9 @@ Les relations de schéma sont représentées par un champ dédié dans un **sch�
 
 Pour établir une relation, le schéma de référence doit avoir une identité principale définie. Lors de la définition d’une identité principale pour une entité B2B, gardez à l’esprit que les ID d’entité basés sur des chaînes peuvent se chevaucher si vous les collectez sur différents systèmes ou emplacements, ce qui peut entraîner des conflits de données dans Experience Platform.
 
-Pour en tenir compte, toutes les classes B2B standard contiennent des champs « clé » conformes au type de données [[!UICONTROL B2B Source]](../data-types/b2b-source.md). Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B ainsi que d’autres informations contextuelles sur la source de l’identifiant. L’un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité principale pour les schémas d’entité B2B.
+Pour en tenir compte, toutes les classes B2B standard contiennent des champs « clé » conformes au type de données ](../data-types/b2b-source.md). [[!UICONTROL B2B Source]Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B ainsi que d’autres informations contextuelles sur la source de l’identifiant. L’un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité principale pour les schémas d’entité B2B.
 
-![&#x200B; champ sourceKey &#x200B;](../images/tutorials/relationship-b2b/sourcekey.png)
+![ champ sourceKey ](../images/tutorials/relationship-b2b/sourcekey.png)
 
 >[!NOTE]
 >

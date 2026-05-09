@@ -5,7 +5,7 @@ description: Découvrez comment exporter des jeux de données d’Adobe Experien
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2966'
+source-wordcount: '3039'
 ht-degree: 23%
 
 ---
@@ -50,16 +50,16 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=fr#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
+    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
+    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
+    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit sur cette page, des avantages de l’utilisation de la fonctionnalité d’exportation du jeu de données et de certains cas d’utilisation suggérés.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448820?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -152,7 +152,7 @@ Utilisez les cases à cocher situées à gauche des noms des jeux de données po
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Options d’exportation de fichiers pour les jeux de données"
->abstract="Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis la dernière exportation. <br> La première exportation de fichier incrémentiel inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis le premier export. <br> Sélectionnez **Exporter les fichiers complets** pour exporter l’abonnement complet de chaque jeu de données à chaque export. "
+>abstract="Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis le dernier export. <br> Le premier export de fichiers incrémentiels inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis le premier export. <br> Sélectionnez **Exporter les fichiers complets** pour exporter l’abonnement complet de chaque jeu de données à chaque export. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
@@ -254,7 +254,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 Lors de l’exportation de jeux de données, Experience Platform crée un ou plusieurs fichiers `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce que de nouveaux fichiers soient déposés dans votre emplacement de stockage en fonction du planning d’exportation que vous avez fourni.
 
-Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [&#x200B; personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
+Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [ personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
 
 >[!TIP]
 >

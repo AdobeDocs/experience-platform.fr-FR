@@ -4,7 +4,7 @@ description: Adobe Experience Platform fournit un tableau de bord grâce auquel 
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2249'
+source-wordcount: '2275'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de votre compte. Ceux-ci sont présentés tels qu’ils sont capturés lors d’instantanés quotidiens. Ce guide explique comment accéder au tableau de bord [!UICONTROL Account Profiles] et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
-Ce document présente les fonctionnalités du tableau de bord [!UICONTROL Account Profiles] et détaille les informations standard disponibles. Consultez le guide de l’interface utilisateur de [[!UICONTROL Account Profiles]](../../rtcdp/accounts/account-profile-ui-guide.md) pour obtenir des détails complets sur ses fonctionnalités disponibles.
+Ce document présente les fonctionnalités du tableau de bord [!UICONTROL Account Profiles] et détaille les informations standard disponibles. Consultez le guide de l’interface utilisateur de ](../../rtcdp/accounts/account-profile-ui-guide.md) pour obtenir des détails complets sur ses fonctionnalités disponibles.[[!UICONTROL Account Profiles]
 
 ## Prise en main
 
@@ -49,7 +49,7 @@ L’onglet [!UICONTROL Overview] est composé de widgets qui fournissent des mes
 
 ### Configuration du service de correspondance des prospects et des comptes {#lead-to-account-matching-service}
 
-Sélectionnez **[!UICONTROL Settings]** pour configurer le service de correspondance des prospects et des comptes dans la boîte de dialogue [!UICONTROL Account settings]. Pour plus d’informations sur la configuration de la correspondance de votre prospect et de votre compte, consultez le [&#x200B; guide de l’interface utilisateur](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Pour en savoir plus sur la correspondance des prospects et des comptes, reportez-vous à la documentation [correspondance des prospects et des comptes) dans Real-Time CDP B2B &#x200B;](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Sélectionnez **[!UICONTROL Settings]** pour configurer le service de correspondance des prospects et des comptes dans la boîte de dialogue [!UICONTROL Account settings]. Pour plus d’informations sur la configuration de la correspondance de votre prospect et de votre compte, consultez le [ guide de l’interface utilisateur](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Pour en savoir plus sur la correspondance des prospects et des comptes, reportez-vous à la documentation [correspondance des prospects et des comptes) dans Real-Time CDP B2B ](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ![Tableau de bord Profils de compte avec les paramètres mis en surbrillance.](../images/account-profiles/settings.png)
 
@@ -68,7 +68,7 @@ Les informations de profil de compte affichées dans l’onglet [!UICONTROL Deta
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
 >title="Vue d’ensemble des clientes et clients par compte"
->abstract="Ce widget d’analyse fournit des informations sur la structure de vos données B2B. Il vous permet d’identifier le nombre de profils de compte auxquels aucun profil client n’est associé ou auxquels un ou plusieurs profils clients sont associés.<ul><li>Clients directs : profils clients directement associés à un compte par l’itinéraire `personComponents`.</li><li>Clients indirects : profils client associés à un compte via l’itinéraire `Account-Person`.</li></ul>"
+>abstract="Ce widget d’analyse fournit des informations sur la structure de vos données B2B. Il vous permet d’identifier le nombre de profils de compte auxquels aucun profil client n’est associé ou auxquels un ou plusieurs profils clients sont associés.<ul><li>Clientes et clients directs : profils clients directement associés à un compte par l’itinéraire `personComponents`.</li><li>Clients indirects : profils client associés à un compte via l’itinéraire `Account-Person`.</li></ul>"
 
 Adobe fournit des widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées aux profils de votre compte.
 
@@ -113,7 +113,7 @@ Les clients indirects sont des profils client liés à un compte via l’itinér
 
 ![Widget de présentation des clients par compte.](../images/account-profiles/customers-per-account-overview-widget.png)
 
-Pour accéder à des informations plus détaillées, sélectionnez l’ellipse (**...**) du graphique [!UICONTROL Customers per account overview] et choisissez **[!UICONTROL Drill through]** dans le menu déroulant.
+Pour accéder à des informations plus détaillées, sélectionnez l’ellipse (**...**) dans le graphique [!UICONTROL Customers per account overview] et choisissez **[!UICONTROL Drill through]** dans le menu déroulant.
 
 ![Le widget de présentation des clients par compte avec le menu déroulant Ellipse et l’option Explorer en surbrillance.](../images/account-profiles/customers-per-account-overview-dropdown.png)
 
@@ -125,7 +125,7 @@ La vue d&#39;exploration s&#39;affiche. Ensuite, explorez les graphiques d’exp
 
 ### [!UICONTROL Navigate between dashboard views] {#dashboard-view-navigation}
 
-Pour basculer entre l’exploration en amont et le tableau de bord Profils de compte , sélectionnez l’icône de dossier (![Icône de dossier A.](../images/account-profiles/folder-icon.png)) suivi de l’affichage correct dans le menu déroulant.
+Pour basculer entre l’exploration en amont et le tableau de bord Profils de compte , sélectionnez l’icône de dossier (![Icône de dossier.](../images/account-profiles/folder-icon.png)) suivi de la vue correcte dans le menu déroulant.
 
 ![Vue d’exploration amont dans le tableau de bord Profils de comptes avec le menu déroulant de navigation en surbrillance.](../images/account-profiles/navigation-dropdown.png)
 
@@ -239,4 +239,4 @@ Pour résoudre ce problème, vous devez ingérer les données d’entité B2B, t
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant savoir comment localiser le tableau de bord [!UICONTROL Account Profiles] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur d’Experience Platform, reportez-vous à la [&#x200B; présentation des profils de compte &#x200B;](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, B2B edition.
+En suivant ce document, vous devriez maintenant savoir comment localiser le tableau de bord [!UICONTROL Account Profiles] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur d’Experience Platform, reportez-vous à la [ présentation des profils de compte ](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, B2B edition.

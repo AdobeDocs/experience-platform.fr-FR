@@ -5,7 +5,7 @@ description: Découvrez comment exporter des tableaux, des mappages et des objet
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1070'
 ht-degree: 14%
 
 ---

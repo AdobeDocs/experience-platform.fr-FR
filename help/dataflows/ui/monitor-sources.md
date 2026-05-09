@@ -4,7 +4,7 @@ title: Surveillance de l’ingestion du lac de données
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1434'
 ht-degree: 15%
 
 ---
@@ -74,7 +74,7 @@ Vous pouvez filtrer davantage vos données à l’aide des options fournies au-d
 
 | Options de filtrage | Description |
 | --- | --- |
-| Rechercher | Utilisez la barre de recherche pour filtrer votre vue en un seul type de source. |
+| Recherche | Utilisez la barre de recherche pour filtrer votre vue en un seul type de source. |
 | Sources | Sélectionnez **[!UICONTROL Sources]** pour filtrer votre vue et afficher les données de mesure par type de source. Il s’agit de l’affichage par défaut utilisé par le tableau de bord de surveillance. |
 | Flux de données | Sélectionnez **[!UICONTROL Dataflows]** pour filtrer votre vue et afficher les données de mesure par flux de données. |
 | Afficher uniquement les échecs | Sélectionnez **[!UICONTROL Show failures only]** pour filtrer l’affichage et afficher uniquement les flux de données qui ont signalé des échecs d’ingestion. |

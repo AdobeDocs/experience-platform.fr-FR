@@ -4,8 +4,8 @@ description: Découvrez comment créer, afficher et mettre à jour des attributs
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1507'
+ht-degree: 11%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 7%
 >
 >Pour accéder aux attributs calculés, vous devez disposer des autorisations appropriées (**Afficher les attributs calculés** et **Gérer les attributs calculés**). Pour plus d’informations sur les autorisations requises, veuillez lire la [documentation sur le contrôle d’accès](../../access-control/home.md). Pour savoir comment appliquer ces autorisations, consultez le [guide de gestion des autorisations](../../access-control/ui/permissions.md).
 
-Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées dans la segmentation, l’activation et la personnalisation.
+Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
 
 Ce document fournit un guide sur la création et la mise à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -61,7 +61,7 @@ De plus, vous pouvez sélectionner un attribut calculé pour afficher des inform
 
 Pour créer un attribut calculé, sélectionnez **[!UICONTROL Create computed attribute]** pour lancer le processus de création d’un attribut calculé.
 
-![Le bouton [!UICONTROL Create computed attributes] est mis en surbrillance et indique aux utilisateurs comment accéder à la page Créer un attribut calculé &#x200B;](./images/ui/create.png).
+![Le bouton [!UICONTROL Create computed attributes] est mis en surbrillance et indique aux utilisateurs comment accéder à la page Créer un attribut calculé ](./images/ui/create.png).
 
 La page **[!UICONTROL Create computed attribute]** s’affiche. Sur cette page, vous pouvez ajouter les informations de base de l’attribut calculé que vous souhaitez créer.
 
@@ -112,7 +112,7 @@ Lors de l’application de la fonction d’agrégation, vous pouvez activer l’
 
 ![La case à cocher [!UICONTROL Fast Refresh] est mise en surbrillance.](./images/ui/enable-fast-refresh.png)
 
-Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser vos attributs calculés tous les jours, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités des utilisateurs et utilisatrices.
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur ou de l’utilisatrice.
 
 Pour plus d’informations sur l’actualisation rapide, consultez la section [actualisation rapide](./overview.md#fast-refresh) de la présentation des attributs calculés.
 
@@ -164,4 +164,4 @@ Après avoir créé un attribut calculé, vous pouvez utiliser les attributs cal
 
 ## Étapes suivantes
 
-Pour en savoir plus sur les attributs calculés, consultez la [présentation des attributs calculés](./overview.md). Pour plus d’informations sur la création et la configuration des attributs calculés à l’aide de l’API, consultez le guide de développement [attributs calculés](./api.md).
+Pour en savoir plus sur les attributs calculés, veuillez lire la [Vue d’ensemble sur les attributs calculés](./overview.md). Pour plus d’informations sur la création et la configuration des attributs calculés à l’aide de l’API, consultez le guide de développement [attributs calculés](./api.md).
