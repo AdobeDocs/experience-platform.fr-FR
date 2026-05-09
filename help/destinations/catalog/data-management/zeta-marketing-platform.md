@@ -40,7 +40,7 @@ Un annonceur vise à cibler les utilisateurs et utilisatrices avec des audiences
 * Bien que le [!DNL Adobe Experience Platform] permette l’activation de plusieurs audiences vers une instance de destination ZMP spécifique, il est obligatoire que chaque instance de destination ZMP ne reçoive qu’une seule audience Experience Platform. Pour gérer plusieurs audiences à partir d’Experience Platform, créez des instances de destination ZMP supplémentaires pour chaque audience et sélectionnez une liste de clients différente dans la liste déroulante. Cette approche permet de s’assurer que les audiences ZMP cibles ne sont pas remplacées. Voir [Renseigner les détails de la destination](#destination-details) pour plus d’informations.
 * Utilisez les informations d’identification suivantes pour configurer la destination :
    * Nom d’utilisateur : **api**
-   * Mot de passe : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la [ documentation ZMP .
+   * Mot de passe : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[&#128279;](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la  documentation ZMP .
 
 ## Identités prises en charge {#supported-identities}
 
@@ -90,7 +90,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -109,7 +109,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Username]** : `api`
-* **[!UICONTROL Password]** : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la [ documentation ZMP .
+* **[!UICONTROL Password]** : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[&#128279;](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la  documentation ZMP .
 
 ### Renseigner les détails de la destination {#destination-details}
 

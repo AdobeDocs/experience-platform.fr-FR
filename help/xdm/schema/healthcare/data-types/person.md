@@ -42,7 +42,7 @@ Pour plus d’informations sur ce type de données, reportez-vous au référenti
 
 `communication` est fourni sous la forme d’un tableau d’objets . La structure de chaque objet est décrite ci-dessous.
 
-![ structure de communication ](../../../images/healthcare/data-types/person/communication.png)
+![&#x200B; structure de communication &#x200B;](../../../images/healthcare/data-types/person/communication.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |

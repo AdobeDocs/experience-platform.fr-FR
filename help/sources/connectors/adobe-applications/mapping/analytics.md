@@ -291,9 +291,9 @@ Ces champs ont une source unique, mais ils sont mappés à **plusieurs** emplace
 
 Certains champs (appelés « valeurs de publication ») contiennent des données après l’ajustement de leurs valeurs par Adobe à l’aide des règles de traitement, des règles VISTA et des tables de recherche. La plupart des valeurs post ont un équivalent prétraité.
 
-Le connecteur source Analytics envoie des données prétraitées dans un jeu de données dans Experience Platform. Vous pouvez transformer ces données en données correspondantes post-traitées à l’aide de transformations. Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par ](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
+Le connecteur source Analytics envoie des données prétraitées dans un jeu de données dans Experience Platform. Vous pouvez transformer ces données en données correspondantes post-traitées à l’aide de transformations. Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par &#x200B;](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
 
-Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par ](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
+Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par &#x200B;](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
 
 +++Sélectionnez cette option pour afficher un tableau des champs de mappage avancés obsolètes
 

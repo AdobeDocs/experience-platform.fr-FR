@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Dans Adobe Experience Platform, l’ordre des données n’est pas garanti par défaut lors de l’ingestion de données par le biais de l’ingestion en flux continu vers la banque de profils. Grâce à l’ordre des horodatages client, vous pouvez garantir que le dernier message, conformément à l’horodatage client fourni, sera conservé dans la banque de profils. Tous les messages obsolètes seront alors ignorés et ne seront **pas** disponibles pour une utilisation dans les services en aval qui utilisent les données de profil comme la segmentation et les destinations. Par conséquent, cela permet à vos données de profil d’être cohérentes et de rester synchronisées avec vos systèmes sources.
 
-Pour activer la commande d’horodatage client, utilisez le champ `extSourceSystemAudit.lastUpdatedDate` dans le groupe de champs [ Attributs d’audit du système Source externe ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) et contactez votre gestionnaire de compte technique Adobe ou l’assistance clientèle Adobe avec votre sandbox et vos informations sur le jeu de données.
+Pour activer la commande d’horodatage client, utilisez le champ `extSourceSystemAudit.lastUpdatedDate` dans le groupe de champs [&#x200B; Attributs d’audit du système Source externe &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) et contactez votre gestionnaire de compte technique Adobe ou l’assistance clientèle Adobe avec votre sandbox et vos informations sur le jeu de données.
 
 ## Contraintes
 

@@ -25,4 +25,4 @@ Pour obtenir des instructions sur la manière d’étiqueter les champs d’iden
 
 ## Étapes suivantes
 
-Pour plus d’informations sur [!DNL Identity Service], consultez la présentation [[!DNL Identity Service] ](./home.md).
+Pour plus d’informations sur [!DNL Identity Service], consultez la présentation [[!DNL Identity Service] &#x200B;](./home.md).

@@ -53,7 +53,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie **, sélectionnez **[!UICONTROL Pinterest Ads]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie **, sélectionnez &#x200B;** [!UICONTROL Pinterest Ads]&#x200B;**, puis &#x200B;** [!UICONTROL Add data]**.
 
 ![Le catalogue de sources sur Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
@@ -79,7 +79,7 @@ L’étape **[!UICONTROL Select data]** s’affiche, vous permettant de saisir l
 
 | Champ | Description |
 | --- | --- |
-| [!UICONTROL ad_account_id] | Identifiant de votre compte publicitaire [!DNL Pinterest Ads]. Reportez-vous au guide [[!DNL Pinterest]  sur la recherche d’identifiants dans Ads Manager ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) si vous avez besoin de conseils. |
+| [!UICONTROL ad_account_id] | Identifiant de votre compte publicitaire [!DNL Pinterest Ads]. Reportez-vous au guide [[!DNL Pinterest]  sur la recherche d’identifiants dans Ads Manager &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) si vous avez besoin de conseils. |
 | [!UICONTROL object_type] | Sélectionnez l’une des **campagnes**, **groupes publicitaires** ou **annonces** selon l’API [!DNL Pinterest] Analytics auprès de laquelle vous souhaitez obtenir des informations. |
 | [!UICONTROL object_ids] | Identifiants de l’objet sélectionné. Accédez à la page [!DNL Pinterest] de **Pinterest Business Hub** > **Résumé du compte publicitaire** > **Campagnes** / **Groupes publicitaires** / **Publicités** et copiez les identifiants requis mentionnés juste en dessous de chacun de leurs noms. |
 
@@ -108,7 +108,7 @@ Lors de la planification de votre flux de données [!DNL Pinterest Ads] pour l�
 | `Day` | 1 |
 | `Hour` | 24 |
 
-Pour plus d’informations sur la planification de votre flux de données [!DNL Pinterest Ads], consultez la section [Mécanismes de sécurisation de la présentation [!DNL Pinterest Ads] ](../../../../connectors/advertising/pinterest-ads.md#guardrails).
+Pour plus d’informations sur la planification de votre flux de données [!DNL Pinterest Ads], consultez la section [Mécanismes de sécurisation de la présentation [!DNL Pinterest Ads] &#x200B;](../../../../connectors/advertising/pinterest-ads.md#guardrails).
 
 Une fois que vous avez fourni les valeurs de votre planning, sélectionnez **[!UICONTROL Next]**.
 
