@@ -78,7 +78,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit sur cette page, des avantages de l’utilisation de la fonctionnalité d’exportation du jeu de données et de certains cas d’utilisation suggérés.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448820?captions=fre_fr)
 
 ## Destinations prises en charge {#supported-destinations}
 

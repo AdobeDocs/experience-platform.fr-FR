@@ -53,7 +53,7 @@ Une fois qu’un sandbox est sélectionné, l’écran actualise le sandbox que 
 
 La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430301/?captions=fre_fr&quality=12&learn=on)
 
 Pour créer un nouveau sandbox, sélectionnez **[!UICONTROL Create sandbox]** dans le coin supérieur droit de l’écran.
 

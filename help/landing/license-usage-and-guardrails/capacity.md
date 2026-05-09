@@ -234,7 +234,7 @@ Vous pouvez résoudre vos violations de débit de segmentation Edge en adoptant 
 
 La vidéo suivante présente un aperçu de la capacité.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475275/?captions=fre_fr&learn=on&enablevpops)
 
 ## Questions fréquentes {#faq}
 
