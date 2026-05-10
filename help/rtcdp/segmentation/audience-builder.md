@@ -6,7 +6,7 @@ badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.a
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1167'
 ht-degree: 9%
 
 ---

@@ -6,7 +6,7 @@ description: Découvrez comment les libellés d’utilisation des données sont 
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '827'
 ht-degree: 88%
 
 ---
@@ -51,7 +51,7 @@ Pour savoir comment des contrôles d‘exportation de données spécifiques se m
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Instructions"
->abstract="<ul><li>Étiquetez et classez les champs et segments XDM dont vous souhaitez restreindre l’accès.</li><li>Étiquetez les rôles et définissez les restrictions applicables aux membres de ce rôle.</li><li>Créez des stratégies et associez les libellés sur les objets libellés, tels que les champs et les segments XDM, aux libellés sur les rôles. Si les libellés correspondent, un accès autorisé ou restreint peut être défini.</li></ul>"
+>abstract="<ul><li>Étiquetez et classez les segments et champs XDM dont vous souhaitez restreindre l’accès.</li><li>Étiquetez les rôles et définissez les restrictions applicables aux personnes membres de ce rôle.</li><li>Créez des stratégies et associez les libellés sur les objets libellés, tels que les champs et les segments XDM, aux libellés sur les rôles. Si les libellés correspondent, un accès autorisé ou restreint peut être défini.</li></ul>"
 
 Vous pouvez gérer les libellés d’utilisation des données à l’aide des API [!DNL Experience Platform] ou de l’interface utilisateur. Consultez les sous-sections ci-dessous pour plus de détails sur chaque option.
 
@@ -61,7 +61,7 @@ L’espace de travail **[!UICONTROL Policies]** de l’interface utilisateur de 
 
 >[!IMPORTANT]
 >
->Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur d’Experience Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la section sur la [migration des libellés précédemment appliqués](../e2e.md#migrate-labels) pour connaitre la procédure à suivre.
+>Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur d’Experience Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Voir la section sur la [migration des libellés précédemment appliqués](../e2e.md#migrate-labels) pour obtenir des instructions sur la manière de procéder.
 
 ### Utilisation des API
 

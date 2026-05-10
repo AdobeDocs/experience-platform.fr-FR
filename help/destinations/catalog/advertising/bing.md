@@ -5,8 +5,8 @@ description: Avec la destination de connexion Microsoft Bing, vous pouvez exécu
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 31%
+source-wordcount: '1077'
+ht-degree: 32%
 
 ---
 
@@ -92,7 +92,7 @@ Lors de la configuration de la destination, vous devez fournir les informations 
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -144,7 +144,7 @@ Ces mappages sont grisés et en lecture seule. Dans cette étape, vous n’avez 
 
 >[!IMPORTANT]
 >
->**ECID est requis pour que l’exportation réussisse.** Les profils sans ECID ou sans mappage de synchronisation des identifiants entre ECID et l’Advertising ID Microsoft ne seront pas exportés.
+>**ECID est requis pour que l’exportation réussisse.** Les profils sans ECID ou sans mappage de synchronisation des identifiants entre ECID et Microsoft Advertising ID ne seront pas exportés.
 
 ### Exemples d’activation {#activation-examples}
 

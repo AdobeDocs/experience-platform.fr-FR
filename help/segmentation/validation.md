@@ -4,7 +4,7 @@ description: DÃ©couvrez comment Experience Platform valide vos audiences pour sâ
 exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
 source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1635'
 ht-degree: 14%
 
 ---

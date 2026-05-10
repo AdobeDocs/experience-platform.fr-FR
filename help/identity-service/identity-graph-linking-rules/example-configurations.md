@@ -4,7 +4,7 @@ description: Découvrez les différents types d’implémentation que vous pouve
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '2005'
 ht-degree: 8%
 
 ---

@@ -1,11 +1,11 @@
 ---
-title: Audiences du compte
+title: Audiences de compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler les profils de compte dans les destinations en aval.
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 53bc79a580641e662d6c51fbf2b0c0f51eb6ddb4
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 23%
+source-wordcount: '1471'
+ht-degree: 25%
 
 ---
 

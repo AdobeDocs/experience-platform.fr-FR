@@ -5,7 +5,7 @@ description: Découvrez comment exporter des jeux de données d’Adobe Experien
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2966'
+source-wordcount: '3039'
 ht-degree: 23%
 
 ---
@@ -152,7 +152,7 @@ Utilisez les cases à cocher situées à gauche des noms des jeux de données po
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Options d’exportation de fichiers pour les jeux de données"
->abstract="Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis la dernière exportation. <br> La première exportation de fichier incrémentiel inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis le premier export. <br> Sélectionnez **Exporter les fichiers complets** pour exporter l’abonnement complet de chaque jeu de données à chaque export. "
+>abstract="Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis le dernier export. <br> Le premier export de fichiers incrémentiels inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis le premier export. <br> Sélectionnez **Exporter les fichiers complets** pour exporter l’abonnement complet de chaque jeu de données à chaque export. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"

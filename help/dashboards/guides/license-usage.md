@@ -6,8 +6,8 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: a4381d034463571d2f69e9a2b04b7fbec1828cb9
 workflow-type: tm+mt
-source-wordcount: '3421'
-ht-degree: 39%
+source-wordcount: '3763'
+ht-degree: 41%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="Lignes CJA prédites disponibles"
->abstract="Les lignes CJA disponibles désignent les lignes de données moyennes quotidiennes disponibles pour analyse dans Customer Journey Analytics.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
+>abstract="Les lignes disponibles CJA désignent les lignes de données moyennes quotidiennes disponibles pour analyse dans Customer Journey Analytics.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
@@ -128,7 +128,7 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
 >title="Lignes CJA prédites disponibles"
->abstract="Les lignes CJA disponibles désignent les lignes de données moyennes quotidiennes disponibles pour analyse dans Customer Journey Analytics.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
+>abstract="Les lignes CJA disponibles désignent les lignes de données moyennes quotidiennes disponibles pour analyse dans Customer Journey Analytics.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
@@ -260,7 +260,7 @@ Gérez et optimisez vos ressources de licence de manière proactive avec des pr�
 
 >[!IMPORTANT]
 >
->Les prévisions sont actualisées chaque semaine, le vendredi. La date d’actualisation est incluse dans une icône d’informations (![Cette icône d’informations.](../images/license-usage/info-icon.png)) au-dessus du titre de la colonne.
+>Les prévisions sont actualisées chaque semaine, le vendredi. La date d’actualisation est incluse dans une icône d’information (![Cette icône d’information.](../images/license-usage/info-icon.png)). au-dessus du titre de la colonne.
 
 Affichez un résumé de l’utilisation des droits d’un produit dans l’onglet [!UICONTROL Product] sous le tableau [!UICONTROL Core products] .
 
@@ -268,7 +268,7 @@ Affichez un résumé de l’utilisation des droits d’un produit dans l’ongle
 
 >[!NOTE]
 >
->Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle par votre organisation et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre organisation avec Adobe.
+>Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence obtenue par votre entreprise auprès d’Adobe.
 
 Le pourcentage d&#39;utilisation prévu est déterminé comme suit :
 
@@ -300,9 +300,9 @@ Les mesures qui s’affichent dans votre tableau de bord dépendent des produits
 | Mesure | Description |
 |---|---|
 | [!UICONTROL AI credits] | Nombre de crédits d’IA consommés par votre organisation lors de l’utilisation des agents Adobe Experience Platform. Les crédits AI sont utilisés pendant la période d’essai liée à l’utilisation des agents Adobe Experience Platform et lorsque une licence est accordée pour l’utilisation d’agents payants. Cette mesure vous permet de surveiller la consommation de crédit de l’IA par rapport à vos droits disponibles. |
-| [!UICONTROL Audience Activation Size] | Taille totale des profils activés vers une destination basée sur des fichiers au cours d’une année. Note : ceci n’inclut pas les profils envoyés par le biais de destinations de streaming. |
+| [!UICONTROL Audience Activation Size] | La taille totale des profils activés vers une destination basée sur des fichiers au cours d’une année. Remarque : les profils envoyés par le biais de destinations de diffusion en streaming ne sont pas inclus. |
 | [!UICONTROL Addressable Audience] | Ensemble de profils de personne dans le profil client en temps réel que votre entreprise est autorisée à utiliser, y compris les profils directement identifiables et pseudonymes. Ces profils peuvent contenir des attributs, des comportements et des données d’appartenance à un segment. Les volumes de profil sont calculés à l’aide du graphique d’identités déterministe par défaut de Adobe Experience Platform et sont considérés comme une fonction partagée. |
-| [!UICONTROL Adhoc Query Service Users Packs] | Module complémentaire pour augmenter vos droits d’utilisateurs et utilisatrices simultanés autorisés du service de requête de cinq personnes simultanées supplémentaires du service de requête et d’une requête ad hoc supplémentaire exécutée simultanément par pack. Plusieurs packs d’utilisateurs et utilisatrices de requêtes ad hoc supplémentaires peuvent être sous licence. |
+| [!UICONTROL Adhoc Query Service Users Packs] | Un module complémentaire pour augmenter vos droits d’utilisateurs Query Service simultanés autorisés de cinq utilisateurs Query Service simultanés supplémentaires et d’une requête ad hoc supplémentaire en cours d’exécution simultanée par pack. Plusieurs packs d’utilisateurs de requêtes ad hoc supplémentaires peuvent être sous licence. |
 | [!UICONTROL Average profile richness] | **Obsolète** - La somme de toutes les données de production stockées à tout moment dans le service de profil Hub, divisée par cinq fois le nombre de profils professionnels autorisés. [!UICONTROL Average profile richness] est une fonctionnalité partagée. |
 | [!UICONTROL CJA Rows Available] | Lignes de données moyennes par jour disponibles pour analyse dans Customer Journey Analytics. |
 | [!UICONTROL Computed Attributes] | Données comportementales de profil agrégées basées sur des événements d’expérience convertis en attribut de profil et pouvant être inclus dans un profil de personne. |
@@ -316,7 +316,7 @@ Les mesures qui s’affichent dans votre tableau de bord dépendent des produits
 | [!UICONTROL Number of Sandboxes] | Nombre de séparations logiques au sein de votre instance de tout service à la demande Adobe qui accède aux données et opérations d’isolation d’Adobe Experience Platform. |
 | [!UICONTROL Profile Richness No of Packs] | Augmentation de votre volume total de données autorisé de 25 Ko par profil pour chaque pack de richesse de profil supplémentaire. |
 | [!UICONTROL Query Service Compute Hours] | Mesure du temps nécessaire aux moteurs de service de requête pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée. |
-| [!UICONTROL Streaming Segmentation No of Packs] | Les packs mettent à jour l’appartenance à un segment pour un profil de personne lorsque de nouvelles données entrent dans le service de segmentation par le biais d’un flux de streaming. L’appartenance au segment est évaluée en fonction des attributs de profil de la personne actuelle et de la valeur de l’événement en cours, sans tenir compte du comportement historique. La segmentation en streaming est une fonctionnalité partagée. |
+| [!UICONTROL Streaming Segmentation No of Packs] | Les packs mettent à jour l’appartenance à un segment pour un profil de personne au fur et à mesure que de nouvelles données entrent dans le service de segmentation par le biais d’un flux de diffusion en continu. L’appartenance à un segment est évaluée en fonction des attributs de profil de la personne actuelle et de la valeur de l’événement actuel, sans prendre en compte le comportement historique. La segmentation en flux continu est une fonctionnalité partagée. |
 | [!UICONTROL Total Data Volume] | Quantité totale de données disponibles pour le profil client en temps réel à utiliser dans les workflows d’engagement. Le volume total de données est calculé à l’aide de la formule suivante : **Volume total de données = Audience adressable × Richesse moyenne du profil**. Cette mesure reflète les données stockées uniquement dans le magasin de profils et exclut le stockage du lac de données. Il offre une vue plus ciblée des données relatives à l’engagement basé sur les profils. Pour en savoir plus, consultez les [questions fréquentes sur le volume total de données](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 | [!UICONTROL Total Volume of Data Egress] | Volume annuel cumulé de données exportées de Adobe Experience Platform vers des entrepôts de données tiers. |
 
@@ -326,7 +326,7 @@ Les mesures qui s’affichent dans votre tableau de bord dépendent des produits
 >
 >Vous pouvez vérifier vos droits de licence dans votre commande client pour calculer des mesures telles que votre « Allocation de stockage ».<br>Par exemple,<ul><li>Allocation de stockage = Nombre de « profils autorisés » dans votre contrat X Richesse moyenne du profil</li></ul>
 
-La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation de description du produit appropriée :
+La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par l’entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation de description du produit appropriée :
 
 | Licence | Description du produit |
 | --- | --- |

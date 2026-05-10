@@ -6,7 +6,7 @@ description: Découvrez comment définir des énumérations et les valeurs sugg�
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1227'
 ht-degree: 8%
 
 ---

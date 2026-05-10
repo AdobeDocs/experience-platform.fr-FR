@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
-source-git-commit: b4f6fac2bdd0365130aada34e7e0932303c6300a
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 59%
+source-wordcount: '401'
+ht-degree: 56%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 59%
       * [Tutoriel de bout en bout](./b2b-tutorial.md)
       * [Barrières de sécurité de l’édition B2B de Real-Time CDP](b2b-guardrails.md)
       * [Mises à niveau de l’architecture de Real-Time CDP B2B edition](b2b-architecture-upgrade.md)
-   * [REAL-TIME CDP MCP](rtcdp-mcp.md)
+   * {hide-from-toc}[Real-Time CDP MCP](rtcdp-mcp.md)
 * Audience Manager et Real-Time CDP {#evolution}
    * [Évolution à partir d’Audience Manager](aam-to-rtcdp.md)
 * Profils de compte {#account}
@@ -48,9 +48,9 @@ ht-degree: 59%
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)
 * Mécanismes de sécurisation {#guardrails}
    * [Présentation des mécanismes de sécurisation de Real-Time CDP](guardrails/overview.md)
-   * [Mécanismes de sécurisation pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=fr){target="_blank"}
+   * [Barrières de sécurité pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=fr){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
-   * [Mécanismes de sécurisation pour  [!DNL Real-Time Customer Profile]  données et la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
+   * [Mécanismes de sécurisation pour les  [!DNL Real-Time Customer Profile]  et la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Identity Service]  données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=fr){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=fr){target="_blank"}
    * [Mécanismes de sécurisation pour l’activation des données via les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=fr){target="_blank"}
@@ -90,5 +90,5 @@ ht-degree: 59%
       * [Faire évoluer la valeur client unique vers la valeur de durée de vie](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Rétablir l’engagement de vos clients de manière intelligente : exemples Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
-* [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)

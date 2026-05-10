@@ -6,8 +6,8 @@ description: Adobe Experience Platform Query Service fournit une interface utili
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 6%
+source-wordcount: '2071'
+ht-degree: 7%
 
 ---
 
@@ -36,13 +36,13 @@ La section **[!UICONTROL Expiring credentials]** fournit les informations suivan
 - **[!UICONTROL Port]** : numéro de port de l’hôte auquel se connecter.
 - **[!UICONTROL Database]** : nom de la base de données à laquelle connecter un client.
 - **[!UICONTROL Username]** : nom d’utilisateur utilisé pour la connexion à Query Service.
-- **[!UICONTROL Password]** : mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![&#x200B; Icône de copie .](/help/images/icons/copy.png)) pour copier vos informations d’identification complètes et non hachées dans le presse-papiers.
+- **[!UICONTROL Password]** : mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![Icône de copie.](/help/images/icons/copy.png)). pour copier vos informations d’identification complètes et non hachées dans le presse-papiers.
 - **[!UICONTROL PSQL command]** : commande qui a inséré automatiquement toutes les informations pertinentes pour vous connecter à Query Service à l’aide de PSQL sur la ligne de commande.
 - **[!UICONTROL Expires]** : date et heure d’expiration des informations d’identification arrivant à expiration. La durée de validité par défaut du jeton est de 24 heures, mais elle peut être modifiée dans les paramètres avancés d’Admin Console.
 
 >[!TIP]
 >
->Pour modifier la durée de vie de la session de votre connexion d’informations d’identification arrivant à expiration à Query Service, accédez à [Admin Console](https://adminconsole.adobe.com/) et sélectionnez les options à l’écran suivantes : **Paramètres** > **Confidentialité et sécurité** > **Paramètres d’authentification** > **Paramètres avancés** > **Durée de vie de session maximale**.
+>Pour modifier la durée de vie de la session de votre connexion d’informations d’identification arrivant à expiration à Query Service, accédez à [&#128279;](https://adminconsole.adobe.com/) et sélectionnez les options à l’écran suivantes : **Paramètres** > **Confidentialité et sécurité** > **Paramètres d’authentification** > **Paramètres avancés** > **Durée de vie de session maximale**.
 >
 >![Onglet Paramètres d’Admin Console avec Confidentialité et sécurité, Paramètres d’authentification et Durée de vie maximale de la session mis en surbrillance.](../images/ui/credentials/max-session-life.png)
 >
@@ -66,7 +66,7 @@ Pour accéder à vos données Customer Journey Analytics dans Power BI ou Tablea
 >
 >Lorsque vous connectez Power BI ou Tableau à Customer Journey Analytics, le droit « sessions simultanées » de Query Service est utilisé. Si des sessions et des requêtes supplémentaires sont requises, il est possible d’acheter un module complémentaire de pack d’utilisateurs de requêtes ad hoc supplémentaire pour obtenir cinq sessions simultanées supplémentaires et une requête simultanée supplémentaire.
 
-Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[&#x200B; consultez le guide de création de requêtes &#x200B;](./user-guide.md#query-authoring)Query Editor).
+Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[&#128279;](./user-guide.md#query-authoring) consultez le guide de création de requêtes Query Editor).
 
 Consultez le guide d’extension [BI](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
 
@@ -88,21 +88,21 @@ Vous pouvez utiliser des informations d’identification non expirantes pour con
 >Les informations d’identification non expirantes présentent les limites suivantes :
 >
 >- Les utilisateurs doivent se connecter avec leur nom d’utilisateur et leur mot de passe au format `{technicalAccountId}:{credential}`. Vous trouverez plus d’informations dans la section [Générer des informations d’identification](#generate-credentials).
->- Par défaut, les informations d’identification sans date d’expiration sont autorisées à exécuter uniquement des requêtes `SELECT`. Pour exécuter des requêtes `CTAS` ou `ITAS`, ajoutez manuellement les autorisations « Gérer le jeu de données » et « Gérer les schémas » au rôle associé aux informations d’identification non expirantes. L’autorisation « Gérer les schémas » se trouve sous la section « Modélisation des données » et l’autorisation « Gérer les jeux de données » se trouve sous la section « Gestion des données » de [Adobe Developer Console](https://developer.adobe.com/console/).
+>- Par défaut, les informations d’identification sans date d’expiration sont autorisées à exécuter uniquement des requêtes `SELECT`. Pour exécuter des requêtes `CTAS` ou `ITAS`, ajoutez manuellement les autorisations « Gérer le jeu de données » et « Gérer les schémas » au rôle associé aux informations d’identification non expirantes. L’autorisation « Gérer les schémas » se trouve sous la section « Modélisation des données » et l’autorisation « Gérer les jeux de données » se trouve sous la section « Gestion des données » de [&#128279;](https://developer.adobe.com/console/).
 >- Les performances des clients tiers peuvent être différentes de celles attendues lors de la mise en liste des objets de requête. Par exemple, certains clients tiers tels que [!DNL DB Visualizer] n’afficheront pas le nom de la vue dans le panneau de gauche. Cependant, le nom de la vue est accessible s’il est appelé dans une requête `SELECT`. De même, [!DNL PowerUI] peut ne pas répertorier les vues temporaires créées via SQL pour la sélection lors de la création du tableau de bord.
 
 ### Conditions préalables
 
 Avant de pouvoir générer des informations d’identification non expirantes, vous devez effectuer les étapes suivantes dans Adobe Admin Console :
 
-1. Connectez-vous à [Adobe Admin Console](https://adminconsole.adobe.com/) et sélectionnez l’organisation appropriée dans la barre de navigation supérieure.
+1. Connectez-vous à [&#128279;](https://adminconsole.adobe.com/) et sélectionnez l’organisation appropriée dans la barre de navigation supérieure.
 2. [Sélectionnez un profil de produit.](../../access-control/ui/browse.md)
 3. [Configurez les autorisations **Sandbox** et **Gérer l’intégration de Query Service** pour le profil de produit](../../access-control/ui/permissions.md).
 4. [Ajoutez un nouvel utilisateur à un profil de produit](../../access-control/ui/users.md) afin qu’il se voit accorder ses autorisations configurées.
 5. [Ajoutez l’utilisateur en tant qu’administrateur de profil de produit](https://helpx.adobe.com/fr/enterprise/using/manage-product-profiles.html) pour autoriser la création d’un compte pour tout profil de produit actif.
 6. [Ajoutez l’utilisateur en tant que développeur de profil de produit](https://helpx.adobe.com/fr/enterprise/using/manage-developers.html) afin de créer une intégration.
 
-Après ces étapes, les autorisations requises sont configurées dans [Adobe Developer Console](https://developer.adobe.com/console/) pour que vous puissiez générer des informations d’identification OAuth de serveur à serveur et utiliser les fonctions d’informations d’identification expirantes ou non expirantes.
+Après ces étapes, les autorisations requises sont configurées dans [&#128279;](https://developer.adobe.com/console/) pour que vous puissiez générer des informations d’identification OAuth de serveur à serveur et utiliser les fonctions d’informations d’identification expirantes ou non expirantes.
 
 Pour plus d’informations sur l’attribution d’autorisations, consultez la [documentation sur le contrôle d’accès](../../access-control/home.md).
 
@@ -184,7 +184,7 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour établi
 | **Port** | Port du serveur/hôte auquel vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non expirantes. Elle se trouve sous **[!UICONTROL Port]** dans la section [!UICONTROL EXPIRING CREDENTIALS].</ul></li> | `80` |
 | **Base de données** | Base de données à laquelle vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non expirantes. Elle se trouve sous **[!UICONTROL Database]** dans la section [!UICONTROL EXPIRING CREDENTIALS]. </ul></li> | `prod:all` |
 | **Nom d’utilisateur** | Nom d’utilisateur de l’utilisateur qui se connecte au client externe. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les autres. Elle se présente sous la forme d’une chaîne alphanumérique avant `@AdobeOrg`. Cette valeur se trouve sous **[!UICONTROL Username]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **Mot de passe** | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, celles-ci se trouvent sous **[!UICONTROL Password]** dans la section [!UICONTROL EXPIRING CREDENTIALS] .</li><li>Si vous utilisez des informations d’identification non expirantes, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Un mot de passe d’identification arrivant à expiration comporte plus d’un millier de caractères alphanumériques. Aucun exemple ne sera donné.</li><li>Un mot de passe d’identification non expirant est le suivant :<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **Mot de passe** | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, celles-ci se trouvent sous **[!UICONTROL Password]** dans la section [!UICONTROL EXPIRING CREDENTIALS] .</li><li>Si vous utilisez des informations d’identification non expirantes, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Un mot de passe d’identification arrivant à expiration comporte plus d’un millier de caractères alphanumériques. Aucun exemple ne sera donné.</li><li>Un mot de passe d’identification non expirant est le suivant :<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 

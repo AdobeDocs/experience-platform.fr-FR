@@ -1,65 +1,64 @@
 ---
-title: Groupe de champs du schéma de destination des médicaments
-description: En savoir plus sur le groupe de champs Schéma de dépenses de médicaments .
+title: Groupe de champs du schéma de distribution des médicaments
+description: Découvrez le groupe de champs du schéma Distribution de médicaments .
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
-hidefromtoc: true
 exl-id: e897c4e0-23ad-4d79-834f-cfbe2dbec771
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 4%
+source-wordcount: '633'
+ht-degree: 3%
 
 ---
 
-# Groupe de champs de schéma [!UICONTROL Dépense de médicaments]
+# [!UICONTROL Medication Dispense] groupe de champs de schéma
 
-[!UICONTROL Dépense de médicaments] est un groupe de champs de schéma standard pour la [[!DNL Medication] classe](../../../classes/medication.md), la [[!DNL XDM Individual Profile] classe](../../../classes/individual-profile.md) et la [[!DNL Provider class]](../../../classes/provider.md). Il fournit un seul champ de type objet `healthcareMedicationDispense` qui capture les informations sur un médicament qui doit être ou qui a été dispensé pour une personne/un patient nommé.
+[!UICONTROL Medication Dispense] est un groupe de champs de schéma standard pour la [[!DNL Medication] classe](../../../classes/medication.md), la [[!DNL XDM Individual Profile] classe](../../../classes/individual-profile.md) et la [[!DNL Provider class]](../../../classes/provider.md). Il fournit un `healthcareMedicationDispense` de champ de type objet unique qui recueille les informations sur un médicament qui doit être ou a été délivré pour une personne/patient nommé(e).
 
-![Structure de groupe de champs](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
+![Structure du groupe de champs](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Autorisation De La Prescription] | `authorizingPrescription` | Tableau de [[!UICONTROL Référence]](../data-types/reference.md) | L&#39;ordonnance qui permet de délivrer l&#39;ordonnance. |
-| [!UICONTROL Basé Sur] | `basedOn` | Tableau de [[!UICONTROL Référence]](../data-types/reference.md) | Le plan sur lequel se fonde la distribution du médicament. |
-| [!UICONTROL Catégorie] | `category` | Tableau de [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | La catégorie sous laquelle les médicaments sont délivrés, par exemple la catégorie juridique des médicaments ou la classification des médicaments. |
-| [!UICONTROL Jours d’approvisionnement] | `daysSupply` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | Le nombre de jours pendant lesquels le médicament fournira au patient. |
-| [!UICONTROL Destination] | `destination` | [[!UICONTROL Référence]](../data-types/reference.md) | L’installation ou le lieu où le médicament a été ou sera expédié, dans le cadre de l’événement de délivrance. |
-| [!UICONTROL Instruction de publication] | `dosageInstruction` | Tableau de [[!UICONTROL Dosage]](../data-types/dosage.md) | Décrit comment le médicament doit être utilisé par le patient. |
-| [!UICONTROL Rencontre] | `encounter` | [[!UICONTROL Référence]](../data-types/reference.md) | La rencontre qui définit le contexte de cet événement. |
-| [!UICONTROL Historique des événements] | `eventHistory` | Tableau de [[!UICONTROL Référence]](../data-types/reference.md) | Résumé des événements qui se sont produits autour de la diffusion. |
-| [!UICONTROL Identifiant] | `identifier` | Tableau de [[!UICONTROL Identifiant]](../data-types/identifier.md) | Identifiants associés à la diffusion. Les identifiants doivent être définis par des processus d’entreprise et/ou utilisés pour y faire référence lorsqu’une référence URL directe n’est pas appropriée. |
-| [!UICONTROL Emplacement] | `location` | [[!UICONTROL Référence]](../data-types/reference.md) | L&#39;emplacement physique principal où le médicament a été dispensé. |
-| [!UICONTROL Medication] | `medication` | [[!UICONTROL Référence codeable]](../data-types/codeable-reference.md) | Identifie le médicament demandé. Il doit s’agir d’un lien vers une ressource qui représente les détails du médicament, ou d’un code qui identifie le médicament. |
-| [!UICONTROL Raison non exécutée] | `notPerformedReason` | [[!UICONTROL Référence codeable]](../data-types/codeable-reference.md) | La raison pour laquelle le médicament n&#39;a pas été dispensé. |
-| [!UICONTROL Remarque] | `note` | Tableau de [[!UICONTROL Annotation]](../data-types/annotation.md) | Informations supplémentaires sur la diffusion. |
-| [!UICONTROL Partie De] | `partOf` | Tableau de [[!UICONTROL Référence]](../data-types/reference.md) | La procédure ou la demande de médicament qui a déclenché la délivrance. |
-| [!UICONTROL Performer] | `performer` | Tableau d’objets | Indique qui ou quoi a exécuté l’événement de diffusion. Pour plus d’informations, consultez la [section ci-dessous](#performer) . |
-| [!UICONTROL Quantity] | `quantity` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | La quantité de médicaments délivrés, y compris l&#39;unité de mesure. |
-| [!UICONTROL Receiver] | `receiver` | Tableau de [[!UICONTROL Référence]](../data-types/reference.md) | Identifie la personne qui a pris le médicament ou l’emplacement où il a été livré. |
-| [!UICONTROL Objet] | `subject` | [[!UICONTROL Référence]](../data-types/reference.md) | Lien vers une ressource représentant la personne ou le groupe à qui le médicament sera donné. |
-| [!UICONTROL Substitution] | `substitution` | Objet | Indique si la substitution a été faite ou non dans le cadre de la livraison. Contient quatre propriétés : <li>`wasSubstituted` : valeur booléenne true si le distributeur a demandé une substitution.</li> <li>`type` : valeur [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) qui fournit un code indiquant si une substitution a été effectuée.</li> <li>`reason` : un tableau de valeurs [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) qui contient les raisons de la substitution.</li> <li>`responsibleParty` : valeur [[!UICONTROL Reference]](../data-types/reference.md) qui fournit la personne ou la partie responsable de la substitution. </li> |
-| [!UICONTROL Informations complémentaires] | `supportingInformation` | Tableau de [[!UICONTROL Référence]](../data-types/reference.md) | Informations supplémentaires qui soutiennent le traitement dispensé. |
-| [!UICONTROL Type] | `type` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Décrit le type d’événement de diffusion exécuté, par exemple un remplissage d’urgence ou partiel. |
-| [!UICONTROL Enregistré] | `recorded` | DateTime | Date et heure de démarrage de l’activité de diffusion si `whenPrepared` ou `whenHandedOver` n’est pas renseigné. |
-| [!UICONTROL Instruction de publication affichée] | `renderedDosageInstruction` | Chaîne | Représentation complète de la dose incluse dans toutes les instructions de dosage. À utiliser lorsque plusieurs instructions posologiques sont incluses pour représenter des doses complexes, telles que l’augmentation ou la réduction de doses. |
-| [!UICONTROL Statut] | `status` | Chaîne | État de la diffusion. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues suivantes. <li> `preperation` </li> <li> `in-progress` </li> <li> `cancelled` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `entered-in-error` </li> <li> `stopped` </li> <li> `declined` </li> <li> `unknown` </li> |
-| [!UICONTROL État modifié] | `statusChanged` | DateTime | Date et heure auxquelles l’état de l’enregistrement de diffusion a changé. |
-| [!UICONTROL Lorsqu’il est transféré] | `whenHandedOver` | DateTime | Date et heure auxquelles le médicament administré a été fourni au patient. |
-| [!UICONTROL Lorsqu’il est préparé] | `whenPrepared` | DateTime | Date et heure auxquelles le médicament administré a été emballé et examiné. |
+| [!UICONTROL Authorizing Prescription] | `authorizingPrescription` | Tableau de [[!UICONTROL Reference]](../data-types/reference.md) | Ordre permettant de délivrer la prescription. |
+| [!UICONTROL Based On] | `basedOn` | Tableau de [[!UICONTROL Reference]](../data-types/reference.md) | Le plan sur lequel repose la délivrance du médicament. |
+| [!UICONTROL Category] | `category` | Tableau de [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | La catégorie à laquelle appartient le médicament distribué, par exemple la catégorie légale du médicament ou la classification du médicament. |
+| [!UICONTROL Days Supply] | `daysSupply` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | Nombre de jours pendant lesquels le médicament sera administré au patient. |
+| [!UICONTROL Destintation] | `destination` | [[!UICONTROL Reference]](../data-types/reference.md) | L’installation ou l’emplacement où le médicament a été ou sera expédié dans le cadre de l’événement de distribution. |
+| [!UICONTROL Dosage Instruction] | `dosageInstruction` | Tableau de [[!UICONTROL Dosage]](../data-types/dosage.md) | Décrit comment le médicament doit être utilisé par le patient. |
+| [!UICONTROL Encounter] | `encounter` | [[!UICONTROL Reference]](../data-types/reference.md) | Rencontre qui définit le contexte de cet événement. |
+| [!UICONTROL Event History] | `eventHistory` | Tableau de [[!UICONTROL Reference]](../data-types/reference.md) | Un résumé des événements qui se sont produits autour de la délivrance. |
+| [!UICONTROL Identifier] | `identifier` | Tableau de [[!UICONTROL Identifier]](../data-types/identifier.md) | Identifiants associés à la délivrance. Les identifiants doivent être définis par des processus d’entreprise et/ou utilisés pour s’y référer lorsqu’une référence URL directe n’est pas appropriée. |
+| [!UICONTROL Location] | `location` | [[!UICONTROL Reference]](../data-types/reference.md) | Emplacement physique principal où le médicament a été délivré. |
+| [!UICONTROL Medication] | `medication` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Permet d’identifier le médicament demandé. Il doit s’agir d’un lien vers une ressource qui représente les détails du médicament ou d’un code qui identifie le médicament. |
+| [!UICONTROL Not Performed Reason] | `notPerformedReason` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | La raison pour laquelle le médicament n’a pas été délivré. |
+| [!UICONTROL Note] | `note` | Tableau de [[!UICONTROL Annotation]](../data-types/annotation.md) | Informations supplémentaires sur la délivrance. |
+| [!UICONTROL Part Of] | `partOf` | Tableau de [[!UICONTROL Reference]](../data-types/reference.md) | La procédure ou la demande de médicament qui a déclenché la délivrance. |
+| [!UICONTROL Performer] | `performer` | Tableau d’objets | Indique qui ou qui a effectué l’événement de distribution. Pour plus d’informations, consultez la [section ci-dessous](#performer). |
+| [!UICONTROL Quantity] | `quantity` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | La quantité de médicaments qui a été délivrée, y compris l’unité de mesure. |
+| [!UICONTROL Receiver] | `receiver` | Tableau de [[!UICONTROL Reference]](../data-types/reference.md) | Indique la personne qui a pris le médicament ou l’endroit où le médicament a été livré. |
+| [!UICONTROL Subject] | `subject` | [[!UICONTROL Reference]](../data-types/reference.md) | Lien vers une ressource représentant la personne ou le groupe auquel le médicament sera administré. |
+| [!UICONTROL Substitution] | `substitution` | Objet | Indique si la substitution a été effectuée ou non dans le cadre de la distribution. Contient quatre propriétés : <li>`wasSubstituted` : valeur booléenne qui est vraie si le distributeur a demandé une substitution.</li> <li>`type` : valeur [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) qui fournit un code indiquant si une substitution a été effectuée.</li> <li>`reason` : tableau de valeurs [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) qui contient le ou les motifs de la substitution.</li> <li>`responsibleParty` : valeur de [[!UICONTROL Reference]](../data-types/reference.md) qui fournit la personne ou la partie responsable de la substitution. </li> |
+| [!UICONTROL Supporting Information] | `supportingInformation` | Tableau de [[!UICONTROL Reference]](../data-types/reference.md) | Informations supplémentaires à l’appui de la délivrance du médicament. |
+| [!UICONTROL Type] | `type` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Décrit le type d’événement de distribution qui est effectué, tel qu’un remplissage d’urgence ou un remplissage partiel. |
+| [!UICONTROL Recorded] | `recorded` | DateTime | Date et heure auxquelles l&#39;activité de distribution a démarré si `whenPrepared` ou `whenHandedOver` n&#39;est pas renseignée. |
+| [!UICONTROL Rendered Dosage Instruction] | `renderedDosageInstruction` | Chaîne | Représentation complète de la dose incluse dans toutes les instructions posologiques. A utiliser lorsque des instructions posologiques multiples sont incluses pour représenter un dosage complexe tel qu’une augmentation ou une diminution des doses. |
+| [!UICONTROL Status] | `status` | Chaîne | Statut de la distribution. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues suivantes. <li> `preperation` </li> <li> `in-progress` </li> <li> `cancelled` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `entered-in-error` </li> <li> `stopped` </li> <li> `declined` </li> <li> `unknown` </li> |
+| [!UICONTROL Status Changed] | `statusChanged` | DateTime | Date et heure auxquelles le statut de l&#39;enregistrement de distribution a changé. |
+| [!UICONTROL When Handed Over] | `whenHandedOver` | DateTime | Date et heure auxquelles le médicament a été délivré au patient. |
+| [!UICONTROL When Prepared] | `whenPrepared` | DateTime | La date et l’heure auxquelles le médicament délivré a été emballé et examiné. |
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
+Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.schema.json)
 
 ## `performer` {#performer}
 
-`performer` est fourni sous la forme d’un tableau d’objets. La structure de chaque objet est décrite ci-dessous.
+`performer` est fourni sous la forme d’un tableau d’objets . La structure de chaque objet est décrite ci-dessous.
 
-![Structure de l’interprète](../../../images/healthcare/field-groups/medication-dispense/performer.png)
+![structure de l’intervenant](../../../images/healthcare/field-groups/medication-dispense/performer.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Acteur] | `actor` | [[!UICONTROL Référence]](../data-types/reference.md) | Le praticien (ou similaire) qui a effectué l’action. On devrait supposer que l&#39;acteur est le dispensateur du médicament. |
-| [!UICONTROL Fonction] | `function` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Type d’interprète dans la diffusion, par exemple l’initiateur de dates, le programme de package ou le vérificateur final. |
+| [!UICONTROL Actor] | `actor` | [[!UICONTROL Reference]](../data-types/reference.md) | Le praticien (ou un professionnel similaire) qui a effectué l’action. Il faut supposer que l&#39;acteur est le distributeur du médicament. |
+| [!UICONTROL Function] | `function` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Type d’intervenant dans la délivrance, tel que la personne qui a saisi la date, l’emballeur ou le vérificateur final. |

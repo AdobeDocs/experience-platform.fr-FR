@@ -5,8 +5,8 @@ description: Découvrez comment exporter des fichiers à la demande vers des des
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 12%
+source-wordcount: '822'
+ht-degree: 11%
 
 ---
 

@@ -4,8 +4,8 @@ description: Découvrez comment configurer des secrets dans lʼinterface utilisa
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2363'
-ht-degree: 53%
+source-wordcount: '2455'
+ht-degree: 54%
 
 ---
 

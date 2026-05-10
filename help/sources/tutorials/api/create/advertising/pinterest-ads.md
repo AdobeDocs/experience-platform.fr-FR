@@ -3,11 +3,10 @@ title: Créer une connexion source et un flux de données pour Pinterest Ads à 
 description: Découvrez comment connecter Adobe Experience Platform à Pinterest Ads à l’aide de l’API Flow Service.
 badge: Beta
 hide: true
-hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '2278'
+source-wordcount: '2370'
 ht-degree: 52%
 
 ---

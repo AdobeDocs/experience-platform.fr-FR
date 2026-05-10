@@ -3,11 +3,10 @@ title: Découverte des champs XDM avec l’assistant AI
 description: Lisez ce document pour savoir comment utiliser l’assistant AI pour la découverte de champs du modèle de données d’expérience (XDM).
 badge: Alpha
 hide: true
-hidefromtoc: true
 exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
-source-git-commit: 58cf5d90d70239a4b47c600bd3a7a37129b07dc3
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '352'
 ht-degree: 1%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est en Alpha et peut ne pas être disponible pour votre organisation. Pour participer au programme d’Alpha et accéder à cette fonctionnalité, contactez l’équipe chargée de votre compte d’Adobe.
+>Cette fonctionnalité se trouve dans Alpha et peut ne pas être disponible pour votre organisation. Pour participer au programme Alpha et accéder à cette fonctionnalité, contactez l’équipe chargée de votre compte Adobe.
 
 Vous pouvez utiliser l’assistant d’IA pour rechercher et découvrir des champs du modèle de données d’expérience (XDM) que vous pouvez ensuite utiliser pour créer des audiences ciblées dans Experience Platform.
 

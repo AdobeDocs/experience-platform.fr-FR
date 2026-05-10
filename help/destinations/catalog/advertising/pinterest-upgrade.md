@@ -2,11 +2,10 @@
 title: Migration de la destination Pinterest vers la nouvelle API. Action du client requise.
 description: Pinterest rend obsolète l’API de l’annonceur v4 actuellement utilisée par la destination Pinterest dans Real-Time CDP. Découvrez vos éléments d’action pour passer facilement à la nouvelle API sans interrompre vos campagnes Pinterest.
 hide: true
-hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---

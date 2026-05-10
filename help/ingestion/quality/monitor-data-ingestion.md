@@ -6,8 +6,8 @@ description: Ce guide d’utilisation fournit des étapes détaillées sur la ma
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 34%
+source-wordcount: '655'
+ht-degree: 35%
 
 ---
 
@@ -30,7 +30,7 @@ Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos donn�
 >
 >Pour calculer le nombre total d’événements à une date particulière, utilisez l’expression : `total events / day = ingestion rate * 60 * 60 * 24`.
 
-Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Monitoring]** dans le menu de navigation de gauche, puis **[!UICONTROL Streaming end-to-end]**.
+Dans l’[interface utilisateur d’](https://platform.adobe.com), sélectionnez **[!UICONTROL Monitoring]** dans le menu de navigation de gauche, puis **[!UICONTROL Streaming end-to-end]**.
 
 La page de surveillance des **[!UICONTROL Streaming end-to-end]** s’affiche. Cet espace de travail fournit un graphique qui affiche le taux d’événements diffusés en continu reçus par [!DNL Experience Platform], un graphique qui affiche le taux d’événements diffusés qui ont été traités avec succès par [[!DNL Real-Time Customer Profile]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
 

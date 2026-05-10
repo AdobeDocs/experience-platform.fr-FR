@@ -4,7 +4,7 @@ description: Découvrez comment utiliser LiveRamp - Connecteur de distribution p
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2817'
 ht-degree: 42%
 
 ---
@@ -42,7 +42,7 @@ La connexion [!DNL LiveRamp - Distribution] vous permet d’activer des audience
 * [[!DNL Teads]](#teads)
 * [[!DNL WB Discovery]](#wb-discovery)
 
-## Cas d’utilisation {#use-cases}
+## Cas pratiques {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination [!DNL LiveRamp - Distribution], consultez l’exemple de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
@@ -100,10 +100,10 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 
 ![Image de l’interface utilisateur d’Experience Platform affichant l’écran de connexion de destination.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
-* **[!UICONTROL LiveRamp Organization ID]** : ID d’organisation de votre compte LiveRamp (répertorié comme _owner_org_ dans vos informations d’identification LiveRamp fournies).
-* **[!UICONTROL Password]** : mot de passe de votre compte LiveRamp (répertorié comme _secret_key_ dans vos informations d’identification LiveRamp).
+* **[!UICONTROL LiveRamp Organization ID]** : ID d’organisation de votre compte LiveRamp (répertorié comme _owner_ org_ dans vos informations d’identification LiveRamp fournies).
+* **[!UICONTROL Password]** : mot de passe de votre compte LiveRamp (répertorié comme _secret_ key_ dans vos informations d’identification LiveRamp).
 * **[!UICONTROL Token URL]** : URL de votre jeton LiveRamp.
-* **[!UICONTROL Username]** : nom d’utilisateur de votre compte LiveRamp (répertorié comme _account_id_ dans vos informations d’identification fournies par LiveRamp).
+* **[!UICONTROL Username]** : nom d’utilisateur de votre compte LiveRamp (répertorié comme _account_ id_ dans vos informations d’identification fournies par LiveRamp).
 
 ### Configurer les détails de la destination {#destination-details}
 
@@ -116,8 +116,7 @@ Une fois la connexion à votre compte LiveRamp établie, saisissez les informati
 >[!NOTE]
 >
 >Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
-><br>
->Exemple : `LiveRamp - Roku`.
+><br>>Exemple : `LiveRamp - Roku`.
 
 * **[!UICONTROL Description]** : saisissez une description de la destination. Utilisez une description qui vous aide à identifier facilement l’objectif de cette destination.
 * **[!UICONTROL Destination]** : utilisez le menu déroulant pour sélectionner la destination vers laquelle vous souhaitez activer les audiences. La destination que vous sélectionnez ici affecte directement ce que vous voyez à l’écran [paramètres spécifiques à la destination](#destination-settings).
@@ -220,7 +219,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 * **[!UICONTROL Advertiser data destination terms agreement]** : saisissez `I AGREE` pour confirmer l’accusé de réception et l’accord avec les conditions relatives aux données de l’annonceur Disney.
 * **[!UICONTROL Client name]** : saisissez le nom de votre société tel que vous souhaitez qu’il apparaisse au partenaire de destination.
-* **[!UICONTROL Email address]** : saisissez une adresse e-mail associée à une personne. Cette adresse e-mail sert de signature au contrat des conditions générales relatives aux données de l’annonceur.
+* **[!UICONTROL Email address]** : saisissez une adresse e-mail associée à une personne. Cette adresse e-mail sert de signature pour l’accord des conditions de données des annonceurs.
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 

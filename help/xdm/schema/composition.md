@@ -6,8 +6,8 @@ description: Découvrez les schémas du modèle de données d’expérience (XDM
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: e4a30f7e483b90d5420ddcc1caffcee2089eda3f
 workflow-type: tm+mt
-source-wordcount: '4371'
-ht-degree: 24%
+source-wordcount: '4466'
+ht-degree: 25%
 
 ---
 
@@ -44,7 +44,7 @@ Les données pouvant être utilisées dans Experience Platform sont regroupées
 * **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **Données de série temporelle** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 
-Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à ce dernier lors de sa création initiale.
+Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois.
 
 Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un objet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
@@ -66,7 +66,7 @@ Pour en savoir plus sur la manière dont les informations d’identité peuvent 
 Il existe deux manières d’envoyer des données d’identité à Experience Platform :
 
 1. Ajouter des descripteurs d’identité à des champs individuels, par le biais de l’interface utilisateur [Éditeur de schémas](../ui/fields/identity.md) ou à l’aide de l’API [Schema Registry](../api/descriptors.md#create)
-2. En utilisant un champ de [`identityMap`](#identityMap)
+2. En utilisant un champ de [&#128279;](#identityMap)`identityMap`
 
 #### `identityMap` {#identityMap}
 
@@ -136,7 +136,7 @@ Le tableau suivant détaille les modifications prises en charge lors de la modif
 | --- | --- |
 | <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Introduction de nouveaux champs obligatoires*</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer au profil</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation du schéma de la participation au profil</li><li>Modification du champ d’identité principale sur un schéma activé pour Profil et contenant des données ingérées</li></ul> |
 
-\**Reportez-vous à la section ci-dessous pour des considérations importantes concernant [la définition de nouveaux champs obligatoires](#post-ingestion-required-fields).*
+\** Reportez-vous à la section ci-dessous pour des considérations importantes concernant [la définition de nouveaux champs obligatoires](#post-ingestion-required-fields).*
 
 ### Champs obligatoires
 
@@ -257,7 +257,7 @@ Pour obtenir la liste la plus récente des types de données XDM standard dispon
 Un champ est le bloc de création le plus basique d’un schéma. Les champs fournissent des contraintes concernant le type de données qu’ils peuvent contenir en définissant un type de données spécifique. Ces types de données de base définissent un seul champ, tandis que les types de données mentionnés précédemment vous permettent de définir plusieurs sous-champs et de réutiliser la même structure à champs multiples dans différents schémas. Donc, en plus de définir le « type de données » d’un champ comme l’un des types de données défini dans le registre, Experience Platform prend en charge des types scalaires de base comme :
 
 * Chaîne
-* Entier
+* Nombre entier
 * Double
 * Booléen
 * Tableau
@@ -271,8 +271,8 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 * Enum
 * Long
-* Short
-* Byte
+* Court
+* Octet
 * Date
 * Date-time
 * Map

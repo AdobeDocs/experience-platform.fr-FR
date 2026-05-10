@@ -6,7 +6,7 @@ type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '4677'
+source-wordcount: '4708'
 ht-degree: 36%
 
 ---
@@ -448,7 +448,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 Ce widget fournit le nombre total d’audiences prêtes à être activées, en fonction de la politique de fusion choisie appliquée aux données de votre profil.
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Audiences] du tableau de bord [!UICONTROL Browse]. De là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Browse] du tableau de bord [!UICONTROL Audiences]. De là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
 
 ![Widget Audiences.](../images/profiles/audiences.png)
 
@@ -507,7 +507,7 @@ Le widget [!UICONTROL Audiences size] fournit un tableau à deux colonnes qui r�
 
 ![Le widget Taille des audiences.](../images/profiles/audiences-size.png)
 
-Pour afficher des informations complètes sur une audience, sélectionnez un nom d’audience dans la liste fournie pour accéder à la page de [!UICONTROL Audiences] [!UICONTROL Detail]. En outre, en sélectionnant **[!UICONTROL View all audiences]** à la fin du widget, vous pouvez accéder à l’onglet [!UICONTROL Audiences] de [!UICONTROL Browse] pour trouver une audience existante.
+Pour afficher des informations complètes sur une audience, sélectionnez un nom d’audience dans la liste fournie pour accéder à la page de [!UICONTROL Detail] [!UICONTROL Audiences]. En outre, en sélectionnant **[!UICONTROL View all audiences]** à la fin du widget, vous pouvez accéder à l’onglet [!UICONTROL Browse] de [!UICONTROL Audiences] pour trouver une audience existante.
 
 ![Le widget Taille des audiences avec un nom d’audience et le texte Afficher toutes les audiences en surbrillance.](../images/profiles/audiences-size-view-all-audiences.png)
 

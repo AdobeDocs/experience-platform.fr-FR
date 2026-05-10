@@ -6,8 +6,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
-source-wordcount: '2898'
-ht-degree: 39%
+source-wordcount: '2941'
+ht-degree: 38%
 
 ---
 
@@ -99,7 +99,7 @@ Pour plus d’informations, consultez la [documentation sur les points d’entr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu[&#x200B; pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.](/help/destinations/catalog/streaming/ip-address-allow-list.md)
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu[&#128279;](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -260,13 +260,13 @@ Dans tous les cas décrits ci-dessus, seuls les profils pour lesquels des mises 
 >
 >Tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes restent inchangés.
 
-### Ce qui détermine une exportation de données et ce qui est inclus dans l’exportation {#what-determines-export-what-is-included}
+### Ce qui détermine une exportation de données et ce qui est inclus dans l’exportation. {#what-determines-export-what-is-included}
 
 Concernant les données exportées pour un profil donné, il est important de comprendre les deux concepts différents entre *ce qui détermine l’exportation de données vers votre destination d’API HTTP* et *les données incluses dans l’exportation*.
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si le statut de `segmentMembership` d’un profil passe à `realized` ou `exiting` ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’API HTTP, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour lequel le statut du profil a changé à la suite d’un événement de qualification ou de sortie d’audience. Notez que d’autres audiences non mappées pour lesquelles le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que l’audience mappée dans le flux de données d’activation. <br> **Important** : lorsque l’option **[!UICONTROL Include Segment Names]** est activée, les noms de segment ne sont inclus que pour les audiences mappées à la destination. Les audiences non mappées qui apparaissent dans l’exportation n’incluent pas le champ `name`, même si l’option est activée. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (actuellement Experience Platform ne prend pas en charge le mappage d’identité dans la destination de l’API HTTP).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et les audiences mappés servent de repère pour une exportation de destination. Cela signifie que si le statut de `segmentMembership` d’un profil passe à `realized` ou `exiting` ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’API HTTP, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle le statut du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que d’autres audiences non mappées pour lesquelles le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que l’audience mappée dans le flux de données d’activation. <br> **Important** : lorsque l’option **[!UICONTROL Include Segment Names]** est activée, les noms de segment ne sont inclus que pour les audiences mappées à la destination. Les audiences non mappées qui apparaissent dans l’exportation n’incluent pas le champ `name`, même si l’option est activée. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (actuellement Experience Platform ne prend pas en charge le mappage d’identité dans la destination de l’API HTTP).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 

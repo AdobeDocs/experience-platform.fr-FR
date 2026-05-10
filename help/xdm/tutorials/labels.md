@@ -4,7 +4,7 @@ description: Découvrez comment ajouter des libellés d’utilisation des donné
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '747'
 ht-degree: 11%
 
 ---
@@ -23,7 +23,7 @@ Ce tutoriel décrit les étapes à suivre pour ajouter des libellés à un sché
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Éditeur de schémas](../ui/overview.md) : découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur d’Experience Platform.

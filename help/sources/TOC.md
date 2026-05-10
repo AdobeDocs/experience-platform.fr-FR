@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
 source-wordcount: '1115'
-ht-degree: 88%
+ht-degree: 87%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 88%
          - [Guide de migration du mappage ECID](connectors/adobe-applications/marketo/migration.md)
    - Advertising {#advertising}
       - [Connecteur Google Ads](connectors/advertising/ads.md)
-      - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
+      - {hide-from-toc}[Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -98,7 +98,7 @@ ht-degree: 88%
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
    - Partage de données {#data-sharing}
-      - [Deltashare](connectors/data-sharing/deltashare.md)
+      - {hide-from-toc}[Deltashare &#x200B;](connectors/data-sharing/deltashare.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -132,7 +132,7 @@ ht-degree: 88%
    - Créer une connexion de base {#create}
       - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
-         - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
+         - {hide-from-toc}[Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -252,7 +252,7 @@ ht-degree: 88%
          - [Activités personnalisées Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
-         - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
+         - {hide-from-toc}[Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
@@ -313,7 +313,7 @@ ht-degree: 88%
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Résolution d’identité d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
       - Partage de données {#data-sharing}
-         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
+         - {hide-from-toc}[Deltashare &#x200B;](tutorials/ui/create/data-sharing/deltashare.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -322,7 +322,7 @@ ht-degree: 88%
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
-         - [Événements de streaming mobile](tutorials/ui/create/loyalty/kobie-streaming.md)
+         - {hide-from-toc}[Événements de streaming Kobie &#x200B;](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur Source Batch Talon.One](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automatisation du marketing {#marketing-automation}
@@ -361,7 +361,7 @@ ht-degree: 88%
       - [Flux de données de connexion aux paiements](tutorials/ui/dataflow/payments.md)
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
    - [Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur](tutorials/ui/templates.md)
-   - [Filtrer les objets sources](tutorials/ui/filter.md)
+   - {hide-from-toc}[Filtrer les objets sources](tutorials/ui/filter.md)
    - [Ingérer des données chiffrées](tutorials/ui/encryped-ingestion.md)
    - [Ingestion à la demande](tutorials/ui/on-demand-ingestion.md)
    - [Surveiller les flux de données par lots](tutorials/ui/monitor.md)

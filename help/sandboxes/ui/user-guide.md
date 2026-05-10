@@ -6,8 +6,8 @@ description: Ce document fournit la procédure à suivre pour réaliser différe
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 36%
+source-wordcount: '1106'
+ht-degree: 37%
 
 ---
 

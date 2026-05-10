@@ -6,7 +6,7 @@ description: Découvrez comment créer et modifier des classes dans l’interfac
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1605'
 ht-degree: 8%
 
 ---
@@ -94,7 +94,7 @@ La liste des classes est actualisée dans la section [!UICONTROL Schema details]
 
 ![La section [!UICONTROL Schema details] avec la nouvelle classe sélectionnée et [!UICONTROL Next] mise en surbrillance.](../../images/ui/resources/classes/select-new-class.png)
 
-Après avoir sélectionné une classe, la section [!UICONTROL Name and review] s’affiche. Dans cette section, vous indiquez un nom et une description pour identifier votre schéma. &#x200B;La structure de base du schéma (fournie par la classe ) s’affiche dans la zone de travail. Vous pouvez ainsi consulter et vérifier la structure de classe et de schéma sélectionnée.
+Après avoir sélectionné une classe, la section [!UICONTROL Name and review] s’affiche. Dans cette section, vous indiquez un nom et une description pour identifier votre schéma. &#x200B;La structure de base du schéma (fournie par la classe ) s’affiche dans la zone de travail pour que vous puissiez consulter et vérifier la structure de classe et de schéma sélectionnée.
 
 Saisissez un [!UICONTROL Schema display name] convivial dans le champ de texte. Saisissez ensuite une description appropriée pour vous aider à identifier votre schéma. Une fois que vous avez révisé votre structure de schéma et que vos paramètres vous conviennent, sélectionnez **[!UICONTROL Finish]** pour créer votre schéma.
 
@@ -136,7 +136,7 @@ Vous pouvez modifier une classe par le biais du workflow de schéma en modifiant
 
 ![Éditeur de schémas avec une classe existante et le [!UICONTROL Create a schema] mis en surbrillance.](../../images/ui/resources/classes/edit-class-options.png)
 
-Si vous choisissez de créer un schéma, consultez la section sur la [création d’un schéma](#create-schema) pour plus d’informations. Une fois que vous avez terminé de créer le schéma (ou après avoir sélectionné un schéma existant), l’éditeur de schémas s’affiche. Pour mettre à jour un champ de classe existant, sélectionnez le champ dans la structure du schéma. Les informations du champ s’affichent dans le rail de droite. Assurez-vous de la [!UICONTROL Assign to]
+Si vous choisissez de créer un schéma, consultez la section sur la [création d’un schéma](#create-schema) pour plus d’informations. Une fois que vous avez terminé de créer le schéma (ou après avoir sélectionné un schéma existant), l’éditeur de schémas s’affiche. Pour mettre à jour un champ de classe existant, sélectionnez le champ dans la structure du schéma. Les informations du champ s’affichent dans le rail de droite. Assurez-vous que [!UICONTROL Assign to]
 l’option **[!UICONTROL Class]** est sélectionnée ou vos mises à jour n’affectent pas la classe.
 
 ![Éditeur de schémas avec un champ sélectionné et mis en surbrillance, et le rail de droite exposé, mettant en surbrillance [!UICONTROL Assign to].](../../images/ui/resources/classes/edit-existing-field.png)

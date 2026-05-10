@@ -4,7 +4,7 @@ description: Découvrez comment supprimer des enregistrements dans l’interface
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2555'
 ht-degree: 12%
 
 ---
@@ -34,7 +34,7 @@ Pour plus d’informations sur les identités dans Experience Platform, consulte
 >Les suppressions d’enregistrements agissent exclusivement sur le champ **identité principale** défini dans le schéma du jeu de données. Les restrictions suivantes s’appliquent :
 >
 >* **Les identités Secondaires ne sont pas analysées.** Si un jeu de données contient plusieurs champs d’identité, seule l’identité principale est utilisée pour la correspondance. Les enregistrements ne peuvent pas être ciblés ou supprimés en fonction d&#39;identités non principales.
->* **Les enregistrements sans identité principale renseignée sont ignorés.** Si aucune métadonnée d’identité principale n’est renseignée pour un enregistrement, celui-ci ne peut pas être supprimé.
+>* **Les enregistrements sans identité principale renseignée sont ignorés.** Si un enregistrement ne comporte pas de métadonnées d’identité principales, il ne peut pas être supprimé.
 >* **Les données ingérées avant la configuration de l’identité ne sont pas éligibles.** Si le champ Identité principale a été ajouté à un schéma après l’ingestion des données, les enregistrements précédemment ingérés ne peuvent pas être supprimés par ce workflow.
 
 ## Création d’une requête {#create-request}

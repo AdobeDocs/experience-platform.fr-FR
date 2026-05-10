@@ -4,8 +4,8 @@ description: Découvrez comment importer les données de votre suite de rapports
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '2754'
-ht-degree: 14%
+source-wordcount: '2813'
+ht-degree: 16%
 
 ---
 
@@ -15,7 +15,7 @@ Lisez ce guide pour savoir comment utiliser la source Adobe Analytics pour ingé
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
 * [Profil client en temps réel](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources et du schéma Analytics d’Analytics .
-* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[&#x200B; consultez la &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr)documentation Analytics sur les variables de conversion .
+* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr) consultez la documentation Analytics sur les variables de conversion .
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
 
 ## Parcourir le catalogue des sources
@@ -59,7 +59,7 @@ Sélectionnez **[!UICONTROL Report suite]** puis utilisez l’interface *[!UICON
 
 ![Une suite de rapports Analytics est sélectionnée pour l’ingestion et le bouton « Suivant » est mis en surbrillance](../../../../images/tutorials/create/analytics/add-data.png)
 
-&lt;!: les suites de rapports Analytics peuvent être configurées pour un sandbox à la fois. Pour importer la même suite de rapports dans un autre sandbox, le flux du jeu de données devra être supprimé et instancié à nouveau via la configuration pour un autre sandbox.—>
+&lt;!—!—Les suites de rapports Analytics peuvent être configurées pour un sandbox à la fois. Pour importer la même suite de rapports dans un autre sandbox, le flux du jeu de données devra être supprimé et instancié à nouveau via la configuration pour un autre sandbox.—>
 
 ## Mappage {#mapping}
 
@@ -298,7 +298,7 @@ Pour plus d’informations sur le renvoi, les données actives et leurs latences
 
 >[!NOTE]
 >
->La page d’activité du jeu de données n’affiche pas d’informations sur les lots, car le connecteur source Analytics est entièrement géré par Adobe. Vous pouvez surveiller le flux de données en examinant les mesures relatives aux enregistrements ingérés.
+>La page d’activité du jeu de données n’affiche pas d’informations sur les lots, car le connecteur source Analytics est entièrement géré par Adobe. Vous pouvez surveiller le flux des données en examinant les mesures relatives aux enregistrements ingérés.
 
 ## Supprimer le flux de données {#delete-dataflow}
 

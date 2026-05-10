@@ -1,8 +1,8 @@
 ---
 source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 98%
+source-wordcount: '390'
+ht-degree: 97%
 
 ---
 # Contribuer au contenu
@@ -13,7 +13,7 @@ Nous invitons notre communauté et les employés d’Adobe ne faisant pas partie
 
 Ce projet a adopté le [code de conduite Adobe Open Source](code-of-conduct.md) ou le [code de conduite de la Fondation .NET](https://dotnetfoundation.org/code-of-conduct). Pour plus d’informations, reportez-vous à l’article [Contribution](contributing.md).
 
-## Comment contribuer au contenu Adobe
+## Comment contribuer au contenu d’Adobe
 
 Consultez le [Guide du contributeur de documents Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=fr).
 
@@ -39,12 +39,12 @@ Les contributeurs de la communauté peuvent utiliser l’interface utilisateur d
 
 Consultez le [Guide du contributeur de documents Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=fr) pour plus de détails.
 
-### Texte (Markdown)
+### Markdown
 
 Tous les articles de ce référentiel utilisent GitHub Flavored Markdown. Si vous n’êtes pas familiarisé avec Markdown, reportez-vous à :
 
 * [Concepts de base de Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
-* [Markdown cheatsheet imprimable](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Aide-mémoire Markdown imprimable](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ### Étiquettes
 

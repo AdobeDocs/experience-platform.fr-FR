@@ -2,11 +2,10 @@
 title: Détails du modèle pour la transparence du modèle d’IA dans Adobe Experience Platform
 description: En savoir plus sur les détails des modèles dans Adobe Experience Platform.
 hide: true
-hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '3171'
+source-wordcount: '3208'
 ht-degree: 0%
 
 ---

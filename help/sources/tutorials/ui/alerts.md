@@ -5,8 +5,8 @@ title: Abonnement aux alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 18%
+source-wordcount: '835'
+ht-degree: 22%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 18%
 
 Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../../../observability/api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
 
-Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux.
+Vous pouvez vous abonner aux alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux de données.
 
 Ce document décrit la procédure à suivre pour s’abonner et recevoir des messages d’alerte pour vos flux de données sources.
 
-## Commencer
+## Prise en main
 
 Ce document nécessite une compréhension du fonctionnement des composants suivants de Adobe Experience Platform :
 

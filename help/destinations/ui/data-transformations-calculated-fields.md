@@ -5,7 +5,7 @@ description: Découvrez comment utiliser la fonctionnalité de champs calculés 
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1624'
 ht-degree: 9%
 
 ---

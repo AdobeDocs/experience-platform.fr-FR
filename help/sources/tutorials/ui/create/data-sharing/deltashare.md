@@ -2,12 +2,11 @@
 title: Utiliser le connecteur Source Deltashare dans l’interface utilisateur
 description: Découvrez comment utiliser le connecteur source Deltashare dans l’interface utilisateur Experience Platform.
 hide: true
-hidefromtoc: true
 exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
-source-git-commit: 1533e35032d6a0508588652b0e1ca4c6717d4acb
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 1%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_sources_deltashare_schema"
 >title="Structure d&#39;un schéma"
->abstract="Veillez à vérifier la structure de votre schéma, car une fois que vous aurez poursuivi, vous ne pourrez plus apporter de modifications à votre schéma."
+>abstract="Veillez à passer en revue la structure de votre schéma, car une fois que vous aurez commencé, vous ne pourrez plus y apporter de modifications."
 
 Lisez ce guide pour savoir comment utiliser le connecteur source [!DNL Deltashare] dans l’interface utilisateur de Adobe Experience Platform.
 

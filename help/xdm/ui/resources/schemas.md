@@ -6,7 +6,7 @@ description: Découvrez les bases de la création et de la modification de sché
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4680'
+source-wordcount: '4712'
 ht-degree: 3%
 
 ---
@@ -61,7 +61,7 @@ L’éditeur de schémas s’ouvre avec une zone de travail vide pour définir l
 
 #### Ajout d’un champ d’identifiant de version {#add-version-identifier}
 
-Pour activer le suivi de version et prendre en charge la capture de données de modification, vous devez désigner un champ d’identifiant de version dans votre schéma. Dans l’éditeur de schémas, sélectionnez l’icône plus (![A plus.](/help/images/icons/plus.png)) à côté du nom du schéma pour ajouter un nouveau champ.
+Pour activer le suivi de version et prendre en charge la capture de données de modification, vous devez désigner un champ d’identifiant de version dans votre schéma. Dans l’éditeur de schémas, sélectionnez le signe plus (![A icône plus.](/help/images/icons/plus.png)) à côté du nom du schéma pour ajouter un nouveau champ.
 
 Saisissez un nom de champ tel que `updateSequence` et choisissez un type de données **[!UICONTROL DateTime]** ou **[!UICONTROL Number]**.
 
@@ -151,7 +151,7 @@ Sélectionnez une ligne pour choisir une classe, puis sélectionnez **[!UICONTRO
 
 ![Workflow [!UICONTROL Create schema] avec une classe sélectionnée dans le tableau des classes disponibles et [!UICONTROL Next] mise en surbrillance.](../../images/ui/resources/schemas/select-class.png)
 
-Après avoir sélectionné une classe, la section [!UICONTROL Name and review] s’affiche. Dans cette section, vous indiquez un nom et une description pour identifier votre schéma. &#x200B;La structure de base du schéma (fournie par la classe ) s’affiche dans la zone de travail. Vous pouvez ainsi consulter et vérifier la structure de classe et de schéma sélectionnée.
+Après avoir sélectionné une classe, la section [!UICONTROL Name and review] s’affiche. Dans cette section, vous indiquez un nom et une description pour identifier votre schéma. &#x200B;La structure de base du schéma (fournie par la classe ) s’affiche dans la zone de travail pour que vous puissiez consulter et vérifier la structure de classe et de schéma sélectionnée.
 
 Saisissez un [!UICONTROL Schema display name] convivial dans le champ de texte. Saisissez ensuite une description appropriée pour vous aider à identifier votre schéma. Une fois que vous avez révisé votre structure de schéma et que vos paramètres vous conviennent, sélectionnez **[!UICONTROL Finish]** pour créer votre schéma.
 
@@ -243,11 +243,11 @@ Une fois que vous avez choisi vos groupes de champs, sélectionnez **[!UICONTROL
 
 La [!DNL Schema Editor] réapparaît avec les champs fournis par le groupe de champs représentés dans la zone de travail.
 
-![&#x200B; avec un exemple de schéma affiché.[!DNL Schema Editor]](../../images/ui/resources/schemas/field-groups-added.png)
+[!DNL Schema Editor] avec un exemple de schéma affiché.![&#128279;](../../images/ui/resources/schemas/field-groups-added.png)
 
 >[!NOTE]
 >
->Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas ![icône de cadenas A.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+>Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas ![une icône de cadenas.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
 >
 >![Éditeur de schémas avec l’icône de cadenas mise en surbrillance](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -331,7 +331,7 @@ La zone de travail se met à jour pour afficher le champ standard ajouté au sch
 
 ![Champ standard ajouté](../../images/ui/resources/schemas/standard-field-added.png)
 
-### Ajouter des champ personnalisés       {#add-custom-fields}
+### Ajouter des champ personnalisés {#add-custom-fields}
 
 Tout comme pour le workflow des champs standard, vous pouvez également ajouter vos propres champs personnalisés directement à un schéma.
 

@@ -2,7 +2,7 @@
 title: Filtrer les données au niveau des lignes pour un Source à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: cf5c460f1db4970217b881688c994787696d1ce1
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
 source-wordcount: '2086'
 ht-degree: 13%
@@ -516,6 +516,8 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'x-api-key: {API_KEY}'
 ```
+
++++
 
 +++Réponse
 

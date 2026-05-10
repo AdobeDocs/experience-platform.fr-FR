@@ -3,16 +3,16 @@ keywords: extensions de balises;extension de balises;destinations launch;extensi
 title: Extensions de balises dans Adobe Experience Platform
 description: Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Experience Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '482'
 ht-degree: 22%
 
 ---
 
 # Extensions de balise dans [!DNL Adobe Experience Platform]
 
-[!DNL Adobe Experience Platform] offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Experience Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes. Les balises sont proposées aux clients [!DNL Adobe Experience Cloud] en tant que fonctionnalité à valeur ajoutée incluse.
+[!DNL Adobe Experience Platform] offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Experience Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes. Les balises sont proposées aux clients [!DNL Adobe CX Enterprise] en tant que fonctionnalité à valeur ajoutée incluse.
 
 Pour une présentation des balises, reportez-vous aux ressources ci-dessous :
 
@@ -64,7 +64,7 @@ Les extensions peuvent appartenir aux catégories suivantes dans Experience Plat
 - [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Plateforme de gestion des données](../data-management/overview.md)
-- [Destinations de marketing par e-mail &#x200B;](../email-marketing/overview.md)
+- [Destinations de marketing par e-mail](../email-marketing/overview.md)
 - [Personnalisation](../personalization/overview.md)
 - [Questionnaires](../survey/overview.md)
 - [Voix du client](../voice/overview.md)

@@ -5,7 +5,7 @@ breadcrumb-title: Guide du service de requête
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 71d8268a209036291c41da3fef84a331aec2172b
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 67%
@@ -39,7 +39,7 @@ ht-degree: 67%
       - [Analyse exploratoire des données](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [Fonctionnalités d’ingénierie pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exporter des données vers des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
-      - [Workflow de bout en bout d’enrichissement du pipeline de données AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+      - {hide-from-toc}[Workflow de bout en bout d’enrichissement du pipeline de données AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
    - [Session Du Summit 2025](data-distiller/top-tips-to-maximize-value.md)
 - Statistiques de Distiller de données et machine learning {#advanced-statistics}
    - [Vue d’ensemble](advanced-statistics/overview.md)

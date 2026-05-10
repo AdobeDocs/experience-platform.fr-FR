@@ -5,8 +5,8 @@ feature: Destinations
 exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
 source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1468'
-ht-degree: 16%
+source-wordcount: '1538'
+ht-degree: 15%
 
 ---
 

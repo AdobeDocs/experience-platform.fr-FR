@@ -2,12 +2,11 @@
 solution: Experience Platform
 title: Guide de l’interface utilisateur des contraintes de temps de la segmentation refactorisées
 description: Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
-hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 26%
+source-wordcount: '373'
+ht-degree: 27%
 
 ---
 

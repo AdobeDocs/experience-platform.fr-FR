@@ -4,7 +4,7 @@ description: Découvrez comment utiliser Audience Portal pour afficher, gérer e
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '4457'
+source-wordcount: '4582'
 ht-degree: 41%
 
 ---
@@ -103,7 +103,7 @@ Vous pouvez ajouter des champs supplémentaires à Audience Portal en sélection
 | [!UICONTROL Name] | Nom de l’audience. |
 | [!UICONTROL Profile count] | Nombre total de profils qui remplissent les critères de l’audience. |
 | [!UICONTROL Origin] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
-| [!UICONTROL Lifecycle status] | Statut de l’audience. Les valeurs possibles pour ce champ comprennent `Draft`, `Inactive` et `Published`. Pour plus d’informations sur les statuts de cycle de vie, y compris sur la signification des différents états et sur la manière de déplacer les audiences vers différents états de cycle de vie, consultez la section [statut du cycle de vie) de la FAQ sur la segmentation](../faq.md#lifecycle-status). |
+| [!UICONTROL Lifecycle status] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive` et `Published`. Pour plus d’informations sur les statuts de cycle de vie, y compris sur la signification des différents états et sur la manière de déplacer les audiences vers différents états de cycle de vie, consultez la section [statut du cycle de vie) de la FAQ sur la segmentation](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ comprennent [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] et [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 | [!UICONTROL Created] | Date et heure de création de l’audience en UTC. |

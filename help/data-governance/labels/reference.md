@@ -6,8 +6,8 @@ description: Ce document décrit tous les libellés dʼutilisation des données 
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 93%
+source-wordcount: '2330'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,7 @@ Les libellés d’utilisation des données vous permettent de classer les jeux d
 
 Ce document décrit les libellés dʼutilisation des données de base actuellement fournies par Experience Platform.
 
-## Étiquettes Contrat {#contract}
+## Libellés de contrat {#contract}
 
 Les étiquettes Contrat « C » sont utilisées pour catégoriser des données qui possèdent des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données de votre organisation.
 
@@ -42,7 +42,7 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 | [C11](#c11) | Les données ne peuvent pas être partagées avec les partenaires de correspondance de segment. |
 | [C12](#c12) | Les données ne peuvent pas être exportées de quelque manière que ce soit. |
 
-## Libellés Identité {#identity}
+## Libellés d’identité {#identity}
 
 Les libellés Identité « I » sont utilisés pour catégoriser des données pouvant identifier ou contacter une personne en particulier.
 
@@ -51,7 +51,7 @@ Les libellés Identité « I » sont utilisés pour catégoriser des données 
 | **I1** | Données directement identifiables qui permettent d’identifier ou de contacter une personne spécifique, plutôt qu’un appareil. |
 | **I2** | Données indirectement identifiables pouvant être utilisées en combinaison avec toute autre donnée pour identifier ou contacter une personne spécifique. |
 
-## Libellés Sensibles {#sensitive}
+## Libellés sensibles {#sensitive}
 
 Les libellés sensibles « S » sont utilisés pour classer les données que vous et votre entreprise considérez comme sensibles.
 

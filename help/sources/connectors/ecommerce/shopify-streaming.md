@@ -125,7 +125,7 @@ curl -X POST \
 ```
 
 | Paramètre | Description |
-| --- | --- | 
+| --- | --- |
 | `webhook.address` | Point d’entrée http où les messages en flux continu sont envoyés. Le modèle du webhook est le suivant : `https://dcs.adobedc.net/collection/{INLET_ID}?x-adobe-flow-id={FLOW_ID}.` |
 | `webhook.topic` | Rubrique de votre abonnement webhook. Pour plus d’informations, consultez le [[!DNL Shopify] guide des rubriques des événements webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | Format des données. |

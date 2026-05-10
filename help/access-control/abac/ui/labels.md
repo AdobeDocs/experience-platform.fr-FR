@@ -5,8 +5,8 @@ description: Gérez les libellés via l’interface Autorisations dans Adobe Exp
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 855f0a1384f658d39aa9d4fbb6bcb032933e59db
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 14%
+source-wordcount: '602'
+ht-degree: 15%
 
 ---
 

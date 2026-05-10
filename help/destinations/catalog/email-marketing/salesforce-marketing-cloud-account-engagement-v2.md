@@ -3,11 +3,10 @@ title: (V2) Engagement Du Compte Salesforce Marketing Cloud
 description: Découvrez comment utiliser la destination Engagement du compte Marketing Cloud (anciennement Pardot) de Salesforce (V2) pour exporter vos données de profil et les activer dans l’engagement du compte Marketing Cloud de Salesforce à l’aide du traitement par lots pour vos besoins professionnels.
 badge: label="Alpha" type="Informative"
 hide: true
-hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1943'
 ht-degree: 17%
 
 ---
@@ -24,8 +23,7 @@ Cette destination utilise le [[!DNL Salesforce Import API v5]](https://developer
 >[!IMPORTANT]
 >
 > Il s’agit de la version V2 de la destination [Engagement du compte Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Cette version remplace la destination précédente et se trouve actuellement dans la version Alpha.
-> <br>
-> Si vous utilisez actuellement la version précédente de la destination [Engagement du compte Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), vous devez migrer vers cette version V2 avant **janvier 2026**. Après janvier 2026, Adobe désactivera la version précédente et elle ne sera plus disponible.
+> <br>> Si vous utilisez actuellement la version précédente de la destination [Engagement du compte Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), vous devez migrer vers cette version V2 avant **janvier 2026**. Après janvier 2026, Adobe désactivera la version précédente et elle ne sera plus disponible.
 
 
 ## Cas d’utilisation {#use-cases}
@@ -150,7 +148,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Account Engagement Business Unit ID]** : votre [!DNL Salesforce] `Account Engagement Business Unit ID`.
+* **[!UICONTROL Account Engagement Business Unit ID]** : votre `Account Engagement Business Unit ID` [!DNL Salesforce].
 * **[!UICONTROL Account Engagement API]** : indiquez si vous souhaitez utiliser les points d’entrée de production (`https://pi.pardot.com`) ou de démonstration (`https://pi.demo.pardot.com`) de l’API d’engagement de compte.
 * **[!UICONTROL Account Engagement Campaign ID]** : chaque prospect [!DNL Account Engagement] doit être associé à une campagne. Si vous ne définissez pas d’identifiant de campagne, l’engagement du compte tentera d’en attribuer automatiquement un, si un identifiant par défaut existe dans votre compte Salesforce.
 
@@ -165,7 +163,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 

@@ -4,7 +4,7 @@ description: Découvrez comment utiliser le Gestionnaire d’autorisations dans 
 exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '575'
 ht-degree: 10%
 
 ---
@@ -78,7 +78,7 @@ Les informations suivantes s’affichent pour chaque rôle correspondant à vos 
 | Attribut | Description |
 | --- | --- |
 | Description | Brève description du rôle. |
-| Libellés | Liste des libellés associés au rôle. |
+| Étiquettes | Liste des libellés associés au rôle. |
 | Sandbox | Liste des sandbox contenant ce rôle. |
 | Modifié le | Date et heure de la dernière mise à jour du rôle. |
 | Date de création | Date et heure de la création du rôle. |

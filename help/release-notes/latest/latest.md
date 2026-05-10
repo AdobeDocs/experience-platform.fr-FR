@@ -2,7 +2,7 @@
 title: Notes De Mise À Jour De Adobe Experience Platform - Avril 2026
 description: Les notes de mise à jour d’avril 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9ebf498257378f4c5002276a84f104cf2d337601
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 24%
@@ -152,4 +152,4 @@ Pour plus d’informations, consultez la [vue d’ensemble des sources](../../so
 
 | Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
 
---->
+-->

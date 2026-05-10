@@ -2,10 +2,10 @@
 title: Champs de mappage pour le connecteur Source Adobe Analytics
 description: Mappez les champs Adobe Analytics aux champs XDM à l’aide du connecteur Source Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e735d9e68ca5a49f8a4e1cbf3ea4264796117a78
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '3832'
-ht-degree: 37%
+source-wordcount: '3834'
+ht-degree: 26%
 
 ---
 
@@ -181,7 +181,7 @@ Lisez cette section pour plus d’informations sur les champs de mappage Analyti
 | `m_user_server` | `web.webPageDetails.server` | chaîne | Variable utilisée dans la dimension Serveur. |
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | chaîne | Variable utilisée pour remplir la dimension Code postal. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | chaîne | Liste de tous les langages acceptés, comme indiqué dans l’en-tête HTTP Accept-Language. |
-| `homepage` | `web.webPageDetails.isHomePage` | booléen | N’est plus utilisé. Indique si l’URL active est la page d’accueil du navigateur. |
+| `homepage` | `web.webPageDetails.isHomePage` | booléen | N’est plus utilisée. Indique si l’URL active est la page d’accueil du navigateur. |
 | `ipv6` | `environment.ipV6` | chaîne |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | Chaîne | Version de JavaScript prise en charge par le navigateur. |
 | `user_agent` | `environment.browserDetails.userAgent` | chaîne | Chaîne de l’agent utilisateur envoyée dans l’en-tête HTTP. |
@@ -197,7 +197,7 @@ Lisez cette section pour plus d’informations sur les champs de mappage Analyti
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | nombre | Relais Mobile Services mineur. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | chaîne | UUID du relais Mobile Services. |
 | `mobileinstalls` | `application.firstLaunches` | Objet | Il est déclenché lors de la première exécution suivant l’installation ou la réinstallation `{id (string), value (number)}` |
-| `mobileupgrades` | `application.upgrades` | objet | Indique le nombre de mises à niveau d’application. Déclencheurs lors de la première exécution après la mise à niveau ou à tout moment où le numéro de version change. `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Objet | Indique le nombre de mises à niveau d’application. Déclencheurs lors de la première exécution après la mise à niveau ou à tout moment où le numéro de version change. `{id (string), value (number)}` |
 | `mobilelaunches` | `application.launches` | Objet | Nombre de lancements de l’application.  `{id (string), value (number)}` |
 | `mobilecrashes` | `application.crashes` | Objet | `{id (string), value (number)}` |
 | `mobilemessageclicks` | `directMarketing.clicks` | Objet | `{id (string), value (number)}` |
@@ -225,7 +225,7 @@ Certains champs provenant d’ADC doivent être transformés, ce qui nécessite 
 | Flux de données | Champ XDM | Type XDM | Description |
 | --- | --- | --- | --- |
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objet | Props Analytics personnalisées, configurées pour être des props de liste. Il contient une liste délimitée de valeurs. `{}` |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | objet | Utilisé par les variables de hiérarchie. Il contient une liste délimitée de valeurs. `{values (array), delimiter (string)}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objet | Utilisé par les variables de hiérarchie. Il contient une liste délimitée de valeurs. `{values (array), delimiter (string)}` |
 | `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | tableau | Variables de liste Analytics personnalisées. Contient une liste délimitée de valeurs.  `{value (string), key (string)}` |
 | `m_color` | `device.colorDepth` | entier | Identifiant de profondeur de couleur, qui est basé sur la valeur de la colonne c_color. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | booléen | Variable utilisée dans la dimension Prise en charge des cookies. |
@@ -243,7 +243,7 @@ Certains champs provenant d’ADC doivent être transformés, ce qui nécessite 
 | `m_pagename_no_url` | `web.webPageDetails.name` | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur reste vide. |
 | `m_paid_search` | `search.isPaid` | booléen | Indicateur défini si l’accès correspond à la détection des référencements payants. |
 | `m_product_list` | `productListItems[].items` | tableau | La liste des produits, transmise par le biais de la variable products. `{SKU (string), quantity (integer), priceTotal (number)}` |
-| `m_ref_type` | `web.webReferrer.type` | chaîne | Identifiant numérique représentant le type de référence pour l’accès.<br/>`1` : À l&#39;intérieur de votre site <br/>`2` : Autres sites Web <br/>`3` : Moteurs de recherche <br/>`4` : Disque dur <br/>`5` : USENET <br/>`6` : Typed/Bookmarked (pas de référent)<br/>`7` : e-mail <br/>`8` : Pas de JavaScript <br/>`9` : Réseaux sociaux |
+| `m_ref_type` | `web.webReferrer.type` | chaîne | Identifiant numérique représentant le type de recommandation pour l’accès.<br/>`1` : à l’intérieur de votre site <br/>`2` : autres sites web <br/>`3` : moteurs de recherche <br/>`4` : disque dur <br/>`5` : USENET <br/>`6` : avec saisie/signet (pas de référent)<br/>`7` : e-mail <br/>`8` : pas de JavaScript <br/>`9` : réseaux sociaux |
 | `m_search_engine` | `search.searchEngine` | chaîne | Identifiant numérique représentant le moteur de recherche qui a renvoyé le visiteur sur votre site. |
 | `post_currency` | `commerce.order.currencyCode` | chaîne | Code de devise utilisé pendant la transaction. |
 | `post_cust_hit_time_gmt` | `timestamp` | chaîne | Utilisé uniquement dans les jeux de données horodatés. Il s’agit de l’horodatage envoyé avec l’accès, basé sur l’heure UNIX®. |
@@ -307,59 +307,59 @@ Pour en savoir plus sur l’exécution de ces transformations à l’aide de Que
 | `post_channel` | `web.webPageDetails.siteSection` | chaîne | Variable utilisée dans la dimension Sections du site. |
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.id` | chaîne | Identifiant visiteur personnalisé, le cas échéant. |
 | `post_first_hit_page_url` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.URL` | chaîne | URL de la première page atteinte par le visiteur. |
-| `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | chaîne | Variable utilisée dans la dimension Page d’accès originale. Nom de page de la page d’accès du visiteur. |
+| `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | chaîne | Variable utilisée dans la dimension d’origine Page d’entrée. Nom de la page d’entrée du visiteur. |
 | `post_keywords` | `search.keywords` | chaîne | Mots-clés collectés pour l’accès. |
 | `post_page_url` | `web.webPageDetails.URL` | chaîne | URL de l’accès à la page. |
 | `post_pagename` | `web.webPageDetails.pageViews.value` | chaîne | Est égal à 1 sur les accès ayant un nom de page. Ceci est similaire à la mesure Pages vues d’Adobe Analytics. |
-| `post_purchaseid` | `commerce.order.purchaseID` | chaîne | Variable utilisée pour identifier de manière unique les achats. |
+| `post_purchaseid` | `commerce.order.purchaseID` | chaîne | Variable utilisée pour identifier les achats de manière unique. |
 | `post_referrer` | `web.webReferrer.URL` | chaîne | URL de la page précédente. |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | chaîne | Variable d’état. |
 | `post_user_server` | `web.webPageDetails.server` | chaîne | Variable utilisée dans la dimension Serveur. |
 | `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | chaîne | Variable utilisée pour remplir la dimension Code postal. |
 | `browser` | `_experience.analytics.environment.`<br/>`browserID` | entier | Identifiant numérique du navigateur. |
 | `domain` | `environment.domain` | chaîne | Variable utilisée dans la dimension Domaine. Il est basé sur le fournisseur de services Internet (FAI) de l’utilisateur. |
-| `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | chaîne | Première URL de référence du visiteur. |
+| `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | chaîne | Première URL de référence pour le visiteur. |
 | `geo_city` | `placeContext.geo.city` | chaîne | Nom de la ville de l’accès. Il est basé sur l’adresse IP de l’accès. |
 | `geo_dma` | `placeContext.geo.dmaID` | entier | Identifiant numérique de la zone démographique pour l’accès. Il est basé sur l’adresse IP de l’accès. |
 | `geo_region` | `placeContext.geo.stateProvince` | chaîne | Nom de l’état ou de la région de l’accès. Il est basé sur l’adresse IP de l’accès. |
 | `geo_zip` | `placeContext.geo.postalCode` | chaîne | Code postal de l’accès. Il est basé sur l’adresse IP de l’accès. |
 | `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | entier | Identifiant numérique représentant le système d’exploitation du visiteur. Dépend de la colonne user_agent. |
-| `search_page_num` | `search.pageDepth` | entier | Cette variable est utilisée par la dimension Classification globale des pages de recherche et indique sur quelle page de résultats de recherche est apparu votre site | avant que l’utilisateur n’ait cliqué sur celui-ci. |
-| `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | chaîne | Variable utilisée dans la dimension Mots-clés de recherche. |
-| `visit_num` | `_experience.analytics.session.`<br/>`num` | entier | Variable utilisée dans la dimension Nombre de visites. Commence à 1 et est incrémenté chaque fois qu’une nouvelle visite est entamée (par utilisateur). |
-| `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | entier | Variable utilisée dans la dimension Détail des accès. Cette valeur augmente de 1 pour chaque accès généré par l’utilisateur et est réinitialisée après chaque visite. |
+| `search_page_num` | `search.pageDepth` | entier | Cette variable est utilisée par la dimension Classement de toutes les pages de recherche et indique la page de résultats de recherche sur laquelle votre site \| s’est affiché avant que l’utilisateur ne clique sur votre site. |
+| `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | chaîne | Variable utilisée dans la dimension Mots-clés de recherche . |
+| `visit_num` | `_experience.analytics.session.`<br/>`num` | entier | Variable utilisée dans la dimension Nombre de visites . Cette opération commence à 1 et est incrémentée à chaque nouveau démarrage de visite (par utilisateur). |
+| `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | entier | Variable utilisée dans la dimension Profondeur d’accès . Cette valeur augmente de 1 pour chaque accès généré par l’utilisateur et réinitialisé après chaque visite. |
 | `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | chaîne | Premier référent de la visite. |
 | `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | entier | Premier nom de page de la visite. |
 | `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objet | Props Analytics personnalisées, configurées pour être des props de liste. Il contient une liste délimitée de valeurs. |
-| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objet | Utilisé par les variables de hiérarchie et contient une liste délimitée de valeurs. | {values (array), delimiter (string)} |
-| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | tableau | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. | {value (string), key (string)} |
-| `post_cookies` | `environment.browserDetails.cookiesEnabled` | Booléen | Variable utilisée dans la dimension Prise en charge des cookies. |
-| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objet | Événements de commerce standard déclenchés à l’accès. | {id (string), value (number)} |
-| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objet | Événements personnalisés déclenchés à l’accès. | {id (Object), value (Object)} |
+| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objet | Utilisé par des variables de hiérarchie et contenant une liste délimitée de valeurs. \| `{values (array), delimiter (string)}` |
+| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | tableau | Liste de valeurs de variable. Contient une liste délimitée de valeurs personnalisées, en fonction de l’implémentation. \| `{value (string), key (string)}` |
+| `post_cookies` | `environment.browserDetails.cookiesEnabled` | booléen | Variable utilisée dans la dimension Prise en charge des cookies . |
+| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objet | Événements commerciaux standard déclenchés lors de l’accès. \| `{id (string), value (number)}` |
+| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objet | Événements personnalisés déclenchés sur l’accès.\| `{id (Object), value (Object)}` |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | booléen | Indicateur qui signale si Java™ est activé. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | nombre |   |
 | `post_longitude` | `placeContext.geo._schema.longitude` | nombre |   |
-| `post_page_event` | `web.webInteraction.type` | chaîne | Le type d’accès qui est envoyé dans la demande d’image (accès standard, lien de téléchargement, lien de sortie ou lien personnalisé sur lequel le visiteur a cliqué). |
+| `post_page_event` | `web.webInteraction.type` | chaîne | Type d’accès envoyé dans la demande d’image (accès standard, lien de téléchargement, lien de sortie ou lien personnalisé sur lequel l’utilisateur a cliqué). |
 | `post_page_event` | `web.webInteraction.linkClicks.value` | nombre | Est égal à 1 si l’accès est un clic sur un lien. Ceci est similaire à la mesure Événements de page dans Adobe Analytics. |
-| `post_page_event_var1` | `web.webInteraction.URL` | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Il s’agit de l’URL du lien de téléchargement, du lien de sortie ou du lien personnalisé sur lequel l’utilisateur a cliqué. |
-| `post_page_event_var2` | `web.webInteraction.name` | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Il s’agit du nom personnalisé du lien. |
-| `post_page_type` | `web.webPageDetails.isErrorPage` | Booléen | Utilisé pour remplir la dimension Pages introuvables. Cette variable doit être vide ou contenir « ErrorPage ». |
+| `post_page_event_var1` | `web.webInteraction.URL` | chaîne | Cette variable n’est utilisée que dans les demandes d’image de suivi de liens. Il s’agit de l’URL du lien de téléchargement, du lien de sortie ou du lien personnalisé sur lequel l’utilisateur a cliqué. |
+| `post_page_event_var2` | `web.webInteraction.name` | chaîne | Cette variable n’est utilisée que dans les demandes d’image de suivi de liens. Il s’agit du nom personnalisé du lien. |
+| `post_page_type` | `web.webPageDetails.isErrorPage` | booléen | Permet de renseigner la dimension Pages introuvables . Cette variable doit être vide ou contenir « ErrorPage » |
 | `post_pagename_no_url` | `web.webPageDetails.name` | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur reste vide. |
-| `post_product_list` | `productListItems[].items` | tableau | Liste de produits, telle qu’elle est transmise par l’intermédiaire de la variable des produits. | {SKU (string), quantity (integer), priceTotal (number)} |
+| `post_product_list` | `productListItems[].items` | tableau | La liste des produits, transmise par le biais de la variable products. \| `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `post_search_engine` | `search.searchEngine` | chaîne | Identifiant numérique représentant le moteur de recherche qui a renvoyé le visiteur sur votre site. |
-| `mvvar1_instances` | `.list.items[]` | Objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
-| `mvvar2_instances` | `.list.items[]` | Objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
-| `mvvar3_instances` | `.list.items[]` | Objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
-| `color` | `device.colorDepth` | entier | Identifiant de profondeur de la couleur, basé sur la valeur de la colonne c_color. |
+| `mvvar1_instances` | `.list.items[]` | Objet | Liste des valeurs de variable. Contient une liste délimitée de valeurs personnalisées, en fonction de l’implémentation. |
+| `mvvar2_instances` | `.list.items[]` | Objet | Liste des valeurs de variable. Contient une liste délimitée de valeurs personnalisées, en fonction de l’implémentation. |
+| `mvvar3_instances` | `.list.items[]` | Objet | Liste des valeurs de variable. Contient une liste délimitée de valeurs personnalisées, en fonction de l’implémentation. |
+| `color` | `device.colorDepth` | entier | Identifiant de profondeur de couleur, en fonction de la valeur de la colonne c_color. |
 | `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | chaîne | Identifiant numérique, représentant le type de référent du premier référent du visiteur. |
 | `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | entier | Horodatage du premier accès du visiteur en temps UNIX®. |
-| `geo_country` | `placeContext.geo.countryCode` | chaîne | Abréviation du pays d’où provient l’accès, selon l’adresse IP. |
+| `geo_country` | `placeContext.geo.countryCode` | chaîne | Abréviation du pays d’où provient l’accès, basé sur l’adresse IP. |
 | `geo_latitude` | `placeContext.geo._schema.latitude` | nombre |  |
 | `geo_longitude` | `placeContext.geo._schema.longitude` | nombre |  |
 | `paid_search` | `search.isPaid` | booléen | Indicateur défini si l’accès correspond à la détection des référencements payants. |
 | `ref_type` | `web.webReferrer.type` | chaîne | Identifiant numérique représentant le type de référence pour l’accès. |
-| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | Booléen | Indicateur (1=payant, 0=non payant) signalant si le premier accès de la visite provient d’un accès de référencement payant. |
-| `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | chaîne | Identifiant numérique, représentant le type de référent du premier référent du visiteur. |
+| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | booléen | Indicateur (1 = payé, 0 = non payé) indiquant si le premier accès de la visite provenait d’un accès de référencement payant. |
+| `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | chaîne | Identifiant numérique représentant le type de référent du premier référent de la visite. |
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | chaîne | Identifiant numérique du premier moteur de recherche de la visite. |
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | entier | Date et heure du premier accès de la visite à l’heure UNIX®. |
 

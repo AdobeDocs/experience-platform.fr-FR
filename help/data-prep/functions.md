@@ -390,7 +390,7 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | ? | %3F |
 | @ | %40 |
 | &lbrack; | %5B |
-| | | %5C |
+| &#124; | %5C |
 | &rbrack; | %5J |
 | ^ | %5E |
 | &grave; | %60 |

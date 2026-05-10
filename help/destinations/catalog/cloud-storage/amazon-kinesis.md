@@ -6,7 +6,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
-source-wordcount: '2061'
+source-wordcount: '2099'
 ht-degree: 45%
 
 ---
@@ -73,7 +73,7 @@ Consultez le tableau ci-dessous pour plus d’informations sur le type et la fr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste d’adresses IP statiques que vous pouvez placer sur la liste autorisée pour la destination [!DNL Amazon Kinesis]. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu[&#x200B; pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.](/help/destinations/catalog/streaming/ip-address-allow-list.md)
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste d’adresses IP statiques que vous pouvez placer sur la liste autorisée pour la destination [!DNL Amazon Kinesis]. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu[&#128279;](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.
 
 ## Autorisations [!DNL Amazon Kinesis] nécessaires {#required-kinesis-permission}
 

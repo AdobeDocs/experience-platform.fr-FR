@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1357'
 ht-degree: 22%
 
 ---
@@ -43,7 +43,7 @@ Ce document fournit un tutoriel expliquant comment définir une relation entre d
 >
 >Pour savoir comment créer une relation multiple-à-un dans Adobe Real-Time Customer Data Platform B2B edition, consultez le guide sur la [création de relations B2B](./relationship-b2b.md).
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite une compréhension pratique de [!DNL XDM System] et de l’éditeur de schémas dans l’interface utilisateur de [!DNL Experience Platform]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 

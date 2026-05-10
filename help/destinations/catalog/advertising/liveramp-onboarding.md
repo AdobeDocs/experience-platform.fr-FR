@@ -5,8 +5,8 @@ last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1988'
-ht-degree: 53%
+source-wordcount: '2116'
+ht-degree: 56%
 
 ---
 
@@ -145,7 +145,7 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 
 À l’étape [!UICONTROL Scheduling], créez un planning d’exportation pour chaque audience, avec les paramètres présentés ci-dessous.
 
-* **[!UICONTROL File export options]** : [!UICONTROL Export full files]. Les [exportations de fichiers incrémentiels](../../ui/activate-batch-profile-destinations.md#export-incremental-files) ne sont actuellement pas prises en charge pour la destination [!DNL LiveRamp].
+* **[!UICONTROL File export options]**: [!UICONTROL Export full files]. Les [exportations de fichiers incrémentiels](../../ui/activate-batch-profile-destinations.md#export-incremental-files) ne sont actuellement pas prises en charge pour la destination [!DNL LiveRamp].
 * **[!UICONTROL Frequency]** : [!UICONTROL Daily], [!UICONTROL Weekly] ou [!UICONTROL Monthly]
 * **[!UICONTROL Date]** : sélectionnez les heures de début et de fin de l’exportation comme vous le souhaitez.
 

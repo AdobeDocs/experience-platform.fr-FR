@@ -2,11 +2,11 @@
 title: Prise en charge des identités unifiées dans la collecte de données
 description: Découvrez comment la prise en charge d’identité unifiée associe la persistance propriétaire et l’activation tierce prise en charge dans la collecte de données web.
 hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 32c2565d31eed4eda28195afaf82aac6f04a6f8a
+exl-id: 8a755b61-6280-47f9-87a1-2d1da331a1c6
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1089'
 ht-degree: 3%
 
 ---
@@ -138,7 +138,7 @@ Les fonctionnalités d’identité tierces dépendent de la prise en charge par 
 | Navigateur | Prise en charge des cookies tiers | Demdex disponible | Comportement de l’identité |
 | --- | --- | --- | --- |
 | Google Chrome | Pris en charge | Oui | Demdex → ECID (cohérent entre les domaines) |
-| Microsoft Edge | Pris en charge par défaut | Oui | Demdex → ECID (cohérent entre les domaines) |
+| Microsoft Edge | Pris en charge par défaut | Oui | Demdex → ECID (cohérent entre les domaines) |
 | Mozilla Firefox | Bloqué par défaut (ETP) | Non (par défaut) | FPID → ECID (par domaine) |
 | Apple Safari | Bloqué (ITP) | Non | FPID → ECID (par domaine) |
 

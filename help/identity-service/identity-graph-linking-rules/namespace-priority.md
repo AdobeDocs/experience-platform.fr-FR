@@ -4,8 +4,8 @@ description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '2118'
-ht-degree: 3%
+source-wordcount: '2176'
+ht-degree: 2%
 
 ---
 
@@ -67,7 +67,7 @@ La priorité des espaces de noms peut être configurée à l’aide de l’inter
 
 Actuellement, la priorité de l’espace de noms influence le comportement du système du profil client en temps réel. Le diagramme ci-dessous illustre ce concept. Pour plus d&#39;informations, consultez le guide sur les diagrammes d&#39;architecture de [Adobe Experience Platform et des applications](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![Diagramme de la portée de l’application de priorité d’espace de noms.](../images/namespace-priority/application-scope.png "Diagramme de la portée de l’application de priorité d’espace de noms."){zoomable="yes"}
+![Diagramme de portée de l’application de priorité d’espace de noms.](../images/namespace-priority/application-scope.png "Diagramme de portée de l’application de priorité d’espace de noms."){zoomable="yes"}
 
 ## Service d’identités : algorithme d’optimisation des identités
 

@@ -4,8 +4,8 @@ description: Découvrez comment ingérer des données chiffrées dans l’espace
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: c52a0e3910697b420f88425388431a4ad3d53072
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 9%
+source-wordcount: '1418'
+ht-degree: 10%
 
 ---
 

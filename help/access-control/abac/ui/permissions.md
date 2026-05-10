@@ -5,8 +5,8 @@ description: Découvrez comment configurer des rôles via l’interface Autorisa
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 36%
+source-wordcount: '1676'
+ht-degree: 39%
 
 ---
 

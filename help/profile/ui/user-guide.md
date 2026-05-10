@@ -5,7 +5,7 @@ description: Le profil client en temps réel offre une vue d’ensemble de chaqu
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: faeb53bfc4eba815eb1d9d00c464da4dc1a3b016
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2196'
 ht-degree: 5%
 
 ---

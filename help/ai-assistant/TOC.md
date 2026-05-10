@@ -5,10 +5,10 @@ user-guide-description: Découvrez comment utiliser l’Assistant IA pour accé
 description: Ce document répertorie la table des matières de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 role: Admin,User,Developer,Leader
-source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 29%
+source-wordcount: '134'
+ht-degree: 33%
 
 ---
 
@@ -28,10 +28,10 @@ ht-degree: 29%
    * [Surveiller les modifications importantes et les audiences prévues](./new-features/audience-forecasting.md)
    * [Estimation en langage naturel](./new-features/natural-language.md)
    * [Agent du support technique du produit](./new-features/customer-support.md)
-   * [Découverte des champs XDM pour la création d’audiences](./new-features/xdm-field-discovery.md)
+   * {hide-from-toc}[découverte de champs XDM pour la création d’audiences](./new-features/xdm-field-discovery.md)
 * Détails du modèle {#model-details}
-   * [Présentation des détails du modèle](./model-details/overview.md)
+   * {hide-from-toc}[Présentation des détails du modèle](./model-details/overview.md)
    * [Langage d’informations opérationnelles naturelles de l’assistant d’IA (hérité) pour SQL](./model-details/natural-language-to-sql.md)
-   * [Optimisation de l’heure d’envoi](./model-details/send-time-optimization.md)
-* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+   * {hide-from-toc}[Optimisation de l’heure d’envoi](./model-details/send-time-optimization.md)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
 

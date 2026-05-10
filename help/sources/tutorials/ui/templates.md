@@ -5,8 +5,8 @@ badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: f9e3c19fdfd4ca0e03fdf3b3a7b5e82b72490dbc
 workflow-type: tm+mt
-source-wordcount: '2271'
-ht-degree: 34%
+source-wordcount: '2304'
+ht-degree: 35%
 
 ---
 
@@ -39,7 +39,7 @@ Le tutoriel suivant décrit les étapes à suivre pour utiliser des modèles dan
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
@@ -190,7 +190,7 @@ La fenêtre d’aperçu s’affiche, vous permettant d’explorer et d’examine
 
 Sélectionnez ensuite dans la liste le modèle que vous souhaitez utiliser. Vous pouvez sélectionner plusieurs modèles et créer plusieurs flux de données à la fois. Cependant, un modèle ne peut être utilisé qu’une seule fois par compte. Une fois les modèles sélectionnés, sélectionnez **[!UICONTROL Finish]** et patientez quelques instants le temps que les ressources se génèrent.
 
-Si vous sélectionnez un ou des éléments partiels dans la liste des modèles disponibles, tous les schémas B2B et les espaces de noms d’identité seront quand même générés afin de garantir que les relations B2B entre les schémas soient correctement configurées.
+Si vous sélectionnez un ou des éléments partiels dans la liste des modèles disponibles, tous les schémas B2B et les espaces de noms d’identité seront quand même générés afin de garantir que les relations B2B entre les schémas sont correctement configurées.
 
 >[!NOTE]
 >

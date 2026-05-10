@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;XDM;système XDM;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;groupes de Champs;groupe de champs;groupe de Champs;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;modèle de données d’expérience;modèle de données d’Expérience;Modèle de Données d’Expérience;modèle de données; Modèle de Données;registre des schémas;Registre des Schémas;bibliothèque de schémas;Bibliothèque de Schémas;schéma;données d’enregistrement;série temporelle;série temporelle
+keywords: Experience Platform;accueil;rubriques les plus consultées;XDM;système XDM;profil individuel XDM;XDM ExperienceEvent;événement d’expérience XDM;experienceEvent;événement d’expérience;groupes de Champs;groupe de champs;groupe de Champs;Événement d’expérience;Événement d’expérience XDM;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;modèle de données d’expérience;modèle de données d’expérience;Modèle de données d’expérience;modèle de données;Modèle de Données;registre des schémas;Registre des Schémas;bibliothèque de schémas;Bibliothèque de Schémas;schéma;données d’enregistrement;série temporelle;série temporelle
 solution: Experience Platform
 title: Présentation du système XDM
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2446'
 ht-degree: 57%
 
 ---
@@ -77,7 +77,7 @@ Les profils moins identifiés peuvent n’être constitués que de signaux compo
 
 Au fur et à mesure qu’un profil croît, il devient un solide référentiel des informations personnelles, des informations d’identification, des coordonnées et des préférences de communication d’une personne.
 
-Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[[!UICONTROL XDM Individual Profile] consultez le guide de référence des &#x200B;](./classes/individual-profile.md) .
+Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[&#128279;](./classes/individual-profile.md) consultez le guide de référence des [!UICONTROL XDM Individual Profile] .
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -89,7 +89,7 @@ Bien qu’il ne soit pas facile de classer tous les événements de toutes les s
 
 ![Infographie du Parcours client visualisée avec les événements d’expérience au fil du temps.](images/overview/experience-event-journey.png)
 
-Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[[!UICONTROL XDM ExperienceEvent] consultez le guide de référence des &#x200B;](./classes/experienceevent.md) .
+Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[&#128279;](./classes/experienceevent.md) consultez le guide de référence des [!UICONTROL XDM ExperienceEvent] .
 
 ## Schémas XDM et services Experience Platform {#schemas-and-platform-services}
 

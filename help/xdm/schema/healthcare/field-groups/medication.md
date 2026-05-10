@@ -1,50 +1,49 @@
 ---
-title: Groupe de champs du schéma de médicaments
+title: Groupe de champs du schéma de médication
 description: Découvrez le groupe de champs Schéma de médicament .
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
-hidefromtoc: true
 exl-id: e1f53ff8-3079-4b2f-9e73-31a773907a63
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '284'
-ht-degree: 7%
+source-wordcount: '270'
+ht-degree: 6%
 
 ---
 
-# Groupe de champs de schéma [!UICONTROL Medication]
+# [!UICONTROL Medication] groupe de champs de schéma
 
-[!UICONTROL Medication] est un groupe de champs de schéma standard pour la [[!DNL Medication] classe](../../../classes/medication.md). Il fournit un seul champ de type objet `healthcareMedication` qui capture les informations d’un médicament.
+[!UICONTROL Medication] groupe de champs de schéma standard pour la [[!DNL Medication] classe](../../../classes/medication.md). Il fournit un `healthcareMedication` de champ de type objet unique qui capture les informations d’un médicament.
 
-![Structure de groupe de champs](../../../images/healthcare/field-groups/medication/medication.png)
+![Structure du groupe de champs](../../../images/healthcare/field-groups/medication/medication.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | ---|  --- | --- | --- |
-| [!UICONTROL Lot] | `batch` | Objet | Détails sur un médicament emballé. Contient deux propriétés : <li>`lotNumber` : valeur de chaîne de l’identifiant affecté au lot.</li> <li>`expirationDate` : valeur DateTime pour laquelle le lot arrivera à expiration.</li> |
-| [!UICONTROL Code] | `code` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Le code qui identifie ce médicament. |
-| [!UICONTROL Définition] | `definition` | [[!UICONTROL Référence]](../data-types/reference.md) | La définition du médicament. |
-| [!UICONTROL Dose Form] | `doseForm` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Décrit la forme de la dose du médicament, comme les comprimés ou les capsules. |
-| [!UICONTROL Identifiant] | `identifier` | Tableau de [[!UICONTROL Identifiant]](../data-types/identifier.md) | Identifiant du médicament. |
-| [!UICONTROL Ingrédient] | `ingredient` | Tableau d’objets | Décrit les informations sur les ingrédients du médicament. Pour plus d’informations, consultez la [section ci-dessous](#ingredient) . |
-| [!UICONTROL Holder d’autorisation marketing] | `marketingAuthorizationHolder` | [[!UICONTROL Référence]](../data-types/reference.md) | L’organisation qui a l’autorisation de commercialiser le médicament. |
-| [!UICONTROL Volume total] | `totalVolume` | [[!UICONTROL Quantity]](../data-types/quantity.md) | La quantité de produit fournie dans le médicament lorsque le code de produit ne déduit pas la taille du paquet. |
-| [!UICONTROL Statut] | `status` | Chaîne | Le statut du médicament. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues suivantes. <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li> |
+| [!UICONTROL Batch] | `batch` | Objet | Détails sur un médicament emballé. Contient deux propriétés : <li>`lotNumber` : valeur de chaîne pour l’identifiant attribué au lot.</li> <li>`expirationDate` : valeur DateTime indiquant le moment d’expiration du lot.</li> |
+| [!UICONTROL Code] | `code` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Le code qui identifie ce médicament. |
+| [!UICONTROL Definition] | `definition` | [[!UICONTROL Reference]](../data-types/reference.md) | La définition du médicament. |
+| [!UICONTROL Dose Form] | `doseForm` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Décrit la forme posologique du médicament, comme des comprimés ou des gélules. |
+| [!UICONTROL Identifier] | `identifier` | Tableau de [[!UICONTROL Identifier]](../data-types/identifier.md) | Identifiant du médicament. |
+| [!UICONTROL Ingredient] | `ingredient` | Tableau d’objets | Décrit les informations sur les ingrédients du médicament. Pour plus d’informations, consultez la [section ci-dessous](#ingredient). |
+| [!UICONTROL Marketing Authorization Holder] | `marketingAuthorizationHolder` | [[!UICONTROL Reference]](../data-types/reference.md) | L&#39;organisation qui a l&#39;autorisation de commercialiser le médicament. |
+| [!UICONTROL Total Volume] | `totalVolume` | [[!UICONTROL Quantity]](../data-types/quantity.md) | La quantité de produit fournie dans le médicament lorsque le code du produit ne déduit pas la taille de l’emballage. |
+| [!UICONTROL Status] | `status` | Chaîne | Le statut du médicament. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues suivantes. <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li> |
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
+Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medication.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medication.schema.json)
 
 ## `ingredient` {#ingredient}
 
-`ingredient` est fourni sous la forme d’un tableau d’objets. La structure de chaque objet est décrite ci-dessous.
+`ingredient` est fourni sous la forme d’un tableau d’objets . La structure de chaque objet est décrite ci-dessous.
 
-![structure d’ingrédient](../../../images/healthcare/field-groups/medication/ingredient.png)
+![structure des ingrédients](../../../images/healthcare/field-groups/medication/ingredient.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Item] | `item` | [[!UICONTROL Référence codeable]](../data-types/codeable-reference.md) | L’ingrédient en cours de description. |
-| [!UICONTROL Force Concept Codeable] | `strengthCodeableConcept` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | La quantité de l’ingrédient présent, exprimée dans une terminologie définie par le système. |
-| [!UICONTROL Force Quantité] | `strengthQuantity` | [[!UICONTROL Quantity]](../data-types/quantity.md) | La quantité de l’ingrédient présent. |
-| [!UICONTROL Ratio de force] | `strengthRatio` | [[!UICONTROL Ratio]](../data-types/ratio.md) | Le ratio de l’ingrédient présent. |
-| [!UICONTROL Est Actif] | `isActive` | Booléen | Indique si l’ingrédient est actif. |
+| [!UICONTROL Item] | `item` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | L&#39;ingrédient décrit. |
+| [!UICONTROL Strength Codeable Concept] | `strengthCodeableConcept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Quantité de l’ingrédient présent, exprimée dans une terminologie définie par le système. |
+| [!UICONTROL Strength Quantity] | `strengthQuantity` | [[!UICONTROL Quantity]](../data-types/quantity.md) | Quantité de l’ingrédient présent. |
+| [!UICONTROL Strength Ratio] | `strengthRatio` | [[!UICONTROL Ratio]](../data-types/ratio.md) | Rapport de l’ingrédient présent. |
+| [!UICONTROL Is Active] | `isActive` | Booléen | Indique si l&#39;ingrédient est actif. |

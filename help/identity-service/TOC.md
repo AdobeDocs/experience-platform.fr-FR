@@ -5,10 +5,10 @@ breadcrumb-title: Guide du service d’identités d’Experience Platform
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 71%
+source-wordcount: '160'
+ht-degree: 63%
 
 ---
 
@@ -31,12 +31,12 @@ ht-degree: 71%
       - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
       - [Interface utilisateur de simulation de graphique](./identity-graph-linking-rules/graph-simulation.md)
       - [Interface utilisateur des paramètres d’identité](./identity-graph-linking-rules/identity-settings-ui.md)
-   - [Présentation d’ECID](./features/ecid.md)
+   - {hide-from-toc}[Présentation d’ECID](./features/ecid.md)
 - [Guide de mise en œuvre](implementation.md)
-- [Barrières de sécurité pour les données Identity &#x200B;](guardrails.md)
+- [Barrières de sécurité pour les données Identity](guardrails.md)
 - API Service d’identités {#api}
    - [Prise en main](api/getting-started.md)
-   - [Étiquetage d’un champ comme identité](api/label-identities.md)
+   - {hide-from-toc}[Étiqueter un champ comme identité](api/label-identities.md)
    - [Répertorier les identités d’un cluster](api/list-cluster-identites.md)
    - [Répertorier l’historique des clusters d’une identité](api/list-cluster-history.md)
    - [Répertorier les mappages d’une identité](api/list-identity-mappings.md)
@@ -44,7 +44,7 @@ ht-degree: 71%
    - [Création d’un espace de noms personnalisé](api/create-custom-namespace.md)
    - [Répertorier l’identifiant natif d’une identité](api/list-native-id.md)
    - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Définir des champs d’identité dans l’interface utilisateur](label-identities.md)
+- {hide-from-toc}[Définir des champs d’identité dans l’interface utilisateur](label-identities.md)
 - [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 - [Guide de dépannage](troubleshooting-guide.md)
-- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

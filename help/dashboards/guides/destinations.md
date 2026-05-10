@@ -6,8 +6,8 @@ type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3048'
-ht-degree: 47%
+source-wordcount: '3056'
+ht-degree: 48%
 
 ---
 
@@ -145,7 +145,7 @@ Le widget **[!UICONTROL Recently activated audiences]** fournit une liste des au
 
 La date de [!UICONTROL Updated] affichée indique la dernière fois que l’audience a été activée vers la destination et correspond au dernier instantané quotidien. En d’autres termes, si vous activez une audience vers la destination, la date mise à jour ne changera pas tant que l’instantané suivant n’aura pas été pris.
 
-Sélectionner le nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL View All]** pour accéder à l’onglet [!UICONTROL Audiences] de [!UICONTROL Browse] , puis sélectionner le nom d’une audience pour en afficher les détails.
+Sélectionner le nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL View All]** pour accéder à l’onglet [!UICONTROL Browse] de [!UICONTROL Audiences] , puis sélectionner le nom d’une audience pour en afficher les détails.
 
 Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md).
 

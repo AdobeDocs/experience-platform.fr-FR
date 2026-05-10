@@ -5,8 +5,8 @@ description: La composition d’audiences dans l’interface utilisateur d’Ado
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2293'
-ht-degree: 55%
+source-wordcount: '2321'
+ht-degree: 54%
 
 ---
 
@@ -151,7 +151,7 @@ Si vous excluez par audience, vous pouvez sélectionner l’audience à exclure 
 
 Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Add]** pour ajouter l’audience à exclure à votre bloc d’exclusion.
 
-![Une liste d’audiences s’affiche. Dans cette boîte de dialogue, vous pouvez sélectionner l’audience à ajouter.](../images/ui/audience-composition/select-audience.png)
+![Une liste d’audiences s’affiche. Vous pouvez sélectionner l’audience à ajouter à partir de cette boîte de dialogue.](../images/ui/audience-composition/select-audience.png)
 
 ### Exclure par attribut {#exclude-attribute}
 

@@ -4,8 +4,8 @@ description: Découvrez les limites d’utilisation et de capacité de votre lic
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 1a7a074a455542bb1438b2cbf199d79229142389
 workflow-type: tm+mt
-source-wordcount: '2072'
-ht-degree: 5%
+source-wordcount: '2098'
+ht-degree: 7%
 
 ---
 
@@ -122,7 +122,7 @@ La section **[!UICONTROL Streaming throughput]** affiche des informations sur le
 
 | Nom de la colonne | Description |
 | ----------- | ----------- |
-| Sandbox | Nom du sandbox. |
+| Sandbox | Le nom du sandbox. |
 | Services | Service utilisé par le sandbox. Actuellement, la seule valeur prise en charge est Profil. |
 | Utilisation (pic) | Débit de diffusion en continu maximal des données dans le sandbox au cours de la période de recherche en amont sélectionnée. |
 | Capacité | Débit de diffusion en continu maximal pour le sandbox. |
@@ -161,12 +161,12 @@ La section **[!UICONTROL Streaming audience count]** affiche le nombre d’audie
 
 | Nom de la colonne | Description |
 | ----------- | ----------- |
-| Sandbox | Nom du sandbox. |
+| Sandbox | Le nom du sandbox. |
 | Services | Service utilisé pour le sandbox. |
 | Utilisation | Nombre d’audiences de diffusion en continu qui se trouvent dans le sandbox. |
 | Capacité | Nombre maximal d’audiences de diffusion en continu autorisées dans le sandbox. |
 
-### Capacités d’Edge {#edge-capacities}
+### Capacités Edge {#edge-capacities}
 
 La section **[!UICONTROL Edge capacities]** présente des informations sur les capacités de périphérie de votre organisation. Plus précisément, cette section affiche des informations de capacité sur le débit de segmentation Edge et les audiences Edge. Vous pouvez modifier la période de recherche en amont des capacités Edge de l’organisation.
 
@@ -202,7 +202,7 @@ La section **[!UICONTROL Edge audience count]** affiche le nombre d’audiences 
 
 | Nom de la colonne | Description |
 | ----------- | ----------- |
-| Sandbox | Nom du sandbox. |
+| Sandbox | Le nom du sandbox. |
 | Services | Service utilisé pour le sandbox. |
 | Utilisation | Nombre d’audiences du type répertorié qui se trouvent dans le sandbox. |
 | Capacité | Nombre maximal d’audiences du type répertorié qui sont autorisées dans le sandbox. |

@@ -5,8 +5,8 @@ description: Gérez les politiques de contrôle d’accès via l’interface Aut
 exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 14%
+source-wordcount: '641'
+ht-degree: 16%
 
 ---
 

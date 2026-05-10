@@ -6,8 +6,8 @@ description: Découvrez comment utiliser l’interface utilisateur de Privacy Se
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 44%
+source-wordcount: '1721'
+ht-degree: 45%
 
 ---
 
@@ -54,7 +54,7 @@ Reportez-vous à la [présentation des réglementations relatives à la confiden
 | [!UICONTROL GDPR (European Union)] | `gdpr` | La [!DNL General Data Protection Regulation] de l&#39;Union européenne |
 | [!UICONTROL HIPAA_USA (United States)] | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL ICDPALIA_USA (Iowa)] | `icdpa_ia_usa` | [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA (Brazil)] | `lgpd_bra` | La [!DNL General Data Protection Law] « [!DNL Lei Geral de Proteção de Dados] » du Brésil |
+| [!UICONTROL LGPD_BRA (Brazil)] | `lgpd_bra` | La [!DNL Lei Geral de Proteção de Dados] « [!DNL General Data Protection Law] » du Brésil |
 | [!UICONTROL MCDPA_MN_USA (Minnesota)] | `mcdpa_mn_usa` | [!DNL Minnesota Consumer Data Privacy Act] |
 | [!UICONTROL MCDPA_MT_USA (Montana)] | `mcdpa_mt_usa` | [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL MHMDA_WA_USA (Washington)] | `mhmda_wa_usa` | [!DNL Washington My Health My Data Act] |

@@ -6,7 +6,7 @@ description: Intelligent Services permet aux analystes et spécialistes du mark
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '513'
 ht-degree: 96%
 
 ---

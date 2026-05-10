@@ -2,8 +2,8 @@
 title: Deltashare
 description: Découvrez comment utiliser la source Deltashare sur Adobe Experience Platform.
 hide: true
-hidefromtoc: true
-source-git-commit: 4bab8f03ce606948ef02909e7ef69d8922a5c340
+exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%

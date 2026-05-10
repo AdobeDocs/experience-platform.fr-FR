@@ -4,8 +4,8 @@ description: Découvrez comment créer une connexion source Mixpanel à l’aide
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 30%
+source-wordcount: '876'
+ht-degree: 29%
 
 ---
 
@@ -15,7 +15,7 @@ Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -30,7 +30,7 @@ Pour connecter [!DNL Mixpanel] à Experience Platform, vous devez fournir des va
 | --- | --- | --- |
 | Nom d’utilisateur | Nom d’utilisateur du compte de service qui correspond à votre compte [!DNL Mixpanel]. Pour plus d’informations, consultez la [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account). | `Test8.6d4ee7.mp-service-account` |
 | Mot de passe | Mot de passe du compte de service qui correspond à votre compte [!DNL Mixpanel]. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| ID de projet | Identifiant de projet [!DNL Mixpanel]. Cet identifiant est requis pour créer une connexion source. Pour plus d’informations[[!DNL Mixpanel]  consultez la &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)documentation sur les paramètres de projet et le [[!DNL Mixpanel] guide sur la création et la gestion de projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
+| ID de projet | Identifiant de projet [!DNL Mixpanel]. Cet identifiant est requis pour créer une connexion source. Pour plus d’informations[&#128279;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) consultez la [!DNL Mixpanel] documentation sur les paramètres de projet et le [[!DNL Mixpanel] guide sur la création et la gestion de projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
 | Fuseau horaire | Fuseau horaire qui correspond à votre projet [!DNL Mixpanel]. Le fuseau horaire est requis pour créer une connexion source. Pour plus d’informations, consultez la [documentation sur les paramètres du projet Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings). | `Pacific Standard Time` |
 
 Pour plus d’informations sur l’authentification de votre source [!DNL Mixpanel], consultez la [[!DNL Mixpanel] présentation de la source](../../../../connectors/analytics/mixpanel.md).
@@ -122,9 +122,9 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 | `item_name` | chaîne |
 | `item_price` | chaîne |
 | `mp_api_endpoint` | chaîne |
-| `mp_api_timestamp_ms` | nombre entier |
-| `mp_processing_time_ms` | Entier |
-| `time` | Entier |
+| `mp_api_timestamp_ms` | entier |
+| `mp_processing_time_ms` | entier |
+| `time` | entier |
 
 ### Limites {#limits}
 

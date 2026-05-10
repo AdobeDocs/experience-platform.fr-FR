@@ -5,8 +5,8 @@ description: Gérez les rôles via l’interface Autorisations dans Adobe Experi
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: ed966156c253a8c07380079013d98c578821ae03
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 14%
+source-wordcount: '769'
+ht-degree: 17%
 
 ---
 

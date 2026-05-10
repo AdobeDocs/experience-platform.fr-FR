@@ -4,8 +4,8 @@ description: Découvrez les règles de liaison du graphique d’identités dans 
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '1605'
-ht-degree: 11%
+source-wordcount: '1712'
+ht-degree: 16%
 
 ---
 
@@ -143,7 +143,7 @@ Il existe des instances où plusieurs connexions peuvent se produire sur un seul
 | Kiosque public | Les voyageurs à l’aéroport se connectent en utilisant leur carte de fidélité pour enregistrer leurs bagages et imprimer leur carte d’embarquement. |
 | Centre d’appel | Le personnel du centre d’appels se connecte sur un seul appareil au nom des clients qui appellent le service clientèle pour résoudre des problèmes. |
 
-![Diagramme de certains appareils partagés courants.](../images/identity-settings/shared-devices.png "Diagramme de certains appareils partagés courants."){zoomable="yes"}
+![Diagramme de certains appareils partagés communs.](../images/identity-settings/shared-devices.png "Diagramme de certains appareils partagés communs."){zoomable="yes"}
 
 Dans ces cas, d’un point de vue graphique, si aucune limite n’est activée, un seul ECID est lié à plusieurs CRMID.
 
@@ -156,7 +156,7 @@ Avec [!DNL Identity Graph Linking Rules], vous pouvez réaliser les actions suiv
 
 Il existe également des cas d’utilisateurs qui fournissent de fausses valeurs comme des numéros de téléphone et/ou des adresses e-mail lors de l’enregistrement. Dans ces cas, si les limites ne sont pas activées, les identités liées au téléphone/e-mail finiront par être liées à plusieurs CRMID différents.
 
-![Diagramme qui représente les scénarios d’e-mail ou de téléphone non valides.](../images/identity-settings/invalid-email-phone.png "Diagramme qui représente les scénarios d’e-mail ou de téléphone non valides."){zoomable="yes"}
+![Diagramme qui représente des scénarios d’e-mail ou de téléphone non valides.](../images/identity-settings/invalid-email-phone.png "Diagramme qui représente des scénarios d’e-mail ou de téléphone non valides."){zoomable="yes"}
 
 Avec [!DNL Identity Graph Linking Rules], vous pouvez réaliser les actions suivantes :
 

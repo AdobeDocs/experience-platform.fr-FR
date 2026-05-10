@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;surveiller les identités;surveiller les flux de données;flux de données;identités;
-description: Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et clientes ainsi que leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel. Ce tutoriel explique comment surveiller les flux de données avec des identités à l’aide de l’interface utilisateur d’Experience Platform.
+description: Le service d’identités d’Adobe Experience Platform vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel. Ce tutoriel explique comment surveiller les flux de données avec des identités à l’aide de l’interface utilisateur d’Experience Platform.
 title: Surveillance des flux de données pour les identités dans l’interface utilisateur
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1075'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -17,7 +17,7 @@ Le service d’identités d’Adobe Experience Platform vous offre la possibil
 
 Le tableau de bord de surveillance vous fournit une représentation visuelle de l’activité des données au sein des identités, y compris le statut des identités de vos données. Ce tutoriel explique comment utiliser le tableau de bord de surveillance pour surveiller les identités de vos données à l’aide de l’interface utilisateur d’Experience Platform, ce qui vous permet de suivre l’état du traitement des identités.
 
-## Commencer {#getting-started}
+## Prise en main {#getting-started}
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Experience Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md) : les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de la fréquence des flux de données sélectionnés.

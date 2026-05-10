@@ -6,8 +6,8 @@ type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 6aacade76b31268b8f6a9db2b8c191d8c7702a1b
 workflow-type: tm+mt
-source-wordcount: '3577'
-ht-degree: 9%
+source-wordcount: '3616'
+ht-degree: 10%
 
 ---
 
@@ -102,7 +102,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 
   >[!IMPORTANT]
   >
-  > À partir de mars 2025, Adobe déploie une mise à jour pour accroître la précision des rapports pour les destinations de diffusion en streaming. Cette amélioration assure un meilleur alignement entre les rapports dans Experience Platform et les plateformes de destination.
+  > À partir de mars 2025, Adobe déploie une mise à jour pour accroître la précision des rapports pour les destinations de diffusion en streaming. Cette amélioration garantit un meilleur alignement entre les rapports dans Experience Platform et les plateformes de destination.
   >
   > Avant cette mise à jour, **[!UICONTROL Identities failed]** incluait toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total.
   > 
@@ -200,7 +200,7 @@ Vous pouvez également choisir d’afficher des informations riches sur un certa
 
 1. Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > onglet **[!UICONTROL Browse]** .
 2. Accédez au flux de données à inspecter.
-3. Sélectionnez le symbole représentant des points de suspension et l’![&#x200B; &#x200B;](/help/images/icons/monitoring.png)icône de surveillance **[!UICONTROL View in monitoring]**.
+3. Sélectionnez le symbole représentant des points de suspension et l’**[!UICONTROL View in monitoring]** ![icône de surveillance](/help/images/icons/monitoring.png).
 
 ![Sélectionnez Afficher dans la surveillance dans le workflow des destinations pour obtenir plus d’informations sur un flux de données.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
 

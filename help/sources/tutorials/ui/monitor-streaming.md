@@ -5,7 +5,7 @@ title: Surveillance des flux de données pour les sources de diffusion en contin
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '1000'
 ht-degree: 16%
 
 ---

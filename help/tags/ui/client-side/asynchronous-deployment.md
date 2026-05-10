@@ -4,8 +4,8 @@ description: Découvrez comment déployer les bibliothèques de balises d’Adob
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 98%
+source-wordcount: '1041'
+ht-degree: 92%
 
 ---
 
@@ -30,7 +30,7 @@ Souvent, les bibliothèques sont chargées de manière synchrone dans la balise 
 
 Par défaut, le navigateur analyse le document et atteint cette ligne, puis commence à récupérer le fichier JavaScript à partir du serveur. Le navigateur attend que le fichier soit renvoyé, puis analyse et exécute le fichier JavaScript. Enfin, il continue d’analyser le reste du document HTML.
 
-Si l’analyseur rencontre la balise `<script>` avant de rendre le contenu visible, l’affichage du contenu est retardé. Si le fichier JavaScript en cours de chargement n’est pas absolument nécessaire pour présenter le contenu à vos utilisateurs, vous exigez inutilement que vos visiteurs attendent le contenu. Plus la bibliothèque est grande, plus le retard est important. C’est la raison pour laquelle des outils de test des performances de site web tels que [!DNL Google PageSpeed] ou [!DNL Lighthouse] marquent souvent des scripts chargés de manière synchrone.
+Si l’analyseur rencontre la balise `<script>` avant de rendre le contenu visible, l’affichage du contenu est retardé. Si le fichier JavaScript en cours de chargement n’est pas absolument nécessaire pour présenter le contenu à vos utilisateurs, vous exigez inutilement que vos visiteurs attendent le contenu. Plus la bibliothèque est grande, plus le retard est important.  C’est la raison pour laquelle des outils de test des performances de site web tels que [!DNL Google PageSpeed] ou [!DNL Lighthouse] marquent souvent des scripts chargés de manière synchrone.
 
 Les bibliothèques de gestion des balises peuvent rapidement prendre de l’ampleur si vous disposez de nombreuses balises à gérer.
 
@@ -73,8 +73,8 @@ Bien que l’ordre soit toujours suivi, il se peut que certaines règles soient 
 
 Lorsque vous appliquez ces principes à votre propre site web, tenez compte des points suivants :
 
-* **Une règle utilisant le type d’événement Library Loaded (Bibliothèque chargée) peut s’exécuter avant que la couche de données ne soit complètement chargée.** Cela peut entraîner l’exécution d’actions de règle avec des données manquantes, car les données n’étaient pas encore disponibles sur la page. Ces types de problèmes peuvent être atténués en ajustant la configuration de votre règle. À titre d’exemple, au lieu d’avoir une règle déclenchée par le type d’événement Library Loaded (Bibliothèque chargée), vous pouvez utiliser les types d’événements Custom Event (Événement personnalisé) ou Direct Call (Appel direct) qui sont déclenchés par votre code de page dès la fin du chargement de votre couche de données.
-* **Le type d’événement Page Bottom (Bas de page) ne fournit pas spécialement de valeur lorsque la bibliothèque est chargée de manière asynchrone.** Prenez plutôt en compte les types d’événements Library Loaded (Bibliothèque chargée), DOM Ready (Prêt pour DOM), Window Loaded (Fenêtre chargée) ou autres.
+* **Une règle utilisant le type d’événement Library Loaded (Bibliothèque chargée) peut s’exécuter avant le chargement complet de la couche de données.**  Il peut en résulter que les actions de la règle s’exécutent avec des données manquantes, car les données n’étaient pas encore disponibles sur la page. Ces types de problèmes peuvent être atténués en ajustant la configuration de votre règle. À titre d’exemple, au lieu d’avoir une règle déclenchée par le type d’événement Library Loaded (Bibliothèque chargée), vous pouvez utiliser les types d’événements Custom Event (Événement personnalisé) ou Direct Call (Appel direct) qui sont déclenchés par votre code de page dès la fin du chargement de votre couche de données.
+* **Le type d’événement Page Bottom (Bas de page) ne fournit pas de valeur particulière lorsque la bibliothèque est chargée de manière asynchrone.**  Considérez plutôt les types d’événements Library Loaded (Bibliothèque chargée), DOM Ready (Prêt pour DOM), Window Loaded (Fenêtre chargée) ou autres.
 
 Si vous constatez que des actions se produisent dans le désordre, il est probable que vous deviez faire face à certains problèmes de délai. Les déploiements qui nécessitent un délai précis peuvent exiger le recours à des récepteurs d’événements ou à des types d’événements Custom Event (Événement personnalisé) ou Direct Call (Appel direct) pour rendre leurs mises en œuvre plus solides et cohérentes.
 

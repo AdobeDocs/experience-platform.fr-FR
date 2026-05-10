@@ -2,10 +2,9 @@
 title: Diffuser des données de Kobie vers Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de Kobie vers Adobe Experience Platform à l’aide de l’interface utilisateur.
 hide: true
-hidefromtoc: true
 badge: Beta
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
-source-git-commit: 90b197a632a5210c4502094de665cab53b76378b
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 15%

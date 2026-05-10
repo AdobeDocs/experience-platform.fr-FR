@@ -5,7 +5,7 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: a90c6cde6d1052f068265a92fc27e32ad87cd0f1
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 69%
@@ -113,7 +113,7 @@ ht-degree: 69%
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
-      * [Mise à niveau de la connexion Pinterest](./catalog/advertising/pinterest-upgrade.md)
+      * {hide-from-toc}[Mise à niveau de la connexion &#x200B;](./catalog/advertising/pinterest-upgrade.md)
       * [Connexion PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [(Beta) Connexion Reddit Custom Audience](./catalog/advertising/reddit-custom-audience.md)
       * [Connexion racine](./catalog/advertising/rokt.md)
@@ -163,7 +163,7 @@ ht-degree: 69%
    * Destinations Data Management Platform {#data-management}
       * [Destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
-      * [Plateforme Marketing Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
+      * {hide-from-toc}[Plateforme marketing Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Partenaire de données et d’identité {#data-partner}
       * [Suppression de prospects Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Amélioration des données Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
@@ -188,7 +188,7 @@ ht-degree: 69%
       * [(API) Connexion à Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(Fichiers) Connexion à Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
-      * [[!DNL (V2) Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2.md)
+      * {hide-from-toc}[[!DNL (V2) Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2.md)
       * [Connexion à SendGrid](./catalog/email-marketing/sendgrid.md)
    * Extensions des balises {#launch-extensions}
       * [Présentation de l’extension de balise](./catalog/launch-extensions/overview.md)

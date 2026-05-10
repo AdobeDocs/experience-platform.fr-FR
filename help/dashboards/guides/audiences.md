@@ -6,14 +6,14 @@ type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2955'
+source-wordcount: '2972'
 ht-degree: 32%
 
 ---
 
 # Tableau de bord [!UICONTROL Audiences] {#audiences-dashboard}
 
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences. Celles-ci sont présentées telles qu’elles sont capturées lors d’instantanés quotidiens. Ce guide explique comment accéder au tableau de bord [!UICONTROL Audiences] et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
+L’interface utilisateur (IU) d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences, présentées ainsi lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord [!UICONTROL Audiences] et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
 Pour une présentation de toutes les fonctionnalités du service de segmentation de Adobe Experience Platform dans l’interface utilisateur d’Experience Platform, consultez le [guide de l’interface utilisateur du service de segmentation](../../segmentation/ui/overview.md).
 
@@ -35,7 +35,7 @@ Pour accéder au tableau de bord [!UICONTROL Audiences] dans l’interface utili
 >
 >Si votre organisation débute avec Experience Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Audiences] n’est pas visible. À la place, l’onglet [!UICONTROL Overview] affiche des liens et de la documentation pour vous aider à commencer la segmentation.
 
-![Onglet [!UICONTROL Audiences] du tableau de bord [!UICONTROL Overview] avec [!UICONTROL Audiences] et [!UICONTROL Overview] en surbrillance.](../images/audiences/dashboard-overview.png)
+![Onglet [!UICONTROL Overview] du tableau de bord [!UICONTROL Audiences] avec [!UICONTROL Audiences] et [!UICONTROL Overview] en surbrillance.](../images/audiences/dashboard-overview.png)
 
 ### Modification du tableau de bord [!UICONTROL Audiences] {#modify}
 

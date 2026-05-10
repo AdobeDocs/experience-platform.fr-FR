@@ -2,11 +2,10 @@
 title: Filtrer les objets sources dans l’interface utilisateur
 description: Découvrez comment parcourir vos objets sources tels que les comptes et les flux de données dans l’interface utilisateur d’Experience Platform.
 hide: true
-hidefromtoc: true
 exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1418'
 ht-degree: 2%
 
 ---

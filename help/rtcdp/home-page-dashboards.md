@@ -6,8 +6,8 @@ feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 12%
+source-wordcount: '922'
+ht-degree: 14%
 
 ---
 
@@ -50,7 +50,7 @@ Le tableau des scores indique le nombre total actuel de schémas, de jeux de don
 
 * **Total des schémas** : le compteur **Total des schémas** affiche le nombre de schémas dans le système. Ce compteur est mis à jour lors de la création d’un schéma. Pour plus d’informations, consultez la [présentation des schémas](../xdm/home.md).
 * **Total des jeux de données** : le compteur **Total des jeux de données** affiche le nombre de jeux de données dans le système et la quantité de données dans Experience Platform. Ce compteur est mis à jour lorsqu’un jeu de données est créé. Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
-* **Nombre total de profils** : le nombre **Profils** indique le nombre total de profils de votre organisation dans Experience Platform. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce nombre utilise la [politique de fusion](profile/merge-policies.md) par défaut définie dans la configuration de la politique de fusion dans le profil client en temps réel. Le nombre de profils est mis à jour une fois toutes les 24 heures. Sélectionnez **[!UICONTROL Profiles]** pour accéder à la page Aperçu des profils et afficher toutes les mesures de votre profil. Pour plus d’informations sur les profils, consultez la [présentation du profil client en temps réel](../profile/home.md).
+* **Nombre total de profils** : le nombre **Profils** indique le nombre total de profils de votre organisation dans Experience Platform. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce nombre utilise la [politique de fusion](profile/merge-policies.md) par défaut définie dans la configuration de la politique de fusion dans le profil client en temps réel. Le nombre de profils est mis à jour une fois toutes les 24 heures. Sélectionnez **[!UICONTROL Profiles]** pour accéder à la page Aperçu des profils et afficher toutes les mesures de votre profil. Pour plus d’informations sur les profils, consultez la [présentation du profil client en temps réel](../profile/home.md).
 * **Nombre total d’audiences** : le compteur **Nombre total d’audiences** affiche le nombre total d’audiences créées pour votre organisation. Ce nombre est mis à jour lors de la création de nouvelles audiences. Pour plus d’informations sur les audiences, consultez la [&#x200B; présentation de Segmentation Service &#x200B;](../segmentation/home.md).
 
 ### Éléments récents

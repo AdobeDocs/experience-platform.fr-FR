@@ -5,8 +5,8 @@ description: Découvrez comment configurer la destination de Personalization per
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 3779531814cbf7e5718db0ac88aca266f14a1b21
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 28%
+source-wordcount: '1192'
+ht-degree: 30%
 
 ---
 
@@ -96,7 +96,7 @@ Le tableau suivant décrit le type et la fréquence d’exportation pour cette d
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](/help/destinations/ui/connect-destination.md).
 
