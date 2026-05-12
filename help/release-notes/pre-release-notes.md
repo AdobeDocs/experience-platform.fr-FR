@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: b7c20cd5f7eb07484b3f61a5933968238f399581
+source-git-commit: f09a2a1f05f05e7e90aa73d650506a231acbb5df
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 29%
+source-wordcount: '1309'
+ht-degree: 30%
 
 ---
 
@@ -48,7 +48,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur les alertes, consultez la [[!DNL Observability Insights] présentation](/help/observability/home.md).
+Pour plus d’informations, consultez la [[!DNL Observability Insights] vue d’ensemble](/help/observability/home.md).
 
 ## Attributs calculés {#computed-attributes}
 
@@ -70,7 +70,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| {type=Informative} [Exporter des tableaux pour les attributs d’enrichissement](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage. Sélectionnez des champs internes individuels dans un tableau et ils sont exportés en tant que colonnes distinctes dans les sorties JSON et Parquet. Cette fonctionnalité est disponible pour un nombre limité de clientes et clients. Pour obtenir l’accès, contactez votre représentant ou représentante Adobe. Pour plus d’informations, consultez la [documentation sur les attributs d’enrichissement](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
+| [!BADGE ]{type=Informative} [Exporter des tableaux pour les attributs d’enrichissement](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage. Sélectionnez des champs internes individuels dans un tableau et ils sont exportés en tant que colonnes distinctes dans les sorties JSON et Parquet. Cette fonctionnalité est disponible pour un nombre limité de clientes et clients. Pour obtenir l’accès, contactez votre représentant ou représentante Adobe. Pour plus d’informations, consultez la [documentation sur les attributs d’enrichissement](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
 | Prise en charge des audiences externes pour [[!DNL Criteo]](../destinations/catalog/advertising/criteo.md) | Activez les audiences d’origines autres que Segmentation Service vers la destination [Criteo](../destinations/catalog/advertising/criteo.md), y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Voir la section [audiences prises en charge](../destinations/catalog/advertising/criteo.md#supported-audiences) pour plus d’informations. |
 | Nouvelles destinations prises en charge pour [[!DNL Acxiom Audience Connection]](../destinations/catalog/advertising/acxiom-audience-connection.md) et [[!DNL Acxiom Real ID Audience Connection]](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Cinq nouvelles destinations sont désormais prises en charge : [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1ère partie), [!DNL Warner Bros. Discovery] et [!DNL Yahoo]. Pour plus d’informations, consultez les documents [Acxiom Audience Connection](../destinations/catalog/advertising/acxiom-audience-connection.md) et [Acxiom Real ID Audience Connection](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md). |
 
