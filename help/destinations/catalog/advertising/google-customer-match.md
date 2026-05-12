@@ -3,7 +3,7 @@ keywords: correspondance client google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: Le ciblage par correspondance des clients de Google utilise vos données en ligne et hors ligne pour atteindre et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping et Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0dfc78f4363283e6774a833f32d70b0c109efb3c
+source-git-commit: b778d29872332a2422396371e09a45ec67c5a8ba
 workflow-type: tm+mt
 source-wordcount: '3521'
 ht-degree: 8%
@@ -273,11 +273,11 @@ Sélection des champs cibles :
 
 L’exemple suivant illustre un mappage d’identité correct. `Phone_E.164` et `Email` appartiennent tous deux au type de clé `CONTACT_INFO`. Vous pouvez donc les utiliser ensemble dans la même connexion.
 
-![Étape de mappage affichant Phone_E.164 mappé à phone_sha256_e.164 et Email mappé à email_lc_sha256. Une légende confirme que les deux identités appartiennent au type de clé CONTACT_INFO.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png)
+![Étape de mappage affichant Phone_E.164 mappé à phone_sha256_e.164 et Email mappé à email_lc_sha256. Une légende confirme que les deux identités appartiennent au type de clé CONTACT_INFO.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png){zoomable="yes"}
 
 L’exemple suivant illustre un mappage d’identité incorrect. `GAID` appartient au type de clé `MOBILE_ADVERTISING_ID`, tandis que `Phone_E.164` appartient à `CONTACT_INFO`. Le mappage d’identités de différentes catégories de type de clé dans la même connexion réinitialise les taux de correspondance à 0 %. Pour plus d’informations sur les types de clé, consultez la section [Un type de clé par connexion de destination](#single-key-type).
 
-![L’étape Mappage affichant GAID mappé à gaid et Phone_E.164 mappé à phone_sha256_e.164. Une légende indique que GAID appartient à MOBILE_ADVERTISING_ID et que Phone_E.164 appartient à CONTACT_INFO, qui est un mappage de type clé mixte non valide.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png)
+![L’étape Mappage affichant GAID mappé à gaid et Phone_E.164 mappé à phone_sha256_e.164. Une légende indique que GAID appartient à MOBILE_ADVERTISING_ID et que Phone_E.164 appartient à CONTACT_INFO, qui est un mappage de type clé mixte non valide.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png){zoomable="yes"}
 
 Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
 
