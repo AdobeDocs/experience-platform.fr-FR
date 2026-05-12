@@ -5,7 +5,7 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+source-git-commit: dd564e2b3a97747c6d40c7e9f3d971f88ed4b349
 workflow-type: tm+mt
 source-wordcount: '1115'
 ht-degree: 87%
@@ -324,7 +324,7 @@ ht-degree: 87%
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
          - {hide-from-toc}[Événements de streaming Kobie &#x200B;](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
-         - [Connecteur Source Batch Talon.One](tutorials/ui/create/loyalty/talon-one-batch.md)
+         - [Connecteur source Talon.One Batch](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automatisation du marketing {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
