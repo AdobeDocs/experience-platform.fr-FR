@@ -3,7 +3,7 @@ keywords: correspondance client google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: Le ciblage par correspondance des clients de Google utilise vos données en ligne et hors ligne pour atteindre et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping et Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0dfc78f4363283e6774a833f32d70b0c109efb3c
+source-git-commit: b778d29872332a2422396371e09a45ec67c5a8ba
 workflow-type: tm+mt
 source-wordcount: '3521'
 ht-degree: 8%
@@ -86,7 +86,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -107,11 +107,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de configurer une destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous de lire et de respecter la politique de Google relative à l’utilisation de [!DNL Customer Match], décrite dans la [documentation d’assistance Google](https://support.google.com/google-ads/answer/6299717).
 
-Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads .
+Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads [.
 
 ### Liste autorisée {#allowlist}
 
-Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique &#x200B;](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique ](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Les clients disposant de comptes conformes sont automatiquement placés sur la liste autorisée par Google.
 
@@ -139,7 +139,7 @@ Selon le type d’identifiants ingérés dans [!DNL Adobe Experience Platform], 
 
 **Exception :** dans le type de clé `CONTACT_INFO`, vous pouvez combiner des adresses e-mail, des numéros de téléphone et des adresses postales dans la même connexion. Google recommande cette approche, car elle améliore les taux de correspondance.
 
-Pour obtenir des exemples de mappages d’identité corrects et incorrects, consultez la section [&#x200B; Exemple de mappage &#x200B;](#example-gcm).
+Pour obtenir des exemples de mappages d’identité corrects et incorrects, consultez la section [ Exemple de mappage ](#example-gcm).
 
 ### Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
 
@@ -176,7 +176,7 @@ Ne fournissez **pas** de valeurs préhachées pour `address_info_first_name` ou 
 
 ### Utilisation d’espaces de noms personnalisés {#custom-namespaces}
 
-Avant de pouvoir utiliser l’espace de noms `User_ID` pour envoyer des données à Google, veillez à synchroniser vos propres identifiants à l’aide de [!DNL gTag]. Pour plus d’informations, consultez la documentation officielle de [&#128279;](https://support.google.com/google-ads/answer/9199250).
+Avant de pouvoir utiliser l’espace de noms `User_ID` pour envoyer des données à Google, veillez à synchroniser vos propres identifiants à l’aide de [!DNL gTag]. Pour plus d’informations, consultez la documentation officielle de [](https://support.google.com/google-ads/answer/9199250).
 
 <!-- 
 Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
@@ -190,14 +190,14 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr) 
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
 -->
 
 ## Vue d’ensemble des vidéos {#video-overview}
 
 Regardez la vidéo ci-dessous pour une explication des avantages et de la manière d’activer les données dans le ciblage par correspondance client Google.
 
->[!VIDEO](https://video.tv.adobe.com/v/326484?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Se connecter à la destination {#connect}
 
@@ -273,11 +273,11 @@ Sélection des champs cibles :
 
 L’exemple suivant illustre un mappage d’identité correct. `Phone_E.164` et `Email` appartiennent tous deux au type de clé `CONTACT_INFO`. Vous pouvez donc les utiliser ensemble dans la même connexion.
 
-![Étape de mappage affichant Phone_E.164 mappé à phone_sha256_e.164 et Email mappé à email_lc_sha256. Une légende confirme que les deux identités appartiennent au type de clé CONTACT_INFO.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png)
+![Étape de mappage affichant Phone_E.164 mappé à phone_sha256_e.164 et Email mappé à email_lc_sha256. Une légende confirme que les deux identités appartiennent au type de clé CONTACT_INFO.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png){zoomable="yes"}
 
 L’exemple suivant illustre un mappage d’identité incorrect. `GAID` appartient au type de clé `MOBILE_ADVERTISING_ID`, tandis que `Phone_E.164` appartient à `CONTACT_INFO`. Le mappage d’identités de différentes catégories de type de clé dans la même connexion réinitialise les taux de correspondance à 0 %. Pour plus d’informations sur les types de clé, consultez la section [Un type de clé par connexion de destination](#single-key-type).
 
-![L’étape Mappage affichant GAID mappé à gaid et Phone_E.164 mappé à phone_sha256_e.164. Une légende indique que GAID appartient à MOBILE_ADVERTISING_ID et que Phone_E.164 appartient à CONTACT_INFO, qui est un mappage de type clé mixte non valide.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png)
+![L’étape Mappage affichant GAID mappé à gaid et Phone_E.164 mappé à phone_sha256_e.164. Une légende indique que GAID appartient à MOBILE_ADVERTISING_ID et que Phone_E.164 appartient à CONTACT_INFO, qui est un mappage de type clé mixte non valide.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png){zoomable="yes"}
 
 Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
 
@@ -329,7 +329,7 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Cette erreur se produit lorsque les comptes client ne respectent pas les [&#x200B; conditions préalables &#x200B;](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads .
+Cette erreur se produit lorsque les comptes client ne respectent pas les [ conditions préalables ](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads [.
 
 ### Erreur interne du serveur 500 - Portées d’authentification insuffisantes {#insufficient-scopes}
 
@@ -352,4 +352,4 @@ Pour résoudre ce problème, procédez comme suit :
 Si le problème persiste :
 
 * Vérifiez que votre compte Google Ads est placé sur la liste autorisée pour la correspondance client et répond aux [exigences de la politique](#google-account-prerequisites).
-* Assurez-vous que le niveau d’accès de l’utilisateur est [!DNL Standard] ou supérieur dans le compte client Google Ads. Pour plus d’informations[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads .
+* Assurez-vous que le niveau d’accès de l’utilisateur est [!DNL Standard] ou supérieur dans le compte client Google Ads. Pour plus d’informations](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads [.
