@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: b7c20cd5f7eb07484b3f61a5933968238f399581
+source-git-commit: f09a2a1f05f05e7e90aa73d650506a231acbb5df
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 29%
+source-wordcount: '1309'
+ht-degree: 30%
 
 ---
 
@@ -48,7 +48,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur les alertes, consultez la [[!DNL Observability Insights] présentation](/help/observability/home.md).
+Pour plus d’informations, consultez la [[!DNL Observability Insights] vue d’ensemble](/help/observability/home.md).
 
 ## Attributs calculés {#computed-attributes}
 
