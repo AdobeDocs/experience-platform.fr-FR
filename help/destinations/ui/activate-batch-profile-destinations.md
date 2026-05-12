@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ce9b0bd5cc733ed67909898b45f4ee42ae015608
+source-git-commit: f8177cc57501a2b62f9127edf230896978513502
 workflow-type: tm+mt
-source-wordcount: '4961'
+source-wordcount: '4940'
 ht-degree: 37%
 
 ---
@@ -326,10 +326,6 @@ Au cours de cette étape, vous devez sélectionner les attributs de profil à aj
    ![Fenêtre modale présentant les attributs de profil qui peuvent être exportés vers la destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
 1. (Facultatif) L’ordre des champs mappés dans l’interface utilisateur est reflété dans l’ordre des colonnes dans le fichier CSV exporté, du haut vers le bas, la ligne supérieure étant la colonne la plus à gauche du fichier CSV. Vous pouvez réorganiser les champs mappés comme vous le souhaitez, en faisant glisser et en déposant les lignes de mappage, comme illustré ci-dessous.
-
-   >[!NOTE]
-   >
-   >Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients et clientes. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
 
    ![Enregistrement montrant la réorganisation des champs de mapping par glisser-déposer.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
