@@ -55,7 +55,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -108,7 +108,7 @@ Une fois le jeton expiré, les exportations de données vers la destination cess
 3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Edit details]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
 4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnect OAuth]** et réauthentifiez-vous à l’aide de vos informations d’identification Pinterest.
-   ![Fenêtre modale avec l’option Reconnecter OAuth ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+   ![Fenêtre modale avec l’option Reconnecter OAuth &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 >
@@ -135,7 +135,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Consultez la page du Centre d&#39;aide de Pinterest [](https://help.pinterest.com/en/business/article/audience-targeting) pour plus d&#39;informations.
+Consultez la page du Centre d&#39;aide de Pinterest [&#128279;](https://help.pinterest.com/en/business/article/audience-targeting) pour plus d&#39;informations.
 
 +++ Afficher le journal des modifications
 
