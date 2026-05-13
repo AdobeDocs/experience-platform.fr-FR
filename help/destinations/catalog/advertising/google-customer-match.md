@@ -3,9 +3,9 @@ keywords: correspondance client google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: Le ciblage par correspondance des clients de Google utilise vos données en ligne et hors ligne pour atteindre et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping et Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b778d29872332a2422396371e09a45ec67c5a8ba
+source-git-commit: dcc6da5f6913e3e71a32383118927cf8b20d2059
 workflow-type: tm+mt
-source-wordcount: '3521'
+source-wordcount: '3522'
 ht-degree: 8%
 
 ---
@@ -86,7 +86,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -107,11 +107,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de configurer une destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous de lire et de respecter la politique de Google relative à l’utilisation de [!DNL Customer Match], décrite dans la [documentation d’assistance Google](https://support.google.com/google-ads/answer/6299717).
 
-Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads .
+Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads [.
 
 ### Liste autorisée {#allowlist}
 
-Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique &#x200B;](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique ](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Les clients disposant de comptes conformes sont automatiquement placés sur la liste autorisée par Google.
 
@@ -121,25 +121,32 @@ Les clients disposant de comptes conformes sont automatiquement placés sur la l
 
 Selon le type d’identifiants ingérés dans [!DNL Adobe Experience Platform], vous devez respecter les exigences correspondantes.
 
-### Un type de clé par connexion à la destination {#single-key-type}
+### Comportement du type de clé lors de la mise à jour des mappages d’identité {#key-type-behavior}
 
-[!DNL Google Customer Match] nécessite que chaque liste de clients utilise une catégorie d’identifiant unique, appelée type de clé. Google définit trois types de clés dans la référence [CustomerMatchUploadKeyType](https://developers.google.com/google-ads/api/reference/rpc/v23/CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType) :
+[!DNL Google Customer Match] utilise trois catégories d’identifiants, appelées types de clés, pour gérer des listes de clients distinctes dans [!DNL Google Ads]. Google définit trois types de clés dans la référence [CustomerMatchUploadKeyType](https://developers.google.com/google-ads/api/reference/rpc/v23/CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType) :
 
 * `CONTACT_INFO` : adresses électroniques, numéros de téléphone et adresses postales
 * `CRM_ID` : ID d’utilisateur personnalisés attribués par l’annonceur
 * `MOBILE_ADVERTISING_ID` : identifiants d’appareils mobiles ([!DNL IDFA] et [!DNL GAID])
 
+Vous pouvez mapper des identités provenant de plusieurs catégories de type clé dans la même connexion de destination. [!DNL Google] conserve une liste de clients distincte pour chaque type de clé.
+
+**Règle de suppression :** [!DNL Google] supprime une liste de clients uniquement lorsque vous supprimez de la destination tous les champs d’identité appartenant à ce type de clé. La suppression d’un champ est sécurisée tant qu’au moins un autre champ du même type de clé reste mappé.
+
+Par exemple, si vous avez mappé `email_lc_sha256` et `address_info_first_name` (tous deux appartiennent au type de clé `CONTACT_INFO`), la suppression de `address_info_first_name` est sécurisée. La liste des clients `CONTACT_INFO` est conservée, car `email_lc_sha256` en fait toujours partie.
+
 >[!IMPORTANT]
 >
->Chaque connexion de destination doit utiliser des identités à partir d’un seul type de clé uniquement. Ne mappez pas d’identités provenant de différentes catégories de types de clés dans la même connexion. Par exemple, ne combinez pas une adresse e-mail (`CONTACT_INFO`) avec un identifiant d’appareil mobile (`MOBILE_ADVERTISING_ID`). En outre, ne modifiez pas le type de clé d’une connexion existante en commutant le mappage d’identité vers une autre catégorie lors d’une exécution d’activation ultérieure.
+>Évitez les actions suivantes. Tous deux suppriment la liste des clients pour le type de clé concerné et suppriment définitivement toutes les données de correspondance historiques :
 >
->Si vous mélangez ou changez de type de clé, [!DNL Google] remplace les ID de mappage dans la destination, ferme les listes d’utilisateurs correspondantes dans [!DNL Google Ads] afin qu’elles n’acceptent plus de nouveaux membres et crée de nouvelles activations. Cette option réinitialise les taux de correspondance sur 0 %.
+>* **Suppression de tous les champs d’un type de clé :** par exemple, si `user_id` est votre seul champ de `CRM_ID` et que vous le supprimez, [!DNL Google] supprime l’intégralité de la liste des clients `CRM_ID`. Le fait de `user_id` rajouter ultérieurement crée une liste vide. Les données précédentes ne peuvent pas être récupérées.
+>* **Basculement entre les types de clés :** la suppression de `user_id` pour passer à `address_info_first_name` et `address_info_last_name`, puis l’inversion ultérieure de la modification, supprime et recrée la liste des clients concernés à chaque fois. Les données historiques d’audience sont perdues.
 >
 >Il s’agit d’une exigence [!DNL Google], et non d’une limitation [!DNL Adobe Experience Platform].
 
-**Exception :** dans le type de clé `CONTACT_INFO`, vous pouvez combiner des adresses e-mail, des numéros de téléphone et des adresses postales dans la même connexion. Google recommande cette approche, car elle améliore les taux de correspondance.
+Si vous devez conserver plusieurs types de clés actifs, pensez à [créer une connexion de destination distincte](../../ui/connect-destination.md) pour chaque type de clé. Cela élimine le risque de supprimer accidentellement tous les champs d’un type lors de la modification de l’autre.
 
-Pour obtenir des exemples de mappages d’identité corrects et incorrects, consultez la section [&#x200B; Exemple de mappage &#x200B;](#example-gcm).
+Dans le type de clé `CONTACT_INFO`, vous pouvez combiner des adresses e-mail, des numéros de téléphone et des adresses postales dans la même connexion. Google recommande cette approche, car elle améliore les taux de correspondance.
 
 ### Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
 
@@ -176,7 +183,7 @@ Ne fournissez **pas** de valeurs préhachées pour `address_info_first_name` ou 
 
 ### Utilisation d’espaces de noms personnalisés {#custom-namespaces}
 
-Avant de pouvoir utiliser l’espace de noms `User_ID` pour envoyer des données à Google, veillez à synchroniser vos propres identifiants à l’aide de [!DNL gTag]. Pour plus d’informations, consultez la documentation officielle de [&#128279;](https://support.google.com/google-ads/answer/9199250).
+Avant de pouvoir utiliser l’espace de noms `User_ID` pour envoyer des données à Google, veillez à synchroniser vos propres identifiants à l’aide de [!DNL gTag]. Pour plus d’informations, consultez la documentation officielle de [](https://support.google.com/google-ads/answer/9199250).
 
 <!-- 
 Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
@@ -190,14 +197,14 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr) 
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
 -->
 
 ## Vue d’ensemble des vidéos {#video-overview}
 
 Regardez la vidéo ci-dessous pour une explication des avantages et de la manière d’activer les données dans le ciblage par correspondance client Google.
 
->[!VIDEO](https://video.tv.adobe.com/v/326484?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Se connecter à la destination {#connect}
 
@@ -250,9 +257,9 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 
 Pour plus d’informations sur la recherche du [!DNL App ID], consultez la documentation officielle de [Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) ou demandez à votre représentant Google.
 
-### Exemple de mappage : activation des données d’audience dans [!DNL Google Customer Match] {#example-gcm}
+### Mappage d’identités : activation des données d’audience dans [!DNL Google Customer Match] {#example-gcm}
 
-Il s’agit d’un exemple de mappage d’identité correct lors de l’activation des données d’audience dans [!DNL Google Customer Match].
+Suivez les instructions ci-dessous pour sélectionner les espaces de noms d’identité source et cible appropriés lors de l’activation des données d’audience dans [!DNL Google Customer Match].
 
 Sélection des champs sources :
 
@@ -270,14 +277,6 @@ Sélection des champs cibles :
 * Sélectionnez l’espace de noms `Phone_SHA256_E.164` comme identité cible lorsque vos espaces de noms sources sont `PHONE_E.164` ou `Phone_SHA256_E.164`.
 * Sélectionnez les espaces de noms `IDFA` ou `GAID` comme identité cible lorsque vos espaces de noms sources sont `IDFA` ou `GAID`.
 * Sélectionnez l’espace de noms `User_ID` comme identité cible lorsque l’espace de noms source est personnalisé.
-
-L’exemple suivant illustre un mappage d’identité correct. `Phone_E.164` et `Email` appartiennent tous deux au type de clé `CONTACT_INFO`. Vous pouvez donc les utiliser ensemble dans la même connexion.
-
-![Étape de mappage affichant Phone_E.164 mappé à phone_sha256_e.164 et Email mappé à email_lc_sha256. Une légende confirme que les deux identités appartiennent au type de clé CONTACT_INFO.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png){zoomable="yes"}
-
-L’exemple suivant illustre un mappage d’identité incorrect. `GAID` appartient au type de clé `MOBILE_ADVERTISING_ID`, tandis que `Phone_E.164` appartient à `CONTACT_INFO`. Le mappage d’identités de différentes catégories de type de clé dans la même connexion réinitialise les taux de correspondance à 0 %. Pour plus d’informations sur les types de clé, consultez la section [Un type de clé par connexion de destination](#single-key-type).
-
-![L’étape Mappage affichant GAID mappé à gaid et Phone_E.164 mappé à phone_sha256_e.164. Une légende indique que GAID appartient à MOBILE_ADVERTISING_ID et que Phone_E.164 appartient à CONTACT_INFO, qui est un mappage de type clé mixte non valide.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png){zoomable="yes"}
 
 Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
 
@@ -303,25 +302,21 @@ Lors du mappage d’une audience à des ID mobiles [!DNL IDFA] et [!DNL GAID], [
 
 ### Le taux de correspondance chute à 0 % après activation {#match-rate-reset}
 
-Si les taux de correspondance chutent à 0 % après l’activation, une cause potentielle est une incohérence de type de clé dans votre connexion de destination.
+Si les taux de correspondance chutent à 0 % après l’activation, la cause probable est que tous les champs d’identité d’un type de clé ont été supprimés de la connexion de destination.
 
-[!DNL Google Customer Match] nécessite que chaque liste de clients utilise un seul type de clé. Deux scénarios déclenchent ce problème :
+[!DNL Google] supprime une liste de clients lorsque tous les champs appartenant à un type de clé donné sont supprimés d’une destination. Deux scénarios déclenchent cette procédure :
 
-* **Types de clés mixtes :** mappage simultané d’identités de différentes catégories de types de clés dans la même connexion (par exemple, une adresse e-mail et un identifiant d’appareil mobile).
-* **Changement de type de clé :** modification du mappage d’identité d’une connexion existante vers une catégorie de type de clé différente lors d’une exécution d’activation ultérieure (par exemple, activation avec `USER_ID` une fois, puis passage à `FIRST_NAME`/`LAST_NAME` la suivante).
+* **Suppression de tous les champs d’un type de clé :** par exemple, si `user_id` est le seul champ de `CRM_ID` dans la connexion et que vous le supprimez, [!DNL Google] supprime la liste des clients `CRM_ID`. Les taux de correspondance sont réinitialisés à 0 %, car [!DNL Google] crée une liste de clients vide.
+* **Basculement entre les types de clés :** supprimez tous les champs d’un type de clé pour ajouter des champs d’un autre type, puis inversez la modification. La liste des clients concernés est ainsi supprimée et recréée à chaque fois. Les données historiques d’audience sont perdues.
 
-Dans les deux cas, [!DNL Google] remplace les identifiants de mappage, ferme les listes d’utilisateurs correspondantes dans [!DNL Google Ads] afin qu’ils n’acceptent plus de nouveaux membres, et crée de nouvelles activations, réinitialisant les taux de correspondance à 0 %.
+La suppression d’un champ individuel est sécurisée tant qu’au moins un autre champ du même type de clé reste mappé dans la connexion.
 
-Pour résoudre ce problème :
+Pour éviter cela :
 
-1. Identifiez la catégorie de type de clé des identités que vous mappez actuellement dans la connexion affectée.
-2. Créez des connexions de destination distinctes, une par catégorie de type de clé :
-   * Une connexion pour les identités `CONTACT_INFO` (e-mail, téléphone, adresse postale)
-   * Une connexion pour les identités `MOBILE_ADVERTISING_ID` ([!DNL IDFA] et [!DNL GAID])
-   * Une connexion pour les identités `CRM_ID` (ID d’utilisateur personnalisés)
-3. Activez les audiences appropriées à chaque connexion, en préservant la cohérence du mappage d’identité pour toutes les exécutions d’activation.
+1. Ne supprimez pas tous les champs d’identité d’un type de clé lors d’une seule exécution d’activation. Conservez mappé au moins un champ du type de clé concerné.
+2. Si plusieurs types de clé doivent être actifs, créez des connexions de destination distinctes pour chaque type de clé pointant vers la même audience source. Cela élimine le risque de supprimer accidentellement tous les champs d’un type lors de la modification de l’autre.
 
-Pour plus d’informations, voir la section [Un type de clé par connexion de destination](#single-key-type).
+Pour plus d’informations, voir la section [Comportement de type clé lors de la mise à jour des mappages d’identité](#key-type-behavior).
 
 ### Message d’erreur 400 Requête incorrecte {#bad-request}
 
@@ -329,7 +324,7 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Cette erreur se produit lorsque les comptes client ne respectent pas les [&#x200B; conditions préalables &#x200B;](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads .
+Cette erreur se produit lorsque les comptes client ne respectent pas les [ conditions préalables ](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads [.
 
 ### Erreur interne du serveur 500 - Portées d’authentification insuffisantes {#insufficient-scopes}
 
@@ -352,4 +347,4 @@ Pour résoudre ce problème, procédez comme suit :
 Si le problème persiste :
 
 * Vérifiez que votre compte Google Ads est placé sur la liste autorisée pour la correspondance client et répond aux [exigences de la politique](#google-account-prerequisites).
-* Assurez-vous que le niveau d’accès de l’utilisateur est [!DNL Standard] ou supérieur dans le compte client Google Ads. Pour plus d’informations[&#128279;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads .
+* Assurez-vous que le niveau d’accès de l’utilisateur est [!DNL Standard] ou supérieur dans le compte client Google Ads. Pour plus d’informations](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) consultez la documentation sur les Google Ads [.
