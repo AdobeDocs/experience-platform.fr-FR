@@ -11,7 +11,8 @@ tutorials-title: Tutorials
 tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 solution: Experience Platform
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 type: Documentation
 index: true
 role: Developer, User, Admin, Leader
