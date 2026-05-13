@@ -4,9 +4,9 @@ title: Exporter des jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: acbcdcb27f355ac24ba1a24168f39bca0429e618
 workflow-type: tm+mt
-source-wordcount: '5137'
+source-wordcount: '5417'
 ht-degree: 12%
 
 ---
@@ -2384,7 +2384,7 @@ Pour vérifier les exécutions d’un flux de données, utilisez l’API d’ex�
 
 **Requête**
 
-+++Obtenir les exécutions de flux de données - Requête
++++Obtenir les exécutions de flux de données
 
 Dans la requête pour récupérer les exécutions de flux de données, ajoutez comme paramètre de requête l’identifiant de flux de données que vous avez obtenu à l’étape précédente, lors de la création du flux de données.
 
@@ -2401,7 +2401,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Réponse**
 
-+++Obtenir les exécutions de flux de données - Réponse
++++Obtenir les exécutions de flux de données
 
 ```json
 {
@@ -2449,7 +2449,117 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Vous trouverez des informations sur les [différents paramètres renvoyés par l’API d’exécution de flux de données](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) dans la documentation de référence de l’API.
+Vous trouverez des informations sur les [différents paramètres renvoyés par l’API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) dans la documentation de référence de l’API.
+
+## Affichage des jeux de données dans un flux de données {#view-datasets-in-dataflow}
+
+Après avoir créé un flux de données d’exportation de jeu de données, vous pouvez récupérer la liste des jeux de données configurés dans ce flux de données. Utilisez ce workflow à deux appels pour vérifier les jeux de données qu’un flux de données est en train d’exporter. Cela s’avère particulièrement utile lorsque vous stockez des métadonnées de flux de données par programmation et que vous devez les réconcilier avec la configuration actuelle.
+
+### Récupérer le flux de données {#retrieve-dataflow}
+
+Récupérez le flux de données pour obtenir son `sourceConnectionIds`. Les définitions de jeux de données dépendent de la connexion source. Vous avez donc besoin de cet identifiant avant de pouvoir afficher les jeux de données associés.
+
+Si vous connaissez votre identifiant de flux de données, utilisez-le directement dans la requête. Si vous ne connaissez pas l’identifiant, commencez par répertorier tous les flux de données d’exportation des jeux de données à l’aide du paramètre de requête illustré ci-dessous, puis identifiez le flux de données correct.
+
+>[!BEGINSHADEBOX]
+
+**Requête**
+
++++Répertorier tous les flux de données d’exportation de jeux de données
+
+```shell
+curl --request GET 'https://platform.adobe.io/data/foundation/flowservice/flows?property=inheritedAttributes.targetConnections[].data.outputType==DATASET_EXPORT' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
++++Obtenir un seul flux de données
+
+```shell
+curl --request GET 'https://platform.adobe.io/data/foundation/flowservice/flows/{FLOW_ID}' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
+**Réponse**
+
++++Obtenir le flux de données
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "name": "Dataset export dataflow",
+    "sourceConnectionIds": [
+        "f8b5e8e0-6d50-4e32-a48a-9e9e8a42b5c2"
+    ]
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+Notez la valeur `sourceConnectionIds` de la réponse. Vous l’utiliserez à l’étape suivante.
+
+### Récupérer la connexion source {#retrieve-source-connection}
+
+Utilisez l’identifiant de connexion source obtenu à l’étape précédente pour récupérer les jeux de données configurés dans le flux de données.
+
+>[!BEGINSHADEBOX]
+
+**Requête**
+
++++Obtenir la connexion source
+
+```shell
+curl --request GET 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/{SOURCE_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
+**Réponse**
+
++++Obtenir la connexion source
+
+Le tableau `params.datasets` répertorie les jeux de données configurés dans le flux de données. Chaque entrée inclut l’identifiant et le nom du jeu de données.
+
+```json
+{
+    "id": "f8b5e8e0-6d50-4e32-a48a-9e9e8a42b5c2",
+    "name": "Dataset export source connection",
+    "params": {
+        "datasets": [
+            {
+                "dataSetId": "abc123",
+                "name": "AAM Devices Data"
+            },
+            {
+                "dataSetId": "def456",
+                "name": "Loyalty Members"
+            }
+        ]
+    }
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ## Vérifier l’exportation réussie d’un jeu de données {#verify}
 
