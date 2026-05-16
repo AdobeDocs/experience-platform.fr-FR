@@ -7,7 +7,7 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
-source-git-commit: c96228ad44f5b7acdbae797d1dd517e1916492f2
+source-git-commit: 24e4992e51813a9f1b2f0935d8bea59825b2606b
 workflow-type: tm+mt
 source-wordcount: 401
 ht-degree: 56%

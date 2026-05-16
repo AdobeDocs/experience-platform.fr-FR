@@ -14,10 +14,12 @@ solution: Experience Platform
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 type: Documentation
+landing-page-name: experience-platform
+landing-page-breadcrumb-title: Experience Platform
 index: true
 role: Developer, User, Admin, Leader
 auto-video-transcripts: true
-source-git-commit: c96228ad44f5b7acdbae797d1dd517e1916492f2
+source-git-commit: be9c7693267cee5dfc601a3d8d09f395f27bd3c4
 workflow-type: tm+mt
 source-wordcount: 125
 ht-degree: 100%
