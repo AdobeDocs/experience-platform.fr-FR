@@ -2,7 +2,7 @@
 cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Experience Platform
-git-repo: https://github.com/AdobeDocs/experience-platform.en
+git-repo: https://github.com/AdobeDocs/experience-platform.fr-FR
 solution: Experience Platform
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
