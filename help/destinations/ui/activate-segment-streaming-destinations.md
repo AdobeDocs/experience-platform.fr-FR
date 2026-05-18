@@ -6,7 +6,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1116'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -102,7 +102,7 @@ Certaines destinations de diffusion en continu d’audience nécessitent que vou
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Appliquer la transformation"
->abstract="Cochez cette option lorsque vous utilisez des champs sources non hachés afin que les [!DNL Adobe Experience Platform] les hachent automatiquement lors de l’activation."
+>abstract="Cochez cette option lorsque vous utilisez des champs sources non hachés afin qu’[!DNL Adobe Experience Platform] les hache automatiquement lors de l’activation."
 
 Lorsque vous mappez des attributs source non hachés avec des attributs cibles qui sont censés être hachés (par exemple : `email_lc_sha256` ou `phone_sha256`), cochez l’option **Apply transformation** pour que [!DNL Adobe Experience Platform] hache automatiquement les attributs source au moment de l’activation.
 

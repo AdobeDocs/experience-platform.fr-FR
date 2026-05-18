@@ -6,7 +6,7 @@ exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
 source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1538'
-ht-degree: 15%
+ht-degree: 19%
 
 ---
 
@@ -157,7 +157,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Jeux de mappages préconfigurés"
->abstract="Nous avons préconfiguré pour vous ces deux jeux de mappages : ECID et cookie [!DNL adcloud]. Lorsque vous activez des données vers Adobe Advertising DSP, les profils qualifiés pour les audiences activées doivent avoir au moins une identité ECID associée à leur profil, pour être exportés vers la destination."
+>abstract="Nous avons préconfiguré ces deux jeux de mappages pour vous : ECID et cookie [!DNL adcloud]. Lorsque vous activez des données vers Adobe Advertising DSP, les profils qualifiés pour les audiences activées doivent avoir au moins une identité ECID associée à leur profil, pour être exportés vers la destination."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
 
 >[!IMPORTANT]

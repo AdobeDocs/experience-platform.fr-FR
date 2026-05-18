@@ -7,7 +7,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 source-git-commit: 0d5bb74473551c9eddd823439e8bbe18126242e9
 workflow-type: tm+mt
 source-wordcount: '1681'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -133,7 +133,7 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Co
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
 >title="Saisir votre identifiant de compte Snowflake"
->abstract="Si votre compte est lié à une organisation, utilisez le format suivant : `OrganizationName.AccountName`<br><br>Si votre compte n’est pas lié à une organisation, utilisez le format suivant : `AccountName`"
+>abstract="Si votre compte est lié à une organisation, utilisez le format suivant : `OrganizationName.AccountName`<br><br>. Si votre compte n’est pas lié à une organisation, utilisez le format suivant : `AccountName`"
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 

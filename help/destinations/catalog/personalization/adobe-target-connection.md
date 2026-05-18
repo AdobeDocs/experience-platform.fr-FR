@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 1b1864c3957c080c0f1d9e823e5c816970aed087
 workflow-type: tm+mt
 source-wordcount: '2330'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
@@ -138,7 +138,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >id="platform_destinations_target_workspace"
 >title="À propos des espaces de travail [!DNL Adobe Target]"
 >abstract="Sélectionnez l’espace de travail [!DNL Adobe Target] vers lequel les audiences seront partagées. Vous pouvez sélectionner un seul espace de travail pour chaque connexion [!DNL Adobe Target]. Lors de l’activation, les audiences sont acheminées vers l’espace de travail sélectionné tout en suivant les libellés d’utilisation des données Experience Platform applicables."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=fr" text="En savoir plus sur les espaces  [!DNL Adobe Target]  travail"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=fr" text="En savoir plus sur les espaces de travail  [!DNL Adobe Target] "
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
