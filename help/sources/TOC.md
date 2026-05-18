@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 9e208aa9e15c009c4a91a0fd0cea5f99934770e7
+source-git-commit: de7562396f469992c52387503025b31d79e2049e
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1124'
 ht-degree: 87%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 87%
          - [Guide de migration du mappage ECID](connectors/adobe-applications/marketo/migration.md)
    - Advertising {#advertising}
       - [Connecteur Google Ads](connectors/advertising/ads.md)
+      - [Connecteur Meta Ads](connectors/advertising/meta-ads.md)
       - {hide-from-toc}[Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
@@ -98,7 +99,7 @@ ht-degree: 87%
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
    - Partage de données {#data-sharing}
-      - {hide-from-toc}[Deltashare &#x200B;](connectors/data-sharing/deltashare.md)
+      - {hide-from-toc}[Deltashare ](connectors/data-sharing/deltashare.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -107,7 +108,7 @@ ht-degree: 87%
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
    - Fidélité {#loyalty}
       - [Événements de streaming capillaire](connectors/loyalty/capillary.md)
-      - {hide-from-toc}[&#x200B; LAVE &#x200B;](connectors/loyalty/lava.md)
+      - {hide-from-toc}[ LAVE ](connectors/loyalty/lava.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automatisation du marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -188,7 +189,7 @@ ht-degree: 87%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Streaming Shopify](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Fidélité {#loyalty}
-         - {hide-from-toc}[&#x200B; LAVE &#x200B;](tutorials/api/create/loyalty/lava.md)
+         - {hide-from-toc}[ LAVE ](tutorials/api/create/loyalty/lava.md)
       - Automatisation du marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -255,6 +256,7 @@ ht-degree: 87%
          - [Activités personnalisées Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
+         - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
          - {hide-from-toc}[Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -316,7 +318,7 @@ ht-degree: 87%
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Résolution d’identité d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
       - Partage de données {#data-sharing}
-         - {hide-from-toc}[Deltashare &#x200B;](tutorials/ui/create/data-sharing/deltashare.md)
+         - {hide-from-toc}[Deltashare ](tutorials/ui/create/data-sharing/deltashare.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -325,8 +327,8 @@ ht-degree: 87%
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
-         - {hide-from-toc}[Événements de streaming Kobie &#x200B;](tutorials/ui/create/loyalty/kobie-streaming.md)
-         - {hide-from-toc}[&#x200B; LAVE &#x200B;](tutorials/ui/create/loyalty/lava.md)
+         - {hide-from-toc}[Événements de streaming Kobie ](tutorials/ui/create/loyalty/kobie-streaming.md)
+         - {hide-from-toc}[ LAVE ](tutorials/ui/create/loyalty/lava.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur source Talon.One Batch](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automatisation du marketing {#marketing-automation}
