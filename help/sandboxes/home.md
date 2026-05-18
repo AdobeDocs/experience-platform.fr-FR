@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des sandbox
 description: Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6fad28b0ff32b9672222414ec3fd6c36cc4c5ec3
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 81%
+source-wordcount: '992'
+ht-degree: 78%
 
 ---
 
@@ -26,6 +26,7 @@ Les sandbox constituent des partitions virtuelles au sein d’une instance d’E
 * **Sandbox de production** : un sandbox de production est conçu pour être utilisé avec des profils dans votre environnement de production. Experience Platform vous permet de créer plusieurs sandbox de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les sandbox de production prennent en charge un volume de profils de production allant jusqu’à votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur tous vos sandbox de production autorisés). Vous avez le droit d’utiliser l’intégralité du volume total de données sous licence (mesuré de manière cumulée sur tous vos sandbox de production autorisés).
 
 * **Sandbox de développement** : un sandbox de développement est un sandbox qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les sandbox de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur tous vos sandbox de développement autorisés). Vos droits incluent jusqu’à :
+
    * une tâche de segmentation par lots par jour, par sandbox de développement ;
    * une moyenne de 120 appels API [!DNL Profile], par [!DNL Profile], par an (mesurée de manière cumulée sur tous vos sandbox de développement autorisés).
 
@@ -55,7 +56,7 @@ Pour plus d’informations sur la gestion des rôles et des autorisations pour l
 
 ## Sandbox dans l’interface utilisateur d’Experience Platform
 
-Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), les utilisateurs peuvent basculer entre les sandbox auxquels ils ont accès en utilisant le **sélecteur de sandbox** en haut à gauche de l’écran.  Les utilisateurs disposant de droits d’administration pour les sandbox ont également accès à l’onglet **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, où ils peuvent visualiser et gérer des sandbox pour leur organisation. Pour plus d’informations sur l’utilisation des sandbox dans l’interface utilisateur, voir le [guide d’utilisation du sandbox](ui/overview.md).
+Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), les utilisateurs peuvent basculer entre les sandbox auxquels ils ont accès en utilisant le **sélecteur de sandbox** en haut à gauche de l’écran.  Les utilisateurs disposant de droits d’administration pour les sandbox ont également accès à l’onglet **[!UICONTROL Sandboxes]** dans le volet de navigation de gauche, où ils peuvent afficher et gérer des sandbox pour leur organisation. Pour plus d’informations sur l’utilisation des sandbox dans l’interface utilisateur, voir le [guide d’utilisation du sandbox](ui/overview.md).
 
 ## Sandbox dans les API Experience Platform
 
