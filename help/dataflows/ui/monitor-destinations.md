@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 6aacade76b31268b8f6a9db2b8c191d8c7702a1b
 workflow-type: tm+mt
 source-wordcount: '3616'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -70,7 +70,7 @@ Pour plus d’informations sur les statuts, consultez le tableau suivant :
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identités ayant échoué"
->abstract="Nombre d’identités de profils individuels ayant échoué pour la destination sélectionnée. Vérifiez les diagnostics d’erreur pour plus de détails."
+>abstract="Le nombre d’identités de profil individuel qui ont échoué pour la destination sélectionnée. Pour plus d’informations, consultez les diagnostics d’erreur."
 
 Pour les destinations de diffusion en continu, l’onglet [!UICONTROL Dataflow runs] fournit une mise à jour horaire des données de mesure sur vos exécutions de flux de données. Les statistiques les plus importantes étiquetées concernent les identités.
 
@@ -147,7 +147,7 @@ La surveillance au niveau de l’audience pour les destinations de diffusion en 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Profils reçus"
->abstract="Nombre total de profils reçus dans l’exécution du flux de données. Pour les exportations planifiées, cela inclut les profils du dernier instantané d’audience, ainsi que les profils dont l’appartenance ou l’identité d’audience a changé entre l’heure de création de l’instantané et l’heure d’exportation. Par conséquent, ce nombre peut être supérieur au nombre de profils dans l’audience."
+>abstract="Nombre total de profils reçus dans l’exécution du flux de données. Pour les exports planifiés, cela inclut les profils du dernier instantané d’audience, ainsi que les profils dont l’appartenance à l’audience ou l’identité a changé entre le moment de création de l’instantané et le moment de l’export. Par conséquent, ce nombre peut être supérieur au nombre de profils dans l’audience."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -223,7 +223,7 @@ Pour accéder au tableau de bord [!UICONTROL Monitoring], sélectionnez **[!UICO
 
 Utilisez le tableau de bord [!UICONTROL Destinations] pour avoir une idée globale de l’intégrité de vos flux d’activation. Commencez par obtenir des informations à un niveau agrégé pour toutes les destinations par lots et de diffusion en continu, puis explorez les vues détaillées pour les flux de données, les exécutions de flux de données et les audiences activées pour une analyse approfondie de vos données d’activation. Les écrans du tableau de bord [!UICONTROL Monitoring] fournissent des informations exploitables par le biais de mesures et de descriptions d’erreur afin de vous aider à résoudre les problèmes susceptibles de se produire dans vos scénarios d’activation.
 
-Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [&#x200B; guide du tableau de bord de surveillance &#x200B;](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [ guide du tableau de bord de surveillance ](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Filtre de type de données mis en surbrillance dans la vue du tableau de bord de surveillance.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
@@ -375,7 +375,7 @@ La page de détails comporte également un bouton (bascule) pour basculer entre 
 
 La vue Erreurs d’exécution du flux de données affiche une liste des enregistrements ayant échoué et des enregistrements ayant été ignorés. Les informations relatives aux enregistrements ayant échoué et ignorés s’affichent, y compris le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les enregistrements ayant échoué. Pour afficher les enregistrements ignorés, activez le bouton (bascule) **[!UICONTROL Records skipped]**.
 
-![&#x200B; Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
+![ Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
 
 Lorsque **[!UICONTROL Audiences]** est sélectionné, la liste des audiences qui ont été activées dans l’exécution du flux de données sélectionné s’affiche. Cet écran comprend des informations au niveau de l’audience sur les enregistrements activés, les enregistrements exclus, ainsi que le statut et l’heure de la dernière exécution du flux de données.
 

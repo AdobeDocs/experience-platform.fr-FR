@@ -6,11 +6,11 @@ exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 18%
+ht-degree: 24%
 
 ---
 
-# Utiliser le connecteur source [!DNL Deltashare] dans l’interface utilisateur {#use-deltashare-in-the-ui}
+# Utiliser le connecteur source [!DNL Deltashare] dans l’interface d’utilisation {#use-deltashare-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_deltashare_schema"

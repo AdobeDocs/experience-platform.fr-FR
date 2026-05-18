@@ -6,7 +6,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1116'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> * Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
-> * Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+> * Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > * Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
@@ -102,7 +102,7 @@ Certaines destinations de diffusion en continu d’audience nécessitent que vou
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Appliquer la transformation"
->abstract="Cochez cette option lorsque vous utilisez des champs sources non hachés afin que les [!DNL Adobe Experience Platform] les hachent automatiquement lors de l’activation."
+>abstract="Cochez cette option lorsque vous utilisez des champs sources non hachés afin qu’[!DNL Adobe Experience Platform] les hache automatiquement lors de l’activation."
 
 Lorsque vous mappez des attributs source non hachés avec des attributs cibles qui sont censés être hachés (par exemple : `email_lc_sha256` ou `phone_sha256`), cochez l’option **Apply transformation** pour que [!DNL Adobe Experience Platform] hache automatiquement les attributs source au moment de l’activation.
 
@@ -119,7 +119,7 @@ Par défaut, la page **[!UICONTROL Audience schedule]** n’affiche que les audi
 
 Pour afficher toutes les audiences activées vers la destination, utilisez l’option de filtrage et désactivez le filtre **[!UICONTROL Show new audiences only]**.
 
-![Toutes les audiences &#x200B;](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
+![Toutes les audiences ](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
 1. Sur la page **[!UICONTROL Audience schedule]**, sélectionnez chaque audience, puis utilisez les sélecteurs **[!UICONTROL Start date]** et **[!UICONTROL End date]** pour configurer l’intervalle de temps pour envoyer les données vers la destination.
 
@@ -147,7 +147,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 
