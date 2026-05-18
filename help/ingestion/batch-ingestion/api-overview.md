@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API d’ingestion par lots
 description: Ce document fournit un guide complet aux développeurs qui travaillent avec des API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: a4d63048640f2761cbea4bb96e56969f6ebbff8a
 workflow-type: tm+mt
-source-wordcount: '2435'
-ht-degree: 64%
+source-wordcount: '2532'
+ht-degree: 63%
 
 ---
 
@@ -29,7 +29,7 @@ Avant de poursuivre, consultez la présentation de l’API d’ingestion par lot
 >
 >- Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devez passer au chargement de fichiers volumineux.
 >
->- Utilisez du code JSON à une seule ligne au lieu du code JSON à plusieurs lignes comme entrée pour l’ingestion par lots. Le format JSON à une seule ligne offre de meilleures performances, car le système peut diviser un fichier d’entrée en plusieurs blocs et les traiter en parallèle, tandis que le format JSON multiligne ne peut pas être divisé. Cela peut réduire considérablement les coûts de traitement des données et améliorer la latence du traitement par lots.
+>- Utilisez des objets JSON à une seule ligne (JSONL) au lieu du JSON multiligne comme entrée pour l’ingestion par lots. Les objets JSON à une seule ligne (JSONL) offrent de meilleures performances, car le système peut diviser un fichier d’entrée en plusieurs blocs et les traiter en parallèle, tandis que le format JSON multiligne ne peut pas être divisé. Cela peut réduire considérablement les coûts de traitement des données et améliorer la latence du traitement par lots.
 
 ### Création d’un lot
 
@@ -37,7 +37,7 @@ Vous devrez tout d’abord créer un lot au format JSON en tant que format d’e
 
 >[!NOTE]
 >
->Les exemples ci-dessous concernent le format JSON à une seule ligne. Pour ingérer un format JSON à plusieurs lignes, l’indicateur `isMultiLineJson` doit être défini. Pour plus d’informations, reportez-vous au [guide de dépannage de l’ingestion par lots](./troubleshooting.md).
+>Les exemples ci-dessous concernent le format JSON à une seule ligne (JSONL). Pour ingérer un format JSON à plusieurs lignes, l’indicateur `isMultiLineJson` doit être défini. Pour plus d’informations, reportez-vous au [guide de dépannage de l’ingestion par lots](./troubleshooting.md).
 
 **Format d’API**
 
@@ -760,7 +760,7 @@ Il peut parfois être nécessaire de mettre à jour les données du magasin de p
 
 Les éléments suivants sont requis pour appliquer un correctif à un lot :
 
-- **Jeu de données activé pour les mises à jour de profils et d’attributs.** Cette opération est effectuée par le biais de balises de jeu de données et nécessite l’ajout d’une balise `isUpsert:true` spécifique au tableau de `unifiedProfile`. Pour obtenir des instructions détaillées sur la création d’un jeu de données ou la configuration d’un jeu de données existant à mettre à jour, suivez le tutoriel [Activation d’un jeu de données pour les mises à jour de profil](../../catalog/datasets/enable-upsert.md).
+- **Jeu de données activé pour les mises à jour de profil et d’attribut.** Cette opération s’effectue par le biais de balises de jeu de données et nécessite l’ajout d’une balise `isUpsert:true` spécifique au tableau de `unifiedProfile`. Pour obtenir des instructions détaillées sur la création d’un jeu de données ou la configuration d’un jeu de données existant à mettre à jour, suivez le tutoriel [Activation d’un jeu de données pour les mises à jour de profil](../../catalog/datasets/enable-upsert.md).
 - **Fichier parquet contenant les champs à corriger et les champs d’identité du profil.** Le format de données pour l’application de correctifs à un lot est similaire au processus normal d’ingestion par lots. L’entrée requise est un fichier Parquet. En plus des champs à mettre à jour, les données chargées doivent contenir les champs d’identité afin de correspondre aux données de la banque de profils.
 
 Une fois que vous disposez d’un jeu de données activé pour Profile et upsert, et d’un fichier Parquet contenant les champs que vous souhaitez corriger ainsi que les champs d’identité nécessaires, vous pouvez suivre les étapes de [ingestion de fichiers Parquet](#ingest-parquet-files) afin d’appliquer le correctif par ingestion par lots.
@@ -921,9 +921,22 @@ La section suivante contient des informations supplémentaires sur l’ingestion
 
 ### Transformation des données pour l’ingestion par lots
 
-Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au schéma [&#x200B; Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
+Pour ingérer un fichier de données dans Experience Platform, la structure hiérarchique du fichier doit être conforme au schéma [&#x200B; Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
 
 Vous trouverez des informations sur le mappage d’un fichier CSV pour être conforme à un schéma XDM dans le document traitant des [exemples de transformations](../../etl/transformations.md), ainsi qu’un exemple de fichier de données JSON correctement formaté. Les exemples de fichiers fournis dans ce document se trouvent ici :
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+
+Voici un exemple de payload JSONL (JSON à une seule ligne) formatée pour l’ingestion dans Experience Platform, provenant du fichier « CRM_single_line_profiles.json » :
+
++++Sélectionner pour afficher la payload
+
+```json
+{"person":{"name":{"courtesyTitle":"Mr","firstName":"Ewart","lastName":"Bennedsen"},"gender":"male","birthDayAndMonth":"09-25","birthDate":"2004-09-25","birthYear":2004},"identityMap":{"CRMID":[{"id":"71a16013-d805-7ece-9ac4-8f2cd66e8eaa","primary":false}],"ECID":[{"id":"87098882279810196101440938110216748923","primary":false},{"id":"55019962992006103186215643814973128178","primary":false}],"LOYALTYID":[{"id":"2e33192000007456-0365c00000000000","primary":true}]},"homePhone":{"number":"256-284-7231"},"personalEmail":{"address":"ebennedsenex@jiathis.com"},"homeAddress":{"street1":"72BuhlerCrossing","city":"Anniston","stateProvince":"Alabama","country":"US","postalCode":"36205","_schema":{"latitude":33.708276,"longitude":-85.7922905}}}
+{"person":{"name":{"courtesyTitle":"Dr","firstName":"Novelia","lastName":"Ansteys"},"gender":"female","birthDayAndMonth":"10-31","birthDate":"1987-10-31","birthYear":1987},"identityMap":{"CRMID":[{"id":"2eeb6532-82e1-0d58-8955-bf97de66a6f5","primary":false}],"ECID":[{"id":"50829196174854544323574004005273946998","primary":false},{"id":"65233136134594262632703695260919939885","primary":false}],"LOYALTYID":[{"id":"2e3319208000765b-3811c00000000001","primary":true}]},"homePhone":{"number":"704-181-6371"},"personalEmail":{"address":"nansteysdk@spotify.com"},"homeAddress":{"street1":"79NorthfieldHill","city":"Charlotte","stateProvince":"NorthCarolina","country":"US","postalCode":"28299","_schema":{"latitude":35.2188655,"longitude":-80.8108888}}}
+{"person":{"name":{"courtesyTitle":"Mr","firstName":"Ulises","lastName":"Mochan"},"gender":"male","birthDayAndMonth":"03-20","birthDate":"1996-03-20","birthYear":1996},"identityMap":{"CRMID":[{"id":"6f393075-addb-bdd6-73f8-31c393b700f5","primary":false}],"ECID":[{"id":"70086119428645095847094710218289660855","primary":false},{"id":"82011353387947708954389153068944017636","primary":false}],"LOYALTYID":[{"id":"2e33192080003023-26b2000000000002","primary":true}]},"homePhone":{"number":"720-837-4159"},"personalEmail":{"address":"umochanco@gnu.org"},"homeAddress":{"street1":"00671MifflinTrail","city":"Lacolle","stateProvince":"Québec","country":"CA","postalCode":"E5A","_schema":{"latitude":45.08338,"longitude":-73.36585}}}
+{"person":{"name":{"courtesyTitle":"Mrs","firstName":"Friederike","lastName":"Durrell"},"gender":"female","birthDayAndMonth":"01-3","birthDate":"1979-01-3","birthYear":1979},"identityMap":{"CRMID":[{"id":"33d018ec-5fed-f1a3-56aa-079370a9511b","primary":false}],"ECID":[{"id":"50164729868919217963697788808932473456","primary":false},{"id":"64452712468609735658703639722261004071","primary":false}],"LOYALTYID":[{"id":"2e33192080006dfc-0cdf400000000003","primary":true}]},"homePhone":{"number":"798-528-3458"},"personalEmail":{"address":"fdurrellbj@utexas.edu"},"homeAddress":{"street1":"47FremontHill","city":"Independencia","stateProvince":"VeracruzLlave","country":"MX","postalCode":"91891","_schema":{"latitude":19.3803931,"longitude":-99.1476908}}}
+```
+
++++
