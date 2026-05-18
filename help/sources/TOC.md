@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 9e208aa9e15c009c4a91a0fd0cea5f99934770e7
+source-git-commit: de7562396f469992c52387503025b31d79e2049e
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1124'
 ht-degree: 87%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 87%
          - [Guide de migration du mappage ECID](connectors/adobe-applications/marketo/migration.md)
    - Advertising {#advertising}
       - [Connecteur Google Ads](connectors/advertising/ads.md)
+      - [Connecteur Meta Ads](connectors/advertising/meta-ads.md)
       - {hide-from-toc}[Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
@@ -255,6 +256,7 @@ ht-degree: 87%
          - [Activités personnalisées Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
+         - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
          - {hide-from-toc}[Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
