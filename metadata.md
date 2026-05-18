@@ -2,13 +2,6 @@
 cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Experience Platform
-solution-title: Platform Overview
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=fr
-solution-image: assets/experience_cloud_appicon_32.png
-getting-started-title: Documentation
-getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html?lang=fr
-tutorials-title: Tutorials
-tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr
 git-repo: https://github.com/AdobeDocs/experience-platform.fr-FR
 solution: Experience Platform
 product_v2:
@@ -19,7 +12,7 @@ landing-page-breadcrumb-title: Experience Platform
 index: true
 role: Developer, User, Admin, Leader
 auto-video-transcripts: true
-source-git-commit: be9c7693267cee5dfc601a3d8d09f395f27bd3c4
+source-git-commit: 8a60c0048d1cf48a65837e20d9cc2b7db449e87c
 workflow-type: tm+mt
 source-wordcount: 125
 ht-degree: 100%
