@@ -4,9 +4,9 @@ description: Découvrez comment créer une connexion source et un flux de donné
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: 66b5b54cdb39a7865092b7e2efcf39046aa791cc
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '702'
 ht-degree: 3%
 
 ---
