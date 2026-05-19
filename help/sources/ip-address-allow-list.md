@@ -1,10 +1,10 @@
 ---
 description: Découvrez les adresses IP que vous devez ajouter à votre place sur la liste autorisée pour utiliser correctement les sources Adobe Experience Platform.
-title: PLACER SUR LA LISTE AUTORISÉE Adresse IP associée aux sources
+title: Adresse IP associée aux sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: b3c06717aac922bbb8591afe283c6066a78bf033
+source-git-commit: 6e0b8effc76a660fccbd7672557ec34dfd587d57
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '251'
 ht-degree: 10%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 10%
 
 Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP source appropriée, vous pouvez autoriser le flux de trafic pour le service de transfert de données. Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources.
 
-## PLACER SUR LA LISTE AUTORISÉE Adresses IP pour les sources se connectant à Experience Platform sur [!DNL Azure] {#azure}
+## Adresses IP pour les sources se connectant à Experience Platform sur [!DNL Azure] {#azure}
 
 ### Sources de lots sur Experience Platform sur [!DNL Azure] {#batch}
 
@@ -59,6 +59,11 @@ Vous devez ajouter les adresses IP suivantes à votre place sur la liste autoris
 - `40.74.26.0/23`
 - `40.113.176.232/29`
 - `52.236.187.112/28`
+- `20.105.215.28/30`
+- `20.105.244.48/29`
+- `57.153.246.72/29`
+- `57.153.246.80/28`
+- `57.153.246.96/30`
 
 >[!TAB AUS5 : Australie]
 
