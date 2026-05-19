@@ -2,7 +2,7 @@
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 9e1b3812118c2f6a6ff49b47d04c220cabf8edab
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 11%
@@ -39,7 +39,7 @@ Pour sélectionner les champs visibles, vous pouvez sélectionner ![l’icône C
 | [!UICONTROL Name] | Nom d’affichage de l’attribut calculé. |
 | [!UICONTROL Description] | Description de l’attribut calculé. |
 | [!UICONTROL Evaluation method] | Méthode d’évaluation de l’attribut calculé. Actuellement, seul le **batch** est pris en charge. |
-| [!UICONTROL Last evaluated] | Cet horodatage représente la dernière exécution d’évaluation réussie. Seuls les événements qui se sont produits **auparavant** cet horodatage sont pris en compte dans la dernière évaluation réussie. |
+| [!UICONTROL Last evaluated] | Cet horodatage représente la dernière exécution d’évaluation réussie. Seuls les événements qui se sont produits **avant** cet horodatage sont pris en compte dans la dernière évaluation réussie. |
 | [!UICONTROL Last evaluation status] | Statut indiquant si l’attribut calculé a été calculé avec succès ou non lors de la dernière exécution de l’évaluation. Les valeurs possibles sont **[!UICONTROL Success]** ou **[!UICONTROL Failed]**. |
 | [!UICONTROL Refresh frequency] | Indication de la fréquence à laquelle l’attribut calculé doit être actualisé. Les valeurs possibles sont horaires, quotidiennes, hebdomadaires ou mensuelles. |
 | [!UICONTROL Fast refresh] | Valeur indiquant si l’actualisation rapide est activée ou non pour cet attribut de calcul. Si l’actualisation rapide est activée, l’attribut calculé peut être actualisé tous les jours, plutôt que toutes les semaines, toutes les deux semaines ou tous les mois. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche en amont plus longue que la base hebdomadaire. |

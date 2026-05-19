@@ -1,7 +1,7 @@
 ---
 title: Objets personnalisés avec B2B CDP
 description: Découvrez comment créer un objet personnalisé de relation un-à-plusieurs pour B2B CDP.
-source-git-commit: 1690d9e86f13fa01664a1f5b8a8d426aa35c3f22
+source-git-commit: 1d95dc69cd4532152f8a8618888dc028ec920239
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Utiliser des objets personnalisés avec B2B CDP
 
-B2B CDP prend en charge les objets personnalisés avec des relations un-à-plusieurs (1:M). Vous pouvez utiliser ces objets personnalisés dans la segmentation et les cas d’utilisation de Query Service. Par exemple, vous pouvez modéliser des objets CRM personnalisés, suivre les droits et les achats des produits et gérer les offres client. »
+B2B CDP prend en charge les objets personnalisés avec des relations un-à-plusieurs (1:M). Vous pouvez utiliser ces objets personnalisés dans la segmentation et les cas d’utilisation de Query Service. Par exemple, vous pouvez modéliser des objets CRM personnalisés, suivre les droits et les achats des produits et gérer les offres des clients.
 
 ## Créer un schéma relationnel {#create-relational}
 
