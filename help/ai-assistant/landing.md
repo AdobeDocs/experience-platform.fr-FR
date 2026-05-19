@@ -3,10 +3,10 @@ title: Assistant AI (hérité) dans la documentation du produit Adobe Experience
 description: Prise en main de l’assistant AI (hérité) dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 67208877eabe88f5bd82ec79c528b7f6216c9697
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 1%
+source-wordcount: '1346'
+ht-degree: 4%
 
 ---
 
@@ -63,7 +63,7 @@ Obtenez un aperçu des dernières améliorations de l’assistant AI (hérité),
 
 ### Surveiller les modifications importantes et les audiences prévues
 
-Vous pouvez utiliser l’assistant d’IA (hérité) pour surveiller les modifications importantes et fournir des prévisions de croissance pour votre audience et les tailles des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et offrir des projections prospectives afin de prendre des décisions éclairées par les données.
+Vous pouvez utiliser l’assistant d’IA (hérité) pour surveiller les modifications importantes et fournir des prévisions de croissance pour votre audience et les tailles des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données.
 
 [![Image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/audience-forecasting.md)
 
@@ -439,17 +439,17 @@ Lisez les exemples de cas d’utilisation de l’assistant AI (hérité) suivant
 
 * [Réduire le temps d’intégration des nouveaux membres de votre équipe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=fr)
 * [Désencombrez vos audiences et optimisez vos opérations marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=fr)
-* [Vérifiez les dépendances et minimisez les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=fr)
-* [Découvrir et déployer de nouvelles fonctionnalités plus rapidement](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=fr)
-* [Révolutionner le service clientèle avec l’assistant IA](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=fr)
+* [Vérifier les dépendances et minimiser les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=fr)
+* [Découvrir et déployer plus rapidement de nouvelles fonctionnalités](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=fr)
+* [Révolutionner le service clientèle avec l’assistant d’IA](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=fr)
 
 >[!TAB Contenu vidéo supplémentaire]
 
 Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’utilisation de l’assistant AI (hérité) :
 
-* [Tirer parti de toute la puissance de l’assistant IA](https://www.youtube.com/watch?v=J48CNmcV7wc)
+* [Tirer le meilleur parti de l’assistant d’IA](https://www.youtube.com/watch?v=J48CNmcV7wc)
 * [Découvrir l’assistant AI pour les audiences](https://www.youtube.com/live/DYsyii7ldck)
-* [Déverrouiller les informations opérationnelles avec l’assistant IA](https://www.youtube.com/watch?v=fGgFwAOZle8)
+* [Déverrouiller les informations opérationnelles avec l’assistant d’IA](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
 
@@ -458,13 +458,14 @@ Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’ut
 Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation de l’assistant d’IA (hérité), ses fonctionnalités, etc.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong></strong><br/>
+<td><strong>Real-Time CDP</strong><br/>
 <a href="./home.md" target="_blank">Documentation</a> - <a href="./ui-guide.md" target="_blank">Guide de l’interface utilisateur</a> - <a href="./access.md" target="_blank">Accéder à l’assistant d’IA</a> - <a href="./privacy.md" target="_blank">Confidentialité, sécurité et gouvernance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
-<td><strong></strong><br/>
-<a href="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentation </a>
+<td><strong>Adobe Journey Optimizer</strong><br/>
+<a href="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">Documentation</a>
 </td>
-<td><strong></strong><br/>
-<a href="https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentation </a>
+<td><strong>Customer Journey Analytics</strong><br/>
+<a href="https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant" target="_blank">Documentation</a>
 </td>
 </tr></table>
+
