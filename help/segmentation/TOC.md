@@ -17,7 +17,7 @@ ht-degree: 66%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [Mécanismes de sécurisation de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Mécanismes de sécurisation de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr#segmentation-guardrails)
 - [Validation de l’audience](./validation.md)
 - API Segmentation {#api}
    - [Vue d’ensemble](api/overview.md)
@@ -38,7 +38,7 @@ ht-degree: 66%
    - [Composition d’audiences](ui/audience-composition.md)
    - {hide-from-toc}[Améliorations de la composition de l’audience](ui/composition-enhancements.md)
    - [Créateur de segments](ui/segment-builder.md)
-   - [Créateur de segments (B2B edition)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/audience-builder)
+   - [Créateur de segments (B2B edition)](https://experienceleague.adobe.com/fr/docs/experience-platform/rtcdp/segmentation/audience-builder)
    - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
    - {hide-from-toc}[Ignorer la mise à jour de la contrainte de temps d’année](ui/ignore-year.md)
    - {hide-from-toc}[&#x200B; Refactorisation des contraintes de temps &#x200B;](ui/segment-refactoring.md)
