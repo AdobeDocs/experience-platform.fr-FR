@@ -27,7 +27,7 @@ Vous devez disposer d’un compte partenaire [!DNL Shopify] valide pour vous con
 
 ### Création de votre application
 
-Avec un compte partenaire [!DNL Shopify] valide, vous pouvez maintenant continuer et créer votre application à l’aide du tableau de bord des partenaires. Pour obtenir des instructions complètes sur la création de votre application dans [!DNL Shopify], consultez le guide [[!DNL Shopify]  de prise en main ](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+Avec un compte partenaire [!DNL Shopify] valide, vous pouvez maintenant continuer et créer votre application à l’aide du tableau de bord des partenaires. Pour obtenir des instructions complètes sur la création de votre application dans [!DNL Shopify], consultez le guide [[!DNL Shopify]  de prise en main &#x200B;](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
 Une fois votre application créée, récupérez vos **identifiant client** et **secret client** dans l’onglet **informations d’identification du client** du tableau de bord des partenaires [!DNL Shopify]. L’identifiant client et le secret client seront utilisés dans les étapes suivantes pour récupérer votre code d’autorisation et votre jeton d’accès.
 
