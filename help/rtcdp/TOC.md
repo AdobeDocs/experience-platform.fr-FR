@@ -1,7 +1,8 @@
 ---
 product: adobe experience platform
 solution: Real-Time Customer Data Platform
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
