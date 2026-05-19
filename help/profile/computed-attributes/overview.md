@@ -1,11 +1,11 @@
 ---
 title: Présentation des attributs calculés
-description: Les attributs calculés sont des fonctions permettant d’agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées dans la segmentation, l’activation et la personnalisation.
+description: Les attributs calculés sont des fonctions permettant d’agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 2eb87601d7090bf6bda8098458f9e01690a02b6c
+source-git-commit: 088151ca9ce96f8618518f87588da57377b4384e
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 8%
+source-wordcount: '1266'
+ht-degree: 11%
 
 ---
 
@@ -55,6 +55,11 @@ Les attributs calculés vous permettent de définir des agrégats d’événemen
 | MIN | Une fonction qui trouve la valeur **minimum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Données de premier achat au cours des 7 derniers jours<br/>Montant minimum de la commande au cours des 4 dernières semaines |
 | MAX | Une fonction qui trouve la valeur **maximum** pour les événements qualifiés. | Entiers, Nombres, Longs, Horodatages | Dernières données d’achat au cours des 7 derniers jours<br/>Montant maximal de la commande au cours des 4 dernières semaines |
 | LAST_RECENT | Une fonction qui trouve la valeur d’attribut spécifiée à partir du dernier événement qualifié. Cette fonction fournit **à la fois** la valeur ainsi que l’horodatage de l’attribut . | Toutes les valeurs primitives, tableaux de valeurs primitives | Dernier produit consulté au cours des 7 derniers jours |
+| LISTE | Une fonction qui **répertorie**, dans un tableau, le dernier nombre spécifié de valeurs d’attribut correspondant à la règle donnée. | S.O. | Répertoriez les noms des 50 dernières commandes de la semaine écoulée. |
+
+>[!NOTE]
+>
+>Si vous utilisez la fonction LIST, les événements sources **doivent** proviennent d&#39;un seul jeu de données. Si les événements source s’étendent sur plusieurs jeux de données, le comportement de fusion n’est pas pris en charge, de sorte que les résultats peuvent être incomplets ou inattendus.
 
 ### Périodes de recherche en amont
 
@@ -81,7 +86,7 @@ La période de recherche en amont des attributs calculés est une période de re
 
 **Actualisation rapide** {#fast-refresh}
 
-Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser vos attributs calculés tous les jours, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités des utilisateurs et utilisatrices.
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur ou de l’utilisatrice.
 
 >[!NOTE]
 >
