@@ -2,10 +2,10 @@
 title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+source-git-commit: 5e5bddf154e8e265f06aaa6cb1dab15db00e7eb6
 workflow-type: tm+mt
-source-wordcount: '2622'
-ht-degree: 8%
+source-wordcount: '2884'
+ht-degree: 9%
 
 ---
 
@@ -32,7 +32,7 @@ Les audiences externes vous permettent de charger des données de profil à part
 Pour utiliser les API Experience Platform, vous devez avoir suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
+- x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
@@ -102,7 +102,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
         "ttlInDays": "40",
         "labels": ["core/C1"],
         "audienceType": "people",
-        "originName": "CUSTOM_UPLOAD"
+        "originName": "CUSTOM_UPLOAD",
+        "expressActivation": true
     }'
 ```
 
@@ -116,6 +117,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `ttlInDays` | Entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
 | `audienceType` | Chaîne | Type d’audience pour l’audience externe. Actuellement, seul `people` est pris en charge. |
 | `originName` | Chaîne | **Obligatoire** Origine de l’audience. Cette information indique d’où vient l’audience. Pour les audiences externes, vous devez utiliser `CUSTOM_UPLOAD`. |
+| `expressActivation` | Booléen | *Facultatif* Valeur booléenne qui permet l’exécution du traitement d’activation rapide. La tâche d’activation express crée une tâche supplémentaire directement consommée par le pipeline d’activation en aval, ce qui réduit le temps de diffusion des données d’appartenance à l’audience vers les destinations par lots configurées. Il est préférable d’utiliser ce champ lors des activations d’audience **suivantes** car il peut ne pas aboutir à des temps d’activation plus rapides pour les activations d’audience **initiales**. Par défaut, la valeur est définie sur `false`. Pour plus d’informations sur l’utilisation de l’activation express, lisez la section [activation express](#express-activation). |
 | `namespace` | Chaîne | Espace de noms de l’audience. Par défaut, cette valeur est définie sur `CustomerAudienceUpload`. |
 | `labels` | Tableau de chaînes | Libellés de contrôle d’accès qui s’appliquent à l’audience externe. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). |
 | `tags` | Tableau de chaînes | Balises à appliquer à l’audience externe. Lorsque vous ajoutez le tableau de balises, vous **devez** utiliser le `tagId` . Vous trouverez plus d’informations sur les balises dans le [guide de gestion des balises](/help/administrative-tags/ui/managing-tags.md). |
@@ -184,7 +186,7 @@ Une réponse réussie renvoie le statut HTTP 202 avec les détails de votre audi
 | `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. |
 | `ttlInDays` | Entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
 | `audienceType` | Chaîne | Type d’audience pour l’audience externe. |
-| `originName` | Chaîne | **Obligatoire** Origine de l’audience. Indique d’où provient l’audience. |
+| `originName` | Chaîne | **Obligatoire** Origine de l’audience. Cette information indique d’où vient l’audience. |
 | `namespace` | Chaîne | Espace de noms de l’audience. |
 | `labels` | Tableau de chaînes | Libellés de contrôle d’accès qui s’appliquent à l’audience externe. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). |
 
@@ -728,7 +730,11 @@ Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux commen
 
 ## Annexe {#appendix}
 
-La section suivante répertorie les codes d’erreur disponibles lors de l’utilisation de l’API des audiences externes.
+La section suivante répertorie des informations supplémentaires relatives au point d’entrée des audiences externes.
+
+### Codes d’erreur {#error-codes}
+
+La section suivante affiche les codes d’erreur disponibles lors de l’utilisation de l’API des audiences externes.
 
 | Code d’erreur de la plateforme | Code d’état | Message | Description |
 | ------------------- | ----------- | ------- | ----------- |
@@ -742,3 +748,17 @@ La section suivante répertorie les codes d’erreur disponibles lors de l’uti
 | 100960-422 | 422 | `UNPROCESSABLE_ENTITY` | La structure de la requête est valide, mais elle ne peut pas être traitée en raison d’erreurs logiques ou sémantiques. |
 | 100970-500 | 500 | `INTERNAL_SERVER_ERROR` | Un problème est survenu lors du traitement de la demande dans le système. |
 | 100970-502 | 502 | `BAD_GATEWAY` | Il y a des problèmes de dépendance en aval. |
+
+### Activation express {#express-activation}
+
+Pour utiliser l’activation rapide, vous devez d’abord effectuer une requête POST au point d’entrée `/external-audience` avec `expressActivation` défini sur `true`. Dans la réponse, veillez à noter les `operationId`.
+
+Vous souhaitez maintenant confirmer que l’audience a bien été traitée. Envoyez une requête GET au `/external-audience/operations` tout en fournissant les `operationId` que vous avez précédemment mentionnées. Si le statut est `SUCCESS`, vous pouvez ajouter l’audience à la destination.
+
+Lorsque vous ajoutez l’audience à une destination, il existe une configuration de 30 minutes entre l’audience et la destination. Patientez au moins 30 minutes avant de déclencher l’exécution du flux.
+
+Une fois que vous avez ajouté l’audience à une destination, vous pouvez déclencher une ingestion d’audience pour activer les données dans votre destination.
+
+>[!IMPORTANT]
+>
+>Actuellement, les données sont activées deux fois : la première fois en raison du traitement d’activation express, qui se produit peu de temps après l’ingestion par lots et la seconde fois après le traitement d’évaluation de l’audience.
