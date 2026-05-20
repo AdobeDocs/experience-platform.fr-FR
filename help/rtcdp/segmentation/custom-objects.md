@@ -1,7 +1,7 @@
 ---
 title: Objets personnalisés avec B2B CDP
 description: Découvrez comment créer un objet personnalisé de relation un-à-plusieurs pour B2B CDP.
-source-git-commit: b45f40e54622880913fafaebea4bf833f55900b4
+source-git-commit: 7487f26a13019c3500cd613b4fefd12f700d9a24
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 2%
@@ -121,4 +121,3 @@ L’objet personnalisé se trouve sous **[!UICONTROL Attributes]** dans le Créa
 Ce guide explique comment ajouter des objets personnalisés de relation un-à-plusieurs à B2B CDP ainsi que la manière d’utiliser les données d’objet personnalisées dans les cas d’utilisation de segmentation.
 
 Pour en savoir plus sur le Créateur d’audience, consultez le [guide du créateur d’audience](./audience-builder.md).
-

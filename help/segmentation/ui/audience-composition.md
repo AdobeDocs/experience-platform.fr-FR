@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La composition d’audiences dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 1621754a7d7d914ea799510991b7689733959f8d
+source-git-commit: 7487f26a13019c3500cd613b4fefd12f700d9a24
 workflow-type: tm+mt
 source-wordcount: '2680'
 ht-degree: 46%
@@ -14,7 +14,7 @@ ht-degree: 46%
 
 >[!BEGINSHADEBOX]
 
-Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=fr) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
+Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
 
 >[!ENDSHADEBOX]
 
@@ -240,7 +240,7 @@ Le bloc **[!UICONTROL Enrich]** est ajouté. Lors de la sélection du bloc, les 
 
 Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . &#x200B;](../images/ui/audience-composition/enrich-select-dataset.png)
+![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . ](../images/ui/audience-composition/enrich-select-dataset.png)
 
 La fenêtre contextuelle **[!UICONTROL Select dataset]** s’affiche. Sélectionnez le jeu de données à ajouter pour l’enrichissement, puis **[!UICONTROL Select]** pour ajouter le jeu de données pour l’enrichissement.
 
@@ -424,8 +424,9 @@ En cas d’erreur lors de la création de l’audience, une alerte s’affiche, 
 
 Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Si vous définissez la destination à activer après l’évaluation du segment, vous n’avez **plus** besoin d’attendre 24 heures pour que la tâche d’évaluation se termine.
 
-Pour savoir comment gérer la destination, lisez le guide [&#x200B; Activer les audiences vers des destinations de profils par lots &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
+Pour savoir comment gérer la destination, lisez le guide [ Activer les audiences vers des destinations de profils par lots ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
 
 ## Étapes suivantes
 
 La composition de l’audience fournit un workflow complet qui vous permet de créer des compositions à partir des différents types de bloc. Pour en savoir plus sur d’autres parties de l’interface utilisateur de Segmentation Service, veuillez lire le [Guide d’utilisation de Segmentation Service](./overview.md).
+
