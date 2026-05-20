@@ -2,7 +2,7 @@
 title: Notes De Mise À Jour De Adobe Experience Platform - Mai 2026
 description: Les notes de mise à jour de mai 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 76308334dcc091fe61a945267cfe4d0d9ffd1393
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 31%
@@ -142,5 +142,4 @@ Pour plus d’informations, consultez la [vue d’ensemble des sources](../../so
 {style="table-layout:auto"}
 
 | Automatic dataflow disabling | Source dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
-
 -->

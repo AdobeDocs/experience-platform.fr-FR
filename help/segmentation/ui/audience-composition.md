@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La composition d’audiences dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 1621754a7d7d914ea799510991b7689733959f8d
 workflow-type: tm+mt
-source-wordcount: '2321'
-ht-degree: 54%
+source-wordcount: '2680'
+ht-degree: 46%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 54%
 
 >[!BEGINSHADEBOX]
 
-Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=fr) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
+Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
 
 >[!ENDSHADEBOX]
 
@@ -109,13 +109,45 @@ Pour ajouter une règle personnalisée au bloc Audience , sélectionnez **[!UICO
 
 ![Le bouton Créer une règle est mis en surbrillance.](../images/ui/audience-composition/select-build-rule.png)
 
-Le créateur de segments s’affiche. Vous pouvez utiliser le créateur de segments pour créer une règle personnalisée que l’audience doit suivre. Vous trouverez plus d’informations sur l’utilisation du créateur de segments dans le [Guide du créateur de segments](./segment-builder.md).
+La zone de travail du créateur de règles dans le créateur d’audience s’affiche. Vous pouvez utiliser le Créateur d’audience pour créer une règle personnalisée que l’audience doit suivre. Vous trouverez plus d’informations sur l’utilisation du Créateur d’audience dans le guide [Guide du créateur d’audience](./segment-builder.md).
 
 ![L’interface utilisateur du créateur de segments s’affiche.](../images/ui/audience-composition/segment-builder.png)
 
 Après avoir ajouté une règle personnalisée, sélectionnez **[!UICONTROL Save]** pour ajouter la règle à votre audience.
 
-![](../images/ui/audience-composition/custom-rule.png)
+![La règle personnalisée s’affiche dans la composition de l’audience.](../images/ui/audience-composition/custom-rule.png)
+
+#### Payload d’audience {#audience-payload}
+
+Vous pouvez également ajouter des payloads d’audience à votre composition. Après avoir sélectionné **[!UICONTROL Build rule]**, la zone de travail du créateur de règles s’affiche.
+
+Vous pouvez maintenant créer un critère de filtre pour la payload de votre audience. Ce critère de filtre **doit** inclut un attribut qui se trouve dans un tableau. L’attribut étant un tableau dépend de la structure de schéma de votre organisation. Après avoir créé vos critères de filtre, sélectionnez **[!UICONTROL Select payloads]** dans le panneau de droite.
+
+![Le bouton Sélectionner des payloads est mis en surbrillance dans le créateur d’audiences.](/help/segmentation/images/ui/audience-composition/select-payloads.png)
+
+Dans le panneau de gauche, choisissez le tableau d’objets, ainsi que les champs que vous souhaitez utiliser dans la payload. S’il n’existe qu’un seul tableau dans le profil, le tableau est automatiquement sélectionné pour vous. Sélectionnez **[!UICONTROL Save]** pour revenir à la composition de l’audience.
+
+![L’arborescence du schéma pour l’arborescence d’enrichissement s’affiche.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
+
++++ Détails de comportement et mécanismes de sécurisation
+
+Gardez les détails et mécanismes de sécurisation suivants à l’esprit lors de l’utilisation des payloads d’audience :
+
+- Vous pouvez uniquement utiliser les payloads d’audience avec des audiences créées dans la composition de l’audience.
+- Le premier bloc utilisé dans la composition **doit** est une audience basée sur des règles.
+- Vous **ne pouvez pas** utiliser d’autres opérations dans la composition.
+- Une fois la publication effectuée, vous **pouvez pas** la composition de l’audience basée sur des règles.
+
+   - Vous *pouvez* copier la composition dans un brouillon et modifier le brouillon si vous souhaitez apporter des modifications à la composition de base ou à l’audience basée sur des règles.
+
+- Un seul tableau d’objets **one** peut être utilisé pour générer la payload dans une seule audience
+
+   - Le tableau de payload peut être imbriqué dans un objet (jusqu’à sept calques dans le schéma de profil), mais **ne peut pas** être contenu dans un autre tableau.
+   - Le tableau de payload **doit** comporte 50 lignes ou moins.
+   - Toutes les colonnes incluses dans la payload **doivent** sont d’un type primitif.
+   - Seules les **vingt premières colonnes** tableau sont incluses dans la sortie.
+
++++
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
@@ -208,7 +240,7 @@ Le bloc **[!UICONTROL Enrich]** est ajouté. Lors de la sélection du bloc, les 
 
 Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . &#x200B;](../images/ui/audience-composition/enrich-select-dataset.png)
+![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . ](../images/ui/audience-composition/enrich-select-dataset.png)
 
 La fenêtre contextuelle **[!UICONTROL Select dataset]** s’affiche. Sélectionnez le jeu de données à ajouter pour l’enrichissement, puis **[!UICONTROL Select]** pour ajouter le jeu de données pour l’enrichissement.
 
@@ -387,6 +419,12 @@ Après avoir créé votre composition, vous pouvez l’enregistrer et la publier
 En cas d’erreur lors de la création de l’audience, une alerte s’affiche, vous indiquant comment résoudre le problème.
 
 ![Le bouton Publier est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/audience-alert.png)
+
+### Activation plus rapide {#faster-activation}
+
+Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Si vous définissez la destination à activer après l’évaluation du segment, vous n’avez **plus** besoin d’attendre 24 heures pour que la tâche d’évaluation se termine.
+
+Pour savoir comment gérer la destination, lisez le guide [ Activer les audiences vers des destinations de profils par lots ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
 
 ## Étapes suivantes
 

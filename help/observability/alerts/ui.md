@@ -4,7 +4,7 @@ title: Guide de lʼinterface utilisateur des alertes
 description: Découvrez comment gérer les alertes dans lʼinterface utilisateur dʼExperience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 01ebf43cb7a2b2fbcd746f4b005c346903a35e25
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 13%
@@ -138,3 +138,4 @@ Vous revenez à l’onglet **[!UICONTROL History]** qui affiche les résultats f
 ## Étapes suivantes
 
 Ce guide explique comment afficher et gérer les alertes dans l’interface utilisateur d’Experience Platform. Consultez la [[!DNL Observability Insights] présentation](../home.md) pour découvrir d’autres façons de surveiller l’activité dans Experience Platform.
+
