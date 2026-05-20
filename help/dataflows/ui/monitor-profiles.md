@@ -4,9 +4,9 @@ description: Le profil client en temps réel offre une vue d’ensemble de chaqu
 title: Surveillance des flux de données pour les profils dans l’interface utilisateur
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: b853620925195e9e565034354de7839de3141da8
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1305'
 ht-degree: 12%
 
 ---
@@ -97,7 +97,9 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 >
 >Lorsque l’exécution du flux de données est à l’état **[!UICONTROL Processing]**, vous pouvez consulter des informations sur la préparation en consultant les statuts des points de contrôle dans le processus d’ingestion.
 >
->![La bulle de préparation à l’ingestion du profil s’affiche.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+>![La bulle de préparation à l’ingestion du profil est mise en surbrillance dans le tableau de bord de surveillance.](../assets/ui/monitor-profiles/profile-ingestion-readiness-monitoring.png){zoomable="yes" width="800"}
+>
+>Si le flux de données présente l’état **[!UICONTROL Success]** pour l’un des points de contrôle, vous pouvez procéder à l’utilisation des données dans le service correspondant.
 
 | Mesure | Description |
 | ------ | ----------- |
@@ -109,9 +111,9 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Profile fragments updated]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
 | **[!UICONTROL Total profile fragments]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
 | **[!UICONTROL Processing time]** | Temps nécessaire à l’exécution du flux de données pour le traitement. |
-| **[!UICONTROL Status]** | Statut de l’exécution du flux de données. Les valeurs possibles sont [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. |
+| **[!UICONTROL Status]** | Statut de l’exécution du flux de données. Valeurs possibles :<ul><li>[!UICONTROL Success] : le flux de données s’est exécuté correctement.</li><li>[!UICONTROL Failed] : le flux de données a échoué.</li><li>[!UICONTROL Queued] : le flux de données a été lancé et attend d’être traité.</li><li>[!UICONTROL Processing] : le flux de données est en cours de traitement. </li></ul> |
 | **[!UICONTROL Ready for customer segmentation]** | Un statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la segmentation client. Les valeurs possibles sont [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la segmentation de la clientèle. |
-| **[!UICONTROL Ready for lookup]** | Statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la recherche Adobe Journey Optimizer.  Les valeurs possibles sont [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la recherche Journey Optimizer. |
+| **[!UICONTROL Ready for lookup]** | Statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la recherche de profil.  Les valeurs possibles sont [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la recherche de profils. |
 
 La page [!UICONTROL Dataflow run details] affiche plus d’informations sur votre exécution de flux de données [!DNL Profile], y compris son identifiant d’organisation et son identifiant d’exécution de flux de données. Cette page affiche également le code d’erreur et le message d’erreur correspondants fournis par [!DNL Profile] en cas d’erreur dans le processus d’ingestion.
 
@@ -125,7 +127,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Records failed]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
 | **[!UICONTROL Profile fragments created]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
 | **[!UICONTROL Profile fragments updated]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
-| **[!UICONTROL Status]** | Définit le statut global d’un flux de données. Les valeurs de statut possibles sont les suivantes : <ul><li>`Success` : indique qu’un flux de données est actif et ingère des données en fonction du planning qui lui a été fourni.</li><li>`Failed` : indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing` : indique que le flux de données n’est pas encore actif. Ce statut se rencontre souvent immédiatement après la création d’un nouveau flux de données.</li></ul> |
+| **[!UICONTROL Status]** | Définit le statut global d’un flux de données. Les valeurs de statut possibles sont les suivantes : <ul><li>`Success` : indique qu’un flux de données est actif et ingère des données en fonction du planning qui lui a été fourni.</li><li>`Failed` : indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing` : indique que le flux de données n’est pas encore actif. Ce statut se rencontre souvent immédiatement après la création d’un nouveau flux de données.</li><li>`Queued` : indique que le flux de données n’est pas encore actif et qu’il est en attente de traitement.</li></ul> |
 | **[!UICONTROL Dataflow run start]** | Date et heure auxquelles le flux de données a commencé à s’exécuter. |
 | **[!UICONTROL Last updated]** | Date et heure de la dernière mise à jour du flux de données. |
 | **[!UICONTROL Error summary]** | Si l’exécution du flux de données a échoué, un code d’erreur et un résumé des raisons de l’échec de l’exécution du flux de données s’affichent. |
