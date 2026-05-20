@@ -4,10 +4,10 @@ user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données clients pour créer une vue unifiée des interactions clients entre les canaux.
 feature: Profiles
 role: User
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+source-git-commit: ec97fb48da32e9efd9568ad46a2defb896cac1aa
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 87%
+source-wordcount: '155'
+ht-degree: 86%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 87%
 * [Expirations des événements d’expérience](event-expirations.md)
 * [Expirations des profils pseudonymes](pseudonymous-profiles.md)
 * {hide-from-toc}[Ordre de date et heure du client](customer-timestamp-ordering.md)
+* {hide-from-toc}[Caractéristiques](traits.md)
 * [!DNL Profile] API {#api}
    * [Vue d’ensemble](api/overview.md)
    * [Prise en main](api/getting-started.md)
