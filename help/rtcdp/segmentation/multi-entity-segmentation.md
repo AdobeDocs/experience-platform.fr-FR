@@ -1,7 +1,7 @@
 ---
 title: Segmentation d’entités multiples avec segmentation B2B
 description: Découvrez comment créer une audience évaluée à l’aide de la segmentation en flux continu qui contient une entité B2B.
-source-git-commit: 0d7cf95f28368c7ebd66f3ca8857a4b71888d31e
+source-git-commit: eafbf2180f1cbf5db932d0f4dfaa21a4276098ab
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -32,4 +32,3 @@ L’audience qui contient l’événement de diffusion en continu se présentera
 Après avoir créé les deux audiences de composant, vous devez créer une audience qui **inclut** les deux audiences constitutives. Cette audience combinée est évaluée à l’aide de la segmentation **en flux continu**.
 
 ![Audience qui combine à la fois l’audience de l’entité B2B et l’audience de l’événement de streaming.](/help/rtcdp/assets/segmentation/multi-entity/combined.png)
-
