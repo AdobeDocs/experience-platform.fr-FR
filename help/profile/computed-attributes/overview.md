@@ -2,7 +2,7 @@
 title: Présentation des attributs calculés
 description: Les attributs calculés sont des fonctions permettant d’agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 088151ca9ce96f8618518f87588da57377b4384e
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '1266'
 ht-degree: 11%
@@ -99,3 +99,4 @@ Une actualisation rapide vous permet de garder vos attributs à jour. L’activa
 ## Étapes suivantes
 
 Pour en savoir plus sur la création et la gestion des attributs calculés, consultez le guide de l’API [computed attributes](./api.md) ou le guide de l’interface utilisateur [computed attributes](./ui.md).
+

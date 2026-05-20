@@ -2,7 +2,7 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: f36a1dcfd86d04bf3f461de3f7bcf2228b47fa5a
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '1302'
 ht-degree: 30%
@@ -145,3 +145,4 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [vue d’ensemble des sources](../sources/home.md).
+

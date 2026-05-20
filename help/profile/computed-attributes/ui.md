@@ -2,7 +2,7 @@
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 9e1b3812118c2f6a6ff49b47d04c220cabf8edab
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 11%
@@ -165,3 +165,4 @@ Après avoir créé un attribut calculé, vous pouvez utiliser les attributs cal
 ## Étapes suivantes
 
 Pour en savoir plus sur les attributs calculés, veuillez lire la [Vue d’ensemble sur les attributs calculés](./overview.md). Pour plus d’informations sur la création et la configuration des attributs calculés à l’aide de l’API, consultez le guide de développement [attributs calculés](./api.md).
+

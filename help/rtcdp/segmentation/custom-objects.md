@@ -1,10 +1,10 @@
 ---
 title: Objets personnalisés avec B2B CDP
 description: Découvrez comment créer un objet personnalisé de relation un-à-plusieurs pour B2B CDP.
-source-git-commit: 1d95dc69cd4532152f8a8618888dc028ec920239
+source-git-commit: b45f40e54622880913fafaebea4bf833f55900b4
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 1%
+source-wordcount: '900'
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ L’éditeur de relations s’affiche. Vous pouvez maintenant définir la relati
 
 Une fois votre schéma entièrement créé, vous pouvez commencer à ingérer des données à partir de votre source dans le jeu de données.
 
-Pour importer les données de votre source dans Experience Platform, vous devez créer un flux de données afin d’ingérer les données par lots de votre source dans le jeu de données . Les fournisseurs de sources de stockage dans le cloud suivants sont pris en charge : Amazon S3, SFTP, Data Landing Zone, Connecteur Marketo, Salesforce CRM, Microsoft Dynamics CRM et Connecteurs API HTTP.
+Pour importer les données de votre source dans Experience Platform, vous devez créer un flux de données afin d’ingérer les données par lots de votre source dans le jeu de données . Les fournisseurs sources suivants sont pris en charge : Amazon S3, SFTP, Data Landing Zone, connecteur Marketo, Salesforce CRM, Microsoft Dynamics CRM et connecteurs d’API HTTP.
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Pour importer les données de votre source dans Experience Platform, vous devez 
 >
 >De la même manière que pour les autres connecteurs, vous **devez** activer le jeu de données pour la segmentation et configurer les relations.
 
-Les données de votre source d’espace de stockage dans le cloud doivent être conformes aux spécifications suivantes :
+Les données de votre source doivent être conformes aux spécifications suivantes :
 
 - Le type de fichier est délimité (par exemple CSV ou TSV) ou JSON
 - Le fichier contient une ligne par clé primaire
@@ -121,3 +121,4 @@ L’objet personnalisé se trouve sous **[!UICONTROL Attributes]** dans le Créa
 Ce guide explique comment ajouter des objets personnalisés de relation un-à-plusieurs à B2B CDP ainsi que la manière d’utiliser les données d’objet personnalisées dans les cas d’utilisation de segmentation.
 
 Pour en savoir plus sur le Créateur d’audience, consultez le [guide du créateur d’audience](./audience-builder.md).
+

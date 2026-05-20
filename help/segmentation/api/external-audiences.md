@@ -2,7 +2,7 @@
 title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 5e5bddf154e8e265f06aaa6cb1dab15db00e7eb6
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '2884'
 ht-degree: 9%
@@ -195,7 +195,7 @@ Une réponse réussie renvoie le statut HTTP 202 avec les détails de votre audi
 
 ## Récupérer le statut de création de l’audience {#retrieve-status}
 
-Vous pouvez récupérer le statut de l’envoi de votre audience externe en adressant une requête GET au point d’entrée `/external-audiences/operations` et en fournissant l’identifiant de l’opération que vous avez reçu de la réponse de création d’audience externe.
+Vous pouvez récupérer le statut de l’envoi de votre audience externe en adressant une requête GET au point d’entrée `/external-audiences/operations` et en fournissant l’identifiant de l’opération que vous avez reçue de la réponse de création d’audience externe.
 
 **Format d’API**
 
@@ -753,7 +753,7 @@ La section suivante affiche les codes d’erreur disponibles lors de l’utilisa
 
 Pour utiliser l’activation rapide, vous devez d’abord effectuer une requête POST au point d’entrée `/external-audience` avec `expressActivation` défini sur `true`. Dans la réponse, veillez à noter les `operationId`.
 
-Vous souhaitez maintenant confirmer que l’audience a bien été traitée. Envoyez une requête GET au `/external-audience/operations` tout en fournissant les `operationId` que vous avez précédemment mentionnées. Si le statut est `SUCCESS`, vous pouvez ajouter l’audience à la destination.
+Vous souhaitez maintenant confirmer que l’audience a bien été traitée. Envoyez une requête GET à l’`/external-audience/operations` tout en fournissant les `operationId` que vous avez précédemment mentionnées. Si le statut est `SUCCESS`, vous pouvez ajouter l’audience à la destination.
 
 Lorsque vous ajoutez l’audience à une destination, il existe une configuration de 30 minutes entre l’audience et la destination. Patientez au moins 30 minutes avant de déclencher l’exécution du flux.
 
@@ -762,3 +762,4 @@ Une fois que vous avez ajouté l’audience à une destination, vous pouvez déc
 >[!IMPORTANT]
 >
 >Actuellement, les données sont activées deux fois : la première fois en raison du traitement d’activation express, qui se produit peu de temps après l’ingestion par lots et la seconde fois après le traitement d’évaluation de l’audience.
+

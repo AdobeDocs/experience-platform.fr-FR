@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 7a9c017c2dc7901c7995e5c6fcd178a4fe8709e0
+source-git-commit: cba56bf52774ed9d72321f7f70a4bb7a8a413b6e
 workflow-type: tm+mt
-source-wordcount: '4809'
+source-wordcount: '4857'
 ht-degree: 24%
 
 ---
@@ -47,7 +47,7 @@ Bien que l’audience générée en externe puisse être référencée lors de l
 
 ### Puis-je réconcilier des données d’audience générées en externe avec un profil existant dans Experience Platform ?
 
-Oui, l’audience générée en externe sera fusionnée avec le profil existant dans Experience Platform si les identifiants principaux correspondent. La réconciliation de ces données peut prendre jusqu’à 24 heures. Si les données de profil n’existent pas déjà, un profil est créé lors de l’ingestion des données.
+Oui, l’audience générée en externe sera fusionnée avec le profil existant dans Experience Platform si les identifiants principaux correspondent.La réconciliation de ces données peut prendre jusqu’à 24 heures. Si les données de profil n’existent pas déjà, un profil est créé lors de l’ingestion des données.
 
 ### Comment les préférences de consentement des clients sont-elles respectées pour les audiences générées en externe qui sont importées dans Audience Portal ?{#consent}
 
@@ -298,7 +298,7 @@ Oui ! Vous pouvez utiliser des audiences à partir de la composition de l’aud
 >
 >Ce mécanisme de sécurisation s’applique uniquement aux compositions créées avec la composition d’audience et ne s’applique **aux compositions créées avec la composition d’audience fédérée.**
 
-À ce stade, la limite est fixée à **10** compositions publiées par sandbox. Ce nombre devrait augmenter dans une prochaine version.
+À ce stade, vous ne pouvez avoir que 50 **de compositions publiées** par sandbox. Ce nombre devrait augmenter dans une prochaine version.
 
 ### Quelles sont les mécanismes de sécurisation des workflows pour la composition d’audiences ?
 

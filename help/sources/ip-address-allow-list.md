@@ -2,7 +2,7 @@
 description: Découvrez les adresses IP que vous devez ajouter à votre place sur la liste autorisée pour utiliser correctement les sources Adobe Experience Platform.
 title: Adresse IP associée aux sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 6e0b8effc76a660fccbd7672557ec34dfd587d57
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 10%

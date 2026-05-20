@@ -3,7 +3,7 @@ title: Assistant AI (hérité) dans la documentation du produit Adobe Experience
 description: Prise en main de l’assistant AI (hérité) dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 67208877eabe88f5bd82ec79c528b7f6216c9697
+source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 4%
@@ -468,4 +468,3 @@ Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation de 
 <a href="https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant" target="_blank">Documentation</a>
 </td>
 </tr></table>
-
