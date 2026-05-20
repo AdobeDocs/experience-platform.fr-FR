@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: cba56bf52774ed9d72321f7f70a4bb7a8a413b6e
+source-git-commit: 7487f26a13019c3500cd613b4fefd12f700d9a24
 workflow-type: tm+mt
 source-wordcount: '2857'
 ht-degree: 43%
@@ -197,3 +197,4 @@ Consultez la documentation suivante pour plus d’informations sur les autres m�
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+

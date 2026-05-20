@@ -2,7 +2,7 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: cba56bf52774ed9d72321f7f70a4bb7a8a413b6e
+source-git-commit: 4d4ac112fabd681580ea1bf61848704e38a087e0
 workflow-type: tm+mt
 source-wordcount: '4857'
 ht-degree: 24%
@@ -433,3 +433,4 @@ La disponibilité d’une définition de segment peut prendre jusqu’à une heu
 ### Existe-t-il des limitations aux données diffusées en continu dans ?
 
 Lors de l’utilisation de la segmentation Edge ou en flux continu, assurez-vous que les événements de chaque profil sont espacés. Si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Experience Platform traite ces événements comme des données générées par les robots et ils sont ignorés. En règle générale, vous devez disposer d’au **moins** cinq secondes entre les données d’événement pour vous assurer que les données sont correctement utilisées.
+

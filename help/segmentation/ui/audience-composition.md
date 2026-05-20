@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La composition d’audiences dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 1621754a7d7d914ea799510991b7689733959f8d
+source-git-commit: 7487f26a13019c3500cd613b4fefd12f700d9a24
 workflow-type: tm+mt
 source-wordcount: '2680'
 ht-degree: 46%
@@ -429,3 +429,4 @@ Pour savoir comment gérer la destination, lisez le guide [&#x200B; Activer les 
 ## Étapes suivantes
 
 La composition de l’audience fournit un workflow complet qui vous permet de créer des compositions à partir des différents types de bloc. Pour en savoir plus sur d’autres parties de l’interface utilisateur de Segmentation Service, veuillez lire le [Guide d’utilisation de Segmentation Service](./overview.md).
+
