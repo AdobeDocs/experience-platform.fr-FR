@@ -2,7 +2,7 @@
 title: Présentation des caractéristiques
 description: Découvrez comment utiliser les caractéristiques, qui sont un moyen léger et plus efficace de stocker l’activité des profils. Vous pouvez utiliser les caractéristiques pour maintenir la conformité aux droits de licence de votre profil tout en préservant l’activation enrichie des profils.
 hide: true
-source-git-commit: e9debb73097441d9fd525a4cf5d0a434fb6cdc41
+source-git-commit: b86770c580e495fb9e2d80d4ef59f642ac15c1f2
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 3%
@@ -156,3 +156,4 @@ Vous pouvez afficher plus de détails en sélectionnant le nom de la caractéris
 <!-- In the **dataset details** page, you can see all the traits that were created from that dataset. -->
 
 <!-- IMAGE -->
+
