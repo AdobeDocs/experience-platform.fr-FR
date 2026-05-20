@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Notes de mise à jour d’Adobe Experience Platform
 breadcrumb-title: Notes de mise à jour d’Experience Platform
 user-guide-description: Trouvez les notes de mise à jour mensuelles pour Adobe Experience Platform.
-source-git-commit: fafc17682ffe767c3c6d2ab972d5d6f74e1c0c9a
+source-git-commit: b7c2869a7077844f5886fd28f7af47375f961d7c
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 93%
@@ -98,3 +98,4 @@ ht-degree: 93%
    * [Juillet 2019](2019/july-2019.md)
    * [Juin 2019](2019/june-2019.md)
    * [Mai 2019](2019/may-2019.md)
+
