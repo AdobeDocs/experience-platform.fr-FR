@@ -1,13 +1,13 @@
 ---
 title: Connexion à l’audience Acxiom
 description: Utilisez la destination  [!DNL Acxiom Audience Connection]  pour améliorer les audiences avec la technologie et les activer sur  [!DNL Acxiom]'s [!DNL Real ID]  plateformes publicitaires.
-source-git-commit: 71e655be2bdae3c89bd1652e2f83ab7bcc8c18fa
+exl-id: bac0f337-bfab-4779-acc8-f70239552666
+source-git-commit: ac792ca2a548cca60319e1c4c49ca1ceade44b43
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 17%
+source-wordcount: '1514'
+ht-degree: 14%
 
 ---
-
 
 # Destination [!DNL Acxiom Audience Connection]
 
@@ -55,7 +55,7 @@ Le tableau suivant décrit les types de données d’audience que vous pouvez ex
 | -------------------- | ----------- | ------------- | ----------- |
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client. Utilisez-les pour cibler des groupes spécifiques de personnes dans le cadre de campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -83,9 +83,14 @@ Activez les audiences vers les plateformes suivantes via la destination [!DNL Ac
 * [[!DNL Facebook]](#facebook)
 * [[!DNL LG Ads]](#lg-ads)
 * [[!DNL Pinterest]](#pinterest)
+* [[!DNL Roku]](#roku)
+* [[!DNL Samsung Ads]](#samsung)
 * [!DNL Spectrum]
+* [[!DNL The Trade Desk 1st Party]](#ttd)
 * [!DNL Viant]
 * [[!DNL Vizio]](#vizio)
+* [[!DNL Warner Bros. Discovery]](#warner)
+* [[!DNL Yahoo]](#yahoo)
 
 ## Se connecter à la destination {#connect}
 
@@ -119,7 +124,7 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Segment Category]** : catégorie cible ou verticale de votre segment. Exemple : services financiers, automobile ou santé.
+* **[!UICONTROL Segment Category]** : catégorie cible ou verticale de votre audience. Exemple : services financiers, automobile ou santé.
 
   ![Copie d’écran du panneau Détails de la destination [!DNL LG Ads] affichant le champ Catégorie de segments.](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png){zoomable="yes"}
 
@@ -131,6 +136,34 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Pinterest] affichant le champ Identifiant du compte de destination.](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png){zoomable="yes"}
 
+### [!DNL Roku] {#roku}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
+* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL Roku] affichant l’ID publicitaire et la durée de la campagne en jours.](../../assets/catalog/advertising/acxiom-audience-distribution/roku_destination_details.png){zoomable="yes"}
+
+### [!DNL Samsung Ads] {#samsung}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Advertiser Name]** : saisissez le nom de l’annonceur pour cette destination.
+* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL Samsung Ads] affichant les champs Nom de l’annonceur et ID de l’annonceur.](../../assets/catalog/advertising/acxiom-audience-distribution/samsung_ads_destination_details.png){zoomable="yes"}
+
+### [!DNL The Trade Desk] (1ère partie) {#ttd}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
+* **[!UICONTROL Advertiser Secret Key on The Trade Desk platform]** : saisissez la clé secrète de l’annonceur pour cet ID d’annonceur. Si vous laissez ce champ vide, la distribution échoue.
+* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL The Trade Desk] affichant l’ID publicitaire, la clé secrète publicitaire et la durée de la campagne dans les champs jours.](../../assets/catalog/advertising/acxiom-audience-distribution/the_trade_desk_destination_details.png){zoomable="yes"}
+
 ### [!DNL Vizio] {#vizio}
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
@@ -138,6 +171,23 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 * **[!UICONTROL Advertiser Name]** : saisissez le nom de l’annonceur pour cette destination.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Vizio] affichant le champ Nom de l’annonceur.](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png){zoomable="yes"}
+
+### [!DNL Warner Bros. Discovery] {#warner}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Client name for Open AP]** : saisissez le nom du client pour [!DNL Warner Bros. Discovery] via [!DNL Open AP]. Votre représentant [!DNL Warner Bros. Discovery] active votre audience en votre nom par le biais d’une coordination avec [!DNL Open AP].
+
+  ![Copie d’écran du panneau Détails de la destination [!DNL Warner Bros. Discovery] affichant le nom du client pour [!DNL Open AP] champ.](../../assets/catalog/advertising/acxiom-audience-distribution/warner_bros_discovery_destination_details.png){zoomable="yes"}
+
+### [!DNL Yahoo] {#yahoo}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Destination Account ID]** : saisissez l’identifiant du compte de destination pour cette destination.
+* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL Yahoo] affichant les champs ID du compte de destination et Durée de la campagne en jours.](../../assets/catalog/advertising/acxiom-audience-distribution/yahoo_destination_details.png){zoomable="yes"}
 
 ## Activer des audiences vers cette destination {#activate}
 
