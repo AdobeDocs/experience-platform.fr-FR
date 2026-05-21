@@ -2,9 +2,9 @@
 title: Plannings de requête
 description: Découvrez comment automatiser les exécutions de requête planifiées, supprimer ou désactiver un planning de requête et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: b0faddcf449285d3ee0b5dd42b9fbf8fce6e78c5
+source-git-commit: 4ab588acea0b6794f897195f2accc2cc458aef83
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2216'
 ht-degree: 7%
 
 ---
@@ -59,6 +59,11 @@ L’espace de travail des plannings s’affiche. L’interface utilisateur affic
 ![Espace de travail Planning du requêteur avec l’option Ajouter un planning mise en surbrillance.](../images/ui/query-schedules/add-schedule.png)
 
 ### Ajouter les détails du planning {#schedule-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_querySchedules_noEndDate"
+>title="Requête planifiée sans date de fin"
+>abstract="Cette requête planifiée n’a pas de date de fin et continue de s’exécuter jusqu’à ce que vous la suspendiez ou la supprimiez manuellement. Passez régulièrement en revue les plannings de longue durée pour éviter toute utilisation inutile des ordinateurs."
 
 La page Détails du planning s’affiche. Sur cette page, vous pouvez modifier différents détails pour la requête planifiée. Les détails incluent la [fréquence et jour de la semaine de la requête planifiée](#scheduled-query-frequency) l’exécution, les dates de début et de fin, le jeu de données vers lequel exporter les résultats et les [alertes de statut de la requête](#alerts-for-query-status).
 
