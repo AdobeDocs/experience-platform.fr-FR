@@ -2,10 +2,10 @@
 title: Plannings de requête
 description: Découvrez comment automatiser les exécutions de requête planifiées, supprimer ou désactiver un planning de requête et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8d3da7f33aefa822e24bd60168760d856a85865f
+source-git-commit: b0faddcf449285d3ee0b5dd42b9fbf8fce6e78c5
 workflow-type: tm+mt
-source-wordcount: '2088'
-ht-degree: 8%
+source-wordcount: '2183'
+ht-degree: 7%
 
 ---
 
@@ -25,8 +25,8 @@ Pour plus d’informations sur la configuration des comptes techniques et l’at
 
 Pour plus d’informations sur la création et la configuration d’un compte technique, voir :
 
-- [Configuration de Developer Console &#x200B;](https://experienceleague.adobe.com/fr/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) : instructions détaillées pour configurer Adobe Developer Console et obtenir les informations d’identification OAuth.
-- [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/fr/docs/platform-learn/tutorial-comprehensive-technical/setup) : présentation complète de la création et de la configuration d’un compte technique dans Adobe Experience Platform.
+- [Configuration de Developer Console ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) : instructions détaillées pour configurer Adobe Developer Console et obtenir les informations d’identification OAuth.
+- [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) : présentation complète de la création et de la configuration d’un compte technique dans Adobe Experience Platform.
 
 Si vous utilisez uniquement l’interface utilisateur de Query Service, assurez-vous de disposer des autorisations nécessaires ou contactez un administrateur qui gère les comptes techniques. Toutes les requêtes planifiées sont ajoutées à la liste dans l’onglet [!UICONTROL Scheduled queries] , où vous pouvez surveiller le statut, les détails de la planification et les messages d’erreur de tous les traitements de requête planifiés, ainsi que vous abonner aux alertes. Pour plus d’informations sur la surveillance et la gestion de vos requêtes, consultez le document [surveiller les requêtes planifiées](./monitor-queries.md).
 
@@ -64,7 +64,9 @@ La page Détails du planning s’affiche. Sur cette page, vous pouvez modifier d
 
 >[!IMPORTANT]
 >
->L’interface utilisateur du planificateur de requêtes ne prend pas en charge la planification indéfinie ou permanente. Une date de fin doit être spécifiée. Il n’existe pas de limite supérieure pour la date de fin.
+>La prise en charge des requêtes planifiées sans date de fin est actuellement disponible pour un nombre limité de clients et clientes. Si cette fonctionnalité est activée pour votre organisation, vous pouvez créer des requêtes planifiées qui s’exécutent en continu sans spécifier de date de fin. Dans certaines réponses système et vues de l&#39;interface utilisateur, les plannings sans date de fin peuvent apparaître avec une date à long terme, telle que `31.12.9999`.
+>
+>Si cette fonctionnalité n’est pas activée pour votre organisation, une date de fin doit être spécifiée. Il n’existe pas de limite supérieure pour la date de fin.
 
 ![Le panneau Détails du planning est mis en surbrillance.](../images/ui/query-schedules/schedule-details.png)
 
@@ -124,13 +126,13 @@ Le tableau ci-dessous décrit les types d’alerte de requête pris en charge :
 | `success` | Cette alerte vous informe lorsqu’une exécution de requête planifiée se termine avec succès, indiquant que la requête s’est exécutée sans erreur. |
 | `failed` | Cette alerte se déclenche lorsqu’une exécution de requête planifiée rencontre une erreur ou ne s’exécute pas correctement. Cela vous aide à identifier et à résoudre les problèmes rapidement. |
 | `quarantine` | Cette alerte est activée lorsqu’une exécution de requête planifiée est mise en quarantaine. Une fois qu’une requête est [inscrite dans la fonction de quarantaine](#quarantine), toute requête planifiée qui échoue dix exécutions consécutives est automatiquement mise en état de [!UICONTROL Quarantined]. Une requête en quarantaine nécessite ensuite votre intervention avant que d’autres exécutions ne puissent avoir lieu. Remarque : les requêtes doivent être inscrites à la fonction de quarantaine pour que vous puissiez vous abonner aux alertes de quarantaine. |
-| `delay` | Cette alerte vous avertit en cas de [&#x200B; retard dans le résultat d’une exécution de requête planifiée](./monitor-queries.md#query-run-delay) au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans terminer ni échouer. Le comportement par défaut définit une alerte pendant 150 minutes après le début du traitement de la requête. |
+| `delay` | Cette alerte vous avertit en cas de [ retard dans le résultat d’une exécution de requête planifiée](./monitor-queries.md#query-run-delay) au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans terminer ni échouer. Le comportement par défaut définit une alerte pendant 150 minutes après le début du traitement de la requête. |
 
 >[!NOTE]
 >
 >Si vous choisissez de définir une alerte [!UICONTROL Query Run Delay], vous devez définir le délai d’attente souhaité en minutes dans l’interface utilisateur d’Experience Platform. Saisissez la durée en minutes. Le délai maximal est de 24 heures (1 440 minutes).
 
-Pour obtenir un aperçu des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte, reportez-vous à la [présentation des alertes](../../observability/alerts/overview.md). Pour obtenir des conseils sur la gestion des alertes et des règles d’alerte dans l’interface utilisateur de Adobe Experience Platform, consultez le [&#x200B; Guide de l’interface utilisateur des alertes](../../observability/alerts/ui.md).
+Pour obtenir un aperçu des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte, reportez-vous à la [présentation des alertes](../../observability/alerts/overview.md). Pour obtenir des conseils sur la gestion des alertes et des règles d’alerte dans l’interface utilisateur de Adobe Experience Platform, consultez le [ Guide de l’interface utilisateur des alertes](../../observability/alerts/ui.md).
 
 ### Définition des paramètres d’une requête paramétrée planifiée {#set-parameters}
 

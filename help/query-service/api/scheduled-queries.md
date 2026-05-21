@@ -5,10 +5,10 @@ title: Point d’entrée des plannings
 description: Les sections suivantes décrivent les différents appels API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: b0faddcf449285d3ee0b5dd42b9fbf8fce6e78c5
 workflow-type: tm+mt
-source-wordcount: '1409'
-ht-degree: 44%
+source-wordcount: '1501'
+ht-degree: 42%
 
 ---
 
@@ -22,11 +22,20 @@ Vous pouvez créer des requêtes planifiées à l’aide d’un compte technique
 
 Les requêtes créées avec un compte d’utilisateur personnel échouent si l’accès de cet utilisateur est révoqué ou si son compte est désactivé. Les comptes techniques offrent une plus grande stabilité car ils ne sont pas liés au statut d’emploi ou aux droits d’accès d’un utilisateur individuel.
 
+>[!AVAILABILITY]
+>
+>La prise en charge des requêtes planifiées sans date de fin est actuellement disponible pour un nombre limité de clients et clientes.
+>
+>Si cette fonctionnalité est activée pour votre organisation, vous pouvez créer des requêtes planifiées qui s’exécutent en continu sans spécifier de date de fin. Dans certaines réponses système et vues de l&#39;interface utilisateur, des planifications sans date de fin peuvent apparaître avec une date à long terme telle que `31.12.9999`.
+
 >[!IMPORTANT]
 >
->Points importants lors de la gestion des requêtes planifiées :<ul><li>Les requêtes planifiées échouent si le compte (technique ou utilisateur) utilisé pour les créer perd l’accès ou les autorisations.</li><li>Les requêtes planifiées doivent être désactivées avant la suppression via l’API ou l’interface utilisateur.</li><li>La planification indéfinie sans date de fin n’est pas prise en charge ; une date de fin doit toujours être spécifiée.</li></ul>
+>Tenez compte du comportement suivant lorsque vous gérez des requêtes planifiées :
+>
+>- Les requêtes planifiées échouent si le compte utilisé pour créer le planning perd l’accès ou les autorisations.
+>- Vous devez désactiver une requête planifiée avant de la supprimer via l’API ou l’interface utilisateur.
 
-Pour obtenir des conseils détaillés sur les exigences du compte, la configuration des autorisations et la gestion des requêtes planifiées, consultez la documentation [Plannings de requête](../ui/query-schedules.md#technical-account-user-requirements). Pour obtenir des instructions détaillées sur la création et la configuration d’un compte technique, reportez-vous aux sections [Configuration de Developer Console](https://experienceleague.adobe.com/fr/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) et [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/fr/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Pour obtenir des conseils détaillés sur les exigences du compte, la configuration des autorisations et la gestion des requêtes planifiées, consultez la documentation [Plannings de requête](../ui/query-schedules.md#technical-account-user-requirements). Pour obtenir des instructions détaillées sur la création et la configuration d’un compte technique, reportez-vous aux sections [Configuration de ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) et [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Exemples d’appels API
 
@@ -55,7 +64,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord la requête planifiée créée la plus ancienne, puis continue à répertorier les résultats les plus récents.Les horodatages ISO <br> permettent différents niveaux de granularité de la date et de l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe est écrit comme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, à 8 :15: 30, heure standard des États-Unis d’Amérique. Un fuseau horaire peut être fourni avec un décalage UTC et est désigné par le suffixe « Z » (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord la requête planifiée créée la plus ancienne, puis continue à répertorier les résultats les plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité de la date et de l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe est écrit comme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, à 8 :15: 30, heure standard des États-Unis d’Amérique. Un fuseau horaire peut être fourni avec un décalage UTC et est désigné par le suffixe « Z » (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `templateId` et `userId` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à) et `==` (égal à) sont pris en charge. Par exemple, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes planifiées pour lesquelles l’identifiant utilisateur est tel qu’indiqué. |
 
 **Requête**
