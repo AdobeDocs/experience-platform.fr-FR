@@ -1,13 +1,13 @@
 ---
 title: Acxiom Real ID&trade ; Audience Connection
 description: Utilisez la destination  [!DNL Acxiom Real ID&trade; Audience Connection]  pour améliorer et activer les audiences sur les plateformes telles que  [!DNL Altice],  [!DNL Ampersand] et  [!DNL Comcast].
-source-git-commit: 3aefb36bbf525a5eebe3a9330e25587501167a64
+exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
+source-git-commit: ac792ca2a548cca60319e1c4c49ca1ceade44b43
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 15%
+source-wordcount: '1416'
+ht-degree: 12%
 
 ---
-
 
 # Destination [!DNL Acxiom Real ID™ Audience Connection]
 
@@ -94,9 +94,14 @@ Activez les audiences vers les plateformes suivantes via la destination [!DNL Ac
 * [[!DNL Facebook]](#facebook)
 * [[!DNL LG Ads]](#lg-ads)
 * [[!DNL Pinterest]](#pinterest)
+* [[!DNL Roku]](#roku)
+* [[!DNL Samsung Ads]](#samsung)
 * [!DNL Spectrum]
+* [[!DNL The Trade Desk 1st Party]](#ttd)
 * [!DNL Viant]
 * [[!DNL Vizio]](#vizio)
+* [[!DNL Warner Bros. Discovery]](#warner)
+* [[!DNL Yahoo]](#yahoo)
 
 ## Se connecter à la destination {#connect}
 
@@ -130,7 +135,7 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Segment Category]** : catégorie cible ou verticale de votre segment. Exemple : services financiers, automobile ou santé.
+* **[!UICONTROL Segment Category]** : catégorie cible ou verticale de votre audience. Exemple : services financiers, automobile ou santé.
 
   ![Copie d’écran du panneau Détails de la destination [!DNL LG Ads] affichant le champ Catégorie de segments.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_lg_ads_destination_details.png){zoomable="yes"}
 
@@ -142,6 +147,34 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Pinterest] affichant le champ Identifiant du compte de destination.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_pinterest_destination_details.png){zoomable="yes"}
 
+### [!DNL Roku] {#roku}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
+* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL Roku] affichant l’ID publicitaire et la durée de la campagne en jours.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/roku_destination_details.png){zoomable="yes"}
+
+### [!DNL Samsung Ads] {#samsung}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Advertiser Name]** : saisissez le nom de l’annonceur pour cette destination.
+* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL Samsung Ads] affichant les champs Nom de l’annonceur et ID de l’annonceur.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/samsung_ads_destination_details.png){zoomable="yes"}
+
+### [!DNL The Trade Desk] (1ère partie) {#ttd}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
+* **[!UICONTROL Advertiser Secret Key on The Trade Desk platform]** : saisissez la clé secrète de l’annonceur pour cet ID d’annonceur. Si vous laissez ce champ vide, la distribution échoue.
+* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL The Trade Desk] affichant l’ID publicitaire, la clé secrète publicitaire et la durée de la campagne dans les champs jours.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/the_trade_desk_destination_details.png){zoomable="yes"}
+
 ### [!DNL Vizio] {#vizio}
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
@@ -149,6 +182,23 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 * **[!UICONTROL Advertiser Name]** : saisissez le nom de l’annonceur pour cette destination.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Vizio] affichant le champ Nom de l’annonceur.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_vizio_destination_details.png){zoomable="yes"}
+
+### [!DNL Warner Bros. Discovery] {#warner}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Client name for Open AP]** : saisissez le nom du client pour [!DNL Warner Bros. Discovery] via [!DNL Open AP]. Votre représentant [!DNL Warner Bros. Discovery] active votre audience en votre nom par le biais d’une coordination avec [!DNL Open AP].
+
+  ![Copie d’écran du panneau Détails de la destination [!DNL Warner Bros. Discovery] affichant le nom du client pour [!DNL Open AP] champ.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/warner_bros_discovery_destination_details.png){zoomable="yes"}
+
+### [!DNL Yahoo] {#yahoo}
+
+Pour configurer les détails de la destination, renseignez les champs suivants.
+
+* **[!UICONTROL Destination Account ID]** : saisissez l’identifiant du compte de destination pour cette destination.
+* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+
+  ![Copie d’écran du panneau des détails de la destination [!DNL Yahoo] affichant les champs ID du compte de destination et Durée de la campagne en jours.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/yahoo_destination_details.png){zoomable="yes"}
 
 ## Activer des audiences vers cette destination {#activate}
 
