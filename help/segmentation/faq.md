@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4d4ac112fabd681580ea1bf61848704e38a087e0
+source-git-commit: 6225fa33feeb0ac22831cc3783629aba1e57005a
 workflow-type: tm+mt
-source-wordcount: '4857'
+source-wordcount: '4871'
 ht-degree: 24%
 
 ---
@@ -432,5 +432,5 @@ La disponibilité d’une définition de segment peut prendre jusqu’à une heu
 
 ### Existe-t-il des limitations aux données diffusées en continu dans ?
 
-Lors de l’utilisation de la segmentation Edge ou en flux continu, assurez-vous que les événements de chaque profil sont espacés. Si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Experience Platform traite ces événements comme des données générées par les robots et ils sont ignorés. En règle générale, vous devez disposer d’au **moins** cinq secondes entre les données d’événement pour vous assurer que les données sont correctement utilisées.
+Lors de l’utilisation de la segmentation Edge ou en flux continu, assurez-vous que les événements de chaque profil sont espacés de manière appropriée. Pour maintenir la stabilité et les performances du système, si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Segmentation Service peut traiter ces événements comme des données générées par les robots et ignorer l’évaluation de l’audience pour ces événements. Ces événements seront toujours stockés. En règle générale, vous devez disposer d’au **cinq secondes** entre les événements pour le même profil afin d’assurer une évaluation fiable de l’audience.
 

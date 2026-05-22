@@ -1,10 +1,10 @@
 ---
 title: Objets personnalisés avec B2B CDP
 description: Découvrez comment créer un objet personnalisé de relation un-à-plusieurs pour B2B CDP.
-source-git-commit: 7487f26a13019c3500cd613b4fefd12f700d9a24
+source-git-commit: d73800d97a2bb08b2aec3bc6e84e9c24f9bf38dc
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 2%
+source-wordcount: '940'
+ht-degree: 1%
 
 ---
 
@@ -36,6 +36,12 @@ La page **[!UICONTROL Create relational schema]** s’affiche. Vous pouvez ajout
 <!-- | Time series | Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject. | -->
 
 ## Ajouter vos champs {#add-fields}
+
+>[!NOTE]
+>
+>Si vous ajoutez un identifiant de personne dans le cadre de votre schéma relationnel, vous **devez** le baliser en tant que **[!UICONTROL Identifier]** avec un espace de noms d’identité approprié. Cela permet de s’assurer que les demandes d’accès à des informations personnelles suppriment correctement ces enregistrements des objets personnalisés pendant leur traitement.
+>
+>![](/help/rtcdp/assets/segmentation/custom-objects/person-identity.png){zoomable="yes" width="50%"}
 
 Une fois le schéma relationnel créé, vous pouvez ajouter les champs de votre schéma, y compris le marquage de la clé primaire et de l’identifiant de version, dans l’éditeur de schémas.
 
