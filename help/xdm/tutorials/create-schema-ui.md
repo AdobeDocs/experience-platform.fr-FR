@@ -5,9 +5,9 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
+source-git-commit: 7ff89999815387884fd8ce39f7cd7e7a6bee88bc
 workflow-type: tm+mt
-source-wordcount: '4768'
+source-wordcount: '4780'
 ht-degree: 59%
 
 ---
@@ -50,7 +50,7 @@ La boîte de dialogue [!UICONTROL Create a schema] s’affiche. Dans cette boît
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier chargé, consultez le guide de création de schéma assisté par machine learning [machine learning](../ui/ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -214,9 +214,9 @@ Chaque champ nécessite les informations suivantes :
 * **[!UICONTROL Type]:** type de données du champ. Cela inclut les types scalaires de base et tous les types de données définis dans [!DNL Schema Registry]. Exemples : [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
 * **[!UICONTROL Description]:** Une description facultative du champ doit être incluse avec un maximum de 200 caractères.
 
-Le premier champ de l’objet `loyaltyTier` sera une chaîne de caractères appelée `id`, représentant l’ID du niveau actuel du membre du programme de fidélité. L’ID de niveau sera unique pour chaque membre du programme de fidélité, car cette entreprise définit différents seuils de point de niveau de fidélité pour chaque client en fonction de différents facteurs. Définissez le type du nouveau champ sur « [!UICONTROL String] » et la section **[!UICONTROL Field properties]** se remplit de plusieurs options pour l’application de contraintes, y compris la valeur par défaut, le format et la longueur maximale. Pour en savoir plus, consultez la documentation sur [les bonnes pratiques relatives aux champs de validation des données](../schema/best-practices.md#data-validation-fields).
+Le premier champ de l’objet `loyaltyTier` sera une chaîne de caractères appelée `id`, représentant l’ID du niveau actuel du membre du programme de fidélité. L’ID de niveau sera unique pour chaque membre du programme de fidélité, car cette entreprise définit différents seuils de point de niveau de fidélité pour chaque client en fonction de différents facteurs. Définissez le type du nouveau champ sur « [!UICONTROL String] » et la section **[!UICONTROL Field properties]** se remplit d’options supplémentaires, notamment **[!UICONTROL Format]**, **[!UICONTROL Maximum length]** et **[!UICONTROL Default value]**. Utilisez les paramètres de **[!UICONTROL Format]** et de longueur lorsque la validation de l’ingestion est requise. **[!UICONTROL Default value]** enregistre uniquement les métadonnées de schéma informationnel et n’est pas automatiquement appliqué lors de l’ingestion ou des flux de préparation de données. Voir [propriétés de champ spécifiques au type](../ui/fields/overview.md#type-specific-properties).
 
-![L’éditeur de schémas avec les valeurs de propriété du champ du nouveau champ d’identifiant mises en surbrillance.](../images/tutorials/create-schema/string-constraints.png)
+![L’éditeur de schémas avec la validation de l’ingestion et les propriétés de champ Valeur par défaut pour le nouveau champ d’identifiant mises en surbrillance.](../images/tutorials/create-schema/string-constraints.png)
 
 Comme `id` est une chaîne à structure libre générée de manière aléatoire, aucune autre contrainte n’est nécessaire. Sélectionnez **[!UICONTROL Apply]** pour appliquer vos modifications.
 
@@ -413,11 +413,11 @@ Vous pouvez également consulter et gérer le schéma « Membres du programme d
 
 La vidéo suivante montre comment créer un schéma simple dans l’interface utilisateur [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/3430220?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 La vidéo suivante est destinée à vous aider à mieux comprendre l’utilisation des groupes et classes de champ.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413606?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Annexe
 

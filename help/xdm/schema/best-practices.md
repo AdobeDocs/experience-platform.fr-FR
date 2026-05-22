@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7a763a978443c0a074e6368448320056759f72bb
+source-git-commit: 000b79c5d87408ebc1f46731fb92aa148b435287
 workflow-type: tm+mt
-source-wordcount: '3429'
+source-wordcount: '3522'
 ht-degree: 49%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 49%
 
 XDM étant extrêmement polyvalent et personnalisable par sa conception, il est important de suivre les bonnes pratiques de modélisation des données lors de la conception de vos schémas. Ce document couvre les principales décisions et considérations à prendre lors du mappage de vos données d’expérience client à XDM.
 
-## Commencer
+## Prise en main
 
 Avant de lire ce guide, consultez la [présentation du système XDM](../home.md) pour une présentation détaillée de XDM et de son rôle dans Experience Platform.
 
@@ -73,7 +73,7 @@ En résumé, les profils et les entités de recherche contiennent des attributs 
 
 Si une entité contient des attributs liés à un client ou une cliente en particulier, il s’agit probablement d’une entité de profil. Voici quelques exemples d’attributs :
 
-* Informations personnelles telles que le nom, la date de naissance, le sexe et le ou les identifiants de compte.
+* Informations personnelles telles que le nom, la date de naissance, le genre et le ou les identifiants de compte.
 * Informations de localisation telles que les adresses et les informations GPS.
 * Coordonnées telles que les numéros de téléphone et les adresses e-mail.
 
@@ -217,7 +217,7 @@ Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à
 * Adobe Campaign
 * Adobe Target
 
-Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Adobe Analytics ExperienceEvent Template] pour mapper &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) schémas XDM des champs spécifiques à [!DNL Analytics]. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
+Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Adobe Analytics ExperienceEvent Template] pour mapper ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) schémas XDM des champs spécifiques à [!DNL Analytics]. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
 
 ![Schéma du [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
@@ -239,6 +239,10 @@ Lorsque vous ingérez des données dans le lac de données, la validation des do
 
 Pour définir des contraintes sur un champ, sélectionnez le champ dans l’éditeur de schémas afin d’ouvrir la barre latérale **[!UICONTROL Field properties]**. Consultez la documentation sur les [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
 
+>[!NOTE]
+>
+>Tous les contrôles dans **[!UICONTROL Field properties]** n’appliquent pas la validation de l’ingestion. Contrairement aux contrôles de validation tels que les **[!UICONTROL Pattern]**, les **[!UICONTROL Format]**, les limites de longueur, les valeurs numériques minimales et maximales, et les **[!UICONTROL Required]**, **[!UICONTROL Default value]** est une métadonnée de schéma d’information définie par la spécification de schéma JSON et qui n’est pas appliquée automatiquement lors de l’ingestion ou des flux de préparation de données. Voir [propriétés de champ spécifiques au type](../ui/fields/overview.md#type-specific-properties).
+
 ![Éditeur de schémas avec les champs de contrainte mis en surbrillance dans la barre latérale [!UICONTROL Field properties].](../images/best-practices/data-validation-fields.png)
 
 ### Conseils pour maintenir l’intégrité des données {#data-integrity-tips}
@@ -251,7 +255,7 @@ Les suggestions suivantes vous aident à maintenir l’intégrité des données 
 * **Appliquer des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, utilisez le paramètre **[!UICONTROL Pattern]** pour appliquer des contraintes. Ce paramètre peut inclure des règles telles que les chiffres uniquement, les majuscules ou les minuscules, ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
 * **Limiter les eVars dans les schémas Analytics** : en règle générale, un schéma Analytics ne doit comporter qu’une seule eVar désignée comme identité. Si vous envisagez d’utiliser plusieurs eVar en tant qu’identité, vous devez vérifier si la structure des données peut être optimisée.
 * **Garantir l’unicité d’un champ sélectionné** : le champ sélectionné doit être unique par rapport à l’identité principale dans le schéma. Si ce n’est pas le cas, ne le marquez pas comme identité. Par exemple, si plusieurs clients peuvent fournir la même adresse e-mail, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également aux autres espaces de noms d’identité tels que les numéros de téléphone. Le marquage d’un champ non unique en tant qu’identité peut entraîner une réduction indésirable du profil.
-* **Vérifier les longueurs de chaîne minimales** : tous les champs de chaîne doivent comporter au moins un caractère, car les valeurs de chaîne ne doivent jamais être vides. Les valeurs nulles pour les champs non obligatoires sont toutefois acceptables. Par défaut, les nouveaux champs de chaîne ont une longueur minimale d’un.
+* **Vérifier les longueurs de chaîne minimales** : tous les champs de chaîne doivent comporter au moins un caractère, car les valeurs de chaîne ne doivent jamais être vides. Les valeurs nulles pour les champs non obligatoires sont toutefois acceptables. Par défaut, les nouveaux champs de chaîne ont une longueur minimale de 1.
 
 ## Gestion des schémas activés pour Profile {#managing-profile-enabled-schemas}
 

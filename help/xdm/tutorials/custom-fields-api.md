@@ -2,9 +2,9 @@
 title: Définir des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources de modèle de données d’expérience (XDM) personnalisées dans l’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
+source-git-commit: 000b79c5d87408ebc1f46731fb92aa148b435287
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ Ce guide décrit la mise en forme appropriée pour définir différents types de
 
 Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour créer votre requête API pour [création d’un groupe de champs](../api/field-groups.md#create) ou [création d’un type de données](../api/data-types.md#create).
 
-## [!UICONTROL Chaîne] {#string}
+## [!UICONTROL String] {#string}
 
-Les champs [!UICONTROL Chaîne] sont indiqués par `type: string`.
+[!UICONTROL String] champs sont indiqués par `type: string`.
 
 ```json
 "sampleField": {
@@ -51,7 +51,7 @@ Vous pouvez éventuellement contraindre les types de valeurs qui peuvent être s
 
 ## [!UICONTROL URI] {#uri}
 
-Les champs [!UICONTROL URI] sont indiqués par des `type: string` avec une propriété `format` définie sur `uri`. Aucune autre propriété n’est acceptée.
+[!UICONTROL URI] champs sont indiqués par des `type: string` avec une propriété `format` définie sur `uri`. Aucune autre propriété n’est acceptée.
 
 ```json
 "sampleField": {
@@ -64,7 +64,7 @@ Les champs [!UICONTROL URI] sont indiqués par des `type: string` avec une propr
 
 ## [!UICONTROL Enum] {#enum}
 
-Les champs [!UICONTROL Enum] doivent utiliser `type: string`, avec les valeurs d’énumération elles-mêmes fournies sous un tableau `enum` :
+[!UICONTROL Enum] champs doivent utiliser `type: string`, avec les valeurs d’énumération elles-mêmes fournies sous un tableau `enum` :
 
 ```json
 "sampleField": {
@@ -103,7 +103,7 @@ Vous pouvez éventuellement fournir des libellés orientés client pour chaque v
 >
 >La valeur `meta:enum` ne déclare **pas** d’énumération ni ne génère de validation de données seule. Dans la plupart des cas, les chaînes fournies sous `meta:enum` sont également fournies sous `enum` pour s’assurer que les données sont limitées. Cependant, il existe certains cas d’utilisation où `meta:enum` est fourni sans tableau de `enum` correspondant. Pour plus d’informations, consultez le tutoriel sur la [définition de valeurs suggérées](../tutorials/suggested-values.md).
 
-Vous pouvez éventuellement fournir une propriété `default` pour indiquer la valeur de `enum` par défaut que le champ utilisera si aucune valeur n’est fournie.
+Vous pouvez éventuellement fournir une propriété `default` pour indiquer la valeur de `enum` par défaut prévue pour le champ. La propriété `default` est une métadonnée d’information définie par la spécification de schéma JSON et n’est pas automatiquement appliquée lors de l’ingestion Experience Platform ou des flux de préparation de données. Voir [Propriétés de champ spécifiques au type dans l’interface utilisateur](../ui/fields/overview.md#type-specific-properties).
 
 ```json
 "sampleField": {
@@ -128,7 +128,7 @@ Vous pouvez éventuellement fournir une propriété `default` pour indiquer la v
 >
 >Si aucune valeur de `default` n’est fournie et que le champ d’énumération est défini sur `required`, tout enregistrement ne disposant pas d’une valeur acceptée pour ce champ ne sera pas validé lors de l’ingestion.
 
-## [!UICONTROL Nombre] {#number}
+## [!UICONTROL Number] {#number}
 
 Les champs numériques sont indiqués par `type: number` et n’ont pas d’autres propriétés requises.
 
@@ -142,11 +142,11 @@ Les champs numériques sont indiqués par `type: number` et n’ont pas d’autr
 
 >[!NOTE]
 >
->Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
+>Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
 
-## [!UICONTROL Entier] {#integer}
+## [!UICONTROL Integer] {#integer}
 
-Les champs [!UICONTROL Entiers] sont indiqués par `type: integer` et n’ont pas d’autres champs obligatoires.
+[!UICONTROL Integer] champs sont indiqués par `type: integer` et n’ont pas d’autres champs obligatoires.
 
 ```json
 "sampleField": {
@@ -158,9 +158,9 @@ Les champs [!UICONTROL Entiers] sont indiqués par `type: integer` et n’ont pa
 
 >[!NOTE]
 >
->Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
+>Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
 
-Vous pouvez éventuellement contraindre la plage de l’entier en ajoutant les propriétés `minimum` et `maximum` à la définition. Plusieurs autres types numériques pris en charge par l’interface utilisateur du créateur de schémas sont simplement des types `integer` avec des contraintes de `minimum` et de `maximum` spécifiques, telles que [[!UICONTROL Long]](#long), [[!UICONTROL Court]](#short) et [[!UICONTROL Octet]](#byte).
+Vous pouvez éventuellement contraindre la plage de l’entier en ajoutant les propriétés `minimum` et `maximum` à la définition. Plusieurs autres types numériques pris en charge par l’interface utilisateur de Schema Builder sont simplement des types `integer` avec des contraintes `minimum` et `maximum` spécifiques, telles que [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short) et [[!UICONTROL Byte]](#byte).
 
 ```json
 "sampleField": {
@@ -174,7 +174,7 @@ Vous pouvez éventuellement contraindre la plage de l’entier en ajoutant les p
 
 ## [!UICONTROL Long] {#long}
 
-L’équivalent d’un champ [!UICONTROL Long] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-9007199254740992` et `9007199254740992`, respectivement).
+L’équivalent d’un champ de [!UICONTROL Long] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-9007199254740992` et `9007199254740992`, respectivement).
 
 ```json
 "sampleField": {
@@ -186,9 +186,9 @@ L’équivalent d’un champ [!UICONTROL Long] créé via l’interface utilisat
 }
 ```
 
-## [!UICONTROL Court] {#short}
+## [!UICONTROL Short] {#short}
 
-L’équivalent d’un champ [!UICONTROL Court] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-32768` et `32767`, respectivement).
+L’équivalent d’un champ de [!UICONTROL Short] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-32768` et `32767`, respectivement).
 
 ```json
 "sampleField": {
@@ -200,9 +200,9 @@ L’équivalent d’un champ [!UICONTROL Court] créé via l’interface utilisa
 }
 ```
 
-## [!UICONTROL Octet] {#byte}
+## [!UICONTROL Byte] {#byte}
 
-L’équivalent d’un champ [!UICONTROL Octet] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-128` et `127`, respectivement).
+L’équivalent d’un champ de [!UICONTROL Byte] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-128` et `127`, respectivement).
 
 ```json
 "sampleField": {
@@ -214,9 +214,9 @@ L’équivalent d’un champ [!UICONTROL Octet] créé via l’interface utilisa
 }
 ```
 
-## [!UICONTROL booléen] {#boolean}
+## [!UICONTROL Boolean] {#boolean}
 
-Les champs [!UICONTROL booléens] sont indiqués par `type: boolean`.
+[!UICONTROL Boolean] champs sont indiqués par `type: boolean`.
 
 ```json
 "sampleField": {
@@ -226,7 +226,7 @@ Les champs [!UICONTROL booléens] sont indiqués par `type: boolean`.
 }
 ```
 
-Vous pouvez éventuellement fournir une valeur de `default` que le champ utilisera lorsqu’aucune valeur explicite n’est fournie lors de l’ingestion.
+Vous pouvez éventuellement fournir une propriété `default` pour documenter la valeur prévue dans la définition de schéma. Ces éléments suivent la sémantique des schémas JSON et constituent des métadonnées informatives. L’ingestion Experience Platform et les flux de préparation de données ne s’appliquent pas automatiquement aux `default`. Voir [Propriétés de champ spécifiques au type dans l’interface utilisateur](../ui/fields/overview.md#type-specific-properties).
 
 ```json
 "sampleField": {
@@ -243,7 +243,7 @@ Vous pouvez éventuellement fournir une valeur de `default` que le champ utilise
 
 ## [!UICONTROL Date] {#date}
 
-Les champs [!UICONTROL Date] sont indiqués par `type: string` et `format: date`. Vous pouvez également fournir un tableau d’`examples` à exploiter dans les cas où vous souhaitez afficher un exemple de chaîne de date pour les utilisateurs qui saisissent manuellement les données.
+[!UICONTROL Date] champs sont indiqués par `type: string` et `format: date`. Vous pouvez également fournir un tableau d’`examples` à exploiter dans les cas où vous souhaitez afficher un exemple de chaîne de date pour les utilisateurs qui saisissent manuellement les données.
 
 ```json
 "sampleField": {
@@ -255,9 +255,9 @@ Les champs [!UICONTROL Date] sont indiqués par `type: string` et `format: date`
 }
 ```
 
-## [!UICONTROL DateHeure] {#date-time}
+## [!UICONTROL DateTime] {#date-time}
 
-Les champs [!UICONTROL DateTime] sont indiqués par `type: string` et `format: date-time`. Vous pouvez également fournir un tableau des `examples` à exploiter dans les cas où vous souhaitez afficher un exemple de chaîne datetime pour les utilisateurs qui saisissent manuellement les données.
+[!UICONTROL DateTime] champs sont indiqués par `type: string` et `format: date-time`. Vous pouvez également fournir un tableau des `examples` à exploiter dans les cas où vous souhaitez afficher un exemple de chaîne datetime pour les utilisateurs qui saisissent manuellement les données.
 
 ```json
 "sampleField": {
@@ -269,9 +269,9 @@ Les champs [!UICONTROL DateTime] sont indiqués par `type: string` et `format: d
 }
 ```
 
-## [!UICONTROL Tableau] {#array}
+## [!UICONTROL Array] {#array}
 
-Les champs [!UICONTROL Tableau] sont indiqués par `type: array` et un objet `items` qui définit le schéma des éléments que le tableau acceptera.
+[!UICONTROL Array] champs sont indiqués par `type: array` et un objet `items` qui définit le schéma des éléments que le tableau acceptera.
 
 Vous pouvez définir des éléments de tableau à l’aide de types primitifs, tels qu’un tableau de chaînes :
 
@@ -286,7 +286,7 @@ Vous pouvez définir des éléments de tableau à l’aide de types primitifs, t
 }
 ```
 
-Vous pouvez également définir les éléments de tableau en fonction d’un type de données existant en vous référant à la `$id` du type de données via une propriété `$ref`. Voici un tableau d&#39;objets [!UICONTROL Payment Item] :
+Vous pouvez également définir les éléments de tableau en fonction d’un type de données existant en vous référant à la `$id` du type de données via une propriété `$ref`. Voici un tableau d’objets [!UICONTROL Payment Item] :
 
 ```json
 "sampleField": {
@@ -299,9 +299,9 @@ Vous pouvez également définir les éléments de tableau en fonction d’un typ
 }
 ```
 
-## [!UICONTROL Objet] {#object}
+## [!UICONTROL Object] {#object}
 
-Les champs [!UICONTROL Object] sont indiqués par `type: object` et un objet `properties` qui définit des sous-propriétés pour le champ de schéma.
+[!UICONTROL Object] champs sont indiqués par des `type: object` et un objet `properties` qui définit les sous-propriétés du champ de schéma.
 
 Les différents sous-champs définis sous `properties` peuvent être définis à l’aide de n’importe quel `type` primitif ou en référençant un type de données existant par le biais d’une propriété `$ref` pointant vers le `$id` du type de données en question :
 
@@ -331,9 +331,9 @@ Vous pouvez également définir l’objet entier via en faisant référence à u
 }
 ```
 
-## [!UICONTROL Carte] {#map}
+## [!UICONTROL Map] {#map}
 
-Un champ de mappage est essentiellement un champ de type [`object`](#object) avec un ensemble non contraint de clés. Comme les objets, les mappages ont une valeur `type` de `object`, mais leur `meta:xdmType` est explicitement définie sur `map`.
+Un champ de mappage est essentiellement un champ de type ](#object) avec un ensemble non contraint de clés. [`object`Comme les objets, les mappages ont une valeur `type` de `object`, mais leur `meta:xdmType` est explicitement définie sur `map`.
 
 Un mappage **ne doit pas** définir de propriétés. Il **doit** définir un schéma de `additionalProperties` unique pour décrire le type de valeurs contenues dans le mappage (chaque mappage ne peut contenir qu’un seul type de données). La valeur `type` doit être `string` ou `integer`.
 
@@ -372,4 +372,4 @@ L’interface utilisateur d’Experience Platform présente également des limit
 
 ## Étapes suivantes
 
-Ce guide explique comment définir différents types de champs dans l’API. Pour plus d’informations sur le formatage des types de champs XDM, consultez le guide sur les [&#x200B; Contraintes de type de champ XDM &#x200B;](../schema/field-constraints.md).
+Ce guide explique comment définir différents types de champs dans l’API. Pour plus d’informations sur le formatage des types de champs XDM, consultez le guide sur les [ Contraintes de type de champ XDM ](../schema/field-constraints.md).

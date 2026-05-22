@@ -2,10 +2,10 @@
 title: Gestion des valeurs suggérées dans l’API
 description: Découvrez comment ajouter des valeurs suggérées à un champ de chaîne dans l’API Schema Registry.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 000b79c5d87408ebc1f46731fb92aa148b435287
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 1%
+source-wordcount: '695'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ Contrairement aux énumérations, l’ajout de **valeurs suggérées** à un cha
 >
 >Il existe un délai d’environ cinq minutes pour que les valeurs suggérées mises à jour d’un champ soient reflétées dans l’interface utilisateur de segmentation.
 
-Ce guide explique comment gérer les valeurs suggérées à l’aide de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Pour savoir comment le faire dans l’interface utilisateur de Adobe Experience Platform, consultez le guide de l’interface utilisateur [&#x200B; sur les énumérations et les valeurs suggérées](../ui/fields/enum.md).
+Ce guide explique comment gérer les valeurs suggérées à l’aide de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Pour savoir comment le faire dans l’interface utilisateur de Adobe Experience Platform, consultez le guide de l’interface utilisateur [ sur les énumérations et les valeurs suggérées](../ui/fields/enum.md).
 
 ## Conditions préalables
 
@@ -28,11 +28,15 @@ Ce guide suppose que vous connaissez les éléments de composition de schémas d
 * [Principes de base de la composition des schémas](../schema/composition.md)
 * [Guide du registre des schémas API](../api/overview.md)
 
-Il est également vivement recommandé de consulter les [&#x200B; règles d’évolution pour les énumérations et les valeurs suggérées &#x200B;](../ui/fields/enum.md#evolution) si vous mettez à jour des champs existants. Si vous gérez les valeurs suggérées pour les schémas qui participent à une union, reportez-vous à la section [règles de fusion des énumérations et des valeurs suggérées](../ui/fields/enum.md#merging).
+Il est également vivement recommandé de consulter les [ règles d’évolution pour les énumérations et les valeurs suggérées ](../ui/fields/enum.md#evolution) si vous mettez à jour des champs existants. Si vous gérez les valeurs suggérées pour les schémas qui participent à une union, reportez-vous à la section [règles de fusion des énumérations et des valeurs suggérées](../ui/fields/enum.md#merging).
 
 ## Composition
 
-Dans l’API , les valeurs contraintes d’un champ **enum** sont représentées par un tableau `enum`, tandis qu’un objet `meta:enum` fournit des noms d’affichage conviviaux pour ces valeurs :
+Dans l’API , les valeurs contraintes d’un champ **enum** sont représentées par un tableau `enum`, tandis qu’un objet `meta:enum` fournit des noms d’affichage conviviaux pour ces valeurs.
+
+>[!NOTE]
+>
+>La propriété facultative `default` de schéma JSON documente une valeur prévue dans la définition de schéma. Experience Platform n’applique pas automatiquement les `default` lors de l’ingestion ou des flux de préparation des données. Voir [Propriétés de champ spécifiques au type dans l’interface utilisateur](../ui/fields/overview.md#type-specific-properties).
 
 ```json
 "exampleStringField": {
@@ -278,4 +282,4 @@ Après application de la modification, le registre des schémas répond avec les
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les valeurs suggérées pour les champs de chaîne dans l’API Schema Registry. Pour plus d’informations sur la création de différents types de champs[&#x200B; consultez le guide sur la &#x200B;](./custom-fields-api.md)définition de champs personnalisés dans l’API).
+Ce guide explique comment gérer les valeurs suggérées pour les champs de chaîne dans l’API Schema Registry. Pour plus d’informations sur la création de différents types de champs](./custom-fields-api.md) consultez le guide sur la [définition de champs personnalisés dans l’API).

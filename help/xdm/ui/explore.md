@@ -5,9 +5,9 @@ title: Explorer les ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur d’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
+source-git-commit: 7ff89999815387884fd8ce39f7cd7e7a6bee88bc
 workflow-type: tm+mt
-source-wordcount: '2820'
+source-wordcount: '2839'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Ces actions sont cohérentes sur les deux points d’entrée pour les types de r
 
 Selon le type de ressource et vos autorisations, les actions suivantes peuvent être disponibles :
 
-- **[!UICONTROL Delete]** — Supprimer définitivement une ressource personnalisée de votre organisation (lorsque les contraintes le permettent). Si la suppression est bloquée, voir [&#x200B; Contraintes &#x200B;](#delete-constraints).
+- **[!UICONTROL Delete]** — Supprimer définitivement une ressource personnalisée de votre organisation (lorsque les contraintes le permettent). Si la suppression est bloquée, voir [ Contraintes ](#delete-constraints).
 - **[!UICONTROL Download sample file]** — Générer un fichier de données d&#39;exemple en fonction de la structure des ressources. Étape par étape : [générer des exemples de données XDM](./sample.md).
 - **[!UICONTROL Copy JSON structure]** — Copiez la définition de la ressource au format JSON pour la réutilisation, l&#39;exportation ou le contrôle. Procédure pas à pas : [Exporter des schémas XDM](./export.md).
 - **[!UICONTROL Add to package]** — Incluez la ressource dans un package sandbox pour l&#39;exportation ou l&#39;importation dans des sandbox. Etape par étape : [Exporter des objets dans un package](../../sandboxes/ui/sandbox-tooling.md#export-objects).
@@ -148,7 +148,7 @@ Consultez la documentation [Ajouter des champs personnalisés aux groupes de cha
 
 Certains noms de champ sont précédés d’un trait de soulignement, tels que `_repo` et `_id`. Il s’agit d’espaces réservés pour les champs que le système génère et attribue automatiquement au fur et à mesure de l’ingestion des données.
 
-Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent &#x200B;](../api/getting-started.md#know-your-tenant_id) un espace de noms.
+Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent ](../api/getting-started.md#know-your-tenant_id) un espace de noms.
 
 ### Types de données {#data-types}
 
@@ -164,7 +164,7 @@ Si un champ de tableau est basé sur un type d’objet, vous pouvez sélectionne
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Field properties]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, des valeurs par défaut, des modèles, des formats, si le champ est obligatoire, etc. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [&#x200B; Libellés dans la vue de structure &#x200B;](#field-group-labels-in-structure).
+Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Field properties]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, des **[!UICONTROL Default value]** (métadonnées de schéma d’information qui ne sont pas appliquées lors de l’ingestion), des modèles, des formats, si le champ est obligatoire, etc. Voir [propriétés de champ spécifiques au type](./fields/overview.md#type-specific-properties) pour connaître les différences par rapport **[!UICONTROL Default value]** paramètres de validation de l’ingestion. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [ Libellés dans la vue de structure ](#field-group-labels-in-structure).
 
 ![Champ sélectionné à partir du type de données Commerce avec les propriétés du champ mises en surbrillance.](../images/ui/explore/field-properties.png)
 
@@ -182,7 +182,7 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 >[!NOTE]
 >
->Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval[&#128279;](./fields/identity.md) consultez le guide sur la  définition des champs d’identité .
+>Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval](./fields/identity.md) consultez le guide sur la [ définition des champs d’identité .
 
 ### Champs de relation {#relationship}
 
