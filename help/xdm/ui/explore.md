@@ -5,9 +5,9 @@ title: Explorer les ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur d’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
+source-git-commit: 7ff89999815387884fd8ce39f7cd7e7a6bee88bc
 workflow-type: tm+mt
-source-wordcount: '2820'
+source-wordcount: '2839'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Si un champ de tableau est basé sur un type d’objet, vous pouvez sélectionne
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Field properties]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, des valeurs par défaut, des modèles, des formats, si le champ est obligatoire, etc. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [&#x200B; Libellés dans la vue de structure &#x200B;](#field-group-labels-in-structure).
+Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Field properties]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, des **[!UICONTROL Default value]** (métadonnées de schéma d’information qui ne sont pas appliquées lors de l’ingestion), des modèles, des formats, si le champ est obligatoire, etc. Voir [propriétés de champ spécifiques au type](./fields/overview.md#type-specific-properties) pour connaître les différences par rapport **[!UICONTROL Default value]** paramètres de validation de l’ingestion. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [&#x200B; Libellés dans la vue de structure &#x200B;](#field-group-labels-in-structure).
 
 ![Champ sélectionné à partir du type de données Commerce avec les propriétés du champ mises en surbrillance.](../images/ui/explore/field-properties.png)
 
