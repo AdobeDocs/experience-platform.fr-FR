@@ -5,7 +5,8 @@ user-guide-description: Découvrez comment utiliser l’Assistant IA pour accé
 description: Ce document répertorie la table des matières de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 role: Admin,User,Developer,Leader
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: 07f87e09a951e99658e5a91fc2cd85a994031fa1
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 33%
