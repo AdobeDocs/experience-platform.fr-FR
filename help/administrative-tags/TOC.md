@@ -3,7 +3,8 @@ audience: user
 user-guide-title: Aide sur les balises unifiées dans Adobe Experience Platform
 breadcrumb-title: Guide des balises unifiées
 user-guide-description: Utilisez les balises unifiées pour gérer les taxonomies des métadonnées. Découvrez comment créer des catégories de balises et des balises.
-source-git-commit: cc8e7074eafae11887486b0cec54154d96eb5a5c
+nudge: true
+source-git-commit: 07f87e09a951e99658e5a91fc2cd85a994031fa1
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 75%
