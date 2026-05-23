@@ -4,10 +4,11 @@ user-guide-title: Guide des catalogues et des jeux de données
 user-guide-description: Explorez la traçabilité des données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données et découvrez-en plus sur le système de service de catalogue.
 feature: Catalog
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+nudge: true
+source-git-commit: d2becb8fb7d209a9f52d9714797ac41cd7f8e7f0
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 100%
+source-wordcount: '138'
+ht-degree: 97%
 
 ---
 
@@ -24,9 +25,9 @@ ht-degree: 100%
    * [Mise à jour d’un objet](api/update-object.md)
    * [Remplacement d’un objet](api/replace-object.md)
    * [Suppression d’un objet](api/delete-object.md)
-   * [Création d’un jeu de données](api/create-dataset.md)
+   * [Créer un jeu de données](api/create-dataset.md)
    * [Création d’un lot](api/create-batch.md)
-   * [Libellés d’utilisation des données](api/labels.md)
+   * [Étiquettes d’utilisation des données](api/labels.md)
    * [Annexe](api/appendix.md)
 * Jeux de données {#datasets}
    * [Présentation des jeux de données](datasets/overview.md)
@@ -38,4 +39,4 @@ ht-degree: 100%
 * [Traitement des demandes d’accès à des informations personnelles dans le lac de données](privacy.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Questions fréquentes](catalog-faq.md)
-* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
