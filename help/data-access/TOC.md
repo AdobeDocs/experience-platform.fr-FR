@@ -5,10 +5,11 @@ breadcrumb-title: Guide d’accès aux données
 user-guide-description: Trouvez et accédez aux jeux de données ingérés dans Experience Platform.
 feature: Data Access
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+nudge: true
+source-git-commit: d2becb8fb7d209a9f52d9714797ac41cd7f8e7f0
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 100%
+source-wordcount: '44'
+ht-degree: 90%
 
 ---
 
@@ -19,4 +20,4 @@ ht-degree: 100%
 - [API Data Access](api.md)
 - Tutoriels {#tutorials}
    - [Affichage des données du jeu de données](tutorials/dataset-data.md)
-- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
