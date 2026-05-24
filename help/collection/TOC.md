@@ -6,7 +6,8 @@ breadcrumb-title: Collecte de données
 user-guide-description: Découvrez comment envoyer des données à Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: c64a493a39ab125f1317b05f02c5e33dd2a54482
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 37%
