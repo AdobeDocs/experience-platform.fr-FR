@@ -4,16 +4,20 @@ description: Découvrez les codes d’erreur Privacy Service afin de diagnostiqu
 keywords: privacy service, codes d’erreur, tâches de confidentialité, erreurs api
 solution: Experience Platform
 exl-id: 49b79093-4d4c-4b92-bd38-86879452dbfb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/lxMUF3u8TUF9GrrvlLi9glQ0e6heDlLupKDIDk41Hc0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 5%
+source-wordcount: 836
+ht-degree: 8%
 
 ---
 
 # Codes d’erreur Privacy Service {#privacy-service-error-codes}
 
-Utilisez cette référence pour identifier les résultats des tâches Privacy Service, diagnostiquer les échecs et déterminer les étapes suivantes appropriées lors de l&#39;envoi ou de la surveillance des tâches de confidentialité dans **Adobe Experience Platform**. Pour savoir comment créer, envoyer et surveiller les tâches de confidentialité, consultez le guide de point d’entrée des tâches de confidentialité [guide](./privacy-jobs.md) ou le guide d’utilisation de l’interface utilisateur de Privacy Service [&#128279;](../ui/user-guide.md).
+Utilisez cette référence pour identifier les résultats des tâches Privacy Service, diagnostiquer les échecs et déterminer les étapes suivantes appropriées lors de l&#39;envoi ou de la surveillance des tâches de confidentialité dans **Adobe Experience Platform**. Pour savoir comment créer, envoyer et surveiller les tâches de confidentialité, consultez le guide de point d’entrée des tâches de confidentialité [guide](./privacy-jobs.md) ou le guide d’utilisation de l’interface utilisateur de Privacy Service [](../ui/user-guide.md).
 
 Les codes d’erreur Privacy Service sont un contrat public stable. Chaque code d’erreur identifie de manière unique un état d’échec ou d’achèvement sur lequel vous pouvez compter pour la gestion programmatique et les workflows opérationnels.
 
@@ -23,7 +27,7 @@ Les garanties suivantes s’appliquent lors de la création de workflows d’aut
 * Les messages d’erreur peuvent changer pour améliorer la clarté, mais pas la valeur du code.
 * De nouveaux codes d’erreur peuvent être ajoutés au fil du temps ; les codes existants ne sont pas réutilisés.
 
-Utilisez des codes d’erreur, et non du texte de message, pour implémenter l’automatisation ou la logique de décision. Pour obtenir des conseils sur le traitement efficace des tâches de confidentialité, la surveillance du statut des tâches et la gestion des erreurs sans se fier aux interrogations ou aux chaînes de message, consultez [Bonnes pratiques relatives à &#x200B;](../best-practices.md).
+Utilisez des codes d’erreur, et non du texte de message, pour implémenter l’automatisation ou la logique de décision. Pour obtenir des conseils sur le traitement efficace des tâches de confidentialité, la surveillance du statut des tâches et la gestion des erreurs sans se fier aux interrogations ou aux chaînes de message, consultez [Bonnes pratiques relatives à ](../best-practices.md).
 
 ## Format de réponse d’erreur {#error-response-format}
 
@@ -31,7 +35,7 @@ Privacy Service renvoie des informations d’erreur dans les réponses de tâche
 
 Le code d’erreur transmet le résultat faisant autorité. Le message fournit un contexte supplémentaire pour la résolution des problèmes.
 
-Ce document décrit la signification et l’intention de chaque code d’erreur. Pour les schémas de réponse au niveau du champ et les détails de la requête, consultez la documentation de l’API Privacy Service [&#128279;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+Ce document décrit la signification et l’intention de chaque code d’erreur. Pour les schémas de réponse au niveau du champ et les détails de la requête, consultez la documentation de l’API Privacy Service [](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 ## Domaines d’erreur {#error-domains}
 
@@ -39,7 +43,7 @@ Les codes d’erreur sont regroupés par domaine fonctionnel pour vous aider à 
 
 Les domaines utilisés dans ce document sont les suivants :
 
-* **Validation de la demande** : la demande est incorrecte ou contient des valeurs non valides. Pour connaître la structure des requêtes et les exigences de validation[&#x200B; consultez le &#x200B;](./privacy-jobs.md) guide des points d’entrée des tâches de confidentialité .
+* **Validation de la demande** : la demande est incorrecte ou contient des valeurs non valides. Pour connaître la structure des requêtes et les exigences de validation](./privacy-jobs.md) consultez le [ guide des points d’entrée des tâches de confidentialité .
 * **Autorisation et mise en service** : votre organisation ou votre utilisateur ne dispose pas de l’accès requis. Voir [Gestion des autorisations](../permissions.md) pour consulter les exigences d’autorisation basées sur les rôles.
 * **Identité et applicabilité** : les identifiants ou les espaces de noms ne s’appliquent pas à la requête. Voir [Données d’identité pour les demandes d’accès à des informations personnelles](../identity-data.md) pour les types d’identité pris en charge et les exigences en espace de noms.
 * **Limitation du débit** : le volume des envois dépasse les limites de la plateforme. Lorsque cette erreur se produit, réduisez le taux d’envoi, puis réessayez.

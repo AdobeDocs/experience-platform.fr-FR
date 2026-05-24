@@ -1,29 +1,32 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;audit;journal d’audit;changelog;journal des modifications;rpc;
+keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;audit;journal d’audit;journal des modifications;rpc;
 solution: Experience Platform
-title: Point de terminaison de l’API du journal d’audit
-description: Le point de terminaison /auditlog de l’API Schema Registry vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
+title: Point d’entrée de l’API du journal d’audit
+description: Le point d’entrée /auditlog dans l’API Schema Registry vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+TQID: https://experienceleague.adobe.com/AfEinzGCnILUsnkIdlbFyKB70HIIwF9zjLdQCB-UEag
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 13%
+source-wordcount: 405
+ht-degree: 14%
 
 ---
 
 # Point d’entrée du journal d’audit
 
-Pour chaque ressource de modèle de données d’expérience (XDM), [!DNL Schema Registry] conserve un journal de toutes les modifications qui se sont produites entre différentes mises à jour. Le point d’entrée `/auditlog` de l’API [!DNL Schema Registry] vous permet de récupérer un journal d’audit pour toute classe, groupe de champs de schéma, type de données ou schéma spécifié par l’ID.
+Pour chaque ressource du modèle de données d’expérience (XDM), le [!DNL Schema Registry] conserve un journal de toutes les modifications qui se sont produites entre différentes mises à jour. Le point d’entrée `/auditlog` de l’API [!DNL Schema Registry] vous permet de récupérer un journal d’audit pour n’importe quelle classe, groupe de champs de schéma, type de données ou schéma spécifié par l’ID.
 
-## Commencer
+## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). [[!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-Le point d’entrée `/auditlog` fait partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement à d’autres points de terminaison dans l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas un `CONTAINER_ID`. Au lieu de cela, ils doivent utiliser l’espace de noms `/rpc`, comme illustré dans l’appel API ci-dessous.
+Le point d&#39;entrée `/auditlog` fait partie des appels de procédure distante (RPC) pris en charge par le [!DNL Schema Registry]. Contrairement aux autres points d&#39;entrée de l&#39;API [!DNL Schema Registry], les points d&#39;entrée RPC ne nécessitent pas d&#39;en-têtes supplémentaires tels que `Accept` ou `Content-Type`, et n&#39;utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans l’appel API ci-dessous.
 
 ## Récupération d’un journal d’audit pour une ressource
 
-Vous pouvez récupérer un journal d’audit pour n’importe quelle classe, groupe de champs, type de données ou schéma dans la bibliothèque de schémas en spécifiant l’identifiant de la ressource dans le chemin d’accès d’une requête de GET au point de terminaison `/auditlog`.
+Vous pouvez récupérer un journal d’audit pour n’importe quelle classe, groupe de champs, type de données ou schéma de la bibliothèque de schémas en spécifiant l’identifiant de la ressource dans le chemin d’accès d’une requête GET au point d’entrée `/auditlog`.
 
 **Format d’API**
 
@@ -33,13 +36,13 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_ID}` | `meta:altId` ou encodé URL `$id` de la ressource dont vous souhaitez récupérer le journal d’audit. |
+| `{RESOURCE_ID}` | `$id` codée en `meta:altId` ou en URL de la ressource dont vous souhaitez récupérer le journal d’audit. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante récupère le journal d’audit pour un schéma.
+La requête suivante récupère le journal d’audit d’un schéma.
 
 ```shell
 curl -X GET \
@@ -52,7 +55,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste chronologique des modifications apportées à la ressource, de la plus récente au moins récente.
+Une réponse réussie renvoie une liste chronologique des modifications apportées à la ressource, du plus récent au moins récent.
 
 ```json
 [
@@ -118,11 +121,11 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
 
 | Propriété | Description |
 | --- | --- |
-| `updates` | Tableau d’objets, chaque objet représentant une modification apportée à la ressource spécifiée ou à l’une de ses ressources dépendantes. |
-| `id` | `$id` de la ressource qui a été modifiée. Cette valeur représente généralement la ressource spécifiée dans le chemin de requête, mais peut représenter une ressource dépendante si c’est la source de la modification. |
+| `updates` | Tableau d’objets, où chaque objet représente une modification apportée à la ressource spécifiée ou à l’une de ses ressources dépendantes. |
+| `id` | `$id` de la ressource qui a été modifiée. Cette valeur représente généralement la ressource spécifiée dans le chemin d’accès de la requête, mais peut représenter une ressource dépendante si c’est la source de la modification. |
 | `xdmType` | Type de ressource qui a été modifié. |
-| `action` | Le type de modification qui a été apporté. |
-| `path` | Chaîne [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) indiquant le chemin d’accès au champ spécifique qui a été modifié ou ajouté. |
+| `action` | Type de changement qui a été apporté. |
+| `path` | Chaîne [pointeur JSON](../../landing/api-fundamentals.md#json-pointer) indiquant le chemin d’accès au champ spécifique qui a été modifié ou ajouté. |
 | `value` | Valeur affectée au champ nouveau ou mis à jour. |
 
 {style="table-layout:auto"}

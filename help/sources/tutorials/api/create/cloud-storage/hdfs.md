@@ -5,9 +5,12 @@ title: Créer une connexion de base Apache HDFS à l’aide de l’API Flow Serv
 type: Tutorial
 description: Découvrez comment connecter un système de fichiers distribué Apache Hadoop à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/jZqHJUNlhqWP5vJXEF8-FwYKaKcllm-xVR4TVYgNgY0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: 469
 ht-degree: 43%
 
 ---
@@ -16,7 +19,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Le connecteur Apache HDFS est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur Apache HDFS est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -24,7 +27,7 @@ Ce tutoriel vous guide tout au long des étapes nécessaires à la création d�
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.

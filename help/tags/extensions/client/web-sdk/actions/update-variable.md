@@ -2,9 +2,15 @@
 title: Mettre à jour la variable
 description: Modifie le contenu d’un élément de données variable.
 exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
-source-git-commit: 50881ef9498196f2de5519f050800334019a2586
+TQID: https://experienceleague.adobe.com/FHWcaLTAxIT4OeOvFzTnw5Jd3GT3ngHeqAN6ntPJ2uo
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: 263
 ht-degree: 0%
 
 ---

@@ -1,30 +1,34 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées
+keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;
 solution: Experience Platform
-title: Guide de l’API d’apprentissage automatique Sensei
+title: Annexe du guide de l’API Sensei Machine Learning
 description: Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API Sensei Machine Learning.
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/XYM1i7-nK2MJRUdCv3HI0s2lYbTA3LlOdrXuyAeZtYE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: 353
 ht-degree: 62%
 
 ---
 
-# [!DNL Sensei Machine Learning] annexe du guide de l’API
+# Annexe du guide de l’API [!DNL Sensei Machine Learning]
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API [!DNL Sensei Machine Learning].
+Les sections suivantes fournissent des informations de référence sur les différentes fonctionnalités de l’API [!DNL Sensei Machine Learning].
 
-## Paramètres de requête pour la récupération de ressources {#query}
+## Paramètres de requête pour la récupération des ressources {#query}
 
-L’API [!DNL Sensei Machine Learning] prend en charge les paramètres de requête pour la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
+L’API [!DNL Sensei Machine Learning] prend en charge les paramètres de requête avec récupération de ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
 
 | Paramètre de requête | Description | Valeur par défaut |
 | --------------- | ----------- | ------- |
@@ -37,7 +41,7 @@ L’API [!DNL Sensei Machine Learning] prend en charge les paramètres de requê
 >
 >Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (**&amp;**).
 
-## Configurations du processeur et du processeur graphique Python {#cpu-gpu-config}
+## Configurations CPU et GPU Python {#cpu-gpu-config}
 
 Avec les moteurs Python, vous avez la possibilité de choisir entre un processeur ou un processeur graphique à des fins de formation ou de notation. Ceux-ci sont définis sur une [MLInstance](./mlinstances.md) en tant que spécification de tâche (`tasks.specification`).
 
@@ -76,19 +80,19 @@ L’exemple suivant présente une configuration qui précise l’utilisation d�
 
 >[!NOTE]
 >
->Les valeurs `cpus` et `gpus` ne signifient pas le nombre de processeurs ou de processeurs graphiques, mais plutôt le nombre de machines physiques. Ces valeurs sont acceptablement `"1"` et renverront une exception dans le cas contraire.
+>Les valeurs de `cpus` et `gpus` ne signifient pas le nombre de processeurs ou de processeurs graphiques, mais plutôt le nombre de machines physiques. Ces valeurs sont acceptablement `"1"` et renverront une exception dans le cas contraire.
 
 ## Configurations des ressources PySpark et Spark {#resource-config}
 
-Les moteurs Spark permettent de modifier des ressources de calcul à des fins de formation et de notation. Ces ressources sont décrites dans le tableau suivant :
+Les moteurs Spark ont la capacité de modifier les ressources de calcul à des fins de formation et de notation. Ces ressources sont décrites dans le tableau suivant :
 
 | Ressource | Description | Type |
 | -------- | ----------- | ---- |
-| driverMemory | Mémoire du pilote en mégaoctets | ent |
-| driverCores | Nombre de noyaux utilisés par le pilote | ent |
-| executorMemory | Mémoire de l’exécuteur en mégaoctets | ent |
-| executorCores | Nombre de noyaux utilisés par l’exécuteur | ent |
-| numExecutors | Nombre d’exécuteurs | ent |
+| driverMemory | Mémoire du pilote en mégaoctets | int |
+| driverCores | Nombre de noyaux utilisés par le pilote | int |
+| executorMemory | Mémoire de l’exécuteur en mégaoctets | int |
+| executorCores | Nombre de noyaux utilisés par l’exécuteur | int |
+| numExecutors | Nombre d’exécuteurs | int |
 
 Vous pouvez préciser les ressources dans une [MLInstance](./mlinstances.md) en tant que soit (A) en paramètres de formation ou de notation uniques, soit (B) au sein d’un objet de spécifications supplémentaire (`specification`). Par exemple, les configurations de ressource suivantes sont les mêmes aussi bien pour la formation que la notation :
 

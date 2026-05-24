@@ -2,10 +2,16 @@
 title: Cas d’utilisation de jeux de données dérivés basés sur des déciles
 description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données de profil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/aqniye45WW7pJOI5Fbg-zGIHKvYV47Ehdn2QUepzAW8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1512'
-ht-degree: 2%
+source-wordcount: 1551
+ht-degree: 3%
 
 ---
 
@@ -23,14 +29,14 @@ Les concepts clés suivants sont illustrés :
 * Calcul des déciles sur une période de recherche en amont.
 * Exemple de requête pour démontrer l’agrégation, le classement et l’ajout d’identités uniques afin de permettre la génération d’audiences en fonction de ces intervalles de déciles.
 
-## Commencer
+## Prise en main
 
 Ce guide nécessite une compréhension pratique de [l’exécution de requêtes dans Query Service](../best-practices/writing-queries.md) et des composants suivants de Adobe Experience Platform :
 
 * [Présentation du profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : présentation des schémas XDM ainsi que des blocs de création, principes et bonnes pratiques pour la composition de schémas.
-* [Comment activer un schéma pour le profil client en temps réel &#x200B;](../../profile/tutorials/add-profile-data.md) : ce tutoriel décrit les étapes nécessaires pour ajouter des données au profil client en temps réel.
-* [Comment définir un type de données personnalisé &#x200B;](../../xdm/api/data-types.md) : les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs pouvant être incluse n’importe où dans le schéma.
+* [Comment activer un schéma pour le profil client en temps réel ](../../profile/tutorials/add-profile-data.md) : ce tutoriel décrit les étapes nécessaires pour ajouter des données au profil client en temps réel.
+* [Comment définir un type de données personnalisé ](../../xdm/api/data-types.md) : les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs pouvant être incluse n’importe où dans le schéma.
 
 ## Objectifs
 
@@ -67,7 +73,7 @@ Le tableau suivant affiche les exemples de données contenus dans l’objet `_pr
 | C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nouveau membre | 5 000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | ARGENTÉ |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | ARGENTÉ |
-| B789279247 | pgalton32n@barnesandnoble.com | 10/02/2022 | AWARD_MILES | FRA-JFK | 5 000 | ARGENTÉ |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5 000 | ARGENTÉ |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nouvelle carte de crédit | 10000 | FLYER |
 
 {style="table-layout:auto"}
@@ -299,4 +305,4 @@ Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez
 
 ## Étapes suivantes
 
-L’exemple de cas d’utilisation fourni ci-dessus illustre les étapes à suivre pour rendre les jeux de données dérivés basés sur des déciles disponibles dans le profil client en temps réel. Cela permet à Segmentation Service, par le biais d’une interface utilisateur ou d’une API RESTful, de générer des audiences en fonction de ces intervalles de déciles. Consultez la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.
+L’exemple de cas d’utilisation fourni ci-dessus illustre les étapes à suivre pour rendre les jeux de données dérivés basés sur des déciles disponibles dans le profil client en temps réel. Cela permet à Segmentation Service, par le biais d’une interface utilisateur ou d’une API RESTful, de générer des audiences en fonction de ces intervalles de déciles. Consultez la [ présentation de Segmentation Service ](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.

@@ -5,13 +5,17 @@ title: Diffuser des données d’enregistrement à l’aide des API d’ingestio
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion en flux continu, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/GqsE8rAyDVd4Ul6--1h5BlAwyzxmANj3BjJWRrPHzAE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: 1036
 ht-degree: 60%
 
 ---
-
 
 # Diffuser des données d’enregistrement à l’aide des API d’ingestion en flux continu
 
@@ -258,7 +262,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | La valeur `inletId` de la connexion en continu que vous avez créée précédemment. |
-| `syncValidation` | Un paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Veuillez noter que si vous définissez ce paramètre de requête sur `true` que le débit de la requête sera limité à 60 fois par minute par `CONNECTION_ID`. |
+| `syncValidation` | Paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Veuillez noter que si vous définissez ce paramètre de requête sur `true` que le débit de la requête sera limité à 60 fois par minute par `CONNECTION_ID`. |
 
 **Requête**
 
@@ -368,7 +372,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `schema.name` | **Obligatoire.** Le nom du schéma auquel vous accédez. |
+| `schema.name` | **Obligatoire.** Nom du schéma auquel vous accédez. |
 | `entityId` | Identifiant de l’entité. Si cet identifiant est fourni, vous devez aussi fournir l’espace de noms de l’entité. |
 | `entityIdNS` | L’espace de noms de l’identifiant que vous tentez de récupérer. |
 

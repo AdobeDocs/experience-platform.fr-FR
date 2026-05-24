@@ -4,9 +4,13 @@ solution: Experience Platform
 title: Dépannage des sources
 description: Ce document répond aux questions fréquentes sur les sources sur Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/4xJhLRtjGfpJzpsWbpBrQ22u-c9y-xQRPK78MbsZgRc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: 758
 ht-degree: 97%
 
 ---

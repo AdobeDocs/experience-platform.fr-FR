@@ -4,9 +4,14 @@ description: Découvrez comment Adobe Experience Platform Edge Network gère l�
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: client;état;gestion;edge;network;passerelle;api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+TQID: https://experienceleague.adobe.com/bYivgb628drUdrx2NREGAk2NUCRQ4MTk-O-3QX1gfCg
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: eadea719-cf89-469b-a6fd-a236a7138047id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: 864
 ht-degree: 96%
 
 ---
@@ -70,7 +75,7 @@ L’état renvoyé par [!DNL Edge Network] dans le corps de la réponse est un o
 | --- | --- | --- |
 | `key` | Chaîne | **Obligatoire**. Nom de l’entrée. |
 | `value` | Chaîne | *Facultatif*. La valeur d’entrée. |
-| `maxAge` | Nombre entier | *Facultatif* Délai (en secondes) avant l’expiration de l’entrée. En cas d’absence, les entrées ne doivent être stockées que pour la session en cours. |
+| `maxAge` | Entier | *Facultatif* Délai (en secondes) avant l’expiration de l’entrée. En cas d’absence, les entrées ne doivent être stockées que pour la session en cours. |
 | `attrs` | `Map<String, String>` | *Facultatif*. Liste facultative des attributs d’entrée. Pour toutes les connexions sécurisées avec un en-tête HTTP de référent sécurisé, l’attribut `SameSite` est défini sur `None`. |
 
 
@@ -109,7 +114,7 @@ Lorsque vous travaillez avec les clients du navigateur, Edge Network peut automa
 Presque toutes les entrées sont matérialisées sous forme de cookies internes lorsqu’elles sont activées et prises en charge (voir la remarque ci-dessous), mais la passerelle peut également stocker certains cookies tiers lorsque le domaine `adobedc.demdex.net` des cookies tiers est utilisé.
 
 Comme les entrées sont toujours liées à une portée spécifique (appareil/application) par leur définition, seul le sous-ensemble compatible avec le contexte de requête actuel sera écrit par Edge Network. Les entrées non écrites sont
-renvoyées dans un objet Handle `state:store`.
+renvoyé dans un objet handle `state:store`.
 
 En règle générale, les entrées étendues au niveau de l’application sont toujours écrites sous forme de cookies internes, tandis que celles étendues au niveau de l’appareil sont écrites sous forme de cookies tiers. La décision est totalement transparente pour l’appelant. La passerelle décide quelles entrées peuvent être écrites, selon le contexte de l’appel.
 

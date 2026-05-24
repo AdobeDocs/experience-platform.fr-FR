@@ -4,9 +4,12 @@ solution: Experience Platform
 title: Présentation du connecteur Source de Microsoft Dynamics
 description: Découvrez comment connecter Microsoft Dynamics à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
+TQID: https://experienceleague.adobe.com/AC5LUjlrsqvoJHPGBoUNHgOiG83DnrEo9xj80RhnQfE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: 285
 ht-degree: 15%
 
 ---
@@ -19,7 +22,7 @@ Vous pouvez utiliser la source de [!DNL Microsoft Dynamics] pour ingérer des do
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ## Mappage des champs de [!DNL Microsoft Dynamics] à XDM
 

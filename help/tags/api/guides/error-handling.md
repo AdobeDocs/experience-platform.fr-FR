@@ -2,10 +2,16 @@
 title: Traitement des erreurs
 description: Découvrez la manière dont les erreurs sont traitées dans lʼAPI Reactor.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+TQID: https://experienceleague.adobe.com/gMO3QmCDf3lTSlVLAnLW8QjrwiSdTqsNxUnc6tngpAg
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: c1d6d0bd-4149-4f38-bb95-1a1a6a87cf56id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7aid: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
+feature_v2: id: c975b431-530e-4c29-9216-0301b9e204c1id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 100%
+source-wordcount: 1069
+ht-degree: 98%
 
 ---
 
@@ -18,7 +24,7 @@ Lorsquʼun problème se produit lors dʼun appel à lʼAPI Reactor, une erreur p
 
 ## Format dʼerreur
 
-Les réponses dʼerreur visent à se conformer à la [spécification des erreurs JSON:API](http://jsonapi.org/format/#errors) et respectent généralement la structure suivante :
+Les réponses d’erreur visent à se conformer à la spécification des erreurs [JSON:API ](http://jsonapi.org/format/#errors) et à respecter généralement la structure suivante :
 
 ```json
 {
@@ -78,11 +84,11 @@ Le tableau suivant répertorie les différentes erreurs que l’API peut renvoye
 | `ims-session-error` | Il y a un problème avec la session de connexion. Déconnectez-vous et reconnectez-vous. |
 | `internal-error` | Une erreur interne sʼest produite. Patientez quelques minutes et réessayez. Si le problème persiste, contactez lʼassistance clientèle. |
 | `invalid-data_element` | Un élément de données non valide ne peut pas être ajouté à une bibliothèque. |
-| `invalid-embed_code` | Il ne sʼagit pas dʼun code incorporé valide ou vous essayez de le lier à un environnement de développement ou dʼévaluation. Les codes incorporés de la gestion dynamique des balises (Dynamic Tag Management, DTM) ne peuvent être associés quʼà des environnements de production. |
+| `invalid-embed_code` | Il ne sʼagit pas dʼun code intégré valide ou vous essayez de le lier à un environnement de développement ou dʼévaluation. Les codes intégrés de la gestion dynamique des balises (Dynamic Tag Management, DTM) ne peuvent être associés quʼà des environnements de production. |
 | `invalid-extension` | Une extension non valide ne peut pas être ajoutée à une bibliothèque. |
 | `invalid-extension_package_id` | Vous pouvez uniquement modifier certaines des propriétés dʼobjet dʼun package dʼextension. Vous avez tenté de modifier une propriété dʼobjet non autorisée. |
 | `invalid-new-owner-org-id` | LʼID dʼorganisation que vous avez tenté dʼaffecter nʼest pas un ID dʼorganisation valide. |
-| `invalid-org` | Votre organisation actuelle ne dispose pas dʼun accès à lʼAPI. Vérifiez que vous utilisez lʼorganisation appropriée. |
+| `invalid-org` | Votre organisation active ne dispose pas dʼun accès à lʼAPI. Vérifiez que vous utilisez lʼorganisation appropriée. |
 | `invalid-rule` | Une règle non valide ne peut pas être ajoutée à une bibliothèque. |
 | `invalid-settings-syntax` | Une erreur de syntaxe sʼest produite lors de lʼanalyse des paramètres JSON. |
 | `library-file-not-found` | Un fichier requis défini en extension.json est introuvable dans le package zip. |

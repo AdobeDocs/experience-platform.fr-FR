@@ -1,11 +1,16 @@
 ---
 title: Informations sur le profil de compte
 description: Découvrez le langage SQL qui alimente les informations de profil de votre compte et utilisez ces requêtes pour générer des informations personnalisées qui explorent davantage vos clients et leurs expériences client.
-badgeB2B: null
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
+TQID: https://experienceleague.adobe.com/PuxetMqlwAVAisy27-r1SCPriB8iE-dEfL24Azn2JEA
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: 765
 ht-degree: 0%
 
 ---

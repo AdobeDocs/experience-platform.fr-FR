@@ -1,35 +1,40 @@
 ---
 title: Informations sur les audiences
-description: Découvrez le code SQL qui alimente vos insights d’audience et utilisez ces requêtes pour générer des insights personnalisés afin d’explorer plus en détail les données d’audience de Adobe Experience Platform.
+description: Découvrez le langage SQL qui alimente les informations sur votre audience et utilisez ces requêtes pour générer des informations personnalisées afin d’explorer davantage les données d’audience à partir de Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+TQID: https://experienceleague.adobe.com/Kx1JQHDv0aIMA-RF9T-R3qDn2wVuptUQCugz8TglAtE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: 1122
 ht-degree: 3%
 
 ---
 
 # Informations sur les audiences
 
-Les informations dérivées de l’analyse de votre modèle de données rendent vos données Adobe Real-Time CDP plus accessibles, compréhensibles et pertinentes pour la prise de décision.
+Les informations dérivées de l’analyse de votre modèle de données rendent vos données Adobe Real-Time CDP plus accessibles, plus compréhensibles et plus pertinentes pour la prise de décision.
 
-Comprenez vos insights d’audience en accédant au code SQL qui les alimente, puis générez vos propres informations afin d’explorer plus en détail les identités et les profils qui constituent vos audiences. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
+Comprenez les informations sur votre audience en accédant au SQL qui les alimente, puis générez vos propres informations pour explorer plus en détail les identités et les profils qui constituent vos audiences. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP existant SQL comme inspiration pour créer des requêtes correspondant aux besoins uniques de votre entreprise.
 
-Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
+Consultez la [Documentation View SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos informations directement via l’interface utilisateur de Platform.
 
-Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Audiences](../guides/audiences.md) ou dans un [tableau de bord défini par l’utilisateur](../standard-dashboards.md) personnalisé. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../standard-dashboards.md#create-widget).
+Les informations suivantes peuvent toutes être utilisées dans le [tableau de bord des audiences](../guides/audiences.md) ou dans un [tableau de bord personnalisé défini par l’utilisateur](../standard-dashboards.md). Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et dans le tableau de bord [défini par l’utilisateur](../standard-dashboards.md#create-widget).
 
-Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Audiences](../guides/audiences.md) ou dans un tableau de bord personnalisé.
+Les informations suivantes peuvent toutes être utilisées dans le [tableau de bord des audiences](../guides/audiences.md) ou dans un tableau de bord personnalisé.
 
 ## Rapport de chevauchement des audiences {#audience-overlap-report}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Quelles sont les 50 premières audiences qui se chevauchent d’une audience filtrée particulière ?
-- Quelles sont les 50 audiences qui se chevauchent le moins d’une audience filtrée particulière ?
-- Comment le modèle se chevauchant change-t-il pour une audience filtrée différente ?
+- Quelles sont les 50 audiences qui se chevauchent le moins au sein d’une audience filtrée particulière ?
+- Comment le modèle de chevauchement change-t-il pour une audience filtrée différente ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT source_segment_name,
@@ -86,17 +91,17 @@ SELECT source_segment_name,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de rapport sur le chevauchement des audiences](../guides/audiences.md#audience-overlap-report) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#audience-overlap-report) consultez la documentation sur le widget [ Rapport de chevauchement d’audience .
 
-## Chevauchement des audiences {#audience-overlap}
+## Chevauchement d’audiences {#audience-overlap}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Quels profils sont communs aux deux audiences ?
-- Quel est l’impact du chevauchement sur les taux d’engagement ou de conversion ?
-- Comment les stratégies marketing peuvent-elles être adaptées au segment qui se chevauchent ?
+- Comment le chevauchement affecte-t-il l’engagement ou les taux de conversion ?
+- Comment adapter les stratégies marketing au segment qui se chevauche ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -133,17 +138,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de chevauchement d’audiences](../guides/audiences.md#audience-overlap) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#audience-overlap) consultez la documentation sur le widget [Chevauchement des audiences.
 
 ## Tendance modif. taille audience {#audience-size-change-trend}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- La taille de l’audience a-t-elle connu des pics ou des creux significatifs au cours des 30, 90 ou 12 derniers jours ?
+- Y a-t-il des pics ou des baisses importants de la taille de l’audience au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois ?
 - Comment la taille de l’audience change-t-elle au cours de jours spécifiques ?
-- Y a-t-il eu des anomalies ou des schémas répétés de pics ou creux détectés au cours des 12 derniers mois ?
+- Des anomalies ou des tendances répétées de pics ou de creux ont-elles été détectées au cours des 12 derniers mois ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT date_key,
@@ -174,17 +179,17 @@ SELECT date_key,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation du widget de tendance de changement de taille d’audience](../guides/audiences.md#audience-size-change-trend) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight, consultez la documentation sur le widget [ Tendance de modification de la taille d’audience ](../guides/audiences.md#audience-size-change-trend) .
 
 ## Tendance de la taille des audiences par identité {#audience-size-trend-by-identity}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Mon audience est-elle en constante croissance, stabilisation ou fluctuation ?
-- Existe-t-il une identité spécifique qui présente des pics ou des creux dans la croissance de l’audience au fil du temps ?
+- Mon audience est-elle en constante augmentation, se stabilise-t-elle ou connaît-elle des fluctuations ?
+- Existe-t-il une identité spécifique avec des pics ou des creux dans la croissance de l’audience au fil du temps ?
 - Y a-t-il des anomalies dans la croissance de mon identité au fil du temps ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT sum(count_of_profiles) AS identities,
@@ -207,17 +212,17 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur la taille de l’audience par widget d’identité](../guides/audiences.md#audience-size-trend-by-identity) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight, consultez la documentation sur le widget [Tendance de la taille de l’audience par identité](../guides/audiences.md#audience-size-trend-by-identity).
 
 ## Tendance de la taille de l’audience {#audience-size-trend}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Comment la taille de l’audience a-t-elle changé au fil du temps, y compris les anomalies ?
 - Comment puis-je trouver la tendance globale de la taille de l’audience sur les périodes : 30 jours, 90 jours et 12 mois ?
-- Quelles sont les caractéristiques clés de l’audience qui contribuent à sa taille ? Pics dus, par exemple, à des campagnes de marketing par e-mail.
+- Quelles sont les principales caractéristiques de l’audience qui contribuent à sa taille ? Par exemple, les pics dus à des campagnes marketing par e-mail.
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT date_key,
@@ -238,17 +243,17 @@ SELECT date_key,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de tendance de la taille de l’audience](../guides/audiences.md#audience-size-trend) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight, consultez la [documentation sur le widget de tendance de la taille d’audience](../guides/audiences.md#audience-size-trend).
 
 ## Taille de l’audience {#audience-size}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Quelle est la taille totale actuelle de l’audience ?
-- Comment la taille actuelle de l’audience se compare-t-elle à des périodes précédentes ou à des audiences spécifiques ?
+- Comment la taille actuelle de l’audience se compare-t-elle aux périodes précédentes ou à des audiences spécifiques ?
 - Quel est l’impact des campagnes marketing récentes sur la taille de l’audience ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT
@@ -266,17 +271,17 @@ WHERE
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Taille de l’audience](../guides/audiences.md#audience-size) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#audience-size) consultez la [documentation sur le widget Taille de l’audience.
 
 ## Répartition des scores (IA dédiée aux clients) {#customer-ai-distribution-of-scores}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quelle est la distribution de notation pour chaque compartiment de mon modèle Customer AI, filtrée par une audience sélectionnée ?
-- Quelle est la distribution de notation des niveaux élevé, moyen et faible pour une audience particulière ?
-- Quelle est la ventilation de la distribution de notation par différents publics ciblés ?
+- Quelle est la répartition de score pour chaque compartiment de mon modèle d’IA dédiée aux clients, filtré par une audience sélectionnée ?
+- Quelle est la distribution de notation entre élevé, moyen et faible pour une audience particulière ?
+- Quelle est la répartition de la distribution des scores par différentes audiences d’intérêt ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT b.model_name,
@@ -409,17 +414,17 @@ SELECT b.model_name,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation sur la distribution du widget de scores dans Customer AI](../guides/audiences.md#customer-ai-distribution-of-scores) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#customer-ai-distribution-of-scores) consultez la documentation sur le widget [Distribution des scores de l’IA dédiée aux clients.
 
 ## Résumé du score de l’IA dédiée aux clients {#customer-ai-scoring-summary}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quel est le résumé de notation de chacun de mes modèles Customer AI pour une audience spécifique ?
-- Comment les scores de propension de Customer AI changent-ils pour différentes audiences ?
-- Comment mon résumé de notation se compare-t-il aux autres IPC dans la présentation de l’audience ?
+- Quel est le résumé du score de chacun de mes modèles d’IA dédiée aux clients pour une audience particulière ?
+- Comment les scores de propension de mon IA dédiée aux clients changent-ils pour différentes audiences ?
+- Comment mon résumé de notation se compare-t-il aux autres indicateurs clés de performance dans la présentation de l’audience ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT model_name,
@@ -454,18 +459,18 @@ SELECT model_name,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de résumé de notation de Customer AI](../guides/audiences.md#customer-ai-scoring-summary) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight, consultez la documentation du widget [Résumé du score de l’IA dédiée aux clients](../guides/audiences.md#customer-ai-scoring-summary).
 
 ## Chevauchement des identités {#identity-overlap}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quelle est l’intersection courante entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] pour une audience filtrée ?
-- Comment affiner les audiences de clients en fonction du chevauchement de types d’identité spécifiques afin d’améliorer les stratégies marketing ciblées ?
-- Quelles sont les informations à tirer de l’évaluation des performances d’une campagne dans les zones intersectées ?
-- Sur la base de ces informations, comment optimiser les efforts marketing futurs ?
+- Quelle est l’intersection commune entre [!UICONTROL Identity Type A] et [!UICONTROL Identity Type B] pour une audience filtrée ?
+- Comment affiner les audiences des clients en fonction du chevauchement de types d’identité spécifiques, afin d’améliorer les stratégies marketing ciblées ?
+- Quels enseignements peut-on tirer de l’évaluation des performances de la campagne dans les zones qui se croisent ?
+- Sur la base de ces informations, comment optimiser les futurs efforts marketing ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -514,18 +519,18 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de chevauchement des identités](../guides/audiences.md#identity-overlap) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#identity-overlap) consultez la documentation sur le widget [Chevauchement des identités.
 
 ## Profils par identité {#profiles-by-identity}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Quel type d’identité a la proportion la plus élevée dans le nombre total de profils pour une audience sélectionnée ?
-- Existe-t-il des disparités significatives entre les types d’identité pour une audience sélectionnée ?
-- Quelle est la distribution globale des types d’identité par audience ?
-- Existe-t-il des disparités ou des anomalies significatives dans le nombre d’identités pour différentes audiences ?
+- Existe-t-il des disparités importantes entre les types d’identité pour une audience sélectionnée ?
+- Quelle est la répartition globale des types d’identité par audience ?
+- Existe-t-il des disparités ou des anomalies importantes dans le décompte des identités pour différentes audiences ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -542,17 +547,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation sur les profils par widget d’identité](../guides/audiences.md#profiles-by-identity) .
+Consultez la [documentation du widget Profils par identité](../guides/audiences.md#profiles-by-identity) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
 
 ## Activations planifiées {#scheduled-activations}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quelles sont les dates de début et de fin des activations les plus performantes pour une audience spécifique sur une plateforme spécifique ?
-- Quelles plateformes ont été les plus utilisées pour les activations planifiées d’une audience particulière ?
-- Existe-t-il des schémas d’utilisation de la plateforme qui pourraient guider les décisions concernant la hiérarchisation ou la diversification des stratégies d’activation pour une audience spécifique ?
+- Quelles sont les dates de début et de fin des activations les plus performantes pour une audience particulière sur une plateforme spécifique ?
+- Quelles sont les plateformes les plus utilisées pour les activations planifiées d’une audience particulière ?
+- Existe-t-il des schémas d’utilisation de la plateforme qui pourraient guider les décisions sur la hiérarchisation ou la diversification des stratégies d’activation pour une audience spécifique ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT p.destination_platform ,
@@ -577,12 +582,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Activations planifiées](../guides/audiences.md#scheduled-activations) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#scheduled-activations) consultez la documentation du widget [ Activations planifiées .
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez désormais le langage SQL qui génère des informations de tableau de bord et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et itérer sur le SQL pour générer vos propres informations.
+En lisant ce document, vous comprenez désormais le langage SQL qui génère des informations sur les tableaux de bord et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et effectuer une itération sur le code SQL pour générer vos propres informations.
 
-Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
+Consultez la [Documentation View SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos informations directement via l’interface utilisateur de Platform.
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour les tableaux de bord [Profils](./profiles.md), [Profils de compte](./account-profiles.md) et [Destinations](./destinations.md).
+Vous pouvez également lire et comprendre le langage SQL qui génère des informations pour les tableaux de bord [Profils](./profiles.md), [Profils de compte](./account-profiles.md) et [Destinations](./destinations.md).

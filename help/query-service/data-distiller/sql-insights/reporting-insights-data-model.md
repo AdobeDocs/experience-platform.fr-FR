@@ -1,10 +1,16 @@
 ---
 title: Guide d’informations sur les rapports de magasin accélérés par les requêtes
-description: Découvrez comment créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
+description: Découvrez comment créer un modèle de données d’informations sur les rapports via le service de requête afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/iKc8qaMunv53b4epLB43U6z7knE8kmnPto9jub35Y-Y
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: 1054
 ht-degree: 77%
 
 ---
@@ -37,7 +43,7 @@ Dans cet exemple, le `externalaudiencereach` tableau/jeu de données est basé s
 
 ## Créer un modèle de rapport d’informations avec Data Distiller
 
-Créez ensuite un modèle de rapport d’informations (`audienceinsight` dans cet exemple) et utilisez la commande SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` pour vous assurer qu’il est créé sur la boutique accélérée. Utilisez ensuite Query Service pour créer un schéma de `audienceinsight.audiencemodel` pour la base de données `audienceinsight`.
+Créez ensuite un modèle de rapport d’informations (`audienceinsight` dans cet exemple) et utilisez la commande SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` pour vous assurer qu’il est créé sur la boutique accélérée. Utilisez ensuite le service de requête pour créer un schéma de `audienceinsight.audiencemodel` pour la base de données `audienceinsight`.
 
 >[!NOTE]
 >
@@ -84,7 +90,7 @@ Une fois les instructions exécutées, utilisez la commande `SHOW datagroups;` p
 
 >[!IMPORTANT]
 >
->Seules les données de la boutique accélérée sont accessibles à partir du point d’entrée `POST /data/foundation/query/accelerated-queries` de l’API sans état de Query Service.
+>Seules les données de la boutique accélérée sont accessibles à partir du point d’entrée `POST /data/foundation/query/accelerated-queries` de l’API sans état du service de requête.
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
@@ -95,7 +101,7 @@ Une fois les instructions exécutées, utilisez la commande `SHOW datagroups;` p
 
 ## Interroger le modèle de données de rapport d’informations
 
-Utilisez Query Service pour interroger le tableau des dimensions `audiencemodel.externalaudiencereach`. Vous trouverez ci-dessous un exemple de requête.
+Utilisez le service de requête pour interroger le tableau des dimensions `audiencemodel.externalaudiencereach`. Vous trouverez ci-dessous un exemple de requête.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -135,7 +141,7 @@ Vous pouvez étendre votre modèle d’audience avec des détails supplémentair
 
 ## Créer des tableaux des dimensions pour étendre votre modèle de rapport d’informations
 
-Utilisez Query Service pour ajouter des attributs descriptifs clés des jeux de données de dimension Real-Time CDP enrichis au modèle de données `audienceinsight` et établir une relation entre votre table des faits et la nouvelle table des dimensions. Le code SQL ci-dessous explique comment intégrer des tables de dimensions existantes à votre modèle de données d’informations sur les rapports.
+Utilisez le service de requête pour ajouter des attributs descriptifs clés des jeux de données de dimension Real-Time CDP enrichis au modèle de données `audienceinsight` et établir une relation entre votre table des faits et la nouvelle table des dimensions. Le code SQL ci-dessous explique comment intégrer des tables de dimensions existantes à votre modèle de données d’informations sur les rapports.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS

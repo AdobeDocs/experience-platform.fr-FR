@@ -3,10 +3,15 @@ keywords: Experience Platform;accueil;rubriques populaires;
 title: Guide de dépannage de la préparation des données
 description: Ce document fournit des réponses aux questions fréquentes sur la préparation des données Adobe Experience Platform.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/G5BNfZ0GOxj-uP7ovMb7g2vnF89tI4BXc17-35KNGMI
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 28%
+source-wordcount: 1274
+ht-degree: 25%
 
 ---
 
@@ -14,7 +19,7 @@ ht-degree: 28%
 
 Ce document fournit des réponses aux questions fréquentes sur la [!DNL Data Prep] Adobe Experience Platform ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou pour obtenir des informations de dépannage concernant les API d’Experience Platform en général, consultez le [guide de dépannage des API de Adobe Experience Platform](../landing/troubleshooting.md).
 
-## FAQ
+## Questions fréquentes
 
 Vous trouverez ci-dessous une liste des questions fréquentes sur [!DNL Data Prep] et leurs réponses.
 
@@ -40,13 +45,13 @@ Assurez-vous que le type de données de chaque champ correspond au type défini 
 
 Les données ingérées doivent être conformes au schéma du modèle de données d’expérience (XDM) défini dans Experience Platform. Si l’attribut ne correspond pas au type ou au format attendu spécifié dans le schéma, l’ingestion échoue.
 
-Si les fonctions de préparation de données sont utilisées, assurez-vous que la transformation génère les attributs appropriés. Vous pouvez vérifier les attributs pendant le processus de configuration du workflow des sources. Lors de l’étape de mappage, sélectionnez **[!UICONTROL Nouveau type de champ]** puis **[!UICONTROL Ajouter un champ calculé]**. Ensuite, utilisez l’interface des champs calculés pour prévisualiser chaque fonction.
+Si les fonctions de préparation de données sont utilisées, assurez-vous que la transformation génère les attributs appropriés. Vous pouvez vérifier les attributs pendant le processus de configuration du workflow des sources. Au cours de l’étape de mappage, sélectionnez **[!UICONTROL New field type]** puis **[!UICONTROL Add calculated field]**. Ensuite, utilisez l’interface des champs calculés pour prévisualiser chaque fonction.
 
 ### Comment puis-je supprimer les valeurs de données incorrectes des enregistrements d’ingestion par lots ou en flux continu ?
 
 Vous pouvez utiliser l’interface de mappage de la préparation des données pour effectuer un filtrage au niveau des colonnes en mappant uniquement les colonnes contenant les données requises. Vous pouvez également utiliser des champs calculés pour transformer les données à l’aide des fonctions de prise en charge.
 
-Le filtrage au niveau des lignes est actuellement disponible uniquement pour le [connecteur source Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
+Le filtrage au niveau des lignes est actuellement disponible uniquement pour le [connecteur source ](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
 
 Après l’ingestion, vous pouvez utiliser Data Distiller pour nettoyer, mettre en forme et manipuler les données à l’aide de SQL. Cependant, ce processus nécessite la suppression du lot contenant les enregistrements incorrects et la réingestion d’un nouveau lot créé à partir du résultat du SQL.
 
@@ -98,7 +103,7 @@ Vous trouverez ci-dessous des exemples d’imbrication de fonctions de préparat
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | --- | --- | --- | --- | --- | --- |
 | iif | Évalue une expression booléenne donnée et renvoie la valeur spécifiée en fonction du résultat. | <ul><li>EXPRESSION : **obligatoire** expression booléenne en cours d’évaluation.</li><li>TRUE_VALUE : **obligatoire** valeur renvoyée si l’expression est évaluée comme vraie.</li><li>FALSE_VALUE : **obligatoire** valeur renvoyée si l’expression est évaluée comme égale à false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| est égal à | Compare deux chaînes pour vérifier si elles sont égales. Cette fonction respecte la casse. | <ul><li>STRING1 : **Obligatoire** première chaîne à comparer.</li><li>STRING2 : **Obligatoire** deuxième chaîne à comparer. | STRING1. &#x200B;égal à(&#x200B;STRING2) | « string1 ». &#x200B;equals&#x200B;(« STRING1 ») | False |
+| est égal à | Compare deux chaînes pour vérifier si elles sont égales. Cette fonction respecte la casse. | <ul><li>STRING1 : **Obligatoire** première chaîne à comparer.</li><li>STRING2 : **Obligatoire** deuxième chaîne à comparer. | STRING1.&#x200B;égal à(&#x200B;STRING2) | « string1 ».&#x200B;equals&#x200B;(« STRING1 ») | False |
 | annuler | Définit la valeur de l’attribut sur null. Utilisez-le lorsque vous ne souhaitez pas copier le champ dans le schéma cible. | | nullify() | nullify() | null |
 
 {style="table-layout:auto"}

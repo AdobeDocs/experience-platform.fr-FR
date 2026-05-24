@@ -3,9 +3,13 @@ title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
+TQID: https://experienceleague.adobe.com/39GR2d-gFP45tkCMfEk1-bkZ30XSdNov-ud4D1fm4wQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: 434
 ht-degree: 71%
 
 ---
@@ -28,11 +32,11 @@ Pour effectuer des appels à l’API Data Hygiene, vous devez d’abord rassembl
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
 * `Content-Type: application/json`
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce document fournit un exemple d’appel API pour illustrer la manière dont vous devez formater vos requêtes. Pour en savoir plus sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section relative à la [lecture d’exemples d’appels API](../../landing/api-guide.md#sample-api) dans le guide de prise en main des API d’Experience Platform.
 
@@ -46,11 +50,11 @@ Une expiration de jeu de données correspond à une action « supprimer un jeu 
 >
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
-L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches de cycle de vie des données qui suppriment des identités sont représentées par un concept appelé ordre de travail. Pour plus d’informations sur l’utilisation des suppressions d’enregistrements dans l’API[&#x200B; consultez le &#x200B;](./workorder.md) guide de point d’entrée d’ordre de travail .
+L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches de cycle de vie des données qui suppriment des identités sont représentées par un concept appelé ordre de travail. Pour plus d’informations sur l’utilisation des suppressions d’enregistrements dans l’API](./workorder.md) consultez le [ guide de point d’entrée d’ordre de travail .
 
 ## Quota
 
-Votre entreprise est limitée à un quota mensuel de tâches prédéterminé pour chaque type d’opération du cycle de vie des données, ce qui peut varier en fonction des licences. Pour plus d’informations sur l’état actuel des quotas de vos processus du cycle de vie des données[&#x200B; consultez le &#x200B;](./quota.md) guide des points d’entrée de quota .
+Votre entreprise est limitée à un quota mensuel de tâches prédéterminé pour chaque type d’opération du cycle de vie des données, ce qui peut varier en fonction des licences. Pour plus d’informations sur l’état actuel des quotas de vos processus du cycle de vie des données](./quota.md) consultez le [ guide des points d’entrée de quota .
 
 ## Étapes suivantes
 

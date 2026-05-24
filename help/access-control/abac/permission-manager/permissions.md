@@ -2,9 +2,13 @@
 title: Gestionnaire d’autorisations de contrôle d’accès basé sur les attributs
 description: Découvrez comment utiliser le Gestionnaire d’autorisations dans Adobe Experience Platform pour générer des rapports et valider les autorisations d’accès.
 exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
-source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
+TQID: https://experienceleague.adobe.com/qhUKfblB85FWurnfDDqxd69sQdlOmA3CpZDbrEbUG04
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: 575
 ht-degree: 10%
 
 ---
@@ -23,7 +27,7 @@ Utilisez des requêtes simples dans le [!UICONTROL Permission Manager] pour cré
 >id="platform_permission_manager"
 >title="Gestionnaire d’autorisations"
 >abstract="Utilisez les sélecteurs de liste déroulante sur la page pour obtenir des rapports de niveau d’accès de différents niveaux de granularité pour les utilisateurs et utilisatrices et les rôles."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=fr" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Users]**.
 

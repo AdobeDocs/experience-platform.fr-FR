@@ -4,9 +4,13 @@ solution: Experience Platform
 title: Présentation des flux de données
 description: Ce document présente les flux de données et décrit leur utilisation dans Adobe Experience Platform.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/DyJwen9bud8l9MrZKTTvv4XAamSkZEskNRo2Eldcdls
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: 245
 ht-degree: 69%
 
 ---

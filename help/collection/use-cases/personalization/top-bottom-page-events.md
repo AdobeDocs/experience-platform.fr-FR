@@ -2,13 +2,18 @@
 title: Configurer les événements haut et bas de page dans Web SDK
 description: Cet article explique comment utiliser les événements de haut et de bas de page dans Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: 8058ee470717b95d30269a8072b12385c920c85f
+TQID: https://experienceleague.adobe.com/eKp-6NGGcWLlW1ZwCQfjnU9ZpIDpcgrW-jNXdxtNBqI
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: e98b7246-966c-4318-9e95-cad2f7a17dc7id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: b3f03848-ae12-48b2-8aab-cad18567eb32id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: 1198
 ht-degree: 1%
 
 ---
-
 
 # Configurer les événements haut et bas de page dans Web SDK
 
@@ -29,7 +34,7 @@ L’exemple ci-dessous configure un événement en haut de la page qui demande u
 
 >[!BEGINTABS]
 
->[!TAB Bibliothèque JavaScript]
+>[!TAB Bibliothèque ]
 
 ```js
 alloy("sendEvent", {
@@ -43,7 +48,7 @@ alloy("sendEvent", {
 
 | Paramètre | Obligatoire / Facultatif | Description |
 | --- | --- | --- |
-| `type` | Obligatoire | Définissez ce paramètre sur `decisioning.propositionFetch`. Ce type d’événement spécial indique à Adobe Analytics de supprimer cet événement. Lors de l’utilisation de Customer Journey Analytics, vous pouvez également configurer un filtre pour supprimer ces événements. Voir [Types d’événements Edge Network dans Adobe Analytics](https://experienceleague.adobe.com/fr/docs/analytics/implementation/aep-edge/hit-types) pour plus d’informations. |
+| `type` | Obligatoire | Définissez ce paramètre sur `decisioning.propositionFetch`. Ce type d’événement spécial indique à Adobe Analytics de supprimer cet événement. Lors de l’utilisation de Customer Journey Analytics, vous pouvez également configurer un filtre pour supprimer ces événements. Voir [Types d’événements Edge Network dans Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) pour plus d’informations. |
 | `renderDecisions` | Obligatoire | Définissez ce paramètre sur `true`. Ce paramètre indique à Web SDK de rendre les décisions renvoyées par Edge Network. |
 | `personalization.sendDisplayEvent` | Obligatoire | Définissez ce paramètre sur `false`. Ce paramètre empêche l’envoi d’événements d’affichage. |
 
@@ -63,7 +68,7 @@ L’exemple ci-dessous configure un événement de bas de page qui envoie des é
 
 >[!BEGINTABS]
 
->[!TAB Bibliothèque JavaScript]
+>[!TAB Bibliothèque ]
 
 ```js
 alloy("sendEvent", {
@@ -97,7 +102,7 @@ L’exemple ci-dessous configure un événement de bas de page qui envoie des é
 
 >[!BEGINTABS]
 
->[!TAB Bibliothèque JavaScript]
+>[!TAB Bibliothèque ]
 
 ```js
 alloy("sendEvent", {
@@ -146,7 +151,7 @@ Dans cet exemple, `home` est la vue chargée lors du chargement initial de la pa
 
 >[!BEGINTABS]
 
->[!TAB Bibliothèque JavaScript]
+>[!TAB Bibliothèque ]
 
 L’appel supérieur demande la personnalisation de la vue `home` sans enregistrer d’accès Analytics ni déclencher d’événements d’affichage. L’appel du bas enregistre la page vue et déclenche les événements d’affichage supprimés. Incluez la même `viewName` dans les deux appels afin que la vue soit enregistrée de manière cohérente.
 
@@ -197,7 +202,7 @@ Dans cet exemple, un seul événement est suffisant, car la personnalisation de 
 
 >[!BEGINTABS]
 
->[!TAB Bibliothèque JavaScript]
+>[!TAB Bibliothèque ]
 
 ```js
 alloy("sendEvent", {
@@ -231,7 +236,7 @@ Incluez la même `viewName` dans les deux appels afin que la vue soit enregistr�
 
 >[!BEGINTABS]
 
->[!TAB Bibliothèque JavaScript]
+>[!TAB Bibliothèque ]
 
 Appelez [`applyPropositions`](/help/collection/js/commands/applypropositions.md) en haut de la page pour effectuer le rendu des propositions mises en cache pour la nouvelle vue. Appelez ensuite `sendEvent` au bas de la page avec `includeRenderedPropositions: true` afin que les événements d’affichage supprimés se déclenchent.
 

@@ -5,10 +5,16 @@ feature: Customer AI
 title: Télécharger les scores dans l’IA dédiée aux clients
 description: L’IA dédiée aux clients vous permet de télécharger des scores au format de fichier Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+TQID: https://experienceleague.adobe.com/bB9cAaiui2rZ5bTtt70kWjJpopN2ZlQInrEIyECxsMk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 70%
+source-wordcount: 988
+ht-degree: 68%
 
 ---
 
@@ -29,7 +35,7 @@ Actuellement, il existe deux manières de télécharger les scores Customer AI 
 
 ## Recherche de votre identifiant de jeu de données {#dataset-id}
 
-Dans votre instance de service d’informations Customer AI, cliquez sur la liste déroulante *Actions supplémentaires* dans le volet de navigation en haut à droite, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
+Dans votre instance de service pour les insights de l’IA dédiée aux clients, cliquez sur le menu déroulant *Plus d’actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
 
 ![Menu déroulant Autres actions affichant l’option « Accéder aux scores ».](../images/insights/more-actions.png)
 
@@ -290,7 +296,7 @@ La section [Exportation d’un segment](../../../segmentation/tutorials/evaluate
 
 - **Création d’un jeu de données cible :** créez le jeu de données pour retenir les membres de l’audience.
 - **Génération de profils d’audience dans le jeu de données :** renseignez le jeu de données avec des profils individuels XDM en fonction des résultats d’une tâche de segmentation.
-- **Contrôle de la progression de l’exportation :** vérifiez la progression actuelle du processus d’exportation.
+- **Surveillance de la progression de l’exportation :** vérifiez la progression actuelle du processus d’exportation.
 - **Lecture des données d’audience :** récupérez les profils individuels XDM obtenus représentant les membres de votre audience.
 
 ## Étapes suivantes

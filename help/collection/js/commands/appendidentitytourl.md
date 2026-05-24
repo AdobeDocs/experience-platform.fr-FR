@@ -2,9 +2,14 @@
 title: appendIdentityToUrl
 description: Diffusez des expériences personnalisées plus précisément entre les applications, le web et les domaines.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+TQID: https://experienceleague.adobe.com/qv1cDywmnFUHfk2eRMCksc4kx9MFspy0eOn1ZtbPxhQ
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: 225
 ht-degree: 0%
 
 ---

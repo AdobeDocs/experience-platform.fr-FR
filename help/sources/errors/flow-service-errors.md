@@ -2,9 +2,12 @@
 title: Messages d’erreur du service de flux
 description: Prenez connaissance des messages d’erreur que vous pouvez rencontrer lors de l’utilisation du service de flux pour les sources.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/EGVX5LQ3xktJ-HpjNmuPoHo4n-XjyDArJwLo-qNYXyg
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: 1707
 ht-degree: 97%
 
 ---
@@ -76,7 +79,7 @@ Le tableau suivant décrit les erreurs de validation interne dans le service de 
 | `1447-400` | Requête non valide | Flux actifs trouvés contenant l’ID aa6a206f-f233-4c2d. |
 | `1448-400` | Requête non valide | Opérateur >= non pris en charge pour l’ID de champ. |
 | `1449-400` | Requête non valide | Connexions de champs non valides dans les paramètres de filtre. |
-| `1450-400` | Requête non valide | Opérateur non valide.> dans les paramètres de filtre. |
+| `1450-400` | Requête non valide | Opérateur !> non valide dans les paramètres de filtre. |
 | `1451-400` | Requête non valide | Paramètres testParam non valides fournis dans les paramètres de requête. |
 | `1452-400` | Requête non valide | Valeur non valide 1676643256,1676643210 pour le champ createdAt. |
 | `1453-400` | Requête non valide | Valeur de requête non valide createdAt== fournie dans le paramètre de requête. |

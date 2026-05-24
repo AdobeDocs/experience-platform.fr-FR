@@ -4,9 +4,14 @@ solution: Experience Platform
 title: Traitement des demandes dʼaccès à des informations personnelles dans le lac de données
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour les données client stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/R5hflyJlXOOucH2ieJ8nM13ygPK6-JEW8wn6g4vptyk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: 1462
 ht-degree: 67%
 
 ---
@@ -69,9 +74,9 @@ Une fois que vous avez défini les champs appropriés dans le schéma en tant qu
 
 >[!NOTE]
 >
->Cette section suppose que vous connaissez la valeur unique de lʼidentifiant URI du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à lʼaide de lʼAPI [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher des objets &#x200B;](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. Lʼidentifiant de schéma se trouve sous `schemaRef.id`
+>Cette section suppose que vous connaissez la valeur unique de lʼidentifiant URI du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à lʼaide de lʼAPI [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher des objets ](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. Lʼidentifiant de schéma se trouve sous `schemaRef.id`
 >
->Cette section suppose également que vous savez comment effectuer des appels vers l’API Registre de schémas. Pour obtenir des informations importantes sur lʼutilisation de lʼAPI, y compris la connaissance de votre `{TENANT_ID}` et du concept des conteneurs, consultez la section [prise en main](../xdm/api/getting-started.md) du guide API. 
+>Cette section suppose également que vous savez comment effectuer des appels vers l’API Registre de schémas. Pour obtenir des informations importantes sur lʼutilisation de lʼAPI, y compris la connaissance de votre `{TENANT_ID}` et du concept des conteneurs, consultez la section [prise en main](../xdm/api/getting-started.md) du guide API.
 
 Vous pouvez ajouter un descripteur dʼidentité au schéma XDM dʼun jeu de données en envoyant une requête POST au point d’entrée `/descriptors` de lʼAPI [!DNL Schema Registry].
 
@@ -155,7 +160,7 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Un espace de noms d’identité valide reconnu par Identity Service doit être fourni pour la valeur d’espace de noms. Utilisez `standard` pour les espaces de noms standard et `custom` pour les espaces de noms personnalisés.
 
-Les identifiants du lac de données doivent utiliser des `unregistered` pour leur valeur de `type` et une valeur de `namespace` correspondant à l’une des [&#x200B; étiquettes de confidentialité &#x200B;](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
+Les identifiants du lac de données doivent utiliser des `unregistered` pour leur valeur de `type` et une valeur de `namespace` correspondant à l’une des [ étiquettes de confidentialité ](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
 
 En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lors de l’exécution de requêtes vers le lac de données, le tableau doit inclure la valeur `aepDataLake`.
 
@@ -202,7 +207,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
+>Experience Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système.
 
 ## Traitement des demandes de suppression
 

@@ -2,16 +2,22 @@
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+TQID: https://experienceleague.adobe.com/HGTfvHmF7wMm5BFb33T-T0u2NQNkM9HNaNAkz1GCEJA
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1912'
-ht-degree: 77%
+source-wordcount: 1915
+ht-degree: 78%
 
 ---
 
 # Configuration des schémas de partenaire
 
-Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. Lorsque des données sont ingérées dans Experience Platform, elles sont structurées selon un schéma XDM. Pour plus d’informations sur le modèle de composition de schémas, notamment sur les principes de conception et les bonnes pratiques, consultez les [bases de la composition de schémas](../../../../xdm/schema/composition.md).
+Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. Lorsque des données sont ingérées dans Experience Platform, elles sont structurées en fonction d’un schéma XDM. Pour plus d’informations sur le modèle de composition de schémas, notamment sur les principes de conception et les bonnes pratiques, consultez les [bases de la composition de schémas](../../../../xdm/schema/composition.md).
 
 Pendant la création d’une destination avec Destination SDK, vous pouvez définir votre propre schéma de partenaire à utiliser par votre plateforme de destination. Cela permet aux utilisateurs de mapper les attributs de profil d’Experience Platform à des champs spécifiques reconnus par votre plateforme de destination, le tout dans l’interface utilisateur d’Experience Platform.
 

@@ -5,10 +5,15 @@ title: Connectez-vous aux destinations de diffusion en continu et activez les do
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/ggi4Jebs6PEwz6T-mWe6sIa9h48krK85CdosyI8DBCg
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2192'
-ht-degree: 40%
+source-wordcount: 2281
+ht-degree: 39%
 
 ---
 
@@ -61,7 +66,7 @@ Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre 
 
 Les ressources d’Experience Platform peuvent être isolées dans des sandbox virtuels spécifiques. Dans les requêtes aux API Experience Platform, vous pouvez spécifier le nom et l’identifiant du sandbox dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -73,7 +78,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation Swagger {#swagger-docs}
 
-Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons de consulter ce tutoriel et la page de documentation de Swagger en parallèle.
+Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons d’utiliser ce tutoriel et la page de documentation Swagger en parallèle.
 
 ## Obtention de la liste des destinations de streaming disponibles {#get-the-list-of-available-streaming-destinations}
 
@@ -270,7 +275,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}` : utilisez l’identifiant de spécification de connexion que vous avez obtenu lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
 * `{AUTHENTICATION_CREDENTIALS}` : renseignez le nom de votre destination de diffusion en streaming : `Aws Kinesis authentication credentials` ou `Azure EventHub authentication credentials`.
-* `{ACCESS_ID}` : *Pour les connexions [!DNL Amazon Kinesis].* Identifiant d’accès pour l’emplacement de stockage Amazon Kinesis.
+* `{ACCESS_ID}` : *Pour les connexions [!DNL Amazon Kinesis].* Identifiant d’accès à l’emplacement de stockage Amazon Kinesis.
 * `{SECRET_KEY}` : *Pour les connexions [!DNL Amazon Kinesis].* Votre clé secrète pour l’emplacement de stockage Amazon Kinesis.
 * `{REGION}` : *Pour les connexions [!DNL Amazon Kinesis].* Région de votre compte [!DNL Amazon Kinesis] dans laquelle Experience Platform diffusera vos données.
 * `{SAS_KEY_NAME}` : *Pour les connexions [!DNL Azure Event Hubs].* Renseignez votre nom de clé SAS. Découvrez comment vous authentifier à l’[!DNL Azure Event Hubs] avec des clés SAS dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -331,7 +336,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape ci-dessus.
 * `{CONNECTION_SPEC_ID}` : utilisez la spécification de connexion que vous avez obtenue lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
 * `{NAME_OF_DATA_STREAM}` : *Pour les connexions [!DNL Amazon Kinesis].* Indiquez le nom de votre flux de données existant dans votre compte [!DNL Amazon Kinesis]. Experience Platform exportera les données vers ce flux.
-* `{REGION}` : *Pour les connexions [!DNL Amazon Kinesis].* Zone géographique de votre compte Amazon Kinesis dans laquelle Experience Platform diffusera vos données.
+* `{REGION}` : *Pour les connexions [!DNL Amazon Kinesis].* Région de votre compte Amazon Kinesis dans laquelle Experience Platform diffusera vos données.
 * `{EVENT_HUB_NAME}` : *Pour les connexions [!DNL Azure Event Hubs].* Renseignez le nom du [!DNL Azure Event Hub] où Experience Platform diffusera vos données. Pour plus d’informations, consultez [Création d’un centre d’événements](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) dans la documentation [!DNL Microsoft].
 
 **Réponse**
@@ -565,7 +570,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 >[!IMPORTANT]
 >
-> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=fr), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
+> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
 
 ```json
 {

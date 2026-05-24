@@ -4,10 +4,14 @@ solution: Experience Platform
 title: Notes de mise à jour de Privacy Service
 description: Dernières notes de mise à jour pour Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: ht
-source-wordcount: '552'
-ht-degree: 100%
+TQID: https://experienceleague.adobe.com/O9VSSN3IblNX3vJKzsTiK8FJVxm-detcHWWaDpd29ek
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+workflow-type: tm+mt
+source-wordcount: 578
+ht-degree: 90%
 
 ---
 
@@ -19,7 +23,7 @@ Ce document contient des informations sur les nouvelles fonctionnalités d’Ado
 >
 >Vous trouverez [ici](../release-notes/latest/latest.md) les notes de mise à jour les plus récentes pour d’autres services [!DNL Experience Platform].
 
-## 9 septembre 2020
+## jeudi 9 septembre 2020
 
 ### Nouvelles fonctionnalités
 
@@ -27,17 +31,17 @@ Ce document contient des informations sur les nouvelles fonctionnalités d’Ado
 | --- | --- |
 | Respect de la loi LGPD (Brésil) | Des tâches relatives à la confidentialité peuvent maintenant être créées dans le cadre de la réglementation brésilienne [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces tâches sont suivies sous le code de réglementation `lgpd_bra`. |
 
-## 8 avril 2020
+## jeudi 8 avril 2020
 
 ### Nouvelles fonctionnalités
 
 | Fonctionnalité | Description |
 | --- | --- |
 | Respect de la loi PDPA | Maintenant, les demandes d’accès à des informations personnelles ([!DNL Privacy]) peuvent être créées et suivies dans le cadre de la loi Personal Data Protection Act (PDPA) en Thaïlande. Lors de l’envoi de demandes d’accès à des informations personnelles dans l’API, le tableau `regulation` accepte la valeur « pdpa_tha ». |
-| Types d’espaces de noms dans l’interface utilisateur | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes de l’interface utilisateur de [!DNL Privacy Service]. Pour plus d’informations, voir le [guide d’utilisation](ui/user-guide.md). |
+| Types d’espaces de noms dans l’interface d’utilisation | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes de l’interface d’utilisation de [!DNL Privacy Service]. Pour plus d’informations, voir le [guide d’utilisation](ui/user-guide.md). |
 | Abandon de l’ancien point d’entrée | L’ancien point d’entrée de l’API (`data/privacy/gdpr`) a été abandonné. |
 
-## 14 janvier 2020
+## mercredi 14 janvier 2020
 
 ### Nouvelles fonctionnalités
 
@@ -62,9 +66,9 @@ Ce document contient des informations sur les nouvelles fonctionnalités d’Ado
 | --- | --- |
 | Demande de tableau de bord de mesures | Le nouveau tableau de bord de mesures de l’interface utilisateur de [!DNL Privacy Service] offre une visibilité sur les demandes RGPD envoyées, erronées et terminées. |
 | Créateur de requêtes | Afin de répondre aux besoins des organisations ayant des utilisateurs et utilisatrices techniques et non techniques pour l’envoi de demandes RGPD, une fonctionnalité « Créer une requête » a été ajoutée à l’interface utilisateur. La fonctionnalité d’envoi de fichiers JSON est toujours disponible dans l’interface utilisateur de [!DNL Privacy Service] pour les organisations qui préfèrent continuer à l’utiliser. |
-| Notifications d’événements liés à une tâche RGPD | Les notifications d’événements relatives à des états de tâches RGPD sont un élément essentiel à de nombreux workflows. Alors que les notifications étaient précédemment diffusées à l’aide de notifications par e-mail individuelles, les notifications d’événements RGPD sont des messages tirant parti des événements d’Adobe I/O, envoyés à un webhook configuré pour faciliter l’automatisation des requêtes de tâches. Les utilisateurs de l’interface utilisateur de [!DNL Privacy Service] peuvent s’abonner aux événements RGPD d’Adobe I/O pour recevoir des mises à jour lorsqu’un produit ou la tâche RGPD est terminée. |
+| Notifications d’événements liés à une tâche RGPD | Les notifications d’événements relatives à des états de tâches RGPD sont un élément essentiel à de nombreux workflows. Alors que les notifications étaient auparavant diffusées à l’aide d’e-mails individuels, les notifications d’événement RGPD sont des messages qui tirent parti des événements Adobe I/O, envoyés à un webhook configuré pour faciliter l’automatisation des demandes de traitement. [!DNL Privacy Service] Les utilisateurs de l’interface utilisateur de peuvent s’abonner aux événements RGPD d’Adobe I/O pour recevoir des mises à jour lorsqu’un produit ou la tâche RGPD est terminée. |
 
-## 18 avril 2019
+## vendredi 18 avril 2019
 
 ### Améliorations
 
@@ -76,12 +80,12 @@ Ce document contient des informations sur les nouvelles fonctionnalités d’Ado
 
 * Ajout d’informations de connexion manquantes pour les requêtes filtrées pour le point d’entrée `GET /` dans l’API [!DNL Privacy Service].
 
-## 11 avril 2019
+## vendredi 11 avril 2019
 
 ### Améliorations
 
-* Mise à jour de l’interface utilisateur afin de prendre en charge les nouvelles fonctionnalités pour les clients bêta
-* Utilisation d’une nouvelle API de mesures pour prendre en charge les fonctionnalités de l’interface utilisateur 2.0 en version bêta
+* Mise à jour de l’interface d’utilisation afin de prendre en charge les nouvelles fonctionnalités pour les clientes et clients Beta
+* Utilisation d’une nouvelle API de mesures pour prendre en charge les fonctionnalités de l’interface d’utilisation 2.0 en version Beta
 
 ## 9 avril 2019
 
@@ -90,7 +94,7 @@ Ce document contient des informations sur les nouvelles fonctionnalités d’Ado
 * Mise à jour de tous les appels API de recherche (GET) pour réinitialiser la plage de recherche tous les 30 jours
 * Restriction de l’utilisation de l’API à une plage de recherche maximale de 45 jours
 
-## 14 février 2019
+## vendredi 14 février 2019
 
 ### Améliorations
 

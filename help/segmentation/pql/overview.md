@@ -3,10 +3,16 @@ solution: Experience Platform
 title: Vue d’ensemble de PQL (Profile Query Language)
 description: Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/UY4weQwKajWp2X8dnFn3CJAmeckGFdF4Fqr2S0lY4nk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 100%
+source-wordcount: 706
+ht-degree: 95%
 
 ---
 
@@ -63,7 +69,7 @@ PQL prend en charge les types littéraux suivants :
 | Entier | Un type de données représentant un nombre entier. Ce nombre peut être positif, négatif ou nul. | `-201`, `0`, `412` |
 | Double | Un type de données représentant n’importe quel nombre réel. Ce nombre peut être positif, négatif ou nul. | `-51.24`, `3.14`, `0.6942058` |
 | Date | Un type de données pouvant être utilisé pour créer des dates en fonction de l’année, du mois et du jour comme paramètres entiers. Celui-ci a la forme `date(year, month, day)` | `date(2020, 3, 14)` |
-| Tableau | Un type de données composé d’un groupe d’autres valeurs littérales. Elle utilise des crochets pour regrouper et des virgules pour délimiter les différentes valeurs. <br> **Remarque :** vous ne pouvez pas accéder directement aux propriétés des éléments d&#39;un tableau. C’est pourquoi, si vous devez accéder à une propriété d’un tableau, la méthode prise en charge est `select X from array where X.item = ...`. <br> PQL réserve le terme `xEvent` pour faire référence à un tableau d’événements d’expérience associés à un profil. | `[1, 4, 7]`, `["US", "CA"]` |
+| Tableau | Un type de données composé d’un groupe d’autres valeurs littérales. Elle utilise des crochets pour regrouper et des virgules pour délimiter les différentes valeurs. <br> **Remarque :** vous ne pouvez pas accéder directement aux propriétés des éléments d&#39;un tableau. Ainsi, si vous devez accéder à une propriété dans un tableau, la méthode prise en charge est `select X from array where X.item = ...`. <br> PQL se réserve le mot `xEvent` pour faire référence à un ensemble d’événements d’expérience liés à un profil. | `[1, 4, 7]`, `["US", "CA"]` |
 | Références de temps relatives | Termes réservés pouvant être utilisés pour former des références de date et heure et d’intervalle de temps. <ul><li>maintenant, aujourd’hui, hier, demain</li><li>ceci, précédent, suivant</li><li>avant, après, depuis</li><li>milliseconde(s), seconde(s), minute(s), heure(s), jour(s), semaine(s), mois, année(s), décennie(s), siècle(s), millénaire(s)</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
 ## Fonctions PQL

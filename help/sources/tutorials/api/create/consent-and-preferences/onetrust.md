@@ -4,10 +4,13 @@ solution: Experience Platform
 title: Créer un flux de données pour une source d’intégration OneTrust à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à l’intégration OneTrust à l’aide de l’API Flow Service.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: f9ca6b7683c64c36772d02c1a88c3ef18f961b92
+TQID: https://experienceleague.adobe.com/tAfeK4m6cuZkjewjWaBc3qHu9B7tAxtOe7nK0xU-FZ0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1924'
-ht-degree: 55%
+source-wordcount: 1994
+ht-degree: 54%
 
 ---
 

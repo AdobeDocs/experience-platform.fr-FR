@@ -4,10 +4,14 @@ solution: Experience Platform
 title: Mapper des champs pour la source Marketo Engage
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/g2-hGKFTAQ0jvTRJnxZCHXgaD9fORd90BOvZ-2pvI6M
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 41%
+source-wordcount: 1432
+ht-degree: 43%
 
 ---
 
@@ -29,7 +33,7 @@ Lisez la documentation relative à la [classe d’événement d’expérience XD
 >
 >Le champ source `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` est un champ calculé qui doit être ajouté à l’aide de l’option **[!UICONTROL Add calculated field]** dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur [l’ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) .
 
-| Champ source Marketo | Identifiant du type d’activité | Jeu de données source | Champ cible XDM | Notes |
+| Champ source Marketo | Identifiant du type d’activité | Jeu de données source | Champ cible XDM | Remarques |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
 | `_id` |  | `_id` | `_id` |  |
 |  |  | `"Marketo"` | `personKey.sourceType` |  |
@@ -50,7 +54,7 @@ Lisez la documentation relative à la [classe d’événement d’expérience XD
 | `attributes.Query Parameters` | 1 | `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters` |  |
 | `attributes.Referrer URL` |  | `web.webReferrer.URL` | `web.webReferrer.URL` |  |
 | `primaryAttributeValueId when activityTypeId in (24, 25)` | 24, 25 | `iif(${listOperations\.listID} != null && ${listOperations\.listID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", ${listOperations\.listID}, "sourceKey", concat(${listOperations\.listID},"@${MUNCHKIN_ID}.Marketo")), null)` | `listOperations.listKey` |  |
-| `attributes.Is Primary` | 34 35 36 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |  |
+| `attributes.Is Primary` | 34,35,36 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |  |
 | primaryAttributeValueId lorsque activityTypeId dans (34, 35, 36) | 34, 35, 36 | `iif(${opportunityEvent\.opportunityID} != null && ${opportunityEvent\.opportunityID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${opportunityEvent\.opportunityID}, "sourceKey", concat(${opportunityEvent\.opportunityID},"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityEvent.opportunityKey` |  |
 | `attributes.Role` | 34, 35, 36 | `opportunityEvent.role` | `opportunityEvent.role` |  |
 | `attributes.Created Date` |  | `leadOperation.newLead.createdDate` | `leadOperation.newLead.createdDate` |  |
@@ -73,8 +77,8 @@ Lisez la documentation relative à la [classe d’événement d’expérience XD
 | `attributes.device` |  | `device.model` | `device.model` |  |
 | `attributes.Platform` |  | `environment.operatingSystem` | `environment.operatingSystem` |  |
 | `attributes.Link` |  | `directMarketing.linkURL` | `directMarketing.linkURL` |  |
-| primaryAttributeValueId lorsque activityTypeId = 3 else attributes.Link ID | 3 | `iif(${web\\.webInteraction\\.linkID} != null && ${web\\.webInteraction\\.linkID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${web\\.webInteraction\\.linkID}, \"sourceKey\", concat(${web\\.webInteraction\\.linkID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `web.webInteraction.webInteractionKey` |  |
-| primaryAttributeValueId lorsque activityTypeId = 2 autres attributs.Webform ID | 2 | `iif(${web\\.fillOutForm\\.webFormID} != null && ${web\\.fillOutForm\\.webFormID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${web\\.fillOutForm\\.webFormID}, \"sourceKey\", concat(${web\\.fillOutForm\\.webFormID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `web.fillOutForm.webFormKey` |  |
+| primaryAttributeValueId lorsque activityTypeId = 3 attributs else.ID du lien | 3 | `iif(${web\\.webInteraction\\.linkID} != null && ${web\\.webInteraction\\.linkID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${web\\.webInteraction\\.linkID}, \"sourceKey\", concat(${web\\.webInteraction\\.linkID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `web.webInteraction.webInteractionKey` |  |
+| primaryAttributeValueId lorsque activityTypeId = 2 attributs else.Identifiant du formulaire web | 2 | `iif(${web\\.fillOutForm\\.webFormID} != null && ${web\\.fillOutForm\\.webFormID} != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\",\"sourceID\",${web\\.fillOutForm\\.webFormID}, \"sourceKey\", concat(${web\\.fillOutForm\\.webFormID},\"@${MUNCHKIN_ID}.Marketo\")), null)` | `web.fillOutForm.webFormKey` |  |
 | primaryAttributeValueId lorsque activityTypeId = 2 else null | 2 | `web.fillOutForm.webFormName` | `web.fillOutForm.webFormName` |  |
 | primaryAttributeValueId lorsque activityTypeId = 3 else attributes.Link | 3 | `web.webInteraction.linkURL` | `web.webInteraction.linkURL` |  |
 | `attributes.Change Value` | 22 | `leadOperation.changeScore.changeValue` | `leadOperation.changeScore.changeValue` |  |
@@ -142,7 +146,7 @@ Lisez la [présentation de XDM Business Campaign](../../../../xdm/classes/b2b/bu
 >
 >Pour les types de balises personnalisés, accédez aux schémas et créez des groupes de champs. Ajoutez ensuite tous les noms de champ supplémentaires requis pour mapper les champs source aux champs XDM de destination.
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | --------------- | ----- |
 | `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
 | `"Marketo"` | `campaignKey.sourceType` |  |
@@ -173,7 +177,7 @@ Lisez la [présentation de XDM Business Campaign](../../../../xdm/classes/b2b/bu
 
 Lisez la [présentation des membres XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign-members.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez le guide [Groupe de champs de schéma des détails des membres XDM Business Campaign](../../../../xdm/field-groups/b2b-campaign-members/details.md).
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -206,13 +210,13 @@ Lisez la [présentation des membres XDM Business Campaign](../../../../xdm/class
 
 Lisez la [présentation des comptes professionnels XDM](../../../../xdm/classes/b2b/business-account.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` | |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` | |
 | `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identité du Principal. MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
-| <ul><li><code>iif(mktoCdpExternalId != null &amp;&amp; mktoCdpExternalId != «  », to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} », « sourceID », mktoCdpExternalId, « sourceKey », concat(mktoCdpExternalId,« @${CRM_ORG_ID}.${CRM_TYPE} »), nul)</code></li><li><code>iif(msftCdpExternalId != null &amp;&amp; msftCdpExternalId != «  », to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} », « sourceID », msftCdpExternalId, « sourceKey », concat(msftCdpExternalId,« @${CRM_ORG_ID}.${CRM_TYPE} »), nul)</code></li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` est une identité Secondaire. CRM_ORG_ID et CRM_TYPE seront remplacés dans le cadre de l’API Explorer |
+| <ul><li><code>iif(mktoCdpExternalId != null &amp;&amp; mktoCdpExternalId != «  », to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} », « sourceID », mktoCdpExternalId, « sourceKey », concat(mktoCdpExternalId,« @${CRM_ORG_ID}.${CRM_TYPE} »)), null)</code></li><li><code>iif(msftCdpExternalId != null &amp;&amp; msftCdpExternalId != «  », to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} », « sourceID », msftCdpExternalId, « sourceKey », concat(msftCdpExternalId,« @${CRM_ORG_ID}.${CRM_TYPE} »)), null)</code></li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` est une identité Secondaire. CRM_ORG_ID et CRM_TYPE seront remplacés dans le cadre de l’API Explorer |
 | `createdAt` | `extSourceSystemAudit.createdDate` | |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` | |
 | `billingCity` | `accountBillingAddress.city` | |
@@ -238,7 +242,7 @@ Lisez la [présentation des comptes professionnels XDM](../../../../xdm/classes/
 
 Lisez la [présentation de la liste XDM Business Marketing](../../../../xdm/classes/b2b/business-marketing-list.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -256,7 +260,7 @@ Lisez la [présentation de la liste XDM Business Marketing](../../../../xdm/clas
 
 Lisez la [Présentation des membres de la liste XDM Business Marketing](../../../../xdm/classes/b2b/business-marketing-list-members.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -277,7 +281,7 @@ Lisez la [Présentation des membres de la liste XDM Business Marketing](../../
 
 Lisez la [Présentation des comptes professionnels XDM](../../../../xdm/classes/b2b/business-account.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -305,7 +309,7 @@ Lisez la [Présentation des comptes professionnels XDM](../../../../xdm/classes/
 
 Lisez la [Présentation des opportunités commerciales XDM](../../../../xdm/classes/b2b/business-opportunity.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -342,7 +346,7 @@ Lisez la [Présentation des opportunités commerciales XDM](../../../../xdm/clas
 
 Lisez la [Présentation de la relation Personne-opportunité commerciale XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Notes |
+| Jeu de données source | Champ cible XDM | Remarques |
 | -------------- | --------------- | ----- |
 | `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |  |
@@ -381,8 +385,8 @@ Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/indivi
 | `id` | `b2b.personKey.sourceID` | |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` | |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceAccountKey` | |
-| <ul><li><code>iif(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null), « sourceKey », concat(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), nul)</code></li><li><code>iif(decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null), « sourceKey », concat(decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), nul)</code></li></ul> | `personComponents.sourceExternalKey` | |
-| <ul><li><code>iif(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null), « sourceKey », concat(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), nul)</code></li><li><code>iif(decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null), « sourceKey », concat(decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), nul)</code></li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` est une identité secondaire |
+| <ul><li><code>iif(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null), « sourceKey », concat(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), null)</code></li><li><code>iif(decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null), « sourceKey », concat(decode(msftType, « Contact », msftContactId, « Lead » msftLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), null)</code></li></ul> | `personComponents.sourceExternalKey` | |
+| <ul><li><code>iif(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null), « sourceKey », concat(decode(sfdcType, « Contact », sfdcContactId, « Lead », sfdcLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), null)</code></li><li><code>iif(decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null) != null, to_object(« sourceType », « ${CRM_TYPE} », « sourceInstanceID », « ${CRM_ORG_ID} »,« sourceID », decode(msftType, « Contact », msftContactId, « Lead », msftLeadId , null), « sourceKey », concat(decode(msftType, « Contact », msftContactId, « Lead » msftLeadId , null),« @${CRM_ORG_ID}.${CRM_TYPE} »), null)</code></li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey.sourceKey` est une identité secondaire |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Ceci est un champ calculé |
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` | |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", mktoCdpCnvContactPersonId, "sourceKey", concat(mktoCdpCnvContactPersonId,"@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.convertedContactKey` | Ceci est un champ calculé |

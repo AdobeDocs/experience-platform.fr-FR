@@ -3,9 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;Shopify;shopify;e-com
 title: Créer une connexion de base au connecteur Shopify à l’aide de l’API Flow Service
 description: Découvrez comment connecter Shopify à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
-source-git-commit: 845af785bbc008b664a81e522ae66bd3c10a980e
+TQID: https://experienceleague.adobe.com/M6S6a5O03NKxoOQqxl1Mb-CIkCKHPb6ZnnjkfSePfR0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: 479
 ht-degree: 33%
 
 ---
@@ -152,4 +155,4 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Shopify] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créer un flux de données pour importer des données E-Commerce dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/ecommerce.md)
+* [Créer un flux de données pour importer des données E-Commerce dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/ecommerce.md)

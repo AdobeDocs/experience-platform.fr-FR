@@ -1,11 +1,14 @@
 ---
-title: Présentation du connecteur Source Azure Blob
+title: Présentation du connecteur Source Blob d’Azure
 description: Découvrez comment connecter votre compte Azure Blob à Experience Platform
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
+TQID: https://experienceleague.adobe.com/9BiEkQj7anFeBn31BW72mDpLa0CADIJXB-bTPasaQw8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1021'
-ht-degree: 21%
+source-wordcount: 1092
+ht-degree: 20%
 
 ---
 
@@ -21,7 +24,7 @@ Lisez les sections suivantes pour terminer la configuration requise avant de con
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 >[!IMPORTANT]
 >
@@ -59,7 +62,7 @@ Fournissez des valeurs pour les informations d’identification suivantes afin d
 | `folderPath` | Chemin d’accès dans le conteneur spécifié où se trouvent vos fichiers. Il s’agit d’un chemin de sous-répertoire facultatif (dossier virtuel) à l’intérieur du conteneur. Si rien n’est indiqué, la racine du conteneur est utilisée. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Azure Blob Storage] est `4c10e202-c428-4796-9208-5f1f5732b1cf`. **Remarque** : ces informations d’identification ne sont requises que lors de la connexion via l’API [!DNL Flow Service]. |
 
-Pour en savoir plus sur l’utilisation de l’authentification par clé de compte avec [!DNL Azure Blob Storage], lisez le [guide d’authentification Azure Microsoft officiel](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#account-key-authentication).
+Pour en savoir plus sur l’utilisation de l’authentification par clé de compte avec [!DNL Azure Blob Storage], consultez le [guide d’authentification Microsoft Azure officiel](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#account-key-authentication).
 
 >[!TAB Signature d’accès partagé]
 
@@ -72,7 +75,7 @@ Fournissez des valeurs pour les informations d’identification suivantes afin d
 | `folderPath` | Chemin d’accès dans le conteneur spécifié où se trouvent vos fichiers. Il s’agit d’un chemin de sous-répertoire facultatif (dossier virtuel) à l’intérieur du conteneur. Si rien n’est indiqué, la racine du conteneur est utilisée. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Azure Blob Storage] est `4c10e202-c428-4796-9208-5f1f5732b1cf`. **Remarque** : ces informations d’identification ne sont requises que lors de la connexion via l’API [!DNL Flow Service]. |
 
-Pour en savoir plus sur l’utilisation de la signature d’accès partagé avec [!DNL Azure Blob Storage], lisez le [guide d’authentification Azure Microsoft officiel](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).
+Pour en savoir plus sur l’utilisation de la signature d’accès partagé avec [!DNL Azure Blob Storage], lisez le [guide d’authentification Microsoft Azure officiel](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).
 
 >[!TAB Authentification basée sur le principal de service]
 
@@ -82,14 +85,14 @@ Fournissez des valeurs pour les informations d’identification suivantes afin d
 | --- | --- |
 | `serviceEndpoint` | URL du point d’entrée de votre compte [!DNL Azure Blob Storage]. Généralement au format : `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
 | `accountKind` | Type de votre compte [!DNL Azure Blob Storage]. Les valeurs courantes comprennent `Storage` (objectif général V1), `StorageV2` (objectif général V2), `BlobStorage` et `BlockBlobStorage`. |
-| `servicePrincipalId` | Identifiant client/d’application du principal de service Azure Active Directory (AAD) utilisé pour l’authentification. |
+| `servicePrincipalId` | Identifiant client/application du principal de service Azure Active Directory (AAD) utilisé pour l’authentification. |
 | `servicePrincipalKey` | Secret client ou mot de passe associé au principal de service Azure. |
 | `tenant` | L’identifiant du client Azure Active Directory (AAD) où le principal de service est enregistré. |
-| `container` | Nom du conteneur de stockage Blob Azure où vos fichiers de données sont stockés. |
+| `container` | Nom du conteneur de stockage d’objets blob Azure où vos fichiers de données sont stockés. |
 | `folderPath` | Chemin d’accès dans le conteneur spécifié où se trouvent vos fichiers. Il s’agit d’un chemin de sous-répertoire facultatif (dossier virtuel) à l’intérieur du conteneur. Si rien n’est indiqué, la racine du conteneur est utilisée. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour le stockage Azure Blob est `4c10e202-c428-4796-9208-5f1f5732b1cf`. **Remarque** : ces informations d’identification ne sont requises que lors de la connexion via l’API [!DNL Flow Service]. |
+| `connectionSpec.id` | L’identifiant de spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour le stockage Blob Azure est `4c10e202-c428-4796-9208-5f1f5732b1cf`. **Remarque** : ces informations d’identification ne sont requises que lors de la connexion via l’API [!DNL Flow Service]. |
 
-Pour en savoir plus sur l’utilisation de l’authentification basée sur le principal de service avec [!DNL Azure Blob Storage], lisez le [guide d’authentification Azure Microsoft officiel](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#service-principal-authentication).
+Pour en savoir plus sur l’utilisation de l’authentification basée sur le principal de service avec [!DNL Azure Blob Storage], lisez le [guide d’authentification Microsoft Azure officiel](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#service-principal-authentication).
 
 >[!ENDTABS]
 

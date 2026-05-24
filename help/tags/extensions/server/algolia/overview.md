@@ -1,12 +1,18 @@
 ---
 title: Présentation De L’Extension Transfert D’Événements Algolia
 description: Découvrez comment configurer et utiliser l’extension de transfert d’événement Algolia dans Adobe Experience Platform. Transférez les données de comportement des utilisateurs via l’API Insights, configurez des règles, mappez des champs XDM et vérifiez la diffusion des événements.
-last-substantial-update: 2025-05-09T00:00:00Z
+last-substantial-update: 2025-05-09T00:00:00.000Z
 exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
-source-git-commit: 61aeec69f782968a8c157b604ba1cd9e990b7f02
+TQID: https://experienceleague.adobe.com/jDmeEVkAAAR-Pe8MF2Mto41G-JHmgJOhXvQBlS1-Xko
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 1%
+source-wordcount: 1015
+ht-degree: 2%
 
 ---
 
@@ -20,7 +26,7 @@ Utilisez l’extension de transfert d’événement [!DNL Algolia] pour envoyer 
 
 Avant d’installer l’extension, vérifiez que vous disposez d’un compte [!DNL Algolia] avec un accès à l’[!DNL Insights API]. Si vous ne disposez pas d’un compte , [inscrivez-vous](https://dashboard.algolia.com/users/sign_up) et activez l’accès à l’API .
 
-Assurez-vous également de comprendre comment utiliser le [!DNL Algolia] [!DNL Insights API]. Pour obtenir un aperçu sur l’envoi d’événements, reportez-vous à la section [Envoi d’événements avec l’API Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/).
+Assurez-vous également de comprendre comment utiliser le [!DNL Insights API] [!DNL Algolia]. Pour obtenir un aperçu sur l’envoi d’événements, reportez-vous à la section [Envoi d’événements avec l’API Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
 Rassemblez les valeurs suivantes à partir du tableau de bord de votre compte [!DNL Algolia] :
 - **[!UICONTROL Application ID]**
@@ -165,7 +171,7 @@ Pour plus d’informations sur le débogage de votre implémentation à l’aide
 
 ## Ressources supplémentaires
 
-- [[!DNL Algolia]  Documentation de l’API Insights &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
-- [[!DNL Algolia] Documentation sur les événements](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Documentation sur le transfert d’événement](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr)
-- [[!DNL Algolia] Présentation des fonctionnalités de l’IA](https://www.algolia.com/products/ai-search/)
+- [Documentation de l’API [!DNL Algolia] Insights](https://www.algolia.com/doc/rest-api/insights/)
+- [Documentation sur les événements [!DNL Algolia]](https://www.algolia.com/doc/guides/sending-events/getting-started/)
+- [Documentation sur le transfert d’événement [!DNL Adobe Experience Platform]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr)
+- [Présentation des fonctionnalités de l’IA dédiée à l’[!DNL Algolia]](https://www.algolia.com/products/ai-search/)

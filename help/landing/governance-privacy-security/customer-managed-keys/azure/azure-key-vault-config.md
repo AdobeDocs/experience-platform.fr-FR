@@ -1,13 +1,18 @@
 ---
-title: Configurer un coffre de clés Azure Key Vault pour les clés gérées par le client
-description: Découvrez comment créer un compte d’entreprise avec Azure ou utiliser un compte d’entreprise existant et créer le coffre Key Vault.
+title: Configuration d’un coffre de clés Azure pour les clés gérées par le client
+description: Découvrez comment créer un compte d’entreprise avec Azure ou utiliser un compte d’entreprise existant et créer le coffre de clés.
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
+TQID: https://experienceleague.adobe.com/HXIcD-4G1y1GAt0GJvBY7RJDbtIK16rV-Osgth4qO38
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 19%
+source-wordcount: 693
+ht-degree: 20%
 
 ---
 
@@ -17,7 +22,7 @@ Les clés gérées par le client (CMK) prennent en charge les clés des coffres 
 
 >[!IMPORTANT]
 >
->Seuls les niveaux HSM Standard, Premium et Managed pour [!DNL Azure] Key Vault sont pris en charge. [!DNL Azure Dedicated HSM] et [!DNL Azure Payments HSM] ne sont pas pris en charge. Reportez-vous à la documentation d’[[!DNL Azure] &#x200B;](https://learn.microsoft.com/fr-fr/azure/security/fundamentals/key-management#azure-key-management-services) pour plus d’informations sur les services de gestion de clés proposés.
+>Seuls les niveaux HSM Standard, Premium et Managed pour [!DNL Azure] Key Vault sont pris en charge. [!DNL Azure Dedicated HSM] et [!DNL Azure Payments HSM] ne sont pas pris en charge. Reportez-vous à la documentation d’[[!DNL Azure] ](https://learn.microsoft.com/fr-fr/azure/security/fundamentals/key-management#azure-key-management-services) pour plus d’informations sur les services de gestion de clés proposés.
 
 >[!NOTE]
 >
@@ -43,7 +48,7 @@ La page **[!DNL Key vaults]** s’affiche après avoir sélectionné le service.
 
 Une fois l’étape **[!DNL Review + create]** atteinte, vous pouvez consulter les détails du coffre de clés pendant la validation. Une fois la validation acceptée, sélectionnez **[!DNL Create]** pour terminer le processus.
 
-![Les coffres de clés Azure Microsoft Examinez et créez une page avec l’option Créer mise en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+![Les coffres de clés d’Azure de Microsoft Examinent et créent une page avec l’option Créer mise en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
 ## Configuration de l’accès {#configure-access}
 
@@ -61,7 +66,7 @@ Sélectionnez **[!DNL Networking]** dans le volet de navigation de gauche. Sous 
 >
 >Si votre coffre de clés utilise un accès réseau restreint, Adobe vous recommande d’ajouter l’adresse IP statique suivante : `20.88.123.53`. L’ajout de cette adresse IP permet aux services Adobe de surveiller plus efficacement la connectivité et de fournir des alertes sur Platform lorsque des problèmes d’accès sont détectés.
 >
->Pour en savoir plus sur quand et quand placer sur la liste autorisée l’adresse IP d’Adobe, comment les alertes fonctionnent et comment répondre aux notifications d’accès clé en cas d’échec, consultez [Configuration des alertes et de l’accès IP pour Azure CMK](./alerts-and-ip-access.md).
+>Pour en savoir plus sur quand et quand placer sur la liste autorisée l’adresse IP d’Adobe, comment les alertes fonctionnent et comment répondre aux notifications d’accès clé en cas d’échec, consultez [Configuration des alertes et de l’accès IP pour la fonction CMK d’Azure](./alerts-and-ip-access.md).
 >
 >Si votre coffre de clés est déjà configuré pour autoriser l’accès au réseau public, aucune autre action n’est requise.
 
@@ -73,7 +78,7 @@ Une fois que vous avez créé un coffre de clés, vous pouvez générer une nouv
 
 ![Onglet [!DNL Keys] de la [!DNL Azure] avec le [!DNL Generate import] mis en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** ou **RSA-HSM** pour le type de clé. Pour les implémentations hébergées sur [!DNL Azure], la **[!DNL RSA key size]** doit être d’au moins 3 072 bits **&#x200B;**&#x200B;comme requis pour [!DNL Azure Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
+Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** ou **RSA-HSM** pour le type de clé. Pour les implémentations hébergées sur [!DNL Azure], la **[!DNL RSA key size]** doit être d’au moins 3 072 bits **** comme requis pour [!DNL Azure Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
 
 >[!NOTE]
 >

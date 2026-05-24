@@ -1,20 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Mise à jour des spécifications de flux à l’aide de l’API Flow Service
-description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK par lots).
+title: Mettre à jour les spécifications de flux à l’aide de l’API Flow Service
+description: Le document suivant décrit la procédure à suivre pour récupérer et mettre à jour des spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK par lots).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 21bccacf3555881ae731d0e60ff7d7677f18732d
+TQID: https://experienceleague.adobe.com/VkVINsHyAX4H63wz2PH5VFFg-iJ3BCEJK2XJyfjbEOk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: 410
 ht-degree: 17%
 
 ---
 
-# Mise à jour des spécifications de flux à l’aide de l’API [!DNL Flow Service]
+# Mettre à jour les spécifications de flux à l’aide de l’API [!DNL Flow Service]
 
-Une fois que vous avez généré un nouvel identifiant de spécification de connexion, vous devez ajouter cet identifiant à une spécification de flux afin de créer un flux de données.
+Une fois que vous avez généré un nouvel identifiant de spécification de connexion, vous devez l’ajouter à une spécification de flux afin de créer un flux de données.
 
-Les spécifications de flux contiennent des informations qui définissent un flux, notamment les identifiants de connexion source et cible pris en charge, les spécifications de transformation nécessaires à l’application aux données et les paramètres de planification requis pour générer un flux. Vous pouvez modifier les spécifications de flux à l’aide du point d’entrée `/flowSpecs`.
+Les spécifications de flux contiennent des informations qui définissent un flux, y compris les identifiants de connexion source et cible pris en charge, les spécifications de transformation qui doivent être appliquées aux données et les paramètres de planification requis pour générer un flux. Vous pouvez modifier les spécifications de flux à l’aide du point d’entrée `/flowSpecs`.
 
 Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API [!DNL Flow Service] pour les sources en libre-service (SDK par lots).
 
@@ -24,7 +27,7 @@ Avant de continuer, consultez le [guide de prise en main](./getting-started.md) 
 
 ## Recherche d’une spécification de flux {#lookup}
 
-Les sources créées avec le modèle `generic-rest-extension` utilisent toutes la spécification de flux `RestStorageToAEP`. Cette spécification de flux peut être récupérée en envoyant une requête GET au point de terminaison `/flowSpecs/` et en fournissant la `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
+Les sources créées avec le modèle de `generic-rest-extension` utilisent toutes la spécification de flux `RestStorageToAEP`. Cette spécification de flux peut être récupérée en adressant une requête GET au point d’entrée `/flowSpecs/` et en fournissant le `flowSpec.id` de `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **Format d’API**
 
@@ -233,11 +236,11 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Mettre à jour une spécification de flux {#update}
 
-Vous pouvez mettre à jour les champs d’une spécification de connexion via une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
+Vous pouvez mettre à jour les champs d’une spécification de connexion par le biais d’une opération PUT. Lors de la mise à jour d’une spécification de connexion par le biais d’une requête PUT, le corps doit inclure tous les champs qui seraient requis lors de la création d’une spécification de connexion dans une requête POST.
 
 >[!IMPORTANT]
 >
->Vous devez mettre à jour la liste de `sourceConnectionSpecIds` de la spécification de flux qui correspond à une nouvelle source chaque fois qu’une nouvelle source est créée. Cela garantit que votre nouvelle source est prise en charge par une spécification de flux existante, ce qui vous permet d’effectuer le processus de création de flux de données avec votre nouvelle source.
+>Vous devez mettre à jour la liste des `sourceConnectionSpecIds` de la spécification de flux qui correspond à une nouvelle source chaque fois qu’une nouvelle source est créée. Cela garantit que votre nouvelle source est prise en charge par une spécification de flux existante, ce qui vous permet d’effectuer le processus de création de flux de données avec votre nouvelle source.
 
 **Format d’API**
 
@@ -247,7 +250,7 @@ PUT /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **Requête**
 
-La requête suivante met à jour la spécification de flux de `6499120c-0b15-42dc-936e-847ea3c24d72` pour inclure l’ID de spécification de connexion `f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`.
+La requête suivante met à jour la spécification de flux de `6499120c-0b15-42dc-936e-847ea3c24d72` pour inclure l’identifiant de spécification de connexion `f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`.
 
 ```shell
 PUT -X GET \
@@ -429,7 +432,7 @@ PUT -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification de flux interrogée, y compris sa liste mise à jour de `sourceConnectionSpecIds`.
+Une réponse réussie renvoie les détails de la spécification de flux interrogée, y compris sa liste de `sourceConnectionSpecIds` mise à jour.
 
 ```json
 {
@@ -610,4 +613,4 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Étapes suivantes
 
-Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Pour plus d’informations, consultez le guide sur le [test et l’envoi d’une nouvelle source](./submit.md) .
+Maintenant que votre nouvelle spécification de connexion a été ajoutée à la spécification de flux appropriée, vous pouvez procéder au test et à l’envoi de votre nouvelle source. Pour plus d’informations, consultez le guide sur le [test et envoi d’une nouvelle source](./submit.md).

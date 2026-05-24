@@ -2,10 +2,16 @@
 title: Publication d’une extension
 description: Découvrez comment effectuer une publication publique ou privée d’une extension de balise dans Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/QAvAkYBmGV51WG5gvI0LoTJb0V5XYaIew4lEHF7EqS8
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 60%
+source-wordcount: 455
+ht-degree: 59%
 
 ---
 
@@ -33,9 +39,7 @@ npx @adobe/reactor-releaser
 `npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s&#39;agit de la méthode la plus simple pour exécuter l&#39;outil de libération.
 
 >[!NOTE]
-> Par défaut, l’outil de libération attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées
-> peut être utilisé en exécutant `npx @adobe/reactor-releaser@v3.1.3` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis
-> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> Par défaut, l’outil de libération attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées> peut être utilisé en exécutant `npx @adobe/reactor-releaser@v3.1.3` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 L&#39;outil de libération nécessite que vous ne saisissiez que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée et sélectionnez **[!UICONTROL View]**.
 
@@ -49,6 +53,6 @@ Si vous souhaitez publier directement votre extension pour une disponibilité pr
 
 ## Publication publique
 
-Une fois la publication privée terminée, vous pouvez demander à Adobe de la publier publiquement. Votre extension sera ainsi disponible dans le catalogue public. Tout utilisateur de la Collecte de données peut installer votre extension sur nʼimporte quelle propriété.
+Une fois la publication privée terminée, vous pouvez demander à Adobe de la publier publiquement.  Votre extension sera ainsi disponible dans le catalogue public. Tout utilisateur de la Collecte de données peut installer votre extension sur nʼimporte quelle propriété.
 
 Veuillez remplir le [formulaire de demande de publication publique](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) pour commencer le processus de publication.

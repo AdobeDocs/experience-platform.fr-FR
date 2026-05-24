@@ -2,9 +2,15 @@
 title: Configurer des clés gérées par la clientèle avec AWS à l’aide de l’interface utilisateur d’Experience Platform
 description: Découvrez comment configurer votre application CMK avec votre nom de ressource Amazon (ARN) et envoyer votre identifiant de clé de chiffrement à Adobe Experience Platform.
 exl-id: f0e38a60-d448-4975-977e-1367fca10515
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/8A0xge-aj2kk4y-DTHzmrerFdUVFok4WBB7kQrFUVbE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: 1221
 ht-degree: 0%
 
 ---
@@ -15,7 +21,7 @@ Utilisez ce guide pour activer les clés gérées par le client (CMK) pour les i
 
 >[!IMPORTANT]
 >
->Avant de poursuivre avec ce guide, assurez-vous d’avoir terminé la configuration détaillée dans le document [’Configuration d’AWS KMS pour &#x200B;](./configure-kms.md) CMK’.
+>Avant de poursuivre avec ce guide, assurez-vous d’avoir terminé la configuration détaillée dans le document [’Configuration d’AWS KMS pour ](./configure-kms.md) CMK’.
 
 ## Mettez à jour la stratégie de clé AWS pour intégrer la clé à Experience Platform.
 
@@ -43,11 +49,11 @@ Pour intégrer votre clé AWS à Experience Platform, vous devez modifier le fic
 
 Dans l’exemple ci-dessus, toutes les ressources (`"Resource": "*"`) du même compte (`Principal.AWS`) peuvent accéder à la clé. Cette politique permet aux services du compte d’effectuer des opérations de chiffrement et de déchiffrement, limitées au compte spécifié. Pour accorder à votre compte à client(e) unique Experience Platform l’accès à cette clé, ajoutez de nouvelles instructions à la politique AWS par défaut. Vous pouvez obtenir la politique JSON requise à partir de l’interface utilisateur d’Experience Platform et l’appliquer à votre clé AWS KMS pour établir une connexion sécurisée avec Adobe Experience Platform.
 
-Dans l’interface utilisateur d’Experience Platform, accédez à la section **[!UICONTROL Administration]** dans le rail de navigation de gauche, puis sélectionnez **[!UICONTROL Chiffrement]**. Dans l’espace de travail [!UICONTROL Configuration du chiffrement], sélectionnez **[!UICONTROL Configurer]** dans la vignette [!UICONTROL Clés gérées par le client].
+Dans l’interface utilisateur d’Experience Platform, accédez à la section **[!UICONTROL Administration]** du rail de navigation de gauche, puis sélectionnez **[!UICONTROL Encryption]**. Dans l’espace de travail [!UICONTROL Encryption Configuration], sélectionnez **[!UICONTROL Configure]** dans la carte [!UICONTROL Customer Managed Keys] .
 
 ![Espace de travail Configuration du chiffrement d’Experience Platform avec l’option Configurer mise en surbrillance dans la vignette Clés gérées par le client.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-La [!UICONTROL configuration des clés gérées par le client] s’affiche. Copiez l’objet `statement` à partir de la politique CMK KMS affichée dans la [!UICONTROL Configuration des clés gérées par le client] [!UICONTROL Configuration du chiffrement].
+L’[!UICONTROL Customer Managed Keys configuration] apparaît. Copiez l’objet `statement` à partir de la politique CMK KMS affichée dans le [!UICONTROL Encryption Configuration] de [!UICONTROL Customer Managed Keys].
 
 <!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 
@@ -61,7 +67,7 @@ Ensuite, revenez à l’espace de travail AWS KMS et mettez à jour la politique
 
 ![Étape de révision du workflow avec la politique mise à jour et Terminer en surbrillance.](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
-Ajoutez à la politique par défaut les quatre instructions de l’espace de travail [!UICONTROL Configuration du chiffrement de la plateforme], comme illustré ci-dessous : `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
+Ajoutez à la politique par défaut les quatre instructions de l’espace de travail [!UICONTROL Platform Encryption Configuration], comme illustré ci-dessous : `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions`.
 
 ```json
 {
@@ -162,7 +168,7 @@ L’espace de travail [!DNL Customer Managed Keys] mis à jour de l’[!DNL Key 
 
 ### Ajout de détails sur la clé de chiffrement AWS à Experience Platform
 
-Ensuite, pour activer le chiffrement, ajoutez le nom de ressource Amazon (ARN) de la clé à votre configuration Experience Platform [!UICONTROL Clés gérées par le client]. Dans la section [!DNL Customer Managed Keys] d’AWS, sélectionnez l’alias de votre nouvelle clé dans la liste de la [!DNL Key Management Service].
+Ensuite, pour activer le chiffrement, ajoutez le nom de ressource Amazon (ARN) de la clé à votre [!UICONTROL Customer Managed Keys configuration] Experience Platform. Dans la section [!DNL Customer Managed Keys] d’AWS, sélectionnez l’alias de votre nouvelle clé dans la liste de la [!DNL Key Management Service].
 
 ![L’espace de travail Clés gérées par le client AWS KMS avec le nouvel alias de clé en surbrillance.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -173,15 +179,15 @@ Sélectionnez l’icône de copie pour copier votre ARN. Une boîte de dialogue 
 
 ![Les détails clés de votre clé gérée par le client AWS KMS avec l’ARN en surbrillance.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Revenez maintenant à l’interface utilisateur d’Experience Platform [!UICONTROL Configuration des clés gérées par le client]. Dans la section **[!UICONTROL Ajouter les détails de la clé de chiffrement AWS]**, ajoutez un **[!UICONTROL Nom de configuration]** et la clé **[!UICONTROL KMS ARN]** que vous avez copiée à partir de l’interface utilisateur d’AWS.
+Revenez à présent à l’interface utilisateur d’Experience Platform [!UICONTROL Customer Managed Keys configuration]. Dans la section **[!UICONTROL Add AWS encryption key details]** , ajoutez un **[!UICONTROL Configuration name]** et les **[!UICONTROL KMS key ARN]** que vous avez copiés à partir de l’interface utilisateur d’AWS.
 
-![L’espace de travail Configuration du chiffrement d’Experience Platform avec le nom de la configuration et la clé KMS ARN en surbrillance dans la section Ajouter des détails de la clé de chiffrement AWS &#x200B;](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png).
+![L’espace de travail Configuration du chiffrement d’Experience Platform avec le nom de la configuration et la clé KMS ARN en surbrillance dans la section Ajouter des détails de la clé de chiffrement AWS ](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png).
 
-Sélectionnez ensuite **[!UICONTROL ENREGISTRER]** pour envoyer le nom de la configuration, l’ARN de la clé KMS et commencer la validation de la clé.
+Sélectionnez ensuite **[!UICONTROL SAVE]** pour envoyer le nom de la configuration, l’ARN de la clé KMS et commencer la validation de la clé.
 
 ![L’espace de travail Configuration du chiffrement d’Experience Platform avec Enregistrer mis en surbrillance.](../../../images/governance-privacy-security/key-management-service/save.png)
 
-Vous revenez alors à l’espace de travail [!UICONTROL Configurations de chiffrement]. Le statut de la configuration du chiffrement s’affiche au bas de la carte **[!UICONTROL Clés gérées par le client]**.
+Vous revenez alors à l’espace de travail [!UICONTROL Encryption Configurations]. Le statut de la configuration de chiffrement s’affiche au bas de la carte **[!UICONTROL Customer Managed Keys]**.
 
 ![Espace de travail Configurations du chiffrement dans l’interface utilisateur d’Experience Platform avec le traitement en surbrillance sur la carte Clés gérées par le client](../../../images/governance-privacy-security/key-management-service/configuration-status.png).
 
@@ -218,7 +224,7 @@ Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!DNL Disabl
 
 ![Boîte de dialogue Désactiver la clé avec la touche Désactiver mise en surbrillance.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
-Si votre clé est utilisée dans d’autres services, vous pouvez également supprimer l’accès à Experience Platform directement à partir de la politique de clé. Sélectionnez **[!UICONTROL Modifier]** dans la section **[!DNL Key Policy]**.
+Si votre clé est utilisée dans d’autres services, vous pouvez également supprimer l’accès à Experience Platform directement à partir de la politique de clé. Sélectionnez **[!UICONTROL Edit]** dans la section **[!DNL Key Policy]** .
 
 ![Section Détails de la clé AWS avec l’option Modifier mise en surbrillance dans la section Politique de clé.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 

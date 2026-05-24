@@ -2,10 +2,15 @@
 title: Notes de mise à jour d’Adobe Experience Platform de novembre 2021
 description: Les notes de mise à jour de novembre 2021 pour Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/ywhIZNdw6os2TxG5QAvpVnDMtGUQYP-wIc5ly-v5I8M
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 81%
+source-wordcount: 810
+ht-degree: 79%
 
 ---
 
@@ -66,7 +71,7 @@ Consultez la documentation [Schémas dans Real-Time Customer Data Platform B2B e
 
 ### (Beta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc {#ad-hoc-activation}
 
-L’API d’activation ad hoc permet aux spécialistes du marketing d’activer par programmation les segments d’audience vers les destinations, de manière rapide et efficace, dans les cas où une activation immédiate est requise. L’activation des audiences ad hoc n’est prise en charge que par les [destinations basées sur des fichiers par lots](../../destinations/destination-types.md#file-based) et est actuellement en version bêta. Pour plus d’informations, consultez la [documentation sur l’API d’activation ad hoc](../../destinations/api/ad-hoc-activation-api.md).
+L’API d’activation ad hoc permet aux spécialistes du marketing d’activer par programmation les segments d’audience vers les destinations, de manière rapide et efficace, dans les cas où une activation immédiate est requise. L’activation des audiences ad hoc n’est prise en charge que par les [destinations basées sur des fichiers par lots](../../destinations/destination-types.md#file-based) et est actuellement en version Beta. Pour plus d’informations, consultez la [documentation sur l’API d’activation ad hoc](../../destinations/api/ad-hoc-activation-api.md).
 
 ### IA dédiée à l’attribution {#attribution-ai}
 

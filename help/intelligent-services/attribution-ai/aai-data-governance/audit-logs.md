@@ -3,9 +3,13 @@ keywords: insights;IA dédiée à l’attrbution;informations sur l’IA dédié
 title: Vue d’ensemble des journaux d’audit dans l’IA dédiée à l’attribution
 description: Découvrez comment afficher et gérer les journaux d’audit dans l’IA dédiée à l’attribution.
 exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+TQID: https://experienceleague.adobe.com/trCdlfP9wDdaO3WYhgn7ZJaSWDEz3QUxEMWDzdmqK9c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: 272
 ht-degree: 90%
 
 ---
@@ -20,6 +24,6 @@ Pour faire simple, un journal d’audit indique qui a effectué quelle action et
 
 ## Accès aux journaux d’audit
 
-Lorsque la fonction est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
+Lorsque la fonctionnalité est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 
 Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle d’accès Accès aux journaux d’audit doit avoir été accordée dans Adobe Console. Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités IA dédiée à l’attribution, consultez la [documentation sur le contrôle d’accès](../aai-data-governance/access-controls.md).

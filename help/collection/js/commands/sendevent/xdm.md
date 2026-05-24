@@ -2,9 +2,15 @@
 title: xdm
 description: Découvrez comment envoyer des données à Adobe par le biais de l’objet aligné sur un schéma XDM.
 exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
-source-git-commit: c6a2b9700f0a688f65fec9febf5622c6c7b6aafa
+TQID: https://experienceleague.adobe.com/DO-YHT1JYbAdu6HIOmUEN4cNKE3ZSEtFhFWb4XXEhcA
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: eadea719-cf89-469b-a6fd-a236a7138047id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: 158
 ht-degree: 0%
 
 ---
@@ -23,7 +29,7 @@ alloy("sendEvent", {
 });
 ```
 
-L’exemple suivant utilise le groupe de champs de schéma Détails de Commerce [&#128279;](/help/xdm/field-groups/event/commerce-details.md) :
+L’exemple suivant utilise le groupe de champs de schéma Détails de Commerce [](/help/xdm/field-groups/event/commerce-details.md) :
 
 ```javascript
 alloy("sendEvent",{

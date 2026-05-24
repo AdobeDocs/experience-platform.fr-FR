@@ -5,9 +5,14 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour le profil client en temps réel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/eLC-1-DirU9gDl-Bvd6YWbZ3O5oHgQn1Kq8qQiNaI5I
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: 1753
 ht-degree: 21%
 
 ---
@@ -46,7 +51,7 @@ Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experi
 
 ## Envoi de requêtes {#submit}
 
-Les sections ci-dessous décrivent comment effectuer des demandes d’accès à des informations personnelles pour [!DNL Real-Time Customer Profile] en utilisant l’API ou l’interface utilisateur [!DNL Privacy Service]. Avant de lire ces sections, vous devez consulter ou connaître la documentation de l’[API &#x200B;](../privacy-service/api/getting-started.md) ou de l’[interface utilisateur Privacy Service](../privacy-service/ui/overview.md). Ces documents fournissent des étapes complètes sur la manière d’envoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données d’identité utilisateur envoyées dans les payloads de requête.
+Les sections ci-dessous décrivent comment effectuer des demandes d’accès à des informations personnelles pour [!DNL Real-Time Customer Profile] en utilisant l’API ou l’interface utilisateur [!DNL Privacy Service]. Avant de lire ces sections, vous devez consulter ou connaître la documentation de l’[API ](../privacy-service/api/getting-started.md) ou de l’[interface utilisateur Privacy Service](../privacy-service/ui/overview.md). Ces documents fournissent des étapes complètes sur la manière d’envoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données d’identité utilisateur envoyées dans les payloads de requête.
 
 >[!IMPORTANT]
 >
@@ -67,7 +72,7 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 
 >[!NOTE]
 >
->Pour plus d’informations sur les effets de l’utilisation de [&#x200B; et de &#x200B;](#profile-v-identity) dans le tableau de `ProfileService` `identity` reportez-vous à la section sur les `include`requêtes de profil et requêtes d’identité plus loin dans ce document.
+>Pour plus d’informations sur les effets de l’utilisation de `ProfileService` et de `identity` dans le tableau de `include`](#profile-v-identity) reportez-vous à la section sur les [requêtes de profil et requêtes d’identité plus loin dans ce document.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la banque de [!DNL Profile]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant l’espace de noms d’identité `Email` standard et l’autre à l’aide d’un espace de noms d’identité `Customer_ID` personnalisé. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans le tableau `include` :
 
@@ -114,7 +119,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
+>Experience Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système.
 
 **Réponse du produit**
 
@@ -186,7 +191,7 @@ Supposons, par exemple, que vous stockiez des données d’attributs du client d
 
 L’un des jeux de données utilise `customer_id` comme identifiant principal, tandis que les deux autres utilisent `email_id`. Si vous deviez envoyer une demande d’accès à des informations personnelles (accès ou suppression) en utilisant uniquement `email_id` comme valeur d’ID utilisateur, seuls les attributs `firstName`, `lastName` et `mlScore` seraient traités, tandis que `address` ne seraient pas affectés.
 
-Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [&#x200B; principes de base de la composition des schémas &#x200B;](../xdm/schema/composition.md#identity).
+Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [ principes de base de la composition des schémas ](../xdm/schema/composition.md#identity).
 
 ## Traitement des demandes de suppression {#delete}
 
@@ -217,7 +222,7 @@ Pour supprimer le profil et toutes les associations d’identités pour un clien
 
 ### Limites des politiques de fusion {#merge-policy-limitations}
 
-Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type de **[!DNL None]** est [!UICONTROL ID stitching]. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion où [!UICONTROL ID stitching] est défini sur [!UICONTROL Private graph].
+Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type de [!UICONTROL ID stitching] est **[!DNL None]**. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion où [!UICONTROL ID stitching] est défini sur [!UICONTROL Private graph].
 
 >![L’assemblage des identifiants de la politique de fusion est défini sur Aucun](./images/privacy/no-id-stitch.png)
 

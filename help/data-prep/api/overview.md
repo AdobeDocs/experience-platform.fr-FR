@@ -3,9 +3,13 @@ keywords: Experience Platform;préparation de données;api data prep;dépannage
 title: Présentation de l’API Data Prep
 description: L’API Data Prep vous permet de créer par programmation des jeux de mappages et des fonctions, pour que vous puissiez transformer vos données entre les schémas source et de destination.
 exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+TQID: https://experienceleague.adobe.com/JpzLOlv1jQi5do37wo7bnU9IHBGJL-8c1zHdtxFech4
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: 261
 ht-degree: 100%
 
 ---

@@ -3,9 +3,13 @@ keywords: destinations analytics;destination analytics
 title: Présentation des destinations Analytics
 description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des informations uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/7wQLLLpCGKxeBLUGwAtpS6JI-MhTrJ7WBGh4xXqWOEo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: 170
 ht-degree: 85%
 
 ---

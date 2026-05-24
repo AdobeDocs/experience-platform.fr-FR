@@ -2,9 +2,13 @@
 title: Groupe de champs de schéma des détails des membres du secteur de la santé
 description: Découvrez le groupe de champs de schéma Détails des membres du service de santé .
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/zFlFJFZpUBVquQkTMaXdCkuxbhwxpdicQ-bOoi3ow94
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: 636
 ht-degree: 3%
 
 ---
@@ -22,7 +26,7 @@ ht-degree: 3%
 | `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse personnelle de la personne. |
 | `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone personnel de la personne. |
 | `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse postale de la personne. |
-| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. Pour plus d’informations sur la structure de l’objet[&#x200B; consultez la &#x200B;](#memberDetails)sous-section ci-dessous. |
+| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. Pour plus d’informations sur la structure de l’objet](#memberDetails) consultez la [sous-section ci-dessous. |
 | `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone mobile de la personne. |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | Acteur, contact ou propriétaire individuel lié à l’adhésion de la personne au système de santé. |
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Adresse e-mail personnelle de la personne. |
@@ -34,7 +38,7 @@ ht-degree: 3%
 
 `memberDetails` est un objet qui contient des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. La structure de `memberDetails` est décrite ci-dessous.
 
-![&#x200B; structure memberDetails &#x200B;](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![ structure memberDetails ](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -58,7 +62,7 @@ ht-degree: 3%
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
 Pour plus d’informations sur l’utilisation de ce groupe de champs pour des cas d’utilisation courants du secteur de la [santé](../../schema/industries/healthcare.md), consultez la documentation sur les schémas du secteur .

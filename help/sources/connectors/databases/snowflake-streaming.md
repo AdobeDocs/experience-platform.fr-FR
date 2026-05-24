@@ -3,9 +3,13 @@ title: Présentation Du Connecteur Source De Diffusion En Continu Snowflake
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer les données de diffusion en continu de votre instance Snowflake vers Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/GatQp2TAQn7ymXkepBPY69wsyum4L5hLGFCcsUbja3s
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: 1567
 ht-degree: 6%
 
 ---
@@ -34,7 +38,7 @@ La section suivante décrit les étapes préalables à suivre avant de pouvoir d
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Amazon Redshift] à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
@@ -48,7 +52,7 @@ Pour que [!DNL Flow Service] puissiez vous connecter à [!DNL Snowflake], vous d
 
 | Informations d’identification | Description |
 | --- | --- |
-| `account` | L’identifiant complet du compte (nom du compte ou localisateur du compte) de votre compte [!DNL Snowflake] suivi du suffixe `snowflakecomputing.com`. L’identifiant de compte peut avoir différents formats : <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (par exemple `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (par exemple `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (par exemple `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Pour plus d’informations, consultez le [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `account` | L’identifiant complet du compte (nom du compte ou localisateur du compte) de votre compte [!DNL Snowflake] suivi du suffixe `snowflakecomputing.com`. L’identifiant de compte peut avoir différents formats : <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (par exemple `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (par exemple, `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (par exemple `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Pour plus d’informations, consultez le [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
 | `warehouse` | L’entrepôt de [!DNL Snowflake] gère le processus d’exécution de la requête pour l’application. Chaque entrepôt de [!DNL Snowflake] est indépendant les uns des autres et doit être accessible individuellement lors de l’importation de données dans Experience Platform. |
 | `database` | La base de données [!DNL Snowflake] contient les données que vous souhaitez importer dans Experience Platform. |
 | `username` | Nom d’utilisateur du compte [!DNL Snowflake]. |
@@ -62,7 +66,7 @@ Pour utiliser l’authentification par paire de clés, vous devez générer une 
 
 | Informations d’identification | Description |
 | --- | --- |
-| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple : `orgname-account_name`. Lisez le guide sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](./snowflake.md#retrieve-your-account-identifier) pour obtenir des conseils supplémentaires. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple :`orgname-account_name` Lisez le guide sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](./snowflake.md#retrieve-your-account-identifier) pour obtenir des conseils supplémentaires. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Nom d’utilisateur de votre compte [!DNL Snowflake]. |
 | `privateKey` | Clé privée [!DNL Base64-]encodée) de votre compte [!DNL Snowflake]. Vous pouvez générer des clés privées chiffrées ou non chiffrées. Si vous utilisez une clé privée chiffrée, vous devez également fournir une phrase secrète de clé privée lors de l’authentification auprès d’Experience Platform. Pour plus d’informations, consultez le guide sur la [récupération  [!DNL Snowflake]  votre clé privée](./snowflake.md). |
 | `passphrase` | La phrase secrète est une couche de sécurité supplémentaire que vous devez utiliser lors de l’authentification avec une clé privée chiffrée. Vous n’êtes pas tenu de fournir la phrase secrète si vous utilisez une clé privée non chiffrée. |
@@ -79,7 +83,7 @@ Pour authentifier votre instance [!DNL Snowflake] avec Experience Platform, vous
 
 Pour trouver l’identifiant de votre compte, procédez comme suit :
 
-* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] &#x200B;](https://app.snowflake.com/).
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application ](https://app.snowflake.com/).[[!DNL Snowflake] 
 * Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
 * Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
 

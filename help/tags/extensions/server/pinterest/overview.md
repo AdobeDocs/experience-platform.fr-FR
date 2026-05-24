@@ -2,12 +2,18 @@
 keywords: extension de transfert d’événement;pinterest;extension de transfert d’événement pinterest
 title: Extension de transfert d’événement Pinterest
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet d’ingérer des événements dans Pinterest en fonction des besoins de votre entreprise.
-last-substantial-update: 2023-04-27T00:00:00Z
+last-substantial-update: 2023-04-27T00:00:00.000Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/oBoefrt3wDx3GSXT-nFdb6L5aoVBUvrX-dJATsjaaFw
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1427'
-ht-degree: 6%
+source-wordcount: 1497
+ht-degree: 5%
 
 ---
 
@@ -33,7 +39,7 @@ Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Pin
 
 Vous devez disposer d’un [!DNL Pinterest] [compte professionnel](https://help.pinterest.com/en/business/article/get-a-business-account) valide pour utiliser cette extension. Accédez à la [[!DNL Pinterest] page d’enregistrement](https://www.pinterest.com/business/create/) pour vous enregistrer et créer un compte si vous n’en avez pas déjà un.
 
-Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte professionnel [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d’entreprise, reportez-vous à la section [[!DNL Pinterest &#x200B;] Compte de développeur](https://developers.pinterest.com/account-setup/).
+Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte professionnel [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d’entreprise, reportez-vous à la section [[!DNL Pinterest ] Compte de développeur](https://developers.pinterest.com/account-setup/).
 
 ### Collecter les détails de configuration requis {#configuration-details}
 
@@ -41,7 +47,7 @@ Pour connecter Experience Platform à [!DNL Pinterest], les entrées suivantes s
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| ID de compte publicitaire | Identifiant De Votre Compte [!DNL Pinterest] Ads. Reportez-vous à la documentation de [[!DNL Pinterest] &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
+| ID de compte publicitaire | Identifiant De Votre Compte [!DNL Pinterest] Ads. Reportez-vous à la documentation de [[!DNL Pinterest] ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
 | Jeton d’accès de conversion | Votre Jeton D’Accès À La Conversion [!DNL Pinterest]. Reportez-vous au document [[!DNL Pinterest] API de conversion](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) pour obtenir des conseils. <br> **Vous ne devrez effectuer cette opération qu’une seule fois, car ce jeton n’expire pas.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## Installation et configuration de l’extension [!DNL Pinterest] {#install}
@@ -72,7 +78,7 @@ Une fois tous vos éléments de données configurés, vous pouvez commencer à c
 
 Créez une [règle](../../../ui/managing-resources/rules.md) dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Pinterest]**. Pour envoyer des événements Edge Network à [!DNL Pinterest], définissez la **[!UICONTROL Action Type]** sur **[!UICONTROL Send Event].**
 
-![Création de la règle de [!DNL Pinterest] [!UICONTROL Send Event].](../../../images/extensions/server/pinterest/rule.png)
+![Création de la règle de [!UICONTROL Send Event] [!DNL Pinterest].](../../../images/extensions/server/pinterest/rule.png)
 
 Après la sélection, des commandes supplémentaires apparaissent pour configurer plus en détail l’événement. Vous devez mapper les propriétés d’événement [!DNL Pinterest] aux éléments de données que vous avez précédemment créés.
 
@@ -82,8 +88,8 @@ Les données d’événement suivantes seront nécessaires pour créer la règle
 
 | Nom du champ | Description | Exemple |
 | --- | --- | --- |
-| [!UICONTROL Event Name] | Type de l’événement utilisateur. Cependant, il peut s’agir de n’importe quel type d’événement. Pour tirer parti de [!DNL Pinterest Analytics], il est recommandé d’utiliser des [[!DNL Pinterest] codes d’événement](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [événement défini par l’utilisateur] |
-| [!UICONTROL Action Source] | Source indiquant où l’événement de conversion s’est produit. | &ast; app_android <br> &ast; app_ios <br> &ast; <br> web &ast; hors ligne |
+| [!UICONTROL Event Name] | Type de l’événement utilisateur. Cependant, il peut s’agir de n’importe quel type d’événement. Pour tirer parti de [!DNL Pinterest Analytics], il est recommandé d’utiliser des [[!DNL Pinterest] codes d’événement](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;ast; checkout <br> &amp;ast; add_to_cart <br> &amp;ast; page_visit <br> &amp;ast; signup <br> &amp;ast; [événement défini par l’utilisateur] |
+| [!UICONTROL Action Source] | Source indiquant où l’événement de conversion s’est produit. | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; <br> web &amp;ast; hors ligne |
 | [!UICONTROL Event Time] | Fait référence à l’heure de l’événement. Le format d’heure par défaut utilisé est UNIX, au format `<seconds>.<miliseconds>` en fonction du fuseau horaire local. Pour plus d’informations, consultez la section [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255,500 indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
 | [!UICONTROL Event ID] | Chaîne d’identifiant unique qui identifie cet événement et qui peut être utilisée pour dédupliquer les événements ingérés à la fois par l’intermédiaire de l’API de conversion et du suivi Pinterest. Sans cela, les données de l&#39;événement seront probablement comptées deux fois et signaleront l&#39;inflation métrique. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Event Properties] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | { « event_source_url »: « http://site.com » } |
@@ -172,4 +178,4 @@ Vous pouvez effectuer une analyse plus approfondie et afficher la distribution d
 Ce guide explique comment installer et configurer l’extension de transfert d’événement [!DNL Pinterest] dans l’interface utilisateur. Pour plus d’informations, consultez la documentation officielle :
 
 * [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/)
-* [[!DNL Pinterest] Présentation de l’API de conversion](https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions)
+* [Présentation de l’API [!DNL Pinterest] Conversions](https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions)

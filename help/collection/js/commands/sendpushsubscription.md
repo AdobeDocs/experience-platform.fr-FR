@@ -2,10 +2,15 @@
 title: sendPushSubscription
 description: Enregistrez les abonnements aux notifications push avec Adobe Experience Platform.
 exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
-source-git-commit: 76ba5719bd922c4ff9bff6fda4a359b18f549c5e
+TQID: https://experienceleague.adobe.com/3acin90o8JdMA6LS-s7tHnf2-qcRn7XDO1aw-Zx3QyU
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 3%
+source-wordcount: 411
+ht-degree: 4%
 
 ---
 
@@ -111,4 +116,4 @@ L’extension de balise Web SDK équivalente à ce champ utilise l’action [[!U
 >
 >* [Configurer les notifications push](configure/pushnotifications.md)
 >* [Spécification de l’API Web Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
->* [&#x200B; API Service Worker &#x200B;](https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API)
+>* [ API Service Worker ](https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API)

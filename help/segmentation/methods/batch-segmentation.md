@@ -2,9 +2,15 @@
 title: Guide de segmentation par lots
 description: Découvrez la segmentation par lots, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation par lots et comment afficher vos audiences créées à l’aide de la segmentation par lots.
 exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+TQID: https://experienceleague.adobe.com/e8XU0O7Q0g2N0D9tRX3IuOxIOLYI2-AVvseWGZ00Jwo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: 543
 ht-degree: 10%
 
 ---
@@ -124,15 +130,15 @@ Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée
 
 >[!TAB Audience Portal]
 
-Dans Audience Portal, sélectionnez **[!UICONTROL Créer une audience]**.
+Dans Audience Portal, sélectionnez **[!UICONTROL Create audience]**.
 
 ![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/batch/select-create-audience.png)
 
-Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Créer des règles]** pour accéder au créateur de segments.
+Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Build rules]** pour accéder au créateur de segments.
 
 ![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/batch/select-build-rules.png)
 
-Après avoir créé votre définition de segment, sélectionnez **[!UICONTROL Lot]** comme **[!UICONTROL Méthode d’évaluation]**.
+Après avoir créé votre définition de segment, sélectionnez **[!UICONTROL Batch]** comme **[!UICONTROL Evaluation method]**.
 
 ![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation en flux continu.](../images/methods/batch/batch-evaluation-method.png)
 
@@ -275,7 +281,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation par 
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL Lot] ». L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation par lots.
+Dans les filtres disponibles, accédez à **[!UICONTROL Update frequency]** et sélectionnez « [!UICONTROL Batch] ». L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation par lots.
 
 ![La fréquence de mise à jour par lots est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation par lots.](../images/methods/batch/filter-batch.png)
 

@@ -3,9 +3,15 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Découvrez comment configurer des rôles via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
+TQID: https://experienceleague.adobe.com/u5fOuck-jOjw0a1x44Eq1vLPBk01yX8jIYOXdUYm-d8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: 1676
 ht-degree: 39%
 
 ---
@@ -116,7 +122,7 @@ Pour supprimer un utilisateur d’un rôle, sélectionnez l’icône **X** en re
 
 La vidéo suivante est destinée à vous aider à comprendre la création d’un rôle et la gestion des utilisateurs et utilisatrices pour ce rôle.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475975/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Gérer les informations d’identification d’API pour un rôle {#manage-api-credentials-for-role}
 
@@ -166,7 +172,7 @@ Les groupes d’utilisateurs consistent en plusieurs utilisateurs qui ont été 
 
 Sélectionnez l’onglet **[!UICONTROL User groups]** pour ouvrir l’espace de travail des groupes d’utilisateurs du rôle, puis sélectionnez **[!UICONTROL Add Groups]** pour affecter des groupes d’utilisateurs au rôle.
 
-![Espace de travail Groupes d’utilisateurs du rôle avec l’option Ajouter des groupes &#x200B;](../../images/flac-ui/flac-user-groups.png)
+![Espace de travail Groupes d’utilisateurs du rôle avec l’option Ajouter des groupes ](../../images/flac-ui/flac-user-groups.png)
 
 La boîte de dialogue **[!UICONTROL Add Groups]** s’affiche. Sélectionnez dans la liste les groupes d’utilisateurs que vous souhaitez ajouter au rôle. Vous pouvez également utiliser la barre de recherche pour rechercher le groupe d’utilisateurs en saisissant le nom du groupe, puis sélectionner **[!UICONTROL Save]**
 

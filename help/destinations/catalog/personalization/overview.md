@@ -3,16 +3,21 @@ keywords: personnalisation;Personnalisation
 title: Présentation des destinations de personnalisation
 description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à parcourir les données anonymes, à diffuser des offres ou des annonces aux prospects en fonction de l’activité précédente ou dans le cadre d’audiences avec des habitudes similaires.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 33b9dda43f8f0b19a184f0fa3fa2c1cffdb7acf6
+TQID: https://experienceleague.adobe.com/06xq8sMhTYpsv6GSsxHiRXCE6kELNHNBM-iFeHITWQs
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: 159
 ht-degree: 54%
 
 ---
 
 # Présentation des destinations de personnalisation {#personalization-destinations}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à parcourir les données anonymes, à diffuser des offres ou des annonces aux prospects en fonction de l’activité précédente ou dans le cadre d’audiences avec des habitudes similaires.
 

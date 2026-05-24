@@ -2,13 +2,16 @@
 description: Découvrez comment utiliser l’API de test de destination basée sur des fichiers pour valider la configuration de vos destinations basées sur des fichiers créés avec Destination SDK.
 title: API de test de destination basée sur les fichiers
 exl-id: 2733fd00-af08-4763-a30e-a53ee56c0a19
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+TQID: https://experienceleague.adobe.com/ZQL06EEfX6N335Fx6Kp-hjoZcXiPKTrZ92s9M3QdbjY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: 389
 ht-degree: 100%
 
 ---
-
 
 # Présentation de l’API de test de destination basée sur des fichiers
 

@@ -4,9 +4,15 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment effectuer des actions courantes lorsque vous utilisez des jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 9bfad453b74afce848ca3b00cd66a2336edf8479
+TQID: https://experienceleague.adobe.com/rrY6T21-wdJgGIFlx8pKf9LoJjzi8SfFEIQjgv8yOt4
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '4355'
+source-wordcount: 4355
 ht-degree: 13%
 
 ---
@@ -221,7 +227,7 @@ Gérez les paramètres d’expiration et de rétention des jeux de données à l
 >
 >Pour appliquer ou mettre à jour des règles de conservation pour un jeu de données ExperienceEvent, votre rôle d’utilisateur doit inclure l’autorisation **[!UICONTROL Manage datasets]**. Ce contrôle d’accès basé sur les rôles garantit que seuls les utilisateurs autorisés peuvent modifier les paramètres de conservation des jeux de données.
 >
->Pour plus d’informations sur l’attribution d’autorisations dans [&#128279;](../../access-control/home.md#platform-permissions) reportez-vous à la  Présentation du contrôle d’accès .
+>Pour plus d’informations sur l’attribution d’autorisations dans ](../../access-control/home.md#platform-permissions) reportez-vous à la [ Présentation du contrôle d’accès .
 
 >[!TIP]
 >

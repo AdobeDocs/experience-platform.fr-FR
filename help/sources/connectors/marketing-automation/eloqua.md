@@ -1,11 +1,16 @@
 ---
 title: Présentation D’Oracle Eloqua (V2) Source
 description: Découvrez comment connecter Oracle Eloqua à Adobe Experience Platform.
-last-substantial-update: 2025-02-02T00:00:00Z
+last-substantial-update: 2025-02-02T00:00:00.000Z
 exl-id: f63beebd-920c-41dd-a924-61511135a234
-source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
+TQID: https://experienceleague.adobe.com/BC2EfWEeU8liOSs1nR8DuVsvnObzT-h1b30F-VKJpjU
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080bid: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: 1859
 ht-degree: 2%
 
 ---
@@ -33,7 +38,7 @@ Vous trouverez ci-dessous un tableau décrivant les objets marketing pris en cha
 
 {style="table-layout:auto"}
 
-## Conditions préalables {#prerequisites}
+## Conditions préalables requises {#prerequisites}
 
 Lisez les sections ci-dessous pour connaître les conditions préalables à la configuration que vous devez remplir avant de pouvoir connecter votre source à Experience Platform.
 
@@ -149,7 +154,7 @@ Les tableaux suivants fournissent des mappages détaillés entre les champs sour
 | `iif(AssetType == "Email", AssetName, null)` | directMarketing.mailingName | |
 | `iif(AssetType == "Email", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null)` | directMarketing.mailingKey | Le `SOURCE_INSTANCE_ID` sera automatiquement remplacé par le connecteur . |
 | `iif(AssetType == "Email", EmailAddress, null)` | directMarketing.email | |
-| `iif(ActivityType == "Bounceback", SmtpStatusCode, null)` | directMarketing.emailBouncedCode | |
+| `iif(ActivityType == "Bounceback", SmtpStatusCode, null)` | directMarketing.emailBouncéCode | |
 | `iif(AssetType == "Email", SmtpMessage, null)` | directMarketing.emailBouncedDetails | |
 | `iif(AssetType == "Email", EmailWebLink, null)` | directMarketing.linkURL | |
 | `iif(ActivityType == "FormSubmit", AssetName, null)` | web.fillOutForm.webFormName | |
@@ -171,7 +176,7 @@ Les tableaux suivants fournissent des mappages détaillés entre les champs sour
 | `name` | campaignName | |
 | `endAt` | campaignEndDate | |
 | `startAt` | campaignStartDate | |
-| `actualCost` | actualCost.amount | |
+| `actualCost` | realCost.amount | |
 | `budgetedCost` | budgetedCost.amount | |
 | `description` | campaignDescription | |
 | `currentStatus` | campaignStatus | |
@@ -225,7 +230,7 @@ Les tableaux suivants fournissent des mappages détaillés entre les champs sour
 | `EmailOpen` | directMarketing.emailOpened |
 | `EmailClickthrough` | directMarketing.emailClicked |
 | `Unsubscribe` | directMarketing.emailUnsubscribed |
-| `Bounceback` | directMarketing.emailBounced |
+| `Bounceback` | directMarketing.emailBouncé |
 | `FormSubmit` | web.formFilledOut |
 | `PageView` | web.webpagedetails.pageViews |
 | `Other` | passer en l’état |

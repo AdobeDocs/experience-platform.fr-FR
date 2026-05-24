@@ -1,29 +1,33 @@
 ---
-keywords: Experience Platform;attribution ai;scores d’accès;rubriques populaires;télécharger des scores;scores d’attribution ai;exporter;exporter
+keywords: Experience Platform;ia dédiée à l’attribution;accès aux scores;rubriques populaires;télécharger des scores;scores ia dédiée à l’attribution;exporter;Exporter
 feature: Attribution AI
-title: Scores de téléchargement dans Attribution AI
-description: Ce document sert de guide pour télécharger des scores pour Attribution AI.
+title: Télécharger des scores dans l’IA dédiée à l’attribution
+description: Ce document sert de guide de téléchargement des notes pour l’IA dédiée à l’attribution.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+TQID: https://experienceleague.adobe.com/3DLniFrsMWLQKj2CxGyYNeA7rANLlGhlT9tO9tByGV4
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: 1058
 ht-degree: 59%
 
 ---
 
-# Téléchargement de scores dans Attribution AI
+# Télécharger des scores dans l’IA dédiée à l’attribution
 
-Ce document sert de guide pour télécharger des scores pour Attribution AI.
+Ce document sert de guide de téléchargement des notes pour l’IA dédiée à l’attribution.
 
-## Commencer
+## Prise en main
 
-Attribution AI vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir lu et terminé la section sur le téléchargement des scores Attribution AI dans le guide de [prise en main](./getting-started.md) .
+Attribution AI vous permet de télécharger des scores au format de fichier Parquet. Ce tutoriel nécessite que vous ayez lu et terminé la section Téléchargement des scores de l’IA dédiée à l’attribution dans le guide [prise en main](./getting-started.md).
 
-De plus, pour accéder aux scores pour Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez le [guide de l’utilisateur Attribution AI](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+En outre, pour accéder aux scores pour l’IA dédiée à l’attribution, vous devez disposer d’une instance de service avec un statut d’exécution réussi disponible. Pour créer une instance de service, consultez le guide d’utilisation d’[Attribution AI](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Recherche de votre identifiant de jeu de données {#dataset-id}
 
-Dans votre instance de service pour les insights Attribution AI, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
+Dans votre instance de service pour les insights IA dédiée à l’attribution, cliquez sur le menu déroulant *Plus d’actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
 
 ![actions supplémentaires](./images/download-scores/more-actions.png)
 
@@ -33,7 +37,7 @@ Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation 
 
 ## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-À l’aide de l’identifiant de jeu de données de l’étape précédente, vous devez effectuer un appel à l’API Catalog afin de récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête `limit` à la valeur souhaitée que vous souhaitez voir renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
+En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez effectuer un appel à l’API Catalog pour récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête `limit` à la quantité souhaitée que vous souhaitez renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -57,11 +61,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot. Dans cet exemple, la valeur de clé de l’objet renvoyé est l’identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’ID de lot. Dans cet exemple, la valeur Clé de l’objet renvoyé est l’ID de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 >[!NOTE]
 >
-> L’objet `tags` a été reformé pour permettre sa lisibilité lors de la réponse suivante.
+> L’objet `tags` de la réponse suivante a été reformaté pour plus de lisibilité.
 
 ```json
 {
@@ -225,7 +229,7 @@ Pour télécharger vos données de fichier, envoyez une requête GET vers la val
 
 >[!NOTE]
 >
->Si vous effectuez cette requête directement dans la ligne de commande, vous serez peut-être invité à ajouter une sortie après les en-têtes de la requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
+>Si vous effectuez cette requête directement dans la ligne de commande, vous pouvez être invité à ajouter une sortie après vos en-têtes de requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
 
 **Format d’API**
 
@@ -251,27 +255,27 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 >[!TIP]
 >
->Assurez-vous que vous vous trouvez dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la demande de GET.
+>Assurez-vous que vous vous trouvez dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la requête GET.
 
 **Réponse**
 
-La réponse télécharge le fichier que vous avez demandé dans votre répertoire actuel. Dans cet exemple, le nom de fichier est &quot;file.parquet&quot;.
+La réponse télécharge le fichier que vous avez demandé dans votre répertoire actuel. Dans cet exemple, le nom du fichier est « file.parquet ».
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-Les scores téléchargés seront au format Parquet et auront besoin d’un lecteur [!DNL Spark]-shell ou Parquet pour les afficher. Pour l’affichage des scores bruts, vous pouvez utiliser les [outils Apache Parquet](https://parquet.apache.org/docs/). Les outils parquet peuvent analyser les données avec [!DNL Spark].
+Les partitions téléchargées seront au format Parquet et auront besoin soit d&#39;une [!DNL Spark]-coquille, soit d&#39;un lecteur Parquet pour voir les partitions. Pour l’affichage des scores bruts, vous pouvez utiliser [les outils Apache Parquet](https://parquet.apache.org/docs/). Les outils de parquet peuvent analyser les données avec [!DNL Spark].
 
 ## Étapes suivantes
 
-Ce document décrit les étapes requises pour télécharger des scores Attribution AI. Pour plus d’informations sur les sorties de score, consultez la documentation [Entrée et sortie d’Attribution AI](./input-output.md).
+Ce document décrit les étapes requises pour télécharger les scores de l’IA dédiée à l’attribution. Pour plus d’informations sur les sorties de score, consultez la documentation [Entrée et sortie de l’IA dédiée à l’attribution](./input-output.md).
 
 ## Accès aux scores à l’aide de Snowflake
 
 >[!IMPORTANT]
 >
->Pour plus d’informations sur l’accès aux scores à l’aide de Snowflake, contactez attributionai-support@adobe.com .
+>Veuillez contacter attributionai-support@adobe.com pour plus d’informations sur l’accès aux scores à l’aide de Snowflake.
 
-Vous pouvez accéder aux scores Attribution AI agrégés via Snowflake. Pour l’instant, vous devez envoyer un e-mail à l’assistance d’Adobe à l’adresse attributionai-support@adobe.com afin de configurer et de recevoir les informations d’identification de votre compte de lecteur pour Snowflake.
+Vous pouvez accéder aux scores IA dédiée à l’attribution agrégés via Snowflake. Pour l’instant, vous devez envoyer un e-mail à l’assistance d’Adobe à l’adresse attributionai-support@adobe.com afin de configurer et de recevoir les informations d’identification de votre compte de lecteur pour Snowflake.
 
 Une fois votre demande traitée par l’assistance d’Adobe, vous recevez l’URL du compte de lecteur pour Snowflake et les informations d’identification correspondantes :
 
@@ -281,9 +285,9 @@ Une fois votre demande traitée par l’assistance d’Adobe, vous recevez l’U
 
 >[!NOTE]
 >
->Le compte de lecteur sert à interroger les données à l’aide de clients SQL, de feuilles de calcul et de solutions BI compatibles avec le connecteur JDBC.
+>Le compte de lecteur permet d’interroger les données à l’aide de clients SQL, de feuilles de calcul et de solutions de BI qui prennent en charge le connecteur JDBC.
 
-Une fois que vous disposez de vos informations d’identification et de l’URL, vous pouvez interroger les tableaux de modèle, les agréger par date de point de contact ou par date de conversion.
+Une fois que vous disposez de vos informations d’identification et de votre URL, vous pouvez interroger les tables de modèles, agrégées par date de point de contact ou date de conversion.
 
 ### Recherche de schéma dans Snowflake
 

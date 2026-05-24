@@ -1,11 +1,15 @@
 ---
-description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée &grave;/authoring/destination-servers&grave;.
+description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée `/authoring/destination-servers`.
 title: Spécifications de serveur pour les destinations créées avec Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/b5tA04VgOSrzrzn-WfVgCP8ayZXPv9wMQbpMH7JUbHw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2745'
-ht-degree: 85%
+source-wordcount: 2805
+ht-degree: 83%
 
 ---
 
@@ -151,10 +155,10 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 | Paramètre | Type | Description |
 |---|---|---|
-| `name` | Chaîne | *Obligatoire.* Représente le nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Exemple : `Moviestar destination server`. |
-| `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` pour les destinations de diffusion en streaming. |
+| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Exemple : `Moviestar destination server`. |
+| `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` pour les destinations de diffusion en continu. |
 | `templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si vous utilisez un champ modélisé au lieu d’une valeur codée en dur dans le champ `value`. Utilisez cette option si vous disposez d’un point d’entrée du type `https://api.moviestar.com/data/{{customerData.region}}/items`, où les utilisateurs doivent sélectionner la région du point d’entrée dans l’interface utilisateur d’Experience Platform. </li><li> Utilisez `NONE` si aucune transformation de modèle n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée, tel que `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter. |
+| `value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter. |
 
 {style="table-layout:auto"}
 
@@ -226,7 +230,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 | `fileBasedSFTPDestination.hostName.templatingStrategy` | Chaîne | *Obligatoire*. Définissez cette valeur en fonction du type de valeur utilisé dans le champ `hostName.value`.<ul><li>Si vous souhaitez que vos utilisateurs saisissent leur propre nom d’hôte dans l’interface utilisateur d’Experience Platform, définissez cette valeur sur `PEBBLE_V1`. Dans ce cas, vous devez modéliser le champ `hostName.value` pour lire une valeur fournie par l’utilisateur à partir des [champs de données client](../destination-configuration/customer-data-fields.md) renseigné. Ce cas d’utilisation est illustré dans l’exemple ci-dessus.</li><li>Si vous utilisez un nom d’hôte codé en dur pour votre intégration, tel que `"hostName.value":"my.hostname.com"`, définissez cette valeur sur `NONE`.</li></ul> |
 | `fileBasedSFTPDestination.hostName.value` | Chaîne | Nom d’hôte de votre serveur SFTP. Il peut s’agir d’un champ modélisé qui lit la valeur des [champs de données client](../destination-configuration/customer-data-fields.md) renseignés par l’utilisateur (comme illustré dans l’exemple ci-dessus) ou une valeur codée en dur, telle que `"hostName.value":"my.hostname.com"`. |
 | `port` | Entier | Port du serveur de fichiers SFTP. |
-| `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>Aucun</li></ul> |
+| `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>None</li></ul> |
 
 {style="table-layout:auto"}
 

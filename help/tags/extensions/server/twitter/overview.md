@@ -2,12 +2,18 @@
 keywords: extension de transfert d’événement;twitter;extension de transfert d’événement twitter
 title: Extension de transfert d’événement Twitter
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet d’ingérer des événements dans Twitter en fonction des besoins de votre entreprise.
-last-substantial-update: 2023-05-24T00:00:00Z
+last-substantial-update: 2023-05-24T00:00:00.000Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/39H41KkNUmxp5uQxeIG-VQ-x7E5vhNIoWL9BzD3nXAM
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: b12f6872-9271-4369-85e5-86969a0b99a2id: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 6%
+source-wordcount: 1149
+ht-degree: 5%
 
 ---
 
@@ -83,7 +89,7 @@ Créez une [règle](../../../ui/managing-resources/rules.md) dans votre proprié
 
 Après la sélection, des commandes supplémentaires apparaissent pour configurer plus en détail l’événement. Vous devez mapper les propriétés d’événement [!DNL Twitter] aux éléments de données que vous avez précédemment créés. Pour plus d’informations, consultez la section [[!DNL Twitter] API de conversions web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
-![&#x200B; de création d’une règle d’événement de conversion.[!DNL Twitter]](../../../images/extensions/server/twitter/action-configuration.png)
+[!DNL Twitter] de création d’une règle d’événement de conversion.](../../../images/extensions/server/twitter/action-configuration.png)![
 
 **[!UICONTROL User Identification]**
 
@@ -109,7 +115,7 @@ Après la sélection, des commandes supplémentaires apparaissent pour configure
 
 Une fois la règle de transfert d’événement créée et exécutée, vérifiez si l’événement envoyé à l’API [!DNL Twitter] s’affiche comme prévu dans l’interface utilisateur de [!DNL Twitter].
 
-Si la collecte d’événements et l’intégration des [!DNL Experience Platform] ont été effectuées avec succès, des événements s’afficheront dans le [!DNL Twitter] de [!UICONTROL Events manager].
+Si la collecte d’événements et l’intégration des [!DNL Experience Platform] ont été effectuées avec succès, des événements s’afficheront dans le [!UICONTROL Events manager] de [!DNL Twitter].
 
 ![Gestionnaire d’événements [!DNL Twitter]](../../../images/extensions/server/twitter/event-manager.png)
 
@@ -118,6 +124,6 @@ Si la collecte d’événements et l’intégration des [!DNL Experience Platfor
 Ce guide explique comment envoyer des événements de conversion à [!DNL Twitter] à l’aide du transfert d’événement. Pour plus d’informations sur ces technologies sous-jacentes, consultez la documentation officielle :
 
 * [[!DNL Twitter] API](https://developer.twitter.com/en/docs/twitter-api)
-* [[!DNL Twitter] API de conversion web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
+* [API de conversion Web [!DNL Twitter]](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
 * [[!DNL Twitter] Jeton d’accès utilisateur](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
-* [Identifiant de pixel et suivi des conversions](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)
+* [Identifiant des pixels et suivi des conversions](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)

@@ -2,9 +2,15 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
+TQID: https://experienceleague.adobe.com/tnuEgiXV20aBnMSXIgum5i97-Ycwct7EggFyU4hA3QI
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '1302'
+source-wordcount: 1302
 ht-degree: 30%
 
 ---
@@ -70,7 +76,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} Exporter des tableaux pour les attributs d’enrichissement | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage. Sélectionnez des champs internes individuels dans un tableau et ils sont exportés en tant que colonnes distinctes dans les sorties JSON et Parquet. Cette fonctionnalité est disponible pour un nombre limité de clientes et clients. Pour obtenir l’accès, contactez votre représentant ou représentante Adobe. |
+| [!BADGE Beta ]{type=Informative} Exporter des tableaux pour les attributs d’enrichissement | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage. Sélectionnez des champs internes individuels dans un tableau et ils sont exportés en tant que colonnes distinctes dans les sorties JSON et Parquet. Cette fonctionnalité est disponible pour un nombre limité de clientes et clients. Pour obtenir l’accès, contactez votre représentant ou représentante Adobe. |
 | Prise en charge des audiences externes pour [[!DNL Criteo]](../destinations/catalog/advertising/criteo.md) | Activez les audiences d’origines autres que Segmentation Service vers la destination [Criteo](../destinations/catalog/advertising/criteo.md), y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Voir la section [audiences prises en charge](../destinations/catalog/advertising/criteo.md#supported-audiences) pour plus d’informations. |
 | Nouvelles destinations prises en charge pour [[!DNL Acxiom Audience Connection]](../destinations/catalog/advertising/acxiom-audience-connection.md) et [[!DNL Acxiom Real ID Audience Connection]](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Cinq nouvelles destinations sont désormais prises en charge : [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1ère partie), [!DNL Warner Bros. Discovery] et [!DNL Yahoo]. Pour plus d’informations, consultez les documents [Acxiom Audience Connection](../destinations/catalog/advertising/acxiom-audience-connection.md) et [Acxiom Real ID Audience Connection](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md). |
 

@@ -3,9 +3,13 @@ title: Utiliser des libellés d’accès pour gérer l’accès des utilisateurs
 description: Découvrez comment utiliser les libellés d’accès pour gérer l’accès des utilisateurs aux flux de données de destination afin que seul un sous-ensemble d’utilisateurs de votre organisation ait accès à des flux de données de destination spécifiques.
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: de71e9e7825ab9a3eaf1e06d03046636406493db
+TQID: https://experienceleague.adobe.com/i5TpbwfUKR06q-HN-cW1YzatETbCwVIc1fZWBGsZ6-E
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: 1027
 ht-degree: 3%
 
 ---
@@ -56,7 +60,7 @@ Avec le contrôle d’accès au niveau de l’objet pour les destinations, limit
 Pour appliquer des libellés d’accès à un flux de données spécifique :
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** et localisez le flux de données de destination pour lequel vous souhaitez limiter l’accès des utilisateurs et utilisatrices.
-1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![&#x200B; &#x200B;](/help/images/icons/key.png)Modifier les détails **[!UICONTROL Apply access labels]** pour ajouter de nouveaux libellés et gérer les libellés existants du flux de données.
+1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande **[!UICONTROL Apply access labels]** ![Modifier les détails](/help/images/icons/key.png) pour ajouter de nouveaux libellés et gérer les libellés existants du flux de données.
    ![Sélectionnez Appliquer les libellés d’accès dans la vue Parcourir de l’espace de travail des destinations.](/help/access-control/images/olac/apply-access-labels.png)
 1. Sélectionnez les libellés à ajouter au flux de données de destination et sélectionnez **[!UICONTROL Save]**.
    ![Sélectionnez les libellés d’accès dans qui doivent s’appliquer au flux de données de destination.](/help/access-control/images/olac/view-access-labels.png)

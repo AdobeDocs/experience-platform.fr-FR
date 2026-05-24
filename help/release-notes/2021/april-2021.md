@@ -1,13 +1,19 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2021
-description: Les notes de mise à jour d’avril 2021 pour Adobe Experience Platform.
+description: Notes de mise à jour d’avril 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/7rDX1RJq359LfphSQNb0sRoP4SsRZeSzvumJKf03NUU
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: 908
 ht-degree: 89%
 
 ---
@@ -33,13 +39,13 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Prise en charge de la modification du mappage pour les flux de données existants | Vous pouvez maintenant mettre à jour les jeux de mappages d’un flux de données existant. Vous ne pouvez pas mettre à jour les jeux de mappages pour les flux de données planifiés pour une ingestion unique. Cette fonctionnalité n’est pas prise en charge pour les API HTTP, Adobe Analytics, Adobe Audience Manager et [!DNL Marketo Engage]. Pour plus d’informations, consultez le tutoriel sur la [mise à jour des flux de données source dans l’interface utilisateur](../../sources/tutorials/ui/update-dataflows.md). |
-| Prise en charge de l’ingestion par flux | Vous pouvez désormais utiliser les fonctions de préparation de données lors de la création d’une connexion source par flux. Pour plus d’informations, consultez le tutoriel sur la [création d’une connexion source par flux dans l’interface utilisateur](../../sources/tutorials/ui/create/streaming/http.md). |
+| Prise en charge de l’ingestion en flux continu | Vous pouvez désormais utiliser les fonctions de préparation de données lors de la création d’une connexion source par flux. Pour plus d’informations, consultez le tutoriel sur la [création d’une connexion source par flux dans l’interface utilisateur](../../sources/tutorials/ui/create/streaming/http.md). |
 
 Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation](../../data-prep/home.md).
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
-Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences clientes par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -75,7 +81,7 @@ Pour plus d’informations sur les jeux de données pris en charge, consultez la
 
 Adobe Experience Platform Segmentation Service propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir des données [!DNL Real-Time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur Experience Platform, ce qui les rend facilement accessibles depuis n’importe quelle application Adobe.
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 **Nouvelles fonctionnalités**
 
@@ -93,7 +99,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Marketo Engage] à l’aide de l’interface utilisateur pour importer les données B2B vers Experience Platform et maintenir ces données à jour à l’aide d’applications connectées à Experience Platform. Pour plus d’informations, voir la [[!DNL Marketo Engage] documentation des connecteurs source](../../sources/connectors/adobe-applications/marketo/marketo.md). |
-| Sources bêta passant à la version générale | Les sources suivantes ont été promues de la version bêta à la version générale : <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
+| [!DNL Marketo Engage] (Beta) | Vous pouvez désormais créer une connexion source [!DNL Marketo Engage] à l’aide de l’interface utilisateur pour importer les données B2B vers Experience Platform et maintenir ces données à jour à l’aide d’applications connectées à Experience Platform. Pour plus d’informations, voir la [[!DNL Marketo Engage] documentation des connecteurs source](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| Sources Beta passant à la version générale | Les sources suivantes ont été promues de la version Beta à la version générale : <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

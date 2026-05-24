@@ -2,9 +2,14 @@
 title: Profile Insights
 description: Découvrez le langage SQL qui alimente les informations de votre profil et utilisez ces requêtes pour générer des informations personnalisées qui explorent davantage vos clients et leurs expériences client.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/x-B2yvty3I-jNBhwgspFI8T5dg6n6Ah3H-Sh4a5bcbw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: 1674
 ht-degree: 3%
 
 ---
@@ -27,7 +32,7 @@ Questions traitées par cette insight :
 - Comment le chevauchement affecte-t-il l’engagement ou les taux de conversion ?
 - Comment adapter les stratégies marketing au segment qui se chevauche ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -74,7 +79,7 @@ Questions traitées par cette insight :
 - Quelles sont les 50 audiences qui se chevauchent le moins ?
 - Comment le modèle de chevauchement change-t-il par politique de fusion ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT source_segment_name,
@@ -131,7 +136,7 @@ SELECT source_segment_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#audience-overlap-report) consultez la documentation sur le widget  Rapport de chevauchement d’audience .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#audience-overlap-report) consultez la documentation sur le widget [ Rapport de chevauchement d’audience .
 
 ## Audiences (nombre) {#audiences}
 
@@ -141,7 +146,7 @@ Questions traitées par cette insight :
 - Quelle est la répartition des audiences dans les politiques de fusion ?
 - Existe-t-il des changements significatifs dans le nombre d’audiences pour des politiques de fusion spécifiques au fil du temps ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,7 +164,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#audiences) consultez la  documentation sur le widget Audiences .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#audiences) consultez la [ documentation sur le widget Audiences .
 
 ## Audiences mappées au statut de destination {#audiences-mapped-to-destination-status}
 
@@ -170,7 +175,7 @@ Questions traitées par cette insight :
 - Quelle proportion de l’ensemble des audiences reste non mappée ?
 - Parmi ces audiences non mappées, existe-t-il des modèles ou des tendances associées ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,7 +196,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consultez la documentation du widget [&#x200B; Audiences mappées au statut de destination &#x200B;](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
+Consultez la documentation du widget [ Audiences mappées au statut de destination ](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
 
 ## Taille des audiences {#audiences-size}
 
@@ -201,7 +206,7 @@ Questions traitées par cette insight :
 - Quelles sont les cinq audiences les plus importantes ?
 - Comment la distribution de la taille de l’audience change-t-elle au fil du temps pour la première audience ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -224,7 +229,7 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#audiences-size) consultez la documentation sur le widget Taille des audiences.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#audiences-size) consultez la [documentation sur le widget Taille des audiences.
 
 ## Répartition des scores (IA dédiée aux clients) {#customer-ai-distribution-of-scores}
 
@@ -234,7 +239,7 @@ Questions traitées par cette insight :
 - Quelle est la répartition des scores par score élevé, moyen et faible ?
 - Quelle est la répartition des scores par politique de fusion ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT b.model_name,
@@ -361,7 +366,7 @@ SELECT b.model_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#customer-ai-distribution-of-scores) consultez la documentation sur le widget Distribution des scores de l’IA dédiée aux clients.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#customer-ai-distribution-of-scores) consultez la documentation sur le widget [Distribution des scores de l’IA dédiée aux clients.
 
 ## Résumé du score de l’IA dédiée aux clients {#customer-ai-scoring-summary}
 
@@ -371,7 +376,7 @@ Questions traitées par cette insight :
 - Comment les scores de propension de mon IA dédiée aux clients changent-ils pour différentes audiences ?
 - Comment ma synthèse des scores change-t-elle par rapport aux autres indicateurs de performance clés dans la présentation des profils ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT model_name,
@@ -408,12 +413,12 @@ Pour plus d’informations sur l’aspect et les fonctionnalités de cette insig
 
 Questions traitées par cette insight :
 
-- Quelle est l’intersection commune entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] ?
+- Quelle est l’intersection commune entre [!UICONTROL Identity Type A] et [!UICONTROL Identity Type B] ?
 - Comment puis-je affiner les audiences de clients en fonction du chevauchement de types d’identité spécifiques pour améliorer les stratégies marketing ciblées ?
 - Quels enseignements peut-on tirer de l’évaluation des performances de la campagne dans les zones qui se croisent ?
 - À l’aide de ces performances de campagne insight, comment optimiser les futurs efforts marketing ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -459,7 +464,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#identity-overlap) consultez la documentation sur le widget Chevauchement des identités.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#identity-overlap) consultez la documentation sur le widget [Chevauchement des identités.
 
 ## Nombre de profils {#profile-count}
 
@@ -481,9 +486,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Vous trouverez des informations complètes sur l’aspect et les fonctionnalités de cette insight dans le [guide du widget Nombre de profils](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=fr#profile-count).
+Vous trouverez des informations complètes sur l’aspect et les fonctionnalités de cette insight dans le [guide du widget Nombre de profils](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#profile-count) consultez la documentation du widget Nombre de profils.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#profile-count) consultez la documentation du widget [Nombre de profils.
 
 ## Modification du nombre de profils {#profile-count-change}
 
@@ -493,7 +498,7 @@ Questions traitées par cette insight :
 - Qu’est-ce qui a provoqué des pics ou des baisses significatifs du nombre de profils ?
 - Existe-t-il des politiques de fusion spécifiques entraînant la modification du nombre de profils ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -528,7 +533,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Insight Pour plus d’informations sur l’aspect et les fonctionnalités de ce widget [Documentation sur le widget de modification du nombre de profils](../guides/profiles.md#profile-count-change), consultez .
+Pour plus d’informations sur l’aspect et les fonctionnalités de ce widget [Documentation sur le widget de modification du nombre de profils](../guides/profiles.md#profile-count-change), consultez .
 
 ## Tendance de modification du nombre de profils {#profile-count-change-trend}
 
@@ -538,7 +543,7 @@ Questions traitées par cette insight :
 - Existe-t-il des modèles ou des fluctuations spécifiques dans le changement du nombre de profils au cours des 30 derniers jours qui nécessitent une attention particulière ?
 - Comment le nombre de profils a-t-il changé au cours des 90 derniers jours par rapport à la tendance globale ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT date_key,
@@ -573,7 +578,7 @@ Questions traitées par cette insight :
 - Quelle politique de fusion contribue le plus à l’augmentation ou à la diminution du nombre de profils sur les périodes spécifiées (30 jours, 90 jours et 12 mois) ?
 - Existe-t-il des pics ou des creux spécifiques dans le nombre de profils en corrélation avec certains événements ou certaines périodes sur la période de 30 jours ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT date_key,
@@ -593,7 +598,7 @@ SELECT date_key,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#profile-count-trend) consultez la documentation du widget Tendance du nombre de profils.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#profile-count-trend) consultez la documentation du widget [Tendance du nombre de profils.
 
 ## Profils par identité {#profiles-by-identity}
 
@@ -604,7 +609,7 @@ Questions traitées par cette insight :
 - Quelle est la distribution globale des types d’identité ?
 - Existe-t-il des disparités ou des anomalies importantes dans le décompte des identités ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -632,7 +637,7 @@ Questions traitées par cette insight :
 - Existe-t-il des tendances ou des fluctuations spécifiques dans le changement du nombre de profils au cours des 30 derniers jours qui nécessitent une attention particulière ?
 - Comment l’évolution du nombre de profils au cours des 90 derniers jours se compare-t-elle à la tendance globale ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT date_key,
@@ -666,7 +671,7 @@ Questions traitées par cette insight :
 - Existe-t-il des tendances d’identité spécifiques qui montrent des changements importants au cours des 30 derniers jours ?
 - En quoi les modifications du nombre de profils diffèrent-elles lorsque vous comparez les tendances sur 30 jours, 90 jours et 12 mois pour une identité particulière ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT date_key,
@@ -708,7 +713,7 @@ Questions traitées par cette insight :
 - Comment l’exhaustivité des profils peut-elle être affectée aux profils qui n’ont qu’un seul type d’identité ?
 - Existe-t-il une corrélation entre le type d’identité le plus courant et le nombre de profils d’identité uniques ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -722,7 +727,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#single-identity-profiles) consultez la documentation du widget Profils d’identité unique.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#single-identity-profiles) consultez la documentation du widget [Profils d’identité unique.
 
 ## Profils à une seule identité par identité {#single-identity-profiles-by-identity}
 
@@ -732,7 +737,7 @@ Questions traitées par cette insight :
 - Quelle est la répartition des profils d’identité uniques entre les différents types d’identité, tels que les e-mails ou les numéros de téléphone ?
 - Existe-t-il des modèles ou des changements d’identité émergents au sein des profils d’identité uniques ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,7 +754,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#single-identity-profiles-by-identity) consultez la documentation du widget Profils d’identité uniques par identité.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#single-identity-profiles-by-identity) consultez la documentation du widget [Profils d’identité uniques par identité.
 
 ## Profils non segmentés {#unsegmented-profiles}
 
@@ -759,7 +764,7 @@ Questions traitées par cette insight :
 - Quel pourcentage de l’audience totale est représenté par des profils non segmentés ?
 - Une politique de fusion contribue-t-elle à un grand nombre de profils non segmentés ?
 
-+++Sélectionner pour afficher le code SQL qui génère cette insight
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +778,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight[&#128279;](../guides/profiles.md#unsegmented-profiles) consultez la documentation du widget Profils non segmentés.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#unsegmented-profiles) consultez la documentation du widget [Profils non segmentés.
 
 ## Étapes suivantes
 

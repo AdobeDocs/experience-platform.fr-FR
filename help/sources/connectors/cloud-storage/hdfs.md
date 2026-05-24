@@ -4,10 +4,13 @@ solution: Experience Platform
 title: Présentation du connecteur Source Apache HDFS
 description: Découvrez comment connecter Apache HDFS à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/x9ukvHKyT1WkEa7CVCKpnNPWRGF7wwJq-MoiLvx5P4s
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 55%
+source-wordcount: 383
+ht-degree: 61%
 
 ---
 
@@ -15,13 +18,13 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Le connecteur Apache HDFS est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur Apache HDFS est en version bêta. Consultez la [ Présentation des sources ](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
-Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes. Les données ingérées peuvent être au format JSON, Parquet ou délimitées. La prise en charge des fournisseurs de stockage cloud inclut [!DNL Apache] HDFS.
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de services cloud comme AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes. Les données ingérées peuvent être au format JSON, Parquet ou délimitées. La prise en charge des fournisseurs de stockage cloud inclut [!DNL Apache] HDFS.
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

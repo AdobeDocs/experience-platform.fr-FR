@@ -5,9 +5,13 @@ title: Analyse De Vos Données À L’Aide De Notebooks
 type: Tutorial
 description: Ce tutoriel se concentre sur l’utilisation des notebooks Jupyter, créés dans le Workspace de science des données, pour accéder à vos données, les explorer et les visualiser.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/oCUMHnv1K-ZOhOISXMKNaDCkZH4olV1PRT5gBKr6O1k
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: 1776
 ht-degree: 72%
 
 ---
@@ -165,8 +169,8 @@ Maintenant que nous connaissons les valeurs de notre DataFrame, nous voulons les
 
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
-- [seaborn](https://seaborn.pydata.org/)
-- [ggplot](https://ggplot2.tidyverse.org/)
+- [marée](https://seaborn.pydata.org/)
+- [tracer en grappe](https://ggplot2.tidyverse.org/)
 
 Dans cette section, nous passerons rapidement en revue certains avantages qu’apporte l’utilisation de chaque bibliothèque.
 

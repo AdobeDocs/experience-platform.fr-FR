@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Type de données de numéro de téléphone
 description: Découvrez le type de données XDM Numéro de téléphone.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+TQID: https://experienceleague.adobe.com/6HBKe4hxVBLAELodREhTOKUE0zTf0BIlwL7Va9x7WCg
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 17%
+source-wordcount: 204
+ht-degree: 9%
 
 ---
 
-# [!UICONTROL Numéro de téléphone] type de données
+# Type de données [!UICONTROL Phone number]
 
-[!UICONTROL Numéro de téléphone] est un type de données XDM standard qui décrit les détails d’un numéro de téléphone.
+[!UICONTROL Phone number] est un type de données XDM standard qui décrit les détails d’un numéro de téléphone.
 
 ![](../images/data-types/phone-number.png){width=600}
 
@@ -30,5 +33,5 @@ ht-degree: 17%
 
 Pour plus d’informations sur le type de données de numéro de téléphone, reportez-vous au référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)

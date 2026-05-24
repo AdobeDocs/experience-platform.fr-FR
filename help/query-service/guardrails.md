@@ -3,10 +3,16 @@ keywords: Experience Platform;requête;query service;dépannage;mécanismes de s
 title: Mécanismes de sécurisation pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
+TQID: https://experienceleague.adobe.com/UXuXXBlvQcXfg9Uvub7-fSQQ636ZSvVT9dRXvF1fl-Y
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 4%
+source-wordcount: 1263
+ht-degree: 5%
 
 ---
 
@@ -62,7 +68,7 @@ Les tableaux ci-dessous fournissent les limites et descriptions recommandées du
 | Utilisateurs Query Service simultanés | <ul><li>Tel que spécifié dans la description du produit d&#39;application.</li><li>+5 (avec chaque pack de modules complémentaires d’utilisateurs de requêtes ad hoc acheté)</li></ul> | Mécanisme de sécurisation mis en œuvre par le système | Cela définit le nombre d’utilisateurs et d’utilisatrices qui peuvent créer des sessions simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, l’utilisateur ou l’utilisatrice reçoit une erreur de `Session Limit Reached`. |
 | Simultanéité des requêtes | <ul><li>Tel que spécifié dans la description du produit d&#39;application.</li><li>+1 (avec chaque pack de SKU de module complémentaire d’utilisateur de requête ad hoc acheté)</li></ul> | Mécanisme de sécurisation mis en œuvre par le système | Cela définit le nombre de requêtes pouvant être exécutées simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, les requêtes sont mises en file d’attente. |
 | Connecteur client et limite de sortie de résultat | Connecteur client<ul><li>Interface utilisateur de requête (100 lignes)</li><li>Client tiers (50 000)</li><li>[!DNL PostgresSQL] client (50 000)</li></ul> | Mécanisme de sécurisation mis en œuvre par le système | Le résultat d’une requête peut être reçu par les moyens suivants :<ul><li>Interface utilisateur de Query Service</li><li>Client tiers</li><li>client [!DNL PostgresSQL]</li></ul>Remarque : l’ajout d’une limitation au nombre de sorties peut renvoyer des résultats plus rapidement. Par exemple, `LIMIT 5`, `LIMIT 10`, etc. |
-| Résultats renvoyés via | Interface utilisateur du client | S/O | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
+| Résultats renvoyés via | Interface utilisateur du client | S.O. | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
 
 {style="table-layout:auto"}
 
@@ -72,11 +78,11 @@ Les tableaux ci-dessous fournissent les limites et descriptions recommandées du
 |---|---|---|---|
 | Durée maximale d’exécution | 24 heures | Mécanisme de sécurisation mis en œuvre par le système | Cela définit le temps d’exécution maximal d’une requête SQL par lots.<br>Le temps de traitement d’une requête dépend du volume de données à traiter et de la complexité de la requête. |
 | Utilisateurs simultanés de Query Service pour un lot non planifié | <ul><li>Tel que spécifié dans la description du produit d&#39;application.</li><li>+5 (avec chaque pack de modules complémentaires d’utilisateurs de requêtes ad hoc acheté)</li></ul> | Mécanisme de sécurisation mis en œuvre par le système | Pour les requêtes par lots non planifiées (par exemple, les requêtes CTAS/ITAS en mode interactif), cela définit le nombre d’utilisateurs et d’utilisatrices qui peuvent créer des sessions simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, l’utilisateur ou l’utilisatrice reçoit une erreur de `Session Limit Reached`. |
-| Utilisateurs et utilisatrices simultanés de Query Service pour le lot planifié | Aucune limitation utilisateur | S/O | Les requêtes par lots planifiées sont des tâches asynchrones, il n’existe donc aucune limitation utilisateur. |
+| Utilisateurs et utilisatrices simultanés de Query Service pour le lot planifié | Aucune limitation utilisateur | S.O. | Les requêtes par lots planifiées sont des tâches asynchrones, il n’existe donc aucune limitation utilisateur. |
 | Heures de calcul pour le traitement des données par lots | Comme indiqué dans la commande client de SKU personnalisé de requête d’intelligence de Adobe Experience Platform | Mécanisme de sécurisation des performances | Cela définit la durée de calcul par an pendant laquelle un client est autorisé à exécuter des requêtes par lots pour analyser, traiter et écrire des données dans le lac de données. |
-| Simultanéité des requêtes | Pris en charge | S/O | Les requêtes par lots planifiées sont des tâches asynchrones, par conséquent les requêtes simultanées sont prises en charge. |
+| Simultanéité des requêtes | Pris en charge | S.O. | Les requêtes par lots planifiées sont des tâches asynchrones, par conséquent les requêtes simultanées sont prises en charge. |
 | Connecteur client et limite de sortie de résultat | Connecteur client<ul><li>Interface utilisateur de requête (aucune limite supérieure de lignes)</li><li>Client tiers (aucune limite supérieure de lignes)</li><li>[!DNL PostgresSQL] client (pas de limite supérieure à lignes)</li><li>API REST (pas de limite supérieure à lignes)</li></ul> | Mécanisme de sécurisation mis en œuvre par le système | Le résultat d’une requête peut être rendu disponible en utilisant les méthodes suivantes :<ul><li>Peuvent être stockés en tant que jeux de données dérivés</li><li>Peuvent être insérées dans les jeux de données dérivés existants</li></ul>Remarque : il n&#39;existe pas de limite supérieure au nombre d&#39;enregistrements à partir du résultat de la requête. |
-| Résultats renvoyés via | Jeu de données | S/O | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
+| Résultats renvoyés via | Jeu de données | S.O. | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +108,7 @@ Pour plus d’informations sur Query Service, consultez la documentation suivant
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-Time Customer Data Platform (édition B2C - packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -3,10 +3,15 @@ title: Connecter Capillaire à Experience Platform à l’aide de l’API Flow S
 description: Découvrez comment connecter Capillary à Experience Platform à l’aide d’API.
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/5q6zrfcakez5OVw-ANj2qEWnPqtgIs1bFLxJfExXJfk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 9%
+source-wordcount: 1180
+ht-degree: 12%
 
 ---
 
@@ -14,7 +19,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->La source [!DNL Capillary Streaming Events] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+La source [!DNL Capillary Streaming Events] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez ce guide pour savoir comment utiliser le [!DNL Capillary Streaming Events] et l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) pour diffuser des données de votre compte [!DNL Capillary] vers Adobe Experience Platform.
 
@@ -263,7 +268,7 @@ Vous pouvez importer vos données historiques de fidélité et de transaction da
 
 Un schéma de modèle de données d’expérience (XDM) offre un moyen normalisé d’organiser et de décrire les données d’expérience client dans Experience Platform. Pour ingérer les données sources dans Experience Platform, vous devez d’abord créer un schéma XDM cible qui définit la structure et les types de données à ingérer. Ce schéma sert de plan directeur pour le jeu de données Experience Platform où se trouveront vos données ingérées.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez les guides suivants :
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez les guides suivants :
 
 * [Créez un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
 * [Créez un schéma à l’aide de l’interface utilisateur](../../../../../xdm/tutorials/create-schema-ui.md).
@@ -272,7 +277,7 @@ Une fois créé, le schéma XDM cible `$id` sera requis ultérieurement pour vot
 
 ## Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement structurée comme un tableau avec des colonnes (schéma) et des lignes (champs). Les données correctement ingérées par Experience Platform sont stockées dans le lac de données sous forme de jeux de données. Au cours de cette étape, vous pouvez créer un jeu de données ou en utiliser un existant.
+Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement structurée comme un tableau avec des colonnes (schéma) et des lignes (champs). Les données correctement ingérées dans Experience Platform sont conservées sous forme de jeux de données dans le lac de données. Au cours de cette étape, vous pouvez créer un jeu de données ou en utiliser un existant.
 
 Vous pouvez créer un jeu de données cible en adressant une requête POST à l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), tout en fournissant l’identifiant du schéma cible dans la payload. Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le guide [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
 
@@ -332,7 +337,7 @@ Mappez les champs capillaires aux champs de schéma XDM correspondants comme sui
 
 >[!TIP]
 >
->Vous pouvez télécharger le [Mappages d’événements et de profils](../../../../images/tutorials/create/capillary/mappings.zip) par [!DNL Capillary] et [importer les fichiers dans la préparation des données](../../../../../data-prep/ui/mapping.md#import-mapping) lorsque vous êtes prêt à mapper vos données.
+Vous pouvez télécharger le [Mappages d’événements et de profils](../../../../images/tutorials/create/capillary/mappings.zip) par [!DNL Capillary] et [importer les fichiers dans la préparation des données](../../../../../data-prep/ui/mapping.md#import-mapping) lorsque vous êtes prêt à mapper vos données.
 
 ### Créer un flux de données {#flow}
 
@@ -381,7 +386,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->`startTime` est en secondes UNIX epoch.
+`startTime` est en secondes UNIX epoch.
 
 **Réponse**
 

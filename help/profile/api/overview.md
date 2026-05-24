@@ -4,10 +4,16 @@ title: Guide de l’API Real-Time Customer Profile
 description: L’API Real-Time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des politiques de fusion, d’exporter ou des exemples de données de profil et de supprimer les données de profil qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 82a9b405a1d36155c84cd27a005c7ec469164ef3
+TQID: https://experienceleague.adobe.com/YlcYp3cxctfqFhWapE8UYLRxDKG-ex33vUnh8hj50vM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 18%
+source-wordcount: 894
+ht-degree: 21%
 
 ---
 
@@ -23,7 +29,7 @@ Pour obtenir un guide sur l’utilisation des données de [!DNL Real-Time Custom
 
 ## Attributs calculés {#computed-attributes}
 
-Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées dans la segmentation, l’activation et la personnalisation.
+Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
 
 Chaque attribut calculé contient une expression, ou « règle », qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Ces valeurs d’attribut calculées peuvent ensuite être affichées dans un profil, utilisées pour créer une audience ou accessibles via plusieurs modèles d’accès différents.
 
@@ -61,4 +67,4 @@ Il peut parfois être nécessaire de mettre à jour les données du magasin de p
 
 ## Étapes suivantes {#next-steps}
 
-Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], lisez le guide de prise en main [&#x200B; &#x200B;](getting-started.md), puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques liés à l’[!DNL Profile]. Pour utiliser les données [!DNL Profile] à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au [guide d’utilisation du profil client en temps réel](../ui/user-guide.md).
+Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], lisez le guide de prise en main [ ](getting-started.md), puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques liés à l’[!DNL Profile]. Pour utiliser les données [!DNL Profile] à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au [guide d’utilisation du profil client en temps réel](../ui/user-guide.md).

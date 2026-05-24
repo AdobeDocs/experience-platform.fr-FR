@@ -5,16 +5,22 @@ title: Créer un flux de données pour les sources de stockage cloud à l’aide
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+TQID: https://experienceleague.adobe.com/SKk7LzYFnn7Ry2O-ljUlnKyUZ9Q2RsrCB9RGCRySuyw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1834'
-ht-degree: 56%
+source-wordcount: 1868
+ht-degree: 57%
 
 ---
 
 # Créer un flux de données pour les sources de stockage cloud à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source d’espace de stockage dans le cloud et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source d’espace de stockage dans le cloud et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -101,7 +107,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Facultatif) Propriété qui définit le type de fichier compressé à ingérer. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` et `tar`. **Remarque** : la propriété `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers délimités ou JSON. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque** : vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingérera l’intégralité du dossier `/acme/summerCampaign/`. |
 | `params.type` | Type du fichier de données source que vous ingérez. Utilisez le `file` de type pour ingérer un fichier individuel et le `folder` de type pour ingérer un dossier entier. |
-| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Utilisée avec les schémas relationnels, la capture des données de modification repose sur la colonne de contrôle de `_change_request_type` (`u` — upsert, `d` — delete), qui est évaluée lors de l’ingestion, mais non stockée dans le schéma cible. Cette propriété est prise en charge par les sources d’espace de stockage suivantes : <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [&#128279;](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez le guide sur l’utilisation de [modification de la capture de données dans les sources](../change-data-capture.md) et la [référence technique des schémas relationnels](../../../../xdm/schema/relational.md). |
+| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Utilisée avec les schémas relationnels, la capture des données de modification repose sur la colonne de contrôle de `_change_request_type` (`u` — upsert, `d` — delete), qui est évaluée lors de l’ingestion, mais non stockée dans le schéma cible. Cette propriété est prise en charge par les sources d’espace de stockage suivantes : <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez le guide sur l’utilisation de [modification de la capture de données dans les sources](../change-data-capture.md) et la [référence technique des schémas relationnels](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | Identifiant de spécification de connexion associé à votre source d’espace de stockage dans le cloud spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**
@@ -273,7 +279,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache.
 
-Pour créer un jeu de mappages, envoyez une requête POST au point d’entrée `mappingSets` de l’[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
+Pour créer un jeu de mappage, envoyez une requête POST au point dʼentrée `mappingSets` de lʼ[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) et indiquez votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 >[!TIP]
 >
@@ -660,7 +666,7 @@ curl -X POST \
 | `flowSpec.id` | [Identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
 | `sourceConnectionIds` | [Identifiant de connexion source](#source) récupéré lors d’une étape précédente. |
 | `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) récupéré lors d’une étape précédente. |
-| `transformations.params.mappingId` | L’[identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | [Identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>**Une fois** : s.o.</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |

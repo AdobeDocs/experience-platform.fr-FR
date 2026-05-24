@@ -1,26 +1,31 @@
 ---
-keywords: Experience Platform;Noter un modèle;Data Science Workspace;rubriques les plus consultées;API d’apprentissage automatique sensei
+keywords: Experience Platform;Noter un modèle;Workspace de science des données;rubriques populaires;api de machine learning sensei
 solution: Experience Platform
-title: Notation d’un modèle à l’aide de l’API d’apprentissage automatique Sensei
+title: Notation d’un modèle à l’aide de l’API Sensei Machine Learning
 type: Tutorial
-description: Ce tutoriel vous explique comment tirer parti des API d’apprentissage automatique de Sensei pour créer une expérience et une exécution d’expérience.
+description: Ce tutoriel vous explique comment tirer parti des API de machine learning de Sensei pour créer une expérience et une exécution d’expérience.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/5bu-W9ypp2xDunBHXRk6UPX9eCCW4JlE2yF1bIWe4-A
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 74%
+source-wordcount: 578
+ht-degree: 73%
 
 ---
 
-# Notation d’un modèle à l’aide de [!DNL Sensei Machine Learning API]
+# Notation d’un modèle à l’aide de l’[!DNL Sensei Machine Learning API]
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour obtenir la liste de tous les points de terminaison de l’API Sensei Machine Learning, reportez-vous à [ce document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour obtenir la liste de tous les points d’entrée de l’API de machine learning de Sensei, reportez-vous à [ce document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Création d’une expérience planifiée pour la notation
 
@@ -40,7 +45,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
+`{ORG_ID}` : informations d’identification de votre organisation, qui se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : objet d’exécution d’expérience à envoyer. Voici l’exemple utilisé dans notre tutoriel :
@@ -128,7 +133,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
+`{ORG_ID}` : informations d’identification de votre organisation, qui se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre expérience.\
@@ -193,7 +198,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience sous laquelle se trouve l’exécution.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
+`{ORG_ID}` : informations d’identification de votre organisation, qui se trouvent dans votre intégration Adobe Experience Platform unique.
 
 Puisqu’il existe plusieurs exécutions d’expérience pour une expérience spécifique, la réponse renvoyée comporte un tableau d’identifiant d’exécution.
 
@@ -236,7 +241,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
+`{ORG_ID}` : informations d’identification de votre organisation, qui se trouvent dans votre intégration Adobe Experience Platform unique.
 
 >[!NOTE]
 >

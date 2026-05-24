@@ -1,12 +1,17 @@
 ---
 title: Présentation du connecteur Source Zendesk
 description: Découvrez comment connecter Zendesk à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-last-substantial-update: 2023-06-21T00:00:00Z
+last-substantial-update: 2023-06-21T00:00:00.000Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/9sBpP4FLIF7sSG9Yi9tVuRyhgoVgUE9-e6W6SrMW2TE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 22%
+source-wordcount: 375
+ht-degree: 24%
 
 ---
 
@@ -20,7 +25,7 @@ Ce Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/e
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ## Authentification de votre compte [!DNL Zendesk]
 
@@ -33,7 +38,7 @@ Cette section décrit les étapes préalables à suivre pour authentifier votre 
 * Sélectionnez ensuite **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Enfin, récupérez votre jeton API dans la section **[!DNL API token]** .
 
-![&#x200B; Jeton API Zendesk &#x200B;](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![ Jeton API Zendesk ](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 Voir la [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) pour plus d’informations sur la récupération de votre sous-domaine. Pour plus d’informations sur la génération de votre jeton API, consultez le guide [[!DNL Zendesk]  sur la génération d’un nouveau jeton API](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
@@ -45,5 +50,5 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL Z
 
 ## Connexion d’[!DNL Zendesk] à Experience Platform à l’aide de l’interface utilisateur
 
-* [Créer une connexion source  [!DNL Zendesk &#x200B;] dans l’interface utilisateur](../../tutorials/ui/create/customer-success/zendesk.md)
+* [Créer une connexion source  [!DNL Zendesk ] dans l’interface utilisateur](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Créer un flux de données pour une connexion source de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/customer-success.md)

@@ -1,22 +1,27 @@
 ---
 solution: Experience Platform
 title: Fonctions de chaîne PQL
-description: Profile Query Language (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
+description: Profile Query Language (PQL) offre des fonctions permettant de simplifier l’interaction avec les chaînes.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+TQID: https://experienceleague.adobe.com/J4AulkVwMq7YKXs6L1A-seVd9PZXxbhMsd8FKQ5Mso4
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: 859
 ht-degree: 66%
 
 ---
 
 # Fonctions de chaîne
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions permettant de simplifier l’interaction avec les chaînes. Vous trouverez plus d’informations sur d’autres fonctions de PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Comme
 
-La fonction `like` permet de déterminer si une chaîne correspond à un modèle spécifié en tant que valeur booléenne.
+La fonction `like` permet de déterminer si une chaîne correspond à un modèle donné sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -37,9 +42,9 @@ La requête PQL suivante récupère toutes les villes contenant le modèle « e
 city like "%es%"
 ```
 
-## Starts with
+## Commence par
 
-La fonction `startsWith` permet de déterminer si une chaîne commence par une sous-chaîne donnée en tant que valeur booléenne.
+La fonction `startsWith` permet de déterminer si une chaîne commence par une sous-chaîne donnée sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -61,9 +66,9 @@ La requête PQL suivante détermine si le nom de la personne commence par « Jo
 person.name.startsWith("Joe")
 ```
 
-## Does not start with
+## Ne commence pas par
 
-La fonction `doesNotStartWith` permet de déterminer si une chaîne ne commence pas par une sous-chaîne donnée en tant que valeur booléenne.
+La fonction `doesNotStartWith` permet de déterminer si une chaîne ne commence pas par une sous-chaîne donnée sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -85,9 +90,9 @@ La requête PQL suivante détermine si le nom de la personne ne commence pas par
 person.name.doesNotStartWith("Joe")
 ```
 
-## Ends with
+## Se termine par
 
-La fonction `endsWith` permet de déterminer si une chaîne se termine par une sous-chaîne spécifiée sous la forme d’une valeur booléenne.
+La fonction `endsWith` permet de déterminer si une chaîne se termine par une sous-chaîne donnée sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -109,9 +114,9 @@ La requête PQL suivante détermine si l’adresse e-mail de la personne se term
 person.emailAddress.endsWith(".com")
 ```
 
-## Does not end with
+## Ne se termine pas par
 
-La fonction `doesNotEndWith` permet de déterminer si une chaîne ne se termine pas par une sous-chaîne donnée en tant que valeur booléenne.
+La fonction `doesNotEndWith` permet de déterminer si une chaîne ne se termine pas par une sous-chaîne donnée sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -133,9 +138,9 @@ La requête PQL suivante détermine si l’adresse e-mail de la personne ne se t
 person.emailAddress.doesNotEndWith(".com")
 ```
 
-## Contains
+## Contient
 
-La fonction `contains` permet de déterminer si une chaîne contient une sous-chaîne spécifiée en tant que valeur booléenne.
+La fonction `contains` permet de déterminer si une chaîne contient une sous-chaîne donnée sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -157,9 +162,9 @@ La requête PQL suivante détermine si l’adresse e-mail de la personne contien
 person.emailAddress.contains("2010@gm")
 ```
 
-## Does not contain
+## Ne contient pas
 
-La fonction `doesNotContain` permet de déterminer si une chaîne ne contient pas de sous-chaîne spécifiée en tant que valeur booléenne.
+La fonction `doesNotContain` permet de déterminer si une chaîne ne contient pas une sous-chaîne donnée en tant que valeur booléenne.
 
 **Format**
 
@@ -181,9 +186,9 @@ La requête PQL suivante détermine si l’adresse e-mail de la personne ne cont
 person.emailAddress.doesNotContain("2010@gm")
 ```
 
-## Equals
+## Égal à
 
-La fonction `equals` permet de déterminer si une chaîne est égale à la chaîne spécifiée en tant que valeur booléenne.
+La fonction `equals` est utilisée pour déterminer si une chaîne est égale à la chaîne spécifiée sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -204,9 +209,9 @@ La requête PQL suivante détermine si le nom de la personne est « John » en
 person.name.equals("John")
 ```
 
-## Not equal to
+## Différent de
 
-La fonction `notEqualTo` permet de déterminer si une chaîne n’est pas égale à la chaîne spécifiée en tant que valeur booléenne.
+La fonction `notEqualTo` permet de déterminer si une chaîne est différente d&#39;une chaîne booléenne donnée.
 
 **Format**
 
@@ -227,9 +232,9 @@ La requête PQL suivante détermine si le nom de la personne n’est pas « Joh
 person.name.notEqualTo("John")
 ```
 
-## Matches
+## Correspond à
 
-La fonction `matches` permet de déterminer si une chaîne correspond à une expression régulière donnée. Pour plus d’informations sur les modèles correspondants dans les expressions régulières en tant que valeur booléenne, reportez-vous à [ce document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) .
+La fonction `matches` permet de déterminer si une chaîne correspond à une expression régulière donnée. Reportez-vous à [ce document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) pour plus d’informations sur les modèles correspondants dans les expressions régulières en tant que valeur booléenne.
 
 **Format**
 
@@ -247,11 +252,11 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **devez** pour échapper la barre oblique inverse. Ainsi, au lieu d&#39;écrire uniquement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire `\\w`.
+>Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **devez** échapper le caractère barre oblique inverse. Ainsi, au lieu d’écrire uniquement `\w`, vous devez inclure une barre oblique inverse supplémentaire et `\\w` écrire.
 
 ## Groupe d’expressions régulières
 
-La fonction `regexGroup` est utilisée pour extraire des informations spécifiques, en fonction de l’expression régulière fournie sous forme de chaîne.
+La fonction `regexGroup` est utilisée pour extraire des informations spécifiques en fonction de l&#39;expression régulière fournie sous la forme d&#39;une chaîne.
 
 **Format**
 
@@ -269,7 +274,7 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **devez** pour échapper la barre oblique inverse. Ainsi, au lieu d&#39;écrire uniquement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire `\\w`.
+>Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **devez** échapper le caractère barre oblique inverse. Ainsi, au lieu d’écrire uniquement `\w`, vous devez inclure une barre oblique inverse supplémentaire et `\\w` écrire.
 
 ## Étapes suivantes
 

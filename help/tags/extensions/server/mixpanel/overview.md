@@ -2,11 +2,17 @@
 keywords: extension de transfert d’événement;mixpanel;extension de transfert d’événement mixpanel
 title: Extension de transfert d’événement de l’API de suivi Mixpanel
 description: Cette extension de transfert d’événement Adobe Experience Platform envoie des événements Edge Network à Mixpanel.
-last-substantial-update: 2023-03-29T00:00:00Z
+last-substantial-update: 2023-03-29T00:00:00.000Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/EmIOjacaI2ZY5Kh5QZzvbj6ww6VQ0yUU5yVJoMaamA0
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: f73667dc-d296-4875-8975-ac3fdc3adc42id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: ee602049-8a18-43df-9299-a689a025a371id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: 976
 ht-degree: 2%
 
 ---
@@ -31,9 +37,9 @@ Les équipes d’analyse peuvent ensuite exploiter [!DNL Mixpanel's] fonctionnal
 
 Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Mixpanel], consultez la documentation suivante :
 
-* [Nouveau sur [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
-* [Présentation du service [!DNL Mixpanel] &#x200B;](https://developer.mixpanel.com/docs)
-* [12 must-try [!DNL Mixpanel] features](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
+* [Débutant avec  [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
+* [Qu&#39;est-ce que  [!DNL Mixpanel] ?](https://developer.mixpanel.com/docs)
+* [12 fonctionnalités  [!DNL Mixpanel] ](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
 ## Conditions préalables de [!DNL Mixpanel] {#prerequisites-mixpanel}
 
@@ -54,7 +60,7 @@ En [!DNL Mixpanel], un cluster d’identités contient un ensemble de valeurs `d
 >
 >Reportez-vous au document [!DNL Mixpanel] sur la [gestion des identités](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) pour plus d’informations sur ces méthodes.
 >
->Vérifiez que vous avez activé la [[!DNL Mixpanel]  fonctionnalité de fusion d’identités &#x200B;](#prerequisites-mixpanel) pour vous assurer que les clusters d’identités sont résolus correctement.
+>Vérifiez que vous avez activé la [[!DNL Mixpanel]  fonctionnalité de fusion d’identités ](#prerequisites-mixpanel) pour vous assurer que les clusters d’identités sont résolus correctement.
 
 ### Collecter les détails de configuration requis {#configuration-details}
 
@@ -68,22 +74,22 @@ Pour connecter Experience Platform à [!DNL Mixpanel], vous devez disposer des e
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou choisissez plutôt une propriété existante à modifier.
 
-Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez **[!UICONTROL Installer]** sur la carte de l’extension [!DNL Mixpanel].
+Sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez **[!UICONTROL Install]** sur la carte de l’extension [!DNL Mixpanel].
 
 ![Installation de l’extension [!DNL Mixpanel].](../../../images/extensions/server/mixpanel/install-extension.png)
 
 ## Créer une règle de [!DNL Send Event]
 
-Commencez à créer une règle dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Mixpanel]**. Définissez ensuite le type d’action sur **[!UICONTROL Suivi des événements]** pour envoyer des événements Edge Network à [!DNL Mixpanel].
+Commencez à créer une règle dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Mixpanel]**. Définissez ensuite le type d’action sur **[!UICONTROL Track Event]** pour envoyer des événements Edge Network à [!DNL Mixpanel].
 
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
-| [!UICONTROL &#x200B; Jeton de projet &#x200B;] | Ce champ doit être mappé au jeton de projet associé à votre compte [!DNL Mixpanel]. | Oui |
-| [!UICONTROL Event Type] (Type d’événement) | Nom de l’événement. | Oui |
-| [!UICONTROL Heure de l’événement] | Heure de l’événement. | |
-| [!UICONTROL Identifiant Mixpanel distinct] | Identifiant unique de l’utilisateur qui a exécuté l’événement. | |
-| [!UICONTROL Insérer un ID] | Identifiant unique de l’événement, utilisé pour la déduplication. | |
-| [!UICONTROL Propriétés des événements] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | |
+| [!UICONTROL Project Token] | Ce champ doit être mappé au jeton de projet associé à votre compte [!DNL Mixpanel]. | Oui |
+| [!UICONTROL Event Type] | Nom de l’événement. | Oui |
+| [!UICONTROL Event Time] | L’heure de l’événement. | |
+| [!UICONTROL Mixpanel Distinct ID] | Identifiant unique de l’utilisateur qui a exécuté l’événement. | |
+| [!UICONTROL Insert ID] | Identifiant unique de l’événement, utilisé pour la déduplication. | |
+| [!UICONTROL Event Properties] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | |
 
 >[!NOTE]
 >
@@ -91,7 +97,7 @@ Commencez à créer une règle dans votre propriété de transfert d’événeme
 
 ![Ajoutez une configuration d’action de règle de transfert d’événement.](../../../images/extensions/server/mixpanel/track-event-action.png)
 
-Une fois l’action [!UICONTROL Suivi des événements] ajoutée à la règle, vous pouvez configurer les conditions de la règle afin qu’elle ne se déclenche que pour certains événements, ou vous pouvez laisser la section Conditions vide pour que la règle se déclenche pour tous les événements.
+Une fois l’action [!UICONTROL Track Event] ajoutée à la règle, vous pouvez configurer les conditions de la règle afin qu’elle ne se déclenche que pour certains événements, ou vous pouvez laisser la section Conditions vide pour que la règle se déclenche pour tous les événements.
 
 >[!IMPORTANT]
 >
@@ -101,13 +107,13 @@ Une fois l’action [!UICONTROL Suivi des événements] ajoutée à la règle, v
 
 Si votre implémentation réussit et que des événements sont collectés, des événements s’affichent dans la [[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948).
 
-Vérifiez si [!DNL Mixpanel] a fusionné les événements de post-connexion renseignés avec les valeurs d’e-mail et les événements créés lors de l’utilisation de **[!UICONTROL Événement d’envoi]**. Si elle est implémentée correctement, [!DNL Mixpanel] les associera à un seul [profil utilisateur](https://help.mixpanel.com/hc/en-us/articles/115004501966).
+Vérifiez si [!DNL Mixpanel] a fusionné les événements de post-connexion renseignés avec les valeurs d’e-mail et les événements créés lors de l’utilisation de **[!UICONTROL Send Event]**. Si elle est implémentée correctement, [!DNL Mixpanel] les associera à un seul [profil utilisateur](https://help.mixpanel.com/hc/en-us/articles/115004501966).
 
 ## Étapes suivantes
 
 Ce guide explique comment envoyer des événements de conversion à [!DNL Mixpanel] à l’aide du transfert d’événement. Cette extension de transfert d’événement tire parti de l’API [!DNL Mixpanel] SDK et JavaScript. Pour plus d’informations sur ces technologies sous-jacentes, consultez la documentation officielle :
 
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
-* [[!DNL Mixpanel] API JavaScript](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
+* [API [!DNL Mixpanel] JAVASCRIPT](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
 
 Pour plus d’informations sur les fonctionnalités de transfert d’événement d’Experience Platform, consultez la [présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).

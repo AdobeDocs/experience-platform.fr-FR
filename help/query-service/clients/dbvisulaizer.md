@@ -4,9 +4,13 @@ solution: Experience Platform
 title: Connexion de DbVisualizer à Query Service
 description: Ce document décrit les étapes à suivre pour connecter DbVisualizer à Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/GtA4-9y9x4viiBEQX7v5HYN0mC2x3zZ9sHBnLaRKOxk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: 922
 ht-degree: 3%
 
 ---
@@ -19,7 +23,7 @@ Ce document décrit les étapes à suivre pour connecter l’outil de base de do
 
 Ce guide nécessite que vous ayez déjà accès à l’application [!DNL DbVisualizer] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger l’application de bureau [!DNL DbVisualizer] ou pour plus d’informations, consultez la [documentation [!DNL DbVisualizer] officielle](https://www.dbvis.com/download/).
 
-Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL &#x200B; DbVisualizer] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes.
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL  DbVisualizer] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes.
 
 ## Créer une connexion à la base de données {#connect-database}
 
@@ -54,7 +58,7 @@ La colonne [!DNL Edited] affiche une coche pour indiquer que la valeur du param�
 
 ### Informations d’identification d’Input Query Service {#query-service-credentials}
 
-Pour obtenir les informations d’identification nécessaires à la connexion de BBVisualizer à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis **[!UICONTROL Credentials]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [&#128279;](../ui/credentials.md) credentials.
+Pour obtenir les informations d’identification nécessaires à la connexion de BBVisualizer à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis **[!UICONTROL Credentials]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [](../ui/credentials.md) credentials.
 
 ![Page Informations d’identification de l’espace de travail Requêtes Experience Platform avec les Informations d’identification et les Informations d’identification arrivant à expiration en surbrillance.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
@@ -91,4 +95,4 @@ La boîte de dialogue [!DNL Connect] s’affiche à la première occasion de la 
 
 ## Étapes suivantes
 
-Maintenant que vous avez connecté [!DNL DbVisualizer] à [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur l’écriture et l’exécution de requêtes, consultez le guide [&#x200B; sur l’exécution de requêtes](../best-practices/writing-queries.md).
+Maintenant que vous avez connecté [!DNL DbVisualizer] à [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur l’écriture et l’exécution de requêtes, consultez le guide [ sur l’exécution de requêtes](../best-practices/writing-queries.md).

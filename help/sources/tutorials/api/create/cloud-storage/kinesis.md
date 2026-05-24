@@ -3,10 +3,13 @@ title: Créer une connexion Source Amazon Kinesis à l’aide de l’API Flow Se
 description: Découvrez comment connecter Adobe Experience Platform à une source Amazon Kinesis à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/JC-ype8Fv0SVK-WoA1XEANp5Z60cy-O0mxZ0A8u4-bc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 50%
+source-wordcount: 773
+ht-degree: 51%
 
 ---
 
@@ -16,11 +19,11 @@ ht-degree: 50%
 >
 >La source [!DNL Amazon Kinesis] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Amazon Kinesis] (ci-après dénommé « [!DNL Kinesis] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Amazon Kinesis] (ci-après dénommé « [!DNL Kinesis] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -35,7 +38,7 @@ Pour que [!DNL Flow Service] puissiez vous connecter à votre compte [!DNL Amazo
 | ---------- | ----------- |
 | `accessKeyId` | L’ID de clé d’accès correspond à la moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] auprès d’Experience Platform. |
 | `secretKey` | La clé d’accès secrète est l’autre moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] auprès d’Experience Platform. |
-| `region` | Région de votre compte [!DNL Kinesis]. Placer sur la liste autorisée Pour plus d’informations sur les régions[&#x200B; consultez le guide sur l’](../../../../ip-address-allow-list.md)ajout d’adresses IP à votre. |
+| `region` | Région de votre compte [!DNL Kinesis]. Pour plus d’informations sur les régions](../../../../ip-address-allow-list.md) consultez le guide sur l’[ajout d’adresses IP à votre. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion [!DNL Kinesis] est : `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Pour plus d’informations sur la [!DNL Kinesis] des clés d’accès et leur génération, reportez-vous à ce [[!DNL AWS] guide sur la gestion des clés d’accès pour les utilisateurs IAM](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
@@ -172,4 +175,4 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion source [!DNL Kinesis] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/streaming.md).
+Ce tutoriel vous a permis de créer une connexion source [!DNL Kinesis] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] ](../../collect/streaming.md).

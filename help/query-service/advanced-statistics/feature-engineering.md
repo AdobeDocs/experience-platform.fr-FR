@@ -3,9 +3,13 @@ title: Extension SQL d’ingénierie des fonctionnalités
 description: Découvrez l’extension SQL d’ingénierie des fonctionnalités de Data Distiller pour prétraiter les données en vue d’une modélisation statistique avancée. Il couvre les techniques disponibles d’extraction, de transformation et de sélection des fonctionnalités.
 role: Developer
 exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/-8qOEEGQcjQHrFU1EWKgmYgYT9OC-m6Jsev7fkY97EU
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: 743
 ht-degree: 1%
 
 ---
@@ -96,4 +100,4 @@ Lorsque vous définissez votre modèle, utilisez la clause `OPTIONS` pour spéci
 
 ### Étapes suivantes
 
-Après avoir appris les techniques d’ingénierie des fonctionnalités décrites dans ce document, passez au document [Modèles](./models.md). Il vous guide tout au long du processus de création, de formation et de gestion de modèles approuvés à l’aide des fonctionnalités que vous avez conçues. Une fois vos modèles créés, passez au document [&#x200B; Implémenter des modèles statistiques avancés .](./implement-models/implement-models.md). Ce document offre un aperçu et fournit des liens vers des guides détaillés relatifs à différentes techniques de modélisation, notamment la mise en grappe, la classification et la régression. En suivant ces documents, vous apprendrez à configurer et à implémenter divers modèles approuvés dans vos workflows SQL et à optimiser vos modèles pour une analyse de données avancée.
+Après avoir appris les techniques d’ingénierie des fonctionnalités décrites dans ce document, passez au document [Modèles](./models.md). Il vous guide tout au long du processus de création, de formation et de gestion de modèles approuvés à l’aide des fonctionnalités que vous avez conçues. Une fois vos modèles créés, passez au document [Implémentation de modèles statistiques avancés](./implement-models/implement-models.md). Ce document offre un aperçu et fournit des liens vers des guides détaillés relatifs à différentes techniques de modélisation, notamment la mise en grappe, la classification et la régression. En suivant ces documents, vous apprendrez à configurer et à implémenter divers modèles approuvés dans vos workflows SQL et à optimiser vos modèles pour une analyse de données avancée.

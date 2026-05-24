@@ -1,13 +1,18 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;expériences;api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;expériences;api de machine learning sensei
 solution: Experience Platform
-title: Point de terminaison de l’API d’expériences
+title: Point d’entrée de l’API des expériences
 description: Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/flhB4oFa9hHWu2Oj6nrOqF1LOOElhFJRg3IbG3IjHC0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: 806
 ht-degree: 86%
 
 ---
@@ -16,9 +21,9 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 
@@ -28,7 +33,7 @@ Vous pouvez créer une expérience en exécutant une requête POST tout en fourn
 
 >[!NOTE]
 >
->Contrairement à la formation de modèle dans l’interface utilisateur, la création d’une expérience par le biais d’un appel API explicite ne crée pas et n’exécute pas de formation automatiquement.
+>Contrairement à l’entraînement de modèle dans l’interface utilisateur, la création d’une expérience par le biais d’un appel API explicite ne crée pas et n’exécute pas automatiquement une exécution d’entraînement.
 
 **Format d’API**
 
@@ -139,7 +144,7 @@ Une réponse réussie renvoie un payload contenant les détails de l’exécutio
 
 ## Récupération d’une liste d’expériences
 
-Vous pouvez obtenir une liste des expériences associées à une instance MLInstance spécifique en exécutant une seule requête GET et en fournissant un identifiant MLInstance valide en tant que paramètre de la requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
+Vous pouvez récupérer une liste des expériences associées à une instance MLInstance spécifique en exécutant une seule requête GET et en fournissant un identifiant MLInstance valide en tant que paramètre de la requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 
 **Format d’API**
@@ -248,11 +253,11 @@ Une réponse réussie renvoie un payload contenant les détails de l’expérien
 
 ## Récupération d’une liste d’exécutions d’expérience
 
-Vous pouvez obtenir une liste des exécutions de formation ou de notation associées à une expérience spécifique en exécutant une seule requête GET et en fournissant un identifiant d’expérience valide. Pour filtrer les résultats plus facilement, vous pouvez spécifier les paramètres de requête dans le chemin d’accès de la requête. Pour obtenir la liste complète des paramètres de requête disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
+Vous pouvez récupérer une liste des exécutions de formation ou de notation associées à une expérience spécifique en exécutant une seule requête GET et en fournissant un identifiant d’expérience valide. Pour filtrer les résultats plus facilement, vous pouvez spécifier les paramètres de requête dans le chemin d’accès de la requête. Pour obtenir la liste complète des paramètres de requête disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 >[!NOTE]
 >
->Lorsque vous combinez plusieurs paramètres de requête, ceux-ci doivent être séparés par des esperluettes (&amp;).
+>Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (&amp;).
 
 **Format d’API**
 
@@ -265,12 +270,12 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Paramètre | Description |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Un identifiant d’expérience valide. |
-| `{QUERY_PARAMETER}` | L’un des [paramètres de requête disponibles](./appendix.md#query) utilisés pour filtrer les résultats. |
+| `{QUERY_PARAMETER}` | L’un des [paramètres de requête disponibles](./appendix.md#query) utilisé pour filtrer les résultats. |
 | `{VALUE}` | La valeur du paramètre de requête précédent. |
 
 **Requête**
 
-La requête suivante contient une requête et renvoie une liste d’exécutions de formation associées à une expérience.
+La requête suivante contient une requête et récupère une liste d’exécutions de formation associées à une expérience.
 
 ```shell
 curl -X GET \
@@ -313,7 +318,7 @@ Vous pouvez mettre à jour une expérience existante en écrasant ses propriét�
 
 >[!TIP]
 >
->Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET pour [récupérer l’expérience par l’identifiant](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Pour garantir le succès de cette requête PUT, il est suggéré d’effectuer d’abord une requête GET pour [récupérer l’expérience par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 L’exemple d’appel API suivant met à jour le nom d’une expérience lorsque les propriétés initiales sont les suivantes :
 

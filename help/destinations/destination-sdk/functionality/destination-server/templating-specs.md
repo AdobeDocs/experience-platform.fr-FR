@@ -2,10 +2,14 @@
 description: Découvrez comment formater les requêtes HTTP envoyées à votre point d’entrée. Utilisez le point d’entrée /authoring/destination-servers pour configurer les spécifications de modèle de serveur de destination dans Adobe Experience Platform Destination SDK.
 title: Spécifications de modèle pour les destinations créées avec Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/fjCp0CZZWqMe047fcjUH9-kGxBdKBdG-cD1zdvKVDOQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 83%
+source-wordcount: 531
+ht-degree: 77%
 
 ---
 
@@ -69,9 +73,9 @@ Consultez ci-dessous un modèle type de requête HTTP, ainsi que des descriptio
 
 | Paramètre | Type | Description |
 |---|---|---|
-| `httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Méthodes prises en charge : `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilisera dans les appels à votre serveur. Méthodes prises en charge : `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement du modèle qui formate les requêtes HTTP envoyées par Experience Platform au format attendu par la destination. <br> Pour plus d’informations sur l’écriture du modèle, consultez la section [Utilisation des modèles](message-format.md#using-templating). <br> Pour plus d’informations sur les caractères d’échappement, consultez la section Norme [RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Pour obtenir un exemple de transformation simple, reportez-vous à la transformation [attributs de profil](message-format.md#attributes). |
+| `value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement du modèle qui formate les requêtes HTTP envoyées par Experience Platform au format attendu par la destination. <br> Pour plus d’informations sur l’écriture du modèle, lisez la section sur [l’utilisation de modèles](message-format.md#using-templating). <br> Pour plus d’informations sur les caractères d’échappement, consultez la section Norme [RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Pour obtenir un exemple de transformation simple, reportez-vous à la transformation [attributs de profil](message-format.md#attributes). |
 | `contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Selon le type de sortie produit par votre modèle de transformation, il peut s’agir de l’un des [types de contenu d’applications HTTP](https://www.iana.org/assignments/media-types/media-types.xhtml#application) pris en charge. Dans la plupart des cas, cette valeur doit être définie sur `application/json`. |
 
 {style="table-layout:auto"}

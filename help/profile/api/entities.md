@@ -5,9 +5,14 @@ type: Documentation
 description: Adobe Experience Platform vous permet d’accéder aux données du profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API Profile.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
+TQID: https://experienceleague.adobe.com/fI05Qed9BZKYm3ZMDYHg8tX29-1eR6lm5YzpceoimuY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2290'
+source-wordcount: 2310
 ht-degree: 28%
 
 ---
@@ -453,9 +458,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 | `identities` | Tableau | **(Obligatoire)** Un tableau contenant une liste d’identités pour les entités auxquelles vous souhaitez accéder. |
 | `identities.entityId` | Chaîne | L’identifiant d’une entité à laquelle vous souhaitez accéder. |
 | `identities.entityIdNS.code` | Chaîne | L’espace de noms d’un identifiant d’entité auquel vous souhaitez accéder. |
-| `timeFilter.startTime` | Nombre entier | Indique l’heure de début du filtrage des entités de profil (en millisecondes). Par défaut, cette valeur est définie comme le début du temps disponible. |
-| `timeFilter.endTime` | Nombre entier | Indique l’heure de fin du filtrage des entités de profil (en millisecondes). Par défaut, cette valeur est définie comme la fin du temps disponible. |
-| `limit` | Nombre entier | Nombre maximal d’enregistrements à renvoyer. Par défaut, cette valeur est définie sur 1000. |
+| `timeFilter.startTime` | Entier | Indique l’heure de début du filtrage des entités de profil (en millisecondes). Par défaut, cette valeur est définie comme le début du temps disponible. |
+| `timeFilter.endTime` | Entier | Indique l’heure de fin du filtrage des entités de profil (en millisecondes). Par défaut, cette valeur est définie comme la fin du temps disponible. |
+| `limit` | Entier | Nombre maximal d’enregistrements à renvoyer. Par défaut, cette valeur est définie sur 1000. |
 | `orderby` | Chaîne | L’ordre de tri des événements d’expérience récupérés par date et heure, indiqué par `(+/-)timestamp`, la valeur par défaut étant `+timestamp`. |
 
 +++
@@ -1232,7 +1237,7 @@ Une réponse réussie renvoie la page de résultats suivante. Cette réponse ne 
 
 >[!IMPORTANT]
 >
->Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [&#x200B; API de suppression des enregistrements du cycle de vie des données &#x200B;](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [&#128279;](/help/hygiene/ui/record-delete.md) à la place.
+>Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [ API de suppression des enregistrements du cycle de vie des données ](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [](/help/hygiene/ui/record-delete.md) à la place.
 >
 >En outre, les requêtes de suppression pour les entités B2B suivantes ont déjà été abandonnées :
 >
@@ -1240,7 +1245,7 @@ Une réponse réussie renvoie la page de résultats suivante. Cette réponse ne 
 >- Relation Compte-Personne
 >- Opportunité
 >- Relation Opportunité-Personne
->- Campagne
+>- Campaign
 >- Membre de la campagne
 >- Liste marketing
 >- Membres de la liste marketing

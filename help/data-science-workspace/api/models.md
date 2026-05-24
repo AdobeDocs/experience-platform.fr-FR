@@ -1,24 +1,29 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques populaires;modèles;api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;modèles;api de machine learning sensei
 solution: Experience Platform
-title: Point de terminaison de l’API Modèles
+title: Point d’entrée de l’API Modèles
 description: Un modèle est une instance d’une recette de machine learning entraînée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/mPaSRE4XUkupJvVrH5lw3oUXS0-UrVZa6QQVN3tNCPc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 61%
+source-wordcount: 890
+ht-degree: 58%
 
 ---
 
-# Point de terminaison des modèles
+# Point d’entrée des modèles
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 Un modèle est une instance d’une recette de machine learning entraînée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 
@@ -122,7 +127,7 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 **Requête**
 
-La demande suivante contient une requête et récupère une liste de modèles formés partageant le même expérienceRunID ({EXPERIMENT_RUN_ID}).
+La requête suivante contient une requête et récupère une liste de modèles entraînés partageant le même experimentRunID ({EXPERIMENT_RUN_ID}).
 
 ```shell
 curl -X GET \
@@ -170,7 +175,7 @@ Une réponse réussie renvoie un payload contenant les détails de votre modèle
 
 ## Enregistrement d’un modèle prégénéré {#register-a-model}
 
-Vous pouvez enregistrer un modèle prégénéré en envoyant une requête de POST au point de terminaison `/models`. Pour enregistrer votre modèle, les valeurs de fichier `modelArtifact` et de propriété `model` doivent être incluses dans le corps de la requête.
+Vous pouvez enregistrer un modèle prégénéré en effectuant une requête POST vers le point d’entrée `/models`. Pour enregistrer votre modèle, le fichier `modelArtifact` et les valeurs de propriété `model` doivent être inclus dans le corps de la requête.
 
 **Format d’API**
 
@@ -180,7 +185,7 @@ POST /models
 
 **Requête**
 
-Le POST suivant contient les valeurs de fichier `modelArtifact` et de propriété `model` nécessaires. Consultez le tableau ci-dessous pour plus d’informations sur ces valeurs.
+L’instruction POST suivante contient le fichier `modelArtifact` et les valeurs de propriété `model` nécessaires. Pour plus d’informations sur ces valeurs, consultez le tableau ci-dessous.
 
 ```shell
 curl -X POST \
@@ -199,7 +204,7 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- |
 | `modelArtifact` | Emplacement de l’artefact de modèle complet que vous souhaitez inclure. |
-| `model` | Les données de formulaire de l’objet de modèle qui doivent être créées. |
+| `model` | Données de formulaire de l’objet de modèle qui doit être créé. |
 
 **Réponse**
 
@@ -228,7 +233,7 @@ Vous pouvez mettre à jour un modèle existant en écrasant ses propriétés par
 
 >[!TIP]
 >
->Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET pour récupérer le modèle par son identifiant. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Pour garantir le succès de cette requête PUT, il est suggéré d’effectuer d’abord une requête GET pour récupérer le modèle par ID. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 **Format d’API**
 
@@ -324,7 +329,7 @@ Une réponse réussie renvoie un payload contenant un état 200 qui confirme la
 
 ## Création d’un transcodage pour un modèle {#create-transcoded-model}
 
-Le transcodage est la conversion numérique-numérique directe d’un encodage vers un autre. Vous créez un nouveau transcodage pour un modèle en fournissant le `{MODEL_ID}` et un `targetFormat` dans lequel vous souhaitez que la nouvelle sortie se trouve.
+Le transcodage est la conversion numérique-numérique directe d’un codage à un autre. Vous créez un nouveau transcodage pour un modèle en fournissant le `{MODEL_ID}` et un `targetFormat` dans lesquels vous souhaitez que la nouvelle sortie se trouve.
 
 **Format d’API**
 
@@ -361,7 +366,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet JSON contenant les informations de votre transcodage. Cela inclut l’identifiant unique de transcodage (`id`) utilisé dans la [récupération d’un modèle transcodé spécifique](#retrieve-transcoded-model).
+Une réponse réussie renvoie une payload contenant un objet JSON avec les informations de votre transcodage. Cela inclut l’identifiant unique de transcodage (`id`) utilisé dans [la récupération d’un modèle transcodé spécifique](#retrieve-transcoded-model).
 
 ```json
 {
@@ -379,7 +384,7 @@ Une réponse réussie renvoie un payload contenant un objet JSON contenant les i
 
 ## Récupération d’une liste de transcodages pour un modèle {#retrieve-transcoded-model-list}
 
-Vous pouvez récupérer une liste de transcodages qui ont été effectués sur un modèle en exécutant une requête de GET avec votre `{MODEL_ID}`.
+Vous pouvez récupérer une liste de transcodages qui ont été effectués sur un modèle en exécutant une requête GET avec votre `{MODEL_ID}`.
 
 **Format d’API**
 
@@ -439,7 +444,7 @@ Une réponse réussie renvoie un payload contenant un objet json avec une liste 
 
 ## Récupération d’un modèle transcodé spécifique {#retrieve-transcoded-model}
 
-Vous pouvez récupérer un modèle transcodé spécifique en exécutant une requête de GET avec votre `{MODEL_ID}` et l’identifiant d’un modèle transcodé.
+Vous pouvez récupérer un modèle transcodé spécifique en exécutant une requête GET avec votre `{MODEL_ID}` et l’identifiant d’un modèle transcodé.
 
 **Format d’API**
 
@@ -465,7 +470,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet JSON avec les données du modèle transcodé.
+Une réponse réussie renvoie une payload contenant un objet JSON avec les données du modèle transcodé.
 
 ```json
 {

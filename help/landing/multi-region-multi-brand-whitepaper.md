@@ -1,13 +1,19 @@
 ---
 title: Adobe Experience Platform pour les entreprises multi-régions et multi-marques
 description: Découvrez comment doter vos équipes d’implémentation des outils et des informations nécessaires pour naviguer efficacement parmi les subtilités de Adobe Experience Platform.
-source-git-commit: 6e96cf7660a9a7fe1b4eaef645bca55ed89b7673
+exl-id: e714cbd8-8915-4f77-b1ba-a7fcf50de8d6
+TQID: https://experienceleague.adobe.com/L6N1-7bjAAPJ7shDueGe9CMXKR83S3lT-NeZWU7-JCs
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d175cb4c-5781-454e-a826-bf6dff786265id: d1823595-9241-4128-8a33-e4ac3bf08773id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0id: db909e74-607e-4493-905b-93836ba51e32id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74id: ee602049-8a18-43df-9299-a689a025a371id: f0c9f224-75f2-4864-8de6-859ae7856690
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '5322'
+source-wordcount: 5507
 ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Platform pour les entreprises multi-régions et multi-marques
 
@@ -72,7 +78,7 @@ Vous pouvez créer plusieurs sandbox de n’importe quel type. Pour ce type d’
 
 ![CDP-Créer un sandbox](./images/whitepaper/Create-sandbox.png)
 
-Dans le sandbox de production, nous prévoyons que vous ingériez vos données de profil de production et d’événement d’expérience afin de créer un profil unifié pour vos activités marketing. Pour plus d’informations sur la manière de combiner des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils client qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et appareils en temps réel, consultez la [documentation d’Adobe Real-Time Customer Data Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/rtcdp/home).
+Dans le sandbox de production, nous prévoyons que vous ingériez vos données de profil de production et d’événement d’expérience afin de créer un profil unifié pour vos activités marketing. Pour plus d’informations sur la manière de combiner des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils client qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et appareils en temps réel, consultez la [documentation d’](https://experienceleague.adobe.com/fr/docs/experience-platform/rtcdp/home).
 
 **Contrôles d’accès**
 
@@ -86,7 +92,7 @@ Si vous le souhaitez, envisagez d’ajouter des contrôles d’accès granulaire
 
 **Cycle de vie du développement avec les sandbox de développement**
 
-Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. C&#39;est différent en ce sens qu&#39;il y aura des mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
+Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. C&#39;est différent en ce sens qu&#39;il y aura des mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
 
 Vous pouvez disposer de plusieurs sandbox de développement (jusqu’à 4 dans cet exemple d’entreprise, car nous utilisons un sandbox de production) pour le cycle de vie du développement et des tests.
 
@@ -102,7 +108,7 @@ Grâce à la fonction d’outil Sandbox, vous pouvez sélectionner différents o
 
 Vous avez la possibilité d’utiliser les API Experience Platform pour automatiser les déploiements de sandbox et les tâches de configuration. Les API permettent un contrôle programmable pour les tâches répétitives telles que l’exportation, l’importation ou la modification des configurations de sandbox, offrant ainsi une certaine flexibilité si vous préférez les workflows automatisés.
 
-Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Créer un package](./images/whitepaper/create-package.png) | ![Packages de liste CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -229,7 +235,7 @@ En outre, vous pouvez utiliser la correspondance de segments Experience Platform
 
 Ce service de partage de segments permet à deux utilisateurs ou plus d’échanger des données de segment de manière sécurisée, contrôlée et respectueuse de la vie privée.
 
-Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/segment-match/overview).
+Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### Combinaison d’approches pour les opérations mondiales, régionales et spécifiques à la marque
 
@@ -404,7 +410,7 @@ Plusieurs ID d’organisation régissent l’accès des utilisateurs et utilisat
 
 Experience Platform fournit aux entreprises un cadre robuste pour centraliser, gérer et activer les données clients sur des modèles commerciaux multi-marques et multi-régions. Ce livre blanc a exploré les principales stratégies de déploiement, les modèles de gouvernance et les bonnes pratiques pour optimiser l’implémentation d’Experience Platform pour les organisations présentant des besoins opérationnels et d’isolement des données variables.
 
-## Principaux points à retenir
+## Points essentiels à retenir
 
 1. **Modèles de déploiement flexibles**
 
@@ -426,7 +432,7 @@ Experience Platform fournit aux entreprises un cadre robuste pour centraliser, g
 
 4. **Rapports globaux et stratégies d’activation**
 
-   - Les entreprises qui utilisent **Customer Journey Analytics** doivent tenir compte de la synchronisation des données et des implications commerciales lors de la consolidation des rapports globaux.
+   - Les entreprises qui utilisent **** doivent tenir compte de la synchronisation des données et des implications commerciales lors de la consolidation des rapports globaux.
 
    - La **Correspondance de segments** fournit un mécanisme conforme à la confidentialité pour le partage d’audiences entre sandbox, assurant ainsi des activations marketing transparentes.
 
@@ -434,7 +440,7 @@ Experience Platform fournit aux entreprises un cadre robuste pour centraliser, g
 
    - Vous devez évaluer soigneusement s’il convient de déployer **plusieurs ID d’organisation ou plusieurs sandbox** en fonction de la résidence des données, de la conformité et des besoins opérationnels.
 
-   - Les **identifiants d’organisation** offrent une isolation complète **&#x200B; tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
+   - Les **identifiants d’organisation** offrent une isolation complète** tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
 
 ## Réflexions finales
 

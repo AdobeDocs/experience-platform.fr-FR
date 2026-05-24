@@ -4,16 +4,21 @@ solution: Experience Platform
 title: Expirations des événements d’expérience
 description: Ce document fournit des instructions générales sur la configuration des délais d’expiration pour des événements d’expérience individuels dans un jeu de données Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: e85122a0f6acf2f3cb3960d89faa70220692ac23
+TQID: https://experienceleague.adobe.com/jE7MfCiVdmisljCh-pea4B01qt2TVNnZJr1ww6x-wxo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: 891
 ht-degree: 64%
 
 ---
 
 # Expirations des événements d’expérience
 
-Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour [&#x200B; Profil client en temps réel &#x200B;](./home.md). Vous pouvez ainsi supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
+Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour [ Profil client en temps réel ](./home.md). Vous pouvez ainsi supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
 
 Pour savoir comment gérer les expirations d’événements d’expérience dans vos jeux de données, consultez le [guide de l’interface utilisateur des jeux de données](../catalog/datasets/user-guide.md#data-retention-policy).
 
@@ -78,7 +83,7 @@ L’expiration des données de profils pseudonymes supprime les enregistrements 
 
 ### Comment utiliser l’expiration des données de profils pseudonymes en parallèle avec l’expiration des données d’événements d’expérience ?
 
-L’expiration des données de profils anonymes et l’expiration des données d’événements d’expérience sont complémentaires.
+L’expiration des données de profils pseudonymes et l’expiration des données d’événements d’expérience sont complémentaires.
 
 Nous vous recommandons de **toujours** appliquer l’expiration des données d’événements d’expérience à vos jeux de données, en fonction de vos besoins de conservation des données sur votre clientèle existante. Une fois la configuration de l’expiration des données d’événements d’expérience terminée, vous pouvez utiliser l’expiration des données de profils pseudonymes pour supprimer automatiquement les profils pseudonymes. En règle générale, le délai d’expiration des données des profils pseudonymes est inférieur à celui des événements d’expérience.
 

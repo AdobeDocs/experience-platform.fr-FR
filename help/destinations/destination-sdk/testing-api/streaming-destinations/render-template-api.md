@@ -2,19 +2,23 @@
 description: Découvrez comment utiliser l’API de test de destination pour valider la sortie vers la destination de diffusion en streaming, en fonction de votre modèle de transformation de message.
 title: Validation de la structure de profil exportée
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/fW6k1ec2bmzNhEJyqQAYJrWB-7fwOJ7gO2vdvbYGsFk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 92%
+source-wordcount: 791
+ht-degree: 87%
 
 ---
-
 
 # Validation de la structure de profil exportée {#render-template-api-operations}
 
 >[!IMPORTANT]
 >
->**Point d’entrée de l’API &#x200B;** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Point d’entrée de l’API ** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
 Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/testing/template/render` et fournit leur description. Effectuez le rendu des profils exportés correspondant au format de destination attendu, en fonction de votre [modèle de transformation de message](../../functionality/destination-server/message-format.md#using-templating). Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](create-template.md).
 
@@ -43,7 +47,7 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | L’identifiant de la configuration de destination pour laquelle vous effectuez le rendu des profils exportés. |
 | `template` | Version du modèle placée dans une séquence dʼéchappement, sur la base duquel vous effectuez le rendu des profils exportés. |
-| `profiles` | *Facultatif*. Vous pouvez ajouter des profils au corps de la demande. Si vous n’ajoutez aucun profil, Experience Platform génère et ajoute automatiquement des profils à la demande. <br> Pour ajouter des profils au corps de la demande, générez-les à lʼaide de lʼ[API de génération de profil type](sample-profile-generation-api.md). |
+| `profiles` | *Facultatif*. Vous pouvez ajouter des profils au corps de la demande. Si vous n’ajoutez aucun profil, Experience Platform génère et ajoute automatiquement des profils à la requête. <br> Si vous souhaitez ajouter des profils au corps de l’appel, vous pouvez en générer à l’aide de la [API de génération de profil type](sample-profile-generation-api.md). |
 
 {style="table-layout:auto"}
 

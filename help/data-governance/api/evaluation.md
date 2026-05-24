@@ -5,10 +5,15 @@ title: Points d’entrée de l’API Policy Evaluation
 description: Une fois les actions marketing créées et les politiques définies, vous pouvez utiliser l’API Policy Service pour déterminer si certaines actions ne respectent pas les politiques. Les contraintes renvoyées prennent la forme d’un ensemble de politiques qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
+TQID: https://experienceleague.adobe.com/ukXQJtJ3MKbRjBG2zSO0WGWVbMIHvAbtbCJHgmaPxOo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 98%
+source-wordcount: 1570
+ht-degree: 94%
 
 ---
 
@@ -171,7 +176,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
 
 **Réponse**
 
@@ -419,7 +424,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
 | `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeurs JSON. Consultez la section sur les [pointeurs JSON](../../landing/api-fundamentals.md#json-pointer) dans le guide des principes de base de l’API pour obtenir plus d’informations sur la syntaxe acceptée pour ces chaînes. |
 
 **Réponse**
@@ -584,8 +589,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | URI de l’action marketing à tester par rapport aux libellés ou aux jeux de données en cas de violations de politique. |
 | `includeDraft` | Par défaut, seules les politiques activées participent à l’évaluation. Si la valeur `includeDraft` est définie sur `true`, les politiques dont l’état est défini sur `DRAFT` participent également. |
-| `labels` | Tableau de libellés d’utilisation des données en fonction desquels tester l’action marketing.<br><br>**IMPORTANT** : lors de l’utilisation de cette propriété, une propriété `entityList` ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de jeux de données et/ou de champs, vous devez inclure un objet distinct dans la payload de requête qui contient un tableau `entityList`. |
-| `entityList` | Tableau de jeux de données et de champs spécifiques (facultatifs) à ces jeux de données en fonction desquels tester l’action marketing.<br><br>**IMPORTANT** : lors de l’utilisation de cette propriété, une propriété `labels` ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de libellés d’utilisation de données spécifiques, vous devez inclure un objet distinct dans la payload de requête qui contient un tableau `labels`. |
+| `labels` | Tableau de libellés d’utilisation des données en fonction desquels tester l’action marketing.<br><br>**IMPORTANT** : lors de l’utilisation de cette propriété, une propriété `entityList` ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de jeux de données et/ou de champs, vous devez inclure un objet distinct dans la payload de requête qui contient un tableau `entityList`. |
+| `entityList` | Tableau de jeux de données et de champs spécifiques (facultatifs) à ces jeux de données en fonction desquels tester l’action marketing.<br><br>**IMPORTANT** : lors de l’utilisation de cette propriété, une propriété `labels` ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de libellés d’utilisation de données spécifiques, vous devez inclure un objet distinct dans la payload de requête qui contient un tableau `labels`. |
 | `entityType` | Type d’entité en fonction de laquelle tester l’action marketing. Actuellement, seul `dataSet` est pris en charge. |
 | `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. |
 | `entityMeta.fields` | (Facultatif) Liste de champs spécifiques dans le jeu de données en fonction desquels tester l’action marketing. |

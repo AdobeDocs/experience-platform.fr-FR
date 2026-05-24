@@ -4,10 +4,16 @@ solution: Experience Platform
 title: Point d’entrée de l’API Unions
 description: Le point d’entrée /unions de l’API Schema Registry vous permet de gérer par programmation les schémas d’union XDM dans votre application d’expérience.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/7DDAzUyAk70ca8JSTipoZd8GwuhXK2OS9AvXG9ZyZCo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 39%
+source-wordcount: 914
+ht-degree: 41%
 
 ---
 
@@ -29,7 +35,7 @@ Un schéma d’union `identityMap` est une représentation des identités connue
 
 Le tableau `timeSeriesEvents` est une liste d’événements de série temporelle liés aux schémas d’enregistrement associés à l’union. Lorsque les données de profil sont exportées vers des jeux de données, ce tableau est inclus pour chaque enregistrement. Ceci est utile pour divers cas d’utilisation, tels que le machine learning où les modèles ont besoin de l’historique complet du comportement d’un profil en plus de ses attributs d’enregistrement.
 
-### Mappage de l’adhésion aux segments
+### Mappage de l’appartenance à des segments
 
 La carte `segmentMembership` stocke les résultats de l’évaluation d’une définition de segment. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://www.adobe.io/experience-platform-apis/references/segmentation/), le mappage est mis à jour. `segmentMembership` stocke également toutes les audiences pré-évaluées qui sont ingérées dans Experience Platform, permettant l’intégration avec d’autres solutions comme Adobe Audience Manager. Pour plus d’informations, consultez le tutoriel sur la [création d’audiences à l’aide d’API](../../segmentation/tutorials/create-a-segment.md).
 
@@ -37,7 +43,7 @@ La carte `segmentMembership` stocke les résultats de l’évaluation d’une d�
 
 Lorsque vous définissez la balise `union` sur un schéma, le [!DNL Schema Registry] ajoute automatiquement le schéma à l’union pour la classe sur laquelle le schéma est basé. S’il n’existe aucune union pour la classe en question, une nouvelle union est automatiquement créée. La `$id` de l’union est similaire à la `$id` standard des autres ressources [!DNL Schema Registry], la seule différence étant que est ajoutée par deux traits de soulignement et le mot « union » (`__union`).
 
-Vous pouvez afficher la liste des unions disponibles en effectuant une requête GET au point d’entrée `/tenant/unions`.
+Vous pouvez afficher la liste des unions disponibles en adressant une requête GET au point d’entrée `/tenant/unions`.
 
 **Format d’API**
 
@@ -178,9 +184,9 @@ Le format de la réponse dépend de l’en-tête Accept envoyé dans la requête
 }
 ```
 
-## Activation d’un segment pour un abonnement à l’union {#enable}
+## Activation d’un schéma pour un abonnement à l’union {#enable}
 
-Pour qu’un schéma soit inclus dans l’union pour sa classe, une balise `union` doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, envoyez une requête PATCH afin d’ajouter un tableau `meta:immutableTags` avec une seule valeur de chaîne de `union` au schéma en question. Pour obtenir un exemple détaillé[&#128279;](./schemas.md#union) consultez le guide schemas endpoint guide .
+Pour qu’un schéma soit inclus dans l’union pour sa classe, une balise `union` doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, envoyez une requête PATCH afin d’ajouter un tableau `meta:immutableTags` avec une seule valeur de chaîne de `union` au schéma en question. Pour obtenir un exemple détaillé](./schemas.md#union) consultez le guide [schemas endpoint guide .
 
 ## Liste des schémas dans une union {#list-schemas}
 
@@ -223,7 +229,7 @@ Le format de la réponse dépend de l’en-tête `Accept` envoyé dans la requê
 
 **Réponse**
 
-Une réponse réussie renvoie une liste filtrée de schémas, contenant uniquement ceux appartenant à la classe spécifiée qui ont été activés pour l’appartenance à une union. N’oubliez pas que lorsque vous utilisez plusieurs paramètres de requête, une relation AND est supposée.
+Une réponse réussie renvoie une liste filtrée de schémas, contenant uniquement ceux appartenant à la classe spécifiée qui ont été activés pour l’appartenance à une union. N’oubliez pas que lorsque vous utilisez plusieurs paramètres de requête, une relation ET est présumée.
 
 ```JSON
 {

@@ -2,9 +2,14 @@
 title: Informations sur les destinations
 description: Découvrez le langage SQL qui alimente vos informations sur les destinations et utilisez ces requêtes pour générer des informations personnalisées afin d’explorer plus en détail l’activation des données de Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/O-Yz8FOv9rjXjT8eTWpIUIPkx9R2eQyatpCzKw71lbQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: eec185bd-7d60-4193-ba3f-da427569936a
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: 1142
 ht-degree: 3%
 
 ---
@@ -48,7 +53,7 @@ WHERE
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la &#x200B;](../guides/destinations.md#activated-audiences) Documentation sur le widget Audiences activées .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#activated-audiences) consultez la [ Documentation sur le widget Audiences activées .
 
 ## Audiences activées dans toutes les destinations {#activated-audiences-across-all-destinations}
 
@@ -214,7 +219,7 @@ SELECT k.destination_name1,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la &#x200B;](../guides/destinations.md#common-audiences) Documentation sur le widget des audiences courantes .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#common-audiences) consultez la [ Documentation sur le widget des audiences courantes .
 
 ## Statut de destination {#destination-status}
 
@@ -256,7 +261,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#destinations-count)Nombre de destinations.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#destinations-count) consultez la documentation du widget [Nombre de destinations.
 
 ## Intégrité de l’audience mappée {#mapped-audience-health}
 
@@ -325,7 +330,7 @@ SELECT destination_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#mapped-audience-health)Intégrité de l’audience mappée.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#mapped-audience-health) consultez la documentation du widget [Intégrité de l’audience mappée.
 
 ## Audiences mappées {#mapped-audiences}
 
@@ -345,7 +350,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#mapped-audiences)Audiences mappées.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#mapped-audiences) consultez la documentation du widget [Audiences mappées.
 
 <!-- 
 Commented out until the Jan release as the SQL IS MISSING:
@@ -394,7 +399,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation du widget &#x200B;](../guides/destinations.md#most-used-destinations)Destinations les plus utilisées.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#most-used-destinations) consultez la documentation du widget [Destinations les plus utilisées.
 
 ## Audiences récemment activées {#recently-activated-audiences}
 
@@ -425,7 +430,7 @@ LIMIT
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la documentation sur le widget &#x200B;](../guides/destinations.md#recently-activated-audiences) Audiences récemment activées .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#recently-activated-audiences) consultez la documentation sur le widget [ Audiences récemment activées .
 
 ## Audiences récemment activées par destination {#recently-activated-audiences-by-destination}
 
@@ -485,7 +490,7 @@ LIMIT
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#x200B; consultez la &#x200B;](../guides/destinations.md#recently-created-destinations) Documentation sur le widget des destinations récemment créées .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/destinations.md#recently-created-destinations) consultez la [ Documentation sur le widget des destinations récemment créées .
 
 <!-- 
 Commented out until the Jan release as SQL MISSING FROM WIKI:

@@ -5,9 +5,12 @@ description: Découvrez comment connecter Pinterest Ads à Adobe Experience Plat
 badge: Beta
 hide: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+TQID: https://experienceleague.adobe.com/0mbf8jV7vZZmsZQ9cx7y0OykfCTpBfch-RizjFcBMR8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: 1017
 ht-degree: 9%
 
 ---

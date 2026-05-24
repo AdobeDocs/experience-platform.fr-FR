@@ -2,10 +2,16 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
 exl-id: e5b40712-2a54-4c6f-a4a1-2f078305da59
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/uFkzKfFeVHwHEZTu1vaeLUWBqg-zzr8RKL1GeA3oRGs
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: ee602049-8a18-43df-9299-a689a025a371id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 97%
+source-wordcount: 2229
+ht-degree: 96%
 
 ---
 
@@ -19,15 +25,15 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
 - [Tableaux de bord](#dashboards)
 - [Préparation des données](#data-prep)
 - [Destinations](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
-- [Query Service](#query-service)
-- [Segmentation Service](#segmentation-service)
+- [Service de requête](#query-service)
+- [Service de segmentation](#segmentation-service)
 - [Sources](#sources)
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -35,7 +41,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des �
 | --- | --- |
 | Prise en charge des sandbox de développement | Vous pouvez maintenant [vous abonner aux alertes](../../observability/alerts/ui.md) dans les sandbox de production et de développement, ce qui permet une surveillance transparente de tous les environnements. |
 | Modèles d’e-mail | Les [alertes par e-mail](../../observability/alerts/ui.md) incluent désormais des informations détaillées sur les ressources, vous permettant ainsi de disposer de toutes les informations clés à portée de main. |
-| Amélioration de la personnalisation | Vous pouvez désormais configurer des [seuils d’alerte](../../observability/alerts/ui.md#alert-threshold) pour une plus grande flexibilité afin d’adapter les alertes à vos besoins spécifiques pour les types d’alertes suivants :<br><ul><li>Retard de la tâche relative aux segments</li><li>Retard d’export du segment</li><li>Retard d’exécution du flux de destination</li><li>Retard d’exécution du flux du service d’identités</li><li>Retard d’exécution du flux de profils</li><li>Retard dans l’exécution du flux de sources</li><li>Retard d’exécution de requête</li><li>Taux d’activations ignorées dépassé</li><li>Taux d’erreurs d’ingestion de sources dépassé</ul> |
+| Amélioration de la personnalisation | Vous pouvez désormais configurer des [seuils d’alerte](../../observability/alerts/ui.md#alert-threshold) pour une plus grande flexibilité afin d’adapter les alertes à vos besoins spécifiques pour les types d’alertes suivants :<br><ul><li>Retard du traitement du segment</li><li>Retard d’export du segment</li><li>Retard d’exécution du flux de destination</li><li>Retard d’exécution du flux du service d’identités</li><li>Retard d’exécution du flux de profils</li><li>Retard dans l’exécution du flux de sources</li><li>Retard d’exécution de la requête</li><li>Taux d’activations ignorées dépassé</li><li>Taux d’erreurs d’ingestion de sources dépassé</ul> |
 | Alertes étendues | Les alertes d’informations sur les événements d’audit sont désormais disponibles pour un abonnement pour les [règles d’alerte](../../observability/alerts/rules.md) suivantes :<br><ul><li>Création d’une audience</li><li>Mise à jour d’une audience</li><li>Suppression d’une audience</li><li>Création d’un jeu de données</li><li>Mise à jour d’un jeu de données</li><li>Suppression d’un jeu de données</li><li>Création d’un schéma</li><li>Mise à jour d’un schéma</li><li>Suppression d’un schéma. |
 
 {style="table-layout:auto"}
@@ -50,7 +56,7 @@ Experience Platform propose de nombreux tableaux de bord qui vous permettent d�
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Tableau des modules complémentaires d’utilisation des licences | Bénéficiez d’une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Experience Platform à l’aide de tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations, voir le [[!UICONTROL guide du tableau de bord Utilisation des licences].](../../dashboards/guides/license-usage.md#overview-tab) |
+| Tableau des modules complémentaires d’utilisation des licences | Bénéficiez d’une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Experience Platform à l’aide de tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations](../../dashboards/guides/license-usage.md#overview-tab) consultez le guide du tableau de bord [[!UICONTROL License Usage] . |
 | Mode de requête pro - Mises à niveau des filtres globaux | Améliorez les analyses avec le nouveau filtre de date du mode de requête pro. Affinez les informations à l’aide de paramètres de date dynamiques dans vos requêtes SQL et filtrez les données par périodes spécifiques. Choisissez des périodes prédéfinies ou personnalisées dans une interface d’utilisation intuitive, en conservant les tableaux de bord pertinents pour tous les utilisateurs et toutes les utilisatrices. Simplifiez les workflows, conservez la précision et prenez des décisions opportunes. Pour plus d’informations, consultez le [guide sur la création de filtres de date](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md). |
 | Mode de requête pro - Explorations | Obtenez des informations plus précises avec la fonctionnalité d’exploration du mode de requête pro et naviguez facilement entre les graphiques généraux et les tableaux de bord détaillés. Utilisez cette fonctionnalité pour passer facilement des résumés aux analyses approfondies et explorer les tendances, les comportements de la clientèle et les KPI. Les passages de filtres automatiques et les explorations à plusieurs niveaux garantissent des données homogènes, assurant une exploration fluide. Simplifiez les workflows, conservez le contexte et accélérez les décisions. Pour plus d’informations, lisez le [guide détaillé sur la création d’explorations](../../dashboards/sql-insights-query-pro-mode/drill-through.md). |
 | Mode de requête pro - Attributs de table avancés | Utilisez les attributs de table avancés du mode de requête pro pour rationaliser la visualisation des données, améliorer l’efficacité des workflows et améliorer la clarté des données. Ajoutez un tri, un redimensionnement et une pagination automatiques à vos tableaux de bord directement depuis les tableaux de bord personnalisés. Triez les colonnes afin de hiérarchiser les données clés, redimensionnez-les pour une lisibilité optimale et parcourez facilement les jeux de données volumineux sans modifier les requêtes SQL. Pour découvrir comment intégrer ces fonctionnalités et améliorer vos informations sur les données, lisez le guide « [Afficher plus](../../dashboards/sql-insights-query-pro-mode/view-more.md) ». |
@@ -68,7 +74,7 @@ Utilisez la préparation des données pour mapper, transformer et valider des do
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Version Beta]{type=Informative} Nouvelles fonctions de préparation des données à utiliser dans les destinations | Vous pouvez désormais utiliser les fonctions de table suivantes pour les cas d’utilisation des destinations :<ul><li>`array_to_string`</li><li>`filterArray`</li><li>`transformArray`</li><li>`flattenArray`</li></ul> Pour plus d’informations, consultez le [guide des fonctions de préparation de données](../../data-prep/functions.md#arrays). |
+| [!BADGE Beta ]{type=Informative} Nouvelles fonctions de préparation de données à utiliser dans les destinations | Vous pouvez désormais utiliser les fonctions de table suivantes pour les cas d’utilisation des destinations :<ul><li>`array_to_string`</li><li>`filterArray`</li><li>`transformArray`</li><li>`flattenArray`</li></ul> Pour plus d’informations, consultez le [guide des fonctions de préparation de données](../../data-prep/functions.md#arrays). |
 
 {style="table-layout:auto"}
 
@@ -76,7 +82,7 @@ Pour plus d’informations sur la préparation des données, consultez la [prés
 
 ## Destinations {#destinations}
 
-**Mise à jour : 30 septembre 2024**
+**Mise à jour : mardi 30 septembre 2024**
 
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
@@ -85,11 +91,11 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Destination | Description |
 | --- | --- |
 | [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | La version de septembre 2024 comporte une option de mappage permettant d’exporter le paramètre `countryCode` vers Amazon Ads. Utilisez `countryCode` dans l’[étape de mappage](/help/destinations/catalog/advertising/amazon-ads.md#map) pour améliorer vos taux de correspondance d’identité avec Amazon. |
-| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | Utilisez cette destination pour activer les audiences de votre compte pour les cas d’utilisation d’Account-Based Marketing (ABM). Faites de la publicité auprès des personas et des rôles pertinents dans vos comptes cibles via Demand Side Platform (DSP) B2B de DemandBase. Les comptes cibles peuvent également être enrichis avec des données tierces DemandBase pour d’autres cas d’utilisation en aval dans le marketing et les ventes. |
+| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | Utilisez cette destination pour activer vos audiences de comptes pour les cas d’utilisation d’Account-Based Marketing (ABM). Faites de la publicité auprès des personas et des rôles pertinents dans vos comptes cibles via Demand Side Platform (DSP) B2B de DemandBase. Les comptes cibles peuvent également être enrichis avec des données tierces DemandBase pour d’autres cas d’utilisation en aval dans le marketing et les ventes. |
 
 {style="table-layout:auto"}
 
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+**Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -101,7 +107,7 @@ Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinatio
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
-XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences clientes par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Fonctionnalités mises à jour**
 
@@ -134,9 +140,9 @@ Utilisez le service d’identités d’Adobe Experience Platform pour créer u
 
 Pour plus d’informations sur le service d’identités, consultez la [vue d’ensemble du service d’identités](../../identity-service/home.md).
 
-## Query Service {#query-service}
+## Service de requête {#query-service}
 
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL data lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer en tant que profil client en temps réel.
+Le service de requête vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL data lake] Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou à ingérer dans le profil client en temps réel.
 
 **Fonctionnalités mises à jour**
 
@@ -149,11 +155,11 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur Query Service, consultez la [vue d’ensemble de Query Service](../../query-service/home.md).
+Pour en savoir plus sur le service de requête, consultez la section [Présentation du service de requête](../../query-service/home.md).
 
 ## Service de segmentation {#segmentation-service}
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -176,12 +182,12 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Version Beta]{type=Informative} Prise en charge de l’ingestion de données chiffrées dans l’interface d’utilisation | Vous pouvez désormais ingérer des données chiffrées à partir d’une source par lots d’espace de stockage dans le cloud à l’aide de l’espace de travail Sources dans l’interface d’utilisation d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur l’[ingestion de données chiffrées dans l’interface d’utilisation](../../sources/tutorials/ui/encryped-ingestion.md). |
+| [!BADGE Beta ]{type=Informative} Prise en charge de l’ingestion de données chiffrées dans l’interface utilisateur | Vous pouvez désormais ingérer des données chiffrées à partir d’une source par lots d’espace de stockage dans le cloud à l’aide de l’espace de travail Sources dans l’interface d’utilisation d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur l’[ingestion de données chiffrées dans l’interface d’utilisation](../../sources/tutorials/ui/encryped-ingestion.md). |
 | Disponibilité générale de la source [!DNL Snowflake Streaming] | La source [!DNL Snowflake Streaming] est désormais en disponibilité générale. Utilisez cette source pour diffuser des données de votre compte [!DNL Snowflake] vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Snowflake Streaming] vue d’ensemble](../../sources/connectors/databases/snowflake-streaming.md). |
-| Prise en charge de l’authentification du compte de service dans [!DNL Google BigQuery] | Vous pouvez désormais connecter votre compte [!DNL Google BigQuery] à Experience Platform à l’aide de l’authentification du compte de service. Pour plus d’informations, consultez la [[!DNL Google BigQuery] vue d’ensemble. &#x200B;](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)<br> ![Image de l’interface d’utilisation d’Experience Platform qui illustre l’option Modifier le planning et les dossiers de l’étape de planification.](../2024/assets/september/service_auth.png "Authentification de service pour Google BigQuery."){width="250" align="center" zoomable="yes"} |
+| Prise en charge de l’authentification du compte de service dans [!DNL Google BigQuery] | Vous pouvez désormais connecter votre compte [!DNL Google BigQuery] à Experience Platform à l’aide de l’authentification du compte de service. Pour plus d’informations, consultez la [[!DNL Google BigQuery] vue d’ensemble. ](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)<br> ![Image de l’interface d’utilisation d’Experience Platform qui illustre l’option Modifier le planning et les dossiers de l’étape de planification.](../2024/assets/september/service_auth.png "Authentification de service pour Google BigQuery."){width="250" align="center" zoomable="yes"} |
 | Prise en charge de la possibilité d’ignorer la prévisualisation des données d’exemple | Vous pouvez maintenant choisir d’ignorer la prévisualisation des données lors de la création d’une connexion source avec les sources suivantes : <ul><li>[[!DNL Google BigQuery]](../../sources/tutorials/ui/create/databases/bigquery.md#skip-preview-of-sample-data)</li><li>[[!DNL Salesforce]](../../sources/tutorials/ui/create/crm/salesforce.md#skip-preview-of-sample-data)</li><li>[[!DNL Snowflake]](../../sources/tutorials/ui/create/databases/snowflake.md#skip-preview-of-sample-data)</li></ul> Vous pouvez ignorer la prévisualisation des données pour contourner un délai d’expiration qui peut se produire lors de l’ingestion de données par lots volumineuses. Cela peut empêcher la validation automatique de vos champs calculés et obligatoires. Si vous choisissez d’ignorer la prévisualisation des données, vous devrez peut-être valider manuellement vos champs calculés et obligatoires lors du mappage. |
 | Prise en charge de la désactivation du regroupement dans [!DNL SFTP] | Vous pouvez désormais configurer un paramètre qui permet de désactiver le regroupement dans la source [!DNL SFTP]. Pour plus d’informations, consultez la [[!DNL SFTP] vue d’ensemble](../../sources/connectors/cloud-storage/sftp.md). |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).

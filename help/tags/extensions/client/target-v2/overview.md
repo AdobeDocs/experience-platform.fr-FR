@@ -2,9 +2,15 @@
 title: Présentation de l’extension Adobe Target v2
 description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/cqZu2HyCdKsadxRRxTIx3r83P2UmGiaEo3zXumwlSeY
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: e08599ea-8888-4294-ba74-3ba0a7762a46id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+subfeature_v2: id: c069c44e-5426-4c1a-accc-8028662f2fdeid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: df312454-73c4-43f6-a90e-18f5043f074cid: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: 1397
 ht-degree: 87%
 
 ---
@@ -27,7 +33,7 @@ Pour configurer l’extension, ouvrez l’onglet Extensions, survolez l’extens
 
 ### Paramètres at.js
 
-Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur de Target. L’extension récupère les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
+Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement récupérés de la configuration at.js de l’interface d’utilisationde Target. L’extension récupère les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
 
 Les options de configuration disponibles sont les suivantes :
 
@@ -35,7 +41,7 @@ Les options de configuration disponibles sont les suivantes :
 
 Le code client est l’identifiant de compte de Target. Cette valeur doit presque toujours être conservée comme valeur par défaut. Elle peut être modifiée à l’aide d’éléments de données.
 
-#### Organization ID (ID d’organisation)
+#### ID d’organisation
 
 Cet identifiant associe votre mise en œuvre à votre compte Adobe Experience Cloud. Cette valeur doit presque toujours être conservée comme valeur par défaut. Elle peut être modifiée à l’aide d’éléments de données.
 
@@ -45,7 +51,7 @@ Le domaine du serveur fait référence au domaine dans lequel les requêtes Targ
 
 #### Opt-in RGPD (Accord préalable RGPD)
 
-Lorsque cette option est activée, Adobe Target fournit une fonctionnalité d’accord préalable aidant à prendre en charge la stratégie de gestion du consentement. Cette fonctionnalité permet aux clients de décider comment et à quel moment la balise Target est déclenchée. Pour plus d’informations sur la fonctionnalité d’accord préalable d’Adobe, voir [Confidentialité et Règlement général sur la protection des données (RGPD)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=fr).
+Lorsque cette option est activée, Adobe Target fournit une fonctionnalité d’accord préalable aidant à prendre en charge la stratégie de gestion du consentement. Cette fonctionnalité permet aux clients de décider comment et à quel moment la balise Target est déclenchée.  Pour plus d’informations sur la fonctionnalité d’accord préalable d’Adobe, voir [Confidentialité et Règlement général sur la protection des données (RGPD)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=fr).
 
 #### Timeout (Délai d’expiration) (ms)
 

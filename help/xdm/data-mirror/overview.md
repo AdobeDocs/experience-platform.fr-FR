@@ -5,9 +5,15 @@ title: Présentation de Data Mirror
 description: Découvrez comment Data Mirror permet l’ingestion de modifications au niveau des lignes à partir de bases de données externes dans Adobe Experience Platform à l’aide de schémas relationnels avec une unicité, des relations et un contrôle de version appliqués.
 badge: Disponibilité limitée
 exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+TQID: https://experienceleague.adobe.com/ZfyfTkCI-wzmyReaplVYGnKXfHgohwAJyV1dSnW2u80
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: 1370
 ht-degree: 1%
 
 ---
@@ -135,7 +141,7 @@ Utilisez ce tableau de comparaison pour choisir la méthode d’ingestion la mie
 | Méthode d’ingestion | Exemple d’utilisation |
 | ----------------------- | -------------------------------------------------------------- |
 | **Modifier la capture de données** | Synchronisation en temps réel à partir des entrepôts cloud pris en charge |
-| **Distiller de données** | Workflows d’ingestion et de transformation SQL |
+| Distiller de données **** | Workflows d’ingestion et de transformation SQL |
 | **Chargement de fichier** | Ingestion manuelle/par lots lorsque l’intégration source n’est pas disponible |
 
 ### Limites de la relation
@@ -144,7 +150,7 @@ Data Mirror prend en charge les relations **un-à-un** et **plusieurs-à-un** à
 
 ## Étapes suivantes
 
-Après avoir consulté cette présentation, vous devriez être en mesure de déterminer si Data Mirror correspond à votre cas d’utilisation et de comprendre les exigences de mise en œuvre. Pour commencer :
+Après avoir consulté cette présentation, vous devriez être en mesure de déterminer si Data Mirror correspond à votre cas d’utilisation et de comprendre les exigences de mise en œuvre. Pour démarrer :
 
 1. Les **architectes des données** doivent évaluer votre modèle de données pour s’assurer qu’il prend en charge les clés primaires, le contrôle de version et les fonctionnalités de suivi des modifications.
 2. **Les parties prenantes de l’entreprise** doivent confirmer que votre licence comprend la prise en charge des schémas relationnels et les éditions Experience Platform requises.

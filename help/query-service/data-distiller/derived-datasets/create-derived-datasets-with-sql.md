@@ -2,9 +2,14 @@
 title: Créer des jeux de données dérivés avec SQL
 description: Découvrez comment utiliser SQL pour créer un jeu de données dérivé activé pour le profil et comment utiliser le jeu de données pour le profil client en temps réel et le service de segmentation.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/-BVUnQ20U9qPywL4Wws--owKoR9qHO2JPrrwMq0pItA
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: 1255
 ht-degree: 2%
 
 ---
@@ -189,7 +194,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >La création d’un groupe de champs via SQL échoue si l’indicateur `label` n’est pas fourni dans l’instruction ou si le groupe de champs existe déjà.
->&#x200B;>Assurez-vous que la requête inclut une clause `IF NOT EXISTS` pour éviter l’échec de la requête, car le groupe de champs existe déjà.
+>Assurez-vous que la requête inclut une clause `IF NOT EXISTS` pour éviter l’échec de la requête, car le groupe de champs existe déjà.
 
 Un exemple concret peut ressembler à celui illustré ci-dessous.
 
@@ -199,7 +204,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 L’exécution réussie de cette instruction renvoie l’identifiant du groupe de champs créé. Par exemple `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Pour plus d’informations sur les autres méthodes[&#x200B; consultez la documentation sur la &#x200B;](../../../xdm/ui/resources/field-groups.md#create)création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
+Pour plus d’informations sur les autres méthodes](../../../xdm/ui/resources/field-groups.md#create) consultez la documentation sur la [création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
 
 ### Déposer un groupe de champs
 

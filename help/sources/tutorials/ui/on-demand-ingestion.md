@@ -2,9 +2,13 @@
 title: Ingestion à la demande des flux de données des sources dans l’interface utilisateur
 description: Découvrez comment créer des flux de données à la demande pour vos connexions source à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: fabacf273fb5774ddcee42d0cdcf12281eb0216b
+TQID: https://experienceleague.adobe.com/Oew01M64EfZm0r606wC3vAtoPVYMtbX6AKGHp6084s8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: 557
 ht-degree: 0%
 
 ---
@@ -23,7 +27,7 @@ Les exécutions de flux représentent une instance d’exécution de flux de don
 
 >[!ENDSHADEBOX]
 
-## Commencer
+## Prise en main
 
 >[!NOTE]
 >
@@ -37,27 +41,27 @@ Ce document nécessite une compréhension du fonctionnement des composants suiva
 
 ## Créer un flux de données à la demande {#create-a-dataflow-on-demand}
 
-Accédez à l’onglet *[!UICONTROL Flux de données]* de l’espace de travail des sources. À partir de là, recherchez le flux de données à exécuter à la demande, puis sélectionnez les points de suspension (**`...`**) à côté de votre nom de flux de données.
+Accédez à l’onglet *[!UICONTROL Dataflows]* de l’espace de travail des sources. À partir de là, recherchez le flux de données à exécuter à la demande, puis sélectionnez les points de suspension (**`...`**) à côté de votre nom de flux de données.
 
 ![Liste des flux de données dans l’espace de travail des sources.](../../images/tutorials/on-demand/select-dataflow.png)
 
-Sélectionnez ensuite **[!UICONTROL Exécuter à la demande]** dans le menu déroulant qui s’affiche.
+Sélectionnez ensuite **[!UICONTROL Run on-demand]** dans le menu déroulant qui s’affiche.
 
 ![Un menu déroulant avec l’option Exécuter à la demande sélectionnée.](../../images/tutorials/on-demand/run-on-demand.png)
 
-Configurez le planning de votre ingestion à la demande. Sélectionnez les options **[!UICONTROL Heure de début de l’ingestion]**, **[!UICONTROL Heure de début de la période]** et **[!UICONTROL Heure de fin de la période]**.
+Configurez le planning de votre ingestion à la demande. Sélectionnez le **[!UICONTROL Ingestion start time]**, le **[!UICONTROL Date range start time]** et le **[!UICONTROL Date range end time]**.
 
 | Configuration de la planification | Description |
 | --- | --- |
-| [!UICONTROL Heure de début de l’ingestion] | Heure planifiée à laquelle l’exécution du flux à la demande commencera. |
-| [!UICONTROL Heure de début de la période] | Date et heure au plus tôt à partir desquelles les données seront récupérées. |
-| [!UICONTROL Heure de fin de la période] | Date et heure de récupération des données. |
+| [!UICONTROL Ingestion start time] | Heure planifiée à laquelle l’exécution du flux à la demande commencera. |
+| [!UICONTROL Date range start time] | Date et heure au plus tôt à partir desquelles les données seront récupérées. |
+| [!UICONTROL Date range end time] | Date et heure de récupération des données. |
 
-Sélectionnez **[!UICONTROL Planifier]** et patientez quelques instants le temps que votre flux de données à la demande se déclenche.
+Sélectionnez **[!UICONTROL Schedule]** et patientez quelques instants le temps que votre flux de données à la demande se déclenche.
 
 ![Fenêtre de configuration de la planification pour l’ingestion à la demande.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Sélectionnez le nom de votre flux de données pour afficher votre activité de flux de données. Vous trouverez ici une liste de vos exécutions de flux de données qui ont été traitées. Vous pouvez réexécuter des itérations individuelles de vos exécutions de flux de données, qu’elles aient échoué ou réussi. Pour les itérations d’exécution ayant échoué, vous pouvez utiliser **[!UICONTROL Réessayer]** pour relancer l’exécution après avoir diagnostiqué et corrigé les erreurs qui ont pu se produire pendant le processus de création.
+Sélectionnez le nom de votre flux de données pour afficher votre activité de flux de données. Vous trouverez ici une liste de vos exécutions de flux de données qui ont été traitées. Vous pouvez réexécuter des itérations individuelles de vos exécutions de flux de données, qu’elles aient échoué ou réussi. Pour les itérations d’exécution ayant échoué, vous pouvez utiliser **[!UICONTROL Retry]** pour relancer l’exécution après avoir diagnostiqué et corrigé les erreurs qui ont pu se produire pendant le processus de création.
 
 >[!TIP]
 >
@@ -65,7 +69,7 @@ Sélectionnez le nom de votre flux de données pour afficher votre activité de 
 
 ![Liste des exécutions de flux traitées pour un flux de données sélectionné.](../../images/tutorials/on-demand/processed.png)
 
-Sélectionnez **[!UICONTROL Planifié]** pour afficher la liste des exécutions de flux de données planifiées pour une ingestion ultérieure.
+Sélectionnez **[!UICONTROL Scheduled]** pour afficher la liste des exécutions de flux de données planifiées pour une ingestion ultérieure.
 
 ![Liste des exécutions de flux planifiées pour un flux de données sélectionné.](../../images/tutorials/on-demand/scheduled.png)
 

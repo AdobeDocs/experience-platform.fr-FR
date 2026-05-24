@@ -2,12 +2,15 @@
 title: Présentation Du Connecteur Source Azure Synapse Analytics
 description: Découvrez comment connecter Azure Synapse Analytics à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00.000Z
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: f8eb8640360205e8ae9579d4b664d4880bf8a368
+TQID: https://experienceleague.adobe.com/E--oG0sLXIUHRzwsxUMCpuK9wVA4ORBQYfNHJzsMkQk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 8%
+source-wordcount: 596
+ht-degree: 9%
 
 ---
 
@@ -27,7 +30,7 @@ Lisez les sections suivantes pour terminer la configuration requise avant de con
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ### Configuration des autorisations
 
@@ -60,7 +63,7 @@ Pour récupérer vos informations d’identification pour l’authentification d
 * ID d’application
 * Nom d’affichage
 * Secret
-* ID du client
+* Identifiant du tenant
 
 Ensuite, accédez à votre [[!DNL Azure Synapse Analytics] instance](https://azure.microsoft.com/en-ca/products/synapse-analytics), puis sélectionnez l’option permettant de créer un utilisateur à partir d’un fournisseur externe. À partir de là, indiquez les autorisations appropriées pour le principal de service sur le schéma. **REMARQUE :** : vous devez inclure « SELECT », car il est obligatoire pour la prévisualisation du schéma, comme pour « COPY ». Par exemple, une commande d&#39;exemple peut être :
 
@@ -79,7 +82,7 @@ Fournissez des valeurs pour les informations d’identification suivantes afin d
 | Clé de service principale | Secret client ou mot de passe associé au principal de service. |
 | Identifiant de spécification de connexion | La **spécification de connexion** fournit les propriétés de connecteur d’une source de données. Cela inclut des détails tels que les spécifications d’authentification et les exigences pour la création de connexions **de base** et **source**. Par [!DNL Azure Synapse Analytics], l’identifiant de spécification de connexion est : `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. **Remarque :** ces informations d’identification ne sont nécessaires que lors de la connexion via les API. |
 
-Pour plus d’informations, consultez la documentation [[!DNL Azure]  sur la gestion des identités pour  [!DNL Azure Synapse Analytics]](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity).
+Pour plus d’informations, consultez la documentation [[!DNL Azure]  sur la gestion des identités pour  [!DNL Azure Synapse Analytics]](https://learn.microsoft.com/fr-fr/azure/synapse-analytics/synapse-service-identity).
 
 >[!ENDTABS]
 

@@ -3,9 +3,12 @@ title: Créer une connexion Source Google PubSub dans l’interface utilisateur
 description: Découvrez comment créer un connecteur source Google PubSub à l’aide de l’interface utilisateur d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: d440cd421334f543f124a5a13ea3c3918d79d3a1
+TQID: https://experienceleague.adobe.com/RQNY56BBk6pPWLz4gw4ZreRWiHamj3W00A-vfJ8yqko
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: 1105
 ht-degree: 18%
 
 ---

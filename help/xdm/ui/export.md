@@ -4,9 +4,13 @@ title: Exporter des schémas XDM dans l’interface utilisateur
 description: Découvrez comment exporter un schéma existant vers une autre sandbox ou organisation dans l’interface utilisateur de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
+TQID: https://experienceleague.adobe.com/fzH5LC2MViIugJMfk5rTic5n3joGGz292UnVEon9204
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: 691
 ht-degree: 10%
 
 ---
@@ -230,8 +234,8 @@ Notez que chaque instance de l’identifiant du client de votre organisation app
 
 ## Importer la ressource à l’aide de l’API {#import-resource-with-api}
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[&#128279;](../api/import.md) consultez le  guide du point d’entrée d’importation .
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités](../api/import.md) consultez le [ guide du point d’entrée d’importation .
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur de [!UICONTROL Schemas], reportez-vous à la présentation de l’interface utilisateur de [[!UICONTROL Schemas] &#x200B;](./overview.md).
+En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur de [!UICONTROL Schemas], reportez-vous à la présentation de l’interface utilisateur de [[!UICONTROL Schemas] ](./overview.md).

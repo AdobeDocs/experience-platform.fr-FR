@@ -2,9 +2,14 @@
 title: Visionneuse de graphiques d’identités
 description: Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la manière dont un client interagit avec votre marque sur différents canaux.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/Ff1Vhejys1zP3BSlICUfDC0exPT1EG3kGuZ26pm8TMk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: 1388
 ht-degree: 6%
 
 ---
@@ -21,7 +26,7 @@ Le document suivant décrit les étapes à suivre pour accéder à la visionneus
 
 La vidéo suivante est destinée à vous aider à comprendre la visionneuse de graphiques d’identités.
 
->[!VIDEO](https://video.tv.adobe.com/v/345654/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Prise en main
 
@@ -135,12 +140,12 @@ Dans la fenêtre d’aperçu, sélectionnez une icône d’empreinte digitale po
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les identités dans Experience Platform, reportez-vous à la [&#x200B; présentation du service d’identités &#x200B;](../home.md)
+En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les identités dans Experience Platform, reportez-vous à la [ présentation du service d’identités ](../home.md)
 
 ## Journal des modifications
 
 | Date | Action |
 | ---- | ------ |
-| 2021-2001 | <ul><li>Ajout de la prise en charge des données ingérées en flux continu et du sandbox hors production.</li><li>Correction de bogues mineurs.</li></ul> |
-| 2021-2002 | <ul><li>La visionneuse de graphiques d’identités est rendue accessible via la prévisualisation du jeu de données.</li><li>Correction de bogues mineurs.</li><li>La visionneuse de graphiques d’identités est mise à la disposition du grand public.</li></ul> |
+| 2021-01 | <ul><li>Ajout de la prise en charge des données ingérées en flux continu et du sandbox hors production.</li><li>Correction de bogues mineurs.</li></ul> |
+| 2021-02 | <ul><li>La visionneuse de graphiques d’identités est rendue accessible via la prévisualisation du jeu de données.</li><li>Correction de bogues mineurs.</li><li>La visionneuse de graphiques d’identités est mise à la disposition du grand public.</li></ul> |
 | 2023-01 | <ul><li>Mises à jour de l’interface utilisateur.</li></ul> |

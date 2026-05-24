@@ -3,9 +3,12 @@ title: PLACE SUR LA LISTE AUTORISÉE d’adresse IP pour les destinations de sto
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre place sur la liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers des destinations d’espace de stockage.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+TQID: https://experienceleague.adobe.com/6U6Qcw4zLJxWsD3mdocqmd7fRVTNfeWClhCaqCn4qIA
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: 296
 ht-degree: 4%
 
 ---

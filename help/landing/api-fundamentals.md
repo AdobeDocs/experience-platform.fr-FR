@@ -6,10 +6,14 @@ description: Ce document présente brièvement certaines des technologies et syn
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/qkaw8aYKh9qEK5NLk-2GjFvq9-Gi1wwgLR-UPil9pF4
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 50%
+source-wordcount: 525
+ht-degree: 51%
 
 ---
 
@@ -126,4 +130,4 @@ Le schéma JSON est un format utilisé pour décrire et valider la structure des
 
 ## Étapes suivantes
 
-Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Pour plus d’informations sur l’utilisation des API Experience Platform, y compris les bonnes pratiques[&#128279;](api-guide.md) consultez le  guide de prise en main . Pour obtenir des réponses aux questions fréquentes, reportez-vous au guide de dépannage d’[Experience Platform](troubleshooting.md).
+Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Pour plus d’informations sur l’utilisation des API Experience Platform, y compris les bonnes pratiques](api-guide.md) consultez le [ guide de prise en main . Pour obtenir des réponses aux questions fréquentes, reportez-vous au guide de dépannage d’[](troubleshooting.md).

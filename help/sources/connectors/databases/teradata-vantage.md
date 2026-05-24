@@ -3,10 +3,14 @@ keywords: Experience Platform;accueil;rubriques populaires;teradata;teradata van
 title: Présentation du connecteur Source Teradata Vantage
 description: Découvrez comment connecter Teradata Vantage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/2AJhcMjFyG52HJtt7-XDkv4ByvKak4kOP3cHDpYcLQQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 30%
+source-wordcount: 232
+ht-degree: 31%
 
 ---
 
@@ -18,7 +22,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Teradata Vantage] à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 

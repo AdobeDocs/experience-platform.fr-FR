@@ -1,12 +1,17 @@
 ---
 title: Créer un flux de données pour les données Braze dans l’interface utilisateur
 description: Découvrez comment créer un flux de données pour votre compte Braze à l’aide de l’interface utilisateur de Adobe Experience Platform.
-last-substantial-update: 2024-01-30T00:00:00Z
+last-substantial-update: 2024-01-30T00:00:00.000Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/eMrd-O8reuZNvyj2-lXg0n7CPzBWwctx1-53m4fw98I
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: 1018
 ht-degree: 16%
 
 ---
@@ -25,7 +30,7 @@ Lisez le tutoriel suivant pour savoir comment importer des données d’événem
 
 Pour suivre les étapes de ce guide, vous devez :
 
-* Une connexion à [Adobe Experience Platform](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
+* Une connexion à [](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
 * Une connexion à votre [[!DNL Braze] tableau de bord](https://dashboard.braze.com/sign_in), une [licence actuelle du connecteur](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents) inutilisée et des autorisations pour créer un connecteur. Pour plus d’informations, consultez la [configuration requise [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ## Prise en main
@@ -68,7 +73,7 @@ Ensuite, chargez le fichier fourni [exemple Braze Currents](https://github.com/A
 ![Écran « Ajouter des données ».](../../../../images/tutorials/create/braze/select-data.png)
 
 Une fois votre fichier chargé, vous devez fournir les détails de votre flux de données, y compris des informations sur votre jeu de données et le schéma auquel vous mappez.  Si c’est la première fois que vous connectez une source Braze Current, créez un jeu de données.  Sinon, vous pouvez utiliser n’importe quel jeu de données existant qui fait référence au schéma Braze.  Si vous créez un jeu de données, utilisez le schéma que nous avons créé dans la section précédente.
-![&#x200B; Écran « Détails du flux de données » mettant en surbrillance « Détails du jeu de données » &#x200B;](../../../../images/tutorials/create/braze/dataflow-detail.png)
+![ Écran « Détails du flux de données » mettant en surbrillance « Détails du jeu de données » ](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Configurez ensuite le mappage pour vos données à l’aide de l’interface de mappage.
 
@@ -100,7 +105,7 @@ Une fois votre connexion créée, vous devez collecter les valeurs d’identific
 | --- | --- |
 | Identifiant client | Identifiant client associé à votre source Experience Platform. |
 | Secret client | Secret client associé à votre source Experience Platform. |
-| ID de client | Identifiant client associé à votre source Experience Platform. |
+| Identifiant du tenant | Identifiant client associé à votre source Experience Platform. |
 | Nom du sandbox | Sandbox associé à votre source Experience Platform. |
 | ID du flux de données | Identifiant du flux de données associé à votre source Experience Platform. |
 | Point de terminaison de diffusion en continu | Point d’entrée de diffusion en continu associé à votre source Experience Platform. **Remarque** : [!DNL Braze] le convertit automatiquement en point d’entrée de diffusion en continu par lots. |

@@ -4,9 +4,14 @@ solution: Experience Platform
 title: Gestion des politiques d’utilisation des données dans l’interface utilisateur
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des politiques d’utilisation des données. Ce document offre une vue d’ensemble des actions que vous pouvez effectuer dans l’espace de travail Politiques de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
+TQID: https://experienceleague.adobe.com/Hqgnlv2Xh6gkH1X9gjk59n-nu0LoskYYTbLPkDPnXNw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2423'
+source-wordcount: 2423
 ht-degree: 49%
 
 ---
@@ -177,7 +182,7 @@ Pour maintenir la qualité et la cohérence des données, l’interface utilisat
 
 Pour définir la condition, cochez les cases correspondant aux valeurs que la politique doit évaluer.
 
-![&#x200B; La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
+![ La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
 
 #### Mapper des champs de type données pour une condition de politique {#map-data-type-fields}
 
@@ -285,4 +290,4 @@ Ce document offre un aperçu de la gestion des politiques d’utilisation des do
 
 La vidéo qui suit montre comment utiliser les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform] :
 
->[!VIDEO](https://video.tv.adobe.com/v/37130?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

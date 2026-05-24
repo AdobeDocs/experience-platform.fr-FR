@@ -1,12 +1,15 @@
 ---
 title: Présentation du connecteur Source MariaDB
 description: Découvrez comment connecter MariaDB à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-04-29T00:00:00.000Z
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
+TQID: https://experienceleague.adobe.com/cgQAa-boyziU0EYaaAFJkNCpEXiZGmdQAbIHPoaF1Ps
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 26%
+source-wordcount: 437
+ht-degree: 25%
 
 ---
 
@@ -16,13 +19,13 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Experience Platform] pouvez vous connecter à différents types de bases de données, telles que Relational, NoSQL ou Data Warehouse. La prise en charge des fournisseurs de base de données inclut [!DNL MariaDB].
 
-## Prérequis {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Lisez les sections suivantes pour terminer la configuration requise avant de connecter votre compte [!DNL MariaDB] à Experience Platform.
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ### S’authentifier auprès d’Experience Platform
 

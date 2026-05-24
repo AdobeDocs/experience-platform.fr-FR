@@ -3,9 +3,15 @@ solution: Experience Platform
 title: Guide de segmentation en flux continu
 description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
+TQID: https://experienceleague.adobe.com/of-qU6LP476uHZ4KzAZW0bLB65wiXiRncZcKO1Q4SSU
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: 2130
 ht-degree: 19%
 
 ---
@@ -232,7 +238,7 @@ Vous pouvez récupérer toutes les audiences évaluées à l’aide de la segmen
 
 >[!TAB API Segmentation Service]
 
-Récupérez une liste de toutes les définitions de segment évaluées à l’aide de la segmentation en flux continu au sein de votre organisation en envoyant une requête GET au point d’entrée `/segment/definitions`.
+Récupérez une liste de toutes les définitions de segment évaluées à l’aide de la segmentation en flux continu dans votre organisation en envoyant une requête GET au point d’entrée `/segment/definitions`.
 
 **Format d’API**
 

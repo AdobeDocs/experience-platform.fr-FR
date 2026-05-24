@@ -4,10 +4,14 @@ solution: Experience Platform
 title: Fonctions Spark SQL dans le service de requête
 description: Découvrez les fonctions Spark SQL prises en charge qui étendent les fonctionnalités de SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/6zioMoWmhw0pxhFmZIym-ZU4ZmD2NDfe5RAzlh8Eiu0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1903'
-ht-degree: 93%
+source-wordcount: 3807
+ht-degree: 96%
 
 ---
 
@@ -64,7 +68,7 @@ Pour plus d’informations sur ces fonctions, notamment leur syntaxe, leur utili
 | [`mean`](https://spark.apache.org/docs/latest/api/sql/index.html#mean) | Renvoie la moyenne calculée à partir des valeurs |
 | [`min`](https://spark.apache.org/docs/latest/api/sql/index.html#min) | Renvoie la valeur minimale de l’expression |
 | [`monotonically_increasing_id`](https://spark.apache.org/docs/latest/api/sql/index.html#monotonically_increasing_id) | Renvoie des ID à augmentation monotone |
-| [`negative`](https://spark.apache.org/docs/latest/api/sql/index.html#negative) |  Renvoie la valeur négative |
+| [`negative`](https://spark.apache.org/docs/latest/api/sql/index.html#negative) | Renvoie la valeur négative |
 | [`percent_rank`](https://spark.apache.org/docs/latest/api/sql/index.html#percent_rank) | Renvoie le classement en pourcentage d’une valeur |
 | [`percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile) | Renvoie le percentile exact à un pourcentage donné |
 | [`percentile_approx`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile_approx) | Renvoie le percentile approximatif à un pourcentage donné |
@@ -288,7 +292,7 @@ Pour plus d’informations sur ces fonctions, notamment leur syntaxe, leur utili
 | [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Renvoie une chaîne avec [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) des espaces |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | Fractionner la chaîne |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | Renvoyer l’index de la sous-chaîne |
-| [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Période |
+| [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Fenêtre |
 | [`xpath`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath) | Analyser les nœuds XML |
 | [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | Analyser les nœuds XML pour rechercher un doublon |
 | [`xpath_float`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_float) | Analyser les nœuds XML pour rechercher une virgule flottante |

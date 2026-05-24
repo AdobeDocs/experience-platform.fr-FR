@@ -3,10 +3,16 @@ title: Supprimer les ordres de travail d'enregistrement
 description: Découvrez comment utiliser le point d’entrée /workorder dans l’API Data Hygiene pour gérer les ordres de travail de suppression d’enregistrements dans Adobe Experience Platform. Ce guide couvre les quotas, la chronologie de traitement et l’utilisation des API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
+TQID: https://experienceleague.adobe.com/oKFqT0xEE47wgrh78-DKl6Ur-taOrFJTn81NQl2ljfM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3316'
-ht-degree: 1%
+source-wordcount: 3421
+ht-degree: 2%
 
 ---
 
@@ -16,7 +22,7 @@ Utilisez le point d’entrée `/workorder` dans l’API Data Hygiene pour créer
 
 >[!IMPORTANT]
 >
->Les ordres de travail de suppression des enregistrements concernent le nettoyage des données, la suppression des données anonymes ou la minimisation des données. **N’utilisez pas d’ordres de travail de suppression d’enregistrements pour les demandes de droits des titulaires de données dans le cadre des réglementations de confidentialité telles que le RGPD.** Pour les cas d’utilisation de conformité, utilisez [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
+>Les ordres de travail de suppression des enregistrements concernent le nettoyage des données, la suppression des données anonymes ou la minimisation des données. **N’utilisez pas d’ordres de travail de suppression d’enregistrements pour les demandes de droits des titulaires de données dans le cadre des réglementations de confidentialité telles que le RGPD.** Pour les cas d’utilisation de conformité, utilisez [](../../privacy-service/home.md).
 
 ## Prise en main
 
@@ -78,7 +84,7 @@ Le tableau suivant décrit les paramètres de requête disponibles pour réperto
 | --------------- | ------------|
 | `search` | Correspondance partielle non sensible à la casse (recherche par caractères génériques) dans les champs : auteur, displayName, description ou datasetName. Correspond également à l’ID d’expiration exact. |
 | `type` | Filtrez les résultats par type d’ordre de travail (par exemple, `identity-delete`). |
-| `status` | Liste des statuts d’ordres de travail séparés par des virgules. Les valeurs de statut respectent la casse.<br>Enum : `received`, `validated`, `submitted`, `ingested`, `completed`, `failed` |
+| `status` | Liste des statuts d’ordres de travail séparés par des virgules. Les valeurs de statut sont sensibles à la casse.<br>Enum : `received`, `validated`, `submitted`, `ingested`, `completed`, `failed` |
 | `author` | Recherchez la personne qui a mis à jour l’ordre de travail le plus récemment (ou le créateur initial). Accepte le modèle littéral ou SQL. |
 | `displayName` | Correspondance insensible à la casse pour le nom d’affichage de l’ordre de travail. |
 | `description` | Correspondance insensible à la casse pour la description de l’ordre de travail. |
@@ -199,7 +205,7 @@ POST /workorder
 >
 >- **Le schéma du jeu de données doit définir une identité principale ou un mappage d’identités.** Vous pouvez uniquement supprimer des enregistrements des jeux de données dont le schéma XDM associé définit une identité principale ou un mappage d’identités.
 >- **Les identités Secondaires ne sont pas analysées.** Si un jeu de données contient plusieurs champs d’identité, seule l’identité principale est utilisée pour la correspondance. Les enregistrements ne peuvent pas être ciblés ou supprimés en fonction d&#39;identités non principales.
->- **Les enregistrements sans identité principale renseignée sont ignorés.** Si aucune métadonnée d’identité principale n’est renseignée pour un enregistrement, celui-ci ne peut pas être supprimé.
+>- **Les enregistrements sans identité principale renseignée sont ignorés.** Si un enregistrement ne comporte pas de métadonnées d’identité principales, il ne peut pas être supprimé.
 >- **Les données ingérées avant la configuration de l’identité ne sont pas éligibles.** Si le champ Identité principale a été ajouté à un schéma après l’ingestion des données, les enregistrements précédemment ingérés ne peuvent pas être supprimés via les ordres de travail de suppression d’enregistrements.
 
 >[!NOTE]
@@ -259,7 +265,7 @@ Le tableau suivant décrit les propriétés de création d&#39;un ordre de trava
 | `displayName` | Libellé lisible par l&#39;utilisateur pour cet ordre de travail de suppression d&#39;enregistrement. |
 | `description` | Description de l&#39;ordre de travail de suppression des enregistrements. |
 | `action` | Action demandée pour l&#39;ordre de travail de suppression d&#39;enregistrement. Pour supprimer des enregistrements associés à une identité donnée, utilisez `delete_identity`. |
-| `datasetId` | Identifiant unique du ou des jeux de données. La valeur doit être exactement l’une des suivantes : `ALL` littéral, un seul ID de jeu de données ou une liste séparée par des virgules de deux ID de jeu de données ou plus (par exemple, `"id1,id2,id3"`). Vous ne pouvez pas combiner des `ALL` avec des identifiants spécifiques. Les requêtes de jeux de données uniques se comportent comme auparavant, les requêtes de jeux de données multiples suppriment les identités de chaque jeu de données répertorié et ciblent `ALL` chaque jeu de données. Les jeux de données doivent avoir une identité principale ou un mappage d’identités. S’il existe un mappage d’identités, il est présent sous la forme d’un champ de niveau supérieur nommé `identityMap`.<br>**Remarque** : une ligne de jeu de données peut avoir plusieurs identités dans son mappage d’identités, mais une seule peut être marquée comme principale. `"primary": true` doit être inclus pour forcer le `id` à correspondre à une identité principale.<br>Lors de l’utilisation de `targetServices` pour la suppression de profil uniquement, `datasetId` devez être `ALL`. |
+| `datasetId` | Identifiant unique du ou des jeux de données. La valeur doit être exactement l’une des suivantes : `ALL` littéral, un seul ID de jeu de données ou une liste séparée par des virgules de deux ID de jeu de données ou plus (par exemple, `"id1,id2,id3"`). Vous ne pouvez pas combiner des `ALL` avec des identifiants spécifiques. Les requêtes de jeux de données uniques se comportent comme auparavant, les requêtes de jeux de données multiples suppriment les identités de chaque jeu de données répertorié et ciblent `ALL` chaque jeu de données. Les jeux de données doivent avoir une identité principale ou un mappage d’identités. S’il existe un mappage d’identités, il est présent sous la forme d’un champ de niveau supérieur nommé `identityMap`.<br>**Remarque** : une ligne de jeu de données peut comporter plusieurs identités dans son mappage d’identités, mais une seule peut être marquée comme principale. `"primary": true` doit être inclus pour forcer le `id` à correspondre à une identité principale.<br>Lors de l’utilisation de `targetServices` pour la suppression de profil uniquement, `datasetId` devez être `ALL`. |
 | `targetServices` | Facultatif. Indique quels services doivent traiter la suppression. La valeur par défaut dépend des droits de votre organisation. Les organisations disposant de Real-Time CDP ou Adobe Journey Optimizer reçoivent l’ensemble complet des services pris en charge (`["datalake", "identity", "profile", "ajo"]`) par défaut. Les organisations qui disposent de Customer Journey Analytics, mais sans droits de profil client en temps réel, ne peuvent utiliser que [ « lac de données »]. Pour limiter la suppression aux données liées au profil uniquement et laisser le lac de données intact, définissez cette valeur sur `["identity", "profile", "ajo"]` (dans n’importe quel ordre). Ce mode Profil uniquement nécessite un droit Real-Time CDP ou Adobe Journey Optimizer et `datasetId` doit être `ALL`. |
 | `identities` | **Utilisez exactement l’une des options `identities` ou `namespacesIdentities`.** Tableau d’objets, chacun avec `namespace` (objet avec `code`, par exemple `"email"`) et `id` (chaîne d’identité unique). Acceptée pour des raisons de rétrocompatibilité et produite par les scripts de conversion. Le service normalise ce format en interne ; le comportement est identique. Voir [Format de payload d’identité](#identity-payload-format-identities-or-namespacesidentities) ci-dessus. |
 | `namespacesIdentities` | **Utilisez exactement l’une des options `identities` ou `namespacesIdentities`.** Tableau d’objets, chacun avec `namespace` (objet avec `code`, par exemple `"email"`) et `ids` (tableau de chaînes d’identité). Recommandé pour toutes les payloads. La propriété `namespacesIdentities` est plus compacte lorsque de nombreuses identités partagent un espace de noms. Voir [Format de payload d’identité](#identity-payload-format-identities-or-namespacesidentities) ci-dessus. Espaces de noms d’identité : [documentation des espaces de noms d’identité](../../identity-service/features/namespaces.md), [API Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
@@ -554,7 +560,7 @@ Le tableau suivant décrit les propriétés de la réponse.
 
 ## Mettre à jour un ordre de travail de suppression d&#39;enregistrement {#update}
 
-Mettez à jour la `name` et la `description` d’un ordre de travail de suppression d’enregistrement en effectuant une requête PUT au point d’entrée `/workorder/{WORKORDER_ID}`.
+Mettez à jour les `name` et les `description` d’un ordre de travail de suppression d’enregistrement en effectuant une requête PUT au point d’entrée `/workorder/{WORKORDER_ID}`.
 
 **Format d’API**
 

@@ -3,9 +3,13 @@ title: Point d’entrée de balises unifiées
 description: Découvrez comment créer, mettre à jour, gérer et supprimer des catégories de balises et des balises à l’aide des API Adobe Experience Platform.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/EEwmEnOYdcRTAJ9soqgwSHrFod-kTxJr0fGwgUx7-sE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: 1861
 ht-degree: 4%
 
 ---
@@ -575,7 +579,7 @@ Une réponse réussie renvoie le statut HTTP 201 avec les détails de la balise 
 
 ## Récupération d’une balise spécifique {#get-tag}
 
-Vous pouvez récupérer une balise spécifique appartenant à votre organisation en adressant une requête GET au point d’entrée `/tags` et en spécifiant l’identifiant de la balise à récupérer.
+Vous pouvez récupérer une balise spécifique qui appartient à votre organisation en adressant une requête GET au point d’entrée `/tags` et en spécifiant l’identifiant de la balise à récupérer.
 
 **Format d’API**
 
@@ -807,4 +811,4 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse vide.
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [&#x200B; guide des catégories de balises](../ui/tags-categories.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [ guide des catégories de balises](../ui/tags-categories.md).

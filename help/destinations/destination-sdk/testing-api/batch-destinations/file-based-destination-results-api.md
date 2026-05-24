@@ -2,9 +2,14 @@
 description: Cette page explique comment utiliser le point d’entrée /testing/destinationInstance de l’API pour afficher les détails complets de vos résultats de test. Ce point d’entrée de l’API renvoie le même résultat que celui obtenu pendant l’utilisation de l’API Flow Service pour surveiller les flux de données.
 title: Consulter les résultats détaillés de l’activation
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/6AAD-f--vG4KgZT6kkiobbp1lx9wU-IJ5xyub9F6bAU
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: 547
 ht-degree: 85%
 
 ---

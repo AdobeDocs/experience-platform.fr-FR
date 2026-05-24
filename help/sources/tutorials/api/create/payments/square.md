@@ -3,10 +3,13 @@ keywords: Experience Platform;accueil;rubriques populaires;Square;square
 title: Créer une connexion de base carrée à l’aide de l’API Flow Service
 description: Découvrez comment connecter Square à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/oS1CgG-kSi1BlAkluNq8GfLAd0LQsyX1I7-mEZdU78o
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 35%
+source-wordcount: 556
+ht-degree: 36%
 
 ---
 
@@ -18,7 +21,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance d’Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.

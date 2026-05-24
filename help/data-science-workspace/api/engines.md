@@ -1,24 +1,29 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;moteurs;api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;moteurs;api de machine learning sensei
 solution: Experience Platform
-title: Point de terminaison de l’API Moteurs
+title: Point d’entrée de l’API Moteurs
 description: Les moteurs sont le fondement des modèles de machine learning dans l’espace de travail de science des données. Ils contiennent des algorithmes de machine learning qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/ZGewWwRNYc-L4A38L-y0MnLvLPbXSMJU8DHP1vxm16U
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: 1190
 ht-degree: 63%
 
 ---
 
-# Point de terminaison des moteurs
+# Point d’entrée des moteurs
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 Les moteurs sont le fondement des modèles de machine learning dans l’espace de travail de science des données. Ils contiennent des algorithmes de machine learning qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 
@@ -26,7 +31,7 @@ Les moteurs sont le fondement des modèles de machine learning dans l’espace d
 
 >[!TIP]
 >
->Si vous ne disposez pas d’une URL Docker, consultez le tutoriel [Former une recette empaquetée à partir de fichiers source](../models-recipes/package-source-files-recipe.md) pour une présentation détaillée de la création d’une URL d’hôte Docker.
+>Si vous ne disposez pas d’une URL Docker, consultez le tutoriel [Créer des fichiers sources de package dans une recette](../models-recipes/package-source-files-recipe.md) pour une présentation détaillée de la création d’une URL hôte Docker.
 
 Les informations d’identification de votre registre Docker sont nécessaires pour charger un fichier de recette empaqueté, y compris l’URL de votre hôte Docker, votre nom d’utilisateur et votre mot de passe. Vous pouvez rechercher ces informations en exécutant la requête GET suivante :
 
@@ -72,7 +77,7 @@ Vous pouvez créer un moteur en exécutant une requête POST tout en fournissant
 POST /engines
 ```
 
-**Demander Python/R**
+**Requête Python/R**
 
 ```shell
 curl -X POST \
@@ -110,7 +115,7 @@ curl -X POST \
 
 **Demander PySpark/Scala**
 
-Lors de l’exécution d’une requête pour les recettes PySpark, les `executionType` et `type` sont &quot;PySpark&quot;. Lors de l’exécution d’une requête pour les recettes Scala, les `executionType` et `type` sont &quot;Spark&quot;. L’exemple de recette Scala suivant utilise Spark :
+Lors d’une demande de recettes PySpark, la `executionType` et la `type` sont « PySpark ». Lors d&#39;une demande de recettes Scala, le `executionType` et le `type` sont « Spark ». L’exemple de recette Scala suivant utilise Spark :
 
 ```shell
 curl -X POST \
@@ -143,13 +148,13 @@ curl -X POST \
 | `name` | Nom souhaité pour le moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
 | `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. La valeur peut être définie sur Spark ou PySpark. |
-| `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être défini sur `databricks-spark`. |
+| `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être `databricks-spark`. |
 | `artifacts.default.image.location` | Emplacement de l’image Docker. Seul Azure ACR ou Public (non authentifié) Dockerhub est pris en charge. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. Il peut s’agir de « Spark » ou « PySpark ». |
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant les détails du nouveau moteur, y compris son identifiant unique (`id`). L’exemple de réponse suivant est pour un moteur Python. Toutes les réponses du moteur suivent ce format :
+Une réponse réussie renvoie une payload contenant les détails du moteur nouvellement créé, y compris son identifiant unique (`id`). L’exemple de réponse suivant concerne un moteur Python. Toutes les réponses du moteur suivent ce format :
 
 ```json
 {
@@ -176,9 +181,9 @@ Une réponse réussie renvoie un payload contenant les détails du nouveau moteu
 }
 ```
 
-## Création d’un moteur de pipeline de fonctionnalités à l’aide des URL Docker {#feature-pipeline-docker}
+## Créer un moteur de pipeline de fonctionnalité à l’aide des URL Docker {#feature-pipeline-docker}
 
-Vous pouvez créer un moteur de pipeline de fonctionnalités en exécutant une requête de POST tout en fournissant ses métadonnées et une URL Docker qui référence une image Docker.
+Vous pouvez créer un moteur de pipeline de fonctionnalité en effectuant une requête POST tout en fournissant ses métadonnées et une URL Docker qui fait référence à une image Docker.
 
 **Format d’API**
 
@@ -220,18 +225,18 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. La valeur peut être définie sur Spark ou PySpark. |
-| `algorithm` | L’algorithme en cours d’utilisation, définissez cette valeur sur `fp` (pipeline de fonctionnalités). |
-| `name` | Nom souhaité pour le moteur de pipeline de fonctionnalités. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
+| `algorithm` | L’algorithme utilisé. Définissez cette valeur sur `fp` (pipeline de fonctionnalités). |
+| `name` | Nom souhaité pour le moteur de pipeline de fonctionnalité. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
-| `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être défini sur `databricks-spark`. |
+| `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être `databricks-spark`. |
 | `artifacts.default.image.location` | Emplacement de l’image Docker. Seul Azure ACR ou Public (non authentifié) Dockerhub est pris en charge. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
-| `artifacts.default.image.packagingType` | Type de package du moteur. Cette valeur doit être définie sur `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Vos paramètres de fichier de configuration `pipeline.json`. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker est créée. Il peut s’agir de « Spark » ou « PySpark ». |
+| `artifacts.default.image.packagingType` | Type d’emballage du moteur. Cette valeur doit être définie sur `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Paramètres du fichier de configuration `pipeline.json`. |
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant les détails du nouveau moteur de pipeline de fonctionnalités, y compris son identifiant unique (`id`). L’exemple de réponse suivant concerne un moteur de pipeline de fonctionnalités PySpark.
+Une réponse réussie renvoie une payload contenant les détails du moteur de pipeline de fonctionnalité nouvellement créé, y compris son identifiant unique (`id`). L’exemple de réponse suivant concerne un moteur de pipeline de fonctionnalité PySpark.
 
 ```json
 {
@@ -393,7 +398,7 @@ Vous pouvez modifier et mettre à jour un moteur existant en écrasant ses propr
 
 >[!NOTE]
 >
->Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET pour [récupérer le moteur par l’identifiant](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Pour garantir le succès de cette requête PUT, il est suggéré d’effectuer d’abord une requête GET pour [récupérer le moteur par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 L’exemple d’appel API suivant met à jour le nom et la description d’un moteur lorsque les propriétés initiales sont les suivantes :
 

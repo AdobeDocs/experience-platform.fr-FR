@@ -1,20 +1,24 @@
 ---
 title: Point d’entrée de l’API Content
-description: Découvrez comment récupérer vos données d’accès à l’aide de l’API du Privacy Service.
+description: Découvrez comment récupérer vos données d’accès à l’aide de l’API Privacy Service.
 role: Developer
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
+TQID: https://experienceleague.adobe.com/0l-tOEOus-PA7yy52VfAvBCjdkfXkRRqapYLRA--J-A
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: 670
 ht-degree: 5%
 
 ---
 
 # Point d’entrée de contenu
 
-Utilisez le point d’entrée `/content` pour récupérer en toute sécurité *les informations d’accès* (les informations qu’un titulaire de confidentialité peut légitimement demander à accéder) pour vos clients. L’URL de téléchargement fournie dans la réponse à une requête de GET `/jobs/{JOB_ID}` pointe vers un point d’entrée de service Adobe. Vous pouvez ensuite envoyer une requête de GET à `/jobs/:JOB_ID/content` pour renvoyer vos données client au format JSON. Cette méthode d’accès met en œuvre plusieurs couches d’authentification et de contrôle d’accès pour améliorer la sécurité.
+Utilisez le point d’entrée `/content` pour récupérer en toute sécurité *les informations d’accès* (les informations qu’un titulaire de confidentialité peut légitimement demander à accéder) pour vos clients. L’URL de téléchargement fournie dans la réponse à une requête GET `/jobs/{JOB_ID}` pointe vers un point d’entrée de service Adobe. Vous pouvez ensuite envoyer une requête GET à `/jobs/:JOB_ID/content` pour renvoyer vos données client au format JSON. Cette méthode d’accès met en œuvre plusieurs couches d’authentification et de contrôle d’accès pour améliorer la sécurité.
 
-Avant d’utiliser ce guide, reportez-vous au [&#x200B; guide de prise en main &#x200B;](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
+Avant d’utiliser ce guide, reportez-vous au [ guide de prise en main ](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
 
 >[!TIP]
 >
@@ -22,7 +26,7 @@ Avant d’utiliser ce guide, reportez-vous au [&#x200B; guide de prise en main &
 
 ## Récupération des informations de tâche relatives à la confidentialité
 
-Pour récupérer des informations sur une tâche spécifique, telles que son statut de traitement actuel, incluez la `jobId` de cette tâche dans le chemin d’accès d’une requête de GET vers le point d’entrée `/jobs`.
+Pour récupérer des informations sur une tâche spécifique, telles que son statut de traitement actuel, incluez la `jobId` de cette tâche dans le chemin d’accès d’une requête GET vers le point d’entrée `/jobs`.
 
 **Format d’API**
 
@@ -107,11 +111,11 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 
 ## Récupération des informations d’accès client {#retrieve-access-data}
 
-Pour obtenir les « informations d’accès » générées en réponse à la requête de votre titulaire de données, envoyez une requête de GET au point d’entrée `/jobs/{JOB_ID}/content`. La réponse est un fichier zip (*.zip) qui contient un dossier avec des sous-dossiers pour chaque produit qui contient des données sur le titulaire de données.
+Pour obtenir les « informations d’accès » générées en réponse à la requête de votre titulaire de données, envoyez une requête GET au point d’entrée `/jobs/{JOB_ID}/content`. La réponse est un fichier zip (*.zip) qui contient un dossier avec des sous-dossiers pour chaque produit qui contient des données sur le titulaire de données.
 
 >[!TIP]
 >
->Vous avez besoin d’un ID de tâche spécifique pour effectuer cette requête. Si vous devez récupérer l’identifiant de tâche spécifique, envoyez d’abord une requête de GET au point d’entrée `/jobs` et utilisez des paramètres de requête supplémentaires pour filtrer les résultats. Vous trouverez des informations détaillées, y compris les paramètres de requête autorisés, dans le guide [Privacy jobs endpoint guide](./privacy-jobs.md).
+>Vous avez besoin d’un ID de tâche spécifique pour effectuer cette requête. Si vous devez récupérer l’identifiant de tâche spécifique, envoyez d’abord une requête GET au point d’entrée `/jobs` et utilisez des paramètres de requête supplémentaires pour filtrer les résultats. Vous trouverez des informations détaillées, y compris les paramètres de requête autorisés, dans le guide [Privacy jobs endpoint guide](./privacy-jobs.md).
 
 **Format d’API**
 

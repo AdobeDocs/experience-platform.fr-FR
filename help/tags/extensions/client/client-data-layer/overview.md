@@ -2,10 +2,16 @@
 title: Extension Adobe Client Data Layer
 description: Découvrez l’extension de balise ACDL dans Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/Cz-9amk86ZTY-OE-9TDzjuFFiQ4s6snU3y-mDfeAX-s
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 95%
+source-wordcount: 650
+ht-degree: 91%
 
 ---
 
@@ -103,7 +109,7 @@ L’action **Réinitialiser et définir l’état calculé** copie le dernier é
 
 ### Push to Data Layer (Envoi vers couche de données)
 
-L’extension vous fournit une action permettant de pousser le contenu JSON vers la couche de données elle-même. Cette action permet d’utiliser des éléments de données directement dans le fichier JSON. Dans l’éditeur JSON, les éléments de données doivent être référencés à l’aide de la notation de pourcentage (par exemple, `%dataElementName%`).
+L’extension vous fournit une action permettant de pousser le contenu JSON vers la couche de données elle-même.Cette action permet d’utiliser des éléments de données directement dans le fichier JSON. Dans l’éditeur JSON, les éléments de données doivent être référencés à l’aide de la notation de pourcentage (par exemple, `%dataElementName%`).
 
 ```json
 {

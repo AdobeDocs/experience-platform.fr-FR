@@ -2,19 +2,24 @@
 title: Création et activation d’une audience externe
 type: Tutorial
 description: Découvrez comment créer une audience externe dans Adobe Experience Platform à l’aide des API Experience Platform.
-source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
+exl-id: 18271a29-1cda-4fdf-8c3d-0dc4c64428a5
+TQID: https://experienceleague.adobe.com/dWrBhVErisK4GplLPONSBELjenKvn1mchOj9VMGGJnE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 7%
+source-wordcount: 909
+ht-degree: 9%
 
 ---
-
 
 # Créer et activer une audience externe à l’aide de l’API
 
 Ce tutoriel décrit les étapes requises pour créer une audience externe à l’aide des API Adobe Experience Platform.
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite une compréhension pratique des différents services Experience Platform impliqués dans la création d’une audience externe. Avant de commencer ce tutoriel, veuillez lire la documentation relative aux services suivants :
 
@@ -24,7 +29,7 @@ Ce tutoriel nécessite une compréhension pratique des différents services Expe
 
 ### En-têtes requis
 
-Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel nécessite également que vous ayez suivi le [ tutoriel sur l’authentification ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -196,4 +201,3 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/{AUDIENCE_
 Une fois que vous avez confirmé que l’audience externe a bien été ingérée, vous pouvez la voir dans Audience Portal et l’utiliser dans les services en aval tels que les destinations.
 
 Pour plus d’informations sur Audience Portal, consultez le [Guide de l’interface utilisateur d’Audience Portal](/help/segmentation/ui/audience-portal.md). Pour plus d’informations sur les destinations, consultez la [présentation des destinations](/help/destinations/home.md).
-

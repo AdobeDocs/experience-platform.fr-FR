@@ -3,9 +3,15 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Type de données Consentements et préférences
 description: Le type de données Consentement pour les préférences de confidentialité, de Personalization et de marketing est destiné à prendre en charge la collecte des autorisations et des préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources à partir de vos opérations de données.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/BczJoJ-NbKoASMEVP6YZHr0d5vFmGUoEvS2wak977Ps
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2305'
+source-wordcount: 2354
 ht-degree: 1%
 
 ---
@@ -20,7 +26,7 @@ Ce document couvre la structure et l’utilisation prévue des champs fournis pa
 
 Ce document nécessite une compréhension pratique de XDM et de l’utilisation des schémas dans [!DNL Experience Platform]. Veuillez consulter la documentation suivante avant de continuer :
 
-* [Vue d’ensemble du système XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr)
+* [Présentation du système XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr)
 * [Principes de base de la composition des schémas](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Structure du type de données {#structure}
@@ -257,7 +263,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 
 Pour utiliser le type de données [!UICONTROL Consents and Preferences] afin d’ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma contenant ce type de données.
 
-Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_fr) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Consents and Preferences], reportez-vous à la section sur la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Consents and Preferences], reportez-vous à la section sur la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
 >
@@ -281,7 +287,7 @@ Le tableau suivant décrit les valeurs acceptées pour `val` :
 | --- | --- | --- |
 | `y` | Oui (opt-in) | Le client a choisi le consentement ou la préférence. En d’autres termes, ils **consentent** à l’utilisation de leurs données comme indiqué par le consentement ou la préférence en question. |
 | `n` | Non (opt-out) | Le client s’est opposé au consentement ou à la préférence. En d&#39;autres termes, ils **ne consentent pas** à l&#39;utilisation de leurs données comme indiqué par le consentement ou la préférence en question. |
-| `p` | En attente de vérification | Le système n’a pas encore reçu de valeur de consentement ou de préférence finale. Elle est le plus souvent utilisée dans le cadre d’un consentement qui nécessite une vérification en deux étapes. Par exemple, si un client accepte de recevoir des e-mails, ce consentement est défini sur `p` jusqu’à ce qu’il sélectionne un lien dans un e-mail pour vérifier qu’il a fourni la bonne adresse e-mail. À ce stade, le consentement est mis à jour sur `y`.<br><br>Si ce consentement ou cette préférence n’utilise pas un processus de vérification à deux ensembles, le choix `p` peut alors être utilisé pour indiquer que le client n’a pas encore répondu à l’invite de consentement. Par exemple, vous pouvez définir automatiquement la valeur sur `p` sur la première page d’un site web, avant que le client n’ait répondu à l’invite de consentement. Dans les juridictions qui n’exigent pas de consentement explicite, vous pouvez également l’utiliser pour indiquer que le client ne s’est pas explicitement opposé (en d’autres termes, le consentement est présumé).<br><br> Bien que cette valeur puisse être ingérée dans le [!DNL Profile] à l’aide d’autres mécanismes, tels que l’ingestion par flux, elle n’est **pas prise en charge** pour la collecte de données ou la collecte de consentement sur [!DNL Edge Network]. Bien que la valeur `p` ne puisse pas être envoyée explicitement, la file d’attente des événements est toujours gérée par le [[!DNL Web SDK]](../../landing/governance-privacy-security/consent/sdk.md) et l’événement est distribué à [!DNL Edge Network] une fois le consentement de l’utilisateur final explicitement `in`. |
+| `p` | En attente de vérification | Le système n’a pas encore reçu de valeur de consentement ou de préférence finale. Elle est le plus souvent utilisée dans le cadre d’un consentement qui nécessite une vérification en deux étapes. Par exemple, si un client ou une cliente accepte de recevoir des e-mails, ce consentement est défini sur `p` jusqu’à ce qu’il ou elle sélectionne un lien dans un e-mail pour vérifier qu’il ou elle a fourni la bonne adresse e-mail. À ce stade, le consentement est mis à jour sur `y`. <br><br>Si ce consentement ou cette préférence n’utilise pas de processus de vérification à deux ensembles, le choix `p` peut plutôt être utilisé pour indiquer que le client ou la cliente n’a pas encore répondu à l’invite de consentement. Par exemple, vous pouvez définir automatiquement la valeur sur `p` sur la première page d’un site web, avant que le client n’ait répondu à l’invite de consentement. Dans les juridictions qui n’exigent pas de consentement explicite, vous pouvez également l’utiliser pour indiquer que le client ne s’est pas explicitement opposé (en d’autres termes, le consentement est présumé).<br><br> Bien que cette valeur puisse être ingérée dans le [!DNL Profile] à l’aide d’autres mécanismes, tels que l’ingestion par flux, elle n’est **pas prise en charge** pour la collecte de données ou la collecte de consentement sur [!DNL Edge Network]. Bien que la valeur `p` ne puisse pas être envoyée explicitement, la file d’attente des événements est toujours gérée par le [[!DNL Web SDK]](../../landing/governance-privacy-security/consent/sdk.md) et l’événement est distribué à [!DNL Edge Network] une fois le consentement de l’utilisateur final explicitement `in`. |
 | `u` | Inconnu | Les informations de consentement ou de préférence du client sont inconnues. |
 | `dy` | Valeur par défaut de Oui (opt-in) | Le client n&#39;a pas fourni lui-même de valeur de consentement et est traité par défaut comme un accord préalable (« Oui »). En d’autres termes, le consentement est présumé jusqu’à ce que le client indique le contraire.<br><br>Notez que si des lois ou des modifications apportées à la politique de confidentialité de votre entreprise entraînent des modifications des valeurs par défaut de certains utilisateurs ou de tous les utilisateurs, vous devez mettre à jour manuellement tous les profils contenant des valeurs par défaut. |
 | `dn` | Valeur par défaut de Non (opt-out) | Le client n&#39;a pas fourni lui-même de valeur de consentement et est traité par défaut comme un désabonnement (« Non »). En d’autres termes, le client est présumé avoir refusé son consentement jusqu’à ce qu’il indique le contraire.<br><br>Notez que si des lois ou des modifications apportées à la politique de confidentialité de votre entreprise entraînent des modifications des valeurs par défaut de certains utilisateurs ou de tous les utilisateurs, vous devez mettre à jour manuellement tous les profils contenant des valeurs par défaut. |

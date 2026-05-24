@@ -1,13 +1,16 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Amazon S3;Azure Blob
 solution: Experience Platform
-title: Créer une connexion Azure Blob ou Amazon S3 Source dans l’interface utilisateur
+title: Création d’une connexion Azure Blob ou Amazon S3 Source dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Azure Blob ou Amazon S3 à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/QWvYqagZlPF9rsoo5od0EJpLnTFa6bFz---LCeR6pwY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: 144
 ht-degree: 27%
 
 ---

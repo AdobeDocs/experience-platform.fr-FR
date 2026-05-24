@@ -4,10 +4,15 @@ title: Solutions d’accessibilité personnalisées pour Experience Platform
 type: Documentation
 description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/e9fipPU-Ymzs-s-FXNqbUvwNynyXCOtsaKmVINrlBP8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 89%
+source-wordcount: 1656
+ht-degree: 84%
 
 ---
 
@@ -61,8 +66,8 @@ Vous pouvez également naviguer dans la boîte de dialogue de la vidéo intégr�
 | Barre de défilement | Touche de tabulation<br/>Flèche à gauche<br/>Flèche à droite | Lorsque la vidéo est en cours de lecture, utilisez la touche de **tabulation** pour placer le focus sur la barre de défilement. Lorsque le focus se trouve sur la barre de défilement, les **touches fléchées à gauche et à droite** font respectivement avancer et reculer la lecture vidéo de 5 secondes. |
 | Mode muet | Touche de tabulation<br/>Barre d’espacement | Utilisez la touche de **tabulation** pour placer le focus sur l’élément de volume muet. Utilisez la **barre d’espacement** pour couper ou remettre le son de la lecture vidéo. |
 | Volume | Touche de tabulation<br/>Flèche à gauche<br/>Flèche à droite | Utilisez la touche de **tabulation** pour placer le focus sur l’élément de volume. Les **touches fléchées à gauche et à droite** augmentent ou diminuent respectivement le volume. |
-| [!UICONTROL Sous-titres] (« cc ») | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez la touche de **tabulation** pour atteindre l’élément [!UICONTROL Sous-titres] (« cc »). Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la langue des sous-titres. Appuyez sur **Entrée** pour confirmer votre sélection. |
-| [!UICONTROL Qualité] | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez la touche de **tabulation** pour placer le focus sur l’élément [!UICONTROL Qualité]. Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la qualité de la vidéo. Appuyez sur **Entrée** pour confirmer votre sélection. |
+| [!UICONTROL Closed Captions] (« cc ») | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | **Tab** à [!UICONTROL Closed Captions] élément (« cc »). Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la langue des sous-titres. Appuyez sur **Entrée** pour confirmer votre sélection. |
+| [!UICONTROL Quality] | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez **Tab** pour placer le focus sur l’élément [!UICONTROL Quality]. Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la qualité de la vidéo. Appuyez sur **Entrée** pour confirmer votre sélection. |
 | Plein écran | Touche de tabulation<br/>Barre d’espacement ou Entrée<br/>Échap | Utilisez la touche de **tabulation** pour placer le focus sur l’élément Plein écran. Utilisez la **barre d’espacement ou la touche Entrée** pour activer l’affichage plein écran. Appuyez sur **Échap** (« esc ») pour quitter le mode plein écran. |
 | Fermer | Touche de tabulation<br/>Barre d’espacement ou Entrée | Utilisez la touche de **tabulation** pour placer le focus sur le bouton Fermer. Utilisez la **barre d’espacement ou la touche Entrée** pour quitter la boîte de dialogue de la vidéo. |
 
@@ -74,11 +79,11 @@ Vous pouvez également naviguer dans la boîte de dialogue de la vidéo intégr�
 
 ## Glisser-déposer un fichier
 
-Dans Experience Platform, toutes les zones de glisser-déposer de sélection de fichier sont accessibles à l’aide du clavier. L’utilisation de la touche de **tabulation** pour mettre en surbrillance le bouton **[!UICONTROL Choisir des fichiers]** ainsi que l’utilisation de la touche **Entrée ou de la barre d’espacement** afin de le sélectionner invoquent l’interface utilisateur de sélection de fichier du système d’exploitation.
+Dans Experience Platform, toutes les zones de glisser-déposer de sélection de fichier sont accessibles à l’aide du clavier. En utilisant **Tab** pour mettre en surbrillance le **[!UICONTROL Choose files]** et **Entrée ou barre d’espace** pour le sélectionner, vous appelez l’interface utilisateur de sélection de fichiers du système d’exploitation.
 
-Une fois le fichier chargé, une icône de suppression devient accessible à l’aide du clavier. Cela permet de supprimer le fichier sélectionné et d’en charger un nouveau. Les utilisateurs peuvent utiliser la touche de **tabulation** pour placer le focus sur l’icône de suppression, puis appuyer sur **Entrée ou la barre d’espacement** pour la sélectionner. Une fois le fichier supprimé, le focus se trouve automatiquement sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
+Une fois le fichier chargé, une icône de suppression devient accessible à l’aide du clavier. Cela permet de supprimer le fichier sélectionné et d’en charger un nouveau. Les utilisateurs peuvent utiliser la touche de **tabulation** pour placer le focus sur l’icône de suppression, puis appuyer sur **Entrée ou la barre d’espacement** pour la sélectionner. Une fois le fichier supprimé, **[!UICONTROL Choose files]** est automatiquement ciblé et peut être sélectionné.
 
-Si le fichier chargé n’est pas au bon format, une icône d’erreur apparaît accompagnée d’un message d’erreur. Le focus se trouve alors sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
+Si le fichier chargé n’est pas au bon format, une icône d’erreur apparaît accompagnée d’un message d’erreur. Le focus se trouve alors sur le bouton **[!UICONTROL Choose files]** , qui peut être sélectionné.
 
 ![Zone de glisser-déposer de fichier avec un message d’erreur et focus sur le bouton Choisir des fichiers.](images/drag-and-drop.png)
 
@@ -136,11 +141,11 @@ Vous pouvez maintenant réduire ou développer les rails gauche et droit de la z
 
 ![Zone de travail du créateur de segments avec les widgets de divulgation des rails gauche et droit mis en surbrillance.](images/left-right-rail-expandables.png)
 
-## Éditeur de Query Service
+## Éditeur du service de requête
 
-Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’éditeur de Query Service :
+Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’éditeur du service de requête :
 
-* Le contraste des couleurs dans l’interface utilisateur de l’éditeur de Query Service respecte la conformité en matière d’accessibilité.
+* Le contraste des couleurs dans l’interface utilisateur de l’éditeur du service de requête respecte la conformité en matière d’accessibilité.
 * La navigation au clavier est prise en charge en dehors de l’interface utilisateur de l’éditeur. L’interface utilisateur de l’éditeur est un miroir de code incorporé.
 
 >[!NOTE]
@@ -149,7 +154,7 @@ Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’édi
 
 ## Onglet Vue du système dans Sources et Destinations
 
-Lorsque vous parcourez la **[!UICONTROL Vue du système]** dans Sources et Destinations, la fonctionnalité suivante améliore l’accessibilité :
+Lorsque vous parcourez le **[!UICONTROL System View]** dans Sources et Destinations, la fonctionnalité suivante améliore l’accessibilité :
 
 * La touche de **tabulation** définit le focus sur la première carte de connexion source.
    * Appuyez à nouveau sur la touche de **tabulation** pour déplacer le focus sur le bouton à l’intérieur de la carte.

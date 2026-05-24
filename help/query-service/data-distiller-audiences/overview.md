@@ -2,9 +2,15 @@
 title: Créer des audiences à l’aide de SQL
 description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie des audiences, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler les destinations basées sur des fichiers.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
+TQID: https://experienceleague.adobe.com/ayllPzdQ3X6WL0xkYYQXzTKBy9l8Zbfwqi-WJiGjvVE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: 1856
 ht-degree: 3%
 
 ---
@@ -294,7 +300,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Enregistrement et disponibilité automatiques des audiences {#registration-and-availability}
 
-Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous la Distiller de données [!UICONTROL Origine] dans l’espace de travail Audience . Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans les destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui simplifie la gestion des audiences. Pour plus d’informations sur l’affichage, la gestion et la création d’audiences dans l’interface utilisateur d’Experience Platform, consultez la présentation d’[Audience Portal](../../segmentation/ui/audience-portal.md).
+Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous le [!UICONTROL Origin] Distiller de données dans l’espace de travail Audience . Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans les destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui simplifie la gestion des audiences. Pour plus d’informations sur l’affichage, la gestion et la création d’audiences dans l’interface utilisateur d’Experience Platform, consultez la présentation d’[Audience Portal](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 

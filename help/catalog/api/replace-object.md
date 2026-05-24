@@ -4,20 +4,24 @@ solution: Experience Platform
 title: Remplacement d’un objet de catalogue
 description: Vous pouvez remplacer les contenus d’un objet Catalog à l’aide d’une requête PUT, dans lequel l’intégralité des ressources est remplacée par le payload de la requête.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 2d6167ee7aaa0b79514be6e532e61602ae5cc640
+TQID: https://experienceleague.adobe.com/k8uNttR1HUTL1rZmnL7FFUybqw4qLMcYuMk10eSSRuE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: 173
 ht-degree: 60%
 
 ---
 
-# Remplacement d’un objet Catalogue
+# Remplacement d’un objet Catalog
 
-Vous pouvez remplacer le contenu d’un objet [!DNL Catalog] à l’aide d’une requête de PUT, dans laquelle la ressource entière est remplacée par le payload de la requête.
+Vous pouvez remplacer le contenu d’un objet [!DNL Catalog] à l’aide d’une requête PUT, dans laquelle l’intégralité de la ressource est remplacée par la payload de la requête.
 
 >[!NOTE]
 >
->Si vous n’avez besoin de mettre à jour que quelques champs spécifiques dans un objet [!DNL Catalog], l’utilisation d’une requête de PATCH peut être plus efficace.
+>Si vous ne devez mettre à jour que quelques champs spécifiques dans un objet [!DNL Catalog], l’utilisation d’une requête PATCH peut s’avérer plus efficace.
 
 **Format d’API**
 
@@ -27,7 +31,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à remplacer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Type de [!DNL Catalog] objet à remplacer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**

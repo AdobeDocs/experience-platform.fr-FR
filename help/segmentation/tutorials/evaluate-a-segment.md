@@ -4,9 +4,15 @@ title: Évaluation et accès aux résultats des segments
 type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les définitions de segment et accéder aux résultats de la segmentation à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+TQID: https://experienceleague.adobe.com/0A-KjwiR4oMhs-NrKYc-1PprSuX8vkaKlBMDdeBwAkg
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: 1630
 ht-degree: 47%
 
 ---
@@ -15,7 +21,7 @@ ht-degree: 47%
 
 Ce document fournit un tutoriel permettant d’évaluer les définitions de segment et d’accéder à ces résultats à l’aide de l’[[!DNL Segmentation API]](../api/getting-started.md) .
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite une compréhension pratique des différents services [!DNL Adobe Experience Platform] impliqués dans la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
@@ -26,7 +32,7 @@ Ce tutoriel nécessite une compréhension pratique des différents services [!DN
 
 ### En-têtes requis
 
-Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel nécessite également que vous ayez suivi le [ tutoriel sur l’authentification ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -88,13 +94,13 @@ Une tâche de segmentation est un processus asynchrone qui crée un segment d’
 
 Vous pouvez créer une tâche de segmentation en effectuant une requête POST vers le point d’entrée `/segment/jobs` dans l’API [!DNL Real-Time Customer Profile].
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [&#x200B; point d’entrée des tâches de segment &#x200B;](../api/segment-jobs.md#create)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [ point d’entrée des tâches de segment ](../api/segment-jobs.md#create)
 
 ### Recherche de l’état de la tâche de segmentation
 
 Vous pouvez utiliser l’`id` pour une tâche de segmentation spécifique afin d’effectuer une requête de recherche (GET) pour afficher l’état actuel de la tâche.
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [&#x200B; point d’entrée des tâches de segment &#x200B;](../api/segment-jobs.md#get)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [ point d’entrée des tâches de segment ](../api/segment-jobs.md#get)
 
 ## Interprétation des résultats des tâches de segmentation
 
@@ -152,7 +158,7 @@ Les étapes suivantes sont requises pour exporter votre audience :
 
 - [Création d’un jeu de données cible](#create-a-target-dataset) : créez le jeu de données permettant de contenir les membres de l’audience.
 - [Génération de profils d’audience dans le jeu de données](#generate-profiles) : renseignez le jeu de données avec des profils individuels XDM en fonction des résultats d’une tâche de segmentation.
-- [Contrôle de la progression de l’exportation](#monitor-export-progress) : vérifiez la progression actuelle du processus d’exportation.
+- [Surveillance de la progression de l’exportation](#monitor-export-progress) : vérifiez la progression actuelle du processus d’exportation.
 - [Lecture des données d’audience](#next-steps) : récupérez les profils individuels XDM obtenus représentant les membres de votre audience.
 
 ### Création d’un jeu de données cible {#create-dataset}
@@ -166,7 +172,7 @@ Il existe deux manières de créer le jeu de données nécessaire :
 - **Utilisation des API :** les étapes qui suivent ce tutoriel expliquent comment créer un jeu de données qui référence le [!DNL XDM Individual Profile Union Schema] à l’aide de l’API [!DNL Catalog].
 - **À l’aide de l’interface utilisateur :** pour utiliser l’interface utilisateur [!DNL Adobe Experience Platform] afin de créer un jeu de données qui référence le schéma d’union, suivez les étapes du tutoriel [IU](../ui/overview.md), puis revenez au présent tutoriel pour suivre les étapes de [génération de profils d’audience](#generate-profiles).
 
-Si vous disposez déjà d’un jeu de données compatible et que vous connaissez son identifiant, vous pouvez passer directement à l’étape de [génération de profils](#generate-profiles).
+Si vous disposez déjà d’un jeu de données compatible et que vous connaissez son identifiant, vous pouvez passer directement à l’étape de [génération de profils d’audience](#generate-profiles).
 
 **Format d’API**
 
@@ -216,9 +222,9 @@ Une fois que vous disposez d’un jeu de données persistant dans l’union, vou
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [point d’entrée des tâches d’exportation](../api/export-jobs.md#create)
 
-### Contrôle de la progression de l’exportation
+### Surveillance de la progression de l’exportation
 
-Lorsqu’une tâche d’exportation est en cours de traitement, vous pouvez contrôler son état en effectuant une requête GET sur le point d’entrée `/export/jobs` et en incluant l’`id` de la tâche d’exportation dans le chemin. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
+Lorsqu’une tâche d’exportation est en cours de traitement, vous pouvez surveiller son statut en effectuant une requête GET sur le point d’entrée `/export/jobs` et en incluant l’`id` de la tâche d’exportation dans le chemin. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [point d’entrée des tâches d’exportation](../api/export-jobs.md#get)
 

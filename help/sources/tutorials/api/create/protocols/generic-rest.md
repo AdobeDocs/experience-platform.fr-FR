@@ -5,9 +5,12 @@ title: Créer une connexion de base d’API REST générique à l’aide de l’
 type: Tutorial
 description: Découvrez comment connecter l’API REST générique à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/bXoERktzrBnptAmyVLl66qsaC--G0tsEDnQ5ydBAP-Y
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: 962
 ht-degree: 45%
 
 ---
@@ -16,7 +19,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->La source [!DNL Generic REST API] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>La source [!DNL Generic REST API] est en version Beta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -24,7 +27,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -108,7 +111,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Experience Platform. |
 | `auth.params.host` | URL racine utilisée pour la connexion à votre source [!DNL Generic REST API]. |
 | `auth.params.accessToken` | Jeton d’accès correspondant utilisé pour authentifier la source. Ceci est requis pour l’authentification basée sur OAuth. |
@@ -168,7 +171,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 | `auth.specName` | Type d’authentification que vous utilisez pour connecter votre source à Experience Platform. |
 | `auth.params.host` | URL racine utilisée pour la connexion à votre source [!DNL Generic REST API]. |
 | `auth.params.username` | Nom d’utilisateur correspondant à votre source de [!DNL Generic REST API]. Ceci est requis pour l’authentification de base. |
@@ -187,7 +190,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST API] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST API] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/protocols.md)
+* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)

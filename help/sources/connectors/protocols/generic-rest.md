@@ -4,9 +4,12 @@ solution: Experience Platform
 title: Présentation du connecteur Source de l’API REST générique
 description: Découvrez comment connecter l’API REST générique à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/wI2PFa0uIpGWcMmC0-62bp7ZGPipfml60g4EjRo-eRE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: 223
 ht-degree: 30%
 
 ---
@@ -15,7 +18,7 @@ ht-degree: 30%
 
 >[!NOTE]
 >
->La source [!DNL Generic REST API] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>La source [!DNL Generic REST API] est en version Beta. Consultez la [ Présentation des sources ](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -25,7 +28,7 @@ La source [!DNL Generic REST API] vous permet d’importer dans Experience Platf
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion d’une source [!DNL Generic REST API] à Experience Platform à l’aide d’API.
 

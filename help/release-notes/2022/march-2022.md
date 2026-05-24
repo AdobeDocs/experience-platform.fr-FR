@@ -2,10 +2,16 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2022
 description: Les notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+TQID: https://experienceleague.adobe.com/JIGkvdV7sN3OV5xdl7fyoBeXUBcP88EdzNNPo10NVTA
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2: id: a230274e-7e6e-49eb-b817-514495a710acid: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b08f50f9-9135-4961-a21e-47e56473ae77id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d1a87129-ba05-4f15-98b1-233618f1774aid: f6ac78a3-5b59-40f5-a37d-45df5303d3a3id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 81%
+source-wordcount: 1204
+ht-degree: 82%
 
 ---
 
@@ -59,7 +65,7 @@ Pour en savoir plus sur Real-Time CDP édition B2B, consultez la [présentation]
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
 
 **Fonctionnalités mises à jour**
 
@@ -85,7 +91,7 @@ Le tableau de bord Profils affiche un instantané des données d’attribut (enr
 | --- | --- |
 | Widget profils non segmentés | Le widget fournit le nombre total de profils qui ne sont associés à aucun segment. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
 | Widget tendance des profils non segmentés | Ce widget fournit une représentation graphique linéaire du nombre de profils qui ne sont associés à aucun segment sur une période donnée. La tendance peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
-| Widget profils non segmentés par identité | Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont représentées dans un histogramme. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
+| Widget profils non segmentés par identité | Ce widget classe le nombre total de profils non segmentés en fonction de leur identifiant unique. Les données sont représentées dans un graphique en barres. Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
 | Widget profils à identité unique | Ce widget fournit le nombre de profils de votre entreprise qui n’ont qu’un seul type d’identifiant qui crée leur identité, soit un email, soit un ECID (identifiant Experience Cloud). Pour plus d’informations, consultez la [documentation sur les widgets standard des profils](../../dashboards/guides/profiles.md#standard-widgets). |
 
 {style="table-layout:auto"}
@@ -100,7 +106,7 @@ Le tableau de bord des destinations affiche un instantané des destinations acti
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Widget de comptage des destinations | Le widget fournit le nombre total de points d’entrée disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations principales et inactives. Pour plus d’informations, consultez la [documentation du widget standard des destinations](../../dashboards/guides/destinations.md#standard-widgets). |
+| Widget de comptage des destinations | Le widget fournit le nombre total de points d’entrée disponibles où une audience peut être activée et diffusée dans le système. Ce nombre inclut les destinations actives et inactives. Pour plus d’informations, consultez la [documentation du widget standard des destinations](../../dashboards/guides/destinations.md#standard-widgets). |
 
 {style="table-layout:auto"}
 
@@ -115,11 +121,11 @@ Experience Platform fournit un ensemble de technologies qui vous permettent de c
 | Fonctionnalité | Description |
 | --- | --- |
 | Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie des identifiants internes et synchronisation des identifiants tiers. Pour plus d’informations, consultez la section sur la [configuration d’un flux de données](../../datastreams/overview.md#create) du guide de l’interface utilisateur des flux de données. |
-| [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | L’API Edge Network permet aux clients d’interagir avec Experience Platform Edge Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
+| [API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | L’API Edge Network permet aux clients d’interagir avec Experience Platform Edge Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
 
 Pour plus d’informations sur la collecte de données dans Experience Platform, consultez la [présentation de la collecte de données](../../collection/home.md).
 
-## Query Service {#query-service}
+## Service de requête {#query-service}
 
 [!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
 
@@ -131,7 +137,7 @@ Pour plus d’informations sur la collecte de données dans Experience Platform,
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les fonctionnalités disponibles, consultez la section [présentation de Query Service](../../query-service/home.md).
+Pour plus d’informations sur les fonctionnalités disponibles, consultez la section [Présentation du service de requête](../../query-service/home.md).
 
 ## Sources {#sources}
 
@@ -144,8 +150,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | Fonctionnalité | Description |
 | --- | --- |
 | Nouvelles sources désormais disponibles pour l’utilisation B2B | Vous pouvez désormais utiliser toutes les sources disponibles sur Experience Platform pour les cas d’utilisation B2B. Pour obtenir une liste complète des sources disponibles, consultez le [catalogue des sources](../../sources/home.md). |
-| Disponibilité générale de la nouvelle source [!DNL Oracle Eloqua] | Vous pouvez désormais utiliser la source de [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de votre instance [!DNL Oracle Eloqua] (compte, campagne, contacts) vers Experience Platform. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source  [!DNL Oracle Eloqua] &#x200B;](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
-| Améliorations de l’API pour [!DNL Data Landing Zone] | La source [!DNL Data Landing Zone] prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL Data Landing Zone] &#x200B;](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). |
+| Disponibilité générale de la nouvelle source [!DNL Oracle Eloqua] | Vous pouvez désormais utiliser la source de [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de votre instance [!DNL Oracle Eloqua] (compte, campagne, contacts) vers Experience Platform. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source  [!DNL Oracle Eloqua] ](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
+| Améliorations de l’API pour [!DNL Data Landing Zone] | La source [!DNL Data Landing Zone] prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL Data Landing Zone] ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 

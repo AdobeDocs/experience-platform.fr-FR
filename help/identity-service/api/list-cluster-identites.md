@@ -1,13 +1,16 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;identités de liste;liste de clusters
+keywords: Experience Platform;accueil;rubriques populaires;lister les identités;lister le cluster
 solution: Experience Platform
 title: Liste de toutes les identités d’un cluster
 description: Les identités qui sont liées dans un graphique d’identités, et ce quel que soit l’espace de noms, sont considérées comme faisant partie du même « cluster » dans ce graphique d’identités. Les options ci-dessous permettent d’accéder à tous les membres du cluster.
 role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+TQID: https://experienceleague.adobe.com/3KLwxoUg2eJ3A44UJkkBmVBHcIvw3MnEtkc6tjCyKew
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: 365
 ht-degree: 83%
 
 ---
@@ -238,7 +241,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->La réponse comportera toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent au même cluster ou qu’un ou plusieurs clusters y soient associés.
+>La réponse aura toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent au même cluster ou qu’un ou plusieurs clusters soient associés.
 
 ## Étapes suivantes
 

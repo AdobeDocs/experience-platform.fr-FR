@@ -2,9 +2,14 @@
 description: Découvrez comment le système Experience Platform gère les différents types d’erreurs renvoyés par les destinations de diffusion en streaming et comment il tente à nouveau d’envoyer des données à la plateforme de destination.
 title: Politique de limitation du débit et de nouvelle tentative pour les destinations de diffusion en streaming créées avec Destination SDK
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
-source-git-commit: 75bee8fde648101335df7a66eae1907b267b4eb6
+TQID: https://experienceleague.adobe.com/cCtldXSjKfwFafsZZnqjVIelVJinuPqZua-6dDE-H7o
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: 478
 ht-degree: 81%
 
 ---

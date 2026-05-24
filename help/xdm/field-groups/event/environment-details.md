@@ -4,21 +4,23 @@ solution: Experience Platform
 title: Groupe De Champs De Schéma Des Détails De L’Environnement
 description: Découvrez le groupe de champs de schéma Détails de l’environnement ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+TQID: https://experienceleague.adobe.com/dEfoFFFsrxU3-rAxfh0v-MSatUAdwLTm-XTociSnP4Q
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 13%
+source-wordcount: 212
+ht-degree: 12%
 
 ---
 
-
-# Groupe de champs de schéma [!UICONTROL Détails de l’environnement]
+# [!UICONTROL Environment Details] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Détails de l’environnement] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisé pour capturer des informations concernant les détails de l’environnement liés à un événement d’expérience, tels que des détails de l’appareil, des informations du navigateur, l’heure locale et d’autres informations géographiques.
+[!UICONTROL Environment Details] est un groupe de champs de schéma standard pour la classe [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations concernant les détails de l’environnement liés à un événement d’expérience, tels que des détails sur l’appareil, des informations sur le navigateur, l’heure locale et d’autres informations géographiques.
 
 ![](../../images/field-groups/environment-details.png){width=500}
 
@@ -32,5 +34,5 @@ ht-degree: 13%
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-environment-details.schema.json)

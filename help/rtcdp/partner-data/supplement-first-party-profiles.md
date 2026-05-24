@@ -3,9 +3,14 @@ title: Complémenter les profils propriétaires avec des attributs fournis par l
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
+TQID: https://experienceleague.adobe.com/LECI7Qmy9iuxLwnlztI3qVqNimsgyyQZreKbVGcbf-A
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: addf009e-030a-4310-8534-776a3e62ed48id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: 1320
 ht-degree: 72%
 
 ---
@@ -41,13 +46,13 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 
 >[!WARNING]
 >
->Les attributs supplémentaires fournis par les partenaires ingérés dans Real-Time CDP ont un impact sur votre *volume total de données*. Lisez la Description du produit [Real-Time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) pour plus d&#39;informations sur le volume total de données.
+>Les attributs supplémentaires fournis par les partenaires ingérés dans Real-Time CDP ont un impact sur votre *volume total de données*. Lisez la Description du produit [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) pour plus d&#39;informations sur le volume total de données.
 
 ## Présentation vidéo {#video-walkthrough}
 
 Regardez le tutoriel vidéo ci-dessous pour une présentation détaillée de la manière de compléter les audiences propriétaires par des attributs fournis par les partenaires :
 
->[!VIDEO](https://video.tv.adobe.com/v/3452451/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Comment réaliser le cas d’utilisation : aperçu de haut niveau {#achieve-the-use-case-high-level}
 

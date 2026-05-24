@@ -2,13 +2,17 @@
 keywords: rtcdp b2b;b2b;compte;profil de compte;profils de compte rtcdp;real-time customer data platform;
 title: Profils de compte dans Real-Time CDP B2B edition
 description: Découvrez comment l’édition B2B d’Adobe Real-Time Customer Data Platform vous permet d’unifier les informations de compte issues de plusieurs sources à l’aide de profils de compte.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: a48196d369cec9e9927d9320475e06457e575691
+TQID: https://experienceleague.adobe.com/xehc5ZJh5DSTJrEShUfiuyiaaDin3VxbVDym2O-ujQs
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 43%
+source-wordcount: 360
+ht-degree: 41%
 
 ---
 
@@ -20,7 +24,7 @@ ht-degree: 43%
 
 Les profils de compte vous permettent d’unifier les informations de compte provenant de plusieurs sources. Cette vue unifiée de compte rassemble des données provenant de vos nombreux canaux marketing et des divers systèmes actuellement utilisés par votre organisation pour stocker les données des comptes clients. Pour en savoir plus sur la manière dont les profils de compte sont créés dans le cadre du workflow B2B, reportez-vous au [tutoriel de bout en bout](../b2b-tutorial.md).
 
-En regroupant les données de comptes provenant de différentes sources, une vue d’ensemble exhaustive se dessine pour chacun de vos comptes clients, ainsi que pour les opportunités et contacts qui leur sont associés. Votre organisation peut ainsi faire passer ses campagnes marketing B2B à un niveau supérieur. Pour en savoir plus sur la puissance de Real-Time CDP, B2B edition, consultez l’exemple de cas d’utilisation de Real-Time CDP, B2B edition [&#128279;](../b2b-use-case.md).
+En regroupant les données de comptes provenant de différentes sources, une vue d’ensemble exhaustive se dessine pour chacun de vos comptes clients, ainsi que pour les opportunités et contacts qui leur sont associés. Votre organisation peut ainsi faire passer ses campagnes marketing B2B à un niveau supérieur. Pour en savoir plus sur la puissance de Real-Time CDP, B2B edition, consultez l’exemple de cas d’utilisation de Real-Time CDP, B2B edition [](../b2b-use-case.md).
 
 ## Visionneuse de profils de compte
 

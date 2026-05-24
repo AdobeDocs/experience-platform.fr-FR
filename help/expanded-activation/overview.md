@@ -2,16 +2,21 @@
 title: Activation étendue d’Audience Manager
 description: Découvrez comment activer les audiences Audience Manager vers des destinations sociales et publicitaires, via l’activation étendue d’Audience Manager.
 exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/Zw5qmg-WWlap--r9-uWpNtIIcc0-m-wkyBvR-JjEg2o
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: 533
 ht-degree: 6%
 
 ---
 
 # Activation étendue d’Audience Manager
 
-Basée sur Adobe Experience Platform, l’activation étendue d’Audience Manager aide les utilisateurs [Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/aam-home) existants à activer leurs audiences vers des plateformes de destination [sociales](../destinations/catalog/social/overview.md) et [publicitaires](../destinations/catalog/advertising/overview.md) à partir de Real-Time CDP, telles que [Facebook](../destinations/catalog/social/facebook.md), [Google Ads](../destinations/catalog/advertising/google-ads-destination.md), etc.
+Basée sur Adobe Experience Platform, l’activation étendue d’Audience Manager aide les utilisateurs [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) existants à activer leurs audiences vers des plateformes de destination [sociales](../destinations/catalog/social/overview.md) et [publicitaires](../destinations/catalog/advertising/overview.md) à partir de Real-Time CDP, telles que [Facebook](../destinations/catalog/social/facebook.md), [Google Ads](../destinations/catalog/advertising/google-ads-destination.md), etc.
 
 >[!IMPORTANT]
 >
@@ -22,7 +27,7 @@ Basée sur Adobe Experience Platform, l’activation étendue d’Audience Manag
 L’activation étendue d’Audience Manager utilise des concepts et des composants de Adobe Experience Platform. Pour mieux comprendre le workflow d’activation développée et les composants que vous utiliserez, assurez-vous de posséder une compréhension de base des concepts suivants :
 
 * [Audiences](../segmentation/ui/overview.md) : les audiences sont des ensembles de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide des définitions de segment ou de la composition de l’audience (audience générée par Experience Platform) ou à partir de sources externes telles que des chargements personnalisés (audience générée en externe). Dans l’activation développée, vos segments Audience Manager (audiences) sont importés en tant que [chargements personnalisés](../segmentation/ui/audience-portal.md#import-audience).
-* [Connecteurs Source &#x200B;](../sources/home.md) : les connecteurs Source (également appelés sources) aident les utilisateurs Experience Platform à ingérer facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide des services Experience Platform. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
+* [Connecteurs Source ](../sources/home.md) : les connecteurs Source (également appelés sources) aident les utilisateurs Experience Platform à ingérer facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide des services Experience Platform. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
 * [Connecteurs de destination](../destinations/home.md) : les destinations décrivent tout point d’entrée (application Adobe, plateforme publicitaire, service de stockage dans le cloud ou service marketing, par exemple) où une audience est activée et diffusée. [!DNL Expanded Activation] prend en charge l’activation des audiences vers les connecteurs de destination [advertising](../destinations/catalog/advertising/overview.md) et [social](../destinations/catalog/social/overview.md).
 
 ## Conditions préalables {#prerequisites}
@@ -37,8 +42,8 @@ Avant de pouvoir utiliser [!DNL Expanded Activation], vous devez créer un compt
 
 Pour activer des audiences par le biais de [!DNL Expanded Activation], assurez-vous que vos audiences Audience Manager sont basées sur des adresses e-mail **hachées**. Pour ce faire, il existe deux manières, en fonction de votre utilisation d’Audience Manager :
 
-* Si vous utilisez la fonctionnalité [Destinations basées sur les individus d’Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), vous ingérez déjà des adresses e-mail hachées dans Audience Manager. Il n’y a aucune étape supplémentaire à franchir dans ce cas. Vous pouvez passer à [activation des audiences via l’activation étendue](activate-audiences.md).
-* Si vous n’utilisez _pas_ la fonctionnalité [Destinations basées sur les individus d’Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), vous devez créer une nouvelle source de données dans Audience Manager et l’utiliser pour stocker les adresses e-mail hachées. Pour découvrir comment procéder, consultez la documentation sur la [configuration d’une source de données pour les workflows d’e-mail hachés](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails). Après avoir ingéré des adresses e-mail hachées dans votre source de données Audience Manager, lisez la documentation sur l’[activation des audiences via l’activation étendue](activate-audiences.md).
+* Si vous utilisez la fonctionnalité [Destinations basées sur les individus d’](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), vous ingérez déjà des adresses e-mail hachées dans Audience Manager. Il n’y a aucune étape supplémentaire à franchir dans ce cas. Vous pouvez passer à [activation des audiences via l’activation étendue](activate-audiences.md).
+* Si vous n’utilisez _pas_ la fonctionnalité [Destinations basées sur les individus d’Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), vous devez créer une nouvelle source de données dans Audience Manager et l’utiliser pour stocker les adresses e-mail hachées. Pour découvrir comment procéder, consultez la documentation sur la [configuration d’une source de données pour les workflows d’e-mail hachés](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails). Après avoir ingéré des adresses e-mail hachées dans votre source de données Audience Manager, lisez la documentation sur l’[activation des audiences via l’activation étendue](activate-audiences.md).
 
 ## Étapes suivantes {#next-steps}
 

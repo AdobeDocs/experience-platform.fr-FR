@@ -2,9 +2,15 @@
 title: Point dʼentrée de recherche
 description: Découvrez comment effectuer des appels vers le point dʼentrée /search dans lʼAPI Reactor.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/zdBI249cv4BWflCTXBClxvi-zyLabGLwGaZ-rI1Glmc
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: 673
 ht-degree: 97%
 
 ---
@@ -35,7 +41,7 @@ Toutes les requêtes sont limitées à votre entreprise actuelle et aux proprié
 >La fonctionnalité de recherche comporte les avertissements et exceptions suivants :
 >
 >* meta ne peut faire lʼobjet de recherches et nʼest pas renvoyé dans les résultats de recherche.
->* Les champs de schéma pour les délégués de packages d’extension (actions, conditions, etc.) peuvent faire l’objet de recherches sous forme de texte, et non de structure de données imbriquées.
+>* Champs de schéma pour les délégués de packages d’extension (actions, conditions, etc.) peuvent faire l’objet de recherches sous forme de texte, et non de structure de données imbriquées.
 >* Actuellement, les requêtes de plage ne prennent en charge que les nombres entiers.
 
 Pour plus dʼinformations détaillées sur lʼutilisation de cette fonctionnalité, consultez le [guide de recherche](../guides/search.md).

@@ -3,10 +3,13 @@ title: Connecter Azure Synapse Analytics à Experience Platform à l’aide de l
 description: Découvrez comment connecter votre compte Azure Synapse Analytics à Experience Platform à l’aide d’API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: b8497ede7f90717ed23bcd10b7abe51de18e08a5
+TQID: https://experienceleague.adobe.com/zDNEXfKF43hVSVsfIDrKT4oxQxYFIIfXGzQ3p-4ADRQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 15%
+source-wordcount: 510
+ht-degree: 20%
 
 ---
 
@@ -100,9 +103,9 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`).
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 ```json
 {
@@ -162,9 +165,9 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`).
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 ```json
 {
@@ -179,7 +182,7 @@ Une réponse réussie renvoie les détails de la nouvelle connexion de base, y c
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion de base à [!DNL Azure Synapse Analytics] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Azure Synapse Analytics] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

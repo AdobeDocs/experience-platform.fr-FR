@@ -2,9 +2,13 @@
 title: Ajouter des champs spécifiques à un schéma à l’aide de l’API Schema Registry
 description: Découvrez comment ajouter des champs individuels de groupes de champs préexistants à un schéma de modèle de données d’expérience (XDM) à l’aide de l’API Schema Registry.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/hcnsLci9fwyxAGcVSesa5jN5WALqj-VH2uBv1FIJ6O0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: 639
 ht-degree: 96%
 
 ---
@@ -17,11 +21,11 @@ Lors de la création d’un schéma, vous pouvez utiliser certains champs d’un
 
 >[!NOTE]
 >
->Pour plus d’informations sur l’ajout et la suppression de champs de schéma individuels dans l’interface utilisateur d’Adobe Experience Platform, consultez le guide sur les [workflows basés sur les champs](../ui/field-based-workflows.md) (actuellement en version bêta).
+>Pour plus d’informations sur l’ajout et la suppression de champs de schéma individuels dans l’interface d’utilisation d’Adobe Experience Platform, consultez le guide sur les [workflows basés sur les champs](../ui/field-based-workflows.md) (actuellement en version Beta).
 
 ## Conditions préalables
 
-Ce tutoriel implique d’effectuer des appels à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de commencer, veuillez consulter le [guide de développement](../api/getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris votre `{TENANT_ID}`, le concept de conteneurs et les en-têtes requis pour effectuer des requêtes.
+Ce tutoriel implique d’effectuer des appels vers l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de commencer, veuillez consulter le [guide de développement](../api/getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris votre `{TENANT_ID}`, le concept de conteneurs et les en-têtes requis pour effectuer des requêtes.
 
 ## Comprendre le champ `meta:refProperty`
 

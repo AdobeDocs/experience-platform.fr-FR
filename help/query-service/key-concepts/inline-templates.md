@@ -2,9 +2,12 @@
 title: Modèles intégrés
 description: Découvrez comment réutiliser plusieurs conditions dans de nombreuses requêtes à l’aide de modèles intégrés.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
+TQID: https://experienceleague.adobe.com/DZFag9t7-LKVavtSNbVvuqC-CRZ6xPGziJAzOliOdqQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: 486
 ht-degree: 100%
 
 ---
@@ -13,11 +16,11 @@ ht-degree: 100%
 
 Les modèles intégrés permettent de réutiliser plusieurs conditions dans une multitude de requêtes. Vous pouvez enregistrer les critères dans un modèle, puis les réutiliser dans plusieurs requêtes. Les modèles SQL réutilisables permettent de réduire les efforts de développement et le risque d’erreur lors de la copie de longues instructions entre les requêtes. Grâce aux modèles intégrés, apportez des modifications à un seul emplacement et reflétez ces modifications dans toutes les requêtes qui font référence à ce modèle.
 
-Ce document couvre l’utilisation et les limites des modèles intégrés dans Query Editor.
+Ce document couvre l’utilisation et les limites des modèles intégrés dans le requêteur.
 
 ## Conditions préalables
 
-Les modèles intégrés sont pris en charge par l’interface utilisateur et par l’API Query Service. Avant de poursuivre avec ce guide, lisez la documentation sur la façon de [créer un modèle de requête via l’API](../api/query-templates.md#create-a-query-template) ou à l’aide de [Query Editor](../ui/user-guide.md#query-authoring).
+Les modèles intégrés sont pris en charge par l’interface utilisateur et par l’API Query Service. Avant de poursuivre avec ce guide, lisez la documentation sur la façon de [créer un modèle de requête via l’API](../api/query-templates.md#create-a-query-template) ou à l’aide du [requêteur](../ui/user-guide.md#query-authoring).
 
 ## Syntaxe du modèle intégré {#syntax}
 
@@ -34,7 +37,7 @@ Les modèles SQL suivants montrent toute l’utilité des modèles intégrés. C
 #revenue_max: SELECT max(revenue) FROM revenue_table WHERE order_date > '01-06-2023'
 ```
 
-Lors de l’exécution de la requête, Query Service remplace le nom du modèle par le symbole de hachage suivi de l’instruction SQL du modèle nommé.
+Lors de l’exécution de la requête, le service de requête remplace le nom du modèle par le symbole de hachage suivi de l’instruction SQL du modèle nommé.
 
 >[!NOTE]
 >
@@ -48,6 +51,6 @@ Vous pouvez utiliser des modèles pour stocker une ou plusieurs conditions. Il n
 
 ## Étapes suivantes
 
-À la lecture de ce document, vous savez désormais comment référencer d’autres modèles dans votre requête SQL, soit dans Query Editor, soit via l’API Query Service.
+À la lecture de ce document, vous savez désormais comment référencer d’autres modèles dans votre requête SQL, soit dans le requêteur, soit via l’API Query Service.
 
 Consultez également le [guide des blocs anonymes](./anonymous-block.md) et découvrez comment réduire les efforts de développement en enchaînant une ou plusieurs instructions SQL exécutées en séquence.

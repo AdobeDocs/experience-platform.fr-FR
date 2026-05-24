@@ -1,13 +1,16 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;query service;Query service;déduplication de données;déduplication;
+keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;service de requête;déduplication de données;déduplication;
 solution: Experience Platform
-title: Déduplication des données dans Query Service
+title: Déduplication des données dans le service de requête
 type: Tutorial
 description: 'Ce document présente des exemples de requêtes d’échantillon complets et sous-sélectionnés pour dédupliquer trois cas d’utilisation courants : événements d’expérience, achats et mesures.'
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+TQID: https://experienceleague.adobe.com/J-flNv6tlRRZG6AeP0aof4yHYL2IxgglqVVy8NXGT50
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: 633
 ht-degree: 100%
 
 ---
@@ -28,7 +31,7 @@ Chaque exemple inclut la portée, la clé de fenêtre, une description de la mé
 
 ## Événements d’expérience {#experience-events}
 
-Dans le cas de doublons d&#39;événements d&#39;expérience, vous souhaiterez probablement ignorer la ligne entière.
+Dans le cas de doublons d’événements d’expérience, vous souhaiterez probablement ignorer la ligne entière.
 
 >[!CAUTION]
 >
@@ -156,4 +159,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## Étapes suivantes
 
-Ce document fournit des exemples de déduplication des données et décrit comment l’effectuer dans Query Service. Pour obtenir plus de bonnes pratiques relatives à l’écriture de requêtes à l’aide de Query Service, lisez le [guide d’écriture de requêtes](../best-practices/writing-queries.md).
+Ce document fournit des exemples de déduplication des données et décrit comment l’effectuer dans le service de requête. Pour obtenir plus de bonnes pratiques relatives à l’écriture de requêtes à l’aide du service de requête, lisez le [guide d’écriture de requêtes](../best-practices/writing-queries.md).

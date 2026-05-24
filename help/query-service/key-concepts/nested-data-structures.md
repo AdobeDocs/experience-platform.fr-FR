@@ -1,30 +1,34 @@
 ---
 keywords: Plateforme Experience ; service de requête ; Query service ; structures de données imbriquées ; données imbriquées ;
-title: Utiliser des structures de données imbriquées dans Query Service
+title: Utiliser des structures de données imbriquées dans le service de requête
 description: Ce document fournit un exemple de travail pour le traitement et la transformation des champs de données imbriqués à l’aide des instructions CTAS et INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/syHuil-gTQqX8twTa-D7cC7uoh0eSCAWNe2f123YB4U
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: 793
 ht-degree: 96%
 
 ---
 
-# Utiliser des structures de données imbriquées dans Query Service
+# Utiliser des structures de données imbriquées dans le service de requête
 
-Adobe Experience Platform Query Service prend en charge l’utilisation de champs de données imbriqués. La complexité des structures de données d’entreprise peut compliquer la transformation ou le traitement de ces données. Ce document fournit des exemples de création, de traitement ou de transformation de jeux de données avec des types de données complexes, y compris des structures de données imbriquées.
+Le service de requête Adobe Experience Platform prend en charge l’utilisation de champs de données imbriqués. La complexité des structures de données d’entreprise peut compliquer la transformation ou le traitement de ces données. Ce document fournit des exemples de création, de traitement ou de transformation de jeux de données avec des types de données complexes, y compris des structures de données imbriquées.
 
-Query Service fournit une interface [!DNL PostgreSQL] pour exécuter des requêtes SQL sur tous les jeux de données gérés par Experience Platform. Experience Platform prend en charge l’utilisation de types de données primitifs ou complexes dans les colonnes de tableau telles que les structures (struct), les tableaux, les mappages, ainsi que les structures (struct), tableaux, et mappages profondément imbriqués. Les jeux de données peuvent également contenir des structures imbriquées dans lesquelles le type de données de colonne peut être aussi complexe qu’un tableau de structures imbriquées, ou une carte de mappages dans laquelle la valeur d’une paire clé-valeur peut être une structure avec plusieurs niveaux d’imbrication.
+Le service de requête fournit une interface [!DNL PostgreSQL] pour exécuter des requêtes SQL sur tous les jeux de données gérés par Experience Platform. Experience Platform prend en charge l’utilisation de types de données primitifs ou complexes dans les colonnes de tableau telles que les structures (struct), les tableaux, les mappages, ainsi que les structures (struct), tableaux, et mappages profondément imbriqués. Les jeux de données peuvent également contenir des structures imbriquées dans lesquelles le type de données de colonne peut être aussi complexe qu’un tableau de structures imbriquées, ou une carte de mappages dans laquelle la valeur d’une paire clé-valeur peut être une structure avec plusieurs niveaux d’imbrication.
 
 ## Prise en main
 
-Ce tutoriel nécessite l’utilisation d’un client PSQL tiers ou de l’outil Query Editor pour écrire, valider et exécuter des requêtes dans l’interface utilisateur de Platform Experience. Des informations complètes sur l’exécution des requêtes via l’interface utilisateur sont disponibles dans la section [Guide de l’interface utilisateur de Query Editor](../ui/user-guide.md). Pour obtenir une liste détaillée des clients de bureau tiers qui peuvent se connecter à Query Service, reportez-vous à la section [présentation des connexions client](../clients/overview.md).
+Ce tutoriel nécessite l’utilisation d’un client PSQL tiers ou de l’outil Requêteur pour écrire, valider et exécuter des requêtes dans l’interface utilisateur de Platform Experience. Des informations complètes sur l’exécution des requêtes via l’interface utilisateur sont disponibles dans la section [Guide de l’interface utilisation du requêteur](../ui/user-guide.md). Pour obtenir une liste détaillée des clients de bureau tiers qui peuvent se connecter au service de requête, reportez-vous à la section [présentation des connexions clientes](../clients/overview.md).
 
 Vous devriez également avoir une bonne compréhension de la syntaxe des instructions `INSERT INTO` et `CTAS`. Vous trouverez des informations spécifiques sur leur utilisation dans les sections [`INSERT INTO`](../sql/syntax.md#insert-into) et [`CTAS`](../sql/syntax.md#create-table-as-select) de la [documentation de référence sur la syntaxe SQL](../sql/syntax.md).
 
 ## Créer un jeu de données
 
-Query Service fournit la fonctionnalité Create Table As Select (`CTAS`) pour créer un tableau en fonction du résultat d’une instruction `SELECT`, ou comme dans ce cas, en utilisant une référence à un schéma XDM existant dans Adobe Experience Platform. Le schéma XDM affiché ci-dessous est pour l’`Final_subscription` créé pour cet exemple.
+Le service de requête fournit la fonctionnalité Create Table As Select (`CTAS`) pour créer un tableau en fonction du résultat d’une instruction `SELECT`, ou comme dans ce cas, en utilisant une référence à un schéma XDM existant dans Adobe Experience Platform. Le schéma XDM affiché ci-dessous est pour l’`Final_subscription` créé pour cet exemple.
 
 ![Diagramme du schéma final_subscription.](../images/best-practices/final-subscription-schema.png)
 
@@ -101,7 +105,7 @@ INSERT INTO final_subscription_test
 
 ## Traiter les données d’un jeu de données imbriqué
 
-Pour trouver la liste des abonnements en cours d’une personne à partir d’un jeu de données, vous devez écrire une requête qui sépare les éléments d’un tableau en plusieurs lignes et colonnes. Pour ce faire, vous devez d’abord comprendre la structure du modèle de données, car les informations d’abonnement sont stockées dans un tableau imbriqué dans le jeu de données.
+Pour trouver la liste des abonnements actifs d’une personne à partir d’un jeu de données, vous devez écrire une requête qui sépare les éléments d’un tableau en plusieurs lignes et colonnes. Pour ce faire, vous devez d’abord comprendre la structure du modèle de données, car les informations d’abonnement sont stockées dans un tableau imbriqué dans le jeu de données.
 
 La commande PSQL `\d` est utilisée pour naviguer niveau par niveau vers les données d’abonnement requises. Les tableaux illustrent la structure du jeu de données `final_subscription_test2`. Les types de données complexes peuvent être reconnus en un coup d’œil, car il ne s’agit pas de valeurs de type standard telles que le texte, le booléen, la date et l’heure, etc.
 
@@ -152,4 +156,4 @@ Malgré la complexité croissante de cet exemple SQL, la `collect_list` pour les
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez désormais comment traiter ou transformer des jeux de données qui utilisent des types de données complexes dans Adobe Experience Platform Query Service. Consultez le [guide d’exécution des requêtes](../best-practices/writing-queries.md) pour plus d’informations sur l’exécution de requêtes SQL sur des jeux de données dans le lac de données.
+En lisant ce document, vous comprenez désormais comment traiter ou transformer des jeux de données qui utilisent des types de données complexes dans le service de requête Adobe Experience Platform. Consultez le [guide d’exécution des requêtes](../best-practices/writing-queries.md) pour plus d’informations sur l’exécution de requêtes SQL sur des jeux de données dans le lac de données.

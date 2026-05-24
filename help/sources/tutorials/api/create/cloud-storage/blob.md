@@ -2,9 +2,12 @@
 title: Connecter Azure Blob Storage à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Azure Blob à l’aide de l’API Flow Service.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
+TQID: https://experienceleague.adobe.com/E7vbvVIqyMNgo9j7rVt0FmxnieNAofxo4yg1fucDEpE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: 665
 ht-degree: 9%
 
 ---
@@ -15,7 +18,7 @@ Lisez ce guide pour savoir comment connecter votre compte [!DNL Azure Blobg Stor
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -167,7 +170,7 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- |
 | `serviceEndpoint` | URL du point d’entrée de votre compte [!DNL Azure Blob Storage]. Généralement au format : `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
-| `servicePrincipalId` | Identifiant client/d’application du principal de service Azure Active Directory (AAD) utilisé pour l’authentification. |
+| `servicePrincipalId` | Identifiant client/application du principal de service Azure Active Directory (AAD) utilisé pour l’authentification. |
 | `servicePrincipalKey` | Secret client ou mot de passe associé au principal de service Azure. |
 | `accountKind` | Type de votre compte [!DNL Azure Blob Storage]. Les valeurs courantes comprennent `Storage` (objectif général V1), `StorageV2` (objectif général V2), `BlobStorage` et `BlockBlobStorage`. |
 | `tenant` | L’identifiant du client Azure Active Directory (AAD) où le principal de service est enregistré. |

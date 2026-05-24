@@ -5,9 +5,14 @@ title: Annexe du guide de l’API Privacy Service
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API Privacy Service.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/sTfXLUp5MYhKzUb2k478ur0b3s2rdoR5NWswtV3cp6U
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: 554
 ht-degree: 46%
 
 ---
@@ -40,7 +45,7 @@ Le tableau suivant présente plusieurs types d’identité prédéfinis couramme
 >
 >Chaque type d’identité possède également une valeur entière `namespaceId`, qui peut être utilisée à la place de la chaîne de `namespace` lors de la définition de la propriété `type` de l’identité sur « namespaceId ». Pour plus d’informations, consultez la section sur les [qualificateurs d’espace de noms](#namespace-qualifiers).
 
-Vous pouvez récupérer une liste d’espaces de noms d’identité utilisés par votre organisation en envoyant une requête GET au point d’entrée `idnamespace/identities` dans l’API [!DNL Identity Service]. Pour plus d’informations, consultez le [guide de développement du service d’identités](../../identity-service/api/getting-started.md).
+Vous pouvez récupérer une liste d’espaces de noms d’identité utilisés par votre organisation en envoyant une requête GET au point d’entrée `idnamespace/identities` de l’API [!DNL Identity Service]. Pour plus d’informations, consultez le [guide de développement du service d’identités](../../identity-service/api/getting-started.md).
 
 ## Qualificateurs d’espace de noms {#namespace-qualifiers}
 
@@ -78,7 +83,7 @@ Le tableau suivant répertorie les produits pris en charge, les noms d’afficha
 | Adobe Experience Platform (lac de données) | [!UICONTROL AEP Data Lake] | `aepDataLake` |
 | Adobe Campaign | [!UICONTROL Campaign] | `campaign` |
 | Adobe Target | [!UICONTROL Target] | `target` |
-| Attributs du client ou de la cliente | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
+| Attributs du client | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
 | Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
 | Marketo Engage | [!UICONTROL Marketo Engage / AJO B2B] | `marketo` |
 | Service d’identités | [!UICONTROL Identity] | `identity` |

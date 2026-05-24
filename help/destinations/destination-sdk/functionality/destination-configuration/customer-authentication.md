@@ -2,9 +2,14 @@
 description: Découvrez comment configurer un mécanisme d’authentification pour la destination et déterminez ce que les utilisateurs verront dans l’interface utilisateur en fonction de la méthode d’authentification que vous sélectionnez.
 title: Configuration de l’authentification du client
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+TQID: https://experienceleague.adobe.com/ZzTDW-QIhAapJddgnhvNbWJV7gok3ozpae7RQoga4ZU
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: 1105
 ht-degree: 88%
 
 ---
@@ -163,7 +168,7 @@ L’authentification [!DNL Azure Data Lake Storage] est prise en charge pour les
 
 Quand vous configurez le type d’authentification[!DNL Azure Data Lake Storage], les utilisateurs doivent saisir les informations d’identification d’Azure Service Principal et leurs informations de client.
 
-![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification &#x200B;](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
+![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification ](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
 Pour configurer l’authentification [!DNL Azure Data Lake Storage] (ADLS) de la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
@@ -215,7 +220,7 @@ Pour configurer l’authentification SFTP avec la clé SSH pour la destination, 
 
 L’authentification [!DNL Google Cloud Storage] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
-Lorsque vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leurs [!DNL Google Cloud Storage] et [!UICONTROL access key ID] [!UICONTROL secret access key].
+Lorsque vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leurs [!UICONTROL access key ID] et [!UICONTROL secret access key] [!DNL Google Cloud Storage].
 
 ![Rendu de l’interface utilisateur avec l’authentification Google Cloud Storage](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 

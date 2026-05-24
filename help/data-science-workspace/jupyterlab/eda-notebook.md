@@ -5,9 +5,14 @@ title: Notebook d’analyse exploratoire des données (AED)
 type: Tutorial
 description: Ce guide porte sur l’utilisation du notebook d’analyse exploratoire des données (AED) pour découvrir des modèles dans les données web, agréger les événements avec un objectif de prédiction, nettoyer les données agrégées et comprendre la relation entre les prédicteurs et un objectif.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/jURxlYkuUMDreblqEN-BLfVOoFNYunWNkMNURzQIWS8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2790'
+source-wordcount: 2824
 ht-degree: 98%
 
 ---
@@ -22,13 +27,13 @@ ht-degree: 98%
 
 Le notebook d’analyse exploratoire des données (AED) est conçu pour vous aider à découvrir des modèles au sein des données, à vérifier l’intégrité de ces dernières et à faire la synthèse des données pertinentes pour les modèles prédictifs.
 
-L’exemple du notebook AED a été optimisé en tenant compte des données web et se compose de deux parties. La première partie commence par l’utilisation de Query Service pour afficher les tendances et les instantanés de données. Ensuite, les données sont agrégées au niveau du profil et du visiteur, en tenant compte de l’objectif d’analyse exploratoire des données.
+L’exemple du notebook AED a été optimisé en tenant compte des données web et se compose de deux parties. La première partie commence par l’utilisation du service de requête pour afficher les tendances et les instantanés de données. Ensuite, les données sont agrégées au niveau du profil et du visiteur, en tenant compte de l’objectif d’analyse exploratoire des données.
 
 La seconde partie commence par une analyse descriptive sur les données agrégées à l’aide des bibliothèques Python. Ce notebook présente des visualisations telles que des histogrammes, des graphiques de dispersion, des diagrammes à surface et une matrice de corrélation afin d’obtenir des informations exploitables utilisées pour déterminer les fonctionnalités les plus susceptibles de contribuer à la prédiction d’un objectif.
 
 ## Prise en main
 
-Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données. En outre, si vous utilisez vos propres données, veuillez consulter la documentation relative à l’[accès aux données dans les notebooks  [!DNL Jupyterlab] &#x200B;](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
+Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données. En outre, si vous utilisez vos propres données, veuillez consulter la documentation relative à l’[accès aux données dans les notebooks  [!DNL Jupyterlab] ](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
 
 Ce notebook utilise un jeu de données de valeurs moyennes sous la forme de données d’événements d’expérience Adobe Analytics trouvées dans Analytics Analysis Workspace. Pour utiliser le notebook AED, vous devez définir votre tableau de données avec les valeurs `target_table` et `target_table_id` suivantes. Tout jeu de données de valeurs moyennes peut être utilisé.
 
@@ -72,7 +77,7 @@ pd.set_option('display.max_colwidth', -1)
 
 [!DNL JupyterLab] sur Experience Platform vous permet d’utiliser SQL dans un notebook [!DNL Python] pour accéder aux données via [Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=fr). L’accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour la gestion de jeux de données volumineux grâce à ses temps d’exécution plus performants. Notez que l’interrogation de données à l’aide de [!DNL Query Service] est limitée à dix minutes de traitement.
 
-Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
+Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
 
 Pour utiliser Query Service dans JupyterLab, vous devez d’abord créer une connexion entre votre notebook Python de travail et Query Service. Pour ce faire, exécutez la cellule suivante.
 
@@ -203,7 +208,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![sortie graphique à barres pour la requête 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
+![sortie graphique en barres pour la requête 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
 **Les 10 pages les plus consultées pour un jour donné**
 
@@ -684,7 +689,7 @@ L’analyse bivariée est utilisée pour aider à comprendre la relation entre d
 - **Diagramme de dispersion** : les diagrammes de dispersion sont un moyen simple de visualiser les relations entre chaque variable. Il produit une matrice des relations entre chaque variable dans les données.
 - **Carte thermique** : les cartes thermiques sont le coefficient de corrélation pour toutes les variables du jeu de données.
 - **Boîte à moustache** : les boîtes à moustache sont une manière normalisée d’afficher la distribution des données en fonction d’un résumé à cinq chiffres (minimum, premier quartile (Q1), médian, troisième quartile (Q3) et maximum).
-- **Graphique à nombres** : un graphique à nombres est comme un histogramme ou un graphique à barres pour certaines fonctionnalités catégorielles. Il indique le nombre d’occurrences d’un élément en fonction d’un certain type de catégorie.
+- **Graphique à nombres** : un graphique à nombres est comme un histogramme ou un graphique en barres pour certaines fonctionnalités catégorielles. Il indique le nombre d’occurrences d’un élément en fonction d’un certain type de catégorie.
 
 Pour comprendre la relation entre la variable « objectif » et les prédicteurs/fonctionnalités, les graphiques sont utilisés en fonction des types de données. Pour les fonctionnalités numériques, vous devez utiliser une boîte à moustache si la variable « objectif » est catégorielle, ainsi qu’un diagramme de dispersion et une carte thermique si la variable « objectif » est numérique.
 

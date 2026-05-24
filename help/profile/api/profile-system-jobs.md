@@ -5,10 +5,15 @@ type: Documentation
 description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données du profil client en temps réel qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile pour créer une tâche système Profile ou supprimer une requête.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/-x1wYB0ISg-uOuBi9VvGIIN-UnE0-7VzabSBTMB0LCo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2021'
-ht-degree: 35%
+source-wordcount: 2048
+ht-degree: 38%
 
 ---
 
@@ -16,7 +21,7 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->Les points d’entrée suivants peuvent différer entre les implémentations de Adobe Experience Platform s’exécutant sur Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/landing/multi-cloud).
+>Les points d’entrée suivants peuvent différer entre les implémentations de Adobe Experience Platform s’exécutant sur Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Les données ingérées dans [!DNL Experience Platform] sont stockées dans le [!DNL Data Lake]. Si les jeux de données ont été activés pour Profile, ces données sont également stockées dans le magasin de données [!DNL Real-Time Customer Profile]. Il peut parfois être nécessaire de supprimer les données de profil associées à un jeu de données de la banque de profils afin de supprimer des données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API [!DNL Real-Time Customer Profile] pour créer une tâche système [!DNL Profile], ou « requête de suppression ».
 
@@ -49,9 +54,9 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
-| `start` | Décalage de la page de résultats renvoyée, en fonction de l’heure de création de la requête. | `start=4` |
+| `start` | Décalez la page des résultats renvoyée, selon l’heure de création de la requête. | `start=4` |
 | `limit` | Limitez le nombre de résultats renvoyés. | `limit=10` |
-| `page` | Renvoyer une page spécifique de résultats, en fonction de l’heure de création de la requête. | `page=2` |
+| `page` | Renvoyez une page de résultats spécifique, selon l’heure de création de la requête. | `page=2` |
 | `sort` | Triez les résultats selon un champ spécifique dans l’ordre croissant (`asc`) ou décroissant (`desc`). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. | `sort=batchId:asc` |
 
 **Requête**
@@ -357,7 +362,7 @@ Pour supprimer un lot, l’identifiant du lot doit être inclus dans le corps de
 >
 > La raison pour laquelle vous ne pouvez pas supprimer les lots des jeux de données basés sur des schémas d’enregistrement est que les lots de jeux de données de type enregistrement remplacent les enregistrements précédents et ne peuvent donc pas être « défaits » ni supprimés. La seule façon de supprimer l’impact des lots erronés pour les jeux de données basés sur des schémas d’enregistrement consiste à réingérer le lot avec les données correctes afin de remplacer les enregistrements incorrects.
 
-Pour plus d’informations sur le comportement des enregistrements et des séries temporelles, consultez la [&#x200B; section sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans la présentation de la [!DNL XDM System].
+Pour plus d’informations sur le comportement des enregistrements et des séries temporelles, consultez la [ section sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans la présentation de la [!DNL XDM System].
 
 **Format d’API**
 

@@ -5,10 +5,15 @@ title: Créer des schémas web et des jeux de données Luma
 type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires au modèle de propension de démonstration de Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 219305a71c70a5bbec2fad591c166761e3aaa9ee
+TQID: https://experienceleague.adobe.com/DlhzBQXCTsTdFlEKmLqtPAypSWSL8uU5wOyf2beQ1Zc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 0%
+source-wordcount: 486
+ht-degree: 2%
 
 ---
 
@@ -51,13 +56,13 @@ Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat 
 
 Pour créer un modèle, vous devez disposer d’un jeu de données dans Experience Platform utilisé pour entraîner et noter votre modèle. Le tutoriel vidéo suivant du [cours Workspace de science des données](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=fr) vous guide tout au long de la création du schéma Luma et de l’ingestion des données utilisées par le modèle de propension à l’achat.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447156?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/333312)
 
 ### Créez les jeux de données de résultats d’entraînement, de notation et de notation
 
 Pour exécuter le notebook du créateur de recettes ou utiliser l’API pour entraîner et noter un modèle, vous devez spécifier le ou les jeux de données et le ou les schémas utilisés pour l’entraînement/la notation. Le tutoriel vidéo suivant vous guide tout au long de la configuration des jeux de données de résultats d’entraînement, de notation et de notation, ainsi que du schéma de résultats de notation utilisé dans le modèle de propension aux achats de Luma.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447423?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## Étapes suivantes
 

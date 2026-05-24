@@ -2,9 +2,15 @@
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
+TQID: https://experienceleague.adobe.com/OxbD7DdFHDJhcokH0HqcuWskgc4NejSCJV6LPUcxxgI
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: eadea719-cf89-469b-a6fd-a236a7138047id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7aid: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c132d929-fa62-4271-803e-b823be07b914id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: 1143
 ht-degree: 29%
 
 ---
@@ -48,7 +54,7 @@ Ce guide explique comment mapper vos données dans l’interface utilisateur. Po
 
 Pour une démonstration rapide du processus de préparation des données pour la collecte de données, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/345564?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 ## Fournir des exemples de données {#select-data}
 
@@ -177,7 +183,7 @@ Pour créer une règle de mappage, sélectionnez **[!UICONTROL Add new mapping]*
 
 ![Ajout d’un nouveau mappage.](assets/data-prep/add-new-mapping.png)
 
-Sélectionnez l’icône de source (![icône du sélecteur de champ &#x200B;](/help/images/icons/source.png)), puis, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source à mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Select]** pour continuer.
+Sélectionnez l’icône de source (![icône du sélecteur de champ ](/help/images/icons/source.png)), puis, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source à mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Select]** pour continuer.
 
 ![Sélection du champ à mapper dans le schéma source.](assets/data-prep/source-mapping.png)
 

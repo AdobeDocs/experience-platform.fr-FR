@@ -2,9 +2,12 @@
 title: Gestion des données Experience Platform à l’aide de Python et de SQLAlchemy
 description: Découvrez comment utiliser SQLAlchemy pour gérer vos données Experience Platform à l’aide de Python au lieu de SQL.
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/gEwwCY3mN8-ykCB7bwh8LpU2uJvekN-0MoG55-Sf7Sw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: 579
 ht-degree: 0%
 
 ---
@@ -15,13 +18,13 @@ Découvrez comment utiliser SQLAlchemy pour une plus grande flexibilité dans la
 
 [!DNL SQLAlchemy] est un mappeur relationnel d&#39;objets (ORM) et une bibliothèque de code [!DNL Python] qui peut transférer des données stockées dans une base de données SQL vers des objets [!DNL Python]. Vous pouvez ensuite effectuer des opérations CRUD sur les données contenues dans le lac de données d’Experience Platform à l’aide du code [!DNL Python]. Cela supprime la nécessité de gérer les données à l’aide de PSQL uniquement.
 
-## Commencer
+## Prise en main
 
 Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL SQLAlchemy] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes.
 
 ## [!DNL Query Service] des informations d’identification {#credentials}
 
-Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes sur la façon de trouver vos informations d’identification, veuillez lire le [&#x200B; guide des informations d’identification &#x200B;](../ui/credentials.md).
+Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis **[!UICONTROL Credentials]**. Pour obtenir des instructions complètes sur la façon de trouver vos informations d’identification, veuillez lire le [ guide des informations d’identification ](../ui/credentials.md).
 
 ![Onglet Informations d’identification avec les informations d’identification arrivant à expiration pour Query Service mis en surbrillance.](../images/use-cases/credentials.png)
 
@@ -61,7 +64,7 @@ password = quote('''
 >
 >Le mot de passe que vous fournissez pour se connecter [!DNL SQLAlchemy] à Experience Platform expirera si vous utilisez des informations d’identification arrivant à expiration. Voir la [section Informations d’identification](#credentials) pour plus d’informations.
 
-### Créer une instance de moteur [#create-engine]
+### Créer une instance de moteur []
 
 Une fois les variables créées, importez la fonction `create_engine` et créez une chaîne pour compiler et formater vos informations d’identification Query Service dans SQLAlchemy. La fonction `create_engine` est ensuite utilisée pour construire une instance de moteur.
 

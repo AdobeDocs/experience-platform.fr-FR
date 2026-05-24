@@ -4,9 +4,14 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/YVw-HONV14aOx-s-U40l3Yhs0GpnTSjGo-HUudM37yY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: 1542
 ht-degree: 69%
 
 ---
@@ -24,7 +29,7 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 Pour appliquer des libellés à vos données, vous avez besoin de l’autorisation **[!UICONTROL Manage Usage Labels]** pour les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer les libellés. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
 
-Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
+Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
 
 ## Gérer les libellés au niveau du schéma
 
@@ -36,7 +41,7 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 >
 >![Boîte de dialogue Non-respect des règles de gouvernance des données détecté avec le résumé des violations et le diagramme de traçabilité des données en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Pour plus d’informations sur les violations de politique[&#128279;](../enforcement/auto-enforcement.md#data-usage-violation) consultez la  documentation sur les violations de politique d’utilisation des données .
+>Pour plus d’informations sur les violations de politique](../enforcement/auto-enforcement.md#data-usage-violation) consultez la [ documentation sur les violations de politique d’utilisation des données .
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schemas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 
@@ -161,5 +166,5 @@ The workflow of this video is now outdated. This can be enabled once the video h
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422795?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on) 
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) 
 -->

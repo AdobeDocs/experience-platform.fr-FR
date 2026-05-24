@@ -5,10 +5,15 @@ title: Diffusion de données de série temporelle à l’aide des API d’ingest
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion en flux continu, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/UwVdABaHdm-lYSAYXPvw98FS3x47hxh7KgKhv62VjAw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 57%
+source-wordcount: 1220
+ht-degree: 55%
 
 ---
 
@@ -423,8 +428,8 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `schema.name` | **Obligatoire.** Le nom du schéma auquel vous accédez. |
-| `relatedSchema.name` | **Obligatoire.** Puisque vous accédez à un `_xdm.context.experienceevent`, cette valeur indique le schéma d’entité de profil auquel les événements de série temporelle sont associés. |
+| `schema.name` | **Obligatoire.** Nom du schéma auquel vous accédez. |
+| `relatedSchema.name` | **Obligatoire.** Puisque vous accédez à un `_xdm.context.experienceevent`, cette valeur spécifie le schéma de l’entité de profil à laquelle les événements de série temporelle sont associés. |
 | `relatedEntityId` | L’identifiant de l’entité associée. Si cet identifiant est fourni, vous devez aussi fournir l’espace de noms de l’entité. |
 | `relatedEntityIdNS` | L’espace de noms de l’identifiant que vous tentez de récupérer. |
 

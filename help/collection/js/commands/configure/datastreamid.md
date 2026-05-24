@@ -2,9 +2,15 @@
 title: datastreamId
 description: Déterminez l’identifiant du flux de données auquel vous souhaitez envoyer des données.
 exl-id: 2d709f70-c014-4868-b2f5-17e8b88343d1
-source-git-commit: b9fea4833c4fe869b27c1270aafd3f7ed62d59db
+TQID: https://experienceleague.adobe.com/mKVKjTc3GpTx-AYw54rFETXaFRRoGA0l5EYtqy-UtBw
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: 216
 ht-degree: 1%
 
 ---
@@ -38,4 +44,4 @@ alloy("configure", {
 
 ## Sélectionnez l’identifiant du flux de données à l’aide de l’extension de balise Web SDK
 
-Consultez [&#x200B; Paramètres de configuration des flux de données &#x200B;](/help/tags/extensions/client/web-sdk/configure/datastreams.md) dans la documentation de l’extension de balise Web SDK pour savoir comment définir le flux de données souhaité pour chaque environnement à l’aide de balises. Vous pouvez envoyer des données à différents flux de données pour les environnements de balises de production, d’évaluation et de développement.
+Consultez [ Paramètres de configuration des flux de données ](/help/tags/extensions/client/web-sdk/configure/datastreams.md) dans la documentation de l’extension de balise Web SDK pour savoir comment définir le flux de données souhaité pour chaque environnement à l’aide de balises. Vous pouvez envoyer des données à différents flux de données pour les environnements de balises de production, d’évaluation et de développement.

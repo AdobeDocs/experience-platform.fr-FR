@@ -2,9 +2,13 @@
 title: Filtrer les données au niveau des lignes pour un Source à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/uUOQaQF4llmEs3v-F7Q2m30cnkwPCMPk6AaNtpBO7cE
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: 2086
 ht-degree: 13%
 
 ---
@@ -156,7 +160,7 @@ Dans l’exemple ci-dessous, les conditions sont appliquées pour sélectionner 
 
 ### Prévisualiser vos données {#preview-your-data}
 
-Vous pouvez prévisualiser vos données en adressant une requête GET au point d’entrée `/explore` de l’API [!DNL Flow Service], tout en fournissant des `filters` dans le cadre de vos paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
+Vous pouvez prévisualiser vos données en adressant une requête GET au point d’entrée `/explore` de l’API [!DNL Flow Service] tout en fournissant des `filters` dans le cadre de vos paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
 
 **Format d’API**
 
@@ -580,7 +584,7 @@ Une réponse réussie renvoie le code d’état 200 et les spécifications de co
 
 ## Filtrage des entités d’activité pour les [!DNL Marketo Engage] {#filter-for-marketo}
 
-Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source &#x200B;](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
+Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source ](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] types d’activité standard {#marketo-standard-activity-types}
 

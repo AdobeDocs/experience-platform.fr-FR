@@ -1,22 +1,25 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;service de requête;exécuter des requêtes planifiées;exécuter une requête planifiée;service de requête;requêtes planifiées;requête planifiée;
+keywords: Experience Platform;accueil;rubriques les plus consultées;query service;exécuter des requêtes planifiées;exécuter une requête planifiée;Query service;requêtes planifiées;requête planifiée;
 solution: Experience Platform
-title: Point de terminaison de l’API des exécutions de requête planifiées
-description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Query Service.
+title: Point d’entrée de l’API des exécutions de requête planifiées
+description: Les sections suivantes décrivent les différents appels API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Query Service.
 role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+TQID: https://experienceleague.adobe.com/uPePS-K2izEuJ9sbI3JUVR44j8fHlOFUeS7Kqtgt-yo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: 785
 ht-degree: 76%
 
 ---
 
-# Point de terminaison des exécutions de requête planifiées
+# Point d’entrée d’exécutions de requête planifiées
 
 ## Exemples d’appels API
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de toutes les exécutions pour une requête planifiée spécifiée
 
@@ -42,7 +45,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les exécutions les plus anciennes, puis continue à répertorier les résultats plus récents<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe serait écrit sous la forme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 am, heure normale de l’Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les exécutions les plus anciennes, puis continue à répertorier les résultats les plus récents<br> Les horodatages ISO permettent différents niveaux de granularité de la date et de l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe est écrit comme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, à 8 :15: 30, heure standard des États-Unis d’Amérique. Un fuseau horaire peut être fourni avec un décalage UTC et est désigné par le suffixe « Z » (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `state` et `externalTrigger` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à), `==` (égal à) et `!=` (différent de) sont pris en charge. Par exemple, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` renverra toutes les exécutions créées manuellement, réussies et créées après le 20 avril 2019. |
 
 **Requête**
@@ -149,7 +152,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste d’exécutions 
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur `_links.cancel` pour [arrêter une exécution pour une requête planifiée spécifiée](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Vous pouvez utiliser la valeur de `_links.cancel` pour [arrêter une exécution pour une requête planifiée spécifiée](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Déclenchement immédiat d’une exécution pour une requête planifiée spécifique
 

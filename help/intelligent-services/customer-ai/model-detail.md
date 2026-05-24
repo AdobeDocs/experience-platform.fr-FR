@@ -1,9 +1,16 @@
 ---
 title: Détails du modèle de score de propension de l’IA dédiée aux clients
 description: Découvrez le modèle d’IA utilisé pour l’IA dédiée aux clients.
-source-git-commit: 6fe2041c0dc5f7f4b98dee00d3a793469b5f64db
+exl-id: 08210982-10fe-43ef-a54e-e701241ac175
+TQID: https://experienceleague.adobe.com/Buhj2m7HQOePab-KwoKXe7VVI-qrq2toRrmhodTFVXc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: 1040
 ht-degree: 0%
 
 ---
@@ -50,7 +57,7 @@ ht-degree: 0%
 * **Entraînement des données et prétraitement** : le jeu de données d’entraînement de chaque client est directement issu de ses propres données dans Adobe Experience Platform. Cela inclut l’historique des interactions du client, les enregistrements transactionnels, les journaux d’engagement comportemental, ainsi que les informations démographiques telles que collectées et stockées dans son instance Adobe Experience Platform. Le jeu de données exploite les données spécifiques aux clients sur la période choisie, en capturant leurs tendances saisonnières uniques et leurs modèles d’engagement. Avant utilisation, le jeu de données de chaque client ou cliente subit un prétraitement adapté à ses caractéristiques de données, notamment la gestion des valeurs manquantes, le codage catégoriel, la mise à l’échelle des fonctionnalités, la détection des valeurs aberrantes et l’ingénierie des fonctionnalités afin d’assurer une qualité et une convivialité optimales pour son cas d’utilisation spécifique.
    * Les données client utilisées pour la formation ne sont pas utilisées entre les clients.
 * **Spécifications de formation** : le modèle utilise des [!DNL LightGBM] à l’aide de [!DNL GBM], optimisées pour les données structurées. Il est entraîné sur des séquences d’événements client historiques pour identifier des modèles comportementaux prédictifs.
-* **Framework de formation** : le modèle a été développé à l’aide de [!DNL LightGBM] et [!DNL scikit-learn], et est hébergé sur l’infrastructure cloud d’IA d’Adobe.
+* **Framework de formation** : le modèle a été développé à l’aide de [!DNL LightGBM] et [!DNL scikit-learn], et est hébergé sur l’infrastructure cloud d’Adobe AI.
 * **Infrastructures de formation** : clusters [!DNL Databricks].
 
 ## Évaluation de modèles {#model-evaluation}
@@ -79,4 +86,4 @@ ht-degree: 0%
 
 ## Considérations éthiques {#ethical-considerations}
 
-**Considérations éthiques associées au modèle** : ce modèle est destiné aux cas d’utilisation marketing. Les clients doivent donc faire preuve d’une prudence accrue s’ils l’appliquent à des domaines sensibles ou réglementés tels que le crédit ou l’emploi. Les extrants sont probabilistes et dérivés de données comportementales, qui peuvent refléter des biais historiques ou de représentation. Les clients sont encouragés à appliquer une supervision humaine. Adobe Experience Platform suit des directives d’IA responsable, en s’assurant que les modèles subissent des audits de biais, des tests d’équité et une supervision humaine avant leur déploiement. Pour plus d’informations, consultez les [Principes d’éthique de l’IA dans Adobe](https://www.adobe.com/content/dam/cc/en/ai-ethics/pdfs/Adobe-AI-Ethics-Principles.pdf?msockid=0d85c8269eb36f0801d0ddb49fd16ebc).
+**Considérations éthiques associées au modèle** : ce modèle est destiné aux cas d’utilisation marketing. Les clients doivent donc faire preuve d’une prudence accrue s’ils l’appliquent à des domaines sensibles ou réglementés tels que le crédit ou l’emploi. Les extrants sont probabilistes et dérivés de données comportementales, qui peuvent refléter des biais historiques ou de représentation. Les clients sont encouragés à appliquer une supervision humaine. Adobe Experience Platform suit des directives d’IA responsable, en s’assurant que les modèles subissent des audits de biais, des tests d’équité et une supervision humaine avant leur déploiement. Pour plus d’informations, consultez les [Principes d’éthique ](https://www.adobe.com/content/dam/cc/en/ai-ethics/pdfs/Adobe-AI-Ethics-Principles.pdf?msockid=0d85c8269eb36f0801d0ddb49fd16ebc).

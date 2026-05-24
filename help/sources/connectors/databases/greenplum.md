@@ -4,9 +4,12 @@ solution: Experience Platform
 title: Présentation du connecteur Source GreenPlum
 description: Découvrez comment connecter GreenPlum à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/PGxj0t9t6DQnfWMveGaki-deD3k3iUizZntng-nUBEk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: 180
 ht-degree: 11%
 
 ---
@@ -19,7 +22,7 @@ Différents types de bases de données tierces sont pris en charge, notamment le
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL GreenPlum] à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
 

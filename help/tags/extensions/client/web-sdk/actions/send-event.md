@@ -2,10 +2,16 @@
 title: Événement d’envoi
 description: Envoyez les données à Adobe Experience Platform Edge Network.
 exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
-source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
+TQID: https://experienceleague.adobe.com/wigmBsoROqaLGEVNIgAn2b6BJ3lhAAKFBW9cj12iZZs
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: cb954087-f4fc-4456-afb9-e939cabcdc79id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: e98b7246-966c-4318-9e95-cad2f7a17dc7id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: d556b755-390a-43f0-be32-a08cf6236126id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: b3a93754-a8b8-46eb-9421-7eccaeeb3dffid: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e9001ce2-5245-4a8e-8601-dd958009072f
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 0%
+source-wordcount: 838
+ht-degree: 1%
 
 ---
 
@@ -49,8 +55,8 @@ L’action **[!UICONTROL Send event]** envoie une payload à un flux de données
 ![Image de l’interface utilisateur Experience Platform Tags montrant les paramètres Personalization pour le type d’action Envoyer l’événement.](../assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]** : tableau des portées que vous souhaitez demander explicitement à la personnalisation. Vous pouvez saisir les portées manuellement ou fournir un élément de données. Lors de la saisie manuelle des portées, chaque champ représente une portée. Sélectionnez **[!UICONTROL Add scope]** pour ajouter d’autres portées à l’action.
-* **[!UICONTROL Surfaces]** : tableau de surfaces à interroger avec l’événement. Voir [Création d’expériences web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=fr) dans la documentation de Adobe Journey Optimizer pour plus d’informations. Lors de la saisie manuelle de surfaces, chaque champ représente une surface. Sélectionnez **[!UICONTROL Add surface]** pour ajouter d’autres surfaces à l’action.
-* **Rendre les décisions de personnalisation visuelle :** une case à cocher qui, lorsqu’elle est activée, vous permet de rendre du contenu personnalisé sur la page. Pour plus d’informations[&#x200B; consultez la section &#x200B;](/help/collection/use-cases/personalization/render-auto-pers-content.md)Rendu automatique des actions DOM .
+* **[!UICONTROL Surfaces]** : tableau de surfaces à interroger avec l’événement. Voir [Création d’expériences web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) dans la documentation de Adobe Journey Optimizer pour plus d’informations. Lors de la saisie manuelle de surfaces, chaque champ représente une surface. Sélectionnez **[!UICONTROL Add surface]** pour ajouter d’autres surfaces à l’action.
+* **Rendre les décisions de personnalisation visuelle :** une case à cocher qui, lorsqu’elle est activée, vous permet de rendre du contenu personnalisé sur la page. Pour plus d’informations](/help/collection/use-cases/personalization/render-auto-pers-content.md) consultez la section [Rendu automatique des actions DOM .
 * **[!UICONTROL Request default personalization]** : contrôle si la portée à l’échelle de la page et la surface par défaut sont demandées. Par défaut, elle est demandée automatiquement lors du premier appel `sendEvent` du chargement de la page. La bibliothèque JavaScript équivalente à ces boutons radio est [`requestDefaultPersonalization`](/help/collection/js/commands/sendevent/personalization.md). Vous pouvez choisir parmi les options suivantes :
    * **[!UICONTROL Automatic]** : comportement par défaut. Ne demandez la personnalisation par défaut que si elle n’a pas encore été demandée.
    * **[!UICONTROL Enabled]** : demander explicitement la portée de la page et la surface par défaut. Cette opération met à jour le cache de l’affichage SPA.
@@ -66,6 +72,6 @@ L’action **[!UICONTROL Send event]** envoie une payload à un flux de données
    * **[!UICONTROL Wait]** : retardez l’envoi de l’événement jusqu’à la réception des données de publicité.
    * **[!UICONTROL Disabled]** : n’ajoutez pas de données publicitaires à la payload de l’événement. Sélectionnez cette option si votre implémentation n’utilise ni Adobe Analytics ni Customer Journey Analytics.
 
-## Remplacements de la configuration des trains de données
+## Remplacements de la configuration du train de données
 
-Cette commande prend en charge les remplacements de la configuration des trains de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [&#x200B; Remplacements de configuration de train de données &#x200B;](../configure/configuration-overrides.md) pour plus d’informations.
+Cette commande prend en charge les remplacements de la configuration des trains de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [ Remplacements de configuration de train de données ](../configure/configuration-overrides.md) pour plus d’informations.

@@ -3,9 +3,14 @@ keywords: Experience Platform;accueil;rubriques populaires;Adobe Campaign Manage
 title: Adobe Campaign Managed Cloud Services
 description: Découvrez comment connecter Campaign Managed Cloud Services à Experience Platform à l’aide de l’interface utilisateur
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 1d29cdd39075aad937d078aa116ec2f6e6ec6a56
+TQID: https://experienceleague.adobe.com/9o9NRO--Z06-E8FlJYwJi6SPmp1zQb-RRSZNcPjYlL4
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: 1068
 ht-degree: 2%
 
 ---
@@ -28,7 +33,7 @@ Avant de pouvoir créer une connexion source pour importer votre Campaign v8 dan
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à la console cliente Adobe Campaign v8 pour afficher vos données de journal dans Campaign. Consultez la [documentation de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=fr) pour plus d’informations sur le téléchargement et l’installation de la console cliente.
+>Vous devez avoir accès à la console cliente Adobe Campaign v8 pour afficher vos données de journal dans Campaign. Consultez la [documentation de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) pour plus d’informations sur le téléchargement et l’installation de la console cliente.
 
 Connectez-vous à votre instance Campaign v8 via la console cliente. Sous l’onglet [!DNL Explorer] , sélectionnez [!DNL Administration] puis [!DNL Configuration]. Sélectionnez ensuite [!DNL Data schemas] puis appliquez le filtre `broadLog` pour le nom ou le libellé. Dans la liste qui s&#39;affiche, sélectionnez le schéma source des logs de diffusion des destinataires intitulé `broadLogRcp`.
 
@@ -74,7 +79,7 @@ La latence de bout en bout d’un événement Campaign vers la disponibilité de
 
 | Scénario | Détails | Latence attendue |
 | --- | --- | --- |
-| L&#39;événement Campaign est généré dans une instance de mid-sourcing/message center | Un événement de diffusion ou de tracking (envoi, ouverture, clic, etc.) se produit sur un nœud d’exécution de Campaign v8 (mid/message center). | Temps réel dans l’exécution de Campaign (actuellement non visible dans Experience Platform). |
+| L&#39;événement Campaign est généré dans une instance de mid-sourcing/message center | Un événement de diffusion ou de tracking (envoi, ouverture, clic, etc.) se produit sur un nœud d’exécution (mid/message center) de Campaign v8. | Temps réel dans l’exécution de Campaign (actuellement non visible dans Experience Platform). |
 | Réplication depuis l&#39;exécution vers la base de données marketing de Campaign | Les données d’événement sont répliquées du mid/centre de messages vers la base de données marketing de Campaign ([!DNL Snowflake] ou [!DNL Postgres], selon la taille du client). Les modèles d’intégration standard supposent une tâche de réplication régulière. | environ 15 minutes, selon la cadence de réplication standard de 15 minutes. |
 | Exporter de la base de données marketing de Campaign vers la zone d&#39;atterrissage (telle que [!DNL Data Landing Zone], [!DNL Amazon S3] ou [!DNL Azure Blob]) | Un workflow d’exportation (service d’exportation) de Campaign s’exécute selon un planning afin d’extraire les logs de diffusion et de tracking nouveaux/modifiés et de les écrire sous forme de micro-lots dans une zone d’atterrissage basée sur des fichiers. | Minutes, plus l’intervalle du planning d’exportation. |
 | Le flux de données source Experience Platform récupère les fichiers exportés | La source Adobe Campaign Managed Cloud Services est configurée sous la forme d’un flux de données par lots dans Experience Platform [!DNL Flow Service]. Il analyse régulièrement la zone d’atterrissage, ingère de nouveaux fichiers et les écrit dans le ou les jeux de données ExperienceEvent configurés. La surveillance expose les « lots réussis » et les « lots en échec ». | Minutes, plus l’intervalle du planning du flux de données. |

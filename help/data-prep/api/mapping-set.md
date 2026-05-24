@@ -2,11 +2,15 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;préparation de données;guide d’api;jeux de mappages;
 solution: Experience Platform
 title: Point d’entré de l’API Mapping Sets
-description: Vous pouvez utiliser le point d’entrée &grave;/mappingSets&grave; dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation des jeux de mappage.
+description: Vous pouvez utiliser le point d’entrée `/mappingSets` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation des jeux de mappage.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+TQID: https://experienceleague.adobe.com/JgejVj4OcLCzdqBOrY9XOOrHsQk0KyvuZGUD2-ZgW7c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: 858
 ht-degree: 88%
 
 ---
@@ -17,7 +21,7 @@ Les jeux de mappages peuvent être utilisés pour définir la façon dont les do
 
 ## Liste des jeux de mappages
 
-Vous pouvez récupérer une liste de tous les ensembles de mappages pour votre organisation en envoyant une requête de GET au point de terminaison `/mappingSets`.
+Vous pouvez récupérer une liste de tous les jeux de mappages pour votre organisation en envoyant une requête GET au point d’entrée `/mappingSets`.
 
 **Format d’API**
 
@@ -40,7 +44,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **Requête**
 
-La requête suivante récupère les deux derniers jeux de mappages au sein de votre organisation.
+La requête suivante récupère les deux derniers jeux de mappages de votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -218,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | Identifiant du schéma XDM auquel vous faites référence. |
 | `outputSchema.schemaRef.contentType` | Détermine le format de réponse du schéma référencé. Vous trouverez plus d’informations sur ce champ dans le [guide de développement du registre des schémas](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Le type de source décrit comment la valeur sera extraite de la source vers la destination. Le type de source prend en charge deux valeurs possibles : <ul><li>`ATTRIBUTE` : le type source `ATTRIBUTE` est utilisé lorsque l’attribut d’entrée provient d’un schéma source.</li><li>`EXPRESSION` : le type de source `EXPRESSION` est utilisé lorsque le mappage est terminé à l’aide d’un champ calculé.</li></ul> **WARNING** : la définition incorrecte des valeurs de type source peut rendre vos jeux de mappages non modifiables. |
+| `mappings.sourceType` | Le type de source décrit comment la valeur sera extraite de la source vers la destination. Le type de source prend en charge deux valeurs possibles : <ul><li>`ATTRIBUTE` : le type de source `ATTRIBUTE` est utilisé lorsque l’attribut d’entrée provient d’un schéma source.</li><li>`EXPRESSION` : le type de source `EXPRESSION` est utilisé lorsque le mappage est terminé à l’aide d’un champ calculé.</li></ul> **AVERTISSEMENT** : la définition incorrecte de valeurs de type de source peut rendre vos jeux de mappages non modifiables. |
 | `mappings.source` | L’emplacement à partir duquel vous souhaitez mapper les données. |
 | `mappings.destination` | L’emplacement auquel vous souhaitez mapper les données. |
 

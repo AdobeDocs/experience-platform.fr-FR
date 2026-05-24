@@ -2,9 +2,14 @@
 description: Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois le modèle défini, testé et envoyé, il sera utilisé par Adobe pour structurer les appels API vers votre destination.
 title: Gérer les métadonnées d’audience
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/oe-h9RNQCbuqRZNrzsct8iRXMPk-hjpe0Ms-86yzVtY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: 1273
 ht-degree: 64%
 
 ---
@@ -554,12 +559,12 @@ Afin de transmettre des informations telles que des ID d’audience, des jetons 
 | `{{authData.accessToken}}` | Transmet le jeton d’accès à votre point d’entrée API. Utilisez `{{authData.accessToken}}` si Experience Platform doit utiliser des jetons non expirants pour se connecter à votre destination, sinon utilisez `{{oauth2ServiceAccessToken}}` pour générer un jeton d’accès. |
 | `{{body.segments[0].segment.id}}` | Renvoie l’identifiant unique de l’audience créée, sous la forme de la valeur de la clé `externalAudienceId`. |
 | `{{error.message}}` | Renvoie un message d’erreur qui sera visible pour les utilisateurs dans l’interface utilisateur d’Experience Platform. |
-| `{{{segmentEnrichmentAttributes}}}` | Accède à tous les attributs d’enrichissement pour une audience spécifique.  Cette macro est prise en charge par les événements `create`, `update` et `delete`. Les attributs d’enrichissement sont disponibles uniquement pour les [&#x200B; audiences de chargement personnalisées &#x200B;](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
+| `{{{segmentEnrichmentAttributes}}}` | Accède à tous les attributs d’enrichissement pour une audience spécifique.  Cette macro est prise en charge par les événements `create`, `update` et `delete`. Les attributs d’enrichissement sont disponibles uniquement pour les [ audiences de chargement personnalisées ](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
 | `{{destination.name}}` | Renvoie le nom de la destination. |
 | `{{destination.sandboxName}}` | Renvoie le nom du sandbox Experience Platform dans lequel la destination est configurée. |
 | `{{destination.id}}` | Renvoie l’identifiant de votre configuration de destination. |
 | `{{destination.imsOrgId}}` | Renvoie l’identifiant de l’organisation IMS où la destination est configurée. |
-| `{{destination.enrichmentAttributes}}` | Accède à tous les attributs d’enrichissement pour toutes les audiences mappées à une destination. Cette macro est prise en charge par les événements `createDestination`, `updateDestination` et `deleteDestination`. Les attributs d’enrichissement sont disponibles uniquement pour les [&#x200B; audiences de chargement personnalisées &#x200B;](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Accède aux attributs d’enrichissement pour des audiences externes spécifiques mappées à une destination. Les attributs d’enrichissement sont disponibles uniquement pour les [&#x200B; audiences de chargement personnalisées &#x200B;](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
+| `{{destination.enrichmentAttributes}}` | Accède à tous les attributs d’enrichissement pour toutes les audiences mappées à une destination. Cette macro est prise en charge par les événements `createDestination`, `updateDestination` et `deleteDestination`. Les attributs d’enrichissement sont disponibles uniquement pour les [ audiences de chargement personnalisées ](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Accède aux attributs d’enrichissement pour des audiences externes spécifiques mappées à une destination. Les attributs d’enrichissement sont disponibles uniquement pour les [ audiences de chargement personnalisées ](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
 
 {style="table-layout:auto"}

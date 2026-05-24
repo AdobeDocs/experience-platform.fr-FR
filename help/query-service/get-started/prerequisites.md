@@ -3,9 +3,14 @@ keywords: Experience Platform;query service;Query service;requête
 title: Prise en main de Adobe Experience Platform Query Service
 description: Une explication des étapes nécessaires pour utiliser entièrement Adobe Experience Platform Query Service
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: fa22a0ca0c79d5d62fd39de3a808f84a11a80c4d
+TQID: https://experienceleague.adobe.com/KBHvQTA56g1ufzrX062FuD5FoEvdZCMYYFd3PDKw0SM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: 376
 ht-degree: 2%
 
 ---
@@ -21,7 +26,7 @@ Avant de commencer à interroger des données, vérifiez que vous disposez des �
 - **Autorisations requises** : votre compte utilisateur a accès à Query Service dans Experience Platform. Si le service n’est pas disponible dans l’interface utilisateur, consultez la [documentation sur les autorisations](../../access-control/home.md#permissions) et contactez votre administrateur système.
 - **Ingestion des données** : vous avez ingéré des données dans Experience Platform.
 
-Si vous devez ingérer des données, consultez le tutoriel vidéo [ingestion de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) pour obtenir un aperçu de la création de jeux de données, du mappage de schéma, de l’ingestion et de la validation. Lisez la [documentation de présentation de l’ingestion](../../ingestion/home.md) pour obtenir des informations plus détaillées et des liens vers d’autres ressources d’apprentissage.
+Si vous devez ingérer des données, consultez le tutoriel vidéo [ingestion de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) pour obtenir un aperçu de la création de jeux de données, du mappage de schéma, de l’ingestion et de la validation. Lisez la [documentation de présentation de l’ingestion](../../ingestion/home.md) pour obtenir des informations plus détaillées et des liens vers d’autres ressources d’apprentissage.
 
 ## Chemins de démarrage rapide
 
@@ -43,7 +48,7 @@ Ce document couvrait les conditions préalables requises pour utiliser les fonct
 - [Syntaxe SQL dans Query Service](../sql/syntax.md)
 - [Créer des jeux de données dérivés avec SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-Vous pouvez également consulter la présentation du cas d’utilisation de navigation abandonnée [&#x200B; pour en savoir plus sur les avantages du traitement des données par Query Service dans Experience Platform](../use-cases/abandoned-browse.md#video-example).
+Vous pouvez également consulter la présentation du cas d’utilisation de navigation abandonnée [ pour en savoir plus sur les avantages du traitement des données par Query Service dans Experience Platform](../use-cases/abandoned-browse.md#video-example).
 
 Les ressources suivantes sont utiles pour améliorer votre compréhension des [!DNL Query Service] :
 

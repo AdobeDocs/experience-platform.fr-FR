@@ -5,9 +5,13 @@ title: Créer et modifier des types de données à l’aide de l’interface uti
 type: Tutorial
 description: Découvrez comment créer et modifier des types de données dans l’interface utilisateur Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
+TQID: https://experienceleague.adobe.com/7DqBrazFClTg5Sok3EKsuBf6SBZTuloXGFVw8qpZnCc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: 1384
 ht-degree: 7%
 
 ---

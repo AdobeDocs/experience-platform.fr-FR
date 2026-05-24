@@ -2,10 +2,14 @@
 title: Évolution d’Audience Manager à Real-Time CDP
 description: Tenez compte des points à prendre en compte avant de planifier la migration d’Audience Manager vers Adobe Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+TQID: https://experienceleague.adobe.com/Y4lLCzBp3q-WnWQ44n61hOSCzWPQ9LvU7ptUhz7mNls
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 67%
+source-wordcount: 560
+ht-degree: 58%
 
 ---
 
@@ -15,9 +19,9 @@ Tandis que votre organisation passe à Adobe Real-Time CDP, voici quelques poi
 
 ![Diagramme d’évolution d’Audience Manager à Real-Time CDP](/help/rtcdp/assets/aam-to-rtcdp-evolution.png)
 
-## &#x200B;1. Prenez en compte l’architecture des données dans Audience Manager.
+## &#x200B;1. Prise en compte de l’architecture des données dans Audience Manager
 
-À mesure que vous prenez en compte l’évolution d’Audience Manager vers Real-Time CDP, le moment est venu d’analyser vos [segments Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=fr) et de déterminer les [signaux](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=fr), [caractéristiques](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=fr) et [règles](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=fr#segment-builder-section) qui constituent ces segments.
+À mesure que vous prenez en compte l’évolution d’Audience Manager vers Real-Time CDP, le moment est venu d’analyser vos [segments Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) et de déterminer les [signaux](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [caractéristiques](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html) et [règles](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) qui constituent ces segments.
 
 En outre, pensez aux sources de données que vous utilisez actuellement dans Audience Manager.
 
@@ -39,13 +43,13 @@ En fonction de leurs critères d’évaluation, les segments qui n’ont aucune 
 
 Les segments dont les règles qui peuvent être prises en charge dans Real-Time CDP mais qui ont des dépendances d’activation avec Audience Manager peuvent être envoyés à Audience Manager via la carte de destination [Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
 
-## &#x200B;4. Quelles destinations sont actuellement en place dans Audience Manager pour commencer à passer à Real-Time CDP ?
+## &#x200B;4. Quelles destinations sont actuellement en place dans Audience Manager pour commencer à passer à Real-Time CDP ?
 
 Adobe recommande vivement que les segments activés dans Audience Manager vers des [destinations basées sur les personnes](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr) soient transmises à Real-Time CDP via l’[!UICONTROL Audience Manager Source Connector], pour être ensuite activés via Real-Time CDP.
 
 Toutes les destinations basées sur les personnes disponibles dans Audience Manager ([Facebook](/help/destinations/catalog/social/facebook.md), [[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md), [LinkedIn](/help/destinations/catalog/social/linkedin.md)) sont également disponibles dans Real-Time CDP.
 
-D’autres partenaires de stratégie des médias et des données propriétaires tels que [Pinterest](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) et [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) sont disponibles.
+D’autres partenaires de stratégie des médias et des données propriétaires tels que [](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) et [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) sont disponibles.
 
 Real-Time CDP prend actuellement en charge plus de 60 destinations en mode natif dans le [catalogue](/help/destinations/catalog/overview.md), dont plus de 20 sont des destinations publicitaires ou de réseaux sociaux prenant en charge la correspondance d’audience propriétaire.
 

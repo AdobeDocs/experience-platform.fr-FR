@@ -4,10 +4,15 @@ title: Point d’entrée de l’API des tâches d’exportation de segments
 description: Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres des segments d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée /export/jobs dans l’API Adobe Experience Platform Segmentation Service, qui vous permet de récupérer, de créer et d’annuler des traitements d’exportation par programmation.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/2JJ7os9adwfeed-vKOYR8L9rlScxeBtbWcyqyfpUq88
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 32%
+source-wordcount: 1691
+ht-degree: 33%
 
 ---
 
@@ -17,7 +22,7 @@ Les tâches d’exportation sont des processus asynchrones utilisés pour conser
 
 >[!NOTE]
 >
->Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [&#x200B; tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
+>Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [ tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
 
 ## Prise en main
 
@@ -208,7 +213,7 @@ La réponse suivante renvoie le statut HTTP 200 avec une liste des tâches d’e
 | Propriété | Description |
 | -------- | ----------- |
 | `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId` : ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch` : valeur booléenne, qui indique si les identifiants de segment sont consolidés ou non. Une valeur « false » signifie que tous les identifiants de segment sont exportés dans un seul identifiant de lot. Une valeur « true » signifie qu’un identifiant de segment est exporté dans un identifiant de lot. **Remarque :** la définition de la valeur sur true peut affecter les performances d’exportation par lots.</li></ul> |
-| `fields` | Liste des champs exportés, séparés par des virgules. |
+| `fields` | Une liste des champs exportés, séparés par des virgules. |
 | `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
 | `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId` : identifiant du segment vers lequel les profils seront exportés.</li><li>`segmentNs` : espace de noms de segment pour la `segmentID` donnée.</li><li>`status` : tableau de chaînes fournissant un filtre de statut pour la `segmentID`. Par défaut, `status` possède la valeur `["realized"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `realized` et `exited`. Une valeur `realized` signifie que le profil est qualifié pour le segment. Une valeur `exiting` signifie que le profil quitte le segment.</li></ul> |
 | `mergePolicy` | Informations sur la politique de fusion pour les données exportées. |
@@ -494,7 +499,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | Propriété | Description |
 | -------- | ----------- |
 | `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId` : ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch` : valeur booléenne, qui indique si les identifiants de segment sont consolidés ou non. Une valeur `false` signifie que tous les identifiants de segment étaient regroupés dans un seul identifiant de lot. Une valeur `true` signifie qu’un identifiant de segment est exporté dans un identifiant de lot.</li></ul> |
-| `fields` | Liste des champs exportés, séparés par des virgules. |
+| `fields` | Une liste des champs exportés, séparés par des virgules. |
 | `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
 | `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId` : identifiant du segment pour les profils à exporter.</li><li>`segmentNs` : espace de noms de segment pour la `segmentID` donnée.</li><li>`status` : tableau de chaînes fournissant un filtre de statut pour la `segmentID`. Par défaut, `status` possède la valeur `["realized"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `realized` et `exited`.  Une valeur `realized` signifie que le profil est qualifié pour le segment. Une valeur `exiting` signifie que le profil quitte le segment.</li></ul> |
 | `mergePolicy` | Informations sur la politique de fusion pour les données exportées. |

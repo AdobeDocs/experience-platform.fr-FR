@@ -4,9 +4,13 @@ solution: Experience Platform
 title: Gestion des tâches de confidentialité dans l’interface utilisateur de Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur de Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans diverses applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+TQID: https://experienceleague.adobe.com/qy-QKSjRlKcgvQ-Sjkp0wh-JE7XFS9nYq1gTIkL1Q1w
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: 1721
 ht-degree: 45%
 
 ---

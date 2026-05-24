@@ -2,10 +2,13 @@
 title: Tri et filtrage des réponses dans l’API Flow Service
 description: Ce tutoriel décrit la syntaxe pour le tri et le filtrage à l’aide de paramètres de requête dans l’API Flow Service, y compris certains cas d’utilisation avancés.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/f5WCgSH7n95jQGrAMPA5OvvtayXlTaFGB2EtM7TggXc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 2%
+source-wordcount: 886
+ht-degree: 3%
 
 ---
 
@@ -195,9 +198,9 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 
 {style="table-layout:auto"}
 
-## Cas d’utilisation {#use-cases}
+## Cas pratiques {#use-cases}
 
-Lisez cette section pour obtenir des exemples spécifiques d’utilisation du filtrage et du tri pour renvoyer des informations sur certains connecteurs ou pour vous aider à déboguer les problèmes. Si vous souhaitez qu’Adobe ajoute d’autres cas d’utilisation, utilisez les **[!UICONTROL options de commentaires détaillés]** de la page pour envoyer une demande.
+Lisez cette section pour obtenir des exemples spécifiques d’utilisation du filtrage et du tri pour renvoyer des informations sur certains connecteurs ou pour vous aider à déboguer les problèmes. Si vous souhaitez qu’Adobe ajoute d’autres cas d’utilisation, utilisez le **[!UICONTROL Detailed feedback options]** de la page pour envoyer une requête.
 
 **Filtrer pour renvoyer les connexions vers une certaine destination uniquement**
 

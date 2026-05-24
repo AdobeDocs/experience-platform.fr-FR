@@ -3,9 +3,15 @@ title: Guide d’évaluation d’audience flexible
 description: Découvrez comment utiliser l’évaluation d’audience flexible pour exécuter des traitements de segmentation par lots sur demande.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
+TQID: https://experienceleague.adobe.com/ziSkEBzlEJIQmFi06RdYIAG5XdWPzIa4mw6XQL8-Uwk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: 1219
 ht-degree: 6%
 
 ---
@@ -203,7 +209,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur la tâ
 
 +++
 
-Après avoir créé la tâche de segmentation, vous pouvez vérifier son statut en adressant une requête GET au point d’entrée `/segment/jobs`, en fournissant l’identifiant de votre nouvelle tâche de segmentation dans le chemin d’accès de la requête.
+Après avoir créé la tâche de segmentation, vous pouvez vérifier son statut en adressant une requête GET au point d’entrée `/segment/jobs`, en fournissant l’identifiant de la tâche de segmentation que vous venez de créer dans le chemin de requête.
 
 +++Exemple de requête pour récupérer une tâche de segmentation
 
@@ -318,7 +324,7 @@ Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requ�
 
 >[!NOTE]
 >
->Le statut de la tâche de segmentation peut être indiqué comme dans l’état « En file d’attente » dans le tableau de bord de surveillance. Vous pouvez afficher l’état le plus à jour de la tâche de segmentation en adressant une requête GET au point d’entrée `/segment/jobs`, en fournissant l’identifiant de la tâche de segmentation dans le chemin d’accès de la requête. Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée dans l’onglet API .
+>Le statut de la tâche de segmentation peut être indiqué comme dans l’état « En file d’attente » dans le tableau de bord de surveillance. Vous pouvez afficher l’état le plus à jour de la tâche de segmentation en adressant une requête GET au point d’entrée `/segment/jobs` et en fournissant l’identifiant de la tâche de segmentation dans le chemin d’accès de la requête. Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée dans l’onglet API .
 >
 >Si vous exécutez l’évaluation d’audience flexible et souhaitez qu’elle active l’audience vers une destination, vous devez vous assurer que la fréquence est définie sur **[!UICONTROL After segment evaluation]**. L’exécution de l’évaluation d’audience flexible sur des audiences déjà définies pour être activées [après l’évaluation des segments](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) active les audiences dès que la tâche d’évaluation d’audience flexible se termine, indépendamment des tâches d’activation quotidiennes précédentes.
 
@@ -328,7 +334,7 @@ Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requ�
 
 La vidéo suivante montre comment accéder à l’évaluation d’audience flexible et l’utiliser dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453642?captions=fre_fr&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Questions fréquentes {#faq}
 

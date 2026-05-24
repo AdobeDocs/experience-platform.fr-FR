@@ -1,12 +1,18 @@
 ---
 title: Connexion Zendesk
 description: Utilisez la destination Zendesk pour exporter les données de votre compte et les activer dans Zendesk en fonction des besoins de votre entreprise.
-last-substantial-update: 2023-03-14T00:00:00Z
+last-substantial-update: 2023-03-14T00:00:00.000Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/GRFzqKjauMj6mb27e3jwHErAOV1YGp71FekQZwc6O8w
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 30%
+source-wordcount: 1626
+ht-degree: 29%
 
 ---
 
@@ -20,13 +26,13 @@ Cette [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md)
 
 ## Cas d’utilisation {#use-cases}
 
-Le service client d’une plateforme B2C multicanal souhaite garantir une expérience personnalisée transparente à ses clients. Le ministère peut créer des audiences à partir de ses propres données hors ligne pour créer de nouveaux profils d&#39;utilisateurs ou mettre à jour les informations de profil existantes à partir de différentes interactions (par exemple, les achats, les retours, etc.) et envoyer ces audiences de [!DNL Adobe Experience Platform] à [!DNL Zendesk]. La mise à jour des informations dans [!DNL Zendesk] permet à l’agent du service client de disposer immédiatement des informations récentes du client, ce qui permet des réponses et une résolution plus rapides.
+Le service client d’une plateforme B2C multicanal souhaite garantir une expérience personnalisée transparente à ses clients. Le ministère peut créer des audiences à partir de ses propres données hors ligne pour créer de nouveaux profils d&#39;utilisateurs ou mettre à jour les renseignements sur les profils existants à partir de différentes interactions (par exemple, les achats, les retours, etc.) et envoyez ces audiences de [!DNL Adobe Experience Platform] à [!DNL Zendesk]. La mise à jour des informations dans [!DNL Zendesk] permet à l’agent du service client de disposer immédiatement des informations récentes du client, ce qui permet des réponses et une résolution plus rapides.
 
 ## Conditions préalables {#prerequisites}
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL Zendesk], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créés dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL Zendesk], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créés dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour le [groupe de champs de schéma Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
@@ -40,7 +46,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination [!D
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| `Bearer token` | Jeton d’accès que vous avez généré dans votre compte [!DNL Zendesk]. <br> Suivez la documentation pour [générer un jeton d’accès [!DNL Zendesk] a](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) si vous n’en avez pas. | `a0b1c2d3e4...v20w21x22y23z` |
+| `Bearer token` | Jeton d’accès que vous avez généré dans votre compte [!DNL Zendesk]. <br> Consultez la documentation pour [générer un jeton  [!DNL Zendesk] ’accès](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) si vous n’en avez pas. | `a0b1c2d3e4...v20w21x22y23z` |
 
 ## Mécanismes de sécurisation {#guardrails}
 
@@ -73,7 +79,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -130,7 +136,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -185,7 +191,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 1. Surveillez le résumé de l’audience et assurez-vous que le nombre de profils correspond au nombre dans le segment.
    ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform montrant le segment.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Accédez au site web [!DNL Zendesk], puis à la page **[!UICONTROL Contacts]** pour vérifier si les profils de l’audience ont été ajoutés. Cette liste peut être configurée pour afficher des colonnes pour les champs supplémentaires créés avec les statuts audience&#x200B;**&#x200B;** et audience .[!UICONTROL Mapping ID]
+1. Accédez au site web [!DNL Zendesk], puis à la page **[!UICONTROL Contacts]** pour vérifier si les profils de l’audience ont été ajoutés. Cette liste peut être configurée pour afficher des colonnes pour les champs supplémentaires créés avec les statuts audience**** et audience .[!UICONTROL Mapping ID]
    ![Capture d’écran de l’interface utilisateur Zendesk présentant la page Contacts avec les champs supplémentaires créés avec le nom de l’audience.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. Vous pouvez également accéder à une page de **[!UICONTROL Person]** individuelle et vérifier la section **[!UICONTROL Additional fields]** affichant le nom de l’audience et les statuts de l’audience.
@@ -199,7 +205,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 Retrouvez d’autres informations utiles de la documentation [!DNL Zendesk] ci-dessous :
 
-* [Premier appel](https://developer.zendesk.com/documentation/sales-crm/first-call/)
+* [Passer votre premier appel](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Champs personnalisés](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 
 ### Journal des modifications {#changelog}

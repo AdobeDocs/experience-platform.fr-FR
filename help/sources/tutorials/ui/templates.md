@@ -3,9 +3,13 @@ description: Découvrez comment utiliser des modèles dans l’interface utilisa
 title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f9e3c19fdfd4ca0e03fdf3b3a7b5e82b72490dbc
+TQID: https://experienceleague.adobe.com/lQ3pu73KNg5lIXXqxXMIypdvKS51HyiRPlT-TK3Qh4c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: 2304
 ht-degree: 35%
 
 ---
@@ -70,7 +74,7 @@ Une fenêtre pop-up s’affiche, vous permettant de parcourir les modèles ou d�
 >
 >Les modèles peuvent générer automatiquement des schémas relationnels lors de l’utilisation de sources qui nécessitent des workflows de capture de données de modification ou qui prennent en charge plusieurs modèles de données. Ces schémas activent les fonctionnalités de Data Mirror pour la synchronisation des données en temps réel.\
 >Lors de l’utilisation de modèles avec des schémas relationnels, les ressources générées automatiquement incluent les champs clé primaire, identifiant de version et identifiant d’horodatage obligatoires.\
->Pour plus d’informations, consultez la présentation de Data Mirror [&#128279;](../../../xdm/data-mirror/overview.md) ainsi que la [référence technique des schémas relationnels](../../../xdm/schema/relational.md).
+>Pour plus d’informations, consultez la présentation de Data Mirror [](../../../xdm/data-mirror/overview.md) ainsi que la [référence technique des schémas relationnels](../../../xdm/schema/relational.md).
 
 Pour utiliser des ressources générées automatiquement, sélectionnez **[!UICONTROL Browse templates]** puis **[!UICONTROL Select]**.
 

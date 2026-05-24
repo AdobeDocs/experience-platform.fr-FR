@@ -4,9 +4,12 @@ description: Découvrez le type de données du modèle de données d’expérien
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: a19823f2-25d0-45cb-86f4-7816041b27f9
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/wcxyQEbKoCu5uM2FoR-adYKojGg5bG-R83IkMUJA4Os
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: 373
 ht-degree: 7%
 
 ---
@@ -42,7 +45,7 @@ Pour plus d’informations sur ce type de données, reportez-vous au référenti
 
 `communication` est fourni sous la forme d’un tableau d’objets . La structure de chaque objet est décrite ci-dessous.
 
-![&#x200B; structure de communication &#x200B;](../../../images/healthcare/data-types/person/communication.png)
+![ structure de communication ](../../../images/healthcare/data-types/person/communication.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |

@@ -1,13 +1,18 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;mlinstances;api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;mlinstances;api de machine learning sensei
 solution: Experience Platform
 title: Point d’entrée de l’API MLInstances
-description: Une instance MLInstance correspond à l’association d’un moteur existant avec un ensemble approprié de configurations qui définit tous les paramètres de formation, paramètres de notation ou configurations de ressources matérielles.
+description: Une MLInstance est une association d'un moteur existant avec un ensemble approprié de configurations qui définit des paramètres d'entraînement, des paramètres de notation ou des configurations de ressources matérielles.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/IBd3KGq1-npoHeHZCk7G-uBG7cjqPd3YxZTcuFfxz6g
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: 642
 ht-degree: 84%
 
 ---
@@ -16,9 +21,9 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 Une instance MLInstance correspond à l’association d’un [moteur](./engines.md) existant avec un ensemble approprié de configurations qui définit les paramètres de formation, les paramètres de notation ou les configurations de ressources matérielles.
 
@@ -202,7 +207,7 @@ Une réponse réussie renvoie une liste d’instances MLInstances et leurs déta
 }
 ```
 
-## Récupération d’une instance MLInstance spécifique {#retrieve-specific}
+## Récupération d’une instance MLI spécifique {#retrieve-specific}
 
 Vous pouvez récupérer les détails d’une instance MLInstance spécifique en effectuant une requête GET comprenant l’identifiant de l’instance MLInstance de votre choix dans le chemin de requête.
 
@@ -281,7 +286,7 @@ Vous pouvez mettre à jour une instance MLInstance existante en écrasant ses pr
 
 >[!TIP]
 >
->Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET pour [récupérer l’instance MLInstance par l’identifiant](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Pour garantir le succès de cette requête PUT, il est suggéré d’effectuer d’abord une requête GET pour [récupérer l’instance MLI par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 L’exemple d’appel API suivant met à jour les paramètres de formation et de notation d’une instance MLInstance lorsque les propriétés initiales sont les suivantes :
 

@@ -4,9 +4,12 @@ solution: Experience Platform
 title: Présentation du Source OData générique
 description: Découvrez comment connecter OData générique à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/uPguNuLRYevEUHwE7TUV3wUne1lyAkKXRFpvazX2AW4
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: 210
 ht-degree: 31%
 
 ---
@@ -19,7 +22,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Generic OData] à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
 

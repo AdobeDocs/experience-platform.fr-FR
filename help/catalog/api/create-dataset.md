@@ -1,23 +1,27 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;jeu de données;jeu de données;créer un jeu de données;créer un jeu de données;activer un jeu de données
+keywords: Experience Platform;accueil;rubriques populaires;jeu de données;Jeu de données;créer un jeu de données;créer un jeu de données;activer le jeu de données
 solution: Experience Platform
-title: Création d’un jeu de données dans l’API
+title: Créer un jeu de données dans l’API
 description: Ce document explique comment créer un objet de jeu de données dans l’API Catalog Service.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+TQID: https://experienceleague.adobe.com/xqmuInOH0ircjNOJUexBCN6imZt8wjw1U5bDA15uwVk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: 256
 ht-degree: 53%
 
 ---
 
-# Création d’un jeu de données dans l’API
+# Créer un jeu de données dans l’API
 
-Pour créer un jeu de données à l’aide de l’API [!DNL Catalog], vous devez connaître la valeur `$id` du schéma [!DNL Experience Data Model] (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l’identifiant de schéma, vous pouvez créer un jeu de données en envoyant une requête de POST au point de terminaison `/datasets` dans l’API [!DNL Catalog].
+Pour créer un jeu de données à l’aide de l’API [!DNL Catalog], vous devez connaître la valeur `$id` du schéma [!DNL Experience Data Model] (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l’identifiant de schéma, vous pouvez créer un jeu de données en effectuant une requête POST vers le point d’entrée `/datasets` dans l’API [!DNL Catalog].
 
 >[!NOTE]
 >
->Ce document couvre uniquement la création d’un objet de jeu de données dans [!DNL Catalog]. Pour obtenir des instructions complètes sur la création, le remplissage et la surveillance d’un jeu de données, reportez-vous au [tutoriel](../datasets/create.md) suivant.
+>Ce document explique uniquement comment créer un objet de jeu de données dans [!DNL Catalog]. Pour obtenir des instructions complètes sur la création, le remplissage et la surveillance d’un jeu de données, reportez-vous au [tutoriel](../datasets/create.md) suivant.
 
 **Format d’API**
 
@@ -27,7 +31,7 @@ POST /dataSets
 
 **Requête**
 
-La requête suivante crée un jeu de données se référant à un schéma précédemment défini.
+La requête suivante crée un jeu de données qui fait référence à un schéma précédemment défini.
 
 ```SHELL
 curl -X POST \

@@ -3,9 +3,13 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Query servi
 title: Options SSL de Query Service
 description: Découvrez la prise en charge SSL pour les connexions tierces à Adobe Experience Platform Query Service et comment vous connecter à l’aide du mode SSL complet.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/s8SGQbEvkOewJAqv35uwKjd70OuVYm8uXYV2Z5s3-OM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: 1048
 ht-degree: 1%
 
 ---
@@ -46,7 +50,7 @@ Lors de l’établissement d’une connexion tierce à une base de données Expe
 
 >[!IMPORTANT]
 >
->Les certificats TLS/SSL sur les environnements de production pour l’API Interactive Postgres de Query Service ont été actualisés le mercredi 24 janvier 2024.<br>Bien qu’il s’agisse d’une exigence annuelle, le certificat racine de la chaîne a également changé cette fois-ci, car le fournisseur de certificats TLS/SSL d’Adobe a mis à jour sa hiérarchie de certificats. Cela peut avoir un impact sur certains clients Postgres si leur liste d’autorités de certification ne dispose pas du certificat racine. Par exemple, un client de ligne de commande PSQL peut avoir besoin que les certificats racines soient ajoutés à une `~/postgresql/root.crt` de fichier explicite, sinon cela peut entraîner une erreur. Par exemple : `psql: error: SSL error: certificate verify failed`. Voir la [documentation officielle de PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) pour plus d’informations sur ce problème.<br>Le certificat racine à ajouter peut être téléchargé depuis [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>Les certificats TLS/SSL sur les environnements de production pour l’API Interactive Postgres de Query Service ont été actualisés le mercredi 24 janvier 2024.<br>Bien qu’il s’agisse d’une exigence annuelle, à cette occasion, le certificat racine de la chaîne a également changé, car le fournisseur de certificats TLS/SSL d’Adobe a mis à jour sa hiérarchie de certificats. Cela peut avoir un impact sur certains clients Postgres si leur liste d’autorités de certification ne dispose pas du certificat racine. Par exemple, un client de ligne de commande PSQL peut avoir besoin que les certificats racines soient ajoutés à une `~/postgresql/root.crt` de fichier explicite, sinon cela peut entraîner une erreur. Par exemple : `psql: error: SSL error: certificate verify failed`. Voir la [documentation officielle de PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) pour plus d’informations sur ce problème.<br>Le certificat racine à ajouter peut être téléchargé depuis [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Pour garantir une connexion sécurisée, l’utilisation de SSL doit être configurée à la fois sur le client et le serveur avant que la connexion ne soit établie. Si le protocole SSL est uniquement configuré sur le serveur, le client peut envoyer des informations sensibles telles que des mots de passe avant qu’il ne soit établi que le serveur requiert une sécurité élevée.
 

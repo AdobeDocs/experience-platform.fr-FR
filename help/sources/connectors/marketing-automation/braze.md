@@ -3,10 +3,13 @@ title: Vue d’ensemble de Braze Current Source
 description: Découvrez comment diffuser des données de Braze Currents vers Experience Platform.
 badge: Beta
 exl-id: dd304e10-26e5-4586-ab39-8fe3294b19c9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/eHgj1J2Q5SlB6w7GuOu35AJ00fo6341zMRCmU2yW9u8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 12%
+source-wordcount: 389
+ht-degree: 19%
 
 ---
 
@@ -16,7 +19,7 @@ ht-degree: 12%
 >
 >La source [!DNL Braze Currents] est en version Beta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données à partir d’applications de diffusion en continu. La prise en charge des fournisseurs de streaming inclut [!DNL Braze Currents].
 
@@ -26,7 +29,7 @@ Experience Platform prend en charge l’ingestion de données à partir d’appl
 
 Pour suivre les étapes de ce guide, vous devez :
 
-* Une connexion à [Adobe Experience Platform](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
+* Une connexion à [](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
 * Une connexion à votre [[!DNL Braze] tableau de bord](https://dashboard.braze.com/sign_in), une [licence actuelle du connecteur](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents) inutilisée et des autorisations pour créer un connecteur. Pour plus d’informations, consultez la [configuration requise [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ### Collecter les informations d’identification requises
@@ -37,7 +40,7 @@ Pour envoyer correctement vos données [!DNL Braze Currents] à Experience Platf
 | --- | --- |
 | Identifiant client | Identifiant client associé à votre source Experience Platform. |
 | Secret client | Secret client associé à votre source Experience Platform. |
-| ID du client | Identifiant client associé à votre source Experience Platform. |
+| Identifiant du tenant | Identifiant client associé à votre source Experience Platform. |
 | Nom du sandbox | Sandbox associé à votre source Experience Platform. |
 | ID du flux de données | Identifiant du flux de données associé à votre source Experience Platform. |
 | Point de terminaison de diffusion en continu | Point d’entrée de diffusion en continu associé à votre source Experience Platform. **Remarque** : [!DNL Braze] le convertit automatiquement en point d’entrée de diffusion en continu par lots. |

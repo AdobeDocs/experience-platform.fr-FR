@@ -4,10 +4,14 @@ solution: Experience Platform
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 description: Pour qu’Intelligent Services puisse découvrir des informations à partir de vos données d’événements marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Pour ce faire, les services intelligents utilisent des schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+TQID: https://experienceleague.adobe.com/t-DwxAHdmMYKDTjDamh-fo5wJZw9MZ2DbIaaKXK-Ss8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2951'
-ht-degree: 2%
+source-wordcount: 3034
+ht-degree: 1%
 
 ---
 
@@ -37,7 +41,7 @@ Le processus de préparation varie selon que vos données sont stockées dans Ad
 
 ### Préparation des données externes
 
-Si vos données sont stockées en dehors d’Experience Platform, vous devez les mapper aux champs obligatoires et pertinents d’un [schéma Consumer ExperienceEvent](#cee-schema). Ce schéma peut être complété par des groupes de champs personnalisés pour mieux capturer vos données client. Une fois mappé, vous pouvez créer un jeu de données à l’aide de votre schéma ExperienceEvent client et [&#x200B; ingérer vos données dans Experience Platform](../ingestion/home.md). Le jeu de données CEE peut ensuite être sélectionné lors de la configuration d&#39;un [!DNL Intelligent Service].
+Si vos données sont stockées en dehors d’Experience Platform, vous devez les mapper aux champs obligatoires et pertinents d’un [schéma Consumer ExperienceEvent](#cee-schema). Ce schéma peut être complété par des groupes de champs personnalisés pour mieux capturer vos données client. Une fois mappé, vous pouvez créer un jeu de données à l’aide de votre schéma ExperienceEvent client et [ ingérer vos données dans Experience Platform](../ingestion/home.md). Le jeu de données CEE peut ensuite être sélectionné lors de la configuration d&#39;un [!DNL Intelligent Service].
 
 Selon le [!DNL Intelligent Service] que vous souhaitez utiliser, différents champs peuvent être requis. Notez qu’il est recommandé d’ajouter des données à un champ si vous disposez des données. Pour en savoir plus sur les champs obligatoires, consultez le guide [IA dédiée à l’attribution](./attribution-ai/input-output.md) ou [IA dédiée aux clients](./customer-ai/data-requirements.md) sur les exigences en matière de données.
 
@@ -96,7 +100,7 @@ Le schéma CEE, comme tous les schémas XDM ExperienceEvent, capture l’état t
 
 Comme tous les schémas XDM, le groupe de champs de schéma CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au groupe de champs CEE et différentes variations peuvent être incluses dans plusieurs schémas si nécessaire.
 
-Vous trouverez un exemple complet du groupe de champs dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). En outre, vous pouvez afficher et copier le fichier [JSON](https://github.com/AdobeDocs/experience-platform.fr-FR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour un exemple de la manière dont les données peuvent être structurées pour se conformer au schéma CEE. Reportez-vous à ces deux exemples au fur et à mesure que vous en apprendrez plus sur les champs clés décrits dans la section ci-dessous, afin de déterminer comment vous pouvez mapper vos propres données au schéma.
+Vous trouverez un exemple complet du groupe de champs dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). En outre, vous pouvez afficher et copier le fichier [JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour un exemple de la manière dont les données peuvent être structurées pour se conformer au schéma CEE. Reportez-vous à ces deux exemples au fur et à mesure que vous en apprendrez plus sur les champs clés décrits dans la section ci-dessous, afin de déterminer comment vous pouvez mapper vos propres données au schéma.
 
 ## Champs clés
 
@@ -108,7 +112,7 @@ Bien que l’utilisation de tous les champs clés soit vivement recommandée, de
 
 * [Un champ d’identité principal](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) (obligatoire uniquement pour l’IA dédiée à l’attribution)
+* [xdm:channel](#channel) (obligatoire uniquement pour Attribution AI)
 
 #### Identité principale {#identity}
 
@@ -132,19 +136,19 @@ Si vous ne savez pas quel champ vous devez utiliser comme identité principale, 
 | Colonne Identité | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
 | Espace de noms | AAID | ECID |
 
-Pour définir une identité principale, accédez à votre schéma à partir de l’onglet **[!UICONTROL Schémas]** et sélectionnez le lien hypertexte du nom du schéma pour ouvrir le **[!DNL Schema Editor]**.
+Pour définir une identité principale, accédez à votre schéma à partir de l’onglet **[!UICONTROL Schemas]** et sélectionnez le lien hypertexte du nom du schéma pour ouvrir le **[!DNL Schema Editor]**.
 
 ![Navigation vers le schéma dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/navigate_schema.png)
 
-Ensuite, accédez au champ que vous souhaitez utiliser comme identité principale et sélectionnez-le. Le menu **[!UICONTROL Propriétés du champ]** s’ouvre pour ce champ.
+Ensuite, accédez au champ que vous souhaitez utiliser comme identité principale et sélectionnez-le. Le menu **[!UICONTROL Field properties]** s’ouvre pour ce champ.
 
 ![Processus de sélection du champ souhaité dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/find_field.png)
 
-Dans le menu **[!UICONTROL Propriétés du champ]**, faites défiler l’écran vers le bas jusqu’à trouver la case à cocher **[!UICONTROL Identité]**. Après avoir coché la case, l’option permettant de définir l’identité sélectionnée comme **[!UICONTROL identité de Principal]** s’affiche. Cochez également cette case.
+Dans le menu **[!UICONTROL Field properties]**, faites défiler l’écran vers le bas jusqu’à ce que vous trouviez la case à cocher **[!UICONTROL Identity]**. Après avoir coché la case, l’option permettant de définir l’identité sélectionnée comme **[!UICONTROL Primary identity]** s’affiche. Cochez également cette case.
 
 ![Case à cocher pour définir l’identité principale dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/set_primary_identity.png)
 
-Ensuite, vous devez fournir un **[!UICONTROL Espace de noms d’identité]** à partir des espaces de noms prédéfinis dans la liste déroulante. Dans cet exemple, l’espace de noms ECID est sélectionné, car un `mcid.id` d’ID Adobe Audience Manager est utilisé. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour, puis sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit pour enregistrer les modifications apportées à votre schéma.
+Ensuite, vous devez fournir un **[!UICONTROL Identity namespace]** à partir de la liste des espaces de noms prédéfinis dans la liste déroulante. Dans cet exemple, l’espace de noms ECID est sélectionné, car un `mcid.id` d’ID Adobe Audience Manager est utilisé. Sélectionnez **[!UICONTROL Apply]** pour confirmer les mises à jour, puis sélectionnez **[!UICONTROL Save]** dans le coin supérieur droit pour enregistrer les modifications apportées à votre schéma.
 
 ![Menu déroulant affichant la sélection de l’espace de noms ECID dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/select_namespace.png)
 
@@ -198,7 +202,7 @@ Le reste des champs clés est décrit dans cette section. Bien que ces champs ne
 
 Ce champ est un tableau d’éléments qui représentent les produits sélectionnés par un client, y compris le SKU, le nom, le prix et la quantité du produit.
 
-![Le champ xdm:productListItems, y compris les sous-champs tels que SKU, name, currencyCode, quantity et priceTotal.](./images/data-preparation/productListItems.png)
+Le champ ![xdm:productListItems, y compris les sous-champs tels que SKU, name, currencyCode, quantity et priceTotal.](./images/data-preparation/productListItems.png)
 
 **Exemple de schéma**
 
@@ -265,7 +269,7 @@ Pour obtenir des informations complètes sur chacun des sous-champs obligatoires
 
 Ce champ représente les détails web relatifs à l’ExperienceEvent, tels que l’interaction, les détails de la page et le référent.
 
-![Le champ xdm:web, y compris les sous-champs tels que webPageDetails et webReferrer.](./images/data-preparation/web.png)
+Le champ ![xdm:web, y compris les sous-champs tels que webPageDetails et webReferrer.](./images/data-preparation/web.png)
 
 **Exemple de schéma**
 
@@ -343,7 +347,7 @@ Une fois que vous avez créé et enregistré le schéma, vous pouvez créer un j
 * [Créer un jeu de données dans l’interface utilisateur](../catalog/datasets/user-guide.md#create) (suivez le workflow pour utiliser un schéma existant)
 * [Créer un jeu de données dans l’API](../catalog/datasets/create.md)
 
-Une fois le jeu de données créé, vous pouvez le retrouver dans l’interface utilisateur d’Experience Platform dans l’espace de travail **[!UICONTROL Jeux de données]**.
+Une fois le jeu de données créé, vous pouvez le retrouver dans l’interface utilisateur d’Experience Platform dans l’espace de travail **[!UICONTROL Datasets]**.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -355,7 +359,7 @@ Si vous ingérez des données à partir d’un fichier CSV local, vous pouvez pa
 
 #### Mapper et ingérer des données {#ingest}
 
-Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Experience Platform. Consultez le tutoriel sur [le mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser l’[exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.fr-FR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour tester le processus d’ingestion avant d’utiliser vos propres données.
+Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Experience Platform. Consultez le tutoriel sur [le mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser l’[exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour tester le processus d’ingestion avant d’utiliser vos propres données.
 
 Une fois qu’un jeu de données a été renseigné, le même jeu de données peut être utilisé pour ingérer des fichiers de données supplémentaires.
 

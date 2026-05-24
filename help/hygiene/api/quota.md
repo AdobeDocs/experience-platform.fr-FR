@@ -3,9 +3,13 @@ title: Point d’entrée de l’API Quota
 description: Le point d’entrée /quota de l’API Data Hygiene vous permet de surveiller l’utilisation de la gestion avancée du cycle de vie des données par rapport aux limites mensuelles de quota de votre entreprise pour chaque type de tâche.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 2c2907c5ed38ce4c87b1b73f96e1a0e64586cb97
+TQID: https://experienceleague.adobe.com/o-NHu4Bt5V4eYU6ef-KPPeZB877YN7jpOhmutlF4Ark
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: 377
 ht-degree: 23%
 
 ---

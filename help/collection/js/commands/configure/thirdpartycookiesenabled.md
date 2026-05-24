@@ -2,10 +2,15 @@
 title: thirdPartyCookiesEnabled
 description: Autorisez l’utilisation de cookies tiers pour identifier les visiteurs.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+TQID: https://experienceleague.adobe.com/Do2Kw6kb1yxrwmqU7SD3hGL9eqorgWDb68FsAKkUYUY
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 0%
+source-wordcount: 207
+ht-degree: 4%
 
 ---
 
@@ -29,4 +34,4 @@ alloy("configure", {
 
 ## Activation des cookies tiers à l’aide de l’extension de balise Web SDK
 
-Ce paramètre peut être configuré dans l’extension de balise Web SDK à l’aide des [&#x200B; Paramètres de configuration des identités &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies).
+Ce paramètre peut être configuré dans l’extension de balise Web SDK à l’aide des [ Paramètres de configuration des identités ](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies).

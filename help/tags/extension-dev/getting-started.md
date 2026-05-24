@@ -2,9 +2,15 @@
 title: Prise en main du développement des extensions
 description: Commencez à développer vos propres extensions de balises dans Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/sV05AetgreyXbB5-hN-x3xRPn34Fs2rEZvlGNqIsC7o
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: 469
 ht-degree: 73%
 
 ---
@@ -48,7 +54,8 @@ L’outil de génération de modèles automatique fournit ensuite des options po
 
 * [Vue de configuration de l’extension](./configuration.md) : la vue, fichier HTML, depuis laquelle une extension rassemble les paramètres globaux d’un utilisateur.
 * [Types d’événement](./web/event-types.md) : définit une activité d’observation. Par exemple, savoir quand un utilisateur fait défiler rapidement une page ou quand un utilisateur a interagi avec un élément de page. Les événements peuvent ensuite être utilisés dans les règles pour exécuter des actions.
-* [Types de condition](./web/condition-types.md) : les types de condition évaluent si un élément est vrai ou faux. Par exemple, elle peut renvoyer la valeur si le navigateur de l’utilisateur est Chrome, s’il utilise une iPad ou si l’utilisateur se trouve sur un domaine spécifique.
+* [Types de condition](./web/condition-types.md) : les types de condition évaluent si un élément est vrai ou faux.
+Par exemple, elle peut renvoyer la valeur si le navigateur de l’utilisateur est Chrome, s’il utilise une iPad ou si l’utilisateur se trouve sur un domaine spécifique.
 * [Types d’action](./web/action-types.md) : action à effectuer lorsqu’un événement se produit. Par exemple, envoyer une balise d’analyse, afficher une offre, enregistrer un cookie ou ouvrir une conversation d’assistance.
 * [Types d’éléments de données](./web/data-element-types.md) : un type d’élément de données récupère une donnée. Cette donnée peut se trouver dans un enregistrement local, dans un cookie, dans un élément DOM ou dans un emplacement personnalisé.
 * [Modules partagés](./web/shared.md) (web uniquement) : un module partagé est un mécanisme par lequel les extensions peuvent communiquer avec d’autres extensions.

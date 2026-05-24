@@ -2,9 +2,15 @@
 title: Vue d’ensemble d’Adobe Experience Platform Assurance
 description: Adobe Experience Platform permet de contrôler, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont accomplies dans vos applications mobiles.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/bxwsI4VYuDMsRRG8jEYcZyB-nvl5qYxVm0CbHgBis3o
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: 858
 ht-degree: 6%
 
 ---
@@ -15,7 +21,7 @@ Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](h
 
 >[!IMPORTANT]
 >
-> Le projet Griffon est désormais connu sous le nom d’**Assurance** !
+> Le projet Griffon est désormais connu sous le nom d’**** !
 >
 > Le projet Griffon est désormais disponible pour **tous** les clients Adobe Experience Cloud sous la forme d’Assurance. Pour en savoir plus sur cette transition, veuillez lire le [guide d’accès utilisateur](./user-access.md).
 
@@ -88,8 +94,8 @@ Assurance a mis en place les mesures de sécurité suivantes :
 * Les sessions Assurance sont supprimées après 30 jours.
 * Les données de session Assurance sont chiffrées au repos, conformément aux bonnes pratiques en matière de stockage.
 
-## Commencer
+## Prise en main
 
 Pour configurer Assurance, vous devez d’abord installer l’extension Assurance dans votre application. Pour savoir comment procéder, consultez le tutoriel sur [l’implémentation de l’extension Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-Après avoir ajouté Assurance à votre application, vous pouvez créer une session Assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, consultez le guide [&#x200B; sur l’utilisation d’Assurance](./tutorials/using-assurance.md).
+Après avoir ajouté Assurance à votre application, vous pouvez créer une session Assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, consultez le guide [ sur l’utilisation d’Assurance](./tutorials/using-assurance.md).

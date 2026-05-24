@@ -1,12 +1,16 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;workflow etl;workflow ETL
+keywords: Experience Platform;accueil;rubriques les plus consultées;ETL;etl;workflow etl;workflow ETL
 solution: Experience Platform
 title: Workflow ETL
 description: Différents outils d’extraction, de transformation et de chargement (ETL) peuvent avoir des formats différents, mais la plupart présentent des fonctionnalités similaires pour faciliter la combinaison de plusieurs sources de données.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+TQID: https://experienceleague.adobe.com/z709WSX9n7CPwTlDvdlSif3V5Tk5CTL4aqjAd8OEMMk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: 226
 ht-degree: 83%
 
 ---
@@ -33,11 +37,11 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image4.png)
 
-### Figure 4 - Nouvelle interface utilisateur de transformation, sélection de la connexion [!DNL Experience Platform] :
+### Figure 4 - Nouvelle interface utilisateur de transformation, sélection de [!DNL Experience Platform] connexion :
 
 ![](images/image5.png)
 
-### Figure 5 - Recherche de jeux de données source [!DNL Experience Platform] :
+### Figure 5 - Recherche de jeux de données de [!DNL Experience Platform] source :
 
 ![](images/image6.png)
 

@@ -4,10 +4,13 @@ solution: Experience Platform
 title: Présentation Des Sources En Libre-Service (SDK Par Lots)
 description: Les sources en libre-service Adobe Experience Platform (SDK par lots) sont un ensemble d’API de configuration qui vous permettent d’intégrer une source basée sur l’API REST à l’aide de l’API Flow Service pour importer vos données dans Experience Platform.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/L6Ahnd17zMi-zHVz40BjiioI7m-OfT9cFkegtASDYlw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 7%
+source-wordcount: 621
+ht-degree: 9%
 
 ---
 
@@ -45,13 +48,13 @@ Une fois votre source créée, consultez le [guide de documentation](./documenta
 
 Le processus détaillé de configuration de votre source dans Experience Platform est décrit ci-dessous :
 
-* Lisez le [&#x200B; Guide de l’API des sources en libre-service (SDK par lots)](./api/api-overview.md).
-   * Lisez le [&#x200B; guide de prise en main &#x200B;](./api/getting-started.md).
+* Lisez le [ Guide de l’API des sources en libre-service (SDK par lots)](./api/api-overview.md).
+   * Lisez le [ guide de prise en main ](./api/getting-started.md).
    * Suivez le tutoriel sur la [création d’une spécification de connexion](./api/create.md).
    * Suivez le tutoriel sur la [mise à jour de la spécification de connexion](./api/update-connection-specs.md).
    * Suivez le tutoriel sur [l’ajout de votre nouvel identifiant de spécification de connexion à une spécification de flux](./api/update-flow-specs.md)
    * [Envoyez votre nouvelle source](./api/submit.md).
-* Pour mieux comprendre la structure et les propriétés d’une spécification de connexion, consultez le guide sur [&#x200B; Options de configuration pour les sources en libre-service (SDK par lots)](./config/config.md).
+* Pour mieux comprendre la structure et les propriétés d’une spécification de connexion, consultez le guide sur [ Options de configuration pour les sources en libre-service (SDK par lots)](./config/config.md).
    * Lisez le guide sur [la configuration de vos spécifications d’authentification](./config/authspec.md) pour mieux comprendre les différents types d’authentification que vous pouvez utiliser pour votre source.
    * Lisez le guide sur [la configuration des spécifications de votre source](./config/sourcespec.md) pour plus d’informations sur les différents types de pagination, les formats de planification et les schémas personnalisés qui peuvent être configurés pour votre source.
    * Lisez le guide sur la [configuration des spécifications d’exploration](./config/explorespec.md) pour plus d’informations sur la définition des paramètres requis pour explorer et inspecter les objets contenus dans votre source.
@@ -59,4 +62,4 @@ Le processus détaillé de configuration de votre source dans Experience Platfor
    * Vous pouvez utiliser ce [modèle de documentation de l’API sources](./documentation/template.md) pour structurer votre documentation d’API.
    * Vous pouvez utiliser ce [modèle de documentation de l’interface utilisateur des sources](./documentation/ui-template.md) pour structurer votre documentation de l’interface utilisateur.
    * Consultez le guide sur [à l’aide de l’interface web GitHub](./documentation/github.md) pour savoir comment créer de la documentation à l’aide de GitHub.
-   * Pour savoir comment créer de la documentation à l’aide de votre ordinateur local[&#128279;](./documentation/text-editor.md) consultez le guide sur à l’aide d’un éditeur de texte.
+   * Pour savoir comment créer de la documentation à l’aide de votre ordinateur local](./documentation/text-editor.md) consultez le guide sur [à l’aide d’un éditeur de texte.

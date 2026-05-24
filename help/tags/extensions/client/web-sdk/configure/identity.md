@@ -2,9 +2,15 @@
 title: Paramètres de configuration des identités
 description: Définissez la manière dont l’extension des balises identifie les visiteurs et visiteuses.
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+TQID: https://experienceleague.adobe.com/sCxtj-jtkPjm8vFKwbjyP-bl2nFPLNCFTdTp7E3XtqU
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: 271
 ht-degree: 11%
 
 ---

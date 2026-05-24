@@ -2,16 +2,19 @@
 title: Groupe de champs de schéma du catalogue de produits
 description: Découvrez le groupe de champs de schéma du catalogue de produits.
 exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+TQID: https://experienceleague.adobe.com/c3JBcARvkI0RERR9-FeLtAh5uOnZVB0-OM5e750HDZI
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 8%
+source-wordcount: 76
+ht-degree: 7%
 
 ---
 
-# Groupe de champs de schéma [!UICONTROL Catalogue de produits]
+# [!UICONTROL Product Catalog] groupe de champs de schéma
 
-[!UICONTROL Catalogue de produits] est un groupe de champs de schéma standard pour la [[!UICONTROL classe Product]](../../classes/product.md) qui capture les propriétés liées à un catalogue de produits.
+[!UICONTROL Product Catalog] est un groupe de champs de schéma standard pour la classe [[!UICONTROL Product]](../../classes/product.md) qui capture les propriétés liées à un catalogue de produits.
 
 ![](../../images/field-groups/product/product-catalog.png)
 
@@ -22,4 +25,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).
+Pour plus d’informations sur le groupe de champs , consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

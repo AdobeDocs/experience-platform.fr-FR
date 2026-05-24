@@ -2,10 +2,15 @@
 title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez quels paramètres d’exportation des destinations sont configurables au niveau de la destination et lesquels sont fixes et impossibles à modifier.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/St5Z3kQLM75rHdgWvxzrqe-sz0HRsujAU863XSQc9gY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 89%
+source-wordcount: 850
+ht-degree: 87%
 
 ---
 
@@ -23,7 +28,7 @@ Cette page fournit des liens vers tous les paramètres d’exportation communs e
 
 ## Paramètres d’exportation communs pour les types de destination {#common-settings-across-destination-types}
 
-Le comportement d’exportation de destination est cohérent sur toutes les destinations appartenant à un type de destination concernant *ce qui déclenche une exportation de destination* et *ce qui est inclus dans les exportations de destination*. Les exportations de destination sont déclenchées par des notifications que le service de destinations reçoit du [service Real-time Customer Profile en amont](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Le comportement d’exportation de destination est cohérent sur toutes les destinations appartenant à un type de destination concernant *ce qui déclenche une exportation de destination* et *ce qui est inclus dans les exportations de destination*. Les exportations de destination sont déclenchées par des notifications que le service de destinations reçoit du [service Real-time Customer Profile en amont](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 Ce qui est inclus dans les exportations de destination varie légèrement d’un type de destination à l’autre. En savoir plus sur les [modèles communs de comportement d’exportation par type de destination](/help/destinations/how-destinations-work/profile-export-behavior.md). Ces paramètres ne peuvent pas être modifiés par les développeurs et développeuses de destinations ou les utilisateurs et utilisatrices de [!DNL Real-Time CDP].
 

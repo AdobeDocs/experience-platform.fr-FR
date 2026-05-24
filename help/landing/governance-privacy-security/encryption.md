@@ -2,10 +2,16 @@
 title: Chiffrement des données dans Adobe Experience Platform
 description: Découvrez comment les données sont chiffrées en transit et au repos dans Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f6eaba4c0622318ba713c562ba0a4c20bba02338
+TQID: https://experienceleague.adobe.com/4fF4k-dokC8fdvvj7G6jgBfx4GVtrtkrnonZjb3WFco
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '849'
-ht-degree: 7%
+source-wordcount: 945
+ht-degree: 11%
 
 ---
 
@@ -24,7 +30,7 @@ Toutes les données en transit entre Experience Platform et tout composant exter
 En règle générale, les données sont importées dans Experience Platform de trois manières :
 
 - Les fonctionnalités [collecte de données](../../collection/home.md) permettent aux sites web et aux applications mobiles d’envoyer des données à Experience Platform Edge Network pour l’évaluation et la préparation de l’ingestion.
-- [Connecteurs Source](../../sources/home.md) diffusez des données directement vers Experience Platform à partir des applications Adobe Experience Cloud et d’autres sources de données d’entreprise.
+- [Connecteurs ](../../sources/home.md) diffusez des données directement vers Experience Platform à partir des applications Adobe Experience Cloud et d’autres sources de données d’entreprise.
 - Les outils ETL non Adobe (extraction, transformation, chargement) envoient des données à l’[API d’ingestion par lots](../../ingestion/batch-ingestion/overview.md) pour consommation.
 
 Une fois les données introduites dans le système et [chiffrées au repos](#at-rest), les services Experience Platform enrichissent et exportent les données des manières suivantes :
@@ -69,7 +75,7 @@ Si vous avez déjà utilisé des liens sur cette page pour télécharger des cer
 
 Les données ingérées et utilisées par Experience Platform sont stockées dans le lac de données, une banque de données hautement granulaire contenant toutes les données gérées par le système, quels qu’en soient l’origine ou le format. Toutes les données conservées dans le lac de données sont chiffrées, stockées et gérées dans une instance [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) isolée et propre à votre organisation.
 
-Pour plus d’informations sur la manière dont les données au repos sont chiffrées dans Azure Data Lake Storage, consultez la [documentation Azure officielle](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
+Pour plus d’informations sur la manière dont les données au repos sont chiffrées dans le stockage du lac de données Azure, consultez la [documentation officielle d’Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Étapes suivantes
 

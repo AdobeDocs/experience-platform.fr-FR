@@ -2,16 +2,20 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour envoyer une destination personnalisée pour révision lorsqu’elle est créée à l’aide de Destination SDK.
 title: Envoyer une destination personnalisée pour révision
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/k89G2gOl6kPgWHdC9MlhheDeJEt-ujTy-nIpgcwM9Zc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 32%
+source-wordcount: 1048
+ht-degree: 31%
 
 ---
 
 # Envoyer une destination personnalisée pour révision
 
-## Vue d’ensemble {#overview}
+## Vue d&#39;ensemble {#overview}
 
 >[!IMPORTANT]
 >
@@ -47,7 +51,7 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest &#x200B;](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Pinterest ](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases) : les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audiences spécifique dont les adresses e-mail sont désactivées dans Verizon Media (VMG). Ils peuvent rapidement créer une nouvelle audience et envoyer le groupe d’audiences souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Motif de la mise à jour {#reason-for-update}

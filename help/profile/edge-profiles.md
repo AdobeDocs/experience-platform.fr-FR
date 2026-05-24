@@ -2,9 +2,14 @@
 title: Profils Edge
 description: Découvrez les profils Edge, ainsi que la terminologie associée, les régions disponibles pour les profils Edge et les services disponibles pour les profils Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+TQID: https://experienceleague.adobe.com/dJIlhuP0Mmueznbg2BVa203uleBLaMAjLX5gkCOHICM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: 658
 ht-degree: 0%
 
 ---
@@ -19,7 +24,7 @@ Par exemple, les applications Adobe telles qu’Adobe Target, Destination Person
 
 Lorsque vous travaillez avec les périphéries, veillez à comprendre les concepts suivants :
 
-- **Edge** : un serveur Edge est un serveur placé géographiquement qui stocke les données et les rend facilement accessibles aux applications.
+- **** : un serveur Edge est un serveur placé géographiquement qui stocke les données et les rend facilement accessibles aux applications.
 - **Projection Edge** : une projection Edge est la vue de projection système d&#39;un profil sur une périphérie spécifique, qui représente les données de profil avec un identifiant unique conforme à un schéma donné pour un client donné. Par exemple, une entité respectant le schéma Profil avec l’ID `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, visiteur du site web Luma, répliqué vers le centre de données VA6, contenant les champs `age = 35` et `gender = male`.
 
 En d’autres termes, les données sont acheminées vers une périphérie par projection, la **destination de projection** définissant **vers quelle périphérie** les données seront envoyées.
@@ -55,7 +60,7 @@ Le service XPS (Express Profile Service) récupère les profils sur les différe
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous devriez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur Adobe Experience Edge, voir [&#x200B; Présentation de la collecte de données &#x200B;](/help/collection/home.md).
+Après lecture de ce guide, vous devriez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur Adobe Experience Edge, voir [ Présentation de la collecte de données ](/help/collection/home.md).
 
 ## Annexe
 

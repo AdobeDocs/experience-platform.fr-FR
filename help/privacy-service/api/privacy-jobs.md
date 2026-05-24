@@ -5,9 +5,15 @@ title: Point d’entrée de l’API des tâches de confidentialité
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
+TQID: https://experienceleague.adobe.com/BKO-vCxXCw-Hfcz6ew37BdcwwTGgjpJ1pENArJ-ztTc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: 1876
 ht-degree: 44%
 
 ---
@@ -16,11 +22,11 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 **&#x200B;**.
+>Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 ****.
 >
 >Mettez à jour vos intégrations avant cette date limite pour éviter les échecs de requête.
 
-Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation du point d’entrée `/job` dans l’API [!DNL Privacy Service]. Avant de lire ce guide, reportez-vous au [&#x200B; guide de prise en main &#x200B;](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la manière de lire des exemples d’appels API.
+Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation du point d’entrée `/job` dans l’API [!DNL Privacy Service]. Avant de lire ce guide, reportez-vous au [ guide de prise en main ](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
 >[!NOTE]
 >
@@ -52,7 +58,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `100` est la valeur par défaut et `1000` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 | `{status}` | Le comportement par défaut consiste à inclure tous les statuts. Si vous spécifiez un type de statut, la requête renvoie uniquement les tâches de confidentialité correspondant à ce type de statut. Les valeurs acceptées sont les suivantes : <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
-| `{toDate}` | Ce paramètre limite les résultats à ceux traités avant une date spécifiée. À partir de la date de la demande, le système peut revenir 45 jours en arrière. Toutefois, la plage ne peut pas être supérieure à 30 jours.<br>Il accepte le format AAAA-MM-JJ. La date que vous indiquez est interprétée comme la date de fin exprimée en heure de Greenwich (GMT).<br>Si vous ne fournissez pas ce paramètre (et une `fromDate` correspondante), le comportement par défaut renvoie les tâches qui contiennent les données des sept derniers jours. Si vous utilisez `toDate`, vous devez également utiliser le paramètre de requête `fromDate`. Si vous n’utilisez pas les deux, l’appel renvoie une erreur 400. |
+| `{toDate}` | Ce paramètre limite les résultats à ceux traités avant une date spécifiée. À partir de la date de la demande, le système peut revenir 45 jours en arrière. Toutefois, la plage ne peut pas être supérieure à 30 jours.<br>Il accepte le format AAAA-MM-JJ. La date que vous indiquez est interprétée comme la date de fin exprimée en heure de Greenwich (GMT).<br>Si vous ne fournissez pas ce paramètre (et une `fromDate` correspondante), le comportement par défaut renvoie les tâches qui ont été traitées au cours des sept derniers jours. Si vous utilisez `toDate`, vous devez également utiliser le paramètre de requête `fromDate`. Si vous n’utilisez pas les deux, l’appel renvoie une erreur 400. |
 | `{fromDate}` | Ce paramètre limite les résultats à ceux traités après une date spécifiée. À partir de la date de la demande, le système peut revenir 45 jours en arrière. Toutefois, la plage ne peut pas être supérieure à 30 jours.<br>Il accepte le format AAAA-MM-JJ. La date que vous indiquez est interprétée comme la date d’origine de la demande exprimée en heure de Greenwich (GMT).<br>Si vous ne fournissez pas ce paramètre (et une `toDate` correspondante), le comportement par défaut renvoie les tâches qui contiennent les données des sept derniers jours. Si vous utilisez `fromDate`, vous devez également utiliser le paramètre de requête `toDate`. Si vous n’utilisez pas les deux, l’appel renvoie une erreur 400. |
 | `{filterDate}` | Ce paramètre limite les résultats à ceux traités à une date spécifiée. Il accepte le format AAAA-MM-JJ. Le système peut revenir sur les 45 derniers jours. |
 
@@ -90,7 +96,7 @@ Avant de créer une nouvelle demande de tâche, vous devez collecter des informa
 
 >[!NOTE]
 >
->Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications[&#128279;](../experience-cloud-apps.md) consultez le guide sur les applications Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications](../experience-cloud-apps.md) consultez le guide sur les applications [Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
 
 L’API [!DNL Privacy Service] prend en charge deux types de requêtes de tâche pour les données personnelles :
 
@@ -240,7 +246,7 @@ Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer
 
 ## Vérification de l’état d’une tâche {#check-status}
 
-Vous pouvez récupérer des informations sur une tâche spécifique, telles que son statut de traitement actuel, en incluant le `jobId` de cette tâche dans le chemin d’accès d’une requête GET au point d’entrée `/jobs`.
+Vous pouvez récupérer des informations sur une tâche spécifique, telles que son statut de traitement actuel, en incluant le `jobId` de cette tâche dans le chemin d’accès d’une requête GET vers le point d’entrée `/jobs`.
 
 >[!IMPORTANT]
 >

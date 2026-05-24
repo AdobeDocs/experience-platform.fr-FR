@@ -4,10 +4,16 @@ solution: Experience Platform
 title: Développement d’intégrations ETL pour Adobe Experience Platform
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et de l’ingestion de données dans Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/omYKrWwAqvXkVfI-EDLUXBRbAxYXzxVybnIrHFhFwMo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3978'
-ht-degree: 98%
+source-wordcount: 4175
+ht-degree: 97%
 
 ---
 
@@ -20,7 +26,7 @@ Le guide d’intégration ETL décrit les étapes générales de la création de
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr)
+- [Authentification et autorisation pour les API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Ce guide comprend également des exemples d’appels d’API à utiliser lors de la conception d’un connecteur ETL, avec des liens vers la documentation détaillant chaque service [!DNL Experience Platform] et l’utilisation de son API.
@@ -50,13 +56,13 @@ Plusieurs composants d’Experience Platform sont impliqués dans les intégrat
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin ou dont vous devrez disposer pour passer avec succès des appels aux API [!DNL Experience Platform].
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -70,13 +76,13 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 >
 >Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../sandboxes/home.md).
 
-Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
 - Content-Type: application/json
 
 ## Flux utilisateur général
 
-Pour commencer, un utilisateur ETL se connecte à l’interface utilisateur d’[!DNL Experience Platform] et crée des jeux de données destinés à être ingérés à l’aide d’un connecteur standard ou d’un connecteur de service Push.
+Pour commencer, un utilisateur ou une utilisatrice ETL se connecte à l’interface d’utilisation d’[!DNL Experience Platform] et crée des jeux de données destinés à être ingérés à l’aide d’un connecteur standard ou d’un connecteur de service Push.
 
 Dans l’interface utilisateur, l’utilisateur crée le jeu de données de sortie en sélectionnant un schéma de jeu de données. Le choix du schéma dépend du type de données (enregistrement ou série temporelle) ingérées dans [!DNL Experience Platform]. En cliquant sur l’onglet Schémas de l’interface utilisateur, l’utilisateur pourra visualiser tous les schémas disponibles, ainsi que le type de comportement pris en charge par le schéma.
 
@@ -211,13 +217,13 @@ Le format de réponse dépend du type d’en-tête Accept envoyé dans la requê
 
 **Réponse**
 
-Le schéma JSON renvoyé décrit la structure et les informations au niveau du champ (« type », « format », « minimum », « maximum », etc.) des données, sérialisées sous la forme JSON. Si vous utilisez un format de sérialisation autre que JSON pour l’ingestion (comme Parquet ou Scala), le [guide du registre des schémas](../xdm/tutorials/create-schema-api.md) comporte un tableau affichant le type JSON souhaité (« meta:xdmType ») et sa représentation correspondante dans d’autres formats.
+Le schéma JSON renvoyé décrit la structure et les informations au niveau du champ (type, format, minimum, maximum, etc.) des données, sérialisées au format JSON. Si vous utilisez un format de sérialisation autre que JSON pour l’ingestion (tel que Parquet ou Scala), le [Guide du registre des schémas](../xdm/tutorials/create-schema-api.md) contient un tableau indiquant le type JSON souhaité (« meta :xdmType ») et sa représentation correspondante dans d’autres formats.
 
 Outre ce tableau, le guide de développement du [!DNL Schema Registry] contient des exemples détaillés de tous les appels possibles à l’aide de l’API [!DNL Schema Registry].
 
-### Propriété « schema » de jeu de données (OBSOLÈTE - FIN DE VIE 2019-05-30)
+### Propriété « schema » de jeu de données (OBSOLÈTE - FIN DE VIE 30-05-2019)
 
-Les jeux de données peuvent contenir une propriété « schema » désormais obsolète mais qui reste temporairement disponible pour des raisons de rétrocompatibilité. Par exemple, une requête de liste (GET) similaire à celle effectuée précédemment, où « schema » a été remplacé par « schemaRef » dans le paramètre de requête `properties`, peut renvoyer ce qui suit :
+Les jeux de données peuvent contenir une propriété « schema » désormais obsolète, mais qui reste temporairement disponible pour des raisons de rétrocompatibilité. Par exemple, une requête de liste (GET) similaire à celle effectuée précédemment, où « schema » a été remplacé par « schemaRef » dans le paramètre de requête `properties`, peut renvoyer ce qui suit :
 
 ```json
 {
@@ -497,7 +503,7 @@ Dans [!DNL Experience Platform], les données devraient être écrites sous la f
 
 ## Phase d’exécution
 
-Lorsque l’exécution démarre, le connecteur (tel que défini dans le composant source) lit les données d’[!DNL Experience Platform] à l’aide de l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/). Le processus de transformation lira les données pour une certaine période. En interne, il interrogera des lots de jeux de données source. Lors de l’interrogation, il utilisera une date de début paramétrée (qui varie pour les données de série temporelle ou les données incrémentielles) et établira une liste des fichiers de jeu de données pour ces lots. Il commencera également à demander des données pour ces fichiers de jeu de données.
+Lorsque l’exécution démarre, le connecteur (tel que défini dans le composant source) lit les données d’[!DNL Experience Platform] à l’aide de l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/). Le processus de transformation lira les données pour une certaine période. En interne, il interrogera des lots de jeux de données sources. Lors de l’interrogation, il utilisera une date de début paramétrée (qui varie pour les données de série temporelle ou les données incrémentielles) et établira une liste des fichiers de jeu de données pour ces lots. Il commencera également à demander des données pour ces fichiers de jeu de données.
 
 ### Exemples de transformations
 
@@ -522,7 +528,7 @@ Vous trouverez des détails sur le filtrage des lots dans le [tutoriel portant s
 
 ### Extraction de fichiers d’un lot
 
-Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] &#x200B;](../data-access/tutorials/dataset-data.md).
+Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
 
 **Requête**
 
@@ -548,7 +554,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key: {API_KEY}"
 ```
 
-La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouverez des informations détaillées sur chaque option dans le tutoriel portant sur l’[[!DNL Data Access] &#x200B;](../data-access/tutorials/dataset-data.md).
+La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouverez des informations détaillées sur chaque option dans le tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
 
 ### Accès au contenu du fichier
 
@@ -769,7 +775,7 @@ Une fois la purge terminée, les administrateurs client devront reconfigurer Ado
 
 ## Traitement simultané de lot
 
-À la discrétion du client, les administrateurs/ingénieurs de données peuvent décider d’extraire, de transformer et de charger les données de manière séquentielle ou simultanée, selon les caractéristiques d’un jeu de données spécifique. Cela dépendra également de ce que le client compte faire des données transformées.
+À la discrétion du client, les administrateurs/ingénieurs de données peuvent décider d’extraire, de transformer et de charger les données de manière séquentielle ou simultanée, selon les caractéristiques d’un jeu de données spécifique. Cela dépendra également du cas d’utilisation que la cliente ou le client cible avec les données transformées.
 
 Par exemple, si le client persiste vers un magasin de persistance modifiable et que la séquence ou l’ordre des événements est important, le client peut avoir besoin de traiter rigoureusement les tâches avec des transformations ETL séquentielles.
 

@@ -2,10 +2,14 @@
 title: Présentation de Merkury Enterprise Identity Resolution Source
 description: Découvrez comment connecter Merkury Enterprise Identity Resolution à Adobe Experience Platform à l’aide de l’interface utilisateur.
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
-source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
+TQID: https://experienceleague.adobe.com/aL79TDCeC7eMZdlHsXoeW9yjo-DbWQJUGvFYBBcrMDQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 34%
+source-wordcount: 493
+ht-degree: 35%
 
 ---
 
@@ -27,7 +31,7 @@ Vous pouvez formater les données ingérées en tant que JSON du modèle de donn
 
 ## Liste autorisée d’adresses IP
 
-Avant de pouvoir utiliser les connecteurs source, vous devez ajouter à votre place sur la liste autorisée les adresses IP requises pour votre région. Si vous n’ajoutez pas ces adresses IP, les connecteurs source risquent de ne pas fonctionner correctement ou de produire des erreurs. Placer sur la liste autorisée Pour obtenir des instructions détaillées et la liste des adresses IP à autoriser, lisez la page [Adresses IP à inclure](../../ip-address-allow-list.md).
+Avant de pouvoir utiliser les connecteurs source, vous devez ajouter à votre place sur la liste autorisée les adresses IP requises pour votre région. Si vous n’ajoutez pas ces adresses IP, les connecteurs source risquent de ne pas fonctionner correctement ou de produire des erreurs. Pour obtenir des instructions détaillées et la liste des adresses IP à autoriser, lisez la page [Adresses IP à inclure](../../ip-address-allow-list.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

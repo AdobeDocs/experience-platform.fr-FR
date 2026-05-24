@@ -2,10 +2,16 @@
 title: Présentation de lʼextension Adobe Analytics
 description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/djFL7XQDsVdedZv-3X8-CiN8e2bYAiK4x-jSOKcfDgg
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a8b0238e-1d43-4679-a3b4-5ba1bad83baaid: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: e08599ea-8888-4294-ba74-3ba0a7762a46id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+subfeature_v2: id: c8add8f2-4250-4fd9-9cde-9707036c567did: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: df312454-73c4-43f6-a90e-18f5043f074cid: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2263'
-ht-degree: 82%
+source-wordcount: 2483
+ht-degree: 83%
 
 ---
 
@@ -99,7 +105,7 @@ Si vous sélectionnez cette option, spécifiez une ou plusieurs suites de rappor
 
 Spécifiez l’objet de suivi à utiliser globalement.
 
-## General (Général)
+## Général
 
 Sélectionnez une option dans la section General (Général) de la page de configuration. Les options de configuration disponibles sont les suivantes :
 
@@ -193,7 +199,7 @@ Voir [s.trackExternalLinks](https://experienceleague.adobe.com/docs/analytics/im
 
 Vous pouvez utiliser l’une des méthodes suivantes pour suivre les liens sortants à partir des sites des applications d’une seule page :
 
-* Si vous ne souhaitez pas suivre les liens sortants à partir de vos applications d’une seule page, insérez une entrée dans la section Never Track (Ne jamais effectuer de suivi). Par exemple : `http://testsite.com/spa/\#`. Tous les liens \# vers cet hôte sont ignorés. Tous les autres liens sortants vers d’autres hôtes tels que [https://www.google.com](https://www.google.com) sont suivis.
+* Si vous ne souhaitez pas suivre les liens sortants à partir de vos applications d’une seule page, insérez une entrée dans la section Never Track (Ne jamais effectuer de suivi).  Par exemple : `http://testsite.com/spa/\#`. Tous les liens \# vers cet hôte sont ignorés. Tous les autres liens sortants vers d’autres hôtes tels que [https://www.google.com](https://www.google.com) sont suivis.
 * Si vous souhaitez suivre certains liens sur vos applications d’une seule page, utilisez la section Always Track (Toujours effectuer le suivi).
 
 Par exemple, si vous disposez d’une page spa/\#/about, vous pouvez placer « about » dans la section Always Track (Toujours effectuer le suivi).
@@ -220,7 +226,7 @@ Valeur unique qui représente un client dans les systèmes en ligne et hors lign
 
 Voir [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=fr).
 
-### Visitor Namespace (Espace de nom du visiteur)
+### Espace de noms du visiteur ou de la visiteuse
 
 Variable permettant d’identifier le domaine avec lequel les cookies sont définis.
 
@@ -357,7 +363,7 @@ Si vous le souhaitez, configurez des hiérarchies supplémentaires.
 
 #### Nom de la page
 
-Cette valeur fait référence au nom d’une page donnée et correspond à la variable [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=fr) dans Analytics.
+Cette valeur fait référence au nom d’une page donnée et correspond à la variable ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) dans Analytics.[`pageName`
 
 >[!IMPORTANT]
 >

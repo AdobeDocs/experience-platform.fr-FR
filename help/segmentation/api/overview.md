@@ -3,10 +3,15 @@ title: Guide de l’API Segmentation Service
 description: L’API Segmentation Service permet aux développeurs de gérer par programmation les opérations de segmentation dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
+TQID: https://experienceleague.adobe.com/plysrtYhvrcwOTmaev4HRE-I2-an-AWMs3MkNogEvNs
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 4%
+source-wordcount: 622
+ht-degree: 5%
 
 ---
 
@@ -28,7 +33,7 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 
 Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres des segments d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée `/export/jobs` pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [&#x200B; guide des points d’entrée des tâches d’exportation](./export-jobs.md).
+Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [ guide des points d’entrée des tâches d’exportation](./export-jobs.md).
 
 ## Audiences externes
 
@@ -54,7 +59,7 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 
 Les définitions de segment définissent les profils qui feront partie de chaque audience. Vous pouvez utiliser le point d’entrée `/segment/definitions` pour gérer les définitions de segment.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [&#x200B; guide des points d’entrée des définitions de segment](./segment-definitions.md).
+Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [ guide des points d’entrée des définitions de segment](./segment-definitions.md).
 
 ## Tâches de segmentation
 

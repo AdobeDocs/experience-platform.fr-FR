@@ -2,10 +2,15 @@
 title: Présentation de Salesforce Marketing Cloud Source
 description: Découvrez comment connecter Salesforce Marketing Cloud à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 7481a4c85f14847c13d20372dc7bd26c92a5c3d4
+last-substantial-update: 2025-05-17T00:00:00.000Z
+TQID: https://experienceleague.adobe.com/xenP6TcoHMl8yND4cCfdjZ-PpZPHxzJcFKWBV1xrZRM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d00e9f03-e50b-4162-b143-0c0817c937c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: 669
 ht-degree: 8%
 
 ---
@@ -37,13 +42,13 @@ Pour plus d’informations sur les portées, y compris une liste de leurs autori
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 >[!WARNING]
 >
->Placer sur la liste autorisée Si vous n’ajoutez pas les adresses IP nécessaires à votre, votre compte [!DNL Salesforce Marketing Cloud] ne se connectera pas à Experience Platform.
+>Si vous n’ajoutez pas les adresses IP nécessaires à votre, votre compte [!DNL Salesforce Marketing Cloud] ne se connectera pas à Experience Platform.
 
-### S’authentifier auprès d’Experience Platform sur Azure {#azure}
+### Authentification à Experience Platform sur Azure {#azure}
 
 Vous devez fournir des valeurs pour les informations d’identification suivantes afin de [!DNL Salesforce Marketing Cloud] connecter à Experience Platform sur [!DNL Azure].
 

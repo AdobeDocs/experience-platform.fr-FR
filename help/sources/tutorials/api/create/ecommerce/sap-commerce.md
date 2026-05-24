@@ -3,10 +3,13 @@ title: Créer une connexion source et un flux de données pour SAP Commerce à l
 description: Découvrez comment créer une connexion source et un flux de données pour importer les données SAP Commerce dans Experience Platform à l’aide de l’API Flow Service.
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/B05a7-7L-2DfqhFv6nfuTHHHSu6oaYVLGAwYgIOP5-o
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2325'
-ht-degree: 47%
+source-wordcount: 2369
+ht-degree: 49%
 
 ---
 
@@ -111,7 +114,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Explorer votre source {#explore}
 
-Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez explorer le contenu et la structure de vos données source en exécutant une requête GET au point d’entrée `/connections` tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
+Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez désormais explorer le contenu et la structure de vos données source en exécutant une requête GET sur le point d’entrée `/connections` tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
 
 **Format d’API**
 
@@ -125,7 +128,7 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Identifiant de connexion de base généré à l’étape précédente. |
 | `objectType=rest` | Type d’objet que vous souhaitez explorer. Actuellement, cette valeur est toujours définie sur `rest`. |
-| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin d’accès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
+| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin dʼaccès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Experience Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
 | `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Experience Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne en base64. <br> [!DNL SAP Commerce] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des éléments suivants : <ul><li>`customers`</li><li>`contacts`</li></ul> |
@@ -744,8 +747,8 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | Format des données [!DNL SAP Commerce] à ingérer. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `data.format` | Format des données [!DNL SAP Commerce] que vous souhaitez ingérer. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
 **Réponse**
@@ -1051,7 +1054,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [Identifiant de mappage](#mapping) généré lors d’une étape précédente. |
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Cette propriété contient des informations sur la planification de l’ingestion du flux de données. |
-| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collecte des données. |
+| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. |
 
 **Réponse**

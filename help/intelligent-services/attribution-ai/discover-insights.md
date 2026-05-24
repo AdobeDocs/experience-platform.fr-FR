@@ -4,9 +4,13 @@ feature: Attribution AI
 title: Découvrez des informations dans Attribution AI
 description: Ce document sert de guide pour interagir avec les informations des instances de service dans l’interface utilisateur Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/RIr-16FceplVeprcE8kGwQvmy0-qmIlG8M1E3Fx7Uk8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: 1600
 ht-degree: 39%
 
 ---
@@ -100,7 +104,7 @@ Ce filtre vous permet de sélectionner les régions que vous avez configurées a
 
 Vous pouvez ajouter des filtres supplémentaires en sélectionnant l’icône **filtre** pour ouvrir la fenêtre contextuelle de **[!UICONTROL Add filters]**. La fenêtre contextuelle **[!UICONTROL Add filters]** vous permet de filtrer par canal, géographie, type de média et produit. Seuls les filtres applicables pour une instance de service sont renseignés par la fenêtre contextuelle. Par exemple, si vous n’avez pas fourni de données géographiques ou de type de média, ces attributs de filtre ne seront pas disponibles pour votre instance.
 
-![&#x200B; filtres supplémentaires &#x200B;](./images/insights/additional-filters.png)
+![ filtres supplémentaires ](./images/insights/additional-filters.png)
 
 ![fenêtre contextuelle de filtre](./images/insights/filter-popover.png)
 
@@ -133,7 +137,7 @@ Survoler la ligne des données avec votre souris d’un modèle d’attribution 
 
 ## Répartition par canal
 
-La carte **[!UICONTROL Breakdown by channel]** est utilisée pour déterminer le nombre total de conversions par rapport à chaque canal. Vous pouvez utiliser cette fiche pour vous aider à prendre des décisions sur l’efficacité de chaque canal et le retour sur investissement.
+La carte **[!UICONTROL Breakdown by channel]** est utilisée pour déterminer le nombre total de conversions par rapport à chaque canal. Vous pouvez utiliser cette carte pour vous aider à prendre des décisions sur l’efficacité de chaque canal et le retour sur investissement.
 
 Sélectionnez les points de suspension en haut à droite de la carte **[!UICONTROL Breakdown by channel]** pour ouvrir une liste déroulante qui vous permet de renseigner les données en fonction des points de contact.
 
@@ -145,7 +149,7 @@ La carte **[!UICONTROL Top campaigns]** affiche un aperçu de vos campagnes et d
 
 ![campagnes principales](./images/insights/top-campaigns.png)
 
-## Répartition par position du point de contact
+## Répartition par position de point de contact
 
 La sélection de l’onglet **[!UICONTROL Path Analysis]** charge les graphiques **[!UICONTROL Breakdown by touchpoint position]** et **[!UICONTROL Top conversion paths]**.
 
@@ -195,4 +199,4 @@ Lorsque vous avez terminé de filtrer les données et que vous pouvez afficher l
 
 La vidéo suivante est conçue pour vous aider à apprendre à utiliser la page d’informations IA dédiée à l’attribution pour comprendre le retour sur investissement des canaux et campagnes marketing.
 
->[!VIDEO](https://video.tv.adobe.com/v/345100?captions=fre_fr&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)

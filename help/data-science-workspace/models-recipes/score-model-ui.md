@@ -5,9 +5,13 @@ title: Notation d’un modèle dans l’interface utilisateur de Workspace de sc
 type: Tutorial
 description: La notation dans l’espace de travail de science des données d’Adobe Experience Platform peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/x-LrZ8VzNiLMR8qWGhQ9Wmw4XWZsdayKFSz9zDbrkeM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: 642
 ht-degree: 31%
 
 ---
@@ -24,7 +28,7 @@ La notation dans Adobe Experience Platform [!DNL Data Science Workspace] peut ê
 
 Ce tutoriel décrit les étapes requises pour noter un modèle dans l’interface utilisateur [!DNL Data Science Workspace].
 
-## Commencer
+## Prise en main
 
 Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 

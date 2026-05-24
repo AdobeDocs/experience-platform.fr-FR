@@ -3,10 +3,15 @@ title: Reciblage hors site des visiteurs non authentifiés
 description: Découvrez comment recibler des utilisateurs non authentifiés à l’aide des ID de prospect afin de créer un attribut calculé pouvant être utilisé pour créer une audience d’utilisateurs non authentifiés.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+TQID: https://experienceleague.adobe.com/L9PoZg8xhIlLGyyuBQqkm1UsWUeZWZFkyHj1spsYujE
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1358'
-ht-degree: 1%
+source-wordcount: 1386
+ht-degree: 2%
 
 ---
 
@@ -109,7 +114,7 @@ Sélectionnez l’événement **[!UICONTROL Page View]** nouvellement ajouté. R
 
 Après avoir ajouté votre événement, vous devez ajouter un attribut. Puisque vous travaillez avec des visiteurs non authentifiés, vous pouvez ajouter l’attribut calculé que vous venez de créer. Cet attribut calculé nouvellement créé vous permet de lier les identifiants de partenaire à une audience.
 
-Pour ajouter l’attribut calculé, sous **[!UICONTROL Attributes]**, sélectionnez **[!UICONTROL XDM Individual Profile]**, suivi de **[l’identifiant du client de votre organisation](/help/xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]** et **[!UICONTROL PartnerID]**. Ajoutez maintenant la **[!UICONTROL Value]** de l’attribut calculé à la section des attributs de la zone de travail.
+Pour ajouter l’attribut calculé, sous **[!UICONTROL Attributes]**, sélectionnez **[!UICONTROL XDM Individual Profile]**, suivi de **[identifiant client de votre organisation](/help/xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]** et **[!UICONTROL PartnerID]**. Ajoutez maintenant la **[!UICONTROL Value]** de l’attribut calculé à la section des attributs de la zone de travail.
 
 ![Le chemin d’accès au dossier pour accéder à l’attribut calculé s’affiche.](../assets/offsite-retargeting/access-computed-attribute.png)
 

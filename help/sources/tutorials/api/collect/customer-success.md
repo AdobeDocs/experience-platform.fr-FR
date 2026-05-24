@@ -5,9 +5,14 @@ title: Créez un flux de données pour les sources de succès client à l’aide
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/c7nu-pPHdE9NysJ4AXOP8fWXwplJjpsq8uHVt2i79RY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: 1302
 ht-degree: 76%
 
 ---
@@ -283,7 +288,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Récupérer des spécifications du flux de données {#specs}
 
-Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Experience Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête GET à l’API Flow Service. Les spécifications de flux de données sont chargées de collecter les données d’un système de réussite client tiers.
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Experience Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête GET à l’API Flow Service. Les spécifications de flux de données sont chargées de collecter les données d’un système de succès client tiers.
 
 **Format d’API**
 

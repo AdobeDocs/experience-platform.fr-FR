@@ -5,9 +5,15 @@ type: Documentation
 description: Le guide de prise en main de l’API Profile décrit les concepts clés et les fonctionnalités de base que vous devez connaître pour utiliser les points d’entrée de l’API Real-Time Customer Profile afin d’effectuer des opérations CRUD de base sur les données Profile.
 role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/RiJCMvzj44PaQGtgPK3bSUi9qax78MVieL-G5WLB4-Y
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: 419
 ht-degree: 53%
 
 ---
@@ -26,9 +32,9 @@ L’utilisation du guide du développeur nécessite une compréhension pratique 
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de passer avec succès des appels vers des points d’entrée d’API [!DNL Profile].
 
-## Lecture d’exemples d’appels API
+## Lecture d&#39;exemples d&#39;appels API
 
-La documentation de l’API [!DNL Real-Time Customer Profile] fournit des exemples d’appels d’API pour démontrer comment formater correctement les requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+La documentation de l’API [!DNL Real-Time Customer Profile] fournit des exemples d’appels d’API pour démontrer comment formater correctement les requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ## En-têtes requis
 

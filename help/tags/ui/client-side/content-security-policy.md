@@ -2,10 +2,16 @@
 title: Prise en charge de la politique de sécurité du contenu (CSP)
 description: Découvrez comment gérer les restrictions de la politique de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/pIeubuRMJoFa7XJkDscjwflNsOjXc9JjCjlehnmXYtc
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: cb954087-f4fc-4456-afb9-e939cabcdc79id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: d556b755-390a-43f0-be32-a08cf6236126id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 96%
+source-wordcount: 1051
+ht-degree: 91%
 
 ---
 
@@ -23,8 +29,8 @@ Dans Adobe Experience Platform, les balises représentent un système de gesti
 
 Si vous souhaitez que les balises soient conformes à votre stratégie de sécurité du contenu, deux critères principaux doivent être remplis :
 
-* **La source de votre bibliothèque de balises doit être fiable.** Si cette condition nʼest pas remplie, la bibliothèque de balises et les autres fichiers JavaScript requis sont bloqués par le navigateur et ne se chargent pas sur la page.
-* **Les scripts intégrés doivent être autorisés.** Si cette condition n’est pas remplie, les actions des règles Custom Code (Code personnalisé) sont bloquées sur la page et ne s’exécuteront pas correctement.
+* **La source de votre bibliothèque de balises doit être fiable.** Si cette condition n’est pas remplie, la bibliothèque de balises et les autres fichiers JavaScript requis sont bloqués par le navigateur et ne se chargent pas sur la page.
+* **Les scripts intégrés doivent être autorisés.** Si cette condition n’est pas remplie, les actions de règle de code personnalisé sont bloquées sur la page et ne s’exécutent pas correctement.
 
 Une sécurité renforcée exige une quantité de travail plus importante de la part du créateur de contenu. Si vous souhaitez utiliser les balises et avoir une stratégie de sécurité du contenu mise en place, vous devez corriger ces deux problèmes sans que les autres scripts soient considérés comme sûrs par erreur. Le reste du document fournit des conseils sur la façon d’y parvenir.
 

@@ -5,10 +5,14 @@ title: Collaborer dans JupyterLab à l’aide de Git
 type: Tutorial
 description: Git est un système de contrôle de version distribué qui permet d’effectuer le suivi des modifications du code source pendant le développement du logiciel. Git est préinstallé dans l’environnement JupyterLab d’espace de travail de science des données.
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/m9VqKX32a0iv3KVfLk-BGagazH3hKn-7CJ3a3eK8Yp0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 92%
+source-wordcount: 308
+ht-degree: 88%
 
 ---
 
@@ -16,9 +20,9 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 [!DNL Git] est un système de contrôle de version distribué qui permet d’effectuer le suivi des modifications du code source pendant le développement du logiciel. Git est préinstallé dans l’environnement [!DNL Data Science Workspace JupyterLab].
 
@@ -34,7 +38,7 @@ L’environnement [!DNL Data Science Workspace JupyterLab] est un environnement 
 
 Commencez par lancer [!DNL Adobe Experience Platform] et par accéder à l’environnement [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab).
 
-Dans [!DNL JupyterLab], sélectionnez **[!UICONTROL Fichier]**, puis pointez sur **[!UICONTROL Nouveau]**. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
+Dans [!DNL JupyterLab], sélectionnez **[!UICONTROL File]** puis pointez sur **[!UICONTROL New]**. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
 
 ![Navigation dans JupyterLab](../images/jupyterlab/tutorials/open-terminal.png)
 

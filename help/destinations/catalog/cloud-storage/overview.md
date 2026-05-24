@@ -3,10 +3,15 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut diffuser vos audiences sous forme de fichiers de données vers vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/csV0sZp7zEsiQvkTcb34Or0L3Aj51E57TmghOfK6ONo
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 40%
+source-wordcount: 460
+ht-degree: 35%
 
 ---
 
@@ -50,18 +55,18 @@ Les exemples ci-dessous référencent un exemple de `Luxury Audience` d’audien
 
 **Macro 1 :`%SEGMENT_NAME%`**
 
-Entrée : `acme/campaigns/2021/%SEGMENT_NAME%`
-Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Luxury Audience`
+Entrée: `acme/campaigns/2021/%SEGMENT_NAME%`
+Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Luxury Audience`
 
 **Macro 2 :`%SEGMENT_ID%`**
 
-Entrée : `acme/campaigns/2021/%SEGMENT_ID%`
-Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+Entrée: `acme/campaigns/2021/%SEGMENT_ID%`
+Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 **Macro 3 :`%SEGMENT_NAME%/%SEGMENT_ID%`**
 
-Entrée : `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
-Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+Entrée: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 **Autres macros**
 

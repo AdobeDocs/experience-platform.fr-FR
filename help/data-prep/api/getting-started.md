@@ -3,9 +3,13 @@ keywords: Experience Platform;préparation de données;api data prep;dépannage
 title: Prise en main de l’API Data Prep
 description: Découvrez les concepts clés et les fonctionnalités de base dont vous avez besoin pour utiliser les points d’entrée de l’API Data Prep afin d’effectuer des opérations CRUD de base à utiliser avec le mappeur.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/UqC9yeVg01NLvfBiSJV6R-Zrp5qXcGL-2USVNBXfaRQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: 187
 ht-degree: 82%
 
 ---

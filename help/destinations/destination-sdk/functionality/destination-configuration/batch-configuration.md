@@ -2,10 +2,15 @@
 description: Découvrez comment configurer les paramètres d’exportation de fichiers pour les destinations créées avec Destination SDK.
 title: Configuration par lots
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/wqtETHVbW7en7bCuO-3khGwjEzT4la5uQc3zwEaC288
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 85%
+source-wordcount: 1056
+ht-degree: 79%
 
 ---
 
@@ -91,11 +96,11 @@ Les valeurs que vous configurez ici sont affichées à l’étape [Planifier l�
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `allowMandatoryFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre la spécification des attributs de profil obligatoires. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Attributs obligatoires](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-| `allowDedupeKeyFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre la spécification des clés de déduplication. La valeur par défaut est `false`. Pour plus d’informations, consultez la section [Clés de déduplication](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `allowDedupeKeyFieldSelection` | Booléen | Définissez cette valeur sur `true` afin de permettre la spécification des clés de déduplication. La valeur par défaut est `false`.  Pour plus d’informations, consultez la section [Clés de déduplication](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
 | `defaultExportMode` | Énumération | Définit le mode d’exportation de fichier par défaut. Valeurs prises en charge :<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> La valeur par défaut est `DAILY_FULL_EXPORT`. Pour plus d’informations sur la planification des exportations de fichiers, consultez la [documentation sur l’activation par lots](../../../ui/activate-batch-profile-destinations.md#scheduling). |
 | `allowedExportModes` | Liste | Définit les modes d’exportation de fichiers disponibles pour les clients. Valeurs prises en charge :<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Liste | Définit la fréquence d’exportation des fichiers disponible pour les clients. Valeurs prises en charge :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
-| `defaultFrequency` | Énumération | Définit la fréquence d’exportation des fichiers par défaut. Les valeurs prises en charge sont les suivantes :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> La valeur par défaut est `DAILY`. |
+| `defaultFrequency` | Enum | Définit la fréquence d’exportation du fichier par défaut.Valeurs prises en charge :<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> La valeur par défaut est `DAILY`. |
 | `defaultStartTime` | Chaîne | Définit l’heure de début par défaut de l’exportation du fichier. Utilise le format de fichier de 24 heures. La valeur par défaut est « 00:00 ». |
 | `filenameConfig.allowedFilenameAppendOptions` | Chaîne | *Obligatoire*. Liste des macros de nom de fichier disponibles. Cela détermine les éléments qui sont ajoutés aux noms de fichier exportés (identifiant d’audience, nom de l’organisation, date et heure de l’exportation, etc.). Quand vous définissez `defaultFilename`, veillez à ne pas dupliquer les macros. <br><br>Valeurs prises en charge : <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Quel que soit l’ordre dans lequel vous définissez les macros, l’interface utilisateur d’Experience Platform les affiche toujours dans l’ordre présenté ici. <br><br> Si `defaultFilename` est vide, la liste `allowedFilenameAppendOptions` doit contenir au moins une macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Chaîne | *Obligatoire*. Macros de nom de fichier par défaut présélectionnées que les utilisateurs peuvent décocher.<br><br> Les macros de cette liste sont un sous-ensemble de celles définies dans `allowedFilenameAppendOptions`. |
@@ -121,7 +126,7 @@ Utilisez les macros de configuration des noms de fichiers pour définir les noms
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Nom de l’organisation du client en [!DNL Adobe Experience Platform]. | Mon nom d’organisation |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Nom du sandbox utilisé par le client. | prod |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` et `TIMESTAMP` définissent tous deux le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : AAAAMMJJ_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME` : 20220509_210543</li><li>`TIMESTAMP` : 1652131584</li></ul> |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` et `TIMESTAMP` définissent tous deux le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : AAAAMMJJ_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | Texte personnalisé défini par l’utilisateur à inclure dans le nom du fichier. Ne peut pas être utilisé dans `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL Date and time] | Date et heure à 10 chiffres indiquant l’heure à laquelle le fichier a été généré, au format Unix. | 1652131584 |
 | `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | Identifiant de la [politique de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des audiences exportées dans des fichiers, en fonction d’une politique de fusion. Utilisez cette macro avec `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |

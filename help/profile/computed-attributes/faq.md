@@ -2,9 +2,15 @@
 title: Questions fréquentes sur les attributs calculés
 description: Trouvez des réponses aux questions fréquentes sur l’utilisation des attributs calculés.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+TQID: https://experienceleague.adobe.com/jufXPDBHwGfjvNeRsgicMAeecLiR1S3JdxIp3d5NfN0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: 1114
 ht-degree: 1%
 
 ---
@@ -49,7 +55,7 @@ Puisque les attributs calculés sont créés à l’aide de champs d’événeme
 
 ## Existe-t-il des limites au nombre d’attributs calculés que je peux créer ?
 
-Oui, le nombre d’attributs calculés que vous pouvez créer est limité. Cette limite s’applique uniquement aux attributs calculés **actifs**. Reportez-vous à la description du produit ou contactez l’équipe du compte d’Adobe pour plus d’informations.
+Oui, le nombre d’attributs calculés que vous pouvez créer est limité. Cette limite s’applique uniquement aux attributs calculés **actifs**. Reportez-vous à la description du produit ou contactez l’équipe du compte Adobe pour plus d’informations.
 
 ## La désactivation d’un attribut calculé a-t-elle des implications en aval ?
 
@@ -99,4 +105,4 @@ Les attributs calculés déduisent automatiquement les libellés d’utilisation
 
 ## Comment utiliser les attributs calculés avec Adobe Journey Optimizer ?
 
-Pour utiliser les attributs calculés dans les parcours, vous devez ajouter le groupe de champs `SystemComputedAttributes` à la source de données Experience Platform. Pour plus d&#39;informations sur la configuration de la source de données Experience Platform, veuillez lire le guide de la source de données de Adobe Experience Platform [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=fr).
+Pour utiliser les attributs calculés dans les parcours, vous devez ajouter le groupe de champs `SystemComputedAttributes` à la source de données Experience Platform. Pour plus d’informations sur la configuration de la source de données Experience Platform, veuillez lire le guide de la source de données [Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

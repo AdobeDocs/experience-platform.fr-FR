@@ -2,9 +2,14 @@
 title: Expirations de jeux de données automatisées
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/o5PnNCz6B8K64tDN8j4tlrkDUZwUYn52cS2LzGIRCtw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: 860
 ht-degree: 41%
 
 ---
@@ -16,7 +21,7 @@ ht-degree: 41%
 >title="Supprimer des enregistrements de clients et de clientes et de jeux de données non souhaités ou ayant expiré"
 >abstract="<h2>Description</h2><p>Pour gérer le cycle de vie de vos données Experience Platform sans rapport avec la conformité réglementaire, vous pouvez supprimer les enregistrements des consommateurs et consommatrices et planifier des dates d’expiration pour les jeux de données. Pour créer ou gérer des demandes des titulaires de données, consultez le bloc de cas d’utilisation « Respecter les demandes d’accès à des informations personnelles des titulaires de données ».</p>"
 
-L’espace de travail [&#128279;](./overview.md) dans l’interface utilisateur de Adobe Experience Platform, vous permet de planifier l’expiration des jeux de données. [!UICONTROL Data Lifecycle]Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
+L’espace de travail ](./overview.md) dans l’interface utilisateur de Adobe Experience Platform, vous permet de planifier l’expiration des jeux de données. [[!UICONTROL Data Lifecycle]Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
 
 >[!WARNING]
 >
@@ -89,6 +94,6 @@ Dans la page des détails de l’expiration du jeu de données, le rail de droit
 
 ## Étapes suivantes
 
-Ce document explique comment planifier des expirations de jeux de données dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de minimisation des données dans l’interface utilisateur, reportez-vous à la section [&#x200B; Présentation de l’interface utilisateur du cycle de vie des données &#x200B;](./overview.md).
+Ce document explique comment planifier des expirations de jeux de données dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de minimisation des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données ](./overview.md).
 
 Pour savoir comment planifier l’expiration des jeux de données à l’aide de l’API Data Hygiene, consultez le guide [point d’entrée d’expiration du jeu de données](../api/dataset-expiration.md).

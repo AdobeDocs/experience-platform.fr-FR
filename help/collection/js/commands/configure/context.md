@@ -2,10 +2,15 @@
 title: contexte
 description: Collectez automatiquement les données relatives à l’appareil, à l’environnement ou à l’emplacement.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
+TQID: https://experienceleague.adobe.com/9rYD-3NrLBMxgby-DnScJGouV7mrCy-YDJfVa0dyu18
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 12%
+source-wordcount: 1038
+ht-degree: 13%
 
 ---
 
@@ -94,11 +99,11 @@ Si vous utilisez les recherches d’appareil lors de la [configuration de votre 
 | Nom du navigateur | Le navigateur utilisé. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Version du navigateur | Version significative du navigateur. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Voir [&#x200B; Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
+Voir [ Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
 
 ### Référent unique pour Analytics {#one-time-analytics-referrer}
 
-Le mot-clé `"oneTimeAnalyticsReferrer"` envoie une valeur de référent à Adobe Analytics uniquement lors du premier appel de `sendEvent` non décisionnelle pour une page. Le principal cas d’utilisation de ce mot-clé de contexte consiste à empêcher le gonflement de la dimension [Référent](https://experienceleague.adobe.com/fr/docs/analytics/components/dimensions/referrer) dans Adobe Analytics par les accès principalement utilisés dans les intégrations Analytics et Target.
+Le mot-clé `"oneTimeAnalyticsReferrer"` envoie une valeur de référent à Adobe Analytics uniquement lors du premier appel de `sendEvent` non décisionnelle pour une page. Le principal cas d’utilisation de ce mot-clé de contexte consiste à empêcher le gonflement de la dimension [Référent](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) dans Adobe Analytics par les accès principalement utilisés dans les intégrations Analytics et Target.
 
 Si une commande de `sendEvent` donnée utilise un type d’événement de prise de décision (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), elle est ignorée lors du calcul de la première `sendEvent` d’une page. Si la valeur du référent change sur la page et qu’une autre `sendEvent` est déclenchée, la nouvelle valeur du référent est incluse dans la payload. Cette condition permet d’utiliser la fonction avec des applications monopages.
 

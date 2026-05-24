@@ -2,9 +2,15 @@
 title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identités est gérée dans le workflow d’activation, en fonction du type de destination.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/zSP6vyySfsJz7SoVfUGSKAiJSGsQuV5n7UuXeb4u9Q8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: beb7a3c1-66ab-4786-b879-7621375b3c40id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: 1187
 ht-degree: 81%
 
 ---
@@ -93,7 +99,7 @@ Lors de la configuration d’un flux de données comme décrit dans la documenta
 
 >[!NOTE]
 >
->La plupart de ces destinations publicitaires sont prises en charge dans Audience Manager (ces types de destinations sont connus dans Audience Manager en tant que destinations basées sur des appareils. Voir une [liste de toutes les destinations basées sur des appareils prises en charge dans Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=fr)). Seules quelques-unes sont répertoriées dans Experience Platform. Pour plus d’informations sur le partage de données entre Experience Platform et Audience Manager, consultez la section sur l’[activation du partage de données entre Experience Platform et Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#enable-aep-to-aam-data). Actuellement, il n’est pas prévu de prendre en charge d’autres destinations de cookie tiers.
+>La plupart de ces destinations publicitaires sont prises en charge dans Audience Manager (ces types de destinations sont connus dans Audience Manager en tant que destinations basées sur des appareils. Voir une [liste de toutes les destinations basées sur des appareils prises en charge dans Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Seules quelques-unes sont répertoriées dans Experience Platform. Pour plus d’informations sur le partage de données entre Experience Platform et Audience Manager, consultez la section sur l’[activation du partage de données entre Experience Platform et Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Actuellement, il n’est pas prévu de prendre en charge d’autres destinations de cookie tiers.
 
 ## Destinations d’entreprise {#enterprise-destinations}
 

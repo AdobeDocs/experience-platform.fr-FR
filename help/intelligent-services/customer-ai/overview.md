@@ -7,13 +7,18 @@ description: Customer AI est utilisé pour générer des scores de propension pe
 landing-page-description: Customer AI permet de générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à l’échelle.
 short-description: Customer AI permet de générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à l’échelle.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+TQID: https://experienceleague.adobe.com/m38rV3i1pEoTSBYytcCDcq-Ppe0wl4SK-WzAyQ5V9ac
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: ba929a52-9339-4154-9487-317dc875a3c7id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: 576
 ht-degree: 66%
 
 ---
-
 
 # Présentation de Customer AI
 
@@ -38,13 +43,13 @@ Customer AI n’est pas conçu pour certaines utilisations :
 
 - Customer AI ne doit pas être utilisé pour prédire la tarification dynamique, ni le prix auquel le client va effectuer un achat.
 - Customer AI ne peut pas déterminer si une offre va inciter un client à acheter un article. Bien que vous puissiez décider d’envoyer des offres de réduction en fonction des scores de propension, il ne s’agit pas nécessairement du meilleur moyen de convertir ces clients.
-- Customer AI n’est pas un outil de recommandation de produits. Si vous disposez de milliers de SKU, n’utilisez pas Customer AI comme proxy pour une véritable solution de recommandations de produits telle que [!DNL Adobe Target].
+- L’IA dédiée aux clients n’est pas un outil de recommandation de produits. Si vous disposez de milliers de SKU, n’utilisez pas Customer AI comme proxy pour une véritable solution de recommandations de produits telle que [!DNL Adobe Target].
 - L’IA dédiée aux clients ne peut pas prédire à quelle étape du Parcours d’achat le client se trouve, par exemple s’il est à l’étape de « sensibilisation », de « considération », d’« achat » ou de « rétention ».
 - N’utilisez pas l’IA dédiée aux clients pour déterminer les clients qui sont susceptibles d’acheter un produit lancé à l’avenir. Certains événement de succès doivent s’être produits pour que Customer AI puisse correctement entraîner l’algorithme de machine learning sur vos données.
 
 La vidéo suivante est conçue pour vous aider à comprendre l’IA dédiée aux clients.
 
->[!VIDEO](https://video.tv.adobe.com/v/36471?captions=fre_fr&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Fonctionnement
 

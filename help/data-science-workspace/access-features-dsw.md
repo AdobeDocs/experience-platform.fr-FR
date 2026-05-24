@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Accès au Workspace de science des données et fonctionnalités
 description: Le document suivant décrit les autorisations du Workspace de science des données et l’accès aux fonctionnalités.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/ynmf-VTgOMJvlpuIflsipSo3Ta5zE2PKPXGjNDfKq7c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 15%
+source-wordcount: 732
+ht-degree: 14%
 
 ---
 

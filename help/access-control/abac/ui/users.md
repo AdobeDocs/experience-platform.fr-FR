@@ -3,9 +3,13 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des utilisateurs du contrôle d’accès basé sur les attributs
 description: Gérez les utilisateurs et les groupes d’utilisateurs via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/gx2ofZdCqxJ0EkL118OrTUoK4FCyDyMXsNVi958vBF8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: 937
 ht-degree: 9%
 
 ---
@@ -173,5 +177,5 @@ Vous savez maintenant comment afficher les détails et les rôles d’un utilisa
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446400/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->

@@ -5,9 +5,14 @@ title: Créer une politique de gouvernance des données dans l’API
 type: Tutorial
 description: Découvrez comment créer une politique de gouvernance des données à l’aide de l’API Policy Service.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/RQVZTt8LCceVQMyUVMgbMShIx9ReQp6xtT2mSIQCFxk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: 1211
 ht-degree: 100%
 
 ---
@@ -26,7 +31,7 @@ Ce document fournit un tutoriel détaillé sur la création d’une politique de
 
 Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des politiques
 
-* [Adobe Experience Platform Data Governance](../home.md) : cadre en fonction duquel [!DNL Experience Platform] applique la conformité d’utilisation des données.
+* [Gouvernance des données dʼAdobe Experience Platform](../home.md) : cadre en fonction duquel [!DNL Experience Platform] applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.

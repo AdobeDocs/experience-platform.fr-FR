@@ -2,9 +2,13 @@
 title: Intégration du journal d’audit de Query Service
 description: Les journaux d’audit de Query Service conservent des enregistrements pour diverses actions des utilisateurs afin de former un journal d’audit pour résoudre les problèmes ou respecter les politiques de gestion des données d’entreprise et les exigences réglementaires. Ce tutoriel présente une vue d’ensemble des fonctionnalités du journal d’audit spécifiques à Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/vXV3gcTNSwMY-jOb9O5dKtXS7DanR4VJWBqun5qME4Q
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: 898
 ht-degree: 8%
 
 ---
@@ -35,11 +39,11 @@ Les catégories de journaux d’audit fournies par [!DNL Query Service] sont les
 
 ## Exécution d’un journal d’audit [!DNL Query Service] {#perform-an-audit-log}
 
-Pour effectuer un audit des activités [!DNL Query Service], sélectionnez **[!UICONTROL Audits]** dans le volet de navigation de gauche, suivi de l’icône funnel (![Icône Filtrer .](/help/images/icons/filter.png)) pour afficher une liste de contrôles de filtre afin de limiter les résultats.
+Pour effectuer un audit des activités [!DNL Query Service], sélectionnez **[!UICONTROL Audits]** dans le volet de navigation de gauche, suivi de l’icône funnel (![Icône Filtrer.](/help/images/icons/filter.png)). pour afficher une liste de contrôles de filtre afin de limiter les résultats.
 
 ![Tableau de bord du journal d’audit de l’interface utilisateur d’Experience Platform avec « Audits » en surbrillance dans les commandes de navigation et de filtrage de gauche.](../images/audit-log/filter-controls.png)
 
-Dans l’onglet [!UICONTROL Audits] du tableau de bord [!UICONTROL Activity log] , vous pouvez filtrer toutes les actions Experience Platform enregistrées par l’une des catégories de [!DNL Query Service]. Les résultats du journal peuvent être filtrés en fonction de la période pendant laquelle ils ont été exécutés, de l’action/la fonction exécutée ou de l’utilisateur qui a exécuté la requête. Consultez la documentation sur le journal d’audit pour [des instructions complètes sur la manière de filtrer les journaux en fonction de la catégorie, de l’action, de l’utilisateur et du statut](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+Dans l’onglet [!UICONTROL Activity log] du tableau de bord [!UICONTROL Audits] , vous pouvez filtrer toutes les actions Experience Platform enregistrées par l’une des catégories de [!DNL Query Service]. Les résultats du journal peuvent être filtrés en fonction de la période pendant laquelle ils ont été exécutés, de l’action/la fonction exécutée ou de l’utilisateur qui a exécuté la requête. Consultez la documentation sur le journal d’audit pour [des instructions complètes sur la manière de filtrer les journaux en fonction de la catégorie, de l’action, de l’utilisateur et du statut](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 Les données du journal d’audit renvoyées contiennent les informations suivantes sur toutes les requêtes qui répondent aux critères de filtre de votre choix.
 
@@ -93,4 +97,4 @@ Les filtres disponibles varient en fonction de la catégorie sélectionnée dans
 
 Grâce à la lecture de ce document, vous comprenez mieux la fonctionnalité de journal d’audit [!DNL Query Service] et comment elle peut être utilisée pour filtrer vos actions utilisateur [!DNL Query Service].
 
-Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [&#128279;](../troubleshooting-guide.md).
+Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [](../troubleshooting-guide.md).

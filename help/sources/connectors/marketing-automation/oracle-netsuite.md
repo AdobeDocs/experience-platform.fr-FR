@@ -1,12 +1,15 @@
 ---
 title: Présentation d’Oracle NetSuite Source
 description: Découvrez comment connecter Oracle NetSuite à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-last-substantial-update: 2024-01-30T00:00:00Z
+last-substantial-update: 2024-01-30T00:00:00.000Z
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/aRYLl1uxd0D-ket0TRcrYj-9vvpOpVm3Es-81xcI4GQ
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 10%
+source-wordcount: 822
+ht-degree: 9%
 
 ---
 
@@ -33,7 +36,7 @@ Consultez le tableau suivant pour plus d’informations sur les deux sources de 
 
 ## Liste autorisée d’adresses IP {#ip-allow-list}
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ## Conditions préalables {#prerequisites}
 
@@ -49,7 +52,7 @@ Avant de pouvoir importer vos données [!DNL Oracle NetSuite] dans Experience Pl
       * Activation de la fonctionnalité OAuth 2.0 et configuration des rôles OAuth 2.0 appropriés.
       * Affectation des utilisateurs aux rôles OAuth 2.0 et création des enregistrements d’intégration nécessaires.
 * Un **jeton d’accès** et un **jeton d’actualisation**.
-   * Pour plus d’informations sur la génération de vos jetons d’accès et d’actualisation[!DNL Oracle] reportez-vous au guide de [&#x200B; sur le &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow)flux d’octroi de code d’autorisation OAuth 2.0.
+   * Pour plus d’informations sur la génération de vos jetons d’accès et d’actualisation](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) reportez-vous au guide de [!DNL Oracle] sur le [flux d’octroi de code d’autorisation OAuth 2.0.
 
 ### Collecter les informations d’identification requises {#gather-credentials}
 

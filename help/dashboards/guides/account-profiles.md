@@ -2,9 +2,14 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre organisation.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/2iGEtoxhzpQnllXsFOe0-6OP2WoqRKkHlAzTZ6hcz1A
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: 2275
 ht-degree: 6%
 
 ---
@@ -13,7 +18,7 @@ ht-degree: 6%
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de votre compte. Ceux-ci sont présentés tels qu’ils sont capturés lors d’instantanés quotidiens. Ce guide explique comment accéder au tableau de bord [!UICONTROL Account Profiles] et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
-Ce document présente les fonctionnalités du tableau de bord [!UICONTROL Account Profiles] et détaille les informations standard disponibles. Consultez le guide de l’interface utilisateur de [&#128279;](../../rtcdp/accounts/account-profile-ui-guide.md) pour obtenir des détails complets sur ses fonctionnalités disponibles.[!UICONTROL Account Profiles]
+Ce document présente les fonctionnalités du tableau de bord [!UICONTROL Account Profiles] et détaille les informations standard disponibles. Consultez le guide de l’interface utilisateur de ](../../rtcdp/accounts/account-profile-ui-guide.md) pour obtenir des détails complets sur ses fonctionnalités disponibles.[[!UICONTROL Account Profiles]
 
 ## Prise en main
 
@@ -49,7 +54,7 @@ L’onglet [!UICONTROL Overview] est composé de widgets qui fournissent des mes
 
 ### Configuration du service de correspondance des prospects et des comptes {#lead-to-account-matching-service}
 
-Sélectionnez **[!UICONTROL Settings]** pour configurer le service de correspondance des prospects et des comptes dans la boîte de dialogue [!UICONTROL Account settings]. Pour plus d’informations sur la configuration de la correspondance de votre prospect et de votre compte, consultez le [&#x200B; guide de l’interface utilisateur](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Pour en savoir plus sur la correspondance des prospects et des comptes, reportez-vous à la documentation [correspondance des prospects et des comptes) dans Real-Time CDP B2B &#x200B;](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Sélectionnez **[!UICONTROL Settings]** pour configurer le service de correspondance des prospects et des comptes dans la boîte de dialogue [!UICONTROL Account settings]. Pour plus d’informations sur la configuration de la correspondance de votre prospect et de votre compte, consultez le [ guide de l’interface utilisateur](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). Pour en savoir plus sur la correspondance des prospects et des comptes, reportez-vous à la documentation [correspondance des prospects et des comptes) dans Real-Time CDP B2B ](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ![Tableau de bord Profils de compte avec les paramètres mis en surbrillance.](../images/account-profiles/settings.png)
 
@@ -239,4 +244,4 @@ Pour résoudre ce problème, vous devez ingérer les données d’entité B2B, t
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant savoir comment localiser le tableau de bord [!UICONTROL Account Profiles] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur d’Experience Platform, reportez-vous à la [&#x200B; présentation des profils de compte &#x200B;](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, B2B edition.
+En suivant ce document, vous devriez maintenant savoir comment localiser le tableau de bord [!UICONTROL Account Profiles] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur d’Experience Platform, reportez-vous à la [ présentation des profils de compte ](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, B2B edition.

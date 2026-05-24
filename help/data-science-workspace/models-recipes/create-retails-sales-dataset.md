@@ -5,13 +5,16 @@ title: Créer le schéma et le jeu de données de ventes au détail
 type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels sur l’espace de travail de science des données d’Adobe Experience Platform. Une fois l’opération terminée, le schéma et les jeux de données de ventes au détail seront disponibles pour vous et les membres de votre organisation sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/2vsG8MTypwkIp59v95c4uYmWIGac5jgvdtylh3L0T-0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 41%
+source-wordcount: 587
+ht-degree: 42%
 
 ---
-
 
 # Création de jeux de données et de schéma de vente au détail
 
@@ -30,7 +33,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 - Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 - Autorisation d’effectuer des appels API [!DNL Experience Platform]. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
    - Authorization: `{ACCESS_TOKEN}`
-   - x-api-key: `{API_KEY}`
+   - x-api-key : `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`
    - Client secret: `{CLIENT_SECRET}`
    - Client certificate: `{PRIVATE_KEY}`
@@ -38,7 +41,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 - [Python >= 2.7](https://www.python.org/downloads/) et les packages [!DNL Python] suivants :
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
-   - [dictor](https://pypi.org/project/dictor/)
+   - [dicteur](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Une connaissance concrète des concepts suivants employés dans ce tutoriel :
    - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
@@ -100,7 +103,7 @@ Les jeux de données et le schéma de vente au détail sont créés automatiquem
 ### Exécution du script de bootstrap
 
 1. Ouvrez votre application de terminal et accédez au répertoire des ressources de tutoriel [!DNL Experience Platform].
-2. Définissez le répertoire `bootstrap` comme chemin de travail actuel et exécutez le script `bootstrap.py` [!DNL Python] en saisissant la commande suivante :
+2. Définissez le répertoire `bootstrap` comme chemin de travail actuel et exécutez le script [!DNL Python] `bootstrap.py` en saisissant la commande suivante :
 
    ```bash
    python bootstrap.py
@@ -112,7 +115,8 @@ Les jeux de données et le schéma de vente au détail sont créés automatiquem
 
 ## Étapes suivantes
 
-Une fois l’exécution du script de bootstrap terminée, il est possible d’afficher les jeux de données et schémas d’entrée et de sortie de ventes au détail sur [!DNL Experience Platform]. Pour plus d’informations, consultez le [tutoriel de présentation des données de schéma](./preview-schema-data.md).
+Une fois l’exécution du script de bootstrap terminée, il est possible d’afficher les jeux de données et schémas d’entrée et de sortie de ventes au détail sur [!DNL Experience Platform]. Voir le tutoriel [prévisualisation des données de schéma)](./preview-schema-data.md)
+pour plus d’informations.
 
 Vous avez également ingéré avec succès des données d’exemple de ventes au détail dans [!DNL Experience Platform] à l’aide du script de bootstrap fourni.
 

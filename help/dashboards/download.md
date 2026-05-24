@@ -4,10 +4,15 @@ title: Téléchargement de tableaux de bord Experience Platform au format PDF
 type: Documentation
 description: Enregistrez des copies des visualisations de vos tableaux de bord à l’aide de la fonctionnalité de téléchargement au format PDF disponible dans l’interface utilisateur d’Experience Platform.
 exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/2LtQLhdwTGsXDIs1H3gTvQ1CiZ2KXDKenEZMADWJqOs
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 65%
+source-wordcount: 587
+ht-degree: 58%
 
 ---
 
@@ -23,13 +28,13 @@ Ce document résume la procédure à suivre pour télécharger des tableaux de b
 
 ## Téléchargement de tableau de bord
 
-Pour commencer à télécharger un tableau de bord, accédez au tableau de bord que vous souhaitez télécharger (par exemple, le tableau de bord [!UICONTROL Profils]), puis sélectionnez le menu Plus d’options (**`...`**) dans le coin supérieur droit du tableau de bord. Cliquez ensuite sur **[!UICONTROL Télécharger]**.
+Pour commencer à télécharger un tableau de bord, accédez au tableau de bord que vous souhaitez télécharger (par exemple, le tableau de bord [!UICONTROL Profiles]), puis sélectionnez le menu Plus d’options (**`...`**) dans le coin supérieur droit du tableau de bord. Ensuite, sélectionnez **[!UICONTROL Download]**.
 
 ![Tableau de bord Profils Experience Platform avec les points de suspension et le menu déroulant Télécharger mis en surbrillance.](images/download/download-button.png)
 
 ## Prévisualisation PDF
 
-Après avoir cliqué sur **[!UICONTROL Télécharger]**, le menu d’impression par défaut de votre navigateur s’ouvre. Cet exemple montre l’affichage du menu d’impression de Google Chrome.
+Après avoir sélectionné **[!UICONTROL Download]**, le menu d’impression par défaut de votre navigateur s’ouvre. Cet exemple montre l’affichage du menu d’impression de Google Chrome.
 
 Le menu d’impression vous permet de prévisualiser le PDF qui sera enregistré. Le PDF est une véritable représentation des widgets du tableau de bord tels qu’ils apparaissent dans l’interface utilisateur d’Experience Platform. La taille du PDF est automatiquement ajustée pour afficher tous les widgets du tableau de bord actuellement visibles sur une seule page.
 

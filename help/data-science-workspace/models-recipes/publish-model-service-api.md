@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;publier un modèle;Workspace de science des données;rubriques populaires;api de machine learning sensei
 solution: Experience Platform
-title: Publish a Model as a Service à l’aide de l’API Sensei Machine Learning
+title: Publication d’un modèle en tant que service à l’aide de l’API Sensei Machine Learning
 type: Tutorial
 description: Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’API Sensei Machine Learning.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+TQID: https://experienceleague.adobe.com/VhA5sSNIEJCWME0x7BMjswFVYUPGLQof-O8U2-bYfdw
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: 1553
 ht-degree: 44%
 
 ---
 
-# Publish d’un modèle en tant que service à l’aide du [!DNL Sensei Machine Learning API]
+# Publication d’un modèle en tant que service à l’aide du [!DNL Sensei Machine Learning API]
 
 >[!NOTE]
 >
@@ -22,9 +26,9 @@ ht-degree: 44%
 
 Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’[[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) .
 
-## Commencer
+## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, consultez la [&#x200B; Présentation du Workspace de science des données &#x200B;](../home.md) pour une présentation détaillée du service.
+Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, consultez la [ Présentation du Workspace de science des données ](../home.md) pour une présentation détaillée du service.
 
 Pour suivre ce tutoriel, vous devez disposer d’un moteur ML, d’une instance ML et d’une expérience existants. Pour savoir comment les créer dans l’API, suivez le tutoriel sur [l’importation d’une recette empaquetée](./import-packaged-recipe-api.md).
 

@@ -4,9 +4,14 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document détaille et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
+TQID: https://experienceleague.adobe.com/gka6v-qb0W1NT-MwtcS6CWNAaKeDS6st781D3jsivpM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '4737'
+source-wordcount: 4737
 ht-degree: 5%
 
 ---
@@ -223,8 +228,8 @@ AS (select_query)
 | `schema` | Titre du schéma XDM. N’utilisez cette clause que si vous souhaitez associer la nouvelle table à un schéma XDM existant. |
 | `rowvalidation` | (Facultatif) Active la validation au niveau des lignes pour chaque lot ingéré dans le jeu de données. La valeur par défaut est « true ». |
 | `label` | (Facultatif) Utilisez la valeur `PROFILE` pour étiqueter le jeu de données comme étant activé pour l’ingestion de profils. |
-| `transform` | (Facultatif) Applique des transformations d’ingénierie des fonctionnalités (telles que l’indexation de chaîne, l’encodage à chaud ou TF-IDF) avant de matérialiser le jeu de données. Cette clause est utilisée pour prévisualiser les fonctions transformées. Pour plus d’informations[&#128279;](#transform) consultez la documentation de la clause `TRANSFORM` . |
-| `select_query` | Instruction `SELECT` standard qui définit le jeu de données. Pour plus d’informations[&#128279;](#select-queries) consultez la section `SELECT` des requêtes . |
+| `transform` | (Facultatif) Applique des transformations d’ingénierie des fonctionnalités (telles que l’indexation de chaîne, l’encodage à chaud ou TF-IDF) avant de matérialiser le jeu de données. Cette clause est utilisée pour prévisualiser les fonctions transformées. Pour plus d’informations](#transform) consultez la documentation de la clause [`TRANSFORM` . |
+| `select_query` | Instruction `SELECT` standard qui définit le jeu de données. Pour plus d’informations](#select-queries) consultez la section [`SELECT` des requêtes . |
 
 >[!NOTE]
 >
@@ -289,24 +294,24 @@ Gardez à l’esprit les restrictions suivantes lors de l’utilisation de la cl
 
 >[!NOTE]
 >
->For more details about available transformation functions and their output types, see [Feature transformation output data types](../advanced-statistics/feature-transformation.md#available-transformations).
+>Pour plus d’informations sur les fonctions de transformation disponibles et leurs types de sortie, consultez [Types de données de sortie de transformation de fonction](../advanced-statistics/feature-transformation.md#available-transformations).
 
 
-### TRANSFORM clause {#transform}
+### Clause TRANSFORM {#transform}
 
-Use the `TRANSFORM` clause to apply one or more feature engineering functions to a dataset before model training or table creation. This clause lets you preview, validate, or define the exact shape of your input features.
+Utilisez la clause `TRANSFORM` pour appliquer une ou plusieurs fonctions d&#39;ingénierie des fonctionnalités à un jeu de données avant la formation du modèle ou la création de la table. Cette clause vous permet de prévisualiser, valider ou définir la forme exacte de vos fonctions d&#39;entrée.
 
-The `TRANSFORM` clause can be used in the following statements:
+La clause `TRANSFORM` peut être utilisée dans les instructions suivantes :
 
 - `CREATE MODEL`
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-See the [Models documentation](../advanced-statistics/models.md) for detailed instructions on using CREATE MODEL, including how to define transformations, set model options, and configure training data.
+Consultez la [documentation des modèles](../advanced-statistics/models.md) pour obtenir des instructions détaillées sur l’utilisation de CREATE MODEL, notamment sur la définition des transformations, la définition des options de modèle et la configuration des données d’identification.
 
-For usage with `CREATE TABLE`, see the [CREATE TABLE AS SELECT section](#create-table-as-select).
+Pour une utilisation avec `CREATE TABLE`, consultez la section [CREATE TABLE AS SELECT](#create-table-as-select).
 
-#### CREATE MODEL example
+#### EXEMPLE DE CRÉATION DE MODÈLE
 
 ```sql
 CREATE MODEL review_model
@@ -327,18 +332,18 @@ AS SELECT * FROM movie_review_e2e_DND;
 
 #### Limites {#limitations}
 
-The following limitations apply when using `TRANSFORM` with `CREATE TABLE`. See `CREATE TABLE AS SELECT` limitations and behavior section for a detailed explanation of how transformed data is stored, how vector outputs are handled, and why the results cannot be reused directly in model training workflows.
+Les restrictions suivantes s’appliquent lorsque vous utilisez `TRANSFORM` avec `CREATE TABLE`. Consultez `CREATE TABLE AS SELECT` section Limites et comportement pour une explication détaillée de la manière dont les données transformées sont stockées, dont les sorties vectorielles sont traitées et pourquoi les résultats ne peuvent pas être réutilisés directement dans les workflows d’entraînement de modèles.
 
-- Vector outputs are automatically converted to arrays, which cannot be used directly in `CREATE MODEL`.
-- Transformation logic is not persisted as metadata and cannot be reused across batches.
+- Les sorties vectorielles sont automatiquement converties en tableaux, qui ne peuvent pas être utilisés directement dans `CREATE MODEL`.
+- La logique de transformation n’est pas conservée en tant que métadonnées et ne peut pas être réutilisée entre les lots.
 
 ## INSERT INTO
 
-The `INSERT INTO` command is defined as follows:
+La commande `INSERT INTO` est définie comme suit :
 
 >[!IMPORTANT]
 >
->Query Service supports **append-only operations** using the ITAS engine. `INSERT INTO` is the only supported data manipulation command, **update** and **delete** operations are not available. To reflect changes in your data, insert new records that represent the desired state.
+>Query Service prend en charge les **opérations d’ajout uniquement** à l’aide du moteur ITAS. `INSERT INTO` est la seule commande de manipulation de données prise en charge. Les opérations **update** et **delete** ne sont pas disponibles. Pour refléter les modifications apportées à vos données, insérez de nouveaux enregistrements qui représentent l’état souhaité.
 
 ```sql
 INSERT INTO table_name select_query
@@ -346,14 +351,14 @@ INSERT INTO table_name select_query
 
 | Paramètres | Description |
 | ----- | ----- |
-| `table_name` | The name of the table that you want to insert the query into. |
-| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
+| `table_name` | Nom de la table dans laquelle vous souhaitez insérer la requête. |
+| `select_query` | Une déclaration `SELECT`. La syntaxe de la requête `SELECT` se trouve dans la section [Requêtes SELECT](#select-queries). |
 
 **Exemple**
 
 >[!NOTE]
 >
->The following is a contrived example and simply for instructional purposes.
+>Ce qui suit est un exemple artificiel et fourni uniquement à titre d’information.
 
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
@@ -363,9 +368,9 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
->Do **not** enclose the `SELECT` statement in parentheses (). Also, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement. You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
+>Ne placez **pas** l’instruction `SELECT` entre parenthèses (). En outre, le schéma du résultat de l’instruction `SELECT` doit être conforme à celui de la table définie dans l’instruction `INSERT INTO`. Vous pouvez fournir une clause `SNAPSHOT` pour lire des deltas incrémentiels dans la table cible.
 
-Most fields in a real XDM schema are not found at the root level and SQL does not permit the use of dot notation. To achieve a realistic result using nested fields, you must map each field in your `INSERT INTO` path.
+La plupart des champs d’un schéma XDM réel sont introuvables au niveau racine et SQL ne permet pas l’utilisation de la notation par points. Pour obtenir un résultat réaliste à l’aide de champs imbriqués, vous devez mapper chaque champ de votre chemin d’accès `INSERT INTO`.
 
 Pour `INSERT INTO` des chemins imbriqués, utilisez la syntaxe suivante :
 
@@ -464,8 +469,8 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | Paramètres | Description |
 | ------ | ------ |
 | `db_name` | Nom de la base de données. |
-| `schema_name` | The name of the schema. |
-| `view_name` | The name of the view to be created. |
+| `schema_name` | Nom du schéma. |
+| `view_name` | Nom de la vue à créer. |
 | `select_query` | Une déclaration `SELECT`. La syntaxe de la requête `SELECT` se trouve dans la section [Requêtes SELECT](#select-queries). |
 
 **Exemple**
@@ -476,9 +481,9 @@ CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
 ```
 
-## SHOW VIEWS
+## AFFICHER LES VUES
 
-The following query shows the list of views.
+La requête suivante affiche la liste des vues.
 
 ```sql
 SHOW VIEWS;
@@ -494,7 +499,7 @@ SHOW VIEWS;
 
 ## DROP VIEW
 
-The following syntax defines a `DROP VIEW` query:
+La syntaxe suivante définit une requête `DROP VIEW` :
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -502,8 +507,8 @@ DROP VIEW [IF EXISTS] view_name
 
 | Paramètres | Description |
 | ------ | ------ |
-| `IF EXISTS` | If this is specified, no exception is thrown if the view does **not** exist. |
-| `view_name` | The name of the view to be deleted. |
+| `IF EXISTS` | Si cette option est spécifiée, aucune exception n&#39;est générée si la vue n&#39;existe **pas**. |
+| `view_name` | Nom de la vue à supprimer. |
 
 **Exemple**
 
@@ -514,9 +519,9 @@ DROP VIEW IF EXISTS v1
 
 ## Bloc anonyme {#anonymous-block}
 
-An anonymous block consists of two sections: executable and exception-handling sections. In an anonymous block, the executable section is mandatory. However, the exception-handling section is optional.
+Un bloc anonyme se compose de deux sections : exécutable et gestion des exceptions. Dans un bloc anonyme, la section exécutable est obligatoire. Toutefois, la section de gestion des exceptions est facultative.
 
-The following example shows how to create a block with one or more statements to be executed together:
+L’exemple suivant montre comment créer un bloc avec une ou plusieurs instructions à exécuter ensemble :
 
 ```sql
 $$BEGIN
@@ -532,7 +537,7 @@ statementList:
     : (statement (';')) +
 ```
 
-Below is an example using anonymous block.
+Vous trouverez ci-dessous un exemple d’utilisation du bloc anonyme.
 
 ```sql
 $$BEGIN
@@ -549,11 +554,11 @@ EXCEPTION
 $$END;
 ```
 
-### Conditional statements in an anonymous block {#conditional-anonymous-block-statements}
+### Instructions conditionnelles dans un bloc anonyme {#conditional-anonymous-block-statements}
 
-The IF-THEN-ELSE control structure enables the conditional execution of a list of statements when a condition is evaluated as TRUE. This control structure is only applicable within an anonymous block. If this structure is used as a standalone command, it results in a syntax error (&quot;Invalid command outside Anonymous Block&quot;).
+La structure de contrôle IF-THEN-ELSE permet l&#39;exécution conditionnelle d&#39;une liste d&#39;instructions lorsqu&#39;une condition est évaluée comme TRUE. Cette structure de contrôle ne s’applique qu’à un bloc anonyme. Si cette structure est utilisée comme commande autonome, une erreur de syntaxe se produit (« Commande non valide en dehors du bloc anonyme »).
 
-The code snippet below demonstrates the correct format for an IF-THEN-ELSE conditional statement in an anonymous block.
+Le fragment de code ci-dessous illustre le format correct d’une instruction conditionnelle IF-THEN-ELSE dans un bloc anonyme.
 
 ```javascript
 IF booleanExpression THEN
@@ -569,7 +574,7 @@ END IF
 
 **Exemple**
 
-The example below executes `SELECT 200;`.
+L’exemple ci-dessous exécute `SELECT 200;`.
 
 ```sql
 $$BEGIN
@@ -588,7 +593,7 @@ $$BEGIN
  END$$;
 ```
 
-This structure can be used with `raise_error();` to return a custom error message. The code block seen below terminates the anonymous block with &quot;custom error message&quot;.
+Cette structure peut être utilisée avec `raise_error();` pour renvoyer un message d’erreur personnalisé. Le bloc de code illustré ci-dessous met fin au bloc anonyme avec « message d’erreur personnalisé ».
 
 **Exemple**
 
@@ -609,9 +614,9 @@ $$BEGIN
  END$$;
 ```
 
-#### Nested IF statements
+#### Instructions IF imbriquées
 
-Nested IF statements are supported within anonymous blocks.
+Les instructions IF imbriquées sont prises en charge dans des blocs anonymes.
 
 **Exemple**
 
@@ -628,9 +633,9 @@ $$BEGIN
  END$$; 
 ```
 
-#### Exception blocks
+#### Blocs d’exception
 
-Exception blocks are supported within anonymous blocks.
+Les blocs d’exception sont pris en charge dans les blocs anonymes.
 
 **Exemple**
 
@@ -654,23 +659,23 @@ EXCEPTION WHEN OTHERS THEN
 
 ### Auto to JSON {#auto-to-json}
 
-Query Service supports an optional session-level setting to return top-level complex fields from interactive SELECT queries as JSON strings. The `auto_to_json` setting allows for data from complex fields to be returned as JSON then parsed into JSON objects using standard libraries.
+Query Service prend en charge un paramètre facultatif au niveau de la session pour renvoyer les champs complexes de niveau supérieur des requêtes INTERactives SELECT sous forme de chaînes JSON. Le paramètre `auto_to_json` permet de renvoyer les données de champs complexes sous forme de fichier JSON, puis de les analyser dans des objets JSON à l’aide de bibliothèques standard.
 
-SET the feature flag `auto_to_json` to true before executing your SELECT query that contains complex fields.
+DÉFINISSEZ l’indicateur de fonctionnalité `auto_to_json` sur true avant d’exécuter votre requête SELECT qui contient des champs complexes.
 
 ```sql
 set auto_to_json=true; 
 ```
 
-#### Before setting the `auto_to_json` flag
+#### Avant de définir l’indicateur de `auto_to_json`
 
-The following table provides an example query result before the `auto_to_json` setting is applied. The same SELECT query (as seen below) that targets a table with complex fields was used in both scenarios.
+Le tableau suivant fournit un exemple de résultat de requête avant l’application du paramètre `auto_to_json` . La même requête SELECT (comme illustré ci-dessous) qui cible une table avec des champs complexes a été utilisée dans les deux scénarios.
 
 ```sql
 SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 ```
 
-The results are as follows:
+Les résultats sont les suivants :
 
 ```console
                 _id                |                                _experience                                 | application  |                   commerce                   | dataSource |                               device                               |                       endUserIDs                       |                                                                                                environment                                                                                                |                     identityMap                     |                              placeContext                               |   receivedTimestamp   |       timestamp       | userActivityRegion |                                         web                                          | _adcstageforpqs
@@ -680,9 +685,9 @@ The results are as follows:
 (2 rows)  
 ```
 
-#### After setting the `auto_to_json` flag
+#### Après avoir défini l’indicateur de `auto_to_json`
 
-The following table demonstrates the difference in results that the `auto_to_json` setting has on the resulting dataset. The same SELECT query was used in both scenarios.
+Le tableau suivant montre la différence de résultats que le paramètre `auto_to_json` a sur le jeu de données résultant. La même requête SELECT a été utilisée dans les deux scénarios.
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
@@ -692,11 +697,11 @@ The following table demonstrates the difference in results that the `auto_to_jso
 (2 rows)
 ```
 
-### Resolve fallback snapshot on failure {#resolve-fallback-snapshot-on-failure}
+### Résoudre l’instantané de secours en cas d’échec {#resolve-fallback-snapshot-on-failure}
 
-The `resolve_fallback_snapshot_on_failure` option is used to resolve the issue of an expired snapshot ID.
+L’option `resolve_fallback_snapshot_on_failure` permet de résoudre le problème d’un ID d’instantané expiré.
 
-Set the `resolve_fallback_snapshot_on_failure` option to true to override a snapshot with a previous snapshot ID.
+Définissez l’option `resolve_fallback_snapshot_on_failure` sur true pour remplacer un instantané par un ID d’instantané précédent.
 
 ```sql
 SET resolve_fallback_snapshot_on_failure=true;
@@ -733,9 +738,9 @@ $$;
 
 ## Organisation des ressources de données
 
-It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
+Il est important d’organiser logiquement vos ressources de données dans le lac de données Adobe Experience Platform au fur et à mesure de leur croissance. Query Service étend les constructions SQL qui vous permettent de regrouper logiquement des ressources de données dans un sandbox. Cette méthode d’organisation permet de partager des ressources de données entre les schémas sans avoir à les déplacer physiquement.
 
-The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
+Les éléments SQL suivants utilisant la syntaxe SQL standard sont pris en charge pour que vous puissiez organiser logiquement vos données.
 
 ```SQL
 CREATE DATABASE dg1;
@@ -746,15 +751,15 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-See the [logical organization of data assets](../best-practices/organize-data-assets.md) guide for a more detailed explanation on Query Service best practices.
+Consultez le guide [organisation logique des ressources de données](../best-practices/organize-data-assets.md) pour une explication plus détaillée des bonnes pratiques relatives à Query Service.
 
 ## Le tableau existe
 
-The `table_exists` SQL command is used to confirm whether a table currently exists in the system. La commande renvoie une valeur booléenne : `true` si le tableau **existe** et `false` si le tableau **n’existe pas**.
+La commande SQL `table_exists` est utilisée pour confirmer si une table existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **existe** et `false` si le tableau **n’existe pas**.
 
-By validating whether a table exists before running the statements, the `table_exists` feature simplifies the process of writing an anonymous block to cover both the `CREATE` and `INSERT INTO` use cases.
+En validant l’existence d’une table avant d’exécuter les instructions, la fonction `table_exists` simplifie le processus d’écriture d’un bloc anonyme pour couvrir les cas d’utilisation `CREATE` et `INSERT INTO`.
 
-The following syntax defines the `table_exists` command:
+La syntaxe suivante définit la commande `table_exists` :
 
 ```SQL
 $$
@@ -780,9 +785,9 @@ WHEN OTHERS THEN SELECT 'ERROR';
 END $$; 
 ```
 
-## Inline {#inline}
+## En ligne {#inline}
 
-The `inline` function separates the elements of an array of structs and generates the values into a table. Il peut uniquement être placé dans la liste `SELECT` ou dans un `LATERAL VIEW`.
+La fonction `inline` sépare les éléments d’un tableau de structures et génère les valeurs dans un tableau. Il peut uniquement être placé dans la liste `SELECT` ou dans un `LATERAL VIEW`.
 
 La fonction `inline` **ne peut pas** peut être placée dans une liste de sélection où il existe d&#39;autres fonctions de générateur.
 
@@ -883,13 +888,13 @@ Vous pouvez désormais calculer les statistiques au niveau des colonnes sur les 
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
-La commande `FILTER CONTEXT` calcule les statistiques sur un sous-ensemble du jeu de données en fonction de la condition de filtre fournie. The `FOR COLUMNS` command targets specific columns for analysis.
+La commande `FILTER CONTEXT` calcule les statistiques sur un sous-ensemble du jeu de données en fonction de la condition de filtre fournie. La commande `FOR COLUMNS` cible des colonnes spécifiques à analyser.
 
 >[!NOTE]
 >
->The `Statistics ID` and the statistics generated are only valid for each session and cannot be accessed across different PSQL sessions.<br><br>Limitations:<ul><li>Statistics generation is not supported for array or map data types</li><li>Computed statistics are **not** persisted across sessions.</li></ul><br><br>Options :<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>By default, the flag is set to true. As a result, when statistics are requested on a datatype that is not supported, it does not error out but silently skips fields with the unsupported datatypes.<br>To enable notifications on errors when statistics are requested on unsupported datatype, use: `SET skip_stats_for_complex_datatypes = false`.
+>Les `Statistics ID` et les statistiques générées ne sont valides que pour chaque session et ne sont pas accessibles dans différentes sessions PSQL.<br><br>Limitations :<ul><li>La génération de statistiques n’est pas prise en charge pour les types de données de tableau ou de mappage</li><li>Les statistiques calculées ne sont **pas** conservées entre les sessions.</li></ul><br><br>Options :<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Par défaut, l’indicateur est défini sur « true ». Par conséquent, lorsque des statistiques sont demandées sur un type de données non pris en charge, elles ne génèrent pas d’erreur, mais ignorent silencieusement les champs contenant des types de données non pris en charge.<br>Pour activer les notifications sur les erreurs lorsque des statistiques sont demandées sur un type de données non pris en charge, utilisez : `SET skip_stats_for_complex_datatypes = false`.
 
-The console output appears as seen below.
+La sortie de la console s’affiche comme illustré ci-dessous.
 
 ```console
 |     Statistics ID      |
@@ -898,20 +903,20 @@ The console output appears as seen below.
 (1 row)
 ```
 
-You can then query the computed statistics directly by referencing the `Statistics ID`. Use the the `Statistics ID` or the alias name as shown in the example statement below, to view the output in full. To learn more about this feature, see the [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
+Vous pouvez ensuite interroger directement les statistiques calculées en référençant le `Statistics ID` . Utilisez le `Statistics ID` ou le nom d’alias comme indiqué dans l’exemple d’instruction ci-dessous pour afficher la sortie dans son intégralité. Pour en savoir plus sur cette fonctionnalité, consultez la documentation [nom d’alias](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics generated in the session. Vous pouvez ainsi affiner la portée de votre analyse statistique.
+Utilisez la commande `SHOW STATISTICS` pour afficher les métadonnées de toutes les statistiques temporaires générées dans la session. Vous pouvez ainsi affiner la portée de votre analyse statistique.
 
 ```sql
 SHOW STATISTICS;
 ```
 
-An example output of SHOW STATISTICS is seen below.
+Vous trouverez ci-dessous un exemple de sortie de SHOW STATISTICS.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
@@ -921,17 +926,17 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-See the [dataset statistics documentation](../key-concepts/dataset-statistics.md) for more information.
+Pour plus d’informations, consultez la [documentation sur les statistiques des jeux de données](../key-concepts/dataset-statistics.md).
 
-#### TABLESAMPLE {#tablesample}
+#### TABLESSAMPLE {#tablesample}
 
 Le service de requête Adobe Experience Platform fournit des exemples de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes.
 
-Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. To conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer, use the `TABLESAMPLE` feature.
+Les exemples de jeux de données sont mieux utilisés lorsque vous n’avez pas besoin d’une réponse exacte pour une opération d’agrégation sur un jeu de données. Pour exécuter des requêtes exploratoires plus efficaces sur des jeux de données volumineux en émettant une requête approximative pour renvoyer une réponse approximative, utilisez la fonction `TABLESAMPLE` .
 
-Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.
+Des échantillons de jeux de données sont créés avec des échantillons aléatoires uniformes issus de jeux de données [!DNL Azure Data Lake Storage] (ADLS) existants, en utilisant uniquement un pourcentage d’enregistrements de l’original. La fonctionnalité d’exemple de jeu de données étend la commande `ANALYZE TABLE` avec les commandes SQL `TABLESAMPLE` et `SAMPLERATE`.
 
-In the example below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
+Dans l’exemple ci-dessous, la ligne 1 montre comment calculer un échantillon de 5 % de la table. La ligne 2 montre comment calculer un échantillon de 5 % à partir d’une vue filtrée des données du tableau.
 
 **Exemple**
 
@@ -940,11 +945,11 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-See the [dataset samples documentation](../key-concepts/dataset-samples.md) for more information.
+Pour plus d’informations, consultez la [documentation sur les exemples de jeux de données](../key-concepts/dataset-samples.md).
 
 ### BEGIN
 
-The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
+La commande `BEGIN`, ou encore la commande `BEGIN WORK` ou `BEGIN TRANSACTION`, initie un bloc de transaction. Toutes les instructions saisies après la commande begin sont exécutées dans une seule transaction jusqu&#39;à ce qu&#39;une commande COMMIT ou ROLLBACK explicite soit donnée. Cette commande est identique à `START TRANSACTION`.
 
 ```sql
 BEGIN

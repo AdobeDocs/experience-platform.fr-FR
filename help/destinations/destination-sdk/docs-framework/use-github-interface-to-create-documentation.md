@@ -2,9 +2,13 @@
 title: Utiliser l’interface web GitHub pour créer une page de documentation de destination
 description: Les instructions de cette page vous montrent comment utiliser l’interface web GitHub pour créer une page de documentation pour votre destination Experience Platform et l’envoyer pour révision.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/jJ9qBavmjeRODOWkPGD5oSxv5lDt1OvGOSC9-4PmVA0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: 779
 ht-degree: 3%
 
 ---
@@ -17,14 +21,14 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 >
 >Reportez-vous également à la documentation d’aide du guide du contributeur d’Adobe :
 >
->* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=fr)
->* [Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr)
->* [Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=fr).
+>* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Configuration de votre environnement de création GitHub {#set-up-environment}
 
-1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.fr-FR`.
-1. Pour [brancher](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Une copie du référentiel Experience Platform est ainsi créée dans votre propre compte GitHub.
+1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.en`.
+1. Pour [brancher](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Une copie du référentiel Experience Platform est ainsi créée dans votre propre compte GitHub.
 
    ![Référentiel de documentation d’Adobe en branchement](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -47,7 +51,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
    >
    >Vous pouvez fermer la fenêtre de votre navigateur à tout moment et la rouvrir ultérieurement. Votre travail est enregistré automatiquement et vous attendra lorsque vous rouvrirez le navigateur.
 1. Copiez le contenu de l’éditeur Markdown dans votre nouveau fichier dans GitHub.
-1. Pour toutes les captures d’écran ou images que vous prévoyez d’utiliser, utilisez l’interface GitHub pour charger les fichiers sur `experience-platform.en/help/destinations/assets/catalog/[...]`, où `[...]` est la catégorie souhaitée pour la destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la catégorie `personalization` . Vous devez créer un lien vers les images de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=fr#link-to-images).
+1. Pour toutes les captures d’écran ou images que vous prévoyez d’utiliser, utilisez l’interface GitHub pour charger les fichiers sur `experience-platform.en/help/destinations/assets/catalog/[...]`, où `[...]` est la catégorie souhaitée pour la destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la catégorie `personalization` . Vous devez créer un lien vers les images de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![Charger l’image sur GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -75,7 +79,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 1. À ce stade, une notification s’affiche vous invitant à signer le contrat de licence du contributeur (CLA) d’Adobe. Il s’agit d’une étape obligatoire. Après avoir signé le contrat de licence du contributeur, actualisez la page de requête de tirage et envoyez la demande d’extraction.
 
-1. Vous pouvez confirmer que la demande d’extraction a été envoyée en consultant l’onglet **Demandes d’extraction** dans `https://github.com/AdobeDocs/experience-platform.fr-FR`.
+1. Vous pouvez confirmer que la demande d’extraction a été envoyée en consultant l’onglet **Demandes d’extraction** dans `https://github.com/AdobeDocs/experience-platform.en`.
 
    ![PR réussie](../assets/docs-framework/ssd-pr-successful.png)
 
@@ -83,4 +87,4 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 >[!TIP]
 >
->Pour ajouter des images et des liens à votre documentation, ainsi que pour toute autre question sur Markdown, lisez [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr) dans le guide d’écriture collaborative d’Adobe.
+>Pour ajouter des images et des liens à votre documentation, ainsi que pour toute autre question sur Markdown, lisez [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) dans le guide d’écriture collaborative d’Adobe.

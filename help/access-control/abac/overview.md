@@ -3,10 +3,16 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
+TQID: https://experienceleague.adobe.com/vECqPYq7h4-T7c3fBpgPyioB4ivq8thPTqMyZgLhAmk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d175cb4c-5781-454e-a826-bf6dff786265id: d1823595-9241-4128-8a33-e4ac3bf08773id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1929'
-ht-degree: 70%
+source-wordcount: 1976
+ht-degree: 71%
 
 ---
 
@@ -24,7 +30,7 @@ Grâce au contrôle d’accès basé sur les attributs, les administrateurs de v
 
 La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451829?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminologie du contrôle d’accès basé sur les attributs
 
@@ -33,7 +39,7 @@ Le contrôle d’accès basé sur les attributs comprend les composants suivants
 | Terminologie | Définition |
 | --- | --- |
 | Attributs | Les attributs sont les identifiants indiquant la corrélation entre un utilisateur et les ressources Experience Platform auxquelles il a accès. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs. |
-| Libellés | Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Experience Platform, ou dès que les données sont disponibles pour une utilisation dans Experience Platform. |
+| Étiquettes | Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Experience Platform, ou dès que les données sont disponibles pour une utilisation dans Experience Platform. |
 | Autorisations | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création de sandbox, la définition de schémas et la gestion des jeux de données. |
 | Jeux d’autorisations | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
 | Politiques | Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. |
@@ -146,4 +152,4 @@ Pour plus d’informations sur XDM, consultez la [présentation du système XDM]
 
 Les autorisations d’accès à Customer Journey Analytics (CJA) sont gérées au niveau de l’application dans CJA. CJA utilise ses propres contrôles d’accès basés sur les attributs et n’hérite ni n’applique les contrôles d’accès basés sur les attributs définis dans Adobe Experience Platform.
 
-Pour plus d’informations sur le contrôle d’accès de CJA, consultez la documentation sur le contrôle d’accès de CJA [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/technotes/access-control).
+Pour plus d’informations sur le contrôle d’accès de CJA, consultez la documentation sur le contrôle d’accès de CJA [](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/technotes/access-control).

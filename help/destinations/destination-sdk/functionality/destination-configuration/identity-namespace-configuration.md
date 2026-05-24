@@ -2,10 +2,15 @@
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/GvF3ln-NZyz8gK8u7k0o0MclR1KnHNWtzsHp7WAr-KY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 50%
+source-wordcount: 919
+ht-degree: 52%
 
 ---
 
@@ -88,7 +93,7 @@ Pendant la définition des identités cibles prises en charge par la destination
 Vous devez indiquer quelles identités [!DNL Experience Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont les suivantes : espaces de noms d’identité [!DNL Experience Platform] que les clientes et clients peuvent mapper aux espaces de noms d’identité de votre destination.
 
 Les espaces de noms d’identité ne nécessitent pas de correspondance 1-1 entre [!DNL Experience Platform] et votre destination.
-Par exemple, les clients peuvent mapper un espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] de votre destination.
+Par exemple, les clients peuvent mapper un espace de noms [!DNL IDFA] [!DNL Experience Platform] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL IDFA] [!DNL Experience Platform] à un espace de noms [!DNL Customer ID] de votre destination.
 
 Apprenez-en plus sur les identités dans la [présentation des espaces de noms d’identité](../../../../identity-service/features/namespaces.md).
 
@@ -118,7 +123,7 @@ La configuration ci-dessous active l’option facultative [Apply transformation]
    }
 ```
 
-Cochez cette option lorsque vous utilisez des champs sources non hachés afin que les [!DNL Adobe Experience Platform] les hachent automatiquement lors de l’activation.
+Cochez cette option lorsque vous utilisez des champs sources non hachés afin qu’[!DNL Adobe Experience Platform] les hache automatiquement lors de l’activation.
 
 Lorsque vous mappez des attributs source non hachés avec des attributs cibles qui sont censés être hachés (par exemple : `email_lc_sha256` ou `phone_sha256`), cochez l’option **Apply transformation** pour que [!DNL Adobe Experience Platform] hache automatiquement les attributs source au moment de l’activation.
 

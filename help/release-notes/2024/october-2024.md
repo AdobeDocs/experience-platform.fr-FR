@@ -2,10 +2,16 @@
 title: Notes de mise à jour d’octobre 2024 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2024 pour Adobe Experience Platform
 exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/Je-Lixl28M-GH1qVbjg43mVsgTZ5UOLRPQioqGre57M
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: d1a87129-ba05-4f15-98b1-233618f1774aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 97%
+source-wordcount: 1160
+ht-degree: 83%
 
 ---
 
@@ -30,11 +36,11 @@ Experience Platform propose de nombreux tableaux de bord qui vous permettent d�
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Modèles de Data Distiller | Explorez plusieurs modèles pour obtenir des informations structurées sur les données d’audience. Utilisez des tableaux de bord tels que **Chevauchements avancés[!UICONTROL &#x200B; des audiences]**, **[!UICONTROL Comparaison des audiences]**, **[!UICONTROL Tendances des audiences]** et **[!UICONTROL Chevauchements des identités d’audience]** pour prendre des décisions basées sur les données, optimiser la segmentation et améliorer les stratégies d’engagement. Pour plus d’informations, consultez le [guide des modèles de Data Distiller](../../dashboards/sql-insights-query-pro-mode/templates/overview.md). |
+| Modèles de Data Distiller | Explorez plusieurs modèles pour obtenir des informations structurées sur les données d’audience. Utilisez des tableaux de bord tels que **Advanced[!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]** et **[!UICONTROL Audience Identity Overlaps]** pour prendre des décisions basées sur les données, optimiser la segmentation et améliorer les stratégies d’engagement. Pour plus d’informations, consultez le [guide des modèles de Data Distiller](../../dashboards/sql-insights-query-pro-mode/templates/overview.md). |
 | Chevauchements avancés des audiences | Analysez rapidement les intersections d’audience pour des audiences spécifiques ou en observant tous les chevauchements afin de découvrir des informations précieuses sur l’ensemble de votre jeu d’audiences. Utilisez ces informations pour affiner la segmentation, réduire les messages redondants et créer des campagnes plus ciblées pour une meilleure efficacité marketing. Pour plus d’informations, consultez le [guide des chevauchements avancés des audiences](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md). |
 | Améliorations de la comparaison des audiences | Affichez une comparaison côte à côte des mesures clés entre différents groupes d’audiences à l’aide du tableau de bord **Comparaison des audiences**. Ce tableau de bord vous permet de sélectionner des périodes et des KPI spécifiques, tels que la taille de l’audience et la composition de l’identité, afin de prendre des décisions plus éclairées sur la segmentation et les stratégies de ciblage de l’audience. Pour plus d’informations, consultez le [guide de comparaison des audiences](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md). |
-| Visualisation des tendances des audiences | Analysez les mesures d’audience au fil du temps à l’aide du tableau de bord **[!UICONTROL Tendances des audiences]**. Visualisez les tendances relatives à la taille des audiences, au nombre d’identités et au nombre de profils d&#39;identité unique afin de mieux surveiller l’évolution de l’audience, mesurer la croissance et affiner vos stratégies d’engagement. Pour plus d’informations, consultez le [guide sur les tendances des audiences](../../dashboards/sql-insights-query-pro-mode/templates/trends.md). |
-| Analyse des chevauchements d’identités | Analysez les chevauchements d’identités dans les audiences sélectionnées grâce au tableau de bord **[!UICONTROL Chevauchements des identités d’audience]**. Affichez les tendances et les répartitions des identités pour comprendre les liens entre les différents types d’identités au sein de votre audience, ce qui améliore le regroupement des identités et la précision de la segmentation de la clientèle. Pour plus d’informations, consultez le [guide des chevauchements des identités d’audience](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md). |
+| Visualisation des tendances des audiences | Analysez les mesures d’audience au fil du temps avec le tableau de bord **[!UICONTROL Audience Trends]**. Visualisez les tendances relatives à la taille des audiences, au nombre d’identités et au nombre de profils d&#39;identité unique afin de mieux surveiller l’évolution de l’audience, mesurer la croissance et affiner vos stratégies d’engagement. Pour plus d’informations, consultez le [guide sur les tendances des audiences](../../dashboards/sql-insights-query-pro-mode/templates/trends.md). |
+| Analyse des chevauchements d’identités | Analysez les chevauchements d’identités dans les audiences sélectionnées avec le tableau de bord **[!UICONTROL Audience Identity Overlaps]**. Affichez les tendances et les répartitions des identités pour comprendre les liens entre les différents types d’identités au sein de votre audience, ce qui améliore le regroupement des identités et la précision de la segmentation de la clientèle. Pour plus d’informations, consultez le [guide des chevauchements des identités d’audience](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md). |
 
 {style="table-layout:auto"}
 
@@ -58,13 +64,13 @@ Pour plus d’informations, consultez la [vue d’ensemble de la collecte des do
 
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+**Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| [Prise en charge de l’export de tableaux disponible pour toutes les personnes utilisatrices](../../destinations/ui/export-arrays-maps-objects.md) | L’ensemble de la clientèle peut désormais utiliser l’option **[!UICONTROL Ajouter un champ calculé]** lors de l’activation d’audiences *vers des destinations basées sur des fichiers* pour exporter des tableaux entiers ou des éléments de tableaux. Notez que vous devez toujours utiliser la fonction `array_to_string` pour aplatir le tableau en une chaîne dans le fichier cible. <br> ![Ajoutez une sélection de champ calculée avec des fonctions et des champs.](../2024/assets/october/array-export.gif "Ajoutez un champ calculé avec une sélection de la fonction array_to_string et du tableau des organisations."){width="250" align="center" zoomable="yes"} |
-| [Améliorations de la précision des rapports pour les destinations de streaming](/help/destinations/ui/export-datasets.md) | Depuis octobre 2024, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration garantit un meilleur alignement entre Experience Platform et les rapports sur les plateformes de destination. <br> Avant cette mise à jour, les **[!UICONTROL identités ayant échoué]** incluaient toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total. <br> Cette amélioration s’applique actuellement à la [destination Ciblage par liste de clients de Google](../../destinations/catalog/advertising/google-customer-match.md), mais sera progressivement déployée vers d’autres destinations de streaming Experience Platform. Suite à cette amélioration, les personnes utilisant la [destination Ciblage par liste de clients de Google](../../destinations/catalog/advertising/google-customer-match.md) peuvent constater une baisse attendue de leur nombre d’**[!UICONTROL identités ayant échoué]**. |
-| Implications de l’évaluation des audiences flexibles sur l’[activation de l’audience par lot](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Si vous exécutez l’[évaluation des audiences flexibles](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) sur des audiences déjà configurées pour être activées après l’évaluation des segments, les audiences seront activées dès que la tâche d’évaluation d’audience flexible sera terminée, quelles que soient les tâches d’activation quotidiennes précédentes. <br> Cela peut entraîner l’export d’audiences plusieurs fois par jour, en fonction de vos actions. |
+| [Prise en charge de l’export de tableaux disponible pour toutes les personnes utilisatrices](../../destinations/ui/export-arrays-maps-objects.md) | Tous les clients peuvent désormais utiliser l’option **[!UICONTROL Add calculated field]** lors de l’activation des audiences *vers des destinations basées sur des fichiers* pour exporter des tableaux entiers ou des éléments de tableaux. Notez que vous devez toujours utiliser la fonction `array_to_string` pour aplatir le tableau en une chaîne dans le fichier cible. <br> ![Ajoutez une sélection de champ calculée avec des fonctions et des champs.](../2024/assets/october/array-export.gif "Ajoutez un champ calculé avec une sélection de la fonction array_to_string et du tableau des organisations."){width="250" align="center" zoomable="yes"} |
+| [Améliorations de la précision des rapports pour les destinations de streaming](/help/destinations/ui/export-datasets.md) | Depuis octobre 2024, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration assure un meilleur alignement entre les rapports Experience Platform et les plateformes de destination. <br> Avant cette mise à jour, **[!UICONTROL Identities failed]** incluait toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total. <br> Cette amélioration s’applique actuellement à la destination [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) mais sera progressivement déployée vers d’autres destinations de streaming Experience Platform. Suite à cette amélioration, les utilisateurs de la destination [Correspondance client ](../../destinations/catalog/advertising/google-customer-match.md) peuvent voir une baisse attendue de leur nombre de **[!UICONTROL Identities failed]**. |
+| Implications de l’évaluation des audiences flexibles sur l’[activation de l’audience par lot](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Si vous exécutez l’[évaluation d’audience flexible](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) sur des audiences qui sont déjà définies pour être activées après l’évaluation du segment, les audiences seront activées dès que la tâche d’évaluation d’audience flexible se terminera, quels que soient les tâches d’activation quotidiennes précédentes. <br> Cela peut entraîner l’exportation d’audiences plusieurs fois par jour, en fonction de vos actions. |
 
 {style="table-layout:auto"}
 
@@ -72,13 +78,13 @@ Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinatio
 
 ## Service de segmentation {#segmentation-service}
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| [!BADGE Disponibilité limitée]{type=Informative} Évaluation des audiences flexibles | L’évaluation des audiences flexibles vous permet de créer rapidement de nouvelles audiences à la demande pour des communications sensibles au temps. Vous trouverez plus d’informations sur cette nouvelle fonctionnalité dans la [documentation du portail d’audience](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
+| [!BADGE Disponibilité limitée]{type=Informative} Évaluation flexible des audiences | L’évaluation des audiences flexibles vous permet de créer rapidement de nouvelles audiences à la demande pour des communications sensibles au temps. Vous trouverez plus d’informations sur cette nouvelle fonctionnalité dans la [documentation du portail d’audience](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
 
 {style="table-layout:auto"}
 
@@ -86,7 +92,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [vue d�
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance d’Experience Platform unique en plusieurs environnements virtuels pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -113,4 +119,4 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).

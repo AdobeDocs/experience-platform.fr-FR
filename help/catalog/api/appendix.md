@@ -1,21 +1,25 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;service de catalogue;api de catalogue;annexe
+keywords: Experience Platform;accueil;rubriques populaires;Service de catalogue;api de catalogue;annexe
 solution: Experience Platform
 title: Annexe du guide de l’API Catalog Service
 description: Ce document contient des informations supplémentaires pour vous aider à utiliser l’API Catalog dans Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
+TQID: https://experienceleague.adobe.com/IcibZLmy1hwqPlWQ95xrI78EFXkjmhG7XXoWKTtci9M
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: 461
 ht-degree: 76%
 
 ---
 
-# [!DNL Catalog Service] annexe du guide de l’API
+# Annexe du guide de l’API [!DNL Catalog Service]
 
-Ce document contient des informations supplémentaires pour vous aider à travailler avec l’API [!DNL Catalog].
+Ce document contient des informations supplémentaires pour vous aider à utiliser l’API [!DNL Catalog].
 
-## Affichage d’objets interconnectés {#view-interrelated-objects}
+## Affichage des objets interdépendants {#view-interrelated-objects}
 
 Certains objets [!DNL Catalog] peuvent être interconnectés avec d’autres objets [!DNL Catalog]. Tout champ précédé du préfixe `@` dans les payloads de réponse indique les objets associés. Les valeurs de ces champs prennent la forme d’un URI qui peut être utilisé dans une requête GET distincte pour récupérer les objets associés qu’ils représentent.
 
@@ -107,6 +111,6 @@ Il peut arriver que vous souhaitiez valider un objet sans enregistrer les inform
 
 ## Compactage des données
 
-Compaction est un service [!DNL Experience Platform] qui fusionne les données de petits fichiers en fichiers plus volumineux sans modifier les données. Pour des raisons de performances, il est parfois bénéfique de combiner un ensemble de petits fichiers en fichiers plus volumineux afin de fournir un accès plus rapide aux données lors de l’interrogation.
+Compaction est un service de [!DNL Experience Platform] qui fusionne les données de petits fichiers en fichiers plus volumineux sans modifier les données. Pour des raisons de performances, il est parfois bénéfique de combiner un ensemble de petits fichiers en fichiers plus volumineux afin de fournir un accès plus rapide aux données lors de l’interrogation.
 
-Lorsque les fichiers d’un lot ingéré ont été compactés, son objet [!DNL Catalog] associé est mis à jour à des fins de surveillance.
+Lorsque les fichiers d’un lot ingéré ont été compactés, l’objet [!DNL Catalog] associé est mis à jour à des fins de surveillance.

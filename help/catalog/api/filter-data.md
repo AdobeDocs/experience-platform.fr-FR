@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Filtrage Des Données De Catalogue À L’Aide De Paramètres De Requête
 description: Utilisez des paramètres de requête pour filtrer les données de réponse dans l’API Catalog Service et récupérer uniquement les informations dont vous avez besoin. Appliquez des filtres à vos appels API pour réduire la charge et améliorer les performances, assurant ainsi une récupération des données plus rapide et plus efficace.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 14ecb971af3f6cdcc605caa05ef6609ecb9b38fd
+TQID: https://experienceleague.adobe.com/5HYETHCp7k3J64Q4-bn6dleWrCUMmHiTg72v1-Uyjr8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2339'
-ht-degree: 68%
+source-wordcount: 2353
+ht-degree: 64%
 
 ---
 
@@ -151,9 +156,9 @@ Une réponse réussie renvoie une liste d’objets [!DNL Catalog] avec seulement
 
 En fonction de la réponse ci-dessus, vous pouvez en déduire ce qui suit :
 
-* Si une ou plusieurs propriétés demandées sont absentes d’un objet, seules les propriétés demandées qu’il inclut seront affichées. (`Dataset1`)
-* Si un objet n’inclut aucune des propriétés demandées, il apparaîtra comme un objet vide. (`Dataset2`)
-* Un jeu de données peut renvoyer une propriété demandée en tant qu’objet vide s’il contient la propriété, mais sans aucune valeur. (`Dataset3`)
+* S’il manque des propriétés demandées à un objet, celui-ci n’affiche que les propriétés demandées qu’il inclut. (`Dataset1`)
+* Si un objet n’inclut aucune des propriétés demandées, il s’affiche sous la forme d’un objet vide. (`Dataset2`)
+* Un jeu de données peut renvoyer une propriété demandée sous la forme d’un objet vide s’il contient la propriété mais qu’il n’existe aucune valeur. (`Dataset3`)
 * Sinon, le jeu de données affichera la valeur complète de toutes les propriétés demandées. (`Dataset4`)
 
 >[!NOTE]
@@ -577,9 +582,9 @@ La valeur du paramètre `property` prend en charge plusieurs types différents d
 | --- | --- | --- |
 | (Aucun) | Indiquer le nom de la propriété sans opérateur renvoie uniquement les objets dans lesquels la propriété existe, et ce quelle que soit sa valeur. | `property=name` |
 | ! | Ajouter le préfixe « `!` » à la valeur d’un paramètre `property` renvoie uniquement les objets dans lesquels la propriété **n’existe pas**. | `property=!name` |
-| ~ | Renvoie uniquement les objets dont les valeurs de propriété (chaîne) correspondent à une expression régulière fournie après le signe tilde (`~`). | `property=name~^example` |
-| == | Renvoie uniquement les objets dont les valeurs de propriété correspond exactement à la chaîne fournie après le signe double égal (`==`). | `property=name==exampleName` |
-| != | Renvoie uniquement les objets dont les valeurs de propriété **ne correspondent pas** à la chaîne fournie après le signe différent (`!=`). | `property=name!=exampleName` |
+| ~ | Renvoie uniquement les objets dont les valeurs de propriété (chaîne) correspondent à une expression régulière fournie après le symbole tilde (`~`). | `property=name~^example` |
+| == | Renvoie uniquement les objets dont les valeurs de propriété correspond exactement à la chaîne fournie après le symbole de double égal (`==`). | `property=name==exampleName` |
+| != | Renvoie uniquement les objets dont les valeurs de propriété **ne correspondent pas** à la chaîne fournie après le symbole « différent de » (`!=`). | `property=name!=exampleName` |
 | &lt; | Renvoie uniquement les objets dont les valeurs de propriété sont inférieures (mais pas égales) à un montant donné. | `property=version<1.0.0` |
 | &lt;= | Renvoie uniquement les objets dont les valeurs de propriété sont inférieures (ou égales) à un montant donné. | `property=version<=1.0.0` |
 | > | Renvoie uniquement les objets dont les valeurs de propriété sont supérieures (mais pas égales) à un montant donné. | `property=version>1.0.0` |
@@ -606,7 +611,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie contient une liste de jeux de données dont les numéros de version sont supérieurs à 1.0.3. Si aucune limite n’est spécifiée, la réponse contient 20 objets maximum.
+Une réponse réussie contient une liste de jeux de données dont les numéros de version sont supérieurs à 1.0.3. À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
 
 ```json
 {

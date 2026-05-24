@@ -3,9 +3,15 @@ keywords: bizible;extension bizible;destination bizible
 title: Extension Bizible
 description: L’extension Bizible est une destination de messagerie dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
+TQID: https://experienceleague.adobe.com/PWnO1801XzamzJyaz3vf6Yq-RgVrvHqA-rm559Q3OSk
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: 431
 ht-degree: 35%
 
 ---
@@ -16,9 +22,9 @@ ht-degree: 35%
 
 [!DNL Bizible] est la solution d’attribution B2B de pointe qui vous offre une visibilité inégalée sur vos données afin que vous puissiez prendre des décisions intelligentes qui alimentent la croissance.
 
-[!DNL Bizible] est une extension d’e-mail dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur Bizible, lisez [Attribution marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=fr) dans les ressources de présentation de Bizible.
+[!DNL Bizible] est une extension d’e-mail dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur Bizible, lisez [Attribution marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) dans les ressources de présentation de Bizible.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Bizible](../../assets/catalog/email/bizible/catalog.png)
 
@@ -32,7 +38,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe 
 
 Pour installer l’extension [!DNL Bizible], procédez comme suit :
 
-Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

@@ -5,10 +5,15 @@ title: Créer un modèle à l’aide de notebooks JupyterLab
 type: Tutorial
 description: Ce tutoriel vous guide tout au long des étapes requises pour créer une recette à l’aide du modèle de créateur de recettes des notebooks JupyterLab .
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/o6DENUmMRTCx311RaRHbSfVlrcuEi2myKsmALQC1aTc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 28%
+source-wordcount: 2127
+ht-degree: 29%
 
 ---
 
@@ -35,7 +40,7 @@ Avant de poursuivre ce tutoriel, vous devez créer les schémas et les jeux de d
 
 ## Prise en main de l’environnement des notebooks [!DNL JupyterLab]
 
-Vous pouvez créer une recette à partir de zéro dans [!DNL Data Science Workspace]. Pour commencer, accédez à [Adobe Experience Platform](https://platform.adobe.com) et sélectionnez l’onglet **[!UICONTROL Notebooks]** sur la gauche. Pour créer un notebook , sélectionnez le modèle Créateur de recettes dans la [!DNL JupyterLab Launcher].
+Vous pouvez créer une recette à partir de zéro dans [!DNL Data Science Workspace]. Pour commencer, accédez à [](https://platform.adobe.com) et sélectionnez l’onglet **[!UICONTROL Notebooks]** sur la gauche. Pour créer un notebook , sélectionnez le modèle Créateur de recettes dans la [!DNL JupyterLab Launcher].
 
 Le notebook [!UICONTROL Recipe Builder] vous permet d’exécuter des exécutions de formation et de notation dans le notebook . Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et de la notation, vous pouvez créer une recette et la publier en tant que modèle à l’aide de la fonctionnalité Recette vers modèle .
 
@@ -69,7 +74,7 @@ Le reste de ce tutoriel couvre les fichiers suivants qui sont prédéfinis dans 
 
 Le tutoriel vidéo suivant explique le notebook de modèle de propension Luma :
 
->[!VIDEO](https://video.tv.adobe.com/v/3452494?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Fichier des exigences {#requirements-file}
 
@@ -195,7 +200,7 @@ Une fois les données chargées, elles doivent être nettoyées et subir une pr�
 
 Une fois que vous avez supprimé toutes les données inutiles, vous pouvez commencer l’ingénierie des fonctionnalités. Les données de démonstration utilisées pour cet exemple ne contiennent aucune information de session. En règle générale, vous souhaiteriez disposer de données sur les sessions en cours et antérieures pour un client spécifique. En raison du manque d’informations sur la session, cet exemple imite plutôt les sessions actuelles et passées via la délimitation du parcours.
 
-![Délimitation du Parcours &#x200B;](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![Délimitation du Parcours ](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 Une fois la délimitation terminée, les données sont étiquetées et un parcours est créé.
 
@@ -251,7 +256,7 @@ L’ajout de `print(metric)` vous permet d’afficher les résultats de la mesur
 
 ## Fichier Data Saver {#data-saver-file}
 
-Le fichier `datasaver.py` contient la fonction `save()` et est utilisé pour enregistrer votre prédiction lors du test de la notation. La fonction `save()` récupère votre prédiction et écrit les données dans le [!DNL Experience Platform Catalog] spécifié dans votre fichier `scoringResultsDataSetId` à l’aide des API `scoring.conf`. Vous pouvez
+Le fichier `datasaver.py` contient la fonction `save()` et est utilisé pour enregistrer votre prédiction lors du test de la notation. La fonction `save()` récupère votre prédiction et écrit les données dans le `scoringResultsDataSetId` spécifié dans votre fichier `scoring.conf` à l’aide des API [!DNL Experience Platform Catalog]. Vous pouvez
 
 ![Enregistreur de données](../images/jupyterlab/create-recipe/data_saver.png)
 

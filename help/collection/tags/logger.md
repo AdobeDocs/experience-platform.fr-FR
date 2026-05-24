@@ -1,9 +1,16 @@
 ---
 title: logger
 description: Affichez les informations dans la console du navigateur lors du débogage.
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+exl-id: c79d0d15-47e2-4a77-9318-1ccbe6fe5dd1
+TQID: https://experienceleague.adobe.com/WvwiuKMWVNg3faKdQBB3u0JQV-39QEZLx9ROvwf1FdI
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: 246
 ht-degree: 1%
 
 ---

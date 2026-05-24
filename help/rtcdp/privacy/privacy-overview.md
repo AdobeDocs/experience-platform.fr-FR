@@ -4,10 +4,15 @@ title: Confidentialité dans Adobe Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/HRSdT-rRWw-l2eHKnSpp6k6rT0Vu--o1Jvx4C6mU9YA
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 80%
+source-wordcount: 398
+ht-degree: 79%
 
 ---
 

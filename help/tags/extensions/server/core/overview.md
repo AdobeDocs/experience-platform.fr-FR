@@ -3,10 +3,16 @@ title: Présentation de lʼextension Core Event Forwarding
 description: Découvrez lʼextension Core Event Forwarding dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/kzzgvG2nl1IQ61dvSp0zEVSoxDyHO4oKRdHmFLbeNeI
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 97%
+source-wordcount: 1680
+ht-degree: 96%
 
 ---
 
@@ -18,7 +24,7 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 
 ## Types de conditions de l’extension Core
 
-Cette section décrit les types de conditions disponibles dans l’extension Core. Ces types de condition peuvent être utilisés avec le type de logique normal ou Exception.
+Cette section décrit les types de conditions disponibles dans l’extension Core.  Ces types de condition peuvent être utilisés avec le type de logique normal ou Exception.
 
 ### Custom code
 
@@ -28,7 +34,7 @@ Spécifiez un Custom Code qui doit exister comme condition de l’événement. U
 1. Saisissez le Custom Code.
 1. Sélectionner **[!UICONTROL Save]**.
 
-Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
+Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
 ```javascript
 getDataElementValue('productName') 
@@ -109,7 +115,7 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 **Equal :** la condition renvoie true (vrai) si les deux valeurs sont égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur ==). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
-**Does Not Equal** (N’est pas égal à) : la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
+**Does Not Equal :** la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
 **Contains :** la condition renvoie true (vrai) si la première valeur contient la seconde valeur. Les nombres sont convertis en chaînes. Pour toute autre valeur qu’un nombre ou une chaîne, la condition renvoie false (faux).
 
@@ -157,7 +163,7 @@ Fournissez le code qui s’exécute une fois que l’événement est déclenché
 1. Sélectionner **[!UICONTROL Open Editor]**.
 1. Modifiez le code, puis cliquez sur **[!UICONTROL Save]**.
 
-Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
+Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
 ```javascript
 getDataElementValue('productName') 
@@ -183,7 +189,7 @@ Il est possible d’entrer du code JavaScript personnalisé dans l’interface u
 
 Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être utilisée en tant que valeur de l’élément de données. Si aucune instruction de retour n’est incluse ou si la valeur `null` ou `undefined` est renvoyée, la valeur par défaut de l’élément de données reflète `null` ou `undefined`.
 
-Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
+Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
 ```javascript
 getDataElementValue('productName') 

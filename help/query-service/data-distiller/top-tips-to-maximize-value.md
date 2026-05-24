@@ -2,10 +2,16 @@
 title: Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller - OS656
 description: Découvrez comment tirer le meilleur parti de Adobe Experience Platform Data Distiller en enrichissant les données du profil client en temps réel et en utilisant des informations comportementales pour créer des audiences ciblées. Cette ressource comprend un échantillon de jeu de données et une étude de cas montrant comment appliquer le modèle Récence, Fréquence, Monétaire (RFM) pour la segmentation de la clientèle.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/UPywwxmfAV52FSJ65j-4SD5RJR3-cNAtex7LG3pSY0I
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fd2e3797-f2ea-4b36-a9af-52acf5e90513id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3664'
-ht-degree: 1%
+source-wordcount: 3715
+ht-degree: 0%
 
 ---
 
@@ -86,7 +92,7 @@ est ingéré sous la forme d’un lot et identifié par un [!UICONTROL Batch ID]
 >
 >Lors de l’écriture de requêtes dans Data Distiller, utilisez le nom de la table au lieu du nom du jeu de données. Le nom du jeu de données est uniquement utilisé pour naviguer dans l’interface utilisateur.
 
-![&#x200B; L’onglet « Activité du jeu de données » pour le jeu de données « luma_web_data » nouvellement créé avec le nom de la table, l’ID de lot et « Prévisualiser le jeu de données » mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
+![ L’onglet « Activité du jeu de données » pour le jeu de données « luma_web_data » nouvellement créé avec le nom de la table, l’ID de lot et « Prévisualiser le jeu de données » mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
 <!-- 
 ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
@@ -439,7 +445,7 @@ Dans cette instruction SQL :
 
 >[!NOTE]
 >
->L’espace de noms « E-mail » est un [espace de noms d’identité standard](../../identity-service/features/namespaces.md#standard) dans Adobe Experience Platform. Lors de la définition de champs d’identité, assurez-vous que l’espace de noms approprié est spécifié pour faciliter la résolution précise des identités. &#x200B;
+>L’espace de noms « E-mail » est un [espace de noms d’identité standard](../../identity-service/features/namespaces.md#standard) dans Adobe Experience Platform. Lors de la définition de champs d’identité, assurez-vous que l’espace de noms approprié est spécifié pour faciliter une résolution d’identité précise. &#x200B;
 >
 >Pour plus d’informations sur la définition des champs d’identité et l’utilisation des espaces de noms d’identité, reportez-vous à la [documentation du service d’identités](../../identity-service/home.md) ou au guide sur la [définition d’un champ d’identité dans l’interface utilisateur de Adobe Experience Platform](../../xdm/ui/fields/identity.md).
 

@@ -3,9 +3,14 @@ title: Modèles
 description: Gestion du cycle de vie des modèles avec l’extension Data Distiller SQL. Découvrez comment créer, entraîner et gérer des modèles statistiques avancés à l’aide de SQL, y compris des processus clés tels que le contrôle de version, l’évaluation et la prédiction des modèles, afin d’obtenir des informations exploitables à partir de vos données.
 role: Developer
 exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
-source-git-commit: 09129d9d19816b4d93b4979305f4ad532e5ffde4
+TQID: https://experienceleague.adobe.com/SNGf3ljvvpI1DitXJHoVwSnIpK1SRrNT5DBy82UeQxg
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: 1664
 ht-degree: 1%
 
 ---
@@ -125,7 +130,7 @@ TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
 AS SELECT * FROM source_table;
 ```
 
-Ou :
+Ou :
 
 ```sql
 CREATE TEMP TABLE [IF NOT EXISTS] table_name
@@ -270,7 +275,7 @@ SHOW MODELS;
 
 Les résultats apparaissent dans un tableau similaire à celui ci-dessous :
 
-| model-id | model-name | version | source-jeu de données | type | options | transformer | champs | created | mis à jour | créé PAR |
+| model-id | model-name | version | source-jeu de données | type | Options | transformer | champs | created | mis à jour | créé PAR |
 |--------------------|---------------|---------|------------------|-----------------------|------------------------------|---------------------------------------------------------------------------|----------------------|---------------------|---------------------|------------|
 | `model-84362-mdunj` | `SalesModel` | 1.0 | `sales_data_2023` | `LogisticRegression` | `{"label": "label-field"}` | `one_hot_encoder(name)`, `ohe_name`, `string_indexer(gender)`, `genderSI` | \[« name », « gender »\] | 14/08/2024 10:30 | 14/08/2024 11:00 | `JohnSnow@adobe.com` |
 

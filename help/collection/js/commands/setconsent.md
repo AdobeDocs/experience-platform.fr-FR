@@ -2,13 +2,18 @@
 title: setConsent
 description: Utilisé sur chaque page pour suivre les préférences de consentement de vos utilisateurs.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
+TQID: https://experienceleague.adobe.com/kQQB8KbJRWZvviQB-8hQ5dsdBio411lMiKugggJRDRQ
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: 1066
 ht-degree: 0%
 
 ---
-
 
 # `setConsent`
 
@@ -22,7 +27,7 @@ Web SDK prend en charge les normes suivantes :
    1. Le schéma Événement d’expérience contient le groupe de champs de consentement [IAB TCF 2.0](/help/xdm/field-groups/event/iab.md).
    1. Vous incluez les informations de consentement IAB dans l’événement [objet XDM](sendevent/xdm.md). Le SDK Web n’inclut pas automatiquement les informations de consentement lors de l’envoi des données d’événement.
 
-Lors de l’utilisation de cette commande, le SDK Web écrit les préférences de l’utilisateur dans le cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk). Ce cookie est défini quelles que soient les préférences de consentement du visiteur, car il stocke ses préférences de consentement. La prochaine fois que l’utilisateur charge votre site web dans le navigateur , le SDK récupère ces préférences persistantes afin de déterminer si des événements peuvent être envoyés à Adobe.
+Lors de l’utilisation de cette commande, le SDK Web écrit les préférences de l’utilisateur dans le cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk). Ce cookie est défini quelles que soient les préférences de consentement du visiteur, car il stocke ses préférences de consentement. La prochaine fois que l’utilisateur charge votre site web dans le navigateur , le SDK récupère ces préférences persistantes afin de déterminer si des événements peuvent être envoyés à Adobe.
 
 Adobe vous recommande de stocker les préférences de boîte de dialogue de consentement séparément du consentement de Web SDK. Le SDK Web ne permet pas de récupérer le consentement. Pour vous assurer que les préférences utilisateur restent synchronisées avec le SDK, vous pouvez appeler la commande `setConsent` à chaque chargement de page. Web SDK effectue uniquement un appel au serveur lorsque le consentement est modifié.
 
@@ -82,7 +87,7 @@ Pour enregistrer les préférences de consentement de l’utilisateur fournies p
 
 Lorsque le consentement est défini de cette manière, le profil client en temps réel est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM de profil doit contenir le [groupe de champs de schéma de confidentialité du profil](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Lors de l’envoi d’événements, les informations de consentement IAB doivent être ajoutées manuellement à l’objet XDM d’événement. Le SDK Web n’inclut pas automatiquement les informations de consentement dans les événements.
 
-Pour envoyer les informations de consentement dans les événements, vous devez ajouter le groupe de champs Confidentialité des événements d’expérience à votre schéma de [!DNL Profile] activé pour [!DNL XDM ExperienceEvent]. Voir la section [mise à jour du schéma ExperienceEvent](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) dans le guide de préparation des jeux de données pour savoir comment configurer cela.
+Pour envoyer les informations de consentement dans les événements, vous devez ajouter le groupe de champs Confidentialité des événements d’expérience à votre schéma de [!DNL XDM ExperienceEvent] activé pour [!DNL Profile]. Voir la section [mise à jour du schéma ExperienceEvent](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema) dans le guide de préparation des jeux de données pour savoir comment configurer cela.
 
 * **`standard`** : norme de consentement choisie. Définissez cette propriété sur `"IAB TCF"` pour la norme IAB TCF 2.0.
 * **`version`** : chaîne représentant la version de la norme de consentement. Définissez cette propriété sur `"2.0"` pour la norme IAB TCF 2.0.

@@ -1,34 +1,38 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;rubriques les plus consultées;service de requête
+keywords: Experience Platform;JupyterLab;notebooks;Workspace de science des données;rubriques populaires;query service
 solution: Experience Platform
-title: Query Service dans Jupyter Notebook
+title: Query Service dans le notebook Jupyter
 type: Tutorial
-description: Adobe Experience Platform vous permet d’utiliser le langage de requête structuré (SQL) dans Data Science Workspace en intégrant Query Service à JupyterLab en tant que fonctionnalité standard. Ce tutoriel présente des exemples de requêtes SQL pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser les données Adobe Analytics.
+description: Adobe Experience Platform vous permet d’utiliser le langage de requête structuré (SQL) dans le Workspace de science des données en intégrant Query Service à JupyterLab en tant que fonctionnalité standard. Ce tutoriel présente des exemples de requêtes SQL pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser les données d’Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/ILnCdA9Ej0fbdmsijcYkpfNjHw3u1MvxmjkwX2uFE5c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 48%
+source-wordcount: 837
+ht-degree: 44%
 
 ---
 
-# Query Service dans Jupyter Notebook
+# Query Service dans le notebook Jupyter
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-[!DNL Adobe Experience Platform] vous permet d’utiliser le langage de requête structuré (SQL) dans [!DNL Data Science Workspace] en intégrant [!DNL Query Service] à [!DNL JupyterLab] comme fonctionnalité standard.
+[!DNL Adobe Experience Platform] vous permet d’utiliser le langage de requête structuré (SQL) dans [!DNL Data Science Workspace] en intégrant [!DNL Query Service] dans [!DNL JupyterLab] en tant que fonctionnalité standard.
 
-Ce tutoriel présente des exemples de requêtes SQL pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser des données [!DNL Adobe Analytics].
+Ce tutoriel présente des exemples de requêtes SQL pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser les données [!DNL Adobe Analytics].
 
 ## Prise en main
 
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
-- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de poursuivre
+- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer
 
 - Un jeu de données [!DNL Adobe Analytics]
 
@@ -38,7 +42,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## Accès à [!DNL JupyterLab] et [!DNL Query Service] {#access-jupyterlab-and-query-service}
+## [!DNL JupyterLab] d’accès et [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
 1. Dans [[!DNL Experience Platform]](https://platform.adobe.com), accédez à **[!UICONTROL Notebooks]** à partir de la colonne de navigation de gauche. Laissez charger JupyterLab.
 
@@ -46,9 +50,9 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
    >[!NOTE]
    >
-   >Si un nouvel onglet de lanceur n’apparaît pas automatiquement, ouvrez un nouvel onglet de lanceur en cliquant sur **[!UICONTROL Fichier]**, puis sélectionnez **[!UICONTROL Nouveau lanceur]**.
+   >Si un nouvel onglet de lanceur ne s’affichait pas automatiquement, ouvrez-le en cliquant sur **[!UICONTROL File]**, puis sélectionnez **[!UICONTROL New Launcher]**.
 
-2. Dans l’onglet de lanceur, cliquez sur l’icône **[!UICONTROL Vierge]** dans un environnement Python 3 pour ouvrir un notebook vierge.
+2. Dans l’onglet Lanceur , cliquez sur l’icône **[!UICONTROL Blank]** dans un environnement Python 3 pour ouvrir un notebook vide.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -56,17 +60,17 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    >
    >Python 3 est actuellement le seul environnement pris en charge pour Query Service dans les notebooks.
 
-3. Dans le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Données]** et double-cliquez sur le répertoire **[!UICONTROL Jeux de données]** pour afficher sous forme de liste tous les jeux de données.
+3. Sur le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Data]** et double-cliquez sur le répertoire **[!UICONTROL Datasets]** pour répertorier tous les jeux de données.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Recherchez un jeu de données [!DNL Adobe Analytics] à explorer et cliquez avec le bouton droit sur la liste. Cliquez ensuite sur **[!UICONTROL Query Data dans Notebook]** pour générer des requêtes SQL dans le notebook vide.
+4. Recherchez un jeu de données [!DNL Adobe Analytics] à explorer et cliquez avec le bouton droit sur la liste, puis cliquez sur **[!UICONTROL Query Data in Notebook]** pour générer des requêtes SQL dans le notebook vide.
 
-5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de notebook et [!DNL Query Service].
+5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de notebook et le [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copiez le nom du jeu de données [!DNL Adobe Analytics] de la seconde requête SQL générée. Il s’agira de la valeur après `FROM`.
+6. Copiez le nom du jeu de données [!DNL Adobe Analytics] de la deuxième requête SQL générée : il s’agit de la valeur après `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -92,9 +96,9 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    ```
 
    - `target_table` : nom de votre jeu de données [!DNL Adobe Analytics].
-   - `target_year` : année spécifique de laquelle proviennent les données cibles.
-   - `target_month` : mois spécifique duquel provient la cible.
-   - `target_day` : jour spécifique duquel proviennent les données cibles.
+   - `target_year` : année spécifique pour laquelle les données cibles sont issues.
+   - `target_month` : mois spécifique pour lequel la cible est issue.
+   - `target_day` : jour spécifique d’où proviennent les données de la cible.
 
    >[!NOTE]
    >
@@ -102,11 +106,11 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 ## Interrogation de vos données {#query-your-data}
 
-Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en la sélectionnant dans sa cellule, puis en sélectionnant le bouton **[!UICONTROL play]** . Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
+Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en sélectionnant dans sa cellule, puis en sélectionnant le bouton **[!UICONTROL play]** . Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
-Lorsqu’un notebook est inactif pendant une longue période, la connexion entre le notebook et [!DNL Query Service] peut être rompue. Dans ce cas, redémarrez [!DNL JupyterLab] en sélectionnant le bouton **Redémarrer** ![bouton de redémarrage](/help/images/icons/restart.png) situé dans le coin supérieur droit à côté du bouton d’alimentation.
+Lorsqu’un notebook est inactif pendant une période prolongée, la connexion entre le notebook et [!DNL Query Service] peut être rompue. Dans ce cas, redémarrez [!DNL JupyterLab] en sélectionnant le bouton **Redémarrer** ![bouton de redémarrage](/help/images/icons/restart.png) situé dans le coin supérieur droit à côté du bouton d’alimentation.
 
-Le noyau du notebook se réinitialise, mais les cellules restent, exécutez à nouveau toutes les cellules pour continuer là où vous vous êtes arrêté.
+Le noyau du notebook se réinitialise, mais les cellules restent, réexécutez toutes les cellules pour continuer là où vous en étiez.
 
 ### Décompte horaire de visiteurs {#hourly-visitor-count}
 
@@ -126,9 +130,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Dans la requête ci-dessus, l’horodatage de la clause `WHERE` est défini sur la valeur de `target_year`. Incluez des variables dans les requêtes SQL en les insérant entre parenthèses (`{}`).
+Dans la requête ci-dessus, la date et l’heure de la clause `WHERE` sont définies sur la valeur de `target_year`. Incluez des variables dans les requêtes SQL en les insérant entre parenthèses (`{}`).
 
-La première ligne de la requête contient la variable facultative `hourly_visitor`. Les résultats des requêtes seront stockés dans cette variable sous la forme d’un cadre de données pandas. Le stockage des résultats dans un cadre de données vous permet de visualiser ultérieurement les résultats de la requête à l’aide d’un package [!DNL Python] souhaité. Exécutez le code [!DNL Python] suivant dans une nouvelle cellule pour générer un graphique à barres :
+La première ligne de la requête contient la variable facultative `hourly_visitor`. Les résultats des requêtes seront stockés dans cette variable sous la forme d’un cadre de données pandas. Le stockage des résultats dans un cadre de données vous permet de visualiser ultérieurement les résultats de la requête à l’aide du package de [!DNL Python] souhaité. Exécutez le code [!DNL Python] suivant dans une nouvelle cellule pour générer un graphique à barres :
 
 ```python
 trace = go.Bar(
@@ -214,7 +218,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Exécutez le code [!DNL Python] suivant pour générer un histogramme du nombre d’événements par visite :
+Exécutez le code [!DNL Python] suivant pour générer un histogramme pour le nombre d’événements par session de visite :
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -282,4 +286,4 @@ LIMIT  10;
 
 ## Étapes suivantes
 
-Ce tutoriel a présenté quelques exemples d’utilisation de [!DNL Query Service] dans des notebooks [!DNL Jupyter]. Suivez le tutoriel [Analyser vos données à l’aide des notebooks Jupyter](./analyze-your-data.md) pour découvrir la manière dont des opérations similaires sont exécutées à l’aide du SDK d’accès aux données.
+Ce tutoriel a présenté quelques exemples de cas d’utilisation de [!DNL Query Service] dans des notebooks [!DNL Jupyter]. Suivez le tutoriel [Analyser vos données à l’aide des notebooks Jupyter](./analyze-your-data.md) pour découvrir la manière dont des opérations similaires sont exécutées à l’aide du SDK d’accès aux données.

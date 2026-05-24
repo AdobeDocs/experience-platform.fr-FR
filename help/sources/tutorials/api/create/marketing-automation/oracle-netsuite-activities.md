@@ -2,10 +2,13 @@
 title: Créer une connexion source et un flux de données pour les activités Oracle NetSuite à l’aide de l’API Flow Service
 description: Découvrez comment créer une connexion source et un flux de données pour importer les données d’événements Oracle NetSuite dans Experience Platform à l’aide de l’API Flow Service.
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+TQID: https://experienceleague.adobe.com/zOO7eWS6pQLEYvmv5dWdfF5Xm548RYcwrVUygdycJco
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1957'
-ht-degree: 46%
+source-wordcount: 2044
+ht-degree: 47%
 
 ---
 
@@ -101,7 +104,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Explorer votre source {#explore}
 
-Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez explorer le contenu et la structure de vos données source en exécutant une requête GET au point d’entrée `/connections` tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
+Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez désormais explorer le contenu et la structure de vos données source en exécutant une requête GET sur le point d’entrée `/connections` tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
 
 **Format d’API**
 
@@ -117,7 +120,7 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Identifiant de connexion de base généré à l’étape précédente. |
 | `objectType=rest` | Type d’objet que vous souhaitez explorer. Actuellement, cette valeur est toujours définie sur `rest`. |
-| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin d’accès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
+| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin dʼaccès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Experience Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
 | `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Experience Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne en base64. <br> La valeur est vide pour [!DNL Oracle NetSuite Activities].</li></ul> |
@@ -439,8 +442,8 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | Format des données [!DNL Oracle NetSuite Activities] à ingérer. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `data.format` | Format des données [!DNL Oracle NetSuite Activities] que vous souhaitez ingérer. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
 **Réponse**
@@ -608,7 +611,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [Identifiant de mappage](#mapping) généré lors d’une étape précédente. |
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Cette propriété contient des informations sur la planification de l’ingestion du flux de données. |
-| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collecte des données. |
+| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. |
 
 **Réponse**

@@ -4,9 +4,12 @@ description: Découvrez le type de données XDM (modèle de données d’expéri
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 4ac9b3d7-acc8-4a82-b34f-ec63a8bf12e0
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/1ODx6i0IjQdtEftw6u6-ah3HPJNaYY7t3mDsosJpI-k
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: 148
 ht-degree: 5%
 
 ---

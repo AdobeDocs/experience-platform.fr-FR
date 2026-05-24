@@ -2,10 +2,16 @@
 title: Secrets dans l’API Reactor
 description: Découvrez les principes de base de la configuration des secrets dans l’API Reactor en vue d’une utilisation dans le transfert d’événements.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+TQID: https://experienceleague.adobe.com/s5XY96PrhElQvidslTZ6boB5pKgLL-e1Nu16JsP2q-Y
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: bef6f891-2e8a-425e-8f99-7ddf22070daaid: c975b431-530e-4c29-9216-0301b9e204c1id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: c5c5043c-63aa-4aa6-ade0-3840596e7a6bid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 88%
+source-wordcount: 1224
+ht-degree: 84%
 
 ---
 
@@ -27,7 +33,7 @@ Ce guide fournit un aperçu général de la configuration des secrets pour une u
 
 ## Informations d’identification
 
-Chaque secret contient un attribut `credentials` qui rassemble ses valeurs d’identification respectives. Lors de la [création d’un secret dans l’API](../endpoints/secrets.md#create), chaque type de secret dispose d’attributs requis différents, comme indiqué dans les sections ci-dessous :
+Chaque secret contient un attribut `credentials` qui rassemble ses valeurs d’informations d’identification respectives. Lors de la [création d’un secret dans l’API](../endpoints/secrets.md#create), chaque type de secret possède différents attributs obligatoires, comme indiqué dans les sections ci-dessous :
 
 * [`token`](#token)
 * [`simple-http`](#simple-http)
@@ -101,19 +107,19 @@ En cas d’échec de l’échange, l’opération est tentée trois fois de plus
 
 ### `oauth2-google` {#oauth2-google}
 
-Les secrets avec une valeur `type_of` de `oauth2-google` requièrent l’attribut suivant sous `credentials` :
+Les secrets disposant d’une valeur `type_of` de `oauth2-google` nécessitent l’attribut suivant sous `credentials` :
 
 | Attribut Credential | Type de données | Description |
 | --- | --- | --- |
-| `scopes` | Tableau | Répertorie les portées du produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Publicités Google](https://developers.google.com/google-ads/api/docs/oauth/overview) : `https://www.googleapis.com/auth/adwords`</li><li>[&#x200B; Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) Google : `https://www.googleapis.com/auth/pubsub`</li></ul> |
+| `scopes` | Tableau | Répertorie les étendues de produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) : `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) : `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
 Après avoir créé le secret `oauth2-google`, la réponse inclut une propriété `meta.authorization_url`. Vous devez copier et coller cette URL dans un navigateur pour terminer le flux d’authentification Google.
 
 #### Réautoriser un secret `oauth2-google`
 
-L’URL d’autorisation d’un secret `oauth2-google` expire une heure après la création du secret (comme indiqué par `meta.authorization_url_expires_at`). Au-delà, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
+L’URL d’autorisation d’un secret `oauth2-google` expire une heure après la création du secret (comme indiqué par `meta.authorization_url_expires_at`). Passé ce délai, le secret doit être réautorisé afin de renouveler le processus d’authentification.
 
-Pour plus d’informations sur la réautorisation d’un secret `oauth2-google` en adressant une demande de PATCH à l’API Reactor, reportez-vous au [guide de point de terminaison de secrets](../endpoints/secrets.md#reauthorize) .
+Reportez-vous au [guide des points d’entrée des secrets](../endpoints/secrets.md#reauthorize) pour plus d’informations sur la réautorisation d’un secret `oauth2-google` en envoyant une requête PATCH à l’API Reactor.
 
 ## Relation entre les environnements
 
@@ -131,13 +137,13 @@ Une fois l’artefact d’échange enregistré dans l’environnement, l’attri
 
 ## Référencer des secrets {#referencing-secrets}
 
-Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/client/core/overview.md)) sur une propriété de transfert d’événements. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
+Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/client/core/overview.md)) sur une propriété de transfert d’événement. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
 
 ![Élément de données secret](../../images/api/guides/secrets/data-element.png)
 
 >[!NOTE]
 >
->Pour ajouter un élément de données secret à une bibliothèque, vous devez avoir au moins un secret `succeeded` associé à l’environnement sur lequel la bibliothèque est en cours de création. Par exemple, si une bibliothèque comporte un élément de données secret qui n’a pas de secret `succeeded` configuré pour la section [!UICONTROL Secret d’évaluation], si vous tentez de créer cette bibliothèque dans l’environnement d’évaluation, une erreur se produira.
+>Pour ajouter un élément de données secret à une bibliothèque, vous devez avoir au moins un secret `succeeded` associé à l’environnement sur lequel la bibliothèque est en cours de création. Par exemple, si une bibliothèque comporte un élément de données secret qui n’a pas de secret `succeeded` configuré pour la section [!UICONTROL Staging Secret] , si vous tentez de créer cette bibliothèque dans l’environnement d’évaluation, une erreur se produira.
 
 Au moment de l’exécution, l’élément de données secret est remplacé par l’artefact d’échange secret correspondant enregistré dans l’environnement.
 

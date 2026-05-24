@@ -4,10 +4,14 @@ solution: Experience Platform
 title: Explorer une connexion eCommerce à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer les connexions eCommerce.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/oWl85RUwdwn8MKBlxIW6EzVISNdSKV0H22RQpk7ZAvs
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 35%
+source-wordcount: 566
+ht-degree: 36%
 
 ---
 
@@ -19,26 +23,26 @@ Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer une connexion **[!
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [[!DNL Sources]](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir la connexion à une connexion **[!UICONTROL eCommerce]** à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de réussir la connexion à une connexion **[!UICONTROL eCommerce]** à l’aide de l’API [!DNL Flow Service].
 
 ### Obtention d’un identifiant de connexion
 
-Pour explorer votre connexion **[!UICONTROL eCommerce]** à l’aide des API [!DNL Experience Platform], vous devez posséder un identifiant de connexion valide. Si vous ne disposez pas déjà d’une connexion pour la connexion **[!UICONTROL eCommerce]** que vous souhaitez utiliser, vous pouvez en créer une à l’aide du tutoriel suivant :
+Pour explorer votre connexion **[!UICONTROL eCommerce]** à l’aide d’API [!DNL Experience Platform], vous devez posséder un identifiant de connexion valide. Si vous ne disposez pas déjà d’une connexion pour la connexion **[!UICONTROL eCommerce]** que vous souhaitez utiliser, vous pouvez en créer une à l’aide du tutoriel suivant :
 
 * [Shopify](../create/ecommerce/shopify.md)
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -64,7 +68,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONNECTION_ID}` | Votre identifiant de connexion **[!UICONTROL eCommerce]**. |
+| `{CONNECTION_ID}` | Identifiant de connexion **[!UICONTROL eCommerce]**. |
 
 **Requête**
 

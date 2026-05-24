@@ -3,9 +3,14 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform Destination SDK
 description: comprendre la terminologie importante lors de la création d’une destination à l’aide d’Experience Platform Destination SDK ;
 exl-id: d65f390a-a980-49b8-9570-840f03534553
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/WNp9QltZI8-cZsW2iN7TGQrdAoZtqIDk-wFK9iRSf5s
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: 676
 ht-degree: 3%
 
 ---

@@ -2,9 +2,14 @@
 title: Point d’entrée de l’API des packages d’outils Sandbox
 description: Le point d’entrée /packages de l’API Sandbox Tooling vous permet de gérer les packages par programmation dans Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
+TQID: https://experienceleague.adobe.com/Q6sl1kMYL9VXgUMLO59R9olaMUNfrOE1mvElFeuTK3g
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2933'
+source-wordcount: 2944
 ht-degree: 11%
 
 ---
@@ -139,7 +144,7 @@ curl -X PUT \
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
 | `action` | Pour ajouter des artefacts dans le package, la valeur de l’action doit être **AJOUTER**. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
 | `artifacts` | Liste des artefacts à ajouter au package. Le package ne sera pas modifié si la liste est **nulle** ou **vide**. Les artefacts sont dédupliqués avant d’être ajoutés au package. Consultez le tableau ci-dessous pour obtenir la liste complète des artefacts pris en charge. | Tableau | Non |
-| `expiry` | La date et l’heure qui définissent la date d’expiration du package. La valeur par défaut est de 90 jours à compter de l’appel de l’API PUT si l’expiration n’est pas spécifiée dans la payload. Le champ d’expiration de la réponse est « heure UTC de l’époque ». | Chaîne (format d’horodatage UTC) | Non |
+| `expiry` | La date et l’heure qui définissent la date d’expiration du package. La valeur par défaut est de 90 jours à partir du moment où l’API PUT est appelée si l’expiration n’est pas spécifiée dans la payload. Le champ d’expiration de la réponse est « heure UTC de l’époque ». | Chaîne (format d’horodatage UTC) | Non |
 
 Les types d’artefacts suivants sont actuellement pris en charge.
 
@@ -230,7 +235,7 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour supprimer des artefacts d&#39;un package, la valeur de l&#39;action doit être **DELETE**. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
+| `action` | Pour supprimer des artefacts d&#39;un package, la valeur de l&#39;action doit être ****. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
 | `artifacts` | Liste des artefacts à supprimer du package. Le package ne sera pas modifié si la liste est **nulle** ou **vide**. | Tableau | Non |
 
 **Réponse**
@@ -382,7 +387,7 @@ Une réponse réussie renvoie un motif qui indique que l’ID du package a été
 
 ## Publication d’un package {#publish}
 
-Pour activer l’importation d’un package dans un sandbox, vous devez le publier. Envoyez une requête GET au point d’entrée `/packages` lors de la spécification de l’identifiant du package que vous souhaitez publier.
+Pour activer l’importation d’un package dans un sandbox, vous devez le publier. Envoyez une requête GET au point d’entrée `/packages` tout en spécifiant l’identifiant du package que vous souhaitez publier.
 
 **Format d’API**
 
@@ -409,7 +414,7 @@ curl -X GET \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `expiryPeriod` | Cette période spécifiée par l’utilisateur définit la date d’expiration du package (en jours) à partir de l’heure de publication du package. Cette valeur ne doit pas être négative.<br> Si aucune valeur n’est spécifiée, la valeur par défaut est calculée sur 90 (jours) à compter de la date de publication. | Nombre entier | Non |
+| `expiryPeriod` | Cette période spécifiée par l’utilisateur définit la date d’expiration du package (en jours) à partir de l’heure de publication du package. Cette valeur ne doit pas être négative.<br> Si aucune valeur n’est spécifiée, la valeur par défaut est calculée sur 90 (jours) à compter de la date de publication. | Entier | Non |
 
 **Réponse**
 
@@ -433,7 +438,7 @@ Une réponse réussie renvoie le package publié.
 
 ## Recherche d’un package {#look-up-package}
 
-Vous pouvez rechercher un package individuel en effectuant une requête GET au point d’entrée `/packages` qui inclut l’identifiant correspondant du package dans le chemin d’accès de la requête.
+Vous pouvez rechercher un package individuel en adressant une requête GET au point d’entrée `/packages` qui inclut l’identifiant correspondant du package dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -501,7 +506,7 @@ Une réponse réussie renvoie des détails pour l’ID de package interrogé. La
 
 ## Liste des packages {#list-packages}
 
-Vous pouvez répertorier tous les packages de votre organisation en effectuant une requête GET au point d’entrée `/packages`.
+Vous pouvez répertorier tous les packages de votre organisation en adressant une requête GET au point d’entrée `/packages`.
 
 **Format d’API**
 
@@ -511,7 +516,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md). |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md). |
 
 **Requête**
 
@@ -900,7 +905,7 @@ Une réponse réussie renvoie une liste d’enfants pour les objets .
 
 ## Vérifiez les autorisations basées sur les rôles pour importer tous les artefacts de package. {#role-based-permissions}
 
-Vous pouvez vérifier si vous disposez des autorisations pour importer des artefacts de package en effectuant une requête GET au point d’entrée `/packages` tout en spécifiant l’identifiant du package et le nom du sandbox cible.
+Vous pouvez vérifier si vous disposez des autorisations pour importer des artefacts de package en envoyant une requête GET au point d’entrée `/packages` tout en spécifiant l’identifiant du package et le nom du sandbox cible.
 
 **Format d’API**
 
@@ -1048,7 +1053,7 @@ Une réponse réussie renvoie les autorisations de ressources pour le sandbox ci
 
 ## Liste des traitements d’export/import {#list-jobs}
 
-Vous pouvez répertorier les tâches d’exportation/importation actuelles en effectuant une requête GET au point d’entrée `/packages`.
+Vous pouvez répertorier les tâches d’exportation/importation actuelles en effectuant une requête GET au point d’entrée `/packages` .
 
 **Format d’API**
 
@@ -1058,7 +1063,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md). |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md). |
 
 **Requête**
 
@@ -1300,7 +1305,7 @@ Une réponse réussie renvoie des détails concernant la demande de partage appr
 
 ### Liste des demandes de partage entrantes/sortantes {#outgoing-and-incoming-requests}
 
-Répertoriez les demandes de partage entrantes et sortantes en effectuant une requête GET au point d’entrée `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`.
+Répertoriez les requêtes de partage entrantes et sortantes en effectuant une requête GET au point d’entrée `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`.
 
 **Format d’API**
 
@@ -1481,7 +1486,7 @@ Une réponse de succès renvoie les détails d’une demande de partage.
 
 ### Récupérer la liste partagée {#transfers-list}
 
-Récupérez une liste de demandes de transfert en effectuant une requête GET au point d’entrée `/transfer/list?{QUERY_PARAMETERS}`, en modifiant les paramètres de requête si nécessaire.
+Récupérez une liste de requêtes de transfert en adressant une requête GET au point d’entrée `/transfer/list?{QUERY_PARAMETERS}`, en modifiant les paramètres de requête si nécessaire.
 
 **Format d’API**
 

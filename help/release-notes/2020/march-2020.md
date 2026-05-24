@@ -6,9 +6,14 @@ last-update: March 10, 2020
 author: ens71067
 keywords: notes de mise à jour ;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/qdI4gw3b2z78bQjddOZEcjEF-JYmlHYX62eivQdVLqM
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: 874
 ht-degree: 61%
 
 ---
@@ -35,7 +40,7 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemb
 
 >[!NOTE]
 >
->Certaines des nouvelles fonctionnalités suivantes sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. Les fonctionnalités en version bêta peuvent être modifiées.
+>Certaines des nouvelles fonctionnalités suivantes sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. Les fonctionnalités en version Beta peuvent être modifiées.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
@@ -68,7 +73,7 @@ Pour en savoir plus sur l’ingestion de données dans Experience Platform, cons
 
 ## Destinations {#destinations}
 
-Dans [Real-Time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 
@@ -97,7 +102,7 @@ Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaî
 
 * Aucune
 
-Pour plus d’informations sur [!DNL Identity Service], consultez la présentation d’Identity Service [&#128279;](../../identity-service/home.md).
+Pour plus d’informations sur [!DNL Identity Service], consultez la présentation d’Identity Service [](../../identity-service/home.md).
 
 ## Sources {#sources}
 
@@ -109,7 +114,7 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Signaux obsolètes du connecteur d’Adobe Audience Manager | Les données au niveau du signal d’Audience Manager ne seront plus envoyées. Notez que l’adhésion aux segments pour les Caractéristiques et les Segments sera toujours incluse. Suite à ce changement, les jeux de données entrants ne seront plus générés. |
+| Signaux obsolètes du connecteur d’Adobe Audience Manager | Les données au niveau du signal d’Audience Manager ne seront plus envoyées. Notez que l’appartenance aux segments pour les Caractéristiques et les Segments sera toujours incluse. Suite à ce changement, les jeux de données entrants ne seront plus générés. |
 | Jeux de données renommés | Les jeux de données générés par le connecteur d’Audience Manager ont des noms et des descriptions à jour. |
 | Activer le bouton [!DNL Profile] dans Audience Manager | [!DNL Profile] bouton (bascule) peut être activé ou désactivé pour convertir un jeu de données en [!DNL Real-Time Customer Profile]. La bascule est activée par défaut. |
 | Prise en charge de l’interface utilisateur pour les systèmes de stockage dans le cloud | Nouveau connecteur source pour [!DNL Azure Data Lake Storage Gen2] dans l’interface utilisateur. |

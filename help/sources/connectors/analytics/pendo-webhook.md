@@ -3,10 +3,14 @@ title: Présentation de Pendo Source
 description: Découvrez comment connecter Pendo à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur en utilisant des webhooks.
 badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/K3ehdkUA-4pw7qaiCKD2jb-el-DXptmbGWLDhIZnT7c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 7%
+source-wordcount: 394
+ht-degree: 13%
 
 ---
 
@@ -16,7 +20,7 @@ ht-degree: 7%
 >
 >La source [!DNL Pendo] est en version Beta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’une application d’analyse tierce. La prise en charge des fournisseurs d’analyses inclut [!DNL Pendo].
 
@@ -38,7 +42,7 @@ Un compte [!DNL Pendo]. Si vous n’en avez pas encore, consultez la page [[!DNL
 
 ### Configurer [!DNL Pendo] Webhook {#set-up-webhook}
 
-Une fois le flux de données créé, vous devez configurer un webhook pour informer Experience Platform des événements [!DNL Pendo]. [!DNL Pendo] Webhooks peuvent envoyer des notifications en temps réel à d’autres services lorsque certains événements se produisent et envoyer ces informations à votre source de [!DNL Pendo]. Pour plus d’informations, consultez les tutoriels sur [l’obtention de l’URL de point d’entrée de diffusion en continu](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) et [la configuration d’un  [!DNL Pendo]  Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Une fois le flux de données créé, vous devez configurer un webhook pour informer Experience Platform des événements [!DNL Pendo]. [!DNL Pendo] Les Webhooks peuvent envoyer des notifications en temps réel à d’autres services lorsque certains événements se produisent et envoyer ces informations à votre source d’[!DNL Pendo]. Pour plus d’informations, consultez les tutoriels sur [l’obtention de l’URL de point d’entrée de diffusion en continu](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) et [la configuration d’un  [!DNL Pendo]  Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
 
 ## Connexion de [!DNL Pendo] à Experience Platform {#connect-to-platform}
 

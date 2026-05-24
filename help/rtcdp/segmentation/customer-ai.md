@@ -1,18 +1,23 @@
 ---
-keywords: segments rtcdp;rtcdp du créateur de segments;segment rtcdp;segment rtcdp;rtcdp du client
-title: IA dédiée aux clients dans Real-Time Customer Data Platform
-description: Présentation de Customer AI et de la manière dont il peut contribuer à générer des scores pour des résultats spécifiques tels que les conversions ou la perte de clientèle.
+keywords: segments rtcdp;créateur de segments rtcdp;segment rtcdp;rtcdp client
+title: Customer AI dans Real-Time Customer Data Platform
+description: Présentation de l’IA dédiée aux clients et de la manière dont elle peut aider à générer des scores pour des résultats spécifiques tels que les conversions ou l’attrition.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+TQID: https://experienceleague.adobe.com/n982cLcGJPV-RNwhjMoOEat3HWCzml9VlD0-SL43mb8
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d00e9f03-e50b-4162-b143-0c0817c937c2id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 67%
+source-wordcount: 307
+ht-degree: 64%
 
 ---
 
-# IA dédiée aux clients dans Real-Time Customer Data Platform
+# Customer AI dans Real-Time Customer Data Platform
 
-Customer AI, une fonctionnalité d’IA intégrée dans Adobe Real-Time Customer Data Platform, permet aux marketeurs de générer des scores de niveau individuel pour un résultat spécifique, tel que les conversions ou l’attrition.
+L’IA dédiée aux clients, une fonctionnalité d’IA intégrée à Adobe Real-Time Customer Data Platform, permet aux marketeurs de générer des scores de niveau individuel pour un résultat spécifique tel que les conversions ou l’attrition.
 
 À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, vous pouvez tirer parti des prédictions et des informations de l’IA dédiée aux clients pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés. L’IA dédiée aux clients peut vous aider à :
 
@@ -23,7 +28,7 @@ Customer AI, une fonctionnalité d’IA intégrée dans Adobe Real-Time Customer
 * améliorer les profils client avec des facteurs d’influence pour les scores de propension ;
 * Création d’audiences de clients en fonction de facteurs d’influence et de scores de propension.
 
-L’IA dédiée aux clients se trouve dans l’onglet **[!UICONTROL Services]** sous **[!UICONTROL Services Adobe]**.
+L’IA dédiée aux clients se trouve dans l’onglet **[!UICONTROL Services]** sous **[!UICONTROL Adobe services]**.
 
 ![Emplacement de l’IA dédiée aux clients](../assets/overview/rtcdp-customer-ai.png)
 
@@ -33,4 +38,4 @@ Pour commencer à utiliser l’IA dédiée aux clients, vous devez suivre le [tu
 
 Pour en savoir plus sur l’IA dédiée aux clients, commencez par consulter la [présentation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md). En outre, la vidéo suivante montre comment l’IA dédiée aux clients enrichit les profils clients avec des propensions basées sur l’IA et renforce la segmentation et le ciblage des clients.
 
->[!VIDEO](https://video.tv.adobe.com/v/328475/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)

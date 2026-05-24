@@ -2,10 +2,16 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2022
 description: Les notes de mise à jour de janvier 2022 pour Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/wcRVicN4gHBCNm4lHB0IYXUQSRXH78OAIoxWYkAsmn8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2: id: ac9ff56e-fdaf-4412-aba7-1f588cb8aa2bid: b08f50f9-9135-4961-a21e-47e56473ae77id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: dcded644-509e-49c5-ae85-3862a2a08609id: f0c9f224-75f2-4864-8de6-859ae7856690id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 81%
+source-wordcount: 1397
+ht-degree: 77%
 
 ---
 
@@ -19,14 +25,14 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [Query Service](#query-service)
+- [Service de requête](#query-service)
 - [Sandbox](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [Service de segmentation](#segmentation)
 - [Sources](#sources)
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
 
 **Fonctionnalités mises à jour**
 
@@ -72,7 +78,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Personnalisation de la même page et de la page suivante | La [fonctionnalité de personnalisation de la même page et de la page suivante](../../destinations/ui/activate-edge-personalization-destinations.md) fournit une vue partagée et ciblée des utilisateurs pour les applications sur Edge Network, afin d’assurer la cohérence entre les canaux marketing et client. Cette personnalisation est possible grâce à la [connexion Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et à la [connexion de personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour configurer vos campagnes de personnalisation de la même page ou de la page suivante, reportez-vous au [tutoriel dédié](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Surveillance des destinations par lots et mesures au niveau du segment | La fonctionnalité de surveillance des destinations est désormais étendue à partir des destinations de diffusion en continu pour inclure également les destinations par lots et les mesures au niveau du segment pour vos flux de données d’activation. Pour plus d’informations, lisez les sections [Tableau de bord de surveillance des destinations](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [Tableau de bord de surveillance des tâches de segment](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard) et [Affichage au niveau du segment](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Modification du planning dans l’interface utilisateur pour les flux de données d’activation par lots existants | Cette version introduit l’option permettant de modifier le planning de vos flux de données d’activation existants vers des destinations par lots. Pour plus d’informations, lisez [Activation des données de profils vers les destinations de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md). |
-| Améliorations des destinations Marketo | Les clients d’Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo grâce à la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le [connecteur de destination Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Lorsque vous envoyez des segments d’audience d’Experience Platform vers Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, lisez [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=fr) (l’étape 9 du tutoriel indique comment envoyer les enregistrements de nouvelles personnes dans Marketo). |
+| Améliorations des destinations Marketo | Les clients Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo grâce à la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le connecteur de destination [Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Lors de l’envoi de segments d’audience d’Experience Platform vers Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, lisez [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html) (l’étape 9 du tutoriel indique comment envoyer les enregistrements de nouvelles personnes dans Marketo). |
 
 **Nouvelles destinations**
 
@@ -83,7 +89,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
-## Query Service {#query-service}
+## Service de requête {#query-service}
 
 [!DNL Query Service] vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
 
@@ -91,8 +97,8 @@ Pour des informations plus générales sur les destinations, reportez-vous à la
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Bloc anonyme | La structure SQL du bloc anonyme permet de ventiler les tâches de préparation des données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, consultez la [documentation sur les exemples de requêtes pour les blocs anonymes](../../query-service/key-concepts/anonymous-block.md). |
-| Organisation des jeux de données | Fournit une structure de données cohérente et logique pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans le sandbox augmente. Pour plus d’informations, consultez la [documentation sur l’organisation des ressources de données](../../query-service/best-practices/organize-data-assets.md). |
+| Bloc anonyme | La structure SQL du bloc anonyme permet de ventiler les tâches de préparation des données à grande échelle dans le service de requête en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, consultez la [documentation sur les exemples de requêtes pour les blocs anonymes](../../query-service/key-concepts/anonymous-block.md). |
+| Organisation des jeux de données | Fournit une structure de données cohérente et logique pour organiser vos ressources de données à utiliser avec le service de requête à mesure que la quantité de ressources de données dans le sandbox augmente. Pour plus d’informations, consultez la [documentation sur l’organisation des ressources de données](../../query-service/best-practices/organize-data-assets.md). |
 
 Pour plus d’informations sur Query Service [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md) de Query Service.
 
@@ -110,7 +116,7 @@ Pour plus d’informations sur les sandbox, consultez la [présentation des sand
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 **Nouvelles fonctionnalités**
 
@@ -128,6 +134,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Sources bêta passant à la version générale | Les sources suivantes ont été promues de la version bêta à la version générale : <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
+| Sources Beta passant à la version générale | Les sources suivantes ont été promues de la version Beta à la version générale : <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
 | Améliorations de la source [!DNL Event Hubs] | La source [!DNL Event Hubs] prend désormais en charge le type d’authentification par clé SAS non racine pour se connecter et créer la connexion source. Pour plus d’informations, consultez la [[!DNL Event Hubs] présentation](../../sources/connectors/cloud-storage/eventhub.md). |
 | Améliorations de la source [!DNL SFTP] | La source [!DNL SFTP] vous permet désormais d’établir un nombre défini de connexions simultanées maximales qu’un flux de données peut utiliser pour se connecter au serveur SFTP. Pour plus d’informations, consultez la [[!DNL SFTP] présentation](../../sources/connectors/cloud-storage/sftp.md). |

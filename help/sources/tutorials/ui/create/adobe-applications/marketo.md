@@ -2,10 +2,15 @@
 title: Créer une connexion et un flux de données Marketo Engage Source dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source et un flux de données Marketo Engage dans l’interface utilisateur afin d’importer des données B2B dans Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/bMZIsfbMaN7xx5WfkEnIJ6Q946ZORS0q-hs9rS4rNfY
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 43%
+source-wordcount: 1800
+ht-degree: 31%
 
 ---
 
@@ -13,7 +18,7 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
->Avant de créer une connexion source [!DNL Marketo Engage] et un flux de données, vous devez d’abord vous assurer que vous avez [mappé votre ID d’organisation Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=fr) dans [!DNL Marketo]. En outre, vous devez également vous assurer que vous avez terminé [&#x200B; [!DNL Marketo]  remplissage automatique de vos espaces de noms et schémas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) avant de créer une connexion source et un flux de données.
+>Avant de créer une connexion source [!DNL Marketo Engage] et un flux de données, vous devez d’abord vous assurer que vous avez [mappé votre ID d’organisation Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) dans [!DNL Marketo]. En outre, vous devez également vous assurer que vous avez terminé  [!DNL Marketo]  remplissage automatique de vos espaces de noms et schémas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) avant de créer une connexion source et un flux de données.[
 
 Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Marketo Engage] (ci-après dénommé « [!DNL Marketo] ») dans l’interface utilisateur pour importer des données B2B dans Adobe Experience Platform.
 
@@ -21,7 +26,7 @@ Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Utilitaire de génération automatique de schémas et d’espaces de noms B2B &#x200B;](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) : l’utilitaire de génération automatique de schémas et d’espaces de noms B2B vous permet d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos schémas et espaces de noms B2B. Vous devez d’abord terminer vos espaces de noms et schémas B2B, avant de créer une connexion source [!DNL Marketo] et un flux de données.
+* [Utilitaire de génération automatique de schémas et d’espaces de noms B2B ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) : l’utilitaire de génération automatique de schémas et d’espaces de noms B2B vous permet d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos schémas et espaces de noms B2B. Vous devez d’abord terminer vos espaces de noms et schémas B2B, avant de créer une connexion source [!DNL Marketo] et un flux de données.
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Créer et modifier des schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md) : découvrez comment créer et modifier des schémas dans l’interface utilisateur.
@@ -47,31 +52,31 @@ Une fois que vous avez rassemblé les informations d’identification requises, 
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *Applications Adobe*, sélectionnez **[!UICONTROL Marketo Engage]**, puis **[!UICONTROL Ajouter des données]**.
+Dans la catégorie *Applications*, sélectionnez **[!UICONTROL Marketo Engage]**, puis **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
 
 ![Le catalogue des sources avec la source Marketo Engage sélectionnée.](../../../../images/tutorials/create/marketo/catalog.png)
 
-La page **[!UICONTROL Connexion au compte Marketo Engage]** s’affiche. Sur cette page, vous pouvez utiliser un nouveau compte ou accéder à un compte existant.
+La page **[!UICONTROL Connect Marketo Engage account]** s’affiche. Sur cette page, vous pouvez utiliser un nouveau compte ou accéder à un compte existant.
 
 >[!BEGINTABS]
 
 >[!TAB Créer un compte]
 
-Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom, une description facultative et vos informations d’identification.
+Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom, une description facultative et vos informations d’identification.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvelle interface de compte permettant d’authentifier un nouveau compte Marketo.](../../../../images/tutorials/create/marketo/new.png)
 
 >[!TAB Utiliser un compte existant]
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans le catalogue des comptes existants.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte à utiliser dans le catalogue des comptes existants.
 
-Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![Interface du compte existant dans laquelle vous pouvez sélectionner un compte Marketo existant.](../../../../images/tutorials/create/marketo/existing.png)
 
@@ -81,13 +86,13 @@ Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 Une fois le compte [!DNL Marketo] créé, une interface sʼaffiche pour explorer les jeux de données [!DNL Marketo].
 
-La moitié gauche de l’interface est un navigateur de répertoire qui affiche les 10 jeux de données [!DNL Marketo]. Une connexion source [!DNL Marketo] pleinement fonctionnelle nécessite l’ingestion des neuf jeux de données différents. Si vous utilisez également la fonctionnalité Account-Based Marketing (ABM) [!DNL Marketo], vous devez créer un 10e flux de données pour ingérer le jeu de données [!UICONTROL Comptes nommés].
+La moitié gauche de l’interface est un navigateur de répertoire qui affiche les 10 jeux de données [!DNL Marketo]. Une connexion source [!DNL Marketo] pleinement fonctionnelle nécessite l’ingestion des neuf jeux de données différents. Si vous utilisez également la fonctionnalité de marketing basé sur les comptes [!DNL Marketo] (ABM), vous devez également créer un 10e flux de données pour ingérer le jeu de données [!UICONTROL Named Accounts].
 
 >[!NOTE]
 >
->À des fins de concision, le tutoriel suivant utilise [!UICONTROL Opportunités] comme exemple, mais les étapes décrites ci-dessous s’appliquent aux 10 jeux de données [!DNL Marketo].
+>À des fins de concision, le tutoriel suivant utilise [!UICONTROL Opportunities] comme exemple, mais les étapes décrites ci-dessous s’appliquent aux 10 jeux de données [!DNL Marketo].
 
-Sélectionnez le jeu de données à ingérer. Cette opération met à jour l’interface pour afficher un aperçu de votre jeu de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Sélectionnez le jeu de données à ingérer. Cette opération met à jour l’interface pour afficher un aperçu de votre jeu de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 ![Interface de prévisualisation](../../../../images/tutorials/create/marketo/preview.png)
 
@@ -97,19 +102,19 @@ Ensuite, vous devez fournir des informations sur votre jeu de données et votre 
 
 ### Détails du jeu de données {#dataset-details}
 
-Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont stockées dans le lac de données sous forme de jeux de données. Au cours de cette étape, vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
+Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont conservées sous forme de jeux de données dans le lac de données. Au cours de cette étape, vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
 
 >[!BEGINTABS]
 
 >[!TAB Utiliser un nouveau jeu de données]
 
-Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis indiquez un nom et une description facultative pour votre jeu de données. Vous devez également sélectionner un schéma de modèle de données d’expérience (XDM) auquel votre jeu de données adhère.
+Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL New dataset]**, puis fournissez un nom et une description facultative pour votre jeu de données. Vous devez également sélectionner un schéma de modèle de données d’expérience (XDM) auquel votre jeu de données adhère.
 
 ![Nouvelle interface de sélection de jeu de données.](../../../../images/tutorials/create/marketo/new-dataset.png)
 
 >[!TAB Utiliser un jeu de données existant]
 
-Si vous disposez déjà d’un jeu de données, sélectionnez **[!UICONTROL Jeu de données existant]** puis utilisez l’option **[!UICONTROL Recherche avancée]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel ou non.
+Si vous disposez déjà d’un jeu de données, sélectionnez **[!UICONTROL Existing dataset]**, puis utilisez l’option **[!UICONTROL Advanced search]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel ou non.
 
 ![Interface de sélection de jeu de données existante.](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
@@ -119,14 +124,14 @@ Si vous disposez déjà d’un jeu de données, sélectionnez **[!UICONTROL Jeu 
 
 >[!IMPORTANT]
 >
->La source [!DNL Marketo] utilise l’ingestion par lots pour ingérer tous les enregistrements historiques et l’ingestion par flux pour les mises à jour en temps réel. Cela permet à la source de continuer la diffusion en continu tout en ingérant les enregistrements erronés. Activez le bouton (bascule) **[!UICONTROL Ingestion partielle]**, puis définissez le [!UICONTROL Seuil d’erreur %] au maximum pour empêcher l’échec du flux de données.
+>La source [!DNL Marketo] utilise l’ingestion par lots pour ingérer tous les enregistrements historiques et l’ingestion par flux pour les mises à jour en temps réel. Cela permet à la source de continuer la diffusion en continu tout en ingérant les enregistrements erronés. Activez le bouton (bascule) **[!UICONTROL Partial ingestion]**, puis définissez la [!UICONTROL Error threshold %] sur maximum pour empêcher l’échec du flux de données.
 
-Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer/désactiver le **[!UICONTROL jeu de données de profil]** pour activer vos données pour l’ingestion de profil. Vous pouvez également utiliser cette étape pour activer les **[!UICONTROL diagnostics d’erreur]** et **[!UICONTROL ingestion partielle]**.
+Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer **[!UICONTROL Profile dataset]** données pour l’ingestion de profil. Vous pouvez également utiliser cette étape pour activer **[!UICONTROL Error diagnostics]** et **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnostics d’erreur]** : sélectionnez **[!UICONTROL Diagnostics d’erreur]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
-* **[!UICONTROL Ingestion partielle]** : l’[ingestion par lots partielle](../../../../../ingestion/batch-ingestion/partial.md) permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
+* **[!UICONTROL Error diagnostics]** : sélectionnez **[!UICONTROL Error diagnostics]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
+* **[!UICONTROL Partial ingestion]** : l’[ingestion par lots partielle](../../../../../ingestion/batch-ingestion/partial.md) est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
 
-Au cours de cette étape, vous pouvez activer **[!UICONTROL Flux de données d’exemple]** pour limiter l’ingestion des données et éviter les coûts supplémentaires liés à l’ingestion de toutes les données historiques, y compris les identités de personne.
+Au cours de cette étape, vous pouvez permettre aux **[!UICONTROL Sample dataflow]** de limiter l’ingestion des données et d’éviter les coûts supplémentaires liés à l’ingestion de toutes les données historiques, y compris les identités des personnes.
 
 >[!BEGINSHADEBOX]
 
@@ -141,7 +146,7 @@ L’exemple de flux de données est une configuration que vous pouvez définir p
 
 ![Section des configurations de flux de données de la page des détails du flux de données.](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
 
-En outre, si vous ingérez des données à partir du jeu de données d’entreprises, vous pouvez activer l’option **[!UICONTROL Exclure les comptes non réclamés]** pour exclure les comptes non réclamés de l’ingestion.
+En outre, si vous ingérez des données à partir du jeu de données d’entreprises, vous pouvez **[!UICONTROL Exclude unclaimed accounts]** permettre d’exclure les comptes non réclamés de l’ingestion.
 
 Lorsque des personnes remplissent un formulaire, [!DNL Marketo] crée un enregistrement de compte fantôme basé sur le nom de la société qui ne contient aucune autre donnée. Pour les nouveaux flux de données, le bouton (bascule) d’exclusion des comptes non réclamés est activé par défaut. Pour les flux de données existants, vous pouvez activer ou désactiver la fonction, les modifications s’appliquant aux données nouvellement ingérées et non aux données existantes.
 
@@ -149,7 +154,7 @@ Lorsque des personnes remplissent un formulaire, [!DNL Marketo] crée un enregis
 
 ## Mappez vos champs sources du jeu de données [!DNL Marketo] aux champs XDM cibles.
 
-L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
+L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
 Chaque jeu de données [!DNL Marketo] comporte ses propres règles de mappage spécifiques à suivre. Pour plus d’informations sur le mappage de jeux de données [!DNL Marketo] à XDM, consultez les sections suivantes :
 
@@ -168,16 +173,16 @@ Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’u
 
 ![L’interface de mappage pour les données Marketo.](../../../../images/tutorials/create/marketo/mapping.png)
 
-Une fois vos jeux de mappages prêts, cliquez sur **[!UICONTROL Suivant]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois vos jeux de mappages prêts, sélectionnez **[!UICONTROL Next]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ## Vérifier le flux de données
 
-L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant de l’entité source choisie et le nombre de colonnes au sein de cette entité source.
-* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Connection]** : affiche le type de source, le chemin d’accès correspondant de l’entité source choisie et le nombre de colonnes au sein de cette entité source.
+* **[!UICONTROL Assign dataset & map fields]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 
-Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Enregistrer et ingérer]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Save & ingest]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![Page de révision dans laquelle vous pouvez confirmer les détails de votre flux de données avant l’ingestion.](../../../../images/tutorials/create/marketo/review.png)
 
@@ -191,7 +196,7 @@ Les attributs personnalisés des jeux de données ne peuvent pas être masqués 
 
 ## Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]**, disponible dans l’espace de travail [!UICONTROL Flux de données]. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail [!UICONTROL Dataflows]. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
 
 ## Étapes suivantes
 

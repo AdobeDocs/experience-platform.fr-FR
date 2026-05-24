@@ -2,9 +2,15 @@
 title: FAQ sur Adobe Experience Platform Web SDK
 description: Obtenez des réponses aux questions fréquentes sur Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+TQID: https://experienceleague.adobe.com/BYHDdbH5bkjkmokYEgmmAbI3hyVtaV0iKu1n03ZAFUw
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: a8b0238e-1d43-4679-a3b4-5ba1bad83baaid: ba929a52-9339-4154-9487-317dc875a3c7id: baaa0dd2-d27e-4921-aae3-7888623a5fa5id: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: b64298cc-90cc-46b7-8917-ee391f1c7516id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: e8a4c7eb-7254-4984-ac46-e651a57c7e39id: ee602049-8a18-43df-9299-a689a025a371id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: 1714
 ht-degree: 1%
 
 ---
@@ -78,7 +84,7 @@ Non. Tout client Adobe Digital Experience peut utiliser Adobe Experience Platfor
 * Les clients qui n’ont *accès* à Experience Platform ou à la plateforme de données clients en temps réel et qui souhaitent utiliser le [!DNL Web SDK] doivent configurer les autorisations appropriées pour créer des schémas et des flux de données dans l’interface utilisateur de collecte de données ou d’Experience Platform.
 * Les clients qui ont accès à Experience Platform ou à Real-Time CDP et souhaitent utiliser le [!DNL Web SDK] devront configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de collecte de données ou dans l’interface utilisateur Experience Platform.
 
-Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=fr).
+Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Qui doit utiliser le SDK web ?
 
@@ -144,11 +150,11 @@ Si vous utilisez nos SDK et envoyez XDM à Edge Network, ces nouvelles fonctionn
 
 ## Qu’est-ce qu’un CNAME ou un domaine propriétaire et pourquoi est-ce important ?
 
-Voir le [programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/adobe-managed-cert) dans le guide des services principaux.
+Voir le [programme de certificat géré par ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) dans le guide des services principaux.
 
 ## Le Adobe Experience Platform Web SDK utilise-t-il des cookies ? Dans l&#39;affirmative, quels cookies utilise-t-elle ?
 
-Voir [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk) dans le guide des services principaux.
+Voir [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) dans le guide des services principaux.
 
 ## Quels navigateurs Adobe Experience Platform Web SDK prend-il en charge ?
 

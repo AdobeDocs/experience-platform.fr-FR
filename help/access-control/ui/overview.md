@@ -4,9 +4,13 @@ solution: Experience Platform
 title: Présentation de lʼinterface utilisateur du contrôle dʼaccès
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités d’Experience Platform à l’aide de Adobe Admin Console. Ce document sert de guide de navigation dans Admin Console pour gérer le contrôle d’accès pour Experience Platform.
 exl-id: 6d83cbf5-c09f-4e2a-9678-b124981f8e83
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/jq8Y3DibnJVHAsV30-MNRKzjhr7MgVDqQXQZcrmpfQ0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: 197
 ht-degree: 77%
 
 ---
