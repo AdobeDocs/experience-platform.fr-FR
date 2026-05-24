@@ -344,7 +344,7 @@ Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requ�
 
 La vidéo suivante montre comment accéder à l’évaluation d’audience flexible et l’utiliser dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453642?captions=fre_fr&)
 
 ## Questions fréquentes {#faq}
 

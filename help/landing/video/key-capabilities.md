@@ -58,4 +58,4 @@ Cette vidéo présente les principales fonctionnalités d’Experience Platform 
 1. Améliorer la diffusion et la personnalisation des expériences en temps réel
 1. Gagnez la confiance grâce aux contrôles de gouvernance, de sécurité et de confidentialité
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428506?captions=fre_fr&quality=12&learn=on)

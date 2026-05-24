@@ -125,7 +125,7 @@ Un graphique d’identité est une carte des relations entre différents espaces
 
 La vidéo suivante est destinée à étayer votre compréhension des identités et des graphiques dʼidentité.
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422771?captions=fre_fr&quality=12&learn=on)
 
 ## Comprendre le rôle d’Identity Service dans l’infrastructure Experience Platform
 
