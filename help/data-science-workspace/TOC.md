@@ -6,10 +6,11 @@ user-guide-description: Utilisez le machine learning pour développer, entraîne
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+nudge: true
+source-git-commit: 27b3100c721209280175b496e1767a55f1c7b90b
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 89%
+source-wordcount: '246'
+ht-degree: 85%
 
 ---
 
@@ -20,10 +21,10 @@ ht-degree: 89%
 * [Accès à l’espace de travail de science des données et fonctionnalités associées](access-features-dsw.md)
 * [Présentation détaillée de l’espace de travail de science des données](walkthrough.md)
 * Notebooks JupyterLab {#jupyterlab}
-   * [Présentation](jupyterlab/overview.md)
+   * [Vue d’ensemble](jupyterlab/overview.md)
    * [Accès aux données](jupyterlab/access-notebook-data.md)
    * [Analyse de vos données](jupyterlab/analyze-your-data.md)
-   * [Query Service](jupyterlab/query-service.md)
+   * [Service de requête](jupyterlab/query-service.md)
    * [Analyse exploratoire des données (AED)](jupyterlab/eda-notebook.md)
    * [Création d’un modèle à l’aide du créateur de recettes](jupyterlab/create-a-model.md)
    * [Collaboration dans JupyterLab à l’aide de Git](jupyterlab/using-git-for-collaboration.md)
@@ -65,4 +66,4 @@ ht-degree: 89%
    * [Planification de la formation et de la notation automatisées d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

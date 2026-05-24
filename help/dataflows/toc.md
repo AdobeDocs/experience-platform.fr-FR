@@ -4,7 +4,8 @@ user-guide-title: Guide des flux de données
 user-guide-description: Découvrez les flux de données et comment les configurer sur différents services.
 feature: Dataflows
 role: Developer
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: 27b3100c721209280175b496e1767a55f1c7b90b
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 45%

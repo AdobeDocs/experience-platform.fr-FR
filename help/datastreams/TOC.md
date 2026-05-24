@@ -6,7 +6,8 @@ breadcrumb-title: Guide des flux de données
 user-guide-description: Découvrez comment configurer des flux de données dans Adobe Experience Platform.
 feature: Datastreams
 role: Developer
-source-git-commit: 5e2445e2f1ec71aeeb2b6abbd032dad607a7427b
+nudge: true
+source-git-commit: 27b3100c721209280175b496e1767a55f1c7b90b
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 78%
