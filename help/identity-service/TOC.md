@@ -5,7 +5,8 @@ breadcrumb-title: Guide du service d’identités d’Experience Platform
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: 0cd7986ba2407a6db367245cacb06a8befa234c1
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 63%

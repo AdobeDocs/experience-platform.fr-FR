@@ -5,7 +5,8 @@ user-guide-description: Activez des audiences à partir d’Audience Manager ve
 description: Ce document répertorie la table des matières de l’activation développée de Adobe Audience Manager
 feature: Destinations
 role: Admin,User
-source-git-commit: 2ca2558d2bfdae9f5ba58489c8161c83909a8e27
+nudge: true
+source-git-commit: 0cd7986ba2407a6db367245cacb06a8befa234c1
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 66%
