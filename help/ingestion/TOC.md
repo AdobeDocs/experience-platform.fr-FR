@@ -5,7 +5,8 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Importez vos données dans Experience Platform via une ingestion par lots ou en flux continu.
 feature: Data Ingestion
 role: Developer
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: b6abe265f340487f0eae12237ba320cd4afbd2d8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 88%
@@ -20,7 +21,7 @@ ht-degree: 88%
    - [Vue d’ensemble](streaming-ingestion/overview.md)
    - [Connecteur Kafka](streaming-ingestion/kafka.md)
    - [Résolution des problèmes](streaming-ingestion/troubleshooting.md)
-   - {hide-from-toc}[Adresse IP Plaçant sur la liste autorisée &#x200B;](streaming-ingestion/allowlisting.md)
+   - {hide-from-toc}[Adresse IP Plaçant sur la liste autorisée ](streaming-ingestion/allowlisting.md)
 - Ingestion par lots{#batch}
    - [Prise en main des API d’ingestion par lots](batch-ingestion/getting-started.md)
    - [Présentation de l’API](batch-ingestion/overview.md)
