@@ -3,8 +3,10 @@ title: Messages d’erreur du service de flux
 description: Prenez connaissance des messages d’erreur que vous pouvez rencontrer lors de l’utilisation du service de flux pour les sources.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
 TQID: https://experienceleague.adobe.com/EGVX5LQ3xktJ-HpjNmuPoHo4n-XjyDArJwLo-qNYXyg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1707

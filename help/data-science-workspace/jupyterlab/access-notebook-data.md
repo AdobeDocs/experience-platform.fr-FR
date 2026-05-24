@@ -5,10 +5,16 @@ title: Accès aux données dans les notebooks Jupyterlab
 description: Ce guide explique comment utiliser les notebooks Jupyter, créés dans le Workspace de science des données pour accéder à vos données.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 TQID: https://experienceleague.adobe.com/wEFukj-yqADUcVeVJKkWCFuAUetP5mSOnus0Iq-Wlwk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3344
@@ -34,7 +40,7 @@ Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’ut
 
 >[!IMPORTANT]
 >
->Pour les notebooks PySpark et Scala si vous recevez une erreur avec la raison « Client RPC distant dissocié ». Cela signifie généralement que la mémoire du pilote ou de l’exécuteur est insuffisante. Essayez de passer [ mode « lot »](#mode) pour résoudre cette erreur.
+>Pour les notebooks PySpark et Scala si vous recevez une erreur avec la raison « Client RPC distant dissocié ». Cela signifie généralement que la mémoire du pilote ou de l’exécuteur est insuffisante. Essayez de passer [&#x200B; mode « lot »](#mode) pour résoudre cette erreur.
 
 Les informations suivantes définissent la quantité maximale de données pouvant être lues, le type de données utilisées et le délai estimé de lecture des données.
 
@@ -182,7 +188,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 [!DNL JupyterLab] sur [!DNL Experience Platform] vous permet d’utiliser SQL dans un notebook [!DNL Python] pour accéder aux données via [Adobe Experience Platform Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=fr). L’accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour la gestion de jeux de données volumineux grâce à ses temps d’exécution plus performants. Notez que l’interrogation de données à l’aide de [!DNL Query Service] est limitée à dix minutes de traitement.
 
-Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
+Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
 
 L’interrogation de données à l’aide de [!DNL Query Service] nécessite que vous fournissiez le nom du jeu de données cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL Data explorer]** . Cliquez avec le bouton droit sur la liste des jeux de données et cliquez sur **[!UICONTROL Query Data in Notebook]** pour générer deux cellules de code dans votre notebook. Ces deux cellules sont décrites plus en détail ci-dessous.
 
@@ -403,7 +409,7 @@ Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écri
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations](../troubleshooting-guide.md) consultez le [ guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab, mais en utilisant la méthode suivante :
 
@@ -503,7 +509,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations](../troubleshooting-guide.md) consultez le [ guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -560,7 +566,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations](../troubleshooting-guide.md) consultez le [ guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}

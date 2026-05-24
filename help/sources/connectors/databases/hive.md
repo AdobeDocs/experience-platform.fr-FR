@@ -5,9 +5,12 @@ title: Présentation d’Apache Hive sur le connecteur Source HDInsights d’Azu
 description: Découvrez comment connecter Apache Hive sur Azure HDInsights à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
 TQID: https://experienceleague.adobe.com/HmAp8FWhvvgk8bHYBLxD7b6L6D-iFo9I93g9lk37Oxs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 265
@@ -19,7 +22,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Le connecteur Apache Hive sur Azure HDInsights est en version bêta. Consultez la [ Présentation des sources ](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur Apache Hive sur Azure HDInsights est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -27,7 +30,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Apache Hive] sur [!DNL Azure HDInsights] à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
 

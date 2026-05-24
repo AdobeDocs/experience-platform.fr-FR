@@ -3,11 +3,19 @@ title: Questions fréquentes sur les attributs calculés
 description: Trouvez des réponses aux questions fréquentes sur l’utilisation des attributs calculés.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
 TQID: https://experienceleague.adobe.com/jufXPDBHwGfjvNeRsgicMAeecLiR1S3JdxIp3d5NfN0
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1114

@@ -4,9 +4,12 @@ description: Découvrez les différentes techniques de modélisation de base dis
 role: Developer
 exl-id: 51049290-c901-46d0-bde7-96c4f73b47a6
 TQID: https://experienceleague.adobe.com/UHO-VGFkMEyCq4lTHIk46QV-Hd9Dg5OpA4bPX7ksmBM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 113

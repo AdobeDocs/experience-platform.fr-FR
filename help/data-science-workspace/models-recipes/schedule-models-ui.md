@@ -6,9 +6,14 @@ type: Tutorial
 description: Le Workspace de science des données de Adobe Experience Platform vous permet de configurer des opérations de notation et de formation planifiées sur un service de machine learning. L’automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l’efficacité d’un service avec le temps en suivant les motifs de vos données.
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
 TQID: https://experienceleague.adobe.com/ZyUhpWPer3FrENcSaOze-0-sPMKeZU18J0wBoQDNMM4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 559

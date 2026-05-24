@@ -3,8 +3,10 @@ title: Classe de fournisseur
 description: Découvrez la classe Fournisseur dans le modèle de données d’expérience (XDM).
 exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
 TQID: https://experienceleague.adobe.com/D6d4ICCmnIq95CldmroXFy-GmYPMIJjDtr85znlH7to
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 140
@@ -26,4 +28,4 @@ Dans le modèle de données d’expérience (XDM), la classe [!UICONTROL Provide
 
 {style="table-layout:auto"}
 
-La classe peut être étendue avec le groupe de champs [[!UICONTROL Healthcare Provider] pour décrire ](../field-groups/provider/healthcare-provider.md) détails supplémentaires sur un prestataire de soins de santé.
+La classe peut être étendue avec le groupe de champs [[!UICONTROL Healthcare Provider] pour décrire &#x200B;](../field-groups/provider/healthcare-provider.md) détails supplémentaires sur un prestataire de soins de santé.

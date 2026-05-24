@@ -3,8 +3,11 @@ title: Documenter votre destination dans Adobe Experience Platform
 description: Cette section contient des instructions détaillées pour la création d’une page de documentation pour la destination dans Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
 TQID: https://experienceleague.adobe.com/bfOmkpY8eTYmQKIYJQJKIuYPRsuIdWeFSGFGbKWPp94
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 528
@@ -52,7 +55,7 @@ Pour créer de la documentation pour la destination conformément aux instructio
 
 ## Modèle de documentation {#documentation-template}
 
-Pour vous aider à créer votre page de documentation, Adobe a prérempli un [ modèle de documentation ](./self-service-template.md). Plus bas, vous trouverez des instructions sur la modification du modèle et l’ouverture d’une requête d’extraction. L’équipe de documentation d’Adobe examinera et publiera la documentation de votre nouvelle destination.
+Pour vous aider à créer votre page de documentation, Adobe a prérempli un [&#x200B; modèle de documentation &#x200B;](./self-service-template.md). Plus bas, vous trouverez des instructions sur la modification du modèle et l’ouverture d’une requête d’extraction. L’équipe de documentation d’Adobe examinera et publiera la documentation de votre nouvelle destination.
 
 [Téléchargez le modèle ici](../assets/docs-framework/yourdestination-template.zip) puis décompressez le fichier pour extraire le fichier `yourdestination.md`.
 
@@ -67,4 +70,4 @@ Vous pouvez utiliser l’interface web GitHub ou votre environnement local pour 
 
 ## Bonnes pratiques {#best-practices}
 
-Consultez les [ bonnes pratiques de création ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) avant et pendant la création de la page de documentation de destination. Veillez également à lire le [guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) pour obtenir d’autres conseils de rédaction que l’équipe de documentation Adobe utilise lors de la création de documentation.
+Consultez les [&#x200B; bonnes pratiques de création &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) avant et pendant la création de la page de documentation de destination. Veillez également à lire le [guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) pour obtenir d’autres conseils de rédaction que l’équipe de documentation Adobe utilise lors de la création de documentation.

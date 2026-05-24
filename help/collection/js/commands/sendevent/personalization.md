@@ -3,11 +3,33 @@ title: personnalisation
 description: Effectuez le rendu de différents contenus pour différents utilisateurs et utilisatrices, créant ainsi une expérience personnalisée pour eux.
 exl-id: 4bd370c8-8d8d-469e-9666-b5b6d0e3a660
 TQID: https://experienceleague.adobe.com/8i3XgBUE5aqnvgELSwmcfd4NBcLVf0QobRRiDa32hfM
-product_v2: id: cb954087-f4fc-4456-afb9-e939cabcdc79id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: a653cc2e-bc85-4353-a306-399e5b247978id: b82389f8-9b5e-4083-8e3b-3cef299fb8b9id: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: cfc95e9b-b035-4403-a6a9-b27a8a053a37id: df312454-73c4-43f6-a90e-18f5043f074c
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+  - id: a653cc2e-bc85-4353-a306-399e5b247978
+  - id: b82389f8-9b5e-4083-8e3b-3cef299fb8b9
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: cfc95e9b-b035-4403-a6a9-b27a8a053a37
+  - id: df312454-73c4-43f6-a90e-18f5043f074c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1282

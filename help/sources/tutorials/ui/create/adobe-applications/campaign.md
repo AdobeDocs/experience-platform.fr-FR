@@ -4,11 +4,25 @@ title: Créer une connexion source Adobe Campaign Managed Cloud Services à l’
 description: Découvrez comment connecter Adobe Experience Platform à Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur Experience Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 TQID: https://experienceleague.adobe.com/ANBl-NSD9cYtBn9jQi4JkRiTbTM6K6Sy-oGdiBZGGsg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: a7150a74-b8a9-4042-b066-147c5f0ca505id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b5eb20d5-4893-4245-8a24-ea6bf0e51fbbid: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b5eb20d5-4893-4245-8a24-ea6bf0e51fbb
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1205
@@ -102,7 +116,7 @@ Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez *
 
 L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >

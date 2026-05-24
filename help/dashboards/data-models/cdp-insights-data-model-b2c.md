@@ -4,11 +4,27 @@ description: Découvrez comment utiliser des requêtes SQL avec les modèles de 
 badgeB2C: label="B2C Edition" type="Caution" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 TQID: https://experienceleague.adobe.com/Dtv1Iuf0L3tvAZw9dfKiyLH-Gu-3DR-BeFQh1DAfBSo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: b08f50f9-9135-4961-a21e-47e56473ae77id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3id: fa38bdc7-753a-4772-8c86-33cee8139fb5
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b08f50f9-9135-4961-a21e-47e56473ae77
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+  - id: fa38bdc7-753a-4772-8c86-33cee8139fb5
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1080
@@ -26,7 +42,7 @@ Le modèle de données d’informations Real-Time Customer Data Platform pour [B
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique de la [ fonctionnalité des tableaux de bord définis par l’utilisateur](../standard-dashboards.md). Veuillez lire la documentation avant de poursuivre avec ce guide.
+Ce guide nécessite une compréhension pratique de la [&#x200B; fonctionnalité des tableaux de bord définis par l’utilisateur](../standard-dashboards.md). Veuillez lire la documentation avant de poursuivre avec ce guide.
 
 ## Rapports et cas d’utilisation Real-Time CDP insight
 
@@ -50,7 +66,7 @@ L’image ci-dessous contient les champs de données pertinents dans chaque jeu 
 
 #### Cas d’utilisation du nombre de profils {#profile-count}
 
-La logique utilisée pour le widget [!UICONTROL Profile count] renvoie le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Pour plus d’informations](../guides/profiles.md#profile-count) consultez la documentation sur le widget [[!UICONTROL Profile count] .
+La logique utilisée pour le widget [!UICONTROL Profile count] renvoie le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Pour plus d’informations[&#128279;](../guides/profiles.md#profile-count) consultez la documentation sur le widget [!UICONTROL Profile count] .
 
 Le code SQL qui génère le widget [!UICONTROL Profile count] est visible dans la section réductible ci-dessous.
 
@@ -70,7 +86,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### Cas d’utilisation des profils d’identité uniques {#single-identity-profiles}
 
-La logique utilisée pour le widget [!UICONTROL Single identity profiles] fournit un nombre des profils de votre organisation qui ne disposent que d’un seul type d’identifiant qui crée leur identité. Pour plus d’informations](../guides/profiles.md#single-identity-profiles) consultez la documentation sur le widget [[!UICONTROL Single identity profiles] .
+La logique utilisée pour le widget [!UICONTROL Single identity profiles] fournit un nombre des profils de votre organisation qui ne disposent que d’un seul type d’identifiant qui crée leur identité. Pour plus d’informations[&#128279;](../guides/profiles.md#single-identity-profiles) consultez la documentation sur le widget [!UICONTROL Single identity profiles] .
 
 Le code SQL qui génère le widget [!UICONTROL Single identity profiles] est visible dans la section réductible ci-dessous.
 
@@ -103,7 +119,7 @@ L’image ci-dessous contient les champs de données pertinents dans chaque jeu 
 
 #### Profils par cas d’utilisation d’identité {#profiles-by-identity}
 
-Le widget [!UICONTROL Profiles by identity] affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Pour plus d’informations](../guides/profiles.md#profiles-by-identity) consultez la documentation sur le widget [[!UICONTROL Profiles by identity] .
+Le widget [!UICONTROL Profiles by identity] affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Pour plus d’informations[&#128279;](../guides/profiles.md#profiles-by-identity) consultez la documentation sur le widget [!UICONTROL Profiles by identity] .
 
 Le code SQL qui génère le widget [!UICONTROL Profiles by identity] est visible dans la section réductible ci-dessous.
 
@@ -166,7 +182,7 @@ L’image ci-dessous contient les champs de données pertinents dans chaque jeu 
 
 #### Cas d’utilisation de la taille de l’audience {#audience-size}
 
-La logique utilisée pour le widget [!UICONTROL Audience size] renvoie le nombre total de profils fusionnés dans l’audience sélectionnée au moment de l’instantané le plus récent. Pour plus d’informations](../guides/audiences.md#audience-size) consultez la documentation sur le widget [[!UICONTROL Audience size] .
+La logique utilisée pour le widget [!UICONTROL Audience size] renvoie le nombre total de profils fusionnés dans l’audience sélectionnée au moment de l’instantané le plus récent. Pour plus d’informations[&#128279;](../guides/audiences.md#audience-size) consultez la documentation sur le widget [!UICONTROL Audience size] .
 
 Le code SQL qui génère le widget [!UICONTROL Audience size] est visible dans la section réductible ci-dessous.
 
@@ -190,7 +206,7 @@ WHERE
 
 #### Cas d’utilisation de la tendance de changement de la taille de l’audience {#audience-size-change-trend}
 
-La logique utilisée pour le widget [!UICONTROL Audience size change trend] fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour une audience donnée et les instantanés quotidiens les plus récents. Pour plus d’informations](../guides/audiences.md#audience-size-change-trend) consultez la documentation sur le widget [[!UICONTROL Audience size change trend] .
+La logique utilisée pour le widget [!UICONTROL Audience size change trend] fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour une audience donnée et les instantanés quotidiens les plus récents. Pour plus d’informations[&#128279;](../guides/audiences.md#audience-size-change-trend) consultez la documentation sur le widget [!UICONTROL Audience size change trend] .
 
 Le code SQL qui génère le widget [!UICONTROL Audience size change trend] est visible dans la section réductible ci-dessous.
 
@@ -227,7 +243,7 @@ SELECT date_key,
 
 #### Cas d’utilisation des destinations les plus utilisées {#most-used-destinations}
 
-La logique utilisée dans le widget [!UICONTROL Most used destinations] répertorie les destinations les plus utilisées de votre organisation en fonction du nombre d’audiences mappées. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées. Pour plus d’informations](../guides/destinations.md#most-used-destinations) consultez la documentation sur le widget [[!UICONTROL Most used destinations] .
+La logique utilisée dans le widget [!UICONTROL Most used destinations] répertorie les destinations les plus utilisées de votre organisation en fonction du nombre d’audiences mappées. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées. Pour plus d’informations[&#128279;](../guides/destinations.md#most-used-destinations) consultez la documentation sur le widget [!UICONTROL Most used destinations] .
 
 Le code SQL qui génère le widget [!UICONTROL Most used destinations] est visible dans la section réductible ci-dessous.
 
@@ -252,7 +268,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### Cas d’utilisation des audiences récemment activées {#recently-activated-audiences}
 
-La logique du widget [!UICONTROL Recently activated audiences] fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit une capture instantanée des audiences et des destinations utilisées activement dans le système et peut aider à corriger les mappages erronés. Pour plus d’informations](../guides/destinations.md#recently-activated-audiences) consultez la documentation sur le widget [[!UICONTROL Recently activated audiences] .
+La logique du widget [!UICONTROL Recently activated audiences] fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit une capture instantanée des audiences et des destinations utilisées activement dans le système et peut aider à corriger les mappages erronés. Pour plus d’informations[&#128279;](../guides/destinations.md#recently-activated-audiences) consultez la documentation sur le widget [!UICONTROL Recently activated audiences] .
 
 Le code SQL qui génère le widget [!UICONTROL Recently activated audiences] est visible dans la section réductible ci-dessous.
 
@@ -296,7 +312,7 @@ L’image ci-dessous contient les champs de données pertinents dans chaque jeu 
 
 #### Profils par identité pour un cas d’utilisation d’audience {#audience-profiles-by-identity}
 
-La logique utilisée dans le widget [!UICONTROL Profiles by identity] fournit une répartition des identités pour tous les profils fusionnés de votre banque de profils pour une audience donnée. Pour plus d’informations](../guides/audiences.md#profiles-by-identity) consultez la documentation sur le widget [[!UICONTROL Profiles by identity] .
+La logique utilisée dans le widget [!UICONTROL Profiles by identity] fournit une répartition des identités pour tous les profils fusionnés de votre banque de profils pour une audience donnée. Pour plus d’informations[&#128279;](../guides/audiences.md#profiles-by-identity) consultez la documentation sur le widget [!UICONTROL Profiles by identity] .
 
 Le code SQL qui génère le widget [!UICONTROL Profiles by identity] est visible dans la section réductible ci-dessous.
 

@@ -4,10 +4,14 @@ description: Découvrez comment utiliser la source Adobe Commerce pour importer 
 last-substantial-update: 2023-12-13T00:00:00.000Z
 exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
 TQID: https://experienceleague.adobe.com/-46-2uS8thVwvxKdGrpzp7gI5BeIjmxc-MeqAYRqr4k
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 559

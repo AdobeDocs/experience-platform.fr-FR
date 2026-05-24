@@ -5,8 +5,10 @@ description: Ce guide fournit des exemples de requêtes et de réponses HTTP pou
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 TQID: https://experienceleague.adobe.com/LqobknUBqbI1PIV2lsAGwy9okdxN28IZmwinuhEQxuM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3222
@@ -168,7 +170,7 @@ Une réponse réussie renvoie un état HTTP 200 et le tableau `alerts` avec les 
 | Propriété | Description |
 | -------- | ----------- |
 | `alerts.assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
-| `alerts.id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [](../../observability/alerts/ui.md). |
+| `alerts.id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [&#128279;](../../observability/alerts/ui.md). |
 | `alerts.status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled`, et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
 | `alerts.alertType` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. L’alerte `quarantine` n’est disponible que pour les requêtes planifiées. En outre, vous ne pouvez définir l’alerte `delay` qu’à partir de l’interface utilisateur d’Experience Platform. Pour cette raison, `delay` n&#39;est pas décrit ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine` : s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul> |
 | `alerts._links` | Fournit des informations sur les méthodes et points d’entrée disponibles qui peuvent être utilisés pour récupérer, mettre à jour, modifier ou supprimer des informations relatives à cet identifiant d’alerte. |
@@ -297,7 +299,7 @@ Une réponse réussie renvoie un état HTTP de 200 et le tableau `alerts` qui co
 | Propriété | Description |
 | -------- | ----------- |
 | `assetId` | L’alerte est associée à cet identifiant. L’ID peut être un ID de requête ou un ID de planning. |
-| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [](../../observability/alerts/ui.md). |
+| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [&#128279;](../../observability/alerts/ui.md). |
 | `status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled`, et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
 | `alertType` | Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `subscriptions.emailNotifications` | Tableau d’adresses électroniques enregistrées par Adobe pour les utilisateurs et utilisatrices qui se sont abonnés pour recevoir des e-mails pour l’alerte. |
@@ -515,7 +517,7 @@ Une réponse réussie renvoie un statut HTTP 200 et le tableau `items` avec les 
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [](../../observability/alerts/ui.md). |
+| `name` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [&#128279;](../../observability/alerts/ui.md). |
 | `assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
 | `status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled`, et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
 | `alertType` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. L’alerte `quarantine` n’est disponible que pour les requêtes planifiées. En outre, vous ne pouvez définir l’alerte `delay` qu’à partir de l’interface utilisateur d’Experience Platform. Pour cette raison, `delay` n&#39;est pas décrit ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine` : s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul> |
@@ -616,7 +618,7 @@ Une réponse réussie renvoie le statut HTTP 202 (Accepté) avec les détails de
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [](../../observability/alerts/ui.md). |
+| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [&#128279;](../../observability/alerts/ui.md). |
 | `_links` | Fournit des informations sur les méthodes et points d’entrée disponibles qui peuvent être utilisés pour récupérer, mettre à jour, modifier ou supprimer des informations relatives à cet identifiant d’alerte. |
 
 ## Activer ou désactiver une alerte {#enable-or-disable-alert}
@@ -676,7 +678,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec des détails sur le statut
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [](../../observability/alerts/ui.md). |
+| `id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la documentation du tableau de bord des alertes Experience Platform [&#128279;](../../observability/alerts/ui.md). |
 | `assetId` | L’alerte est associée à cet identifiant. L’ID peut être un ID de requête ou un ID de planning. |
 | `alertType` | Chaque alerte peut avoir trois types d’alerte différents. Les voici : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
 | `status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled`, et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |

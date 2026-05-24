@@ -4,10 +4,15 @@ title: Modification du schéma pour créer des widgets de tableaux de bord perso
 description: Ce guide fournit des instructions détaillées relatives à la sélection des attributs et à la configuration du schéma de votre organisation dans le but de créer des widgets personnalisés pour les tableaux de bord d’Adobe Experience Platform.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 TQID: https://experienceleague.adobe.com/wzsVe7h8x3mxCzbF-xHMNxsbCZyoc1njuArukNFm-nU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 495

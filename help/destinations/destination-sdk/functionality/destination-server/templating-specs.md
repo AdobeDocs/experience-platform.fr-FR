@@ -3,9 +3,14 @@ description: Découvrez comment formater les requêtes HTTP envoyées à votre 
 title: Spécifications de modèle pour les destinations créées avec Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
 TQID: https://experienceleague.adobe.com/fjCp0CZZWqMe047fcjUH9-kGxBdKBdG-cD1zdvKVDOQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 531

@@ -6,10 +6,16 @@ type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Experience Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de consentement et de préférences à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
 TQID: https://experienceleague.adobe.com/rIUl1NLY7e4TlQ4u-6GsdRbDg5qx4tSw5KQ9yiadJlc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1602
@@ -94,7 +100,7 @@ Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez *
 
 L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../data-prep/ui/mapping.md).
 
 Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
 

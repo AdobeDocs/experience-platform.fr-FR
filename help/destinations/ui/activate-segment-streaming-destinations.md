@@ -4,11 +4,21 @@ type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les mappant aux destinations de diffusion en streaming.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 TQID: https://experienceleague.adobe.com/Ot4xQ3-lFqYm70OGq-YJMVS4Fc1hwCClArMhYIEWb7w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1116
@@ -20,8 +30,8 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> * Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
-> * Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+> * Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
 > * Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
@@ -124,7 +134,7 @@ Par défaut, la page **[!UICONTROL Audience schedule]** n’affiche que les audi
 
 Pour afficher toutes les audiences activées vers la destination, utilisez l’option de filtrage et désactivez le filtre **[!UICONTROL Show new audiences only]**.
 
-![Toutes les audiences ](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
+![Toutes les audiences &#x200B;](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
 1. Sur la page **[!UICONTROL Audience schedule]**, sélectionnez chaque audience, puis utilisez les sélecteurs **[!UICONTROL Start date]** et **[!UICONTROL End date]** pour configurer l’intervalle de temps pour envoyer les données vers la destination.
 
@@ -152,7 +162,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 

@@ -4,11 +4,23 @@ title: Extension Talk URL Inbox
 description: L’extension Talk URL Inbox est la voix de la destination du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
 TQID: https://experienceleague.adobe.com/CUOaB7EDWVZAGN0A30GX9nzZfyp0B2oAFLsJ9As2Rxw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 473
@@ -22,7 +34,7 @@ Recevez des messages vocaux de la part des visiteurs de votre page web. Inclut l
 
 [!DNL Talk URL Inbox] est la voix de l’extension cliente dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Talk URL Inbox](../../assets/catalog/voice/talkurl/catalog.png)
 
@@ -36,7 +48,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe 
 
 Pour installer l’extension [!DNL Talk URL Inbox], procédez comme suit :
 
-Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

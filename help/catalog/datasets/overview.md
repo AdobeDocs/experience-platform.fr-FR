@@ -6,11 +6,28 @@ description: Ce document présente de manière générale les jeux de données d
 user-guide-description: Obtenez un aperçu général des jeux de données dans Experience Platform avec ce guide. Découvrez comment les créer, appliquer des contraintes aux données et ingérer des données dans des jeux de données ici.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 TQID: https://experienceleague.adobe.com/UUpCoAbaTNxTPitedrL4jzkvs3J-SrwnO9fyi-o0dsg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 876

@@ -6,11 +6,16 @@ type: Tutorial
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 TQID: https://experienceleague.adobe.com/BMvTDEb9-sCWP4F1acHaorBKJyW6ISW4COsGzjN8XKU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 716

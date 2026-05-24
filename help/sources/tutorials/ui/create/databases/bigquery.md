@@ -4,11 +4,19 @@ description: Découvrez comment créer une connexion source Google BigQuery à l
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 TQID: https://experienceleague.adobe.com/7dFl507nX-YsGaEXuNfHkRyJRK86YnXsV5mV7DhwgXA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: e0c8953a-a203-4291-bef3-3560160d3041
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 773

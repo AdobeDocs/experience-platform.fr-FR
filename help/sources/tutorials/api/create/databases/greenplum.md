@@ -6,9 +6,12 @@ type: Tutorial
 description: Découvrez comment connecter GreenPlum à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 TQID: https://experienceleague.adobe.com/P117zI4xelzJI8kwYCK4eFWh7osuYM7OT9EBBkNggJU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 443
@@ -103,4 +106,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL GreenPlum] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

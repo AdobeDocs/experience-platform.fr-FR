@@ -5,9 +5,12 @@ title: Guide de dépannage de l’ingestion par lots
 description: Cette documentation vous aidera à répondre aux questions fréquentes sur les API Batch Data Ingestion d’Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 TQID: https://experienceleague.adobe.com/ojv-ehYe-3inSldMxXvo3t6LMr1zTItFyJrvVum5SGk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1436

@@ -5,10 +5,15 @@ title: Définir les champs d’énumération et les valeurs suggérées dans l�
 description: Découvrez comment définir des énumérations et les valeurs suggérées pour les champs de chaîne dans l’interface utilisateur d’Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 TQID: https://experienceleague.adobe.com/faZiFJz31YgwU3BtX5YkdEj0c-KsujZu6DE1NilqS5w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: fe06da76-5b92-43de-9bda-c5c9c01b55e8
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1227

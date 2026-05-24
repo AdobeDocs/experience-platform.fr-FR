@@ -3,11 +3,18 @@ title: Informations SQL pour les rapports d’application étendus
 description: Découvrez comment utiliser les requêtes SQL pour générer des informations pour vos tableaux de bord personnalisés.
 exl-id: c60a9218-4ac0-4638-833b-bdbded36ddf5
 TQID: https://experienceleague.adobe.com/Ip1mxjQK7tBQxNH6bR0ZAJs07rIlBY6f7PzHMsPgogY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1452

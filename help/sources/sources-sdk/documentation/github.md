@@ -5,8 +5,10 @@ title: Utiliser l’interface web GitHub pour créer une page de documentation s
 description: Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub afin de créer de la documentation et d’envoyer une requête de tirage.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
 TQID: https://experienceleague.adobe.com/HCx0E53IUNzcd8if2oxQ5cCz4x2rjeeotAf1ItXpnws
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 639
@@ -24,7 +26,7 @@ Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub
 
 ## Configuration de votre environnement GitHub
 
-La première étape de la configuration de votre environnement GitHub consiste à accéder au référentiel GitHub [](https://github.com/AdobeDocs/experience-platform.en).
+La première étape de la configuration de votre environnement GitHub consiste à accéder au référentiel GitHub [&#128279;](https://github.com/AdobeDocs/experience-platform.en).
 
 ![platform-repo](../assets/platform-repo.png)
 

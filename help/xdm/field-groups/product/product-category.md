@@ -3,8 +3,10 @@ title: Groupe de champs de schéma de catégorie de produits
 description: Découvrez le groupe de champs de schéma Catégorie de produits .
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
 TQID: https://experienceleague.adobe.com/9vVZyHyUlxPKjZX5Pw6CiHImrqJr1FwVRjZVD1-7DcU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 92

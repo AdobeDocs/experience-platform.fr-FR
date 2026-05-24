@@ -3,9 +3,12 @@ description: Découvrez les adresses IP que vous devez ajouter à votre place su
 title: Adresse IP associée aux sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 TQID: https://experienceleague.adobe.com/QRulb6wq-HKA1uNGobKCVmMOknufp8hbVNL3nIy4EeA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 251

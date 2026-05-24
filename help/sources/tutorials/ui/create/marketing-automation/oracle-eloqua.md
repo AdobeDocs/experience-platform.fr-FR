@@ -3,8 +3,10 @@ title: Créer une connexion source Oracle Eloqua à l’aide de l’interface ut
 description: Découvrez comment connecter Adobe Experience Platform à Oracle Eloqua à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 TQID: https://experienceleague.adobe.com/gvfjMdSAusrSDDGQA-ia8aIyLqznx-5-LZ8SbJmSNSM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 567

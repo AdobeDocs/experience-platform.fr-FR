@@ -7,11 +7,17 @@ title: Extension Adobe Experience Platform Debugger
 uuid: 42e2c8a2-548a-4a3f-b57d-532535a0e7b9
 exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
 TQID: https://experienceleague.adobe.com/AXQi1UWQGbeMDAFyxvi-up8MI7MV2NFaeQbrXrY6F-c
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 263
@@ -40,8 +46,8 @@ Vous pouvez exécuter Experience Platform Debugger sur n’importe quelle page w
 Vous pouvez utiliser les informations collectées par Experience Platform Debugger pour mieux comprendre comment vos solutions Experience Cloud sont mises en œuvre. Par exemple :
 
 * **Balises** : découvrez la propriété, l’environnement et la version déployés sur une page.
-* **** : Vérifiez pour quelles activités vous êtes éligible ou non et pourquoi.
-* **** : Vérifiez quelles suites de rapports sont actives sur la page active.
+* **&#x200B;**&#x200B;: Vérifiez pour quelles activités vous êtes éligible ou non et pourquoi.
+* **&#x200B;**&#x200B;: Vérifiez quelles suites de rapports sont actives sur la page active.
 
 ## Tutoriel vidéo
 

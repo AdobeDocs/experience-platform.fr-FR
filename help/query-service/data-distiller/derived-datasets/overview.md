@@ -3,9 +3,13 @@ title: Jeux De Données Dérivés
 description: Les jeux de données dérivés offrent un moyen pratique de générer les jeux de données de votre choix qui peuvent être actualisés à n’importe quelle cadence régulière et éventuellement publiés dans vos données de profil client en temps réel. Ce document présente un aperçu de l’utilisation de Query Service pour créer des jeux de données dérivés à utiliser avec vos données de profil.
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
 TQID: https://experienceleague.adobe.com/96Bjr5P6CXB7vb5qnqNJS-ZvCU96rstr8f2U7Whl2M8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 767
@@ -54,4 +58,4 @@ Vous pouvez également calculer des mesures commerciales en tant qu’attribut d
 
 ## Étapes suivantes et cas d’utilisation
 
-Grâce à la lecture de ce document, vous comprenez mieux comment les jeux de données dérivés de Query Service facilitent les cas d’utilisation complexes pour optimiser l’utilité de vos données. Vous devez ensuite lire le cas d’utilisation d’attributs dérivés basés sur des déciles ](../../use-cases/deciles-use-case.md) pour voir comment cette fonctionnalité est appliquée dans un scénario réel.[
+Grâce à la lecture de ce document, vous comprenez mieux comment les jeux de données dérivés de Query Service facilitent les cas d’utilisation complexes pour optimiser l’utilité de vos données. Vous devez ensuite lire le cas d’utilisation d’attributs dérivés basés sur des déciles [&#128279;](../../use-cases/deciles-use-case.md) pour voir comment cette fonctionnalité est appliquée dans un scénario réel.

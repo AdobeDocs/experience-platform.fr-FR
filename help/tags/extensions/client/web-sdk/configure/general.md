@@ -3,11 +3,21 @@ title: Paramètres de configuration de l’instance du SDK
 description: Configurez les paramètres généraux de l’instance Web SDK.
 exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
 TQID: https://experienceleague.adobe.com/YcT1bzlpS8kUyB-agr5inPv2adRL8V1y2R8LweccnRU
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 293
@@ -46,4 +56,4 @@ L’identifiant de l’organisation à laquelle vous souhaitez que les données 
 
 Domaine vers lequel/à partir duquel l’extension envoie et reçoit des données. Par défaut, le champ contient `<COMPANYID>.data.adobedc.net`. Les implémentations plus anciennes peuvent contenir une valeur par défaut de `edge.adobedc.net`, qui est également valide.
 
-Adobe recommande dans la plupart des cas d’utiliser un domaine propriétaire. Consultez le [programme de certificat géré par ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) pour obtenir des instructions sur la configuration d’un domaine propriétaire adapté à la collecte de données. Voir aussi [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) dans la documentation de la bibliothèque JavaScript pour obtenir des conseils sur la définition de cette valeur.
+Adobe recommande dans la plupart des cas d’utiliser un domaine propriétaire. Consultez le [programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) pour obtenir des instructions sur la configuration d’un domaine propriétaire adapté à la collecte de données. Voir aussi [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) dans la documentation de la bibliothèque JavaScript pour obtenir des conseils sur la définition de cette valeur.

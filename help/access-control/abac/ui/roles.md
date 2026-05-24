@@ -4,11 +4,22 @@ title: Création d’un rôle de contrôle d’accès basé sur les attributs
 description: Gérez les rôles via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 TQID: https://experienceleague.adobe.com/PxhSLqPYfsF5HEGhV4Arqy9JM9aZfD05GDIRyfk4Rwg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 769
@@ -75,7 +86,7 @@ The following video is intended to support your understanding of creating a new 
 
 La duplication d’un rôle entraîne la copie sur les détails, les autorisations, les libellés et les sandbox. Les utilisateurs, les groupes d’utilisateurs et d’utilisatrices et les informations d’identification d’API **ne sont pas** copiés et devront être ajoutés manuellement au rôle.
 
-Pour dupliquer un rôle existant, recherchez le rôle que vous souhaitez dupliquer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![ Plus ](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Duplicate]** dans le menu déroulant.
+Pour dupliquer un rôle existant, recherchez le rôle que vous souhaitez dupliquer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![&#x200B; Plus &#x200B;](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Duplicate]** dans le menu déroulant.
 
 ![Espace de travail Rôles avec le menu déroulant d’un rôle développé et l’option Dupliquer mise en surbrillance.](../../images/ui/roles/role-duplicate.png)
 
@@ -93,7 +104,7 @@ La boîte de dialogue de confirmation de duplication s’affiche. Sélectionnez 
 
 ## Supprimer un rôle
 
-Pour supprimer un rôle, recherchez le rôle que vous souhaitez supprimer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![ Plus ](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Delete]** dans le menu déroulant.
+Pour supprimer un rôle, recherchez le rôle que vous souhaitez supprimer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![&#x200B; Plus &#x200B;](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Delete]** dans le menu déroulant.
 
 ![Espace de travail Rôles avec le menu déroulant d’un rôle développé et l’option Dupliquer mise en surbrillance.](../../images/ui/roles/role-delete.png)
 

@@ -3,9 +3,12 @@ title: Vue Messagerie In-App
 description: Ce guide détaille les informations sur la vue Messagerie In-App dans Adobe Experience Platform Assurance.
 exl-id: 6131289a-aebb-4b3a-9045-4b2cf23415f8
 TQID: https://experienceleague.adobe.com/APH2yfRAuQR1hHgP-dIBv6TGJpsrzoLJDu7XoHWEXWw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 667
@@ -65,7 +68,7 @@ Si les trois conditions correspondent à l’événement actuel, le message s’
 
 L’onglet **[!UICONTROL Analyze]** fournit des informations supplémentaires sur les règles. Ici, nous filtrons chaque événement de la session en fonction de la proximité de la règle de message par rapport à l’événement.
 
-![ Analyser ](./images/in-app-messaging/analyze.png)
+![&#x200B; Analyser &#x200B;](./images/in-app-messaging/analyze.png)
 
 Dans l’exemple de la section **[!UICONTROL Rules Tab]** , la règle comporte trois conditions. Cet onglet indique le pourcentage de la règle à laquelle correspond chaque événement. La majorité des événements correspondent à 33 % (l’une des trois conditions) et le reste à 100 %.
 
@@ -79,7 +82,7 @@ Le curseur **[!UICONTROL Match Threshold]** permet de filtrer les événements �
 
 L’onglet **[!UICONTROL Interactions]** affiche une liste des événements d’interaction qui ont été envoyés à Edge à des fins de suivi.
 
-![ Interactions ](./images/in-app-messaging/interactions.png)
+![&#x200B; Interactions &#x200B;](./images/in-app-messaging/interactions.png)
 
 Il existe généralement quatre événements d’interaction lorsqu’un message est affiché :
 
@@ -95,13 +98,13 @@ La colonne de validation indique si l&#39;événement d&#39;interaction a été 
 
 L’onglet **[!UICONTROL Validation]** exécute des validations sur votre session en cours, en vérifiant si l’application a été correctement configurée pour la messagerie in-app :
 
-![ Validation ](./images/in-app-messaging/validation.png)
+![&#x200B; Validation &#x200B;](./images/in-app-messaging/validation.png)
 
 Si des erreurs ont été détectées, des détails sur la manière de les corriger sont fournis.
 
 ## Liste des événements
 
-![ Validation ](./images/in-app-messaging/event-list.png)
+![&#x200B; Validation &#x200B;](./images/in-app-messaging/event-list.png)
 
 L’onglet **[!UICONTROL Event List]** donne un aperçu de tous les événements de la session Assurance liés à la messagerie In-App. Voici certains des événements que vous pouvez voir ici :
 

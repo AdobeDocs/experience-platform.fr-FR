@@ -3,9 +3,15 @@ title: Prise en charge du contrôle d’accès basé sur les attributs pour les 
 description: Guide permettant de restreindre l’accès aux champs de données dans les schémas ad hoc générés via Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 TQID: https://experienceleague.adobe.com/xwy2I4Cg4bA19ZBdKvPid0jiiS7P04QEmkkrjJt2KnA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1018
@@ -80,7 +86,7 @@ Consultez la documentation pour obtenir des conseils sur la [création ou modifi
 >
 >La création ou la modification d’un libellé existant nécessite des autorisations d’administrateur pour votre organisation. Si vous ne disposez pas des privilèges d’administrateur, contactez votre administrateur système pour organiser l’accès.
 
-Vous pouvez également créer des libellés à l’aide de l’espace de travail Autorisations . Pour obtenir des instructions, consultez le guide [ sur la création de libellés dans l’espace de travail Autorisations ](../../access-control/abac/ui/labels.md) .
+Vous pouvez également créer des libellés à l’aide de l’espace de travail Autorisations . Pour obtenir des instructions, consultez le guide [&#x200B; sur la création de libellés dans l’espace de travail Autorisations &#x200B;](../../access-control/abac/ui/labels.md) .
 
 Une fois le niveau approprié de contrôle d’accès basé sur les attributs appliqué, le comportement système suivant s’applique à toute requête exécutée via Query Service lorsqu’un utilisateur ou une utilisatrice tente d’accéder à des données non accessibles :
 

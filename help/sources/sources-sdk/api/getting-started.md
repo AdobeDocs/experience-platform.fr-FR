@@ -5,9 +5,12 @@ title: Prise en main des sources en libre-service (SDK par lots)
 description: Ce document présente les informations préalables que vous devez connaître avant d’essayer de créer une source à l’aide de sources en libre-service (SDK par lots).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
 TQID: https://experienceleague.adobe.com/jG8-cM2uupkzf7H-YWHeLqtAbnLWW9eLnO1qQAur9yc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 402

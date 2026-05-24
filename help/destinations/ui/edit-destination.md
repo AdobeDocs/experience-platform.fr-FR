@@ -4,8 +4,11 @@ type: Tutorial
 description: Découvrez comment modifier et mettre à jour les comptes de destinations existants dans l’interface utilisateur de Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
 TQID: https://experienceleague.adobe.com/AqQPdWQS5LXVdZc69Tdffyn-WVovfOsN5zPD4huCA48
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 367
@@ -31,7 +34,7 @@ Pour modifier différents composants d’une connexion de destination existante 
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Sélectionnez la destination que vous souhaitez modifier.
-3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**pour modifier les connexions de destination existantes.
+3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;pour modifier les connexions de destination existantes.
 4. Dans la fenêtre modale, modifiez tous les paramètres souhaités. Sélectionnez **[!UICONTROL Save]** lorsque vous avez terminé.
 
 Dans la fenêtre Modifier la destination , vous pouvez mettre à jour les paramètres que vous avez configurés lors de la connexion initiale à la destination. Ces paramètres sont différents en fonction de la plateforme de destination que vous mettez à jour.

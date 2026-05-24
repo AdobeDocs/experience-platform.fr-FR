@@ -3,8 +3,10 @@ title: Groupe de champs de schéma des détails de mise à niveau
 description: Découvrez le groupe de champs de schéma Détails de mise à niveau .
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
 TQID: https://experienceleague.adobe.com/v0SpTekNz7uk9qRdDVvATGYqcvka6YtzfGkweF4DT44
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 153
@@ -23,7 +25,7 @@ Le groupe de champs fournit un seul champ de type objet, `upgrades`. Les propri�
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `upgradeImpressions` | Tableau d’[impressions](../../data-types/impressions.md) | Tableau qui répertorie les impressions enregistrées (vues numériques ou engagements avec l’offre de mise à niveau) pour le client. |
-| `upgradeTransaction` | [ Transaction ](../../data-types/transaction.md) | Décrit la transaction de devise pour la mise à niveau. |
+| `upgradeTransaction` | [&#x200B; Transaction &#x200B;](../../data-types/transaction.md) | Décrit la transaction de devise pour la mise à niveau. |
 
 {style="table-layout:auto"}
 

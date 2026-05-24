@@ -4,11 +4,21 @@ description: Découvrez comment créer une connexion de destination Merkury Ente
 last-substantial-update: 2024-07-20T00:00:00.000Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
 TQID: https://experienceleague.adobe.com/YVxjPGEF4mT1LmuI45IHav-LP-jYWDnouId-a4YivkI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1584
@@ -80,7 +90,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -101,7 +111,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des [ ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)[autorisations de contrôle d’accès]**Afficher les destinations** et **Gérer et activer les destinations du jeu de données**. Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des [&#x200B; &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) [autorisations de contrôle d’accès]&#x200B;**Afficher les destinations** et **Gérer et activer les destinations du jeu de données**. Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [[tutoriel sur la configuration des destinations]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 

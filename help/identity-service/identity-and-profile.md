@@ -3,9 +3,13 @@ title: Service d’identités et profil client en temps réel
 description: En savoir plus sur la relation entre Identity Service et le profil client en temps réel
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
 TQID: https://experienceleague.adobe.com/MmIRavLlxLzYEsiNAOS190aKA-ve9CzseNvf-jLbzAg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 647

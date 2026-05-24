@@ -5,10 +5,16 @@ title: Groupe de champs de consentement IAB TCF 2.0 pour les schémas de profil
 description: Découvrez le groupe de champs de schéma de consentement IAB TCF 2.0 pour la classe XDM Individual Profile.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 TQID: https://experienceleague.adobe.com/McCw6O5c1l-WVvFvtsX9d7v4XWjSI7if2uiz9KMSGns
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 334
@@ -61,9 +67,9 @@ Comme le montre l’exemple, chaque clé de niveau racine de `xdm:identityPrivac
 >
 >Bien que l’exemple ci-dessus utilise une seule paire espace de noms/valeur pour représenter l’identité du client, vous pouvez ajouter des clés supplémentaires pour d’autres espaces de noms et chaque espace de noms peut avoir plusieurs valeurs d’identité, chacune avec son propre jeu de préférences de consentement TCF.
 
-Pour chaque valeur d’identité, une propriété `identityIABConsent` doit être fournie, qui fournit la valeur de consentement TCF pour l’identité. La valeur de cette propriété doit être conforme au type de données ](../../data-types/consent-string.md).[[!UICONTROL Consent String]
+Pour chaque valeur d’identité, une propriété `identityIABConsent` doit être fournie, qui fournit la valeur de consentement TCF pour l’identité. La valeur de cette propriété doit être conforme au type de données [&#128279;](../../data-types/consent-string.md).[!UICONTROL Consent String]
 
-Pour plus d’informations sur le cas d’utilisation de ce groupe de champs](../../../landing/governance-privacy-security/consent/iab/overview.md) consultez le guide sur la prise en charge d’[ IAB TCF 2.0 dans Experience Platform . Pour plus d’informations sur le groupe de champs lui-même, consultez le référentiel XDM public :
+Pour plus d’informations sur le cas d’utilisation de ce groupe de champs[&#128279;](../../../landing/governance-privacy-security/consent/iab/overview.md) consultez le guide sur la prise en charge d’ IAB TCF 2.0 dans Experience Platform . Pour plus d’informations sur le groupe de champs lui-même, consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

@@ -6,11 +6,23 @@ title: Découvrir des informations avec l’IA dédiée aux clients
 description: Ce document sert de guide pour interagir avec les informations d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 TQID: https://experienceleague.adobe.com/ChexcCvlaKGZ43eoXm7xpgpJKkOJcZ6HX979rcMIabg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2398
@@ -99,7 +111,7 @@ Pour modifier une instance, sélectionnez **[!UICONTROL Edit]** dans le volet de
 
 La boîte de dialogue de modification s’affiche, vous permettant de modifier le nom, la description, le statut et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, sélectionnez **[!UICONTROL Save]** dans le coin inférieur droit.
 
-![ Fenêtre contextuelle Modifier l’instance affichant des options pour modifier le nom, la description, le statut et la fréquence de notation d’une instance IA dédiée aux clients ](../images/insights/edit-instance.png)
+![&#x200B; Fenêtre contextuelle Modifier l’instance affichant des options pour modifier le nom, la description, le statut et la fréquence de notation d’une instance IA dédiée aux clients &#x200B;](../images/insights/edit-instance.png)
 
 ### Actions supplémentaires
 
@@ -204,7 +216,7 @@ Outre le suivi des résultats prévus et réels au fil du temps sur l’onglet P
 
 ### Graphique de courbe d’élévation
 
-Graphique de courbe d’élévation ![ montrant l’amélioration du modèle prédictif par rapport au ciblage aléatoire. Les valeurs élevées de la courbe de portance des déciles précoces indiquent un modèle fort.](../images/user-guide/lift-chart.png)
+Graphique de courbe d’élévation ![&#x200B; montrant l’amélioration du modèle prédictif par rapport au ciblage aléatoire. Les valeurs élevées de la courbe de portance des déciles précoces indiquent un modèle fort.](../images/user-guide/lift-chart.png)
 
 Le graphique de courbe d’élévation mesure l’amélioration apportée par l’utilisation d’un modèle prédictif plutôt que d’un ciblage aléatoire.
 

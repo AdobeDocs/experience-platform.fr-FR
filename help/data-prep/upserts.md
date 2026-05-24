@@ -4,10 +4,14 @@ title: Envoyer Des Mises À Jour De Ligne Partielles Au Profil Client En Temps R
 description: Découvrez comment envoyer des mises à jour de lignes partielles au profil client en temps réel à l’aide de la préparation des données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 TQID: https://experienceleague.adobe.com/HKhuYcYpE--wPMnTDFOg-He9i9nIh-xXmi5idYUzwzY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1376

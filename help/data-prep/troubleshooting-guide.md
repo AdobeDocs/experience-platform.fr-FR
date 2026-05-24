@@ -4,10 +4,14 @@ title: Guide de dépannage de la préparation des données
 description: Ce document fournit des réponses aux questions fréquentes sur la préparation des données Adobe Experience Platform.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
 TQID: https://experienceleague.adobe.com/G5BNfZ0GOxj-uP7ovMb7g2vnF89tI4BXc17-35KNGMI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1274
@@ -51,7 +55,7 @@ Si les fonctions de préparation de données sont utilisées, assurez-vous que l
 
 Vous pouvez utiliser l’interface de mappage de la préparation des données pour effectuer un filtrage au niveau des colonnes en mappant uniquement les colonnes contenant les données requises. Vous pouvez également utiliser des champs calculés pour transformer les données à l’aide des fonctions de prise en charge.
 
-Le filtrage au niveau des lignes est actuellement disponible uniquement pour le [connecteur source ](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
+Le filtrage au niveau des lignes est actuellement disponible uniquement pour le [connecteur source &#x200B;](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
 
 Après l’ingestion, vous pouvez utiliser Data Distiller pour nettoyer, mettre en forme et manipuler les données à l’aide de SQL. Cependant, ce processus nécessite la suppression du lot contenant les enregistrements incorrects et la réingestion d’un nouveau lot créé à partir du résultat du SQL.
 

@@ -4,9 +4,13 @@ title: Affichage d’un rapport de cumul pour un visiteur spécifique
 description: Le document suivant fournit des exemples de requêtes impliquant des événements d’expérience dans Adobe Experience Platform Query Service.
 exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
 TQID: https://experienceleague.adobe.com/0CoSu4ahGKi3-6DVVfTKlz83ey6qcIsQ0nuhcnSKGzo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 280

@@ -5,10 +5,15 @@ title: Expirations des événements d’expérience
 description: Ce document fournit des instructions générales sur la configuration des délais d’expiration pour des événements d’expérience individuels dans un jeu de données Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
 TQID: https://experienceleague.adobe.com/jE7MfCiVdmisljCh-pea4B01qt2TVNnZJr1ww6x-wxo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 891
@@ -18,7 +23,7 @@ ht-degree: 64%
 
 # Expirations des événements d’expérience
 
-Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour [ Profil client en temps réel ](./home.md). Vous pouvez ainsi supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
+Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour [&#x200B; Profil client en temps réel &#x200B;](./home.md). Vous pouvez ainsi supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
 
 Pour savoir comment gérer les expirations d’événements d’expérience dans vos jeux de données, consultez le [guide de l’interface utilisateur des jeux de données](../catalog/datasets/user-guide.md#data-retention-policy).
 

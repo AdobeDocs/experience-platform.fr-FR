@@ -3,9 +3,15 @@ title: Sauvegarder des configurations d’objet à l’aide des outils de sandbo
 description: Pour réinitialiser les sandbox en toute sécurité et ajouter la prise en charge des versions, sauvegardez les configurations d’objet (ou les métadonnées) à l’aide des packages d’outils de sandbox. Les packages de sauvegarde empêchent la perte de configurations critiques telles que les schémas, les jeux de données et les audiences, en particulier pendant les itérations de développement.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
 TQID: https://experienceleague.adobe.com/WH-xddgrLOeQFh5ZvldofO62-K30vflC0jtYVNerX6A
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1178
@@ -36,7 +42,7 @@ Lorsque vous envisagez de créer votre propre package de sauvegarde au sein de v
 
 ### Fonctionnalités de l’interface utilisateur, composants Experience Platform et produits Experience Cloud que vous utiliserez {#ui-functionality-and-elements}
 
-Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser plusieurs zones de Adobe Experience Platform. Vérifiez que vous disposez des autorisations de contrôle d’accès basé sur les attributs [ nécessaires](../../access-control/abac/overview.md) pour toutes ces zones, ou demandez à votre administrateur système de vous accorder les autorisations nécessaires.
+Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser plusieurs zones de Adobe Experience Platform. Vérifiez que vous disposez des autorisations de contrôle d’accès basé sur les attributs [&#x200B; nécessaires](../../access-control/abac/overview.md) pour toutes ces zones, ou demandez à votre administrateur système de vous accorder les autorisations nécessaires.
 
 - [Outil Sandbox](../ui/sandbox-tooling.md)
 - [Gestion des sandbox](../ui/user-guide.md)
@@ -65,7 +71,7 @@ Avant de commencer à créer votre package de sauvegarde, vous devez tenir compt
 
 >[!NOTE]
 >
-> Si vous envisagez de sauvegarder votre sandbox pour le réinitialiser, gardez à l’esprit les [ limites ](../ui/user-guide.md#reset-a-sandbox) qui entourent la réinitialisation des sandbox.
+> Si vous envisagez de sauvegarder votre sandbox pour le réinitialiser, gardez à l’esprit les [&#x200B; limites &#x200B;](../ui/user-guide.md#reset-a-sandbox) qui entourent la réinitialisation des sandbox.
 
 ### Exporter les métadonnées de votre choix dans un package
 
@@ -115,7 +121,7 @@ Bien qu’il soit possible d’ajouter de nouveaux objets à votre package de sa
 
 ### Vérifiez vos utilisations actuelles par rapport à vos droits de licence
 
-Maintenant que votre package de sauvegarde est prêt, vous pouvez réinitialiser votre sandbox pour réinitialiser votre utilisation. Vous devez régulièrement surveiller votre utilisation afin de pouvoir ajuster vos droits de licence ou réinitialiser votre sandbox si nécessaire. Pour en savoir plus sur le tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md) reportez-vous au [ guide d’utilisation des licences.
+Maintenant que votre package de sauvegarde est prêt, vous pouvez réinitialiser votre sandbox pour réinitialiser votre utilisation. Vous devez régulièrement surveiller votre utilisation afin de pouvoir ajuster vos droits de licence ou réinitialiser votre sandbox si nécessaire. Pour en savoir plus sur le tableau de bord d’utilisation de la licence[&#128279;](../../dashboards/guides/license-usage.md) reportez-vous au  guide d’utilisation des licences.
 
 ### Réinitialiser votre sandbox
 

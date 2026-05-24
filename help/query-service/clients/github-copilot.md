@@ -3,11 +3,21 @@ title: Connecter le pilote GitHub et Visual Studio Code à Query Service
 description: Découvrez comment connecter le Copilote GitHub et Visual Studio Code à Adobe Experience Platform Query Service.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
 TQID: https://experienceleague.adobe.com/I-kt0XLWL0-nj-sMLiVHIqW-zL7PbD-UhB6Aq3ZwJYc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: e0c8953a-a203-4291-bef3-3560160d3041
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1423
@@ -19,7 +29,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Avant d’utiliser cet outil intégré, vous devez comprendre quelles données sont partagées avec GitHub. Les données partagées incluent des informations contextuelles sur le code et les fichiers modifiés (« invites ») et des détails sur les actions de l&#39;utilisateur (« données d&#39;engagement de l&#39;utilisateur »).  Veuillez consulter la déclaration de confidentialité de ](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) pour en savoir plus sur les données qu&#39;ils collectent. [[!DNL GitHub Copilot]Vous devez également tenir compte des implications en matière de sécurité de l’implication de services tiers, car vous êtes responsable de la conformité aux politiques de gouvernance des données de votre entreprise. Adobe n’est pas responsable des problèmes liés aux données qui peuvent résulter de l’utilisation de cet outil. Pour plus d’informations, consultez la documentation de GitHub .
+>Avant d’utiliser cet outil intégré, vous devez comprendre quelles données sont partagées avec GitHub. Les données partagées incluent des informations contextuelles sur le code et les fichiers modifiés (« invites ») et des détails sur les actions de l&#39;utilisateur (« données d&#39;engagement de l&#39;utilisateur »).  Veuillez consulter la déclaration de confidentialité de [&#128279;](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) pour en savoir plus sur les données qu&#39;ils collectent. [!DNL GitHub Copilot]Vous devez également tenir compte des implications en matière de sécurité de l’implication de services tiers, car vous êtes responsable de la conformité aux politiques de gouvernance des données de votre entreprise. Adobe n’est pas responsable des problèmes liés aux données qui peuvent résulter de l’utilisation de cet outil. Pour plus d’informations, consultez la documentation de GitHub .
 
 [!DNL GitHub Copilot], optimisé par OpenAI Codex, est un outil piloté par l’IA qui améliore votre expérience de codage en suggérant des fragments de code et des fonctions entières directement dans votre éditeur. Intégré à [!DNL Visual Studio Code] ([!DNL VS Code]), [!DNL Copilot] peut accélérer considérablement votre workflow, en particulier lorsque vous travaillez avec des requêtes complexes. Suivez ce guide pour savoir comment connecter [!DNL GitHub Copilot] et [!DNL VS Code] à Query Service afin d’écrire et de gérer vos requêtes avec une plus grande efficacité. Pour plus d’informations sur [!DNL Copilot], consultez [la page produit Copilot de GitHub](https://github.com/pricing) et la [documentation [!DNL Copilot] officielle](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot).
 

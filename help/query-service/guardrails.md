@@ -4,11 +4,19 @@ title: Mécanismes de sécurisation pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 TQID: https://experienceleague.adobe.com/UXuXXBlvQcXfg9Uvub7-fSQQ636ZSvVT9dRXvF1fl-Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1263

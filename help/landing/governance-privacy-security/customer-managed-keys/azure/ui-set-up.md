@@ -5,11 +5,21 @@ role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
 TQID: https://experienceleague.adobe.com/gzpPs7ty7fp45AkutX59-4zEUq55T1zYw2-hc7-5ZQo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1105
@@ -106,7 +116,7 @@ Le champ **[!UICONTROL Key Identifier]** affiche l’identifiant d’URI de la c
 
 ![Détails clés du tableau de bord Microsoft Azure avec les sections [!DNL Permitted operations] et Copier l’URL clé en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Une fois que vous avez obtenu la [!DNL Key vault URI], revenez à la vue [!UICONTROL Customer Managed Keys configuration] et saisissez un **[!UICONTROL Configuration name]** descriptif. Ajoutez ensuite le [!DNL Key Identifier] extrait de la page Détails des clés Azure dans le **[!UICONTROL Key vault key identifier]** et sélectionnez **[!UICONTROL  Save]**.
+Une fois que vous avez obtenu la [!DNL Key vault URI], revenez à la vue [!UICONTROL Customer Managed Keys configuration] et saisissez un **[!UICONTROL Configuration name]** descriptif. Ajoutez ensuite le [!DNL Key Identifier] extrait de la page Détails des clés Azure dans le **[!UICONTROL Key vault key identifier]** et sélectionnez **[!UICONTROL &#x200B; Save]**.
 
 ![Vue [!UICONTROL Customer Managed Keys configuration] avec les sections [!UICONTROL Configuration name] et [!UICONTROL Key vault key identifier] mises en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
 

@@ -6,11 +6,20 @@ type: Tutorial
 description: Le guide suivant décrit les étapes requises pour créer et publier un modèle de machine learning.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 TQID: https://experienceleague.adobe.com/00Wxm9NlQkOMxGDJ-sUj2kYxNVjqC6vJZRLPZKBx6PM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1098
@@ -38,7 +47,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 ### Exploration des données et compréhension des schémas
 
-Connectez-vous à [](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Datasets]** pour répertorier tous les jeux de données existants et sélectionnez le jeu de données à explorer. Dans ce cas, vous devez sélectionner le jeu de données **Données web Luma**.
+Connectez-vous à [&#128279;](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Datasets]** pour répertorier tous les jeux de données existants et sélectionnez le jeu de données à explorer. Dans ce cas, vous devez sélectionner le jeu de données **Données web Luma**.
 
 ![sélectionnez Jeu de données web Luma](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
@@ -64,7 +73,7 @@ Suivez le tutoriel [Créer un modèle à l’aide de notebooks JupyterLab](../ju
 
 Si vous souhaitez importer et compresser une recette pour l’utiliser dans le Workspace de science des données, vous devez compresser vos fichiers sources dans un fichier d’archive. Suivez le tutoriel [package des fichiers sources dans une recette](./package-source-files-recipe.md). Ce tutoriel vous explique comment compresser les fichiers sources dans une recette, ce qui est l’étape préalable à l’importation d’une recette dans le Workspace de science des données. Une fois le tutoriel terminé, une image Docker vous est fournie dans un registre de conteneurs Azure, avec l’URL de l’image correspondante, en d’autres termes, un fichier d’archive.
 
-Ce fichier d’archive peut être utilisé pour créer une recette dans le Workspace de science des données en suivant le workflow d’importation des recettes à l’aide du [ workflow de l’interface utilisateur ](./import-packaged-recipe-ui.md) ou du [ workflow de l’API ](./import-packaged-recipe-api.md).
+Ce fichier d’archive peut être utilisé pour créer une recette dans le Workspace de science des données en suivant le workflow d’importation des recettes à l’aide du [&#x200B; workflow de l’interface utilisateur &#x200B;](./import-packaged-recipe-ui.md) ou du [&#x200B; workflow de l’API &#x200B;](./import-packaged-recipe-api.md).
 
 ## Former et évaluer un modèle {#train-and-evaluate-your-model}
 
@@ -74,7 +83,7 @@ L’interface utilisateur et l’API Data Science Workspace vous permettent de p
 
 ### Création d’un modèle
 
-Pour en savoir plus sur la création d’un modèle à l’aide de l’interface utilisateur, consultez la page Formation et évaluation d’un modèle dans le tutoriel sur l’interface utilisateur de Workspace [tutoriel sur l’interface utilisateur](./train-evaluate-model-ui.md) ou [ tutoriel sur l’API](./train-evaluate-model-api.md). Ce tutoriel fournit un exemple de création, d’entraînement et de mise à jour d’hyperparamètres pour affiner votre modèle.
+Pour en savoir plus sur la création d’un modèle à l’aide de l’interface utilisateur, consultez la page Formation et évaluation d’un modèle dans le tutoriel sur l’interface utilisateur de Workspace [tutoriel sur l’interface utilisateur](./train-evaluate-model-ui.md) ou [&#x200B; tutoriel sur l’API](./train-evaluate-model-api.md). Ce tutoriel fournit un exemple de création, d’entraînement et de mise à jour d’hyperparamètres pour affiner votre modèle.
 
 >[!NOTE]
 >
@@ -92,7 +101,7 @@ Pour savoir comment noter votre modèle, consultez la section Noter un modèle [
 
 Le Workspace de science des données vous permet de publier votre modèle formé en tant que service. Cela permet aux utilisateurs et utilisatrices de votre organisation de noter des données sans avoir à créer leurs propres modèles.
 
-Pour savoir comment publier un modèle en tant que service, consultez le tutoriel [tutoriel de l’interface utilisateur](./publish-model-service-ui.md) ou [ tutoriel de l’API](./publish-model-service-api.md).
+Pour savoir comment publier un modèle en tant que service, consultez le tutoriel [tutoriel de l’interface utilisateur](./publish-model-service-ui.md) ou [&#x200B; tutoriel de l’API](./publish-model-service-api.md).
 
 ### Planification d’une formation automatisée pour un service
 

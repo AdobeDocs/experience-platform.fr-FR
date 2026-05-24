@@ -4,10 +4,16 @@ description: Découvrez comment connecter votre compte Google Ads à Adobe Exper
 badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 TQID: https://experienceleague.adobe.com/1yjXJFEWfzNTFVX-srzcqEfPmVrDcSHbXV55vTpF1kU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 895
@@ -21,7 +27,7 @@ ht-degree: 10%
 >
 > La source [!DNL Google Ads] est actuellement en version bêta et ne prend en charge qu’une ingestion unique. Vous pouvez utiliser [la méthode API](../../../api/create/advertising/ads.md) pour effectuer une ingestion incrémentielle des données de vos [!DNL Google Ads] dans Experience Platform.
 >
->Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez ce guide pour savoir comment connecter votre compte [!DNL Google Ads] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 
@@ -63,7 +69,7 @@ Si vous ne disposez pas d’un compte existant, vous devez créer un compte en f
 Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom de compte et, éventuellement, une description pour les détails de votre compte. Ensuite, fournissez les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform :
 
 * **Identifiant client** : l’identifiant client est le numéro de compte qui correspond au compte client [!DNL Google Ads] que vous souhaitez gérer avec l’API [!DNL Google Ads]. Cet identifiant suit le modèle de `123-456-7890`.
-* **ID de client de connexion** : l’ID de client de connexion est le numéro de compte qui correspond à votre compte [!DNL Google Ads] Manager et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la documentation de l’API ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).[[!DNL Google Ads] 
+* **ID de client de connexion** : l’ID de client de connexion est le numéro de compte qui correspond à votre compte [!DNL Google Ads] Manager et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la documentation de l’API [&#128279;](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).[!DNL Google Ads] 
 * **Jeton de développeur** : le jeton de développeur vous permet d’accéder à l’API [!DNL Google Ads]. Vous pouvez utiliser le même jeton de développement pour effectuer des requêtes sur tous vos comptes [!DNL Google Ads]. Récupérez votre jeton de développeur en [vous connectant à votre compte Manager](https://ads.google.com/home/tools/manager-accounts/) puis en accédant à la page du Centre API.
 * **Jeton d’actualisation** : le jeton d’actualisation fait partie de l’authentification [!DNL OAuth2]. Ce jeton vous permet de régénérer vos jetons d’accès après leur expiration.
 * **Identifiant client** : l’identifiant client est utilisé conjointement avec le secret client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Google].

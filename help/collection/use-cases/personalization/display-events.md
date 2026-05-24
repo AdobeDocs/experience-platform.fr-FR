@@ -4,11 +4,21 @@ description: Décrit ce que sont les événements d’affichage et comment les u
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
 keywords: personnalisation;événements d’affichage;sendEvent;renderDecisions;applyPropositions;propositions;
 TQID: https://experienceleague.adobe.com/JCQ7B8nsvKMsG1vRmIM-Cm9HmqPW9Y7-tIZ5lbtr43Q
-product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: b3f03848-ae12-48b2-8aab-cad18567eb32id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 421

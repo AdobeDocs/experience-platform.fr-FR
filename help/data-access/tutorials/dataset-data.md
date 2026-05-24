@@ -6,10 +6,15 @@ type: Tutorial
 description: Découvrez comment localiser les données stockées dans un jeu de données, les télécharger et y accéder à l’aide de l’API Data Access de Adobe Experience Platform. Ce document présente certaines des fonctionnalités uniques de l’API Data Access, telles que la pagination et les téléchargements partiels.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
 TQID: https://experienceleague.adobe.com/-CmCq-BFklkKbfQn5SxNb43yCwwsV9n61bhdyTxi-Go
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1393
@@ -66,7 +71,7 @@ Avant de pouvoir commencer à utiliser l’API [!DNL Data Access], vous devez id
 - `GET /batches` : renvoie une liste de lots sous votre organisation
 - `GET /dataSetFiles` : renvoie une liste de fichiers sous votre organisation
 
-Pour obtenir la liste complète des points d’entrée de l’API [!DNL Catalog], reportez-vous à la [ Référence d’API ](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Pour obtenir la liste complète des points d’entrée de l’API [!DNL Catalog], reportez-vous à la [&#x200B; Référence d’API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Récupération d’une liste de lots sous votre organisation
 

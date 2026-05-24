@@ -3,11 +3,17 @@ title: Vue Transactions d’événement
 description: Ce guide détaille les informations sur la vue Transactions d’événement dans Adobe Experience Platform Assurance.
 exl-id: ad97f2c1-5bbc-49e2-8378-edcb8af149a3
 TQID: https://experienceleague.adobe.com/GBAxXZygOH4-p218l0UZ6qYYobw3otg5zQlkQT9LMVM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: e0c8953a-a203-4291-bef3-3560160d3041
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 682

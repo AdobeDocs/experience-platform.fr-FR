@@ -5,11 +5,35 @@ title: Présentation de l’espace de travail de science des données
 description: Ce guide présente les concepts clés de l’espace de travail de science des données dans Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 TQID: https://experienceleague.adobe.com/mKz9YC92fnMKQKCFx-ZiKBInNsIDiFouEK2xH8PFWUQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: a230274e-7e6e-49eb-b817-514495a710acid: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: aff8c1fa-1be7-48bd-92b8-4b12a668ca13id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2442
@@ -206,4 +230,4 @@ Pour plus d’informations, comme un processus quotidien complet, commencez par 
 
 La vidéo suivante est conçue pour vous aider à comprendre [!DNL Data Science Workspace].
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)

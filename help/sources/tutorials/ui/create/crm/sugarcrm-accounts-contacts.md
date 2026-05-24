@@ -3,11 +3,16 @@ title: Créer une connexion source Comptes et contacts SugarCRM dans l’interfa
 description: Découvrez comment créer une connexion source Comptes et contacts SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
 TQID: https://experienceleague.adobe.com/ePzKsm1-8YTfiLvzvh15Ce11CDBkl2cQjGlnRqF7zE4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 758
@@ -42,7 +47,7 @@ Pour connecter [!DNL SugarCRM Accounts & Contacts] à Experience Platform, vous 
 
 ### Création d’un schéma Experience Platform
 
-Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 Le [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Cela signifie que vous devez créer un schéma distinct, en fonction du type d’objet que vous utilisez. Consultez les exemples ci-dessous pour les schémas de comptes et de contacts :
 
@@ -66,7 +71,7 @@ Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le cô
 
 Dans la catégorie *CRM*, sélectionnez **[!UICONTROL SugarCRM Accounts & Contacts]**, puis **[!UICONTROL Add data]**.
 
-![Capture d’écran de l’interface utilisateur d’Experience Platform pour le catalogue avec la carte Comptes et contacts SugarCRM ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour le catalogue avec la carte Comptes et contacts SugarCRM &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 La page **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 

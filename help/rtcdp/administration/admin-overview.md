@@ -5,11 +5,18 @@ description: Ce document présente les fonctionnalités d’administration d’A
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 TQID: https://experienceleague.adobe.com/qSXP2h0wS-89O6K3Xn21JCWCf-Ur1iuAzfLtMSgp8yc
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: a3f1e846-82a6-4574-9832-7d46ef69f306
-subfeature_v2: id: a3118268-59a6-4679-b8b5-7e62de26c61fid: c14504d0-ed2f-4120-8361-02a1874e245a
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: a3f1e846-82a6-4574-9832-7d46ef69f306
+subfeature_v2:
+  - id: a3118268-59a6-4679-b8b5-7e62de26c61f
+  - id: c14504d0-ed2f-4120-8361-02a1874e245a
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 325
@@ -29,7 +36,7 @@ Les sections suivantes présentent les composants centraux des fonctionnalités 
 
 Le contrôle d’accès basé sur les attributs est géré via l’interface utilisateur des autorisations. Cette fonctionnalité exploite les rôles de l’interface utilisateur Autorisations, ce qui vous permet de lier les utilisateurs à des autorisations et des sandbox. Grâce à cette fonctionnalité, les administrateurs peuvent accorder ou restreindre l’accès à des fonctionnalités spécifiques de la plateforme CDP en temps réel pour des ensembles d’utilisateurs définis.
 
-Pour en savoir plus sur le contrôle d’accès, consultez la [ présentation du contrôle d’accès basé sur les attributs ](/help/access-control/abac/overview.md) dans la documentation [!DNL Experience Platform].
+Pour en savoir plus sur le contrôle d’accès, consultez la [&#x200B; présentation du contrôle d’accès basé sur les attributs &#x200B;](/help/access-control/abac/overview.md) dans la documentation [!DNL Experience Platform].
 
 >[!IMPORTANT]
 >

@@ -5,11 +5,24 @@ type: Documentation
 description: Octroyez aux utilisateurs la possibilité dʼafficher, de modifier et de mettre à jour les tableaux de bord Experience Platform à lʼaide dʼAdobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 TQID: https://experienceleague.adobe.com/ZuPk5map-epe3a7-yCh6BmkrsxRWUIfy6t6MzKuQ2gM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377id: eec185bd-7d60-4193-ba3f-da427569936a
-subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 621

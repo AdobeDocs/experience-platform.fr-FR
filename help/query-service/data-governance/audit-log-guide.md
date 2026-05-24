@@ -3,9 +3,16 @@ title: Intégration du journal d’audit de Query Service
 description: Les journaux d’audit de Query Service conservent des enregistrements pour diverses actions des utilisateurs afin de former un journal d’audit pour résoudre les problèmes ou respecter les politiques de gestion des données d’entreprise et les exigences réglementaires. Ce tutoriel présente une vue d’ensemble des fonctionnalités du journal d’audit spécifiques à Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
 TQID: https://experienceleague.adobe.com/vXV3gcTNSwMY-jOb9O5dKtXS7DanR4VJWBqun5qME4Q
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 898
@@ -97,4 +104,4 @@ Les filtres disponibles varient en fonction de la catégorie sélectionnée dans
 
 Grâce à la lecture de ce document, vous comprenez mieux la fonctionnalité de journal d’audit [!DNL Query Service] et comment elle peut être utilisée pour filtrer vos actions utilisateur [!DNL Query Service].
 
-Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [](../troubleshooting-guide.md).
+Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [&#128279;](../troubleshooting-guide.md).

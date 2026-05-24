@@ -4,9 +4,12 @@ description: Vous pouvez vous abonner à des alertes lors de la création d’un
 title: Abonnement aux alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 TQID: https://experienceleague.adobe.com/SX2Md-aGUY5mQx6ywSPvINLs8-syTbwPhQt6mjA699k
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 835
@@ -120,7 +123,7 @@ Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Dataflow
 
 Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données existant dans la page de [!UICONTROL Dataflows]. Recherchez le flux de données que vous créez dans la liste, puis sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL Subscribe alerts]** pour modifier les paramètres d’alerte de votre flux de données.
 
-![options ](../../images/tutorials/alerts/options.png)
+![options &#x200B;](../../images/tutorials/alerts/options.png)
 
 Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de sources. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 

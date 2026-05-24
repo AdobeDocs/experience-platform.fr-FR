@@ -3,9 +3,14 @@ title: Guide complet sur la gouvernance des données
 description: Suivez la procédure complète permettant d’appliquer des contraintes d’utilisation des données aux champs et jeux de données dans Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 TQID: https://experienceleague.adobe.com/1MTKJuyrdltX7iDluo2im9AdFjSv885Rk-J1WrxYAVY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1823

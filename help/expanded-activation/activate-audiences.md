@@ -3,10 +3,15 @@ title: Activer les audiences Audience Manager par le biais d’une activation é
 description: Découvrez comment activer les audiences Audience Manager vers des destinations sociales et publicitaires, via l’activation étendue d’Audience Manager.
 exl-id: 4105f5c5-db69-414f-9ee4-8630b0a86da7
 TQID: https://experienceleague.adobe.com/Y4A-nsIFEc9jMpWdVbD6yZYh9QF2wT-YpJqnVRdvv6s
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 482
@@ -28,7 +33,7 @@ Les étapes décrites dans ce guide supposent que vous ayez lu la page [Aperçu 
 
 ## Étape 1 : configurer la connexion source Audience Manager {#configure-source}
 
-Le connecteur source [](../sources/connectors/adobe-applications/audience-manager.md) envoie les données d’audience collectées dans Adobe Audience Manager pour activation sur les plateformes de destination prises en charge par l’activation étendue.
+Le connecteur source [&#128279;](../sources/connectors/adobe-applications/audience-manager.md) envoie les données d’audience collectées dans Adobe Audience Manager pour activation sur les plateformes de destination prises en charge par l’activation étendue.
 
 Suivez le guide expliquant comment [créer une connexion source Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) pour configurer votre connecteur source.
 
@@ -38,7 +43,7 @@ Suivez le guide expliquant comment [créer une connexion source Audience Manager
 >
 >Le connecteur source Adobe Audience Manager est le seul connecteur source disponible dans l’activation étendue.
 >
->Si vous souhaitez ingérer des audiences en fonction d’identifiants supplémentaires, vous devez acheter une édition de [](../rtcdp/overview.md). Pour plus d’informations, contactez votre représentant ou représentante Adobe.
+>Si vous souhaitez ingérer des audiences en fonction d’identifiants supplémentaires, vous devez acheter une édition de [&#128279;](../rtcdp/overview.md). Pour plus d’informations, contactez votre représentant ou représentante Adobe.
 
 ### Affichage et surveillance des audiences ingérées {#view-audiences}
 

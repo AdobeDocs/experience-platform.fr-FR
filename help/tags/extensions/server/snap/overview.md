@@ -4,11 +4,29 @@ description: Utilisez la conversion Snapchat pour envoyer des données d’évé
 last-substantial-update: 2025-01-20T00:00:00.000Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
 TQID: https://experienceleague.adobe.com/SbZbjD4PtmqMTLZfAFTB1FgNd1o90Xudfjc3EdETWvE
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1056
@@ -31,7 +49,7 @@ Créez un [flux de données](/help/tags/ui/event-forwarding/getting-started.md) 
 
 Un compte **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) est requis pour utiliser l’API Conversions. Business Manager aide les annonceurs à intégrer les efforts marketing de **[!DNL Snapchat]** dans leur entreprise et avec des partenaires externes. Consultez l’article **[!DNL Snapchat]** [centre d’aide](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sur la création d’un compte Business Manager si vous n’en avez pas.
 
-Un [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
+Un [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section [[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
 
 Vous avez besoin d’un jeton API statique de longue durée. Pour obtenir ce jeton, consultez la [[!DNL Snapchat] documentation de l’API de conversion](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token).
 
@@ -73,7 +91,7 @@ Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, 
 
 4. Dans le menu déroulant, sélectionnez l’élément approprié, puis remplissez le champ [!UICONTROL Path] dans le panneau de droite pour référencer les données souhaitées dans votre schéma.
 
-   ![Image illustrant l’écran Créer un élément de données ](../../../images/extensions/server/snap/create_data_element.png)
+   ![Image illustrant l’écran Créer un élément de données &#x200B;](../../../images/extensions/server/snap/create_data_element.png)
 
 Par exemple, si vous créez un élément de données qui fait référence à `snapClickId` dans le schéma illustré ci-dessous :
 

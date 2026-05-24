@@ -6,10 +6,16 @@ type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires au modèle de propension de démonstration de Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 TQID: https://experienceleague.adobe.com/DlhzBQXCTsTdFlEKmLqtPAypSWSL8uU5wOyf2beQ1Zc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 486

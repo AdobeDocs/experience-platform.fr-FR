@@ -4,11 +4,28 @@ title: Type de données Consentements et préférences
 description: Le type de données Consentement pour les préférences de confidentialité, de Personalization et de marketing est destiné à prendre en charge la collecte des autorisations et des préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources à partir de vos opérations de données.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 TQID: https://experienceleague.adobe.com/BczJoJ-NbKoASMEVP6YZHr0d5vFmGUoEvS2wak977Ps
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2354

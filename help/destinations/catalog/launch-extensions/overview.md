@@ -4,10 +4,18 @@ title: Extensions de balises dans Adobe Experience Platform
 description: Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Experience Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 TQID: https://experienceleague.adobe.com/tFy2sNkSxq88Rga5OlFMJmvYYQilW2ZFtnGrD6wcfFc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: e0eb8757-182f-49f3-94a4-1587d16f5094id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 482
@@ -32,7 +40,7 @@ Pour rechercher les extensions dans l’interface d’Experience Platform, accé
 
 ## Fonctionnement des extensions de balises {#how-extensions-work}
 
-Une [extension de balise](../../../tags/home.md#extensions) est un package de code qui améliore les fonctionnalités d’un site web ou d’une application mobile. Il peut s’agir de l’envoi de données d’événement brutes vers une destination telle que [](/help/destinations/catalog/analytics/google-universal-analytics.md) mais elles peuvent également servir à d’autres fonctions.
+Une [extension de balise](../../../tags/home.md#extensions) est un package de code qui améliore les fonctionnalités d’un site web ou d’une application mobile. Il peut s’agir de l’envoi de données d’événement brutes vers une destination telle que [&#128279;](/help/destinations/catalog/analytics/google-universal-analytics.md) mais elles peuvent également servir à d’autres fonctions.
 
 Il est important de faire la distinction entre les extensions de transfert de balises et d’événements. Les extensions affichées dans l’interface utilisateur des destinations Experience Platform sont des *extensions de balise*. Reportez-vous à la présentation du transfert d’événement pour plus d’informations sur les [différences entre les balises et le transfert d’événement](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 

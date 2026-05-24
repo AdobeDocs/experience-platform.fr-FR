@@ -4,11 +4,19 @@ description: Découvrez comment utiliser des requêtes SQL avec les modèles de 
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
 TQID: https://experienceleague.adobe.com/5zA8YXF364wlpGwZsTXqu99TOhFsSWGboM3KPEzt3qg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 473
@@ -57,7 +65,7 @@ Le diagramme ci-dessous affiche les champs de données pertinents dans chaque je
 
 #### Cas pratique des nouveaux comptes par secteur {#accounts-by-industry}
 
-La logique utilisée pour le [!UICONTROL New accounts by industry] insight renvoie les cinq principaux secteurs d’activité en fonction de leur nombre de profils de compte et de leur taille relative les uns par rapport aux autres. Pour plus d’informations](../guides/account-profiles.md#accounts-by-industry) consultez la documentation sur le widget [[!UICONTROL New accounts By Industry] .
+La logique utilisée pour le [!UICONTROL New accounts by industry] insight renvoie les cinq principaux secteurs d’activité en fonction de leur nombre de profils de compte et de leur taille relative les uns par rapport aux autres. Pour plus d’informations[&#128279;](../guides/account-profiles.md#accounts-by-industry) consultez la documentation sur le widget [!UICONTROL New accounts By Industry] .
 
 >[!TIP]
 >
@@ -102,7 +110,7 @@ LIMIT 5000;
 
 #### Cas d’utilisation des nouveaux comptes par type {#accounts-by-type}
 
-La logique utilisée par [!UICONTROL New accounts by type] insight renvoie la répartition numérique des comptes par type. Cette insight peut vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Pour plus d’informations](../guides/account-profiles.md#accounts-by-type) consultez la documentation sur le widget [[!UICONTROL New accounts by type] .
+La logique utilisée par [!UICONTROL New accounts by type] insight renvoie la répartition numérique des comptes par type. Cette insight peut vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Pour plus d’informations[&#128279;](../guides/account-profiles.md#accounts-by-type) consultez la documentation sur le widget [!UICONTROL New accounts by type] .
 
 Le code SQL qui génère le [!UICONTROL New accounts by type] insight est visible dans la section réductible ci-dessous.
 

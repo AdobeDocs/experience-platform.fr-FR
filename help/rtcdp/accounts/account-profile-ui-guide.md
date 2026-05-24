@@ -6,11 +6,19 @@ badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.a
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 TQID: https://experienceleague.adobe.com/Yo5q-kUX7-DhWBa32yIwibmv3JgFDMX2FKp4D7A4Z5w
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: a3f1e846-82a6-4574-9832-7d46ef69f306
-subfeature_v2: id: a3118268-59a6-4679-b8b5-7e62de26c61f
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: a3f1e846-82a6-4574-9832-7d46ef69f306
+subfeature_v2:
+  - id: a3118268-59a6-4679-b8b5-7e62de26c61f
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1641
@@ -34,7 +42,7 @@ Sélectionnez **[!UICONTROL Profiles]** sous [!UICONTROL Accounts] dans le volet
 
 ![Onglet Aperçu des profils de compte avec Profils dans le volet de navigation de gauche et Aperçu en surbrillance.](images/b2b-account-profile-overview.png)
 
-Consultez la documentation du tableau de bord [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) pour en savoir plus. Pour plus d’informations sur la manière dont vos modèles de données d’informations peuvent être utilisés pour créer des graphiques personnalisés pour vos tableaux de bord, consultez la documentation de la B2B edition du modèle de données d’informations Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2b.md).[
+Consultez la documentation du tableau de bord [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) pour en savoir plus. Pour plus d’informations sur la manière dont vos modèles de données d’informations peuvent être utilisés pour créer des graphiques personnalisés pour vos tableaux de bord, consultez la documentation de la B2B edition du modèle de données d’informations Real-time Customer Data Platform Insights[&#128279;](../../dashboards/data-models/cdp-insights-data-model-b2b.md).
 
 ## Configurer la correspondance des prospects et des comptes {#configure-lead-to-account-matching}
 

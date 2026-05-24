@@ -3,10 +3,17 @@ title: Notes de mise à jour d’octobre 2021 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2021 pour Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
 TQID: https://experienceleague.adobe.com/4R8p7thJ8ALc8M75bLXOCwGzAcEK1cqiiyP8kI-f-pw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 438
@@ -63,6 +70,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | Fonctionnalité | Description |
 | --- | --- |
 | Améliorations de la source [!DNL Amazon S3] | Vous pouvez désormais utiliser le paramètre `s3SessionToken` pour connecter votre compte [!DNL Amazon S3] à Experience Platform à l’aide d’informations d’identification de sécurité temporaires. Ce jeton vous permet de fournir un accès temporaire à court terme à vos ressources [!DNL Amazon S3] à des utilisateurs dans des environnements non approuvés. Pour plus d’informations, consultez la [[!DNL Amazon S3] documentation](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
-| [!DNL Generic REST API] (Beta) | Vous pouvez désormais créer une connexion source [!DNL Generic REST API] à l’aide de l’API [[!DNL Flow Service]  ](../../sources/tutorials/api/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md). |
+| [!DNL Generic REST API] (Beta) | Vous pouvez désormais créer une connexion source [!DNL Generic REST API] à l’aide de l’API [[!DNL Flow Service]  &#x200B;](../../sources/tutorials/api/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

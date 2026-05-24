@@ -5,10 +5,14 @@ title: Mise à jour d’un objet de catalogue
 description: Vous pouvez mettre à jour un objet Catalogue en incluant son identifiant dans le chemin d’accès d’une requête PATCH. Ce document couvre l’utilisation des champs et de la notation JSON Patch pour effectuer des opérations PATCH sur des objets de catalogue.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 TQID: https://experienceleague.adobe.com/JwwAe9V-v0nHlBooAG4XvPzbq4h6adYhq3Omv1PcgxY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 696

@@ -4,11 +4,18 @@ title: Guide de l’interface utilisateur d’Audiences
 description: La composition d’audiences dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 TQID: https://experienceleague.adobe.com/CxgOpknFxBvL7tjZuOTFcLwuPcVp0WUjjUtcbGwtphI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 2680
@@ -246,7 +253,7 @@ Le bloc **[!UICONTROL Enrich]** est ajouté. Lors de la sélection du bloc, les 
 
 Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . ](../images/ui/audience-composition/enrich-select-dataset.png)
+![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . &#x200B;](../images/ui/audience-composition/enrich-select-dataset.png)
 
 La fenêtre contextuelle **[!UICONTROL Select dataset]** s’affiche. Sélectionnez le jeu de données à ajouter pour l’enrichissement, puis **[!UICONTROL Select]** pour ajouter le jeu de données pour l’enrichissement.
 
@@ -430,7 +437,7 @@ En cas d’erreur lors de la création de l’audience, une alerte s’affiche, 
 
 Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Si vous définissez la destination à activer après l’évaluation du segment, vous n’avez **plus** besoin d’attendre 24 heures pour que la tâche d’évaluation se termine.
 
-Pour savoir comment gérer la destination, lisez le guide [ Activer les audiences vers des destinations de profils par lots ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
+Pour savoir comment gérer la destination, lisez le guide [&#x200B; Activer les audiences vers des destinations de profils par lots &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
 
 ## Étapes suivantes
 

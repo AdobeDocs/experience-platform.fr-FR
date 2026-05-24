@@ -5,10 +5,16 @@ description: Découvrez comment accélérer le délai de valorisation en copiant
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
 TQID: https://experienceleague.adobe.com/1YhhTYyxgj-PKTqU3NDs0BWg4OHRLAmqWiOpc0R5T4E
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 899
@@ -46,11 +52,11 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
    ![Package à l’état de brouillon ou dépublié](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
-   ![ Publication du package ](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
+   ![&#x200B; Publication du package &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
 
 4. Une fois la publication réussie, sur la page de navigation des packages, un bouton **+** doit s’afficher en regard du nom.
 
-   ![ Onglet Packages de la page Sandbox ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![&#x200B; Onglet Packages de la page Sandbox &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
    >[!NOTE]
    >
@@ -80,11 +86,11 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
 4. Terminez le mappage et sélectionnez **Enregistrer**.
 
-   ![ Enregistrer le mappage ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
+   ![&#x200B; Enregistrer le mappage &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
 
 5. Une fois que vous avez terminé de mapper tous les champs des schémas, sélectionnez **Terminer** pour terminer le workflow d’importation.
 
-   ![ Terminer le flux ](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
+   ![&#x200B; Terminer le flux &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
 
    >[!NOTE]
    >
@@ -98,8 +104,8 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
 2. Pendant l’importation du package, les ressources du package sont créées dans le sandbox cible. Une fois terminés, ils référencent les champs que vous avez mappés pendant le processus d’importation. Le processus est maintenant terminé et les ressources du sandbox source d’inspiration sont désormais également présentes dans votre sandbox cible pour que vous puissiez les tester.
 
-   ![ Ressources générées dans le sandbox cible ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![&#x200B; Ressources générées dans le sandbox cible &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment tirer parti des playbooks de cas d’utilisation avec l’[outil Sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les cas d’utilisation courants de [](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment tirer parti des playbooks de cas d’utilisation avec l’[outil Sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les cas d’utilisation courants de [&#128279;](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).

@@ -3,11 +3,21 @@ title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identités est gérée dans le workflow d’activation, en fonction du type de destination.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
 TQID: https://experienceleague.adobe.com/zSP6vyySfsJz7SoVfUGSKAiJSGsQuV5n7UuXeb4u9Q8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: beb7a3c1-66ab-4786-b879-7621375b3c40id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1187

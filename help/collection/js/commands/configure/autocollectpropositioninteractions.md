@@ -3,11 +3,25 @@ title: autoCollectPropositionInteractions
 description: Collecter automatiquement des données lorsqu’un utilisateur clique sur un lien.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
 TQID: https://experienceleague.adobe.com/TOhnO1l7gwD9tUbkcHTJBOxsaIIkyDTgriZENdvw-qw
-product_v2: id: cb954087-f4fc-4456-afb9-e939cabcdc79id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: d998adac-2f81-400b-a669-d07bb196e4ebid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: fa683eda-48de-4558-af32-2673edcd44fe
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+  - id: d998adac-2f81-400b-a669-d07bb196e4eb
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: fa683eda-48de-4558-af32-2673edcd44fe
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 501
@@ -56,7 +70,7 @@ Vous pouvez utiliser des attributs de données sur les éléments pour ajouter d
 | Nom | Attribut de données | Description |
 | --- | --- | --- |
 | **[!UICONTROL Label]** | `data-aep-click-label` | Lorsque l’attribut de données de libellé est présent sur un élément sur lequel l’utilisateur a cliqué, il est inclus dans les détails d’interaction envoyés à Edge Network. Le SDK Web recherche un attribut de données de libellé commençant par l’élément sur lequel l’utilisateur a cliqué et remontant l’arborescence DOM. Le SDK Web utilise le premier libellé trouvé. |
-| **[!UICONTROL Token]** | `data-aep-click-token` | Utilisez ce jeton lors de l’utilisation des politiques de décision dans les campagnes basées sur le code [](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/code-based-experience/get-started-code-based). Vous pouvez utiliser le jeton pour distinguer l’élément de politique de décision sur lequel l’utilisateur a cliqué. Lorsque l’attribut de données de jeton est présent sur un élément sur lequel l’utilisateur a cliqué, il est inclus dans les détails d’interaction envoyés à Edge Network. Le SDK Web recherche un attribut de données de jeton commençant par l’élément sur lequel l’utilisateur a cliqué et remontant l’arborescence DOM. Le SDK Web utilise le premier jeton qu’il trouve. |
+| **[!UICONTROL Token]** | `data-aep-click-token` | Utilisez ce jeton lors de l’utilisation des politiques de décision dans les campagnes basées sur le code [&#128279;](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/code-based-experience/get-started-code-based). Vous pouvez utiliser le jeton pour distinguer l’élément de politique de décision sur lequel l’utilisateur a cliqué. Lorsque l’attribut de données de jeton est présent sur un élément sur lequel l’utilisateur a cliqué, il est inclus dans les détails d’interaction envoyés à Edge Network. Le SDK Web recherche un attribut de données de jeton commençant par l’élément sur lequel l’utilisateur a cliqué et remontant l’arborescence DOM. Le SDK Web utilise le premier jeton qu’il trouve. |
 | **[!UICONTROL Interact ID]** | `data-aep-interact-id` | Le SDK Web ajoute automatiquement cet identifiant unique aux éléments de conteneur lors du rendu des propositions. Le SDK Web utilise cet identifiant pour corréler les éléments DOM aux propositions. Comme il s’agit d’un identifiant requis par le SDK Web, vous ne devez pas le modifier du tout. Vous pouvez l’ignorer en toute sécurité. |
 
 ## Exemple

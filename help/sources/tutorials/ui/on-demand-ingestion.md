@@ -3,9 +3,12 @@ title: Ingestion à la demande des flux de données des sources dans l’interfa
 description: Découvrez comment créer des flux de données à la demande pour vos connexions source à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
 TQID: https://experienceleague.adobe.com/Oew01M64EfZm0r606wC3vAtoPVYMtbX6AKGHp6084s8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 557

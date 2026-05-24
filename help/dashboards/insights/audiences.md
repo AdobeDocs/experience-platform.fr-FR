@@ -3,10 +3,16 @@ title: Informations sur les audiences
 description: Découvrez le langage SQL qui alimente les informations sur votre audience et utilisez ces requêtes pour générer des informations personnalisées afin d’explorer davantage les données d’audience à partir de Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 TQID: https://experienceleague.adobe.com/Kx1JQHDv0aIMA-RF9T-R3qDn2wVuptUQCugz8TglAtE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1122
@@ -91,7 +97,7 @@ SELECT source_segment_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#audience-overlap-report) consultez la documentation sur le widget [ Rapport de chevauchement d’audience .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/audiences.md#audience-overlap-report) consultez la documentation sur le widget  Rapport de chevauchement d’audience .
 
 ## Chevauchement d’audiences {#audience-overlap}
 
@@ -138,7 +144,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#audience-overlap) consultez la documentation sur le widget [Chevauchement des audiences.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/audiences.md#audience-overlap) consultez la documentation sur le widget Chevauchement des audiences.
 
 ## Tendance modif. taille audience {#audience-size-change-trend}
 
@@ -179,7 +185,7 @@ SELECT date_key,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight, consultez la documentation sur le widget [ Tendance de modification de la taille d’audience ](../guides/audiences.md#audience-size-change-trend) .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette insight, consultez la documentation sur le widget [&#x200B; Tendance de modification de la taille d’audience &#x200B;](../guides/audiences.md#audience-size-change-trend) .
 
 ## Tendance de la taille des audiences par identité {#audience-size-trend-by-identity}
 
@@ -271,7 +277,7 @@ WHERE
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#audience-size) consultez la [documentation sur le widget Taille de l’audience.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/audiences.md#audience-size) consultez la documentation sur le widget Taille de l’audience.
 
 ## Répartition des scores (IA dédiée aux clients) {#customer-ai-distribution-of-scores}
 
@@ -414,7 +420,7 @@ SELECT b.model_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#customer-ai-distribution-of-scores) consultez la documentation sur le widget [Distribution des scores de l’IA dédiée aux clients.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/audiences.md#customer-ai-distribution-of-scores) consultez la documentation sur le widget Distribution des scores de l’IA dédiée aux clients.
 
 ## Résumé du score de l’IA dédiée aux clients {#customer-ai-scoring-summary}
 
@@ -519,7 +525,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#identity-overlap) consultez la documentation sur le widget [Chevauchement des identités.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/audiences.md#identity-overlap) consultez la documentation sur le widget Chevauchement des identités.
 
 ## Profils par identité {#profiles-by-identity}
 
@@ -582,7 +588,7 @@ SELECT p.destination_platform ,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/audiences.md#scheduled-activations) consultez la documentation du widget [ Activations planifiées .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/audiences.md#scheduled-activations) consultez la documentation du widget  Activations planifiées .
 
 ## Étapes suivantes
 

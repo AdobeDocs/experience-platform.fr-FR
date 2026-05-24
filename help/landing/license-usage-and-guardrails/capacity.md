@@ -3,11 +3,24 @@ title: Utilisation et capacité des licences
 description: Découvrez les limites d’utilisation et de capacité de votre licence dans Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 TQID: https://experienceleague.adobe.com/sMPVDRtNFLHhcY9FgNj2sB9JzqNLTKvsNQN3UIsnQXU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2098
@@ -27,7 +40,7 @@ ht-degree: 8%
 >   - Cette autorisation vous permet de **modifier** vos allocations de capacité.
 >   - En outre, vous **devez** avoir accès à tous les sandbox pour modifier la capacité de **n’importe quel** sandbox.
 >
->Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [ présentation du contrôle d’accès ](/help/access-control/home.md#permissions)
+>Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [&#x200B; présentation du contrôle d’accès &#x200B;](/help/access-control/home.md#permissions)
 >
 >De plus, si vous avez acheté Segmentation par flux à haut débit, vous **ne pourrez pas** allouer vos capacités à l’aide de la capacité. Pour mettre à jour vos capacités, contactez l’Assistance clientèle d’Adobe.
 
@@ -64,7 +77,7 @@ Dans ces services, les mécanismes de sécurisation suivants sont suivis :
 - Le nombre maximal d’audiences Edge est de 150
 - Le débit combiné initial pour l’ingestion en flux continu est de 1 500 enregistrements par seconde (rps)
    - Ce débit de diffusion en continu combiné mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans le profil client en temps réel sur vos sandbox de production et de développement.
-   - Vous pouvez acheter une prise en charge supplémentaire de la segmentation en flux continu pour un maximum de 13 500 enregistrements par seconde. Vous trouverez plus d’informations sur l’achat de droits supplémentaires dans la description du produit [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Vous pouvez acheter une prise en charge supplémentaire de la segmentation en flux continu pour un maximum de 13 500 enregistrements par seconde. Vous trouverez plus d’informations sur l’achat de droits supplémentaires dans la description du produit [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 - Le débit combiné pour la segmentation Edge est de 1 500 enregistrements par seconde (rps)
 
 La capacité de l’audience se situe au niveau **sandbox**. Cela signifie que, pour chaque sandbox de votre organisation, vous pouvez avoir 500 audiences en flux continu, dont 150 peuvent être des audiences Edge.
@@ -225,7 +238,7 @@ En outre, vous pouvez consulter vos flux de données et voir si vous pouvez opti
 | Facteur contributif | Signification | Impact sur les cas d’utilisation | Bonnes pratiques |
 | --- | --- | --- | --- |
 | Conversion par lots en flux continu | Les charges de travail par lots converties en flux continu peuvent augmenter considérablement le débit et affecter les performances et l’allocation des ressources. Par exemple, l’exécution d’une mise à jour de profil en bloc après un événement sans limites de débit. | Les stratégies de diffusion en continu sont inutiles pour les cas d’utilisation par lots lorsqu’un traitement à faible latence n’est pas nécessaire. | Évaluez les exigences du cas d’utilisation. Pour le marketing sortant par lots, pensez à utiliser l’[ingestion par lots](/help/ingestion/batch-ingestion/overview.md) plutôt que la diffusion en continu pour gérer plus efficacement l’ingestion des données. |
-| Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**** : utilisez le [filtrage au niveau des lignes](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](/help/sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
+| Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**&#x200B;** : utilisez le [filtrage au niveau des lignes](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](/help/sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
 
 ## Bonnes pratiques relatives au débit de segmentation d’Edge {#edge-best-practices}
 

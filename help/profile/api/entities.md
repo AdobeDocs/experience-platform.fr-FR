@@ -6,10 +6,17 @@ description: Adobe Experience Platform vous permet d’accéder aux données du 
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 TQID: https://experienceleague.adobe.com/fI05Qed9BZKYm3ZMDYHg8tX29-1eR6lm5YzpceoimuY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2310
@@ -1237,7 +1244,7 @@ Une réponse réussie renvoie la page de résultats suivante. Cette réponse ne 
 
 >[!IMPORTANT]
 >
->Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [ API de suppression des enregistrements du cycle de vie des données ](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [](/help/hygiene/ui/record-delete.md) à la place.
+>Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [&#x200B; API de suppression des enregistrements du cycle de vie des données &#x200B;](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [&#128279;](/help/hygiene/ui/record-delete.md) à la place.
 >
 >En outre, les requêtes de suppression pour les entités B2B suivantes ont déjà été abandonnées :
 >

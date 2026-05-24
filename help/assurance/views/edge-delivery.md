@@ -3,11 +3,22 @@ title: Vue Edge Delivery
 description: Ce guide détaille les informations sur la vue Edge Delivery dans Adobe Experience Platform Assurance.
 exl-id: 570c1bcb-ec6d-465e-84ff-ed910d4f7e8a
 TQID: https://experienceleague.adobe.com/NnE95pgNlZdFfexC63pqCkvJuXaHzNOUJkUTyC9PT7g
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: b64298cc-90cc-46b7-8917-ee391f1c7516id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 899
@@ -23,7 +34,7 @@ La vue **[!UICONTROL Edge Delivery]** à l’intérieur de **[!UICONTROL Adobe E
 
 Avant de poursuivre, vérifiez que vous avez accès aux services suivants :
 
-- Interface utilisateur de la collecte de données de Adobe Experience Platform [](https://experience.adobe.com/#/data-collection/)
+- Interface utilisateur de la collecte de données de Adobe Experience Platform [&#128279;](https://experience.adobe.com/#/data-collection/)
 - [Assurance d’Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
 Pour savoir comment installer **[!UICONTROL Assurance]** dans votre application, veuillez lire le guide [implémentation d’Assurance](../tutorials/implement-assurance.md).

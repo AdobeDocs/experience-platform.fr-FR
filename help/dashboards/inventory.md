@@ -3,8 +3,11 @@ title: Afficher les tableaux de bord configurés
 description: Affichez une liste des tableaux de bord configurés de votre entreprise dans l’interface utilisateur d’Experience Platform.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
 TQID: https://experienceleague.adobe.com/ViUMOcMtEY7f0b--U-Ga08M99JjkE7CqHGuTQUu2gLA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 202

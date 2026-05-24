@@ -7,10 +7,18 @@ role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 TQID: https://experienceleague.adobe.com/smnoNfQjs0DcOO80h2nnX0ve-3wWFqXKkdpRAxWUO6Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2551
@@ -46,7 +54,7 @@ Pour réussir les appels aux API Experience Platform, vous devez disposer des é
 
 Vous devez également disposer d’une Adobe ID pour suivre ce tutoriel. Si vous ne possédez pas d’Adobe ID, vous pouvez en créer un en suivant les étapes suivantes :
 
-1. Accédez à [](https://console.adobe.io).
+1. Accédez à [&#128279;](https://console.adobe.io).
 2. Sélectionnez **[!UICONTROL Create a new account]**.
 3. Terminez le processus d’inscription.
 
@@ -58,7 +66,7 @@ Avant de créer des intégrations sur Adobe Developer Console, votre compte doit
 
 Contactez un administrateur ou une administratrice Admin Console de votre organisation pour vous ajouter en tant que développeur ou développeuse à un profil de produit Experience Platform. Consultez la documentation d’Admin Console pour obtenir des instructions spécifiques sur la [gestion de l’accès des développeurs pour les profils de produit](https://helpx.adobe.com/fr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-Une fois que vous êtes affecté en tant que développeur, vous pouvez commencer à créer des intégrations dans [](https://www.adobe.com/go/devs_console_ui). Ces intégrations sont un pipeline reliant des applications et services externes aux API Adobe.
+Une fois que vous êtes affecté en tant que développeur, vous pouvez commencer à créer des intégrations dans [&#128279;](https://www.adobe.com/go/devs_console_ui). Ces intégrations sont un pipeline reliant des applications et services externes aux API Adobe.
 
 ### Obtenir l’accès utilisateur {#gain-user-access}
 
@@ -70,7 +78,7 @@ Pour plus d’informations, consultez le guide sur la [gestion des groupes d’u
 
 >[!NOTE]
 >
->Si vous suivez ce document à partir du guide de l’API [](../privacy-service/api/getting-started.md), vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès propres à [!DNL Privacy Service].
+>Si vous suivez ce document à partir du guide de l’API [&#128279;](../privacy-service/api/getting-started.md), vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès propres à [!DNL Privacy Service].
 
 Après avoir obtenu l’accès développeur et utilisateur à Experience Platform via Admin Console, l’étape suivante consiste à générer vos informations d’identification `{ORG_ID}` et `{API_KEY}` dans Adobe Developer Console. Ces informations d’identification ne doivent être générées qu’une seule fois et peuvent être réutilisées dans les appels API Experience Platform futurs.
 
@@ -92,7 +100,7 @@ Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Add API]** 
 
 L’écran **[!UICONTROL Add an API]** s’affiche. Sélectionnez l’icône de produit à **[!UICONTROL Adobe Experience Platform]**, puis choisissez **[!UICONTROL Experience Platform API]** avant de sélectionner **[!UICONTROL Next]**.
 
-![Sélectionnez API Experience Platform dans l’écran Ajouter une API ](./images/api-authentication/platform-api.png).
+![Sélectionnez API Experience Platform dans l’écran Ajouter une API &#x200B;](./images/api-authentication/platform-api.png).
 
 >[!TIP]
 >
@@ -253,7 +261,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 ## Tester les informations d’identification d’accès {#test-credentials}
 
-Une fois que vous avez rassemblé les trois informations d’identification requises (jeton d’accès, clé API et ID d’organisation), vous pouvez essayer d’effectuer l’appel API suivant. Cet appel répertorie toutes les classes [!DNL Experience Data Model] standard (XDM) disponibles pour votre organisation. Importez et exécutez l’appel dans [](#use-postman).
+Une fois que vous avez rassemblé les trois informations d’identification requises (jeton d’accès, clé API et ID d’organisation), vous pouvez essayer d’effectuer l’appel API suivant. Cet appel répertorie toutes les classes [!DNL Experience Data Model] standard (XDM) disponibles pour votre organisation. Importez et exécutez l’appel dans [&#128279;](#use-postman).
 
 >[!BEGINSHADEBOX]
 
@@ -306,7 +314,7 @@ Vous trouverez également des informations détaillées sur la manière dont un 
 
 ## Utilisation de Postman pour authentifier et tester les appels API {#use-postman}
 
-[](https://www.postman.com/) est un outil populaire qui permet aux développeurs d’explorer et de tester les API RESTful. Vous pouvez utiliser les collections et environnements Experience Platform Postman pour accélérer votre travail avec les API Experience Platform. En savoir plus sur [l’utilisation de Postman dans Experience Platform](/help/landing/postman.md) et la prise en main des collections et des environnements.
+[&#128279;](https://www.postman.com/) est un outil populaire qui permet aux développeurs d’explorer et de tester les API RESTful. Vous pouvez utiliser les collections et environnements Experience Platform Postman pour accélérer votre travail avec les API Experience Platform. En savoir plus sur [l’utilisation de Postman dans Experience Platform](/help/landing/postman.md) et la prise en main des collections et des environnements.
 
 Vous trouverez également des informations détaillées sur l’utilisation de Postman avec les collections et environnements Experience Platform dans les tutoriels vidéo ci-dessous :
 
@@ -316,7 +324,7 @@ Vous trouverez également des informations détaillées sur l’utilisation de P
 
 **Utiliser une collection Postman pour générer des jetons d’accès**
 
-Téléchargez la collection Identity Management Service Postman [](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) et regardez la vidéo ci-dessous pour savoir comment générer des jetons d’accès.
+Téléchargez la collection Identity Management Service Postman [&#128279;](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) et regardez la vidéo ci-dessous pour savoir comment générer des jetons d’accès.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
@@ -338,7 +346,7 @@ Avant de pouvoir créer des intégrations sur Adobe Developer Console, votre com
 
 ### Ajout de développeurs au profil de produit {#add-developers-to-product-profile}
 
-Accédez à [](https://adminconsole.adobe.com/) et connectez-vous avec votre Adobe ID.
+Accédez à [&#128279;](https://adminconsole.adobe.com/) et connectez-vous avec votre Adobe ID.
 
 Sélectionnez **[!UICONTROL Products]** dans la barre de navigation, puis sélectionnez **[!UICONTROL Adobe Experience Platform]** dans la liste des produits.
 

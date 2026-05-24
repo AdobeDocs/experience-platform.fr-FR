@@ -5,10 +5,14 @@ title: Point d’entrée de l’API Classes
 description: Le point d’entrée /classes de l’API Schema Registry vous permet de gérer les classes XDM par programmation dans votre application d’expérience.
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 TQID: https://experienceleague.adobe.com/4nnZ3Opf259QCj1n-1VfZmOifXUzEB5SPyDvIUHRhCA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1524
@@ -31,7 +35,7 @@ Le point d’entrée `/classes` de l’API [!DNL Schema Registry] vous permet de
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de l’API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). [[!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). [!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de classes {#list}
 
@@ -257,7 +261,7 @@ Vous pouvez définir une classe personnalisée sous le conteneur `tenant` en eff
 
 >[!IMPORTANT]
 >
->Lors de la composition d’un schéma basé sur une classe personnalisée que vous définissez, vous ne pourrez pas utiliser de groupes de champs standard. Chaque groupe de champs définit les classes avec lesquelles ils sont compatibles dans leur attribut `meta:intendedToExtend`. Une fois que vous avez commencé à définir des groupes de champs compatibles avec votre nouvelle classe (en utilisant la `$id` de votre nouvelle classe dans le champ `meta:intendedToExtend` du groupe de champs ), vous pourrez réutiliser ces groupes de champs chaque fois que vous définissez un schéma qui implémente la classe que vous avez définie. Pour plus d’informations](./field-groups.md#create) reportez-vous aux sections [création de groupes de champs et [création de schémas](./schemas.md#create) dans leurs guides de point d’entrée respectifs.
+>Lors de la composition d’un schéma basé sur une classe personnalisée que vous définissez, vous ne pourrez pas utiliser de groupes de champs standard. Chaque groupe de champs définit les classes avec lesquelles ils sont compatibles dans leur attribut `meta:intendedToExtend`. Une fois que vous avez commencé à définir des groupes de champs compatibles avec votre nouvelle classe (en utilisant la `$id` de votre nouvelle classe dans le champ `meta:intendedToExtend` du groupe de champs ), vous pourrez réutiliser ces groupes de champs chaque fois que vous définissez un schéma qui implémente la classe que vous avez définie. Pour plus d’informations[&#128279;](./field-groups.md#create) reportez-vous aux sections création de groupes de champs et [création de schémas](./schemas.md#create) dans leurs guides de point d’entrée respectifs.
 >
 >Si vous prévoyez d’utiliser des schémas basés sur des classes personnalisées dans le profil client en temps réel, il est également important de garder à l’esprit que les schémas d’union ne sont construits que sur la base de schémas partageant la même classe. Si vous souhaitez inclure un schéma de classe personnalisée dans l’union pour une autre classe telle que [!UICONTROL XDM Individual Profile] ou [!UICONTROL XDM ExperienceEvent], vous devez établir une relation avec un autre schéma qui utilise cette classe. Pour plus d’informations, consultez le tutoriel sur [l’établissement d’une relation entre deux schémas dans l’API](../tutorials/relationship-api.md).
 

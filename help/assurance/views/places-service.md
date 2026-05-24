@@ -3,8 +3,10 @@ title: Vue Places
 description: Ce guide détaille les informations sur la vue Places dans Adobe Experience Platform Assurance.
 exl-id: 23086aae-8894-4350-aa02-7e2faabe000d
 TQID: https://experienceleague.adobe.com/BpEoecuIBv04cGwxurgAa8YMExojpjFpLajACIOYwbk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 148

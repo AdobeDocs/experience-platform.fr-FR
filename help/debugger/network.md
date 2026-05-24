@@ -7,10 +7,16 @@ seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
 exl-id: ed0579ef-ec26-43df-9453-a395c105038a
 TQID: https://experienceleague.adobe.com/pHNSxx-HRE2sJKyKq8nLQKAu3ps7cO3gb1iMVntSV58
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 215

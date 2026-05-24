@@ -3,9 +3,13 @@ description: Découvrez comment utiliser l’API de test de destination pour tes
 title: Vue d’ensemble de l’API de test de destination en streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 TQID: https://experienceleague.adobe.com/qLrehyJCv1-Vb5904hXJqTch7PJD2W1PfhZ-Xf-PMQs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 510
@@ -41,7 +45,7 @@ Avec cet outil, après avoir configuré la destination, vous pouvez :
 
 >[!NOTE]
 >
->Pour consulter la documentation de référence complète sur l’API, consultez les [opérations d’API de test de destination ](../../testing-api/streaming-destinations/destination-testing-api.md).
+>Pour consulter la documentation de référence complète sur l’API, consultez les [opérations d’API de test de destination &#x200B;](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 Vous pouvez appeler le point d’entrée de l’API de test de destination avec ou sans ajout de profils à la requête.
 

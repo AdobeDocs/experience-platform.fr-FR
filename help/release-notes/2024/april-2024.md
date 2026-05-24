@@ -3,11 +3,46 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2024
 description: Notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
 TQID: https://experienceleague.adobe.com/f26YgTSVNW-GUUNxJymGoha8pL5dn6hPpqxPyDbI2pU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: a230274e-7e6e-49eb-b817-514495a710acid: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: d1a87129-ba05-4f15-98b1-233618f1774aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1968
@@ -21,7 +56,7 @@ ht-degree: 29%
 
 >[!TIP]
 >
->Utilisez le glossaire [](/help/landing/glossary.md) pour vous familiariser avec la terminologie utilisée dans Real-Time Customer Data Platform et Adobe Experience Platform. Si vous ne trouvez pas un terme spécifique que vous recherchez, utilisez les options de commentaires de la page pour demander l’ajout de nouveaux termes au glossaire.
+>Utilisez le glossaire [&#128279;](/help/landing/glossary.md) pour vous familiariser avec la terminologie utilisée dans Real-Time Customer Data Platform et Adobe Experience Platform. Si vous ne trouvez pas un terme spécifique que vous recherchez, utilisez les options de commentaires de la page pour demander l’ajout de nouveaux termes au glossaire.
 
 Mises à jour des fonctionnalités existantes dans Experience Platform :
 
@@ -58,11 +93,11 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Type | Fonctionnalité | Description |
 | --- | --- | --- |
 | Extensions | Extension [!DNL Acxiom Anonymous Visitor Insights] Tags | Découvrez d’où viennent les visiteurs et visiteuses de votre site web avec [!DNL Acxiom's Visitor Insights]. En utilisant la technologie de recherche d’adresses IP géographiques, Acxiom peut localiser les navigateurs anonymes. Une fois identifié, une recherche dans leur base de données organisée génère des informations supplémentaires qui sont renvoyées au navigateur. Les créateurs de contenu peuvent ainsi personnaliser leur contenu pour qu’il corresponde à ces points de données, offrant ainsi une expérience plus personnalisée et plus attrayante aux visiteurs, même s’ils ont commencé comme des inconnus. |
-| Trains de données | [Détection de robots ](../../datastreams/bot-detection.md) | Le trafic provenant d’entités non humaines, telles que les programmes automatisés, les web scrapers, les araignées et les scanners scriptés, peut rendre plus difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir un impact négatif sur des mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects. <br>La détection des robots vous permet d’identifier les événements générés par la [collecte de données Adobe Experience Platform](/help/collection/home.md) comme étant générés par des araignées et des robots connus. En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques que vous souhaitez classer comme événements de robots. <br> L’identification du trafic de robots peut vous permettre de mesurer plus précisément l’activité des utilisateurs sur votre site ou application mobile. |
+| Trains de données | [Détection de robots &#x200B;](../../datastreams/bot-detection.md) | Le trafic provenant d’entités non humaines, telles que les programmes automatisés, les web scrapers, les araignées et les scanners scriptés, peut rendre plus difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir un impact négatif sur des mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects. <br>La détection des robots vous permet d’identifier les événements générés par la [collecte de données Adobe Experience Platform](/help/collection/home.md) comme étant générés par des araignées et des robots connus. En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques que vous souhaitez classer comme événements de robots. <br> L’identification du trafic de robots peut vous permettre de mesurer plus précisément l’activité des utilisateurs sur votre site ou application mobile. |
 | SDK Mobile | Version majeure | De nouvelles versions majeures de Mobile SDK ont été publiées pour les plateformes suivantes : iOS Mobile Core 5.x et extensions iOS compatibles, Android Mobile Core 3.x et extensions Android compatibles, React Native Core 6.x et extensions React Native compatibles, Flutter Core 4.x et extensions Flutter compatibles. Ces versions offrent plusieurs nouvelles fonctionnalités et améliorations, notamment la prise en charge d’Android SDK pour Jetpack Compose, la prise en charge des expériences basées sur du code Adobe Journey Optimizer et la disponibilité générale de l’extension de messagerie Adobe Journey Optimizer pour Flutter. Pour des notes de mise à jour plus détaillées, voir [Notes de mise à jour de Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | SDK Mobile | Confidentialité | En raison de la mise à jour de la politique d’Apple, à compter du 1er mai 2024, les développeurs et les développeuses doivent mettre en œuvre de nouvelles fonctionnalités de confidentialité pour envoyer des emails à App Store. Tous les clients Adobe qui utilisent Mobile SDK devront effectuer la mise à niveau vers la version 5.x de SDK s’ils souhaitent recevoir l’approbation d’App Store après le 1er mai. |
 | SDK Roku | SDK Roku | La première version majeure de Roku SDK a été publiée avec la prise en charge de Streaming Media pour Experience Platform Edge Network. |
-| Balises et transfert d’événement | Conseils intégrés au produit | Experience Platform [Balises](../../tags/home.md) et [Transfert d’événement](../../tags/ui/event-forwarding/overview.md) offrent une nouvelle gamme d’expériences qui peuvent vous aider à démarrer rapidement et à rentabiliser rapidement votre investissement. Ces expériences comprennent de nouveaux écrans d’intégration, des tutoriels intégrés au produit et des info-bulles. <br>![ Transfert d’événement avec les conseils intégrés au produit mis en surbrillance.](../2024/assets/april/event-forwarding.png "Éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance."){width="100" zoomable="yes"}<br> |
+| Balises et transfert d’événement | Conseils intégrés au produit | Experience Platform [Balises](../../tags/home.md) et [Transfert d’événement](../../tags/ui/event-forwarding/overview.md) offrent une nouvelle gamme d’expériences qui peuvent vous aider à démarrer rapidement et à rentabiliser rapidement votre investissement. Ces expériences comprennent de nouveaux écrans d’intégration, des tutoriels intégrés au produit et des info-bulles. <br>![&#x200B; Transfert d’événement avec les conseils intégrés au produit mis en surbrillance.](../2024/assets/april/event-forwarding.png "Éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance."){width="100" zoomable="yes"}<br> |
 | SDK Web | Adoption simplifiée de Web SDK pour les clients Audience Manager | Plusieurs mises à jour de Web SDK simplifient désormais l’adoption de Web SDK sans utiliser Experience Data Model (XDM) pour les solutions Experience Cloud telles qu’Audience Manager, Analytics et Target. Pour en savoir plus sur l’adoption d’Audience Manager Web SDK, consultez les guides suivants : <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Mettez à jour votre bibliothèque de collecte de données pour Audience Manager de l’extension de balise Audience Manager à l’extension de balise Web SDK</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Mettez à jour votre bibliothèque de collecte de données pour Audience Manager de la bibliothèque AppMeasurement JavaScript à la bibliothèque Web SDK JavaScript</li></ul> |
 
 {style="table-layout:auto"}
@@ -80,8 +115,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonction | Description |
 | ----------- | ----------- |
 | `isRequired` paramètre désormais disponible pour les champs de données client imbriqués dans Destination SDK | Lors de la configuration d’une destination dans Destination SDK, vous pouvez désormais [définir des champs de données client imbriqués selon vos besoins](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). De cette manière, les utilisateurs qui configurent votre destination ne peuvent pas poursuivre leur flux d’activation tant qu’ils n’ont pas sélectionné une valeur pour ce champ. |
-| La segmentation Edge n’est plus obligatoire lors de la configuration d’une destination Adobe Target avec Web SDK | Auparavant, lors de la configuration d’une destination [](/help/destinations/catalog/personalization/adobe-target-connection.md) avec Web SDK, le flux de données devait être activé pour la personnalisation et la segmentation Edge. L’exigence selon laquelle le flux de données doit être activé pour la segmentation Edge [a maintenant été supprimée](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Notez que ce modèle d’intégration vous permet uniquement de bénéficier d’un sous-ensemble de cas d’utilisation de la personnalisation lors de l’utilisation d’Adobe Target avec Real-Time CDP. En savoir plus sur le [cas d’utilisation activés par le type d’intégration](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases). |
-| [!BADGE Beta ]{type=Informative} supprimer plusieurs audiences et jeux de données des flux d’activation | Vous pouvez désormais sélectionner et supprimer plusieurs audiences et jeux de données des flux d’activation de destination. Consultez la documentation [détails de la destination](../../destinations/ui/destination-details-page.md#bulk-remove) et [exportation du jeu de données](../../destinations/ui/export-datasets.md) pour plus d’informations. |
+| La segmentation Edge n’est plus obligatoire lors de la configuration d’une destination Adobe Target avec Web SDK | Auparavant, lors de la configuration d’une destination [&#128279;](/help/destinations/catalog/personalization/adobe-target-connection.md) avec Web SDK, le flux de données devait être activé pour la personnalisation et la segmentation Edge. L’exigence selon laquelle le flux de données doit être activé pour la segmentation Edge [a maintenant été supprimée](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Notez que ce modèle d’intégration vous permet uniquement de bénéficier d’un sous-ensemble de cas d’utilisation de la personnalisation lors de l’utilisation d’Adobe Target avec Real-Time CDP. En savoir plus sur le [cas d’utilisation activés par le type d’intégration](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases). |
+| [!BADGE Beta &#x200B;]{type=Informative} supprimer plusieurs audiences et jeux de données des flux d’activation | Vous pouvez désormais sélectionner et supprimer plusieurs audiences et jeux de données des flux d’activation de destination. Consultez la documentation [détails de la destination](../../destinations/ui/destination-details-page.md#bulk-remove) et [exportation du jeu de données](../../destinations/ui/export-datasets.md) pour plus d’informations. |
 
 {style="table-layout:auto"}
 
@@ -181,9 +216,9 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mises à jour des adresses IP pour les listes autorisées dans VA7 | Les adresses IP suivantes ont été ajoutées à la liste des adresses IP à ajouter à votre liste autorisée pour VA7 (Amérique du Nord) : <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> Pour obtenir une liste complète des adresses IP à ajouter à votre liste autorisée, consultez le document [ liste autorisée d’adresses IP ](../../sources/ip-address-allow-list.md). |
+| Mises à jour des adresses IP pour les listes autorisées dans VA7 | Les adresses IP suivantes ont été ajoutées à la liste des adresses IP à ajouter à votre liste autorisée pour VA7 (Amérique du Nord) : <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> Pour obtenir une liste complète des adresses IP à ajouter à votre liste autorisée, consultez le document [&#x200B; liste autorisée d’adresses IP &#x200B;](../../sources/ip-address-allow-list.md). |
 | Prise en charge de nouveaux types d’authentification avec la source [!DNL Azure Event Hubs] | Vous pouvez désormais connecter votre source de [!DNL Event Hubs] à Experience Platform à l’aide de [!DNL Azure Active Directory Authentication] ou de [!DNL Scoped Azure Active Directory Authentication]. Pour plus d’informations, consultez le guide sur la [connexion [!DNL Event Hubs] à Experience Platform](../../sources/tutorials/ui/create/cloud-storage/eventhub.md). |
-| Mises à jour de la récupération des informations d’identification [!DNL Data Landing Zone] | Vous pouvez maintenant utiliser le rail de droite dans l’espace de travail des sources pour récupérer vos informations d’identification [!DNL Data Landing Zone]. Vous pouvez également utiliser le rail de droite pour actualiser vos informations d’identification. Pour plus d’informations, consultez le [[!DNL Data Landing Zone]  guide de l’interface utilisateur ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) . |
+| Mises à jour de la récupération des informations d’identification [!DNL Data Landing Zone] | Vous pouvez maintenant utiliser le rail de droite dans l’espace de travail des sources pour récupérer vos informations d’identification [!DNL Data Landing Zone]. Vous pouvez également utiliser le rail de droite pour actualiser vos informations d’identification. Pour plus d’informations, consultez le [[!DNL Data Landing Zone]  guide de l’interface utilisateur &#x200B;](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) . |
 
 {style="table-layout:auto"}
 

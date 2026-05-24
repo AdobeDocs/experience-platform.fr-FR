@@ -5,8 +5,10 @@ title: Type de données des détails de la page web
 description: Découvrez les détails de la page web sur le type de données du modèle de données d’expérience (XDM).
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 TQID: https://experienceleague.adobe.com/prPWidLpfgplYbTfVPbGqu9zyDy0M0C2QgZSaNhTfSw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 405

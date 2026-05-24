@@ -3,9 +3,13 @@ description: Découvrez comment formater un appel API pour soumettre une requêt
 title: Création d’une requête de publication de destination
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
 TQID: https://experienceleague.adobe.com/Bw4axuyIVyrMPM6Qmiy4u-O4Iu2yzQ3JhA8LSc8pkww
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 443

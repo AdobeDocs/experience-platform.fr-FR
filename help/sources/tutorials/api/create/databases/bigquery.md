@@ -4,11 +4,16 @@ description: Découvrez comment connecter Adobe Experience Platform à Google Bi
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 TQID: https://experienceleague.adobe.com/jzrfqql6tZZhYdxmBxwGV7EN7uSmKxWMX-3-2e9-h-c
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: e0c8953a-a203-4291-bef3-3560160d3041
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 712
@@ -245,4 +250,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Google BigQuery] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

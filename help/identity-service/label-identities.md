@@ -5,8 +5,11 @@ description: Vous pouvez étiqueter des champs contenant des informations d’id
 hide: true
 exl-id: c3097030-0242-404f-9e4c-72a7fa574011
 TQID: https://experienceleague.adobe.com/xtQvYLF9RdLjBfY56bQj5UHdAzn9Kb-pCe0fvXIufmc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 201
@@ -28,4 +31,4 @@ Pour obtenir des instructions sur la manière d’étiqueter les champs d’iden
 
 ## Étapes suivantes
 
-Pour plus d’informations sur [!DNL Identity Service], consultez la présentation [[!DNL Identity Service] ](./home.md).
+Pour plus d’informations sur [!DNL Identity Service], consultez la présentation [[!DNL Identity Service] &#x200B;](./home.md).

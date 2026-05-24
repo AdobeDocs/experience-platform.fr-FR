@@ -4,10 +4,14 @@ title: Gestion des libellés de contrôle d’accès basé sur les attributs
 description: Gérez les libellés via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 TQID: https://experienceleague.adobe.com/Uj1V9nun-SPbJpAtTgr1iAW15cqG80FSxXhhuPR2ACU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 602
@@ -35,9 +39,9 @@ Les libellés sont classés par type et appartiennent à l’une des catégories
 
 | Type | Description |
 | --- | --- |
-| [ Contrat ](../../../data-governance/labels/reference.md#contract){target="_blank"} | Cette catégorie est utilisée pour classer les données contenant des obligations contractuelles ou liées aux politiques de gouvernance des données de votre organisation. |
+| [&#x200B; Contrat &#x200B;](../../../data-governance/labels/reference.md#contract){target="_blank"} | Cette catégorie est utilisée pour classer les données contenant des obligations contractuelles ou liées aux politiques de gouvernance des données de votre organisation. |
 | [Identité](../../../data-governance/labels/reference.md#identity){target="_blank"} | Cette catégorie est utilisée pour classer les données qui peuvent identifier directement ou indirectement une personne. |
-| [ Sensible ](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | Cette catégorie est utilisée pour classer les données que votre organisation considère comme sensibles. |
+| [&#x200B; Sensible &#x200B;](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | Cette catégorie est utilisée pour classer les données que votre organisation considère comme sensibles. |
 | [Réseau Partenaires](../../../data-governance/labels/reference.md#partner){target="_blank"} | Cette catégorie est utilisée pour classer les données obtenues à partir de sources externes à votre organisation. |
 | Engagement responsable | Cette catégorie contient une étiquette unique, **[!UICONTROL Potential for Bias]**, qui reflète les données susceptibles d&#39;introduire un biais. |
 | Valeur personnalisée | Cette catégorie comprend les libellés créés par votre organisation. |

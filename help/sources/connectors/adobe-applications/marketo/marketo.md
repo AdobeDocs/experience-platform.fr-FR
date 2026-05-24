@@ -5,10 +5,15 @@ title: Connecteur Marketo Engage
 description: Ce document présente le connecteur source Marketo Engage, y compris des informations sur son authentification, son mappage et la latence des données.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 TQID: https://experienceleague.adobe.com/tdPj4DvS2gL7z80KzqqdNUikVp3MtiWkzavfB30YnyM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 767
@@ -42,7 +47,7 @@ Avant de pouvoir établir des jeux de mappages pour [!DNL Marketo Engage], vous 
 
 Pour connecter [!DNL Marketo Engage] à Experience Platform, vous devez d’abord récupérer des valeurs pour vos `munchkinId`, `clientId` et `clientSecret`.
 
-Consultez les étapes décrites dans le document [ Authentifier le connecteur source Marketo ](./marketo-auth.md) pour récupérer vos informations d’identification.
+Consultez les étapes décrites dans le document [&#x200B; Authentifier le connecteur source Marketo &#x200B;](./marketo-auth.md) pour récupérer vos informations d’identification.
 
 ## Configurer l’utilitaire de génération automatique de schémas et d’espaces de noms B2B
 
@@ -94,6 +99,6 @@ La documentation suivante fournit des informations supplémentaires sur la créa
    * Pour plus d’informations sur la configuration de vos schémas et l’ingestion de données d’activité personnalisées, consultez le tutoriel sur [la création d’une connexion source et d’un flux de données pour les données  [!DNL Marketo Engage] ’activité personnalisées](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
    * Pour plus d’informations sur la migration de votre mappage ECID du jeu de données [!DNL Person] vers le jeu de données [!DNL Activity], consultez le [guide de migration du mappage ECID](./migration.md).
 * Pour plus d’informations sur la configuration sous-jacente des espaces de noms et des schémas B2B utilisés avec [!DNL Marketo Engage], consultez la documentation relative aux espaces de noms et aux schémas [B2B](./marketo-namespaces.md).
-* Pour plus d’informations sur la recherche de votre identifiant munchkin [!DNL Marketo Engage] et la génération de vos informations d’identification, consultez le guide d’authentification [[!DNL Marketo Engage] ](./marketo-auth.md).
+* Pour plus d’informations sur la recherche de votre identifiant munchkin [!DNL Marketo Engage] et la génération de vos informations d’identification, consultez le guide d’authentification [[!DNL Marketo Engage] &#x200B;](./marketo-auth.md).
 * Pour plus d’informations sur les règles de mappage spécifiques qui s’appliquent aux jeux de données [!DNL Marketo Engage], consultez la documentation sur les [[!DNL Marketo Engage] mappages de champs](../mapping/marketo.md).
 * Pour obtenir des informations générales sur [!DNL Real-Time Customer Data Platform B2B Edition] et ses fonctionnalités, consultez la documentation sur [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

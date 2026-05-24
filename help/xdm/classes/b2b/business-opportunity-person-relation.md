@@ -3,9 +3,12 @@ title: Classe de relation de la personne avec l’opportunité commerciale XDM
 description: Découvrez la classe de relation entre la personne et l’opportunité commerciale XDM dans le modèle de données d’expérience (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 TQID: https://experienceleague.adobe.com/CZjEhevT7rql7WYWlHypeXBecAnOa6b9IUyvur3iF2U
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 345
@@ -21,7 +24,7 @@ ht-degree: 3%
 
 [!UICONTROL XDM Business Opportunity Person Relation] est une classe XDM (modèle de données d’expérience) standard qui recueille les propriétés minimales requises d’une personne associée à une opportunité commerciale.
 
-![ Structure de la classe de personne XDM Business Opportunity telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-opportunity-person-relation.png)
+![&#x200B; Structure de la classe de personne XDM Business Opportunity telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-opportunity-person-relation.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |

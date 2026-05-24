@@ -3,11 +3,24 @@ title: Présentation du développement d’extension
 description: Découvrez les principaux composants des différents types d’extensions de balise ainsi que le processus de développement des extensions dans Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 TQID: https://experienceleague.adobe.com/ZORuxNcwiKs5o5T6x-GDVA8BX6gl986KeUKsD3M6LLA
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 912

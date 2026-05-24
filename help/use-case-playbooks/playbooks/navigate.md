@@ -5,10 +5,14 @@ description: Découvrez comment parcourir une galerie de playbooks et commencer 
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
 TQID: https://experienceleague.adobe.com/XcrelsauHLgOt29zk-d-c5yY0OWtU2EC-f902RlAo0E
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 751
@@ -56,7 +60,7 @@ Notez que lorsque vous créez un sandbox source d’inspiration, les surfaces de
 
 ## Configuration des surfaces de canal et de sandbox dans Journey Optimizer {#configure-channel-surfaces}
 
-Si votre organisation dispose d’une licence pour [](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, vous devez configurer les préréglages de canal dans votre sandbox, qui définissent les paramètres techniques requis pour vos messages. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=fr).
+Si votre organisation dispose d’une licence pour [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, vous devez configurer les préréglages de canal dans votre sandbox, qui définissent les paramètres techniques requis pour vos messages. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=fr).
 
 Pour créer des instances de playbooks dans Journey Optimizer, vous devez configurer les surfaces des canaux pour les notifications par e-mail, push et SMS.
 

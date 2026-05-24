@@ -3,11 +3,28 @@ title: Appliquer les propositions
 description: Propositions de rendu dans les applications monopages sans incrémenter de mesures.
 exl-id: cac9c65b-259b-4776-bd32-fab070a145fb
 TQID: https://experienceleague.adobe.com/dzvNI7AGqvf2e1Man7WUOugdwRTjX4IeSqkzxGh--Mk
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: b3f03848-ae12-48b2-8aab-cad18567eb32id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: ee602049-8a18-43df-9299-a689a025a371id: f1f1a2d4-0976-4881-b091-c2bb8de7ffacid: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 363

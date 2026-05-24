@@ -3,11 +3,21 @@ title: Mise en œuvre de l’extension Adobe Experience Platform Assurance
 description: Ce guide explique comment implémenter et installer l’extension Adobe Experience Platform Assurance.
 exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
 TQID: https://experienceleague.adobe.com/C2q6JWgloytbZFx-gac44fNJkFpb85at43uM-YPpxNE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 409
@@ -23,7 +33,7 @@ Ce tutoriel explique comment installer et implémenter l’extension Experience 
 
 Pour installer et implémenter l’extension Assurance, vous devez avoir accès aux services suivants :
 
-- Interface utilisateur de la collecte de données de Adobe Experience Platform [](https://experience.adobe.com/#/data-collection/)
+- Interface utilisateur de la collecte de données de Adobe Experience Platform [&#128279;](https://experience.adobe.com/#/data-collection/)
 - [Assurance d’Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
 ## Création d’une propriété mobile

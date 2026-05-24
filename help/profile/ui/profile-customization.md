@@ -4,10 +4,14 @@ title: Personnalisation des détails du profil dans l’interface utilisateur
 description: Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données du profil client en temps réel dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 TQID: https://experienceleague.adobe.com/BcU9R2k5TsyjeFIGsE9ArBmJOOkDIdEYMST3x9pz7MA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1304
@@ -87,7 +91,7 @@ Lorsque vous choisissez d’ajouter une nouvelle carte, l’écran **[!UICONTROL
 
 ![Une nouvelle vignette de widget s’affiche dans l’écran Modifier le widget.](../images/profile-customization/edit-widget.png)
 
-Lorsque la boîte de dialogue **[!UICONTROL Select union schema field]** s’ouvre, le côté gauche de la boîte de dialogue affiche le schéma d’union [!UICONTROL XDM Individual Profile] complet et la section **[!UICONTROL Selected Attributes]** du côté droit de la boîte de dialogue affiche les attributs que vous sélectionnez pour votre carte. Pour plus d’informations sur l’ajout d’attributs, consultez la section [ sur l’ajout d’attributs ](#add-attributes) qui apparaît plus haut dans ce document.
+Lorsque la boîte de dialogue **[!UICONTROL Select union schema field]** s’ouvre, le côté gauche de la boîte de dialogue affiche le schéma d’union [!UICONTROL XDM Individual Profile] complet et la section **[!UICONTROL Selected Attributes]** du côté droit de la boîte de dialogue affiche les attributs que vous sélectionnez pour votre carte. Pour plus d’informations sur l’ajout d’attributs, consultez la section [&#x200B; sur l’ajout d’attributs &#x200B;](#add-attributes) qui apparaît plus haut dans ce document.
 
 Le nombre total d’attributs sélectionnés s’affiche, ainsi que le nombre maximal d’attributs (20) pouvant être ajoutés à une seule carte. Vous pouvez également supprimer et réorganiser vos attributs sélectionnés à partir de cet écran. Une fois que vous avez ajouté tous les attributs que vous souhaitez afficher sur la carte, choisissez **[!UICONTROL Select]** pour revenir à l’écran de **[!UICONTROL Edit widget]**.
 
@@ -109,4 +113,4 @@ Si, à tout moment, vous décidez que vous souhaitez restaurer les cartes par d�
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir mettre à jour la vue Profil de votre organisation, y compris l’ajout et la suppression de cartes, la modification des détails et attributs des cartes, ainsi que la réorganisation et le redimensionnement des cartes. Pour en savoir plus sur l’utilisation des données de [!DNL Profile] dans l’interface utilisateur d’Experience Platform, reportez-vous au guide d’utilisation [[!DNL Profile] ](user-guide.md).
+En suivant ce document, vous devriez maintenant pouvoir mettre à jour la vue Profil de votre organisation, y compris l’ajout et la suppression de cartes, la modification des détails et attributs des cartes, ainsi que la réorganisation et le redimensionnement des cartes. Pour en savoir plus sur l’utilisation des données de [!DNL Profile] dans l’interface utilisateur d’Experience Platform, reportez-vous au guide d’utilisation [[!DNL Profile] &#x200B;](user-guide.md).

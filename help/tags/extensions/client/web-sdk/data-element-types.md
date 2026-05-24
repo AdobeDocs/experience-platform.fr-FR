@@ -3,11 +3,21 @@ title: Types d’éléments de données dans l’extension Adobe Experience Plat
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balises Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 TQID: https://experienceleague.adobe.com/F-1A-l6ypALptCKCtZiYp1yPwgQxUPUusGPxhsebVgM
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 617
@@ -41,7 +51,7 @@ Vous ne devez pas fournir de [!DNL ECID] lors de la création d’un mappage d�
 
 L’élément de données de mappage d’identités est souvent utilisé avec l’élément de données [[!UICONTROL Variable]](#variable) et l’action [[!UICONTROL Set consent]](actions/set-consent.md).
 
-En savoir plus sur le service Adobe Experience Platform Identity [](/help/identity-service/home.md).
+En savoir plus sur le service Adobe Experience Platform Identity [&#128279;](/help/identity-service/home.md).
 
 ## Objet XDM {#xdm-object}
 
@@ -70,7 +80,7 @@ Après avoir créé cet élément de données, vous pouvez utiliser l’action [
 
 Un élément de données **[!UICONTROL Quality of Experience]** est utile lors de l’envoi d’événements de streaming multimédia à Adobe Experience Platform. Vous pouvez ajouter cet élément lors de la création d’une session multimédia et les événements multimédia suivants contiendront des données de qualité d’expérience mises à jour.
 
-![Image de l’interface utilisateur affichant l’écran Créer une qualité d’élément de données d’expérience ](assets/qoe-data-element.png).
+![Image de l’interface utilisateur affichant l’écran Créer une qualité d’élément de données d’expérience &#x200B;](assets/qoe-data-element.png).
 
 ## Étapes suivantes {#next-steps}
 

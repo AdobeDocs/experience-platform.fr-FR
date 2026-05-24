@@ -4,9 +4,12 @@ description: Découvrez comment connecter Mixpanel à Adobe Experience Platform 
 last-substantial-update: 2023-06-21T00:00:00.000Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 TQID: https://experienceleague.adobe.com/NH-xFyej5uq5PptsqLjSXEETCRe0hAmYLUx-dL-DrDM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 448
@@ -26,7 +29,7 @@ Sources tire parti de l’[API d’exportation d’événement Mixpanel > Télé
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
 
 ## Authentification de votre compte [!DNL Mixpanel]
 

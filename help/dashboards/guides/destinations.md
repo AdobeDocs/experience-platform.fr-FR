@@ -5,11 +5,23 @@ description: Adobe Experience Platform fournit un tableau de bord grâce auque
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
 TQID: https://experienceleague.adobe.com/r7XVjb-mk-tGQit8gk0jvKeqYUblCU13STI155Wp0MM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: eec185bd-7d60-4193-ba3f-da427569936a
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3056
@@ -39,7 +51,7 @@ La date et l’heure de l’instantané le plus récent s’affichent en haut de
 
 >[!NOTE]
 >
->Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord Destinations et l’onglet [!UICONTROL Overview] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [!UICONTROL Catalog] . Pour en savoir plus sur l’onglet [!UICONTROL Catalog] , consultez le guide d’[[!UICONTROL Destinations] Workspace ](../../destinations/ui/destinations-workspace.md).
+>Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord Destinations et l’onglet [!UICONTROL Overview] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [!UICONTROL Catalog] . Pour en savoir plus sur l’onglet [!UICONTROL Catalog] , consultez le guide d’[[!UICONTROL Destinations] Workspace &#x200B;](../../destinations/ui/destinations-workspace.md).
 
 ![Présentation des destinations de l’interface utilisateur d’Experience Platform avec l’instantané le plus récent en surbrillance.](../images/destinations/snapshot-timestamp.png)
 
@@ -153,7 +165,7 @@ La date de [!UICONTROL Updated] affichée indique la dernière fois que l’audi
 
 Sélectionner le nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL View All]** pour accéder à l’onglet [!UICONTROL Browse] de [!UICONTROL Audiences] , puis sélectionner le nom d’une audience pour en afficher les détails.
 
-Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [ présentation de Segmentation Service ](../../segmentation/home.md).
+Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md).
 
 ![Onglet Aperçu du tableau de bord Destinations avec le widget Audiences récemment activées en surbrillance.](../images/destinations/recently-activated-audiences.png)
 
@@ -300,7 +312,7 @@ Le widget [!UICONTROL Activated audiences across all destinations] fournit le no
 
 ![Le widget Audiences activées dans toutes les destinations.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Browse] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Browse] , consultez la documentation ](../../destinations/ui/destinations-workspace.md#browse).
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Browse] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Browse] , consultez la documentation &#x200B;](../../destinations/ui/destinations-workspace.md#browse).
 
 Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 

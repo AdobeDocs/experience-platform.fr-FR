@@ -3,8 +3,10 @@ title: Groupe de champs de schéma du catalogue de produits
 description: Découvrez le groupe de champs de schéma du catalogue de produits.
 exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
 TQID: https://experienceleague.adobe.com/c3JBcARvkI0RERR9-FeLtAh5uOnZVB0-OM5e750HDZI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 76

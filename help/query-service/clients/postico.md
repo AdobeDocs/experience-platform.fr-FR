@@ -5,8 +5,11 @@ title: Connecter Postico à Query Service
 description: Ce document contient le lien permettant d’installer le client de sauvegarde Postico pour Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 TQID: https://experienceleague.adobe.com/huBmzVsvhS0lKblXU3kxmrPt8SFD1d0o02ZMiQpgMAc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 418

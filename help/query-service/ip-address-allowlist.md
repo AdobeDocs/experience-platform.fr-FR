@@ -4,9 +4,14 @@ title: Adresse IP associée à Query Service
 description: Cette page fournit des plages d’adresses IP mises à jour que vous pouvez ajouter à votre place sur la liste autorisée pour un accès sécurisé à Query Service.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
 TQID: https://experienceleague.adobe.com/29vuxFP4lB-AJy1I68P2Cxtt6HzMgE8Azz0F-gUXgI4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 314

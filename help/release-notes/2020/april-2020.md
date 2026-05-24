@@ -7,10 +7,23 @@ author: ens71067
 keywords: notes de mise à jour ;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
 TQID: https://experienceleague.adobe.com/EWoOSRvtLJP1MQbDceDd2YNjQc9svPwNEFh2vq0LAbA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 983
@@ -49,7 +62,7 @@ Mises à jour des fonctionnalités existantes :
 
 * Aucun problème connu pour le moment.
 
-Pour plus d’informations sur les [!DNL Intelligent Services] et ce qu’ils ont à offrir, reportez-vous à la [ présentation des services intelligents ](../../intelligent-services/home.md).
+Pour plus d’informations sur les [!DNL Intelligent Services] et ce qu’ils ont à offrir, reportez-vous à la [&#x200B; présentation des services intelligents &#x200B;](../../intelligent-services/home.md).
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 
@@ -96,7 +109,7 @@ Pour plus d’informations, consultez la section [Présentation de la gouvernanc
 
 ## Destinations {#destinations}
 
-Dans [](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 
@@ -125,7 +138,7 @@ Problèmes connus
 
 * Aucun
 
-Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [](../../privacy-service/home.md).
+Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [&#128279;](../../privacy-service/home.md).
 
 ## Sources {#sources}
 

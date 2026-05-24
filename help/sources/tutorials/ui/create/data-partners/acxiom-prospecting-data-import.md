@@ -3,10 +3,14 @@ title: Import de données de prospection Acxiom
 description: Découvrez comment connecter les données de prospection Acxiom à Adobe Experience Platform et Adobe Real-time Customer Data Platform à l’aide de l’interface utilisateur.
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
 TQID: https://experienceleague.adobe.com/--G3QCsQEc3qHwcdh41QNtlHVALNDruPV5odlx9b1II
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1827
@@ -132,7 +136,7 @@ Vous pouvez sélectionner **[!UICONTROL Advanced search]** pour afficher une fen
 Au cours de cette étape, si votre jeu de données est activé pour Profil, vous pouvez sélectionner le bouton **[!UICONTROL Profile dataset]** pour activer vos données pour Ingestion de profil. Vous pouvez également activer les [!UICONTROL Error diagnostics] et les [!UICONTROL Partial ingestion].
 
 * **Diagnostics d’erreur** - Sélectionnez **Diagnostics d’erreur** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement à l’aide des API. Pour plus d’informations, consultez la présentation des diagnostics d’erreur [Error Diagnostics](../../../../../ingestion/quality/error-diagnostics.md)
-* **Activer l’ingestion partielle** - L’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément, avec des détails sur les raisons de leur non-validité.  Pour plus d’informations, consultez la [ Présentation de l’ingestion partielle ](../../../../../ingestion/batch-ingestion/partial.md)
+* **Activer l’ingestion partielle** - L’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément, avec des détails sur les raisons de leur non-validité.  Pour plus d’informations, consultez la [&#x200B; Présentation de l’ingestion partielle &#x200B;](../../../../../ingestion/batch-ingestion/partial.md)
 
 ![Interface des configurations des détails du flux de données.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
 
@@ -140,11 +144,11 @@ Au cours de cette étape, si votre jeu de données est activé pour Profil, vous
 | --- | --- |
 | Nom du flux de données | Nom du flux de données.  Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options sont toutes exécutées dans un flux de données pour les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes ](../../alerts.md) [<ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options sont toutes exécutées dans un flux de données pour les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 ## Mappage
 
-Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform.  Pour plus d’informations, consultez le guide de mappage [ dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md)
+Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform.  Pour plus d’informations, consultez le guide de mappage [&#x200B; dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md)
 
 ![L’interface de mappage.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 

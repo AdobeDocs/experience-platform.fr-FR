@@ -3,8 +3,10 @@ title: Type de données de recherche interne au site
 description: Découvrez le type de données XDM de recherche interne au site.
 exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
 TQID: https://experienceleague.adobe.com/aFl8c91iEEmyqaWll6cyeKwPf02OKx1FrH2URbgKT90
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 372

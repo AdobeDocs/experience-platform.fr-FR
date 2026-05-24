@@ -6,11 +6,34 @@ last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 TQID: https://experienceleague.adobe.com/Nz3NU3sHJrr7SALPseT6pliDoPHIrRlksm4ynWK46yw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1931
@@ -50,14 +73,14 @@ Avec Real-Time CDP, vous pouvez :
 * générer des informations exploitables et adapter les audiences grâce à l’IA et au machine learning optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
 * proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
-Pour plus d’informations, consultez la documentation de [](../../rtcdp/overview.md).
+Pour plus d’informations, consultez la documentation de [&#128279;](../../rtcdp/overview.md).
 
 **Fonctionnalités clés**
 
 | Fonctionnalité | Description |
 |---|---|
 | Destinations | Intégrations préconfigurées aux plateformes de destination prises en charge par Adobe [!DNL Real-Time Customer Data Platform] qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
-| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-Time Customer Data Platform (Real-Time CDP) comprend un tableau de bord des mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures ](#real-time-customer-data-platform-metrics) ci-dessous. |
+| Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-Time Customer Data Platform (Real-Time CDP) comprend un tableau de bord des mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures &#x200B;](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
 **[!DNL Real-Time Customer Data Platform]des mesures**
@@ -68,7 +91,7 @@ La page d’accueil n’est qu’un des emplacements où les cartes de mesures a
 
 Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. À mesure que les données sont collectées, le tableau de bord se met automatiquement à jour pour afficher des informations sur ces données.
 
-Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [](../../rtcdp/home-page-dashboards.md)
+Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [&#128279;](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
@@ -195,4 +218,4 @@ Adobe Experience Platform [!DNL Segmentation Service] propose une interface util
 
 * Aucun.
 
-Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [ présentation de Segmentation Service](../../segmentation/home.md).
+Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [&#x200B; présentation de Segmentation Service](../../segmentation/home.md).

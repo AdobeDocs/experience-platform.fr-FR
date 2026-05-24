@@ -4,11 +4,27 @@ description: Découvrez l’extension Microsoft Azure pour le transfert d’év�
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
 last-substantial-update: 2022-11-23T00:00:00.000Z
 TQID: https://experienceleague.adobe.com/TChdA0zKwBpe8oyauafbwWZKgZkPcz6Y4cj76NoCGjw
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 888
@@ -24,7 +40,7 @@ L’extension [!DNL Microsoft Azure] [transfert d’événement](../../../ui/eve
 
 ## Conditions préalables
 
-Pour utiliser cette extension, vous devez disposer d’un compte [!DNL Azure] valide avec un accès à [!DNL Event Hubs]. Vous devez également [créer un hub d’événements à l’aide du portail [!DNL Azure] ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create) avant de suivre les étapes ci-dessous.
+Pour utiliser cette extension, vous devez disposer d’un compte [!DNL Azure] valide avec un accès à [!DNL Event Hubs]. Vous devez également [créer un hub d’événements à l’aide du portail [!DNL Azure] &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create) avant de suivre les étapes ci-dessous.
 
 ## Installation l’extension
 

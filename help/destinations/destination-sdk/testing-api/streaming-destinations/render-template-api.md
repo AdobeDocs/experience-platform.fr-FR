@@ -3,10 +3,15 @@ description: Découvrez comment utiliser l’API de test de destination pour val
 title: Validation de la structure de profil exportée
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 TQID: https://experienceleague.adobe.com/fW6k1ec2bmzNhEJyqQAYJrWB-7fwOJ7gO2vdvbYGsFk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 791
@@ -18,7 +23,7 @@ ht-degree: 87%
 
 >[!IMPORTANT]
 >
->**Point d’entrée de l’API ** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Point d’entrée de l’API &#x200B;** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
 Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/testing/template/render` et fournit leur description. Effectuez le rendu des profils exportés correspondant au format de destination attendu, en fonction de votre [modèle de transformation de message](../../functionality/destination-server/message-format.md#using-templating). Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](create-template.md).
 

@@ -5,9 +5,13 @@ title: Présentation de l’interface utilisateur de Privacy Service
 description: Commencez à utiliser l’interface utilisateur de Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans diverses applications Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 TQID: https://experienceleague.adobe.com/-eHJWnCRW23gVWmIXo7JYXHCFjE3nLx-fE44skX6yAg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 224
@@ -34,7 +38,7 @@ L’interface utilisateur de Privacy Service vous permet de coordonner les deman
 >
 >Vous devez disposer d’une Adobe ID pour vous authentifier auprès de l’interface utilisateur de [!DNL Privacy Service].
 
-Pour accéder à l’interface utilisateur, connectez-vous à [](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Privacy Service]** dans le menu Accès rapide.
+Pour accéder à l’interface utilisateur, connectez-vous à [&#128279;](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Privacy Service]** dans le menu Accès rapide.
 
 ![Tableau de bord Experience Cloud avec Privacy Service mis en surbrillance.](../images/ui-overview/quick-access.png)
 

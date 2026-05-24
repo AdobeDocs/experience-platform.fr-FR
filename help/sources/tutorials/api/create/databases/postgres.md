@@ -3,10 +3,14 @@ title: Connecter PostgreSQL à Experience Platform à l’aide de l’API Flow S
 description: Découvrez comment connecter votre base  [!DNL PostgreSQL]  données à Experience Platform à l’aide d’API.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 TQID: https://experienceleague.adobe.com/vng5WtwoISMZeYr7e7cYteqgpbbhyczWEm7QxWTh-dY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 754
@@ -269,4 +273,4 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 Maintenant que vous avez créé une connexion entre votre base de données [!DNL PostgreSQL] et Experience Platform, vous pouvez passer aux étapes suivantes et importer vos données [!DNL PostgreSQL] dans Experience Platform. Pour plus d’informations, consultez la documentation suivante :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

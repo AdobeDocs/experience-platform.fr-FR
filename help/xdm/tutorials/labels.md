@@ -3,9 +3,13 @@ title: Gestion des libellés d’utilisation des données pour un schéma
 description: Découvrez comment ajouter des libellés d’utilisation des données aux champs de schéma du modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 TQID: https://experienceleague.adobe.com/sGPnfFwysKLbZj0oAZB1NLLAeP7S-6YaIelAYiRFRU4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 747
@@ -56,7 +60,7 @@ Vous pouvez également sélectionner l’onglet **[!UICONTROL Labels]** , choisi
 
 Pour modifier les libellés de l’ensemble du schéma, dans l’onglet **[!UICONTROL Labels]** , cochez la case située sous l’icône de filtre. Cela sélectionne tous les champs disponibles dans le schéma. Sélectionnez ensuite **[!UICONTROL Apply Access and Data Governance Labels]** dans le rail de droite.
 
-![Sélectionnez le nom du schéma dans l’onglet [!UICONTROL Labels] ](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![Sélectionnez le nom du schéma dans l’onglet [!UICONTROL Labels] &#x200B;](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >

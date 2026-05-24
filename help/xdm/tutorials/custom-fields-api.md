@@ -3,8 +3,10 @@ title: Définir des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources de modèle de données d’expérience (XDM) personnalisées dans l’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
 TQID: https://experienceleague.adobe.com/aH0yjq-inTvAFACQJzbupIliIu8qa-KrZwmUqjzFmVY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 1250
@@ -145,7 +147,7 @@ Les champs numériques sont indiqués par `type: number` et n’ont pas d’autr
 
 >[!NOTE]
 >
->Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
+>Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
 
 ## [!UICONTROL Integer] {#integer}
 
@@ -161,7 +163,7 @@ Les champs numériques sont indiqués par `type: number` et n’ont pas d’autr
 
 >[!NOTE]
 >
->Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
+>Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
 
 Vous pouvez éventuellement contraindre la plage de l’entier en ajoutant les propriétés `minimum` et `maximum` à la définition. Plusieurs autres types numériques pris en charge par l’interface utilisateur de Schema Builder sont simplement des types `integer` avec des contraintes `minimum` et `maximum` spécifiques, telles que [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short) et [[!UICONTROL Byte]](#byte).
 
@@ -336,7 +338,7 @@ Vous pouvez également définir l’objet entier via en faisant référence à u
 
 ## [!UICONTROL Map] {#map}
 
-Un champ de mappage est essentiellement un champ de type ](#object) avec un ensemble non contraint de clés. [`object`Comme les objets, les mappages ont une valeur `type` de `object`, mais leur `meta:xdmType` est explicitement définie sur `map`.
+Un champ de mappage est essentiellement un champ de type [&#128279;](#object) avec un ensemble non contraint de clés. `object`Comme les objets, les mappages ont une valeur `type` de `object`, mais leur `meta:xdmType` est explicitement définie sur `map`.
 
 Un mappage **ne doit pas** définir de propriétés. Il **doit** définir un schéma de `additionalProperties` unique pour décrire le type de valeurs contenues dans le mappage (chaque mappage ne peut contenir qu’un seul type de données). La valeur `type` doit être `string` ou `integer`.
 
@@ -375,4 +377,4 @@ L’interface utilisateur d’Experience Platform présente également des limit
 
 ## Étapes suivantes
 
-Ce guide explique comment définir différents types de champs dans l’API. Pour plus d’informations sur le formatage des types de champs XDM, consultez le guide sur les [ Contraintes de type de champ XDM ](../schema/field-constraints.md).
+Ce guide explique comment définir différents types de champs dans l’API. Pour plus d’informations sur le formatage des types de champs XDM, consultez le guide sur les [&#x200B; Contraintes de type de champ XDM &#x200B;](../schema/field-constraints.md).

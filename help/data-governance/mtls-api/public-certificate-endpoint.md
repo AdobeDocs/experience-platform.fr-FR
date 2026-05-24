@@ -4,10 +4,16 @@ description: Découvrez comment récupérer vos certificats publics à l’aide 
 role: Developer
 exl-id: 8369c783-e595-476f-9546-801cf4f10f71
 TQID: https://experienceleague.adobe.com/J-uDK52sdjzrA-ehXGbN876zdIUS8E3mtzmSgOlgwo4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 491
@@ -129,4 +135,4 @@ Vous devez mettre à jour vos intégrations pour prendre en charge la récupéra
 
 ## Étapes suivantes
 
-Après avoir récupéré vos certificats publics à l’aide de l’API, mettez à jour vos intégrations pour appeler régulièrement ce point d’entrée avant l’expiration des certificats. Pour tester cet appel de manière interactive, consultez la page de référence de l’API [MTLS](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). Pour obtenir des instructions plus générales sur les intégrations basées sur des certificats, reportez-vous à la [ Présentation du chiffrement des données dans Adobe Experience Platform ](../../landing/governance-privacy-security/encryption.md) ou à la [Présentation de la gouvernance des données](../home.md).
+Après avoir récupéré vos certificats publics à l’aide de l’API, mettez à jour vos intégrations pour appeler régulièrement ce point d’entrée avant l’expiration des certificats. Pour tester cet appel de manière interactive, consultez la page de référence de l’API [MTLS](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). Pour obtenir des instructions plus générales sur les intégrations basées sur des certificats, reportez-vous à la [&#x200B; Présentation du chiffrement des données dans Adobe Experience Platform &#x200B;](../../landing/governance-privacy-security/encryption.md) ou à la [Présentation de la gouvernance des données](../home.md).

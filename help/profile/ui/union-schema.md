@@ -5,10 +5,15 @@ type: Documentation
 description: Dans l’interface utilisateur (IU) de Adobe Experience Platform, vous pouvez facilement afficher n’importe quel schéma d’union de votre organisation et prévisualiser les champs, les identités, les relations et les schémas de contribution pour une classe spécifique. Ce guide fournit des informations détaillées sur la manière d’afficher et d’explorer les schémas d’union à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 TQID: https://experienceleague.adobe.com/-nc1eT-InOS1eN1rgrxLqFbHTUaWjusjc8U-Hh8fDkk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1196
@@ -93,7 +98,7 @@ Si vous sélectionnez une identité individuelle dans la liste, le schéma affic
 
 Le champ Identité est mis en surbrillance dans le schéma d’union et les détails de l’identité sont affichés dans la partie droite de l’écran. Les détails incluent une liste des schémas contributeurs contenant le champ d’identité et vous pouvez effectuer une analyse en profondeur pour trouver des liens vers les jeux de données liés à ce schéma qui ingèrent des données dans le champ d’identité sélectionné.
 
-![ L’identité sélectionnée est mise en surbrillance. Des détails sur l’identité sélectionnée s’affichent dans la barre latérale droite.](../images/union-schema/select-identity.png)
+![&#x200B; L’identité sélectionnée est mise en surbrillance. Des détails sur l’identité sélectionnée s’affichent dans la barre latérale droite.](../images/union-schema/select-identity.png)
 
 ## Afficher les relations {#view-relationships}
 

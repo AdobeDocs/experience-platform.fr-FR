@@ -4,8 +4,10 @@ title: Groupe de champs du schéma de réservation de restaurant
 description: Découvrez le groupe de champs du schéma Réservation au restaurant .
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
 TQID: https://experienceleague.adobe.com/0sz89MbTwJBtXL45o65mBiosH6SO-WA4HctlCiX7OZU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 457
@@ -21,7 +23,7 @@ Le groupe de champs est une extension du groupe de champs [!UICONTROL Reservatio
 
 >[!NOTE]
 >
->Ce document couvre les détails du tableau de `diningReservations`. Pour plus d’informations sur les autres champs fournis sous l’objet `reservations` , reportez-vous à la référence du groupe de champs [[!UICONTROL Reservation Details] ](./reservation-details.md).
+>Ce document couvre les détails du tableau de `diningReservations`. Pour plus d’informations sur les autres champs fournis sous l’objet `reservations` , reportez-vous à la référence du groupe de champs [[!UICONTROL Reservation Details] &#x200B;](./reservation-details.md).
 
 ![Structure de réservation de restaurant](../../images/field-groups/dining-reservation/structure.png)
 

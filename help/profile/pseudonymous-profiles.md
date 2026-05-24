@@ -5,11 +5,16 @@ title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 TQID: https://experienceleague.adobe.com/IDGOl6dFgAVG9jucar8oarbg6nokOlXZwnR0bAtddmU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1272
@@ -137,12 +142,12 @@ Dans un cas d’utilisation standard, définissez l’expiration des données d�
 
 +++ Réponse
 
-- Le système de suppression « premier entré, premier sorti »](../identity-service/guardrails.md) d’Identity Service [ supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
+- Le système de suppression « premier entré, premier sorti »[&#128279;](../identity-service/guardrails.md) d’Identity Service  supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
 - Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (magasin de profils), l’expiration des données de profils pseudonymes supprime ce profil du magasin de profils.
 
 +++
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous savez comment afficher et créer des expirations de données de profils pseudonymes. Pour plus d’informations sur la gestion des données dans Experience Platform dans son ensemble, consultez le [ Guide des bonnes pratiques relatives aux droits de licence de gestion des données ](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous savez comment afficher et créer des expirations de données de profils pseudonymes. Pour plus d’informations sur la gestion des données dans Experience Platform dans son ensemble, consultez le [&#x200B; Guide des bonnes pratiques relatives aux droits de licence de gestion des données &#x200B;](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 

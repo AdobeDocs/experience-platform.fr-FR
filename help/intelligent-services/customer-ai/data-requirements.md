@@ -7,10 +7,17 @@ topic-legacy: Getting started
 description: Apprenez-en plus sur les événements, les entrées et les sorties requis utilisés par l’IA dédiée aux clientes et clients.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 TQID: https://experienceleague.adobe.com/xgMO3T3fcu7ff-46cYQW3zmV9ZMmTiW9fSGnksvudLY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2581

@@ -3,9 +3,12 @@ title: Classe Membres de la liste marketing professionnelle XDM
 description: Découvrez la classe Membres de la liste XDM Business Marketing dans le modèle de données d’expérience (XDM).
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
 TQID: https://experienceleague.adobe.com/Nwn7dV1iV5YAAQ9FNWy-PMyjc8Igd3RtxQDdXeTKLVs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 309
@@ -21,7 +24,7 @@ ht-degree: 3%
 
 [!UICONTROL XDM Business Marketing List Members] est une classe XDM (modèle de données d’expérience) standard qui décrit les membres, les personnes ou les contacts associés à une liste marketing.
 
-![ Structure de la classe Membres de la liste marketing professionnelle XDM telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-marketing-list-members.png)
+![&#x200B; Structure de la classe Membres de la liste marketing professionnelle XDM telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-marketing-list-members.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |

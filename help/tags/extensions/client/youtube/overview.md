@@ -3,11 +3,30 @@ title: Présentation de l’extension de suivi vidéo YouTube
 description: Découvrez lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 TQID: https://experienceleague.adobe.com/HbmbcElcFvRdvNAgLZaEavbH2Z6b5dlaAoxNmCf9oys
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: c153fd90-23e1-4614-81d3-3cc7571227f7id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: df312454-73c4-43f6-a90e-18f5043f074cid: e7d92df1-c5ba-4e93-85df-f83171b889be
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: df312454-73c4-43f6-a90e-18f5043f074c
+  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 875
@@ -25,7 +44,7 @@ Chaque propriété de balise dans Adobe Experience Platform requiert que les e
 * du service d’identification des visiteurs Experience Cloud
 * Extension Core
 
-Utilisez la [ « Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code de la documentation Google destinée aux développeurs dans l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
+Utilisez la [&#x200B; « Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code de la documentation Google destinée aux développeurs dans l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
 
 Cette extension, la version 2.0.1, prend en charge l’incorporation d’une ou de plusieurs vidéos YouTube sur une seule page web via l’insertion d’un attribut `id` avec une valeur unique dans la balise de script iframe, et l’ajout de `enablejsapi=1` et `rel=0` à la fin de la valeur de l’attribut `src`, si le code ne s’y trouve pas déjà. Par exemple :
 

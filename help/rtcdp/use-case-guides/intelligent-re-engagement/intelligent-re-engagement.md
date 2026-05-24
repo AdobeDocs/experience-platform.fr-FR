@@ -4,10 +4,21 @@ description: Proposez des expériences attrayantes et connectées au cours des m
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
 TQID: https://experienceleague.adobe.com/ZDB01BCQ05Ol1Wlr-r8UknHykSJjSZ9bn-MhiLyP5DI
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 4099
@@ -146,7 +157,7 @@ Le groupe de champs [Consentements et préférences](/help/xdm/field-groups//pro
 
 +++Détails du test de profil (groupe de champs)
 
-Ce groupe de champs vous permet de tester votre parcours avant sa publication à l’aide de profils de test. Pour plus d’informations sur la création de profils de test, consultez les tutoriels [créer des profils de test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) et [tester le parcours ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=fr).
+Ce groupe de champs vous permet de tester votre parcours avant sa publication à l’aide de profils de test. Pour plus d’informations sur la création de profils de test, consultez les tutoriels [créer des profils de test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) et [tester le parcours &#x200B;](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=fr).
 
 +++
 
@@ -185,7 +196,7 @@ Le groupe de champs [Détails de l’ID de l’utilisateur final](/help/xdm/fiel
 
 +++Détails du Commerce (groupe de champs)
 
-Le groupe de champs [Détails ](/help/xdm/field-groups/event/commerce-details.md) est utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations standard du panier (commande, passage en caisse, abandon).
+Le groupe de champs [Détails &#x200B;](/help/xdm/field-groups/event/commerce-details.md) est utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations standard du panier (commande, passage en caisse, abandon).
 
 | Champs | Description |
 | --- | --- |
@@ -228,7 +239,7 @@ La classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 
 +++Détails du Commerce (groupe de champs)
 
-Le groupe de champs [Détails ](/help/xdm/field-groups/event/commerce-details.md) est utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations standard du panier (commande, passage en caisse, abandon).
+Le groupe de champs [Détails &#x200B;](/help/xdm/field-groups/event/commerce-details.md) est utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations standard du panier (commande, passage en caisse, abandon).
 
 | Champs | Description |
 | --- | --- |
@@ -355,7 +366,7 @@ Pour plus d’informations sur la création d’une audience, consultez le [guid
 
 Pour plus d’informations sur la composition directe d’[audiences](/help/segmentation/home.md), consultez le [guide de l’interface utilisateur sur la composition d’audiences](/help/segmentation/ui/audience-composition.md).
 
-Pour plus d’informations sur la création d’audiences par le biais de définitions d’audience dérivées d’Experience Platform, consultez le [ guide de l’interface utilisateur du créateur d’audience](/help/segmentation/ui/segment-builder.md).
+Pour plus d’informations sur la création d’audiences par le biais de définitions d’audience dérivées d’Experience Platform, consultez le [&#x200B; guide de l’interface utilisateur du créateur d’audience](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -760,7 +771,7 @@ La logique de clé de la zone de travail de parcours nécessite que vous identif
 
 >[!ENDTABS]
 
-Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Configuration de publicités multimédias payantes dans les destinations {#paid-media-ads}
 
@@ -777,7 +788,7 @@ Les destinations d’exportation d’audiences en flux continu (telles que Faceb
 Vous pouvez activer les audiences de navigation de produit abandonnées et abandonner les audiences de panier pour les publicités médias payantes.
 
 * Flux/Déclenché
-   * [](/help/destinations/catalog/advertising/overview.md)/[Médias payants et médias sociaux](/help/destinations/catalog/social/overview.md)
+   * [&#128279;](/help/destinations/catalog/advertising/overview.md)/[Médias payants et médias sociaux](/help/destinations/catalog/social/overview.md)
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destination de diffusion en continu](/help/destinations/catalog/streaming/http-destination.md)
    * [Destination personnalisée créée à l’aide de Destination SDK.](/help/destinations/destination-sdk/overview.md). Si vous êtes un client Real-Time CDP Ultimate, vous pouvez également créer une destination privée [personnalisée à l’aide de Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
@@ -786,4 +797,4 @@ Vous pouvez activer les audiences de navigation de produit abandonnées et aband
 
 En réengageant vos clients qui ont abandonné une conversion de manière intelligente et responsable, vous avez, espérons-le, augmenté les conversions et la valeur de la durée de vie du client.
 
-[ Ensuite, vous pouvez explorer d’autres cas d’utilisation pris en charge par Real-Time CDP, tels que l’affichage de contenu personnalisé pour les utilisateurs non authentifiés](/help/rtcdp/partner-data/onsite-personalization.md) sur vos propriétés web.
+[&#x200B; Ensuite, vous pouvez explorer d’autres cas d’utilisation pris en charge par Real-Time CDP, tels que l’affichage de contenu personnalisé pour les utilisateurs non authentifiés](/help/rtcdp/partner-data/onsite-personalization.md) sur vos propriétés web.

@@ -7,11 +7,19 @@ type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
 TQID: https://experienceleague.adobe.com/1MtJnkHPrFEHtlYHIKZL1rbj6SfsHsUJuqSwn1TovcA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1910
@@ -178,7 +186,7 @@ En savoir plus sur l’[export de jeux de données](/help/destinations/ui/export
 
 ### Mécanismes de sécurisation de Destination SDK {#destination-sdk-guardrails}
 
-[](/help/destinations/destination-sdk/overview.md) est une suite d’API de configuration permettant de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée, en fonction des données et des formats d’authentification de votre choix. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
+[&#128279;](/help/destinations/destination-sdk/overview.md) est une suite d’API de configuration permettant de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée, en fonction des données et des formats d’authentification de votre choix. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |

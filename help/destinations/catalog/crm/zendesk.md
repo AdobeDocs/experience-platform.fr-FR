@@ -4,11 +4,18 @@ description: Utilisez la destination Zendesk pour exporter les données de votre
 last-substantial-update: 2023-03-14T00:00:00.000Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 TQID: https://experienceleague.adobe.com/GRFzqKjauMj6mb27e3jwHErAOV1YGp71FekQZwc6O8w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1626
@@ -79,7 +86,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -191,7 +198,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 1. Surveillez le résumé de l’audience et assurez-vous que le nombre de profils correspond au nombre dans le segment.
    ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform montrant le segment.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Accédez au site web [!DNL Zendesk], puis à la page **[!UICONTROL Contacts]** pour vérifier si les profils de l’audience ont été ajoutés. Cette liste peut être configurée pour afficher des colonnes pour les champs supplémentaires créés avec les statuts audience**** et audience .[!UICONTROL Mapping ID]
+1. Accédez au site web [!DNL Zendesk], puis à la page **[!UICONTROL Contacts]** pour vérifier si les profils de l’audience ont été ajoutés. Cette liste peut être configurée pour afficher des colonnes pour les champs supplémentaires créés avec les statuts audience&#x200B;**&#x200B;** et audience .[!UICONTROL Mapping ID]
    ![Capture d’écran de l’interface utilisateur Zendesk présentant la page Contacts avec les champs supplémentaires créés avec le nom de l’audience.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. Vous pouvez également accéder à une page de **[!UICONTROL Person]** individuelle et vérifier la section **[!UICONTROL Additional fields]** affichant le nom de l’audience et les statuts de l’audience.

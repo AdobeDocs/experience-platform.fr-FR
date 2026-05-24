@@ -3,11 +3,47 @@ title: Présentation de l’extension de l’API de conversions Meta
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
 TQID: https://experienceleague.adobe.com/GrTuIOPkhlhBNYFBjXEyyhmjqJ3eUR64QXJ57jUc3c8
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7aid: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: b12f6872-9271-4369-85e5-86969a0b99a2id: ba929a52-9339-4154-9487-317dc875a3c7id: bef6f891-2e8a-425e-8f99-7ddf22070daaid: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: a94ced60-8199-4549-b453-ede2acb4101eid: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b64298cc-90cc-46b7-8917-ee391f1c7516id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+  - id: b12f6872-9271-4369-85e5-86969a0b99a2
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2366
@@ -100,7 +136,7 @@ Des commandes s’affichent pour vous permettre de configurer les données d’�
 | Section de configuration | Description |
 | --- | --- |
 | [!UICONTROL Server Event Parameters] | Informations générales sur l’événement, y compris l’heure à laquelle il s’est produit et l’action source qui l’a déclenché. Reportez-vous à la documentation du développeur [!DNL Meta] pour plus d’informations sur les [paramètres d’événement standard](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) acceptés par le [!DNL Conversions API].<br><br>Si vous utilisez à la fois [!DNL Meta Pixel] et [!DNL Conversions API] pour envoyer des événements, veillez à inclure à la fois un **[!UICONTROL Event Name]** (`event_name`) et **[!UICONTROL Event ID]** (`event_id`) avec chaque événement, car ces valeurs sont utilisées pour [event deduplication](#deduplication).<br><br>Vous avez également la possibilité de **[!UICONTROL Enable Limited Data Use]** pour vous conformer aux désinscriptions des clients. Consultez la documentation [!DNL Conversions API] sur les [options de traitement des données](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) pour plus d’informations sur cette fonctionnalité. |
-| [!UICONTROL Customer Information Parameters] | Données d’identité utilisateur utilisées pour attribuer l’événement à un client. Certaines de ces valeurs doivent être hachées avant de pouvoir être envoyées à l’API. <br><br>Pour garantir une bonne connexion d’API commune et une qualité de correspondance d’événement (EMQ) élevée, il est recommandé d’envoyer tous les [ paramètres d’informations client acceptés](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) ainsi que les événements de serveur. Ces paramètres doivent également être [classés par ordre de priorité en fonction de leur importance et de leur impact sur l’EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
+| [!UICONTROL Customer Information Parameters] | Données d’identité utilisateur utilisées pour attribuer l’événement à un client. Certaines de ces valeurs doivent être hachées avant de pouvoir être envoyées à l’API. <br><br>Pour garantir une bonne connexion d’API commune et une qualité de correspondance d’événement (EMQ) élevée, il est recommandé d’envoyer tous les [&#x200B; paramètres d’informations client acceptés](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) ainsi que les événements de serveur. Ces paramètres doivent également être [classés par ordre de priorité en fonction de leur importance et de leur impact sur l’EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
 | [!UICONTROL Custom Data] | Données supplémentaires à utiliser pour l’optimisation de la diffusion des publicités, fournies sous la forme d’un objet JSON. Reportez-vous à la [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) pour plus d’informations sur les propriétés acceptées pour cet objet.<br><br>Si vous envoyez un événement d’achat, vous devez utiliser cette section pour fournir les attributs requis `currency` et `value`. |
 | [!UICONTROL Test Event] | Cette option est utilisée pour vérifier si votre configuration entraîne la réception des événements du serveur par [!DNL Meta] comme prévu. Pour utiliser cette fonctionnalité, cochez la case **[!UICONTROL Send as Test Event]**, puis fournissez un code d’événement de test de votre choix dans l’entrée ci-dessous. Une fois la règle de transfert d’événement déployée, si vous avez correctement configuré l’extension et l’action, vous devriez voir les activités apparaître dans la vue **[!DNL Test Events]** dans [!DNL Meta Events Manager]. |
 
@@ -209,4 +245,4 @@ Ce guide explique comment envoyer des données d’événement côté serveur à
 * Connectez tout autre [!DNL Pixels] qui n’est pas encore connecté à une intégration [!DNL Conversions API].
 * Si vous envoyez certains événements exclusivement par le biais de [!DNL Meta Pixel] côté client, envoyez également ces mêmes événements au [!DNL Conversions API] côté serveur.
 
-Pour plus d’informations sur la mise en œuvre efficace de votre intégration [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) consultez la documentation [!DNL Meta] sur [les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../../home.md).
+Pour plus d’informations sur la mise en œuvre efficace de votre intégration [!DNL Conversions API][&#128279;](https://www.facebook.com/business/help/308855623839366?id=818859032317965) consultez la documentation [!DNL Meta] sur les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../../home.md).

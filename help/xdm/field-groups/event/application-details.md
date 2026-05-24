@@ -3,8 +3,10 @@ title: Groupe de champs de schéma des détails de l’application
 description: Découvrez le groupe de champs de schéma Détails de l’application .
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
 TQID: https://experienceleague.adobe.com/LRyLsquiVHsY8HDAUGoOimEhs1lTJ9pYLdOm7-sgptM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 131

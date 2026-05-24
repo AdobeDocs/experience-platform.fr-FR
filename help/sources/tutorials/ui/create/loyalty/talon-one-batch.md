@@ -5,10 +5,14 @@ badge: Beta
 last-substantial-update: 2026-04-06T00:00:00.000Z
 exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
 TQID: https://experienceleague.adobe.com/MbxKod59EHKJ-CjuwtuKRkyjQFR4bzp3oAyaKPIKukw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1547
@@ -71,7 +75,7 @@ Une fois l’authentification effectuée, saisissez les valeurs pour vos **appli
 
 >[!TIP]
 >
->Pour capturer les transactions terminées (y compris les points de fidélité gagnés ou échangés, les coupons échangés et les remises accordées), sélectionnez le type d’événement `talon_session_closed`. Pour plus d&#39;informations sur le filtrage des événements par type, reportez-vous au paramètre de requête [ « type » dans la documentation  [!DNL Talon.One]  l&#39;API ](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
+>Pour capturer les transactions terminées (y compris les points de fidélité gagnés ou échangés, les coupons échangés et les remises accordées), sélectionnez le type d’événement `talon_session_closed`. Pour plus d&#39;informations sur le filtrage des événements par type, reportez-vous au paramètre de requête [&#x200B; « type » dans la documentation  [!DNL Talon.One]  l&#39;API &#x200B;](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![Les étapes de sélection des données et de prévisualisation du workflow des sources.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
@@ -108,13 +112,13 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 | --- | --- |
 | Nom du flux de données | Nom du flux de données. Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes ](../../alerts.md) [<ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Mappage
 
-Une fois les détails de votre jeu de données et de votre flux de données configurés, vous pouvez procéder au mappage de vos champs de données sources à leurs champs XDM cibles appropriés. Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [ dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
+Une fois les détails de votre jeu de données et de votre flux de données configurés, vous pouvez procéder au mappage de vos champs de données sources à leurs champs XDM cibles appropriés. Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [&#x200B; dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >

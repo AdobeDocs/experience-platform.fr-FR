@@ -4,10 +4,15 @@ type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 TQID: https://experienceleague.adobe.com/NbcgU4Ozh6CMWqCkAKn7hWMF-r6MGv0vih-mrwNWAvs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1222
@@ -44,7 +49,7 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Configurer mise en surbrillance.](../assets/ui/connect-destinations/set-up.png)
 
-   ![ Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
+   ![&#x200B; Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Si vous avez sélectionné **[!UICONTROL Set up]**, passez à l’étape suivante, pour [s’authentifier](#authenticate) à la destination.
 

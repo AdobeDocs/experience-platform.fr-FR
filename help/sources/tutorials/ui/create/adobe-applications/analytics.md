@@ -3,11 +3,27 @@ title: Connexion D’Adobe Analytics À Experience Platform
 description: Découvrez comment importer les données de votre suite de rapports Adobe Analytics dans Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 TQID: https://experienceleague.adobe.com/9bCvEqM-V97tG839lRQRhizF-O65xfwcg-8UlY-BxRE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: dba482e5-29a8-4127-afa2-c4b913512ef8id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: dba482e5-29a8-4127-afa2-c4b913512ef8
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2813
@@ -32,7 +48,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources et du schéma Analytics d’Analytics .
-* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) consultez la [documentation Analytics sur les variables de conversion .
+* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) consultez la documentation Analytics sur les variables de conversion .
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
 
 ## Parcourir le catalogue des sources

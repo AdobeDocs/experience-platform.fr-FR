@@ -4,8 +4,10 @@ description: Le document suivant décrit la procédure à suivre pour créer une
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
 badge: Beta
 TQID: https://experienceleague.adobe.com/ustM5EAwEdENFDs8sDhb80oTgXzKoqa1ecGHvg4It4Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 166

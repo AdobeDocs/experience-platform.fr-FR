@@ -4,11 +4,19 @@ description: Utilisez le point d’entrée audiences dans l’API Adobe Experien
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 TQID: https://experienceleague.adobe.com/YtQlw4OHZtAGH7bx3WS7KnicD3uzN6F9J4OSjj0Hm2w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1617
@@ -197,9 +205,9 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
 | `sandbox` | Les deux | Informations sur le sandbox auquel appartient l’audience. Vous trouverez plus d’informations sur les sandbox dans la [présentation des sandbox](../../sandboxes/home.md). |
 | `name` | Les deux | Nom de l’audience. |
 | `description` | Les deux | Description de l’audience. |
-| `expression` | Généré par Platform | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [](../pql/overview.md). |
+| `expression` | Généré par Platform | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [&#128279;](../pql/overview.md). |
 | `mergePolicyId` | Généré par Platform | L’identifiant de la politique de fusion à laquelle l’audience est associée. Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Généré par Platform | Indique comment l’audience sera évaluée. Les méthodes d’évaluation possibles sont par lots, synchrones (diffusion en continu) ou continues (Edge). Vous trouverez plus d’informations sur les méthodes d’évaluation dans la [ présentation de la segmentation ](../home.md) |
+| `evaluationInfo` | Généré par Platform | Indique comment l’audience sera évaluée. Les méthodes d’évaluation possibles sont par lots, synchrones (diffusion en continu) ou continues (Edge). Vous trouverez plus d’informations sur les méthodes d’évaluation dans la [&#x200B; présentation de la segmentation &#x200B;](../home.md) |
 | `dependents` | Les deux | Tableau d’ID d’audience qui dépendent de l’audience actuelle. Cette option est utile si vous créez une audience qui est un segment d’un segment. |
 | `dependencies` | Les deux | Tableau d’identifiants d’audience dont dépend l’audience. Cette option est utile si vous créez une audience qui est un segment d’un segment. |
 | `type` | Les deux | Champ généré par le système qui indique si l’audience est générée par Platform ou est une audience générée en externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
@@ -256,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | Nom de l’audience. |
 | `description` | Description de l’audience. |
 | `type` | Champ qui indique si l’audience est générée par Platform ou si elle est générée de manière externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
-| `expression` | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [](../pql/overview.md). |
+| `expression` | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [&#128279;](../pql/overview.md). |
 | `schema` | Schéma du modèle de données d’expérience (XDM) de l’audience. |
 | `labels` | Utilisation des données au niveau de l’objet et libellés de contrôle d’accès basés sur les attributs pertinents pour l’audience. |
 
@@ -773,4 +781,4 @@ Une réponse réussie renvoie un état HTTP 207 avec des informations sur les au
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des audiences à l’aide de l’API Adobe Experience Platform. Pour plus d’informations sur la gestion des audiences à l’aide de l’interface utilisateur, consultez le [ guide de l’interface utilisateur de segmentation](../ui/overview.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des audiences à l’aide de l’API Adobe Experience Platform. Pour plus d’informations sur la gestion des audiences à l’aide de l’interface utilisateur, consultez le [&#x200B; guide de l’interface utilisateur de segmentation](../ui/overview.md).

@@ -4,11 +4,26 @@ title: Exemple de cas d’utilisation de Adobe Experience Platform Query Service
 description: Exemple complet pour démontrer la polyvalence et les avantages de Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
 TQID: https://experienceleague.adobe.com/rwleF1-pMq0uCxuX1d3ut3uKDk0esgek9FOpOpXCOdM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 731
@@ -31,7 +46,7 @@ Ce document et la présentation vidéo qui l’accompagne fournissent un workflo
 Cette démonstration de workflow repose sur plusieurs services Adobe Experience Platform. Si vous souhaitez suivre cette procédure, il est recommandé de bien comprendre les fonctionnalités et services suivants :
 
 * Les [principes de base de la composition de schémas du modèle de données d’expérience (XDM)](../../xdm/schema/composition.md)
-* Comment [ créer des jeux de données et ingérer des données ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
+* Comment [&#x200B; créer des jeux de données et ingérer des données &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
 * Comment [ingérer des données à l’aide du connecteur source Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=fr)
 * [Segmentation](../../segmentation/home.md)
 * [Destinations](../../destinations/home.md)
@@ -79,7 +94,7 @@ Adobe Experience Platform fournit un référentiel de données et les outils né
 
 ## Étapes suivantes
 
-En lisant ce document, vous devriez maintenant comprendre comment [!DNL Query Service] affecte non seulement la qualité de vos données et la facilité de segmentation, mais aussi son importance dans votre architecture de données pour l’ensemble du workflow de bout en bout. Pour obtenir des exemples SQL plus applicables qui utilisent Adobe Analytics avec [!DNL Query Service], consultez le cas d’utilisation des variables de marchandisage d’Adobe Analytics [](./merchandising-variables.md).
+En lisant ce document, vous devriez maintenant comprendre comment [!DNL Query Service] affecte non seulement la qualité de vos données et la facilité de segmentation, mais aussi son importance dans votre architecture de données pour l’ensemble du workflow de bout en bout. Pour obtenir des exemples SQL plus applicables qui utilisent Adobe Analytics avec [!DNL Query Service], consultez le cas d’utilisation des variables de marchandisage d’Adobe Analytics [&#128279;](./merchandising-variables.md).
 
 Le [cas d’utilisation du filtrage des robots](./bot-filtering.md) est un autre document qui illustre les avantages de l’[!DNL Query Service] aux informations commerciales stratégiques de votre organisation.
 

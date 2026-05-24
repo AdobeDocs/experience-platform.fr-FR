@@ -3,11 +3,31 @@ title: Connexion Marketo Engage
 description: Marketo Engage est la seule solution de gestion de l’expérience client (CXM) de bout en bout pour le marketing, la publicité, l’analyse et le commerce. Utilisez-le pour automatiser et gérer les activités, de la gestion des prospects CRM à l’engagement des clients, en passant par le marketing basé sur les comptes et l’attribution des recettes.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
 TQID: https://experienceleague.adobe.com/BQFXDvrinG9A6uC2-p6-C6d9mj8NqpfQ8S7xjMW8iRY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a7150a74-b8a9-4042-b066-147c5f0ca505id: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d175cb4c-5781-454e-a826-bf6dff786265id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5520579-b31f-4df7-9281-f0d9f91e2edcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1896
@@ -51,7 +71,7 @@ Ils peuvent activer leurs audiences dans Marketo Engage et utiliser le type de s
 
 ## Conditions préalables {#prerequisites}
 
-* L’utilisateur configurant la destination doit disposer de l’autorisation [ Modifier la personne ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans son instance et sa partition Marketo.
+* L’utilisateur configurant la destination doit disposer de l’autorisation [&#x200B; Modifier la personne &#x200B;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans son instance et sa partition Marketo.
 * Seules les instances Marketo Engage de la même organisation Adobe [!DNL Real-Time CDP] seront disponibles lors de la configuration de cette destination.
 * Seules les instances Marketo Engage dont les utilisateurs sont gérés dans le Adobe Admin Console peuvent utiliser cette destination.
 
@@ -82,7 +102,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -151,7 +171,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
    * **[!UICONTROL Audience and profile]** : sélectionnez cette option lorsque vous souhaitez à la fois ajouter des membres de l’audience aux listes Marketo et tenir à jour leurs informations de profil.
    * **[!UICONTROL Profile only]** : sélectionnez cette option lorsque vous souhaitez que les profils de prospect Marketo soient à jour avec les dernières informations d’Experience Platform.
    * **[!UICONTROL Audience only]** : sélectionnez cette option lorsque vous souhaitez ajouter des membres de l’audience aux listes Marketo sans mettre à jour leurs informations de profil.
-* **[!UICONTROL Partition]** : *la sélection de partition est disponible uniquement lors du choix des types de synchronisation **[!UICONTROL Profile only]**ou **[!UICONTROL Audience and profile]***. Sélectionnez un ID de partition Marketo associé à l’espace de travail de votre choix. Ceci permet de spécifier la partition de lead dans Marketo qui recevra les données exportées. Si vous ne choisissez pas de partition spécifique, vos données seront envoyées à la partition **[!UICONTROL Default]** dans Marketo.
+* **[!UICONTROL Partition]** : *la sélection de partition est disponible uniquement lors du choix des types de synchronisation **[!UICONTROL Profile only]**&#x200B;ou **[!UICONTROL Audience and profile]***. Sélectionnez un ID de partition Marketo associé à l’espace de travail de votre choix. Ceci permet de spécifier la partition de lead dans Marketo qui recevra les données exportées. Si vous ne choisissez pas de partition spécifique, vos données seront envoyées à la partition **[!UICONTROL Default]** dans Marketo.
 * **[!UICONTROL Marketo deduplication field]** : sélectionnez le champ Déduplication Marketo à utiliser lors de la mise à jour des prospects Marketo existants. Ce sélecteur affiche les champs que vous avez marqués comme champs de déduplication dans Marketo. Si vous souhaitez qu’un champ spécifique de Marketo s’affiche en tant que champ de déduplication, vous devez le marquer comme un [champ consultable](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) dans Marketo.
 
   >[!NOTE]

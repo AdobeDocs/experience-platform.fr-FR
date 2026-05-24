@@ -5,10 +5,14 @@ title: Type de données contextuelles de l’emplacement
 description: En savoir plus sur le type de données XDM Placer le contexte .
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 TQID: https://experienceleague.adobe.com/fDSEqraUtNlCosMh-AOWlaRtU2Qt3kyvuJw3tAu4st4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 173

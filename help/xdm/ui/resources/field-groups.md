@@ -5,8 +5,10 @@ title: Création et modification de groupes de champs de schéma dans l’interf
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 TQID: https://experienceleague.adobe.com/68ipWr1cvhjhlcBQRcODN-ZwnoWQK1MFLNMlGqFBCWk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1004

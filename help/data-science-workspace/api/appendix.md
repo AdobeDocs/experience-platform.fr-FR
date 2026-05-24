@@ -6,9 +6,13 @@ description: Les sections suivantes fournissent des informations de référence 
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 TQID: https://experienceleague.adobe.com/XYM1i7-nK2MJRUdCv3HI0s2lYbTA3LlOdrXuyAeZtYE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 353

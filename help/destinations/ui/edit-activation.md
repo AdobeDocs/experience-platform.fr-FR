@@ -5,10 +5,15 @@ type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 TQID: https://experienceleague.adobe.com/wE6eVboAogPDZd-rk7pWS3T9S8FDbYPNSwh-xFU6qj4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 917
@@ -63,7 +68,7 @@ Dans l’étape **[!UICONTROL Select audiences]** du workflow d’activation, vo
 
 Le workflow d’activation diffère légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
@@ -82,7 +87,7 @@ Dans l’étape **[!UICONTROL Scheduling]** du workflow d’activation, vous pou
 
 Les opérations de planification que vous pouvez effectuer varient légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
@@ -102,7 +107,7 @@ Dans l’étape **[!UICONTROL Mapping]** du workflow d’activation, vous pouvez
 
 Le workflow d’activation diffère légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
@@ -135,7 +140,7 @@ Sélectionnez les actions marketing applicables, puis cliquez sur **[!UICONTROL 
 
 ## Appliquer les libellés d’accès {#apply-access-labels}
 
-Sélectionnez **[!UICONTROL Apply access labels]** pour modifier les libellés d’utilisation des données exportées. Pour en savoir plus](../../data-governance/labels/overview.md) consultez la documentation sur les [ libellés d’utilisation des données .
+Sélectionnez **[!UICONTROL Apply access labels]** pour modifier les libellés d’utilisation des données exportées. Pour en savoir plus[&#128279;](../../data-governance/labels/overview.md) consultez la documentation sur les  libellés d’utilisation des données .
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/apply-access-labels.png)
 

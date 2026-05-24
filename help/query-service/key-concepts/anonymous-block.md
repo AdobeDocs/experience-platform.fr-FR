@@ -3,8 +3,11 @@ title: Bloc anonyme dans le service de requête
 description: Le bloc anonyme est une syntaxe SQL prise en charge par le service de requête Adobe Experience Platform, qui permet d’exécuter efficacement une séquence de requêtes.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 TQID: https://experienceleague.adobe.com/YuhEMk5Q-VnFZaynxpXg-9i9Vz-v-iFjun0z5dW0TuM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 619

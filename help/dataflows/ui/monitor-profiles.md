@@ -5,9 +5,12 @@ title: Surveillance des flux de données pour les profils dans l’interface uti
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 TQID: https://experienceleague.adobe.com/VPQrgKS3Czue8XlGIdGM0hZ1yTfAww5xCx00GUDYk1E
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 1305
