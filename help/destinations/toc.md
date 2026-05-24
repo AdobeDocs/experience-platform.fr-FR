@@ -5,7 +5,8 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: f4447656c42ad4f5315fde511143d3af1733070d
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 69%
@@ -33,7 +34,7 @@ ht-degree: 69%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -94,7 +95,7 @@ ht-degree: 69%
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
-      * {hide-from-toc}[&#x200B; (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
+      * {hide-from-toc}[ (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
@@ -113,7 +114,7 @@ ht-degree: 69%
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
-      * {hide-from-toc}[Mise à niveau de la connexion &#x200B;](./catalog/advertising/pinterest-upgrade.md)
+      * {hide-from-toc}[Mise à niveau de la connexion ](./catalog/advertising/pinterest-upgrade.md)
       * [Connexion PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [(Beta) Connexion Reddit Custom Audience](./catalog/advertising/reddit-custom-audience.md)
       * [Connexion racine](./catalog/advertising/rokt.md)
