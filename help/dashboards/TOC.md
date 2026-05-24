@@ -5,10 +5,11 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 3582ce4f73887f03bbb9da72f96aab1be9b99614
+nudge: true
+source-git-commit: b0047fdb3881d1d9a7f3f3c026e0430ab592d901
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 66%
+source-wordcount: '153'
+ht-degree: 64%
 
 ---
 
@@ -63,4 +64,4 @@ ht-degree: 66%
    * [Power BI](integrations/power-bi.md)
 * [Jeux de données de tableau de bord des requêtes](query.md)
 * [Afficher insight SQL](view-sql.md)
-* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
