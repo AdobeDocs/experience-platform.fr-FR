@@ -37,7 +37,7 @@ Pour plus d’informations sur la manière d’effectuer ce processus pour les i
 
 Pour afficher et consulter la section [!UICONTROL Encryption] dans Adobe Experience Platform, vous devez avoir créé un rôle et attribué l’autorisation [!UICONTROL Manage Customer Managed Key] à ce rôle. Tout utilisateur disposant de l’autorisation [!UICONTROL Manage Customer Managed Key] peut activer la fonction CMK pour son organisation.
 
-Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr).
 
 Pour activer la fonction CMK, votre coffre [[!DNL Azure] Key Vault doit être configuré](./azure-key-vault-config.md) avec les paramètres suivants :
 

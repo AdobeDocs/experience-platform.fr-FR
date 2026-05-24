@@ -40,9 +40,9 @@ ht-degree: 5%
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | Entier | Non | Valeur du débit (en Kbits/s). |
-| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | Entier | Non | Nombre total d’images perdues lors de la lecture. |
-| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | Entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
-| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | Entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |
+| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#average-bitrate) | `bitrate` | Entier | Non | Valeur du débit (en Kbits/s). |
+| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#dropped-frames) | `droppedFrames` | Entier | Non | Nombre total d’images perdues lors de la lecture. |
+| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#frames-per-second) | `framesPerSecond` | Entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
+| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#time-to-start-1) | `timeToStart` | Entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |
 
 {style="table-layout:auto"}
