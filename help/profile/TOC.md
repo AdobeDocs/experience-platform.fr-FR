@@ -4,7 +4,8 @@ user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données clients pour créer une vue unifiée des interactions clients entre les canaux.
 feature: Profiles
 role: User
-source-git-commit: ec97fb48da32e9efd9568ad46a2defb896cac1aa
+nudge: true
+source-git-commit: 304c93b5cc4979650722198b385f1dabdb3ec7f0
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 86%
