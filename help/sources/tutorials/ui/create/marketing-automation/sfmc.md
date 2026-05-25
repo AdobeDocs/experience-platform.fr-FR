@@ -1,9 +1,19 @@
 ---
 title: Connexion de votre compte Salesforce Marketing Cloud (V2) à Experience Platform via l’interface utilisateur
 description: Découvrez comment connecter votre compte Salesforce Marketing Cloud (V2) à Experience Platform via l’interface utilisateur.
-source-git-commit: 91bf8bf6e6f7030574d693484ce9797800c2d5dd
+exl-id: a42a37c2-f75d-4237-8e09-442b38a41052
+TQID: https://experienceleague.adobe.com/-4CERuxZJOSCNO1Fzg1MmsbfVJdMiY19a11Op-Nbg40
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: 841
 ht-degree: 10%
 
 ---
@@ -14,7 +24,7 @@ Lisez ce guide pour savoir comment connecter votre compte [!DNL Salesforce Marke
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -99,4 +109,3 @@ Pour plus d’informations, consultez la documentation suivante :
 
 * [Présentation des sources](../../../../home.md)
 * [Real-Time CDP B2B Edition](../../../../../rtcdp/b2b-overview.md)
-

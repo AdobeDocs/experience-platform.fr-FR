@@ -1,11 +1,23 @@
 ---
 title: Connexion Moengage
 description: Moengage est une plateforme d’engagement client qui alimente en temps réel les interactions axées sur les clients entre les consommateurs et les marques.
-last-substantial-update: 2023-10-11T00:00:00Z
+last-substantial-update: 2023-10-11T00:00:00.000Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/eKdUOuVZfDcHjXk-egiNwVLIUZBVqx4P7urYuZCMAIg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: 1140
 ht-degree: 29%
 
 ---

@@ -2,13 +2,23 @@
 description: Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour la destination.
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/MjZiP0ebeGYG2Vg-2BBWkJQfm3OKXdFDMkaMTukiBz0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2234'
-ht-degree: 66%
+source-wordcount: 2258
+ht-degree: 64%
 
 ---
-
 
 # Autorisation OAuth 2
 
@@ -369,7 +379,7 @@ Vous pouvez utiliser les paramètres suivants dans `authenticationDataFields` po
 | `authenticationDataFields.name` | Chaîne | Nom du champ personnalisé. |
 | `authenticationDataFields.title` | Chaîne | Titre que vous pouvez donner au champ personnalisé. |
 | `authenticationDataFields.description` | Chaîne | Description du champ de données personnalisé que vous configurez. |
-| `authenticationDataFields.type` | Chaîne | Définit le type du champ de données personnalisé. <br> Valeurs acceptées : `string`, `boolean`, `integer` |
+| `authenticationDataFields.type` | Chaîne | Définit le type du champ de données personnalisé. <br> Valeurs acceptées : `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | Booléen | Indique si le champ de données personnalisé est obligatoire dans le flux d’autorisation. |
 | `authenticationDataFields.format` | Chaîne | Lorsque vous sélectionnez `"format":"password"`, Adobe chiffre la valeur du champ de données d’autorisation. Utilisé avec `"fieldType": "CUSTOMER"`, cela masque également l’entrée dans l’interface utilisateur quand l’utilisateur saisit le champ. |
 | `authenticationDataFields.fieldType` | Chaîne | Indique si l’entrée provient du partenaire (vous) ou de l’utilisateur, quand il configure la destination dans Experience Platform. |
@@ -462,7 +472,7 @@ Vous pouvez utiliser les paramètres suivants dans `accessTokenRequest` pour per
 | `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si vous utilisez des modèles pour les valeurs dans `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Utilisez `NONE` si la valeur du champ `accessTokenRequest.httpTemplate.requestBody.value` est une constante. </li></li> |
 | `accessTokenRequest.httpTemplate.requestBody.value` | Chaîne | Utilisez le langage de modèle pour personnaliser les champs de la requête HTTP vers le point d’entrée du jeton d’accès. Pour plus d’informations sur l’utilisation du modèle pour personnaliser des champs, consultez la section [Conventions de création de modèles](#templating-conventions). |
 | `accessTokenRequest.httpTemplate.httpMethod` | Chaîne | Indique la méthode HTTP utilisée pour appeler votre point d’entrée de jeton d’accès. Dans la plupart des cas, cette valeur est `POST`. |
-| `accessTokenRequest.httpTemplate.contentType` | Chaîne | Indique le type de contenu de l’appel HTTP au point d’entrée du jeton d’accès. <br> Par exemple, `application/x-www-form-urlencoded` ou `application/json`. |
+| `accessTokenRequest.httpTemplate.contentType` | Chaîne | Indique le type de contenu de l’appel HTTP vers le point d’entrée du jeton d’accès. <br> Par exemple : `application/x-www-form-urlencoded` ou `application/json`. |
 | `accessTokenRequest.httpTemplate.headers` | Chaîne | Indique si des en-têtes doivent être ajoutés à l’appel HTTP vers le point d’entrée du jeton d’accès. |
 | `accessTokenRequest.responseFields.templatingStrategy` | Chaîne | <ul><li>Utilisez `PEBBLE_V1` si vous utilisez des modèles pour les valeurs dans `accessTokenRequest.responseFields.value`.</li><li> Utilisez `NONE` si la valeur du champ `accessTokenRequest.responseFields.value` est une constante. </li></li> |
 | `accessTokenRequest.responseFields.value` | Chaîne | Utilisez le langage de modèle pour accéder aux champs d’accès de la réponse HTTP depuis votre point d’entrée du jeton d’accès. Pour plus d’informations sur l’utilisation du modèle pour personnaliser des champs, consultez la section [Conventions de création de modèles](#templating-conventions). |

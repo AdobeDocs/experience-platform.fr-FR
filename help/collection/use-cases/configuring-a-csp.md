@@ -5,9 +5,23 @@ description: Découvrez comment configurer une CSP pour Experience Platform Web 
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configuration;configuration;SDK;edge;Web SDK;configurer;contexte;web;appareil;environnement;paramètres du sdk web;politique de sécurité du contenu;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 010192e91185c11d5454d4153913c06b90fe2122
+TQID: https://experienceleague.adobe.com/KKKsGpKtueETXu07nlNxn6zdRghWlomteunJBAP011c
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: 370
 ht-degree: 0%
 
 ---

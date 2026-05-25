@@ -3,9 +3,15 @@ title: Étendre les plannings d’exportation de jeux de données pour les flux 
 description: Découvrez comment étendre le planning d’exportation des flux de données d’exportation de jeux de données créés avant novembre 2024 qui cesseront de fonctionner le 1er septembre 2025.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
+TQID: https://experienceleague.adobe.com/7zT-p4j3iB-SZWaTkTmcloDc-SeFBZDRZqd4QdCrtS0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: 674
 ht-degree: 0%
 
 ---
@@ -48,16 +54,16 @@ Regardez la vidéo ci-dessous pour une démonstration détaillée de la manière
 
 Avant d’étendre le planning d’exportation de vos flux de données d’exportation de jeux de données, vous devez d’abord identifier les flux de données qui sont affectés par la date d’expiration à venir. Suivez les étapes ci-dessous pour localiser les flux de données qui nécessitent une action.
 
-1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]** dans l’interface utilisateur d’Experience Platform.
-2. Sélectionnez **[!UICONTROL Activer]** sur une destination qui comporte des flux de données d’exportation de jeux de données actifs.
+1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** dans l’interface utilisateur d’Experience Platform.
+2. Sélectionnez **[!UICONTROL Activate]** sur une destination qui comporte des flux de données d’exportation de jeux de données actifs.
 
    >[!TIP]
    >
-   >Utilisez le filtre **[!UICONTROL Types de données]** sur le côté gauche du catalogue pour filtrer les destinations disponibles par **[!UICONTROL Jeux de données]**.
+   >Utilisez le filtre **[!UICONTROL Data Types]** sur le côté gauche du catalogue pour filtrer les destinations disponibles par **[!UICONTROL Datasets]**.
 
-3. Sélectionnez le type de données **[!UICONTROL Jeux de données]** pour afficher uniquement les flux de données avec des exportations de jeux de données.
+3. Sélectionnez le type de données **[!UICONTROL Datasets]** pour afficher uniquement les flux de données avec des exportations de jeux de données.
    ![Capture d’écran montrant comment filtrer les flux de données par type de données.](/help/destinations/assets/ui/export-datasets/dataset-type.png)
-4. Sélectionnez l’en-tête de colonne **[!UICONTROL Créé]** et choisissez **[!UICONTROL Trier par ordre croissant]** pour afficher les flux de données plus anciens.
+4. Sélectionnez l’en-tête de colonne **[!UICONTROL Created]** et choisissez **[!UICONTROL Sort Ascending]** pour afficher les flux de données plus anciens.
    ![Capture d’écran montrant comment trier les flux de données par ordre croissant.](/help/destinations/assets/ui/export-datasets/sort-ascending.png)
 5. Identifiez le flux de données créé avant novembre 2024 que vous souhaitez conserver.
 
@@ -65,20 +71,20 @@ Avant d’étendre le planning d’exportation de vos flux de données d’expor
 
 Pour chaque flux de données que vous souhaitez conserver, vous devez accéder au workflow d’exportation des jeux de données pour modifier le planning.
 
-1. Sélectionnez le nom du flux de données dans la colonne **[!UICONTROL Nom]**. Vous accédez alors à la page **[!UICONTROL Exécutions de flux de données]**.
-2. Sur cette page, sélectionnez l’option **[!UICONTROL Exporter les jeux de données]**.
+1. Sélectionnez le nom du flux de données dans la colonne **[!UICONTROL Name]** . Vous accédez alors à la page **[!UICONTROL Dataflow runs]** .
+2. Sur cette page, sélectionnez l’option **[!UICONTROL Export datasets]** .
    ![Capture d’écran affichant l’option Exporter les jeux de données dans la page exécutions de flux de données.](/help/destinations/assets/ui/export-datasets/export-datasets-option.png)
-3. Sur la page **[!UICONTROL Sélectionner des jeux de données]**, sélectionnez **[!UICONTROL Suivant]**. Vous n’avez pas besoin d’ajouter de nouveaux jeux de données au flux de données.
-4. Vous accédez alors à la page **[!UICONTROL Planification]** où vous pouvez également voir une notification vous informant de la date d’expiration de l’exportation du jeu de données.
+3. Sur la page **[!UICONTROL Select datasets]**, sélectionnez **[!UICONTROL Next]**. Vous n’avez pas besoin d’ajouter de nouveaux jeux de données au flux de données.
+4. Vous accédez alors à la page **[!UICONTROL Scheduling]** où vous pouvez également voir une notification vous informant de la date d’expiration de l’exportation du jeu de données.
    ![Flux de données d’exportation de jeux de données avec notification d’expiration](/help/destinations/assets/ui/export-datasets/dataset-export-notification.png)
 
 ## Étape 3 : Étendre le planning d’exportation {#extend-export-schedule}
 
 Vous pouvez maintenant modifier le planning d’exportation pour l’étendre au-delà du 1er septembre 2025.
 
-1. Sélectionnez **[!UICONTROL Modifier le planning]**.
+1. Sélectionnez **[!UICONTROL Edit schedule]**.
    ![Capture d’écran de l’étape Planification affichant le bouton Modifier le planning.](/help/destinations/assets/ui/export-datasets/edit-schedule.png)
-2. Sélectionnez un nouveau planning d’exportation, puis sélectionnez **[!UICONTROL Enregistrer]**.
+2. Sélectionnez un nouveau planning d’exportation, puis sélectionnez **[!UICONTROL Save]**.
    ![Capture d’écran de l’étape Planification affichant les options de planification.](/help/destinations/assets/ui/export-datasets/edit-schedule-calendar.png)
 
    >[!TIP]

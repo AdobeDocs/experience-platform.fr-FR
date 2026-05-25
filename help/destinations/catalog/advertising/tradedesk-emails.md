@@ -1,11 +1,21 @@
 ---
 title: Connexion CRM The Trade Desk
 description: Activez les profils sur votre compte Trade Desk pour le ciblage et la suppression d'audiences en fonction des données CRM.
-last-substantial-update: 2026-04-29T00:00:00Z
+last-substantial-update: 2026-04-29T00:00:00.000Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a052203dce4949bc795fe181821a8d890c341673
+TQID: https://experienceleague.adobe.com/ffAWVtX2AVWGf99mqthLKZI8prjJWRKJ2vM--zkSYag
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: 1861
 ht-degree: 9%
 
 ---

@@ -1,14 +1,24 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;informations;api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;informations;api de machine learning sensei
 solution: Experience Platform
-title: Point de terminaison de l’API Insights
+title: Point d’entrée de l’API Insights
 description: Les informations contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/5-EtnCOjDU6JI-R7-uxgykd589WVGvZX9XZkfwJEwUs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 91%
+source-wordcount: 538
+ht-degree: 92%
 
 ---
 
@@ -16,9 +26,9 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 Les informations contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 
@@ -285,7 +295,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Requête**
 
-La requête suivante contient une requête et renvoie une mesure spécifique à l’aide de l’identifiant d’algorithme `{ALGORITHM}`
+La requête suivante contient une requête et récupère une mesure spécifique à l’aide de l’identifiant d’algorithme `{ALGORITHM}`
 
 ```shell
 curl -X GET \

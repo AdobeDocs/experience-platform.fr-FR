@@ -2,9 +2,24 @@
 title: (Entreprises) Connexion LinkedIn
 description: Utilisez cette destination pour activer vos audiences de comptes pour les cas d’utilisation d’Account-Based Marketing (ABM). Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des e-mails hachés.
 exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
-source-git-commit: a12d6923c7b47bb06ba40090e6da628c277b2768
+TQID: https://experienceleague.adobe.com/6l-EqFCKoKUxUhjkJM-j8FfEg9WuVdZ6rt7RXbWwyxs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: 795
 ht-degree: 20%
 
 ---

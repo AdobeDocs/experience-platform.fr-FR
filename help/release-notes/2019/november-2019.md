@@ -5,10 +5,39 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/Nz3NU3sHJrr7SALPseT6pliDoPHIrRlksm4ynWK46yw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 60%
+source-wordcount: 1931
+ht-degree: 57%
 
 ---
 
@@ -119,7 +148,7 @@ Pour plus d’informations, consultez la [présentation de l’espace de travail
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 
-La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+La normalisation et l&#39;interopérabilité sont les concepts clés de [!DNL Experience Platform]. [!DNL Experience Data Model] Le modèle de données d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
 XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
@@ -170,12 +199,12 @@ Adobe Experience Platform [!DNL Segmentation Service] propose une interface util
 
 | Fonctionnalité | Description |
 | -----------| ---------- |
-| Segmentation planifiée | Les utilisateurs peuvent désormais activer l’évaluation de segmentation planifiée pour tous les segments via l’interface utilisateur et l’API. Une fois activée, tous les segments sont évalués une fois par jour. Cela n’affecte pas les fonctionnalités de segmentation sur demande dont le fonctionnement reste inchangé.<br/><br/>Remarque : la fonction de segmentation planifiée ne peut pas être utilisée dans les sandbox avec plus de cinq politiques de fusion pour [!DNL XDM Individual Profile]. |
+| Segmentation planifiée | Les utilisateurs peuvent désormais activer l’évaluation de segmentation planifiée pour tous les segments via l’interface utilisateur et l’API. Une fois activée, tous les segments sont évalués une fois par jour. Cela n’affecte pas les fonctionnalités de segmentation à la demande qui continuent à fonctionner comme auparavant.<br/><br/>Remarque : la fonctionnalité de segmentation planifiée ne peut pas être utilisée dans les sandbox avec plus de cinq politiques de fusion pour [!DNL XDM Individual Profile]. |
 | Segmentation par streaming | La prise en charge de l’évaluation continue des segments (segmentation en flux continu) permet d’évaluer la plupart des règles de segment pendant que les données sont transmises à [!DNL Experience Platform]. Cette fonctionnalité signifie que l’appartenance au segment sera à jour sans devoir exécuter des tâches de segmentation planifiées. Certaines exceptions s’appliquent, comme les segments utilisant des relations à plusieurs entités ou comportant des payloads enrichis. |
 | Segments définis comme des blocs de création | Lors de la création de segments à l’aide de l’interface utilisateur du créateur de segments, les utilisateurs peuvent désormais utiliser des segments précédemment définis comme des blocs de création pour d’autres segments. <ul><li>Référencer l’appartenance à l’audience actuelle : elle est mise à jour lorsque les personnes rejoignent et quittent les audiences.</li><li>Copier la logique : prenez la définition de segment sélectionnée et dupliquez-la dans le nouveau segment.</li></ul> |
 | Affichage de l’appartenance au segment par espace de noms d’identifiant | L’appartenance à un segment peut désormais être affichée à l’aide de l’espace de noms d’identifiant (e-mail, ECID et nombre total). |
 | Prise en charge des RBAC | Le créateur de segments prend désormais en charge les autorisations et les contrôles d’accès en fonction du rôle. |
-| Prise en charge améliorée du partage d’audiences externes entre les solutions [!DNL Experience Platform] et Adobe | Les utilisateurs peuvent désormais introduire des métadonnées d’audience externe (non [!DNL Experience Platform]) dans des scénarios où le nombre d’audiences est à priori important ou inconnu. Cette version comprend l’accès aux métadonnées [!DNL Audience Manager] pour les clients qui ont configuré le connecteur de solution. Ces métadonnées d’audience peuvent être utilisées dans le créateur de segments pour créer des segments [!DNL Experience Platform]. <br/><br/> en outre, les segments créés dans [!DNL Experience Platform] seront désormais disponibles pour une utilisation dans les solutions Adobe intégrées, notamment [!DNL Audience Manager], [!DNL Target] et [!DNL Ad Cloud]. |
+| Prise en charge améliorée du partage d’audiences externes entre les solutions [!DNL Experience Platform] et Adobe | Les utilisateurs peuvent désormais introduire des métadonnées d’audience externe (non [!DNL Experience Platform]) dans des scénarios où le nombre d’audiences est à priori important ou inconnu. Cette version comprend l’accès aux métadonnées [!DNL Audience Manager] pour les clients qui ont configuré le connecteur de solution. Ces métadonnées d’audience peuvent être utilisées dans le créateur de segments pour créer des segments [!DNL Experience Platform]. <br/><br/> En outre, les segments créés dans [!DNL Experience Platform] pourront désormais être utilisés dans les solutions Adobe intégrées, notamment [!DNL Audience Manager], [!DNL Target] et [!DNL Ad Cloud]. |
 
 **Correctifs de bugs**
 

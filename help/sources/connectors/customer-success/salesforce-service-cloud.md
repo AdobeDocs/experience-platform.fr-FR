@@ -2,9 +2,16 @@
 title: Présentation Du Connecteur Source Salesforce Service Cloud
 description: Découvrez comment connecter Salesforce Service Cloud à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: b9a9b00114b3c1159a14b7e39484d250fa7563ba
+TQID: https://experienceleague.adobe.com/okn6tenVmPStEfXwnOAo-Pz9fUey03dqUs1xWd-7UaM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: 447
 ht-degree: 10%
 
 ---

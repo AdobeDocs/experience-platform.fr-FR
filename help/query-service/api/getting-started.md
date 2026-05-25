@@ -1,13 +1,21 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;requête
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;Service de requête;requête
 solution: Experience Platform
 title: Guide de l’API Query Service
 description: L’API Query Service permet aux développeurs d’interroger leurs données Adobe Experience Platform à l’aide de SQL standard. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/DFpRizSbGg57vcneMvN-dgiuWVOanbofBLHakEUjAG4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: 411
 ht-degree: 100%
 
 ---
@@ -26,16 +34,16 @@ Ce guide nécessite une compréhension pratique des divers services Adobe Exper
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour utiliser correctement [!DNL Query Service] à l’aide de l’API.
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans cette documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
+- x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
 Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :

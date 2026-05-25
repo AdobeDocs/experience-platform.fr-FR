@@ -2,10 +2,20 @@
 title: Créer une connexion Source SQL Server Microsoft dans l’interface utilisateur
 description: Découvrez comment créer une connexion source SQL Server Microsoft à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+TQID: https://experienceleague.adobe.com/bq6sS42wNhby9v4elhHuVFL2C1lAPTnIhayedUA2-Sg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 39%
+source-wordcount: 458
+ht-degree: 38%
 
 ---
 
@@ -17,7 +27,7 @@ Lisez ce tutoriel pour savoir comment connecter votre compte [!DNL Microsoft SQL
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.

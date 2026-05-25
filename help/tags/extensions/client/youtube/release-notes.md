@@ -2,16 +2,31 @@
 title: Notes de mise à jour de l’extension de suivi vidéo YouTube
 description: Notes de mise à jour les plus récentes pour lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
 exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/67qFiKxlrZ668E85pILiNHr6heVvY7j3v-g0FkIx9O4
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: 97
 ht-degree: 100%
 
 ---
 
 # Notes de mise à jour de l’extension de suivi vidéo YouTube
 
-## 4 juin 2021
+## samedi 4 juin 2021
 
 ### Extension de suivi vidéo YouTube 2.0.1
 
@@ -20,7 +35,7 @@ ht-degree: 100%
 * Correction de bugs pour les pages comportant plusieurs iFrames
 * Changement de nom pour des raisons de branding
 
-## 23 avril 2021
+## samedi 23 avril 2021
 
 ### Extension de suivi vidéo YouTube 2.0.0
 
@@ -29,7 +44,7 @@ ht-degree: 100%
 * Élément de données spécifiant la version
 * Remplacement intuitif de QSP
 
-## 24 novembre 2020
+## mercredi 24 novembre 2020
 
 ### Extension de suivi vidéo YouTube 1.0.1
 
@@ -38,7 +53,7 @@ ht-degree: 100%
 * Correction des correctifs de bugs de déclencheur de début
 * Ajout d’un événement de relecture
 
-## 19 novembre 2020
+## vendredi 19 novembre 2020
 
 ### Extension de suivi vidéo YouTube 1.0.0
 

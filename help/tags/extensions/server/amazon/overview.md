@@ -1,11 +1,38 @@
 ---
 title: Présentation de l’extension de l’API Conversions d’Amazon
 description: Partager des interactions de site web directement avec Amazon à l’aide de l’API d’événements web Adobe Experience Platform
-last-substantial-update: 2025-04-17T00:00:00Z
+last-substantial-update: 2025-04-17T00:00:00.000Z
 exl-id: 20339b6e-15e3-4d0e-8870-a3a85b7e66fd
-source-git-commit: 306795c0fdd665b1813c70c41bd9b5d58f5507e6
+TQID: https://experienceleague.adobe.com/i7qqnDNojOFDHyp0-XJdwS7iB9lMDvEgBaSzbXZhhp8
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: 969
 ht-degree: 3%
 
 ---
@@ -31,7 +58,7 @@ Pour connecter Experience Platform à [!DNL Amazon], saisissez les détails suiv
 | Type de clé | Description |
 | --- | --- |
 | Identifiant de compte | Identifiant de compte unique de votre compte [!DNL Amazon]. |
-| Identifiant de l’entité | Identifiant d’un profil associé au compte de l’annonceur. Elle se trouve dans l’URL du portail du gestionnaire de campagne, précédée du préfixe `entity`. |
+| ID de l’entité | Identifiant d’un profil associé au compte de l’annonceur. Elle se trouve dans l’URL du portail du gestionnaire de campagne, précédée du préfixe `entity`. |
 | Jeton d’accès | Jeton d’accès non expirant de votre application, utilisé pour s’authentifier auprès de l’API [!DNL Amazon] via OAuth. Reportez-vous à la documentation de l’API Amazon [sur l’authentification](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) pour obtenir des conseils. |
 
 ## Installation et configuration de l’extension [!DNL Amazon] {#install-configure}
@@ -87,7 +114,7 @@ Le tableau ci-dessous décrit les propriétés clés requises pour configurer et
 | `countryCode` | Cette valeur est basée sur la norme ISO 3166-1 alpha-2, codes pays à deux lettres définis dans la norme ISO 3166-1, qui fait partie de la norme ISO 3166 publiée par l’Organisation internationale de normalisation (ISO), pour représenter les pays, les territoires dépendants et les zones géographiques spéciales d’intérêt. | Oui | --- |
 | `dataProcessingOptions` | Indique le consentement de l’utilisateur pour l’utilisation des données publicitaires. | Facultatif | LIMITED_DATA_USE |
 
-- Sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la règle.
+- Sélectionnez **[!UICONTROL Keep Changes]** pour enregistrer la règle.
 
 ![Interface de configuration des paramètres d’événement avec le bouton Conserver les modifications en surbrillance.](../../../images/extensions/server/amazon/event-parameters.png)
 
@@ -108,7 +135,7 @@ Pour activer la déduplication, incluez le champ `clientDedupeId` dans chaque é
 
 En configurant correctement la déduplication, vous pouvez vous assurer que les données d’optimisation restent exactes et que les rapports ne sont pas affectés négativement.
 
-Pour plus d’informations, consultez le [Guide de déduplication des événements d’Amazon](https://advertising.amazon.com/).
+Pour plus d’informations, consultez le [Guide de déduplication des événements d’](https://advertising.amazon.com/).
 
 ## Étapes suivantes {#next-steps}
 

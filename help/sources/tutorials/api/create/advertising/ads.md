@@ -2,9 +2,14 @@
 title: Connexion de Google Ads à Experience Platform à l’aide d’API
 description: Découvrez comment connecter Adobe Experience Platform à Google Ads à l’aide de l’API Flow Service.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
+TQID: https://experienceleague.adobe.com/-LBtfXxOo-UC7Aqtsg-YItREUlz-VkASj57vh8YmuVA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: 462
 ht-degree: 27%
 
 ---
@@ -103,7 +108,7 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 
 ## Créer un flux de données pour ingérer des données publicitaires
 
-Ce tutoriel vous a permis de créer une connexion de base [!DNL Google Ads] à l’aide de l’API [!DNL Flow Service] et de connecter votre compte [!DNL Google Ads] à Experience Platform. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base [!DNL Google Ads] à l’aide de l’API [!DNL Flow Service] et de connecter votre compte [!DNL Google Ads] à Experience Platform. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer des données publicitaires dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/advertising.md)

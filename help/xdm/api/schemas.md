@@ -4,10 +4,19 @@ solution: Experience Platform
 title: Point d’entrée de l’API Schemas
 description: Le point d’entrée /schemas de l’API Schema Registry vous permet de gérer les schémas XDM par programmation dans votre application d’expérience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+TQID: https://experienceleague.adobe.com/P0NBe5hK8y-qeUimpRpb3PXqwjbxjKmS1l665a5nfj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2091'
-ht-degree: 15%
+source-wordcount: 2120
+ht-degree: 16%
 
 ---
 
@@ -36,7 +45,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | Paramètre | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | Le conteneur qui contient les schémas à récupérer : `global` pour les schémas créés par Adobe ou `tenant` pour les schémas appartenant à votre organisation. |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Voir le [document annexe](./appendix.md#query) pour obtenir une liste des paramètres disponibles. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir le [document annexe](./appendix.md#query) pour obtenir une liste des paramètres disponibles. |
 
 {style="table-layout:auto"}
 
@@ -110,7 +119,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | Paramètre | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | Conteneur contenant le schéma à récupérer : `global` pour un schéma créé par Adobe ou `tenant` pour un schéma détenu par votre organisation. |
-| `{SCHEMA_ID}` | Le `meta:altId` `$id` ou encodé URL du schéma que vous souhaitez rechercher. |
+| `{SCHEMA_ID}` | Le `$id` `meta:altId` ou encodé URL du schéma que vous souhaitez rechercher. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +146,7 @@ Le format de la réponse dépend de l’en-tête `Accept` envoyé dans la requê
 | `application/vnd.adobe.xed-notext+json; version=1` | Brut avec `$ref` et `allOf`, ne contient aucun titre ni aucune description. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` et `allOf` résolus, contient des descripteurs. |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` et `allOf` résolus, comporte des titres et des descriptions. Les champs obsolètes sont indiqués par un attribut `meta:status` de `deprecated`. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` et `allOf` résolus, contient des titres et des descriptions. Les champs obsolètes sont indiqués par un attribut `meta:status` de `deprecated`. |
 
 {style="table-layout:auto"}
 
@@ -279,7 +288,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 
 L’exécution d’une requête GET pour [répertorier tous les schémas](#list) dans le conteneur du tenant inclut désormais le nouveau schéma. Vous pouvez effectuer une [requête de recherche (GET)](#lookup) à l’aide de l’URI de `$id` codée en URL pour afficher directement le nouveau schéma.
 
-Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [PATCH](#patch) afin d’ajouter des groupes de champs aux tableaux `allOf` et `meta:extends` du schéma.
+Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [&#128279;](#patch) afin d’ajouter des groupes de champs aux tableaux `allOf` et `meta:extends` du schéma.
 
 ## Créer un schéma relationnel {#create-relational-schema}
 
@@ -306,7 +315,7 @@ Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les des
 
 >[!CAUTION]
 >
->Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[&#x200B; consultez le &#x200B;](./unions.md) guide des points d’entrée des unions .
+>Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[&#128279;](./unions.md) consultez le  guide des points d’entrée des unions .
 
 **Format d’API**
 
@@ -455,7 +464,7 @@ Une requête réussie renvoie **HTTP 201 (Created)** et le schéma créé.
 | `meta:behaviorType` | Chaîne | Type de comportement (`record` ou `time-series`, lorsqu’il est activé). |
 | `meta:containerId` | Chaîne | Conteneur dans lequel le schéma est stocké (par exemple, `tenant`). |
 
-Pour ajouter des champs à un schéma relationnel après sa création, effectuez une requête [PATCH](#patch). Les schémas relationnels n’héritent pas et n’évoluent pas automatiquement. Les modifications structurelles telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données. Une fois que les données existent, seules les **modifications supplémentaires** (telles que l’ajout de nouveaux champs) sont prises en charge.
+Pour ajouter des champs à un schéma relationnel après sa création, effectuez une requête [&#128279;](#patch). Les schémas relationnels n’héritent pas et n’évoluent pas automatiquement. Les modifications structurelles telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données. Une fois que les données existent, seules les **modifications supplémentaires** (telles que l’ajout de nouveaux champs) sont prises en charge.
 
 Vous pouvez ajouter de nouveaux champs au niveau racine (dans la définition ou le `properties` racine), mais vous ne pouvez pas supprimer, renommer ni modifier le type des champs existants.
 
@@ -465,7 +474,7 @@ Vous pouvez ajouter de nouveaux champs au niveau racine (dans la définition ou 
 
 ## Mise à jour d’un schéma {#put}
 
-Vous pouvez remplacer un schéma entier par une opération PUT, c’est-à-dire réécrire la ressource. Lors de la mise à jour d’un schéma par le biais d’une requête PUT, le corps doit inclure tous les champs requis lors de la [création d’un nouveau schéma](#create) dans une requête POST.
+Vous pouvez remplacer un schéma entier par une opération PUT, ce qui revient essentiellement à réécrire la ressource. Lors de la mise à jour d’un schéma par le biais d’une requête PUT, le corps doit inclure tous les champs qui sont requis lors de la [création d’un nouveau schéma](#create) dans une requête POST.
 
 >[!NOTE]
 >
@@ -479,7 +488,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` `$id` ou encodé URL du schéma que vous souhaitez réécrire. |
+| `{SCHEMA_ID}` | Le `$id` `meta:altId` ou encodé URL du schéma que vous souhaitez réécrire. |
 
 {style="table-layout:auto"}
 
@@ -550,7 +559,7 @@ Vous pouvez mettre à jour une partie d’un schéma à l’aide d’une requêt
 
 >[!NOTE]
 >
->Si vous souhaitez remplacer l’ensemble d’une ressource par de nouvelles valeurs au lieu de mettre à jour des champs individuels, consultez la section sur le [remplacement d’un schéma à l’aide d’une opération PUT](#put).
+>Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, consultez la section sur le [remplacement d’un schéma à l’aide d’une opération PUT](#put).
 
 L’une des opérations PATCH les plus courantes consiste à ajouter des groupes de champs précédemment définis à un schéma, comme le montre l’exemple ci-dessous.
 
@@ -653,7 +662,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | L’URI ou le `$id` de `meta:altId` codé URL du schéma que vous souhaitez activer. |
+| `{SCHEMA_ID}` | L’URI ou le `meta:altId` de `$id` codé URL du schéma que vous souhaitez activer. |
 
 {style="table-layout:auto"}
 
@@ -753,6 +762,6 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
+Une réponse réussie renvoie un statut HTTP 204 (Pas de contenu) et un corps vide.
 
 Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au schéma . Vous devez inclure un en-tête `Accept` dans la requête, mais vous devriez recevoir le statut HTTP 404 (Not Found), car le schéma a été supprimé du registre des schémas.

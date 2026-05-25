@@ -5,9 +5,24 @@ title: Point d’entrée de l’API Roles
 description: Le point d’entrée /roles de l’API de contrôle d’accès basé sur les attributs vous permet de gérer les rôles par programmation dans Adobe Experience Platform.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/t7-Yo2mof3hy1IqFkfzIg4NSUYfCLtqVoFjARcOPg0I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: 1681
 ht-degree: 28%
 
 ---
@@ -22,13 +37,13 @@ Les rôles définissent l’accès d’un administrateur, d’une administratric
 
 Le point d’entrée `/roles` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer les rôles par programmation dans votre organisation.
 
-## Commencer
+## Prise en main
 
 Le point d’entrée de l’API utilisé dans ce guide fait partie de l’API de contrôle d’accès basé sur les attributs. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de rôles {#list}
 
-Vous pouvez répertorier tous les rôles existants appartenant à votre organisation en effectuant une requête GET au point d’entrée `/roles`.
+Vous pouvez répertorier tous les rôles existants appartenant à votre organisation en envoyant une requête GET au point d’entrée `/roles`.
 
 **Format d’API**
 
@@ -180,7 +195,7 @@ Une réponse réussie renvoie des détails pour l’ID de rôle interrogé, y co
 
 ## Rechercher des objets par ID de rôle
 
-Vous pouvez également récupérer des objets en adressant une requête GET au point d’entrée `/roles` tout en fournissant une {ROLE_ID}.
+Vous pouvez également récupérer des sujets en adressant une requête GET au point d’entrée `/roles` tout en fournissant une {ROLE_ID}.
 
 **Format d’API**
 
@@ -408,7 +423,7 @@ Une réponse réussie renvoie le rôle mis à jour, y compris les nouvelles vale
 
 ## Mettre à jour un rôle par ID de rôle {#put}
 
-Vous pouvez mettre à jour un rôle en adressant une requête PUT au point d’entrée `/roles` et en spécifiant l’identifiant de rôle correspondant au rôle à mettre à jour.
+Vous pouvez mettre à jour un rôle en adressant une requête PUT au point d’entrée `/roles` et en spécifiant l’identifiant de rôle correspondant au rôle que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -578,7 +593,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
+Une réponse réussie renvoie un statut HTTP 204 (Pas de contenu) et un corps vide.
 
 Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au rôle . Vous recevrez un statut HTTP 404 (Introuvable), car le rôle a été supprimé de l’administration.
 
@@ -611,4 +626,4 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
+Une réponse réussie renvoie un statut HTTP 204 (Pas de contenu) et un corps vide.

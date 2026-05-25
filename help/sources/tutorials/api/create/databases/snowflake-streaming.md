@@ -3,10 +3,15 @@ title: Connexion de votre compte de streaming Snowflake à Adobe Experience Plat
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake Streaming à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: a4a464f1f3b61311754a39f2a6e6a4ef21af3ab0
+TQID: https://experienceleague.adobe.com/JO6g-2XHCtkl4-9uLmI3uFsJ0NXDv5XdHcI-HVuYGK4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 20%
+source-wordcount: 886
+ht-degree: 23%
 
 ---
 
@@ -21,7 +26,7 @@ Ce tutoriel décrit les étapes à suivre pour connecter et diffuser des donnée
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -108,7 +113,7 @@ Une réponse réussie renvoie la nouvelle connexion de base et son etag correspo
 
 ## Explorer vos tableaux de données {#explore-your-data-tables}
 
-Ensuite, utilisez l’identifiant de connexion de base pour explorer et parcourir les tableaux de données de votre source en envoyant une requête GET au point d’entrée `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` tout en fournissant votre identifiant de connexion de base en tant que paramètre.
+Ensuite, utilisez l’identifiant de connexion de base pour explorer et parcourir les tables de données de votre source en envoyant une requête GET au point d’entrée `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` tout en fournissant votre identifiant de connexion de base en tant que paramètre.
 
 **Format d’API**
 

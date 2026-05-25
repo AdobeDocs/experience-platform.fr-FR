@@ -5,9 +5,24 @@ title: Envoyer plusieurs messages dans une seule requête HTTP
 type: Tutorial
 description: Ce document fournit un tutoriel permettant d’envoyer plusieurs messages vers Adobe Experience Platform dans une seule requête HTTP à l’aide de l’ingestion par flux.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
+TQID: https://experienceleague.adobe.com/2xJYZLgRjlCRLNbPmn4Fox1YanluEgSMMpdHJRErpiY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: 1724
 ht-degree: 51%
 
 ---

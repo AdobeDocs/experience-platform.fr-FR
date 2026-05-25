@@ -5,10 +5,20 @@ title: Supprimer un compte de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment supprimer un compte de destination à l’aide de l’API Flow Service.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/xCKyodhDyqpezTLcoGBypwZvx8vr6cpoaUKRhsRhXjU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 32%
+source-wordcount: 760
+ht-degree: 35%
 
 ---
 
@@ -179,7 +189,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (pas de contenu) et un corps vide. Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) à la connexion . L’API renvoie une erreur HTTP 404 (Not Found), indiquant que le compte de destination a été supprimé.
+Une réponse réussie renvoie un état HTTP 204 (pas de contenu) et un corps vide. Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) à la connexion. L’API renvoie une erreur HTTP 404 (Not Found), indiquant que le compte de destination a été supprimé.
 
 ## Gestion des erreurs d’API {#api-error-handling}
 

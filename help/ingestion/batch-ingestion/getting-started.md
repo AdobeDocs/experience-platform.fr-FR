@@ -4,10 +4,20 @@ title: Prise en main de l’API Data Ingestion
 type: Documentation
 description: Le guide de prise en main de l’API Data Ingestion décrit les concepts clés et les fonctionnalités de base que vous devez connaître avant de commencer à ingérer des données dans Experience Platform à l’aide d’API.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/JJbItfMFua4vz4ofzCKm6NiMn1apkkNTZDqsgeM-MyM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 53%
+source-wordcount: 372
+ht-degree: 54%
 
 ---
 
@@ -24,9 +34,9 @@ L’utilisation des guides d’API nécessite une compréhension pratique de plu
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de passer avec succès des appels vers des points d’entrée d’API [!DNL Profile].
 
-## Lecture d’exemples d’appels API
+## Lecture d&#39;exemples d&#39;appels API
 
-La documentation de l’API Data Ingestion fournit des exemples d’appels API pour démontrer comment formater correctement les requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+La documentation de l’API Data Ingestion fournit des exemples d’appels API pour démontrer comment formater correctement les requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ## En-têtes requis
 

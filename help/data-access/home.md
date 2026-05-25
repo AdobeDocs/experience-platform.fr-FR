@@ -4,10 +4,17 @@ solution: Experience Platform
 title: Présentation de Data Access
 description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la capacité de découverte et l’accessibilité des jeux de données Experience Platform ingérés.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/wDm32nCR70IzCWYvT-MDaeBxViM6V-55M0-DJeXEmnY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 81%
+source-wordcount: 185
+ht-degree: 82%
 
 ---
 

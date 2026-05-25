@@ -4,10 +4,20 @@ description: Présentation du rôle des schémas de modèle de données d’exp�
 feature: Get Started, Data Management, Schemas
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+TQID: https://experienceleague.adobe.com/GS8FH9-f6GE6Y-TjUOGRaNVG4lL3tUkIwdy13rbRtPM
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 24%
+source-wordcount: 902
+ht-degree: 23%
 
 ---
 
@@ -46,7 +56,7 @@ Le tableau suivant contient des informations sur la configuration sous-jacente d
 | Nom du schéma | Classe de base | Groupes de champs | [!DNL Profile] dans le schéma | Identité principale | Espace de noms d’identité principal | identité Secondaire | Espace de noms d’identité Secondaire | Relation | Remarques |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Compte B2B | [&#x200B; Compte professionnel XDM &#x200B;](../../xdm/classes/b2b/business-account.md) | Détails du compte professionnel XDM | Activé | `accountKey.sourceKey` dans la classe de base | Compte B2B | `extSourceSystemAudit.externalKey.sourceKey` dans la classe de base | Compte B2B | <ul><li>`accountParentKey.sourceKey` dans le groupe de champs Détails du compte professionnel XDM</li><li>Propriété de destination : `/accountKey/sourceKey`</li><li>Type : un à un</li><li>Schéma de référence : compte B2B</li><li>Espace De Noms : Compte B2B</li></ul> |  |
-| Personne B2B | [XDM Individual Profile](../../xdm/classes/individual-profile.md) | <ul><li>Détails de professionnel XDM</li><li>Composants de professionnel XDM</li><li>IdentityMap</li><li>Détails relatifs au consentement et aux préférences</li></ul> | Activé | `b2b.personKey.sourceKey` dans le groupe de champs Détails professionnels XDM | Personne B2B | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` du groupe de champs Détails professionnels XDM</li><li>`workEmail.address` du groupe de champs Détails professionnels XDM</ol></li> | <ol><li>Personne B2B</li><li>E-mail</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` du groupe de champs Composants professionnels XDM .</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Compte B2B</li><li>Espace De Noms : Compte B2B</li><li>Propriété de destination : accountKey.sourceKey</li><li>Nom de la relation à partir du schéma actuel : Compte</li><li>Nom de la relation du schéma de référence : Personnes</li></ul> |  |
+| Personne B2B | [XDM Individual Profile](../../xdm/classes/individual-profile.md) | <ul><li>Détails de professionnel XDM</li><li>Composants de professionnel XDM</li><li>IdentityMap</li><li>Détails relatifs au consentement et aux préférences</li></ul> | Activé | `b2b.personKey.sourceKey` dans le groupe de champs Détails professionnels XDM | Personne B2B | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` du groupe de champs Détails professionnels XDM</li><li>`workEmail.address` du groupe de champs Détails professionnels XDM</ol></li> | <ol><li>Personne B2B</li><li>Email</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` du groupe de champs Composants professionnels XDM .</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Compte B2B</li><li>Espace De Noms : Compte B2B</li><li>Propriété de destination : accountKey.sourceKey</li><li>Nom de la relation à partir du schéma actuel : Compte</li><li>Nom de la relation du schéma de référence : Personnes</li></ul> |  |
 | Opportunité B2B | [Opportunité commerciale XDM](../../xdm/classes/b2b/business-opportunity.md) | Détails de l’opportunité commerciale XDM | Activé | `opportunityKey.sourceKey` dans la classe de base | Opportunité B2B | `extSourceSystemAudit.externalKey.sourceKey` dans la classe de base | Opportunité B2B | <ul><li>`accountKey.sourceKey` dans la classe de base</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Compte B2B</li><li>Espace De Noms : Compte B2B</li><li>Propriété de destination : `accountKey.sourceKey`</li><li>Nom de la relation à partir du schéma actuel : Compte</li><li>Nom de la relation du schéma de référence : Opportunités</li></ul> |  |
 | Relation de la personne avec l’opportunité B2B | [Relation de la personne avec l’opportunité commerciale XDM](../../xdm/classes/b2b/business-opportunity-person-relation.md) | Aucune | Activé | `opportunityPersonKey.sourceKey` dans la classe de base | Relation de la personne avec l’opportunité B2B | | | **Première relation**<ul><li>`personKey.sourceKey` dans la classe de base</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Personne B2B</li><li>Espace De Noms : Personne B2B</li><li>Propriété de destination : b2b.personKey.sourceKey</li><li>Nom de la relation à partir du schéma actuel : Personne</li><li>Nom de la relation du schéma de référence : Opportunités</li></ul>**Deuxième relation**<ul><li>`opportunityKey.sourceKey` dans la classe de base</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Opportunité B2B </li><li>Espace de noms : opportunité B2B </li><li>Propriété de destination : `opportunityKey.sourceKey`</li><li>Nom de la relation à partir du schéma actuel : opportunité</li><li>Nom de la relation du schéma de référence : Personnes</li></ul> |  |
 | Campagne B2B | [XDM Business Campaign](../../xdm/classes/b2b/business-campaign.md) | Détails de XDM Business Campaign | Activé | `campaignKey.sourceKey` dans la classe de base | Campagne B2B | | | | |

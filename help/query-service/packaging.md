@@ -2,10 +2,26 @@
 title: Package Query Service
 description: Le document suivant décrit l’emballage des fonctionnalités et des produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et par lots.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
+TQID: https://experienceleague.adobe.com/Dkf2YtZHdS1SeSDppV3ipXRyBiZrpGROD-HLtdSBVkw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 5%
+source-wordcount: 1010
+ht-degree: 6%
 
 ---
 
@@ -20,7 +36,7 @@ Adobe Experience Platform Query Service peut être divisé en deux fonctionnalit
 
 Les fonctionnalités de Query Service sont incluses avec les produits et modules complémentaires suivants :
 
-- **Applications basées sur Experience Platform** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics et Adobe Journey Optimizer) : l’accès à Query Service pour exécuter des requêtes ad hoc est fourni dès le départ avec chaque variation et niveau des applications basées sur Experience Platform.
+- **Applications basées sur** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics et Adobe Journey Optimizer) : l’accès à Query Service pour exécuter des requêtes ad hoc est fourni dès le départ avec chaque variation et niveau des applications basées sur Experience Platform.
 - **[!DNL Data Distiller]** (package complémentaire pouvant être acheté avec Adobe Real-Time CDP, Customer Journey Analytics et Adobe Journey Optimizer) : l’accès à Query Service pour exécuter des requêtes par lots est fourni avec [!DNL Data Distiller].
 
 ## Droits {#entitlements}
@@ -36,7 +52,7 @@ Le tableau suivant décrit les droits clés de Query Service en fonction de leur
 | Mesure de licence | **Simultanéité de l&#39;utilisateur de requête** : <ul><li>1 utilisateur simultané (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 utilisateurs simultanés (Customer Journey Analytics, Adobe Mix Modeler) &#x200B;</li></ul> **Simultanéité des requêtes** : <ul><li>1 requête en cours d’exécution (toutes les applications) &#x200B;</li></ul> **Vous pouvez acheter un module complémentaire supplémentaire de package d’utilisateurs de requêtes ad hoc** pour augmenter vos droits de requête ad hoc autorisés. <ul><li>+5 utilisateurs simultanés supplémentaires par pack</li><li>+1 requête d’exécution simultanée supplémentaire par pack</li></ul> | **Heures de calcul** : <ul><li>Variable (étendue en fonction des droits de votre application)</li></ul> Le **nombre d’heures de calcul** est une mesure du temps pris par le moteur de Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée. <br>Avec le SKU Data Distiller, vous obtenez également un utilisateur supplémentaire et une simultanéité des requêtes, qui peut être utilisée pour l’exécution de requêtes ad hoc.  Le SKU de Data Distiller comprend les éléments suivants <br><ul><li>+5 utilisateurs simultanés supplémentaires</li><li>+1 requête supplémentaire en cours d’exécution</li></ul> |
 | Utilisation accélérée des requêtes et des rapports | Non | Oui - Les requêtes accélérées simultanées vous permettent de lire les données de la boutique accélérée et de les afficher dans vos tableaux de bord. Un droit dédié pour le stockage des modèles de création de rapports et des jeux de données dans la boutique accélérée est également fourni. |
 | Capacité de stockage du lac de données | Le droit total au stockage dépend de vos licences d’applications basées sur la plateforme. Par exemple, Real-Time CDP, AJO, CJA, etc. | Oui - Un droit d’enregistrement supplémentaire est fourni pour conserver vos jeux de données bruts et dérivés pour les cas d’utilisation de Data Distiller au-delà d’une date d’expiration de sept jours.<br>La capacité de stockage de votre lac de données est mesurée en téraoctets (To) et dépend de la quantité d’heures de calcul que vous avez achetées. Pour plus d’informations, consultez la description du produit . |
-| Allocation d&#39;exportation de données | Le droit d’exportation total dépend de vos licences d’applications basées sur Platform. Par exemple, Real-Time CDP, AJO, CJA, etc. | Oui - Un droit d’exportation supplémentaire est fourni pour permettre l’exportation de jeux de données dérivés créés à l’aide de Data Distiller.<br>Votre allocation annuelle d’exportation de données est mesurée en téraoctets (To) et dépend de la quantité d’heures de calcul que vous avez achetées. Veuillez consulter la description du produit pour plus de détails. |
+| Allocation d&#39;exportation de données | Le droit d’exportation total dépend de vos licences d’applications basées sur Platform. Par exemple, Real-Time CDP, AJO, CJA, etc. | Oui - Un droit d’exportation supplémentaire est fourni pour permettre l’exportation de jeux de données dérivés créés à l’aide de Data Distiller.<br> Votre quota annuel d’exportation de données est mesuré en téraoctets (To) et dépend de la quantité d’heures de calcul que vous avez achetées. Veuillez consulter la description du produit pour plus de détails. |
 | Interface d’exécution de requête | <ul><li>Interface utilisateur de Query Service</li><li>Interface utilisateur du client tiers</li><li>Interface utilisateur du client [!DNL PostgresSQL]</li></ul> | <ul><li>Interface utilisateur de Query Service </li><li>Interface utilisateur du client tiers</li><li>Interface utilisateur du client [!DNL PostgresSQL]</li><li>API REST</li></ul> |
 | Résultats De La Requête Renvoyés Via | Interface utilisateur du client | Jeu de données dérivé stocké dans le lac de données |
 | Limite de résultat | <ul><li>Interface utilisateur de Query Service - Le nombre de lignes de sortie peut être [configuré avec un paramètre d’interface utilisateur](./ui/user-guide.md#result-count) compris entre 50 et 1 000 lignes.</li><li>Clients tiers - 50 000</li><li>[!DNL PostgresSQL] client - 50 000</li></ul> | Les requêtes CTAS et ITAS ne génèrent que des messages de réussite, car la sortie de la requête est stockée dans des jeux de données dérivés. |

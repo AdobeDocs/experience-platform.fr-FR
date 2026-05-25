@@ -1,11 +1,26 @@
 ---
 title: Destination par lots Magnite
 description: Utilisez cette destination pour diffuser des audiences Adobe CDP vers la plateforme de streaming Magnite par lots.
-last-substantial-update: 2024-11-18T00:00:00Z
+last-substantial-update: 2024-11-18T00:00:00.000Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/P6fNpC1cTwoQImY7TqxqMulwr-A2qAbPs3SgIYIesvU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: 1787
 ht-degree: 12%
 
 ---
@@ -106,7 +121,7 @@ Une fois que l’utilisation de la destination a été approuvée et que la diff
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Recherchez la destination Magnite : Batch dans le catalogue d’expériences Adobe. Cliquez sur le bouton d’options supplémentaires (\...), puis configurez la connexion/instance de destination.
+Recherchez la destination Magnite : Batch dans le catalogue d’expériences Adobe. Cliquez sur le bouton Options supplémentaires (\...) puis configurez la connexion/instance de destination.
 
 Si vous disposez déjà d’un compte , vous pouvez le localiser en remplaçant l’option Type de compte par « Compte existant ». Sinon, vous allez créer un compte ci-dessous :
 
@@ -136,7 +151,7 @@ connexion/instance de destination à l’avenir.
 
 >[!NOTE]
 >
->Si vous prévoyez d’envoyer plusieurs types d’identifiants (GAID, IDFA, etc.) à l’aide de la destination par lots, une nouvelle connexion/instance de destination est requise pour chaque type. Contactez votre représentant de compte Magnite pour plus d’informations.
+>Si vous envisagez d’envoyer plusieurs types d’ID (GAID, IDFA, etc.) En utilisant la destination par lots, une nouvelle connexion/instance de destination est requise pour chaque . Contactez votre représentant de compte Magnite pour plus d’informations.
 
 Vous pouvez ensuite procéder en sélectionnant **[!UICONTROL Next]**
 
@@ -157,7 +172,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -172,7 +187,7 @@ Dans cet exemple, nous avons sélectionné le **[!UICONTROL Target field]** : ma
 
 >[!NOTE]
 >
->Si vous prévoyez d’envoyer/mapper plusieurs types d’ID (GAID, IDFA, etc.) à l’aide de la destination par lots, une nouvelle connexion/instance de destination est requise pour chaque. Contactez votre représentant de compte Magnite pour plus d’informations.
+>Si vous prévoyez d’envoyer/de mapper plusieurs types d’ID (GAID, IDFA, etc.) En utilisant la destination par lots, une nouvelle connexion/instance de destination est requise pour chaque . Contactez votre représentant de compte Magnite pour plus d’informations.
 
 
 Sur l’écran « Configurer un nom de fichier et un planning d’exportation pour chaque audience », vous devez maintenant configurer une date de début (obligatoire), une date de fin (facultatif) et un identifiant de mappage (obligatoire) pour chaque audience.

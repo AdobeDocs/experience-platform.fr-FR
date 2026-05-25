@@ -4,10 +4,24 @@ title: Guide de dépannage du profil client en temps réel
 type: Documentation
 description: Ce document fournit des réponses aux questions fréquentes sur le profil client en temps réel, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide d’Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/jYSckGSfzhSh1UbUQ0fQVt2v-AtmYVpfDoooXr66wM8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 91%
+source-wordcount: 984
+ht-degree: 86%
 
 ---
 
@@ -17,7 +31,7 @@ Ce document fournit des réponses aux questions fréquentes sur le profil client
 
 [!DNL Real-Time Customer Profile] offre une vision holistique de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Cette fonctionnalité permet aux professionnels du marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 
-## FAQ
+## Questions fréquentes
 
 Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos du profil client en temps réel.
 
@@ -51,13 +65,13 @@ Vous pouvez également utiliser l’API Segmentation Service d’Adobe Experie
 
 #### Utilisation de l’interface utilisateur
 
-Dans l’interface utilisateur d’Experience Platform, l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Profils]** vous permet d’afficher le nombre total de profils et de rechercher des profils individuels en fonction de leur valeur d’identité. Pour plus d’informations, consultez le [guide d’utilisation de Profile](./ui/user-guide.md).
+Dans l’interface utilisateur d’Experience Platform, l’onglet **[!UICONTROL Browse]** de l’espace de travail **[!UICONTROL Profiles]** vous permet d’afficher le nombre total de profils et de rechercher des profils individuels en fonction de leur valeur d’identité. Pour plus d’informations, consultez le [guide d’utilisation de Profile](./ui/user-guide.md).
 
-Vous pouvez également afficher la liste de vos audiences sous l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Audiences]**. Après avoir sélectionné une audience, un échantillon de profils éligibles à cette audience s’affiche. Vous pouvez ensuite sélectionner l’un des profils répertoriés pour en afficher les détails. Pour plus d’informations, consultez la [Présentation de l’interface utilisateur Segmentation](../segmentation/ui/overview.md),
+Vous pouvez également afficher la liste de vos audiences sous l’onglet **[!UICONTROL Browse]** dans l’espace de travail **[!UICONTROL Audiences]** . Après avoir sélectionné une audience, un échantillon de profils éligibles à cette audience s’affiche. Vous pouvez ensuite sélectionner l’un des profils répertoriés pour en afficher les détails. Pour plus d’informations, consultez la [Présentation de l’interface utilisateur Segmentation](../segmentation/ui/overview.md),
 
 ## Codes d’erreur
 
-Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-Time Customer Profile. Si l&#39;erreur que vous rencontrez n&#39;est pas répertoriée ici, vous pouvez la trouver dans le [guide de dépannage d&#39;Experience Platform](../landing/troubleshooting.md).
+Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-Time Customer Profile. Si l&#39;erreur que vous rencontrez n&#39;est pas répertoriée ici, vous pouvez la trouver dans le [guide de dépannage d&#39;](../landing/troubleshooting.md).
 
 ### Impossible de rechercher le schéma de l’attribut calculé pour le chemin d’accès fourni
 

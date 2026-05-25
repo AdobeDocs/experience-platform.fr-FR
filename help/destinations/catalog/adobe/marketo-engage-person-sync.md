@@ -1,12 +1,33 @@
 ---
 title: Synchronisation de la personne Marketo Engage
 description: Utilisez le connecteur de synchronisation des personnes Marketo Engage pour diffuser les mises à jour d’une audience de personnes vers les enregistrements correspondants dans votre Marketo Engage.
-last-substantial-update: 2025-01-14T00:00:00Z
+last-substantial-update: 2025-01-14T00:00:00.000Z
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: bfff4cd5ffc57abda2f9672d5db487e9ebebee9d
+TQID: https://experienceleague.adobe.com/BS6kwT01iGcRiyy--2-SzxvD5GwIDdsoTyKfT-ZW7Ag
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: b5eb20d5-4893-4245-8a24-ea6bf0e51fbb
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 12%
+source-wordcount: 1232
+ht-degree: 11%
 
 ---
 
@@ -97,7 +118,7 @@ Si votre société a accès à plusieurs organisations, veillez à utiliser la m
 * **[!UICONTROL First searchable field]** : champ à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. La valeur par défaut est e-mail.
 * **[!UICONTROL First searchable field]** : champ secondaire à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. Facultatif
 
-Une fois que vous avez sélectionné votre instance, vous devez également sélectionner la partition de lead à laquelle vous souhaitez que la configuration s’intègre. Dans [&#x200B; une &#x200B;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) partition de lead est un concept utilisé pour séparer les enregistrements de lead par entreprise (marque ou région de vente, par exemple). Si votre abonnement Marketo ne dispose pas de la fonctionnalité Espaces de travail et partitions, ou si aucune partition supplémentaire n’a été créée dans votre abonnement, seule la partition Par défaut est disponible. Une configuration unique ne peut mettre à jour que les enregistrements de prospect qui existent dans sa partition configurée.
+Une fois que vous avez sélectionné votre instance, vous devez également sélectionner la partition de lead à laquelle vous souhaitez que la configuration s’intègre. Dans [&#128279;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) une  partition de lead est un concept utilisé pour séparer les enregistrements de lead par entreprise (marque ou région de vente, par exemple). Si votre abonnement Marketo ne dispose pas de la fonctionnalité Espaces de travail et partitions, ou si aucune partition supplémentaire n’a été créée dans votre abonnement, seule la partition Par défaut est disponible. Une configuration unique ne peut mettre à jour que les enregistrements de prospect qui existent dans sa partition configurée.
 
 >[!IMPORTANT]
 >

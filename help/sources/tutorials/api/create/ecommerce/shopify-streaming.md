@@ -3,9 +3,14 @@ title: Créer une connexion Source en flux continu et un flux de données pour l
 description: Découvrez comment créer une connexion source en flux continu et un flux de données pour les données Shopify à l’aide de l’API Flow Service.
 badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/ZOHi9eHM3HxtkpiLfOnPOBbrzo4PBbYGB4liRKm0T8Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: 1505
 ht-degree: 42%
 
 ---
@@ -151,7 +156,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Format des données [!DNL Shopify] que vous souhaitez importer dans Experience Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 

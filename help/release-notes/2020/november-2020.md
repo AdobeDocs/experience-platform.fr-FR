@@ -5,10 +5,39 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/Hhytl4tWcAYu9LuT2VCzK4m-S8lBzFlhx7o3PWCrLUk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2178'
-ht-degree: 20%
+source-wordcount: 2192
+ht-degree: 23%
 
 ---
 
@@ -46,8 +75,8 @@ Pour plus d’informations, consultez le [&#x200B; Guide de migration du lac de 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Autorisations | Dans l’[!DNL Admin Console], l’onglet d’un profil de produit [!DNL Experience Platform] vous permet de personnaliser les fonctionnalités de [!DNL Experience Platform] disponibles pour les utilisateurs associés à ce profil. Les catégories d’autorisations disponibles sont les suivantes : **[!UICONTROL Modélisation des données]**, **[!UICONTROL Gestion des données]**, **[!UICONTROL Gestion des profils]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Surveillance des données]**, **[!UICONTROL Administration des sandbox]**, **[!UICONTROL Destinations]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** et **[!UICONTROL Gouvernance des données]** **&#x200B;**. |
-| Accès aux sandbox | L’onglet **[!UICONTROL Autorisations]** au sein d’un profil de produit [!DNL Experience Platform] peut accorder aux utilisateurs l’accès à des sandbox spécifiques. Consultez la section sur les [sandbox](#sandboxes) ci-dessous pour plus d’informations. |
+| Autorisations | Dans l’[!DNL Admin Console], l’onglet d’un profil de produit [!DNL Experience Platform] vous permet de personnaliser les fonctionnalités de [!DNL Experience Platform] disponibles pour les utilisateurs associés à ce profil. Les catégories d’autorisations disponibles sont les suivantes : **[!UICONTROL Data Modeling]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profile Management]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Data Monitoring]**, **[!UICONTROL Sandbox Administration]**, **[!UICONTROL Destinations]**, **[!UICONTROL Data Ingestion]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** et **[!UICONTROL Data Governance]**. |
+| Accès aux sandbox | L’onglet **[!UICONTROL Permissions]** d’un profil de produit [!DNL Experience Platform] peut accorder aux utilisateurs l’accès à des sandbox spécifiques. Consultez la section sur les [sandbox](#sandboxes) ci-dessous pour plus d’informations. |
 
 Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 
@@ -100,13 +129,13 @@ L’espace de travail de science des données utilise le machine learning et l�
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Modèle [!DNL JupyterLab] créateur de recettes | Notebook pour la recette utilisation des exigences et versions mises à jour. [!DNL Python] image de base ML Runtime a été mise à jour afin d’utiliser [!DNL Python] 3.6.7 et un environnement [!DNL Conda] exclusivement. |
+| Modèle [!DNL JupyterLab] créateur de recettes | Notebook pour la recette utilisation des exigences et versions mises à jour. [!DNL Python] L’image de base de ML Runtime a été mise à jour afin d’utiliser exclusivement [!DNL Python] 3.6.7 et un environnement [!DNL Conda]. |
 
 Pour plus d’informations, consultez le document sur la [création d’une recette à l’aide de notebooks Jupyter](../../data-science-workspace/jupyterlab/create-a-model.md).
 
 ## Service [!DNL Destinations] {#destinations}
 
-Dans [Real-Time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 
@@ -127,7 +156,7 @@ Dans [Real-Time Customer Data Platform](../../rtcdp/overview.md), les destinatio
 
 Pour plus d’informations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
-## Intelligent Services {#intelligent-services}
+## Services intelligents {#intelligent-services}
 
 Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
 
@@ -141,7 +170,7 @@ Pour plus d’informations, consultez la section sur [l’ajout de champs d’id
 
 ### IA dédiée à l’attribution
 
-Dans le cadre d’Intelligent Services, l’IA dédiée à l’attribution est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés.
+Dans le cadre d’Intelligent Services, Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés.
 
 **Fonctionnalités clés**
 

@@ -2,10 +2,20 @@
 title: Référence de test de présence de balise
 description: Découvrez comment l’auditeur teste la présence de balises dans Adobe Experience Platform Debugger.
 exl-id: 8f01f89e-2a3b-41bc-b971-f3c60d0ae3fa
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/cXxLoQFNTcSSROkTutWNWo5pvebzQjWNRkIuqhMlXdg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 13%
+source-wordcount: 580
+ht-degree: 14%
 
 ---
 
@@ -28,7 +38,7 @@ Les tests de présence de balises évaluent si certaines balises existent sur la
 | Launch - Ne comporte pas plusieurs scripts incorporés | 5 | Les sites de production ne doivent charger qu’un seul code incorporé par page. | Vérifiez que seule la bibliothèque de production est en cours de chargement sur la page. |
 | Launch - `pageBottom` rappel existe dans `<body>` | 5 | Le rappel `_satellite.pageBottom()` obligatoire est introuvable dans le `<body>` de la page. Ce test échoue si l’appel de `pageBottom` est introuvable sur la page ou s’il se trouve dans la balise `<head>` (ou à un autre emplacement inattendu). Il ne sera transmis que si `pageBottom` se trouve quelque part dans la balise `<body>`. | Ajoutez le script intégré juste avant la balise `</body>` de fermeture pour garantir le bon fonctionnement des balises.<br><br>[Informations supplémentaires](../../tags/ui/client-side/asynchronous-deployment.md) |
 | Launch : le rappel `pageBottom` ne doit pas exister en cas de déploiement asynchrone | 5 | Le rappel `_satellite.pageBottom()` a été trouvé sur la page, ce qui ne devrait pas être le cas lorsque les balises sont déployées de manière asynchrone. | Supprimez le script `_satellite.pageBottom()` pour activer la fonctionnalité de balises appropriée. <br><br>[Informations supplémentaires](../../tags/ui/client-side/asynchronous-deployment.md) |
-| Service Experience Cloud ID : présence du code | 5 | Le code du service Experience Cloud ID est introuvable. L’utilisation d’Experience Cloud ID (ECID) est vivement recommandée pour vous assurer de tirer le meilleur parti de vos solutions Experience Cloud et elle est essentielle à la gestion des identifiants dans les solutions Experience Cloud. | Installez la version la plus récente d’ECID.<br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr) |
+| Service Experience Cloud ID : présence du code | 5 | Le code du service Experience Cloud ID est introuvable. L’utilisation d’Experience Cloud ID (ECID) est vivement recommandée pour vous assurer de tirer le meilleur parti de vos solutions Experience Cloud et elle est essentielle à la gestion des identifiants dans les solutions Experience Cloud. | Installer la version la plus récente d’ECID.<br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr) |
 | Service Experience Cloud ID : présence du cookie | 5 | Le cookie `AMCV_` est introuvable. Vous devez instancier un objet visiteur à partir du code `VisitorAPI.js`. | S’il s’agit d’une implémentation de balises, vérifiez que l’ID d’organisation Adobe est correctement saisi dans l’outil ECID. <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr) |
 | Service Experience Cloud ID : présence de la valeur MID | 5 | La valeur MID est introuvable dans le cookie `AMCV_`. | Testez à nouveau pour vérifier la latence de l’API ECID. Si le problème persiste, contactez l’Assistance clientèle d’Adobe. <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr) |
 | Cible - Présence du code | 5 | Adobe Target doit être défini dans le DOM. | Installez la version la plus récente de Target (at.js). <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html?lang=fr) |

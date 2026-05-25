@@ -5,10 +5,20 @@ title: Mapper un fichier CSV à un schéma XDM existant
 type: Tutorial
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM existant à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/o-0H2iNEqG9qFAc7gLWvds7S-5c0eDHx5UJLE0tyA8c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 92%
+source-wordcount: 973
+ht-degree: 72%
 
 ---
 
@@ -16,7 +26,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Ce document explique comment mapper un fichier CSV à un schéma XDM existant. Pour plus d’informations sur l’utilisation de l’outil de recommandation de schéma généré par l’IA (actuellement en version bêta), consultez le document sur le [mappage d’un fichier CSV à l’aide de recommandations de machine learning](./recommendations.md).
+>Ce document explique comment mapper un fichier CSV à un schéma XDM existant. Pour plus d’informations sur l’utilisation de l’outil de recommandation de schéma généré par l’IA (actuellement en version Beta), consultez le document sur le [mappage d’un fichier CSV à l’aide de recommandations de machine learning](./recommendations.md).
 
 Pour ingérer des données CSV dans [!DNL Adobe Experience Platform], les données doivent être mappées à un schéma (XDM) [!DNL Experience Data Model]. Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur [!DNL Experience Platform].
 
@@ -32,43 +42,43 @@ Vous devez également avoir créé un jeu de données dans lequel ingérer vos d
 
 ## Choisir une destination
 
-Connectez-vous à [[!DNL Adobe Experience Platform]](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Workflows]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Workflows]**.
+Connectez-vous à [[!DNL Adobe Experience Platform]](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Workflows]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Workflows]**.
 
-Dans l’écran **[!UICONTROL Workflows]**, sélectionnez **[!UICONTROL Mapper le fichier CSV au schéma XDM]** sous la section **[!UICONTROL Ingestion des données]**, puis sélectionnez **[!UICONTROL Lancement]**.
+Sur l’écran de **[!UICONTROL Workflows]**, sélectionnez **[!UICONTROL Map CSV to XDM schema]** sous la section **[!UICONTROL Data ingestion]** , puis sélectionnez **[!UICONTROL Launch]**.
 
 ![](../../images/tutorials/map-a-csv-file/workflows.png)
 
-Le workflow **[!UICONTROL Mapper CSV à un schéma XDM]** apparaît, en commençant par l’étape **[!UICONTROL Destination]**. Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
+Le workflow **[!UICONTROL Map CSV to XDM schema]** apparaît, en commençant par l’étape **[!UICONTROL Destination]**. Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
 **Utiliser un jeu de données existant**
 
-Pour ingérer vos données CSV dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de la fonction de recherche, ou en faisant défiler la liste des jeux de données existants dans le panneau.
+Pour ingérer vos données CSV dans un jeu de données existant, sélectionnez **[!UICONTROL Use existing dataset]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de la fonction de recherche, ou en faisant défiler la liste des jeux de données existants dans le panneau.
 
 ![](../../images/tutorials/map-a-csv-file/use-existing-dataset.png)
 
-Pour ingérer vos données CSV dans un nouveau jeu de données, sélectionnez **[!UICONTROL Créer un jeu de données]** et saisissez un nom et une description pour le jeu de données dans les champs fournis. Sélectionnez un schéma à l’aide de la fonction de recherche ou en faisant défiler la liste des schémas fournis. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour ingérer vos données CSV dans un nouveau jeu de données, sélectionnez **[!UICONTROL Create new dataset]** et saisissez un nom et une description pour le jeu de données dans les champs fournis. Sélectionnez un schéma à l’aide de la fonction de recherche ou en faisant défiler la liste des schémas fournis. Sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![](../../images/tutorials/map-a-csv-file/create-new-dataset.png)
 
 ## Ajouter des données
 
-L’étape **[!UICONTROL Ajouter les données]** apparaît. Faites glisser votre fichier CSV dans l’espace prévu à cet effet ou sélectionnez **[!UICONTROL Choisir les fichiers]** pour saisir manuellement votre fichier CSV.
+L’étape **[!UICONTROL Add data]** s’affiche. Faites glisser votre fichier CSV dans l’espace prévu à cet effet ou sélectionnez **[!UICONTROL Choose files]** pour saisir manuellement votre fichier CSV.
 
 ![](../../images/tutorials/map-a-csv-file/add-data.png)
 
-La section **[!UICONTROL Données d’exemple]** apparaît une fois le fichier chargé, affichant les dix premières lignes de données. Une fois que vous avez confirmé que les données ont été chargées comme prévu, cliquez sur **[!UICONTROL Suivant]**.
+La section **[!UICONTROL Sample data]** apparaît une fois le fichier chargé, affichant les dix premières lignes de données. Une fois que vous avez confirmé que les données ont été chargées comme prévu, sélectionnez **[!UICONTROL Next]**.
 
 ![](../../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Mappage des champs CSV aux champs de schéma XDM
 
-L’étape **[!UICONTROL Mappage]** apparaît. Les colonnes du fichier CSV sont répertoriées sous **[!UICONTROL Champ source]**, et les champs de schéma XDM correspondants sont répertoriés sous **[!UICONTROL Champ cible]**.
+L’étape **[!UICONTROL Mapping]** s’affiche. Les colonnes du fichier CSV sont répertoriées sous **[!UICONTROL Source Field]**, et les champs de schéma XDM correspondants sont répertoriés sous **[!UICONTROL Target Field]**.
 
 [!DNL Experience Platform] fournit automatiquement des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-Pour accepter toutes les valeurs de mappage de génération automatique, cochez la case « [!UICONTROL Accepter tous les champs cibles] ».
+Pour accepter toutes les valeurs de mappage de génération automatique, cochez la case intitulée « [!UICONTROL Accept all target fields] ».
 
 ![](../../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
@@ -80,7 +90,7 @@ Vous pouvez également choisir de mapper manuellement votre schéma source à vo
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
 
-La fenêtre contextuelle **[!UICONTROL Mapper la source au champ cible]** s’affiche. À partir de là, vous pouvez sélectionner le champ à mapper, puis **[!UICONTROL Enregistrer]** pour ajouter votre nouveau mappage.
+La fenêtre contextuelle **[!UICONTROL Map source to target field]** s’affiche. À partir de là, vous pouvez sélectionner le champ à mapper, puis **[!UICONTROL Save]** ajouter votre nouveau mappage.
 
 ![](../../images/tutorials/map-a-csv-file/manual-mapping.png)
 
@@ -90,11 +100,11 @@ Si vous souhaitez supprimer l’un des mappages, pointez sur ce mappage, puis s�
 
 Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être affectées à des attributs dans le schéma cible. Vous pouvez également leur fournir un nom et une description pour en faciliter la référence.
 
-Sélectionnez le bouton **[!UICONTROL Ajouter un champ calculé]** pour continuer.
+Sélectionnez le bouton **[!UICONTROL Add calculated field]** pour continuer.
 
 ![](../../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-Le panneau **[!UICONTROL Créer un champ calculé]** sʼaffiche. La boîte de dialogue de gauche contient les champs, fonctions et opérateurs pris en charge dans les champs calculés. Sélectionnez lʼun des onglets pour commencer à ajouter des fonctions, des champs ou des opérateurs à lʼéditeur dʼexpression.
+Le panneau **[!UICONTROL Create calculated field]** s’affiche. La boîte de dialogue de gauche contient les champs, fonctions et opérateurs pris en charge dans les champs calculés. Sélectionnez lʼun des onglets pour commencer à ajouter des fonctions, des champs ou des opérateurs à lʼéditeur dʼexpression.
 
 ![](../../images/tutorials/map-a-csv-file/create-calculated-fields.png)
 
@@ -108,9 +118,9 @@ Vous pouvez ajouter manuellement des champs, des fonctions et des opérateurs à
 
 ![](../../images/tutorials/map-a-csv-file/create-calculated-field.png)
 
-Sélectionnez **[!UICONTROL Enregistrer]** pour continuer.
+Sélectionnez **[!UICONTROL Save]** pour continuer.
 
-Lʼécran des mappings réapparaît avec le champ source que vous venez de créer. Appliquez le champ cible correspondant et sélectionnez **[!UICONTROL Terminer]** pour terminer le mapping.
+Lʼécran des mappings réapparaît avec le champ source que vous venez de créer. Appliquez le champ cible correspondant et sélectionnez **[!UICONTROL Finish]** pour terminer le mapping.
 
 ![](../../images/tutorials/map-a-csv-file/new-calculated-field.png)
 

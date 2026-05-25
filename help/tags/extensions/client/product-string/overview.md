@@ -2,9 +2,25 @@
 title: Présentation de l’extension Adobe Analytics Product String
 description: Découvrez l’extension de balise Adobe Analytics Product String présente dans Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/f-SpKAI5YymyvgEx1F-x3aj2dP8mvVjCX2rdnDgvgYQ
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: 486
 ht-degree: 100%
 
 ---
@@ -87,7 +103,7 @@ Cette action doit s’accompagner d’une action « Adobe Analytics - Définir
 
 ![Champs standard](./images/screenshot-action-type.png)
 
-### Conditions
+### Conditions requises
 
 * Une [couche de données](https://theblog.adobe.com/data-layers-buzzword-best-practice/) basée sur un objet avec des variables pour toutes les données liées au produit (comme l’ID du produit, la quantité, le prix). Cette extension ne fonctionne pas avec les couches de données basées sur des tableaux.
 * L’extension [Adobe Analytics](../analytics/overview.md) doit être installée.

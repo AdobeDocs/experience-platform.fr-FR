@@ -2,12 +2,19 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre de schémas;registre de schémas;compatibilité;compatibilité;mode de compatibilité;mode de compatibilité;type de champ;types de champs;
 solution: Experience Platform
 title: Annexe du guide de l’API Schema Registry
-description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
+description: Ce document fournit des informations supplémentaires relatives à l’utilisation de l’API Schema Registry.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/mLuMUf38O3h7cHLbMi3zRZHqxoeupYBZOG--E8pEpRo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 28%
+source-wordcount: 983
+ht-degree: 27%
 
 ---
 
@@ -31,7 +38,7 @@ Les paramètres de requête les plus courants pour la pagination sont les suivan
 | --- | --- |
 | `orderby` | Triez les résultats en fonction d&#39;une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). L’ajout d’un `-` avant la valeur de paramètre (`orderby=-title`) trie les éléments par titre dans l’ordre décroissant (Z-A). |
 | `limit` | Utilisé conjointement avec un paramètre de `orderby`, `limit` limite le nombre maximal d’éléments qui doivent être renvoyés pour une requête donnée. Ce paramètre ne peut pas être utilisé sans un paramètre `orderby` présent.<br><br>Le paramètre `limit` spécifie un entier positif (entre `0` et `500`) comme *conseil* quant au nombre maximal d’éléments qui doivent être renvoyés. Par exemple, `limit=5` renvoie uniquement cinq ressources dans la liste. Cependant, cette valeur n’est pas strictement respectée. La taille réelle de la réponse peut être plus petite ou plus grande si elle est limitée par la nécessité de fournir le fonctionnement fiable du paramètre de `start`, si un tel paramètre est fourni. |
-| `start` | Utilisé conjointement avec un paramètre `orderby`, `start` spécifie l’emplacement où doit commencer la liste d’éléments sous-définie. Ce paramètre ne peut pas être utilisé sans un paramètre `orderby` présent. Cette valeur peut être obtenue à partir de l’attribut `_page.next` d’une réponse de liste et utilisée pour accéder à la page de résultats suivante. Si la valeur `_page.next` est nulle, aucune page supplémentaire n’est disponible.<br><br>En règle générale, ce paramètre est omis pour obtenir la première page de résultats. Ensuite, `start` doit être défini sur la valeur maximale de la propriété de tri principale du champ de `orderby` reçu dans la page précédente. La réponse de l’API renvoie ensuite les entrées commençant par celles qui ont une propriété de tri principale de `orderby` strictement supérieure à (pour l’ordre croissant) ou strictement inférieure à (pour l’ordre décroissant) la valeur spécifiée.<br><br>Par exemple, si le paramètre `orderby` est défini sur `orderby=name,firstname`, le paramètre `start` contient une valeur pour la propriété `name`. Dans ce cas, si vous souhaitez afficher les 20 entrées suivantes d’une ressource juste après le nom « Miller », vous devez utiliser : `?orderby=name,firstname&start=Miller&limit=20`. |
+| `start` | Utilisé conjointement avec un paramètre `orderby`, `start` spécifie l’emplacement où doit commencer la liste d’éléments sous-définie. Ce paramètre ne peut pas être utilisé sans un paramètre `orderby` présent. Cette valeur peut être obtenue à partir de l’attribut `_page.next` d’une réponse de liste et utilisée pour accéder à la page de résultats suivante. Si la valeur du `_page.next` est null, aucune page supplémentaire n’est disponible.<br><br>En règle générale, ce paramètre est omis pour obtenir la première page de résultats. Ensuite, `start` doit être défini sur la valeur maximale de la propriété de tri principale du champ de `orderby` reçu dans la page précédente. La réponse de l’API renvoie ensuite les entrées commençant par celles qui ont une propriété de tri principale de `orderby` strictement supérieure à (pour l’ordre croissant) ou strictement inférieure à (pour l’ordre décroissant) la valeur spécifiée.<br><br>Par exemple, si le paramètre `orderby` est défini sur `orderby=name,firstname`, le paramètre `start` contient une valeur pour la propriété `name`. Dans ce cas, si vous souhaitez afficher les 20 entrées suivantes d’une ressource juste après le nom « Miller », vous devez utiliser : `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style="table-layout:auto"}
 
@@ -67,7 +74,7 @@ Le mode de compatibilité permet au modèle XDM JSON-LD de fonctionner avec une 
 
 La principale différence que vous noterez entre le XDM standard et le mode de compatibilité est la suppression du préfixe « xdm: » devant les noms des champs.
 
-Le tableau ci-dessous contient une comparaison côte à côte affichant les champs associés à la date de naissance (dont les attributs « description » ont été supprimés) aux formats XDM standard et Mode de compatibilité. Notez que les champs Mode de compatibilité incluent une référence au champ XDM et à son type de données dans les attributs « meta:xdmField » et « meta:xdmType ».
+Le tableau ci-dessous contient une comparaison côte à côte affichant les champs associés à la date de naissance (dont les attributs « description » ont été supprimés) aux formats XDM standard et Mode de compatibilité. Notez que les champs Mode de compatibilité incluent une référence au champ XDM et à son type de données dans les attributs « meta:xdmField » et « meta:xdmType ».
 
 <table style="table-layout:auto">
   <th>XDM standard</th>

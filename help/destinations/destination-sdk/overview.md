@@ -2,10 +2,22 @@
 description: Adobe Experience Platform Destination SDK est un ensemble d’API de configuration qui permet de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée ou emplacement de stockage, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/prlSQ3-eQS9ETlrUaTEKq5wWX20c0Hf4ZA2nxRG-HVg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 22%
+source-wordcount: 1150
+ht-degree: 24%
 
 ---
 
@@ -157,7 +169,7 @@ Pour configurer votre destination dans Experience Platform, procédez comme sui
 3. Créez votre intégration. Suivez les instructions de la documentation du produit pour configurer les [destinations de diffusion en continu](guides/configure-destination-instructions.md) ou [destinations basées sur des fichiers](guides/configure-file-based-destination-instructions.md).
 4. Testez votre intégration. Suivez les instructions de la documentation du produit pour tester les [destinations de diffusion en continu](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou [destinations basées sur des fichiers](testing-api/batch-destinations/file-based-destination-testing-overview.md).
 5. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), [envoyez votre intégration](guides/submit-destination.md) pour révision Adobe (le temps de réponse standard est de cinq jours ouvrables).
-6. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une intégration personnalisée, utilisez le processus de documentation en libre-service [&#x200B; pour créer une page de documentation du produit sur Experience League pour votre destination.](docs-framework/documentation-instructions.md)
+6. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une intégration personnalisée, utilisez le processus de documentation en libre-service [&#128279;](docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur Experience League pour votre destination.
 7. Pour les intégrations standardisées, une fois approuvées par Adobe, votre intégration s’affichera dans le [catalogue Experience Platform](../catalog/overview.md).
 8. Si vous souhaitez mettre à jour votre intégration, suivez la même procédure.
 
@@ -165,6 +177,6 @@ Pour configurer votre destination dans Experience Platform, procédez comme sui
 
 Adobe recommande de lire et de comprendre la documentation dʼExperience Platform suivante :
 
-* [Présentation des destinations d’Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=fr)
+* [Présentation des destinations Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=fr)
 * [Principes de base de la composition des schémas XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr)
 * [Présentation des espaces de noms d’identité](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr)

@@ -1,11 +1,27 @@
 ---
 title: Destination De Merkury Enterprise Connections
 description: Découvrez comment créer une connexion de destination Merkury Enterprise Connections à l’aide de l’interface utilisateur de Adobe Experience Platform.
-last-substantial-update: 2024-07-20T00:00:00Z
+last-substantial-update: 2024-07-20T00:00:00.000Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/YVxjPGEF4mT1LmuI45IHav-LP-jYWDnouId-a4YivkI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: 1584
 ht-degree: 14%
 
 ---
@@ -40,7 +56,7 @@ Suivez les étapes de cette page de documentation pour créer une connexion de d
 >[!IMPORTANT]
 >
 >* Pour vous connecter à la destination, vous avez besoin des **Afficher les destinations** et **Gérer les destinations**, **Activer les destinations**, **Afficher les profils** et **Afficher les segments** [[autorisations de contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions). Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous avez besoin de l’**[autorisation de contrôle d’accès]** [&#x200B; Afficher le graphique d’identités](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions).\![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* Pour exporter des *identités*, vous avez besoin de l’[[autorisation de contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions) **Afficher le graphique d’identités**.\![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## Identités prises en charge {#supported-identities}
 
@@ -95,7 +111,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **&#x200B;**&#x200B;[autorisations de contrôle d’accès]&#x200B;**Afficher les destinations** et [Gérer et activer les destinations du jeu de données](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions). Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des [&#x200B; &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions) [autorisations de contrôle d’accès]&#x200B;**Afficher les destinations** et **Gérer et activer les destinations du jeu de données**. Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [[tutoriel sur la configuration des destinations]](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/connect-destination). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 

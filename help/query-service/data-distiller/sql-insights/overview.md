@@ -2,9 +2,31 @@
 title: SQL Insights
 description: Découvrez les cas pratiques, les fonctionnalités essentielles et les étapes requises pour développer un tableau de bord d’informations SQL avec Data Distiller. Découvrez comment la fonctionnalité SQL Insights de Data Distiller peut améliorer la transparence et obtenir des informations opérationnelles sur différentes dimensions telles que les profils, les audiences, les campagnes, les parcours, les droits et le consentement.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/U8N4L5KhrbAbVFM5sp3hMaxAlhAWSVOReMar2qwjQeA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: 955
 ht-degree: 0%
 
 ---
@@ -21,7 +43,7 @@ Ce document couvre les cas d’utilisation, les fonctionnalités essentielles et
 
 Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur d’Experience Platform. Consultez la [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/standard-dashboards.md) pour en savoir plus sur cette fonctionnalité.
 
-## Commencer
+## Prise en main
 
 Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’informations et pour étendre les modèles de données Real-Time CDP qui contiennent des données Experience Platform enrichies. Voir la documentation [packaging](../../packaging.md), [mécanismes de sécurisation](../../guardrails.md#query-accelerated-store) et [licence](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 

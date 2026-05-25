@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Créer une connexion source de campagnes Mailchimp à l’aide de l’interface utilisateur d’Experience Platform
 description: Découvrez comment connecter Adobe Experience Platform à des campagnes Mailchimp à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/0LnGSDHJ1KBgPXn-7as0mQfUxlel5y1Zpx4j0Kyngv4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 63%
+source-wordcount: 675
+ht-degree: 48%
 
 ---
 
@@ -17,7 +22,7 @@ Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -48,37 +53,37 @@ Pour plus d’informations sur l’utilisation d’OAuth 2 pour authentifier le 
 
 ## Connexion de votre compte [!DNL Mailchimp Campaigns] à Experience Platform
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie [!UICONTROL Automatisation marketing], sélectionnez **[!UICONTROL Campagne Mailchimp]**, puis **[!UICONTROL Ajouter des données]**.
+Sous la catégorie [!UICONTROL Marketing automation] , sélectionnez **[!UICONTROL Mailchimp Campaign]**, puis **[!UICONTROL Add data]**.
 
-![Catalogue](../../../../images/tutorials/create/mailchimp-campaigns/catalog.png)
+![catalogue](../../../../images/tutorials/create/mailchimp-campaigns/catalog.png)
 
-La page **[!UICONTROL Connecter le compte de campagnes Mailchimp]** s’affiche. Sur cette page, vous pouvez indiquer si vous accédez à un compte existant ou si vous choisissez de créer un compte.
+La page **[!UICONTROL Connect Mailchimp Campaigns account]** s’affiche. Sur cette page, vous pouvez indiquer si vous accédez à un compte existant ou si vous choisissez de créer un compte.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL Mailchimp Campaigns] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL Mailchimp Campaigns] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/mailchimp-campaigns/existing.png)
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description pour les détails de votre connexion source [!DNL Mailchimp Campaigns].
+Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et une description pour les détails de votre connexion source [!DNL Mailchimp Campaigns].
 
 ![nouveau](../../../../images/tutorials/create/mailchimp-campaigns/new.png)
 
 #### S’authentifier à l’aide d’OAuth 2
 
-Pour utiliser OAuth 2, sélectionnez [!UICONTROL Code d’actualisation OAuth 2], indiquez les valeurs de votre domaine, de l’URL du test d’autorisation et du jeton d’accès, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser OAuth 2, sélectionnez [!UICONTROL OAuth 2 Refresh Code], saisissez les valeurs de votre domaine, l’URL du test d’autorisation et le jeton d’accès, puis sélectionnez **[!UICONTROL Connect to source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### S’authentifier à l’aide de l’authentification de base
 
-Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Authentification de base], indiquez les valeurs de votre domaine, de votre nom d’utilisateur et de votre mot de passe, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Basic authentication], indiquez les valeurs de votre domaine, de votre nom d’utilisateur et de votre mot de passe, puis sélectionnez **[!UICONTROL Connect to source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![De base](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 
@@ -86,11 +91,11 @@ Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Authentifi
 
 Une fois votre source authentifiée, vous devez fournir la valeur `campaignId` qui correspond à votre compte [!DNL Mailchimp Campaigns].
 
-Sur la page [!UICONTROL Sélectionner des données], saisissez votre `campaignId`, puis cliquez sur **[!UICONTROL Explorer]**.
+Sur la page [!UICONTROL Select data], saisissez votre `campaignId`, puis sélectionnez **[!UICONTROL Explore]**.
 
 ![erkunden](../../../../images/tutorials/create/mailchimp-campaigns/explore.png)
 
-La page se met à jour dans une arborescence de schéma interactif qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+La page se met à jour dans une arborescence de schéma interactif qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![select-data](../../../../images/tutorials/create/mailchimp-campaigns/select-data.png)
 

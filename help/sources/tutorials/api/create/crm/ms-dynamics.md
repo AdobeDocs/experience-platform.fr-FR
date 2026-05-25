@@ -2,10 +2,17 @@
 title: Créer une connexion de base Microsoft Dynamics à l’aide de l’API Flow Service
 description: Découvrez comment connecter Experience Platform à un compte Microsoft Dynamics à l’aide de l’API Flow Service.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/Wt1pOhIgdrq2Tq05ysdVfeI1QP1RrmQsfJ2hiKlfVmU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 14%
+source-wordcount: 1361
+ht-degree: 15%
 
 ---
 
@@ -13,9 +20,9 @@ ht-degree: 14%
 
 Lisez ce guide pour savoir comment connecter votre source [!DNL Microsoft Dynamics] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-## Prise en main
+## Commencer
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -176,7 +183,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`).
 
 +++Sélectionner pour afficher l’exemple de réponse
 
@@ -305,7 +312,7 @@ curl -X GET \
 
 ## Examiner la structure d’un tableau
 
-Pour examiner la structure d’une table spécifique, envoyez une requête GET à `/connections/{BASE_CONNECTION_ID}/explore` et indiquez le chemin d’accès à la table spécifique comme paramètre de requête.
+Pour inspecter la structure d’une table spécifique, envoyez une requête GET à `/connections/{BASE_CONNECTION_ID}/explore` et indiquez le chemin d’accès à la table spécifique comme paramètre de requête.
 
 **Format d’API**
 
@@ -379,7 +386,7 @@ Une réponse réussie renvoie le contenu du chemin `workflowdependency`.
 
 Dans [!DNL Dynamics], une vue fait référence aux colonnes à afficher, à la largeur de chaque colonne, au système par défaut dans lequel une liste d&#39;enregistrements est triée et aux filtres par défaut appliqués pour limiter les enregistrements qui apparaîtront dans la liste.
 
-Pour inspecter la structure d’une vue, envoyez une requête GET à `/connections/{BASE_CONNECTION_ID}/explore` et spécifiez le chemin de vue dans vos paramètres de requête. En outre, vous devez spécifier `objectType` comme `view`.
+Pour examiner la structure d&#39;une vue, envoyez une requête GET à `/connections/{BASE_CONNECTION_ID}/explore` et spécifiez le chemin de vue dans vos paramètres de requête. En outre, vous devez spécifier `objectType` comme `view`.
 
 **Format d’API**
 
@@ -690,7 +697,7 @@ Une réponse réussie renvoie l’identifiant de connexion source nouvellement g
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion de base à [!DNL Microsoft Dynamics] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Microsoft Dynamics] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créer un flux de données pour importer des données CRM dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/crm.md)

@@ -1,11 +1,30 @@
 ---
 title: Niveau de connexion
 description: Utilisez la destination de diffusion en continu Niveau pour activer les audiences directement dans la base de données utilisateur de niveau et les API de gestion des segments, et prendre en charge le ciblage en temps réel au moment de la décision.
-last-substantial-update: 2026-01-27T00:00:00Z
+last-substantial-update: 2026-01-27T00:00:00.000Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/nJ7SPoowD09LIODa9JajFZXnzw28ovZRV0-bZSIIrYY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: 1185
 ht-degree: 8%
 
 ---
@@ -31,7 +50,7 @@ Vous pouvez activer les audiences comportementales propriétaires riches dans vo
 Pour vous préparer à l’utilisation de la destination [!DNL Kevel], assurez-vous que les conditions préalables suivantes sont remplies :
 
 - Vous devez disposer d’un réseau **[!DNL Kevel]actif** ainsi que d’un accès API.
-- Vous avez besoin d’une clé API **[!DNL Kevel]avec les autorisations pour créer des segments et mettre à jour les enregistrements UserDB.**
+- Vous avez besoin d’une clé API **avec les autorisations pour créer des segments et mettre à jour les enregistrements UserDB.**&#x200B;[!DNL Kevel]
 - Vous devez configurer des espaces de noms d’identité dans Experience Platform qui correspondent aux identités envoyées par votre site ou votre application lors des demandes d’annonces [!DNL Kevel] (par exemple, ECID, GAID, IDFA, identifiant de fidélité, etc.).
 - Les clients Adobe ne doivent mapper que les identités utilisées lors des requêtes publicitaires en temps réel, car chaque identité entraîne un enregistrement UserDB.
 
@@ -229,5 +248,5 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-- [[!DNL Kevel] Référence UserDB](https://dev.kevel.com/reference/userdb)
-- [[!DNL Kevel] Ciblage des segments utilisateur](https://dev.kevel.com/docs/segment-targeting)
+- [Référence UserDB [!DNL Kevel]](https://dev.kevel.com/reference/userdb)
+- [Ciblage des segments d’utilisateurs [!DNL Kevel]](https://dev.kevel.com/docs/segment-targeting)

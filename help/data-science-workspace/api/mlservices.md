@@ -1,13 +1,23 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;mlservices;api d’apprentissage automatique sensei
+keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;mlservices;api de machine learning sensei
 solution: Experience Platform
 title: Point d’entrée de l’API MLServices
 description: Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/Z-d001njUr-UbULX5CThvwEBfzNuJAhbzsOXxi-Wt3E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: 913
 ht-degree: 92%
 
 ---
@@ -16,9 +26,9 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
 
@@ -112,7 +122,7 @@ Une réponse réussie renvoie un payload contenant les détails du MLService nou
 }
 ```
 
-## Obtention d’une liste de MLServices {#retrieve-a-list-of-mlservices}
+## Récupération d’une liste de MLServices {#retrieve-a-list-of-mlservices}
 
 Vous pouvez récupérer une liste de MLServices en exécutant une requête GET unique. Pour filtrer les résultats plus facilement, vous pouvez spécifier les paramètres de requête dans le chemin d’accès de la requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
@@ -221,7 +231,7 @@ Vous pouvez mettre à jour un MLService existant en écrasant ses propriétés p
 
 >[!TIP]
 >
->Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET pour [récupérer le MLService par l’ID](#retrieve-a-specific-mlservice). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Pour garantir le succès de cette requête PUT, il est suggéré d’effectuer d’abord une requête GET pour [récupérer le service MLS par ID](#retrieve-a-specific-mlservice). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 **Format d’API**
 

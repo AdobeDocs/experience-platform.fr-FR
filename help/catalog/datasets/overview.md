@@ -5,16 +5,39 @@ title: Présentation des jeux de données
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 user-guide-description: Obtenez un aperçu général des jeux de données dans Experience Platform avec ce guide. Découvrez comment les créer, appliquer des contraintes aux données et ingérer des données dans des jeux de données ici.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/UUpCoAbaTNxTPitedrL4jzkvs3J-SrwnO9fyi-o0dsg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: 876
 ht-degree: 86%
 
 ---
 
 # Présentation des jeux de données
 
-Toutes les données correctement ingérées par Adobe Experience Platform sont conservées sous forme de jeux de données dans le [!DNL Data Lake]. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
+Toutes les données correctement ingérées par Adobe Experience Platform sont conservées sous forme de jeux de données dans le [!DNL Data Lake]. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
 
 Ce document présente de manière générale les jeux de données dans [!DNL Experience Platform].
 
@@ -62,7 +85,7 @@ Voici une liste des services en aval qui utilisent des jeux de données pour div
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : tire parti de [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) : permet de créer des segments et de générer des audiences à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le [!DNL Data Lake].
 * [Espace de travail de science des données d’Adobe Experience Platform](../../data-science-workspace/home.md) : utilise le machine learning et l’intelligence artificielle pour découvrir des informations dans les jeux de données volumineux.
-* [Adobe Experience Platform Query Service](../../query-service/home.md) : vous permet d’utiliser une requête SQL standard pour interroger les données dans [!DNL Experience Platform]. Il peut joindre n’importe quel jeu de données dans le [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser pour le reporting, [!DNL Data Science Workspace], ou [!DNL Real-Time Customer Profile].
+* [Service de requête Adobe Experience Platform](../../query-service/home.md) : vous permet d’utiliser une requête SQL standard pour interroger les données dans [!DNL Experience Platform]. Il peut joindre n’importe quel jeu de données dans le [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser pour le reporting, [!DNL Data Science Workspace], ou [!DNL Real-Time Customer Profile].
 * [Service de destinations d’Adobe Experience Platform](../../destinations/home.md) : vous permet d’[exporter des jeux de données](/help/destinations/ui/export-datasets.md) vers les destinations de stockage dans le cloud ou de marketing par e-mail de votre choix, pour les activités de création de rapports ou de science des données.
 
 ## Étapes suivantes

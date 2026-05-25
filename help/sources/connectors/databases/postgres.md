@@ -1,11 +1,20 @@
 ---
 title: Présentation du connecteur Source PostgreSQL
 description: Découvrez la source PostgreSQL sur Adobe Experience Platform.
-last-substantial-update: 2025-05-20T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00.000Z
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
+TQID: https://experienceleague.adobe.com/MPS-eJVoewjODd7kHsQx-ZD6HcfNMRTa3x4vz3VOv4w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: 678
 ht-degree: 13%
 
 ---
@@ -14,17 +23,17 @@ ht-degree: 13%
 
 Lisez ce document pour découvrir les étapes préalables à suivre avant de pouvoir connecter votre base de données [!DNL PostgreSQL] à Adobe Experience Platform.
 
-## Prérequis {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Lisez les sections suivantes pour terminer la configuration requise avant de connecter votre base de données [!DNL PostgreSQL] à Experience Platform.
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur Azure ou Amazon Web Services (AWS). Pour plus d’informations, consultez le guide sur la [liste autorisée des adresses IP pour se connecter à Experience Platform sur Azure et AWS](../../ip-address-allow-list.md).
+Vous devez ajouter à votre liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur Azure ou Amazon Web Services (AWS). Pour plus d’informations, consultez le guide sur la [liste autorisée des adresses IP pour se connecter à Experience Platform sur Azure et AWS](../../ip-address-allow-list.md).
 
-### S’authentifier auprès d’Experience Platform sur Azure {#azure}
+### Authentification à Experience Platform sur Azure {#azure}
 
-Vous devez fournir des valeurs pour les informations d’authentification suivantes pour connecter [!DNL PostgreSQL] à Experience Platform sur Azure.
+Vous devez fournir des valeurs pour les informations d’authentification suivantes pour vous connecter [!DNL PostgreSQL] à Experience Platform sur Azure.
 
 >[!BEGINTABS]
 

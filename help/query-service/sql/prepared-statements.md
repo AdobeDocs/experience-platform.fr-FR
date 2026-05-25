@@ -1,19 +1,28 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;service de requête;Query Service;instructions préparées;préparées;sql;
+keywords: Experience Platform;accueil;rubriques les plus consultées;query service;Query service;instructions préparées;préparé;sql;
 solution: Experience Platform
 title: Instructions préparées dans Query Service
 description: Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Query Service prend en charge les instructions préparées à l’aide d’une requête paramétrée.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+TQID: https://experienceleague.adobe.com/yWxTkcuUryzJnlBOR4llYpRo4tgepvRnOH-h22PNtvw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 78%
+source-wordcount: 401
+ht-degree: 79%
 
 ---
 
 # Instructions préparées
 
-Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform [!DNL Query Service] prend en charge les instructions préparées à l’aide d’une requête paramétrée. Cela peut optimiser les performances, car vous n’avez plus besoin de réanalyser une requête de manière répétitive.
+Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform prend [!DNL Query Service] en charge les instructions préparées à l’aide d’une requête paramétrée. Cela peut optimiser les performances, car vous n’avez plus besoin d’analyser à nouveau une requête de manière répétitive.
 
 ## Utilisation d’instructions préparées
 
@@ -23,7 +32,7 @@ Lorsque vous utilisez des instructions préparées, les syntaxes suivantes sont 
 - [EXECUTE](#execute)
 - [DEALLOCATE](#deallocate)
 
-### Préparation d’une instruction préparée {#prepare}
+### Préparer une instruction préparée {#prepare}
 
 Cette requête SQL enregistre la requête SELECT écrite avec le nom donné comme `PLAN_NAME`. Vous pouvez utiliser des variables, telles que `$1` au lieu de valeurs réelles. Cette instruction préparée sera enregistrée pendant la session en cours. Veuillez noter que les noms des formules **ne sont pas** sensibles à la casse.
 
@@ -39,7 +48,7 @@ PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### Exécution d’une instruction préparée {#execute}
+### Exécuter une instruction préparée {#execute}
 
 Cette requête SQL utilise l’instruction préparée qui a été créée précédemment.
 
@@ -55,7 +64,7 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Désallocation d’une instruction préparée {#deallocate}
+### Désallouer une instruction préparée {#deallocate}
 
 Cette requête SQL est utilisée pour supprimer l’instruction préparée nommée.
 
@@ -81,7 +90,7 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 La requête SQL ci-dessus renvoie la réponse suivante :
 
-| identifiant | prénom | nom | date de naissance | adresse e-mail | ville | pays |
+| identifiant | prénom | nom | date de naissance | E-mail | ville | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
 | 10001 | antoine | dubois | 14/03/1967 | exemple2@exemple.com | Paris | France |
@@ -104,7 +113,7 @@ EXECUTE getIdRange(10000, 10005);
 
 Lors de l’appel, les résultats sont exactement les mêmes que précédemment :
 
-| identifiant | prénom | nom | date de naissance | adresse e-mail | ville | pays |
+| identifiant | prénom | nom | date de naissance | E-mail | ville | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
 | 10001 | antoine | dubois | 14/03/1967 | exemple2@exemple.com | Paris | France |

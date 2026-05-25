@@ -5,16 +5,21 @@ solution: Experience Platform
 title: Supprimer des flux de données dans l’interface utilisateur
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/i9Qx2Nvk2rb-gXk6rvcXnLVLgzlYZ1l3-g9A3IByeKI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 18%
+source-wordcount: 361
+ht-degree: 19%
 
 ---
 
 # Supprimer des flux de données dans l’interface utilisateur
 
-L’espace de travail [!UICONTROL Sources] vous permet de supprimer les flux de données de lots et de diffusion en continu existants qui contiennent des erreurs ou qui sont devenus obsolètes.
+L’espace de travail [!UICONTROL Sources] vous permet de supprimer les flux de données par lots et de diffusion en continu existants qui contiennent des erreurs ou qui sont devenus obsolètes.
 
 Ce tutoriel décrit les étapes à suivre pour supprimer des flux de données à l’aide de l’espace de travail [!UICONTROL Sources].
 
@@ -22,16 +27,16 @@ Ce tutoriel décrit les étapes à suivre pour supprimer des flux de données à
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Sources &#x200B;](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+- [Sources](../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 - [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Supprimer des flux de données
 
-Dans l’interface utilisateur [Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources], puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur.
+Dans l’interface utilisateur d’[&#128279;](https://platform.adobe.com), sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources], puis sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur.
 
 ![catalogue](../../images/tutorials/delete/catalog.png)
 
-La page **[!UICONTROL Flux de données]** s’affiche. Sur cette page, vous trouverez une liste des flux de données visibles, y compris des informations sur leur jeu de données cible, leur source, leur nom de compte et leur date de création.
+La page **[!UICONTROL Dataflows]** s’affiche. Sur cette page, vous trouverez une liste des flux de données visibles, y compris des informations sur leur jeu de données cible, leur source, leur nom de compte et leur date de création.
 
 Sélectionnez l’icône de filtre (![filter-icon](/help/images/icons/filter.png)) en haut à gauche pour lancer le panneau de tri.
 
@@ -45,11 +50,11 @@ Sélectionnez la source que vous souhaitez utiliser pour afficher la liste de se
 
 Un menu déroulant s’affiche, vous offrant des options pour modifier le planning de votre flux de données, le désactiver ou le supprimer entièrement.
 
-Sélectionnez **[!UICONTROL Supprimer]** pour supprimer le flux de données.
+Sélectionnez **[!UICONTROL Delete]** pour supprimer le flux de données.
 
 ![delete](../../images/tutorials/delete/delete.png)
 
-Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UICONTROL Supprimer]** pour terminer le processus.
+Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UICONTROL Delete]** pour terminer le processus.
 
 ![confirmer](../../images/tutorials/delete/confirm.png)
 

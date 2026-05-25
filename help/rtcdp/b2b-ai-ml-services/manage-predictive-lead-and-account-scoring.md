@@ -5,9 +5,16 @@ description: Ce document fournit des informations sur la gestion de la fonctionn
 feature: Profiles, B2B
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+TQID: https://experienceleague.adobe.com/yf6o-vTDyvQXJh2QdaxzD9lsr-OIdwVTkzDKNGgndaU
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: 1044
 ht-degree: 4%
 
 ---
@@ -150,9 +157,9 @@ Vous revenez alors à l’onglet **[!UICONTROL Services]** où vous ne pouvez pl
 | 100 | INFO 100. Vérification de la qualité de l’IA dédiée aux leads : le nombre de comptes est : {}. |
 | 101 | INFOS 101. Vérification de la qualité de l’IA dédiée aux leads : le nombre de contacts est : {}. |
 | 102 | INFOS 102. Vérification de la qualité de l’IA dédiée aux leads : le nombre d’opportunités est : {}. |
-| 103 | INFO 103. Contrôle de qualité de l’IA dédiée aux leads : l’auc de test est faible. Commencez l’optimisation des paramètres. Test de l’auc : {}. |
-| 200 | ATTENTION 200. Vérification de la qualité de l’IA dédiée aux leads : le taux manquant de fonctionnalités firmographiques est : {}. |
-| 201 | AVERTISSEMENT 201. Vérification de la qualité de l’IA dédiée aux leads : le taux d’activité manquant est : {}. |
+| 103 | INFO 103. Contrôle de qualité de l’IA dédiée aux leads : l’auc de test est faible. Commencez l’optimisation des paramètres. Auc de test : {}. |
+| 200 | ATTENTION 200. Vérification de la qualité de l’IA dédiée aux leads : le taux manquant de fonctionnalités thermographiques est : {}. |
+| 201 | AVERTISSEMENT 201. Vérification de la qualité de l’IA dédiée aux leads : le taux manquant de fonctionnalités d’activité est : {}. |
 
 ## Étapes suivantes
 

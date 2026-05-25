@@ -1,30 +1,38 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;accès aux données;sdk python;api d’accès aux données;lire python;écrire python
+keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;api data access;lire python;écrire python
 solution: Experience Platform
-title: Accès aux données à l’aide de Python dans Data Science Workspace
+title: Accès aux données à l’aide de Python dans le Workspace de science des données
 type: Tutorial
-description: Le document suivant contient des exemples d’accès aux données en Python à utiliser dans Data Science Workspace.
+description: Le document suivant contient des exemples d’accès aux données en Python à utiliser dans le Workspace de science des données.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/ZnNACjUyOdEHld7l1z8ksqitjc9oQIIuku3Tp2A8XQY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: 446
 ht-degree: 0%
 
 ---
 
-# Accès aux données à l’aide de Python dans Data Science Workspace
+# Accès aux données à l’aide de Python dans le Workspace de science des données
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Le document suivant contient des exemples d’accès aux données à l’aide de Python à utiliser dans Data Science Workspace. Pour plus d’informations sur l’accès aux données à l’aide des notebooks JupyterLab, consultez la documentation [&#x200B; sur l’accès aux données des notebooks JupyterLab](../jupyterlab/access-notebook-data.md).
+Le document suivant contient des exemples d’accès aux données à l’aide de Python pour une utilisation dans le Workspace de science des données. Pour plus d’informations sur l’accès aux données à l’aide des notebooks JupyterLab, consultez la documentation sur l’accès aux données des notebooks [JupyterLab](../jupyterlab/access-notebook-data.md) .
 
 ## Lecture d’un jeu de données
 
-Après avoir défini les variables d’environnement et terminé l’installation, votre jeu de données peut désormais être lu dans le cadre de données pandas.
+Après avoir défini les variables d’environnement et terminé l’installation, votre jeu de données peut maintenant être lu dans le cadre de données pandas.
 
 ```python
 import pandas as pd
@@ -40,7 +48,7 @@ dataset_reader = DatasetReader(client_context, config_properties['DATASET_ID'])
 df = dataset_reader.read()
 ```
 
-### SÉLECTIONNER des colonnes du jeu de données
+### SÉLECTIONNER des colonnes dans le jeu de données
 
 ```python
 df = dataset_reader.select(['column-a','column-b']).read()
@@ -57,7 +65,7 @@ partitions = dataset.get_partitions_info()
 
 ### Clause DISTINCT
 
-La clause DISTINCT vous permet de récupérer toutes les valeurs distinctes au niveau d’une ligne/colonne, supprimant toutes les valeurs en double de la réponse.
+La clause DISTINCT vous permet de récupérer toutes les valeurs distinctes au niveau de la ligne/colonne, en supprimant toutes les valeurs en double de la réponse.
 
 Vous trouverez ci-dessous un exemple d’utilisation de la fonction `distinct()` :
 
@@ -67,11 +75,11 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 ### Clause WHERE
 
-Vous pouvez utiliser certains opérateurs en Python pour vous aider à filtrer votre jeu de données.
+Vous pouvez utiliser certains opérateurs en Python pour aider à filtrer votre jeu de données.
 
 >[!NOTE]
 >
->Les fonctions utilisées pour le filtrage sont sensibles à la casse.
+>Les fonctions utilisées pour le filtrage respectent la casse.
 
 ```python
 eq() = '='
@@ -91,7 +99,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### Clause ORDER BY
 
-La clause ORDER BY permet de trier les résultats reçus par une colonne spécifiée dans un ordre spécifique (croissant ou décroissant). Pour ce faire, utilisez la fonction `sort()` .
+La clause ORDER BY permet de trier les résultats reçus selon une colonne spécifiée dans un ordre spécifique (croissant ou décroissant). Pour ce faire, utilisez la fonction `sort()` .
 
 Vous trouverez ci-dessous un exemple d’utilisation de la fonction `sort()` :
 
@@ -111,7 +119,7 @@ df = dataset_reader.limit(100).read()
 
 ### Clause OFFSET
 
-La clause OFFSET vous permet d’ignorer les lignes, dès le début, pour commencer à renvoyer des lignes à partir d’un point ultérieur. Combinée avec LIMIT, cette méthode peut être utilisée pour itérer les lignes dans des blocs.
+La clause OFFSET vous permet d&#39;ignorer des lignes depuis le début pour commencer à renvoyer des lignes à partir d&#39;un point ultérieur. En combinaison avec LIMIT, cela peut être utilisé pour itérer des lignes dans des blocs.
 
 Vous trouverez ci-dessous un exemple d’utilisation de la fonction `offset()` :
 
@@ -123,7 +131,7 @@ df = dataset_reader.offset(100).read()
 
 Pour écrire dans un jeu de données, vous devez fournir le cadre de données pandas à votre jeu de données.
 
-### Écriture du cadre de données pandas
+### Écriture du Dataframe Pandas
 
 ```python
 client_context = get_client_context(config_properties)
@@ -136,15 +144,15 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 ```
 
-## Répertoire d’espace utilisateur (Checkpointer)
+## Répertoire de l&#39;espace utilisateur (point de contrôle)
 
-Pour les tâches plus longues, vous devrez peut-être stocker des étapes intermédiaires. Dans des cas comme celui-ci, vous pouvez lire et écrire dans un espace utilisateur.
+Pour les tâches plus longues, vous devrez peut-être stocker des étapes intermédiaires. Dans des instances comme celle-ci, vous pouvez lire et écrire dans un espace utilisateur.
 
 >[!NOTE]
 >
->Les chemins d’accès aux données sont **et non** stockés. Vous devez stocker le chemin d’accès correspondant à ses données respectives.
+>Les chemins d’accès aux données ne sont **pas** stockés. Vous devez stocker le chemin d’accès correspondant dans ses données respectives.
 
-### Écriture sur l’espace utilisateur
+### Écrire dans l’espace utilisateur
 
 ```python
 client_context = get_client_context(config_properties)
@@ -153,7 +161,7 @@ user_helper = UserSpaceHelper(client_context)
 user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
 ```
 
-### Lecture à partir de l’espace utilisateur
+### Lecture depuis l’espace utilisateur
 
 ```python
 client_context = get_client_context(config_properties)
@@ -164,4 +172,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Étapes suivantes
 
-Adobe Experience Platform Data Science Workspace fournit un exemple de recette qui utilise les exemples de code ci-dessus pour lire et écrire des données. Si vous souhaitez en savoir plus sur l’utilisation de Python pour accéder à vos données, consultez le [référentiel Python GitHub Python de Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Le Workspace de science des données de Adobe Experience Platform fournit un exemple de recette qui utilise les exemples de code ci-dessus pour lire et écrire des données. Si vous souhaitez en savoir plus sur l’utilisation de Python pour accéder à vos données, consultez la section [Référentiel GitHub Python de Workspace de science des données](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

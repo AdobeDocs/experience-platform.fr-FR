@@ -4,10 +4,21 @@ description: Découvrez les codes d’erreur Privacy Service afin de diagnostiqu
 keywords: privacy service, codes d’erreur, tâches de confidentialité, erreurs api
 solution: Experience Platform
 exl-id: 49b79093-4d4c-4b92-bd38-86879452dbfb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/lxMUF3u8TUF9GrrvlLi9glQ0e6heDlLupKDIDk41Hc0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 5%
+source-wordcount: 836
+ht-degree: 8%
 
 ---
 
@@ -39,7 +50,7 @@ Les codes d’erreur sont regroupés par domaine fonctionnel pour vous aider à 
 
 Les domaines utilisés dans ce document sont les suivants :
 
-* **Validation de la demande** : la demande est incorrecte ou contient des valeurs non valides. Pour connaître la structure des requêtes et les exigences de validation[&#x200B; consultez le &#x200B;](./privacy-jobs.md) guide des points d’entrée des tâches de confidentialité .
+* **Validation de la demande** : la demande est incorrecte ou contient des valeurs non valides. Pour connaître la structure des requêtes et les exigences de validation[&#128279;](./privacy-jobs.md) consultez le  guide des points d’entrée des tâches de confidentialité .
 * **Autorisation et mise en service** : votre organisation ou votre utilisateur ne dispose pas de l’accès requis. Voir [Gestion des autorisations](../permissions.md) pour consulter les exigences d’autorisation basées sur les rôles.
 * **Identité et applicabilité** : les identifiants ou les espaces de noms ne s’appliquent pas à la requête. Voir [Données d’identité pour les demandes d’accès à des informations personnelles](../identity-data.md) pour les types d’identité pris en charge et les exigences en espace de noms.
 * **Limitation du débit** : le volume des envois dépasse les limites de la plateforme. Lorsque cette erreur se produit, réduisez le taux d’envoi, puis réessayez.

@@ -2,10 +2,20 @@
 title: Référence de test d’alerte
 description: Découvrez comment l’auditeur teste les alertes dans Adobe Experience Platform Debugger.
 exl-id: ac6f8675-6c34-48b4-b5dd-48e92af217fd
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/Y1MPMYJLHlDHzYYeIRfT1yGCTJcA48rfGV7I0O77E24
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 9%
+source-wordcount: 638
+ht-degree: 8%
 
 ---
 
@@ -21,7 +31,7 @@ Les alertes indiquent les problèmes que vous devez connaître, mais qui n’aff
 
 | Test | Poids | Critères | Recommandation |
 | --- | --- | --- | --- |
-| Adobe Advertising - Balise de conversion correcte implémentée | 0 | Vérifiez si c’est la balise de conversion appropriée qui est utilisée.<br><br>**Avertissement** : l’utilisation des balises de conversion TubeMogul obsolètes peut entraîner une perte de données. | Mettez à niveau vos pixels de conversion vers les nouvelles balises de conversion d’image uniquement d’Advertising. Cela est plus facile à réaliser avec l’extension de balise [&#128279;](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
+| Adobe Advertising - Balise de conversion correcte implémentée | 0 | Vérifiez si la balise de conversion correcte est utilisée.<br><br>**Avertissement** : l’utilisation des balises de conversion TubeMogul obsolètes peut entraîner une perte de données. | Mettez à niveau vos pixels de conversion vers les nouvelles balises de conversion d’image uniquement d’Advertising. Cela est plus facile à réaliser avec l’extension de balise [&#128279;](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
 | Adobe Advertising - Balise JS Correcte Utilisée | 0 | Advertising doit utiliser les dernières balises JavaScript. | Mettez à niveau votre JavaScript Advertising vers la dernière version. L’utilisation des versions obsolètes de JavaScript peut entraîner une perte de fonctionnalités. Pour ce faire, utilisez plus facilement l’extension de balise [&#128279;](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
 | Adobe Advertising - Balise d’image seule | 0 | Le format des pixels d’image Advertising doit correspondre à l’un des formats recommandés suivants : <ul><li>`http(s)://rtd.tubemogul.com/upi/?sid=<HASH_VALUE>`</li><li>`http(s)://rtd-tm.everesttech.net/upi/?sid=<HASH_VALUE>`</li><li>`http(s)://pixel.everesttech.net/px2/<NUMERIC_ID>?`</li></ul> | Mettez à niveau vos pixels Advertising vers les nouvelles balises Advertising image seule, qui vous permettent de tirer parti de toutes les fonctionnalités d’Advertising. Cela est plus facile à réaliser avec l’extension de balise [&#128279;](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
 | Adobe Advertising - Synchronisation DSP Des Pixels De Segment Activée | 0 | Vérifiez si le pixel de segment TubeMogul contient un paramètre de synchronisation DSP et recommandez que le paramètre soit ajouté au pixel. Le paramètre de synchronisation DSP est déterminé par l’utilisation d’un paramètre de chaîne de requête. Pour résumer : <ul><li>SI la balise est déclenchée vers l’un des éléments suivants :<ul><li>`https://rtd.tubemogul.com/upi/?sid=<HASH_VALUE>`</li><li>`http(s)://rtd-tm.everesttech.net/upi/?sid=<HASH_VALUE>`</li><li>`http(s)://pixel.everesttech.net/px2/<NUMERIC_ID>?`</li></ul></li><li>ET la balise contient le paramètre URL `sid=`</li><li>Ensuite, vérifiez si le paramètre d’URL `cs=0` ou `cs=1` existe et, dans le cas contraire, `cs=1` recommandons de l’ajouter à ces pixels afin d’améliorer les taux de correspondance d’audience.</li></ul> | Ajoutez le paramètre d’URL `cs=1` à vos pixels Advertising afin que la synchronisation DSP puisse avoir lieu, ce qui augmente les taux de correspondance d’audience. Cela est plus facile avec l’extension de balise [&#128279;](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |

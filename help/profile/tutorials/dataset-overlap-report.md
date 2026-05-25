@@ -4,9 +4,22 @@ title: Générer le rapport de chevauchement de jeux de données
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la génération du rapport de chevauchement de jeux de données à l’aide de l’API Real-Time Customer Profile.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/G65tQIdmuEqNSc-Dbs4nGZXgDYGbhKm3dmGyslY-H-k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: 909
 ht-degree: 2%
 
 ---
@@ -19,7 +32,7 @@ En plus de fournir des informations sur vos données, ce rapport peut vous aider
 
 Ce tutoriel décrit les étapes nécessaires à la génération du rapport de chevauchement de jeux de données à l’aide de l’API [!DNL Real-Time Customer Profile] et à l’interprétation des résultats pour votre organisation.
 
-## Commencer
+## Prise en main
 
 Pour utiliser les API Adobe Experience Platform, vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin de rassembler les valeurs dont vous avez besoin pour les en-têtes requis. Pour en savoir plus sur les API d&#39;Experience Platform, reportez-vous à la documentation [Prise en main des API d&#39;Experience Platform](../../landing/api-guide.md).
 
@@ -68,7 +81,7 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchem
 
 ### Générer un rapport de chevauchement de jeux de données à l’aide de Postman
 
-Postman est une plateforme collaborative de développement d’API qui s’avère utile pour visualiser les appels d’API. Il peut être téléchargé gratuitement à partir du site Web [Postman](https://www.postman.com) et fournit une interface utilisateur facile à utiliser pour effectuer des appels API. Les captures d’écran suivantes utilisent l’interface de Postman.
+Postman est une plateforme collaborative de développement d’API qui s’avère utile pour visualiser les appels d’API. Il peut être téléchargé gratuitement à partir du site Web [&#128279;](https://www.postman.com) et fournit une interface utilisateur facile à utiliser pour effectuer des appels API. Les captures d’écran suivantes utilisent l’interface de Postman.
 
 **Requête**
 

@@ -5,9 +5,14 @@ title: Point d’entrée des plannings
 description: Les sections suivantes décrivent les différents appels API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: b0faddcf449285d3ee0b5dd42b9fbf8fce6e78c5
+TQID: https://experienceleague.adobe.com/h2IwzihCHWZhZ9I78SbmBoZ3Se72-aXzHWqhlDZkJ18
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: 1501
 ht-degree: 42%
 
 ---

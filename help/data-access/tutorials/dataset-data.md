@@ -5,9 +5,19 @@ title: Afficher des données de jeu de données à l’aide de l’API Data Acce
 type: Tutorial
 description: Découvrez comment localiser les données stockées dans un jeu de données, les télécharger et y accéder à l’aide de l’API Data Access de Adobe Experience Platform. Ce document présente certaines des fonctionnalités uniques de l’API Data Access, telles que la pagination et les téléchargements partiels.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/-CmCq-BFklkKbfQn5SxNb43yCwwsV9n61bhdyTxi-Go
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: 1393
 ht-degree: 56%
 
 ---

@@ -2,12 +2,37 @@
 keywords: extension de transfert d’événement;pinterest;extension de transfert d’événement pinterest
 title: Extension de transfert d’événement Pinterest
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet d’ingérer des événements dans Pinterest en fonction des besoins de votre entreprise.
-last-substantial-update: 2023-04-27T00:00:00Z
+last-substantial-update: 2023-04-27T00:00:00.000Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/oBoefrt3wDx3GSXT-nFdb6L5aoVBUvrX-dJATsjaaFw
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1427'
-ht-degree: 6%
+source-wordcount: 1497
+ht-degree: 5%
 
 ---
 
@@ -72,7 +97,7 @@ Une fois tous vos éléments de données configurés, vous pouvez commencer à c
 
 Créez une [règle](../../../ui/managing-resources/rules.md) dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Pinterest]**. Pour envoyer des événements Edge Network à [!DNL Pinterest], définissez la **[!UICONTROL Action Type]** sur **[!UICONTROL Send Event].**
 
-![Création de la règle de [!DNL Pinterest] [!UICONTROL Send Event].](../../../images/extensions/server/pinterest/rule.png)
+![Création de la règle de [!UICONTROL Send Event] [!DNL Pinterest].](../../../images/extensions/server/pinterest/rule.png)
 
 Après la sélection, des commandes supplémentaires apparaissent pour configurer plus en détail l’événement. Vous devez mapper les propriétés d’événement [!DNL Pinterest] aux éléments de données que vous avez précédemment créés.
 
@@ -172,4 +197,4 @@ Vous pouvez effectuer une analyse plus approfondie et afficher la distribution d
 Ce guide explique comment installer et configurer l’extension de transfert d’événement [!DNL Pinterest] dans l’interface utilisateur. Pour plus d’informations, consultez la documentation officielle :
 
 * [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/)
-* [[!DNL Pinterest] Présentation de l’API de conversion](https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions)
+* [Présentation de l’API [!DNL Pinterest] Conversions](https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions)

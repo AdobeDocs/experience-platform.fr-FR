@@ -2,9 +2,25 @@
 title: Référence de résolution des alertes CMK
 description: Identifiez, résolvez les problèmes et résolvez les alertes courantes déclenchées par les configurations incorrectes de Customer Managed Key (CMK) dans Adobe Experience Platform. Utilisez ce guide pour suivre des instructions claires et détaillées et restaurer un accès sécurisé aux clés.
 exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
-source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
+TQID: https://experienceleague.adobe.com/p-Xz-l5FsFCdWivkM8JZN4j-HotTZNGlfqck8zf-XJo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: 918
 ht-degree: 1%
 
 ---
@@ -27,7 +43,7 @@ Cette alerte indique que Adobe Experience Platform ne peut pas accéder au CMK c
 
 ### Quand cela se produit
 
-Cette alerte est déclenchée lorsque la clé de chiffrement du coffre de clés Azure Key Vault est désactivée, supprimée ou mal configurée d’une manière qui empêche l’accès pendant les opérations de la plateforme.
+Cette alerte est déclenchée lorsque la clé de chiffrement du coffre de clés Azure est dans un état désactivé, supprimée ou mal configurée d’une manière qui empêche l’accès pendant les opérations de la plateforme.
 
 ### Causes possibles
 
@@ -47,10 +63,10 @@ Les raisons courantes pour lesquelles cette alerte peut se produire sont les sui
 
 +++Si la clé est désactivée
 
-1. Accédez au [coffre de clés Azure](https://portal.azure.com/) qui contient la fonction CMK.
+1. Accédez au coffre de clés [Azure Key Vault](https://portal.azure.com/) contenant la fonction CMK.
 2. Sélectionnez la clé associée à Adobe Experience Platform.
 3. Vérifiez que le statut de la clé est défini sur **Activé**.
-4. Si la clé est désactivée, activez-la à l’aide du portail Azure ou de la `az keyvault key enable` de commande de l’interface de ligne de commande.
+4. Si la clé est désactivée, activez-la à l’aide du portail Azure ou du `az keyvault key enable` de commande de l’interface de ligne de commande.
 
 >[!NOTE]
 >
@@ -58,7 +74,7 @@ Les raisons courantes pour lesquelles cette alerte peut se produire sont les sui
 
 +++
 
-+++Si les opérations clés ont été modifiées
++++Si des opérations clés ont été modifiées
 
 1. Ajoutez à nouveau les autorisations `wrapKey` et `unwrapKey` à la clé .
 
@@ -77,14 +93,14 @@ Les raisons courantes pour lesquelles cette alerte peut se produire sont les sui
 
 +++Si la clé a été supprimée
 
-1. Assurez-vous que la suppression réversible est activée dans Azure Key Vault.
+1. Assurez-vous que la suppression réversible est activée dans le coffre de clés Azure.
 2. Accédez à « Gérer les clés supprimées » dans le portail Azure ou l’interface de ligne de commande.
 3. Sélectionnez la clé supprimée dans la liste des éléments supprimés de manière réversible.
 4. Cliquez sur **Récupérer** pour restaurer la clé.
 
 +++
 
-+++Si les autorisations de l’application MultiTenant ont été supprimées ou modifiées
++++Si les autorisations de l’application multi-client ont été supprimées ou modifiées
 
 1. Restaurez les autorisations appropriées pour l’application MultiTenant.
 2. Vérifiez que l’autorisation suivante est accordée : `Key Vault Crypto Service Encryption User`
@@ -145,7 +161,7 @@ Cette alerte est généralement déclenchée lorsque le pare-feu du coffre de cl
 
 +++
 
-+++Si les autorisations de l’application MultiTenant sont manquantes ou modifiées
++++Si les autorisations d’application multi-client sont manquantes ou modifiées
 
 1. Vérifiez que l’application Adobe MultiTenant dispose des autorisations suivantes :
    - `get`, `wrapKey` et `unwrapKey` sur la clé.

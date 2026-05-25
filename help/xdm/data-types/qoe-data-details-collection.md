@@ -1,31 +1,48 @@
 ---
-title: Type de données de collecte de détails sur la qualité de l’expérience (QoE)
-description: Découvrez le type de données Modèle de données d’expérience (XDM) de détails sur la qualité de l’expérience (QoE).
+title: Type de données de collecte des détails de données QoE (qualité de l’expérience)
+description: Découvrez le type de données de modèle de données d’expérience (XDM) du type de collecte de données Détails de la qualité de l’expérience (QoE).
 exl-id: d99816d9-e207-434a-9a40-ee9ded46c4d2
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+TQID: https://experienceleague.adobe.com/2FE97ebiyqzEd2NKqoiJ5pNoR6hXezVbK1p6SftHOzc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 6%
+source-wordcount: 273
+ht-degree: 5%
 
 ---
 
-# Type de données de collecte de données QoE (Qualité de l’expérience)
+# Type de données de collecte des détails de données QoE (qualité de l’expérience)
 
-[!UICONTROL Détails des données QoE] La collection est un type de données XDM (Experience Data Model) standard qui fournit des mesures détaillées liées à la qualité de l’expérience (QoE) pendant la lecture multimédia. Utilisez le type de données de collection [!UICONTROL Détails de données QoE] pour capturer des détails tels que des informations de débit binaire, des taux d’images, des événements de mise en mémoire tampon, des images perdues, etc. Les champs de collecte de médias capturent des données et les envoient à d’autres services Adobe en vue d’un traitement ultérieur. Ce type de données permet d’analyser la qualité de lecture, ce qui permet d’obtenir des informations sur les performances de diffusion en continu, l’expérience utilisateur et les problèmes potentiels rencontrés lors des sessions de lecture.
+[!UICONTROL QoE Data Details] collecte de données d’expérience est un type de données standard des modèles de données d’expérience (XDM) qui fournit des mesures détaillées liées à la qualité de l’expérience (QoE) pendant la lecture multimédia. Utilisez le type de données [!UICONTROL QoE Data Details] Collection pour capturer des informations telles que les informations sur le débit binaire, les débits d’images, les événements de mise en mémoire tampon, les images perdues, etc. Les champs de collecte de médias capturent des données et les envoient à d’autres services Adobe en vue d’un traitement ultérieur. Ce type de données permet d’analyser la qualité de la lecture, ce qui permet d’obtenir des informations sur les performances de diffusion en continu, l’expérience utilisateur et les problèmes potentiels rencontrés lors des sessions de lecture.
 
 +++Sélectionnez cette option pour afficher le type de données Détails des données QoE .
-![&#x200B; Diagramme du type de données de collecte de détails sur la qualité de l’expérience.](../images/data-types/qoe-data-details-collection.png)
+![Diagramme du type de données de collecte de détails sur la qualité de l’expérience (QoE).](../images/data-types/qoe-data-details-collection.png)
 +++
 
 >[!NOTE]
 >
->Chaque nom d’affichage contient un lien vers des informations supplémentaires sur ses paramètres audio et vidéo. Les pages liées contiennent des détails sur les données de publicité vidéo collectées par Adobe, les valeurs d’implémentation, les paramètres réseau, la création de rapports et des considérations importantes.
+>Chaque nom d’affichage contient un lien vers des informations supplémentaires sur ses paramètres audio et vidéo. Les pages liées contiennent des détails sur la vidéo et les données collectées par Adobe, les valeurs d’implémentation, les paramètres réseau, les rapports et des considérations importantes.
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL Débit &#x200B;]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#average-bitrate) | `bitrate` | Entier | Non | Valeur de débit binaire (en Kbits/s). |
-| [[!UICONTROL Images perdues]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#dropped-frames) | `droppedFrames` | Entier | Non | Nombre total d’images perdues pendant la lecture. |
-| [[!UICONTROL Images Par Seconde]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#frames-per-second) | `framesPerSecond` | Entier | Non | Vitesse d’image de la diffusion en cours (en images par seconde). |
-| [[!UICONTROL Temps De Démarrage]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#time-to-start-1) | `timeToStart` | Entier | Non | Durée (en secondes) entre le chargement de la vidéo et le démarrage. |
+| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#average-bitrate) | `bitrate` | Entier | Non | Valeur du débit (en Kbits/s). |
+| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#dropped-frames) | `droppedFrames` | Entier | Non | Nombre total d’images perdues lors de la lecture. |
+| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#frames-per-second) | `framesPerSecond` | Entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
+| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=fr#time-to-start-1) | `timeToStart` | Entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |
 
 {style="table-layout:auto"}

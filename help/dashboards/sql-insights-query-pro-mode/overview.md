@@ -2,9 +2,22 @@
 title: Informations SQL pour les rapports d’application étendus
 description: Découvrez comment utiliser les requêtes SQL pour générer des informations pour vos tableaux de bord personnalisés.
 exl-id: c60a9218-4ac0-4638-833b-bdbded36ddf5
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+TQID: https://experienceleague.adobe.com/Ip1mxjQK7tBQxNH6bR0ZAJs07rIlBY6f7PzHMsPgogY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: 1452
 ht-degree: 0%
 
 ---
@@ -63,7 +76,7 @@ Pour inclure des filtres [globaux](./filters/global-filter.md) ou [date](./filte
 >
 >Si vous souhaitez utiliser un filtre global, vous devez placer un paramètre de requête dans votre SQL, puis lier ce paramètre de requête au filtre global dans le compositeur de widgets. Dans la capture d’écran ci-dessous, `CONSENT_VALUE_FILTER` est utilisé dans le SQL comme paramètre de requête pour un filtre global. Consultez la [documentation sur les filtres globaux](./filters/global-filter.md#enable-global-filter) pour plus d’informations sur la procédure à suivre.
 
-Pour exécuter votre requête, sélectionnez l’icône d’exécution (![&#x200B; L’icône d’exécution .](/help/images/icons/play.png)). Le Query Editor affiche l’onglet des résultats . Ensuite, pour confirmer votre configuration et ouvrir le compositeur de widgets, sélectionnez **[!UICONTROL Select]**.
+Pour exécuter votre requête, sélectionnez l’icône d’exécution (![Icône d’exécution.](/help/images/icons/play.png)). Le Query Editor affiche l’onglet des résultats . Ensuite, pour confirmer votre configuration et ouvrir le compositeur de widgets, sélectionnez **[!UICONTROL Select]**.
 
 >[!TIP]
 >
@@ -85,13 +98,13 @@ Pour créer votre widget, utilisez les attributs répertoriés dans la colonne [
 
 ### Ajouter des attributs {#add-attributes}
 
-Pour ajouter un attribut à votre widget, sélectionnez l’icône plus (![A icône plus.](/help/images/icons/add-circle.png)) à côté d’un nom d’attribut. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut au graphique à partir des options déterminées par votre SQL. Différents types de graphique comportent différentes options, telles qu’une liste déroulante des axes X et Y.
+Pour ajouter un attribut à votre widget, sélectionnez l’icône plus (![A icône plus.](/help/images/icons/add-circle.png)) en regard d’un nom d’attribut. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut au graphique à partir des options déterminées par votre SQL. Différents types de graphique comportent différentes options, telles qu’une liste déroulante des axes X et Y.
 
 Dans cet exemple de graphique en anneau, les options sont la taille et la couleur. La couleur répartit les résultats du graphique en anneau et la taille correspond à la mesure réelle utilisée. Ajoutez un attribut au champ [!UICONTROL Color] pour fractionner les résultats en différentes couleurs en fonction de la composition de cet attribut.
 
 >[!TIP]
 >
->Sélectionnez l’icône des flèches vers le haut et vers le bas (![Icône des flèches vers le haut et vers le bas.](/help/images/icons/switch.png)) pour changer la disposition des axes X et Y sur les graphiques en barres ou en courbes.
+>Sélectionnez l’icône de flèche vers le haut et vers le bas (![Icône de flèche vers le haut et vers le bas.](/help/images/icons/switch.png)). pour changer la disposition des axes X et Y sur les graphiques en barres ou en courbes.
 
 ![Le compositeur de widget avec la liste déroulante d’icône d’ajout et les flèches de basculement mises en surbrillance.](../images/sql-insights-query-pro-mode/add-icon-and-switch-arrows.png)
 
@@ -113,7 +126,7 @@ Pour activer le tri pour n’importe quelle colonne, cochez les cases **[!UICONT
 
 ![Page d’édition du tableau avec les cases à cocher triables mises en surbrillance.](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
 
-Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau [!UICONTROL Properties]. Dans le panneau **[!UICONTROL Properties]**, utilisez la liste déroulante pour sélectionner la colonne **[!UICONTROL Default sort]**, puis utilisez la liste déroulante pour sélectionner la **[!UICONTROL Sort direction]**. Enfin, sélectionnez **[!UICONTROL Save and close]**.
+Sélectionnez l’icône des propriétés (![Icône Propriétés.](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau [!UICONTROL Properties] . Dans le panneau **[!UICONTROL Properties]**, utilisez la liste déroulante pour sélectionner la colonne **[!UICONTROL Default sort]**, puis utilisez la liste déroulante pour sélectionner la **[!UICONTROL Sort direction]**. Enfin, sélectionnez **[!UICONTROL Save and close]**.
 
 ![Le compositeur de widget avec l’icône de propriétés, le tri par défaut, l’ordre de tri, l’enregistrement et la fermeture mis en surbrillance.](../images/sql-insights-query-pro-mode/advanced-table-properties.png)
 
@@ -121,7 +134,7 @@ Pour en savoir plus sur l’utilisation des fonctionnalités de tri, de redimens
 
 ## Propriétés du widget {#properties}
 
-Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Properties], saisissez le nom du widget dans le champ de texte **[!UICONTROL Widget title]** . Vous pouvez également renommer divers aspects de votre graphique.
+Sélectionnez l’icône des propriétés (![Icône Propriétés.](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Properties], saisissez le nom du widget dans le champ de texte **[!UICONTROL Widget title]** . Vous pouvez également renommer divers aspects de votre graphique.
 
 >[!NOTE]
 >

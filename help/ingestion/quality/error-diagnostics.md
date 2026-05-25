@@ -4,9 +4,18 @@ solution: Experience Platform
 title: Récupération des diagnostics d’erreur d’ingestion de données
 description: Ce document fournit des informations sur la surveillance de l’ingestion par lots, la gestion des erreurs d’ingestion par lots partiels ainsi qu’une référence pour les types d’ingestion par lots partiels.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/ADy-GBCnvhuhZRfhBGuG6OOYwqVrmSx7Hwv6FtDghyc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: 986
 ht-degree: 36%
 
 ---
@@ -19,18 +28,18 @@ Ce document fournit des informations sur la surveillance de l’ingestion par lo
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 - [[!DNL Adobe Experience Platform Data Ingestion]](../home.md) : méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`

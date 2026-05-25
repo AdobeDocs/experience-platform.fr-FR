@@ -6,10 +6,28 @@ last-update: April 13, 2020
 author: ens71067
 keywords: notes de mise à jour ;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/EWoOSRvtLJP1MQbDceDd2YNjQc9svPwNEFh2vq0LAbA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 63%
+source-wordcount: 983
+ht-degree: 60%
 
 ---
 
@@ -48,7 +66,7 @@ Pour plus d’informations sur les [!DNL Intelligent Services] et ce qu’ils on
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 
-La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+La normalisation et l&#39;interopérabilité sont les concepts clés de [!DNL Experience Platform]. [!DNL Experience Data Model] Le modèle de données d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
 XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
@@ -91,7 +109,7 @@ Pour plus d’informations, consultez la section [Présentation de la gouvernanc
 
 ## Destinations {#destinations}
 
-Dans [Real-Time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 
@@ -113,7 +131,7 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 | Fonctionnalité | Description |
 | --- | --- |
 | Respect de la loi PDPA | Désormais, les demandes d’accès à des informations personnelles peuvent être créées et suivies en vertu de la loi sur la protection des données à caractère personnel (PDPA) en Thaïlande. Lors de l’envoi de demandes d’accès à des informations personnelles dans l’API, le tableau `regulation` accepte la valeur « pdpa_tha ». |
-| Types d’espaces de noms dans l’interface utilisateur | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes de l’interface utilisateur de [!DNL Privacy Service]. Pour plus d’informations, voir le [guide d’utilisation](../../privacy-service/ui/user-guide.md). |
+| Types d’espaces de noms dans l’interface d’utilisation | Vous pouvez désormais spécifier différents types d’espaces de noms dans le créateur de requêtes de l’interface d’utilisation de [!DNL Privacy Service]. Pour plus d’informations, voir le [guide d’utilisation](../../privacy-service/ui/user-guide.md). |
 | Abandon de l’ancien point d’entrée | L’ancien point d’entrée de l’API (`data/privacy/gdpr`) a été abandonné. |
 
 Problèmes connus

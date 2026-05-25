@@ -3,9 +3,22 @@ solution: Experience Platform
 title: Prise en charge des navigateurs et des langues pour l’interface utilisateur d’Experience Platform
 description: Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/9DXzNTnRJOUjEymIcDKQewo0vvBSUiTfyGzNUGmyUIs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: 250
 ht-degree: 33%
 
 ---
@@ -53,9 +66,9 @@ Pour modifier la langue :
 
 1. Connectez-vous à votre compte Experience Platform.
 1. Appuyez sur `Ctrl + i` pour afficher le menu des informations du compte.
-1. Accédez à **[!UICONTROL Langues préférées]**.
+1. Accédez à **[!UICONTROL Preferred Languages]**.
 1. Sélectionnez vos préférences de première et de deuxième langue.
-1. Sélectionnez **[!UICONTROL Enregistrer]** et fermez la fenêtre.
+1. Sélectionnez **[!UICONTROL Save]** et fermez la fenêtre.
 
 >[!NOTE]
 >

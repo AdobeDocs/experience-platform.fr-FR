@@ -3,9 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des politiques de contrôle d’accès
 description: Gérez les politiques de contrôle d’accès via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/CrH7bsZHNIWU3Q7SZyd3k-dUFrSVqlY12OAnnByQx3Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: 641
 ht-degree: 16%
 
 ---

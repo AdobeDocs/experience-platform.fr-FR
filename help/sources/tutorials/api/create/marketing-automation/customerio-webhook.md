@@ -3,10 +3,17 @@ title: Créez une connexion source et un flux de données pour Customer.io à l�
 description: Découvrez comment connecter Adobe Experience Platform à Customer.io à l’aide de l’API Flow Service.
 badge: Beta
 exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/a6QeFyGHsqoXiw07iUkdLVfzHml7ztCtKAe8pcE08fc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1395'
-ht-degree: 49%
+source-wordcount: 1484
+ht-degree: 48%
 
 ---
 
@@ -145,8 +152,8 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Format des données [!DNL Customer.io] à ingérer. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Format des données [!DNL Customer.io] que vous souhaitez ingérer. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
 **Réponse**

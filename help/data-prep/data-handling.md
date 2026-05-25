@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Gestion des formats de données avec la préparation des données
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/C2IVb0smhO7BczWeWgum2xhCJ2dSzBeO3ZpnEUogedo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 93%
+source-wordcount: 626
+ht-degree: 94%
 
 ---
 

@@ -2,9 +2,17 @@
 description: Cette page illustre l’appel API utilisé pour mettre à jour une configuration d’informations d’identification existante avec Adobe Experience Platform Destination SDK.
 title: Mise à jour d’une configuration d’informations d’identification
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/Z7X-EF6ZuA2Z4w9352vM3-9nyhuQ8Ae9fqA6O7M3xtY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: 607
 ht-degree: 85%
 
 ---

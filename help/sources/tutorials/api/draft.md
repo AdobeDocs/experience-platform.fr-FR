@@ -2,10 +2,15 @@
 title: Créer des brouillons de votre API Flow Service Entities
 description: Découvrez comment créer des brouillons de votre connexion de base, connexion source, connexion cible et flux de données à l’aide de l’API Flow Service.
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/A8ttLAKsXX1DjRRUcrtNyysaMHUZNHQcHp84oPr6-NU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 93%
+source-wordcount: 1204
+ht-degree: 91%
 
 ---
 
@@ -37,7 +42,7 @@ Vous devez également vérifier si l’identifiant de spécification de connexio
 >[!TAB Rechercher les détails de la spécification de connexion]
 
 +++Requête
-La requête suivante récupère les informations sur la spécification de connexion pour [!DNL Azure File Storage] :
+La requête suivante récupère les informations sur la spécification de connexion pour [!DNL Azure File Storage] :
 
 ```shell
 curl -X GET \
@@ -344,7 +349,7 @@ Une réponse réussie renvoie les informations sur la spécification de connexio
 >[!TAB Rechercher des détails sur la spécification de flux]
 
 +++Requête
-La requête suivante récupère les détails de spécification de flux pour une source d’espace de stockage :
+La requête suivante récupère les détails de spécification de flux pour une source d’espace de stockage :
 
 ```shell
 curl -X GET \

@@ -3,9 +3,21 @@ title: Workflow de bout en bout d’enrichissement du pipeline de données AI/ML
 description: Utilisez des notebooks d’environnement de machine learning basés sur le cloud pour créer une formation et un score de modèle de propension qui prédit les conversions d’abonnements à partir des données Adobe Experience Platform.
 hide: true
 exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+TQID: https://experienceleague.adobe.com/a-OCrXqZ71YfunDPUQxKt-l-8x6OlccXLgv9homCaeY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: 653
 ht-degree: 0%
 
 ---

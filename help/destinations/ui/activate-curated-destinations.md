@@ -3,10 +3,27 @@ title: Activer les audiences vers des destinations sélectionnées en fonction d
 type: Tutorial
 description: Découvrez comment activer des audiences de Adobe Experience Platform vers des destinations TV et audio connectées, ainsi que d’autres intégrations à l’aide de l’identifiant de rampe LiveRamp.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/LRtQCSf7MikWim6l2TbHpBN1ieTSlDhUJs-cjkxSFZE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 1%
+source-wordcount: 674
+ht-degree: 2%
 
 ---
 
@@ -104,8 +121,7 @@ Lorsque vous configurez la destination **[!DNL LiveRamp - Distribution]**, vous 
 >[!TIP]
 >
 >Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
-><br>
->Exemple : `LiveRamp - Roku`.
+><br>>Exemple : `LiveRamp - Roku`.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant plusieurs destinations LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 

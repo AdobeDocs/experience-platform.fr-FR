@@ -2,10 +2,31 @@
 title: Présentation de l’extension AWS
 description: Découvrez l’extension AWS pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+last-substantial-update: 2022-11-23T00:00:00.000Z
+TQID: https://experienceleague.adobe.com/YcC7JNua10Epn-vycJwxTW-BUiV6SBTXDcFDaB005QY
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: 771
 ht-degree: 2%
 
 ---
@@ -54,7 +75,7 @@ Le panneau de droite se met à jour pour afficher les options de configuration r
 | --- | --- |
 | [!UICONTROL Stream Name] | Nom du flux vers lequel cette règle de transfert d’événement enverra les enregistrements de données. |
 | [!UICONTROL AWS Region] | Région [!DNL AWS] dans laquelle le flux de données [!DNL Kinesis] est créé. |
-| [!UICONTROL Partition Key] | La [clé de partition](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) que l’extension utilisera lors de l’envoi de données au flux de données.<br><br>[!DNL Kinesis Data Streams] sépare les enregistrements de données appartenant à un flux en plusieurs partitions. Elle utilise la clé de partition envoyée avec chaque enregistrement de données pour déterminer à quelle partition appartient un enregistrement de données donné.<br><br>Le numéro de client peut être une bonne clé de partition pour la distribution des clients, car il est différent pour chaque client. Une clé de partition de mauvaise qualité pourrait avoir son code postal, car ils peuvent tous vivre dans la même zone à proximité. En règle générale, vous devez choisir une clé de partition qui possède la plage la plus élevée de différentes valeurs potentielles. Consultez l’article [!DNL AWS] sur [mise à l’échelle de vos flux  [!DNL Kinesis]  données](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) pour connaître les bonnes pratiques de gestion des clés de partition. |
+| [!UICONTROL Partition Key] | La [clé de partition](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) que l’extension utilisera lors de l’envoi de données au flux de données.<br><br>[!DNL Kinesis Data Streams] sépare les enregistrements de données appartenant à un flux en plusieurs partitions. Elle utilise la clé de partition envoyée avec chaque enregistrement de données pour déterminer à quelle partition appartient un enregistrement de données donné. <br><br>Une bonne clé de partition pour distribuer les clients peut être le numéro de client, puisqu’il est différent pour chaque client. Une clé de partition de mauvaise qualité pourrait avoir son code postal, car ils peuvent tous vivre dans la même zone à proximité. En règle générale, vous devez choisir une clé de partition qui possède la plage la plus élevée de différentes valeurs potentielles. Consultez l’article [!DNL AWS] sur [mise à l’échelle de vos flux  [!DNL Kinesis]  données](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) pour connaître les bonnes pratiques de gestion des clés de partition. |
 
 {style="table-layout:auto"}
 

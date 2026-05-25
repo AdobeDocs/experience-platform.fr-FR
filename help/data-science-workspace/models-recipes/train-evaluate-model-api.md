@@ -5,9 +5,19 @@ title: Entraînement et évaluation d’un modèle à l’aide de l’API Sensei
 type: Tutorial
 description: Ce tutoriel vous explique comment créer, entraîner et évaluer un modèle à l’aide d’appels API de machine learning Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/wRFVt9xogecMJh5GYNjZhreBN07-cr7pqClWwkjohFU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1240'
+source-wordcount: 1254
 ht-degree: 79%
 
 ---
@@ -26,7 +36,7 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez le tutoriel [Authentification de l’API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
+Suivez le tutoriel [Authentification de l’API &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
@@ -216,7 +226,8 @@ La réponse de la création de l’expérience ressemble à ceci.
 }
 ```
 
-`{EXPERIMENT_ID}` : identifiant qui représente l’expérience que vous venez de créer. `{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience que vous venez de créer.
+`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
 
 ### Création d’une expérience planifiée pour la formation
 

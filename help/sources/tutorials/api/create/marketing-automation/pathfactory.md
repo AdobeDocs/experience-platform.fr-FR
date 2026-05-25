@@ -2,10 +2,15 @@
 title: Créer une connexion de base PathFactory à l’aide de l’API Flow Service
 description: Découvrez comment authentifier votre compte PathFactory par rapport à Experience Platform à l’aide de l’API Flow Service.
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+TQID: https://experienceleague.adobe.com/0Kha2mfe47n3O-QJFxJgn8-TewqxPLwROyzw2qVxti0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 24%
+source-wordcount: 554
+ht-degree: 25%
 
 ---
 
@@ -103,7 +108,7 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion de base à [!DNL PathFactory] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL PathFactory] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créer un flux de données pour importer des données d’automatisation marketing dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/marketing-automation.md)

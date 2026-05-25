@@ -3,9 +3,27 @@ title: Personnaliser des expériences sur site pour les visiteurs inconnus à l�
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+TQID: https://experienceleague.adobe.com/AleI6qHVwbtVSa48LDXatkW4LlpwyySJ2eSjl6FraPo
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: 2668
 ht-degree: 72%
 
 ---
@@ -47,13 +65,13 @@ Lorsque vous envisagez d’utiliser des attributs fournis par les partenaires po
 Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser plusieurs zones de Real-time Customer Data Platform et d’autres solutions Experience Cloud. Assurez-vous que vous disposez des [autorisations de contrôle d’accès basées sur des attributs](/help/access-control/abac/overview.md) pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
 * Collecte de données
-   * [SDK Web Adobe Experience Platform](/help/collection/js/js-overview.md)
+   * [SDK web Adobe Experience Platform](/help/collection/js/js-overview.md)
    * [Balises](/help/tags/home.md)
    * [Flux de données](/help/datastreams/overview.md)
 * Gestion des données sur Real-Time CDP
    * [Identités](/help/identity-service/features/namespaces.md)
    * [Schémas](/help/xdm/home.md)
-   * [Libellés d’utilisation des données](/help/data-governance/labels/overview.md)
+   * [Étiquettes d’utilisation des données](/help/data-governance/labels/overview.md)
    * [Jeux de données](/help/catalog/datasets/overview.md)
 * Personnalisation des propriétés web
    * [Segmentation Edge](/help/segmentation/methods/edge-segmentation.md)
@@ -81,7 +99,7 @@ Regardez le tutoriel vidéo ci-dessous pour une présentation détaillée de la 
 
 Parcourez les sections ci-dessous, qui contiennent des liens vers d’autres documents, pour suivre chacune des étapes de la vue d’ensemble de haut niveau ci-dessus.
 
-### Gestion des données : créer un espace de noms, un schéma et un jeu de données d’identité pour gérer les attributs de données {#data-management}
+### Gestion des données : créer un espace de noms d’identité, un schéma et un jeu de données pour gérer les attributs de données {#data-management}
 
 Pour préparer le cas d’utilisation et personnaliser l’expérience des visiteurs et visiteuses non authentifiés, vous devez d’abord configurer la structure de gestion des données dans Real-Time CDP afin de recevoir les données entrantes d’événement en temps réel et de qualification des audiences.
 

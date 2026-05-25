@@ -3,9 +3,16 @@ title: Point d’entrée de requêtes accélérées
 description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées du service de requête.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/AH6kgvi3x04U4efD9cFbV-Cg1ly3FeVetFKHjj1gKKw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: 572
 ht-degree: 97%
 
 ---

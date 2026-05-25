@@ -2,9 +2,16 @@
 title: Activer la capture de données de modification pour les connexions source dans l’API
 description: Découvrez comment activer la capture de données de modification pour les connexions source dans l’API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 74743d7dc93e2ba291481ad11e923d28088c4903
+TQID: https://experienceleague.adobe.com/9bn3tG2S9UUvOXuf8TY6LgQDDqexyxnCbbpaXdYKgVA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: 1336
 ht-degree: 0%
 
 ---
@@ -171,7 +178,7 @@ Pour utiliser la capture de données de modification avec [!DNL Google BigQuery]
 
 Pour activer l’historique des modifications dans votre connexion source [!DNL Google BigQuery], accédez à la page [!DNL Google BigQuery] dans la console [!DNL Google Cloud] et définissez `enable_change_history` sur `TRUE`. Cette propriété active l&#39;historique des modifications de votre tableau de données.
 
-Pour plus d’informations, consultez le guide sur les instructions de langage de définition de données dans [&#x200B; [!DNL GoogleSQL].](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)
+Pour plus d’informations, consultez le guide sur les instructions de langage de définition de données dans  [!DNL GoogleSQL][&#128279;](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
 Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Google BigQuery] :
 

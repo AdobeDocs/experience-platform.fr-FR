@@ -2,20 +2,26 @@
 keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;Aqua Data Studio;Aqua data studio;se connecter à query service;
 solution: Experience Platform
 title: Connecter Aqua Data Studio à Query Service
-description: Ce document décrit les étapes à suivre pour connecter Aqua Data Studio à Adobe Experience Platform Query Service.
+description: Ce document décrit les étapes à suivre pour connecter Aqua Data Studio au service de requête Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/kHT-1T-Qheq-C4onQHUii-4LBLzzgUGBGtc8PckjdF8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 8%
+source-wordcount: 571
+ht-degree: 7%
 
 ---
 
-# Connecter [!DNL Aqua Data Studio] à Query Service
+# Connecter [!DNL Aqua Data Studio] au service de requête
 
 Ce document décrit les étapes à suivre pour connecter [!DNL Aqua Data Studio] à Adobe Experience Platform [!DNL Query Service].
 
-## Commencer
+## Prise en main
 
 Ce guide nécessite que vous ayez déjà accès à [!DNL Aqua Data Studio] et que vous sachiez comment naviguer dans son interface. Vous trouverez plus d’informations sur les [!DNL Aqua Data Studio] dans la [documentation [!DNL Aqua Data Studio] officielle](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
 
@@ -23,7 +29,7 @@ Ce guide nécessite que vous ayez déjà accès à [!DNL Aqua Data Studio] et qu
 >
 >Il existe des versions [!DNL Windows] et [!DNL macOS] de [!DNL Aqua Data Studio]. Les captures d’écran de ce guide ont été effectuées à l’aide de l’application de bureau [!DNL macOS]. Il peut y avoir des incohérences mineures dans l’interface utilisateur entre les versions.
 
-Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL Aqua Data Studio] à Experience Platform, vous devez avoir accès à l’espace de travail [!UICONTROL Requêtes] dans l’interface utilisateur d’Experience Platform. Veuillez contacter l’administrateur de votre organisation si vous n’avez pas actuellement accès à l’espace de travail [!UICONTROL Requêtes].
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL Aqua Data Studio] à Experience Platform, vous devez avoir accès à l’espace de travail [!UICONTROL Queries] dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail [!UICONTROL Queries].
 
 ## Enregistrement du serveur {#register-server}
 
@@ -39,7 +45,7 @@ Une fois que la boîte de dialogue **[!DNL Register Server]** s’affiche pour u
 
 ### [!DNL Query Service] des informations d’identification
 
-Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de [!DNL Experience Platform] et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes afin de trouver vos informations de connexion, hôte, port et nom de base de données, veuillez lire le [&#x200B; guide des informations d’identification &#x200B;](../ui/credentials.md).
+Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de [!DNL Experience Platform] et sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis **[!UICONTROL Credentials]**. Pour obtenir des instructions complètes afin de trouver vos informations de connexion, hôte, port et nom de base de données, veuillez lire le [&#x200B; guide des informations d’identification &#x200B;](../ui/credentials.md).
 
 [!DNL Query Service] propose également des informations d’identification non expirantes pour permettre une configuration unique avec des clients tiers. Consultez la documentation pour obtenir des [instructions complètes sur la génération et l’utilisation d’informations d’identification non expirantes](../ui/credentials.md#non-expiring-credentials).
 

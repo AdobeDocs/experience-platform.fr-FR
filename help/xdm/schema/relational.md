@@ -5,9 +5,24 @@ title: Schémas relationnels
 description: Découvrez les schémas relationnels dans Adobe Experience Platform, notamment les fonctionnalités, les champs obligatoires, les relations et les limitations.
 badge: Disponibilité limitée
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+TQID: https://experienceleague.adobe.com/J6ZL1z5vBIfoYehWeu0JaB4MyhQCuUkjpolBDiYhn54
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: 1332
 ht-degree: 0%
 
 ---
@@ -157,7 +172,7 @@ Avant d’ajouter des descripteurs de relation, déterminez le type et la cible 
 }
 ```
 
-Pour obtenir la liste des types de descripteur de relation et de la syntaxe associée, reportez-vous à la [référence de l’API descriptors](../api/descriptors.md).Pour apprendre à appliquer ces concepts en pratique, suivez les tutoriels [définir une relation dans l’API](../tutorials/relationship-api.md) ou [créer une relation dans l’interface utilisateur](../tutorials/relationship-ui.md).
+Pour obtenir une liste des types de descripteurs de relation et de la syntaxe, consultez la [référence de l’API descriptors](../api/descriptors.md).Pour découvrir comment appliquer ces concepts en pratique, suivez les tutoriels pour [définir une relation dans l’API](../tutorials/relationship-api.md) ou [créer une relation dans l’interface utilisateur](../tutorials/relationship-ui.md).
 
 >[!NOTE]
 >

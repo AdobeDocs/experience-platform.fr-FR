@@ -4,9 +4,26 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: e4a30f7e483b90d5420ddcc1caffcee2089eda3f
+TQID: https://experienceleague.adobe.com/aWe8rBHi9h54CeVw2w7-s5itqPHoBy3y8ABtRj-J5Ak
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '4466'
+source-wordcount: 4466
 ht-degree: 25%
 
 ---

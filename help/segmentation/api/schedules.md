@@ -4,10 +4,21 @@ title: Point d’entrée de l’API Schedules
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des traitements de segmentation par lots une fois par jour.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/cktEWP6qwS4i6pn23Le8Pv2O7pXohH5Coj9hC5ZwdTk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2088'
-ht-degree: 15%
+source-wordcount: 2100
+ht-degree: 14%
 
 ---
 
@@ -15,11 +26,11 @@ ht-degree: 15%
 
 Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des traitements de segmentation par lots une fois par jour. Vous pouvez utiliser le point d’entrée `/config/schedules` pour récupérer une liste de planifications, créer une nouvelle planification, récupérer les détails d’une planification spécifique, mettre à jour une planification spécifique ou supprimer une planification spécifique.
 
-## Commencer
+## Prise en main
 
 Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
-## Obtention d’une liste de plannings {#retrieve-list}
+## Récupération d’une liste de plannings {#retrieve-list}
 
 Vous pouvez récupérer une liste de tous les plannings pour votre organisation en envoyant une requête GET au point d’entrée `/config/schedules`.
 
@@ -153,10 +164,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | Propriété | Description |
 | -------- | ------------ |
 | `name` | **Obligatoire.** Nom du planning sous forme de chaîne. |
-| `type` | **Obligatoire.** Type de tâche sous forme de chaîne. Les deux types pris en charge sont « batch_segmentation » et « export ». |
+| `type` | **Obligatoire.** Type de traitement sous forme de chaîne. Les deux types pris en charge sont « batch_segmentation » et « export ». |
 | `properties` | **Obligatoire.** Objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | **Obligatoire lorsque la `type` est égale à « batch_segmentation ».** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. Les tâches ne peuvent être planifiées pour s’exécuter qu’une seule fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plus d’une fois sur une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, « `0 0 1 * *` » signifie que cette planification s’exécutera à 1 heure du matin tous les jours. <br><br>Si cette chaîne n’est pas fournie, un planning généré par le système est automatiquement généré. |
+| `properties.segments` | **Requis lorsque la `type` est égale à « batch_segmentation ».** L’utilisation de `["*"]` garantit que tous les segments sont inclus. |
+| `schedule` | *Facultatif.* Chaîne contenant le planning du traitement. Les tâches ne peuvent être planifiées pour s’exécuter qu’une seule fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plus d’une fois sur une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, « `0 0 1 * *` » signifie que cette planification s’exécutera à 1 heure du matin tous les jours. <br><br>Si cette chaîne n’est pas fournie, un planning généré par le système est automatiquement généré. |
 | `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont « actif » et « inactif ». Par défaut, l’état est défini sur « inactif ». |
 
 +++
@@ -406,7 +417,7 @@ Dans une chaîne d’expression cron, le premier champ représente les secondes,
 | Minutes | Oui | 0-59 | `, - * /` |
 | Heures | Oui | 0-23 | `, - * /` |
 | Jour du mois | Oui | 1-31 | `, - * ? / L W` |
-| Month | Oui | 1ER-12 JANVIER-DÉCEMBRE | `, - * /` |
+| Mois | Oui | 1ER-12 JANVIER-DÉCEMBRE | `, - * /` |
 | Jour de la semaine | Oui | 1-7, SUN-SAM | `, - * ? / L #` |
 | Year | Non | Vide, 1970-2099 | `, - * /` |
 
@@ -424,7 +435,7 @@ Les caractères spéciaux autorisés ont la signification suivante :
 | `,` | Cette valeur est utilisée pour spécifier des valeurs supplémentaires. Par exemple, si vous placez `MON, FRI, SAT` dans le champ jour de la semaine , cela signifie que les jours de la semaine incluent le lundi, le vendredi et le samedi. |
 | `/` | Cette valeur est utilisée pour spécifier des incréments. La valeur placée avant le `/` détermine l’endroit à partir duquel il incrémente, tandis que la valeur placée après le `/` détermine son incrémentation. Par exemple, si vous mettez `1/7` dans le champ des procès-verbaux, cela signifie que les procès-verbaux comprendraient 1, 8, 15, 22, 29, 36, 43, 50 et 57. |
 | `L` | Cette valeur est utilisée pour spécifier `Last` et a une signification différente selon le champ par lequel elle est utilisée. S’il est utilisé avec le champ Jour du mois, il représente le dernier jour du mois. S’il est utilisé seul avec le champ Jour de la semaine, il représente le dernier jour de la semaine, à savoir samedi (`SAT`). S’il est utilisé avec le champ Jour de la semaine, en conjonction avec une autre valeur, il représente le dernier jour de ce type pour le mois. Par exemple, si vous placez `5L` dans le champ jour de la semaine, cela **uniquement** inclure le dernier vendredi du mois. |
-| `W` | Cette valeur est utilisée pour spécifier le jour de la semaine le plus proche du jour donné. Par exemple, si vous placez `18W` dans le champ jour du mois, et que le 18 de ce mois était un samedi, cela se déclencherait le vendredi 17, qui est le jour de la semaine le plus proche. Si le 18 de ce mois-là était un dimanche, cela se déclencherait le lundi 19, qui est le jour de la semaine le plus proche. Veuillez noter que si vous placez `1W` dans le champ jour du mois et que le jour de la semaine le plus proche se trouve dans le mois précédent, l’événement se déclenchera toujours le jour de la semaine le plus proche du **mois en cours**.</br></br>De plus, vous pouvez combiner des `L` et des `W` pour effectuer des `LW`, ce qui spécifie le dernier jour de la semaine du mois. |
+| `W` | Cette valeur est utilisée pour spécifier le jour de la semaine le plus proche du jour donné. Par exemple, si vous placez `18W` dans le champ jour du mois, et que le 18 de ce mois était un samedi, cela se déclencherait le vendredi 17, qui est le jour de la semaine le plus proche. Si le 18 de ce mois-là était un dimanche, cela se déclencherait le lundi 19, qui est le jour de la semaine le plus proche. Veuillez noter que si vous placez `1W` dans le champ jour du mois et que le jour de la semaine le plus proche se trouve dans le mois précédent, l’événement se déclenchera toujours le jour de la semaine le plus proche du **mois en cours**.</br></br>De plus, vous pouvez combiner `L` et `W` pour effectuer des `LW`, ce qui spécifie le dernier jour de la semaine du mois. |
 | `#` | Cette valeur est utilisée pour spécifier le énième jour de la semaine dans un mois. La valeur placée avant le `#` représente le jour de la semaine, tandis que la valeur placée après le `#` représente l’occurrence du mois en question. Par exemple, si vous placez `1#3`, l’événement se déclenche le troisième dimanche du mois. Veuillez noter que si vous mettez `X#5` et qu’il n’y a pas de cinquième occurrence de ce jour de la semaine dans ce mois-là, l’événement **sera pas déclenché** Par exemple, si vous mettez `1#5` et qu’il n’y a pas de cinquième dimanche dans ce mois-là, l’événement **sera pas déclenché** |
 
 ### Exemples

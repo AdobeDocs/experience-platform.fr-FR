@@ -4,10 +4,20 @@ solution: Experience Platform
 title: Création de modèles à l’aide du SDK Adobe Experience Platform
 description: Ce tutoriel vous fournit des informations sur la conversion de data_access_sdk_python en nouveau platform_sdk Python en Python et en R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/qA2ZrLfipTk6VFVMmCBg0EivqrR0mYxooY4xqIZAwIE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 57%
+source-wordcount: 511
+ht-degree: 58%
 
 ---
 

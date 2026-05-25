@@ -4,10 +4,19 @@ solution: Experience Platform
 title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/aa6yePFPHhlFpnSOWs0AhpzXLeGBL-hCvfyeiUSzHf0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 89%
+source-wordcount: 1029
+ht-degree: 86%
 
 ---
 
@@ -17,7 +26,7 @@ Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et un
 
 Ce document répond aux questions les plus fréquemment posées sur [!DNL Privacy Service], ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 
-## Lors de la création de requêtes de confidentialité dans l’API, quelle est la différence entre un utilisateur et un identifiant utilisateur ?  {#user-ids}
+## Lors de la création de requêtes de confidentialité dans l’API, quelle est la différence entre un utilisateur et un identifiant utilisateur ? {#user-ids}
 
 Pour effectuer une nouvelle tâche de confidentialité dans l’API, le payload JSON de la requête doit contenir un tableau `users` contenant des informations spécifiques pour chaque utilisateur concerné par la requête de confidentialité. Chaque élément du tableau `users` est un objet qui représente un utilisateur spécifique identifié par sa valeur `key`.
 
@@ -73,15 +82,15 @@ Veuillez contacter votre équipe Adobe en charge des comptes pour coordonner vos
 
 ## Comment puis-je obtenir des informations sur le statut d’une requête ou d’une tâche de confidentialité ?
 
-Vous pouvez obtenir des détails sur une tâche spécifique à l’aide de l’API ou de l’interface utilisateur [!DNL Privacy Service].
+Vous pouvez récupérer des détails sur une tâche spécifique à l’aide de l’API [!DNL Privacy Service] ou de l’interface d’utilisation.
 
 ### Utilisation de l’API
 
-Pour obtenir le statut d’une tâche spécifique à l’aide de l’API [!DNL Privacy Service], envoyez une requête au point d’entrée racine (`GET /`) en indiquant l’identifiant de la tâche dans le chemin d’accès de la requête. Pour plus d’informations, consultez la section relative à la [vérification du statut d’une tâche](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide de développement de l’API [!DNL Privacy Service].
+Pour récupérer le statut d’une tâche spécifique à l’aide de l’API [!DNL Privacy Service], envoyez une requête au point d’entrée racine (`GET /`) en indiquant l’identifiant de la tâche dans le chemin d’accès de la requête. Pour plus d’informations, consultez la section relative à la [vérification du statut d’une tâche](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide de développement de l’API [!DNL Privacy Service].
 
 ### Utilisation de l’interface utilisateur
 
-Toutes les requêtes de tâche actives sont répertoriées dans le widget **[!UICONTROL Requêtes de tâche]** accessible depuis le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] L’état de chaque requête de tâche est affiché sous la colonne **[!UICONTROL État]**. Pour plus d’informations sur l’affichage des requêtes de tâche dans l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md).
+Toutes les requêtes de tâche actives sont répertoriées dans le widget **[!UICONTROL Job Requests]** du tableau de bord de l’interface utilisateur de [!DNL Privacy Service]. Le statut de chaque demande de traitement s’affiche sous la colonne **[!UICONTROL Status]** . Pour plus d’informations sur l’affichage des requêtes de tâche dans l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md).
 
 ## Comment télécharger les résultats de tâches de confidentialité terminées ?
 

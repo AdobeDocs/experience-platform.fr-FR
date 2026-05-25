@@ -5,9 +5,29 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/58FjcqxEmkjAGINGfEOqpIRBtHbCmptKpbt3I3EcK1E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: 875
 ht-degree: 48%
 
 ---
@@ -60,7 +80,7 @@ Pour en savoir plus, consultez la [présentation des destinations](../../destina
 | --- | --- |
 | Notifications d’événement Adobe I/O | [!DNL Observability Insights] utilise Adobe I/O Events pour créer des notifications d’événement pour plusieurs services Experience Platform. Les payloads de notification sont envoyées à un webhook configuré que vous pouvez ensuite utiliser pour automatiser d’autres processus en aval. |
 
-Pour plus d’informations sur le service[[!DNL Observability Insights]  consultez la &#x200B;](../../observability/home.md) présentation .
+Pour plus d’informations sur le service[&#128279;](../../observability/home.md) consultez la [!DNL Observability Insights]  présentation .
 
 ## [!DNL Privacy Service] {#privacy}
 

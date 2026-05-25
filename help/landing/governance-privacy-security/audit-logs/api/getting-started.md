@@ -4,10 +4,21 @@ description: L’API Audit Query vous permet de récupérer des données de mesu
 role: Developer
 feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/2mK88Is4LiMHBTyme7kMDW2Tv09jp6yq7crqQuMlcc0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 35%
+source-wordcount: 398
+ht-degree: 46%
 
 ---
 
@@ -19,9 +30,9 @@ L’API Audit Query vous permet d’auditer l’activité des utilisateurs pour 
 
 ## Conditions préalables
 
-Pour gérer les événements d’audit, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le journal d’activité de l’utilisateur]** accordée (dans la catégorie [!UICONTROL Gouvernance des données]). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../../access-control/home.md).
+Pour gérer les événements d’audit, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View User Activity Log]** accordée (disponible dans la catégorie [!UICONTROL Data Governance] ). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../../access-control/home.md).
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées pour les exemples d’appels API dans la documentation, consultez la section sur la [lecture d’exemples d’appels API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 

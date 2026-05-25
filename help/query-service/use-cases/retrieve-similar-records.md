@@ -2,9 +2,21 @@
 title: Récupérer des enregistrements similaires avec des fonctions d’ordre supérieur
 description: Découvrez comment identifier et récupérer des enregistrements similaires ou associés à partir d’un ou de plusieurs jeux de données en fonction d’une mesure de similarité et d’un seuil de similarité. Ce workflow peut mettre en évidence des relations significatives ou des chevauchements entre des jeux de données disparates.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/cYKXvBTZc1S6QFhn6WKtogk-mNiDUQ8oxIjt6masJgw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '4030'
+source-wordcount: 4361
 ht-degree: 3%
 
 ---

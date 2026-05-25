@@ -5,9 +5,23 @@ type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les politiques de fusion sont les règles utilisées par Experience Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/2wx8oSE0jUq-tFHPV9HCv-kuBC9yBw1bRfuMBHGlTw4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: 2482
 ht-degree: 63%
 
 ---
@@ -76,7 +90,7 @@ L’objet de politique de fusion complet est un ensemble de préférences contr�
 | `version` | [!DNL Experience Platform] version conservée de la politique de fusion. Cette valeur en lecture seule est incrémentée chaque fois qu’une politique de fusion est mise à jour. |
 | `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
 | `attributeMerge` | [Fusion d’attributs](#attribute-merge) objet indiquant la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. |
-| `isActiveOnEdge` | Valeur booléenne indiquant si cette politique de fusion peut être utilisée sur Edge. Par défaut, cette valeur est `false`. |
+| `isActiveOnEdge` | Valeur booléenne indiquant si cette politique de fusion peut être utilisée sur Edge. Par défaut, la valeur est `false`. |
 | `default` | Valeur booléenne indiquant si cette politique de fusion est la valeur par défaut du schéma spécifié. |
 | `updateEpoch` | Date de la dernière mise à jour de la politique de fusion. |
 
@@ -471,7 +485,7 @@ POST /config/mergePolicies
 ```
 
 **Requête**
-La requête suivante crée une nouvelle politique de fusion, configurée par les valeurs d’attribut fournies dans le payload :
+La requête suivante crée une politique de fusion , configurée en fonction des valeurs d’attribut fournies dans la payload :
 
 ```shell
 curl -X POST \
@@ -731,7 +745,7 @@ Vous pouvez supprimer une politique de fusion en exécutant une requête DELETE 
 
 >[!NOTE]
 >
->Si la politique de fusion a `isActiveOnEdge` définie sur true, la politique de fusion **ne peut pas** ne peut pas être supprimée. Utilisez les points d’entrée [PATCH](#edit-individual-merge-policy-fields) ou [PUT](#overwrite-a-merge-policy) pour mettre à jour la politique de fusion avant de la supprimer.
+>Si la politique de fusion a `isActiveOnEdge` définie sur true, la politique de fusion **ne peut pas** ne peut pas être supprimée. Utilisez les points d’entrée [&#128279;](#edit-individual-merge-policy-fields) ou [PUT](#overwrite-a-merge-policy) pour mettre à jour la politique de fusion avant de la supprimer.
 
 **Format d’API**
 
@@ -758,10 +772,10 @@ curl -X DELETE \
 
 **Réponse**
 
-Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps de réponse vide. Pour confirmer que la suppression a réussi, vous pouvez exécuter une requête GET pour afficher la politique de fusion à l’aide de son identifiant. Si la politique de fusion a été supprimée, vous recevrez un état HTTP 404 (Introuvable).
+Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps de réponse vide. Pour confirmer que la suppression a réussi, vous pouvez exécuter une requête GET pour afficher la politique de fusion à l’aide de son identifiant. Si la politique de fusion a été supprimée, vous recevrez une erreur HTTP 404 (Non trouvé).
 
 ## Étapes suivantes
 
 Maintenant que vous savez comment créer et configurer des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster la vue des profils clients dans Experience Platform et pour créer des audiences à partir de vos données [!DNL Real-Time Customer Profile].
 
-Consultez la [documentation du service de segmentation Adobe Experience Platform](../../segmentation/home.md) pour commencer à définir et à utiliser les audiences.
+Consultez la [documentation du service de segmentation &#x200B;](../../segmentation/home.md) pour commencer à définir et à utiliser les audiences.

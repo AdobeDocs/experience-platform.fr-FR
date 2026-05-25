@@ -3,26 +3,35 @@ title: Profils de prospects
 description: Découvrez comment créer et utiliser des profils de prospects pour rassembler des informations sur des clients inconnus à l’aide d’informations tierces.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/JwVYHMSFTXwblcjLW-C3hzW4MJBbsJG2oaG8ADmF2o0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 4%
+source-wordcount: 393
+ht-degree: 10%
 
 ---
 
 # Profils de prospects
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque.
 
 Les profils de prospects sont utilisés pour représenter des personnes qui n’ont pas encore interagi avec votre entreprise, mais avec lesquelles vous souhaitez établir un contact. Avec les profils de prospect, vous pouvez compléter vos profils client avec des attributs provenant de partenaires tiers de confiance.
 
 ## Parcourir {#browse}
 
-Pour accéder aux profils des prospects, sélectionnez **[!UICONTROL Profils]** dans la section **[!UICONTROL Prospects]**.
+Pour accéder aux profils des prospects, sélectionnez **[!UICONTROL Profiles]** dans la section **[!UICONTROL Prospects]** .
 
-La page **[!UICONTROL Parcourir]** s’affiche. Une liste de tous les profils de prospects de votre organisation s’affiche.
+La page **[!UICONTROL Browse]** s’affiche. Une liste de tous les profils de prospects de votre organisation s’affiche.
 
-![Le bouton [!UICONTROL Profils] est mis en surbrillance et affiche la page [!UICONTROL Parcourir] pour les profils de prospects.](../images/prospect-profile/browse-profiles.png)
+![Le bouton [!UICONTROL Profiles] est mis en surbrillance et affiche la page [!UICONTROL Browse] pour les profils de prospects.](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
@@ -36,7 +45,7 @@ Pour plus d’informations sur la navigation dans les profils, veuillez lire la 
 >
 >Un profil de prospect expire automatiquement après 25 jours de résidence dans Adobe Experience Platform.
 
-Pour afficher plus d’informations sur un profil de prospect spécifique, sélectionnez un profil sur la page [!UICONTROL Parcourir].
+Pour afficher plus d’informations sur un profil de prospect spécifique, sélectionnez un profil sur la page [!UICONTROL Browse].
 
 ![Un profil de prospect est mis en surbrillance sur la page de navigation.](../images/prospect-profile/select-specific-profile.png)
 
@@ -46,11 +55,11 @@ Des informations sur le profil du prospect s’affichent, y compris les attribut
 
 Pour plus d’informations sur ces onglets, veuillez lire la section [Afficher les détails du profil) du guide d’utilisation du profil](./user-guide.md#profile-detail).
 
-Vous pouvez également afficher tous les attributs au format JSON en sélectionnant **[!UICONTROL Afficher JSON]**.
+Vous pouvez également afficher tous les attributs au format JSON en sélectionnant **[!UICONTROL View JSON]**.
 
-![Le bouton [!UICONTROL Afficher JSON] est mis en surbrillance sur la page des détails du profil du prospect.](../images/prospect-profile/profile-select-view-json.png)
+![Le bouton [!UICONTROL View JSON] est mis en surbrillance sur la page des détails du profil du prospect.](../images/prospect-profile/profile-select-view-json.png)
 
-La boîte de dialogue [!UICONTROL Afficher JSON] s’affiche. Les attributs du profil du prospect sont désormais affichés au format JSON.
+La boîte de dialogue [!UICONTROL View JSON] s’affiche. Les attributs du profil du prospect sont désormais affichés au format JSON.
 
 ![Les attributs du profil du prospect sont affichés au format JSON.](../images/prospect-profile/profile-view-json.png)
 

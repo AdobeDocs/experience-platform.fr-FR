@@ -5,10 +5,23 @@ title: Créer un flux de données pour les sources de stockage cloud à l’aide
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+TQID: https://experienceleague.adobe.com/SKk7LzYFnn7Ry2O-ljUlnKyUZ9Q2RsrCB9RGCRySuyw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1834'
-ht-degree: 56%
+source-wordcount: 1868
+ht-degree: 57%
 
 ---
 
@@ -273,7 +286,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache.
 
-Pour créer un jeu de mappages, envoyez une requête POST au point d’entrée `mappingSets` de l’[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
+Pour créer un jeu de mappage, envoyez une requête POST au point dʼentrée `mappingSets` de lʼ[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) et indiquez votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 >[!TIP]
 >
@@ -660,7 +673,7 @@ curl -X POST \
 | `flowSpec.id` | [Identifiant de spécification de flux](#specs) récupéré à l’étape précédente. |
 | `sourceConnectionIds` | [Identifiant de connexion source](#source) récupéré lors d’une étape précédente. |
 | `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) récupéré lors d’une étape précédente. |
-| `transformations.params.mappingId` | L’[identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | [Identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>**Une fois** : s.o.</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |

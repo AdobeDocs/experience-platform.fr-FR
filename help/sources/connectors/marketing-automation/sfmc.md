@@ -1,10 +1,25 @@
 ---
 title: Présentation Du Source Salesforce Marketing Cloud (V2)
 description: Découvrez comment connecter Salesforce Marketing Cloud (V2) à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-last-substantial-update: 2025-02-02T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+last-substantial-update: 2025-02-02T00:00:00.000Z
+exl-id: 116d9e72-c0f8-4442-bca9-61d6cac0b7b6
+TQID: https://experienceleague.adobe.com/tmZ-7Lucdl3MR6K14KvAY6yZc-EfkNVTLc2F8BIu5SY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: 1039
 ht-degree: 1%
 
 ---

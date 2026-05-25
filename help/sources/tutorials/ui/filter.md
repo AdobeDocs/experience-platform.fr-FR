@@ -3,9 +3,16 @@ title: Filtrer les objets sources dans l’interface utilisateur
 description: Découvrez comment parcourir vos objets sources tels que les comptes et les flux de données dans l’interface utilisateur d’Experience Platform.
 hide: true
 exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+TQID: https://experienceleague.adobe.com/3FiBm2yGXVE6xK8BI2RSTZeI-O62yIK5LyZdXHETQik
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: 1418
 ht-degree: 2%
 
 ---

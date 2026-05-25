@@ -4,10 +4,21 @@ solution: Experience Platform
 title: Point d’entrée de l’API Metrics
 description: Découvrez comment récupérer des mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 3b217f7bcb60f762b5d380d82076cfb17d7a2d13
+TQID: https://experienceleague.adobe.com/vflDr3xjVkgrXnW48LSezGNIVPESrvQx1xAPYLRooQs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1294'
-ht-degree: 24%
+source-wordcount: 1311
+ht-degree: 25%
 
 ---
 
@@ -194,7 +205,7 @@ Les tableaux suivants répertorient toutes les mesures exposées par [!DNL Obser
 
 #### [!DNL Data Ingestion] {#ingestion}
 
-Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Data Ingestion]. Les mesures en **gras** sont des mesures d’ingestion par flux.
+Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Data Ingestion]. Les mesures en **gras** sont des mesures d’ingestion en flux continu.
 
 | Mesure Informations | Description | Paramètre de requête d’identifiant |
 | ---- | ---- | ---- |
@@ -220,7 +231,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Iden
 | timeseries.identity.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Identity Service], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.identity.dataset.recordfailed.count | Nombre d’enregistrements ayant échoué par [!DNL Identity Service], pour un jeu de données ou pour tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Nombre d’enregistrements d’identité ignorés. | ID d’organisation |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités pour votre organisation. | N/A |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités pour votre organisation. | S.O. |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités pour un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation pour une force de graphique particulière (« inconnue », « faible » ou « forte »). | Force de graphique (**obligatoire**) |
 

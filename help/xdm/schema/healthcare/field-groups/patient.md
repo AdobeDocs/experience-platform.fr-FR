@@ -4,9 +4,16 @@ description: En savoir plus sur le groupe de champs de schéma Patient.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: eba7deb3-4785-4d05-86ef-0f6691fcd2c5
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/-gpIsx49AjgzLMvXTbNQzYvCtVqobsFm2hJnXscoQoc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: 541
 ht-degree: 7%
 
 ---

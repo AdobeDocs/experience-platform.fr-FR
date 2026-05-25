@@ -3,10 +3,15 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Envoyer votre Source
 description: Le document suivant décrit les étapes à suivre pour tester et vérifier une nouvelle source à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service (SDK par lots).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/IsP-D4nIT4tayfQukgV38M7kn3tIq2I3UyDeOgx0mb8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 10%
+source-wordcount: 841
+ht-degree: 11%
 
 ---
 
@@ -16,7 +21,7 @@ La dernière étape de l’intégration de votre nouvelle source à Adobe Experi
 
 Le document suivant décrit les étapes à suivre pour tester et déboguer votre source à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Commencer
+## Prise en main
 
 * Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 * Pour plus d’informations sur la génération de vos informations d’identification pour les API Experience Platform, consultez le tutoriel sur l’[authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
@@ -74,7 +79,7 @@ Une fois vos paramètres d’authentification et de spécification de source fou
 | `verifyWatTimeInSecond` | Intervalle de temps désigné à suivre lors de la vérification de la fin d’une exécution de flux. | `40` |
 | `startTime` | Heure de début désignée pour votre flux de données. L&#39;heure de début doit être au format horaire unix. | `1597784298` |
 
-Une fois que vous avez fourni toutes vos variables d’environnement, vous pouvez commencer à exécuter la collection à l’aide de l’interface [!DNL Postman]. Dans l’interface [!DNL Postman], sélectionnez les points de suspension (**...**) à côté de [!DNL Sources SSSs Verification Collection], puis sélectionnez **Exécuter la collection**.
+Une fois que vous avez fourni toutes vos variables d’environnement, vous pouvez commencer à exécuter la collection à l’aide de l’interface [!DNL Postman]. Dans l’interface [!DNL Postman], sélectionnez les points de suspension (**...**) à côté de [!DNL Sources SSSs Verification Collection] , puis sélectionnez **Exécuter la collection**.
 
 ![runner](../assets/runner.png)
 

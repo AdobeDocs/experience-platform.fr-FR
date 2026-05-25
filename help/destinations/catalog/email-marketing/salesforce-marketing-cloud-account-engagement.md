@@ -1,11 +1,24 @@
 ---
 title: Engagement du compte Salesforce Marketing Cloud
 description: Découvrez comment utiliser la destination Engagement du compte Salesforce Marketing Cloud (anciennement Pardot) pour exporter les données de votre compte et les activer dans l’engagement du compte Salesforce Marketing Cloud pour répondre aux besoins de votre entreprise.
-last-substantial-update: 2023-04-14T00:00:00Z
+last-substantial-update: 2023-04-14T00:00:00.000Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/NDcloPic6uhQC-hbwuiYjr4TDeNRhAKg937n7RqLCQ4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: 1739
 ht-degree: 23%
 
 ---
@@ -20,7 +33,7 @@ Cette [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md)
 
 [!DNL Marketing Cloud Account Engagement] utilise le protocole OAuth 2 avec code d’autorisation pour s’authentifier auprès de l’API [!DNL Account Engagement]. Les instructions vous permettant de vous authentifier sur votre instance [!DNL Marketing Cloud Account Engagement] sont plus loin dans la section [Authentifier à la destination](#authenticate).
 
-## Cas d’utilisation {#use-cases}
+## Cas pratiques {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination [!DNL Marketing Cloud Account Engagement], consultez l’exemple de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
@@ -44,7 +57,7 @@ Notez les conditions préalables suivantes pour exporter des données d’Experi
 
 Un compte [!DNL Marketing Cloud Account Engagement] avec un abonnement au produit [Engagement du compte Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) est obligatoire pour continuer.
 
-Votre compte [!DNL Salesforce] doit avoir le [!DNL Salesforce] `Account Engagement Administrator role`. Cela est nécessaire pour [créer des champs de prospect personnalisés](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
+Votre compte [!DNL Salesforce] doit avoir le `Account Engagement Administrator role` [!DNL Salesforce]. Cela est nécessaire pour [créer des champs de prospect personnalisés](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
 
 Enfin, votre compte doit également pouvoir accéder au [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5).
 
@@ -140,7 +153,7 @@ Si les détails fournis sont valides, l’interface utilisateur affiche un messa
 
 ### Renseigner les détails de la destination {#destination-details}
 
-Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire. Reportez-vous à la section [Collecter [!DNL Marketing Cloud Account Engagement] informations d’identification](#gather-credentials) pour obtenir des conseils.
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire. Reportez-vous à la section [Collecter [!DNL Marketing Cloud Account Engagement] informations d’identification](#gather-credentials) pour obtenir des conseils.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform affichant les détails de la destination.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
 
@@ -148,7 +161,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 | --- | --- |
 | **[!UICONTROL Name]** | Nom par lequel vous reconnaîtrez cette destination à l’avenir. |
 | **[!UICONTROL Description]** | Une description qui vous aidera à identifier cette destination à l’avenir. |
-| **[!UICONTROL Account Engagement Business Unit ID]** | Votre [!DNL Salesforce] `Account Engagement Business Unit ID`. |
+| **[!UICONTROL Account Engagement Business Unit ID]** | Votre `Account Engagement Business Unit ID` [!DNL Salesforce]. |
 
 {style="table-layout:auto"}
 
@@ -163,7 +176,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

@@ -4,10 +4,20 @@ solution: Experience Platform
 title: Gestion des libellés dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des libellés dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/KY2QKiJVoCcdoeKcjCyshXfIES2MWxtw6d8u7sozjU8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 91%
+source-wordcount: 1349
+ht-degree: 90%
 
 ---
 
@@ -105,7 +115,7 @@ Lors dʼappels API mettant à jour les libellés existants dʼun jeu de données
 >
 >Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais dʼune requête PUT, qui ne nécessite pas d’en-tête `If-Match`. Une fois que des libellés ont été ajoutés à un jeu de données, la valeur de `etag` la plus récente est requise pour mettre à jour ou supprimer les libellés plus tard<br>Avant d’exécuter la méthode PUT, vous devez effectuer une requête GET sur les libellés du jeu de données. Veillez à ne mettre à jour que les champs spécifiques destinés à être modifiés dans la requête, en laissant le reste inchangé. En outre, assurez-vous que l’appel PUT conserve les mêmes entités parentes que l’appel GET. Toute incohérence entraînerait une erreur pour le client.
 
-Pour récupérer la version la plus récente de lʼentité libellé-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure. 
+Pour récupérer la version la plus récente de lʼentité libellé-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure.
 
 ```shell
 curl -X POST \
@@ -139,7 +149,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de données. 
+Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de données.
 
 >[!IMPORTANT]
 >
@@ -237,14 +247,14 @@ curl -X PUT \
 
 | Paramètre | Description |
 | --- | --- |
-| `entityId` | Permet d’identifier l’entité spécifique du jeu de données à mettre à jour. Le paramètre `entityId` doit inclure les trois valeurs suivantes : <br/><br/>`namespace` : permet d’éviter les collisions d’identifiants. La valeur de `namespace` est `AEP`.<br/>`id` : l’identifiant de la ressource mise à jour. Fait référence au paramètre `datasetId`.<br/>`type` : le type de ressource mise à jour. Il s’agit toujours de `dataset`. |
+| `entityId` | Permet d’identifier l’entité spécifique du jeu de données à mettre à jour. Le paramètre `entityId` doit inclure les trois valeurs suivantes : <br/><br/>`namespace` : permet d’éviter les collisions d’identifiants. La `namespace` est `AEP`.<br/>`id` : identifiant de la ressource mise à jour. Fait référence au fichier `datasetId`.<br/>`type` : type de ressource mis à jour. Il s’agit toujours de `dataset`. |
 | `labels` | Liste de libellés dʼutilisation des données que vous souhaitez ajouter au jeu de données entier. |
 | `parents` | Le tableau `parents` contient une liste de `entityId` dont ce jeu de données héritera des libellés. Les jeux de données peuvent hériter des libellés des schémas et/ou des jeux de données. |
-| `optionalLabels` | Ce paramètre permet de supprimer les libellés précédemment appliqués à un champ de jeu de données. Liste de tous les champs individuels dans le jeu de données desquels vous souhaitez supprimer des libellés. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li><code>identifiant</code>: la valeur URI <code>$id</code> du schéma associé au champ.</li><li><code>contentType</code> : type de contenu et numéro de version du schéma. Cela doit prendre la forme dʼun des <a href="../../xdm/api/getting-started.md#accept">en-têtes « Accept »</a> valides pour une demande de recherche XDM.</li><li><code>schemaPath</code> : chemin dʼaccès au champ dans le schéma du jeu de données.</li></ul>`labels` : cette valeur doit contenir un sous-ensemble des libellés de champ existants appliqués ou être vide pour supprimer tous les libellés de champ existants. Les méthodes de PUT ou de POST renvoient désormais une erreur si le champ `optionalLabels` contient des libellés nouveaux ou modifiés. |
+| `optionalLabels` | Ce paramètre permet de supprimer les libellés précédemment appliqués à un champ de jeu de données. Liste de tous les champs individuels dans le jeu de données desquels vous souhaitez supprimer des libellés. Chaque élément de ce tableau doit avoir les propriétés suivantes :<br/><br/>`option`objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li><code>identifiant</code>: la valeur URI <code>$id</code> du schéma associé au champ.</li><li><code>contentType</code>: type de contenu et numéro de version du schéma. Cela doit prendre la forme dʼun des <a href="../../xdm/api/getting-started.md#accept">en-têtes « Accept »</a> valides pour une demande de recherche XDM.</li><li><code>schemaPath</code>: chemin dʼaccès au champ dans le schéma du jeu de données.</li></ul>`labels` : cette valeur doit contenir un sous-ensemble des libellés de champ existants appliqués ou être vide pour supprimer tous les libellés de champ existants. Les méthodes de PUT ou de POST renvoient désormais une erreur si le champ `optionalLabels` contient des libellés nouveaux ou modifiés. |
 
 **Réponse**
 
-Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de données. 
+Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de données.
 
 ```json
 {

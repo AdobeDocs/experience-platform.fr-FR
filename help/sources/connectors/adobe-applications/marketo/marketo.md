@@ -4,9 +4,19 @@ solution: Experience Platform
 title: Connecteur Marketo Engage
 description: Ce document présente le connecteur source Marketo Engage, y compris des informations sur son authentification, son mappage et la latence des données.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 659e873f9bccdbc0e52a1943a924dc70d3170e96
+TQID: https://experienceleague.adobe.com/tdPj4DvS2gL7z80KzqqdNUikVp3MtiWkzavfB30YnyM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: 767
 ht-degree: 11%
 
 ---

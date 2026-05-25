@@ -5,10 +5,20 @@ title: Créer un flux de données en continu pour les données brutes à l’aid
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données de diffusion en continu et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+TQID: https://experienceleague.adobe.com/gSGoLUNRnBZc--pYoLQXN0u8KHRovw4QRUU0Tu03ekQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 35%
+source-wordcount: 1241
+ht-degree: 39%
 
 ---
 
@@ -194,7 +204,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels API. L’identifiant du jeu de données cible est requis aux étapes suivantes pour créer une connexion cible et un flux de données.
+Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. L’identifiant du jeu de données cible est requis aux étapes suivantes pour créer une connexion cible et un flux de données.
 
 ```json
 [

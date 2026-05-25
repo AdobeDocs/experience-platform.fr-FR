@@ -2,9 +2,14 @@
 title: Ingestion de données chiffrées
 description: Découvrez comment ingérer des fichiers chiffrés par le biais de sources de lots d’espaces de stockage à l’aide de l’API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/I6lbpFs6nw7sg2t-0xTFygeIB49tmzU0tbzwN-sIsuk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: 1839
 ht-degree: 63%
 
 ---
@@ -109,7 +114,7 @@ curl -X POST \
 
 **Réponse**
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 Une réponse réussie renvoie votre clé publique codée en Base64, votre identifiant de clé publique et la date d’expiration de vos clés. La date d’expiration est automatiquement définie sur 180 jours après la date de génération de la clé. La date d’expiration ne peut actuellement pas être configurée.
 
@@ -157,7 +162,7 @@ curl -X GET \
 
 **Réponse**
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 Une réponse réussie renvoie l’algorithme de chiffrement, le nom, la clé publique, l’ID de clé publique, le type de clé et l’heure d’expiration correspondante de vos clés.
 
@@ -200,7 +205,7 @@ curl -X GET \
 
 **Réponse**
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 Une réponse réussie renvoie l’algorithme de chiffrement, le nom, la clé publique, l’ID de clé publique, le type de clé et l’heure d’expiration correspondante de vos clés.
 
@@ -264,7 +269,7 @@ curl -X POST \
 
 **Réponse**
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 ```json
 {    
@@ -304,7 +309,7 @@ curl -X GET \
 
 **Réponse**
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 ```json
 [
@@ -333,7 +338,7 @@ Tout d’abord, vous devez créer une connexion de base pour authentifier votre 
 * [Azure File Storage](../api/create/cloud-storage/azure-file-storage.md)
 * [Data Landing Zone](../api/create/cloud-storage/data-landing-zone.md)
 * [FTP](../api/create/cloud-storage/ftp.md)
-* [Google Cloud Storage](../api/create/cloud-storage/google.md)
+* [Google Cloud Storage](../api/create/cloud-storage/google.md)
 * [Oracle Object Storage](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
@@ -426,7 +431,7 @@ curl -X POST \
 
 **Réponse**
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données créé pour vos données chiffrées.
 
@@ -496,7 +501,7 @@ curl -X POST \
 
 **Réponse**
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données créé pour vos données chiffrées.
 
@@ -537,7 +542,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
+Une réponse réussie renvoie un statut HTTP 204 (Pas de contenu) et un corps vide.
 
 ### Validation des clés de chiffrement {#validate-encryption-keys}
 
@@ -602,9 +607,9 @@ Dans ce scénario, les fichiers en gras sont ingérés dans Experience Platform.
 
 * ACME-customers
    * **Fichier1.csv.gpg**
-   * File2.json.gpg
+   * Fichier2.json.gpg
    * **Fichier3.csv.gpg**
-   * File4.json
+   * Fichier4.json
    * **Fichier5.csv.gpg**
 
 Voici un exemple de structure de dossiers non prise en charge dans laquelle le chemin d’accès source est `/ACME-customers/*`.
@@ -612,14 +617,14 @@ Voici un exemple de structure de dossiers non prise en charge dans laquelle le c
 Dans ce scénario, l’exécution du flux échoue et renvoie un message d’erreur indiquant que les données ne peuvent pas être copiées à partir de la source.
 
 * ACME-customers
-   * File1.csv.gpg
-   * File2.json.gpg
+   * Fichier1.csv.gpg
+   * Fichier2.json.gpg
    * Sous-dossier1
-      * File3.csv.gpg
-      * File4.json.gpg
-      * File5.csv.gpg
+      * Fichier3.csv.gpg
+      * Fichier4.json.gpg
+      * Fichier5.csv.gpg
 * ACME-loyalty
-   * File6.csv.gpg
+   * Fichier6.csv.gpg
 
 
 ## Étapes suivantes

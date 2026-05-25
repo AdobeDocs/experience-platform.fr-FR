@@ -3,9 +3,16 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des sandbox de contrôle d’accès basé sur les attributs
 description: Gérez les sandbox via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 8c9503c9923372ef919d485d4ec0e3ebda5a2413
+TQID: https://experienceleague.adobe.com/NDFuG3d0nIbKtf0UbndNUZXKNfWqsEOCNxvBAZA16FU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: 317
 ht-degree: 28%
 
 ---

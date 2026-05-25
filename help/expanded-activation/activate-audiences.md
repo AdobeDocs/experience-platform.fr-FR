@@ -2,10 +2,20 @@
 title: Activer les audiences Audience Manager par le biais d’une activation étendue
 description: Découvrez comment activer les audiences Audience Manager vers des destinations sociales et publicitaires, via l’activation étendue d’Audience Manager.
 exl-id: 4105f5c5-db69-414f-9ee4-8630b0a86da7
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/Y4A-nsIFEc9jMpWdVbD6yZYh9QF2wT-YpJqnVRdvv6s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 0%
+source-wordcount: 482
+ht-degree: 2%
 
 ---
 
@@ -23,7 +33,7 @@ Les étapes décrites dans ce guide supposent que vous ayez lu la page [Aperçu 
 
 ## Étape 1 : configurer la connexion source Audience Manager {#configure-source}
 
-Le connecteur source [Audience Manager](../sources/connectors/adobe-applications/audience-manager.md) envoie les données d’audience collectées dans Adobe Audience Manager pour activation sur les plateformes de destination prises en charge par l’activation étendue.
+Le connecteur source [&#128279;](../sources/connectors/adobe-applications/audience-manager.md) envoie les données d’audience collectées dans Adobe Audience Manager pour activation sur les plateformes de destination prises en charge par l’activation étendue.
 
 Suivez le guide expliquant comment [créer une connexion source Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) pour configurer votre connecteur source.
 
@@ -33,13 +43,13 @@ Suivez le guide expliquant comment [créer une connexion source Audience Manager
 >
 >Le connecteur source Adobe Audience Manager est le seul connecteur source disponible dans l’activation étendue.
 >
->Si vous souhaitez ingérer des audiences en fonction d’identifiants supplémentaires, vous devez acheter une édition de [Real-Time CDP](../rtcdp/overview.md). Contactez votre représentant Adobe pour plus d’informations.
+>Si vous souhaitez ingérer des audiences en fonction d’identifiants supplémentaires, vous devez acheter une édition de [&#128279;](../rtcdp/overview.md). Pour plus d’informations, contactez votre représentant ou représentante Adobe.
 
 ### Affichage et surveillance des audiences ingérées {#view-audiences}
 
 Les audiences que vous importez dans Activation étendue à partir d’Audience Manager peuvent être affichées dans le tableau de bord **[!UICONTROL Audiences]**.
 
-Pour afficher vos audiences, accédez à **[!UICONTROL Client]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Parcourir]**.
+Pour afficher vos audiences, accédez à **[!UICONTROL Customer]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Browse]**.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant la page Audiences.](assets/audiences-browse.png)
 
@@ -54,7 +64,7 @@ Après avoir configuré votre connecteur source Audience Manager, passez à l’
 
 Avant d’envoyer vos audiences Audience Manager vers la plateforme de destination de votre choix, vous devez d’abord créer une connexion à une plateforme de destination.
 
-Dans la barre latérale gauche, accédez à **[!UICONTROL Connexions]** -> **[!UICONTROL Destinations]** -> **[!UICONTROL Catalogue]**.
+Dans la barre latérale gauche, accédez à **[!UICONTROL Connections]** -> **[!UICONTROL Destinations]** -> **[!UICONTROL Catalog]**.
 
 Les catégories de destination disponibles pour [!DNL Expanded Activation] sont [publicité](../destinations/catalog/advertising/overview.md) et [social](../destinations/catalog/social/overview.md).
 

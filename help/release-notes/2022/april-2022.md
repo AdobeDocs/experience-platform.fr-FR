@@ -2,9 +2,42 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+TQID: https://experienceleague.adobe.com/f8lT77RmA-W-SjJ-2Q0K8rP1EC0m24GDreUn7LAWcVY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: 2866
 ht-degree: 92%
 
 ---
@@ -94,7 +127,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| Connecteurs de destination d’entreprise avancés | Trois connecteurs de destination d’entreprise sont désormais disponibles : [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) et [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilité générale des connecteurs de destination d’entreprise comprend toutes les fonctionnalités proposées précédemment dans la phase Beta, et bien plus encore : <ul><li>Nouvelles fonctionnalités d’authentification, notamment la [Signature d’accès partagé dans Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) et d’autres [types d’authentification](../../destinations/catalog/streaming/http-destination.md#authentication-information) (jetons du porteur, OAuth 2) dans la destination de l’API HTTP</li><li>[Renvoi de données de profil historiques](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (envoi de profils historiques qualifiés pour le segment lors de sa première activation)</li><li>Les mesures de l’exécution du flux de données sont désormais prises en charge pour ces destinations</li><li>[Métadonnées de segment supplémentaires](../../destinations/catalog/streaming/http-destination.md#destination-details) incluses dans la charge utile de données, y compris les noms de segment et les dates et heures de segment</li><li>Prise en charge d’[adresses IP statiques](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour les clients qui doivent placer Experience Platform sur la liste autorisée</li></ul> |
+| Connecteurs de destination d’entreprise avancés | Trois connecteurs de destination d’entreprise sont désormais disponibles : [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) et [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilité générale des connecteurs de destination d’entreprise comprend toutes les fonctionnalités proposées précédemment dans la phase Beta, et bien plus encore : <ul><li>Nouvelles fonctionnalités d’authentification, notamment la [Signature d’accès partagé dans Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) et d’autres [types d’authentification](../../destinations/catalog/streaming/http-destination.md#authentication-information) (jetons du porteur, OAuth 2) dans la destination de l’API HTTP</li><li>[Renvoi de données de profil historiques](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (envoi de profils historiques qualifiés pour le segment lors de sa première activation)</li><li>Les mesures de l’exécution du flux de données sont désormais prises en charge pour ces destinations</li><li>[Métadonnées de segment supplémentaires](../../destinations/catalog/streaming/http-destination.md#destination-details) incluses dans la charge utile de données, y compris les noms de segment et les dates et heures de segment</li><li>Prise en charge d’[adresses IP statiques](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour les clients qui doivent placer Experience Platform sur la liste autorisée</li></ul> |
 | Alertes dans le contexte pour les flux de données de destination | Vous pouvez désormais vous [abonner aux alertes](../../destinations/ui/alerts.md) lors de la création d’un flux de données de destination, pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution du flux de données. Vous pouvez choisir de recevoir des alertes dans l’interface utilisateur d’Experience Platform ou par e-mail. |
 
 ### Processus de publication des connecteurs de destination d’entreprise avancés {#release-process-enterprise-destinations}

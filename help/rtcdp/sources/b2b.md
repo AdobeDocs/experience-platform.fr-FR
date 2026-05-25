@@ -4,9 +4,18 @@ description: Présentation du rôle des sources dans Adobe Real-Time Customer Da
 feature: Sources, Data Ingestion, Get Started, B2B
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+TQID: https://experienceleague.adobe.com/D2sQBwXOeLnNT3KTBtRZBCBOSRbOQZSqa-8kCfd24Ac
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: 261
 ht-degree: 0%
 
 ---

@@ -2,9 +2,17 @@
 title: Utiliser l’interface web GitHub pour créer une page de documentation de destination
 description: Les instructions de cette page vous montrent comment utiliser l’interface web GitHub pour créer une page de documentation pour votre destination Experience Platform et l’envoyer pour révision.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/jJ9qBavmjeRODOWkPGD5oSxv5lDt1OvGOSC9-4PmVA0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: 779
 ht-degree: 3%
 
 ---

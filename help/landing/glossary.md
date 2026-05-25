@@ -4,9 +4,44 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
+TQID: https://experienceleague.adobe.com/BamtoDSzzhu0E1flZK7kaWvPXgD-xq9Qv2iQfBdaTt4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '8224'
+source-wordcount: 8436
 ht-degree: 12%
 
 ---
@@ -27,7 +62,7 @@ ht-degree: 12%
 
 **Administrateur** : au moins une personne de votre organisation peut configurer et personnaliser les autorisations pour Experience Platform dans Adobe Admin Console.
 
-**Adobe Admin Console** : Adobe Admin Console fournit un emplacement central pour la gestion des droits et des accès aux produits Adobe pour votre organisation. Par le biais de la console, les administrateurs et administratrices peuvent accorder des autorisations d’accès à des groupes d’utilisateurs et d’utilisatrices pour diverses fonctionnalités d’Experience Platform, telles que « Gérer les jeux de données », « Afficher les jeux de données » ou « Gérer les profils ».
+**&#x200B;**&#x200B;: Adobe Admin Console fournit un emplacement central pour la gestion des droits et des accès aux produits Adobe pour votre organisation. Par le biais de la console, les administrateurs et administratrices peuvent accorder des autorisations d’accès à des groupes d’utilisateurs et d’utilisatrices pour diverses fonctionnalités d’Experience Platform, telles que « Gérer les jeux de données », « Afficher les jeux de données » ou « Gérer les profils ».
 
 **Adobe Experience Platform** : Adobe Experience Platform normalise les données et le contenu dans l’ensemble de l’entreprise, alimentant les profils consommateurs en temps réel, permettant l’utilisation de la science des données et accélérant la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience sur le parcours client.
 
@@ -37,9 +72,9 @@ ht-degree: 12%
 
 **Adobe Intelligent Services** : les services intelligents tels que l’IA dédiée à l’attribution et l’IA dédiée aux clients sont des modèles d’apprentissage automatique basés sur l’intelligence artificielle qui sont conçus spécifiquement et qui nécessitent l’exécution et le fonctionnement d’Experience Platform.
 
-**Adobe I/O** : Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Experience Platform, y compris aux API, aux événements, à la console de développement et aux outils utiles.
+**&#x200B;**&#x200B;: Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Experience Platform, y compris aux API, aux événements, à la console de développement et aux outils utiles.
 
-**Adobe Sensei** : Adobe Sensei est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**&#x200B;**&#x200B;: Adobe Sensei est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
 **Compartiment Amazon S3** : les compartiments [!DNL Amazon S3] sont les conteneurs de base pour les données stockées dans l’écosystème [!DNL Amazon]. Les compartiments contiennent des objets, chaque objet est stocké et récupéré à l’aide d’une clé unique attribuée par le développeur.
 
@@ -165,7 +200,7 @@ ht-degree: 12%
 
 **Libellés du jeu de données** : les libellés d’utilisation des données peuvent être ajoutés aux jeux de données. Tous les champs de ce jeu de données héritent des libellés du jeu de données.
 
-**Workspace de science des données** : [!DNL Data Science Workspace] dans Experience Platform permet aux clients de créer des modèles de machine learning à l’aide de données dans les applications Experience Platform et Adobe, afin de créer des segments intelligents, de générer des informations et de fournir des prédictions, ce qui vous permet d’améliorer considérablement les expériences digitales des utilisateurs finaux.
+Workspace de science des données **: [!DNL Data Science Workspace] dans Experience Platform permet aux clients de créer des modèles de machine learning à l’aide de données dans les applications Experience Platform et Adobe, afin de créer des segments intelligents, de générer des informations et de fournir des prédictions, ce qui vous permet d’améliorer considérablement les expériences digitales des utilisateurs finaux.**
 
 **Source de données** : une source de données est une origine de données désignée par l’utilisateur. Une source de données peut être, par exemple, une application mobile, des événements de profil et/ou d’expérience, des événements de profil de site web ou un CRM.
 
@@ -293,7 +328,7 @@ ht-degree: 12%
 
 **Symbole d’identité** : un symbole d’identité est l’abréviation d’un espace de noms d’identité qui peut être utilisé comme référence dans les API.
 
-**Valeur d’identité** : une valeur d’identité, combinée à un espace de noms d’identité, est un identifiant qui représente un individu, une organisation ou une ressource unique. Lors de la mise en correspondance des données d’enregistrement sur les fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre.
+**Valeur d’identité** : une valeur d’identité, combinée à un espace de noms d’identité, est un identifiant qui représente un individu, une organisation ou une ressource unique. Lors de la mise en correspondance de données d’enregistrement avec des fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre.
 
 **Libellé d’utilisation des données I1** : le libellé d’utilisation des données `I1` est utilisé pour classer les données qui peuvent directement identifier ou contacter une personne spécifique plutôt qu’un appareil.
 
@@ -435,7 +470,7 @@ ht-degree: 12%
 
 ## R
 
-**Real-Time Customer Data Platform** : Adobe Real-Time Customer Data Platform (Real-Time CDP) rassemble des données client connues et inconnues pour créer des profils client de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
+**&#x200B;**&#x200B;: Adobe Real-Time Customer Data Platform (Real-Time CDP) rassemble des données client connues et inconnues pour créer des profils client de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
 
 **Real-Time Customer Profile** : le profil client en temps réel (parfois appelé Profil) fournit une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos données client en profils individuels offrant des comptes horodatés et exploitables de chaque interaction client.
 
@@ -513,7 +548,7 @@ ht-degree: 12%
 
 Libellé d’utilisation des données **S2** : un libellé d’utilisation des données `S2` est utilisé pour classer les données qui peuvent être utilisées pour déterminer une zone de limite géographique plus large.
 
-**Source** : source est un terme général pour tout connecteur d’entrée dans Experience Platform. Voir aussi : Connecteur Source
+**&#x200B;**&#x200B;: source est un terme général pour tout connecteur d’entrée dans Experience Platform. Voir aussi : Connecteur Source
 
 **Attribut Source** : un attribut source est un champ dans le jeu de données source. Les attributs sources sont mappés aux champs de schémas sources.
 
@@ -565,7 +600,7 @@ Libellé d’utilisation des données **S2** : un libellé d’utilisation des d
 
 **XDM ExperienceEvent** : XDM ExperienceEvent est une classe basée sur une série temporelle utilisée pour capturer l’état du système lorsqu’un événement (ou un ensemble d’événements) se produit, y compris le moment et l’identité du titulaire concerné. Voir aussi : Événement d’expérience
 
-**XDM Individual Profile** : XDM [!DNL Individual Profile] est une classe basée sur les enregistrements qui forme une représentation unique des attributs des sujets identifiés et partiellement identifiés.  Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses e-mail.
+**XDM Individual Profile** : XDM [!DNL Individual Profile] est une classe basée sur les enregistrements qui forme une représentation unique des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses e-mail.
 
 **Système XDM** : le système XDM représente le framework qui rend les schémas XDM opérationnels pour une utilisation dans les services Experience Platform en aval.
 

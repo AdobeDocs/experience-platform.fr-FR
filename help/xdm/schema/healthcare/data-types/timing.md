@@ -4,9 +4,14 @@ description: Découvrez le type de données Modèle de données d’expérience 
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: e1bc16ed-4dd8-4316-b3c8-88d49d393859
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/dQjdUh7cZkhp0mKxO1xqMqYJJCWMnNeN5q-6MZOIIIk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: 127
 ht-degree: 6%
 
 ---

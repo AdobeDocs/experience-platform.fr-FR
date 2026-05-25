@@ -2,10 +2,18 @@
 description: Cette page décrit comment vous authentifier et commencer à utiliser Adobe Experience Platform Destination SDK. Vous y trouverez des instructions sur la manière d’obtenir des informations d’authentification Adobe I/O, un nom de sandbox et l’autorisation de contrôle d’accès de création de destinations.
 title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/alsuk2QIp1-FinuS1dwhkNCC-3HQINeVZeriwDClrKo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 76%
+source-wordcount: 656
+ht-degree: 77%
 
 ---
 
@@ -64,7 +72,7 @@ Pour plus d’informations, consultez les documents suivants sur le contrôle d�
 
 * [Gérer les autorisations d’un profil de produit](/help/access-control/ui/permissions.md)
 * [Autorisations disponibles pour Experience Platform](/help/access-control/home.md#permissions)
-* [Documentation dʼAdobe Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html)
+* [Documentation de Adobe Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html)
 
 ## Remarques complémentaires {#additional-considerations}
 

@@ -3,9 +3,21 @@ title: Méthodes de débogage
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le Web SDK.
 keywords: débogage du sdk web;débogage;commande debug;setDebug;debugEnabled;déboguer
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: aea46e3804d315c1237fc853540771f1b5c2b767
+TQID: https://experienceleague.adobe.com/Cvj77rryCZSYnrUW1jeoGHHBSIgLcttgOGvrf5Gfwgs
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: 292
 ht-degree: 0%
 
 ---
@@ -54,4 +66,4 @@ Adobe Experience Platform Debugger est un outil puissant qui examine vos pages w
 
 ![Activer le débogueur](../js/assets/enable-debugging.png)
 
-Voir [Présentation d’Adobe Experience Platform Debugger](/help/debugger/home.md) pour plus d’informations.
+Voir [Présentation d’](/help/debugger/home.md) pour plus d’informations.

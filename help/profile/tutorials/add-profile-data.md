@@ -4,13 +4,21 @@ title: Ajout de données au profil client en temps réel
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires pour ajouter des données au profil client en temps réel.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/XxbJb0VuQnnbB2mifj35Sw00Ya02jEZS69dUUDvZnzI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 59%
+source-wordcount: 457
+ht-degree: 58%
 
 ---
-
 
 # Ajout de données aux [!DNL Real-Time Customer Profile]
 
@@ -28,9 +36,9 @@ Toutes les données chargées vers [!DNL Experience Platform] à l’aide de l�
 
 Une fois que le jeu de données a été configuré, vous pouvez commencer l’ingestion de données. Pour obtenir des instructions détaillées sur la manière de charger des fichiers dans différents formats, reportez-vous au [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
 
-## Ajouter des données à l’aide de l’ingestion par flux
+## Ajouter des données à l’aide de l’ingestion en flux continu
 
-Toutes les données ingérées par le flux conformes à un schéma XDM compatible avec le [!DNL Profile] ajouteront ou remplaceront automatiquement l’enregistrement approprié dans [!DNL Real-Time Customer Profile]. Si plusieurs identités sont fournies dans l’enregistrement ou si des données de série temporelle sont utilisées, ces identités sont mises en correspondance dans le graphique d’identités sans configuration supplémentaire. Pour en savoir plus, consultez le [guide de développement de l’ingestion par flux](../../ingestion/tutorials/streaming-record-data.md).
+Toutes les données ingérées par le flux conformes à un schéma XDM compatible avec le [!DNL Profile] ajouteront ou remplaceront automatiquement l’enregistrement approprié dans [!DNL Real-Time Customer Profile]. Si plusieurs identités sont fournies dans l’enregistrement ou si des données de série temporelle sont utilisées, ces identités sont mises en correspondance dans le graphique d’identités sans configuration supplémentaire. Pour en savoir plus, consultez le [guide de développement de l’ingestion en flux continu](../../ingestion/tutorials/streaming-record-data.md).
 
 ## Confirmer la réussite du chargement
 

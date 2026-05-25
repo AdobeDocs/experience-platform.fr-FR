@@ -2,9 +2,27 @@
 title: Environnements
 description: Découvrez le concept des environnements de balises et leur fonctionnement dans Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/qpesZyFpuOeVl-kRKb1JPxfigloMdJXQ19rzxIhPFkA
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: 1415
 ht-degree: 98%
 
 ---
@@ -143,7 +161,7 @@ Les codes intégrés étant générés en fonction des configurations de votre e
 
 ## Création d’un environnement
 
-Trois environnements sont automatiquement affectés à une propriété lors de sa création : développement, staging et production. Ces environnements suffisent pour exécuter le processus de publication. Cependant, vous pouvez ajouter d’autres environnements de développement si vous le souhaitez, car cela peut s’avérer utile pour des équipes plus importantes dans lesquelles plusieurs développeurs travaillent simultanément sur différents projets.
+Trois environnements sont automatiquement affectés à une propriété lors de sa création : développement, évaluation et production. Ces environnements suffisent pour exécuter le processus de publication. Cependant, vous pouvez ajouter d’autres environnements de développement si vous le souhaitez, car cela peut s’avérer utile pour des équipes plus importantes dans lesquelles plusieurs développeurs travaillent simultanément sur différents projets.
 
 Dans l’onglet [!UICONTROL Environments] correspondant à votre propriété, sélectionnez **[!UICONTROL Add Environment]**.
 

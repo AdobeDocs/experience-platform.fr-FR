@@ -2,10 +2,20 @@
 description: Cette page illustre l’appel API utilisé pour mettre à jour une configuration de serveur de destination existante avec Adobe Experience Platform Destination SDK.
 title: Mise à jour d’une configuration de serveur de destination
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/r-OmoLDKGVSmzpYPRBwEq1bAXk2WCzfE5vmGPuduMrA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 91%
+source-wordcount: 1106
+ht-degree: 86%
 
 ---
 
@@ -92,11 +102,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `name` | Chaîne | *Obligatoire.* Représente le nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Par exemple, `Moviestar destination server`. |
-| `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` quand les destinations sont diffusées en temps réel (streaming). |
+| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Par exemple, `Moviestar destination server`. |
+| `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` pour les destinations en temps réel (streaming). |
 | `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée d’API auquel Experience Platform doit se connecter. |
-| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Les options sont les suivantes : `GET`, `PUT`, `PUT`, `DELETE` ou `PATCH`. |
+| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter. |
+| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilisera dans les appels à votre serveur. Les options sont les suivantes : `GET`, `PUT`, `PUT`, `DELETE` ou `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
 | `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement qui transforme les données des clients Experience Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur les caractères d’échappement, consultez la section Norme [RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
@@ -318,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `fileBasedSFTPDestination.hostName.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
 | `fileBasedSFTPDestination.hostName.value` | Chaîne | Nom d’hôte de lʼespace de stockage de destination. |
 | `port` | Entier | Port du serveur de fichiers SFTP. |
-| `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>Aucun</li></ul> |
+| `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>None</li></ul> |
 | `fileConfigurations` | S.O. | Pour en savoir plus sur la manière de configurer ces paramètres, consultez la [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}

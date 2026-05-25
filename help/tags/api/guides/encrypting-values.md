@@ -2,17 +2,33 @@
 title: Chiffrement des valeurs
 description: Découvrez comment chiffrer des valeurs sensibles lors de l’utilisation de l’API Reactor.
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/Ui3AuOGd9Pr5CoM1kNo6oddr-gVT9Xh2PWkDV7E6bm8
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 100%
+source-wordcount: 396
+ht-degree: 91%
 
 ---
 
 # Chiffrement des valeurs
 
 Lorsque vous utilisez des balises dans Adobe Experience Platform, certains workflows nécessitent de fournir des valeurs sensibles (par exemple, en fournissant une clé privée lors de la diffusion de bibliothèques vers des environnements via des hôtes). La nature sensible de ces informations d’identification nécessite
-un transfert et un stockage sécurisés.
+transfert et stockage sécurisés.
 
 Ce document décrit comment chiffrer des valeurs sensibles à l’aide du [chiffrement GnuPG](https://www.gnupg.org/gph/en/manual/x110.html) (également appelé GPG) afin que seul le système de balises puisse les lire.
 
@@ -58,7 +74,7 @@ Cette commande peut être répartie comme suit :
 * L&#39;entrée est fournie à la commande `gpg`.
 * `--armor` crée une sortie ASCII (texte) au lieu de binaire. Cela simplifie le transfert de la valeur via JSON.
 * `--encrypt` indique à GPG de chiffrer les données.
-* `-r` définit le destinataire des données. Seul le destinataire (titulaire de la clé privée correspondant à la clé publique) peut décrypter les données. Le nom du destinataire de la clé souhaitée peut être trouvé en examinant la sortie de `gpg --list-keys`.
+* `-r` définit le destinataire des données. Seul le destinataire (titulaire de la clé privée correspondant à la clé publique) peut déchiffrer les données. Le nom du destinataire de la clé souhaitée peut être trouvé en examinant la sortie de `gpg --list-keys`.
 
 La commande ci-dessus utilise la clé publique de `Tags Data Encryption <launch@adobe.com>` pour chiffrer la valeur, `Example value`, au format ASCII.
 

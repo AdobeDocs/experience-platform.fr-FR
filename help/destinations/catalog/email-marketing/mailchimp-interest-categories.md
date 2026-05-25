@@ -1,12 +1,26 @@
 ---
 title: Catégories d’intérêt Mailchimp
 description: Mailchimp (également appelé Intuit Mailchimp) est une plateforme d’automatisation du marketing et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts (clients ou autres parties intéressées) à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
-last-substantial-update: 2023-05-24T00:00:00Z
+last-substantial-update: 2023-05-24T00:00:00.000Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/W1EPUBE136XxoQbdHELMCqvEIlQ2jqqqowTti-PBOBw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 16%
+source-wordcount: 2530
+ht-degree: 15%
 
 ---
 
@@ -14,7 +28,7 @@ ht-degree: 16%
 
 [[!DNL Mailchimp]](https://mailchimp.com) est une plateforme d’automatisation du marketing et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts *(clients ou autres parties intéressées)* à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
 
-[!DNL Mailchimp Interest Categories] utilise les [&#x200B; &#x200B;](https://mailchimp.com/help/getting-started-audience/)audiences[, &#x200B;](https://mailchimp.com/help/getting-started-with-groups/)groupes *et catégories d’intérêt (également appelées noms de groupe ou titres de groupe)*. Chaque groupe de [!DNL Mailchimp] est une liste de catégories d’intérêt. Les contacts sont associés à une catégorie d’intérêt lorsqu’ils s’abonnent à une ou plusieurs catégories d’intérêt par le biais d’un formulaire d’inscription sur votre site web. Au sein d’une audience, vous pouvez également organiser les contacts en groupes et les associer à des catégories d’intérêt, qui pourront ensuite être utilisées pour créer des segments. Vous pouvez utiliser ces audiences pour diffuser des e-mails de campagne ciblés aux contacts abonnés.
+[!DNL Mailchimp Interest Categories] utilise les *[audiences](https://mailchimp.com/help/getting-started-audience/), [groupes](https://mailchimp.com/help/getting-started-with-groups/) et catégories d’intérêt (également appelées noms de groupe ou titres de groupe)*. Chaque groupe de [!DNL Mailchimp] est une liste de catégories d’intérêt. Les contacts sont associés à une catégorie d’intérêt lorsqu’ils s’abonnent à une ou plusieurs catégories d’intérêt par le biais d’un formulaire d’inscription sur votre site web. Au sein d’une audience, vous pouvez également organiser les contacts en groupes et les associer à des catégories d’intérêt, qui pourront ensuite être utilisées pour créer des segments. Vous pouvez utiliser ces audiences pour diffuser des e-mails de campagne ciblés aux contacts abonnés.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
@@ -22,7 +36,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 Cette [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) utilise l’API [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) pour créer des [catégories d’intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/) puis ajouter des contacts de chacune des audiences Experience Platform sélectionnées dans une catégorie d’intérêt correspondante. Vous pouvez **ajouter de nouveaux contacts** ou **mettre à jour les informations des contacts [!DNL Mailchimp] existants**, puis **ajouter ou supprimer ces contacts de leurs groupes souhaités** dans une audience [!DNL Mailchimp] existante après les avoir activés dans un nouveau segment. [!DNL Mailchimp Interest Groups] utilise les noms d’audience sélectionnés dans Experience Platform en tant que catégories d’intérêt dans [!DNL Mailchimp].
 
-## Cas d’utilisation {#use-cases}
+## Cas pratiques {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination [!DNL Mailchimp Interest Categories], consultez l’exemple de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
@@ -136,7 +150,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs obligato
 | Champ | Description |
 | --- | --- |
 | **[!UICONTROL Username]** | Votre nom d’utilisateur [!DNL Mailchimp Interest Categories]. |
-| **[!UICONTROL Password]** | Votre [!DNL Mailchimp] **clé API**, que vous avez notée dans la section [Collecter [!DNL Mailchimp] informations d’identification](#gather-credentials).<br> Votre clé API se présente sous la forme d’`{KEY}-{DC}`, où la partie `{KEY}` fait référence à la valeur indiquée dans la section [[!DNL Mailchimp] Clé API](#gather-credentials) et la partie `{DC}` fait référence au [[!DNL Mailchimp] centre de données](#identify-data-center). <br>Vous pouvez fournir la partie `{KEY}` ou l’intégralité du formulaire.<br> Par exemple, si votre clé API est <br>*`0123456789abcdef0123456789abcde-us14`*<br> vous pouvez fournir *`0123456789abcdef0123456789abcde`*ou *`0123456789abcdef0123456789abcde-us14`*comme valeur. |
+| **[!UICONTROL Password]** | Votre [!DNL Mailchimp] **clé API**, que vous avez notée dans la section [Collecter [!DNL Mailchimp] informations d’identification](#gather-credentials) <br>. Votre clé API se présente sous la forme d’une `{KEY}-{DC}`, où la partie `{KEY}` fait référence à la valeur indiquée dans la section [[!DNL Mailchimp] clé API](#gather-credentials) et la partie `{DC}` fait référence au [[!DNL Mailchimp] centre de données](#identify-data-center). <br>Vous pouvez fournir la partie `{KEY}` ou l’intégralité du formulaire.<br> Par exemple, si votre clé API est <br> vous pouvez fournir *`0123456789abcdef0123456789abcde`* ou *`0123456789abcdef0123456789abcde-us14`* comme valeur.<br>*`0123456789abcdef0123456789abcde-us14`* |
 
 {style="table-layout:auto"}
 
@@ -175,7 +189,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -262,8 +276,8 @@ Retrouvez d’autres informations utiles de la documentation [!DNL Mailchimp] ci
 
 * [Prise en main de  [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Prise en main des audiences](https://mailchimp.com/help/getting-started-audience/)
-* [Création d’un audience](https://mailchimp.com/help/create-audience/)
+* [Création d’une audience](https://mailchimp.com/help/create-audience/)
 * [Prise en main des groupes](https://mailchimp.com/help/getting-started-with-groups/)
 * [Créer un groupe d’audiences](https://mailchimp.com/help/create-new-audience-group/)
 * [Catégories d’intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/)
-* [&#x200B; API marketing &#x200B;](https://mailchimp.com/developer/marketing/api/)
+* [API marketing](https://mailchimp.com/developer/marketing/api/)

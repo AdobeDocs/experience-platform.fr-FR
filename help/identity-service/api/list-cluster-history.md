@@ -1,20 +1,25 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;identités;historique des clusters
+keywords: Experience Platform;accueil;rubriques populaires;identités;historique de cluster
 solution: Experience Platform
-title: Obtention de l’historique des clusters d’une identité
+title: Obtention de l’historique de cluster d’une identité
 description: Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. Le service d’identités offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
 role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+TQID: https://experienceleague.adobe.com/YSJJWD-MOV55DBRSNWdffPDBpiNKCBcJ4DgTl39-fyI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: 345
 ht-degree: 78%
 
 ---
 
 # Obtention de l’historique des clusters d’une identité
 
-Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. [!DNL Identity Service] offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
+Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. [!DNL Identity Service] offre une visibilité sur les associations de clusters d’une identité donnée au fil du temps.
 
 Utilisez le paramètre `graph-type` facultatif pour indiquer le type de sortie à partir duquel obtenir le cluster. Les options sont les suivantes :
 
@@ -214,7 +219,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->La réponse comportera toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent au même cluster ou qu’un ou plusieurs clusters y soient associés.
+>La réponse aura toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent au même cluster ou qu’un ou plusieurs clusters soient associés.
 
 ## Étapes suivantes
 

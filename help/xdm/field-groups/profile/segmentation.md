@@ -3,27 +3,37 @@ solution: Experience Platform
 title: Groupe De Champs De Schéma Détails De L’Appartenance À Un Segment
 description: Découvrez le groupe de champs de schéma Détails de l’appartenance à un segment .
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+TQID: https://experienceleague.adobe.com/OFliiKVxEU-AoHO4ogxWhu7sS3xgVAgc8pEK8YErGKE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 20%
+source-wordcount: 420
+ht-degree: 19%
 
 ---
 
-
-# [!UICONTROL Détails sur l’appartenance à un segment] groupe de champs de schéma
+# [!UICONTROL Segment Membership Details] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Détails de l’appartenance à un segment] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique qui recueille des informations sur l’appartenance au segment, notamment les segments auxquels appartient la personne, l’heure de la dernière qualification et la date de validité de l’abonnement.
+[!UICONTROL Segment Membership Details] groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique qui recueille des informations sur l’appartenance au segment, notamment les segments auxquels appartient la personne, l’heure de la dernière qualification et la date de validité de l’abonnement.
 
 >[!WARNING]
 >
 >Bien que le champ `segmentMembership` doive être ajouté manuellement à votre schéma de profil à l’aide de ce groupe de champs, vous ne devez pas tenter de renseigner ou de mettre à jour manuellement ce champ. Le système met automatiquement à jour la carte des `segmentMembership` pour chaque profil au fur et à mesure que les tâches de segmentation sont effectuées.
 
-![segmentation des profils](../../images/data-types/profile-segmentation.png){width=400}
+![segmentation de profil](../../images/data-types/profile-segmentation.png){width=400}
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -86,5 +96,5 @@ Voici un exemple `segmentMembership` mappage que le système a renseigné pour u
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

@@ -3,13 +3,35 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion Personalization personnalisée
 description: Découvrez comment configurer la destination de Personalization personnalisée pour récupérer les données d’audience de Adobe Experience Platform en vue d’une personnalisation sur site en temps réel.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 3779531814cbf7e5718db0ac88aca266f14a1b21
+TQID: https://experienceleague.adobe.com/yhLyEzIMZ5Wt4eXv16DmdWerQEUnqttxj7F72ZbEjTw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: 1192
 ht-degree: 30%
 
 ---
-
 
 # Connexion Personalization personnalisée {#custom-personalization-connection}
 

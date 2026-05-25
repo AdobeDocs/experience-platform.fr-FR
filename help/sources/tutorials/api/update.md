@@ -2,9 +2,16 @@
 title: Mettre à jour des comptes à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’un compte à l’aide de l’API Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/l3lJf6eNMSAImgLB-EDui5rMuM1u5ih8Iv0G6UQfaM0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: 551
 ht-degree: 77%
 
 ---

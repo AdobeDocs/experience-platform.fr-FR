@@ -3,9 +3,34 @@ title: Détails du modèle pour la transparence du modèle d’IA dans Adobe Exp
 description: En savoir plus sur les détails des modèles dans Adobe Experience Platform.
 hide: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+TQID: https://experienceleague.adobe.com/aLI7vAvV-kJk6vpJ2XZcWwUZNAKUWt00VQB63AD8jXE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: ebef6e6f-6552-40b6-b842-0c5256698a4e
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3208'
+source-wordcount: 3208
 ht-degree: 0%
 
 ---

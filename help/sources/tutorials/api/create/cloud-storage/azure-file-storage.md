@@ -1,13 +1,18 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Azure;Stockage de fichiers Azure;Stockage de fichiers Azure
 solution: Experience Platform
-title: Créer une connexion de base Azure File Storage à l’aide de l’API Flow Service
+title: Créer une connexion de base de stockage de fichiers Azure à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment connecter Azure File Storage à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/8NK-0-xk6KsDz6OzHKnWTaIdkeFEaCgd6Pp9aBdkSl0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: 487
 ht-degree: 51%
 
 ---
@@ -20,7 +25,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -38,7 +43,7 @@ Pour connecter [!DNL Flow Service] à [!DNL Azure File Storage], vous devez four
 | `password` | Mot de passe de votre instance [!DNL Azure File Storage] |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Azure File Storage] est `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
-Pour plus d’informations sur la prise en main, consultez [ce document Azure File Storage](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+Pour plus d’informations sur la prise en main, consultez [ce document sur le stockage de fichiers Azure](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ### Utilisation des API Experience Platform
 

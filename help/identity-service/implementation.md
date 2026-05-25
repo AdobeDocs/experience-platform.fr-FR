@@ -1,21 +1,38 @@
 ---
-title: Guide de mise en oeuvre d’Identity Service
+title: Guide de mise en œuvre d’Identity Service
 description: Découvrez comment les données fournies à Adobe Experience Platform sont traitées avant d’être utilisées par Identity Service pour créer des graphiques d’identités.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
+TQID: https://experienceleague.adobe.com/ivGRbgSeErIFeOqy2NbsXXnmPU-ruhVGijoci-LhHxo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: 603
 ht-degree: 62%
 
 ---
 
-# Guide de mise en oeuvre d’Identity Service
+# Guide de mise en œuvre d’Identity Service
 
-Ce document fournit des informations sur la manière dont les données fournies à Adobe Experience Platform sont traitées avant d’être utilisées par Identity Service pour créer un graphique d’identités pour un client donné.
+Ce document fournit des informations sur le traitement des données fournies à Adobe Experience Platform avant qu’elles ne soient utilisées par Identity Service pour créer un graphique d’identités pour un client donné.
 
 ## Choix des champs d’identité
 
-En fonction de la stratégie de collecte de données de votre entreprise, les champs de données que vous désignez comme identités déterminent les données qui sont incluses dans votre carte d’identité. Pour tirer le meilleur parti des identités de clients Experience Platform et les plus complètes possible, vous devez télécharger des données en ligne et hors ligne.
+En fonction de la stratégie de collecte de données de votre entreprise, les champs de données que vous étiquetez comme identités déterminent les données qui sont incluses dans votre carte d’identité. Pour tirer le meilleur parti d’Experience Platform et obtenir les identités de client les plus complètes possible, vous devez charger des données en ligne et hors ligne.
 
 * Les données en ligne décrivent la présence et le comportement en ligne, comme les noms d’utilisateur et les adresses électroniques.
 
@@ -31,11 +48,11 @@ Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous 
 
 ## Introduction de données d’identité dans le modèle de données d’expérience (XDM)
 
-En tant que cadre normalisé selon lequel l’Experience Platform organise les données client, le modèle de données d’expérience (XDM) permet de partager et de comprendre les données entre les Experience Platform et les autres services interagissant avec l’Experience Platform. Pour plus d’informations, consultez la [présentation du système XDM](../xdm/home.md).
+En tant que cadre normalisé selon lequel Experience Platform organise les données clients, le modèle de données d’expérience (XDM) permet de partager et de comprendre les données sur Experience Platform et les autres services interagissant avec Experience Platform. Pour plus d’informations, consultez la [&#x200B; Présentation du système XDM &#x200B;](../xdm/home.md).
 
 Les schémas d’enregistrement et de série temporelle permettent d’inclure des données d’identité. À mesure que les données sont ingérées, le graphique d’identités crée de nouvelles relations entre les fragments de données provenant de différents espaces de noms s’il s’avère qu’ils partagent des données d’identité communes.
 
-## Étiquetage des champs XDM comme identité
+## Étiqueter les champs XDM comme identité
 
 Les champs de type `string` dans les schémas qui mettent en œuvre des classes XDM d’enregistrement ou de série temporelle peuvent être qualifiés de champs d’identité. Par conséquent, toutes les données ingérées dans ces champs seraient considérées comme des données d’identité.
 
@@ -46,22 +63,22 @@ Par exemple, en désignant les champs de numéro de téléphone comme des champs
 >
 >* Les champs de type tableau et mappage ne sont pas pris en charge et ne peuvent pas être marqués et libellés comme des champs dʼidentité.
 >* L’espace de noms des identités résultantes est fourni au moment où le champ est libellé.
->* Un champ peut être marqué comme identité tant que ce champ n’est pas sous un objet de tableau.
+>* Un champ peut être marqué comme une identité, tant que ce champ ne se trouve pas sous un objet tableau.
 
-Pour plus d’informations, consultez le guide sur la [définition des champs d’identité dans l’interface utilisateur](../xdm/ui/fields/identity.md).
+Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](../xdm/ui/fields/identity.md).
 
 ## Configuration d’un jeu de données pour le service d’identités
 
-Pendant le processus d’ingestion par flux, le service d’identités extrait automatiquement les données d’identité des données d’enregistrement et de série temporelle. Cependant, les données doivent être activées pour le service d’identités avant de pouvoir être ingérées. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un jeu de données pour Real-Time Customer Profile et Identity Service à l’aide des API](../profile/tutorials/dataset-configuration.md) .
+Pendant le processus d’ingestion en flux continu, le service d’identités extrait automatiquement les données d’identité des données d’enregistrement et de série temporelle. Cependant, les données doivent être activées pour le service d’identités avant de pouvoir être ingérées. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un jeu de données pour le profil client en temps réel et le service d’identités à l’aide d’API](../profile/tutorials/dataset-configuration.md).
 
 ## Ingestion des données dans le service d’identités
 
-Identity Service consomme des données conformes à XDM envoyées à l’Experience Platform par [ingestion par lots](../ingestion/batch-ingestion/overview.md) ou [ingestion par flux](../ingestion/streaming-ingestion/overview.md).
+Identity Service consomme des données conformes à XDM envoyées à Experience Platform par [ingestion par lots](../ingestion/batch-ingestion/overview.md) ou [ingestion par flux](../ingestion/streaming-ingestion/overview.md).
 
 La vidéo suivante est destinée à vous aider à comprendre le service dʼidentités. Cette vidéo explique comment libeller les champs de données comme des identités, ingérer les données dʼidentité, puis vérifier que les données ont été enregistrées dans le graphique Privé du service d’identités d’Adobe Experience Platform.
 
 >[!WARNING]
 >
->L’interface utilisateur Experience Platform affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation pour obtenir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
+>L’interface utilisateur d’Experience Platform affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation pour obtenir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/31637?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/31637?captions=fre_fr&quality=12&learn=on)

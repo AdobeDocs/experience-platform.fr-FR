@@ -2,9 +2,29 @@
 title: Présentation des hôtes gérés par Adobe
 description: Découvrez l’option d’hébergement par défaut pour le déploiement des versions de bibliothèques de balises dans Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/MlOoP711la-oYC9Rc4iNElpYOGIsPW6wp8-xJBClmsg
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: 1163
 ht-degree: 82%
 
 ---
@@ -66,7 +86,7 @@ Puisque Akamai dispose de plusieurs serveurs d’origine qui répliquent des fic
 * 5 minutes après le téléchargement
 * 60 minutes après le téléchargement
 
-Ces invalidations échelonnées du cache donnent aux groupes de serveurs d’origine le temps de répliquer la dernière version du fichier entre eux afin qu’ils disposent tous de la dernière version une fois le fichier extrait.
+Ces invalidations échelonnées du cache donnent aux groupes de serveurs d’origine le temps de répliquer la dernière version du fichier entre eux afin qu’ils disposent tous de la dernière version une fois le fichier récupéré.
 
 ### Caching du navigateur {#browser}
 
@@ -80,7 +100,7 @@ Le délai d’expiration de la version de votre bibliothèque mise en cache par 
 | Évaluation | `max-age=0, no-cache, no-store` |
 | Production | `max-age=3600` |
 
-Comme l’indique le tableau ci-dessus, le caching du navigateur n’est pas pris en charge sur les environnements de développement et d’évaluation. Par conséquent, vous ne devez pas utiliser les codes intégrés de développement ou intermédiaires dans les contextes à trafic élevé ou de production.
+Comme l’indique le tableau ci-dessus, le caching du navigateur n’est pas pris en charge sur les environnements de développement et d’évaluation. Par conséquent, vous ne devez pas utiliser les codes intégrés de développement ou d’évaluation dans les contextes à trafic élevé ou de production.
 
 Les en-têtes de contrôle du cache ne sont appliqués que pour la version de la bibliothèque principale. Toutes les sous-ressources situées sous la bibliothèque principale sont toujours considérées comme des sous-ressources nouvelles et il n’est donc pas nécessaire de les mettre en cache dans le navigateur.
 

@@ -5,10 +5,11 @@ breadcrumb-title: Guide de Privacy Service
 user-guide-description: Gérez les demandes de données des clients afin de respecter les réglementations légales en matière de confidentialité, telles que le RGPD et le CCPA.
 feature: Privacy
 role: User,Admin
-source-git-commit: bc180437c42ab2eea946e1a4d6d9dbd77e0896c8
+nudge: true
+source-git-commit: b6abe265f340487f0eae12237ba320cd4afbd2d8
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 93%
+source-wordcount: '101'
+ht-degree: 94%
 
 ---
 

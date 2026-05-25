@@ -9,10 +9,24 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+TQID: https://experienceleague.adobe.com/1fKH08BLQ1H92AQFB-gK2jhr829dCpl1tfDHfv7e-ts
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1817'
-ht-degree: 92%
+source-wordcount: 1971
+ht-degree: 90%
 
 ---
 
@@ -20,7 +34,7 @@ ht-degree: 92%
 
 Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform, ainsi qu’un guide de dépannage détaillé pour les erreurs courantes qui peuvent se produire dans n’importe quelle API [!DNL Experience Platform]. Pour obtenir un guide de dépannage concernant un service [!DNL Experience Platform] en particulier, consultez le [répertoire de dépannage des services](#service-troubleshooting-directory) ci-dessous.
 
-## FAQ {#faq}
+## Questions fréquentes {#faq}
 
 Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos d’Adobe Experience Platform.
 
@@ -28,7 +42,7 @@ Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquem
 
 [!DNL Experience Platform] propose plusieurs API RESTful qui utilisent des requêtes HTTP pour accéder aux ressources de [!DNL Experience Platform]. Ces API de service présentent chacune plusieurs points d’entrée et vous permettent d’effectuer des opérations ayant pour but de répertorier (GET), de rechercher (GET), de modifier (PUT et/ou PATCH) et de supprimer (DELETE) des ressources. Pour plus d’informations sur les points d’entrée spécifiques et sur les opérations disponibles pour chaque service, consultez la [documentation de référence sur l’API](https://www.adobe.com/go/platform-api-reference-en) sur Adobe I/O.
 
-## Comment formater une requête API ?  {#how-do-i-format-an-api-request}
+## Comment formater une requête API ? {#how-do-i-format-an-api-request}
 
 Les formats de requête varient selon l’API [!DNL Experience Platform] utilisée. Le meilleur moyen d’apprendre à structurer vos appels API est de suivre les exemples fournis dans la documentation du service [!DNL Experience Platform] que vous utilisez.
 
@@ -38,15 +52,15 @@ Pour plus d’informations sur le formatage des requêtes API, consultez la sect
 
 Une organisation est une représentation de clientèle pour Adobe. Toutes les solutions Adobe sous licence sont intégrées à cette organisation cliente. Lorsqu’une organisation est autorisée à utiliser [!DNL Experience Platform], elle peut attribuer un accès aux développeurs et développeuses. L’identifiant d’organisation (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API devrait être exécuté. Il est donc nécessaire de le placer en tant qu’en-tête de toutes les requêtes API. Cet ID est accessible via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) : dans l’onglet **Intégrations**, accédez à la section **Vue d’ensemble** pour toute intégration spécifique afin de trouver l’ID sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Experience Platform], consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
-## Où trouver ma clé API ?  {#where-can-i-find-my-api-key}
+## Où trouver ma clé API ? {#where-can-i-find-my-api-key}
 
 Une clé API doit constituer l’en-tête de toutes les requêtes API. Il est accessible via [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Dans la console, sous l’onglet **Intégrations**, accédez à la section **Présentation** pour une intégration spécifique et vous trouverez la clé sous **Informations d’identification client**. Pour une présentation détaillée de la procédure d’authentification dans [!DNL Experience Platform], consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
-## Comment obtenir un jeton d’accès ?  {#how-do-i-get-an-access-token}
+## Comment obtenir un jeton d’accès ? {#how-do-i-get-an-access-token}
 
 Les jetons d’accès doivent être renseignés dans l’en-tête d’autorisation de tous les appels API. Ils peuvent être générés à l’aide d’une commande CURL, à condition que vous ayez accès à une intégration pour une organisation. Les jetons d’accès ne sont valides que pendant 24 heures. Après ce délai, un nouveau jeton doit être généré pour continuer à utiliser l’API. Pour plus d’informations sur la génération des jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
-## Comment utiliser les paramètres de requête ?  {#how-do-i-user-query-parameters}
+## Comment utiliser les paramètres de requête ? {#how-do-i-user-query-parameters}
 
 Certains points d’entrée de l’API [!DNL Experience Platform] acceptent des paramètres de requête visant à localiser des informations spécifiques et filtrer les résultats renvoyés dans la réponse. Les paramètres de requête sont ajoutés aux chemins de requête avec un point d’interrogation (`?`), suivi d’un ou plusieurs paramètres de requête au format `paramName=paramValue`. Lorsque vous combinez plusieurs paramètres dans un seul appel, vous devez utiliser une esperluette (`&`) pour les séparer. L’exemple suivant illustre la manière dont une requête qui utilise plusieurs paramètres de requête est représentée dans la documentation.
 
@@ -60,7 +74,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 Pour savoir précisément quels paramètres de requête sont disponibles pour un service ou un point d’entrée en particulier, consultez la documentation spécifique au service.
 
-## Comment indiquer un champ JSON à mettre à jour dans une requête PATCH ?  {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
+## Comment indiquer un champ JSON à mettre à jour dans une requête PATCH ? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
 De nombreuses opérations PATCH dans les API [!DNL Experience Platform] utilisent des chaînes [JSON Pointer](https://tools.ietf.org/html/rfc6901) pour indiquer les propriétés JSON à mettre à jour. Elles sont généralement incluses dans les payloads des requêtes au format [JSON Patch](https://tools.ietf.org/html/rfc6902). Pour plus d’informations sur la syntaxe requise pour ces technologies, consultez le [guide de base de l’API](api-fundamentals.md).
 
@@ -96,7 +110,7 @@ Vous pouvez rencontrer les codes d’état suivants sur n’importe quelle API [
 |--- | --- | ---|
 | 400 | Mauvaise requête | La requête a été mal construite, des informations de clé étaient absentes et/ou sa syntaxe était incorrecte. |
 | 401 | Échec de l’authentification | La requête n’a pas pu être authentifiée. Votre jeton d’accès est peut-être absent ou non valide. Pour plus d’informations, reportez-vous à la section [erreurs de jeton OAuth](#oauth-token-is-missing) ci-dessous. |
-| 403 | Interdit | La ressource a été trouvée, mais vous ne possédez pas les informations d’identification appropriées pour la consulter. <br>Une cause probable de cette erreur est que vous ne disposez pas des [autorisations de contrôle d’accès](/help/access-control/home.md) permettant d’accéder à la ressource ou de la modifier. Lisez comment [obtenir les autorisations de contrôle d’accès basé sur les attributs nécessaires](/help/landing/api-authentication.md#get-abac-permissions) pour utiliser les API d’Experience Platform. </p> |
+| 403 | Interdit | La ressource a été trouvée, mais vous ne disposez pas des informations d’identification appropriées pour l’afficher. <br> La cause probable de cette erreur est que vous ne disposez peut-être pas des [autorisations de contrôle d’accès](/help/access-control/home.md) requises pour accéder à la ressource ou la modifier. Lisez comment [obtenir les autorisations de contrôle d’accès basé sur les attributs nécessaires](/help/landing/api-authentication.md#get-abac-permissions) pour utiliser les API d’Experience Platform. </p> |
 | 404 | Introuvable | La ressource demandée n’a pas été trouvée sur le serveur. La ressource a peut-être été supprimée, ou le chemin d’accès demandé n’a pas été correctement saisi. |
 | 500 | Erreur interne du serveur | Il s’agit d’une erreur côté serveur. Si vous effectuez de nombreux appels simultanés, vous pouvez atteindre la limite de l’API et devoir filtrer vos résultats. (Pour en savoir plus, consultez la sous-partie du guide de développement de l’API [!DNL Catalog Service] sur le [filtrage des données](../catalog/api/filter-data.md).) Patientez avant de réessayer d’exécuter votre requête et contactez votre administrateur si le problème persiste. |
 
@@ -213,7 +227,7 @@ Ce message d’erreur s’affiche dans l’un des deux cas ci-dessous :
 
 Voici une liste de guides de dépannage et de documentation de référence sur les API pour les API [!DNL Experience Platform]. Chaque guide de dépannage fournit des réponses aux questions les plus fréquemment posées ainsi que des solutions aux problèmes relatifs à un service [!DNL Experience Platform] spécifique. Les documents de référence sur l’API fournissent un guide complet de tous les points d’entrée disponibles pour chaque service et présentent des échantillons de corps de requête, de réponses et de codes d’erreur que vous pouvez recevoir.
 
-| Service | Référence d’API | Dépannage |
+| Service | Référence d’API | Résolution des problèmes |
 | --- | --- | --- |
 | Contrôle d’accès | [API Access Control](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guide de dépannage du contrôle d’accès](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guide de dépannage de l’ingestion par lots](../ingestion/batch-ingestion/troubleshooting.md) |
@@ -221,7 +235,7 @@ Voici une liste de guides de dépannage et de documentation de référence sur l
 | Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | Guide de dépannage du [[!DNL Data Science Workspace] &#x200B;](../data-science-workspace/troubleshooting-guide.md) |
 | Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Service d’identités d’Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] &#x200B;](../identity-service/troubleshooting-guide.md) |
-| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] &#x200B;](../query-service/troubleshooting-guide.md) |
+| Service de requête Adobe Experience Platform | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] &#x200B;](../query-service/troubleshooting-guide.md) |
 | Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |  |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] Questions fréquentes et guide de dépannage](../xdm/troubleshooting-guide.md) |

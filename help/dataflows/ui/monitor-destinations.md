@@ -4,9 +4,27 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 6aacade76b31268b8f6a9db2b8c191d8c7702a1b
+TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2:
+  - id: ac9ff56e-fdaf-4412-aba7-1f588cb8aa2b
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: dcded644-509e-49c5-ae85-3862a2a08609
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3616'
+source-wordcount: 3616
 ht-degree: 12%
 
 ---

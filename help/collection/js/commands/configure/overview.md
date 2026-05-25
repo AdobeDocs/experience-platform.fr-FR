@@ -2,9 +2,24 @@
 title: Configuration de Adobe Experience Platform Web SDK
 description: Utilisez la commande de configuration pour définir les paramètres requis lors de l’utilisation de Web SDK.
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+TQID: https://experienceleague.adobe.com/MPrJXWHz2aG1iXNg5JmrGTS9MDSGeHJCtwJkjHMwLZE
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: 82
 ht-degree: 0%
 
 ---

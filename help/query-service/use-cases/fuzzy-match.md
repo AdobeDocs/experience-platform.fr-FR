@@ -2,9 +2,17 @@
 title: Correspondance approximative dans Query Service
 description: Découvrez comment effectuer une correspondance sur vos données Experience Platform qui combine les résultats de plusieurs jeux de données en faisant correspondre à peu près une chaîne de votre choix.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/qdtM6kXEYmt4YJ1waf4V6hMgFBM3qpHIx1DF2-6ISpM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: 827
 ht-degree: 0%
 
 ---
@@ -17,7 +25,7 @@ Au lieu d’essayer de reformater les chaînes de recherche pour les faire corre
 
 L’exemple fourni dans ce cas d’utilisation se concentre sur la correspondance d’attributs similaires provenant d’une recherche de chambre d’hôtel dans deux jeux de données d’agence de voyage différents. Le document montre comment faire correspondre des chaînes en fonction de leur degré de similarité à partir de grandes sources de données distinctes. Dans cet exemple, correspondance floue compare les résultats de recherche pour les caractéristiques d’une chambre des agences de voyages Luma et Acme.
 
-## Commencer {#getting-started}
+## Prise en main {#getting-started}
 
 Dans le cadre de ce processus, qui nécessite l’entraînement d’un modèle de machine learning, ce document suppose une connaissance pratique d’un ou de plusieurs environnements de machine learning.
 
@@ -83,7 +91,7 @@ luma[:10]
 
 Sélectionnez **Sortie** pour afficher le tableau renvoyé.
 
-+++Output
++++Sortie
 
 ```console
 array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
@@ -110,7 +118,7 @@ acme[:10]
 
 Sélectionnez **Sortie** pour afficher le tableau renvoyé.
 
-+++Output
++++Sortie
 
 ```console
 array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
@@ -162,7 +170,7 @@ matched_pairs[:10]
 
 Sélectionnez **Sortie** pour afficher les résultats.
 
-+++Output
++++Sortie
 
 ```console
 [('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
@@ -204,7 +212,7 @@ WHERE
 
 Sélectionnez **Sortie** pour afficher les résultats de cette jointure.
 
-+++Output
++++Sortie
 
 ```console
 [('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),

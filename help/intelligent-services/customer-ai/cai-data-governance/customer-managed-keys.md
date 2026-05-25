@@ -3,9 +3,19 @@ keywords: insights;IA dédiée aux clients;insights IA dédiée aux clients;serv
 title: Clés gérées par le client dans l’IA dédiée aux clients.
 description: Découvrez comment configurer les clés gérées par le client pour l’IA dédiée aux clients.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/QB1nPpdo4BlYg2ePFDb7DI4tNeoI-zalFdm5uTOLCZU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: 170
 ht-degree: 75%
 
 ---

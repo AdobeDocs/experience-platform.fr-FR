@@ -2,10 +2,19 @@
 title: Connecter MySQL à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter votre base de données MySQL à Experience Platform à l’aide d’API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
+TQID: https://experienceleague.adobe.com/AXw6xQUbbX-RXhiu9tQ5UfrMldShQ4A4rV-6pkzmTVI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 7%
+source-wordcount: 615
+ht-degree: 14%
 
 ---
 
@@ -15,7 +24,7 @@ Lisez ce guide pour savoir comment connecter votre compte [!DNL MySQL] à Adobe 
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -30,7 +39,7 @@ Lisez la [[!DNL MySQL] présentation](../../../../connectors/databases/mysql.md#
 
 Lisez le guide sur [Prise en main des API Experience Platform](../../../../../landing/api-guide.md) pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform.
 
-## Connecter [!DNL MySQL] à Experience Platform sur Azure {#azure}
+## Connexion de [!DNL MySQL] à Experience Platform sur Azure {#azure}
 
 Pour plus d’informations sur la connexion de votre compte [!DNL MySQL] à Experience Platform sur Azure, lisez les étapes ci-dessous.
 
@@ -89,7 +98,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`).
 
 +++Afficher l’exemple de réponse
 
@@ -152,7 +161,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`).
 
 +++Afficher l’exemple de réponse
 
@@ -231,7 +240,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`).
 
 +++Afficher l’exemple de réponse
 

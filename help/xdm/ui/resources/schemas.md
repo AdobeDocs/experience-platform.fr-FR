@@ -4,9 +4,27 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
+TQID: https://experienceleague.adobe.com/yevQxPbQDMaftqQBj5oeLlpGvoINcaQNnLe1eHUgTKk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: addc3a3a-2b1c-4fdf-aea4-4b1eb2931ba6
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '4712'
+source-wordcount: 4712
 ht-degree: 3%
 
 ---

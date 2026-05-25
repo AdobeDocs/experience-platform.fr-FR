@@ -6,9 +6,38 @@ description: Adobe Experience Platform fournit des services d’API étroitement
 role: Developer
 feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+TQID: https://experienceleague.adobe.com/HZc00JZcbSNcB3grMH-LKhLVKA-ZsOUYqqIS4KoMi7U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: 1501
 ht-degree: 21%
 
 ---
@@ -51,7 +80,7 @@ Postman est une plateforme de collaboration pour le développement d’API qui v
 
 Pour en savoir plus sur Postman, notamment sur la configuration d’un environnement, sur une liste des collections disponibles et sur l’importation de collections, consultez la [documentation Experience Platform Postman](postman.md).
 
-## Lecture d’exemples d’appels API {#sample-api}
+## Lecture d&#39;exemples d&#39;appels API {#sample-api}
 
 Les formats de requête varient selon l’API Experience Platform utilisée. Le meilleur moyen d’apprendre à structurer vos appels API est de suivre les exemples fournis dans la documentation du service Experience Platform que vous utilisez.
 
@@ -111,7 +140,7 @@ La réponse illustre ce que vous vous attendez à recevoir après un appel réus
 
 ## Messages d’erreur
 
-Le guide de dépannage d’[Experience Platform](troubleshooting.md#errors-and-troubleshooting) fournit une liste des erreurs que vous pouvez rencontrer lors de l’utilisation d’un service Experience Platform.
+Le guide de dépannage d’[&#128279;](troubleshooting.md#errors-and-troubleshooting) fournit une liste des erreurs que vous pouvez rencontrer lors de l’utilisation d’un service Experience Platform.
 
 Pour obtenir un guide de dépannage concernant un service Experience Platform spécifique, consultez le [répertoire de dépannage des services](troubleshooting.md#service-troubleshooting-directory).
 
@@ -121,11 +150,11 @@ Pour plus d’informations sur les points d’entrée spécifiques dans les API 
 
 | Guide des API | Description |
 | --- | --- |
-| [[!DNL Access Control]  Guide de l’API &#x200B;](.././access-control/api/getting-started.md) | Le point d’entrée de l’API [!DNL Access Control] peut récupérer les politiques actuelles en vigueur pour un utilisateur sur des ressources données dans un sandbox spécifié. Toutes les autres fonctionnalités de contrôle d’accès sont fournies via [Adobe Admin Console](https://adminconsole.adobe.com/). |
+| [[!DNL Access Control]  Guide de l’API &#x200B;](.././access-control/api/getting-started.md) | Le point d’entrée de l’API [!DNL Access Control] peut récupérer les politiques actuelles en vigueur pour un utilisateur sur des ressources données dans un sandbox spécifié. Toutes les autres fonctionnalités de contrôle d’accès sont fournies via [&#128279;](https://adminconsole.adobe.com/). |
 | [&#x200B; Guide de l’API d’ingestion par lots &#x200B;](.././ingestion/batch-ingestion/api-overview.md) | L’API Adobe Experience Platform [!DNL Data Ingestion] vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système CRM (comme un fichier Parquet) ou des données conformes à un schéma connu dans Schema Registry (XDM). |
 | [[!DNL Catalog Service]  Guide de l’API &#x200B;](.././catalog/api/getting-started.md) | L’API [!DNL Catalog Service] permet aux développeurs de gérer les métadonnées des jeux de données dans Adobe Experience Platform. Cela inclut les emplacements des données, les étapes de traitement, les erreurs survenues pendant le traitement et les rapports de données. |
 | [[!DNL Data Access]  Guide de l’API &#x200B;](.././data-access/api.md) | L’API [!DNL Data Access] permet aux développeurs de récupérer des informations sur les jeux de données ingérés dans Experience Platform. Cela inclut l’accès et le téléchargement des fichiers de jeu de données, la récupération des informations d’en-tête, la liste des lots ayant échoué et réussi et le téléchargement des fichiers CSV/Parquet d’aperçu. |
-| [[!DNL Dataset Service]  Guide de l’API &#x200B;](.././data-governance/labels/dataset-api.md) | LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données. |
+| [[!DNL Dataset Service]  Guide de l’API &#x200B;](.././data-governance/labels/dataset-api.md) | LʼAPI Dataset Service vous permet dʼappliquer et de modifier des libellés dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données. |
 | [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | L’API [!DNL Data Hygiene] vous permet de corriger ou de supprimer par programmation les données personnelles de vos clients stockées dans Adobe Experience Platform, ainsi que de planifier des dates d’expiration pour les jeux de données. |
 | [[!DNL Edge Network]  Guide de l’API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Le [!DNL Edge Network API] peut être utilisé pour divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. Le [!DNL Edge Network API] peut être utilisé sur des serveurs, des appareils [!DNL IoT], des décodeurs et de nombreux autres appareils. |
 | [[!DNL Identity Service]  Guide de l’API &#x200B;](.././identity-service/api/getting-started.md) | L’API [!DNL Identity Service] permet aux développeurs de gérer l’identification inter-appareils, inter-canaux et en temps quasi réel de vos clients à l’aide de graphiques d’identités dans Adobe Experience Platform. |
@@ -146,6 +175,6 @@ Pour plus d’informations sur les points d’entrée et opérations spécifique
 
 Ce document présente les en-têtes requis, les guides disponibles et fournit un exemple d’appel API. Maintenant que vous disposez des valeurs d’en-tête requises pour effectuer des appels API sur Adobe Experience Platform, sélectionnez un point d’entrée d’API que vous souhaitez explorer dans le tableau [Guides de l’API Experience Platform](#api-guides).
 
-Pour obtenir des réponses aux questions fréquentes, reportez-vous au guide de dépannage d’[Experience Platform](troubleshooting.md).
+Pour obtenir des réponses aux questions fréquentes, reportez-vous au guide de dépannage d’[&#128279;](troubleshooting.md).
 
 Pour configurer un environnement Postman et explorer les collections Postman disponibles, reportez-vous au [guide Experience Platform Postman](postman.md).

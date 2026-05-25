@@ -5,10 +5,28 @@ title: Se connecter aux destinations par lots et activer des données à l’aid
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/Y49HlAMbsTxBwGRmCEBzeaD35cKBLrdYF1mZF6p0w3o
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3413'
-ht-degree: 69%
+source-wordcount: 3501
+ht-degree: 67%
 
 ---
 
@@ -20,7 +38,7 @@ ht-degree: 69%
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions).
 >
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -85,7 +103,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation de référence sur les API {#api-reference-documentation}
 
-Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons de consulter ce tutoriel et la documentation de référence sur les API en parallèle.
+Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons d’utiliser ce tutoriel et la documentation de référence sur les API en parallèle.
 
 ## Obtenir la liste des destinations disponibles {#get-the-list-of-available-destinations}
 
@@ -532,7 +550,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | Vous pouvez éventuellement fournir une description de la connexion de base. |
 | `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la destination par lots de votre choix. Vous avez obtenu cet identifiant à l’étape [Obtenir la liste des destinations disponibles](#get-the-list-of-available-destinations). |
 | `auth.specname` | Indique le format d’authentification de la destination. Pour connaître le specName de votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), en précisant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `authSpec.name` dans la réponse. <br> Par exemple, pour les destinations [!DNL Adobe Campaign], vous pouvez utiliser l’une des options `S3`, `SFTP with Password` ou `SFTP with SSH Key`. |
-| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres d’authentification requis. Pour les connexions Amazon S3, vous devez fournir votre identifiant d’accès et votre clé secrète à votre emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), en précisant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `authSpec.spec.required` dans la réponse. |
+| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres d’authentification requis. Pour les connexions Amazon S3, vous devez fournir votre identifiant d’accès et votre clé secrète à l’emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) en fournissant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `authSpec.spec.required` dans la réponse. |
 
 {style="table-layout:auto"}
 
@@ -857,7 +875,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | Vous pouvez éventuellement fournir une description de la connexion cible. |
 | `baseConnectionId` | Utilisez l’identifiant de la connexion de base que vous avez créée à l’étape ci-dessus. |
 | `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la destination par lots de votre choix. Vous avez obtenu cet identifiant à l’étape [Obtenir la liste des destinations disponibles](#get-the-list-of-available-destinations). |
-| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres requis à votre emplacement de stockage. Pour les connexions Amazon S3, vous devez fournir votre identifiant d’accès et votre clé secrète à votre emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), en précisant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `targetSpec.spec.required` dans la réponse. |
+| `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres requis à votre emplacement de stockage. Pour les connexions Amazon S3, vous devez fournir votre identifiant d’accès et votre clé secrète à l’emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) en fournissant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `targetSpec.spec.required` dans la réponse. |
 | `params.mode` | En fonction du mode pris en charge pour votre destination, vous devez fournir une valeur différente. Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) en fournissant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `targetSpec.spec.properties.mode.enum` dans la réponse et sélectionnez le mode souhaité. |
 | `params.bucketName` | Pour les connexions S3, indiquez le nom de l’intervalle où les fichiers seront exportés. |
 | `params.path` | Pour les connexions S3, indiquez le chemin d’accès au fichier dans l’emplacement de stockage où les fichiers seront exportés. |
@@ -1049,12 +1067,12 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 | `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
 | `name` | *Facultatif*. Indiquez le nom de l’audience que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter une audience au flux de données de destination sans indiquer son nom. |
-| `filenameTemplate` | Ce champ détermine le format du nom des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant de l’audience exportée.</li><li>`%SEGMENT_NAME%` : facultatif. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%` : facultatif. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text` : facultatif. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, consultez la section [configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
+| `filenameTemplate` | Ce champ détermine le format du nom de fichier des fichiers exportés vers la destination. <br> Les options disponibles sont les suivantes : <br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant de l’audience exportée.</li><li>`%SEGMENT_NAME%` : facultatif. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%` : facultatif. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text` : facultatif. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, consultez la section [configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `exportMode` | Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `startDate` | Sélectionnez la date à laquelle l’audience doit commencer à exporter les profils vers votre destination. |
 | `frequency` | Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE`, `DAILY`, `WEEKLY` ou `MONTHLY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de la sélection du mode `"DAILY_FULL_EXPORT"` dans le sélecteur de `frequency`. <br> Obligatoire. <br> <ul><li>Sélectionnez `"AFTER_SEGMENT_EVAL"` pour que le traitement d’activation s’exécute immédiatement une fois le traitement quotidien de segmentation par lots d’Experience Platform terminé. Ainsi, lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.</li><li>Sélectionnez `"SCHEDULED"` pour que la tâche d’activation s’exécute à une heure fixe. Cela garantit que les données de profil Experience Platform sont exportées simultanément chaque jour, mais les profils exportés ne sont peut-être pas les plus récents, selon que la tâche de segmentation par lots est terminée ou non avant le début de la tâche d’activation. Lorsque vous sélectionnez cette option, vous devez également ajouter un `startTime` pour indiquer à quel moment en UTC les exportations quotidiennes doivent avoir lieu.</li></ul> |
-| `endDate` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et de `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
+| `endDate` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
 | `startTime` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres de l’audience doivent être générés et exportés vers votre destination. |
 
 {style="table-layout:auto"}

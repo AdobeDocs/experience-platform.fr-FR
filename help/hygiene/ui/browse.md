@@ -2,9 +2,16 @@
 title: Parcourir les ordres de travail relatifs au cycle de vie des données
 description: Découvrez comment afficher et gérer les ordres de travail de cycle de vie des données existants dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
+TQID: https://experienceleague.adobe.com/e8rzCUkYUbNbxNCublKt3eAFmqTJh4uodaz38SOJU30
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: 846
 ht-degree: 62%
 
 ---

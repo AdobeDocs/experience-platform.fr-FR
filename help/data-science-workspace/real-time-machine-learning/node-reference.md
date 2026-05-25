@@ -4,10 +4,22 @@ solution: Experience Platform
 title: Référence des nœuds de machine learning en temps réel
 description: Un nœud est l’unité fondamentale à partir de laquelle des graphiques sont formés. Chaque nœud effectue une tâche spécifique et ces nœuds peuvent être liés ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un nœud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence de machine learning. Le nœud sort la valeur transformée ou déduite pour le ou les nœuds suivants.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 9030a5482d4ea2b54426680cef92b89e68ef5b33
+TQID: https://experienceleague.adobe.com/sNpKUdNsLfRvOapjsFEfn2RfGU5Bk0knXtI0WnGWR6s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 96%
+source-wordcount: 704
+ht-degree: 95%
 
 ---
 
@@ -15,9 +27,9 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 >[!IMPORTANT]
 >
@@ -127,7 +139,7 @@ msg6 = model_train.process(msg5)
 
 | Valeur | Description |
 | --- | --- |
-| fonctionnalités | Fonctionnalités d’entrée du modèle (liste des chaînes). <br> Par exemple : `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| fonctionnalités | Fonctionnalités d&#39;entrée du modèle (liste de chaînes). <br> Par exemple : `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | libellé | Nom de la colonne cible (chaîne). |
 | mode | Entraînement/test (chaîne). |
 | model_path | Chemin d’accès à l’enregistrement local du modèle au format onnx. |
@@ -135,7 +147,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | Hyperparamètres du modèle, consulter la documentation [API sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
 | node_instance.process(data_message_from_previous_node) | La méthode `process()` prend DataMsg à partir du nœud précédent et applique la transformation. Cela dépend du nœud actuellement utilisé. |
 
-### Fractionner
+### Partage
 
 Utilisez le nœud suivant pour partager votre Dataframe en entraînement et test en transmettant `train_size` ou `test_size`. Cette opération renvoie un Dataframe avec un multi-index. Vous pouvez accéder aux dataframes d’entraînement et de test à l’aide de l’exemple suivant, `msg5.data.xs("train")`.
 

@@ -5,9 +5,20 @@ title: Publication d’un modèle en tant que service dans l’interface utilisa
 type: Tutorial
 description: Le Workspace de science des données de Adobe Experience Platform vous permet de publier votre modèle formé et évalué en tant que service, ce qui permet aux utilisateurs de votre organisation de noter des données sans avoir à créer leurs propres modèles.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+TQID: https://experienceleague.adobe.com/Rzqbbm-8AC-00mmXydXlL5oxf9QVkMYJ9gXpUPX7E-I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: 510
 ht-degree: 32%
 
 ---

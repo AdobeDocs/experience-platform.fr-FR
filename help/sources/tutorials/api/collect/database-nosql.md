@@ -3,10 +3,24 @@ title: Créez un flux de données pour les sources de base de données à l’ai
 type: Tutorial
 description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données de votre base de données dans Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+TQID: https://experienceleague.adobe.com/a-C-FvRuLWfqiQlmpLVqlr-7zuyadewGuybBKtbDc-U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1489'
-ht-degree: 71%
+source-wordcount: 1522
+ht-degree: 69%
 
 ---
 
@@ -143,7 +157,7 @@ Pour obtenir des instructions détaillées sur la création d’un jeu de donné
 
 ## Créer une connexion cible {#target-connection}
 
-Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 Vous disposez désormais des identifiants uniques d’un schéma cible, d’un jeu de données cible, ainsi que l’identifiant de spécification de connexion au lac de données. À lʼaide de l’API [!DNL Flow Service], vous pouvez créer une connexion cible en spécifiant ces identifiants ainsi que le jeu de données qui contiendra les données source entrantes.
 

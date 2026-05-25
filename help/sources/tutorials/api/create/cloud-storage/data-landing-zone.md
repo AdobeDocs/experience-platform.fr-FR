@@ -2,9 +2,14 @@
 title: Connecter Data Landing Zone à Adobe Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+TQID: https://experienceleague.adobe.com/X0dgc1KobP6xMAWX7CEWjWDTOpXpsKn64U4mL3HoLUY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: 1426
 ht-degree: 13%
 
 ---
@@ -68,7 +73,7 @@ Selon votre fournisseur, une requête réussie renvoie les éléments suivants :
 
 >[!BEGINTABS]
 
->[!TAB Réponse sur Azure ]
+>[!TAB Réponse sur Azure]
 
 ```json
 {
@@ -132,7 +137,7 @@ Selon votre fournisseur, une requête réussie renvoie les éléments suivants :
 
 >[!BEGINTABS]
 
->[!TAB Réponse sur Azure ]
+>[!TAB Réponse sur Azure]
 
 ```json
 {
@@ -479,7 +484,7 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 
 ### Utilisation de `determineProperties` pour détecter automatiquement les informations de propriété de fichier d’un [!DNL Data Landing Zone]
 
-Vous pouvez utiliser le paramètre `determineProperties` pour détecter automatiquement les informations de propriété du contenu du fichier de votre [!DNL Data Landing Zone] lors d’un appel GET visant à explorer le contenu et la structure de votre source.
+Vous pouvez utiliser le paramètre `determineProperties` pour détecter automatiquement les informations de propriété du contenu du fichier de votre [!DNL Data Landing Zone] lors d’un appel GET pour explorer le contenu et la structure de votre source.
 
 #### `determineProperties` cas d’utilisation
 
@@ -487,8 +492,8 @@ Le tableau suivant décrit les différents scénarios que vous pouvez rencontrer
 
 | `determineProperties` | `queryParams` | Réponse |
 | --- | --- | --- |
-| True | S/O | Si `determineProperties` est fourni comme paramètre de requête, la détection des propriétés du fichier se produit et la réponse renvoie une nouvelle clé de `properties` qui inclut des informations sur le type de fichier, le type de compression et le délimiteur de colonne. |
-| S/O | True | Si les valeurs du type de fichier, du type de compression et du délimiteur de colonne sont fournies manuellement dans le cadre de `queryParams`, elles sont utilisées pour générer le schéma et les mêmes propriétés sont renvoyées dans le cadre de la réponse. |
+| True | S.O. | Si `determineProperties` est fourni comme paramètre de requête, la détection des propriétés du fichier se produit et la réponse renvoie une nouvelle clé de `properties` qui inclut des informations sur le type de fichier, le type de compression et le délimiteur de colonne. |
+| S.O. | True | Si les valeurs du type de fichier, du type de compression et du délimiteur de colonne sont fournies manuellement dans le cadre de `queryParams`, elles sont utilisées pour générer le schéma et les mêmes propriétés sont renvoyées dans le cadre de la réponse. |
 | True | True | Si les deux options sont effectuées simultanément, une erreur est renvoyée. |
 | S.O. | S.O. | Si aucune des deux options n’est fournie, une erreur est renvoyée, car il n’existe aucun moyen d’obtenir des propriétés pour la réponse. |
 

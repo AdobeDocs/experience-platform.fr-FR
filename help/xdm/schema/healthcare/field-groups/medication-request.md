@@ -4,9 +4,19 @@ description: Découvrez le groupe de champs de schéma Demande de médicament .
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 8502380f-9557-4ca6-84bc-65010dfc6066
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/0xtGKHslJtX3XKceir3eBtCu4gmjSya701PTh0pBDFM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: 902
 ht-degree: 2%
 
 ---

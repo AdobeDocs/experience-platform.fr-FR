@@ -1,18 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;liste d’espaces de noms;espace de noms de liste
 solution: Experience Platform
-title: Liste des espaces de noms d’identité disponibles
-description: Répertorier tous les espaces de noms disponibles.
+title: Répertorier les espaces de noms d’identité disponibles
+description: Répertoriez tous les espaces de noms disponibles.
 role: Developer
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+TQID: https://experienceleague.adobe.com/w0FQUDAE3RlptCj7SCe13CcSEsSDGFM67aF2xg6csSQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 44%
+source-wordcount: 79
+ht-degree: 46%
 
 ---
 
-# Liste des espaces de noms d’identité disponibles
+# Répertorier les espaces de noms d’identité disponibles
 
 **Format d’API**
 
@@ -33,7 +38,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les espaces de noms avec une valeur &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; sont des espaces de noms standard, tandis que ceux avec une valeur &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; sont des espaces de noms que votre organisation a créés.
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les espaces de noms dont la valeur « [!UICONTROL custom] » est « [!UICONTROL false] » sont des espaces de noms standard, tandis que ceux dont la valeur « [!UICONTROL custom] » est « [!UICONTROL true] » sont des espaces de noms créés par votre organisation.
 
 >[!NOTE]
 >

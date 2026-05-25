@@ -1,19 +1,29 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;champs;schémas;Schémas;address;xdm:address;type de données;type de données;type de données;
+keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;champs;schémas;Schémas;adresse;xdm:address;type de données;type de données;type de données;
 solution: Experience Platform
 title: Type De Données D’Adresse Postale
 description: Découvrez le type de données XDM de l’adresse postale.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+TQID: https://experienceleague.adobe.com/bvWBdaEeWQHQvL6n-LddHvIp00zKfzPNRiBfLmDFmt0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 32%
+source-wordcount: 341
+ht-degree: 21%
 
 ---
 
-# [!UICONTROL Adresse postale] type de données
+# Type de données [!UICONTROL Postal address]
 
-[!UICONTROL Adresse postale] est un type de données XDM standard qui décrit les détails d’une adresse de publipostage.
+[!UICONTROL Postal address] est un type de données XDM standard qui décrit les détails d’une adresse de publipostage.
 
 ![](../images/data-types/postal-address.png){width=450}
 
@@ -27,7 +37,7 @@ ht-degree: 32%
 | `label` | Nom de l’adresse sous forme libre. |
 | `lastVerifiedDate` | Date à laquelle l’adresse a été vérifiée pour la dernière fois comme étant toujours associée à la personne. |
 | `modifiedByBatchID` | Identifiant du fichier de commandes ingéré qui a modifié l’enregistrement pour la dernière fois. |
-| `msaID` | Région métropolitaine des États-Unis dans laquelle cette observation a été effectuée. |
+| `msaID` | Région métropolitaine des États-Unis dans laquelle l’observation a été effectuée. |
 | `postOfficeBox` | Boîte postale de l’adresse. |
 | `postalCode` | Code postal de l’emplacement. Les codes postaux ne sont pas disponibles pour tous les pays. Dans certains pays, ce champ ne contiendra qu’une partie du code postal. |
 | `primary` | Valeur booléenne qui indique s’il s’agit de l’adresse principale de l’individu. Un profil ne peut avoir qu’une seule adresse `primary` à un moment donné. |
@@ -43,5 +53,5 @@ ht-degree: 32%
 
 Pour plus d’informations sur le type de données d’adresse postale, consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)

@@ -5,9 +5,24 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 7ff89999815387884fd8ce39f7cd7e7a6bee88bc
+TQID: https://experienceleague.adobe.com/ZKEa-vyCMpCB4TkJeWEyZdNVt1m1RG2KQopF1tQQqzc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '4780'
+source-wordcount: 4780
 ht-degree: 59%
 
 ---

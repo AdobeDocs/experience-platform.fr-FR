@@ -3,10 +3,27 @@ title: Faire évoluer la valeur client unique vers la valeur de durée de vie
 description: Découvrez comment créer des campagnes personnalisées pour offrir les meilleurs produits ou services complémentaires en fonction des attributs, du comportement et des achats passés d’un client spécifique.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+TQID: https://experienceleague.adobe.com/kDGYdaV-V2-qPtZfd8FsFWDhyuGFP1Zi8fuYHR6jnkA
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3156'
-ht-degree: 2%
+source-wordcount: 3383
+ht-degree: 3%
 
 ---
 
@@ -47,7 +64,7 @@ Pour ce faire, la technologie requise se compose des deux applications Experienc
    * [Destinations](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) : concevez des parcours, configurez des déclencheurs et créez les messages adéquats pour répondre aux besoins de vos visiteurs.
    * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=fr)
-   * [&#x200B; Audiences et événements &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
+   * [Audiences et événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
    * [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr)
 
 ## Architecture de Real-Time CDP et de Journey Optimizer
@@ -93,7 +110,7 @@ Au fur et à mesure que vous mettrez en œuvre le cas d’utilisation, vous util
 
 Les ressources du modèle de données d’expérience (XDM) sont gérées dans l’espace de travail [!UICONTROL Schemas] de [!DNL Adobe Experience Platform]. Vous pouvez afficher et explorer les ressources de base fournies par [!DNL Adobe] (par exemple, [!UICONTROL field groups]) et créer des ressources et des schémas personnalisés pour votre organisation.
 
-Pour plus d’informations sur la création de [schémas](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/home), consultez le tutoriel [création de schémas](/help/xdm/tutorials/create-schema-ui.md).
+Pour plus d’informations sur la création de [schémas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr), consultez le tutoriel [création de schémas](/help/xdm/tutorials/create-schema-ui.md).
 
 Il existe plusieurs conceptions de schéma que vous pouvez utiliser dans cet exemple d’implémentation pour le cas d’utilisation afin de transformer une valeur unique en valeur de durée de vie. Chaque schéma comprend des champs spécifiques requis à configurer, ainsi que certains champs suggérés.
 
@@ -218,7 +235,7 @@ Le schéma des transactions client hors ligne est représenté par une classe [!
 
 +++Détails du Commerce (groupe de champs)
 
-[Détails Commerce](/help/xdm/field-groups/event/commerce-details.md) est un groupe de champs de schéma standard pour la classe [!DNL XDM ExperienceEvent], utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations de panier standard (commande, passage en caisse, abandon).
+[Détails &#x200B;](/help/xdm/field-groups/event/commerce-details.md) est un groupe de champs de schéma standard pour la classe [!DNL XDM ExperienceEvent], utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations de panier standard (commande, passage en caisse, abandon).
 
 +++
 
@@ -308,7 +325,7 @@ Plus précisément, vous devez créer et utiliser deux audiences à différentes
 
 >[!BEGINTABS]
 
->[!TAB Audience admissible Adobe Journey Optimizer]
+>[!TAB Audience admissible ]
 
 Cette audience à forte valeur ajoutée et à faible fréquence inclut les profils que vous souhaitez contacter par le biais d’un parcours, pour les informer d’un nouveau programme d’abonnement. Les détails de l’audience sont les suivants :
 
@@ -342,7 +359,7 @@ Cette audience est créée pour inclure les profils qui ont dépensé plus de 25
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est indiqué dans les diagrammes. Toutes les [annonces publicitaires médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans l’espace de travail [!UICONTROL destinations][&#128279;](/help/destinations/ui/destinations-workspace.md).
+>[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est indiqué dans les diagrammes. Toutes les [annonces publicitaires médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans l’espace de travail [[!UICONTROL destinations]](/help/destinations/ui/destinations-workspace.md).
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) vous permet de proposer des expériences connectées, contextuelles et personnalisées à vos clients. Le parcours client est l’ensemble du processus d’interaction d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques.
 
@@ -357,11 +374,11 @@ Vous trouverez ci-dessous les données précises nécessaires pour chaque branch
 
 >[!BEGINTABS]
 
->[!TAB Parcours de vie]
+>[!TAB Parcours de vie] 
 
 Le parcours de durée de vie s’adresse à l’audience des clients à forte valeur ajoutée et à faible fréquence qui n’ont pas été ciblés au cours des 30 derniers jours. Un message s’affiche pour ces clients. Si, au bout de 7 jours, ils ne procèdent toujours pas à leur achat, vous pouvez inclure les non-acheteurs dans une audience à laquelle vous pouvez afficher des annonces publicitaires payantes. S&#39;il effectue un achat, vous pouvez définir les acheteurs sur un parcours de confirmation de commande, détaillé dans l&#39;onglet séparé.
 
-![Présentation visuelle de haut niveau du parcours de durée de vie.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Présentation visuelle de haut niveau de la valeur ponctuelle au parcours de durée de vie."){zoomable="yes"}
+![Présentation visuelle de haut niveau du parcours de durée de vie.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Valeur unique pour la présentation visuelle de haut niveau du parcours de durée de vie."){zoomable="yes"}
 
 +++Logique de Parcours détaillée
 
@@ -369,7 +386,7 @@ Le parcours illustré ci-dessus suit la logique suivante.
 
 1. Lecture d’audience : utilisez une [activité Lecture d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=fr) pour la première audience créée dans la section audiences ci-dessus.
 
-2. Condition - Canal préféré : utilisez une [activité de condition](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=fr) pour déterminer comment contacter les clients, que ce soit par e-mail, SMS ou notifications push. Utilisez trois activités d’action pour créer les trois branches.
+2. Condition - Canal préféré : utilisez une [activité de condition](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) pour déterminer comment contacter les clients, que ce soit par e-mail, SMS ou notifications push. Utilisez trois activités d’action pour créer les trois branches.
 
 3. Attente : utilisez une [activité d’attente](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=fr) pour attendre d’écouter les achats.
 
@@ -379,7 +396,7 @@ Le parcours illustré ci-dessus suit la logique suivante.
 
 +++
 
->[!TAB Parcours de confirmation de commande]
+>[!TAB Parcours de confirmation de commande] 
 
 Le parcours de confirmation de commande se concentre sur le fait de savoir si un achat a été effectué via le site web ou l&#39;application mobile. Une fois qu’un client a effectué avec succès l’achat, par exemple, d’un abonnement auprès de votre société, vous pouvez le configurer sur un parcours de confirmation de commande.
 

@@ -3,9 +3,20 @@ title: Connecter Snowflake à Experience Platform à l’aide de l’API Flow Se
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 7ccb8f7c6cfe6e3d030e79bc03ea0136003e5dfa
+TQID: https://experienceleague.adobe.com/sV6cHRcVjvz7ddujcgIU-zZqqZLc4fHc9yk6GK0C7g4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: 776
 ht-degree: 26%
 
 ---

@@ -6,10 +6,23 @@ seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+TQID: https://experienceleague.adobe.com/dcpt-GodRlCeJfvY8XkgLo60FzuTwVVJolscPPELuvA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 83%
+source-wordcount: 940
+ht-degree: 74%
 
 ---
 
@@ -52,7 +65,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
  </tbody> 
 </table>
 
-**Audience Manager**
+**Audience Manager**
 
 <table id="table_784AEABADBDA4D14BB9A7A9CB9EF07C3"> 
  <tbody> 
@@ -107,7 +120,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
    <td colname="col2"> <p>Numéro de <a href="/help/collection/js/release-notes.md" format="html" scope="external">version de la bibliothèque</a> SDK web Adobe Experience Platform. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>Namespace (Espace de nom du visiteur)</p> </td> 
+   <td colname="col1"> <p>Espace de noms</p> </td> 
    <td colname="col2"> <p>Le nom identifié dans l’extension.</p> </td> 
   </tr> 
   <tr> 
@@ -150,11 +163,11 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Code client </p> </td> 
-   <td colname="col2"> <p>Votre <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=fr" format="html" scope="external"> code client </a>Target. </p> </td> 
+   <td colname="col2"> <p>Votre <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html" format="html" scope="external"> code client </a>Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>Votre version actuelle d’<a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html?lang=fr" format="html" scope="external"> at.js</a> ou de mbox.js. </p> </td> 
+   <td colname="col2"> <p>Votre version actuelle d’<a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html" format="html" scope="external"> at.js</a> ou de mbox.js. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nom global de la demande </p> </td> 

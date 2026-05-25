@@ -2,10 +2,36 @@
 title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
-workflow-type: ht
-source-wordcount: '1524'
-ht-degree: 100%
+TQID: https://experienceleague.adobe.com/hM87YY9d3csuhb-guwwPs0oTDCWh5eJUwL3hkI5tBGQ
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a8b0238e-1d43-4679-a3b4-5ba1bad83baa
+  - id: b89b323a-1e91-40b1-8d20-96b5b726d55a
+  - id: c814092e-2730-45e8-a12d-e084529f52cb
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+workflow-type: tm+mt
+source-wordcount: 1685
+ht-degree: 96%
 
 ---
 
@@ -17,7 +43,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 >
 >L’extension de balises Analytics est régulièrement mise à jour en réponse aux mises à jour apportées à la [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Voir [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
 
-## 28 octobre 2024
+## mardi 28 octobre 2024
 
 **Extension Adobe Analytics 1.9.6**
 
@@ -33,7 +59,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Mise à niveau vers [AppMeasurement v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
 
-## 4 mars 2024
+## mardi 4 mars 2024
 
 **Extension Adobe Analytics 1.9.4**
 
@@ -41,7 +67,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Mise à niveau vers [AppMeasurement v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
-## 15 septembre 2023
+## samedi 15 septembre 2023
 
 **Extension Adobe Analytics 1.9.3**
 
@@ -50,7 +76,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Mise à niveau vers [AppMeasurement v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
 
 
-## 19 juillet 2023
+## jeudi 19 juillet 2023
 
 **Extension Adobe Analytics 1.9.2**
 
@@ -64,7 +90,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Ajout d’une fonctionnalité de gestion des erreurs supplémentaire pour les navigateurs ayant des API d’[indices clients d’agent utilisateur](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=fr) à entropie élevée défectueux.
 * Modification de l’en-tête Content-Type [POST](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/POST) de sorte à utiliser `x-www-form-urlencoded` par défaut.
 
-## 23 septembre 2022
+## samedi 23 septembre 2022
 
 **Extension Adobe Analytics 1.9.1**
 
@@ -73,7 +99,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Mise à niveau vers AppMeasurement v2.23.0.
 * L’extension peut désormais collecter des [indices client d’agent utilisateur](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) à entropie élevée pris en charge par la dernière version d’AppMeasurement.
 
-## 28 février 2022
+## mardi 28 février 2022
 
 **Extension Adobe Analytics 1.9.0**
 
@@ -81,7 +107,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Suppression de certaines instructions de débogage dans AppMeasurement.
 
-## 29 novembre 2021
+## mardi 29 novembre 2021
 
 **Extension Adobe Analytics 1.8.8**
 
@@ -89,7 +115,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Mise à niveau dʼAppMeasurement vers la version 2.22.3.
 
-## 16 septembre 2021
+## vendredi 16 septembre 2021
 
 **Extension Adobe Analytics 1.8.7**
 
@@ -105,7 +131,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 **Correctifs de bugs** :
 
 * Mise à niveau dʼ[AppMeasurement vers la version 2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
-* Mise à jour de lʼargumernt linkName Fallback pour refléter la logique Activity Map au lieu dʼutiliser innerHTML.
+* Mise à jour de lʼargument linkName Fallback pour refléter la logique Activity Map au lieu dʼutiliser innerHTML.
 
 ## 6 août 2020
 
@@ -120,7 +146,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Mise à jour d’[AppMeasurement vers la version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr).
 * Légère modification de l’interface utilisateur, de façon à ce que les paramètres supplémentaires apparaissent désormais réduits en accordéon plutôt que sous forme de case à cocher.
 
-## 2 juin 2020
+## mercredi 2 juin 2020
 
 **Extension Adobe Analytics 1.8.4**
 
@@ -134,7 +160,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * L’interface utilisateur a été nettoyée en minimisant les variables de hiérarchie et d’autres options.
 * Un champ a été ajouté pour définir les identifiants d’achat à partir de l’interface utilisateur de configuration de l’extension.
 
-## 10 mars 2020
+## mercredi 10 mars 2020
 
 **Extension Adobe Analytics 1.8.3**
 
@@ -147,7 +173,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * [Mise à jour d’AppMeasurement vers la version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr)
 
-## 2 mars 2020
+## mardi 2 mars 2020
 
 **Extension Adobe Analytics 1.8.2**
 
@@ -164,7 +190,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Ajout d’une case à cocher dans la section « Cookies » de la configuration de l’extension qui vous permet d’écrire des cookies sécurisés.
 * Ajout de trois nouvelles configurations au module Audience Manager. Ajout d’un paramètre pour l’activation de la journalisation, l’activation des destinations d’URL et l’activation des destinations de cookies.
 
-## 13 novembre 2019
+## jeudi 13 novembre 2019
 
 **Extension Adobe Analytics 1.8.1**
 
@@ -172,7 +198,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Correction d’un bogue en raison duquel les variables eVar et prop Premium n’étaient pas enregistrées.
 
-## 1 novembre 2019
+## samedi 1 novembre 2019
 
 **Extension Adobe Analytics 1.8.0**
 
@@ -186,7 +212,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Trie numériquement les eVars, les props et les événements dans la vue Extension.
 * Changements de schéma principal pour la prise en charge des données contextuelles Magento
 
-## 6 septembre 2019
+## samedi 6 septembre 2019
 
 **Extension Adobe Analytics 1.7.8**
 
@@ -195,7 +221,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Correction d’un bogue qui empêchait certains utilisateurs de voir les options de la suite de rapports dans la liste déroulante
 * Correction d’un bogue qui empêchait les événements de se déclencher correctement
 
-## 5 septembre 2019
+## vendredi 5 septembre 2019
 
 **Extension Adobe Analytics 1.7.7**
 
@@ -210,7 +236,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Correction d’un bogue de définition des inclusions/exclusions
 * Correction d’un bogue qui ne permettait pas de définir correctement les variables lors de l’utilisation de l’ECID
 
-## 18 juillet 2019
+## vendredi 18 juillet 2019
 
 **Extension Adobe Analytics 1.7.6**
 
@@ -221,7 +247,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#version-2.15.0)
 * Suppression de la case à cocher suivante qui n’est plus prise en charge : « Ne pas joindre l’IFRAME de publication de destination au DOM ou aux destinations de déclenchement »
 
-## 4 juin 2019
+## mercredi 4 juin 2019
 
 **Extension Adobe Analytics 1.7.5**
 
@@ -235,15 +261,15 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Correction d’un bogue de l’interface utilisateur qui entraînait la suppression d’une eVar incorrecte d’une liste
 * Correction d’un bogue qui nécessitait un serveur de suivi SSL lors de l’ajout de plusieurs suites de rapports. Lors de l’ajout de plusieurs suites de rapports, un serveur de suivi est requis, mais le champ serveur de suivi SSL est facultatif.
 
-## 15 avril 2019
+## mardi 15 avril 2019
 
 **Extension Adobe Analytics 1.7.4**
 
 **Correctifs de bugs** :
 
-* Restauration de l’extension après la découverte d’un bogue dans AppMeasurement 2.13.0. AppMeasurement 2.13.0 générait un problème qui empêchait l’envoi de l’ECID. Si vous avez installé la version 1.7.3, nous vous recommandons donc d’effectuer une mise à niveau vers la version 1.7.4 pour éviter ce problème. Notez que le clearVars continuera jusqu’à ce qu’une version mise à jour d’AppMeasurement soit publiée
+* Restauration de l’extension après la détection d’un bogue dans appMeasurement 2.13.0. appMeasurement 2.13.0 provoquait un problème qui n’envoyait pas l’ECID. Par conséquent, si vous avez installé 1.7.3, nous vous recommandons de mettre à niveau vers la version 1.7.4 pour éviter ce problème. Notez que le clearVars continuera jusqu’à ce qu’une version mise à jour d’AppMeasurement soit publiée
 
-## 12 avril 2019
+## samedi 12 avril 2019
 
 **Extension Adobe Analytics 1.7.3**
 
@@ -251,7 +277,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Mise à jour de l’extension Adobe Analytics vers AppMeasurement 2.13.0 incluant un correctif pour un problème clearVars connu.
 
-## 21 mars 2019
+## vendredi 21 mars 2019
 
 **Extension Adobe Analytics 1.7.2**
 
@@ -262,7 +288,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Mise à niveau de la vue d’extension Adobe Analytics vers React-Spectrum.
 * Désormais, lors de la configuration des suites de rapports dans la page de configuration, une liste déroulante s’affiche pour toutes les suites de rapports de votre société, ce qui facilite la sélection de la suite de rapports appropriée.
 
-## 7 mars 2019
+## vendredi 7 mars 2019
 
 **Extension Adobe Analytics 1.7.1**
 
@@ -270,7 +296,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Restauration de l’extension à la version 1.6 après la découverte d’un bogue dans la version 1.7.
 
-## 11 février 2019
+## mardi 11 février 2019
 
 **Extension Adobe Analytics 1.6**
 
@@ -283,7 +309,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Correction d’un conflit avec Prototype JS. L’extension Analytics prend désormais en charge les bibliothèques prototype.js standard.
 
-## 9 novembre 2018
+## samedi 9 novembre 2018
 
 **Extension Adobe Analytics 1.5.1**
 
@@ -291,7 +317,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Rétrogradation du module DIL vers la version 7.0 pour corriger un problème causant l’échec du déclenchement des balises Analytics
 
-## 5 novembre 2018
+## mardi 5 novembre 2018
 
 **Extension Adobe Analytics 1.5**
 
@@ -299,13 +325,13 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Mise à jour de l’extension Adobe Analytics pour la prise en charge de DIL 8.0 pour Audience Manager
 * Séparation du champ « Serialize from value » (Sérialiser à partir de la valeur) en deux champs, « Event ID » (ID d’événement) et « Event Value » (Valeur d’événement). Cela corrige le problème qui affectait une valeur plutôt que de sérialiser un événement
-   * Notez que si vous utilisez le champ actuel pour ajouter un ID à l’aide d’une chaîne (p. ex. Event7=3:abc123), vous devez mettre à jour votre entrée pour refléter l’ID dans le champ « Event ID » (ID d’événement).
+   * Notez que si vous utilisez le champ actuel pour ajouter un ID à l’aide d’une chaîne (p. ex. Event7=3:abc123) vous devrez mettre à jour votre entrée pour refléter l’identifiant dans le champ « Identifiant de l’événement »
 
 **Correctifs de bugs** :
 
 * Correction d’un bogue qui empêchait le remplissage correct du code de devise
 
-## 11 octobre 2018
+## vendredi 11 octobre 2018
 
 **Extension Adobe Analytics 1.4**
 
@@ -317,7 +343,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Correction d’un bogue afin que les variables de définition ne se bloquent pas lorsqu’aucun objet trackerProperties n’est disponible.
 
-## 5 juin 2018
+## mercredi 5 juin 2018
 
 **Extension Adobe Analytics 1.3**
 
@@ -332,7 +358,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Correction de plusieurs bogues afin d’améliorer le chargement des ressources dans le sélecteur de révisions
 * Correction d’un bogue causant le remplacement de s.events par plusieurs règles dans l’extension Adobe Analytics.
 
-## 20 mars 2018
+## mercredi 20 mars 2018
 
 **Extension Adobe Analytics 1.2**
 
@@ -341,7 +367,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Mise à jour du fichier AppMeasurement.js vers la version 2.8.0
 * Ajout d’une prise en charge du transfert côté serveur
 
-## 8 février 2018
+## vendredi 8 février 2018
 
 **Extension Adobe Analytics 1.1**
 

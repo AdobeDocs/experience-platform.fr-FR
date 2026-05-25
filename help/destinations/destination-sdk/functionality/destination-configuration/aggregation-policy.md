@@ -2,10 +2,21 @@
 description: Découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être associées et regroupées par lot.
 title: Politique d’agrégation
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/qaSEo-1xpccTir5sGY-b0glgLMr0yQE2xaB831Kz39s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 75%
+source-wordcount: 1228
+ht-degree: 74%
 
 ---
 
@@ -79,7 +90,7 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `aggregationType` | Chaîne | Indique le type de politique d’agrégation que la destination doit utiliser. Types d’agrégation pris en charge : <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. <br><br>Cette valeur indique le nombre maximal de profils que le point d’entrée doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation des meilleurs efforts. Par exemple, si vous spécifiez la valeur 100, Experience Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br><br> Si le serveur n’accepte pas plusieurs utilisateurs par requête, définissez cette valeur sur `1`. |
+| `bestEffortAggregation.maxUsersPerRequest` | Entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. <br><br>Cette valeur indique le nombre maximal de profils que le point d’entrée doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation des meilleurs efforts. Par exemple, si vous spécifiez la valeur 100, Experience Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br><br> Si le serveur n’accepte pas plusieurs utilisateurs par demande, définissez cette valeur sur `1`. |
 | `bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de noms d’identité donné. |
 | `bestEffortAggregation.aggregationKey` | Objet | *Facultatif*. Agrège les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. Ce paramètre peut être omis ou défini sur `null` si l’agrégation n’est pas nécessaire. Lorsqu’elle est fournie, elle fonctionne de manière identique à la clé d’agrégation dans l’agrégation configurable. |
 | `bestEffortAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez ce paramètre sur `true` pour regrouper les profils exportés vers votre destination par identifiant d’audience. |

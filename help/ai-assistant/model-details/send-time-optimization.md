@@ -3,9 +3,25 @@ title: Détails du modèle d’optimisation de l’heure d’envoi
 description: Découvrez le modèle d’IA utilisé pour l’optimisation de l’heure d’envoi dans Adobe Journey Optimizer.
 hide: true
 exl-id: 95e1fc8f-1817-40d7-aa55-93daa50f43c0
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+TQID: https://experienceleague.adobe.com/4J6eSeDpKP0Amc9fMoazaIG--0y77-DV6jiwsAuZfRo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: 1253
 ht-degree: 10%
 
 ---

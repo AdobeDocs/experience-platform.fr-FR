@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Présentation du connecteur FTP Source
 description: Découvrez comment connecter un serveur FTP à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/bPAvGDHZWR8JwMmXa6dFCJ32BRffKbMxDNa6fCYvetc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 64%
+source-wordcount: 450
+ht-degree: 65%
 
 ---
 
@@ -27,7 +32,7 @@ Les sources de stockage dans le cloud peuvent introduire vos propres données da
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

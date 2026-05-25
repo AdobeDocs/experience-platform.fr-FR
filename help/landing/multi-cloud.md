@@ -3,10 +3,22 @@ solution: Experience Platform
 title: Présentation de Adobe Experience Platform multi-cloud
 description: Découvrez les différences entre l’exécution d’Experience Platform sur Microsoft Azure et Amazon Web Services.
 exl-id: da552311-6e50-4b09-bcc8-696a25325796
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/2tKDwwPcXRPITGOfwJGwP3fQ1MvsUv9yJ44Q8AXo07k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 4%
+source-wordcount: 593
+ht-degree: 8%
 
 ---
 

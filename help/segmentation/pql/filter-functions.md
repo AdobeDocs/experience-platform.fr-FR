@@ -1,22 +1,33 @@
 ---
 solution: Experience Platform
 title: Fonctions de filtre PQL
-description: Les fonctions de filtre sont utilisées pour filtrer les données dans des tableaux dans Profile Query Language (PQL).
+description: Les fonctions de filtrage sont utilisées pour filtrer les données dans les tableaux de Profile Query Language (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: 7c282594e66c8c7700471a94947448fd91596814
+TQID: https://experienceleague.adobe.com/GeQYYItaeubvmw814w0Ecn0A0sc9M-1ehl1zGbcoTeM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: 211
 ht-degree: 66%
 
 ---
 
 # Fonctions de filtre
 
-Les fonctions de filtre sont utilisées pour filtrer les données dans des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
+Les fonctions de filtrage sont utilisées pour filtrer les données dans les tableaux d’[!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur d’autres fonctions de PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Filtre
 
-La fonction `[]` (filtre) permet d’appliquer des filtres à un tableau et de renvoyer un sous-ensemble du tableau correspondant à la condition spécifiée. Par conséquent, cette fonction renvoie un tableau .
+La fonction `[]` (filtre) permet d’appliquer des filtres à un tableau et de renvoyer un sous-ensemble du tableau qui correspond à la condition spécifiée. Par conséquent, cette fonction renvoie un tableau.
 
 **Format**
 
@@ -51,7 +62,7 @@ L’opérateur `^` (« haut ») vous permet de faire référence aux propriét
 
 **Exemple**
 
-La requête PQL suivante récupère tous les événements qui contiennent au moins un produit avec un SKU égal à « PS » **ou** qui contiennent un individu de sexe féminin.
+La requête PQL suivante récupère tous les événements qui contiennent au moins un produit avec un SKU égal à « PS » **ou** qui contiennent une personne dont le genre est « féminin ».
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]

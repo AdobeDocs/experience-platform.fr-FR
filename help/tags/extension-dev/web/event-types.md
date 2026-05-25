@@ -2,9 +2,30 @@
 title: Types d’événements pour les extensions web
 description: Découvrez comment définir un module de bibliothèque relatif aux types d’événements pour une extension web dans Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/n7L45Vf7IZ4cbBZtHC6xHEiS8hJM2aIUAs3Xt52MMno
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: 1016
 ht-degree: 97%
 
 ---
@@ -57,7 +78,7 @@ Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configu
 }
 ```
 
-Pour fonctionner selon la durée définie par l’utilisateur ou l’utilisatrice, notre module devrait être mis à jour pour devenir ceci :
+Pour fonctionner selon la durée définie par l’utilisateur, notre module devrait être modifié pour devenir ceci :
 
 ```js
 module.exports = function(settings, trigger) {

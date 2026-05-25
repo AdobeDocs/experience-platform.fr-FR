@@ -2,10 +2,25 @@
 title: edgeDomain
 description: Déterminez le domaine vers lequel vous souhaitez envoyer des données.
 exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
-source-git-commit: 2d3c31e399989652a0472bbe2174ca8d8554ba30
+TQID: https://experienceleague.adobe.com/AGtfo51srVVyouLSiLya2Ie5-P6V50vl9Xxxwi0iQ-s
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
+subfeature_v2:
+  - id: bdea9bc8-5600-45db-b85e-d74bb59dfcff
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 2%
+source-wordcount: 297
+ht-degree: 6%
 
 ---
 

@@ -3,14 +3,21 @@ solution: Experience Platform
 title: Modèle de données du secteur des télécommunications ERD
 description: Affichez un diagramme de relation d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur des télécommunications, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/HmhEXrbL-AR3jG2SkrLI4z-zAmBU6NNbFfv0VO76RpU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 1%
+source-wordcount: 386
+ht-degree: 0%
 
 ---
 
-# [!UICONTROL Télécommunications] modèle de données du secteur ERD
+# [!UICONTROL Telecommunications] modèle de données du secteur ERD
 
 Le diagramme de relation d&#39;entité suivant (ERD) représente un modèle de données normalisé pour l&#39;industrie des télécommunications. L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
 
@@ -33,14 +40,14 @@ Utilisez la légende suivante pour interpréter cet ERD :
 >
 >L’entité Événement d’expérience comprend un champ « _ID », qui représente l’attribut d’identifiant unique (`_id`) fourni par la classe XDM ExperienceEvent. Consultez le document de référence sur [XDM ExperienceEvent](../../classes/experienceevent.md) pour plus d’informations sur ce qui est attendu pour cette valeur.
 
-## Cas pratiques [!UICONTROL télécommunications]
+## Cas d’utilisation [!UICONTROL Telecommunications]
 
 Le tableau suivant décrit les classes et les groupes de champs de schéma recommandés pour plusieurs cas d’utilisation courants du secteur des télécommunications.
 
 | Cas d’utilisation | Classes et groupes de champs recommandés |
 | --- | --- |
-| Comprenez les clients qui sont de bons candidats pour des opportunités de vente incitative ou croisée en fonction de leurs avoirs actuels et de leur comportement de navigation. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Détails de la montée en gamme]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL Détails de la mise à niveau]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL Profil individuel XDM]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Abonnement télécom]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Détails démographiques]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Coordonnées personnelles]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
-| Recibler les abandons de panier par le biais d’annonces pertinentes et d’e-mails personnalisés automatisés. Supprimer les publicités lors de leur conversion. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Détails Commerce &#x200B;]](../../field-groups/event/upsell-details.md) (pour capturer les abandons de panier)</li></ul></li><li>**[[!UICONTROL Profil individuel XDM]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Abonnement télécom]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Détails démographiques]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Coordonnées personnelles]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
-| Lorsqu’un client est marqué comme susceptible d’être résilié (en fonction d’une interaction d’un employé ou d’un algorithme de machine learning automatisé), envoyez les détails du client aux canaux numériques et non numériques. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Détails de la campagne marketing]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL Informations sur le canal]](../../field-groups/event/channel-details.md)</li><li>Un groupe de champs personnalisés contenant du contenu personnalisé</li></ul></li><li>**[[!UICONTROL Profil individuel XDM]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Détails démographiques]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Coordonnées personnelles]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| Comprenez les clients qui sont de bons candidats pour des opportunités de vente incitative ou croisée en fonction de leurs avoirs actuels et de leur comportement de navigation. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Upsell Details]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL Upgrade Details]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Telecom Subscription]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| Recibler les abandons de panier par le biais d’annonces pertinentes et d’e-mails personnalisés automatisés. Supprimer les publicités lors de leur conversion. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Commerce Details]](../../field-groups/event/upsell-details.md) (pour capturer les abandons de panier)</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Telecom Subscription]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+| Lorsqu’un client est marqué comme susceptible d’être résilié (en fonction d’une interaction d’un employé ou d’un algorithme de machine learning automatisé), envoyez les détails du client aux canaux numériques et non numériques. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Campaign Marketing Details]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL Channel Details]](../../field-groups/event/channel-details.md)</li><li>Un groupe de champs personnalisés contenant du contenu personnalisé</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}

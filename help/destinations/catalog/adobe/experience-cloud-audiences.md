@@ -1,15 +1,39 @@
 ---
 title: Audiences Experience Cloud
 description: Découvrez comment partager des audiences de Real-Time Customer Data Platform vers différentes applications Experience Cloud.
-last-substantial-update: 2023-09-28T00:00:00Z
+last-substantial-update: 2023-09-28T00:00:00.000Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/2W5j-HTIS416Tlrk5TmTseIyvBiPGYIEaAX9rf7MAvk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1717'
-ht-degree: 13%
+source-wordcount: 1969
+ht-degree: 12%
 
 ---
-
 
 # Connexion [!UICONTROL Experience Cloud Audiences]
 
@@ -183,7 +207,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 >
 >Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Lisez [Activer des profils et des audiences vers des destinations d’exportation d’audiences de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Aucune [&#x200B; étape de mappage &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) n’est requise et aucune [&#x200B; étape de planification &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) n’est disponible pour cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Aucune [&#x200B; étape de mappage &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) n’est requise et aucune [&#x200B; étape de planification &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) n’est disponible pour cette destination.
 
 ## Valider l’exportation des données {#exported-data}
 

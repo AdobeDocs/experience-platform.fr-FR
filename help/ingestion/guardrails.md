@@ -3,10 +3,30 @@ keywords: Experience Platform;dépannage;mécanismes de sécurisation;conseils;
 title: Mécanismes de sécurisation pour l’ingestion des données
 description: Découvrez les mécanismes de sécurisation pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: b5b975308d28ae82ea4d811652681215bc2cfbdb
+TQID: https://experienceleague.adobe.com/miZ-K7DpzfXPKrtp3PVJOHn7wEOVsMIuVvqhjKPi6Kg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+  - id: f5efb499-54f9-432b-ac5c-599dbac103af
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 37%
+source-wordcount: 912
+ht-degree: 33%
 
 ---
 
@@ -49,7 +69,7 @@ Le tableau suivant présente les mécanismes de sécurisation à prendre en comp
 
 | Type d’ingestion | Instructions | Notes |
 | --- | --- | --- |
-| Sources en flux continu | <ul><li>La taille d’enregistrement maximale est de 1 Mo, la taille recommandée étant de 10 Ko.</li><li>Les sources en flux continu prennent en charge entre 4 000 et 5 000 requêtes par seconde lors de l’ingestion dans le lac de données. Cela s’applique aux nouvelles connexions source en plus des connexions source existantes. **Remarque** : il peut s’écouler jusqu’à 60 minutes avant que les données de diffusion en continu ne soient complètement traitées dans le lac de données.</li><li>Les sources en flux continu prennent en charge un maximum de 1 500 requêtes par seconde lors de l’ingestion de données vers le profil ou la segmentation en flux continu.</li></ul> | Les sources en flux continu, telles que [!DNL Kafka], [!DNL Azure Event Hubs] et [!DNL Amazon Kinesis], n’utilisent pas l’itinéraire [!DNL Data Collection Core Service] (DCCS) et peuvent avoir différentes limites de débit. Consultez la [présentation des sources](../sources/home.md) pour un catalogue de sources que vous pouvez utiliser pour l’ingestion de données. |
+| Sources en flux continu | <ul><li>La taille d’enregistrement maximale est de 1 Mo, la taille recommandée étant de 10 Ko.</li><li>Les sources en flux continu prennent en charge entre 4 000 et 5 000 requêtes par seconde lors de l’ingestion dans le lac de données. Cela s’applique aux nouvelles connexions source en plus des connexions source existantes. **Remarque** : il peut s’écouler jusqu’à 60 minutes avant que les données de diffusion en continu ne soient complètement traitées dans le lac de données.</li><li>Les sources en flux continu prennent en charge un maximum de 1 500 requêtes par seconde lors de l’ingestion de données vers le profil ou la segmentation en flux continu.</li></ul> | Les sources en flux continu, telles que [!DNL Kafka], [!DNL Azure Event Hubs] et [!DNL Amazon Kinesis], n’utilisent pas l’itinéraire [!DNL Data Collection Core Service] (DCCS) et peuvent avoir différentes limites de débit. Consultez la [présentation des sources](../sources/home.md) pour un catalogue de sources que vous pouvez utiliser pour l’ingestion de données. |
 
 {style="table-layout:auto"}
 

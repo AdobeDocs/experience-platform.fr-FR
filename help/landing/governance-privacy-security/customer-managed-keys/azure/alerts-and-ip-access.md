@@ -1,9 +1,22 @@
 ---
-title: Configuration des alertes et de la place sur la liste autorisée IP pour Azure CMK
-description: Découvrez comment placer sur la liste autorisée l’adresse IP statique d’Adobe dans Azure Key Vault et comment les alertes Experience Platform permettent de détecter et de résoudre les problèmes d’accès aux clés gérées par le client.
-source-git-commit: 719273798954b70460c77711ef5eda5f9d22cdb0
+title: Configuration des alertes et de la place sur la liste autorisée IP pour la fonction CMK d’Azure
+description: Découvrez comment placer sur la liste autorisée l’adresse IP statique d’Adobe dans le coffre de clés Azure et comment les alertes Experience Platform permettent de détecter et de résoudre les problèmes d’accès aux clés gérées par le client.
+exl-id: 9b520a3f-9cf1-4ae3-b8c2-c71ac3a80201
+TQID: https://experienceleague.adobe.com/zkYYcw4hrTioMWuKzg6-blIZBjDoefAjKPsawDAkYTk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: 449
 ht-degree: 0%
 
 ---
@@ -16,7 +29,7 @@ Pour améliorer la transparence, Adobe fournit un [service de surveillance](../.
 >
 >Si vous avez désactivé l’accès au réseau public ou configuré votre coffre de clés [!DNL Azure] pour autoriser uniquement les réseaux sélectionnés, vous devez ajouter l’adresse IP statique d’Adobe à votre place sur la liste autorisée. Sans cela, vous ne serez peut-être pas averti des problèmes d’accès qui pourraient avoir un impact sur votre instance Experience Platform.
 
-## Placer sur la liste autorisée l’adresse IP statique d’Adobe dans [!DNL Azure] Key Vault {#add-adobe-static-ip}
+## l’adresse IP statique d’Adobe dans [!DNL Azure] Key Vault {#add-adobe-static-ip}
 
 Pour activer ces alertes tout en conservant vos restrictions réseau, accédez à votre **[!DNL Azure Key Vault]** > **[!DNL Networking settings]**. Dans l’onglet **[!DNL Firewalls and virtual networks]** , sélectionnez **[!DNL Allow public access from specific virtual networks and IP addresses]**.
 
@@ -38,7 +51,7 @@ Après avoir placé sur la liste autorisée l’adresse IP statique d’Adobe, E
 
 ## Surveiller les alertes {#monitor-alerts}
 
-Les alertes de Platform vous informent des problèmes susceptibles d’interrompre l’accès aux clés, tels que **[!UICONTROL Échec de l’accès à la clé]** ou **[!UICONTROL Désactivation de la clé]**. Ces alertes vous aident à identifier rapidement des problèmes tels qu’une adresse IP statique supprimée ou un pare-feu mal configuré. Pour restaurer l’accès, vérifiez les paramètres de votre pare-feu [!DNL Azure] et ajoutez à nouveau l’adresse IP requise.
+Les alertes de Platform vous informent des problèmes susceptibles d’interrompre l’accès aux clés, tels que **[!UICONTROL Key access failure]** ou **[!UICONTROL Key disablement]**. Ces alertes vous aident à identifier rapidement des problèmes tels qu’une adresse IP statique supprimée ou un pare-feu mal configuré. Pour restaurer l’accès, vérifiez les paramètres de votre pare-feu [!DNL Azure] et ajoutez à nouveau l’adresse IP requise.
 
 <!-- For a complete list of alert types and recommended resolutions, see the [CMK alert resolution reference](../alert-resolution-reference.md). -->
 

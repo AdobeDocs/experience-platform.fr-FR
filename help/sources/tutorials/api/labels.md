@@ -2,9 +2,16 @@
 title: Appliquez des libellés d’accès pour gérer l’accès des utilisateurs aux flux de données sources à l’aide de l’API
 description: Découvrez comment utiliser l’API Flow Service pour appliquer des libellés d’accès et gérer l’accès des utilisateurs et utilisatrices à vos flux de données sources.
 exl-id: 572d6838-3e4c-4fd5-89fa-32cad6280325
-source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
+TQID: https://experienceleague.adobe.com/5czWcoSjOAHSQYhcLU0llUpPe3mQzM2gQvnNTZhrl80
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: 582
 ht-degree: 11%
 
 ---
@@ -15,7 +22,7 @@ Vous pouvez utiliser les fonctionnalités fournies par [contrôle d’accès bas
 
 Lorsque vous ajoutez un libellé d’accès à un flux de données spécifique, seuls les utilisateurs et utilisatrices ayant accès à un rôle auquel ce libellé est affecté peuvent afficher et modifier ce flux de données. Si un flux de données de sources n’est marqué d’aucun libellé, il est visible par tous les utilisateurs appartenant à votre organisation. Par exemple, si vous appliquez le libellé C12 à un flux de données, les utilisateurs affectés à un rôle qui ne dispose pas du libellé C12 ne pourront pas afficher et modifier le flux de données avec le libellé C12.
 
-Lisez ce guide pour plus d’informations sur la manière d’appliquer des libellés d’accès à vos flux de données sources à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lisez ce guide pour plus d’informations sur la manière d’appliquer des libellés d’accès à vos flux de données sources à l’aide de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).[!DNL Flow Service] 
 
 ## Commencer
 
@@ -24,7 +31,7 @@ Avant d’utiliser des libellés de contrôle d’accès, familiarisez-vous d’
 * [Présentation du contrôle d’accès basé sur les attributs](../../../access-control/abac/overview.md)
 * [Guide complet du contrôle d’accès basé sur les attributs](../../../access-control/abac/end-to-end-guide.md)
 * [Guide de l’API de contrôle d’accès basé sur les attributs](../../../access-control/abac/api/overview.md)
-* [Glossaire des étiquettes dʼutilisation des données](../../../data-governance/labels/reference.md)
+* [Glossaire des libellés dʼutilisation des données](../../../data-governance/labels/reference.md)
 
 ## Application de libellés d’accès aux flux de données sources
 

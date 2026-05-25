@@ -4,16 +4,27 @@ solution: Experience Platform
 title: Type de données de mesure
 description: Découvrez le type de données du modèle de données d’expérience de mesure (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+TQID: https://experienceleague.adobe.com/aNvqpcpEDybeIUE1pUW3hPE20hPIVcwnLyKa7x1v5sk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: 227
 ht-degree: 5%
 
 ---
 
-# [!UICONTROL Mesure] type de données
+# Type de données [!UICONTROL Measure]
 
-[!UICONTROL Mesure] est un type de données standard du modèle de données d’expérience (XDM) qui contient un point de données quantifiable concret d’une mesure particulière. Une mesure est composée d’un identifiant unique et d’une valeur.
+[!UICONTROL Measure] est un type de données standard du modèle de données d’expérience (XDM) qui contient un point de données quantifiable concret d’une mesure particulière. Une mesure est composée d’un identifiant unique et d’une valeur.
 
 ![mesurer l’image](../images/data-types/measure.PNG){width=500}
 
@@ -26,5 +37,5 @@ ht-degree: 5%
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/data/measure.schema.json)

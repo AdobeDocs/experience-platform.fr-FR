@@ -3,10 +3,17 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;API;explorer;
 title: Explorer un Source tabulaire à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer le contenu et la structure d’une source basée sur des tableaux.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/cSaXWkL4Bl5tp1uPvaLVh-1Wd2iLtOKRfygpDA0nnJA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 16%
+source-wordcount: 481
+ht-degree: 17%
 
 ---
 
@@ -20,7 +27,7 @@ Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la str
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -31,7 +38,7 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 
 ## Explorer vos tableaux de données
 
-Vous pouvez récupérer des informations sur la structure de vos tableaux de données en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant l’identifiant de connexion de base de votre source.
+Vous pouvez récupérer des informations sur la structure de vos tables de données en adressant une requête GET à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base de votre source.
 
 **Format d’API**
 

@@ -5,9 +5,14 @@ title: Point d’entrée de l’API des modèles de requête
 description: Ce guide détaille les différents appels de l’API de modèle de requête que vous pouvez effectuer à l’aide de l’API Query Service.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/29-sMVEKEw6yHYjFF6yz2y1MAKKgRY8bl27AfVAvuQI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: 980
 ht-degree: 44%
 
 ---
@@ -18,7 +23,7 @@ ht-degree: 44%
 
 Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-Pour plus d’informations sur la création de modèles via l’interface utilisateur d’[&#x200B; consultez la documentation sur les modèles de requête de l’interface utilisateur &#x200B;](../ui/query-templates.md).
+Pour plus d’informations sur la création de modèles via l’interface utilisateur d’[&#128279;](../ui/query-templates.md) consultez la documentation sur les modèles de requête de l’interface utilisateur .
 
 ### Récupération d’une liste de modèles de requête
 
@@ -43,7 +48,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les modèles créés les plus anciens, puis continue à répertorier les résultats les plus récents.Les horodatages ISO <br> permettent différents niveaux de granularité de la date et de l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe est écrit comme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, à 8 :15: 30, heure standard des États-Unis d’Amérique. Un fuseau horaire peut être fourni avec un décalage UTC et est désigné par le suffixe « Z » (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les modèles créés les plus anciens, puis continue à répertorier les résultats les plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité de la date et de l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe est écrit comme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, à 8 :15: 30, heure standard des États-Unis d’Amérique. Un fuseau horaire peut être fourni avec un décalage UTC et est désigné par le suffixe « Z » (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `name` et `userId` sont pris en charge. Le seul opérateur pris en charge est `==` (égal à). Par exemple, `name==my_template` renvoie tous les modèles de requête portant le nom `my_template`. |
 
 **Requête**
@@ -254,7 +259,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La requête PUT nécessite de renseigner les champs sql et name , et **remplacera** le contenu actuel de ce modèle de requête.
+>La requête PUT nécessite que les champs sql et name soient renseignés et **remplacera** le contenu actuel de ce modèle de requête.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f

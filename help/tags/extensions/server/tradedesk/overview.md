@@ -2,9 +2,31 @@
 title: Présentation de l’extension de l’API Conversions en temps réel de Trade Desk
 description: Découvrez l’extension d’API Real-Time Conversions de Trade Desk pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/WxVVcBWiq0p7LaTNM-GCo6Au2SIcoIisNyKt9qyXQqk
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: 955
 ht-degree: 3%
 
 ---
@@ -23,7 +45,7 @@ Lisez ce document pour savoir comment installer l’extension et utiliser ses fo
 
 ## Conditions préalables {#prerequisites}
 
-Pour configurer le [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API], vous devez disposer d’un ID publicitaire, d’un ID UPixel et d’un ID de suivi appropriés issus de votre compte &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
+Pour configurer le [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi), vous devez disposer d’un ID publicitaire, d’un ID UPixel et d’un ID de suivi appropriés issus de votre compte [!DNL The Trade Desk].
 
 >[!INFO]
 >

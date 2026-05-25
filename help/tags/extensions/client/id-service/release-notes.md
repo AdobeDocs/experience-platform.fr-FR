@@ -2,9 +2,29 @@
 title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
 description: Dernières notes de mise à jour pour l’extension Service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/EgQQOzGQ6-G5So513F-YTlTLFLj56DmCeOscpe429EY
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c814092e-2730-45e8-a12d-e084529f52cb
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: 679
 ht-degree: 76%
 
 ---
@@ -54,7 +74,8 @@ Ce document contient les notes de mise à jour de l’extension Adobe Experience
 
 ### Extension 5.1.0 d’Experience Cloud ID
 
-* Ajouter la configuration `sameSiteCookie` pour spécifier l’attribut `SameSite` du cookie `AMCV`. Cette configuration prend en charge les valeurs suivantes pour l’attribut `SameSite` :
+* Ajouter la configuration `sameSiteCookie` pour spécifier l’attribut `SameSite` du cookie `AMCV`.
+Cette configuration prend en charge les valeurs suivantes pour l’attribut `SameSite` :
 
    * `Strict`
    * `Lax`
@@ -69,13 +90,13 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 * Mise à jour du patch VisitorJS 5.0.1 avec un correctif pour l’ajout de l’indicateur d_cf lorsque la chaîne de consentement IAB a été modifiée.
 
-## 15 juin 2020
+## mardi 15 juin 2020
 
 ### Extension 5.0.0 d’Experience Cloud ID
 
 * Ajout du support pour le `IAB TCF` - Transparency and Consent Framework - `Version 2.0`.
 
-## 13 avril 2020
+## mardi 13 avril 2020
 
 ### Extension 4.6.0 d’Experience Cloud ID
 
@@ -83,7 +104,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 * Mise à jour de la fonction utilisée pour détecter la version d’Internet-Explorer (IE), afin de corriger un problème signalé par ESLint.
 * Correction d’un bogue pour un problème de performances sur Internet-Explorer (IE) 11 lorsque l’inclusion pre-approval est accordée à ECID et que ce dernier est mis à jour ultérieurement.
 
-## 22 janvier 2020
+## jeudi 22 janvier 2020
 
 ### Extension 4.5.2 d’Experience Cloud ID
 
@@ -91,7 +112,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 * La version 4.5.1 du fichier visitor.js comprend un correctif relatif au plug-in IAB pour l’inclusion.
 * Mise à jour de la méthode `setCustomerIDs` pour rejeter les ID vides envoyés.
 
-## 7 janvier 2020
+## mercredi 7 janvier 2020
 
 ### Extension 4.4.2 d’Experience Cloud ID
 
@@ -99,7 +120,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 * Améliorations de la méthode `getVisitorValues` pour récupérer les valeurs plus rapidement.
 
 
-## 19 septembre 2019
+## vendredi 19 septembre 2019
 
 ### Extension 4.4.1 d’Experience Cloud ID
 
@@ -109,7 +130,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
   ![](../../../images/ecid-media-analytics.png)
 
-## 17 juillet 2019
+## jeudi 17 juillet 2019
 
 ### Extension 4.4.0 d’Experience Cloud ID
 
@@ -118,7 +139,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
   ![](../../../images/ecid-setCustomerIDs-hash.png)
 
-## 13 mai 2019
+## mardi 13 mai 2019
 
 ### Extension 4.3.1 d’Experience Cloud ID
 
@@ -127,19 +148,19 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
   ![](../../../images/ecid-data-element.png)
 
-## 9 avril 2019
+## 9 avril 2019
 
 ### Extension 4.2.0 d’Experience Cloud ID
 
 * Mise à jour du fichier visitor.js vers la version 4.2 incluant la prise en charge du plug-in IAB TCF pour Audience Manager.
 
-## 25 février 2019
+## mardi 25 février 2019
 
 ### Extension 4.1.0 d’Experience Cloud ID
 
 * Mise à jour de visitor.js vers la version 4.1, qui mettait à jour publishDestinations par nouvelle modification de l’API. Avec cette mise à jour, les informations du référent de la page peuvent être exposées pendant la synchronisation ID, si nécessaire.
 
-## 15 février 2019
+## samedi 15 février 2019
 
 ### Extension 4.0.0 d’Experience Cloud ID
 
@@ -148,7 +169,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
   ![](../../../images/ext-mcid-opt-in.png)
 
-## 20 mars 2018
+## mercredi 20 mars 2018
 
 ### Extension 3.1.0 d’Experience Cloud ID
 

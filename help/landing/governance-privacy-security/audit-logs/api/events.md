@@ -4,9 +4,21 @@ description: Découvrez comment récupérer les événements d’audit dans Expe
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: dec895e3ea625fb86d1891bad713185d39c47c81
+TQID: https://experienceleague.adobe.com/Hbz-W8NmDQYyeJXcIfwLoJHLYcHQx18-vy3qIxH3klw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: 484
 ht-degree: 20%
 
 ---

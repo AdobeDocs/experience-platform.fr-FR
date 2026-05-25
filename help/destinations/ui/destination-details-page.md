@@ -3,10 +3,21 @@ keywords: destinations;destination;page de détails des destinations;page de dé
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de la destination. Les détails de la destination incluent le nom de la destination, l’identifiant, les audiences mappées à la destination et les commandes permettant de modifier l’activation et d’activer et de désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/RS1gkf-nDO6wwBE-0-Rnfnq1BVqxavl2XhiTK-R1r4Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 6%
+source-wordcount: 1222
+ht-degree: 7%
 
 ---
 
@@ -18,7 +29,7 @@ Dans l’interface utilisateur [!DNL Adobe Experience Platform], vous pouvez aff
 
 >[!NOTE]
 >
->La page de détails des destinations fait partie de l’espace de travail [!UICONTROL Destinations] dans le [!DNL Experience Platform] de [!DNL UI]. Pour plus d’informations[[!UICONTROL Destinations] consultez la présentation de l’espace de travail &#x200B;](./destinations-workspace.md) .
+>La page de détails des destinations fait partie de l’espace de travail [!UICONTROL Destinations] dans le [!DNL UI] de [!DNL Experience Platform]. Pour plus d’informations[&#128279;](./destinations-workspace.md) consultez la présentation de l’espace de travail [!UICONTROL Destinations] .
 
 ## Afficher les détails de la destination {#view-details}
 
@@ -54,7 +65,7 @@ Le tableau suivant couvre les commandes et les détails fournis par le rail de d
 
 | Élément du rail de droite | Description |
 | --- | --- |
-| [!UICONTROL Activate audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations[&#x200B; consultez les guides sur &#x200B;](./activate-segment-streaming-destinations.md)l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
+| [!UICONTROL Activate audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations[&#128279;](./activate-segment-streaming-destinations.md) consultez les guides sur l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
 | [!UICONTROL Delete] | Supprime ce flux de données et annule le mappage des audiences précédemment activées. |
 | [!UICONTROL Destination name] | Ce champ peut être modifié pour mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |

@@ -3,9 +3,29 @@ solution: Experience Platform
 title: Groupe de champs de schéma Consentements et préférences
 description: En savoir plus sur le groupe de champs de schéma Consentements et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+TQID: https://experienceleague.adobe.com/wOhEsFSQQknczmSnFyHtm17-kE5G-EdSWho2yi2MoU8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: 919
 ht-degree: 0%
 
 ---
@@ -20,7 +40,7 @@ ht-degree: 0%
 
 ## Structure du groupe de champs {#structure}
 
-Le groupe de champs [!UICONTROL Consents and Preferences] fournit un champ de type objet unique, `consents`, pour capturer les informations de consentement et de préférence. Ce champ étend le type de données [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]](../../data-types/consents.md) en supprimant le champ `adID` et en ajoutant un champ de mappage `idSpecific`.
+Le groupe de champs [!UICONTROL Consents and Preferences] fournit un champ de type objet unique, `consents`, pour capturer les informations de consentement et de préférence. Ce champ étend le type de données [&#128279;](../../data-types/consents.md) en supprimant le champ `adID` et en ajoutant un champ de mappage `idSpecific`.[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]
 
 ![](../../images/field-groups/consent.png)
 

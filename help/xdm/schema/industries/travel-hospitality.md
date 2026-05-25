@@ -3,14 +3,21 @@ solution: Experience Platform
 title: Modèle de données de l'industrie du voyage et de l'accueil ERD
 description: Affichez un diagramme de relation d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur du voyage et de l’hôtellerie, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/Duc29lmBUd96BF36QtHtsKbg8QQ-0gA3-8V25sBY-5Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: 455
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Voyage et hébergement] modèle de données du secteur ERD
+# [!UICONTROL Travel and hospitality] modèle de données du secteur ERD
 
 Le diagramme de relation d’entité suivant (ERD) représente un modèle de données normalisé pour l’industrie du voyage et de l’accueil. L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
 
@@ -32,7 +39,7 @@ Utilisez la légende suivante pour interpréter cet ERD :
 >
 >L’entité Événement d’expérience comprend un champ « _ID », qui représente l’attribut d’identifiant unique (`_id`) fourni par la classe XDM ExperienceEvent. Consultez le document de référence sur [XDM ExperienceEvent](../../classes/experienceevent.md) pour plus d’informations sur ce qui est attendu pour cette valeur.
 
-## [!UICONTROL Voyage et hébergement] cas pratiques
+## Cas d’utilisation [!UICONTROL Travel and hospitality]
 
 Le tableau suivant décrit les classes et les groupes de champs de schéma recommandés pour plusieurs cas d’utilisation courants du secteur du voyage et de l’hôtellerie.
 

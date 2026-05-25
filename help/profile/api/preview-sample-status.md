@@ -4,9 +4,19 @@ title: Prévisualiser l’exemple de point d’entrée de l’API Statut (Aperç
 description: Le point d’entrée d’aperçu de statut d’échantillon de l’API Real-Time Customer Profile vous permet de prévisualiser le dernier exemple réussi de vos données de profil, de répertorier la distribution des profils par jeu de données et par identité et de générer des rapports présentant le chevauchement des jeux de données, le chevauchement des identités et les profils désassemblés.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/v7BZX-ERQ08jpLPHnryoWKluX2XZGiNFqV3qCdFEnW0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: 2137
 ht-degree: 6%
 
 ---
@@ -46,7 +56,7 @@ Les mesures nombre de profils et profils par espace de noms sont également disp
 
 ## Afficher le dernier statut d’échantillon {#view-last-sample-status}
 
-Vous pouvez afficher les détails du dernier exemple de tâche réussie exécuté pour votre organisation en envoyant une requête GET au point d’entrée `/previewsamplestatus`. Ce rapport inclut le nombre total de profils dans l’exemple, ainsi que la mesure du nombre de profils ou le nombre total de profils de votre organisation dans Experience Platform.
+Vous pouvez afficher les détails du dernier exemple de tâche réussi exécuté pour votre organisation en envoyant une requête GET au point d’entrée `/previewsamplestatus`. Ce rapport inclut le nombre total de profils dans l’exemple, ainsi que la mesure du nombre de profils ou le nombre total de profils de votre organisation dans Experience Platform.
 
 Le nombre de profils est généré après la fusion de fragments de profil afin de former un seul profil pour chaque client individuel. En d’autres termes, lorsque des fragments de profil sont fusionnés, ils renvoient un nombre de « 1 » profil, car ils sont tous liés à la même personne.
 
@@ -122,7 +132,7 @@ Une réponse réussie renvoie le statut HTTP 200 et inclut les détails du derni
 
 ## Répertorier la distribution des profils par jeu de données
 
-Vous pouvez voir la répartition des profils par jeu de données en adressant une requête GET au point d’entrée `/previewsamplestatus/report/dataset`.
+Vous pouvez voir la distribution des profils par jeu de données en adressant une requête GET au point d’entrée `/previewsamplestatus/report/dataset`.
 
 **Format d’API**
 
@@ -226,7 +236,7 @@ Une réponse réussie renvoie un état HTTP 200 et inclut un tableau `data`, con
 
 ## Répartition des profils de liste par espace de noms d’identité
 
-Vous pouvez envoyer une requête GET au point d’entrée `/previewsamplestatus/report/namespace` pour afficher la répartition par espace de noms d’identité pour tous les profils fusionnés de votre banque de profils. Cela inclut les identités standard fournies par Adobe, ainsi que les identités personnalisées définies par votre organisation.
+Vous pouvez effectuer une requête GET au point d’entrée `/previewsamplestatus/report/namespace` pour afficher la répartition par espace de noms d’identité pour tous les profils fusionnés de votre banque de profils. Cela inclut les identités standard fournies par Adobe, ainsi que les identités personnalisées définies par votre organisation.
 
 Les espaces de noms d’identité sont des composants importants du Adobe Experience Platform Identity Service qui servent d’indicateurs du contexte auquel les données client se rapportent. Pour en savoir plus, commencez par lire la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).
 

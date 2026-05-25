@@ -2,18 +2,25 @@
 keywords: Experience Platform;accueil;rubriques populaires;créer un lot;service de catalogue;api
 solution: Experience Platform
 title: Création d’un lot dans l’API
-description: Vous pouvez créer un lot en envoyant une requête de POST au point de terminaison /batches dans l’API Catalog.
+description: Vous pouvez créer un lot en effectuant une requête POST au point d’entrée /batches dans l’API Catalog.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+TQID: https://experienceleague.adobe.com/aTA7HpLfGwjI5bVLhTG-IgAWam475cYGc9s5l3Fm1-w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 51%
+source-wordcount: 119
+ht-degree: 52%
 
 ---
 
 # Création d’un lot
 
-Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. À l’aide de la valeur `id` d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête de POST au point de terminaison `/batches` dans l’API [!DNL Catalog].
+Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. En utilisant la valeur `id` d’un jeu de données existant, vous pouvez créer un lot en effectuant une requête POST vers le point d’entrée `/batches` dans l’API [!DNL Catalog].
 
 **Format d’API**
 

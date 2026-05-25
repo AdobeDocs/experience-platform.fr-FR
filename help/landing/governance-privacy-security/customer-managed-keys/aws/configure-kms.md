@@ -2,9 +2,28 @@
 title: Configurer AWS KMS pour les clés gérées par le client
 description: Découvrez comment configurer le service de gestion des clés (KMS) de Amazon Web Services à utiliser avec les clés gérées par le client dans Adobe Experience Platform.
 exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
-source-git-commit: 5d59dffa00e041c91b3e1a8943fa3df9e9d7b4ef
+TQID: https://experienceleague.adobe.com/G7VLSY7Q--7U4uLIGzQ8cjTD0kq4O5M9GRBz9aEEoDE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: 1598
 ht-degree: 0%
 
 ---

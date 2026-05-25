@@ -4,9 +4,31 @@ solution: Experience Platform
 title: Questions fréquentes sur Query Service et Data Distiller
 description: Ce document contient les questions les plus fréquentes et les réponses associées relatives à Query Service et à Data Distiller. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+TQID: https://experienceleague.adobe.com/stm9X3x6ZCk7ZRj3ghtDdqbG-2UBWLlfJ5-IyLllcyI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '5423'
+source-wordcount: 5536
 ht-degree: 59%
 
 ---
@@ -685,7 +707,7 @@ Suivez l’utilisation de vos heures de calcul dans le tableau de bord [&#x200B;
 
 ## Interface utilisateur des requêtes
 
-### L’action « Créer une requête » est bloquée sur « Initialisation de la connexion... » lors de la tentative de connexion à Query Service. Comment résoudre le problème ?
+### L’action « Créer une requête » est bloquée « Initialisation de la connexion... » lors de la tentative de connexion à Query Service. Comment résoudre le problème ?
 
 +++Réponse
 Si l’action « Créer une requête » est bloquée sur « Initialisation de la connexion... », il s’agit probablement d’un problème de connexion ou de session. Actualisez le navigateur si vous utilisez l’interface utilisateur d’Experience Platform et réessayez.

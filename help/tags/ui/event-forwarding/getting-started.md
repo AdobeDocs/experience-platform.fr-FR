@@ -3,10 +3,28 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/le5vikYVp7NdNw3hWPwAcZyQQXD3n-NBkEWbX4g0RSU
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 70%
+source-wordcount: 828
+ht-degree: 68%
 
 ---
 
@@ -19,8 +37,8 @@ ht-degree: 70%
 Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à lʼaide de lʼune ou de plusieurs des trois options suivantes :
 
 * [SDK web Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
-* [&#x200B; SDK Mobile Adobe Experience Platform](https://sdkdocs.com)
-* [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/)
+* [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
+* [API EDGE NETWORK](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK et Experience Platform Mobile SDK ne nécessitent pas de déploiement par le biais de balises dans Adobe Experience Platform. Toutefois, il est recommandé dʼutiliser des balises pour déployer ces SDK.
@@ -64,8 +82,8 @@ Dans l’espace de travail **[!UICONTROL Tags]**, créez une propriété de type
 
 1. Sélectionner **[!UICONTROL Save]**.
 
-Après avoir créé la propriété, accédez à l’onglet **[!UICONTROL Environments]** correspondant à la nouvelle propriété et
-notez les identifiants de l’environnement. Si l’organisation Adobe Adobe utilisée dans le flux de données diffère de celle utilisée dans le transfert d’événement, vous pouvez copier l’identifiant d’environnement de l’onglet **[!UICONTROL Environments]** et le coller lors de la création d’un flux de données. Sinon, vous pouvez sélectionner l’environnement dans un menu déroulant.
+Après avoir créé la propriété, accédez à l’onglet **[!UICONTROL Environments]** de la nouvelle propriété et effectuez les opérations suivantes :
+note des identifiants d’environnement. Si l’organisation Adobe utilisée dans le flux de données diffère de celle utilisée dans le transfert d’événement, vous pouvez copier l’identifiant d’environnement de l’onglet **[!UICONTROL Environments]** et le coller lors de la création d’un flux de données. Sinon, vous pouvez sélectionner l’environnement dans un menu déroulant.
 
 ## Création dʼun flux de données
 

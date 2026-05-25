@@ -2,9 +2,25 @@
 title: Connecteur source Adobe Analytics pour les données de suite de rapports
 description: Ce document présente Analytics et décrit des cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+TQID: https://experienceleague.adobe.com/tn8xFuLHCbCI09BI92znF-tHumF9luCTeY8OCVDZcgQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: 1462
 ht-degree: 6%
 
 ---
@@ -23,7 +39,7 @@ Ce document présente une vue d’ensemble des [!DNL Analytics] et décrit des c
 
 À un niveau élevé, [!DNL Analytics] collecte des données à partir de divers canaux numériques et de plusieurs centres de données dans le monde entier. Une fois les données collectées, les règles VISTA (Visitor Identification, Segmentation and Transformation Architecture) et les règles de traitement sont appliquées pour donner forme aux données entrantes. Une fois que les données brutes ont subi ce traitement léger, elles sont considérées comme prêtes à être utilisées par [!DNL Real-Time Customer Profile]. Parallèlement à ce qui précède, les mêmes données traitées sont microbatchées et ingérées dans des jeux de données Experience Platform pour être utilisées par [!DNL Query Service] et d’autres applications de découverte de données.
 
-Pour plus d’informations sur les règles de traitement[&#x200B; consultez la &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=fr) présentation des règles de traitement .
+Pour plus d’informations sur les règles de traitement[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=fr) consultez la  présentation des règles de traitement .
 
 ## Modèle de données d’expérience (XDM)
 

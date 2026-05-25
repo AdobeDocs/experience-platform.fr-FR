@@ -3,9 +3,27 @@ keywords: correspondance client google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: Le ciblage par correspondance des clients de Google utilise vos données en ligne et hors ligne pour atteindre et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping et Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: dcc6da5f6913e3e71a32383118927cf8b20d2059
+TQID: https://experienceleague.adobe.com/JVth-Vipe0-564Luty---iN93GwwvmCI60kGqGGQSTY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '3522'
+source-wordcount: 3522
 ht-degree: 8%
 
 ---

@@ -2,10 +2,29 @@
 title: Analyse et suivi du consentement
 description: Découvrez comment créer un tableau de bord d’analyse du consentement pour suivre les tendances au fil du temps en matière de consentement des utilisateurs.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/zsm--n04TqiJMXAoDl8eaDJhdm1FV4tcsi9CJQw9EZ0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1805'
-ht-degree: 0%
+source-wordcount: 1826
+ht-degree: 1%
 
 ---
 
@@ -78,7 +97,7 @@ Pour vérifier le chevauchement entre deux audiences de consentement, ajoutez la
 
 ![Tableau de bord Profils avec le widget Chevauchement des audiences par politique de fusion en surbrillance. Le widget visualise les chevauchements entre deux audiences de consentement.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
 
-Vous pouvez afficher le chevauchement de toutes les audiences où les utilisateurs ont consenti à recevoir des appels dans toutes les autres audiences, avec le rapport Chevauchement des audiences dans le tableau de bord Audiences . Pour afficher le chevauchement des audiences de consentement, accédez d’abord à l’onglet [!UICONTROL Audiences] de [!UICONTROL Overview] . De là, vous pouvez ajouter le widget [!UICONTROL Audience overlap report] au tableau de bord Audiences . Une fois le widget créé, sélectionnez l’audience **[!UICONTROL User consented to calls]** dans le menu déroulant Présentation de l’audience en haut de la page. Sélectionnez ensuite **[!UICONTROL View more]** dans le widget Rapport de chevauchement des audiences pour afficher jusqu’à 50 des chevauchements les plus importants et jusqu’à 50 des chevauchements les moins importants concernant le segment sélectionné.
+Vous pouvez afficher le chevauchement de toutes les audiences où les utilisateurs ont consenti à recevoir des appels dans toutes les autres audiences, avec le rapport Chevauchement des audiences dans le tableau de bord Audiences . Pour afficher le chevauchement des audiences de consentement, accédez d’abord à l’onglet [!UICONTROL Overview] de [!UICONTROL Audiences] . De là, vous pouvez ajouter le widget [!UICONTROL Audience overlap report] au tableau de bord Audiences . Une fois le widget créé, sélectionnez l’audience **[!UICONTROL User consented to calls]** dans le menu déroulant Présentation de l’audience en haut de la page. Sélectionnez ensuite **[!UICONTROL View more]** dans le widget Rapport de chevauchement des audiences pour afficher jusqu’à 50 des chevauchements les plus importants et jusqu’à 50 des chevauchements les moins importants concernant le segment sélectionné.
 
 <!-- Image needs updating to night mode -->
 
@@ -104,7 +123,7 @@ Lorsque vous créez une audience basée sur le consentement, sa tendance s’ét
 
 ## Tableau de bord de présentation des audiences {#audiences-overview-dashboard}
 
-Après avoir créé une audience liée au consentement telle que « Utilisateurs ayant consenti aux SMS », vous pouvez afficher des informations personnalisées clés sur le consentement de votre audience en ajoutant les widgets appropriés à votre tableau de bord de présentation des audiences. Accédez au [!UICONTROL Audiences] [!UICONTROL Overview] et ajoutez les widgets de votre choix dans la bibliothèque de widgets. Tout widget ajouté à l’affichage du tableau de bord peut être redimensionné et déplacé à l’aide de la fonction [!UICONTROL Modify dashboard]. Votre vue personnalisée peut contenir des informations telles que la tendance au fil du temps (jusqu’à 12 mois), les chevauchements avec d’autres audiences et la composition de l’identité de l’audience. Un exemple de vue est illustré ci-dessous.
+Après avoir créé une audience liée au consentement telle que « Utilisateurs ayant consenti aux SMS », vous pouvez afficher des informations personnalisées clés sur le consentement de votre audience en ajoutant les widgets appropriés à votre tableau de bord de présentation des audiences. Accédez au [!UICONTROL Overview] [!UICONTROL Audiences] et ajoutez les widgets de votre choix dans la bibliothèque de widgets. Tout widget ajouté à l’affichage du tableau de bord peut être redimensionné et déplacé à l’aide de la fonction [!UICONTROL Modify dashboard]. Votre vue personnalisée peut contenir des informations telles que la tendance au fil du temps (jusqu’à 12 mois), les chevauchements avec d’autres audiences et la composition de l’identité de l’audience. Un exemple de vue est illustré ci-dessous.
 
 ![Tableau de bord des audiences avec l’audience Utilisateurs ayant consenti à l’SMS mise en surbrillance dans le menu déroulant de l’audience globale.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -126,14 +145,14 @@ La vue suivante affiche une liste des tableaux disponibles dans le rail de gauch
 
 Une fois le compositeur de widget renseigné avec les données du tableau de votre choix, effectuez les étapes ci-dessous :
 
-- [Recherchez des [!UICONTROL Attributes]](../standard-dashboards.md#add-filter-attributes) dans la `[!UICONTROL date]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL date]` à l’axe X à partir du menu déroulant.
+- [Recherchez des `[!UICONTROL date]` dans la [!UICONTROL Attributes]](../standard-dashboards.md#add-filter-attributes), puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL date]` à l’axe X à partir du menu déroulant.
   ![Le compositeur de widget avec l’icône d’ajout et le menu déroulant mis en surbrillance.](../images/standard-dashboards/attributes-dropdown.png)
-- Recherchez des [!UICONTROL Attributes] dans `[!UICONTROL count_of_profiles]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL count_of_profiles]` à l’axe Y à partir du menu déroulant.
+- Recherchez des `[!UICONTROL count_of_profiles]` dans [!UICONTROL Attributes], puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL count_of_profiles]` à l’axe Y à partir du menu déroulant.
 - Sélectionnez l’icône `...` (des points de suspension) dans le champ [!UICONTROL Y-axis] , puis sélectionnez la fonction d’agrégat [!UICONTROL SUM] dans le menu déroulant.
   ![Le widget Tendances du consentement du compositeur de widget avec le modèle de données, le tableau, le menu déroulant de l’axe Y et la fonction SOMME mis en surbrillance.](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Sélectionnez le menu déroulant [!UICONTROL Marks] et modifiez le type de graphique en [!UICONTROL Line].
 - Recherchez [!UICONTROL Attributes] le `[!UICONTROL segment_name]`, puis utilisez l’icône + pour ajouter le `segment_name` sous forme de [!UICONTROL Filter] dans le menu déroulant. La boîte de dialogue [!UICONTROL Filter: Segment_name] s’affiche. Sélectionnez les audiences créées précédemment et liées au consentement. Pour cet exemple, sélectionnez **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]** et **[!UICONTROL Users Consented to Email]**, puis **[!UICONTROL Apply]**.
-- Recherchez des [!UICONTROL Attributes] dans `[!UICONTROL segment_name]`, puis sélectionnez l’icône + pour ajouter des `segment_name` sous forme de [!UICONTROL Color] dans le menu déroulant.
+- Recherchez des `[!UICONTROL segment_name]` dans [!UICONTROL Attributes], puis sélectionnez l’icône + pour ajouter des `segment_name` sous forme de [!UICONTROL Color] dans le menu déroulant.
 - Ouvrez [le panneau [!UICONTROL Properties]](../standard-dashboards.md#widget-properties) puis fournissez un [!UICONTROL Widget title] et un [!UICONTROL Axis label] appropriés.
   ![Le compositeur de widget avec l’icône de propriétés et le titre du widget mis en surbrillance.](../images/standard-dashboards/properties-panel.png)
 - Sélectionnez **[!UICONTROL Save and close]** pour confirmer vos paramètres.

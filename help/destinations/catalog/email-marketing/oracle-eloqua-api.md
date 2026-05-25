@@ -1,15 +1,35 @@
 ---
 title: Connexion Oracle Eloqua (API)
 description: Utilisez la destination Oracle Eloqua (API) pour exporter les données de votre compte et les activer dans Oracle Eloqua en fonction des besoins de votre entreprise.
-last-substantial-update: 2023-03-14T00:00:00Z
+last-substantial-update: 2023-03-14T00:00:00.000Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/7Cffuml8Slh4ubKJ1m-mGji0WpLj62nCMIWdlp0Lk6I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: 2286
 ht-degree: 21%
 
 ---
-
 
 # Connexion [!DNL (API) Oracle Eloqua]
 

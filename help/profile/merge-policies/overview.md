@@ -4,10 +4,24 @@ title: Présentation des politiques de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les politiques de fusion sont les règles utilisées par Experience Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/QAhXZHqxtxyv7qPGhI052cL3X6vhcEi6kqPRb3-fC2k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 69%
+source-wordcount: 1280
+ht-degree: 56%
 
 ---
 
@@ -43,25 +57,25 @@ La sélection d’une méthode de fusion vous permet de spécifier les attributs
 
 Deux méthodes de fusion sont disponibles pour les politiques de fusion. Chacune de ces méthodes est résumée ci-dessous, et des informations supplémentaires sont fournies dans les sections suivantes :
 
-* **[!UICONTROL Priorité du jeu de données] :** En cas de conflit, donnez la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. En savoir plus sur la méthode de fusion [priorité du jeu de données](#dataset-precedence).
-* **[!UICONTROL Horodatage ordonné] :** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [horodatage ordonné](#timestamp-ordered)
+* **[!UICONTROL Dataset precedence]:** En cas de conflit, donnez la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. En savoir plus sur la méthode de fusion [priorité du jeu de données](#dataset-precedence).
+* **[!UICONTROL Timestamp ordered]:** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [horodatage ordonné](#timestamp-ordered)
 
 ### Priorité du jeu de données {#dataset-precedence}
 
-Lorsque **[!UICONTROL Priorité du jeu de données]** est sélectionnée comme méthode de fusion pour une politique de fusion, vous pouvez donner la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Par exemple, un cas d’utilisation serait la présence d’informations de votre organisation dans un jeu de données que vous préférez ou dont les données sont davantage de confiance par rapport à un autre jeu de données.
+Lorsque **[!UICONTROL Dataset precedence]** est sélectionné comme méthode de fusion pour une politique de fusion, vous pouvez donner la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Par exemple, un cas d’utilisation serait la présence d’informations de votre organisation dans un jeu de données que vous préférez ou dont les données sont davantage de confiance par rapport à un autre jeu de données.
 
-Pour créer une politique de fusion à l’aide de la **[!UICONTROL priorité du jeu de données]**, vous devez sélectionner les jeux de données Profile et ExperienceEvent inclus, puis classer manuellement les jeux de données Profile par priorité. Une fois les jeux de données sélectionnés et triés, le jeu de données supérieur se verra accorder la priorité la plus élevée, le deuxième jeu de données sera le deuxième plus élevé, etc.
+Pour créer une politique de fusion à l’aide de **[!UICONTROL Dataset precedence]**, vous devez sélectionner les jeux de données Profile et ExperienceEvent inclus, puis classer manuellement les jeux de données Profile par priorité. Une fois les jeux de données sélectionnés et triés, le jeu de données supérieur se verra accorder la priorité la plus élevée, le deuxième jeu de données sera le deuxième plus élevé, etc.
 
 ### Horodatage ordonné {#timestamp-ordered}
 
-Lorsque des enregistrements de profil sont intégrés dans Experience Platform, un horodatage système est obtenu au moment de l’intégration et ajouté à l’enregistrement. Lorsque **[!UICONTROL Horodatage ordonné]** est sélectionné comme méthode de fusion pour une politique de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans Experience Platform.
+Lorsque des enregistrements de profil sont intégrés dans Experience Platform, un horodatage système est obtenu au moment de l’ingestion et ajouté à l’enregistrement. Lorsque **[!UICONTROL Timestamp ordered]** est sélectionné comme méthode de fusion pour une politique de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans Experience Platform.
 
 ## Combinaison d’identités {#id-stitching}
 
-La combinaison d’identités ([!UICONTROL combinaison d’identités]) est le processus d’identification de fragments de données et de leur combinaison afin de former un enregistrement de profil complet. Pour illustrer les différents comportements de combinaison, imaginez un seul client qui interagit avec une marque à l’aide de deux adresses électroniques différentes.
+La combinaison d’identités ([!UICONTROL ID stitching]) est le processus d’identification de fragments de données et de leur combinaison afin de former un enregistrement de profil complet. Pour illustrer les différents comportements de combinaison, imaginez un seul client qui interagit avec une marque à l’aide de deux adresses électroniques différentes.
 
-* **[!UICONTROL Aucun] :** lorsque cette option est sélectionnée, les identifiants ne sont pas regroupés. Lorsqu’il y a segmentation, les identités pouvant appartenir à la même personne ne sont pas regroupées et la segmentation ne prend en compte que les attributs associés à chaque identifiant individuel lorsque vous déterminez si un client est admissible pour l’adhésion à l’audience. Cela peut se traduire par l’existence de plusieurs profils pour un seul client et par la qualification de chaque profil pour différentes audiences, entraînant l’envoi de plusieurs messages marketing à un même client.
-* **[!UICONTROL Graphique privé] :** lorsque le graphique privé est sélectionné, les différentes identités liées à la même personne sont regroupées. Le client dispose ainsi d’un profil unique, ce qui permet à la segmentation de prendre en compte plusieurs attributs provenant de plusieurs identités associées lors de la détermination de la qualification du segment. Dans ce scénario, le client est susceptible d’avoir un seul profil, de se qualifier pour une audience en fonction de la combinaison d’attributs entre les identités et de ne recevoir qu’un seul message marketing.
+* **[!UICONTROL None]:** lorsque cette option est sélectionnée, les identifiants ne sont pas regroupés. Lorsqu’il y a segmentation, les identités pouvant appartenir à la même personne ne sont pas regroupées et la segmentation ne prend en compte que les attributs associés à chaque identifiant individuel lorsque vous déterminez si un client est admissible pour l’adhésion à l’audience. Cela peut se traduire par l’existence de plusieurs profils pour un seul client et par la qualification de chaque profil pour différentes audiences, entraînant l’envoi de plusieurs messages marketing à un même client.
+* **[!UICONTROL Private graph]:** lorsque le graphique privé est sélectionné, les différentes identités liées à la même personne sont regroupées. Le client ou la cliente dispose ainsi d’un profil unique, ce qui permet à la segmentation de prendre en compte plusieurs attributs provenant de plusieurs identités associées lors de la détermination de la qualification de segment. Dans ce scénario, le client est susceptible d’avoir un seul profil, de se qualifier pour une audience en fonction de la combinaison d’attributs entre les identités et de ne recevoir qu’un seul message marketing.
 
 Pour en savoir plus sur les identités et leur rôle dans la génération de profils et d’audiences, commencez par lire la [présentation d’Identity Service](../../identity-service/home.md).
 

@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Présentation du connecteur Source de Google Cloud Storage
 description: Découvrez comment connecter Google Cloud Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/TZ9EefnEfaLwRWIGe-9uegtb4FOmDI3d5kOjygBLDrQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 45%
+source-wordcount: 607
+ht-degree: 46%
 
 ---
 
@@ -23,7 +28,7 @@ Les sources de stockage dans le cloud peuvent importer vos propres données dans
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
 
 ## Configuration requise pour connecter votre compte [!DNL Google Cloud Storage]
 

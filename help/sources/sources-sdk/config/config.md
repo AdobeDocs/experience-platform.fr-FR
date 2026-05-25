@@ -3,9 +3,14 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Options de configuration dans les sources en libre-service (SDK par lots)
 description: Ce document présente un aperçu des configurations que vous devez préparer pour utiliser des sources en libre-service (SDK par lots).
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/s8-DfhoZ8Q5ypehsoE4sKcXco6IbiwAPx9x94ssvupA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: 299
 ht-degree: 22%
 
 ---

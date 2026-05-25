@@ -4,10 +4,23 @@ solution: Experience Platform
 title: Données d’identité pour les demandes d’accès à des informations personnelles
 description: Ce document fournit des instructions générales expliquant comment configurer vos opérations de données et tirer parti des technologies Adobe pour récupérer efficacement les informations d’identité appropriées pour les demandes d’accès à des informations personnelles des clients.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/jmF4PEyHm18ZQDdiFx93ZuUjT8np8kV87JR4I8CcVNs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 35%
+source-wordcount: 661
+ht-degree: 36%
 
 ---
 

@@ -4,10 +4,28 @@ solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 8ba80a1cc4529f9d4693e3f7cbd7584193915410
+TQID: https://experienceleague.adobe.com/O4-612CGo5FKSlxcDjkhMgn0mN-VoTTbQxpo98QTLog
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2368'
-ht-degree: 77%
+source-wordcount: 2608
+ht-degree: 79%
 
 ---
 
@@ -17,7 +35,7 @@ Ce document répond aux questions fréquentes sur [!DNL Experience Data Model] (
 
 **[!DNL Experience Data Model] (XDM)** est une spécification open source conçue pour définir des schémas normalisés pour la gestion de l’expérience client. La méthodologie sur laquelle repose [!DNL Experience Platform], **le système XDM**, rend les schémas [!DNL Experience Data Model] opérationnels pour qu’ils soient utilisés par les services de [!DNL Experience Platform]. Le **[!DNL Schema Registry]** fournit une interface utilisateur et une API RESTful pour accéder à **[!DNL Schema Library]** dans [!DNL Experience Platform]. Pour plus d’informations, consultez la [documentation XDM](home.md).
 
-## FAQ
+## Questions fréquentes
 
 Vous trouverez ci-dessous une liste de réponses aux questions fréquentes concernant le système XDM et l’utilisation de l’API [!DNL Schema Registry].
 

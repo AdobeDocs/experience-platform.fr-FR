@@ -2,10 +2,19 @@
 title: Créer une connexion source SAP Commerce dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Commerce SAP à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
+TQID: https://experienceleague.adobe.com/rk--uQV0IoQnIXoHm1OY-a5GnyAmxByVn3--47PPuTU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 28%
+source-wordcount: 971
+ht-degree: 23%
 
 ---
 
@@ -15,7 +24,7 @@ Le tutoriel suivant vous guide tout au long des étapes de création d’une con
 
 ## Prise en main {#getting-started}
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -39,7 +48,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL SAP Commerce] documentati
 
 ### Création d’un schéma Experience Platform {#create-platform-schema}
 
-Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#x200B; consultez le tutoriel sur la &#x200B;](../../../../../xdm/schema/composition.md)création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 Développez la section suivante pour afficher un exemple de schéma.
 
@@ -138,25 +147,25 @@ Développez la section suivante pour afficher un exemple de schéma.
 
 ## Connecter votre compte [!DNL SAP Commerce] {#connect-account}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *eCommerce*, sélectionnez **[!UICONTROL SAP Commerce]**, puis **[!UICONTROL Ajouter des données]**.
+Dans la catégorie *eCommerce*, sélectionnez **[!UICONTROL SAP Commerce]**, puis **[!UICONTROL Add data]**.
 
 ![Capture d’écran de l’interface utilisateur Experience Platform pour le catalogue avec la carte SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
-La page **[!UICONTROL Connecter le compte SAP Commerce]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connect SAP Commerce account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant {#existing-account}
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL SAP Commerce] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL SAP Commerce] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte SAP Commerce à un compte existant](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### Nouveau compte {#new-account}
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte SAP Commerce à un nouveau compte](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
@@ -173,13 +182,13 @@ Enfin, vous devez sélectionner le type d’objet à ingérer dans Experience Pl
 
 >[!TAB Clients]
 
-Pour ingérer des données client, sélectionnez **[!UICONTROL Clients]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
+Pour ingérer des données client, sélectionnez **[!UICONTROL Customers]** comme type d’objet, puis sélectionnez **[!UICONTROL Next]**.
 
 ![Capture d’écran de l’interface utilisateur Experience Platform pour SAP Commerce montrant la configuration avec l’option Clients sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contacts]
 
-Pour ingérer des données de contact, sélectionnez **[!UICONTROL Contacts]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
+Pour ingérer des données de contact, sélectionnez **[!UICONTROL Contacts]** comme type d’objet, puis sélectionnez **[!UICONTROL Next]**.
 
 ![Capture d’écran de l’interface utilisateur Experience Platform pour SAP Commerce montrant la configuration avec l’option Contacts sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 

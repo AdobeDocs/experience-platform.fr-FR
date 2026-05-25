@@ -2,9 +2,17 @@
 title: Explorer une base de données à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer le contenu et la structure de fichiers d’une base de données tierce.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: 46e1a62e558a209ffed4a693cfd71ad5e76d7d98
+TQID: https://experienceleague.adobe.com/uI74EmN-dQr5B-aeUbJzalTZ3xB6Oo4dyuis9rQn4bY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: 389
 ht-degree: 9%
 
 ---
@@ -15,7 +23,7 @@ Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer le contenu et la s
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -28,7 +36,7 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 
 ## Explorer vos tableaux de données
 
-À l’aide de l’identifiant de connexion de votre base de données, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour rechercher le chemin d’accès de la table que vous souhaitez inspecter ou ingérer dans Experience Platform.
+À l’aide de l’identifiant de connexion de votre base de données, vous pouvez explorer vos tables de données en exécutant des requêtes GET. Utilisez l’appel suivant pour rechercher le chemin d’accès de la table que vous souhaitez inspecter ou ingérer dans Experience Platform.
 
 **Format d’API**
 

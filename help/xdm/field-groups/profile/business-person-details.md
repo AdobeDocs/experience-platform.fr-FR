@@ -3,10 +3,20 @@ title: Groupe de champs de schéma Détails professionnels XDM
 description: Découvrez le groupe de champs de schéma Détails professionnels XDM .
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
+TQID: https://experienceleague.adobe.com/OsVRQv-ZSeKOaQ4H0nx-P-IKZ42W2hZK6ss8RFMT9eo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 11%
+source-wordcount: 613
+ht-degree: 10%
 
 ---
 
@@ -65,5 +75,5 @@ ht-degree: 11%
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.schema.json)

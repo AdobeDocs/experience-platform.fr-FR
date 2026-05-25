@@ -6,10 +6,15 @@ description: Ce document contient les étapes de configuration d’un environnem
 role: Developer
 feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/TSfyd-YpWj4GntOUgq-ySsA2--oAAD2J-d9aD4KRs4c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 0%
+source-wordcount: 566
+ht-degree: 1%
 
 ---
 
@@ -33,7 +38,7 @@ Pour télécharger une collection Postman, sélectionnez **[!DNL Raw]** dans la 
 
 ## Importer une collection Postman {#import}
 
-Pour utiliser une collection [Postman](#collections), vous devez avoir configuré un environnement. Une fois la configuration de l’environnement terminée, sélectionnez le sélecteur de **[!DNL Manage Environments]** dans le coin supérieur droit.
+Pour utiliser une collection [&#128279;](#collections), vous devez avoir configuré un environnement. Une fois la configuration de l’environnement terminée, sélectionnez le sélecteur de **[!DNL Manage Environments]** dans le coin supérieur droit.
 
 ![gérer le sélecteur d’environnement](./images/api-guide/environment-selector.png)
 
@@ -57,7 +62,7 @@ Pour en savoir plus sur l’interface utilisateur de Postman et ses fonctionnali
 
 La vidéo ci-dessous utilise la collection Postman [d’Identity Management Service (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) qui peut être téléchargée à partir du référentiel GitHub public.
 
->[!VIDEO](https://video.tv.adobe.com/v/33190/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/33190/?captions=fre_fr&quality=12&learn=on)
 
 ## Étapes suivantes
 

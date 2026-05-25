@@ -2,10 +2,48 @@
 title: Guide de démarrage rapide
 description: Découvrez comment vous familiariser rapidement avec les balises dans Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/3N7o3QDBF--Wp-WM4wcDYvdfbU3gWfBrZExNWJDeoEE
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: c1c5fb98-9105-44ed-9df1-9e04d062a784
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: e66c61b1-1ca4-4c42-8df9-e5cb44b0555c
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
+feature_v2:
+  - id: a1028f9a-6dbc-4a4f-adf5-eb9f85a408a6
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+  - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 89%
+source-wordcount: 1496
+ht-degree: 87%
 
 ---
 
@@ -23,7 +61,7 @@ Le workflow de base des balises :
 6. Test dans votre environnement de développement.
 7. Promotion de la production.
 
-## 1. Configuration de groupes et d’utilisateurs
+## &#x200B;1. Configuration de groupes et d’utilisateurs
 
 Les balises sont totalement intégrées à votre Adobe ID. Les autorisations utilisateur sont gérées via lʼAdmin Console avec dʼautres produits et solutions Adobe depuis [!DNL Creative Cloud], [!DNL Document Cloud] et Experience Cloud.
 
@@ -31,9 +69,9 @@ Les balises disposent dʼun système de gestion des utilisateurs basé sur les d
 
 Pour obtenir des instructions détaillées sur la création de groupes et l’ajout d’utilisateurs pour les balises, consultez le guide [autorisations relatives à la collecte de données](../../collection/permissions.md).
 
-## 2. Connexion
+## &#x200B;2. Connexion
 
-Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur d’Experience Platform ou à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’écran de connexion [Experience Cloud](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Data Collection]** ou **[!UICONTROL Experience Platform]**.
+Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur d’Experience Platform ou à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’écran de connexion [&#128279;](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Data Collection]** ou **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -45,7 +83,7 @@ Une fois la connexion à l’interface utilisateur effectuée, la première chos
 
 Pour plus d’informations sur la création de propriétés, reportez-vous à la section [Création d’une propriété](../ui/administration/companies-and-properties.md).
 
-## 4. Installation d’extensions
+## &#x200B;4. Installation d’extensions
 
 Une extension est une intégration construite par Adobe ou ses partenaires qui ajoute de nouvelles options inépuisables pour les balises que vous pouvez déployer sur vos sites. Si vous considérez une balise comme un système dʼexploitation, les extensions sont les applications que vous installez afin de pouvoir effectuer les actions dont vous avez besoin.
 
@@ -53,7 +91,7 @@ Toutes les nouvelles propriétés sont dotées de l’ [extension Core](../exten
 
 Ce qui rend les balises d’Experience Platform vraiment uniques, ce sont les extensions que chacun peut construire. Vous souhaitez déposer un pixel de remarketing Facebook sur votre site ? Découvrez l’extension créée par Facebook. Vous souhaitez la même pour Twitter ou LinkedIn ? Utilisez ces extensions. Vous souhaitez réaliser une enquête ? Jetez un œil à Question Pro ou Foresee. Vous souhaitez gérer la confidentialité et le consentement de vos utilisateurs finaux pour les aider avec [!DNL GDPR] ? Allez voir du côté d’Evidon et de Trust Arc. Vous souhaitez avoir des informations granulaires sur le comportement des utilisateurs individuels de votre site ? Clicktale peut vous être utile. Pour plus d’informations, consultez la section sur l’ [ajout d’une nouvelle extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
-## 5. Création de règles et d’éléments de données
+## &#x200B;5. Création d’éléments de données et de règles
 
 Les **éléments de données** sont des pointeurs vers les informations que vous souhaitez collecter et envoyer à différents endroits sur votre page :
 
@@ -67,7 +105,7 @@ Une fois l’élément de données défini, vous pouvez l’utiliser n’importe
 
 Les **règles** se rapportent au noyau logique de votre mise en œuvre et contrôlent tout ce qui concerne les balises de votre site. Définissez un événement, des conditions et des exceptions, puis les actions et l’ordre. Enfin, publiez vos modifications pour afficher les résultats. Pour plus d’informations, reportez-vous à la section [Règles](../ui/managing-resources/rules.md).
 
-## 6. Test dans votre environnement de développement
+## &#x200B;6. Test dans votre environnement de développement
 
 ### Bibliothèques et versions
 
@@ -112,7 +150,7 @@ Voici une description des étapes du processus de publication.
 1. créer une bibliothèque et l’affecter à l’environnement de développement que vous avez créé ;
 1. créer votre bibliothèque.
 
-## 7. Promotion de la production
+## &#x200B;7. Promouvoir pour la production
 
 Après avoir testé votre version dans votre environnement de développement, assurez-vous de créer vos environnements dʼévaluation et de production et de placer les codes intégrés aux emplacements adéquats. Pour le faire, vous pouvez réutiliser des hôtes existants.
 

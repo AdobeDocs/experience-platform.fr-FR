@@ -4,10 +4,22 @@ solution: Experience Platform
 title: Présentation du connecteur Source des attributs du client
 description: Découvrez comment connecter les attributs du client à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+TQID: https://experienceleague.adobe.com/SEkixDB2pXqkq6fFwOJsTuHuyAGO34NvVHf2XdDiMRI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 19%
+source-wordcount: 410
+ht-degree: 20%
 
 ---
 

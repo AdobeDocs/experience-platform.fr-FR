@@ -3,10 +3,19 @@ title: Modèle de libre-service de documentation pour l’interface utilisateur 
 description: Découvrez comment importer des données de flux d’une source vers Adobe Experience Platform à l’aide de l’interface utilisateur.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/gKKoCn2nqsYRKYfHdcgZMJS67BTvJILS2iDJoDxvKSk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 7%
+source-wordcount: 1187
+ht-degree: 8%
 
 ---
 

@@ -1,10 +1,27 @@
 ---
 title: Présentation accélérée de la boutique
 description: Découvrez comment utiliser la boutique accélérée dans Adobe Experience Platform pour obtenir des informations rapides et basées sur SQL à l’aide de données agrégées. Cette page décrit son utilisation prévue, les restrictions relatives aux données d’identité et de BI, ainsi que les bonnes pratiques pour assurer la conformité aux politiques de gouvernance des données d’Adobe.
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+exl-id: 4ec09bd2-b0a2-4559-9b4d-295369880317
+TQID: https://experienceleague.adobe.com/q-6joPeADyilaP3Ka1AsuEpgiPJT-fBz2dMbUwIS2YI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 1%
+source-wordcount: 601
+ht-degree: 0%
 
 ---
 

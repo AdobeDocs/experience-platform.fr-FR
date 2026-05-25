@@ -4,9 +4,14 @@ solution: Experience Platform
 title: Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources
 description: Ce document décrit les étapes à suivre pour utiliser votre environnement local afin de créer de la documentation pour votre source et d’envoyer une requête de tirage (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/2cI60PYEFSn-EAZCnKuJDC9TO7Qys6-pfCzzLHjEL2E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: 678
 ht-degree: 5%
 
 ---
@@ -25,7 +30,7 @@ Le tutoriel suivant nécessite l’installation préalable de GitHub Desktop sur
 
 ## Connexion à GitHub et configuration de votre environnement de création local
 
-La première étape de la configuration de votre environnement de création local consiste à accéder au référentiel GitHub de [Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.fr-FR).
+La première étape de la configuration de votre environnement de création local consiste à accéder au référentiel GitHub de [&#128279;](https://github.com/AdobeDocs/experience-platform.fr-FR).
 
 ![platform-repo](../assets/platform-repo.png)
 

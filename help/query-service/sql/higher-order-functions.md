@@ -2,9 +2,15 @@
 title: Gérez les types de données de tableau et de mappage avec des fonctions d'ordre supérieur
 description: Découvrez comment gérer les types de données de tableau et de mappage avec des fonctions d’ordre supérieur dans Query Service. Des exemples sont fournis avec des cas d’utilisation courants.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/P311rfJfVDuFSdXB0D2vAhmplJxHCIJy7E9oaHSkMDg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: 1483
 ht-degree: 1%
 
 ---
@@ -460,6 +466,6 @@ Les exemples suivants de fonctions d’ordre supérieur sont expliqués dans le 
 
 L’exemple de fonction [`transform` couvre &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) segmentation en unités lexicales d’une liste de produits.
 
-L’exemple de fonction [`filter`](../use-cases/retrieve-similar-records.md#filter-results) illustre une extraction plus affinée et plus précise des informations pertinentes à partir des données de texte.
+L’exemple de fonction [&#128279;](../use-cases/retrieve-similar-records.md#filter-results) illustre une extraction plus affinée et plus précise des informations pertinentes à partir des données de texte.`filter`
 
-La fonction [`reduce`](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) permet d’obtenir des valeurs cumulées ou des agrégats qui peuvent jouer un rôle essentiel dans divers processus d’analyse et de planification.
+La fonction [&#128279;](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) permet d’obtenir des valeurs cumulées ou des agrégats qui peuvent jouer un rôle essentiel dans divers processus d’analyse et de planification.`reduce`

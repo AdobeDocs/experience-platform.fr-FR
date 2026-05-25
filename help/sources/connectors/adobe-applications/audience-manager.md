@@ -4,9 +4,28 @@ solution: Experience Platform
 title: Présentation d’Audience Manager Source
 description: La source Adobe Audience Manager diffuse des données propriétaires collectées dans Audience Manager vers Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/LuP2iKWYUHNzM9J5M0-rwo4DmpV12taWFvL5hauxnFs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: f5efb499-54f9-432b-ac5c-599dbac103af
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: 1151
 ht-degree: 13%
 
 ---
@@ -66,13 +85,13 @@ Les jeux de données Audience Manager sont désactivés pour le profil par défa
 | Nom du jeu de données | Description | Classe |
 | --- | --- | --- |
 | AAM en temps réel | Ce jeu de données contient les données collectées à la suite d’accès directs aux points d’entrée DCS d’Audience Manager et aux mappages d’identités pour les profils Audience Manager. Conservez ce jeu de données activé pour l’ingestion dans Profile. | Événement d’expérience |
-| Mises à jour du profil en temps réel d’AAM | Ce jeu de données permet le ciblage en temps réel des caractéristiques et des segments Audience Manager. Il contient des informations pour le routage régional, les caractéristiques et l’adhésion aux segments Edge. Gardez ce jeu de données activé pour l’ingestion de profils. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton (bascule) **[!UICONTROL Profil]** pour ingérer directement les données dans le profil. | Enregistrement |
-| Données des appareils AAM | Données d’appareil avec ECID et réalisations de segment correspondantes agrégées dans Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton (bascule) **[!UICONTROL Profil]** pour ingérer directement les données dans le profil. | Enregistrement |
-| Données de profil d’appareil AAM | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton (bascule) **[!UICONTROL Profil]** pour ingérer directement les données dans le profil. | Enregistrement |
-| Profils authentifiés AAM | Ce jeu de données contient des profils authentifiés Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton (bascule) **[!UICONTROL Profil]** pour ingérer directement les données dans le profil. | Enregistrement |
-| Métadonnées des profils authentifiés AAM | Utilisé pour les diagnostics du connecteur Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton (bascule) **[!UICONTROL Profil]** pour ingérer directement les données dans le profil. | Enregistrement |
-| Renvoi de données d’appareils AAM | Jeu de données provenant de l’importation de données d’appareils antérieures. Contient des ECID et les réalisations de segment correspondantes agrégés dans Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton (bascule) **[!UICONTROL Profil]** pour ingérer directement les données dans le profil. | Enregistrement |
-| Renvoi de profils authentifiés AAM | Jeu de données provenant de l’importation de données authentifiées antérieures. Contient des profils authentifiés Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton (bascule) **[!UICONTROL Profil]** pour ingérer directement les données dans le profil. | Enregistrement |
+| Mises à jour du profil en temps réel d’AAM | Ce jeu de données permet le ciblage en temps réel des caractéristiques et des segments Audience Manager. Il contient des informations pour le routage régional, les caractéristiques et l’appartenance aux segments Edge. Conservez ce jeu de données activé pour l’ingestion dans Profile. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton **[!UICONTROL Profile]** pour ingérer directement les données dans le profil. | Enregistrement |
+| Données des appareils AAM | Données d’appareil avec ECID et réalisations de segment correspondantes agrégées dans Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton **[!UICONTROL Profile]** pour ingérer directement les données dans le profil. | Enregistrement |
+| Données de profil d’appareil AAM | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton **[!UICONTROL Profile]** pour ingérer directement les données dans le profil. | Enregistrement |
+| Profils authentifiés AAM | Ce jeu de données contient des profils authentifiés Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton **[!UICONTROL Profile]** pour ingérer directement les données dans le profil. | Enregistrement |
+| Données Meta Des Profils Authentifiés AAM | Utilisé pour les diagnostics du connecteur Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton **[!UICONTROL Profile]** pour ingérer directement les données dans le profil. | Enregistrement |
+| Renvoi de données d’appareils AAM | Jeu de données provenant de l’importation de données d’appareils antérieures. Contient des ECID et les réalisations de segment correspondantes agrégés dans Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton **[!UICONTROL Profile]** pour ingérer directement les données dans le profil. | Enregistrement |
+| Renvoi de profils authentifiés AAM | Jeu de données provenant de l’importation de données authentifiées antérieures. Contient des profils authentifiés Audience Manager. Les données ne sont pas visibles sous forme de lots dans le jeu de données. Vous pouvez activer le bouton **[!UICONTROL Profile]** pour ingérer directement les données dans le profil. | Enregistrement |
 
 ### Connexions
 

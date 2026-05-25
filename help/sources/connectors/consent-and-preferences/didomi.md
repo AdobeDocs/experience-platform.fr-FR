@@ -1,13 +1,22 @@
 ---
 title: Présentation de Didomi Source
 description: Découvrez comment connecter Didomi à Adobe Experience Platform à l’aide de l’interface utilisateur.
-last-substantial-update: 2025-07-29T00:00:00Z
+last-substantial-update: 2025-07-29T00:00:00.000Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/kNG516Ux3USmcbDNuhvRZUhzuBjss8wsPAabgG16KTM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 3%
+source-wordcount: 901
+ht-degree: 2%
 
 ---
 

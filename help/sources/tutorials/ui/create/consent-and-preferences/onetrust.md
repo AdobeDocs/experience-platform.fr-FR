@@ -5,10 +5,15 @@ title: Créer une connexion Source OneTrust dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source OneTrust à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/LHTYunghISWC4Iyb-KZrI3g-LrSLVO9Hy569iSU1gGw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 23%
+source-wordcount: 526
+ht-degree: 15%
 
 ---
 
@@ -48,25 +53,25 @@ Pour plus d’informations sur ces informations d’identification, consultez la
 >
 >Les spécifications de l’API [!DNL OneTrust Integration] sont partagées avec Adobe pour l’ingestion de données.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] pour un catalogue de sources disponibles dans Experience Platform.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] d’un catalogue de sources disponibles dans Experience Platform.
 
-Utilisez le menu *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique à partir du catalogue.
+Utilisez le menu *[!UICONTROL Categories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique à partir du catalogue.
 
-Accédez à la catégorie [!UICONTROL Consentement et préférences] pour la carte source [!DNL OneTrust Integration]. Pour commencer, sélectionnez **[!UICONTROL Ajouter des données]**.
+Accédez à la catégorie [!UICONTROL Consent & Preferences] de la carte source [!DNL OneTrust Integration]. Pour commencer, sélectionnez **[!UICONTROL Add data]**.
 
 ![Le catalogue des sources de l’interface utilisateur d’Experience Platform.](../../../../images/tutorials/create/onetrust/catalog.png)
 
-La page **[!UICONTROL Connecter le compte d’intégration OneTrust]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connect OneTrust Integration account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL OneTrust Integration] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL OneTrust Integration] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![Étape d’authentification du compte existant dans le workflow des sources.](../../../../images/tutorials/create/onetrust/existing.png)
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![L’étape d’authentification du nouveau compte dans le workflow des sources.](../../../../images/tutorials/create/onetrust/new.png)
 

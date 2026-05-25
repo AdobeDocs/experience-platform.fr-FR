@@ -2,9 +2,19 @@
 title: Détermination D’Un Score De Propension À L’Aide D’Un Modèle Prédictif Généré Par Machine Learning
 description: Découvrez comment utiliser Query Service pour appliquer votre modèle prédictif aux données Experience Platform. Ce document explique comment utiliser les données d’Experience Platform pour prédire la propension d’un client à acheter à chaque visite.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/K4Nf0gb4l0e5MDRm1WtWMieZhJHGVr8ccSJMZUYSEj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: 1315
 ht-degree: 0%
 
 ---
@@ -15,7 +25,7 @@ Grâce à Query Service, vous pouvez utiliser des modèles prédictifs, tels que
 
 Ce guide explique comment utiliser Query Service pour envoyer des données à votre plateforme de machine learning afin d’entraîner un modèle dans un notebook de calcul. Le modèle formé peut être appliqué aux données à l’aide de SQL afin de prédire la propension d’un client à acheter pour chaque visite.
 
-## Commencer
+## Prise en main
 
 Dans le cadre de ce processus, qui nécessite l’entraînement d’un modèle de machine learning, ce document suppose une connaissance pratique d’un ou de plusieurs environnements de machine learning.
 

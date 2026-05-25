@@ -2,9 +2,14 @@
 title: Définir des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources de modèle de données d’expérience (XDM) personnalisées dans l’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 000b79c5d87408ebc1f46731fb92aa148b435287
+TQID: https://experienceleague.adobe.com/aH0yjq-inTvAFACQJzbupIliIu8qa-KrZwmUqjzFmVY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: 1250
 ht-degree: 2%
 
 ---

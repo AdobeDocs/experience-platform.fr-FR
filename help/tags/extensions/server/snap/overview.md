@@ -1,11 +1,35 @@
 ---
 title: Présentation de l’extension de l’API de conversions Snapchat
 description: Utilisez la conversion Snapchat pour envoyer des données d’événement côté serveur à Snap.
-last-substantial-update: 2025-01-20T00:00:00Z
+last-substantial-update: 2025-01-20T00:00:00.000Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/SbZbjD4PtmqMTLZfAFTB1FgNd1o90Xudfjc3EdETWvE
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: 1056
 ht-degree: 4%
 
 ---
@@ -118,7 +142,7 @@ Les [règles](https://experienceleague.adobe.com/fr/docs/platform-learn/implemen
 | Nom | `ln` |
 | Genre | `ge` |
 | Ville | `ph` |
-| State (État) | `st` |
+| État | `st` |
 | Zip (Code postal) | `zp` |
 | Pays | `country` |
 | ID externe | `external_id` |

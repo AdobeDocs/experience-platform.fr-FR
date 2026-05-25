@@ -2,10 +2,23 @@
 title: Type de données de collection des détails de session
 description: Découvrez le type de données Modèle de données d’expérience (XDM) de la collecte de détails de session .
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/w2EYDZMD7deZm-pkdsNDtMSm3E3YwyNrVXBGpqTG6pc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 13%
+source-wordcount: 1134
+ht-degree: 9%
 
 ---
 
@@ -28,11 +41,11 @@ La collecte de [!UICONTROL Session Details] est un type de données standard du 
 | [[!UICONTROL Artist]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#artist) | `artist` | Chaîne | Non | Nom de l’artiste ou du groupe qui effectue l’enregistrement musical ou la vidéo. |
 | [[!UICONTROL Asset ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#asset-id) | `assetID` | Chaîne | Non | Le [!UICONTROL Asset ID] est l’identifiant unique du contenu de la ressource multimédia, tel que l’identifiant de l’épisode de la série télévisée, l’identifiant de la ressource vidéo ou l’identifiant de l’événement en direct. En règle générale, ces identifiants sont dérivés d’autorités de métadonnées telles que EIDR, TMS/Gracenote ou Rovi. Ces identifiants peuvent également provenir d’autres systèmes propriétaires ou internes. |
 | [[!UICONTROL Author]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#author) | `author` | Chaîne | Non | Nom de l’auteur du média. |
-| [[!UICONTROL Broadcast Content Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-type) | `contentType` | Chaîne | Oui | [!UICONTROL Broadcast Content Type] de la diffusion du flux. Les valeurs disponibles par [!UICONTROL Stream Type] sont les suivantes : <br> Audio : « song », « podcast », « audiobook » et « radio » ; <br> Vidéo : « VoD », « Live », « Linear », « UGC » et « DVoD ».<br>Les clients peuvent fournir des valeurs personnalisées pour ce paramètre. |
+| [[!UICONTROL Broadcast Content Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-type) | `contentType` | Chaîne | Oui | [!UICONTROL Broadcast Content Type] de la diffusion du flux. Les valeurs disponibles par [!UICONTROL Stream Type] sont les suivantes : <br>Audio : « song », « podcast », « audiobook » et « radio » ; <br>Vidéo : « VoD », « Live », « Linear », « UGC » et « DVoD ».<br>Les clients peuvent fournir des valeurs personnalisées pour ce paramètre. |
 | [[!UICONTROL Broadcast Network]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#network) | `network` | Chaîne | Non | Nom du réseau/canal. |
 | [[!UICONTROL Content Channel]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-channel) | `channel` | Chaîne | Oui | Le [!UICONTROL Content Channel] est le canal de distribution à partir duquel le contenu a été lu. |
 | [!UICONTROL Content Delivery Network] | `cdn` | Chaîne | Non | [!UICONTROL Content Delivery Network] du contenu lu. |
-| [[!UICONTROL Content ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-id) | `name` | chaîne | Oui | Le [!UICONTROL Content ID] est un identifiant unique du contenu. Il peut être utilisé pour établir un lien vers d’autres ID de secteur ou de CMS. |
+| [[!UICONTROL Content ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-id) | `name` | string | Oui | Le [!UICONTROL Content ID] est un identifiant unique du contenu. Il peut être utilisé pour établir un lien vers d’autres ID de secteur ou de CMS. |
 | [[!UICONTROL Content Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-name-(variable)) | `friendlyName` | Chaîne | Non | Le [!UICONTROL Content Name] est le nom « convivial » (lisible par l’utilisateur) du contenu. |
 | [[!UICONTROL Content Player Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-player-name) | `playerName` | Chaîne | Oui | Nom du lecteur de contenu. |
 | [[!UICONTROL Creator Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#originator) | `originator` | Chaîne | Non | Nom du créateur du contenu. |

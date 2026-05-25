@@ -2,10 +2,23 @@
 title: Type de données de rapport des détails de session
 description: Découvrez le type de données du modèle de données d’expérience de création de rapports (XDM) Détails de la session.
 exl-id: 8bcaa0d8-2f85-4189-b0b5-8c72ecbb0660
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/d5up9DXvvwBOczR-nO4p6-LnHyvXF5O89arNJMng9Dk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1293'
-ht-degree: 14%
+source-wordcount: 1974
+ht-degree: 9%
 
 ---
 
@@ -36,7 +49,7 @@ Les champs de création de rapports multimédia sont utilisés par les services 
 | [[!UICONTROL Asset ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#asset-id) | `assetID` | Chaîne | Le [!UICONTROL Asset ID] est l’identifiant unique du contenu de la ressource multimédia, tel que l’identifiant de l’épisode de la série télévisée, l’identifiant de la ressource vidéo ou l’identifiant de l’événement en direct. En règle générale, ces identifiants sont dérivés d’autorités de métadonnées telles que EIDR, TMS/Gracenote ou Rovi. Ces identifiants peuvent également provenir d’autres systèmes propriétaires ou internes. |
 | [[!UICONTROL Author]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#author) | `author` | Chaîne | Nom de l’auteur du média. |
 | [[!UICONTROL Average Minute Audience]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#average-minute-audience) | `averageMinuteAudience` | Nombre Décrit la durée moyenne consacrée à un élément de média spécifique, c’est-à-dire le temps de contenu total divisé par la durée de toutes les sessions de lecture. |  |
-| [[!UICONTROL Broadcast Content Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-type) | `contentType` | Chaîne | [!UICONTROL Broadcast Content Type] de la diffusion du flux. Les valeurs disponibles par [!UICONTROL Stream Type] sont les suivantes : <br> Audio : « song », « podcast », « audiobook » et « radio » ; <br> Vidéo : « VoD », « Live », « Linear », « UGC » et « DVoD ».<br>Les clients peuvent fournir des valeurs personnalisées pour ce paramètre. |
+| [[!UICONTROL Broadcast Content Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-type) | `contentType` | Chaîne | [!UICONTROL Broadcast Content Type] de la diffusion du flux. Les valeurs disponibles par [!UICONTROL Stream Type] sont les suivantes : <br>Audio : « song », « podcast », « audiobook » et « radio » ; <br>Vidéo : « VoD », « Live », « Linear », « UGC » et « DVoD ».<br>Les clients peuvent fournir des valeurs personnalisées pour ce paramètre. |
 | [[!UICONTROL Broadcast Network]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#network) | `network` | Chaîne | Nom du réseau/canal. |
 | [[!UICONTROL Chapter Count]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#chapter-count) | `chapterCount` | Entier | Nombre de chapitres démarrés pendant la lecture. |
 | [[!UICONTROL Content Channel]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-channel) | `channel` | Chaîne | Le [!UICONTROL Content Channel] est le canal de distribution à partir duquel le contenu a été lu. |
@@ -57,10 +70,10 @@ Les champs de création de rapports multimédia sont utilisés par les services 
 | [[!UICONTROL First Digital Date]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#first-digital-date) | `firstDigitalDate` | Chaîne | Date à laquelle le contenu a été diffusé pour la première fois sur un canal ou une plateforme numérique. Tout format de date est acceptable, mais Adobe recommande le format suivant : AAAA-MM-JJ. |
 | [[!UICONTROL Genre]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#genre) | `genre` | Chaîne | Type ou groupement de contenu, tel que défini par le producteur du contenu. Les valeurs doivent être délimitées par des virgules dans l’implémentation des variables. |
 | [[!UICONTROL Media Authorized]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#authorized) | `authorized` | Chaîne | Confirme si l&#39;utilisateur a obtenu une autorisation via l&#39;authentification Adobe. |
-| [[!UICONTROL Media Content Length]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-length-(variable)) | `length` | Entier     OUI | Le [!UICONTROL Media Content Length] contient la longueur/exécution de l’élément. Il s’agit de la longueur maximale (ou durée) du contenu consommé (en secondes). |
+| [[!UICONTROL Media Content Length]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-length-(variable)) | `length` | Entier OUI | Le [!UICONTROL Media Content Length] contient la longueur/exécution de l’élément. Il s’agit de la longueur maximale (ou durée) du contenu consommé (en secondes). |
 | [[!UICONTROL Media Downloaded Flag]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#media-downloaded-flag) | `isDownloaded` | Booléen | Le flux a été lu localement sur l’appareil après avoir été téléchargé. |
 | [[!UICONTROL Media Segment Views]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#content-segment-views) | `hasSegmentView` | Booléen | [!UICONTROL Media Segment Views] indique si au moins une image, et pas nécessairement la première, a été vue. |
-| [[!UICONTROL Media Session ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#media-session-id) | `ID` | Chaîne | Le [!UICONTROL Media Session ID] identifie une instance d’un flux de contenu propre à une lecture individuelle.<br><em>Remarque :<em>`sessionId` est envoyé sur tous les événements, à l’exception des `sessionStart` et de tous les événements téléchargés. |
+| [[!UICONTROL Media Session ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#media-session-id) | `ID` | Chaîne | Le [!UICONTROL Media Session ID] identifie une instance d’un flux de contenu spécifique à une lecture. <br><em>Remarque :<em>`sessionId` est envoyé sur tous les événements, à l’exception des `sessionStart` et de tous les événements téléchargés. |
 | [[!UICONTROL Media Session Server Timeout]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#seconds-since-last-call) | `secondsSinceLastCall` | Nombre Le [!UICONTROL Media Session Server Timeout] indique la durée écoulée, en secondes, entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |  |
 | [[!UICONTROL Media Starts]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#media-starts) | `isViewed` | Booléen | Événement de chargement du média. Cela se produit lorsque la visionneuse sélectionne le bouton de lecture. Cela compte même s’il existe des publicités preroll, une mise en mémoire tampon, des erreurs, etc. |
 | [[!UICONTROL Media Time Spent]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html?lang=fr#media-time-spent) | `totalTimePlayed` | Entier | Décrit le temps total passé par un utilisateur sur un fichier multimédia minuté spécifique, qui inclut le temps passé à regarder les publicités. |

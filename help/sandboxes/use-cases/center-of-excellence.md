@@ -2,9 +2,19 @@
 title: Activer un centre d’excellence à l’aide des outils de sandbox
 description: Créez un centre d’excellence à l’aide de l’outil sandbox en créant un package « sandbox doré » pour normaliser les bonnes pratiques sur plusieurs sandbox.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/uaWArD7gFpe3GFQTu3BoRe-bGd0DTCYTYvFvDPZBtuc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: 914
 ht-degree: 8%
 
 ---
@@ -81,7 +91,7 @@ L’outil Sandbox vous permet de partager des packages que vous avez créés dan
 
 ### Surveiller les importations et les exportations au moyen de journaux d’audit
 
-Lorsque vous importez ou exportez votre package, vous pouvez surveiller le statut des tâches à l’aide du tableau de bord **[!UICONTROL Tâches]** dans Experience Platform. Pour en savoir plus sur la surveillance des tâches, consultez le guide sur la [surveillance des détails d’importation](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Lorsque vous importez ou exportez votre package, vous pouvez surveiller le statut des tâches à l’aide du tableau de bord **[!UICONTROL Jobs]** dans Experience Platform. Pour en savoir plus sur la surveillance des tâches, consultez le guide sur la [surveillance des détails d’importation](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### Mettez régulièrement à jour le sandbox doré
 

@@ -5,9 +5,20 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour le profil client en temps réel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/eLC-1-DirU9gDl-Bvd6YWbZ3O5oHgQn1Kq8qQiNaI5I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: 1753
 ht-degree: 21%
 
 ---
@@ -67,7 +78,7 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 
 >[!NOTE]
 >
->Pour plus d’informations sur les effets de l’utilisation de [&#x200B; et de &#x200B;](#profile-v-identity) dans le tableau de `ProfileService` `identity` reportez-vous à la section sur les `include`requêtes de profil et requêtes d’identité plus loin dans ce document.
+>Pour plus d’informations sur les effets de l’utilisation de `ProfileService` et de `identity` dans le tableau de `include`[&#128279;](#profile-v-identity) reportez-vous à la section sur les requêtes de profil et requêtes d’identité plus loin dans ce document.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la banque de [!DNL Profile]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant l’espace de noms d’identité `Email` standard et l’autre à l’aide d’un espace de noms d’identité `Customer_ID` personnalisé. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans le tableau `include` :
 
@@ -114,7 +125,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système. 
+>Experience Platform traite les demandes d’accès à des informations personnelles dans tous les [sandbox](../sandboxes/home.md) appartenant à votre organisation. Par conséquent, tout en-tête `x-sandbox-name` inclus dans la demande est ignoré par le système.
 
 **Réponse du produit**
 
@@ -217,7 +228,7 @@ Pour supprimer le profil et toutes les associations d’identités pour un clien
 
 ### Limites des politiques de fusion {#merge-policy-limitations}
 
-Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type de **[!DNL None]** est [!UICONTROL ID stitching]. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion où [!UICONTROL ID stitching] est défini sur [!UICONTROL Private graph].
+Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type de [!UICONTROL ID stitching] est **[!DNL None]**. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion où [!UICONTROL ID stitching] est défini sur [!UICONTROL Private graph].
 
 >![L’assemblage des identifiants de la politique de fusion est défini sur Aucun](./images/privacy/no-id-stitch.png)
 

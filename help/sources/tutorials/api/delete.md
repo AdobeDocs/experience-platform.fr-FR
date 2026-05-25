@@ -5,9 +5,14 @@ title: Supprimer un compte à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment supprimer un compte à l’aide de l’API Flow Service.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/i1mkGngo5K1Gast4i3t6fvD831rAAtJN-YitHzhu1-Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: 346
 ht-degree: 92%
 
 ---
@@ -24,7 +29,7 @@ Ce tutoriel nécessite que vous disposiez d’un identifiant de connexion valide
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources &#x200B;](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sources](../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utilisation des API Experience Platform
@@ -62,7 +67,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
+Une réponse réussie renvoie un statut HTTP 204 (Pas de contenu) et un corps vide.
 
 Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) à la connexion.
 

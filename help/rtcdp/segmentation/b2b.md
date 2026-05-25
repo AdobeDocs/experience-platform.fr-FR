@@ -4,9 +4,18 @@ description: Présentation des différents cas d’utilisation d’Adobe Real-Ti
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/sldRLmJy7Yt2SiPTT-w9keXkWYQsvan0hzwdngYOreY
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: 1637
 ht-degree: 1%
 
 ---
@@ -35,7 +44,7 @@ Dans le cadre des mises à niveau de l’architecture Real-Time CDP B2B edition,
 
 >[!ENDSHADEBOX]
 
-## Conditions préalables {#prerequisites}
+## Conditions préalables requises {#prerequisites}
 
 Avant de pouvoir utiliser les attributs de segmentation pour les classes B2B, vous devez effectuer les étapes suivantes :
 

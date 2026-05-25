@@ -5,9 +5,19 @@ title: Surveiller les flux de données à l’aide de l’API Flow Service
 type: Tutorial
 description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
+TQID: https://experienceleague.adobe.com/GJ106bgXNxjDGVMjuraphQyBOtHDzZ0V74ml-tGbhiQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: 770
 ht-degree: 57%
 
 ---

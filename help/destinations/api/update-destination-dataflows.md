@@ -5,16 +5,31 @@ title: Mettre à jour des flux de données de destination à l’aide de l’API
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/BApRI4yJJvcUY4alv4XElRtz0qxjFh5jI-3Z2AoQIPY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: 2472
 ht-degree: 27%
 
 ---
 
 # Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [[!DNL Flow Service] . &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [&#x200B; Modifier les flux d’activation &#x200B;](/help/destinations/ui/edit-activation.md).
+Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [&#128279;](https://www.adobe.io/experience-platform-apis/references/flow-service/). [!DNL Flow Service] Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [&#x200B; Modifier les flux d’activation &#x200B;](/help/destinations/ui/edit-activation.md).
 
 ## Prise en main {#get-started}
 
@@ -503,12 +518,12 @@ curl -X PATCH \
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 | `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
 | `name` | **(facultatif)**. Indiquez le nom de l’audience que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter une audience au flux de données de destination sans indiquer son nom. |
-| `filenameTemplate` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom de fichier des fichiers exportés vers la destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant de l’audience exportée.</li><li>`%SEGMENT_NAME%` : **(facultatif)**. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%` : **(facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text` : **(facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, consultez la section [configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
+| `filenameTemplate` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom de fichier des fichiers exportés vers la destination. <br> Les options disponibles sont les suivantes : <br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant de l’audience exportée.</li><li>`%SEGMENT_NAME%` : **(facultatif)**. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%` : **(facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text` : **(facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, consultez la section [configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `exportMode` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `startDate` | Sélectionnez la date à laquelle l’audience doit commencer à exporter les profils vers votre destination. |
 | `frequency` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de la sélection du mode `"DAILY_FULL_EXPORT"` dans le sélecteur de `frequency`. <br> Obligatoire. <br> <ul><li>Sélectionnez `"AFTER_SEGMENT_EVAL"` pour que le traitement d’activation s’exécute immédiatement une fois le traitement quotidien de segmentation par lots d’Experience Platform terminé. Ainsi, lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.</li><li>Sélectionnez `"SCHEDULED"` pour que la tâche d’activation s’exécute à une heure fixe. Cela garantit que les données de profil Experience Platform sont exportées simultanément chaque jour, mais les profils exportés ne sont peut-être pas les plus récents, selon que la tâche de segmentation par lots est terminée ou non avant le début de la tâche d’activation. Lorsque vous sélectionnez cette option, vous devez également ajouter un `startTime` pour indiquer à quel moment en UTC les exportations quotidiennes doivent avoir lieu.</li></ul> |
-| `endDate` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et de `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
+| `endDate` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
 | `startTime` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres de l’audience doivent être générés et exportés vers votre destination. |
 
 {style="table-layout:auto"}
@@ -598,7 +613,7 @@ PATCH /flows/{FLOW_ID}
 
 **Requête**
 
-Lors de la mise à jour d’une audience dans un flux de données de destination existant, vous devez d’abord effectuer une opération GET pour récupérer les détails de l’audience à mettre à jour. Ensuite, fournissez toutes les informations d’audience dans la payload, et pas seulement les champs que vous souhaitez mettre à jour. Dans l’exemple ci-dessous, du texte personnalisé est ajouté à la fin du modèle de nom de fichier et la fréquence du planning d’exportation est mise à jour de 6 heures à 12 heures.
+Lors de la mise à jour d’une audience dans un flux de données de destination existant, vous devez d’abord effectuer une opération GET pour récupérer les détails de l’audience que vous souhaitez mettre à jour. Ensuite, fournissez toutes les informations d’audience dans la payload, et pas seulement les champs que vous souhaitez mettre à jour. Dans l’exemple ci-dessous, du texte personnalisé est ajouté à la fin du modèle de nom de fichier et la fréquence du planning d’exportation est mise à jour de 6 heures à 12 heures.
 
 ```shell
 curl -X PATCH \

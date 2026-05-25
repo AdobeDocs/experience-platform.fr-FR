@@ -1,33 +1,38 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
+keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;ExperienceEvent;champs;schémas;Schémas;Conception de schéma;groupe de champs;groupe de champs;
 solution: Experience Platform
-title: Groupe de champs de schéma Détails du marketing de Campaign
-description: Découvrez le groupe de champs Détails du marketing Campaign .
+title: Groupe De Champs Du Schéma Des Détails Marketing De Campaign
+description: Découvrez le groupe de champs de schéma Détails marketing de la campagne .
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+TQID: https://experienceleague.adobe.com/UO1uSSTvQO3oEPwe-hMltpyDFTdMq1A0NWLfNFgPQI8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 19%
+source-wordcount: 142
+ht-degree: 16%
 
 ---
 
-# [!UICONTROL Groupe de champs Détails du marketing de campagne]
+# [!UICONTROL Campaign Marketing Details] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Détails marketing de campagne] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire des informations de campagne marketing telles que le groupe de campagne, le nom et le code de suivi.
+[!UICONTROL Campaign Marketing Details] est un groupe de champs de schéma standard pour la classe [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), utilisé pour décrire les informations sur la campagne marketing telles que le groupe de la campagne, le nom et le code de suivi.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `marketing` | [Marketing](../../data-types/marketing.md) | Objet qui décrit des informations sur les campagnes marketing, telles que le groupe, le nom et le code de suivi des campagnes. |
+| `marketing` | [Marketing &#x200B;](../../data-types/marketing.md) | Objet qui décrit les informations sur la campagne marketing telles que le groupe de la campagne, le nom et le code de suivi. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
+Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)

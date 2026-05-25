@@ -2,9 +2,19 @@
 title: Fonctionnalités d’ingénierie pour le machine learning
 description: Découvrez comment transformer les données de Adobe Experience Platform en fonctionnalités ou variables qui peuvent être utilisées par un modèle de machine learning. Utilisez Data Distiller pour calculer les fonctionnalités ML à grande échelle et partager ces fonctionnalités avec votre environnement de machine learning.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
+TQID: https://experienceleague.adobe.com/kZ5CVFECnR2pAX--WNVskQrt2qk33VFhnwtXeWa-AOU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: 1146
 ht-degree: 18%
 
 ---
@@ -146,7 +156,7 @@ df_features.head()
 
 **Exemple de sortie**
 
-|   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
+|   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionRejetée | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN |
@@ -156,9 +166,9 @@ df_features.head()
 
 {style="table-layout:auto"}
 
-#### Combine labels and features queries {#combine-queries}
+#### Combiner des requêtes de libellés et de fonctionnalités {#combine-queries}
 
-Finally, the labels query and the features query can be combined into a single query that returns a training dataset of labels and features:
+Enfin, la requête de libellés et la requête de fonctionnalités peuvent être combinées en une seule requête qui renvoie un jeu de données d’entraînement de libellés et de fonctionnalités :
 
 +++Sélectionner pour afficher un exemple de requête
 
@@ -229,7 +239,7 @@ df_training_set.head()
 
 **Exemple de sortie**
 
-|  | userId | eventType | date et heure | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
+|  | userId | eventType | date et heure | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionRejetée | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
 | 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN | 1 |
 | 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Aucune | NaN | 1 |
@@ -239,18 +249,18 @@ df_training_set.head()
 
 {style="table-layout:auto"}
 
-## Create a query template to incrementally compute training data
+## Créer un modèle de requête pour calculer de manière incrémentielle les données d’identification
 
-It is typical to periodically retrain a model with updated training data to maintain accuracy of the model over time. As a best practice for efficiently updating your training dataset, you can create a template from your training set query to compute new training data incrementally. This allows you compute labels and features only from data that was added to the original Experience Events dataset since the training data was last updated, and insert the new labels and features into the existing training dataset.
+Il est courant de recycler périodiquement un modèle avec des données d’apprentissage mises à jour pour maintenir la précision du modèle au fil du temps. Comme bonne pratique pour mettre à jour efficacement votre jeu de données d’entraînement, vous pouvez créer un modèle à partir de votre requête de jeu d’entraînement pour calculer de nouvelles données d’entraînement de manière incrémentielle. Cela vous permet de calculer les libellés et les fonctionnalités uniquement à partir des données qui ont été ajoutées au jeu de données d’événements d’expérience d’origine depuis la dernière mise à jour des données d’entraînement, et d’insérer les nouveaux libellés et fonctionnalités dans le jeu de données d’entraînement existant.
 
-Doing so requires a few modifications to the training set query:
+Pour ce faire, quelques modifications doivent être apportées à la requête du jeu de formation :
 
-- Add logic to create a new training dataset if it doesn&#39;t exist, and insert the new labels and features into the existing training dataset otherwise. This requires a series of two versions of the training set query:
-   - First, using the `CREATE TABLE IF NOT EXISTS {table_name} AS` statement
-   - Next, using the `INSERT INTO {table_name}` statement for the case where the training dataset already exists
-- Add a `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` statement to limit the query to event data that was added within a specified interval. The `$` prefix on the snapshot IDs indicates that thy are variables that will be passed in when the query template is executed.
+- Ajoutez une logique pour créer un jeu de données d’entraînement s’il n’existe pas, et insérez les nouveaux libellés et fonctionnalités dans le jeu de données d’entraînement existant dans le cas contraire. Cela nécessite une série de deux versions de la requête du jeu d’entraînement :
+   - Tout d’abord, utilisez l’instruction `CREATE TABLE IF NOT EXISTS {table_name} AS` .
+   - Ensuite, utilisez l’instruction `INSERT INTO {table_name}` dans le cas où le jeu de données d’entraînement existe déjà
+- Ajoutez une instruction `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` pour limiter la requête aux données d’événement ajoutées au cours d’un intervalle spécifié. Le préfixe `$` sur les ID d’instantané indique qu’il s’agit de variables qui seront transmises lors de l’exécution du modèle de requête.
 
-Applying those changes results in the following query:
+L’application de ces modifications génère la requête suivante :
 
 +++Sélectionner pour afficher un exemple de requête
 
@@ -390,7 +400,7 @@ END $$;
 
 +++
 
-Finally, the following code saves the query template in Data Distiller:
+Enfin, le code suivant enregistre le modèle de requête dans la Distiller de données :
 
 ```python
 template_res = dd.createQueryTemplate({
@@ -407,7 +417,7 @@ print(f"Template for propensity training data created as ID {template_id}")
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
-With the template saved, you can execute the query at any time by referencing the template ID and specify the range of snapshot IDs that should be included in the query. The following query retrieves the snapshots of the original Experience Events dataset:
+Une fois le modèle enregistré, vous pouvez exécuter la requête à tout moment en référençant l’ID du modèle et en spécifiant la plage d’ID d’instantané qui doit être incluse dans la requête. La requête suivante récupère les instantanés du jeu de données d’événements d’expérience d’origine :
 
 ```python
 query_snapshots = f"""
@@ -422,7 +432,7 @@ ORDER BY snapshot_generation ASC
 df_snapshots = dd_cursor.query(query_snapshots, output="dataframe")
 ```
 
-The following code demonstrates execution of the query template, using the first and last snapshots to query the entire dataset:
+Le code suivant illustre l’exécution du modèle de requête, à l’aide des premier et dernier instantanés pour interroger l’ensemble du jeu de données :
 
 ```python
 snapshot_start_id = str(df_snapshots["snapshot_id"].iloc[0])
@@ -445,7 +455,7 @@ print(f"Query started successfully and got assigned ID {query_final_id} - it wil
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
-You can define the following function to periodically check the status of the query:
+Vous pouvez définir la fonction suivante pour vérifier régulièrement le statut de la requête :
 
 ```python
 def wait_for_query_completion(query_id):
@@ -482,6 +492,6 @@ Query is still in progress, sleeping…
 Query completed successfully in 473.8 seconds
 ```
 
-## Next steps:
+## Étapes suivantes :
 
-By reading this document you have learned how to transform data in Adobe Experience Platform into features, or variables, that can be consumed by a machine learning model. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [export feature datasets](./export-data.md).
+En lisant ce document, vous avez appris à transformer les données de Adobe Experience Platform en fonctionnalités, ou variables, qui peuvent être utilisées par un modèle de machine learning. L’étape suivante de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement de machine learning consiste à [exporter des jeux de données de fonctionnalités](./export-data.md).

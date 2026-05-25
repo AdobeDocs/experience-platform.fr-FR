@@ -5,9 +5,19 @@ title: Créer un schéma à l’aide de l’API Schema Registry
 type: Tutorial
 description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: cc1c2edc8980c562e323357376c2594fd8ea482a
+TQID: https://experienceleague.adobe.com/gXtWRb4BLfmtveJKf1zH6nnh5pNyjxlbM876kmdjliY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2853'
+source-wordcount: 2884
 ht-degree: 31%
 
 ---
@@ -24,7 +34,7 @@ Ce tutoriel utilise l’API [!DNL Schema Registry] pour vous guider tout au long
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -139,7 +149,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` `$id` ou encodé URL du schéma que vous souhaitez rechercher. |
+| `{SCHEMA_ID}` | Le `$id` `meta:altId` ou encodé URL du schéma que vous souhaitez rechercher. |
 
 **Requête**
 
@@ -217,11 +227,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | `meta:altId` codée en `$id` ou en URL du schéma auquel vous ajoutez le groupe de champs. |
+| `{SCHEMA_ID}` | `$id` codée en `meta:altId` ou en URL du schéma auquel vous ajoutez le groupe de champs. |
 
 **Requête**
 
-Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Demographic Details] (](../field-groups/profile/demographic-details.md))`profile-person-details`
+Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Demographic Details] (`profile-person-details`)](../field-groups/profile/demographic-details.md)
 
 En ajoutant le groupe de champs `profile-person-details` , le schéma Membres du programme de fidélité capture désormais les informations démographiques des membres du programme de fidélité, telles que leur prénom, leur nom et leur anniversaire.
 
@@ -304,7 +314,7 @@ Les schémas Membres du programme de fidélité nécessitent deux groupes de cha
 
 >[!TIP]
 >
->Il est intéressant de passer en revue tous les groupes de champs disponibles pour vous familiariser avec les champs inclus dans chacun d’eux. Vous pouvez répertorier (GET) tous les groupes de champs disponibles à utiliser avec une classe particulière en exécutant une requête sur chacun des conteneurs « global » et « tenant », en renvoyant uniquement les groupes de champs où le champ « meta :intendedToExtend » correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile]. Par conséquent, la [!DNL XDM Individual Profile] `$id` est utilisée :
+>Il est intéressant de passer en revue tous les groupes de champs disponibles pour vous familiariser avec les champs inclus dans chacun d’eux. Vous pouvez répertorier (GET) tous les groupes de champs disponibles à utiliser avec une classe particulière en exécutant une requête sur chacun des conteneurs « global » et « tenant », en renvoyant uniquement les groupes de champs où le champ « meta :intendedToExtend » correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile]. Par conséquent, la `$id` [!DNL XDM Individual Profile] est utilisée :
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -319,7 +329,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` `$id` ou encodé URL du schéma que vous mettez à jour. |
+| `{SCHEMA_ID}` | Le `$id` `meta:altId` ou encodé URL du schéma que vous mettez à jour. |
 
 **Requête**
 
@@ -598,7 +608,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | `meta:altId` `$id` ou encodée en URL du schéma. |
+| `{SCHEMA_ID}` | `$id` `meta:altId` ou encodée en URL du schéma. |
 
 **Requête**
 
@@ -710,7 +720,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | `meta:altId` `$id` ou encodée en URL du schéma. |
+| `{SCHEMA_ID}` | `$id` `meta:altId` ou encodée en URL du schéma. |
 
 **Requête**
 
@@ -969,7 +979,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | `meta:altId` codée en `$id` ou URL du groupe de champs à mettre à jour. |
+| `{FIELD_GROUP_ID}` | `$id` codée en `meta:altId` ou URL du groupe de champs à mettre à jour. |
 
 **Requête**
 
@@ -1195,7 +1205,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` `$id` ou encodé URL du schéma que vous activez pour Profile. |
+| `{SCHEMA_ID}` | Le `$id` `meta:altId` ou encodé URL du schéma que vous activez pour Profile. |
 
 **Requête**
 

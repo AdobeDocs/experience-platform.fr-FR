@@ -1,23 +1,31 @@
 ---
-title: Point de terminaison de l’API des outils Sandbox
-description: Le point de terminaison /tools de l’API Sandbox Tooling vous permet de récupérer les données JSON de la tâche dans Adobe Experience Platform.
+title: Point d’entrée de l’API des outils d’outils Sandbox
+description: Le point d’entrée /tools de l’API Sandbox Tooling vous permet de récupérer les données JSON de la tâche dans Adobe Experience Platform.
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
-source-git-commit: 955c6946786e9425bdb99d623595420a6d13747e
+TQID: https://experienceleague.adobe.com/Ur1tNiN2lBVqXoxE5lXoqXWlu6VeKW480LeLTwh1jrU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: 149
 ht-degree: 22%
 
 ---
 
-# Point de terminaison des outils
+# Point d’entrée des outils
 
 L’outil Sandbox vous permet de sélectionner différents artefacts et de les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. Tous les objets inclus dans un package doivent provenir du même sandbox.
 
-Le point d’entrée `/tools` de l’API d’outils de test vous permet de répertorier et de récupérer les données JSON de la tâche.
+Le point d’entrée `/tools` de l’API d’outils de sandbox vous permet de répertorier et de récupérer des données JSON de tâche.
 
 ## Détails du traitement {#details}
 
-Pour récupérer indépendamment les données JSON de la tâche, effectuez une requête de GET au point de terminaison `/tools` et fournissez l’identifiant de la tâche.
+Pour récupérer indépendamment les données JSON de la tâche, envoyez une requête GET au point d’entrée `/tools` et indiquez l’identifiant de la tâche.
 
 **Format d’API**
 
@@ -44,7 +52,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’ID de tâche interrogé, fournissant des mises à jour d’état en temps réel lorsque `completedTasks` et `failedTasks` sont mis à jour au fur et à mesure que la tâche progresse.
+Une réponse réussie renvoie des détails pour l’ID de tâche interrogé, fournissant des mises à jour de statut en temps réel au fur et à mesure que `completedTasks` et `failedTasks` sont mises à jour au fur et à mesure de la progression de la tâche.
 
 ```json
 {

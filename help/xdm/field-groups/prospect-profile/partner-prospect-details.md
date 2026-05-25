@@ -1,53 +1,60 @@
 ---
-title: Groupe de champs Détails du projet partenaire (exemple)
-description: Découvrez le groupe de champs Détails du projet partenaire (exemple) (XDM) .
+title: Groupe De Champs Détails Du Prospect Partenaire (Exemple)
+description: Découvrez le groupe de champs de schéma (XDM) des Détails du prospect partenaire (exemple).
 exl-id: 2de1eb7a-2e44-4417-9bdd-7a8a4b2d3a7f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+TQID: https://experienceleague.adobe.com/8lScs-QTKmjm6qmrBkEw3URhc8OgpQtpaa-lipYBibk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 11%
+source-wordcount: 325
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL Détails du projet partenaire (exemple)] groupe de champs
+# [!UICONTROL Partner Prospect Details (Sample)] le groupe de champs
 
-[!UICONTROL Partner Prospect Details (Sample)] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le [!UICONTROL Partner Prospect Details (Sample)] fournit un exemple de structure pour divers détails liés au profil d’un prospect. Ce cadre simplifie le processus d’organisation et de gestion de diverses informations liées aux prospects.
+[!UICONTROL Partner Prospect Details (Sample)] groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le [!UICONTROL Partner Prospect Details (Sample)] fournit un exemple de framework pour divers détails liés au profil d’un prospect. Ce cadre simplifie le processus d’organisation et de gestion de diverses informations relatives aux prospects.
 
-Ce groupe de champs étend la [classe Individual Prospect Profile](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=fr) dans le contexte d’un partenaire.
+Ce groupe de champs étend la classe [Profil de prospect individuel](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=fr) dans le contexte d’un partenaire.
 
-![Schéma du groupe de champs [!UICONTROL Détails du projet partenaire (exemple)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
+![Diagramme du groupe de champs [!UICONTROL Partner Prospect Details (Sample)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |---------------------------------------|-----------------------------|-----------|--------------------------------------------------|
-| [!UICONTROL ageRangeInHousehold] | `ageRangeInHousehold` | Chaîne | Age au sein du foyer. |
-| [!UICONTROL apparelAccessories] | `apparelAccessories` | Chaîne | Préférences ou implication dans les vêtements/accessoires. |
-| [!UICONTROL vélo] | `bicycling` | Chaîne | Intérêt ou implication dans les activités de vélo. |
-| [!UICONTROL cableTv] | `cableTv` | Chaîne | Indique l’engagement avec la télévision par câble. |
-| [!UICONTROL domestitics] | `domestics` | Chaîne | Préférences ou engagement dans les activités nationales. |
-| [!UICONTROL électronique] | `electronics` | Chaîne | L’intérêt ou l’engagement dans les appareils électroniques. |
-| [!UICONTROL foodAndBeverage] | `foodAndBeverage` | Chaîne | Préférences ou implication dans les aliments/boissons. |
-| [!UICONTROL chaussures] | `footwear` | Chaîne | Intérêt ou implication dans les chaussures. |
-| [!UICONTROL healthFoods] | `healthFoods` | Chaîne | Préférences ou implication dans les aliments pour la santé. |
-| [!UICONTROL randonnée] | `hiking` | Chaîne | Intérêt ou implication dans les activités de randonnée. |
-| [!UICONTROL householdId] | `householdId` | Chaîne | Identifiant unique du foyer. |
-| [!UICONTROL individualId] | `individualId` | Chaîne | Identifiant unique de l’individu. |
-| [!UICONTROL inferredCardHolder] | `inferredCardHolder` | Chaîne | L&#39;inférence d&#39;être détenteur de carte. |
-| [!UICONTROL inferredPremiumCardholder] | `inferredPremiumCardholder]` | Chaîne | L’idée d’être détenteur de carte de crédit Premium. |
-| [!UICONTROL matchLevelFlag] | `matchLevelFlag` | Chaîne | Indicateur du niveau correspondant. |
-| [!UICONTROL BuyerRating] | `buyerRating` | Chaîne | Évaluation liée au comportement d’achat. |
-| [!UICONTROL DonorRating] | `donorRating` | Chaîne | Évaluation liée au comportement des donneurs. |
-| [!UICONTROL InvestmentRating] | `investmentRating` | Chaîne | Évaluation liée au comportement d’investissement. |
-| [!UICONTROL ResponderRating] | `responderRating` | Chaîne | Évaluation liée au comportement du participant. |
-| [!UICONTROL &rbrace;DépensesVelocity] | `spendingVelocity` | Chaîne | La vitesse ou le taux de dépenses. |
-| [!UICONTROL DépensesVolume] | `spendingVolume` | Chaîne | Montant ou volume des dépenses. |
-| [!UICONTROL recordId] | `recordId` | Chaîne | Identifiant unique de l’enregistrement. |
-| [!UICONTROL RésidenceId] | `residenceId` | Chaîne | Identifiant unique de la résidence. |
-|  | `sailing` | Chaîne | Indique l’intérêt ou l’implication dans les activités de navigation. |
-| [!UICONTROL seasonHolidayProducts] | `seasonalHolidayProducts` | Chaîne | Indique les préférences ou l’engagement dans les produits de vacances. |
-| [!UICONTROL skiing] | `skiing` | Chaîne | Indique l’intérêt ou l’implication dans les activités de ski. |
-| [!UICONTROL tennis] | `tennis` | Chaîne | Indique l’intérêt ou l’implication dans les activités de tennis. |
-| [!UICONTROL tvShoppers] | `tvShoppers` | Chaîne | Indique l’engagement avec les achats à la télévision. |
+| [!UICONTROL ageRangeInHousehold] | `ageRangeInHousehold` | chaîne | Tranche d&#39;âge au sein du ménage. |
+| [!UICONTROL apparelAccessories] | `apparelAccessories` | chaîne | Préférences ou implication dans les vêtements/accessoires. |
+| [!UICONTROL bicycling] | `bicycling` | chaîne | Intérêt ou participation à des activités de cyclisme. |
+| [!UICONTROL cableTv] | `cableTv` | chaîne | Indique un engagement avec la télévision par câble. |
+| [!UICONTROL domestics] | `domestics` | chaîne | Préférences ou engagement dans des activités nationales. |
+| [!UICONTROL electronics] | `electronics` | chaîne | Intérêt ou engagement dans les dispositifs électroniques. |
+| [!UICONTROL foodAndBeverage] | `foodAndBeverage` | chaîne | Préférences ou implication dans les aliments/boissons. |
+| [!UICONTROL footwear] | `footwear` | chaîne | Intérêt ou participation dans la chaussure. |
+| [!UICONTROL healthFoods] | `healthFoods` | chaîne | Préférences ou participation à des aliments sains. |
+| [!UICONTROL hiking] | `hiking` | chaîne | Intérêt ou participation à des activités de randonnée. |
+| [!UICONTROL householdId] | `householdId` | chaîne | Identifiant unique du ménage. |
+| [!UICONTROL individualId] | `individualId` | chaîne | Identifiant unique de l’individu. |
+| [!UICONTROL inferredCardHolder] | `inferredCardHolder` | chaîne | L’inférence d’être titulaire d’une carte. |
+| [!UICONTROL inferredPremiumCardholder] | `inferredPremiumCardholder]` | chaîne | L&#39;inférence d&#39;être titulaire d&#39;une carte à prime. |
+| [!UICONTROL matchLevelFlag] | `matchLevelFlag` | chaîne | Indicateur du niveau de correspondance. |
+| [!UICONTROL BuyerRating] | `buyerRating` | chaîne | Une évaluation liée au comportement d’achat. |
+| [!UICONTROL DonorRating] | `donorRating` | chaîne | Évaluation liée au comportement du donneur. |
+| [!UICONTROL InvestmentRating] | `investmentRating` | chaîne | Une note liée au comportement d’investissement. |
+| [!UICONTROL ResponderRating] | `responderRating` | chaîne | Évaluation liée au comportement du répondeur. |
+| [!UICONTROL SpendingVelocity] | `spendingVelocity` | chaîne | La vitesse ou le taux de dépenses. |
+| [!UICONTROL SpendingVolume] | `spendingVolume` | chaîne | Montant ou volume des dépenses. |
+| [!UICONTROL recordId] | `recordId` | chaîne | Identifiant unique de l’enregistrement. |
+| [!UICONTROL residenceId] | `residenceId` | chaîne | Identifiant unique de la résidence. |
+| [!UICONTROL sailing] | `sailing` | chaîne | Indique l&#39;intérêt ou la participation aux activités nautiques. |
+| [!UICONTROL seasonalHolidayProducts] | `seasonalHolidayProducts` | chaîne | Indique les préférences ou l’implication dans les produits de vacances. |
+| [!UICONTROL skiing] | `skiing` | chaîne | Indique l&#39;intérêt ou la participation aux activités de ski. |
+| [!UICONTROL tennis] | `tennis` | chaîne | Indique l’intérêt ou l’implication dans les activités de tennis. |
+| [!UICONTROL tvShoppers] | `tvShoppers` | chaîne | Indique l’engagement avec les achats TV. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au [schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-prospect/merkle/prospect-details-partner-sample.schema.json) sur le référentiel XDM public.
+Pour plus d’informations sur le groupe de champs , reportez-vous au [schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-prospect/merkle/prospect-details-partner-sample.schema.json) sur le référentiel XDM public.

@@ -3,9 +3,23 @@ title: Définition d’une relation entre deux schémas dans Real-Time Customer 
 description: Découvrez comment définir une relation multiple-à-un entre deux schémas dans Adobe Real-Time Customer Data Platform B2B edition.
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
+TQID: https://experienceleague.adobe.com/iXm4qKp6XcRMxy2iwTKMiJrEZMFopfZqIwq2NhEkvjU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: 1776
 ht-degree: 14%
 
 ---

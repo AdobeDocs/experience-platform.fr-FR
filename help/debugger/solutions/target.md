@@ -2,9 +2,28 @@
 title: Tester une mise en œuvre Adobe Target avec Adobe Experience Platform Debugger
 description: Découvrez comment utiliser Adobe Experience Platform Debugger pour tester et déboguer un site web activé avec Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/0rONlTRlBMQqPKeAhd8-mq62xqVwgH4jFjr5dcirr3o
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: 1260
 ht-degree: 84%
 
 ---

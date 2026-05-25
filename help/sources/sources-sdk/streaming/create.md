@@ -3,9 +3,14 @@ title: Créer une spécification de connexion pour Streaming SDK à l’aide de 
 description: Le document suivant décrit la procédure à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source via des sources en libre-service.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/0IHC3r9y4NeUP1IAQN8C997fNtoOlIHPD2Pfg52JBtE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: 750
 ht-degree: 37%
 
 ---

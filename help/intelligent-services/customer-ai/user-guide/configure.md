@@ -5,13 +5,25 @@ feature: Customer AI
 title: Configuration d’une instance IA dédiée aux clients
 description: Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe Sensei simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+TQID: https://experienceleague.adobe.com/Eu5uG-1g0jnRAJdqlvjWOJZVGxQeGqUo5cCpbW0yVas
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3092'
-ht-degree: 7%
+source-wordcount: 3028
+ht-degree: 6%
 
 ---
-
 
 # Configuration d’une instance IA dédiée aux clients
 
@@ -21,46 +33,46 @@ Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que servi
 
 ## Création d’une instance {#set-up-your-instance}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche tous les services disponibles. Dans le conteneur de l’IA dédiée aux clients, sélectionnez **[!UICONTROL Ouvrir]**.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** s’affiche et affiche tous les services disponibles. Dans le conteneur de l’IA dédiée aux clients, sélectionnez **[!UICONTROL Open]**.
 
 ![Accédez au service IA dédiée aux clients dans l’interface utilisateur d’Experience Platform.](../images/user-guide/navigate-to-service.png)
 
 L’interface utilisateur **IA dédiée aux clients** s’affiche et affiche toutes vos instances de service.
 
-- La mesure **[!UICONTROL Nombre total de profils notés]** se trouve dans le coin inférieur droit du conteneur **[!UICONTROL Créer une instance]**. Cette mesure effectue le suivi du nombre total de profils notés par l’IA dédiée aux clients pour l’année civile en cours, y compris tous les environnements de test et toutes les instances de service supprimées.
+- La mesure **[!UICONTROL Total profiles scored]** se trouve dans le coin inférieur droit du conteneur de **[!UICONTROL Create instance]**. Cette mesure effectue le suivi du nombre total de profils notés par l’IA dédiée aux clients pour l’année civile en cours, y compris tous les environnements de test et toutes les instances de service supprimées.
 
 ![Mesure du nombre total de profils notés dans Customer AI.](../images/user-guide/total-profiles.png)
 
-Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces commandes, sélectionnez une instance parmi vos **[!UICONTROL instances de service]** existantes. Les contrôles contiennent les éléments suivants :
+Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces commandes, sélectionnez une instance dans votre **[!UICONTROL Service instances]** existant. Les contrôles contiennent les éléments suivants :
 
-- **[!UICONTROL Modifier]** : la sélection de **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
-- **[!UICONTROL Cloner]** : la sélection de **[!UICONTROL Cloner]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouvelle instance.
-- **[!UICONTROL Supprimer]** : vous pouvez supprimer une instance de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé d’Experience Platform. Toutefois, les scores synchronisés avec le profil client en temps réel ne sont pas supprimés.
-- **[!UICONTROL Source de données]** : lien vers le jeu de données utilisé par cette instance. Si plusieurs jeux de données sont utilisés, la sélection du texte de l’hyperlien ouvre la fenêtre contextuelle d’aperçu du jeu de données.
-- **[!UICONTROL Détails de la dernière exécution]** : ils s’affichent uniquement lorsqu’une exécution échoue. Des informations sur les raisons de l’échec de l’exécution, telles que les codes d’erreur, sont affichées ici.
-- **[!UICONTROL Définition d’un score]** : aperçu rapide de l’objectif que vous avez configuré pour cette instance.
+- **[!UICONTROL Edit]** : la sélection de **[!UICONTROL Edit]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
+- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie la configuration d&#39;instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Delete]** : vous pouvez supprimer une instance de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé d’Experience Platform. Toutefois, les scores synchronisés avec le profil client en temps réel ne sont pas supprimés.
+- **[!UICONTROL Data source]** : lien vers le jeu de données utilisé par cette instance. Si plusieurs jeux de données sont utilisés, la sélection du texte de l’hyperlien ouvre la fenêtre contextuelle d’aperçu du jeu de données.
+- **[!UICONTROL Last run details]** : elle s’affiche uniquement en cas d’échec de l’exécution. Des informations sur les raisons de l’échec de l’exécution, telles que les codes d’erreur, sont affichées ici.
+- **[!UICONTROL Score definition]** : aperçu rapide de l’objectif que vous avez configuré pour cette instance.
 
 ![Panneau d’instance de service dans l’IA dédiée aux clients.](../images/user-guide/service-instance-panel.png)
 
-Pour créer une instance, sélectionnez **[!UICONTROL Créer une instance]**.
+Pour créer une instance, sélectionnez **[!UICONTROL Create instance]**.
 
 ![Tableau de bord de l’IA dédiée aux clients présentant une vue d’ensemble des instances de service et leurs états.](../images/user-guide/dashboard.png)
 
 ## Configurer
 
-Le workflow de création d’instance apparaît, en commençant par l’étape **[!UICONTROL Configurer]**.
+Le workflow de création d’instance apparaît, en commençant par l’étape **[!UICONTROL Set up]**.
 
 Vous trouverez ci-dessous des informations importantes sur les valeurs que vous pouvez renseigner dans l’instance :
 
--**[!UICONTROL Name] :** le nom de l’instance est utilisé partout où les scores de l’IA dédiée aux clients sont affichés. Par conséquent, les noms doivent décrire ce que représentent les scores de prédiction. Par exemple, « Probabilité d’annuler un abonnement à un magazine ».
+-**[!UICONTROL Name]:** le nom de l’instance est utilisé partout où les scores de l’IA dédiée aux clients sont affichés. Par conséquent, les noms doivent décrire ce que représentent les scores de prédiction. Par exemple, « Probabilité d’annuler un abonnement à un magazine ».
 
--**[!UICONTROL Description] :** description indiquant ce que vous essayez de prédire.
+-**[!UICONTROL Description]:** Description indiquant ce que vous essayez de prédire.
 
--**[!UICONTROL Type de propension] :** le type de propension détermine le but du score et la polarité des mesures. Vous pouvez choisir **[!UICONTROL Attrition]** ou **[!UICONTROL Conversion]**. Pour plus d’informations sur l’impact du type de propension sur votre instance, consultez la note située sous [résumé de notation](./discover-insights.md#scoring-summary) dans le document d’informations sur les découvertes.
+-**[!UICONTROL Propensity type]:** le type de propension détermine le but du score et la polarité des mesures. Vous pouvez choisir entre **[!UICONTROL Churn]** ou **[!UICONTROL Conversion]**. Pour plus d’informations sur l’impact du type de propension sur votre instance, consultez la note située sous [résumé de notation](./discover-insights.md#scoring-summary) dans le document d’informations sur les découvertes.
 
 ![Écran de configuration affichant le workflow de création d’instance dans l’IA dédiée aux clients.](../images/user-guide/create-instance.png)
 
-Fournissez les valeurs requises, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Fournissez les valeurs requises, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ## Sélectionner les données {#select-data}
 
@@ -68,7 +80,7 @@ Par défaut, l’IA dédiée aux clients utilise Adobe Analytics, Adobe Audience
 
 ![Écran de sélection du jeu de données affichant la barre de recherche et les options d’enregistrement mises en surbrillance.](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
-Après avoir sélectionné les jeux de données que vous souhaitez utiliser, cliquez sur le bouton **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
+Après avoir sélectionné les jeux de données que vous souhaitez utiliser, cliquez sur le bouton **[!UICONTROL Add]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
 
 ![Écran de sélection des jeux de données affichant les jeux de données sélectionnés dans le volet d’aperçu.](../images/user-guide/select-datasets.png)
 
@@ -78,7 +90,7 @@ Si vous sélectionnez l’icône d’informations ![icône d’informations](/he
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
 
-Sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer les brouillons tout au long du workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisez **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. La fonction vous permet de créer et d&#39;enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le processus de configuration.
+Sélectionnez **[!UICONTROL Save]** pour enregistrer vos brouillons tout au long du workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisez **[!UICONTROL Save and continue]** pour créer et enregistrer des brouillons lors des configurations de modèle. La fonction vous permet de créer et d&#39;enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le processus de configuration.
 
 ![Le workflow Créer de l’onglet IA dédiée aux clients des services de science des données avec Enregistrer et Enregistrer et continuer en surbrillance.](../images/user-guide/cai-save-and-exit.png)
 
@@ -116,36 +128,36 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 ## Définition d’un objectif {#define-a-goal}
 
-L’étape **[!UICONTROL Définir l’objectif]** s’affiche et fournit un environnement interactif dans lequel vous pouvez définir visuellement un objectif de prédiction. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
+L’étape **[!UICONTROL Define goal]** s’affiche et fournit un environnement interactif dans lequel vous pouvez définir visuellement un objectif de prédiction. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
 
-Pour créer un objectif, sélectionnez **[!UICONTROL Saisir le nom du champ]** puis un champ dans la liste déroulante. Sélectionnez la deuxième entrée, une clause pour la condition de l’événement, puis fournissez éventuellement la valeur cible pour terminer l’événement. D’autres événements peuvent être configurés en sélectionnant **[!UICONTROL Ajouter un événement]**. Enfin, complétez l’objectif en appliquant un délai de prédiction en nombre de jours, puis sélectionnez **[!UICONTROL Suivant]**.
+Pour créer un objectif, sélectionnez **[!UICONTROL Enter Field Name]** puis un champ dans la liste déroulante. Sélectionnez la deuxième entrée, une clause pour la condition de l’événement, puis fournissez éventuellement la valeur cible pour terminer l’événement. D’autres événements peuvent être configurés en sélectionnant **[!UICONTROL Add event]**. Enfin, complétez l’objectif en appliquant un intervalle de temps de prédiction en nombre de jours, puis sélectionnez **[!UICONTROL Next]**.
 
 ![Étape Définir l’objectif dans l’IA dédiée aux clients présentant l’environnement interactif pour définir un objectif de prédiction.](../images/user-guide/cai-define-a-goal.png)
 
 ### Se produira et ne se produira pas
 
-Lors de la définition de votre objectif, vous avez la possibilité de sélectionner **[!UICONTROL Aura lieu]** ou **[!UICONTROL N’aura pas lieu]**. Sélectionner **[!UICONTROL Se produira]** signifie que les conditions d’événement que vous définissez doivent être remplies pour que les données d’événement d’un client soient incluses dans l’interface utilisateur des insights.
+Lors de la définition de votre objectif, vous avez la possibilité de sélectionner **[!UICONTROL Will occur]** ou **[!UICONTROL Will not occur]**. Sélectionner **[!UICONTROL Will occur]** signifie que les conditions d’événement que vous définissez doivent être remplies pour que les données d’événement d’un client soient incluses dans l’interface utilisateur des insights.
 
-Par exemple, si vous souhaitez configurer une application pour prédire si un client effectuera un achat, vous pouvez sélectionner **[!UICONTROL Se produira]** suivi de **[!UICONTROL Tous les]**, puis saisir **commerce.purchases.id** (ou un champ similaire) et **[!UICONTROL existe]** en tant qu’opérateur.
+Par exemple, si vous souhaitez configurer une application pour prédire si un client effectuera un achat, vous pouvez sélectionner **[!UICONTROL Will occur]** suivi de **[!UICONTROL All of]**, puis saisir **commerce.purchases.id** (ou un champ similaire) et **[!UICONTROL exists]** comme opérateur.
 
 <!-- ![will occur](../images/user-guide/occur.png) -->
 ![Exemple illustrant la configuration d’un objectif où un événement se produira.](../images/user-guide/cai-will-occur.png)
 
-Cependant, il peut y avoir des cas où vous souhaitez prédire si un événement ne se produira pas dans une certaine période. Pour configurer un objectif avec cette option, sélectionnez **[!UICONTROL Ne se produira pas]** dans la liste déroulante de niveau supérieur.
+Cependant, il peut y avoir des cas où vous souhaitez prédire si un événement ne se produira pas dans une certaine période. Pour configurer un objectif avec cette option, sélectionnez **[!UICONTROL Will not occur]** dans la liste déroulante de niveau supérieur.
 
-Par exemple, si vous souhaitez prédire quels clients seront moins engagés et que vous ne consultez pas la page de connexion à votre compte le mois prochain. Sélectionnez **[!UICONTROL Ne se produira pas]** suivi de **[!UICONTROL Tous les]**, puis saisissez **web.webInteraction.URL** (ou un champ similaire) et **[!UICONTROL est égal à]** en tant qu’opérateur avec **account-login** comme valeur.
+Par exemple, si vous souhaitez prédire quels clients seront moins engagés et que vous ne consultez pas la page de connexion à votre compte le mois prochain. Sélectionnez **[!UICONTROL Will not occur]** suivi de **[!UICONTROL All of]**, puis saisissez **web.webInteraction.URL** (ou un champ similaire) et **[!UICONTROL equals]** comme opérateur avec **account-login** comme valeur.
 
 ![Exemple illustrant la configuration d’un objectif dans lequel un événement ne se produira pas.](../images/user-guide/not-occur.png)
 
 ### Tous les et tous les
 
-Dans certains cas, vous pouvez vouloir prédire si une combinaison d’événements se produira et, dans d’autres cas, vous pouvez vouloir prédire l’occurrence de n’importe quel événement à partir d’un ensemble prédéfini. Pour prédire si un client aura une combinaison d’événements, sélectionnez l’option **[!UICONTROL Tout le]** dans la liste déroulante de deuxième niveau de la page **[!UICONTROL Définir l’objectif]**.
+Dans certains cas, vous pouvez vouloir prédire si une combinaison d’événements se produira et, dans d’autres cas, vous pouvez vouloir prédire l’occurrence de n’importe quel événement à partir d’un ensemble prédéfini. Pour prédire si un client aura une combinaison d’événements, sélectionnez l’option **[!UICONTROL All of]** dans la liste déroulante de deuxième niveau de la page **[!UICONTROL Define Goal]**.
 
 Par exemple, vous pouvez vouloir prédire si un client achète un produit particulier. Cet objectif de prédiction est défini par deux conditions : une `commerce.order.purchaseID` **existe** et la `productListItems.SKU` **est égale** à une valeur spécifique.
 
 ![Exemple illustrant la configuration d’un objectif où toutes les conditions doivent être remplies.](../images/user-guide/all-of.png)
 
-Pour prédire si un client disposera d’un événement d’un ensemble donné, vous pouvez utiliser l’option **[!UICONTROL N’importe lequel]**.
+Pour prédire si un client aura un événement d’un ensemble donné, vous pouvez utiliser l’option **[!UICONTROL Any of]** .
 
 Par exemple, vous pouvez vouloir prédire si un client visite une certaine URL ou une page web avec un nom particulier. Cet objectif de prédiction est défini par deux conditions : `web.webPageDetails.URL` **commence par** une valeur particulière et `web.webPageDetails.name` **commence par** une valeur particulière.
 
@@ -167,7 +179,7 @@ Si vous disposez d’informations supplémentaires en plus des [champs d’évé
 
 ![Exemple illustrant la configuration d’une fonctionnalité d’événement dans Customer AI.](../images/user-guide/event-feature.png)
 
-Pour ajouter un événement personnalisé, sélectionnez **[!UICONTROL Ajouter un événement personnalisé]**. Saisissez ensuite un nom d’événement personnalisé, puis mappez-le au champ d’événement de votre schéma. Les noms des événements personnalisés s’affichent à la place de la valeur des champs lorsque vous examinez des facteurs d’influence et d’autres informations. Cela signifie que le nom de l’événement personnalisé sera utilisé au lieu de l’ID/la valeur de l’événement. Pour plus d’informations sur l’affichage des événements personnalisés, consultez la section [exemple d’événement personnalisé](#custom-event). Ces événements personnalisés supplémentaires sont utilisés par l’IA dédiée aux clientes et clients pour améliorer la qualité de votre modèle et fournir des résultats plus précis.
+Pour ajouter un événement personnalisé, sélectionnez **[!UICONTROL Add custom event]**. Saisissez ensuite un nom d’événement personnalisé, puis mappez-le au champ d’événement de votre schéma. Les noms des événements personnalisés s’affichent à la place de la valeur des champs lorsque vous examinez des facteurs d’influence et d’autres informations. Cela signifie que le nom de l’événement personnalisé sera utilisé au lieu de l’ID/la valeur de l’événement. Pour plus d’informations sur l’affichage des événements personnalisés, consultez la section [exemple d’événement personnalisé](#custom-event). Ces événements personnalisés supplémentaires sont utilisés par l’IA dédiée aux clientes et clients pour améliorer la qualité de votre modèle et fournir des résultats plus précis.
 
 ![Exemple illustrant la configuration d’un champ d’événement personnalisé dans IA dédiée aux clients.](../images/user-guide/custom-event.png)
 
@@ -179,7 +191,7 @@ Enfin, saisissez la ou les valeurs du champ si l&#39;opérateur sélectionné en
 
 ![Exemple illustrant la configuration d’une valeur de champ d’événement personnalisé dans IA dédiée aux clients.](../images/user-guide/custom-value.png)
 
-Une fois l’opération terminée, sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour continuer.
+Une fois l’opération terminée, sélectionnez **[!UICONTROL Next]** dans le coin supérieur droit pour continuer.
 
 ### Attributs de profil personnalisés (*facultatif*)
 
@@ -213,15 +225,15 @@ L’étape de définition des options vous permet de configurer un planning pour
 
 ### Configuration d’un planning *(facultatif)* {#configure-a-schedule}
 
-Pour configurer un planning de notation, commencez par configurer la **[!UICONTROL fréquence de notation]**. Les opérations de prédiction automatisées peuvent être planifiées pour une exécution hebdomadaire ou mensuelle.
+Pour configurer un planning de notation, commencez par configurer le **[!UICONTROL Scoring Frequency]**. Les opérations de prédiction automatisées peuvent être planifiées pour une exécution hebdomadaire ou mensuelle.
 
 ![Exemple montrant les options de configuration du planning de notation dans l’IA dédiée aux clients.](../images/user-guide/schedule.png)
 
 ### Exclusions de prévision *(facultatif)*
 
-Si votre jeu de données contient des colonnes ajoutées en tant que données de test, vous pouvez ajouter cette colonne ou cet événement à une liste d’exclusions en sélectionnant **[!UICONTROL Ajouter une exclusion]** puis en saisissant le champ que vous souhaitez exclure. Cela empêche l’évaluation des événements répondant à certaines conditions lors de la génération de scores. Cette fonctionnalité peut être utilisée pour filtrer les entrées de données ou les promotions non pertinentes.
+Si votre jeu de données contient des colonnes ajoutées en tant que données de test, vous pouvez ajouter cette colonne ou cet événement à une liste d’exclusions en sélectionnant **[!UICONTROL Add Exclusion]**, puis en saisissant le champ que vous souhaitez exclure. Cela empêche l’évaluation des événements répondant à certaines conditions lors de la génération de scores. Cette fonctionnalité peut être utilisée pour filtrer les entrées de données ou les promotions non pertinentes.
 
-Pour exclure un événement, sélectionnez **[!UICONTROL Ajouter une exclusion]** et définissez l’événement. Pour supprimer une exclusion, sélectionnez les points de suspension (**[!UICONTROL ...]**) en haut à droite du conteneur d’événements, puis sélectionnez **[!UICONTROL Supprimer le conteneur]**.
+Pour exclure un événement, sélectionnez **[!UICONTROL Add exclusion]** et définissez l’événement. Pour supprimer une exclusion, sélectionnez les points de suspension (**[!UICONTROL ...]**) en haut à droite du conteneur d’événement, puis sélectionnez **[!UICONTROL Remove Container]**.
 
 ![Exemple montrant la configuration des exclusions de prédiction dans l’IA dédiée aux clients.](../images/user-guide/exclusion.png)
 
@@ -233,7 +245,7 @@ Lorsque vous utilisez l’IA dédiée aux clientes et clients pour la première 
 
 ![Exemple illustrant l’option de basculement Profil dans le workflow avancé de l’IA dédiée aux clients.](../images/user-guide/advanced-workflow-save.png)
 
-Une fois votre planning de notation défini, les exclusions de prédiction incluses et le bouton (bascule) du profil où vous souhaitez qu’il soit, sélectionnez **[!UICONTROL Terminer]** dans le coin supérieur droit pour créer votre instance IA dédiée aux clients.
+Une fois votre planning de notation défini, les exclusions de prédiction incluses et le bouton (bascule) du profil où vous souhaitez qu’il soit, sélectionnez **[!UICONTROL Finish]** dans le coin supérieur droit pour créer votre instance IA dédiée aux clients.
 
 Si l’instance est créée avec succès, une opération de prédiction se déclenche immédiatement et les suivantes s’exécutent selon le planning défini.
 
@@ -255,4 +267,4 @@ La vidéo suivante est conçue pour vous aider à comprendre le workflow de conf
 >
 > La vidéo suivante est obsolète. Pour obtenir les informations les plus récentes, reportez-vous à la documentation .
 
->[!VIDEO](https://video.tv.adobe.com/v/36548?learn=on&quality=12&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/36548?captions=fre_fr&learn=on&quality=12)

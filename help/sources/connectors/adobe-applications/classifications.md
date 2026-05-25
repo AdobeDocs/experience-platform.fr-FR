@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Connecteur Source Adobe Analytics pour les données de classification
 description: Découvrez comment connecter Analytics Classifications à Experience Platform à l’aide de l’interface utilisateur
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/VSv9149mlzfLMBRACNHo-5OyzLAgfy8hMk5TSXPWaII
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 24%
+source-wordcount: 184
+ht-degree: 25%
 
 ---
 

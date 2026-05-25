@@ -5,7 +5,8 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: f4447656c42ad4f5315fde511143d3af1733070d
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 69%

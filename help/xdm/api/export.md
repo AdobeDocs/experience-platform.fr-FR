@@ -1,27 +1,32 @@
 ---
-title: Exporter le point de terminaison de l’API
-description: Le point de terminaison /export de l’API Schema Registry vous permet de partager des ressources XDM entre environnements de test.
+title: Point d’entrée de l’API d’exportation
+description: Le point d’entrée /export dans l’API Schema Registry vous permet de partager des ressources XDM entre les sandbox.
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+TQID: https://experienceleague.adobe.com/ctz7CjWQdaNJbTjxOCxpYS6KCO2vJJCV9Qz3AKI9cFI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 12%
+source-wordcount: 415
+ht-degree: 13%
 
 ---
 
-# Exporter le point de fin
+# Point d’entrée de l’exportation
 
-Toutes les ressources de [!DNL Schema Library] sont contenues dans un environnement de test spécifique dans Adobe Experience Platform. Dans certains cas, vous souhaiterez peut-être partager des ressources de modèle de données d’expérience (XDM) entre des environnements de test et des organisations. Le point d’entrée `/rpc/export` de l’API [!DNL Schema Registry] vous permet de générer une payload d’exportation pour tout schéma, groupe de champs de schéma ou type de données dans [!DNL Schema Library], puis d’utiliser cette payload pour importer cette ressource (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation via le point d’entrée [`/rpc/import` &#x200B;](./import.md).
+Toutes les ressources du [!DNL Schema Library] se trouvent dans un sandbox spécifique de Adobe Experience Platform. Dans certains cas, vous pouvez partager des ressources de modèle de données d’expérience (XDM) entre des sandbox et des organisations. Le point d’entrée `/rpc/export` de l’API [!DNL Schema Registry] vous permet de générer une payload d’exportation pour tout schéma, groupe de champs de schéma ou type de données du [!DNL Schema Library], puis d’utiliser cette payload pour importer cette ressource (et toutes les ressources dépendantes) dans un sandbox et une organisation cibles via le point d’entrée [`/rpc/import`](./import.md).
 
-## Commencer
+## Prise en main
 
-Le point d’entrée `/rpc/export` fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée `/rpc/export` fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-Le point d’entrée `/rpc/export` fait partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement à d’autres points de terminaison dans l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas un `CONTAINER_ID`. Au lieu de cela, ils doivent utiliser l’espace de noms `/rpc`, comme illustré dans les appels API ci-dessous.
+Le point d&#39;entrée `/rpc/export` fait partie des appels de procédure distante (RPC) pris en charge par le [!DNL Schema Registry]. Contrairement aux autres points d&#39;entrée de l&#39;API [!DNL Schema Registry], les points d&#39;entrée RPC ne nécessitent pas d&#39;en-têtes supplémentaires tels que `Accept` ou `Content-Type`, et n&#39;utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans les appels d’API ci-dessous.
 
-## Générer un payload d’exportation pour une ressource {#export}
+## Générer une payload d&#39;export pour une ressource {#export}
 
-Pour tout schéma, groupe de champs ou type de données existant dans [!DNL Schema Library], vous pouvez générer une payload d’exportation en effectuant une requête de GET sur le point de terminaison `/export`, en fournissant l’identifiant de la ressource dans le chemin d’accès.
+Pour tout schéma, groupe de champs ou type de données existant dans le [!DNL Schema Library], vous pouvez générer une payload d’exportation en adressant une requête GET au point d’entrée `/export` et en fournissant l’identifiant de la ressource dans le chemin d’accès .
 
 **Format d’API**
 
@@ -31,7 +36,7 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_ID}` | `meta:altId` ou encodé URL `$id` de la ressource XDM que vous souhaitez exporter. |
+| `{RESOURCE_ID}` | Le `meta:altId` ou le `$id` encodé URL de la ressource XDM que vous souhaitez exporter. |
 
 {style="table-layout:auto"}
 
@@ -51,9 +56,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau d’objets, qui représente la ressource XDM cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un type de données `Property` créé par le client et utilisé par le groupe de champs `Restaurant`, tandis que le second objet est le groupe de champs `Restaurant` lui-même. Ce payload peut ensuite être utilisé pour [importer la ressource](#import) dans un environnement de test ou une organisation différent.
+Une réponse réussie renvoie un tableau d’objets , qui représentent la ressource XDM cible et toutes ses ressources dépendantes. Dans cet exemple, le premier objet du tableau est un type de données `Property` créé par le client utilisé par le groupe de champs `Restaurant`, tandis que le deuxième objet est le groupe de champs `Restaurant` lui-même. Cette payload peut ensuite être utilisée pour [importer la ressource](#import) dans un autre sandbox ou une autre organisation.
 
-Notez que toutes les instances de l’identifiant du client de la ressource sont remplacées par `<XDM_TENANTID_PLACEHOLDER>`. Cela permet au registre des schémas d’appliquer automatiquement l’identifiant client correct aux ressources en fonction de l’emplacement où ils sont envoyés dans l’appel d’importation suivant.
+Notez que toutes les instances de l’ID du client de la ressource sont remplacées par `<XDM_TENANTID_PLACEHOLDER>`. Cela permet au registre des schémas d’appliquer automatiquement l’identifiant client correct aux ressources en fonction de l’endroit où elles sont envoyées dans l’appel d’importation suivant.
 
 ```json
 [
@@ -195,6 +200,6 @@ Notez que toutes les instances de l’identifiant du client de la ressource sont
 
 ## Importer la ressource {#import}
 
-Après avoir généré la payload d’exportation à partir du fichier CSV, vous pouvez envoyer cette payload au point de terminaison `/rpc/import` pour générer le schéma.
+Après avoir généré la payload d’exportation à partir du fichier CSV, vous pouvez envoyer cette payload au point d’entrée `/rpc/import` pour générer le schéma.
 
-Pour plus d’informations sur la génération de schémas à partir de payloads d’exportation, reportez-vous au [guide de point d’entrée d’import](./import.md) .
+Pour plus d’informations sur la génération de schémas à partir de payloads d’exportation[&#128279;](./import.md) consultez le  guide de point d’entrée d’importation .

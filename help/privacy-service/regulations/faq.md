@@ -1,13 +1,29 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;RGPD;RGPD;CCPA;CCPA;PDPA;pdpa;LGPD;lgpd;faq;FAQ;réglementation;réglementations;Règlements;Confidentialité;Confidentialité;
+keywords: Experience Platform;accueil;rubriques les plus consultées;RGPD;rgpd;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;réglementation;réglementations;Règlements;Confidentialité;Confidentialité;
 solution: Experience Platform
 title: FAQ sur les réglementations de confidentialité
 description: Ce document répond aux questions fréquentes sur les réglementations légales prises en charge en matière de confidentialité et leur mise en œuvre dans Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
+TQID: https://experienceleague.adobe.com/8VLNtjZPdsv3HnY46jLLCw84M2EpUSBw32CS-Y66U9c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 32%
+source-wordcount: 1609
+ht-degree: 33%
 
 ---
 
@@ -21,11 +37,11 @@ Ce document répond aux questions fréquentes sur les réglementations légales 
 
 ## Questions générales
 
-Les questions suivantes se rapportent à toutes les réglementations de confidentialité prises en charge par l’Experience Cloud.
+Les questions suivantes se rapportent à toutes les réglementations de confidentialité prises en charge par Experience Cloud.
 
 ### Sur qui les réglementations de confidentialité prises en charge s’appliquent-elles ?
 
-Les [règlements sur la protection des renseignements personnels pris en charge par l&#39;Experience Cloud &#x200B;](./overview.md) s&#39;appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des règlements, quel que soit l&#39;emplacement géographique de l&#39;organisation.
+Les [&#x200B; réglementations relatives à la confidentialité prises en charge par Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les limites des juridictions respectives des réglementations, quelle que soit la localisation géographique de l’organisation.
 
 ### Que signifie la notion de données personnelles ?
 
@@ -47,7 +63,7 @@ Les informations personnelles peuvent aussi inclure les renseignements liés à 
 * L’historique des recherches
 * Les informations relatives à l’interaction d’un client avec un site web, une application ou une publicité
 
-Bien que les réglementations relatives à la confidentialité couvrent un large éventail d&#39;informations personnelles, les termes du contrat standard d&#39;Adobe stipulent que les informations personnelles sensibles (telles que le numéro de sécurité sociale, les informations figurant sur le permis de conduire, les informations de compte financier et les données biométriques) sont généralement interdites d&#39;importation et d&#39;utilisation dans les applications Experience Cloud.
+Bien que les réglementations de confidentialité couvrent un large éventail d’informations personnelles, les termes du contrat standard d’Adobe stipulent que les informations personnelles sensibles (telles que le numéro de sécurité sociale, les informations figurant sur le permis de conduire, les informations de compte financier et les données biométriques) sont généralement interdites d’importation et d’utilisation dans les applications Experience Cloud.
 
 ### Quelle est la différence entre le contrôleur des données et le responsable du traitement des données ?
 
@@ -67,7 +83,7 @@ Pour de nombreuses réglementations telles que le RGPD, le consentement explicit
 
 De nombreuses réglementations relatives à la confidentialité stipulent que si une personne concernée a moins d&#39;un certain âge, elle ne peut pas légalement consentir à la collecte de ses données personnelles. Certains règlements autorisent le titulaire de la responsabilité parentale à donner son consentement pour cette personne concernée dans ces cas, mais pas tous. Le tableau suivant répertorie l’âge minimum auquel les titulaires de données doivent donner leur propre consentement pour chaque règlement, avec des notes pour plus d’informations :
 
-| Réglementation | Âge du consentement | Notes |
+| Règlement | Âge du consentement | Remarques |
 | --- | --- | --- |
 | CCPA (Californie) | 16 | <ul><li>Le consentement parental ne peut être fourni que pour les personnes concernées âgées de 13 ans ou plus.</li><li>La collecte de données personnelles auprès de personnes de moins de 13 ans est strictement interdite.</li></ul> |
 | RGPD (Union européenne) | 16 | <ul><li>Certains États membres de l&#39;UE peuvent prévoir une loi pour un âge inférieur à cette fin, mais pas inférieur à 13 ans.</li><li>Le consentement des parents doit être fourni pour toutes les personnes concernées n’ayant pas atteint l’âge limite.</li></ul> |
@@ -84,7 +100,7 @@ En supposant que l&#39;entreprise ait recueilli des renseignements personnels et
 >
 >Le délai de réponse en « jours » reflète les délais prescrits par chaque loi réglementaire pour répondre à une demande des consommateurs.
 
-| Réglementation | Délai de réponse | Notes |
+| Règlement | Délai de réponse | Remarques |
 | --- | --- | --- |
 | CCPA (Californie) | 45 jours | |
 | RGPD (Union européenne) | 30 jours | |
@@ -93,7 +109,7 @@ En supposant que l&#39;entreprise ait recueilli des renseignements personnels et
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
-### Mon entreprise doit-elle nommer un délégué à la protection des données ?
+### Mon entreprise doit-elle nommer une personne déléguée à la protection des données ?
 
 Si les opérations de données de votre organisation relèvent de la compétence légale du RGPD, du LGPD ou de la PDPA, vous devez nommer un délégué à la protection des données (DPD) dans les cas suivants :
 
@@ -107,7 +123,7 @@ Si les opérations de données de votre organisation relèvent de la compétence
 
 ### Comment puis-je prendre en charge les demandes d’accès à des informations personnelles des consommateurs si je conserve des données couvertes par les réglementations de confidentialité ?
 
-Une fois que vous avez pris les mesures nécessaires pour authentifier les consommateurs et consommatrices qui relèvent des juridictions légales appropriées, Adobe Experience Platform Privacy Service vous permet d’envoyer les demandes d’accès à des informations personnelles de consommateurs et consommatrices vers des applications Experience Cloud compatibles. Voir la [[!DNL Privacy Service] présentation](../home.md) pour plus d’informations. Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
+Une fois que vous avez pris les mesures nécessaires pour authentifier les consommateurs et consommatrices qui relèvent des juridictions légales appropriées, Adobe Experience Platform Privacy Service vous permet d’envoyer les demandes d’accès à des informations personnelles des consommateurs et consommatrices vers des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -126,7 +142,7 @@ Selon la définition de la CCPA, s’appliquent à Adobe et à ses clients les r
 
 En tant que Fournisseur de services, Adobe collecte et traite des informations personnelles pour le compte de l’Entreprise. Il est contractuellement tenu d’utiliser ces informations uniquement aux finalités spécifiques définies dans le contrat.
 
-Compte tenu de cette relation et du libellé du contrat d&#39;Adobe, les divulgations à l&#39;Adobe ne seraient probablement pas considérées comme une « vente » pour laquelle les entreprises devraient fournir un avis et demander le consentement.
+Compte tenu de cette relation et du langage contractuel d’Adobe, les divulgations à Adobe ne seraient probablement pas considérées comme une « vente » pour laquelle les entreprises devraient fournir un avis et demander le consentement.
 
 Cependant, les services Adobe peuvent être utilisés pour activer certains partages et transferts de données vers des tiers. Ces transferts à des tiers pourraient être considérés comme une « vente » et exigent légalement la divulgation et le consentement. Les clients doivent se rapprocher de leur service juridique pour examiner des cas d’utilisation spécifiques afin d’évaluer les exigences applicables.
 

@@ -3,9 +3,19 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/dchgYSCdxGfTwsmiNPKEY7Ae6TLUUrkDarT4FLzYA3Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2140'
+source-wordcount: 2148
 ht-degree: 21%
 
 ---
@@ -20,7 +30,7 @@ L’espace de travail [!UICONTROL Destinations] se compose de cinq sections, [!U
 
 ## [!UICONTROL Overview] {#overview}
 
-L’onglet **[!UICONTROL Overview]** affiche le tableau de bord [!UICONTROL Destinations], fournissant des mesures clés liées aux données de destination de votre organisation. Pour en savoir plus, consultez le guide du tableau de bord de l’[[!UICONTROL Destinations].](../../dashboards/guides/destinations.md)
+L’onglet **[!UICONTROL Overview]** affiche le tableau de bord [!UICONTROL Destinations], fournissant des mesures clés liées aux données de destination de votre organisation. Pour en savoir plus, consultez le guide du tableau de bord de l’[&#128279;](../../dashboards/guides/destinations.md).[!UICONTROL Destinations]
 
 >[!NOTE]
 >
@@ -82,13 +92,13 @@ Les destinations dont le bouton (bascule) **[!UICONTROL Enabled/Disabled]** est 
 >
 > ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 > 
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![&#x200B; &#x200B;](/help/images/icons/data-add.png) Activer les audiences **[!UICONTROL Activate audiences]** pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande **[!UICONTROL Activate audiences]** ![&#x200B; Activer les audiences &#x200B;](/help/images/icons/data-add.png) pour exporter des audiences ou des jeux de données vers cette destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;pour modifier les connexions de destination existantes. Pour plus d’informations, consultez le tutoriel sur la [modification des destinations](/help/destinations/ui/edit-destination.md).
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![&#x200B; &#x200B;](/help/images/icons/edit-marketing-actions.svg)Modifier les actions marketing **[!UICONTROL Edit marketing actions]** pour [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) pour la destination sélectionnée.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/delete.png)Supprimer **[!UICONTROL Delete]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/monitoring.png)Affichage dans la surveillance **[!UICONTROL View in monitoring]** pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/alert-add.png)S’abonner aux alertes **[!UICONTROL Subscribe to alerts]** pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/manage-tags.png)Gérer les balises **[!UICONTROL Manage tags]** pour ajouter ou supprimer des balises d’une destination. Consultez la section [&#x200B; Gérer les balises de destination &#x200B;](#manage-tags) pour plus d’informations sur l’utilisation des balises.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande **[!UICONTROL Edit marketing actions]** ![Modifier les actions marketing](/help/images/icons/edit-marketing-actions.svg) pour [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) pour la destination sélectionnée.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de **[!UICONTROL Delete]** ![Supprimer](/help/images/icons/delete.png) pour [supprimer](delete-destinations.md) une connexion existante à une destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de **[!UICONTROL View in monitoring]** ![Affichage dans la surveillance](/help/images/icons/monitoring.png) pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de **[!UICONTROL Subscribe to alerts]** ![S’abonner aux alertes](/help/images/icons/alert-add.png) pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de **[!UICONTROL Manage tags]** ![Gérer les balises](/help/images/icons/manage-tags.png) pour ajouter ou supprimer des balises d’une destination. Consultez la section [&#x200B; Gérer les balises de destination &#x200B;](#manage-tags) pour plus d’informations sur l’utilisation des balises.
 
 Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL Browse] .
 
@@ -101,7 +111,7 @@ Consultez le tableau ci-dessous pour toutes les informations fournies pour chaqu
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
 | [!UICONTROL Account Expiration Date] | Date d’expiration de l’autorisation de connexion à cette destination. <br> Une icône d’avertissement ![Avertissement : icône d’expiration de compte](/help/images/icons/alert-expiration.png) s’affiche avant la date d’expiration pour vous avertir que la connexion va expirer et peut nécessiter un renouvellement. Les flux de données vers les connexions expirées sont arrêtés et vous devez vous réauthentifier pour reprendre vos workflows d’activation. <br>**Important** : cette colonne est actuellement disponible uniquement pour les connexions [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) et [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![Exemple d’avertissement d’expiration de compte dans l’onglet Parcourir](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL Username] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
-| [!UICONTROL Activation Data] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez cette commande pour en savoir plus sur les audiences activées. Pour plus d’informations sur les audiences activées[&#x200B; reportez-vous à la section &#x200B;](/help/destinations/ui/destination-details-page.md#activation-data)Données d’activation de la page de détails de la destination. |
+| [!UICONTROL Activation Data] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez cette commande pour en savoir plus sur les audiences activées. Pour plus d’informations sur les audiences activées[&#128279;](/help/destinations/ui/destination-details-page.md#activation-data) reportez-vous à la section Données d’activation de la page de détails de la destination. |
 | [!UICONTROL Created] | Date et heure de création du flux d’activation vers la destination. Sélectionnez les flèches haut/bas pour trier les flux d’activation en fonction du plus récent ou du plus ancien. |
 | [!UICONTROL Modified] | Date et heure de la dernière modification du flux d’activation vers la destination. |
 | [!UICONTROL Status] | `Enabled` ou `Disabled`. Indique si les données sont activées vers cette destination. |
@@ -199,7 +209,7 @@ L’onglet **[!UICONTROL Accounts]** affiche des détails sur les connexions que
 | [!UICONTROL Username] | Nom d’utilisateur que vous avez sélectionné dans le [workflow de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connections] | Représente le nombre de flux de données de destination uniques réussis et connectés avec des informations de base créées pour une destination. |
 | [!UICONTROL Authorization date] | La date à laquelle la connexion à cette destination a été autorisée. |
-| [!UICONTROL Expiration date] | Date d’expiration de l’autorisation de connexion à cette destination. <br> Icône d’avertissement ![icône d’avertissement Compte ayant expiré.](/help/images/icons/alert-expiration.png) s’affiche avant la date d’expiration pour vous avertir que la connexion va expirer et peut nécessiter un renouvellement. Les flux de données vers les connexions expirées sont arrêtés et vous devez vous réauthentifier pour reprendre vos workflows d’activation. <br>**Important** : cette colonne est actuellement disponible uniquement pour les connexions [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) et [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![Comptes de destination expirés mis en surbrillance dans l’espace de travail des destinations.](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| [!UICONTROL Expiration date] | Date d’expiration de l’autorisation de connexion à cette destination. <br> Une icône d’avertissement ![icône d’avertissement Compte ayant expiré](/help/images/icons/alert-expiration.png). s’affiche avant la date d’expiration pour vous avertir que la connexion va expirer et peut nécessiter un renouvellement. Les flux de données vers les connexions expirées sont arrêtés et vous devez vous réauthentifier pour reprendre vos workflows d’activation. <br>**Important** : cette colonne est actuellement disponible uniquement pour les connexions [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) et [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![Comptes de destination expirés mis en surbrillance dans l’espace de travail des destinations.](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

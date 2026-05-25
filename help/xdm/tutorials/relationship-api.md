@@ -4,10 +4,22 @@ title: Définir une relation entre deux schémas à l’aide de l’API Schema R
 description: Ce document fournit un tutoriel expliquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’API Schema Registry.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/E0LJws3OqdVUn3rB-EK72XkD0PoIEJ4O7Kj1S0tN-sg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1379'
-ht-degree: 27%
+source-wordcount: 1397
+ht-degree: 28%
 
 ---
 
@@ -23,7 +35,7 @@ Bien que les relations de schéma puissent être déduites par l’utilisation d
 
 Ce document fournit un tutoriel expliquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’[[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) .
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite une compréhension pratique de [!DNL Experience Data Model] (XDM) et de [!DNL XDM System]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
@@ -44,7 +56,7 @@ Les relations de schéma sont représentées par un **schéma source** dont un c
 >
 >Pour établir une relation, les deux schémas doivent avoir défini des identités principales et être activés pour la [!DNL Real-Time Customer Profile]. Consultez la section relative à l’[activation d’un schéma à utiliser dans Profile](./create-schema-api.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
 
-Pour définir une relation entre deux schémas, vous devez d’abord acquérir les valeurs `$id` des deux schémas. Si vous connaissez les noms d’affichage (`title`) des schémas, vous pouvez rechercher leurs valeurs `$id` en adressant une requête GET au point d’entrée `/tenant/schemas` dans l’API [!DNL Schema Registry].
+Pour définir une relation entre deux schémas, vous devez d’abord acquérir les valeurs `$id` des deux schémas. Si vous connaissez les noms d’affichage (`title`) des schémas, vous pouvez trouver leurs valeurs `$id` en adressant une requête GET au point d’entrée `/tenant/schemas` dans l’API [!DNL Schema Registry].
 
 **Format d’API**
 

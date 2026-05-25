@@ -2,10 +2,31 @@
 title: Vues dans les extensions web
 description: Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/Vx3huRlBr6dfUapFD7Axam-l7RpCKAgLb6Q3xK-5qY8
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2103'
-ht-degree: 92%
+source-wordcount: 2145
+ht-degree: 91%
 
 ---
 
@@ -133,7 +154,7 @@ L’appel de cette méthode affiche un mode permettant à un utilisateur de test
 | Propriété | Description |
 | --- | --- |
 | `pattern` | Modèle d’expression régulière qui doit être utilisé comme valeur initiale du champ de modèle à l’intérieur du testeur. Est généralement fourni lorsque l’utilisateur modifie une expression régulière existante. Si ce n’est pas le cas, le champ de motif sera initialement vide. |
-| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir [Documentation sur RegExp de MDN](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière.<br><br>Un scénario courant est une extension qui permet d’activer ou de désactiver le respect de la casse pour une expression régulière. Pour ce faire, lʼextension fournit généralement une case à cocher dans sa vue dʼextension qui, lorsquʼelle est cochée, active lʼinsensibilité à la casse (représentée par lʼindicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue dʼextension souhaite ouvrir le testeur dʼexpression régulière, elle doit transmettre lʼindicateur `i` si la case dʼinsensibilité à la casse est cochée. Permet à lʼutilisateur de tester correctement lʼexpression régulière avec lʼinsensibilité à la casse activée. |
+| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir la documentation RegExp de [MDN](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière. <br><br>Un scénario courant est une extension qui permet aux utilisateurs d’activer/désactiver la sensibilité à la casse pour une expression régulière. Pour ce faire, lʼextension fournit généralement une case à cocher dans sa vue dʼextension qui, lorsquʼelle est cochée, active lʼinsensibilité à la casse (représentée par lʼindicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue dʼextension souhaite ouvrir le testeur dʼexpression régulière, elle doit transmettre lʼindicateur `i` si la case dʼinsensibilité à la casse est cochée. Permet à lʼutilisateur de tester correctement lʼexpression régulière avec lʼinsensibilité à la casse activée. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 

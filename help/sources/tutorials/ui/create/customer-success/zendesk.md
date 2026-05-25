@@ -2,10 +2,19 @@
 title: Créer une connexion Source Zendesk dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Zendesk à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/yqAmXcJm92UgCJE45bfhDqcnzlggltjsY8FjIdCmWNE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 26%
+source-wordcount: 776
+ht-degree: 25%
 
 ---
 
@@ -37,7 +46,7 @@ Pour plus d’informations sur l’authentification de votre source [!DNL Zendes
 
 ### Création d’un schéma Experience Platform pour [!DNL Zendesk]
 
-Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#x200B; consultez le tutoriel sur la &#x200B;](../../../../../xdm/schema/composition.md)création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 Pour plus d’informations sur le schéma de [!DNL Zendesk] requis pour le [!DNL Zendesk Search API], reportez-vous à la section [limites](#limits) ci-dessous.
 
@@ -114,8 +123,8 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 | `results.active` | Booléen |
 | `results.alias` | Chaîne |
 | `results.created_at` | Chaîne |
-| `results.custom_role_id` | Nombre entier |
-| `results.default_group_id` | Nombre entier |
+| `results.custom_role_id` | Entier |
+| `results.default_group_id` | Entier |
 | `results.details` | Chaîne |
 | `results.email` | Chaîne |
 | `results.external_id` | Entier |
@@ -128,7 +137,7 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 | `results.name` | Chaîne |
 | `results.notes` | Chaîne |
 | `results.only_private_comments` | Booléen |
-| `results.organization_id` | Nombre entier |
+| `results.organization_id` | Entier |
 | `results.phone` | Chaîne |
 | `results.photo` | Chaîne |
 | `results.report_csv` | Booléen |

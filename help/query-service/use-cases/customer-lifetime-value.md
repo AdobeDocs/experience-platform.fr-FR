@@ -2,10 +2,39 @@
 title: Suivre les signaux de données pour générer une valeur pour la durée de vie du client
 description: Ce guide fournit une démonstration complète sur l’utilisation de Data Distiller et des tableaux de bord définis par l’utilisateur avec Real-Time Customer Data Platform pour mesurer et visualiser la valeur de la durée de vie du client.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/j-VRJe3vGxXBMf-Fj2HeM4f53oFLCEma1bEI9YJmIJw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 7%
+source-wordcount: 1305
+ht-degree: 9%
 
 ---
 
@@ -23,7 +52,7 @@ Ce guide est conçu pour vous aider à mieux comprendre votre expérience client
 
 ![Infographie des grandes étapes requises pour utiliser la valeur de la durée de vie du client.](../images/use-cases/implementation-steps.png)
 
-## Commencer {#getting-started}
+## Prise en main {#getting-started}
 
 Ce guide nécessite une connaissance pratique des composants suivants de Adobe Experience Platform :
 

@@ -3,10 +3,21 @@ keywords: Experience Platform;accueil;rubriques populaires;flux de données;Flux
 title: Configurer un flux de données pour ingérer des données par lot à partir d’un Source de stockage dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour configurer un nouveau flux de données afin d’ingérer des données par lot à partir d’une source d’espace de stockage dans l’interface utilisateur
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/w4qX8u-hPYQd7UCjAIa3jqjJGTpZRaH0ZVi40aR-PuM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1929'
-ht-degree: 29%
+source-wordcount: 1899
+ht-degree: 16%
 
 ---
 
@@ -14,15 +25,15 @@ ht-degree: 29%
 
 Ce tutoriel décrit les étapes à suivre pour configurer un flux de données afin d’importer des données par lots de votre source d’espace de stockage dans Adobe Experience Platform.
 
-## Commencer
+## Prise en main
 
 >[!NOTE]
 >
 >Pour créer un flux de données afin d’importer des données par lots d’un espace de stockage dans le cloud, vous devez déjà avoir accès à une source d’espace de stockage dans le cloud authentifiée. Si vous n’y avez pas accès, accédez à la [présentation des sources](../../../../home.md#cloud-storage) pour obtenir une liste des sources d’espace de stockage dans le cloud avec lesquelles vous pouvez créer un compte.
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
@@ -38,7 +49,7 @@ Les sources de stockage dans le cloud pour les données par lot prennent en char
 
 ## Ajouter des données
 
-Une fois votre compte d’espace de stockage créé, l’étape **[!UICONTROL Ajouter des données]** s’affiche, vous permettant d’explorer la hiérarchie de vos fichiers d’espace de stockage dans le cloud et de sélectionner le dossier ou le fichier spécifique à importer dans Experience Platform.
+Une fois votre compte d’espace de stockage créé, l’étape **[!UICONTROL Add data]** s’affiche, vous permettant d’explorer la hiérarchie de vos fichiers d’espace de stockage dans le cloud et de sélectionner le dossier ou le fichier spécifique à importer dans Experience Platform.
 
 * La partie gauche de l’interface est un navigateur de répertoires qui affiche la hiérarchie des fichiers de l’espace de stockage dans le cloud.
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un dossier ou d’un fichier compatible.
@@ -53,25 +64,25 @@ Une fois que vous avez sélectionné un dossier, l’interface de droite se met 
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/select-folder.png)
 
-Au cours de cette étape, vous pouvez effectuer plusieurs configurations sur vos données, avant de continuer. Sélectionnez tout d’abord **[!UICONTROL Format des données]**, puis sélectionnez le format de données approprié pour votre fichier dans le panneau déroulant qui s’affiche.
+Au cours de cette étape, vous pouvez effectuer plusieurs configurations sur vos données, avant de continuer. Tout d’abord, sélectionnez **[!UICONTROL Data format]**, puis sélectionnez le format de données approprié pour votre fichier dans le panneau déroulant qui s’affiche.
 
 Le tableau suivant affiche les formats de données appropriés pour les types de fichiers pris en charge :
 
 | Type de fichier | Format des données |
 | --- | --- |
-| CSV | [!UICONTROL Délimité] |
-| JSON | [!UICONTROL &#x200B; JSON &#x200B;] |
-| Parquet | [!UICONTROL Parquet XDM &#x200B;] |
+| CSV | [!UICONTROL Delimited] |
+| JSON | [!UICONTROL JSON] |
+| Parquet | [!UICONTROL XDM Parquet] |
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/data-format.png)
 
 ### Sélectionner un délimiteur de colonne
 
-Après avoir configuré le format des données, vous pouvez définir un délimiteur de colonne lors de l’ingestion de fichiers délimités. Sélectionnez l’option **[!UICONTROL Délimiteur]** puis sélectionnez un délimiteur dans le menu déroulant. Le menu affiche les options les plus utilisées pour les délimiteurs, y compris une virgule (`,`), un onglet (`\t`) et une barre verticale (`|`).
+Après avoir configuré le format des données, vous pouvez définir un délimiteur de colonne lors de l’ingestion de fichiers délimités. Sélectionnez l’option **[!UICONTROL Delimiter]** , puis sélectionnez un délimiteur dans le menu déroulant. Le menu affiche les options les plus utilisées pour les délimiteurs, y compris une virgule (`,`), un onglet (`\t`) et une barre verticale (`|`).
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/delimiter.png)
 
-Si vous préférez utiliser un délimiteur personnalisé, sélectionnez **[!UICONTROL Personnalisé]** et saisissez un délimiteur à un seul caractère de votre choix dans la barre de saisie contextuelle.
+Si vous préférez utiliser un délimiteur personnalisé, sélectionnez **[!UICONTROL Custom]** et saisissez un délimiteur à un seul caractère de votre choix dans la barre de saisie contextuelle.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
@@ -79,39 +90,39 @@ Si vous préférez utiliser un délimiteur personnalisé, sélectionnez **[!UICO
 
 Vous pouvez également ingérer des fichiers délimités ou JSON compressés en spécifiant leur type de compression.
 
-À l’étape [!UICONTROL Sélectionner des données], sélectionnez un fichier compressé à ingérer, puis sélectionnez son type de fichier approprié et s’il est compatible ou non avec XDM. Sélectionnez ensuite **[!UICONTROL Type de compression]** puis sélectionnez le type de fichier compressé approprié pour vos données source.
+À l’étape [!UICONTROL Select data], sélectionnez un fichier compressé à ingérer, puis sélectionnez son type de fichier approprié et indiquez s’il est compatible ou non avec XDM. Sélectionnez ensuite **[!UICONTROL Compression type]**, puis sélectionnez le type de fichier compressé approprié pour vos données source.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
 Pour importer un fichier spécifique dans Experience Platform, sélectionnez un dossier, puis sélectionnez le fichier à ingérer. Au cours de cette étape, vous pouvez également prévisualiser le contenu d’autres fichiers dans un dossier donné à l’aide de l’icône d’aperçu à côté d’un nom de fichier.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/select-file.png)
 
 ## Fournir des détails sur le flux de données
 
-La page [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer vos données à ingérer dans le profil et activer des paramètres tels que [!UICONTROL Diagnostics d’erreur], [!UICONTROL Ingestion partielle] et [!UICONTROL Alertes].
+La page [!UICONTROL Dataflow detail] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer vos données à ingérer dans le profil et activer des paramètres tels que [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion] et [!UICONTROL Alerts].
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/dataflow-detail.png)
 
 ### Utiliser un jeu de données existant
 
-Pour ingérer vos données dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option de [!UICONTROL Recherche avancée], soit faire défiler la liste des jeux de données existants dans le menu déroulant. Une fois que vous avez sélectionné un jeu de données, indiquez un nom et une description pour votre flux de données.
+Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Existing dataset]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option [!UICONTROL Advanced search] , soit faire défiler la liste des jeux de données existants dans le menu déroulant. Une fois que vous avez sélectionné un jeu de données, indiquez un nom et une description pour votre flux de données.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/existing.png)
 
 ### Utiliser un nouveau jeu de données
 
-Pour procéder à lʼingestion dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]**, puis saisissez un nom pour le jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Recherche avancée] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
+Pour effectuer une ingestion dans un nouveau jeu de données, sélectionnez **[!UICONTROL New dataset]**, puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Advanced search] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/new.png)
 
 ### Activation des diagnostics de profil et d’erreur
 
-Sélectionnez ensuite le bouton (bascule) **[!UICONTROL Jeu de données de profil]** pour activer votre jeu de données pour le profil. Cela vous permet de créer une vue holistique des attributs et des comportements d’une entité. Les données de tous les jeux de données activés pour Profil seront incluses dans le profil et les modifications sont appliquées lorsque vous enregistrez votre flux de données.
+Sélectionnez ensuite le bouton (bascule) **[!UICONTROL Profile dataset]** pour activer votre jeu de données pour Profil. Cela vous permet de créer une vue holistique des attributs et des comportements d’une entité. Les données de tous les jeux de données activés pour Profil seront incluses dans le profil et les modifications sont appliquées lorsque vous enregistrez votre flux de données.
 
-Le [!UICONTROL diagnostic d’erreur] permet de générer un message d’erreur détaillé pour tout enregistrement erroné survenant dans votre flux de données, tandis que l’[!UICONTROL ingestion partielle] vous permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous définissez manuellement. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partiels](../../../../../ingestion/batch-ingestion/partial.md).
+[!UICONTROL Error diagnostics] permet la génération de messages d’erreur détaillés pour tout enregistrement erroné survenant dans votre flux de données, tandis que [!UICONTROL Partial ingestion] vous permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous définissez manuellement. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partiels](../../../../../ingestion/batch-ingestion/partial.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/ingestion-configs.png)
 
@@ -119,17 +130,17 @@ Le [!UICONTROL diagnostic d’erreur] permet de générer un message d’erreur 
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des sources dans l’interface utilisateur](../../alerts.md).
 
-Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/alerts.png)
 
 ## Mappage des champs de données à un schéma XDM
 
-L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
+L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
 Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
-Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
+Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/mapping.png)
 
@@ -139,7 +150,7 @@ Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 >
 >Il est vivement recommandé de planifier votre flux de données pour une ingestion unique lors de l’utilisation de la source [FTP](../../../../connectors/cloud-storage/ftp.md).
 
-L’étape [!UICONTROL Planification] s’affiche et vous permet de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour ajuster la fréquence d’ingestion, sélectionnez **[!UICONTROL Fréquence]** puis sélectionnez une option dans le menu déroulant.
+L’étape [!UICONTROL Scheduling] s’affiche, vous permettant de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour ajuster la fréquence d’ingestion, sélectionnez **[!UICONTROL Frequency]** puis une option dans le menu déroulant.
 
 >[!TIP]
 >
@@ -164,19 +175,19 @@ Pour plus d’informations sur les configurations de planification, consultez le
 >
 >Pour l’ingestion par lots, chaque flux de données qui s’ensuit sélectionne les fichiers à ingérer à partir de votre source en fonction de la date et heure de leur **dernière modification**. Cela signifie que les flux de données par lot sélectionnent des fichiers de la source qui sont nouveaux ou qui ont été modifiés depuis la dernière exécution du flux. En outre, vous devez vous assurer qu’il existe un délai suffisant entre le chargement des fichiers et une exécution de flux planifiée, car les fichiers qui ne sont pas entièrement chargés sur votre compte d’espace de stockage cloud avant l’heure d’exécution de flux planifiée peuvent ne pas être sélectionnés pour l’ingestion.
 
-Une fois la configuration du planning d’ingestion terminée, sélectionnez **[!UICONTROL Suivant]**.
+Une fois la configuration du planning d’ingestion terminée, sélectionnez **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/scheduling-configs.png)
 
 ## Vérifier le flux de données
 
-L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
-* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
-* **[!UICONTROL Planification]** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
+* **[!UICONTROL Connection]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
+* **[!UICONTROL Assign dataset & map fields]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Scheduling]** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
 
-Une fois que vous avez révisé votre flux de données, cliquez sur **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez révisé votre flux de données, cliquez sur **[!UICONTROL Finish]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/review.png)
 
@@ -192,7 +203,7 @@ En suivant ce tutoriel, vous avez réussi à créer un flux de données pour imp
 >
 > Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/33156?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/33156?captions=fre_fr&quality=12&learn=on)
 
 ## Annexe
 
@@ -208,4 +219,4 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ## Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]**, disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).

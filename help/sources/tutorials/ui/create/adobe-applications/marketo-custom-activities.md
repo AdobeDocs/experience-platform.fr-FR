@@ -2,10 +2,19 @@
 title: Créer une connexion Source Marketo Engage et un flux de données pour les données d’activité personnalisées dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Marketo Engage et un flux de données dans l’interface utilisateur afin d’importer des données d’activités personnalisées dans Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/VP2MYYJnuWKRdGgfqxSd0sCNKn3OhzahWXEnord6sso
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1477'
-ht-degree: 17%
+source-wordcount: 1436
+ht-degree: 10%
 
 ---
 
@@ -45,7 +54,7 @@ Sélectionnez **Champs** dans l’en-tête supérieur pour afficher les champs a
 
 ## Configurer des groupes de champs pour les activités personnalisées dans le schéma d’activités B2B
 
-Dans le tableau de bord *[!UICONTROL Schémas]* de l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Parcourir]** puis sélectionnez **[!UICONTROL Activité B2B]** dans la liste des schémas.
+Dans le tableau de bord *[!UICONTROL Schemas]* de l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Browse]** puis **[!UICONTROL B2B Activity]** dans la liste des schémas.
 
 >[!TIP]
 >
@@ -57,15 +66,15 @@ Dans le tableau de bord *[!UICONTROL Schémas]* de l’interface utilisateur d�
 
 Ajoutez ensuite un nouveau groupe de champs au schéma [!DNL B2B Activity]. Ce groupe de champs doit correspondre à l’activité personnalisée que vous souhaitez ingérer et doit utiliser le nom d’affichage de l’activité personnalisée que vous avez récupéré précédemment.
 
-Pour ajouter un nouveau groupe de champs, sélectionnez **[!UICONTROL + Ajouter]** en regard du panneau *[!UICONTROL Groupes de champs]* sous *[!UICONTROL Composition]*.
+Pour ajouter un nouveau groupe de champs, sélectionnez **[!UICONTROL + Add]** à côté du panneau *[!UICONTROL Field groups]* sous *[!UICONTROL Composition]*.
 
 ![Structure du schéma.](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
 
-La fenêtre *[!UICONTROL Ajouter des groupes de champs]* s’affiche. Sélectionnez **[!UICONTROL Créer un groupe de champs]** puis indiquez le même nom d’affichage pour l’activité personnalisée récupérée à une étape précédente et fournissez une description facultative de votre nouveau groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
+La fenêtre *[!UICONTROL Add field groups]* s’affiche. Sélectionnez **[!UICONTROL Create new field group]** puis indiquez le même nom d’affichage pour l’activité personnalisée récupérée à une étape précédente, ainsi qu’une description facultative de votre nouveau groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Add field groups]**.
 
 ![Fenêtre permettant de libeller et de créer un groupe de champs.](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
-Une fois créé, votre nouveau groupe de champs pour l’activité personnalisée apparaît dans le catalogue [!UICONTROL Groupes de champs].
+Une fois créé, votre nouveau groupe de champs pour l’activité personnalisée apparaît dans le catalogue [!UICONTROL Field groups].
 
 ![Structure du schéma avec un nouveau groupe de champs ajouté sous le panneau groupe de champs.](../../../../images/tutorials/create/marketo-custom-activities/new-field-group-created.png)
 
@@ -73,7 +82,7 @@ Une fois créé, votre nouveau groupe de champs pour l’activité personnalisé
 
 Ajoutez ensuite un nouveau champ à votre schéma. Ce nouveau champ doit être défini sur `type: object` et contiendra les champs individuels de l’activité personnalisée.
 
-Pour ajouter un nouveau champ, sélectionnez le signe plus (`+`) à côté du nom du schéma. Une entrée pour *[!UICONTROL Champ sans titre | Type]* s’affiche. Configurez ensuite les propriétés de votre champ à l’aide du panneau *[!UICONTROL Propriétés du champ]*. Définissez le nom du champ sur le nom d’API de votre activité personnalisée et définissez le nom d’affichage sur le nom d’affichage de votre activité personnalisée. Définissez ensuite le type sur `object` et affectez le groupe de champs au groupe de champs d’activité personnalisée que vous avez créé à l’étape précédente. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
+Pour ajouter un nouveau champ, sélectionnez le signe plus (`+`) à côté du nom du schéma. Une entrée pour *[!UICONTROL Untitled Field | Type]* s’affiche. Configurez ensuite les propriétés de votre champ à l’aide du panneau *[!UICONTROL Field properties]* . Définissez le nom du champ sur le nom d’API de votre activité personnalisée et définissez le nom d’affichage sur le nom d’affichage de votre activité personnalisée. Définissez ensuite le type sur `object` et affectez le groupe de champs au groupe de champs d’activité personnalisée que vous avez créé à l’étape précédente. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]**.
 
 ![Structure du schéma avec le signe plus (`+`) sélectionné pour qu’un nouveau champ puisse être ajouté.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
@@ -91,17 +100,17 @@ La dernière étape de la préparation de votre schéma consiste à ajouter des 
 
 Une fois la configuration de votre schéma terminée, vous pouvez procéder à la création d’un flux de données pour vos données d’activité personnalisées.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
 
-Dans la catégorie [!UICONTROL Applications Adobe], sélectionnez **[!UICONTROL Marketo Engage]**. Sélectionnez ensuite **[!UICONTROL Ajouter des données]** pour créer un flux de données [!DNL Marketo].
+Sous la catégorie [!UICONTROL Adobe applications] , sélectionnez **[!UICONTROL Marketo Engage]**. Sélectionnez ensuite **[!UICONTROL Add data]** pour créer un flux de données [!DNL Marketo].
 
 ![Le catalogue des sources sur l’interface utilisateur d’Experience Platform avec la source Marketo Engage sélectionnée.](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### Sélectionner les données
 
-Sélectionnez **[!UICONTROL Activités]** dans la liste des jeux de données [!DNL Marketo], puis sélectionnez **[!UICONTROL Suivant]**.
+Sélectionnez **[!UICONTROL Activities]** dans la liste des jeux de données [!DNL Marketo], puis sélectionnez **[!UICONTROL Next]**.
 
 ![L’étape de sélection des données dans le workflow des sources avec le jeu de données des activités sélectionné.](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
 
@@ -115,11 +124,11 @@ Ensuite, [fournissez des informations pour votre flux de données](./marketo.md#
 
 Les mappages des champs d’activité standard sont automatiquement renseignés, mais les champs d’activité personnalisés doivent être mappés manuellement à leurs champs cibles correspondants.
 
-Pour commencer à mapper vos champs d’activité personnalisés, sélectionnez **[!UICONTROL Nouveau type de champ]** puis **[!UICONTROL Ajouter un nouveau champ]**.
+Pour commencer à mapper vos champs d’activité personnalisés, sélectionnez **[!UICONTROL New field type]** puis **[!UICONTROL Add new field]**.
 
 ![L’étape de mappage avec le menu déroulant pour ajouter un nouveau champ.](../../../../images/tutorials/create/marketo-custom-activities/add-new-mapping-field.png)
 
-Parcourez la structure des données sources et recherchez le champ d’activité personnalisé à ingérer. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Sélectionner]**.
+Parcourez la structure des données sources et recherchez le champ d’activité personnalisé à ingérer. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Select]**.
 
 >[!TIP]
 >
@@ -131,18 +140,18 @@ Pour ajouter un champ cible, sélectionnez l’icône de schéma ![icône de sch
 
 ![Structure du schéma cible.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 
-Répétez les étapes pour ajouter le reste de vos champs de mappage d’activité personnalisés. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Répétez les étapes pour ajouter le reste de vos champs de mappage d’activité personnalisés. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 ![Tous les mappages pour les données source et cible.](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
-### Révision
+### Réviser
 
-L’écran de *[!UICONTROL Révision]* s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape *[!UICONTROL Review]* s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant de l’entité source choisie et le nombre de colonnes au sein de cette entité source.
-* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Connection]** : affiche le type de source, le chemin d’accès correspondant de l’entité source choisie et le nombre de colonnes au sein de cette entité source.
+* **[!UICONTROL Assign dataset & map fields]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 
-Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Enregistrer et ingérer]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Save & ingest]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![Étape de révision finale qui résume les informations sur les champs de connexion, de jeu de données et de mappage.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 

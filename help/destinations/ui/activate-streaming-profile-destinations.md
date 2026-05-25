@@ -4,13 +4,26 @@ type: Tutorial
 description: Découvrez comment activer les données d’audience disponibles dans Adobe Experience Platform en envoyant des audiences vers des destinations basées sur des profils de diffusion en continu.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/bO1nMDaAs7jYfFQNYuzrNkAdv3weRFR7SxPDObo-qOI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: 761
 ht-degree: 12%
 
 ---
-
 
 # Activer les audiences vers des destinations d’export de profils en flux continu
 

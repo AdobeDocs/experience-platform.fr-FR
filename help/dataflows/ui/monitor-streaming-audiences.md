@@ -3,9 +3,21 @@ title: Surveiller les audiences en flux continu
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les audiences évaluées à l’aide de la segmentation en flux continu
 hide: true
 exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+TQID: https://experienceleague.adobe.com/ksp5cu-Y0PB7DOQZcDIzapoCtpGc1HXyMWQzP2l6Nbs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: 370
 ht-degree: 19%
 
 ---

@@ -3,10 +3,20 @@ keywords: insights;ia dédiée à l’attributon;insights sur l’IA dédiée à
 title: Clés gérées par le client
 description: Découvrez comment configurer les clés gérées par le client ou la cliente pour l’IA dédiée à l’attribution.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/SyXGJ0lKJp86Wodd-0FKMRIYr2YDIFgKqahQaiiJOBw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 74%
+source-wordcount: 165
+ht-degree: 75%
 
 ---
 

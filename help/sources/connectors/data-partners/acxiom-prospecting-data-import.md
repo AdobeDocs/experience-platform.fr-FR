@@ -2,10 +2,19 @@
 title: Import de données de prospection Acxiom
 description: Découvrez comment connecter les données de prospection Acxiom à Adobe Experience Platform et Adobe Real-time Customer Data Platform à l’aide de l’interface utilisateur.
 exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
-source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
+TQID: https://experienceleague.adobe.com/WtQxLw5WwJvrjbk3IkgGBBewyk-RaT9-HIi59ozjCnI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 31%
+source-wordcount: 554
+ht-degree: 32%
 
 ---
 
@@ -34,11 +43,11 @@ Pour accéder à votre compartiment sur Experience Platform, vous devez fournir 
 
 ## Liste autorisée d’adresses IP
 
-Avant de pouvoir utiliser les connecteurs source, vous devez ajouter à votre place sur la liste autorisée les adresses IP requises pour votre région. Si vous n’ajoutez pas ces adresses IP, les connecteurs source risquent de ne pas fonctionner correctement ou de produire des erreurs. Placer sur la liste autorisée Pour obtenir des instructions détaillées et la liste des adresses IP à autoriser, lisez la page [Adresses IP à inclure](../../ip-address-allow-list.md).
+Avant de pouvoir utiliser les connecteurs source, vous devez ajouter à votre place sur la liste autorisée les adresses IP requises pour votre région. Si vous n’ajoutez pas ces adresses IP, les connecteurs source risquent de ne pas fonctionner correctement ou de produire des erreurs. Pour obtenir des instructions détaillées et la liste des adresses IP à autoriser, lisez la page [Adresses IP à inclure](../../ip-address-allow-list.md).
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Acxiom Prospecting Data Import] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Acxiom Prospecting Data Import] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

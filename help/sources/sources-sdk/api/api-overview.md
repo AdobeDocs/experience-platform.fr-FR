@@ -3,16 +3,21 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Guide de l’API des sources en libre-service (SDK par lots)
 description: Ce document présente le processus de création d’une source, y compris les étapes de récupération, d’écriture et d’envoi d’une nouvelle spécification de connexion à l’aide de l’API Flow Service.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/NLSktvAzH7e-WpTIzzfAT8iYDM-6aocmdw1nF2FCg2E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 8%
+source-wordcount: 496
+ht-degree: 9%
 
 ---
 
 # Guide de l’API des sources en libre-service (SDK par lots)
 
-Ce document présente le processus de création d’une source, y compris les étapes d’écriture et d’envoi d’une nouvelle spécification de connexion à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce document présente le processus de création d’une source, y compris les étapes d’écriture et d’envoi d’une nouvelle spécification de connexion à l’aide de l’API [&#128279;](https://www.adobe.io/experience-platform-apis/references/flow-service/).[!DNL Flow Service] 
 
 [!DNL Flow Service] est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Experience Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permettent de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 

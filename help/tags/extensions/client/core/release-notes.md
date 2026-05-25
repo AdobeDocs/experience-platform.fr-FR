@@ -2,10 +2,30 @@
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/0xlK-pC8-F9CtKAeu2uVNPpaGkOo-W8ZN9bzPxLjpsI
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 98%
+source-wordcount: 1769
+ht-degree: 95%
 
 ---
 
@@ -20,7 +40,7 @@ v3.4.4
 * Supprimez Yarn et alignez le processus de création sur nos autres référentiels open source.
 
 
-## 8 mai 2025
+## vendredi 8 mai 2025
 
 v3.4.3
 
@@ -28,13 +48,13 @@ v3.4.3
 * Mises à niveau @adobe/react-spectrum vers la version 3.41.0.
 * Mises à niveau @adobe/reactor-sandbox vers la version 13.2.1.
 
-## 23 octobre 2024
+## jeudi 23 octobre 2024
 
 v3.4.2
 
-* Correction de l’erreur de validation du schéma pour l’événement Formulaire -> Modifier, lorsque « et ayant certaines valeurs de propriété... » est actif.
+* Correction de l’erreur de validation du schéma pour l’événement Formulaire -> Modifier lorsque « et ayant certaines valeurs de propriété... » est actif.
 
-## 29 mars 2023
+## jeudi 29 mars 2023
 
 v3.4.1
 
@@ -54,26 +74,26 @@ v3.4.1
 * Supprime le code qui migrait les cookies DTM vers LocalStorage.
 * Inscrit un avertissement dans la console lorsque les API LocalStorage et SessionStorage ne sont pas disponibles.
 
-## 4 janvier 2022
+## mercredi 4 janvier 2022
 
 v3.3.0
 
 * Modifie lʼ[action Déclencher l’appel direct](./overview.md#direct-call-action) afin que vous puissiez fournir des informations sur l’événement personnalisé à envoyer aux règles d’appel direct.
 
-## 8 octobre 2021
+## samedi 8 octobre 2021
 
 v3.2.2
 
 * Correction du schéma JSON de l’élément de données de valeur conditionnelle pour tous les opérateurs disponibles.
 * Correction du problème https://github.com/adobe/reactor-extension-core/issues/64.
 
-## 23 septembre 2021
+## vendredi 23 septembre 2021
 
 v3.2.1
 
 * Correction d’une erreur qui entraînait un dysfonctionnement de l’initialisation d’affichage d’élément de données de valeur conditionnelle lorsque les valeurs de champs étaient égales à 0.
 
-## 23 septembre 2021
+## vendredi 23 septembre 2021
 
 v3.2.0
 
@@ -83,13 +103,13 @@ Les modifications suivantes ont été introduites dans l’élément de données
 * Les valeurs numériques sont exposées comme des nombres dans l’objet Paramètres.
 * La valeur conditionnelle n’est plus nécessaire pour que le comportement soit similaire à celui de la valeur de secours.
 
-## 17 septembre 2021
+## samedi 17 septembre 2021
 
 v3.1.1
 
 * Correction d’une erreur JS qui empêchait le chargement de l’affichage des conditions de période.
 
-## 16 septembre 2021
+## vendredi 16 septembre 2021
 
 v3.1.0
 
@@ -111,46 +131,46 @@ La version 3.0.0 de lʼextension Core est associée à des modifications dans l
 
 Cette mise à niveau est facultative et rétrocompatible pour les utilisateurs qui ne possèdent pas le réseau CDN Premium, cependant, elle est obligatoire pour les clients dont le réseau CDN Premium est activé au sein de leur société.
 
-## 20 mai 2021
+## vendredi 20 mai 2021
 
 v2.0.7
 
 * Correction d’un problème en raison duquel les interactions de la souris sur les entrées de texte ne fonctionnaient plus correctement.
 * Utilisation déconseillée des conditions du navigateur et du système d’exploitation.
 
-## 4 mai 2021
+## mercredi 4 mai 2021
 
 v2.0.6
 
 * Mise à jour mineure afin de résoudre le problème des icônes qui se déforment lorsque la taille de l’écran change.
 
-## 11 mars 2021
+## vendredi 11 mars 2021
 
 v2.0.5
 
 * Mise à jour du code dans lʼévaluation de lʼexécution pour les événements et actions avec option de délai, qui prend désormais en charge les valeurs des éléments de données ajoutés dans la version 2.0.4, afin de convertir correctement les chaînes en nombres.
 
-## 9 mars 2021
+## mercredi 9 mars 2021
 
 v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps passé sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=fr) pour Adobe Experience Platform.
+* **Dépassement de délai du lien marqué sur l’événement de clic comme « n’est plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=fr) pour Adobe Experience Platform.
 
-## 6 janvier 2021
+## jeudi 6 janvier 2021
 
 v1.9.0
 
 * **Nouvelle action « Déclencher un appel direct »** : l’extension Core inclut désormais un nouveau type d’action appelé `Trigger Direct Call`.  Vous pouvez l’utiliser lorsque vous voulez déclencher une règle d’appel direct par le biais d’une action tirée d’une autre règle. Il correspond directement à la méthode `_satellite.track()`. Un grand merci à Jan Exner pour cette contribution.
 
-## 8 décembre 2020
+## mercredi 8 décembre 2020
 
 v1.8.4
 
 * Correction d’un bug en raison duquel un utilisateur ne pouvait pas effacer ou annuler la valeur à usage unique CSP.
 
-## 28 juillet 2020
+## mercredi 28 juillet 2020
 
 v1.8.3
 
@@ -196,19 +216,19 @@ v1.6.2
 
 * **Nouveau type d’élément de données « Constante »** : l’extension Core inclut désormais un nouveau type d’élément de données appelé `Constant`.  Vous pouvez l’utiliser lorsque vous avez besoin de stocker une valeur constante qui sera référencée dans différentes conditions, actions ou code personnalisé (Custom code). Un grand merci à Jan Exner pour cette contribution.
 
-## 11 septembre 2019
+## jeudi 11 septembre 2019
 
 v1.6.1
 
 * **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. Si celle-ci est configurée, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune politique de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
 
-## 18 juin 2019
+## mercredi 18 juin 2019
 
 v1.5.0
 
 * **Direct Call Logging** : la connexion du navigateur pour les règles d’appels directs fournit désormais des détails supplémentaires lors de la transmission.
 
-## 8 mai 2019
+## jeudi 8 mai 2019
 
 v1.4.3
 
@@ -217,7 +237,7 @@ v1.4.3
 * **Correction de bogue** : correction d’un bogue qui survenait lorsque la condition Value Comparison (Comparaison de valeurs) ne contenait pas une valeur 0.
 * **Correction de bogue** : mise à jour du champ exchange\_url afin que la liste des extensions de base s’affiche dans Adobe Exchange.
 
-## 8 janvier 2019
+## mercredi 8 janvier 2019
 
 v1.4.2
 
@@ -225,28 +245,28 @@ v1.4.2
 * **Événement Custom Event** : les événements personnalisés peuvent désormais contenir des données contextuelles qui peuvent être utilisées dans des conditions et des actions.
 * **Événement Click** : lorsque vous définissez un retard de lien sur l’événement Click, celui-ci s’applique désormais à tous les descendants de l’ancre de lien et pas seulement à l’ancre de lien elle-même.
 
-## 8 novembre 2018
+## vendredi 8 novembre 2018
 
 * **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case « Conserver la cohorte » est cochée et que la condition renvoie « true » lors de sa première exécution pour une personne donnée, elle renvoie « true » sur toutes les exécutions suivantes de la condition pour la même personne. De même, si la case « Conserver la cohorte » est cochée et que la condition renvoie « false » lors de sa première exécution pour une personne donnée, elle renvoie « false » sur toutes les exécutions suivantes de la condition pour la même personne.
 * **Correctif** : correction d’un bug par lequel une règle utilisant un événement Bas de page et une action de code personnalisé sur une page où les balises étaient chargées de manière synchrone, mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`), effaçait le contenu du site web.
 * **Correction de bug** : correction dʼun problème qui empêchait l’événement Enters Viewport de fonctionner si la bibliothèque de balises était chargée de manière asynchrone et que le chargement était terminé après le déclenchement de lʼévénement DOMContentLoaded du navigateur.
 
-## 24 mai 2018
+## vendredi 24 mai 2018
 
 * **Fonctionnalité** : ajout d’une condition Value Comparison comparant deux valeurs à l’aide de l’un des opérateurs disponibles. Cette fonctionnalité remplace celles de plusieurs conditions antérieures qui étaient bien trop spécifiques.
 * **Fonctionnalité** : ajout d’une condition « Fréquence max » permettant de spécifier le nombre de fois où la condition doit renvoyer la valeur TRUE dans une période ou une occurrence d’événement. Exemples : 5 fois par jour, 2 fois par visite.
 
-## 11 avril 2018
+## jeudi 11 avril 2018
 
 * **Fonctionnalité** : les éléments de données peuvent désormais référencer d’autres éléments de données.
 
-## 20 mars 2018
+## mercredi 20 mars 2018
 
 * **Bug Fix** : les fenêtres Custom code (Code personnalisé) généraient des erreurs `document.write` et ne s’exécutaient pas dans les déploiements asynchrones
 * **Bug Fix** : les modules principaux n’étaient pas inclus dans une bibliothèque
 * **Bug Fix** : des problèmes se produisaient avec les valeurs minimum et maximum sur l’élément de données Random Number
 
-## 10 janvier 2018
+## jeudi 10 janvier 2018
 
 * **Fonctionnalité** : élément de données Random Number
 * **Fonctionnalité** : élément de données de Page Info

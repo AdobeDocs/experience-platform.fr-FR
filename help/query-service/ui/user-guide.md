@@ -4,9 +4,24 @@ solution: Experience Platform
 title: Guide de l’interface utilisation du requêteur
 description: Le requêteur est un outil interactif fourni par le service de requête Adobe Experience Platform. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Le requêteur prend en charge le développement de requêtes pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+TQID: https://experienceleague.adobe.com/heUDuv13asGb6RZOgLqm2-3ngvI1dx1EylCbSRBAsL0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3341'
+source-wordcount: 3379
 ht-degree: 16%
 
 ---
@@ -157,7 +172,7 @@ Pour générer un jeu de données de sortie, sélectionnez **[!UICONTROL Run as 
 
 ![Boîte de dialogue [!UICONTROL Enter output dataset details].](../images/ui/query-editor/output-dataset-details.png)
 
-Une fois l’action **[!UICONTROL Run as CTAS]** exécutée, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes[&#x200B; consultez la &#x200B;](./query-logs.md) documentation sur les journaux de requêtes .
+Une fois l’action **[!UICONTROL Run as CTAS]** exécutée, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes[&#128279;](./query-logs.md) consultez la  documentation sur les journaux de requêtes .
 
 ### Enregistrement des requêtes {#saving-queries}
 
@@ -260,7 +275,7 @@ Pour télécharger les résultats de votre requête, sélectionnez **[!UICONTROL
 
 >[!NOTE]
 >
->Lors de l’ouverture d’un fichier CSV dans Excel, l’avertissement suivant peut s’afficher : <br>« Perte possible de données. Certaines fonctionnalités risquent d’être perdues si vous enregistrez ce classeur au format .csv (délimité par des virgules). Pour conserver ces fonctionnalités, enregistrez-le au format de fichier Excel. »<br>Notez également que le formatage de la date et de l’heure peut varier en fonction du type de fichier. Les fichiers CSV conservent le format indiqué dans les résultats de la requête, tandis que les fichiers XLSX peuvent appliquer automatiquement une mise en forme localisée dans Excel. Si cet avertissement s’affiche, vous pouvez continuer en toute sécurité. Pour conserver une mise en forme spécifique à Excel, enregistrez le fichier en tant que XLSX à la place.
+>Lors de l’ouverture d’un fichier CSV dans Excel, l’avertissement suivant peut s’afficher : <br>« Perte possible de données. Certaines fonctionnalités risquent d’être perdues si vous enregistrez ce classeur au format .csv (délimité par des virgules). Pour conserver ces fonctionnalités, enregistrez-le au format Excel. »<br>Notez également que le formatage de la date et de l’heure peut varier en fonction du type de fichier. Les fichiers CSV conservent le format indiqué dans les résultats de la requête, tandis que les fichiers XLSX peuvent appliquer automatiquement une mise en forme localisée dans Excel. Si cet avertissement s’affiche, vous pouvez continuer en toute sécurité. Pour conserver une mise en forme spécifique à Excel, enregistrez le fichier en tant que XLSX à la place.
 
 ### Affichage des résultats en plein écran {#view-results}
 

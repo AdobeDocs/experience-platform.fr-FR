@@ -4,9 +4,20 @@ solution: Experience Platform
 title: Accès aux données dans les notebooks Jupyterlab
 description: Ce guide explique comment utiliser les notebooks Jupyter, créés dans le Workspace de science des données pour accéder à vos données.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/wEFukj-yqADUcVeVJKkWCFuAUetP5mSOnus0Iq-Wlwk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3274'
+source-wordcount: 3344
 ht-degree: 21%
 
 ---
@@ -23,7 +34,7 @@ Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous pe
 
 ## Prise en main
 
-Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée du [!DNL JupyterLab] et de son rôle dans le Workspace de science des données.
+Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données.
 
 ## Limites de données des notebooks {#notebook-data-limits}
 
@@ -379,7 +390,7 @@ Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écri
 | `{action}` | Type d’action à effectuer sur le jeu de données. Deux actions sont disponibles : « lecture » ou « écriture ». | Oui |
 | `--datasetId {id}` | Utilisé pour fournir l’identifiant du jeu de données à lire ou à écrire. | Oui |
 | `--dataFrame {df}` | Le Dataframe Pandas. <ul><li> Lorsque l’action est « read », {df} est la variable dans laquelle les résultats de l’opération de lecture du jeu de données sont disponibles (comme un Dataframe). </li><li> Lorsque l’action est « write », ce {df} de cadre de données est écrit dans le jeu de données. </li></ul> | Oui |
-| `--mode` | Un paramètre supplémentaire qui modifie la façon dont les données sont lues. Les paramètres autorisés sont « batch » et « interactive ». Par défaut, le mode est défini sur « batch ».<br> Il est recommandé d’utiliser le mode « interactif » pour améliorer les performances des requêtes sur des jeux de données plus petits. | Oui |
+| `--mode` | Un paramètre supplémentaire qui modifie la façon dont les données sont lues. Les paramètres autorisés sont « batch » et « interactive ». Par défaut, le mode est défini sur « batch ».<br> Il est recommandé de passer en mode « interactif » pour améliorer les performances des requêtes sur des jeux de données plus petits. | Oui |
 
 >[!TIP]
 >
@@ -398,7 +409,7 @@ Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écri
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations[&#x200B; consultez le &#x200B;](../troubleshooting-guide.md) guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab, mais en utilisant la méthode suivante :
 
@@ -498,7 +509,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations[&#x200B; consultez le &#x200B;](../troubleshooting-guide.md) guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -555,7 +566,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations[&#x200B; consultez le &#x200B;](../troubleshooting-guide.md) guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}

@@ -4,10 +4,19 @@ title: Présentation du profil client en temps réel dans Real-Time CDP
 description: Découvrez comment Adobe Real-Time Customer Data Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide du profil client en temps réel.
 feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/0Md7PoZZyIneMvvmSYEghc05tYIcfL-QT81Dwj6-weE
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 85%
+source-wordcount: 472
+ht-degree: 86%
 
 ---
 
@@ -27,7 +36,7 @@ Outre les fonctionnalités de profil prises en charge par Real-Time CDP, vous po
 
 ## Identités et espaces de noms d’identité
 
-Une fois réunies, les données client sont fusionnées en un profil unique au moyen d’identités et il est possible de les assembler avec l’acquisition d’informations supplémentaires sur le client. Pour en savoir plus sur les identités et les espaces de noms d’identité, consultez [Présentation des identités](identities-overview.md).
+Une fois réunies, les données clients sont fusionnées dans un profil unique au moyen d’identités et il est possible de les assembler avec l’acquisition d’informations supplémentaires sur chaque client ou cliente. Pour en savoir plus sur les identités et les espaces de noms d’identité, consultez [Présentation des identités](identities-overview.md).
 
 ## Politiques de fusion
 

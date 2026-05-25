@@ -3,14 +3,26 @@ solution: Experience Platform
 title: Modèle de données du secteur des services financiers ERD
 description: Affichez un diagramme de relation d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur de la banque, des services financiers et de l’assurance (BFSI). Ce modèle de données est compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/KPSjq3jaeD0i-ZqnQksgCLGYl8KP5Hx5zRzOeQ8JQjQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 2%
+source-wordcount: 371
+ht-degree: 0%
 
 ---
 
-# [!UICONTROL Services financiers] modèle de données du secteur ERD
+# [!UICONTROL Financial services] modèle de données du secteur ERD
 
 Le diagramme de relation d’entité (ERD) suivant représente un modèle de données normalisé pour le secteur de la banque, des services financiers et de l’assurance (BFSI). L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
 
@@ -32,12 +44,12 @@ Utilisez la légende suivante pour interpréter cet ERD :
 >
 >L’entité Événement d’expérience comprend un champ « _ID », qui représente l’attribut d’identifiant unique (`_id`) fourni par la classe XDM ExperienceEvent. Consultez le document de référence sur [XDM ExperienceEvent](../../classes/experienceevent.md) pour plus d’informations sur ce qui est attendu pour cette valeur.
 
-## [!UICONTROL Services financiers] cas pratiques
+## Cas d’utilisation [!UICONTROL Financial services]
 
 Le tableau suivant décrit les classes et groupes de champs de schéma recommandés pour plusieurs cas d’utilisation financiers courants.
 
 | Cas d’utilisation | Classes et groupes de champs recommandés |
 | --- | --- |
-| Favorisez la personnalisation à l’échelle pour les segments préférés grâce à des informations de rapports omnicanaux et à l’automatisation des parcours pour augmenter les inscriptions à un programme de récompenses préféré. | <ul><li>**[[!UICONTROL Produit]](../../classes/product.md)** :<ul><li>[[!UICONTROL Catégorie de produits]](../../field-groups/product/product-category.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Actions de carte]](../../field-groups/event/card-actions.md)</li><li>[[!UICONTROL Détails de la demande de devis]](../../field-groups/event/quote-request-details.md)</li><li>[[!UICONTROL Détails du dépôt]](../../field-groups/event/deposit-details.md)</li><li>[[!UICONTROL Informations sur le canal]](../../field-groups/event/channel-details.md)</li><li>[[!UICONTROL Transferts de solde]](../../field-groups/event/balance-transfers.md)</li></ul></li><li>**[[!UICONTROL Profil individuel XDM]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Détails démographiques]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Coordonnées personnelles]](../../field-groups/profile/personal-contact-details.md)</li><li>[[!UICONTROL Détails de fidélité]](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
-| Optimisez la personnalisation cross-canal sur les canaux en ligne et hors ligne. | <ul><li>**[[!UICONTROL Produit]](../../classes/product.md)** :<ul><li>[[!UICONTROL Catégorie de produits]](../../field-groups/product/product-category.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Informations sur le canal]](../../field-groups/event/channel-details.md)</li></ul></li><li>**[[!UICONTROL Profil individuel XDM]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Détails démographiques]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Coordonnées personnelles]](../../field-groups/profile/personal-contact-details.md)</li><li>[[!UICONTROL Détails de fidélité]](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
-| Stimulez de nouvelles opportunités de chiffre d’affaires en utilisant les informations acquises par l’analyse de comportement cross-canal, en identifiant les modèles d’utilisation de produit qui peuvent conduire à de nouvelles offres de produit. | <ul><li>**[[!UICONTROL Politique]](../../classes/policy.md)**</li><li>**[[!UICONTROL Produit]](../../classes/product.md)** :<ul><li>[[!UICONTROL Catégorie de produits]](../../field-groups/product/product-category.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Actions de carte]](../../field-groups/event/card-actions.md)</li><li>[[!UICONTROL Recherche sur le site d’assistance]](../../field-groups/event/support-site-search.md)</li><li>[[!UICONTROL Détails du dépôt]](../../field-groups/event/deposit-details.md)</li><li>[[!UICONTROL Informations sur le canal]](../../field-groups/event/channel-details.md)</li></ul></li><li>**[[!UICONTROL Profil individuel XDM]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Détails démographiques]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Coordonnées personnelles]](../../field-groups/profile/personal-contact-details.md)</li><li>[[!UICONTROL Détails de fidélité]](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| Favorisez la personnalisation à l’échelle pour les segments préférés grâce à des informations de rapports omnicanaux et à l’automatisation des parcours pour augmenter les inscriptions à un programme de récompenses préféré. | <ul><li>**[[!UICONTROL Product]](../../classes/product.md)** :<ul><li>[[!UICONTROL Product Category]](../../field-groups/product/product-category.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Card Actions]](../../field-groups/event/card-actions.md)</li><li>[[!UICONTROL Quote Request Details]](../../field-groups/event/quote-request-details.md)</li><li>[[!UICONTROL Deposit Details]](../../field-groups/event/deposit-details.md)</li><li>[[!UICONTROL Channel Details]](../../field-groups/event/channel-details.md)</li><li>[[!UICONTROL Balance Transfers]](../../field-groups/event/balance-transfers.md)</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)** :<ul><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li><li>[[!UICONTROL Loyalty Details]](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| Optimisez la personnalisation cross-canal sur les canaux en ligne et hors ligne. | <ul><li>**[[!UICONTROL Product]](../../classes/product.md)**:<ul><li>[[!UICONTROL Product Category]](../../field-groups/product/product-category.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)** :<ul><li>[[!UICONTROL Channel Details]](../../field-groups/event/channel-details.md)</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li><li>[[!UICONTROL Loyalty Details]](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| Stimulez de nouvelles opportunités de chiffre d’affaires en utilisant les informations acquises par l’analyse de comportement cross-canal, en identifiant les modèles d’utilisation de produit qui peuvent conduire à de nouvelles offres de produit. | <ul><li>**[[!UICONTROL Policy]](../../classes/policy.md)**</li><li>**[[!UICONTROL Product]](../../classes/product.md)**:<ul><li>[[!UICONTROL Product Category]](../../field-groups/product/product-category.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Card Actions]](../../field-groups/event/card-actions.md)</li><li>[[!UICONTROL Support Site Search]](../../field-groups/event/support-site-search.md)</li><li>[[!UICONTROL Deposit Details]](../../field-groups/event/deposit-details.md)</li><li>[[!UICONTROL Channel Details]](../../field-groups/event/channel-details.md)</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li><li>[[!UICONTROL Loyalty Details]](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |

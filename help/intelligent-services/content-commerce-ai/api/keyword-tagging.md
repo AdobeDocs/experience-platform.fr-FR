@@ -1,33 +1,40 @@
 ---
-keywords: Experience Platform;prise en main;contenu;balisage de contenu;balisage de mots-clés;balisage de mots-clés
+keywords: Experience Platform;prise en main;contenu;ia dédiée au balisage de contenu;balisage des mots-clés;balisage des mots-clés
 solution: Experience Platform
 title: Balisage de mots-clés dans l’API de balisage de contenu
-description: Le service de balisage de mots-clés, lorsqu’il reçoit un document texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, une combinaison d’algorithmes de reconnaissance d’entité nommée (NER) et de balisage de mot-clé non supervisé est utilisée.
+description: Lorsqu’il reçoit un document texte, le service Balisage des mots-clés extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, on utilise une combinaison d'algorithmes de reconnaissance d'entités nommées (NER) et de balisage de mots-clés non supervisé.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
+TQID: https://experienceleague.adobe.com/iOmCfCfAhDGqiiRHDs9qjI6fD41yfDl9SBaf6a-JdSM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: 448
 ht-degree: 6%
 
 ---
 
 # Balisage des mots-clés
 
-Lorsqu’un document texte est fourni, le service de balisage de mot-clé extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, une combinaison d’algorithmes de reconnaissance d’entité nommée (NER) et de balisage de mot-clé non supervisé est utilisée.
+Lorsqu’il reçoit un document texte, le service de balisage des mots-clés extrait automatiquement les mots-clés ou les expressions clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, on utilise une combinaison d&#39;algorithmes de reconnaissance d&#39;entités nommées (NER) et de balisage de mots-clés non supervisé.
 
-Le tableau suivant répertorie les entités nommées que [!DNL Content Tagging] peut identifier :
+Le tableau suivant répertorie les entités nommées que [!DNL Content Tagging] pouvez identifier :
 
 | Nom de l’entité | Description |
 | --- | --- |
 | PERSONNE | Des gens, y compris des fictifs. |
 | GPE | Pays, villes et états. |
-| LOC | Emplacements non-GPE, étendues de montagne et étendues d&#39;eau. |
-| FAC | Bâtiments, aéroports, autoroutes, ponts, etc. |
+| LOC | Emplacements non conformes au GPE, chaînes de montagnes et masses d&#39;eau. |
+| AAAA | Bâtiments, aéroports, autoroutes, ponts, etc. |
 | ORG | Entreprises, agences, institutions, etc. |
 | PRODUIT | Objets, véhicules, aliments, etc. (Pas les services.) |
-| ÉVÉNEMENT | ouragans, batailles, guerres, événements sportifs, etc. |
-| WORK_OF_ART | Des titres de livres, de chansons, etc. |
-| DROIT | Les documents nommés deviennent des lois. |
+| ÉVÉNEMENT | Ouragans nommés, batailles, guerres, événements sportifs, etc. |
+| WORK_OF_ART | Titres de livres, de chansons, etc. |
+| DROIT | Documents nommés transformés en lois. |
 | LANGUE | Toute langue nommée. |
 
 **Format d’API**
@@ -38,9 +45,9 @@ POST /services/v2/predict
 
 **Requête**
 
-La requête suivante extrait les mots-clés d’un document en fonction des paramètres d’entrée fournis dans le payload.
+La requête suivante extrait des mots-clés d’un document en fonction des paramètres d’entrée fournis dans la payload.
 
-Pour plus d’informations sur les paramètres d’entrée affichés, reportez-vous au tableau ci-dessous de l’exemple de payload.
+Pour plus d’informations sur les paramètres d’entrée affichés, consultez le tableau ci-dessous l’exemple de payload.
 
 Ce fichier [exemple pdf](../pdf-files/simple-text.pdf) a été utilisé dans l’exemple illustré dans ce document.
 
@@ -90,21 +97,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `top_n` | Nombre de résultats à renvoyer. 0, pour renvoyer tous les résultats. Utilisé conjointement avec le seuil, le nombre de résultats renvoyé est inférieur à l’une ou l’autre des limites. | Non |
-| `min_relevance` | Seuil de score au-dessous duquel les résultats doivent être renvoyés. Excluez le paramètre pour renvoyer tous les résultats. | Non |
+| `top_n` | Nombre de résultats à retourner. 0, pour renvoyer tous les résultats. Utilisé conjointement avec le seuil, le nombre de résultats renvoyés sera inférieur à l’une des limites. | Non |
+| `min_relevance` | Seuil de score en dessous duquel les résultats doivent être renvoyés. Excluez le paramètre pour renvoyer tous les résultats. | Non |
 | `min_key_phrase_length` | Nombre minimum de mots requis dans les expressions clés. | Non |
 | `max_key_phrase_length` | Nombre maximal de mots requis dans les expressions clés. | Non |
-| `last_semantic_unit_type` | Renvoie uniquement les unités sémantiques jusqu’au niveau donné dans la réponse hiérarchique. &quot;key_phrase&quot; renvoie uniquement les expressions clés, &quot;linked_entity&quot; renvoie uniquement les expressions clés et les entités liées correspondantes, et &quot;concept&quot; renvoie les expressions clés, les entités liées et les concepts. | Non |
-| `entity_types` | Types d’entités à renvoyer sous la forme d’expressions clés. | Non |
+| `last_semantic_unit_type` | Renvoie uniquement les unités sémantiques jusqu’au niveau donné dans la réponse hiérarchique. « key_phrase » renvoie uniquement les phrases clés, « linked_entity » renvoie uniquement les phrases clés et leurs entités liées correspondantes, et « concept » renvoie les phrases clés, les entités liées et les concepts. | Non |
+| `entity_types` | Types d’entités à renvoyer sous forme d’expressions clés. | Non |
 
 **Objet document**
 
 | Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | chaîne | - | - | - | URL présignée du document duquel extraire les expressions clés. |
-| `sensei:repoType` | Chaîne | - | - | HTTPS | Type de référentiel dans lequel le document est stocké. |
-| `sensei:multipart_field_name` | Chaîne | - | - | - | Utilisez-le lorsque vous transmettez le document en tant qu’argument en plusieurs parties au lieu d’utiliser des URL présignées. |
-| `dc:format` | Chaîne | Oui | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-office.document.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;, 8&rbrace; &quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-office.document.présentation.ml.présentation&quot;<br> | Le codage du document est comparé aux types de codage d’entrée autorisés avant d’être traité. |
+| `repo:path` | chaîne | - | - | - | URL prédéfinie du document à partir duquel les expressions clés doivent être extraites. |
+| `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel le document est stocké. |
+| `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez ceci lors de la transmission du document en tant qu’argument multipartie au lieu d’utiliser des URL présignées. |
+| `dc:format` | string | Oui | - | « text/plain »,<br>« application/pdf »,<br>« text/pdf »,<br>« text/html »,<br>« text/rtf »,<br>« application/rtf »,<br>« application/msword »,<br>« application/vnd.openxmlformats-officedocument.wordprocessingml.document »,<br>« application/mspowerpoint »,<br>« application/vnd.ms-powerpoint »,<br>« application/vnd.openxmlformats-officedocument.presentationml.presentation » | Le codage du document est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
 
 **Réponse**
 

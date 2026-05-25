@@ -4,9 +4,17 @@ feature: Customer AI
 title: Politiques de gouvernance pour l’IA dédiée aux clients
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance les données d’expérience collectées.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/-M15OKzPOdrjHyc2UQk-gjwrNXCv14HrpZFr5x97DF8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: 190
 ht-degree: 86%
 
 ---
@@ -17,4 +25,4 @@ Une fois que vous avez terminé le workflow pour créer un modèle et envoyer la
 
 ![Une fenêtre contextuelle affichant des informations sur la violation de la politique](../images/user-guide/policy-violation-popover-cai.png).
 
-La fenêtre contextuelle fournit des informations spécifiques sur la violation. Vous pouvez résoudre ces violations par le biais des paramètres de la politique et d’autres mesures qui ne sont pas directement liées au workflow de configuration. Par exemple, vous pouvez modifier les étiquettes afin que certains champs soient autorisés à être utilisés à des fins de science des données. Vous pouvez également modifier la configuration du modèle elle-même afin qu’elle n’utilise rien qui porte un libellé. Consultez la documentation pour en savoir plus sur la configuration des [politiques](/help/data-governance/policies/overview.md).
+La fenêtre contextuelle fournit des informations spécifiques sur la violation. Vous pouvez résoudre ces violations par le biais des paramètres de la politique et d’autres mesures qui ne sont pas directement liées au workflow de configuration. Par exemple, vous pouvez modifier les libellés afin que certains champs soient autorisés à être utilisés à des fins de science des données. Vous pouvez également modifier la configuration du modèle elle-même afin qu’elle n’utilise rien qui porte un libellé. Consultez la documentation pour en savoir plus sur la configuration des [politiques](/help/data-governance/policies/overview.md).

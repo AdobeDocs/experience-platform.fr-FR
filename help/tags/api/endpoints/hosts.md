@@ -2,9 +2,26 @@
 title: Point d’entrée des hôtes
 description: Découvrez comment effectuer des appels au point d’entrée /hôtes dans l’API Reactor.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+TQID: https://experienceleague.adobe.com/Q0x-jFSGgXODcL8ap2d-ie6Ml0LvYysEncVutvIC2FQ
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: 801
 ht-degree: 91%
 
 ---
@@ -228,7 +245,7 @@ curl -X POST \
 | `attributes.path` | Chemin d’accès à ajouter à l’URL `server`. |
 | `attributes.port` | Nombre entier indiquant le port de serveur spécifique à utiliser. |
 | `attributes.server` | URL hôte du serveur. |
-| `attributes.skip_symlinks`<br><br>(Pour les hôtes SFTP uniquement) | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (symlinks) pour référencer les versions de bibliothèque enregistrées sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cet attribut est inclus et défini sur `true`, l’hôte utilise une opération de copie pour mettre à jour les ressources de création directement au lieu d’utiliser des liens symboliques. |
+| `attributes.skip_symlinks`<br><br> (pour les hôtes SFTP uniquement) | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (symlinks) pour référencer les versions de bibliothèque enregistrées sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cet attribut est inclus et défini sur `true`, l’hôte utilise une opération de copie pour mettre à jour directement les ressources de build au lieu d’utiliser des liens symboliques. |
 | `attributes.username` | Nom d’utilisateur facultatif pour l’authentification. |
 | `type` | Le type de ressource en cours de mise à jour. Pour ce point d’entrée, la valeur doit être `hosts`. |
 

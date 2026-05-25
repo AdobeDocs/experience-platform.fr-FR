@@ -2,9 +2,18 @@
 description: Découvrez comment utiliser Destination SDK pour configurer une destination Data Landing Zone (DLZ) avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée.
 title: Configurez une destination Data Landing Zone (DLZ) avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/Pu094HXFGjuP9dX1AC-zqlaefivMIgNDA81SgCqqlYY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: 710
 ht-degree: 8%
 
 ---

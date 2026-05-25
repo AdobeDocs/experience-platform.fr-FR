@@ -4,9 +4,18 @@ title: Guide de lʼinterface utilisateur des alertes
 description: Découvrez comment gérer les alertes dans lʼinterface utilisateur dʼExperience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 3f6b4f2335525a1d133f83f378bae888d60cc21d
+TQID: https://experienceleague.adobe.com/X1LmSIA3VvcE4j6XH2p4oRKZwDVz24HPuRwwqijiPHU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: 825
 ht-degree: 13%
 
 ---

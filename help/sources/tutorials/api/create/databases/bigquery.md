@@ -3,9 +3,20 @@ title: Connecter Google BigQuery à Experience Platform à l’aide de l’API F
 description: Découvrez comment connecter Adobe Experience Platform à Google BigQuery à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/jzrfqql6tZZhYdxmBxwGV7EN7uSmKxWMX-3-2e9-h-c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: 712
 ht-degree: 24%
 
 ---
@@ -33,7 +44,7 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 
 Lisez le [[!DNL Google BigQuery] guide d’authentification](../../../../connectors/databases/bigquery.md#prerequisites) pour obtenir des instructions détaillées sur la récupération de vos informations d’identification [!DNL Google BigQuery].
 
-## Connecter [!DNL Google BigQuery] à Experience Platform sur Azure {#azure}
+## Connexion de [!DNL Google BigQuery] à Experience Platform sur Azure {#azure}
 
 Pour plus d’informations sur la connexion de votre source [!DNL Google BigQuery] à Experience Platform sur Azure, lisez les étapes ci-dessous.
 
@@ -236,7 +247,7 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion de base à [!DNL Google BigQuery] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL Google BigQuery] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

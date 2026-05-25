@@ -2,9 +2,19 @@
 title: Activation étendue d’Audience Manager
 description: Découvrez comment activer les audiences Audience Manager vers des destinations sociales et publicitaires, via l’activation étendue d’Audience Manager.
 exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/Zw5qmg-WWlap--r9-uWpNtIIcc0-m-wkyBvR-JjEg2o
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: 533
 ht-degree: 6%
 
 ---
@@ -37,7 +47,7 @@ Avant de pouvoir utiliser [!DNL Expanded Activation], vous devez créer un compt
 
 Pour activer des audiences par le biais de [!DNL Expanded Activation], assurez-vous que vos audiences Audience Manager sont basées sur des adresses e-mail **hachées**. Pour ce faire, il existe deux manières, en fonction de votre utilisation d’Audience Manager :
 
-* Si vous utilisez la fonctionnalité [Destinations basées sur les individus d’Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), vous ingérez déjà des adresses e-mail hachées dans Audience Manager. Il n’y a aucune étape supplémentaire à franchir dans ce cas. Vous pouvez passer à [activation des audiences via l’activation étendue](activate-audiences.md).
+* Si vous utilisez la fonctionnalité [Destinations basées sur les individus d’](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), vous ingérez déjà des adresses e-mail hachées dans Audience Manager. Il n’y a aucune étape supplémentaire à franchir dans ce cas. Vous pouvez passer à [activation des audiences via l’activation étendue](activate-audiences.md).
 * Si vous n’utilisez _pas_ la fonctionnalité [Destinations basées sur les individus d’Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview), vous devez créer une nouvelle source de données dans Audience Manager et l’utiliser pour stocker les adresses e-mail hachées. Pour découvrir comment procéder, consultez la documentation sur la [configuration d’une source de données pour les workflows d’e-mail hachés](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails). Après avoir ingéré des adresses e-mail hachées dans votre source de données Audience Manager, lisez la documentation sur l’[activation des audiences via l’activation étendue](activate-audiences.md).
 
 ## Étapes suivantes {#next-steps}

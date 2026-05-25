@@ -1,100 +1,111 @@
 ---
 solution: Experience Platform
-title: Présentation de la prise en compte des données dans les classeurs de cas d’utilisation
-description: Découvrez comment accélérer le temps de valorisation en copiant les ressources générées dans l’environnement de test d’inspiration finale vers d’autres environnements de test.
+title: Présentation de la connaissance des données dans les playbooks de cas d’utilisation
+description: Découvrez comment accélérer le délai de valorisation en copiant les ressources générées dans le sandbox d’inspiration final vers d’autres sandbox.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+TQID: https://experienceleague.adobe.com/1YhhTYyxgj-PKTqU3NDs0BWg4OHRLAmqWiOpc0R5T4E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: 899
 ht-degree: 0%
 
 ---
 
-# Ressources générées par le lecteur Publish dans d’autres environnements de test {#publish-to-other-sandboxes}
+# Publication de ressources générées par un playbook dans d’autres sandbox {#publish-to-other-sandboxes}
 
-Les scénarios d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Vous pouvez tester les ressources créées par des livres de jeu dans l’environnement de test inspirant. Lorsque vous êtes prêt, vous pouvez importer les ressources dans d’autres environnements de test de développement pour effectuer d’autres tests avec les données disponibles dans ces environnements de test. Lorsque vous êtes satisfait des tests, vous pouvez ensuite déplacer les ressources des environnements de test de développement vers les environnements de test de production.
+Les playbooks de cas d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Vous pouvez tester les ressources créées par les playbooks dans le sandbox d’inspiration et, lorsque vous êtes prêt(e), vous pouvez importer les ressources dans d’autres sandbox de développement pour les tester davantage avec les données disponibles dans ces sandbox. Une fois les tests effectués, vous pouvez déplacer les ressources des sandbox de développement vers les sandbox de production.
 
-Cependant, dans certains cas, vous avez peut-être déjà configuré vos propres schémas, champs et groupes de champs dans d’autres environnements de test de développement. Cela peut rendre certaines des ressources générées par les modèles de cas d’utilisation, comme les parcours, incompatibles avec vos données. Pour comprendre comment utiliser la fonctionnalité de sensibilisation aux données pour mieux aligner et compléter les ressources générées avec vos ressources existantes, lisez ce tutoriel.
+Cependant, dans certains cas, vous avez peut-être déjà configuré vos propres schémas, champs et groupes de champs dans d’autres sandbox de développement. Cela peut rendre certaines des ressources générées par les modèles de cas d’utilisation, telles que les parcours, incompatibles avec vos données. Pour comprendre comment utiliser la fonctionnalité de connaissance des données afin de mieux aligner et compléter les ressources générées avec vos ressources existantes, consultez ce tutoriel.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de lire ce tutoriel, parcourez les [modèles de scénario d’utilisation disponibles](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) et [créez une instance](/help/use-case-playbooks/playbooks/create-share-reuse.md) d’un playbook préféré.
+Avant de lire ce tutoriel, parcourez les [modèles de playbook de cas d’utilisation disponibles](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) et [créez une instance](/help/use-case-playbooks/playbooks/create-share-reuse.md) d’un playbook préféré.
 
-La création d’une instance génère un ensemble de ressources telles que des parcours, des segments, des schémas et des messages dans l’environnement de test d’inspiration. Lisez la suite pour découvrir comment copier ces ressources dans d’autres environnements de test.
+La création d’une instance génère un ensemble de ressources telles que des parcours, des segments, des schémas et des messages dans le sandbox source d’inspiration. Lisez la suite pour savoir comment copier ces ressources dans d’autres sandbox.
 
-### Création et publication d’un module {#create-publish-package}
+### Création et publication d’un package {#create-publish-package}
 
 >[!NOTE]
 >
-> Vous ne pouvez importer des packages que dans d’autres environnements de développement. Une fois que vous avez apporté toutes les modifications ou mises à jour nécessaires, vous pouvez importer en production les ressources ou les modules de ces environnements de test de développement. Vous ne pouvez pas importer directement depuis les environnements de test des cahiers de travail du cas d’utilisation en production.
+> Vous ne pouvez importer des packages que dans d’autres sandbox de développement. Une fois toutes les modifications ou mises à jour nécessaires effectuées, vous pouvez importer les ressources ou les packages de ces sandbox de développement en production. Vous ne pouvez pas importer directement des sandbox des playbooks de cas d’utilisation vers la production.
 
-1. Pour importer des objets de l’environnement de test inspiré dans un autre environnement de test, accédez à une instance souhaitée d’un playbook de cas d’utilisation et sélectionnez **[!UICONTROL Publish sur un autre environnement de test]** pour exporter les artefacts sous la forme d’un package.
+1. Pour importer des objets du sandbox source d’inspiration dans un autre sandbox, accédez à l’instance souhaitée d’un playbook de cas d’utilisation, puis sélectionnez **[!UICONTROL Publish to a different sandbox]** pour exporter les artefacts sous la forme d’un package.
 
-   ![GIF montrant les différentes instances de cas d&#39;utilisation](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
+   ![GIF présentant les différentes instances de cas d’utilisation](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Une fois que vous avez sélectionné le bouton **[!UICONTROL Publish to a another sandbox]** , un modal s’affiche. Renseignez le nom et la description facultative, puis sélectionnez **[!UICONTROL Créer]**. Cette étape regroupe les ressources générées dans un package qui peut être importé dans un autre environnement de test.
+2. Une fois que vous avez sélectionné le bouton **[!UICONTROL Publish to a different sandbox]** , une boîte de dialogue modale s’affiche. Renseignez le nom et la description facultative, puis sélectionnez **[!UICONTROL Create]**. Cette étape regroupe les ressources générées dans un package qui peut être importé dans un autre sandbox.
 
-   ![Un modal pour créer un package](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
+   ![Boîte de dialogue modale pour la création d’un package](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Accédez à la page **Sandbox** dans le volet de navigation de gauche et sélectionnez l’onglet **Packages** , recherchez votre package et publiez-le. Pour publier un package en état de brouillon, suivez les étapes du document [outil de test](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish).
+3. Accédez à la page **Sandbox** dans le volet de navigation de gauche, sélectionnez l’onglet **Packages**, recherchez votre package et publiez-le. Pour publier un package à l’état de brouillon, suivez les étapes du document [outils sandbox](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish).
 
-   ![Package dans l’état préliminaire ou non publié](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
+   ![Package à l’état de brouillon ou dépublié](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
-   ![Publier le package](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
+   ![&#x200B; Publication du package &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
 
-4. Une fois la publication effectuée, un bouton **+** doit être activé en regard du nom sur la page de navigation des packages.
+4. Une fois la publication réussie, sur la page de navigation des packages, un bouton **+** doit s’afficher en regard du nom.
 
-   ![Onglet Packages dans la page Sandbox](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![&#x200B; Onglet Packages de la page Sandbox &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
    >[!NOTE]
    >
-   > Le package ne peut pas être importé tant qu’il est toujours en mode préliminaire. Ouvrez donc la page des détails du package et publiez le package.
+   > Le package ne peut pas être importé s’il est toujours en mode brouillon. Par conséquent, ouvrez la page des détails du package et publiez-le.
 
-5. Sélectionnez le contrôle **+** et lancez le workflow pour importer les ressources générées par le manuel de cas d’utilisation dans l’ **[!UICONTROL environnement de test Target]**. Sélectionnez un environnement de test cible et confirmez le nom du module à importer à l’aide de la liste déroulante. Ajoutez les détails de la tâche, tels que le nom et la description de la tâche, avant de passer à l’étape suivante.
+5. Sélectionnez le contrôle **+** et lancez le workflow pour importer dans le **[!UICONTROL Target sandbox]** les ressources générées par le playbook du cas d’utilisation. Sélectionnez un sandbox cible et confirmez le nom du package que vous souhaitez importer à l’aide de la liste déroulante. Ajoutez les détails de la tâche, tels que son nom et sa description, avant de passer à l’étape suivante.
 
-   ![Lancer le workflow d&#39;import, sélectionner la cible, confirmer le package, ajouter les détails de la tâche.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
+   ![Lancer le workflow d’importation, sélectionner la cible, confirmer le package et ajouter les détails de la tâche.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
-6. À l’étape **[!UICONTROL Afficher les dépendances]** , vous pouvez mapper des schémas et copier d’autres ressources de l’environnement de test d’inspiration dans l’environnement de test cible. Le bouton **[!UICONTROL Terminer]** est désactivé tant que vous n’avez pas mappé chaque schéma.
+6. L’étape **[!UICONTROL View dependencies]** vous permet de mapper des schémas et de copier d’autres ressources du sandbox source d’inspiration vers le sandbox cible. Le bouton **[!UICONTROL Finish]** est désactivé jusqu’à ce que vous mappez chaque schéma.
 
-   ![&#x200B; Mappez les schémas à l&#39;étape &#39;Afficher les dépendances&#39;, en activant le bouton Terminer.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
+   ![Mappez les schémas à l’étape « Afficher les dépendances » en activant le bouton Terminer.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
 
 ### Mappage des schémas {#map-schemas}
 
-1. Mappez le premier schéma. La boîte de dialogue de mappage de schéma affiche une liste déroulante pour sélectionner le schéma cible. Si le schéma source est un schéma de profil, il n’existe aucune autre option de schéma cible en plus du [&#x200B; schéma de profil d’union individuel](/help/xdm/classes/individual-profile.md). Vous pouvez voir les recommandations de mappage générées automatiquement entre les données Source et les champs cibles lors du premier affichage de la page. Vous pouvez éditer les mappages en sélectionnant le champ cible, puis en sélectionnant un nouveau champ. Si vous modifiez les mappages suggérés, utilisez le bouton **Valider** pour valider les nouveaux mappages et afficher les erreurs qui peuvent être liées aux nouveaux mappages. Sélectionnez **Enregistrer** une fois le mappage terminé.
+1. Mappez le premier schéma. La boîte de dialogue de mappage de schéma affiche une liste déroulante pour sélectionner le schéma cible. Si le schéma source est un schéma de profil, il n’existe aucune autre option de schéma cible en dehors du [schéma de profil d’union individuel](/help/xdm/classes/individual-profile.md). Vous pouvez voir les recommandations de mappage générées automatiquement entre les champs Source Data et Target lorsque la page est affichée pour la première fois. Vous pouvez modifier les mappages en sélectionnant le champ cible, puis en sélectionnant un nouveau champ. Si vous modifiez les mappages suggérés, utilisez le bouton **Valider** pour valider les nouveaux mappages et afficher les erreurs qui peuvent être liées aux nouveaux mappages. Sélectionnez **Enregistrer** une fois le mappage terminé.
 
-   ![&#x200B; Boîte de dialogue de mappage de schéma avec une liste déroulante pour sélectionner un schéma cible.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
+   ![Boîte de dialogue de mappage de schéma avec une liste déroulante pour sélectionner un schéma cible.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
-2. Poursuivez le mappage de tous les champs des schémas. Si le schéma est un [schéma d’événement](/help/xdm/classes/experienceevent.md), la boîte de dialogue affiche une liste déroulante dans laquelle vous pouvez afficher tous les schémas d’événement dans l’environnement de test cible.
+2. Poursuivez le mappage de tous les champs des schémas. Si le schéma est un [schéma d’événement](/help/xdm/classes/experienceevent.md), la boîte de dialogue affiche une liste déroulante dans laquelle vous pouvez afficher tous les schémas d’événement du sandbox cible.
 
    ![Sélectionner un schéma cible dans la liste déroulante](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
 
-3. Sélectionnez un schéma parmi les schémas disponibles dans l’ **environnement de test Target**.
+3. Sélectionnez un schéma parmi les schémas disponibles dans le **sandbox cible**.
 
    ![Sélectionner un schéma](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-available-schemas.png)
 
-4. Effectuez le mappage et sélectionnez **Enregistrer**.
+4. Terminez le mappage et sélectionnez **Enregistrer**.
 
-   ![Enregistrer le mappage](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
+   ![&#x200B; Enregistrer le mappage &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
 
-5. Une fois que vous avez effectué le mappage de tous les champs des schémas, sélectionnez **Terminer** pour terminer le workflow d&#39;import.
+5. Une fois que vous avez terminé de mapper tous les champs des schémas, sélectionnez **Terminer** pour terminer le workflow d’importation.
 
-   ![Terminer le flux](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
+   ![&#x200B; Terminer le flux &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
 
    >[!NOTE]
    >
-   > Vous ne pouvez modifier aucune ressource, à l’exception des schémas, car il s’agit d’un environnement de test inspirant, mais ils s’affichent car il s’agit de dépendances du module.
+   > Vous ne pouvez modifier aucune ressource, à l’exception des schémas , car il s’agit d’un sandbox source d’inspiration, mais elles s’affichent en tant que dépendances du package.
 
-### Statut de l’importation {#import-status}
+### Etat de l’import {#import-status}
 
 1. Vous êtes automatiquement redirigé vers la page [**Imports**](/help/sandboxes/ui/sandbox-tooling.md#view-import-details) où vous pouvez voir la progression de votre importation.
 
    ![Page affichant la progression de l’importation](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. Pendant l’importation du package, les actifs du package sont créés dans l’environnement de test cible. Une fois l’importation terminée, ils font référence aux champs que vous avez mappés pendant le processus d’importation. Le processus est maintenant terminé et les ressources de l’environnement de test inspirant sont désormais également présentes dans votre environnement de test cible pour que vous puissiez le tester.
+2. Pendant l’importation du package, les ressources du package sont créées dans le sandbox cible. Une fois terminés, ils référencent les champs que vous avez mappés pendant le processus d’importation. Le processus est maintenant terminé et les ressources du sandbox source d’inspiration sont désormais également présentes dans votre sandbox cible pour que vous puissiez les tester.
 
-   ![Ressources générées dans l’environnement de test cible](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![&#x200B; Ressources générées dans le sandbox cible &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment tirer parti des classeurs de cas d’utilisation avec l’[outil de test](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les [cas pratiques Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) courants.
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment tirer parti des playbooks de cas d’utilisation avec l’[outil Sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les cas d’utilisation courants de [&#128279;](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).

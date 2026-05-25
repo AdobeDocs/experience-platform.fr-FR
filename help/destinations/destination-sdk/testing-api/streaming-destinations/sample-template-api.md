@@ -2,13 +2,22 @@
 description: Découvrez comment utiliser l’API de test de destination pour générer un modèle de transformation de message de test pour la destination.
 title: Génération d’un modèle type de transformation des messages
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/xodA-ag0DqHYcdzsIq4awGRkEhU-ss-XSC1iDsQ-lM0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: 373
 ht-degree: 84%
 
 ---
-
 
 # Génération d’un modèle type de transformation des messages {#get-sample-template-api-operations}
 

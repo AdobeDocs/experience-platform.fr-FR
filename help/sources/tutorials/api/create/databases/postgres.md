@@ -2,9 +2,18 @@
 title: Connecter PostgreSQL à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter votre base  [!DNL PostgreSQL]  données à Experience Platform à l’aide d’API.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
+TQID: https://experienceleague.adobe.com/vng5WtwoISMZeYr7e7cYteqgpbbhyczWEm7QxWTh-dY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: 754
 ht-degree: 18%
 
 ---
@@ -41,7 +50,7 @@ Vous pouvez activer le chiffrement SSL pour votre chaîne de connexion [!DNL Pos
 
 Voici un exemple de chaîne de connexion [!DNL PostgreSQL] ajoutée avec le chiffrement SSL : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
-## Connecter [!DNL PostgreSQL] à Experience Platform sur Azure {#azure}
+## Connexion de [!DNL PostgreSQL] à Experience Platform sur Azure {#azure}
 
 Lisez les étapes ci-dessous pour savoir comment connecter votre compte [!DNL PostgreSQL] à Experience Platform sur Azure.
 

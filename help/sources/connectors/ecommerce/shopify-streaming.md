@@ -2,11 +2,18 @@
 title: Source de streaming Shopify
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer des données de flux de votre instance Shopify vers Adobe Experience Platform
 badge: Beta
-last-substantial-update: 2023-04-26T00:00:00Z
+last-substantial-update: 2023-04-26T00:00:00.000Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/WHz5WqfeMaaBKIfSRVo1PP347-YmLfo9rQXzr7qFEYk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: 702
 ht-degree: 3%
 
 ---

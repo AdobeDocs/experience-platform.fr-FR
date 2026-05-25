@@ -3,9 +3,19 @@ title: Utilisez l’attribut XDM de la dernière qualification dans les nouvelle
 description: Découvrez comment utiliser l’attribut XDM de la dernière qualification dans les nouvelles destinations bêta de stockage dans le cloud
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+TQID: https://experienceleague.adobe.com/owwch5kzbI5Md9T0lgj4GAtgTq9LO6ncHTmSjyuQNkI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: 287
 ht-degree: 10%
 
 ---

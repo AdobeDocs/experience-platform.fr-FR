@@ -5,10 +5,37 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/YJ2q23PLQR-3VXfuZU1ccV2JIr48CeOs5PwHQt3WgM8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 90%
+source-wordcount: 1156
+ht-degree: 82%
 
 ---
 
@@ -80,15 +107,15 @@ Pour des informations plus générales sur les destinations, reportez-vous à la
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+La normalisation et l&#39;interopérabilité sont les concepts clés de [!DNL Experience Platform]. [!DNL Experience Data Model] Le modèle de données d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mise à niveau de l’interface utilisateur de recherche | Les fonctionnalités de recherche améliorées sont désormais disponibles dans l’onglet [!UICONTROL Parcourir] de l’espace de travail [!UICONTROL Schémas] et dans la boîte de dialogue de sélection des groupes de champs de schémas dans le [!DNL Schema Editor].<br><br>Précédemment, lors d’une recherche de terme, les résultats n’incluaient que les ressources XDM dont le nom correspondait à la requête. Désormais, outre les ressources dont le nom correspond à la requête, les ressources contenant des attributs individuels qui correspondent au terme sont également incluses. Cela vous permet de rechercher des ressources XDM en fonction des attributs qu’elles contiennent plutôt que par le biais de leur nom.<br><br>Pour plus d’informations, consultez les documents sur l’[exploration des ressources XDM](../../xdm/ui/explore.md) et ceux sur la [gestion des schémas](../../xdm/ui/resources/schemas.md) dans l’interface utilisateur. |
+| Mise à niveau de l’interface utilisateur de recherche | Les fonctionnalités de recherche améliorées sont désormais disponibles dans l’onglet [!UICONTROL Browse] de l’espace de travail [!UICONTROL Schemas] et dans la boîte de dialogue de sélection du groupe de champs de schéma de l’[!DNL Schema Editor].<br><br>Auparavant, lors de la recherche d’un terme, les résultats n’incluaient que les ressources XDM dont le nom correspondait à la requête. Désormais, outre les ressources dont le nom correspond à la requête, les ressources contenant des attributs individuels qui correspondent au terme sont également incluses. Cela vous permet de rechercher des ressources XDM en fonction des attributs qu’elles contiennent plutôt que par le biais de leur nom.<br><br>Pour plus d’informations, consultez les documents sur l’[exploration des ressources XDM](../../xdm/ui/explore.md) et ceux sur la [gestion des schémas](../../xdm/ui/resources/schemas.md) dans l’interface utilisateur. |
 
 Pour des informations plus générales sur XDM, reportez-vous à la [présentation du système XDM](../../xdm/home.md).
 

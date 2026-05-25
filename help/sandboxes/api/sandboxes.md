@@ -5,16 +5,23 @@ title: Point d’entrée de l’API Sandbox Management
 description: Le point d’entrée /sandbox de l’API Sandbox vous permet de gérer les sandbox par programmation dans Adobe Experience Platform.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/EC2I30Bvl49lt1B0hLmPJrhk-JAkXE5qr58jbUUwf3M
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1477'
-ht-degree: 49%
+source-wordcount: 1517
+ht-degree: 52%
 
 ---
 
 # Point d’entrée de la gestion des sandbox
 
-Les sandbox de Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de production. Le point d’entrée `/sandboxes` de l’API [!DNL Sandbox] vous permet de gérer les sandbox par programmation dans Experience Platform.
+Les sandbox d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production. Le point d’entrée `/sandboxes` de l’API [!DNL Sandbox] vous permet de gérer les sandbox par programmation dans Experience Platform.
 
 ## Prise en main
 
@@ -32,7 +39,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md#query). |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md#query). |
 
 **Requête**
 

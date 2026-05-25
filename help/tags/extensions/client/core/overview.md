@@ -2,9 +2,33 @@
 title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 0750a684c7383bd3f7cb18749078989ad5571816
+TQID: https://experienceleague.adobe.com/PikhqnR--WUiowunORXrFQzTxdBab-XG4LWw8py8B-I
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '5387'
+source-wordcount: 5449
 ht-degree: 94%
 
 ---
@@ -275,7 +299,7 @@ Les opérateurs de comparaison de valeurs suivants sont disponibles :
 
 **Equal :** la condition renvoie true (vrai) si les deux valeurs sont égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur ==). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
-**Does Not Equal** (N’est pas égal à) : la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
+**Does Not Equal :** la condition renvoie true (vrai) si les deux valeurs ne sont pas égales à l’aide d’une comparaison non stricte (dans JavaScript, l’opérateur !=). Les valeurs peuvent être de n’importe quel type. Lorsque vous saisissez un mot tel que _true_ (vrai), _false_ (faux), _null_ (nul) ou _undefined_ (non défini) dans un champ de valeur, le mot est comparé en tant que chaîne et n’est pas converti vers son équivalent JavaScript.
 
 **Contains :** la condition renvoie true (vrai) si la première valeur contient la seconde valeur. Les nombres sont convertis en chaînes. Pour toute autre valeur qu’un nombre ou une chaîne, la condition renvoie false (faux).
 
@@ -855,7 +879,7 @@ Voici quelques cas d’utilisation courants :
 
 ### Valeur conditionnelle
 
-Un wrapper pour la condition [Value Comparison](#value-comparison-value-comparison). En fonction du résultat de la comparaison, renverra l’une des deux valeurs disponibles dans le formulaire. Peut donc gérer les scénarios &quot;If... Then... Else...&quot; sans avoir besoin de règles supplémentaires.
+Un wrapper pour la condition [Value Comparison](#value-comparison-value-comparison). En fonction du résultat de la comparaison, renverra l’une des deux valeurs disponibles dans le formulaire. Peut donc gérer « If... Alors... Sinon... » scénarios sans avoir besoin de règles supplémentaires.
 
 ### Environnement d’exécution
 

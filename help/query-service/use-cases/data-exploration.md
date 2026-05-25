@@ -2,9 +2,18 @@
 title: Explorer, dépanner et vérifier l’ingestion par lots avec SQL
 description: Découvrez comment comprendre et gérer le processus d’ingestion des données dans Adobe Experience Platform. Ce document explique comment vérifier les lots et interroger les données ingérées.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: 7fac5ebd3f81e6f4b9f601ab1d9252402cad52b6
+TQID: https://experienceleague.adobe.com/AUqT3UL99Y69g6fxVInVJ-gLovfWid6DX4MoYtAlRt8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: 1163
 ht-degree: 0%
 
 ---
@@ -92,21 +101,21 @@ Ensuite, validez et vérifiez les enregistrements qui ont été ingérés dans l
 
 >[!TIP]
 >
->To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Experience Platform. If you want to test the process yourself, you can ingest CSV data into Experience Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md).
+>Pour récupérer l’ID de lot et les enregistrements de requête associés à cet ID de lot, vous devez d’abord créer un lot dans Experience Platform. Si vous souhaitez tester le processus vous-même, vous pouvez ingérer des données CSV dans Experience Platform. Lisez le guide sur la façon de [mapper un fichier CSV à un schéma XDM existant à l’aide de recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Once you have ingested a batch, you must navigate to the [!UICONTROL Datasets activity tab] for the dataset you ingested data into.
+Une fois que vous avez ingéré un lot, vous devez accéder au [!UICONTROL Datasets activity tab] du jeu de données dans lequel vous avez ingéré des données.
 
-In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left-navigation to open the [!UICONTROL Datasets] dashboard. Next, select the name of the dataset from the [!UICONTROL Browse] tab to access the [!UICONTROL Dataset activity] screen.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir le tableau de bord [!UICONTROL Datasets]. Sélectionnez ensuite le nom du jeu de données dans l’onglet [!UICONTROL Browse] pour accéder à l’écran [!UICONTROL Dataset activity].
 
-![The Experience Platform UI Datasets dashboard with Datasets highlighted in left navigation.](../images/use-cases/datasets-workspace.png)
+![Tableau de bord Jeux de données de l’interface utilisateur d’Experience Platform avec Jeux de données en surbrillance dans le volet de navigation de gauche.](../images/use-cases/datasets-workspace.png)
 
-The [!UICONTROL Dataset activity] view appears. This view contains details of your selected dataset. It includes any ingested batches which are displayed in a table format.
+La vue [!UICONTROL Dataset activity] s’affiche. Cette vue contient les détails du jeu de données sélectionné. Elle inclut tous les lots ingérés qui s’affichent au format tableau.
 
-Select a batch from the list of available batches and copy the [!UICONTROL Batch ID] from the details panel on the right.
+Sélectionnez un lot dans la liste des lots disponibles et copiez le [!UICONTROL Batch ID] à partir du panneau des détails à droite.
 
-![The Experience Platform Datasets UI showing the ingested records with a batch ID highlighted.](../images/use-cases/batch-id.png)
+![Interface utilisateur des jeux de données Experience Platform affichant les enregistrements ingérés avec un identifiant de lot en surbrillance.](../images/use-cases/batch-id.png)
 
-Next, use the following query to retrieve all the records that were included in the dataset as part of that batch:
+Ensuite, utilisez la requête suivante pour récupérer tous les enregistrements qui ont été inclus dans le jeu de données dans le cadre de ce lot :
 
 ```sql
 SELECT * FROM movie_data
@@ -114,18 +123,18 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-The `_ACP_BATCHID` keyword is used to filter the [!UICONTROL Batch ID].
+Le mot-clé `_ACP_BATCHID` est utilisé pour filtrer les [!UICONTROL Batch ID].
 
 >[!TIP]
 >
->The `LIMIT` clause is helpful if you want to restrict the number of rows displayed, but a filter condition is more desirable.
+>La clause `LIMIT` est utile si vous souhaitez limiter le nombre de lignes affichées, mais une condition de filtre est plus souhaitable.
 
-When you execute this query in the Query Editor, the results are truncated to 100 rows. The Query Editor is designed for quick previews and investigation. To retrieve up to 50,000 rows, you can use a third-party tool like DBVisualizer or DBeaver.
+Lorsque vous exécutez cette requête dans le Query Editor, les résultats sont tronqués à 100 lignes. Query Editor est conçu pour offrir des aperçus rapides et faciliter la recherche. Pour récupérer jusqu’à 50 000 lignes, vous pouvez utiliser un outil tiers tel que DBVisualizer ou DBeaver.
 
 ## Étapes suivantes {#next-steps}
 
-By reading this document, you learned the essentials of verifying and validating records in ingested batches as part of the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Experience Platform.
+En lisant ce document, vous avez appris les principes de base de la vérification et de la validation des enregistrements dans les lots ingérés dans le cadre du processus d’ingestion de données. Vous avez également obtenu des informations sur l’accès aux métadonnées des lots de jeux de données, la compréhension des partitions logiques et physiques et l’interrogation de lots spécifiques à l’aide de commandes SQL. Ces connaissances peuvent vous aider à assurer l’intégrité des données et à optimiser le stockage de vos données sur Experience Platform.
 
-Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Experience Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+Ensuite, vous devez vous entraîner à ingérer des données pour appliquer les concepts appris. Ingérez un exemple de jeu de données dans Experience Platform avec les fichiers d’exemple fournis ou vos propres données. Si vous ne l’avez pas déjà fait, consultez le tutoriel sur la [ingestion de données dans Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
-Alternatively, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md) to enhance your data analysis capabilities.
+Vous pouvez également apprendre à [connecter et vérifier Query Service à diverses applications de bureau clientes](../clients/overview.md) afin d’améliorer vos fonctionnalités d’analyse des données.

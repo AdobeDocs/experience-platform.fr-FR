@@ -4,20 +4,27 @@ solution: Experience Platform
 title: Qualité des données
 description: Le document suivant présente un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/6WfJEb0xsEjGlUf2BtUOIBDRDOyy8axoqpXfPp1gImM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: 430
 ht-degree: 73%
 
 ---
 
 # Qualité des données dans Adobe Experience Platform
 
-Adobe Experience Platform fournit des garanties bien définies d’exhaustivité, d’exactitude et de cohérence pour toute donnée chargée par ingestion par lots ou par flux. Le document suivant présente un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans [!DNL Experience Platform].
+Adobe Experience Platform fournit des garanties bien définies d’exhaustivité, d’exactitude et de cohérence pour toute donnée chargée par ingestion par lots ou en flux continu. Le document suivant présente un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans [!DNL Experience Platform].
 
 ## Vérifications prises en charge
 
-|   | Ingestion par lots | Ingestion par flux |
+|   | Ingestion par lots | Ingestion en flux continu |
 | ------ | --------------- | ------------------- |
 | Vérification du type de données | Oui | Oui |
 | Vérification de l’énumération | Oui | Oui |
@@ -28,7 +35,7 @@ Adobe Experience Platform fournit des garanties bien définies d’exhaustivit
 
 ## Comportements de validation pris en charge
 
-L’ingestion par lots et en flux continu empêche les données en échec de descendre en déplaçant les données incorrectes pour récupération et analyse en [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
+L’ingestion par lots et en flux continu empêche les données en échec de descendre en déplaçant les données incorrectes pour récupération et analyse en [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et en flux continu.
 
 ### Ingestion par lots
 
@@ -40,9 +47,9 @@ Les validations suivantes sont effectuées pour l’ingestion par lots :
 | `identityField` | Vérifie que tous les descripteurs d’identité valides sont définis. |
 | `createdUser` | Vérifie que l’utilisateur qui a ingéré le lot est autorisé à ingérer le lot. |
 
-### Ingestion par flux
+### Ingestion en flux continu
 
-Les validations suivantes sont effectuées pour l’ingestion par flux :
+Les validations suivantes sont effectuées pour l’ingestion en flux continu :
 
 | Zone de validation | Description |
 | --------------- | ----------- |
@@ -52,7 +59,7 @@ Les validations suivantes sont effectuées pour l’ingestion par flux :
 | Organisation | S’assure que l’organisation répertoriée est une organisation valide. |
 | Nom de source | Vérifie que le nom de la source de données est spécifié. |
 | Jeu de données | Vérifie que le jeu de données est spécifié, activé et n’a pas été supprimé. |
-| En-tête | Vérifie que l’en-tête est spécifié et valide. |
+| Header | Vérifie que l’en-tête est spécifié et valide. |
 
 Vous trouverez plus d’informations sur la manière dont [!DNL Experience Platform] surveille et valide les données dans la documentation [surveillance des flux de données](./monitor-data-ingestion.md).
 

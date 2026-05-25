@@ -5,10 +5,28 @@ feature: Customer AI
 title: Découvrir des informations avec l’IA dédiée aux clients
 description: Ce document sert de guide pour interagir avec les informations d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+TQID: https://experienceleague.adobe.com/ChexcCvlaKGZ43eoXm7xpgpJKkOJcZ6HX979rcMIabg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2449'
-ht-degree: 21%
+source-wordcount: 2398
+ht-degree: 19%
 
 ---
 
@@ -24,7 +42,7 @@ Pour utiliser les informations relatives à Customer AI, vous devez avoir à dis
 
 ## Présentation de l’instance de service
 
-Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur *Services* apparaît et affiche les services intelligents disponibles. Dans le conteneur de l’IA dédiée aux clients, sélectionnez **[!UICONTROL Ouvrir]**.
+Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur *Services* apparaît et affiche les services intelligents disponibles. Dans le conteneur de l’IA dédiée aux clients, sélectionnez **[!UICONTROL Open]**.
 
 ![Accédez à l’instance du service IA dédiée aux clients dans l’interface utilisateur de Adobe Experience Platform.](../images/insights/navigate-to-service.png)
 
@@ -40,9 +58,9 @@ Sélectionnez un nom d’instance de service pour commencer.
 
 ![Capture d’écran montrant le processus de sélection du nom d’une instance de service dans le tableau de bord de l’IA dédiée aux clients.](../images/insights/click-the-name.png)
 
-Ensuite, la page d’informations de cette instance de service s’affiche avec l’option permettant de sélectionner **[!UICONTROL Derniers scores]** ou **[!UICONTROL Résumé des performances]**. L’onglet par défaut **[!UICONTROL Derniers scores]** fournit des visualisations de vos données. Les visualisations et ce que vous pouvez faire avec ces données sont expliqués plus en détail dans ce guide.
+Ensuite, la page d’informations de cette instance de service s’affiche avec l’option permettant de sélectionner **[!UICONTROL Latest scores]** ou **[!UICONTROL Performance summary]**. L’onglet par défaut **[!UICONTROL Latest scores]** des visualisations de vos données. Les visualisations et ce que vous pouvez faire avec ces données sont expliqués plus en détail dans ce guide.
 
-L’onglet **[!UICONTROL Résumé des performances]** affiche les taux de résiliation ou de conversion réels pour chaque intervalle de propension. Pour en savoir plus, consultez la section sur les [mesures de résumé des performances](#performance-metrics).
+L’onglet **[!UICONTROL Performance summary]** affiche les taux de résiliation ou de conversion réels pour chaque intervalle de propension. Pour en savoir plus, consultez la section sur les [mesures de résumé des performances](#performance-metrics).
 
 ![Page de destination des insights de l’IA dédiée aux clients présentant diverses visualisations et options d’exploration des insights.](../images/insights/landing_page_insights.png)
 
@@ -54,12 +72,12 @@ Vous pouvez afficher les détails d’une instance de service de deux manières 
 
 Pour afficher un aperçu des détails de l’instance de service dans le tableau de bord, sélectionnez un conteneur d’instance de service, en évitant le lien hypertexte associé au nom. Un rail de droite s’ouvre, fournissant des détails supplémentaires. Les contrôles contiennent les éléments suivants :
 
-- **[!UICONTROL Modifier]** : la sélection de **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
-- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouvelle instance.
-- **[!UICONTROL Supprimer]** : vous pouvez supprimer une instance de service, y compris les exécutions historiques.
-- **[!UICONTROL Source de données]** : lien vers le jeu de données utilisé par cette instance.
-- **[!UICONTROL Fréquence d’exécution]** : fréquence et heure d’une exécution de notation.
-- **[!UICONTROL Définition d’un score]** : aperçu rapide de l’objectif que vous avez configuré pour cette instance.
+- **[!UICONTROL Edit]** : la sélection de **[!UICONTROL Edit]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
+- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie la configuration de l&#39;instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Delete]** : vous pouvez supprimer une instance de service, y compris les exécutions historiques.
+- **[!UICONTROL Data source]** : lien vers le jeu de données utilisé par cette instance.
+- **[!UICONTROL Run Frequency]** : fréquence et heure d’une exécution de notation.
+- **[!UICONTROL Score definition]** : aperçu rapide de l’objectif que vous avez configuré pour cette instance.
 
 ![Panneau de l’instance de service présentant des détails tels que le nom, la description, la fréquence de notation et d’autres options de configuration.](../images/user-guide/service-instance-panel.png)
 
@@ -71,7 +89,7 @@ Pour afficher un aperçu des détails de l’instance de service dans le tableau
 
 ### Menu déroulant Afficher plus d’informations
 
-La deuxième façon d’afficher des détails supplémentaires sur une instance de service se trouve sur la page des informations. Sélectionnez **[!UICONTROL Afficher plus]** dans le coin supérieur droit pour remplir une liste déroulante. Des détails sont répertoriés, tels que la définition de score, la date de création, le type de propension et les jeux de données utilisés. Pour plus d’informations sur l’une des propriétés répertoriées, consultez [Configuration d’une instance IA dédiée aux clients](./configure.md).
+La deuxième façon d’afficher des détails supplémentaires sur une instance de service se trouve sur la page des informations. Sélectionnez **[!UICONTROL Show more]** dans le coin supérieur droit pour remplir une liste déroulante. Des détails sont répertoriés, tels que la définition de score, la date de création, le type de propension et les jeux de données utilisés. Pour plus d’informations sur l’une des propriétés répertoriées, consultez [Configuration d’une instance IA dédiée aux clients](./configure.md).
 
 ![Fenêtre contextuelle d’aperçu du jeu de données de l’IA dédiée aux clientes et clients présentant plusieurs jeux de données avec une clé codée par couleur pour une identification facile.](../images/insights/landing-show-more.png)
 
@@ -87,22 +105,22 @@ La sélection du lien de plusieurs jeux de données ouvre la fenêtre contextuel
 
 ### Modification d’une instance
 
-Pour modifier une instance, sélectionnez **[!UICONTROL Modifier]** dans le volet de navigation supérieur droit.
+Pour modifier une instance, sélectionnez **[!UICONTROL Edit]** dans le volet de navigation supérieur droit.
 
 ![Bouton Modifier dans l’interface de l’IA dédiée aux clients.](../images/insights/edit-button.png)
 
-La boîte de dialogue de modification s’affiche, vous permettant de modifier le nom, la description, le statut et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, sélectionnez **[!UICONTROL Enregistrer]** dans le coin inférieur droit.
+La boîte de dialogue de modification s’affiche, vous permettant de modifier le nom, la description, le statut et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, sélectionnez **[!UICONTROL Save]** dans le coin inférieur droit.
 
 ![&#x200B; Fenêtre contextuelle Modifier l’instance affichant des options pour modifier le nom, la description, le statut et la fréquence de notation d’une instance IA dédiée aux clients &#x200B;](../images/insights/edit-instance.png)
 
 ### Actions supplémentaires
 
-Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. La sélection de **[!UICONTROL Autres actions]** ouvre une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
+Le bouton **[!UICONTROL More actions]** se trouve dans le volet de navigation supérieur droit à côté de **[!UICONTROL Edit]**. La sélection de **[!UICONTROL More actions]** ouvre une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
 
-- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie la configuration de l’instance de service. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouvelle instance.
-- **[!UICONTROL Supprimer]** : supprime l’instance.
-- **[!UICONTROL Scores d’accès]** : la sélection de l’option **[!UICONTROL Scores d’accès]** ouvre une boîte de dialogue fournissant un lien vers le tutoriel [Téléchargement des scores pour l’IA dédiée aux clients](./download-scores.md), la boîte de dialogue fournit également l’identifiant du jeu de données requis pour effectuer des appels API.
-- **[!UICONTROL Afficher l’historique d’exécution]** : fait apparaître une boîte de dialogue contenant une liste des exécutions de notation associées à l’instance de service.
+- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie la configuration de l&#39;instance de service. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Delete]** : supprime l’instance.
+- **[!UICONTROL Access scores]** : la sélection de **[!UICONTROL Access scores]** ouvre une boîte de dialogue qui fournit un lien vers le tutoriel [téléchargement des scores pour l’IA dédiée aux clients](./download-scores.md), la boîte de dialogue fournit également l’identifiant du jeu de données requis pour effectuer des appels API.
+- **[!UICONTROL View run history]** : une boîte de dialogue contenant une liste de toutes les exécutions de notation associées à l’instance de service s’affiche.
 
 ![Liste déroulante Autres actions présentant des options telles que Cloner, Supprimer, Accéder aux scores et Afficher l’historique d’exécution.](../images/insights/more-actions.png)
 
@@ -122,7 +140,7 @@ Vous pouvez pointer sur n’importe quelle couleur de l’anneau pour afficher d
 
 ## Distribution des scores
 
-La carte **[!UICONTROL Distribution des scores]** vous donne un résumé visuel de la population en fonction du score. Les couleurs affichées dans la carte [!UICONTROL Répartition des scores] représentent le type de score de propension généré. Placer le pointeur de la souris sur l’une des distributions de notation fournit le nombre exact appartenant à cette distribution.
+La carte **[!UICONTROL Distribution of Scores]** vous donne un résumé visuel de la population en fonction du score. Les couleurs affichées dans la carte [!UICONTROL Distribution of Scores] représentent le type de score de propension généré. Placer le pointeur de la souris sur l’une des distributions de notation fournit le nombre exact appartenant à cette distribution.
 
 ![Visualisation montrant la distribution des scores dans différents intervalles de propension dans l’IA dédiée aux clientes et clients.](../images/insights/distribution-of-scores.png)
 
@@ -146,17 +164,17 @@ Vous pouvez constater que les profils à faible propension à la conversion sont
 
 ### Création d’un segment
 
-Cliquer sur le bouton **[!UICONTROL Créer un segment]** dans l’un des compartiments pour les propensions faible, moyenne et élevée vous redirige vers le créateur de segments.
+Cliquer sur le bouton **[!UICONTROL Create Segment]** dans l’un des compartiments pour une propension faible, moyenne et élevée vous redirige vers le créateur de segments.
 
 >[!NOTE]
 >
->Le bouton **[!UICONTROL Créer un segment]** n’est disponible que si le profil client en temps réel est activé pour le jeu de données. Pour plus d’informations sur l’activation du profil client en temps réel, consultez la [présentation du profil client en temps réel](../../../rtcdp/overview.md).
+>Le bouton **[!UICONTROL Create Segment]** n’est disponible que si le profil client en temps réel est activé pour le jeu de données. Pour plus d’informations sur l’activation du profil client en temps réel, consultez la [présentation du profil client en temps réel](../../../rtcdp/overview.md).
 
 ![Bouton pour créer un segment à partir de facteurs d’influence dans les informations de l’IA dédiée aux clients.](../images/insights/influential-factors-create-segment.png)
 
 ![Bouton pour créer un segment à partir de facteurs d’influence dans les informations de l’IA dédiée aux clients.](../images/insights/create-segment.png)
 
-Le créateur de segments permet de définir un segment. Lors de la sélection de **[!UICONTROL Créer un segment]** dans la page Insights, l’IA dédiée aux clients ajoute automatiquement les informations des intervalles sélectionnés au segment. Pour terminer la création de votre segment, il vous suffit de renseigner les conteneurs **Nom** et **Description** situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description au segment, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit.
+Le créateur de segments permet de définir un segment. Lors de la sélection de **[!UICONTROL Create Segment]** dans la page Insights, l’IA dédiée aux clients ajoute automatiquement les informations des intervalles sélectionnés au segment. Pour terminer la création de votre segment, il vous suffit de renseigner les conteneurs **Nom** et **Description** situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description au segment, sélectionnez **[!UICONTROL Save]** dans le coin supérieur droit.
 
 >[!NOTE]
 >
@@ -164,13 +182,13 @@ Le créateur de segments permet de définir un segment. Lors de la sélection de
 
 ![Interface d’enregistrement des segments affichant les champs pour saisir le nom et la description du segment avant l’enregistrement.](../images/insights/segment-saving.png)
 
-Pour afficher votre nouveau segment dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page **[!UICONTROL Parcourir]** apparaît et affiche tous les segments disponibles.
+Pour afficher votre nouveau segment dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page **[!UICONTROL Browse]** s’affiche et affiche tous les segments disponibles.
 
 ![Tableau de bord des segments affichant la liste de tous les segments disponibles dans l’interface utilisateur d’Experience Platform.](../images/insights/Segments-dashboard.png)
 
 ## Performances historiques {#historical-performance}
 
-L’onglet **[!UICONTROL Résumé des performances]** affiche les taux d’attrition ou de conversion réels, séparés en chacun des intervalles de propension notés par l’IA dédiée aux clientes et clients.
+L’onglet **[!UICONTROL Performance summary]** affiche les taux d’attrition ou de conversion réels, séparés en chacun des intervalles de propension notés par l’IA dédiée aux clientes et clients.
 
 ![Onglet de résumé des performances affichant les taux de perte de clientèle ou de conversion dans les intervalles de propension, avec des options pour filtrer par période et afficher les résultats d’exécution de notation individuels.](../images/insights/summary_tab.png)
 
@@ -186,9 +204,9 @@ Vous pouvez filtrer la période pour les taux prévus et réels affichés. Séle
 
 ### Taux d’exécution de notation individuels
 
-La moitié inférieure de l’onglet **[!UICONTROL Résumé des performances]** affiche les résultats de chaque exécution de notation individuelle. Sélectionnez la date de la liste déroulante dans le coin supérieur droit pour afficher les résultats d’une autre exécution de notation.
+La moitié inférieure de l’onglet **[!UICONTROL Performance summary]** affiche les résultats de chaque exécution de notation individuelle. Sélectionnez la date de la liste déroulante dans le coin supérieur droit pour afficher les résultats d’une autre exécution de notation.
 
-Selon si vous prédisez l’attrition ou la conversion, le graphique [!UICONTROL Répartition des scores] affiche la répartition des profils attriés/convertis et non attriés/non convertis dans chaque incrément.
+Selon si vous prédisez l’attrition ou la conversion, le graphique [!UICONTROL Distribution of Scores] affiche la distribution des profils attriés/convertis et non attriés/non convertis dans chaque incrément.
 
 ![Visualisation des résultats d’exécution de notation individuels montrant la répartition des profils dans les catégories résiliées/converties et non résiliées/non converties.](../images/insights/scoring_tab.png)
 
@@ -231,4 +249,4 @@ Ce document décrit les informations fournies par une instance de service Custom
 
 La vidéo suivante montre comment utiliser l’IA dédiée aux clients pour afficher la sortie des modèles et des facteurs d’influence.
 
->[!VIDEO](https://video.tv.adobe.com/v/36547?learn=on&quality=12&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/36547?captions=fre_fr&learn=on&quality=12)

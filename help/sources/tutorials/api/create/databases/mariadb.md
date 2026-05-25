@@ -2,10 +2,15 @@
 title: Connecter MariaDB à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter votre compte MariaDB à Experience Platform à l’aide d’API.
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
-source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
+TQID: https://experienceleague.adobe.com/XFk9VS75ukxM7x5MI1hZ1LwoJl-IZN2Y294NR4pjic4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 22%
+source-wordcount: 479
+ht-degree: 28%
 
 ---
 
@@ -89,7 +94,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`).
 
 +++Afficher l’exemple de réponse
 
@@ -151,7 +156,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`).
 
 +++Afficher l’exemple de réponse
 
@@ -169,7 +174,7 @@ Une réponse réussie renvoie les détails de la nouvelle connexion de base, y c
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion de base à [!DNL MariaDB] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base à [!DNL MariaDB] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

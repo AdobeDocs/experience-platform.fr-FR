@@ -3,10 +3,40 @@ title: Indications du client de l’agent utilisateur
 description: Découvrez comment fonctionnent les indications du client de l’agent utilisateur dans Web SDK. Les indications du client permettent aux propriétaires de site web d’accéder aux mêmes informations que celles disponibles dans la chaîne de l’agent utilisateur, mais d’une manière plus respectueuse de la vie privée.
 keywords: user-agent;indications du client; chaîne; chaîne user-agent; faible entropie; entropie élevée
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+TQID: https://experienceleague.adobe.com/QioPtdSdXjNNDtNwsgFKMLz2fVwTWqgseSvDHJwRB1U
+product_v2:
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
+  - id: d556b755-390a-43f0-be32-a08cf6236126
+  - id: df64005d-8f9a-422e-ba4d-c6f6dc3454b4
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 3%
+source-wordcount: 1290
+ht-degree: 7%
 
 ---
 
@@ -31,17 +61,17 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Nom du logiciel | `Chrome` |
 | Version du logiciel | `105` |
 | Version complète du logiciel | `105.0.0.0` |
-| Nom du moteur de mise en page | `AppleWebKit` |
-| Version du moteur de disposition | `537.36` |
-| Operating system (Système d’exploitation) | `Mac OS X` |
+| Nom du moteur de rendu | `AppleWebKit` |
+| Version du moteur de rendu | `537.36` |
+| Système d’exploitation | `Mac OS X` |
 | Version du système d’exploitation | `10.15.7` |
 | Appareil | `Intel Mac OS X 10_15_7` |
 
-## Cas d’utilisation {#use-cases}
+## Cas pratiques {#use-cases}
 
 Les chaînes d’agent utilisateur ont longtemps été utilisées pour fournir aux équipes de marketing et de développement des informations importantes sur la manière dont les navigateurs, les systèmes d’exploitation et les appareils affichent le contenu du site, ainsi que sur la manière dont les utilisateurs interagissent avec les sites web.
 
-Les chaînes de l’agent utilisateur sont également utilisées pour bloquer le spam et filtrer les robots qui explorent les sites à diverses fins supplémentaires.
+Les chaînes d’agent utilisateur sont également utilisées pour bloquer les spams et filtrer les robots qui explorent aux sites à diverses fins supplémentaires.
 
 ## Chaînes de l’agent utilisateur dans Adobe Experience Cloud {#user-agent-in-adobe}
 
@@ -88,7 +118,7 @@ Les indications du client à faible entropie incluent des informations de base q
 
 Les indications du client à faible entropie sont activées par défaut dans Web SDK et sont transmises à chaque requête.
 
-| En-tête HTTP | JavaScript | Inclus dans User-Agent par défaut | Inclus dans les indications du client par défaut |
+| En-tête HTTP | JavaScript | Inclus dans User-Agent par défaut | Inclus dans les indications du client par défaut |
 |---|---|---|---|
 | `Sec-CH-UA` | `brands` | Oui | Oui |
 | `Sec-CH-UA-Platform` | `platform` | Oui | Oui |
@@ -98,7 +128,7 @@ Les indications du client à faible entropie sont activées par défaut dans Web
 
 Les indications du client à entropie élevée sont des informations plus détaillées sur l’appareil client, telles que la version de la plateforme, l’architecture, le modèle, le débit (plateformes 64 ou 32 bits) ou la version complète du système d’exploitation. Ces informations pourraient éventuellement être utilisées pour les empreintes digitales.
 
-| Propriété | Description | En-tête HTTP | Chemin XDM | Exemple | Inclus dans l’agent utilisateur par défaut | Inclus dans les indications du client par défaut |
+| Propriété | Description | En-tête HTTP | Chemin XDM | Exemple | Inclus dans l’agent utilisateur par défaut | Inclus dans les indications du client par défaut |
 | --- | --- | --- | --- | --- |---|---|
 | Version du système d’exploitation | Version du système d’exploitation. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Oui | Non |
 | Architecture | Architecture CPU sous-jacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Oui | Non |

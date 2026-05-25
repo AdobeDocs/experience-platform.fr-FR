@@ -4,10 +4,18 @@ solution: Experience Platform
 title: Recette de recommandations de produits
 description: La recette des recommandations de produits vous permet d’apporter à vos clients des recommandations de produits personnalisées et adaptées à leurs besoins et à leurs intérêts. Grâce à une modélisation prédictive précise, l’historique des achats d’un client peut vous fournir des informations sur les produits susceptibles de l’intéresser.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/8PXA9KOa5wiwCZwrXdddJFQMfzlmho-FFMRl2CLv4iE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 86%
+source-wordcount: 504
+ht-degree: 84%
 
 ---
 
@@ -33,8 +41,8 @@ La recette des recommandations de produits utilise le machine learning pour anal
 
 Pour commencer, suivez le tutoriel de l’atelier d’Adobe Experience Platform (voir le lien vers l’atelier ci-dessous). Ce tutoriel vous explique comment créer la recette des recommandations de produits dans un notebook Jupyter en suivant le workflow [notebook vers recette](../jupyterlab/create-a-model.md) et en implémentant la recette dans [!DNL Experience Platform] [!DNL Data Science Workspace].
 
-* [Atelier : Prédire l’avenir avec l’espace de travail de science des données](https://expleague.azureedge.net/labs/L777/index.html)
-* [Ressources de l’atelier](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
+* [Atelier : Prédire l’avenir avec le Workspace de science des données](https://expleague.azureedge.net/labs/L777/index.html)
+* [Ressources de Lab](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Schéma des données
 
@@ -53,7 +61,7 @@ Cette recette utilise des schémas [XDM](../../xdm/schema/field-dictionary.md) p
 
 | Nom du champ | Type |
 | --- | --- |
-| recommendations | Chaîne |
+| recommandations | Chaîne |
 | userId | Entier |
 
 ## Algorithme

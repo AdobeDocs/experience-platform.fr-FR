@@ -2,9 +2,19 @@
 title: Connexion de votre compte Salesforce à l’aide de l’interface utilisateur d’Experience Platform
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 11e9e1a25a45f4011f15b1e28753a98d4158012c
+TQID: https://experienceleague.adobe.com/WAzj5-ww-k4xmFa2uOMHyQ0xCZdrhniOP7elENeahy8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: 724
 ht-degree: 18%
 
 ---

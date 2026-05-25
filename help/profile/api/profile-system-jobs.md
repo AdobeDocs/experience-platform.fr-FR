@@ -5,10 +5,21 @@ type: Documentation
 description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données du profil client en temps réel qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile pour créer une tâche système Profile ou supprimer une requête.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/-x1wYB0ISg-uOuBi9VvGIIN-UnE0-7VzabSBTMB0LCo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2021'
-ht-degree: 35%
+source-wordcount: 2048
+ht-degree: 38%
 
 ---
 
@@ -49,9 +60,9 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
-| `start` | Décalage de la page de résultats renvoyée, en fonction de l’heure de création de la requête. | `start=4` |
+| `start` | Décalez la page des résultats renvoyée, selon l’heure de création de la requête. | `start=4` |
 | `limit` | Limitez le nombre de résultats renvoyés. | `limit=10` |
-| `page` | Renvoyer une page spécifique de résultats, en fonction de l’heure de création de la requête. | `page=2` |
+| `page` | Renvoyez une page de résultats spécifique, selon l’heure de création de la requête. | `page=2` |
 | `sort` | Triez les résultats selon un champ spécifique dans l’ordre croissant (`asc`) ou décroissant (`desc`). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. | `sort=batchId:asc` |
 
 **Requête**

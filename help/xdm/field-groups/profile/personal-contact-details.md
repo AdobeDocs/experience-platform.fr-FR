@@ -1,38 +1,44 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;profil individuel;champs;schémas;schémas;détails personnels;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;Schéma;XDM;profil individuel;champs;schémas;Schémas;détails personnels;conception de schéma;groupe de champs;groupe de champs;
 solution: Experience Platform
-title: Groupe de champs de schéma Détails du contact personnel
-description: Découvrez le groupe de champs Détails du contact personnel .
+title: Groupe de champs de schéma des détails de contact personnels
+description: Découvrez le groupe de champs de schéma Coordonnées personnelles .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+TQID: https://experienceleague.adobe.com/gU25SitmtH-ON-x0PqZqk1aPIAoVcz8d-G3FT8VxYFg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 16%
+source-wordcount: 161
+ht-degree: 14%
 
 ---
 
-
-# [!UICONTROL Détails du contact personnel] groupe de champs de schéma
+# [!UICONTROL Personal Contact Details] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Personal Contact Details] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui décrit les informations de contact pour une personne individuelle.
+[!UICONTROL Personal Contact Details] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui décrit les informations de contact d’une personne individuelle.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `faxPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de fax de la personne. |
-| `homeAddress` | [Adresse postale](../../data-types/postal-address.md) | Décrit l’adresse de la personne. |
-| `homePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone de la personne. |
-| `mobilePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone portable de la personne. |
-| `personalEmail` | [Adresse électronique](../../data-types/email-address.md) | Décrit l’adresse électronique de la personne. |
+| `faxPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de télécopie de la personne. |
+| `homeAddress` | [Adresse postale](../../data-types/postal-address.md) | Décrit l’adresse résidentielle de la personne. |
+| `homePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone personnel de la personne. |
+| `mobilePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone mobile de la personne. |
+| `personalEmail` | [Adresse électronique](../../data-types/email-address.md) | Décrit l’adresse e-mail de la personne. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
+Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

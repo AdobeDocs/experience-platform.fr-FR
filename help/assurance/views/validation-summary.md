@@ -2,10 +2,17 @@
 title: Affichage de l’éditeur de validation
 description: Ce guide détaille les informations sur la vue Éditeur de validation dans Adobe Experience Platform Assurance.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/UCeZJoWRtOJAUSBv4n1jbNXcfhLnnjqw2dn8lYHsFgs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 5%
+source-wordcount: 533
+ht-degree: 4%
 
 ---
 
@@ -57,7 +64,7 @@ La fonction de validation doit renvoyer un objet contenant les éléments suivan
 | :--- | :--- | :--- |
 | `message` | Chaîne | Message de validation à afficher dans le résumé des résultats. |
 | `events` | Tableau | Tableau d’UUID d’événement à signaler comme correspondants ou non correspondants. |
-| `links` | Tableau | Tableau d’objets `ValidationResultLink` à référencer dans la documentation et d’autres ressources `{( type: 'doc'`&vert;`'product', url: String )}` |
+| `links` | Tableau | Tableau d’objets `ValidationResultLink` pour référencer la documentation et d’autres ressources `{( type: 'doc'`&vert;`'product', url: String )}` |
 | `result` | Chaîne | Il s’agit du résultat de la validation qui doit être l’une des chaînes énumérées : « correspondant », « non correspondant », « inconnu » |
 
 ## Afficher les résultats de la validation
@@ -76,4 +83,4 @@ Vous pouvez ajouter des `console.log()` dans votre fonction pour imprimer des é
 
 Si une erreur se produit dans l’éditeur de code JavaScript, un statut d’erreur et la raison s’affichent.
 
-Pour en savoir plus sur les validations, rendez-vous sur le site GitHub [Validations Adobe Experience Platform Assurance](https://github.com/adobe/griffon-validation-plugins). Vous y trouverez des exemples de validations détenues par Adobe. Voir le [wiki](https://github.com/adobe/griffon-validation-plugins/wiki) pour des descriptions plus détaillées des validations.
+Pour en savoir plus sur les validations, rendez-vous sur le site GitHub [Validations &#x200B;](https://github.com/adobe/griffon-validation-plugins). Vous y trouverez des exemples de validations détenues par Adobe. Voir le [wiki](https://github.com/adobe/griffon-validation-plugins/wiki) pour des descriptions plus détaillées des validations.

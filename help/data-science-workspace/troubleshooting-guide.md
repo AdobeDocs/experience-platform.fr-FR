@@ -4,10 +4,21 @@ solution: Experience Platform
 title: Guide de dépannage de l’espace de travail de science des données
 description: Ce document fournit des réponses aux questions fréquentes sur l’espace de travail de science des données d’Adobe Experience Platform.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/2kJ6a71xzL0m3hW9oCSfc6ZOKCAtb-f8yLCzUJH8WSE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 98%
+source-wordcount: 1515
+ht-degree: 95%
 
 ---
 
@@ -29,7 +40,7 @@ Un notebook JupyterLab peut indiquer qu’une cellule est en état d’exécutio
 
 Pendant la lecture des données, la mémoire peut augmenter jusqu’à atteindre la quantité maximale de mémoire allouée. La mémoire est libérée dès que la mémoire maximale est atteinte et que le noyau redémarre. Cela signifie que la mémoire utilisée dans ce scénario peut s’afficher comme étant très faible en raison du redémarrage du noyau, alors qu’un peu avant le redémarrage, la mémoire aurait été très proche de la RAM allouée maximale.
 
-Pour résoudre ce problème, sélectionnez l’icône d’engrenage en haut à droite de JupyterLab et faites glisser le curseur vers la droite, puis sélectionnez **[!UICONTROL Mettre à jour les configurations]** pour allouer plus de RAM. En outre, si vous exécutez plusieurs requêtes et que la valeur de la RAM est proche de la quantité maximale allouée, à moins que vous n’ayez besoin des résultats de requêtes précédentes, redémarrez le noyau pour réinitialiser la quantité de RAM disponible. Vous disposez ainsi de la quantité maximale de RAM disponible pour la requête actuelle.
+Pour résoudre ce problème, sélectionnez l’icône d’engrenage en haut à droite de JupyterLab et faites glisser le curseur vers la droite, puis sélectionnez **[!UICONTROL Update configs]** pour allouer plus de RAM. En outre, si vous exécutez plusieurs requêtes et que la valeur de la RAM est proche de la quantité maximale allouée, à moins que vous n’ayez besoin des résultats de requêtes précédentes, redémarrez le noyau pour réinitialiser la quantité de RAM disponible. Vous disposez ainsi de la quantité maximale de RAM disponible pour la requête actuelle.
 
 ![allouer plus de ram](./images/jupyterlab/user-guide/notebook-gpu-config.png)
 
@@ -61,7 +72,7 @@ Enfin, faites basculer « Bloquer les cookies tiers » sur « Désactivé »
 
 >[!NOTE]
 >
->Vous pouvez également désactiver les cookies tiers et les ajouter sur [*.]ds.adobe.net sur la liste autorisée.
+>Vous pouvez également désactiver les cookies tiers et ajouter [*.]ds.adobe.net à la liste autorisée.
 
 Saisissez « chrome://flags/ » dans votre barre d’adresse. Recherchez et désactivez l’indicateur intitulé *« SameSite by default cookies »* en utilisant le menu déroulant sur la droite.
 

@@ -2,10 +2,18 @@
 title: Bonnes pratiques de création
 description: Découvrez les règles et conseils à suivre au moment de la création de la page de documentation de destination, afin de vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/SJ38avlncjFbrK-gAbCTh1CykXtri-HwXYhwMQdes8U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 81%
+source-wordcount: 566
+ht-degree: 68%
 
 ---
 
@@ -29,7 +37,7 @@ Cette page décrit les règles à suivre au moment de la [création de la page d
 >Consultez le document [Guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=fr) avant de commencer à créer la page de documentation de destination.
 
 * Faites des phrases courtes et allez à l’essentiel. Si la phrase comporte plus de 20 mots ou plusieurs virgules, envisagez de la diviser en plusieurs phrases, car elles peuvent être particulièrement difficiles à lire.
-* Ne soyez pas trop poli. Évitez d’utiliser « veuillez » ou « nous vous prions… » dans la documentation technique.
+* Ne soyez pas trop poli. Évitez d’utiliser « veuillez » ou « nous vous prions... » dans la documentation technique.
 
 ## Liaison {#linking}
 

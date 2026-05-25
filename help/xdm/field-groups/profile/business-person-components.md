@@ -3,10 +3,17 @@ title: Groupe de champs de schéma des composants Business Person XDM
 description: Découvrez le groupe de champs de schéma Composants professionnels XDM .
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
+TQID: https://experienceleague.adobe.com/tRefVc6pfCLYZ9D9nraib63Squ4q5kDa5nNWQlGOOmA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 4%
+source-wordcount: 566
+ht-degree: 3%
 
 ---
 
@@ -54,5 +61,5 @@ Le groupe de champs fournit un champ de `personComponents` au niveau racine, qui
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.schema.json)

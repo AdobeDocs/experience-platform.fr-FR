@@ -2,9 +2,18 @@
 title: Filtrage des robots à l’aide des statistiques et du machine learning
 description: Découvrez comment utiliser les statistiques Data Distiller et le machine learning pour identifier et filtrer l’activité des robots afin d’assurer des analyses précises et une intégrité des données améliorée.
 exl-id: 30d98281-7d15-47a6-b365-3baa07356010
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/11YKESkt6dwRmAaXFGzfdmSBLSdLsiGKPXXB8rNaL8g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: 1640
 ht-degree: 0%
 
 ---

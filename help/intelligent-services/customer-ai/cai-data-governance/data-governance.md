@@ -5,16 +5,27 @@ feature: Customer AI
 title: Gouvernance des données dans IA dédiée aux clients
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/KlM7q7qwfUKkkYvwFajbFE-uYHG-wUYS0KMWf3d70rM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 79%
+source-wordcount: 319
+ht-degree: 77%
 
 ---
 
 # IA dédiée aux clients et gouvernance des données dans IA dédiée aux clients
 
-Les paramètres liés à la gouvernance de données dans l’IA dédiée aux clients sont hérités d’Adobe Experience Platform.
+Les paramètres liés à la gouvernance des données dans l’IA dédiée aux clients sont hérités d’Adobe Experience Platform.
 
 ## Gouvernance des données {#governance}
 
@@ -31,5 +42,5 @@ L’IA dédiée aux clients respecte vos préférences de consentement. Une fois
 Vous pouvez en savoir plus sur cette fonctionnalité ici :
 
 [Prise en main de l’IA dédiée aux clients](../../customer-ai/getting-started.md)
-[Adobe Experience Platform et applications](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr)
-[Diagrammes d’architecture Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=fr)
+[Adobe Experience Platform et applications](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr)
+[Diagrammes d’architecture de &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=fr)

@@ -2,10 +2,39 @@
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
 description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/zR0HplGerZuIqqwI0ibvyAkvgx3euPIraBBHsGoea-M
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
+  - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
+subfeature_v2:
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+  - id: fef08361-6ac5-460c-93fe-d063e40b6a49
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2299'
-ht-degree: 84%
+source-wordcount: 2350
+ht-degree: 80%
 
 ---
 
@@ -58,9 +87,7 @@ npx @adobe/reactor-uploader
 `npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s’agit de la manière la plus simple d’exécuter le téléchargeur.
 
 >[!NOTE]
-> Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées
-> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis
-> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
 Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée et sélectionnez **[!UICONTROL View]**.
 
@@ -132,7 +159,7 @@ Les extensions offrent de nouvelles fonctionnalités aux utilisateurs dʼAdobe 
 
 ### Éléments de données
 
-L’objectif des éléments de données de balise est d’aider les utilisateurs à conserver les valeurs. Chaque élément de données est un mappage ou un pointeur vers les données sources. Un seul élément de données est une variable dont la valeur peut être mappée à des chaînes de requête, des URL, des valeurs de cookie, des variables JavaScript, etc. Sélectionnez **Éléments de données** dans la barre de navigation de gauche, puis **Créer un élément de données**.
+L’objectif des éléments de données de balise est d’aider les utilisateurs à conserver les valeurs. Chaque élément de données est un mappage ou un pointeur vers les données sources. Un seul élément de données est une variable qui peut être mappée à des chaînes de requête, des URL, des valeurs de cookie, des variables JavaScript, etc. Sélectionnez **Éléments de données** dans la barre de navigation de gauche, puis **Créer un élément de données**.
 
 ![](../images/getting-started/data-element-create-new-link.png)
 
@@ -142,7 +169,7 @@ Si nécessaire, les extensions peuvent définir des types d’éléments de donn
 
 Lorsqu’un utilisateur sélectionne votre extension dans la liste déroulante **Extension**, la liste déroulante **Type d’élément de données** est renseignée avec tous les types d’élément de données fournis par votre extension. L’utilisateur peut ensuite mapper chaque élément de données à sa valeur source. Les éléments de données peuvent ensuite être utilisés lors de la création de règles dans l’Événement de modification des éléments de données ou l’Événement de code personnalisé pour déclencher l’exécution d’une règle. Un élément de données peut également être utilisé dans la condition de l’élément de données ou dans d’autres conditions, exceptions ou actions d’une règle.
 
-Une fois l’élément de données créé (le mappage est configuré), les utilisateurs peuvent référencer les données sources simplement en référençant l’élément de données. Si la source de la valeur venait à changer (reconceptions de site, etc.), les utilisateurs n’auraient qu’à mettre à jour le mappage une seule fois dans l’interface utilisateur et tous les éléments de données recevraient automatiquement la nouvelle valeur source.
+Une fois l’élément de données créé (le mappage est configuré), les utilisateurs peuvent référencer les données sources simplement en référençant l’élément de données. Si la source de la valeur venait à changer (reconceptions de site, etc.) Les utilisateurs n’ont besoin de mettre à jour le mappage qu’une seule fois dans l’interface utilisateur. Tous les éléments de données recevront alors automatiquement la nouvelle valeur source.
 
 ### Règles
 
@@ -162,11 +189,11 @@ Si un événement se produit, que les conditions sont remplies et qu’il n’y 
 
 Le **Type d’événement** `Window Loaded` garantit le déclenchement de cette règle à chaque chargement de page sur le site de test. Sélectionnez **Conserver les modifications**. Pour cet exemple, ignorez les **Conditions** car la règle doit être déclenchée pour n’importe quelle page du site de test.
 
-Sous **ACTIONS**, cliquez sur **Ajouter**. L’écran **Configuration de l’action** s’affiche. Vous devez ensuite choisir l’extension à laquelle la règle doit être appliquée et l’action à effectuer lorsque la règle est déclenchée. Sélectionnez **Facebook Pixel** dans la liste déroulante **Extension**, puis sélectionnez **Envoyer la page vue** dans la liste déroulante **Type d’action**. Sélectionnez **Conserver les modifications**, puis cliquez sur **Enregistrer** sur l’écran **Modifier la règle** suivant.
+Sous **ACTIONS**, cliquez sur **Ajouter**. L’écran **Configuration d’action** s’affiche.Vous devez ensuite choisir l’extension à laquelle la règle doit être appliquée et l’action à effectuer lorsque la règle est déclenchée. Sélectionnez **Facebook Pixel** dans la liste déroulante **Extension**, puis sélectionnez **Envoyer la page vue** dans la liste déroulante **Type d’action**. Sélectionnez **Conserver les modifications**, puis cliquez sur **Enregistrer** sur l’écran **Modifier la règle** suivant.
 
 ![](../images/getting-started/action-configuration.png)
 
-Lors du test de votre extension, sélectionnez les événements, conditions, etc. pertinents. fourni par votre extension dans n’importe quel nombre de règles.
+Lors du test de votre extension, sélectionnez tous les événements, conditions, etc. pertinents fournis par votre extension dans un certain nombre de règles.
 
 ## Publier vos modifications {#publish}
 

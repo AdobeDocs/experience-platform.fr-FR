@@ -4,9 +4,17 @@ feature: Attribution AI
 title: Politiques de gouvernance pour Attribution AI
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance les données d’expérience collectées.
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/UpBD2NB-239jbrPC55ux9sgrdNoyUyrqHD5NmvNTVtI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: 194
 ht-degree: 87%
 
 ---
@@ -19,4 +27,4 @@ Une fois que vous avez parcouru le workflow pour créer un modèle et envoyé la
 
 [Une fenêtre contextuelle affichant des informations sur la violation de la politique](../../attribution-ai/images/data-governance/policy-violation-popover-aai.png).
 
-La fenêtre contextuelle fournit des informations spécifiques sur la violation. Vous pouvez résoudre ces violations par le biais de paramètres de la politique et d’autres mesures qui ne sont pas directement liés au workflow de configuration. Par exemple, vous pouvez modifier les étiquettes afin que certains champs soient autorisés à être utilisés à des fins de science des données. Vous pouvez également modifier la configuration de modèle afin qu’elle n’utilise rien avec une étiquette. Consultez la documentation pour en savoir plus sur la configuration des politiques.
+La fenêtre contextuelle fournit des informations spécifiques sur la violation. Vous pouvez résoudre ces violations par le biais de paramètres de la politique et d’autres mesures qui ne sont pas directement liés au workflow de configuration. Par exemple, vous pouvez modifier les libellés afin que certains champs soient autorisés à être utilisés à des fins de science des données. Vous pouvez également modifier la configuration de modèle afin qu’elle n’utilise rien qui porte un libellé. Consultez la documentation pour en savoir plus sur la configuration des politiques.

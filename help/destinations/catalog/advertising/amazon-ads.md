@@ -1,12 +1,27 @@
 ---
 title: (Hérité) Amazon Ads
 description: Amazon Ads propose toute une gamme d’options pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteurs et autrices Kindle Direct Publishing (KDP), les développeurs et développeuses d’applications ou les agences peuvent tirer parti de ces options. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
-last-substantial-update: 2025-10-08T00:00:00Z
+last-substantial-update: 2025-10-08T00:00:00.000Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 1e93c78b13159a2aed24d283e3768c670ad14097
+TQID: https://experienceleague.adobe.com/EBaIP492yo-ojWg9hkx3TiZ442ah-YiOQSSDXTaG1U0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2156'
-ht-degree: 26%
+source-wordcount: 2263
+ht-degree: 28%
 
 ---
 
@@ -52,7 +67,7 @@ Cette intégration à [!DNL Amazon Marketing Cloud] (AMC) permet aux annonceurs 
 
 Pour utiliser la connexion [!DNL Amazon Ads] avec [!DNL Adobe Experience Platform], les utilisateurs doivent d’abord avoir accès à un compte publicitaire [!DNL Amazon DSP] ou à une instance [!DNL Amazon Marketing Cloud]. Pour configurer ces instances, rendez-vous sur la page suivante du site web [!DNL Amazon Ads] :
 
-* [Commencer avec Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
+* [Prise en main d’Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
 * [Prise en main d’Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Identités prises en charge {#supported-identities}
@@ -149,7 +164,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -202,7 +217,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 Pour obtenir de la documentation d’aide supplémentaire, consultez les ressources d’aide [!DNL Amazon Ads] suivantes :
 
-* [Centre d’aide Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+* [Centre d’aide d’Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ## Journal des modifications {#changelog}
 

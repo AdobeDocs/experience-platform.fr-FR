@@ -2,24 +2,40 @@
 title: Notes de mise à jour de l’extension des modules externes courants Analytics
 description: Dernières notes de mise à jour pour l’extension des balises de modules externes d’analyses courants dans Adobe Experience Platform.
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+TQID: https://experienceleague.adobe.com/94sa-1F-LVCY4pzDc4wdQ6okxEjupdZB1ddN0lLHbgE
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: 364
 ht-degree: 97%
 
 ---
 
 # Notes de mise à jour des modules externes courants Analytics
 
-## 3 juin 2022
+## samedi 3 juin 2022
 
 ### Extension de modules externes courants 3.0.7
 
 #### Fonctionnalités
 
-* Les modules qui définissent des cookies utilisent désormais l’indicateur sécurisé
+* Les modules externes qui définissent des cookies utilisent désormais l’indicateur sécurisé
 
-## mercredi 23 juin 2021
+## jeudi 23 juin 2021
 
 ### Extension de modules externes courants 3.0.6
 
@@ -27,7 +43,7 @@ ht-degree: 97%
 
 * Correction d’un problème en raison duquel getPercentPageViewed se rompait lors de l’utilisation de caractères spéciaux.
 
-## 20 mai 2021
+## vendredi 20 mai 2021
 
 ### Extension de modules externes courants 3.0.5
 
@@ -35,7 +51,7 @@ ht-degree: 97%
 
 * Correction d’un problème en raison duquel getTimeParting ne s’initialisait pas correctement lors de l’utilisation de l’action d’initialisation générique.
 
-## 26 mars 2021
+## samedi 26 mars 2021
 
 ### Extension de modules externes courants 3.0.4
 
@@ -45,7 +61,7 @@ ht-degree: 97%
 * Correction d’un problème en raison duquel getQueryParam revenait non défini au lieu de &quot;&quot; si queryParam n’était pas présent dans la chaîne de requête
 * Correction d’un problème en raison duquel des numéros de version incorrects s’affichaient dans l’action Initialiser
 
-## 19 mars 2021
+## samedi 19 mars 2021
 
 ### Extension de modules externes courants 3.0.2
 
@@ -64,7 +80,7 @@ ht-degree: 97%
    * getVisitNum
 * Mise à jour des styles
 
-## 9 avril 2020
+## vendredi 9 avril 2020
 
 ### Extension de modules externes courants 2.2.0
 
@@ -76,7 +92,7 @@ ht-degree: 97%
 
 * Mise à jour de la documentation pour l’action Initialiser
 
-## 5 décembre 2019
+## vendredi 5 décembre 2019
 
 ### Extension de modules externes courants 2.1.1
 
@@ -86,7 +102,7 @@ ht-degree: 97%
 * Correction d’un problème qui faisait rediriger les liens de la documentation vers une mauvaise documentation
 * Correction d’un problème où `getTimeSinceLastVisit` apparaissait deux fois dans l’action Initialiser
 
-## 15 novembre 2019
+## samedi 15 novembre 2019
 
 ### Extension de modules externes courants 2.1.0
 
@@ -104,7 +120,7 @@ ht-degree: 97%
 * Mise à jour de la version de `getNewRepeat`
 * Mise à jour de la documentation pour tous les modules externes
 
-## 30 octobre 2019
+## jeudi 30 octobre 2019
 
 ### Extension de modules externes courants 2.0.3
 
@@ -112,7 +128,7 @@ ht-degree: 97%
 
 * Correction d’un problème de liens rompus vers la documentation
 
-## 11 octobre 2019
+## samedi 11 octobre 2019
 
 ### Extension de modules externes courants 2.0.2
 
@@ -121,7 +137,7 @@ ht-degree: 97%
 * Ajout de 15 modules externes à l’extension
 * Création d’une nouvelle action Initialiser pour faciliter les implémentations
 
-## 11 juillet 2019
+## vendredi 11 juillet 2019
 
 ### Extension de modules externes courants 1.0.4
 

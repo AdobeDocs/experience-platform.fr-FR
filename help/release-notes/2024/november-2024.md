@@ -2,10 +2,31 @@
 title: Notes de mise à jour d’Adobe Experience Platform de novembre 2024
 description: Notes de mise à jour de novembre 2024 pour Adobe Experience Platform.
 exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/KK6YGMilj3y6UwuFQwxGtGo67gfbv79g4Oo0-1pZOlA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '853'
-ht-degree: 96%
+source-wordcount: 876
+ht-degree: 95%
 
 ---
 
@@ -19,7 +40,7 @@ ht-degree: 96%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
-- [Assistant IA](#ai-assistant)
+- [Assistant IA](#ai-assistant)
 - [Destinations](#destinations)
 - [Service de requête](#query-service)
 - [Sandbox](#sandboxes)
@@ -28,7 +49,7 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
    - [Nouvelle table des matières sur Experience League](#new-table-of-contents-on-experience-league)
    - [Nouvelle page de destination Assistant IA](#new-ai-assistant-landing-page)
 
-## Assistant IA {#ai-assistant}
+## Assistant IA {#ai-assistant}
 
 L’Assistant IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’Assistant IA pour développer vos connaissances sur le produit, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles. L’Assistant IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
@@ -36,8 +57,8 @@ L’Assistant IA dans Adobe Experience Platform est une expérience conversat
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Alpha]{type=Informative} Surveiller les changements significatifs et prévoir la croissance de l’audience | Utilisez l’Assistant IA pour surveiller les changements significatifs et fournir des prévisions de croissance de votre audience et de la taille des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données. Pour plus d’informations, consultez le guide sur la [surveillance des changements significatifs et la prévision de la croissance de l’audience](../../ai-assistant/new-features/audience-forecasting.md). |
-| [!BADGE Alpha]{type=Informative} Estimation du langage naturel | Utilisez les fonctionnalités d’estimation du langage naturel d’Assistant IA pour estimer la taille des audiences et prédire la propension des audiences sur la base de questions simples et conversationnelles. Pour plus d’informations, consultez le guide sur l’[utilisation de l’estimation du langage naturel avec l’Assistant IA](../../ai-assistant/new-features/natural-language.md). |
+| {type=Informative} Surveillez les modifications importantes et la croissance prévue de l’audience. | Utilisez l’Assistant IA pour surveiller les changements significatifs et fournir des prévisions de croissance de votre audience et de la taille des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données. Pour plus d’informations, consultez le guide sur la [surveillance des changements significatifs et la prévision de la croissance de l’audience](../../ai-assistant/new-features/audience-forecasting.md). |
+| [!BADGE Alpha &#x200B;]{type=Informative} Estimation en langage naturel | Utilisez les fonctionnalités d’estimation du langage naturel d’Assistant IA pour estimer la taille des audiences et prédire la propension des audiences sur la base de questions simples et conversationnelles. Pour plus d’informations, consultez le guide sur l’[utilisation de l’estimation du langage naturel avec l’Assistant IA](../../ai-assistant/new-features/natural-language.md). |
 
 {style="table-layout:auto"}
 
@@ -54,7 +75,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 {style="table-layout:auto"}
 
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+**Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -78,7 +99,7 @@ Pour plus d’informations sur Query Service [!DNL Query Service], consultez la 
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance d’Experience Platform unique en plusieurs environnements virtuels pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -92,7 +113,7 @@ Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des s
 
 ### Documentation interactive de l’API Experience Platform {#interactive-api-documentation}
 
-La [documentation de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/) est désormais entièrement interactive, ce qui vous permet d’authentifier et d’explorer les API directement sur la page de documentation de référence de l’API. Vous pouvez désormais accéder à la page de documentation de référence de l’API souhaitée, créer ou obtenir vos informations d’authentification d’API, les coller dans le bloc **[!UICONTROL Try it]** et exécuter l’appel. Tout ceci sur une seule et même page. [En savoir plus](/help/landing/api-authentication.md#get-credentials-functionality) à propos de la fonctionnalité.
+La [documentation de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/) est désormais entièrement interactive, ce qui vous permet d’authentifier et d’explorer les API directement sur la page de documentation de référence de l’API. Vous pouvez maintenant accéder à la page de documentation de référence de l’API souhaitée, créer ou obtenir vos informations d’authentification API, les coller dans le bloc **[!UICONTROL Try it]** et exécuter l’appel. Tout ceci sur une seule et même page. [En savoir plus](/help/landing/api-authentication.md#get-credentials-functionality) à propos de la fonctionnalité.
 
 ### Nouvelle table des matières sur Experience League {#new-table-of-contents-on-experience-league}
 

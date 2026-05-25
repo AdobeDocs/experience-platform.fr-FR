@@ -4,9 +4,15 @@ solution: Experience Platform
 title: Connecter PSQL à Query Service
 description: Découvrez comment connecter le client PSQL à Adobe Experience Platform Query Service, y compris les versions de PostgreSQL prises en charge et les instructions de configuration.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: f75ea97e8631984dcd1d4a7f8aff3c10cba7b11f
+TQID: https://experienceleague.adobe.com/RqOocxtvDgcplcIAuISBiFusNpdOjAxPdFaypSEq6EQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: 408
 ht-degree: 2%
 
 ---
@@ -25,9 +31,9 @@ Avant de commencer, vérifiez que vous avez accès à PSQL et que vous connaisse
 >
 >Lors du téléchargement de PostgreSQL, veillez à sélectionner la version 14.x. Par défaut, le site web PostgreSQL propose la dernière version, qui peut ne pas être compatible avec Query Service.
 
-Une fois PSQL installé, vous pouvez le connecter à Query Service. Revenez à l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Requêtes]** et **[!UICONTROL Informations d’identification]**.
+Une fois PSQL installé, vous pouvez le connecter à Query Service. Revenez à l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Queries]** et **[!UICONTROL Credentials]**.
 
-Sous la section **[!UICONTROL Commande PSQL]**, sélectionnez l’icône **[!UICONTROL Copier dans le presse-papiers]** (![Icône Copier](/help/images/icons/copy.png)) pour copier la chaîne de commande.
+Sous la section **[!UICONTROL PSQL Command]** , sélectionnez l’icône **[!UICONTROL Copy to clipboard]** (![Icône Copier](/help/images/icons/copy.png)) pour copier la chaîne de commande.
 
 ![Onglet Informations d’identification du tableau de bord Requêtes avec l’icône de copie mise en surbrillance.](../images/clients/psql/copy-credentials.png)
 
@@ -35,7 +41,7 @@ Collez la chaîne de commande dans votre terminal et appuyez sur **Entrée** sur
 
 >[!IMPORTANT]
 >
->Si vous êtes sur un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne. Si vous utilisez la version 12.0 ou une version ultérieure, vous devez ajouter `PGGSSENCMODE=disable` à votre chaîne de connexion. Ce paramètre désactive le chiffrement GSSAPI, qui est inutile pour les connexions à Query Service et peut entraîner des erreurs de connexion.<br>En outre, si vous utilisez des informations d’identification non expirantes, veillez à remplacer le champ du mot de passe par le mot de passe des informations d’identification non expirantes. Pour en savoir plus sur les informations d’identification non expirantes, consultez le [guide des informations d’identification](../ui/credentials.md).
+>Si vous êtes sur un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne. Si vous utilisez la version 12.0 ou une version ultérieure, vous devez ajouter `PGGSSENCMODE=disable` à votre chaîne de connexion. Ce paramètre désactive le chiffrement GSSAPI, qui est inutile pour les connexions à Query Service et peut entraîner des erreurs de connexion.<br>De plus, si vous utilisez des informations d’identification non expirantes, veillez à remplacer le champ du mot de passe par le mot de passe des informations d’identification non expirantes. Pour en savoir plus sur les informations d’identification non expirantes, consultez le [guide des informations d’identification](../ui/credentials.md).
 
 Vous devriez voir apparaître un résultat similaire à ceci :
 

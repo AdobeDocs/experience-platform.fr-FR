@@ -3,10 +3,24 @@ keywords: crm;CRM;destinations crm;salesforce crm;destination salesforce crm
 title: Connexion CRM à Salesforce
 description: Utilisez la destination Salesforce CRM pour exporter les données de votre compte et les activer dans Salesforce CRM en fonction des besoins de votre entreprise.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/7D5Rank7IFViOCNDXLXgrFDwN2uwKnt97Sm3I1MXVcs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2885'
-ht-degree: 14%
+source-wordcount: 3121
+ht-degree: 13%
 
 ---
 
@@ -182,10 +196,10 @@ Pour vous authentifier auprès de la destination, renseignez les champs obligato
 | Informations d’identification | Description |
 | --- | --- |
 | **[!UICONTROL Username]** | Nom d’utilisateur de votre compte [!DNL Salesforce]. |
-| **[!UICONTROL Password]** | Chaîne concaténée composée du mot de passe de votre compte [!DNL Salesforce], suivie du jeton de sécurité [!DNL Salesforce].<br>La valeur concaténée prend la forme d’`{PASSWORD}{TOKEN}`.<br> Remarque : n’utilisez pas d’accolades ni d’espaces.<br>Par exemple, si votre mot de passe [!DNL Salesforce] est `MyPa$$w0rd123` et [!DNL Salesforce] jeton de sécurité est `TOKEN12345....0000`, la valeur concaténée que vous utiliserez dans le champ **[!UICONTROL Password]** est `MyPa$$w0rd123TOKEN12345....0000`. |
+| **[!UICONTROL Password]** | Chaîne concaténée composée du mot de passe de votre compte [!DNL Salesforce], suivi de votre jeton de sécurité [!DNL Salesforce].<br>La valeur concaténée se présente sous la forme `{PASSWORD}{TOKEN}`.<br> N’utilisez pas d’accolades ni d’espaces.<br>Par exemple, si votre mot de passe [!DNL Salesforce] est `MyPa$$w0rd123` et [!DNL Salesforce] jeton de sécurité est `TOKEN12345....0000`, la valeur concaténée que vous utiliserez dans le champ **[!UICONTROL Password]** est `MyPa$$w0rd123TOKEN12345....0000`. |
 | **[!UICONTROL Custom Domain]** | Votre préfixe de domaine [!DNL Salesforce]. <br>Par exemple, si votre domaine est *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, vous devez fournir `d5i000000isb4eak-dev-ed` comme valeur. |
-| **[!UICONTROL Client ID]** | Votre [!DNL Salesforce] d’application connectée `Consumer Key`. |
-| **[!UICONTROL Client Secret]** | Votre [!DNL Salesforce] d’application connectée `Consumer Secret`. |
+| **[!UICONTROL Client ID]** | Votre `Consumer Key` d’application connectée [!DNL Salesforce]. |
+| **[!UICONTROL Client Secret]** | Votre `Consumer Secret` d’application connectée [!DNL Salesforce]. |
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment s’authentifier.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -215,7 +229,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -273,17 +287,17 @@ Lorsque vous avez terminé de fournir les mappages pour votre connexion de desti
 
 Lors de l’exécution de l’étape [&#x200B; Planifier l’exportation d’audiences &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences activées depuis Experience Platform à leur champ personnalisé correspondant dans [!DNL Salesforce].
 
-Pour ce faire, sélectionnez chaque segment, puis saisissez le nom du champ personnalisé à partir de [!DNL Salesforce] dans le champ [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** . Reportez-vous à la section [Créer des champs personnalisés dans [!DNL Salesforce]](#prerequisites-custom-field) pour obtenir des conseils et connaître les bonnes pratiques sur la création de champs personnalisés dans [!DNL Salesforce].
+Pour ce faire, sélectionnez chaque segment, puis saisissez le nom du champ personnalisé à partir de [!DNL Salesforce] dans le champ **[!UICONTROL Mapping ID]** [!DNL Salesforce CRM] . Reportez-vous à la section [Créer des champs personnalisés dans [!DNL Salesforce]](#prerequisites-custom-field) pour obtenir des conseils et connaître les bonnes pratiques sur la création de champs personnalisés dans [!DNL Salesforce].
 
-Par exemple, si votre champ personnalisé [!DNL Salesforce] est `crm_2_seg`, spécifiez cette valeur dans le [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** pour renseigner les audiences d’Experience Platform dans ce champ personnalisé.
+Par exemple, si votre champ personnalisé [!DNL Salesforce] est `crm_2_seg`, spécifiez cette valeur dans le **[!UICONTROL Mapping ID]** [!DNL Salesforce CRM] pour renseigner les audiences d’Experience Platform dans ce champ personnalisé.
 
 Un exemple de champ personnalisé de [!DNL Salesforce] est illustré ci-dessous :
 Capture d’écran de l’interface utilisateur ![[!DNL Salesforce] affichant le champ personnalisé.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-Un exemple indiquant l’emplacement du [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** est illustré ci-dessous :
+Un exemple indiquant l’emplacement du **[!UICONTROL Mapping ID]** [!DNL Salesforce CRM] est illustré ci-dessous :
 ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform montrant la planification de l’exportation de l’audience.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
-Comme indiqué ci-dessus, le [!DNL Salesforce] **[!UICONTROL Field Name]** correspond exactement à la valeur spécifiée dans [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
+Comme indiqué ci-dessus, le **[!UICONTROL Field Name]** [!DNL Salesforce] correspond exactement à la valeur spécifiée dans [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
 
 Selon votre cas d’utilisation, toutes les audiences activées peuvent être mappées au même champ personnalisé [!DNL Salesforce] ou à différentes **[!UICONTROL Field Name]** dans [!DNL Salesforce CRM]. Un exemple type basé sur l’image affichée ci-dessus pourrait être .
 
@@ -349,7 +363,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 Retrouvez d’autres informations utiles du portail de développement [&#128279;](https://developer.salesforce.com/) ci-dessous :
 
 * [Démarrage rapide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
-* [Créer un enregistrement](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_create.htm)
-* [&#x200B; Audiences de recommandations personnalisées &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
+* [Création d’un enregistrement](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_create.htm)
+* [Audiences de recommandations personnalisées](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
 * [Utilisation de ressources composites](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_composite_resources.htm?q=composite)
 * Cette destination utilise l’API [Upsert Multiple Records](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm) au lieu de l’appel API [Upsert Single Record](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts).

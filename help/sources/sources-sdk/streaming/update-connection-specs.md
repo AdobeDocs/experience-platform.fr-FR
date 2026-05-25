@@ -1,22 +1,27 @@
 ---
-title: Mise à jour d’une spécification de connexion pour le SDK de diffusion en continu à l’aide de l’API Flow Service
-description: Le document suivant décrit les étapes à suivre pour établir une spécification de connexion à l’aide de l’API Flow Service pour les sources en libre-service (SDK de diffusion en continu).
+title: Mettre à jour une spécification de connexion pour Streaming SDK à l’aide de l’API Flow Service
+description: Le document suivant décrit la procédure à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service pour les sources en libre-service (Streaming SDK).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-badge: Version bêta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+badge: Beta
+TQID: https://experienceleague.adobe.com/ustM5EAwEdENFDs8sDhb80oTgXzKoqa1ecGHvg4It4Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: 166
 ht-degree: 4%
 
 ---
 
-# Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service
+# Mettre à jour une spécification de connexion à l’aide de l’API Flow Service
 
 >[!NOTE]
 >
->Le SDK de diffusion en continu des sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La diffusion en continu de SDK par les sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
+Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération PUT. Lors de la mise à jour d’une spécification de connexion par le biais d’une requête PUT, le corps doit inclure tous les champs qui seraient requis lors de la création d’une spécification de connexion dans une requête POST.
 
 **Format d’API**
 
@@ -110,7 +115,7 @@ PUT -X GET \
 
 **Réponse**
 
-Un appel réussi renvoie les détails de la spécification de connexion mis à jour, y compris son nom mis à jour.
+Un appel réussi renvoie les détails de spécification de connexion mis à jour, y compris son nom mis à jour.
 
 ```json
 {
@@ -196,4 +201,4 @@ Un appel réussi renvoie les détails de la spécification de connexion mis à j
 
 ## Étapes suivantes
 
-Une fois que vous avez terminé vos mises à jour de votre spécification de connexion, vous pouvez passer à [test et envoyer votre source pour l’intégration](./submit.md).
+Une fois que vous avez terminé les mises à jour de votre spécification de connexion, vous pouvez passer à [tester et envoyer votre source pour intégration](./submit.md).

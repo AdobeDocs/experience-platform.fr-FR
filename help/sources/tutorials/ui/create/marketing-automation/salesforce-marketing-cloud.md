@@ -2,10 +2,24 @@
 title: Connexion de votre compte Salesforce Marketing Cloud à Experience Platform via l’interface utilisateur
 description: Découvrez comment connecter votre compte Salesforce Marketing Cloud à Experience Platform via l’interface utilisateur.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 0c6a51d06e57eb6de063a350bd4b17022555a0b4
+TQID: https://experienceleague.adobe.com/e-hxGQrjmvBXpwtmsmzm2Kxc6dWnfFR8RqpGbgOq7b0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 13%
+source-wordcount: 557
+ht-degree: 14%
 
 ---
 
@@ -19,7 +33,7 @@ Lisez ce guide pour savoir comment connecter votre compte [!DNL Salesforce Marke
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
@@ -41,17 +55,17 @@ Lisez la [[!DNL Salesforce Marketing Cloud] présentation](../../../../connector
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Pour vous connecter à [!DNL Salesforce Marketing Cloud], accédez à la catégorie *[!UICONTROL Automatisation du marketing]*, sélectionnez la carte source **[!UICONTROL Salesforce Marketing Cloud]**, puis sélectionnez **[!UICONTROL Configurer]**.
+Pour vous connecter à [!DNL Salesforce Marketing Cloud], accédez à la catégorie *[!UICONTROL Marketing Automation]* , sélectionnez la carte source **[!UICONTROL Salesforce Marketing Cloud]**, puis sélectionnez **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
 
 ![Le catalogue des sources avec la carte source Salesforce Marketing Cloud sélectionnée.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
 ## Utiliser un compte existant {#existing}
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL Salesforce Marketing Cloud] à utiliser.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte [!DNL Salesforce Marketing Cloud] à utiliser.
 
 ![Interface des comptes existants dans le workflow des sources avec « Compte existant » sélectionné.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
@@ -61,7 +75,7 @@ Vous pouvez utiliser la source [!DNL Salesforce Marketing Cloud] pour vous conne
 
 ### Connexion à Experience Platform sur [!DNL Azure] {#azure}
 
-Pour vous connecter à Experience Platform sur [!DNL Azure], indiquez un nom de compte, une description facultative et les informations d’authentification de votre [compte](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#azure). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion s’établisse.
+Pour vous connecter à Experience Platform sur [!DNL Azure], indiquez un nom de compte, une description facultative et les informations d’authentification de votre [compte](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#azure). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques instants le temps que la connexion s’établisse.
 
 ![Nouvelle interface de compte dans le workflow des sources pour la connexion à Experience Platform sur Azure.](../../../../images/tutorials/create/salesforce-marketing-cloud/new-azure.png)
 
@@ -71,7 +85,7 @@ Pour vous connecter à Experience Platform sur [!DNL Azure], indiquez un nom de 
 >
 >Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../../../landing/multi-cloud.md).
 
-Pour vous connecter à Experience Platform sur [!DNL AWS], vérifiez que vous êtes dans un sandbox VA6 et fournissez un nom de compte, une description facultative et vos informations d’authentification [compte](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion s’établisse.
+Pour vous connecter à Experience Platform sur [!DNL AWS], vérifiez que vous êtes dans un sandbox VA6 et fournissez un nom de compte, une description facultative et vos informations d’authentification [compte](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques instants le temps que la connexion s’établisse.
 
 ![Nouvelle interface de compte dans le workflow des sources pour la connexion à Experience Platform sur AWS](../../../../images/tutorials/create/salesforce-marketing-cloud/new-aws.png)
 

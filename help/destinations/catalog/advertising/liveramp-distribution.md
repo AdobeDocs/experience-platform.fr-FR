@@ -2,9 +2,20 @@
 title: LiveRamp - Connexion de distribution
 description: Découvrez comment utiliser LiveRamp - Connecteur de distribution pour orchestrer et activer des audiences précédemment intégrées à LiveRamp, vers des destinations publicitaires en aval.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/gwYN-yDqT8yZnSE4SHEfRIjWCw2dEC45Bef8Sde-SOQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2817'
+source-wordcount: 2817
 ht-degree: 42%
 
 ---

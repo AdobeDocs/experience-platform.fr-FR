@@ -2,10 +2,34 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2025
 description: Les notes de mise à jour de septembre 2025 pour Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: 1e1e91a4006a55a94c64bbc8e89ff3e2e58c4918
+TQID: https://experienceleague.adobe.com/osXaSJbIMADKjSCmPEVYKm903WBbt8is2Rm9rkLwQnM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: f0c9f224-75f2-4864-8de6-859ae7856690
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 85%
+source-wordcount: 1634
+ht-degree: 86%
 
 ---
 
@@ -30,7 +54,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Profil client en temps réel](#profile)
-- [Segmentation Service](#segmentation-service)
+- [Service de segmentation](#segmentation-service)
 - [Sources](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -54,7 +78,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Alertes d’ingestion de profil en streaming | Vous pouvez désormais vous abonner à deux nouvelles alertes pour l’ingestion en streaming au niveau du flux de données : <ul><li>Taux d’échec d’ingestion en streaming dépassé</li><li>Taux de saut d’ingestion en streaming dépassé</li></ul> Des alertes dans la plateforme ou par e-mail vous avertissent lorsque les seuils sont dépassés : soit le seuil par défaut, soit un seuil personnalisé que vous définissez. Pour plus d’informations, consultez le guide des [alertes de profil](../../observability/alerts/rules.md#profile). |
+| Alertes d’ingestion de profil en streaming | Vous pouvez désormais vous abonner à deux nouvelles alertes pour l’ingestion en flux continu au niveau du flux de données : <ul><li>Taux d’échec d’ingestion en flux continu dépassé</li><li>Taux de saut d’ingestion en flux continu dépassé</li></ul> Des alertes dans la plateforme ou par e-mail vous avertissent lorsque les seuils sont dépassés : soit le seuil par défaut, soit un seuil personnalisé que vous définissez. Pour plus d’informations, consultez le guide des [alertes de profil](../../observability/alerts/rules.md#profile). |
 
 {style="table-layout:auto"}
 
@@ -110,7 +134,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 **Mises à jour importantes**
 
-| Mise à jour  | Description |
+| Mise à jour | Description |
 | ------ | ----------- |
 | Abandon de l’API de suppression de profil | L’[API de suppression de profil](/help/profile/api/entities.md#delete-entity) sera abandonnée d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [&#x200B; API de suppression des enregistrements du cycle de vie des données &#x200B;](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [&#128279;](/help/hygiene/ui/record-delete.md) à la place. Les workflows de cycle de vie des données fournissent un suivi de bout en bout du cycle de vie ainsi que des quotas mensuels que vous pouvez afficher et gérer. <br/><br/>Une fois le point d’entrée obsolète, tout utilisateur qui l’utilise actuellement continuera à y avoir accès. La fin de vie de ce sera annoncée séparément. Pour toute question, contactez l’Assistance clientèle d’Adobe. |
 
@@ -124,11 +148,11 @@ Pour plus d’informations, consultez la [vue d’ensemble du profil client en t
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Abandon des audiences de compte avec événements d’expérience | Après la mise à niveau de l’architecture B2B, les audiences de compte avec événements d’expérience ne sont plus prises en charge. Utilisez plutôt la nouvelle approche segment de segments : créez une audience Personnes avec des événements d’expérience, puis référencez cette audience Personnes lors de la création d’une Audience de compte. Cela offre une approche plus flexible et plus facile à maintenir pour la création d’audiences B2B. |
+| Abandon des audiences de comptes avec événements d’expérience | Après la mise à niveau de l’architecture B2B, les audiences de comptes avec événements d’expérience ne sont plus prises en charge. Utilisez plutôt la nouvelle approche segment de segments : créez une audience Personnes avec des événements d’expérience, puis référencez cette audience Personnes lors de la création d’une audience de compte. Cela offre une approche plus flexible et plus facile à maintenir pour la création d’audiences B2B. |
 
 **Mises à jour importantes**
 
-| Mise à jour  | Description |
+| Mise à jour | Description |
 | ------- | ----------- |
 | Annulation de l’actualisation automatique des estimations d’audience | L’amélioration relative à l’actualisation automatique des estimations d’audience a été annulée. Les estimations d’audience continueront d’être générées dans le créateur de segments, mais la fonctionnalité d’actualisation automatique a été supprimée. |
 | Audience externe | À partir du 30 septembre, les audiences externes seront récupérées via la recherche unifiée dans le créateur de segments. Si vous utilisez la correspondance de segments, vous pouvez activer l’expérience héritée dans le créateur de segments. |

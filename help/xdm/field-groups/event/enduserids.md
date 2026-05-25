@@ -4,13 +4,17 @@ solution: Experience Platform
 title: Groupe de champs de schéma Détails de l’ID de l’utilisateur final
 description: Découvrez le groupe de champs de schéma Détails de l’ID de l’utilisateur final .
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+TQID: https://experienceleague.adobe.com/GmusYQqnB5f07fzVpdB4UeZNDAtqbp7SjxJVBbCV-7Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 16%
+source-wordcount: 218
+ht-degree: 14%
 
 ---
-
 
 # [!UICONTROL End User ID Details] groupe de champs de schéma
 
@@ -37,5 +41,5 @@ ht-degree: 16%
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)

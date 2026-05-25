@@ -4,9 +4,24 @@ solution: Experience Platform
 title: Point d’entrée de l’API Descriptors
 description: Le point d’entrée /descriptors dans l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+TQID: https://experienceleague.adobe.com/W3WNLfYI7NCZsj03lj2I6dr9fhNu8OBdzp-0Wtt0T4A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: 2930
 ht-degree: 25%
 
 ---
@@ -30,9 +45,9 @@ Il existe plusieurs types de descripteurs, notamment :
 
 Le point d’entrée `/descriptors` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les descripteurs dans votre application d’expérience.
 
-## Commencer
+## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de l’API [[!DNL Schema Registry] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). [!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 Outre les descripteurs standard, le [!DNL Schema Registry] prend en charge les types de descripteurs pour les schémas relationnels, tels que **clé primaire**, **version** et **horodatage**. Ils assurent l’unicité, contrôlent le contrôle de version et définissent des champs de série temporelle au niveau du schéma. Si vous ne connaissez pas les schémas relationnels, consultez la présentation de Data Mirror [&#128279;](../data-mirror/overview.md) et la [référence technique des schémas relationnels](../schema/relational.md) avant de continuer.
 
@@ -42,7 +57,7 @@ Outre les descripteurs standard, le [!DNL Schema Registry] prend en charge les t
 
 ## Récupérer une liste de descripteurs {#list}
 
-Vous pouvez répertorier tous les descripteurs qui ont été définis par votre organisation en effectuant une requête GET à `/tenant/descriptors`.
+Vous pouvez répertorier tous les descripteurs qui ont été définis par votre organisation en adressant une requête GET à `/tenant/descriptors`.
 
 **Format d’API**
 
@@ -294,7 +309,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
+Une réponse réussie renvoie un statut HTTP 204 (Pas de contenu) et un corps vide.
 
 Pour confirmer que le descripteur a été supprimé, vous pouvez effectuer une [requête de recherche](#lookup) par rapport au `@id` de descripteur. La réponse renvoie le statut HTTP 404 (Introuvable), car le descripteur a été supprimé du [!DNL Schema Registry].
 
@@ -627,7 +642,7 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 
 #### Descripteur de champ obsolète
 
-Vous pouvez [rendre obsolète un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation-api.md#custom) en ajoutant un attribut `meta:status` défini sur `deprecated` au champ en question. Toutefois, si vous souhaitez rendre obsolètes les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. À l’aide de l’en-tête de [&#x200B; `Accept` correct &#x200B;](../tutorials/field-deprecation-api.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes d’un schéma lors de la recherche dans l’API.
+Vous pouvez [rendre obsolète un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation-api.md#custom) en ajoutant un attribut `meta:status` défini sur `deprecated` au champ en question. Toutefois, si vous souhaitez rendre obsolètes les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. À l’aide de l’en-tête de `Accept` [&#x200B; correct &#x200B;](../tutorials/field-deprecation-api.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes d’un schéma lors de la recherche dans l’API.
 
 ```json
 {

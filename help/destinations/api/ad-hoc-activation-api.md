@@ -5,10 +5,27 @@ title: Activer des audiences vers des destinations par lots via l’API d’acti
 description: Cet article illustre le workflow de bout en bout pour activer des audiences via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 944cb03ae8a432b09b54b148e94b2ee1e1bcbc5d
+TQID: https://experienceleague.adobe.com/qsC2rkW9zkzewzUls3FVlivqVHQyXUpkOoEA0T-OU8Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 8%
+source-wordcount: 1776
+ht-degree: 9%
 
 ---
 
@@ -18,7 +35,7 @@ ht-degree: 8%
 >
 >Une fois la phase Beta terminée, la [!DNL ad-hoc activation API] est désormais disponible pour tous les clients Experience Platform. Dans la version mise à disposition générale, l’API a été mise à niveau vers la version 2. L’étape 4 ([Obtention du dernier identifiant de tâche d’exportation d’audience](#segment-export-id)) n’est plus nécessaire, car l’API ne nécessite plus l’identifiant d’exportation.
 >
->Pour plus d’informations[&#x200B; consultez la section &#x200B;](#activation-job)Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
+>Pour plus d’informations[&#128279;](#activation-job) consultez la section Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
 
 ## Vue d’ensemble {#overview}
 
@@ -74,7 +91,7 @@ Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre 
 
 Les ressources d’Experience Platform peuvent être isolées dans des sandbox virtuels spécifiques. Dans les requêtes aux API Experience Platform, vous pouvez spécifier le nom et l’identifiant du sandbox dans lequel l’opération aura lieu. Il s’agit de paramètres facultatifs.
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >

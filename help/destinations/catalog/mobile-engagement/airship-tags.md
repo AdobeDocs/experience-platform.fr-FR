@@ -3,10 +3,30 @@ keywords: balises airship;destination airship
 title: Connexion Balises Airship
 description: Transmettez facilement les données d’audience Adobe à Airship sous la forme de balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/JPaL7El70TnYpgZ1d1bcVdJBhPXVirJdXYTCZiA-FgY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 26%
+source-wordcount: 1085
+ht-degree: 25%
 
 ---
 
@@ -86,9 +106,9 @@ Voir [Gérer les groupes de balises](https://docs.airship.com/tutorials/manage-p
 
 ## Générer un jeton du porteur {#generate-bearer-token}
 
-Accédez à la **[!UICONTROL Settings]** « **[!UICONTROL APIs & Integrations]** » dans le [tableau de bord Airship](https://go.airship.com) et sélectionnez **[!UICONTROL Tokens]** dans le menu de gauche.
+Accédez à la **[!UICONTROL APIs & Integrations]** « **[!UICONTROL Settings]** » dans le [tableau de bord Airship](https://go.airship.com) et sélectionnez **[!UICONTROL Tokens]** dans le menu de gauche.
 
-Cliquez sur **[!UICONTROL Create Token]**.
+Cliquez sur **[!UICONTROL Create Token]**.
 
 Attribuez un nom convivial à votre jeton, par exemple « Destination Adobe Tags », et sélectionnez « Tous les accès » pour le rôle.
 

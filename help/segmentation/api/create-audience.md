@@ -3,9 +3,22 @@ title: Créer un point d’entrée de l’API Audience
 description: Découvrez comment créer des métadonnées pour une audience externe à l’aide de l’API .
 hide: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/SjcGT-MZHNaHiCEVUBlndaKnSV85bVuXhCsHm4K4oT8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: 278
 ht-degree: 37%
 
 ---

@@ -2,9 +2,19 @@
 description: Cette page illustre comment l’appel API est utilisé pour récupérer une configuration de destination avec Adobe Experience Platform Destination SDK.
 title: Récupération d’une configuration de destination
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/CYufnxbl7OuOVX3WqKZo7B9Ms1f17q0xZkrSjh-Y-iE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: 365
 ht-degree: 86%
 
 ---

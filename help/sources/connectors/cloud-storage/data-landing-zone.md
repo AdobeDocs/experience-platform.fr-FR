@@ -2,10 +2,20 @@
 title: Source de la zone d’atterrissage des données
 description: Découvrez comment connecter Data Landing Zone à Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/-yrTnh4LVgXOHrgyNxOq-TmulMCnJxzv9HmYeeOlNBc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1361'
-ht-degree: 18%
+source-wordcount: 1426
+ht-degree: 19%
 
 ---
 
@@ -17,7 +27,7 @@ ht-degree: 18%
 
 [!DNL Data Landing Zone] est une interface de stockage [!DNL Azure Blob] fournie par Adobe Experience Platform. Elle vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Experience Platform. Vous avez accès à un conteneur [!DNL Data Landing Zone] par sandbox et le volume total de données sur tous les conteneurs est limité au total des données fournies avec votre licence Produits et Services Experience Platform. Tous les clients d’Experience Platform sont configurés avec un conteneur [!DNL Data Landing Zone] par sandbox. Vous pouvez lire et écrire des fichiers dans votre conteneur via [!DNL Azure Storage Explorer] ou votre interface de ligne de commande.
 
-[!DNL Data Landing Zone] prend en charge l’authentification SAS et ses données sont protégées par des mécanismes de sécurité du stockage [!DNL Azure Blob] standard au repos et en transit. L’authentification SAS vous permet d’accéder en toute sécurité à votre conteneur [!DNL Data Landing Zone] via une connexion Internet publique. Placer sur la liste autorisée Aucune modification réseau n’est requise pour accéder à votre conteneur [!DNL Data Landing Zone], ce qui signifie que vous n’avez pas besoin de configurer de ou de configurations inter-régions pour votre réseau. Experience Platform applique un délai d’expiration strict de sept jours sur tous les fichiers et dossiers chargés dans un conteneur [!DNL Data Landing Zone]. Tous les fichiers et les dossiers sont supprimés au bout de sept jours.
+[!DNL Data Landing Zone] prend en charge l’authentification SAS et ses données sont protégées par des mécanismes de sécurité du stockage [!DNL Azure Blob] standard au repos et en transit. L’authentification SAS vous permet d’accéder en toute sécurité à votre conteneur [!DNL Data Landing Zone] via une connexion Internet publique. Aucune modification réseau n’est requise pour accéder à votre conteneur [!DNL Data Landing Zone], ce qui signifie que vous n’avez pas besoin de configurer de ou de configurations inter-régions pour votre réseau. Experience Platform applique un délai d’expiration strict de sept jours sur tous les fichiers et dossiers chargés dans un conteneur [!DNL Data Landing Zone]. Tous les fichiers et les dossiers sont supprimés au bout de sept jours.
 
 ## Configurer votre source de [!DNL Data Landing Zone] pour Experience Platform sur Azure {#azure}
 
@@ -44,11 +54,11 @@ Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com
 
 Dans l’interface utilisateur de [!DNL Azure Storage Explorer], sélectionnez l’icône de connexion dans le volet de navigation de gauche. La fenêtre **Sélectionner la ressource** s’affiche, vous permettant d’accéder à des options de connexion. Sélectionnez **[!DNL Blob container]** pour vous connecter à [!DNL Data Landing Zone].
 
-![L’espace de travail Sélectionner la ressource sur Azure Explorer.](../../images/tutorials/create/dlz/select-resource.png)
+![L’espace de travail Sélectionner la ressource dans l’Explorateur Azure.](../../images/tutorials/create/dlz/select-resource.png)
 
 Ensuite, sélectionnez **URL de signature d’accès partagé (SAS)** comme méthode de connexion, puis sélectionnez **Suivant**.
 
-![La méthode de connexion Select sur Azure Explorer, avec la signature d’accès partagé sélectionnée.](../../images/tutorials/create/dlz/select-connection-method.png)
+![La méthode de connexion Sélectionner sur l’explorateur Azure, avec la signature d’accès partagé sélectionnée.](../../images/tutorials/create/dlz/select-connection-method.png)
 
 Après avoir sélectionné votre méthode de connexion, vous devez fournir un **nom d’affichage** ainsi que l’URL SAS du conteneur **[!DNL Blob]** qui correspond à votre conteneur [!DNL Data Landing Zone].
 
@@ -58,19 +68,19 @@ Après avoir sélectionné votre méthode de connexion, vous devez fournir un **
 
 Indiquez votre URL SAS [!DNL Data Landing Zone], puis sélectionnez **Suivant**
 
-![L’espace de travail Saisir les informations de connexion sur Azure Explorer dans lequel le nom d’affichage et l’URL SAS sont saisis.](../../images/tutorials/create/dlz/enter-connection-info.png)
+![L’espace de travail Saisir les informations de connexion dans l’Explorateur Azure où le nom d’affichage et l’URL SAS sont saisis.](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 La fenêtre **Résumé** s’affiche, vous donnant ainsi une présentation de vos paramètres, y compris des informations sur votre point d’entrée et vos autorisations [!DNL Blob]. Quand vous avez terminé, sélectionnez **Se connecter**.
 
-![Espace de travail de résumé de l’explorateur Azure qui récapitule les paramètres de votre connexion aux ressources.](../../images/tutorials/create/dlz/summary.png)
+![Espace de travail de résumé de l’Explorateur Azure qui récapitule les paramètres de votre connexion aux ressources.](../../images/tutorials/create/dlz/summary.png)
 
 Une connexion réussie met à jour l’interface utilisateur [!DNL Azure Storage Explorer] avec votre conteneur [!DNL Data Landing Zone].
 
-![Espace de travail de navigation de la zone d’atterrissage des données sur Azure Explorer.](../../images/tutorials/create/dlz/dlz-user-container.png)
+![Espace de travail de navigation de la zone d’atterrissage des données dans l’Explorateur Azure.](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 Maintenant que votre conteneur [!DNL Data Landing Zone] est connecté à [!DNL Azure Storage Explorer], vous pouvez commencer à charger des fichiers dans votre conteneur [!DNL Data Landing Zone]. Pour charger, sélectionnez **Télécharger** puis **Télécharger des fichiers**.
 
-![Espace de travail des fichiers de chargement d’Azure Explorer.](../../images/tutorials/create/dlz/upload.png)
+![Espace de travail Charger des fichiers de l’Explorateur Azure.](../../images/tutorials/create/dlz/upload.png)
 
 Une fois le fichier à charger sélectionné, vous devez identifier le type de [!DNL Blob] sous lequel vous souhaitez le charger, ainsi que le répertoire de destination souhaité. Lorsque vous avez terminé, sélectionnez **Charger**.
 
@@ -79,7 +89,7 @@ Une fois le fichier à charger sélectionné, vous devez identifier le type de [
 | Bloquer les [!DNL Blob] | Les [!DNL Blobs] de blocs sont optimisés pour charger de grandes quantités de données de manière efficace. Les [!DNL Blobs] de bloc sont l’option par défaut pour les [!DNL Data Landing Zone]. |
 | Ajouter un [!DNL Blob] | Les [!DNL Blobs] d’ajout sont optimisées pour l’ajout de données à la fin du fichier. |
 
-![La fenêtre Charger des fichiers d’Azure Explorer dans laquelle les fichiers sélectionnés, le type d’objet Blob et la catégorie de destination s’affichent.](../../images/tutorials/create/dlz/upload-files.png)
+![La fenêtre Charger des fichiers de l’Explorateur Azure dans laquelle les fichiers sélectionnés, le type d’objet Blob et la catégorie de destination sont affichés.](../../images/tutorials/create/dlz/upload-files.png)
 
 ### Chargez des fichiers dans votre [!DNL Data Landing Zone] à l’aide de l’interface de ligne de commande
 
@@ -163,7 +173,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 Pour découvrir comment configurer votre compte [!DNL Data Landing Zone] pour Experience Platform sur Amazon Web Services (AWS), procédez comme suit.
 
-### PLACER SUR LA LISTE AUTORISÉE Adresse IP utilisée pour la connexion à AWS
+### Adresse IP utilisée pour la connexion à AWS
 
 Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur AWS. Pour plus d’informations, consultez le guide sur [la liste autorisée d’adresses IP pour se connecter à Experience Platform sur AWS](../../ip-address-allow-list.md).
 

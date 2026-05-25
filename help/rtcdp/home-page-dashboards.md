@@ -4,9 +4,16 @@ title: Page d’accueil et tableaux de bord Real-Time Customer Data Platform
 description: Découvrez les différents tableaux de bord, la page d’accueil et la première expérience client d’Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+TQID: https://experienceleague.adobe.com/THfxsas5dP7HBk-tWzE43tkcZspHzw-wqAyKQa55xDU
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: 922
 ht-degree: 14%
 
 ---

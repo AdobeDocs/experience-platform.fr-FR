@@ -2,10 +2,32 @@
 title: Gestion de la duplication des événements dans Experience Platform
 description: Découvrez comment Adobe Experience Platform gère la duplication des événements
 exl-id: ac8c3ee8-52cf-459c-b283-16ed32d2976d
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+TQID: https://experienceleague.adobe.com/P7G0XROFmmnm0Z9VEAxt-lSw6UhenD4g7SBeV-5T7FY
+product_v2:
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: e98b7246-966c-4318-9e95-cad2f7a17dc7
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: df64005d-8f9a-422e-ba4d-c6f6dc3454b4
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 0%
+source-wordcount: 506
+ht-degree: 7%
 
 ---
 

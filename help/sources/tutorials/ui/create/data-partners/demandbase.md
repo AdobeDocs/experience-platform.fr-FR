@@ -2,9 +2,16 @@
 title: Connecter Demandbase Intent à Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter Demandbase Intent à Experience Platform
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+TQID: https://experienceleague.adobe.com/LBPcZpswc8n7fJFPmvsEQ1kEF0jc8tuodNmz78i6Se4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: 994
 ht-degree: 7%
 
 ---
@@ -15,7 +22,7 @@ Lisez ce guide pour savoir comment connecter votre compte [!DNL Demandbase Inten
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Real-Time CDP B2B edition](../../../../../rtcdp/b2b-overview.md) : Real-Time CDP B2B edition est conçu pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux spécialistes marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.

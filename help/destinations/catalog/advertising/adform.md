@@ -1,11 +1,25 @@
 ---
 title: Adform
 description: Adform est un fournisseur de premier plan de solutions d'achat et de vente de médias programmatiques. En connectant Adform au Adobe Experience Platform, vous pouvez activer vos audiences propriétaires via Adform en fonction de l’Experience Cloud ID (ECID).
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2025-10-23T00:00:00.000Z
 exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
-source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
+TQID: https://experienceleague.adobe.com/b7hTTp6s5jQfv5haxMsCTdkG-wwZIn12G4l4uWOra3A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: 1145
 ht-degree: 25%
 
 ---

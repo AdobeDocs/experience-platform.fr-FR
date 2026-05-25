@@ -5,10 +5,25 @@ title: Enrichissement du profil client en temps réel avec des informations de m
 type: Tutorial
 description: Ce document fournit un guide sur la manière d’enrichir le profil client en temps réel avec des informations sur le machine learning.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/N7JMlkEuiEAqw2AZO3SuzmSoPQIYxNyI9d12cZopGyI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 15%
+source-wordcount: 665
+ht-degree: 18%
 
 ---
 
@@ -26,7 +41,7 @@ Le processus de segmentation dépend de la méthode d’évaluation de l’audie
 
 Ce document fournit des liens vers des tutoriels qui vous permettent d’enrichir [!DNL Real-Time Customer Profile] avec vos informations sur le machine learning.
 
-## Commencer
+## Prise en main
 
 Pour suivre les tutoriels ci-dessous, vous devez maîtriser l’ingestion de données [!DNL Profile] et la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 

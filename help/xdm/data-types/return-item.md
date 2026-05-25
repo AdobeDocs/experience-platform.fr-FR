@@ -1,34 +1,39 @@
 ---
-title: Type de données de retour
-description: Découvrez le type de données Modèle de données d’expérience d’élément de retour (XDM) .
+title: Type de données d'article retourné
+description: Découvrez le type de données Modèle de données d’expérience d’élément renvoyé (XDM).
 exl-id: e703d65b-a133-484e-96d6-6b1f50fc1e48
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+TQID: https://experienceleague.adobe.com/L7f0Y1UQQlslZr4oLtAoc7EDOG2DJndUtpU56-boWZw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: 181
 ht-degree: 7%
 
 ---
 
 # Type de données [!UICONTROL Return Item]
 
-[!UICONTROL Article de retour] est un type de données XDM (Experience Data Model) standard qui capture les détails essentiels liés au processus de retour d’un article acheté.
+[!UICONTROL Return Item] est un type de données standard du modèle de données d’expérience (XDM) qui capture les détails essentiels liés au processus de retour d’un article acheté.
 
-![Schéma du type de données Article de retour.](../images/data-types/return-item.png)
+![Diagramme du type de données Article renvoyé.](../images/data-types/return-item.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |-----------------------------|------------------------------|-----------|--------------------------------------------------------|
-| [!UICONTROL Statut de retour] | `returnStatus` | Chaîne | État de l’élément renvoyé (par exemple, En attente ou Approuvé). |
-| [!UICONTROL Raison de retour] | `returnReason` | Chaîne | Motif pour lequel le retour a été demandé pour l’élément. |
-| [!UICONTROL Condition de retour de l’élément] | `returnItemCondition` | Chaîne | La condition de l’élément pour lequel le retour est demandé. |
-| [!UICONTROL Résolution de retour] | `returnResolution` | Chaîne | Résolution ou résultat souhaité attendu du retour (par exemple, Remboursement ou Exchange). |
-| [!UICONTROL Quantité renvoyée demandée] | `returnQuantityRequested` | Entier | Quantité de l’article que l’acheteur a demandé de renvoyer. |
-| [!UICONTROL Quantité renvoyée autorisée] | `returnQuantityAuthorized` | Entier | Quantité de l’article autorisée à être renvoyée. |
-| [!UICONTROL Quantité renvoyée &#x200B;] | `returnQuantityReceived` | Entier | Nombre d’éléments renvoyés reçus. |
-| [!UICONTROL Retour Quantité Approuvé] | `returnQuantityApproved` | Entier | La quantité de l’élément avec un retour complet et approuvé. |
+| [!UICONTROL Return Status] | `returnStatus` | chaîne | Statut de l’élément renvoyé (par exemple, En attente ou Approuvé). |
+| [!UICONTROL Return Reason] | `returnReason` | chaîne | Motif pour lequel le retour a été demandé pour l&#39;article. |
+| [!UICONTROL Return Item Condition] | `returnItemCondition` | chaîne | Condition de l&#39;article pour lequel le retour est demandé. |
+| [!UICONTROL Return Resolution] | `returnResolution` | chaîne | Résolution souhaitée ou résultat attendu du retour (par exemple, remboursement ou échange). |
+| [!UICONTROL Return Quantity Requested] | `returnQuantityRequested` | entier | Quantité de l&#39;article que l&#39;acheteur a demandé de retourner. |
+| [!UICONTROL Return Quantity Authorized] | `returnQuantityAuthorized` | entier | Quantité de l’article dont le retour est autorisé. |
+| [!UICONTROL Return Quantity Received] | `returnQuantityReceived` | entier | Quantité d&#39;articles retournés reçue. |
+| [!UICONTROL Return Quantity Approved] | `returnQuantityApproved` | entier | Quantité de l&#39;article avec un retour entièrement terminé et approuvé. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
+Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.schema.json)

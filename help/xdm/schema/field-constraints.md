@@ -4,9 +4,14 @@ solution: Experience Platform
 title: Contraintes de type de champ XDM
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels ils peuvent être mappés et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/Tn19LbfmJL2BzSKZHyBKo7YG8mm--fuWb-UrMeJ-mpg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: 643
 ht-degree: 6%
 
 ---
@@ -27,7 +32,7 @@ XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’un
 
 >[!NOTE]
 >
->Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API [&#x200B; consultez le &#x200B;](../../landing/api-fundamentals.md#json-schema) guide des principes de base des API .
+>Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API [&#128279;](../../landing/api-fundamentals.md#json-schema) consultez le  guide des principes de base des API .
 
 Le tableau suivant décrit la manière dont chaque type XDM est représenté dans le schéma JSON, ainsi qu’un exemple de valeur conforme au type :
 
@@ -137,7 +142,7 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
   </tbody>
 </table>
 
-**Toutes les chaînes formatées en date doivent être conformes à la norme ISO 8601 ([RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+** Toutes les chaînes formatées en date doivent être conformes à la norme ISO 8601 ([RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
 
 ## Faire correspondre les types XDM à d’autres formats
 

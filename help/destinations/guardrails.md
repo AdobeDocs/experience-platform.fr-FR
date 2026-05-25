@@ -6,10 +6,24 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c6a8a516afe31c5c6eaef67712fc646c2944d31d
+TQID: https://experienceleague.adobe.com/1MtJnkHPrFEHtlYHIKZL1rbj6SfsHsUJuqSwn1TovcA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 38%
+source-wordcount: 1910
+ht-degree: 34%
 
 ---
 
@@ -64,7 +78,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Nombre d’activations (messages HTTP avec export de profils) par seconde | S.O. | - | Il n’existe actuellement aucune limite au nombre de messages par seconde envoyés par Experience Platform aux points d’entrée de l’API des destinations partenaires. <br> Toute limite ou latence est déterminée par le point d’entrée où Experience Platform envoie des données. Veillez également à vérifier la page [catalogue](/help/destinations/catalog/overview.md) de la destination à laquelle vous vous connectez et vers laquelle vous activez les données. |
+| Nombre d’activations (messages HTTP avec export de profils) par seconde | S.O. | - | Il n’existe actuellement aucune limite au nombre de messages par seconde envoyés par Experience Platform aux points d’entrée de l’API des destinations partenaires. <br> Toute limite ou latence est déterminée par le point d’entrée où Experience Platform envoie des données. Veillez également à vérifier la page du [catalogue](/help/destinations/catalog/overview.md) de la destination à laquelle vous vous connectez et activez les données. |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,41 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 1b1864c3957c080c0f1d9e823e5c816970aed087
+TQID: https://experienceleague.adobe.com/-fU-zvoxIhZ2PBnGpr5j7Kh0SOWRIN-7Hx1ESH3juuE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: 2330
 ht-degree: 26%
 
 ---

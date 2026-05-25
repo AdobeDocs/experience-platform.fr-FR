@@ -2,9 +2,17 @@
 title: Prise en charge des liens privés pour les sources dans l’API
 description: Découvrez comment créer et utiliser des liens privés pour les sources Adobe Experience Platform
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
+TQID: https://experienceleague.adobe.com/TRQbOSUO5M2HmbsO462bbflW6GgjXrVWE2QawUwI5pk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: 1585
 ht-degree: 7%
 
 ---
@@ -580,7 +588,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de votre connexion de base. |
+| `name` | Nom de la connexion de base. |
 | `description` | (Facultatif) Description qui fournit des informations supplémentaires sur votre connexion. |
 | `auth.specName` | Authentification utilisée pour connecter votre source à Experience Platform. |
 | `auth.params.connectionString` | Chaîne de connexion [!DNL Azure Blob Storage]. Pour plus d’informations, consultez le [[!DNL Azure Blob Storage] guide d’authentification des API](../api/create/cloud-storage/blob.md). |
@@ -840,7 +848,7 @@ Lisez cette section pour plus d’informations sur l’utilisation de liens priv
 
 Pour approuver une demande de point d’entrée privé pour les sources [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2], connectez-vous au [!DNL Azure Portal] . Dans le volet de navigation de gauche, sélectionnez **[!DNL Data storage]**, puis accédez à l’onglet **[!DNL Security + networking]** et choisissez **[!DNL Networking]**. Sélectionnez ensuite **[!DNL Private endpoints]** pour afficher la liste des points d’entrée privés associés à votre compte et leurs états de connexion actuels. Pour approuver une demande en attente, sélectionnez le point d’entrée souhaité, puis cliquez sur **[!DNL Approve]**.
 
-![Portail Azure avec une liste de points d’entrée privés en attente.](../../images/tutorials/private-links/azure.png)
+![Le portail Azure avec une liste de points d’entrée privés en attente.](../../images/tutorials/private-links/azure.png)
 
 <!--
 

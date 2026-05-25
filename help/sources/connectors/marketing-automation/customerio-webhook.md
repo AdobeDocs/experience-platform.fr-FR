@@ -3,10 +3,19 @@ title: Présentation de Customer.io Source
 description: Découvrez comment connecter Customer.io à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur en utilisant des webhooks
 badge: Beta
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/xO-8cbLN-U2NLLi5ChDaKnNNaGpNZxHIV9FYkITxkw8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 6%
+source-wordcount: 399
+ht-degree: 13%
 
 ---
 
@@ -16,7 +25,7 @@ ht-degree: 6%
 >
 >La source [!DNL Customer.io] est en version Beta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’applications de diffusion en continu. La prise en charge des fournisseurs de streaming inclut [!DNL Customer.io].
 

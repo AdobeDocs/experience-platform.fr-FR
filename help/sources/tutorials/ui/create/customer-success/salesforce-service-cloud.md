@@ -2,9 +2,19 @@
 title: Connexion de votre compte Salesforce Service Cloud à l’aide de l’interface utilisateur d’Experience Platform
 description: Découvrez comment connecter votre compte Salesforce Service Cloud et importer vos données de succès client dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: b9a9b00114b3c1159a14b7e39484d250fa7563ba
+TQID: https://experienceleague.adobe.com/ECKQlI7fuOkpNcBz2V6ieAH08-N7dn-nlfdToux5Fac
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: 423
 ht-degree: 36%
 
 ---

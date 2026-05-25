@@ -2,10 +2,22 @@
 title: Accéder à l’assistant AI (hérité) dans Experience Platform
 description: Découvrez comment accéder à l’assistant AI dans l’interface utilisateur d’Experience Cloud.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: daaf3ff0218b73a9fd827ab2ef090d8046cef3bb
+TQID: https://experienceleague.adobe.com/BD0anxydq-2tfsJ1zCZnjPFWag70OmqnGYgC6Johs-k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '876'
-ht-degree: 0%
+source-wordcount: 963
+ht-degree: 3%
 
 ---
 

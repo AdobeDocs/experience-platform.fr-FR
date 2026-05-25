@@ -4,9 +4,27 @@ solution: Experience Platform
 title: Terminologie des règlements relatifs à la confidentialité
 description: Ce document fournit des définitions pour les termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+TQID: https://experienceleague.adobe.com/7Nm-1-rf4ovhgp61aYh2NoUEe5VreDU3cSmMMrG5sGU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: f5efb499-54f9-432b-ac5c-599dbac103af
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2790'
+source-wordcount: 2823
 ht-degree: 1%
 
 ---
@@ -109,7 +127,7 @@ Ce document fournit des définitions pour les termes clés liés aux réglementa
 
 **MHMDAa** : la [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) renforce les droits à la confidentialité des consommateurs concernant leurs données de santé. Elle impose la divulgation, le consentement des consommateurs et les droits de suppression des données de santé, et interdit la vente de données de santé sans autorisation. En outre, la loi interdit l’utilisation de clôtures géologiques autour des établissements de santé.
 
-**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA) : À compter du 31 juillet 2025, le MCDPA donne aux résidents du Minnesota des droits d’accès, de correction, de suppression et d’obtention de leurs données personnelles, ainsi que de refus de vente de données, de publicité ciblée et de certains profils. Elle s’applique aux entreprises opérant dans le Minnesota ou ciblant cet État et traitant des données de plus de 100 000 consommateurs par an (à l’exclusion des données de paiement uniquement), ou de plus de 25 000 consommateurs si plus de 25 % des revenus proviennent des ventes de données. Les entités couvertes doivent mettre en œuvre des mesures raisonnables de sécurité des données et mener des évaluations des risques. Le procureur général du Minnesota applique la loi et peut infliger des amendes allant jusqu’à 7 500 dollars par infraction. Toutefois, les entreprises ont jusqu&#39;au 31 janvier 2026 pour corriger les infractions avant l&#39;application des sanctions.
+**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA) : À compter du 31 juillet 2025, le MCDPA donne aux résidents du Minnesota des droits d’accès, de correction, de suppression et d’obtention de leurs données personnelles, ainsi que de refus de vente de données, de publicité ciblée et de certains profils. Elle s’applique aux entreprises opérant dans le Minnesota ou ciblant cet État et traitant des données de plus de 100 000 consommateurs par an (à l’exclusion des données de paiement uniquement), ou de plus de 25 000 consommateurs si plus de 25 % des revenus proviennent des ventes de données. Les entités couvertes doivent mettre en œuvre des mesures raisonnables de sécurité des données et procéder à des évaluations des risques.Le procureur général du Minnesota applique la loi et peut infliger des amendes allant jusqu’à 7 500 $ par infraction. Toutefois, les entreprises ont jusqu&#39;au 31 janvier 2026 pour corriger les infractions avant l&#39;application des sanctions.
 
 **MODPA** : le [!DNL Maryland Online Data Privacy Act] accorde aux résidents des droits comprenant l’accès, la correction, la suppression et la portabilité des données. Les résidents peuvent se désinscrire du traitement des données pour la publicité ciblée, les ventes de données personnelles et le profilage. La Loi interdit le géorepérage autour des établissements de santé mentale ou de santé reproductive. La loi s’applique aux entités qui traitent des données provenant de plus de 35 000 consommateurs, ou à celles qui traitent des données provenant de plus de 10 000 consommateurs et tirent plus de 20 % de leurs revenus de la vente de ces données. L&#39;application de la loi est gérée par le Procureur général du Maryland, avec des amendes et des pénalités applicables en cas d&#39;infraction.
 

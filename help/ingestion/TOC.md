@@ -5,7 +5,8 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Importez vos données dans Experience Platform via une ingestion par lots ou en flux continu.
 feature: Data Ingestion
 role: Developer
-source-git-commit: 752e9939a7d141921330d5a52dd4299681d09205
+nudge: true
+source-git-commit: b6abe265f340487f0eae12237ba320cd4afbd2d8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 88%

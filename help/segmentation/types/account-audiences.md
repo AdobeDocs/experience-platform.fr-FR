@@ -2,9 +2,23 @@
 title: Audiences de compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler les profils de compte dans les destinations en aval.
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 53bc79a580641e662d6c51fbf2b0c0f51eb6ddb4
+TQID: https://experienceleague.adobe.com/1hdtXQ--sfJExWY845DVQ-FrEXtjHHrd40tE2XGeyZE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: 1471
 ht-degree: 25%
 
 ---

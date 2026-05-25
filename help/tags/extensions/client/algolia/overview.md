@@ -2,10 +2,37 @@
 title: Présentation de l’extension Algolia Tags
 description: Découvrez l’extension Balises Algolia dans Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/elJ-5Oy4QJ4LxkAXvGYYj41ne-E5GYPgluZ7UUwh4FA
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1954'
-ht-degree: 2%
+source-wordcount: 2132
+ht-degree: 1%
 
 ---
 
@@ -86,12 +113,11 @@ Ajoutez l’action **[!UICONTROL Click]** à votre règle de balise pour envoyer
 >[!NOTE]
 >
 >Si `queryID` et `positions` sont inclus, l’événement est classé comme **ID d’objet sur lesquels l’utilisateur a cliqué après la recherche**. Sinon, il est classé comme un événement **Clicked object IDs**.
-><br>
->Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
+><br>>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
-Pour plus d’informations sur les catégories d’événement, consultez la [Identifiants d’objet sur lesquels vous avez cliqué après recherche](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
+Pour plus d’informations sur les catégories d’événement, voir [Identifiants d’objet sur lesquels vous avez cliqué après recherche](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
 et les guides [ID d’objet cliqués](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/).
 
 ### Converti {#converted}
@@ -106,8 +132,7 @@ Ajoutez l’action **[!UICONTROL Converted]** à votre règle de balise pour env
 >[!NOTE]
 >
 >Si l’élément de données contient des `queryId`, l’événement est classé comme **Converti après la recherche**. Sinon, il sera classé comme un événement **Converti**.
-><br>
->Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
+><br>>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -125,10 +150,8 @@ Ajoutez l’action **[!UICONTROL Added to Cart]** à votre règle de balise pour
 >[!NOTE]
 >
 >Si l’élément de données contient des `queryId`, l’événement est classé comme **Ajouté aux ID d’objet de panier après la recherche**. Sinon, il sera classé comme un événement **Ajouté aux ID d’objet de panier**.
-><br>
->Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
-><br>
->Si les éléments de données par défaut ne répondent pas à vos besoins, un élément de données personnalisé peut être créé pour renvoyer les détails de l’événement souhaité.
+><br>>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
+><br>>Si les éléments de données par défaut ne répondent pas à vos besoins, un élément de données personnalisé peut être créé pour renvoyer les détails de l’événement souhaité.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -146,8 +169,7 @@ Ajoutez l’action **[!UICONTROL Purchased]** à votre règle de balise pour env
 >[!NOTE]
 >
 >L’action Achat récupère les données d’événement du stockage du navigateur en fonction des ID d’article achetés. Si l’un des articles achetés contient un `queryID` dans ses données stockées, l’événement est classé comme **ID d’objet achetés après la recherche**. Sinon, il sera classé comme événement **ID d’objet achetés**.
-><br>
->Cette approche permet à l’événement d’achat d’inclure automatiquement tout le contexte pertinent (identifiant de requête, nom d’index, prix, quantité, remise) des interactions antérieures de l’utilisateur avec les articles.
+><br>>Cette approche permet à l’événement d’achat d’inclure automatiquement tout le contexte pertinent (identifiant de requête, nom d’index, prix, quantité, remise) des interactions antérieures de l’utilisateur avec les articles.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
@@ -306,12 +328,12 @@ Cet élément de données renvoie ce qui est stocké dans le stockage de session
 Les événements *Cliqué après la recherche* ou *Converti après la recherche* nécessitent un `queryID` et `positions` est également requis pour les événements *Cliqué après la recherche*. Ces propriétés sont disponibles lorsque l’indicateur `insights` est activé dans les paramètres de requête InstantSearch et/ou Autocomplete. Reportez-vous aux ressources suivantes pour savoir comment configurer Insights pour votre site :
 
 * [Configuration des informations sur la saisie semi-automatique](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
-* [Configuration des informations sur InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
+* [Configuration d’Insights sur InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
 * [Prise en main des événements de clic et de conversion](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
 * [Envoi  [!DNL Algolia]  événements Insights](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
-* [[!DNL Algolia] Référentiel GitHub de l’extension Launch](https://github.com/algolia/algolia-launch-extension)
+* [Référentiel GitHub de l’extension [!DNL Algolia] Launch](https://github.com/algolia/algolia-launch-extension)
 * [Documentation InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
-* [[!DNL Algolia]  Documentation de l’API Insights &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+* [Documentation de l’API [!DNL Algolia] Insights](https://www.algolia.com/doc/rest-api/insights/)
 * [Référentiel de code d’extension Algolia Launch](https://github.com/algolia/algolia-launch-extension)
 
 ## Étapes suivantes {#next-steps}

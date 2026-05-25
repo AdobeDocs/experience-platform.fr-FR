@@ -1,14 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: Créer une connexion IBM [!DNL IBM DB2] Base à l’aide de l’API Flow Service
+title: Créer une connexion  [!DNL IBM DB2] Base à l’aide de l’API Flow Service
 type: Tutorial
-description: Découvrez comment connecter IBM [!DNL IBM DB2] à Adobe Experience Platform à l’aide de l’API Flow Service.
+description: Découvrez comment connecter  [!DNL IBM DB2] à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/A--c3ExvyPuWrLiFnVP-QRU1a6zWDebt40xwRE8hUVo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 37%
+source-wordcount: 474
+ht-degree: 38%
 
 ---
 
@@ -24,7 +29,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 
 ## Prise en main
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance d’Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -107,7 +112,7 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion de base [!DNL IBM DB2] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+Ce tutoriel vous a permis de créer une connexion de base [!DNL IBM DB2] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
 * [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

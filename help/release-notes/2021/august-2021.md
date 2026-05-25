@@ -5,9 +5,22 @@ doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/Ip8XAA94LTRdVkRejXYfCuU3N3FYxQk-eLEGqjmr-qY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: 733
 ht-degree: 87%
 
 ---
@@ -55,7 +68,7 @@ Observability Insights vous permet de surveiller les activités d’Experience P
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Alertes | Vous pouvez désormais vous abonner à des alertes importantes liées aux workflows s’exécutant sur Experience Platform. Après vous être abonné à des règles dʼalerte spécifiques, vous recevrez des notifications et des e-mails dans lʼinterface utilisateur dès quʼun événement de cycle de vie important se produit (par exemple, une ingestion de données réussie) ou si des problèmes nécessitent votre attention (par exemple, un échec du flux dʼingestion ou une tâche de segmentation qui prend plus de temps que prévu). Pour plus dʼinformations, voir la [présentation des alertes](../../observability/alerts/overview.md). |
+| Alertes | Vous pouvez désormais vous abonner à des alertes importantes liées aux workflows s’exécutant sur Experience Platform. Après avoir souscrit un abonnement à des règles dʼalerte spécifiques, vous recevrez des notifications et des e-mails dans lʼinterface d’utilisation dès quʼun événement de cycle de vie important se produit (par exemple, une ingestion de données réussie) ou si des problèmes nécessitent votre attention (par exemple, un échec du flux dʼingestion ou une tâche de segmentation qui prend plus de temps que prévu). Pour plus dʼinformations, voir la [présentation des alertes](../../observability/alerts/overview.md). |
 
 Pour plus dʼinformations sur ce service, voir la [présentation dʼObservability Insights](../../observability/home.md).
 

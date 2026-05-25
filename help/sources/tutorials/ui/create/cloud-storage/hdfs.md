@@ -5,10 +5,19 @@ title: Créer une connexion Source Apache HDFS dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Apache Hadoop Distributed File System à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/0-l9FULZglznmaLISUKiIsA9Crjyt2iMhMCVmKt0xsc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 35%
+source-wordcount: 476
+ht-degree: 27%
 
 ---
 
@@ -43,25 +52,25 @@ Pour authentifier votre connecteur source HDFS, vous devez fournir des valeurs p
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte HDFS à [!DNL Experience Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [&#128279;](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalog]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie **[!UICONTROL Espace de stockage]**, sélectionnez **[!UICONTROL Apache HDFS]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur HDFS.
+Sous la catégorie **[!UICONTROL Cloud storage]** , sélectionnez **[!UICONTROL Apache HDFS]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configure]**. Sinon, sélectionnez **[!UICONTROL Add data]** pour créer un connecteur HDFS.
 
 ![catalogue](../../../../images/tutorials/create/hdfs/catalog.png)
 
-La page **[!UICONTROL Connexion à HDFS]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connect to HDFS]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Sur le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification HDFS. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL New account]**. Sur le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification HDFS. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![connexion](../../../../images/tutorials/create/hdfs/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte HDFS auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte HDFS auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/hdfs/existing.png)
 

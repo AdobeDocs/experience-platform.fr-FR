@@ -2,12 +2,24 @@
 keywords: diffusion en continu, destination Qualtrics
 title: Automatisations de Qualtrics
 description: Synchronisez les données client opérationnelles et d’expérience pour déverrouiller la personnalisation à grande échelle. Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform comme entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée afin de combler l’écart en matière de compréhension des moteurs d’intention, d’émotion et d’expérience.
-last-substantial-update: 2023-10-25T00:00:00Z
+last-substantial-update: 2023-10-25T00:00:00.000Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/dGEc2bMqzOfR82A3jq1g6ocHn2FnVPKbaWqyIAQvHTo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 23%
+source-wordcount: 1286
+ht-degree: 22%
 
 ---
 

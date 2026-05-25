@@ -2,12 +2,17 @@
 keywords: Experience Platform;accueil;rubriques populaires;Stockage de fichiers Azure;stockage de fichiers azure
 solution: Experience Platform
 title: Présentation du connecteur Source de stockage de fichiers Azure
-description: Découvrez comment connecter Azure File Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
+description: Découvrez comment connecter le stockage de fichiers Azure à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+TQID: https://experienceleague.adobe.com/1M1I8felhzfG6l6ld4qkMMho2S0tbqjWctWBvJxl4TI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 69%
+source-wordcount: 400
+ht-degree: 70%
 
 ---
 
@@ -19,7 +24,7 @@ Les sources de stockage dans le cloud peuvent introduire vos propres données da
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 
@@ -38,11 +43,11 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL A
 
 ### Utiliser les API
 
-- [Créer une connexion de base Azure File Storage à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Créer une connexion de base de stockage de fichiers Azure à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
 - [Explorer la structure de données et le contenu d’une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/explore/cloud-storage.md)
 - [Créer un flux de données pour une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utiliser l’interface utilisateur
 
-- [Créer une connexion source Azure File Storage dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
+- [Créer une connexion source de stockage de fichiers Azure dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
 - [Créer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)

@@ -4,10 +4,18 @@ title: Abonnement aux notifications dʼévénement Adobe I/O
 description: Ce document décrit la procédure à suivre pour sʼabonner aux notifications dʼévénement Adobe I/O pour les services Adobe Experience Platform. Des informations de référence concernant les types dʼévénement disponibles sont également fournies, ainsi que des liens vers la documentation supplémentaire sur la manière dʼinterpréter les données dʼévénement renvoyées pour chaque service  [!DNL Experience Platform]  applicable.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/YbSl4WsK5jaiQOq3bWBBBYX4AKA9WDTSI0Ss0CkEamU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 88%
+source-wordcount: 780
+ht-degree: 70%
 
 ---
 
@@ -43,20 +51,20 @@ Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 
 >
 >L’événement de notification d’ingestion de données est obsolète dans Adobe I/O. Utilisez plutôt l’événement d’E/S **Informations d’exécution du flux de sources**.
 
-Une fois que vous avez créé un projet, accédez à lʼécran dʼaperçu de ce projet. Sélectionnez ensuite **[!UICONTROL Ajouter un événement]**.
+Une fois que vous avez créé un projet, accédez à lʼécran dʼaperçu de ce projet. À partir de là, sélectionnez **[!UICONTROL Add event]**.
 
 ![](../images/notifications/add-event-button.png)
 
 Une boîte de dialogue sʼaffiche, vous permettant dʼajouter un fournisseur dʼévénements à votre projet :
 
-* Si vous vous abonnez aux alertes dʼExperience Platform, sélectionnez **[!UICONTROL Notifications Platform]**.
-* Si vous vous abonnez aux notifications dʼAdobe Experience Platform [!DNL Privacy Service], sélectionnez **[!UICONTROL Événements Privacy Service]**.
+* Si vous vous abonnez à des alertes Experience Platform, sélectionnez **[!UICONTROL Platform notifications]**
+* Si vous vous abonnez à des notifications de [!DNL Privacy Service] Adobe Experience Platform, sélectionnez **[!UICONTROL Privacy Service Events]**
 
-Après avoir choisi un fournisseur dʼévénements, sélectionnez **[!UICONTROL Suivant]**.
+Une fois que vous avez choisi un fournisseur d’événements, sélectionnez **[!UICONTROL Next]**.
 
 ![](../images/notifications/event-provider.png)
 
-Lʼécran suivant affiche une liste des types dʼévénements auxquels vous pouvez vous abonner. Sélectionnez les événements auxquels vous souhaitez vous abonner, puis cliquez sur **[!UICONTROL Suivant]**.
+Lʼécran suivant affiche une liste des types dʼévénements auxquels vous pouvez vous abonner. Sélectionnez les événements auxquels vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Next]**.
 
 >[!NOTE]
 >
@@ -73,23 +81,23 @@ Lʼécran suivant affiche une liste des types dʼévénements auxquels vous pouv
 
 Lʼécran suivant vous invite à créer un JSON Web Token (JWT). Vous avez la possibilité de générer automatiquement une paire de clés ou de télécharger votre propre clé publique générée dans le terminal.
 
-Pour les besoins de ce tutoriel, nous avons retenu la première option. Sélectionnez la zone dʼoption **[!UICONTROL Générer une paire de clés]**, puis cliquez sur le bouton **[!UICONTROL Générer la paire de clés]** dans le coin inférieur droit.
+Pour les besoins de ce tutoriel, nous avons retenu la première option. Sélectionnez la case d’option à **[!UICONTROL Generate a key pair]**, puis sélectionnez le bouton **[!UICONTROL Generate keypair]** dans le coin inférieur droit.
 
 ![](../images/notifications/generate-keypair.png)
 
 Lorsque la paire de clés est générée, elle est automatiquement téléchargée par le navigateur. Vous devez stocker ce fichier vous-même, car il nʼest pas conservé dans Developer Console.
 
-Lʼécran suivant vous permet dʼafficher les détails de la paire de clés nouvellement générée. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Lʼécran suivant vous permet dʼafficher les détails de la paire de clés nouvellement générée. Sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![](../images/notifications/keypair-generated.png)
 
-Dans lʼécran suivant, indiquez le nom et la description de lʼenregistrement de lʼévénement dans la section [!UICONTROL Détails de lʼenregistrement de lʼévénement]. Il est recommandé de créer un nom unique et facilement identifiable afin de différencier cet enregistrement dʼévénement des autres sur le même projet.
+Dans l’écran suivant, indiquez un nom et une description pour l’enregistrement de l’événement dans la section [!UICONTROL Event registration details] . Il est recommandé de créer un nom unique et facilement identifiable afin de différencier cet enregistrement dʼévénement des autres sur le même projet.
 
 ![](../images/notifications/registration-details.png)
 
-Plus bas sur le même écran, sous la section [!UICONTROL Comment recevoir des événements], vous pouvez éventuellement configurer comment vous souhaitez recevoir les événements. **[!UICONTROL Webhook]** vous permet de fournir une adresse webhook personnalisée pour recevoir les événements, tandis que l’**[!UICONTROL action Runtime]** vous permet de faire de même à l’aide de [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Plus bas sur le même écran, sous la section [!UICONTROL How to receive events] , vous pouvez éventuellement configurer comment recevoir les événements. **[!UICONTROL Webhook]** vous permet de fournir une adresse webhook personnalisée pour recevoir les événements, tandis que **[!UICONTROL Runtime action]** vous permet de faire de même à l’aide de [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
-Pour ce tutoriel, sélectionnez **[!UICONTROL Webhook]** et fournissez l’URL du webhook que vous avez créé précédemment. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Enregistrer les événements configurés]** pour terminer l’enregistrement de l’événement.
+Pour ce tutoriel, sélectionnez **[!UICONTROL Webhook]** et fournissez l’URL du webhook que vous avez créé précédemment. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Save configured events]** pour terminer l’enregistrement de l’événement.
 
 ![](../images/notifications/receive-events.png)
 

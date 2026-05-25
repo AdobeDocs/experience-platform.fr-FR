@@ -2,9 +2,18 @@
 title: Bonnes pratiques relatives à la gestion avancée du cycle de vie des données
 description: Découvrez comment gérer efficacement les demandes d’hygiène des données dans Adobe Experience Platform à l’aide de l’interface utilisateur de gestion avancée du cycle de vie des données et de l’API Data Hygiene. Ce guide couvre les bonnes pratiques telles que la maximisation des identités par requête, la spécification de jeux de données individuels et la limitation de l’API pour éviter les ralentissements. Le document comprend des instructions pour configurer le nettoyage automatique des jeux de données, comment surveiller les statuts des ordres de travail et des méthodes détaillées de récupération des réponses. Suivez ces pratiques pour rationaliser le traitement de vos demandes et optimiser les temps de réponse.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
+TQID: https://experienceleague.adobe.com/PYUTmQwCYwZyI8-ipe8RBTMr1yoipCN5I1EDsetJYsA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: 823
 ht-degree: 0%
 
 ---

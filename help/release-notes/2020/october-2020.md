@@ -5,9 +5,27 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/0rclkbabzPRyuw8mRPRbpr5czih93eW7zX7EP-P5dGA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: 1035
 ht-degree: 23%
 
 ---
@@ -18,7 +36,7 @@ ht-degree: 23%
 
 - [Préparation des données](#data-prep)
 - [Profil client en temps réel](#profile)
-- [Segmentation Service](#segmentation)
+- [Service de segmentation](#segmentation)
 - [Sources](#sources)
 - [Délai de rentabilisation](#time-to-value)
 
@@ -30,7 +48,7 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| fonction `is_set` | La fonction `is_set` vous permet de vérifier la présence d’un attribut dans les données source. `is_set` peut être utilisé en combinaison avec `is_empty` pour vérifier à la fois la présence de l’attribut et la présence de la valeur dans l’attribut . |
+| Fonction `is_set` | La fonction `is_set` vous permet de vérifier la présence d’un attribut dans les données source. `is_set` peut être utilisé en combinaison avec `is_empty` pour vérifier à la fois la présence de l’attribut et la présence de la valeur dans l’attribut . |
 | Fonction `get_values` | La fonction `get_values` vous permet d’obtenir les valeurs du mappage d’entrée pour n’importe quelle clé donnée. |
 
 Pour plus d’informations, consultez la [présentation de la préparation des données](../../data-prep/home.md).
@@ -50,7 +68,7 @@ Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les 
 
 Adobe Experience Platform Segmentation Service propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir des données [!DNL Real-Time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Experience Platform], ce qui les rend facilement accessibles depuis n’importe quelle application Adobe.
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 **Nouvelles fonctionnalités**
 

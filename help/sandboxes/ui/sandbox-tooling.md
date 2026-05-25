@@ -2,9 +2,34 @@
 title: Outil Sandbox
 description: Exportez et importez facilement des configurations de sandbox entre des sandbox de manière transparente.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: a026ee1fc33463da663f5a75561df9df34470453
+TQID: https://experienceleague.adobe.com/owHoDUAwNAvbIkMHFb2OOuz3OwaJgBKji6d6Uv4rI-8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '3668'
+source-wordcount: 3668
 ht-degree: 7%
 
 ---

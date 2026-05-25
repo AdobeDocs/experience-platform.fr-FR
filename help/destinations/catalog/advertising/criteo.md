@@ -3,9 +3,19 @@ keywords: publicité ; critères ;
 title: Connexion Criteo
 description: Criteo permet de proposer des publicités fiables et percutantes afin d’offrir des expériences plus riches à chaque personne sur Internet. Grâce au plus grand jeu de données du commerce au monde et à la meilleure IA de sa catégorie, Criteo veille à ce que chaque point de contact du parcours d’achat soit personnalisé afin de toucher les clientes et clients avec la bonne annonce, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: c86a3cb911fef2b56600f312c4ae558810c8579d
+TQID: https://experienceleague.adobe.com/WNRnMVT0tVOHKY2uQdexYZGkX3yHTQZDJTupB19CxkY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: 1179
 ht-degree: 32%
 
 ---

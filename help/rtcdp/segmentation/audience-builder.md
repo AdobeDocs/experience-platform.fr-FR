@@ -4,9 +4,17 @@ description: Découvrez comment utiliser le Créateur d’audience dans Real-Tim
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
+TQID: https://experienceleague.adobe.com/oIUjDYEGD0j8r2vn-nItHAoL7GIhtDRUUlEftr87hT0
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: 1167
 ht-degree: 9%
 
 ---

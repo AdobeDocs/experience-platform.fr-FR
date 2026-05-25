@@ -2,9 +2,15 @@
 title: Documenter votre destination dans Adobe Experience Platform
 description: Cette section contient des instructions détaillées pour la création d’une page de documentation pour la destination dans Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/bfOmkpY8eTYmQKIYJQJKIuYPRsuIdWeFSGFGbKWPp94
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: 528
 ht-degree: 7%
 
 ---

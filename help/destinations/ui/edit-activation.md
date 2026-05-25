@@ -4,9 +4,19 @@ title: Modifier des flux de données d’activation
 type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/wE6eVboAogPDZd-rk7pWS3T9S8FDbYPNSwh-xFU6qj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: 917
 ht-degree: 8%
 
 ---
@@ -130,7 +140,7 @@ Sélectionnez les actions marketing applicables, puis cliquez sur **[!UICONTROL 
 
 ## Appliquer les libellés d’accès {#apply-access-labels}
 
-Sélectionnez **[!UICONTROL Apply access labels]** pour modifier les libellés d’utilisation des données exportées. Pour en savoir plus[&#x200B; consultez la documentation sur les &#x200B;](../../data-governance/labels/overview.md) libellés d’utilisation des données .
+Sélectionnez **[!UICONTROL Apply access labels]** pour modifier les libellés d’utilisation des données exportées. Pour en savoir plus[&#128279;](../../data-governance/labels/overview.md) consultez la documentation sur les  libellés d’utilisation des données .
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/apply-access-labels.png)
 

@@ -2,10 +2,51 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2024
 description: Notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/f26YgTSVNW-GUUNxJymGoha8pL5dn6hPpqxPyDbI2pU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1893'
-ht-degree: 30%
+source-wordcount: 1968
+ht-degree: 29%
 
 ---
 
@@ -118,10 +159,10 @@ Le service de requête vous permet d’utiliser le langage SQL standard pour int
 | Fonctionnalité | Description |
 | --- | --- |
 | Quarantaine de requête | Isolez automatiquement les exécutions de requête ayant échoué afin d’éviter les perturbations et de maintenir des performances cohérentes. Pour plus d’informations, consultez la documentation [Quarantaine de requête](../../query-service/ui/query-schedules.md#quarantine). |
-| Annuler la requête | Prenez le contrôle de l’exécution des requêtes et améliorez votre productivité en annulant les requêtes de longue durée. Pour plus d’informations, consultez la documentation [annuler la requête](../../query-service/ui/user-guide.md#cancel-query). |
+| Annuler la requête | Prenez le contrôle de l’exécution des requêtes et améliorez votre productivité en annulant les requêtes de longue durée.Voir la documentation [annuler la requête](../../query-service/ui/user-guide.md#cancel-query) pour plus d’informations. |
 | Alertes de requête planifiées | Tenez-vous informé grâce à des notifications proactives lors de la planification des requêtes, assurant ainsi une gestion efficace et opportune des tâches. Vous pouvez vous [abonner à des alertes lors de la création d’une requête](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou à l’aide d’actions intégrées pour les requêtes planifiées existantes. Pour plus d’informations, consultez la documentation [s’abonner aux alertes avec des actions intégrées](../../query-service/ui/monitor-queries.md#alert-subscription) . |
 | Amélioration de la navigation dans les requêtes planifiées | Naviguez facilement entre les modèles de requête et les exécutions planifiées pour une productivité accrue. Pour plus d’informations, consultez la documentation sur l’[affichage des exécutions de requête planifiées](../../query-service/ui/query-schedules.md#scheduled-query-runs). |
-| Sortie de requête étendue | Accédez à jusqu’à 500 lignes de résultats de requête dans la console pour une analyse plus approfondie de vos données. Pour plus d’informations, consultez la documentation [nombre de résultats](../../query-service/ui/user-guide.md#result-count). |
+| Sortie de requête étendue | Accédez à jusqu’à 500 lignes de résultats de requête dans la console pour une analyse plus approfondie de vos données.Pour plus d’informations, consultez la documentation [nombre de résultats](../../query-service/ui/user-guide.md#result-count) . |
 | Coucher de soleil de l’ancien Query Editor | Depuis le 30 avril 2024, le Query Editor amélioré est l’éditeur par défaut pour tous les utilisateurs et utilisatrices. L’éditeur hérité sera abandonné le 24 mai 2024 et ne sera plus disponible. Pour plus d’informations, consultez le [guide d’utilisation de Query Editor](../../query-service/ui/user-guide.md). |
 
 {style="table-layout:auto"}

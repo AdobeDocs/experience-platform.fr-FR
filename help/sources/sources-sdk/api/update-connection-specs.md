@@ -1,18 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service
-description: Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération de PUT.
+title: Mettre à jour une spécification de connexion à l’aide de l’API Flow Service
+description: Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération PUT.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+TQID: https://experienceleague.adobe.com/HCEHRkpghbwByGEIGHkQvcq--iUCF5gxgm-7pUKSzwU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: 118
 ht-degree: 14%
 
 ---
 
-# Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service
+# Mettre à jour une spécification de connexion à l’aide de l’API Flow Service
 
-Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
+Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération PUT. Lors de la mise à jour d’une spécification de connexion par le biais d’une requête PUT, le corps doit inclure tous les champs qui seraient requis lors de la création d’une spécification de connexion dans une requête POST.
 
 **Format d’API**
 
@@ -22,7 +27,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Requête**
 
-La requête suivante met à jour `name` de la source [!DNL MailChimp] créée à l’étape précédente.
+La requête suivante met à jour le `name` de la source de [!DNL MailChimp] créée à l’étape précédente.
 
 ```shell
 PUT -X GET \
@@ -205,7 +210,7 @@ PUT -X GET \
 
 **Réponse**
 
-Un appel réussi renvoie les détails de la spécification de connexion mis à jour, y compris son nom mis à jour.
+Un appel réussi renvoie les détails de spécification de connexion mis à jour, y compris son nom mis à jour.
 
 ```json
 {

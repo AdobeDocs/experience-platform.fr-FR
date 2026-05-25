@@ -2,9 +2,17 @@
 title: Plannings de requête
 description: Découvrez comment automatiser les exécutions de requête planifiées, supprimer ou désactiver un planning de requête et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 4ab588acea0b6794f897195f2accc2cc458aef83
+TQID: https://experienceleague.adobe.com/TazOHQGBFYjSGH0WjggCDoo8YybIJ3Wg61Iz8igpFNk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '2216'
+source-wordcount: 2216
 ht-degree: 7%
 
 ---

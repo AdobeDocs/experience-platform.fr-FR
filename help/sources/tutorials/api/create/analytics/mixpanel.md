@@ -2,10 +2,17 @@
 title: Créer une connexion Source et un flux de données pour Mixpanel à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Mixpanel à l’aide de l’API Flow Service.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/CqROpTBrGDtBoM5lUyltgj2XCLuwCinKQuJaOhoNbDc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1992'
-ht-degree: 52%
+source-wordcount: 2059
+ht-degree: 54%
 
 ---
 
@@ -30,7 +37,7 @@ Pour connecter [!DNL Mixpanel] à Experience Platform, vous devez fournir des va
 | --- | --- | --- |
 | `username` | Nom d’utilisateur du compte de service qui correspond à votre compte [!DNL Mixpanel]. Pour plus d’informations, consultez la [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account). | `Test8.6d4ee7.mp-service-account` |
 | `password` | Mot de passe du compte de service qui correspond à votre compte [!DNL Mixpanel]. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| `projectId` | Identifiant de projet [!DNL Mixpanel]. Cet identifiant est requis pour créer une connexion source. Pour plus d’informations[[!DNL Mixpanel]  consultez la &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings)documentation sur les paramètres de projet et le [[!DNL Mixpanel] guide sur la création et la gestion de projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
+| `projectId` | Identifiant de projet [!DNL Mixpanel]. Cet identifiant est requis pour créer une connexion source. Pour plus d’informations[&#128279;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) consultez la [!DNL Mixpanel] documentation sur les paramètres de projet et le [[!DNL Mixpanel] guide sur la création et la gestion de projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
 | `timezone` | Fuseau horaire qui correspond à votre projet [!DNL Mixpanel]. Le fuseau horaire est requis pour créer une connexion source. Pour plus d’informations, consultez la [documentation sur les paramètres du projet Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings). | `Pacific Standard Time` |
 
 Pour plus d’informations sur l’authentification de votre source [!DNL Mixpanel], consultez la [[!DNL Mixpanel] présentation de la source](../../../../connectors/analytics/mixpanel.md).
@@ -115,7 +122,7 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Identifiant de connexion de base généré à l’étape précédente. |
 | `objectType=rest` | Type d’objet que vous souhaitez explorer. Actuellement, cette valeur est toujours définie sur `rest`. |
-| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin d’accès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
+| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin dʼaccès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Experience Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
 | `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Experience Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne `{"projectId":"2671127","timezone":"Pacific Standard Time"}` en base64. **Remarque** : dans l’exemple ci-dessous, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` codé en base64 équivaut à `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
@@ -454,7 +461,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
 | `data.format` | Format des données [!DNL Mixpanel] que vous souhaitez importer dans Experience Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 

@@ -4,9 +4,21 @@ type: Tutorial
 description: Découvrez comment créer une connexion source Snowflake à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ea8100cf8e032371b6c5187ba142bc12047b35d1
+TQID: https://experienceleague.adobe.com/BbnMUO7mCISuO-BJKczFtk-dh737zyQYOGxgpSrGPts
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: 1079
 ht-degree: 6%
 
 ---

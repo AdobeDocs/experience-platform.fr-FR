@@ -2,9 +2,18 @@
 description: Découvrez comment créer un connecteur source Adobe Analytics dans l’interface utilisateur pour importer les données de classification dans Adobe Experience Platform.
 title: Créer une connexion Adobe Analytics Source pour les données de classification dans l’interface utilisateur
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
+TQID: https://experienceleague.adobe.com/0hQI9C9obl7vXSsLL6uUJuI2bOm93JPqhgBZpEqtuZA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: 517
 ht-degree: 16%
 
 ---
@@ -31,7 +40,7 @@ Le connecteur source des classifications Analytics nécessite que vos données a
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *Applications Adobe*, sélectionnez **[!UICONTROL Adobe Analytics]**, puis **[!UICONTROL Set up]**.
+Dans la catégorie *Applications*, sélectionnez **[!UICONTROL Adobe Analytics]**, puis **[!UICONTROL Set up]**.
 
 >[!TIP]
 >

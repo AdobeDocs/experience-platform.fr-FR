@@ -2,10 +2,20 @@
 title: Prise en main de l’API d’outils Sandbox
 description: Utilisez l’API Sandbox tooling pour examiner les artefacts et exporter et importer un instantané des configurations de sandbox entre les sandbox. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+TQID: https://experienceleague.adobe.com/VKRQcGBs4APKpgOVXmLil-IKxCc-c9pEFg05pltyAvI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 63%
+source-wordcount: 318
+ht-degree: 64%
 
 ---
 
@@ -13,7 +23,7 @@ ht-degree: 63%
 
 Ce guide de développement décrit les étapes à suivre pour utiliser l’API d’outils Sandbox afin de gérer les packages et les outils dans Adobe Experience Platform. Il comprend des exemples d’appels API pour effectuer diverses opérations.
 
-## Lecture d’exemples d’appels API {#api-calls}
+## Lecture d&#39;exemples d&#39;appels API {#api-calls}
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. Des exemples de données JSON renvoyées à la réponse de l’API sont également fournis. Pour plus d’informations sur les conventions utilisées pour les exemples d’appels API dans la documentation, consultez la section sur la [lecture d’exemples d’appels API](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 

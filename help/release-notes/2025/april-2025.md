@@ -2,10 +2,47 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
+TQID: https://experienceleague.adobe.com/JIfj1VqOK4AsYkzeS2YofnCEoWxKM2M7MotY2SWjyyM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2069'
-ht-degree: 99%
+source-wordcount: 2135
+ht-degree: 94%
 
 ---
 
@@ -40,7 +77,7 @@ Experience League est une plateforme d’apprentissage complète conçue pour v
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et modifiez-la sur [Experience League](https://experienceleague.adobe.com/fr/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Signets] pour enregistrer et collecter vos ressources préférées en un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Consultations récentes** : utilisez la section [!UICONTROL Consultations récentes] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL Toutes les ressources d’apprentissage] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL Nouveautés] pour obtenir un flux du contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les produits phares, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Regarder des événements passés à la demande].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
+| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et modifiez-la sur [Experience League](https://experienceleague.adobe.com/fr/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Bookmarks] pour enregistrer et collecter vos ressources préférées à un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Récemment consultés** : utilisez la section [!UICONTROL Recently viewed] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL All learning resources] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL What's new] pour obtenir un flux du contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les projecteurs de produit, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Watch past events on-demand].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -87,7 +124,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 ## Modèle de données d’expérience (XDM) {#xdm}
 
-XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences clientes par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Composants XDM mis à jour**
 
@@ -153,7 +190,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Version bêta]{type=Informative} [!DNL Algolia User Profiles] | La source [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) est maintenant disponible. Utilisez cette source pour amener vos données d’affinités de profils d’utilisation [!DNL Algolia] dans Experience Platform. Vous pouvez ensuite utiliser ces données pour améliorer l’interaction des clientes et clients, les taux de conversion et l’expérience clientèle générale en proposant des solutions de recherche hautes performances pour les sites web, les plateformes d’e-commerce et les applications. Pour plus d’informations, consultez le guide sur l’ [ingestion de données [!DNL Algolia User Profiles] dans Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
+| [!BADGE Version bêta]{type=Informative} [!DNL Algolia User Profiles] | La source [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) est maintenant disponible. Utilisez cette source pour amener vos données d’affinités de profils d’utilisation [!DNL Algolia] dans Experience Platform. Vous pouvez ensuite utiliser ces données pour améliorer l’engagement client, les taux de conversion et l’expérience client générale en proposant des solutions de recherche hautes performances pour les sites web, les plateformes d’e-commerce et les applications. Pour plus d’informations, consultez le guide sur l’ [ingestion de données [!DNL Algolia User Profiles] dans Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md). |
 | Prise en charge de l’API [!BADGE Beta]{type=Informative} pour [!DNL Azure Databricks] | La source [!DNL Azure Databricks] est désormais disponible dans l’API. Utilisez l’API [!DNL Flow Service] pour connecter votre compte [!DNL Databricks] et importer vos données [!DNL Databricks] dans Experience Platform. Pour plus d’informations, consultez la documentation sur [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md). |
 
 {style="table-layout:auto"}
@@ -168,7 +205,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
 
 ## Playbooks de cas d’utilisation {#use-case-playbooks}
 

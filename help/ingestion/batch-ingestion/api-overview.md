@@ -4,9 +4,18 @@ solution: Experience Platform
 title: Guide de l’API d’ingestion par lots
 description: Ce document fournit un guide complet aux développeurs qui travaillent avec des API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: a4d63048640f2761cbea4bb96e56969f6ebbff8a
+TQID: https://experienceleague.adobe.com/oCAUvP0cM4dw1wEXnVCbjIkNGIlwSKb31A5h5s3-MTM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '2532'
+source-wordcount: 2532
 ht-degree: 63%
 
 ---

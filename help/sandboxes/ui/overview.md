@@ -4,10 +4,18 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur des sandbox
 description: Adobe Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts et isolés. L’interface utilisateur des sandbox se trouve dans l’interface utilisateur d’Experience Platform.
 exl-id: d86e282c-6231-490f-a6c8-dbd12bf2341e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/FtIfjhWEOezhjDBl6ENpy9qJje-WoMkJa-s94WL-sqs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 56%
+source-wordcount: 135
+ht-degree: 57%
 
 ---
 

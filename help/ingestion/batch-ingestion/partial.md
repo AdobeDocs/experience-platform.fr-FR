@@ -4,10 +4,18 @@ solution: Experience Platform
 title: Aperçu de l’ingestion par lots partielle
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: bc72f77b1b4a48126be9b49c5c663ff11e9054ea
+TQID: https://experienceleague.adobe.com/6-IqkSaGjRlvaIB5Ju1b7lmpGTSlRqBn8-SRQrpS23M
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 30%
+source-wordcount: 1223
+ht-degree: 31%
 
 ---
 
@@ -26,13 +34,13 @@ Ce tutoriel nécessite une connaissance pratique des différents services Adobe�
 
 Les sections suivantes contiennent des informations supplémentaires nécessaires pour passer des appels à des API [!DNL Experience Platform].
 
-### Lecture d’exemples d’appels API
+### Lecture d&#39;exemples d&#39;appels API
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -189,7 +197,7 @@ Une réponse réussie renvoie le `id` de votre flux de données et une `etag` mi
 
 ### Vérifier la mise à jour
 
-Une fois le PATCH terminé, envoyez une requête GET et récupérez votre flux de données pour vérifier que les modifications ont bien été apportées.
+Une fois le PATCH terminé, envoyez une requête GET et récupérez votre flux de données pour vérifier que les modifications ont bien été effectuées.
 
 **Format d’API**
 

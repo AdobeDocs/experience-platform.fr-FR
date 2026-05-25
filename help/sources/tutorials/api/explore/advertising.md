@@ -4,10 +4,15 @@ solution: Experience Platform
 title: Explorer un système Advertising à l’aide de l’API Flow Service
 description: Le service de flux est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge peuvent être connectées. Ce tutoriel utilise l’API Flow Service pour explorer les systèmes publicitaires.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/D-5QZa41FqhL6hvGzA9gqIOsWJsYCxq5-auweRCnfOk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 15%
+source-wordcount: 510
+ht-degree: 16%
 
 ---
 
@@ -17,13 +22,13 @@ Une fois la connexion de base créée, vous pouvez désormais utiliser l’ident
 
 Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour explorer les systèmes publicitaires.
 
-## Commencer
+## Prise en main
 
 >[!IMPORTANT]
 >
 >Ce tutoriel nécessite que vous disposiez de l’identifiant de connexion de base unique pour votre source publicitaire. Si vous ne disposez pas de cet identifiant, consultez le tutoriel sur [la connexion d’une source publicitaire à Experience Platform](../../api/create/advertising/ads.md).
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [Sources](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
@@ -36,7 +41,7 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 
 ## Explorer vos tableaux de données
 
-En utilisant la connexion de base de votre système publicitaire, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour rechercher le chemin d’accès de la table que vous souhaitez inspecter ou ingérer dans [!DNL Experience Platform].
+À l’aide de la connexion de base de votre système publicitaire, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour rechercher le chemin d’accès de la table que vous souhaitez inspecter ou ingérer dans [!DNL Experience Platform].
 
 **Format d’API**
 

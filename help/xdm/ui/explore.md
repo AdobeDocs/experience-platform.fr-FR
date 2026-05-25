@@ -5,9 +5,16 @@ title: Explorer les ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur d’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7ff89999815387884fd8ce39f7cd7e7a6bee88bc
+TQID: https://experienceleague.adobe.com/xB6Pe34IWxVlkDy9oP9k4tTWHa62UUhaGUbzXRIGjlU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: 2839
 ht-degree: 0%
 
 ---

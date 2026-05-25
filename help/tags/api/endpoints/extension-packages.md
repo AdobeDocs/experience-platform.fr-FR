@@ -2,9 +2,32 @@
 title: Point d’entrée des packages d’extension
 description: Découvrez comment effectuer des appels au point d’entrée /extension_packages dans l’API Reactor.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+TQID: https://experienceleague.adobe.com/bUEQ1aWFlCDj9VXWADhgAgOb5uknineiedJzplWfi-Y
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: 940
 ht-degree: 97%
 
 ---
@@ -17,7 +40,7 @@ ht-degree: 97%
 
 Un package d’extension représente une [extension](./extensions.md) telle qu’elle a été créée par un développeur d’extension. Un package d’extension définit des fonctionnalités supplémentaires qui peuvent être mises à la disposition des utilisateurs de balises. La plupart du temps, ces fonctionnalités se présentent sous la forme de [composants de règle](./rule-components.md) (événements, conditions et actions) et [d&#39;éléments de données](./data-elements.md), mais peuvent également inclure des modules principaux et des modules partagés.
 
-Les modules d’extension s’affichent dans le catalogue d’extensions dans l’interface utilisateur de la collecte de données et l’interface utilisateur de Adobe Experience Platform pour que les utilisateurs puissent les installer. L’ajout d’un package d’extension à une propriété s&#39;effectue en créant une extension comportant un lien vers le package d’extension.
+Les packages d’extension s’affichent dans le catalogue d’extensions dans l’interface utilisateur de collecte de données et de Adobe Experience Platform pour que les utilisateurs puissent les installer. L’ajout d’un package d’extension à une propriété s&#39;effectue en créant une extension comportant un lien vers le package d’extension.
 
 Un package d’extension appartient à la [société](./companies.md) du développeur qui l’a créé.
 
@@ -27,7 +50,7 @@ Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](http
 
 Il est important de comprendre non seulement comment passer des appels à lʼAPI Reactor, mais également comment les attributs `status` et `availability` dʼun package dʼextension déterminent les actions que vous pouvez effectuer sur celui-ci. Ces actions sont abordées dans les sections ci-dessous.
 
-### État
+### Statut
 
 Les packages dʼextension ont trois états possibles : `pending`, `succeeded` et `failed`.
 
@@ -55,7 +78,7 @@ Il existe plusieurs niveaux de disponibilité pour un package dʼextension : `d
 
 Vous pouvez récupérer une liste des packages d’extension en effectuant une requête GET sur `/extension_packages`.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /extension_packages
@@ -63,7 +86,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les packages d’extension répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Consultez le guide sur le [filtrage des réponses](../guides/filtering.md) pour plus d&#39;informations.
+>À l’aide des paramètres de requête, les packages d’extension répertoriés peuvent être filtrés en fonction des attributs suivants :<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
 
 **Requête**
 

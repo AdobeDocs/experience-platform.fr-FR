@@ -3,9 +3,14 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configurer les spécifications d’authentification pour les sources en libre-service (SDK par lots)
 description: Ce document présente un aperçu des configurations que vous devez préparer pour utiliser des sources en libre-service (SDK par lots).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+TQID: https://experienceleague.adobe.com/MiQsU-CMA68oPDh814DN5Gb1NWN-NRxMa5vY7SSzdF4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: 776
 ht-degree: 4%
 
 ---
@@ -194,10 +199,10 @@ Les paramètres suivants sont généralement requis lors de l’utilisation de l
 
 | Paramètre | Type | Obligatoire | Description |
 | --- | --- | --- | --- |
-| `host` | chaîne | Non | URL de la ressource. |
-| `authKey1` | Chaîne | Oui | Première clé d’authentification requise pour l’accès à l’API. Elle est généralement envoyée dans l’en-tête de requête ou les paramètres de requête. |
-| `authKey2` | Chaîne | Facultatif | Une deuxième clé d’authentification. Si nécessaire, cette clé est souvent utilisée pour valider davantage les requêtes. |
-| `authKeyN` | Chaîne | Facultatif | Variable d’authentification supplémentaire qui peut être utilisée si nécessaire, à l’exception de l’API . |
+| `host` | string | Non | URL de la ressource. |
+| `authKey1` | string | Oui | Première clé d’authentification requise pour l’accès à l’API. Elle est généralement envoyée dans l’en-tête de requête ou les paramètres de requête. |
+| `authKey2` | chaîne | Facultatif | Une deuxième clé d’authentification. Si nécessaire, cette clé est souvent utilisée pour valider davantage les requêtes. |
+| `authKeyN` | chaîne | Facultatif | Variable d’authentification supplémentaire qui peut être utilisée si nécessaire, à l’exception de l’API . |
 
 {style="table-layout:auto"}
 
@@ -265,7 +270,7 @@ Vous pouvez utiliser le paramètre `restAttributes` pour définir comment la cl�
   }
 ```
 
-Chaque clé d’authentification (telle que `authKey1`, `authKey2`, etc.) peut être associée à `restAttributes` pour dicter la manière dont elles sont envoyées sous forme de requêtes.
+Chaque clé d’authentification (telle que `authKey1`, `authKey2`, etc.) peut être associé à des `restAttributes`, pour dicter la manière dont ils sont envoyés en tant que requêtes.
 
 Si `authKey1` a `"headerParamName": "X-Auth-Key1"`. Cela signifie que l’en-tête de la requête doit inclure `X-Auth-Key:{YOUR_AUTH_KEY1}`. De plus, le nom de la clé et le `headerParamName` ne doivent pas nécessairement être identiques. Par exemple :
 

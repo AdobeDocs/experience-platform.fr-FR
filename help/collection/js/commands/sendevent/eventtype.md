@@ -2,9 +2,21 @@
 title: eventType
 description: Définissez le type d’événement pour un appel sendEvent.
 exl-id: 9d0fae3b-827a-4084-b460-b755e478e06a
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+TQID: https://experienceleague.adobe.com/amcl11k32moRYEd4dOehhKhspTvDOclDEm1iHvdLbSo
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: 133
 ht-degree: 0%
 
 ---

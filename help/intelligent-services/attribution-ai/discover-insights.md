@@ -4,9 +4,16 @@ feature: Attribution AI
 title: Découvrez des informations dans Attribution AI
 description: Ce document sert de guide pour interagir avec les informations des instances de service dans l’interface utilisateur Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/RIr-16FceplVeprcE8kGwQvmy0-qmIlG8M1E3Fx7Uk8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: 1600
 ht-degree: 39%
 
 ---
@@ -133,7 +140,7 @@ Survoler la ligne des données avec votre souris d’un modèle d’attribution 
 
 ## Répartition par canal
 
-La carte **[!UICONTROL Breakdown by channel]** est utilisée pour déterminer le nombre total de conversions par rapport à chaque canal. Vous pouvez utiliser cette fiche pour vous aider à prendre des décisions sur l’efficacité de chaque canal et le retour sur investissement.
+La carte **[!UICONTROL Breakdown by channel]** est utilisée pour déterminer le nombre total de conversions par rapport à chaque canal. Vous pouvez utiliser cette carte pour vous aider à prendre des décisions sur l’efficacité de chaque canal et le retour sur investissement.
 
 Sélectionnez les points de suspension en haut à droite de la carte **[!UICONTROL Breakdown by channel]** pour ouvrir une liste déroulante qui vous permet de renseigner les données en fonction des points de contact.
 
@@ -145,7 +152,7 @@ La carte **[!UICONTROL Top campaigns]** affiche un aperçu de vos campagnes et d
 
 ![campagnes principales](./images/insights/top-campaigns.png)
 
-## Répartition par position du point de contact
+## Répartition par position de point de contact
 
 La sélection de l’onglet **[!UICONTROL Path Analysis]** charge les graphiques **[!UICONTROL Breakdown by touchpoint position]** et **[!UICONTROL Top conversion paths]**.
 

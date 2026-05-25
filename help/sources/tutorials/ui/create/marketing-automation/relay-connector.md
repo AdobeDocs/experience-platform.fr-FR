@@ -2,9 +2,14 @@
 title: Connecter le relais à Experience Platform dans l’interface utilisateur
 description: Découvrez comment créer une connexion source personnalisée du connecteur relais à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+TQID: https://experienceleague.adobe.com/ACRUFLwGLJVM937cdU7rgtCA1r3MBwI7h9IyfQUO-gQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: 585
 ht-degree: 2%
 
 ---

@@ -5,10 +5,30 @@ feature: Customer AI
 title: Contrôle d’accès pour l’IA dédiée aux clients
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs pour l’IA dédiée aux clients.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/ovzb-dwRBsFOMNTl-DwQLQ78zHvRmCBHDLPEV2--oCg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 93%
+source-wordcount: 500
+ht-degree: 84%
 
 ---
 
@@ -32,11 +52,11 @@ En haut de la **page insights** de l’espace de travail de l’IA dédiée aux 
 
 ![L’espace de travail de l’IA dédiée aux clients avec les champs restreints du schéma mis en surbrillance.](../images/user-guide/access-restricted.png)
 
-Lorsque vous prévisualisez des jeux de données avec un schéma limité sur la page **[!UICONTROL Créer un modèle de workflow]**, un avertissement s’affiche pour vous informer qu’[!UICONTROL en raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.].
+Lorsque vous prévisualisez des jeux de données avec un schéma limité sur la page **[!UICONTROL Create model workflow]**, un avertissement s’affiche pour vous informer que [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
 ![L’espace de travail de l’IA dédiée aux clients avec les champs restreints des jeux de données d’aperçu avec les résultats de schéma limités mis en surbrillance.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
-Après avoir créé un modèle contenant des informations restreintes et procédé à l’étape **[!UICONTROL Définir un objectif]**, un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.].
+Après avoir créé un modèle avec des informations restreintes et procédé à l’étape de **[!UICONTROL Define goal]**, un avertissement s’affiche en haut : [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
 ![L’espace de travail de l’IA dédiée aux clients avec les champs restreints des résultats du modèle de service mis en surbrillance.](../images/user-guide/information-not-displayed-save-and-exit.png)
 

@@ -1,12 +1,25 @@
 ---
 title: Connexion Zendesk
 description: Utilisez la destination Zendesk pour exporter les données de votre compte et les activer dans Zendesk en fonction des besoins de votre entreprise.
-last-substantial-update: 2023-03-14T00:00:00Z
+last-substantial-update: 2023-03-14T00:00:00.000Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/GRFzqKjauMj6mb27e3jwHErAOV1YGp71FekQZwc6O8w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 30%
+source-wordcount: 1626
+ht-degree: 29%
 
 ---
 
@@ -20,7 +33,7 @@ Cette [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md)
 
 ## Cas d’utilisation {#use-cases}
 
-Le service client d’une plateforme B2C multicanal souhaite garantir une expérience personnalisée transparente à ses clients. Le ministère peut créer des audiences à partir de ses propres données hors ligne pour créer de nouveaux profils d&#39;utilisateurs ou mettre à jour les informations de profil existantes à partir de différentes interactions (par exemple, les achats, les retours, etc.) et envoyer ces audiences de [!DNL Adobe Experience Platform] à [!DNL Zendesk]. La mise à jour des informations dans [!DNL Zendesk] permet à l’agent du service client de disposer immédiatement des informations récentes du client, ce qui permet des réponses et une résolution plus rapides.
+Le service client d’une plateforme B2C multicanal souhaite garantir une expérience personnalisée transparente à ses clients. Le ministère peut créer des audiences à partir de ses propres données hors ligne pour créer de nouveaux profils d&#39;utilisateurs ou mettre à jour les renseignements sur les profils existants à partir de différentes interactions (par exemple, les achats, les retours, etc.) et envoyez ces audiences de [!DNL Adobe Experience Platform] à [!DNL Zendesk]. La mise à jour des informations dans [!DNL Zendesk] permet à l’agent du service client de disposer immédiatement des informations récentes du client, ce qui permet des réponses et une résolution plus rapides.
 
 ## Conditions préalables {#prerequisites}
 
@@ -40,7 +53,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination [!D
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| `Bearer token` | Jeton d’accès que vous avez généré dans votre compte [!DNL Zendesk]. <br> Suivez la documentation pour [générer un jeton d’accès [!DNL Zendesk] a](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) si vous n’en avez pas. | `a0b1c2d3e4...v20w21x22y23z` |
+| `Bearer token` | Jeton d’accès que vous avez généré dans votre compte [!DNL Zendesk]. <br> Consultez la documentation pour [générer un jeton  [!DNL Zendesk] ’accès](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) si vous n’en avez pas. | `a0b1c2d3e4...v20w21x22y23z` |
 
 ## Mécanismes de sécurisation {#guardrails}
 
@@ -130,7 +143,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -199,7 +212,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 Retrouvez d’autres informations utiles de la documentation [!DNL Zendesk] ci-dessous :
 
-* [Premier appel](https://developer.zendesk.com/documentation/sales-crm/first-call/)
+* [Passer votre premier appel](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Champs personnalisés](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 
 ### Journal des modifications {#changelog}

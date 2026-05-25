@@ -2,9 +2,20 @@
 title: idMigrationEnabled
 description: Permet au SDK Web de lire les cookies AMCV.
 exl-id: 33b9d645-0fbe-4fe4-8847-e6f9e78557b6
-source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
+TQID: https://experienceleague.adobe.com/hbyGQRiwdHakLAJboWijFbU7V7rdNb64W2-jJqwGB-s
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: 857
 ht-degree: 0%
 
 ---
@@ -71,7 +82,7 @@ Pour vérifier que la migration d’identité fonctionne correctement :
 >});
 >```
 
-## Configuration `idMigrationEnabled` {#configure}
+## Configurer `idMigrationEnabled` {#configure}
 
 Définissez la valeur booléenne `idMigrationEnabled` lors de l’exécution de la commande `configure`. Si vous omettez cette propriété lors de la configuration de Web SDK, elle est définie par défaut sur `true`. Définissez cette propriété si vous souhaitez désactiver la possibilité de lire les cookies AMCV définis par l’API visiteur. La plupart des organisations n’ont pas besoin de définir cette propriété.
 

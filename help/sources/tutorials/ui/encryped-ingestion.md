@@ -2,9 +2,16 @@
 title: Ingestion de données chiffrées dans le Workspace de l’interface utilisateur des sources
 description: Découvrez comment ingérer des données chiffrées dans l’espace de travail de l’interface utilisateur des sources.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: c52a0e3910697b420f88425388431a4ad3d53072
+TQID: https://experienceleague.adobe.com/qQ1M2BDcSWJsSA-AF-dj6-1fPq-yF4aFsJ3k6VPRsRY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: 1418
 ht-degree: 10%
 
 ---

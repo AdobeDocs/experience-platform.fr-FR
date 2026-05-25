@@ -4,10 +4,21 @@ title: Création d’un pipeline de fonctionnalités à l’aide du SDK de créa
 type: Tutorial
 description: Adobe Experience Platform vous permet de créer des pipelines de fonctionnalités personnalisés pour concevoir des fonctionnalités à grande échelle via l’exécution du framework de machine learning de Sensei. Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide du SDK de création de modèles dans PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/HWziPP2Hj-x5e9fgPEVjtaPPLWfBthLSt-FSv0CC0AI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 28%
+source-wordcount: 1473
+ht-degree: 27%
 
 ---
 
@@ -25,7 +36,7 @@ ht-degree: 28%
 
 Adobe Experience Platform vous permet de créer des pipelines de fonctionnalités personnalisés pour concevoir des fonctionnalités à grande échelle via l’exécution du framework de machine learning de Sensei (ci-après appelée « exécution »).
 
-Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide de la [SDK de création de modèles](./sdk.md) dans PySpark.
+Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide de la SDK de création de modèles[&#128279;](./sdk.md) dans PySpark.
 
 Le workflow suivant se produit lorsqu’un pipeline de fonctionnalité est exécuté :
 
@@ -37,7 +48,7 @@ Le workflow suivant se produit lorsqu’un pipeline de fonctionnalité est exéc
 6. Le modèle est transformé avec le jeu de données de notation.
 7. Les colonnes intéressantes de la sortie sont ensuite sélectionnées et réenregistrées en [!DNL Experience Platform] avec les données associées.
 
-## Commencer
+## Prise en main
 
 Pour exécuter une recette dans n’importe quelle organisation, les éléments suivants sont requis :
 

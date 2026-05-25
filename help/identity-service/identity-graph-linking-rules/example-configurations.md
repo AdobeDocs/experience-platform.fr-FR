@@ -2,9 +2,26 @@
 title: Guide de configuration des règles de liaison du graphique d’identités
 description: Découvrez les différents types d’implémentation que vous pouvez configurer à l’aide des règles de liaison de graphique d’identités.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/lb51Oazv4fAGSIVGe09Kethm0zYa0JNguNmnA-BlQKk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '2005'
+source-wordcount: 2005
 ht-degree: 8%
 
 ---

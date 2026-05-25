@@ -2,10 +2,19 @@
 title: Créer une connexion Source SFTP dans l’interface utilisateur
 description: Découvrez comment créer une connexion source SFTP à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
+TQID: https://experienceleague.adobe.com/sbWU6m2ZAge8fe3MBRWuO5rPhAhPWVUm3zrZyqbuTb0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 25%
+source-wordcount: 643
+ht-degree: 24%
 
 ---
 
@@ -15,9 +24,9 @@ Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
@@ -34,19 +43,19 @@ Lisez le [[!DNL SFTP] guide d’authentification](../../../../connectors/cloud-s
 
 ## Connexion à votre serveur [!DNL SFTP]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie [!UICONTROL Espace de stockage], sélectionnez **[!UICONTROL SFTP]** puis **[!UICONTROL Ajouter des données]**.
+Sous la catégorie [!UICONTROL Cloud storage] , sélectionnez **[!UICONTROL SFTP]** puis **[!UICONTROL Add data]**.
 
 ![Le catalogue des sources Experience Platform avec la source SFTP sélectionnée.](../../../../images/tutorials/create/sftp/catalog.png)
 
-La page **[!UICONTROL Se connecter à SFTP]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connect to SFTP]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte FTP ou SFTP auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte FTP ou SFTP auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![Liste des comptes SFTP existants dans l’interface utilisateur d’Experience Platform.](../../../../images/tutorials/create/sftp/existing.png)
 
@@ -58,7 +67,7 @@ Pour connecter un compte existant, sélectionnez le compte FTP ou SFTP auquel vo
 >
 >* SFTP prend en charge la clé OpenSSH de type `ed25519`, `RSA` ou `DSA`. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour convertir le fichier PPK au format OpenSSH.
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description facultative pour votre nouveau compte [!DNL SFTP].
+Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et une description facultative pour votre nouveau compte [!DNL SFTP].
 
 ![Écran du nouveau compte pour SFTP](../../../../images/tutorials/create/sftp/new.png)
 
@@ -68,14 +77,14 @@ La source [!DNL SFTP] prend en charge l’authentification de base et l’authen
 
 >[!TAB  Authentification de base ]
 
-Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Mot de passe]** puis indiquez les valeurs appropriées pour les informations d’identification suivantes :
+Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Password]**, puis fournissez les valeurs appropriées pour les informations d’identification suivantes :
 
 * hôte
 * port
 * nom d&#39;utilisateur
 * mot de passe
 
-Au cours de cette étape, vous pouvez également configurer vos connexions simultanées maximales, définir votre chemin d’accès au dossier et activer ou désactiver le fractionnement de votre serveur [!DNL SFTP]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion s’établisse.
+Au cours de cette étape, vous pouvez également configurer vos connexions simultanées maximales, définir votre chemin d’accès au dossier et activer ou désactiver le fractionnement de votre serveur [!DNL SFTP]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques instants le temps que la connexion s’établisse.
 
 Pour plus d’informations sur l’authentification, consultez le guide sur la [collecte des informations d’identification requises pour [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
@@ -83,7 +92,7 @@ Pour plus d’informations sur l’authentification, consultez le guide sur la [
 
 >[!TAB authentification par clé publique SSH]
 
-Pour utiliser les informations d’identification basées sur une clé publique SSH, sélectionnez **[!UICONTROL Clé publique SSH]** puis indiquez les valeurs appropriées pour les informations d’identification suivantes :
+Pour utiliser les informations d’identification basées sur la clé publique SSH, sélectionnez **[!UICONTROL SSH public key]**, puis fournissez les valeurs appropriées pour les informations d’identification suivantes :
 
 * hôte
 * port
@@ -91,7 +100,7 @@ Pour utiliser les informations d’identification basées sur une clé publique 
 * contenu de clé privée
 * phrase secrète
 
-Au cours de cette étape, vous pouvez également configurer vos connexions simultanées maximales, définir votre chemin d’accès au dossier et activer ou désactiver le fractionnement de votre serveur [!DNL SFTP]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion s’établisse.
+Au cours de cette étape, vous pouvez également configurer vos connexions simultanées maximales, définir votre chemin d’accès au dossier et activer ou désactiver le fractionnement de votre serveur [!DNL SFTP]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques instants le temps que la connexion s’établisse.
 
 Pour plus d’informations sur l’authentification, consultez le guide sur la [collecte des informations d’identification requises pour [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 

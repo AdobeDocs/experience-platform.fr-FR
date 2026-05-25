@@ -4,9 +4,14 @@ solution: Experience Platform
 title: Présentation du connecteur Source Shopify
 description: Découvrez comment connecter Shopify à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 636b31a7-e5f9-434a-acd1-226096522495
-source-git-commit: 845af785bbc008b664a81e522ae66bd3c10a980e
+TQID: https://experienceleague.adobe.com/jQm1yV7duOKceC-5mGXjVahXqF6UwZZ5MES-VUb1vvI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: 392
 ht-degree: 4%
 
 ---

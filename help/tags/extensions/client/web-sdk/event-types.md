@@ -3,14 +3,24 @@ title: Types d’événements dans l’extension Adobe Experience Platform Web S
 description: Découvrez comment utiliser les types d’événements fournis par l’extension Adobe Experience Platform Web SDK dans Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: f87e6a0e969aa0924656cdb2ea56aa79d2d7c841
+TQID: https://experienceleague.adobe.com/vSI32w-jPns0bNRzw4LRTn7CgVcmvKHiOB0VNAofEQc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1419'
-ht-degree: 0%
+source-wordcount: 1437
+ht-degree: 1%
 
 ---
 
-# Types d’événements 
+# Types d’événements
 
 Cette page décrit les types d’événements Adobe Experience Platform fournis par l’extension de balise Adobe Experience Platform Web SDK. Ils sont utilisés pour [créer des règles](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=fr) et ne doivent pas être confondus avec le champ `eventType` dans l’objet [`xdm`](/help/collection/js/commands/sendevent/xdm.md).
 

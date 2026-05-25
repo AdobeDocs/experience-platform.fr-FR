@@ -4,10 +4,20 @@ solution: Experience Platform
 title: Guide de l’API Schema Registry
 description: L’API Schema Registry permet aux développeurs de gérer par programmation tous les schémas et les ressources de modèle de données d’expérience (XDM) associées dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/vJJirubxD5D2tolsVNNY3ETu8YVeZSstUpjKMmd1ElY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 8%
+source-wordcount: 1161
+ht-degree: 9%
 
 ---
 

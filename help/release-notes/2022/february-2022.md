@@ -2,10 +2,34 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2022
 description: Les notes de mise à jour de février 2022 pour Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+TQID: https://experienceleague.adobe.com/U-c7Ievwmd7m8Lwnp3Bsfby6Wg6PZDID-JxD9NNK9mQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 92%
+source-wordcount: 1044
+ht-degree: 82%
 
 ---
 
@@ -59,7 +83,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| (Beta) Prise en charge par Destination SDK des destinations basées sur des fichiers  | La fonctionnalité [Prise en charge par Destination SDK des destinations basées sur des fichiers](../../destinations/destination-sdk/functionality/destination-server/server-specs.md) est actuellement en version Private Beta et n’est disponible que pour un certain nombre de partenaires, clientes et clients. Les fonctionnalités et la documentation associée peuvent faire l’objet de modifications avant la mise à disposition d’une version générale.<br><br>Contactez votre représentant de compte Adobe pour découvrir comment accéder à la fonctionnalité. Les représentants du compte interne Adobe doivent contacter les équipes produit et ingénieur des destinations Experience Platform pour discuter des cas d’utilisation pris en charge. <br><br> Pendant la phase Beta de la prise en charge par Destination SDK des destinations basées sur des fichiers, les partenaires Beta et la clientèle peuvent utiliser [Destination SDK Experience Platform](../../destinations/destination-sdk/overview.md) pour créer des destinations privées afin de bénéficier des fonctionnalités suivantes : <ul><li>Créer une destination basée sur des fichiers (par lots) via Amazon S3, les serveurs SFTP, Azure Blob, Azure Data Lake Storage, le stockage des zones d’atterrissage des données.</li><li>Configurer et définir les options de planification et de fréquence d’exportation des fichiers par défaut.</li><li>Configurer et définir des options pour formater vos fichiers CSV exportés (délimiteurs, caractères d’échappement et autres options).</li><li>Possibilité de définir et de modifier des en-têtes de fichier personnalisés.</li><li>Possibilité de recevoir des notifications d’événement sur l’exportation de fichiers et de segments.</li><li>Possibilité d’exporter des types de fichiers supplémentaires tels que CSV, TSV, JSON, Parquet.</li></ul>  <br>Pour commencer à utiliser la nouvelle fonctionnalité, consultez la documentation [(Beta) Utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md). <br><br> La fonctionnalité de création de destinations de *diffusion en streaming* privées ou publiques à l’aide de Destination SDK est déjà disponible à l’ensemble de la clientèle et des partenaires d’Experience Platform. Pour en savoir plus, consultez le guide sur la façon d’[utiliser Destination SDK pour configurer une destination de diffusion en streaming](../../destinations/destination-sdk/guides/configure-destination-instructions.md). |
+| (Beta) Prise en charge par Destination SDK des destinations basées sur des fichiers | La fonctionnalité [Prise en charge par Destination SDK des destinations basées sur des fichiers](../../destinations/destination-sdk/functionality/destination-server/server-specs.md) est actuellement en version Private Beta et n’est disponible que pour un certain nombre de partenaires, clientes et clients. Les fonctionnalités et la documentation associée peuvent faire l’objet de modifications avant la mise à disposition d’une version générale.<br><br>Contactez votre représentant de compte Adobe pour découvrir comment accéder à la fonctionnalité. Les représentants du compte interne Adobe doivent contacter les équipes produit et ingénieur des destinations Experience Platform pour discuter des cas d’utilisation pris en charge. <br><br> Pendant la phase bêta de la prise en charge par Destination SDK des destinations basées sur des fichiers, les partenaires bêta et la clientèle peuvent utiliser [Experience Platform Destination SDK](../../destinations/destination-sdk/overview.md) pour créer des destinations privées afin de bénéficier des fonctionnalités suivantes : <ul><li>Créer une destination basée sur des fichiers (par lots) via Amazon S3, les serveurs SFTP, Azure Blob, Azure Data Lake Storage, le stockage des zones d’atterrissage des données.</li><li>Configurer et définir les options de planification et de fréquence d’exportation des fichiers par défaut.</li><li>Configurer et définir des options pour formater vos fichiers CSV exportés (délimiteurs, caractères d’échappement et autres options).</li><li>Possibilité de définir et de modifier des en-têtes de fichier personnalisés.</li><li>Possibilité de recevoir des notifications d’événement sur l’exportation de fichiers et de segments.</li><li>Possibilité d’exporter des types de fichiers supplémentaires tels que CSV, TSV, JSON, Parquet.</li></ul>  <br>Pour commencer à utiliser la nouvelle fonctionnalité, consultez la documentation [(Beta) Utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md). <br><br> La fonctionnalité de création de destinations *streaming* privées ou publiques à l’aide de Destination SDK est déjà disponible à tous les clients et partenaires d’Experience Platform. Pour en savoir plus, consultez le guide sur la façon d’[utiliser Destination SDK pour configurer une destination de diffusion en streaming](../../destinations/destination-sdk/guides/configure-destination-instructions.md). |
 
 ## [!DNL Identity Service] {#identity}
 

@@ -1,32 +1,39 @@
 ---
-title: Importer le point de terminaison de l’API
-description: Le point de terminaison /import de l’API Schema Registry vous permet de partager des ressources XDM entre les organisations et les environnements de test.
+title: Point d’entrée de l’API d’importation
+description: Le point d’entrée /import de l’API Schema Registry vous permet de partager des ressources XDM entre les organisations et les sandbox.
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+TQID: https://experienceleague.adobe.com/qBBI2G06HrUXj-JOCg3ZmUUbRiEP9mLZqUMDfXi5ezw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 17%
+source-wordcount: 295
+ht-degree: 18%
 
 ---
 
-# Point de terminaison d’importation
+# Importer le point d’entrée
 
-Le point d’entrée `/rpc/import` de l’API [!DNL Schema Registry] vous permet de créer des ressources de modèle de données d’expérience (XDM) à partir des charges d’exportation générées. Les payloads d’exportation peuvent être créés à partir de deux sources :
+Le point d’entrée `/rpc/import` de l’API [!DNL Schema Registry] vous permet de créer des ressources de modèle de données d’expérience (XDM) à partir des payloads d’exportation générées. Les payloads d’exportation peuvent être créées à partir de deux sources :
 
-* Le point d’entrée [`/rpc/export` &#x200B;](./export.md) crée des payloads d’exportation à partir de ressources XDM existantes, ce qui vous permet de partager des ressources entre environnements de test.
-* Le point d’entrée [`/rpc/csv2schema` &#x200B;](./csv-to-schema.md) crée des payloads d’exportation à partir de modèles CSV.
+* Le point d’entrée [`/rpc/export` crée &#x200B;](./export.md) payloads d’exportation à partir de ressources XDM existantes, ce qui vous permet de partager des ressources entre les sandbox.
+* Le point d’entrée [`/rpc/csv2schema` crée &#x200B;](./csv-to-schema.md) payloads d’exportation à partir de modèles CSV.
 
-Une fois que vous avez créé une payload d’exportation, vous pouvez utiliser le point de terminaison `/rpc/import` pour générer la ressource (et toutes les ressources dépendantes) dans l’environnement de test de votre choix.
+Une fois que vous avez créé une payload d’exportation, vous pouvez utiliser le point d’entrée `/rpc/import` pour générer la ressource (et toutes les ressources dépendantes) dans le sandbox de votre choix.
 
-## Commencer
+## Prise en main
 
-Le point d’entrée `/rpc/import` fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée `/rpc/import` fait partie de l’[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-Le point d’entrée `/rpc/import` fait partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement à d’autres points de terminaison dans l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas un `CONTAINER_ID`. Au lieu de cela, ils doivent utiliser l’espace de noms `/rpc`, comme illustré dans les appels API ci-dessous.
+Le point d&#39;entrée `/rpc/import` fait partie des appels de procédure distante (RPC) pris en charge par le [!DNL Schema Registry]. Contrairement aux autres points d&#39;entrée de l&#39;API [!DNL Schema Registry], les points d&#39;entrée RPC ne nécessitent pas d&#39;en-têtes supplémentaires tels que `Accept` ou `Content-Type`, et n&#39;utilisent pas de `CONTAINER_ID`. Ils doivent plutôt utiliser l’espace de noms `/rpc`, comme illustré dans les appels d’API ci-dessous.
 
 ## Importer une ressource {#import}
 
-Une fois que vous avez généré un payload d’exportation pour une ressource XDM, vous pouvez utiliser ce payload dans une requête de POST sur le point de terminaison `/import` pour importer cette ressource dans une organisation cible et un environnement de test.
+Une fois que vous avez généré une payload d’exportation pour une ressource XDM, vous pouvez utiliser cette payload dans une requête POST vers le point d’entrée `/import` pour importer cette ressource dans une organisation cible et un sandbox.
 
 **Format d’API**
 
@@ -36,7 +43,7 @@ POST /rpc/import
 
 **Requête**
 
-La requête suivante utilise la charge utile renvoyée par un appel au point de terminaison [`/rpc/export`](./export.md) pour importer un groupe de champs (`Restaurant`) dans une nouvelle organisation et un nouvel environnement de test, comme déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name` respectivement.
+La requête suivante prend la payload renvoyée par un appel au point d’entrée [&#128279;](./export.md) pour importer un groupe de champs (`Restaurant`) dans une nouvelle organisation et un nouveau sandbox, tel que déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name`, respectivement.`/rpc/export`
 
 ```shell
 curl -X POST \
@@ -187,7 +194,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste des ressources importées, avec les valeurs d’identifiant du client et d’organisation appropriées appliquées.
+Une réponse réussie renvoie une liste des ressources importées, avec l’identifiant client approprié et les valeurs d’organisation appliquées.
 
 ```json
 [

@@ -3,10 +3,22 @@ title: Types d’actions dans l’extension Adobe Experience Platform Web SDK
 description: Découvrez les différents types d’actions fournis par l’extension de balises Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 19e85ef4dbaeb90712ad9cd6ad4cb9a1a6b0c6a5
+TQID: https://experienceleague.adobe.com/PXgXVKr8kxjrVb2Io6Gq4tvHbb-WTzVP1TKT23rt4jw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 2%
+source-wordcount: 172
+ht-degree: 3%
 
 ---
 

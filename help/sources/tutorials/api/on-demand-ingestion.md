@@ -3,10 +3,17 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;flow servic
 title: Créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 description: Découvrez comment créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+TQID: https://experienceleague.adobe.com/SfngohD2hHnDRi4d6uiZxlsMuZKlFTCf3oJG4gfHRDw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 10%
+source-wordcount: 847
+ht-degree: 11%
 
 ---
 
@@ -16,7 +23,7 @@ Les exécutions de flux représentent une instance d’exécution de flux. Par e
 
 L’ingestion à la demande vous permet de créer une exécution de flux pour un flux de données donné. Cela permet à vos utilisateurs de créer une exécution de flux, en fonction de paramètres donnés, et de créer un cycle d’ingestion, sans jetons de service. La prise en charge de l’ingestion à la demande est disponible uniquement pour les sources par lots.
 
-Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’API [[!DNL Flow Service] .](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’API [&#128279;](https://www.adobe.io/experience-platform-apis/references/flow-service/).[!DNL Flow Service] 
 
 >[!TIP]
 >

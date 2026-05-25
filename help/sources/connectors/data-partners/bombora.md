@@ -1,11 +1,20 @@
 ---
 title: Intention de Bombora
 description: Découvrez la source d’intention Bombora sur Experience Platform.
-last-substantial-update: 2025-03-26T00:00:00Z
+last-substantial-update: 2025-03-26T00:00:00.000Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
+TQID: https://experienceleague.adobe.com/DFFKck5q-ru1dPHZBGsX-15E-RJ343Dl4u-5CbUxAeA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1775'
+source-wordcount: 1775
 ht-degree: 11%
 
 ---

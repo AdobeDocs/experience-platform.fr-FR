@@ -3,10 +3,22 @@ title: Activer les audiences de prospects vers des destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de prospects vers les destinations
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/ehh6VrkoICKHlBbFIP-0rSQbWkjm9FcqYA-6HURbIjQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 15%
+source-wordcount: 587
+ht-degree: 19%
 
 ---
 

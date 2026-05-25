@@ -2,9 +2,30 @@
 title: Présentation de l’extension de suivi vidéo BrightCove
 description: Découvrez lʼextension de balise de suivi vidéo BrightCove dans Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+TQID: https://experienceleague.adobe.com/C1JZ1MziVRvUeDbCRaS-BURurIAcr904-rfdHS9Qks4
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: 887
 ht-degree: 97%
 
 ---
@@ -47,7 +68,7 @@ L’extension contient sept éléments de données. Aucun ne nécessite d’êtr
 
 L’extension comprend sept événements et seul le suivi personnalisé par points de repère requiert une configuration.
 
-* **Suivi personnalisé par points de repère :** cet événement se déclenche lorsque la vidéo atteint le pourcentage de vidéo indiqué. Par exemple, si une vidéo dure 60 secondes et que la valeur indiquée est de 50 %, l’événement se déclenche à 30 secondes de vidéo. 
+* **Suivi personnalisé par points de repère :** cet événement se déclenche lorsque la vidéo atteint le pourcentage de vidéo indiqué. Par exemple, si une vidéo dure 60 secondes et que la valeur indiquée est de 50 %, l’événement se déclenche à 30 secondes de vidéo.
 
 >[!NOTE]
 >

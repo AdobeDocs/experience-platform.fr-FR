@@ -2,9 +2,17 @@
 title: Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation de destination
 description: Les instructions de cette page vous montrent comment utiliser un éditeur de texte pour travailler dans votre environnement local afin de créer une page de documentation pour votre destination Experience Platform et de l’envoyer pour révision.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/n2NvyC5LSYmj4s2vf1fvYggCL7mLtcBDXGIx1B7M9C8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: 914
 ht-degree: 4%
 
 ---

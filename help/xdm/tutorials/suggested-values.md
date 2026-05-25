@@ -2,9 +2,19 @@
 title: Gestion des valeurs suggérées dans l’API
 description: Découvrez comment ajouter des valeurs suggérées à un champ de chaîne dans l’API Schema Registry.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 000b79c5d87408ebc1f46731fb92aa148b435287
+TQID: https://experienceleague.adobe.com/ZFUjIljLTwbivMqKMrt75sd-zL0KRkG7lmSyS8LjNuw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: 695
 ht-degree: 2%
 
 ---

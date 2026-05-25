@@ -4,9 +4,20 @@ title: Prévisualisations et estimations des points d’entrée de l’API
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation de Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience prévue.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/fu7pR-uaSo46gZb63V42NCJ2ajCGKw-g0Gq1ygfWSDs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: 1020
 ht-degree: 18%
 
 ---
@@ -199,7 +210,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
-Une fois que vous avez créé une tâche d’aperçu, vous pouvez utiliser son `previewId` dans le chemin d’accès d’une requête GET vers le point d’entrée `/estimate` pour afficher des informations statistiques sur la définition du segment, y compris la taille d’audience prévisionnelle, l’intervalle de confiance et l’écart type d’erreur.
+Une fois que vous avez créé une tâche d’aperçu, vous pouvez utiliser son `previewId` dans le chemin d’accès d’une requête GET au point d’entrée `/estimate` pour afficher des informations statistiques sur la définition du segment, y compris la taille d’audience prévisionnelle, l’intervalle de confiance et l’écart type d’erreur.
 
 **Format d’API**
 

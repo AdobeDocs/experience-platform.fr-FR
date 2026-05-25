@@ -4,16 +4,25 @@ solution: Experience Platform
 title: Guide de l’API Catalog Service
 description: L’API Catalog Service permet aux développeurs de gérer les métadonnées des jeux de données dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+TQID: https://experienceleague.adobe.com/I-Ah3jW5AerEc1FXm5-BNh9N8dj-VGx18uD2d-PowPo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 58%
+source-wordcount: 613
+ht-degree: 59%
 
 ---
 
 # Guide de l’API [!DNL Catalog Service]
 
-Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. [!DNL Catalog] sert de banque de métadonnées ou de « catalogue » dans lequel vous pouvez trouver des informations sur vos données dans [!DNL Experience Platform], sans avoir à accéder aux données elles-mêmes. Pour plus d’informations, consultez la [[!DNL Catalog] présentation](../home.md). 
+Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. [!DNL Catalog] sert de banque de métadonnées ou de « catalogue » dans lequel vous pouvez trouver des informations sur vos données dans [!DNL Experience Platform], sans avoir à accéder aux données elles-mêmes. Pour plus d’informations, consultez la [[!DNL Catalog] présentation](../home.md).
 
 Ce guide de développement décrit les étapes à suivre pour commencer à utiliser l’API [!DNL Catalog]. Le guide fournit ensuite des exemples d’appels API pour effectuer des opérations clés à l’aide de [!DNL Catalog].
 
@@ -27,13 +36,13 @@ Ce guide de développement décrit les étapes à suivre pour commencer à utili
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin ou dont vous devrez disposer pour passer avec succès des appels à l’API [!DNL Catalog Service].
 
-## Lecture d’exemples d’appels API
+## Lecture d&#39;exemples d&#39;appels API
 
 Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ## Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -47,13 +56,13 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 >
 >Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
-Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
 * Content-Type: application/json
 
 ## Bonnes pratiques relatives aux appels d’API [!DNL Catalog]
 
-Lors de l’exécution de requêtes GET vers l’API [!DNL Catalog], il est recommandé d’inclure des paramètres de requête dans vos requêtes afin de renvoyer uniquement les objets et propriétés dont vous avez besoin. Les requêtes non filtrées peuvent entraîner des payloads de réponse supérieurs à 3 Go, ce qui peut ralentir les performances globales.
+Lors de l’exécution de requêtes GET à l’API [!DNL Catalog], il est recommandé d’inclure des paramètres de requête dans vos requêtes afin de renvoyer uniquement les objets et propriétés dont vous avez besoin. Les requêtes non filtrées peuvent entraîner des payloads de réponse supérieurs à 3 Go, ce qui peut ralentir les performances globales.
 
 Vous pouvez afficher des objets spécifiques en incluant leurs identifiants dans le chemin d’accès à la requête ou utiliser des paramètres de requête tels que `properties` et `limit` pour filtrer les réponses. Les filtres peuvent être transmis sous forme d’en-têtes et de paramètres de requête, les filtres transmis sous forme de paramètres de requête prévalant sur les autres. Pour plus d’informations, consultez le document sur le [filtrage des données du catalogue](filter-data.md).
 

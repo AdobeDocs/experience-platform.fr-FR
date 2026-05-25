@@ -4,9 +4,22 @@ title: Point d’entrée de l’API des définitions de segment
 description: Le point d’entrée des définitions de segment de l’API Segmentation Service de Adobe Experience Platform vous permet de gérer par programmation les définitions de segment pour votre organisation.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
+TQID: https://experienceleague.adobe.com/BxbU0FrNIHFSYClMu15kNoa8Oo3wEzqfwqfZY66cOq8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: 1581
 ht-degree: 24%
 
 ---
@@ -21,11 +34,11 @@ Adobe Experience Platform vous permet de créer des définitions de segment qui 
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et comprend des exemples d’appels API pour exécuter des actions de base à l’aide de l’API .
 
-## Commencer
+## Prise en main
 
 Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
-## Obtention d’une liste de définitions de segment {#list}
+## Récupération d’une liste de définitions de segment {#list}
 
 Vous pouvez récupérer une liste de toutes les définitions de segment pour votre organisation en envoyant une requête GET au point d’entrée `/segment/definitions`.
 
@@ -279,7 +292,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `schema` | Schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
 | `expression` | Une entité qui contient des informations de champs sur la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
-| `expression.format` | Indique la structure de l’expression dans la valeur. |
+| `expression.format` | Indique la structure de l’expression en valeur. |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
 
 +++
@@ -342,7 +355,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 ## Récupération d’une définition de segment spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en adressant une requête GET au point d’entrée `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin d’accès de la requête.
+Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en adressant une requête GET au point d’entrée `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 

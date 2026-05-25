@@ -2,16 +2,24 @@
 title: Créer un filtre global
 description: Découvrez comment filtrer vos informations sur les données avec un filtre personnalisé appliqué globalement.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 60b0c73766c89b98685810b4f58cfe1a40316dc9
+TQID: https://experienceleague.adobe.com/1Y-ySp1R9qX5DqoSCrWmTx1dINrpgF812jq3vE-HGLs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 1%
+source-wordcount: 519
+ht-degree: 0%
 
 ---
 
 # Créer un filtre global {#create-global-filter}
 
-Pour créer un filtre global, sélectionnez d’abord **[!UICONTROL Ajouter un filtre]** dans la vue de votre tableau de bord, puis **[!UICONTROL Filtre global]** dans le menu déroulant.
+Pour créer un filtre global, sélectionnez d’abord **[!UICONTROL Add filter]** dans la vue de votre tableau de bord, puis **[!UICONTROL Global filter]** dans le menu déroulant.
 
 >[!IMPORTANT]
 >
@@ -21,29 +29,29 @@ Pour créer un filtre global, sélectionnez d’abord **[!UICONTROL Ajouter un f
 
 Vous pouvez rapidement modifier les informations fournies par votre SQL à l’aide de filtres globaux personnalisés.
 
-La boîte de dialogue [!UICONTROL Créer un filtre global] s’ouvre. La création d’un filtre global suit le même processus que la création d’une insight avec SQL. Sélectionnez tout d’abord une base de données (modèle de données d’informations) à interroger, puis saisissez votre code SQL personnalisé dans le Query Editor, et enfin sélectionnez l’icône d’exécution (![Icône d’exécution.](/help/images/icons/play.png)).
+La boîte de dialogue [!UICONTROL Create a global filter] s’ouvre. La création d’un filtre global suit le même processus que la création d’une insight avec SQL. Sélectionnez tout d’abord une base de données (modèle de données d’informations) à interroger, puis saisissez votre code SQL personnalisé dans le Query Editor, et enfin sélectionnez l’icône d’exécution (![Icône d’exécution.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
 >Vous devez inclure un identifiant et une valeur lors de la création d’un filtre global. Les exemples de valeurs permettent d’exécuter l’instruction SQL et de créer le graphique. Notez que les exemples de valeurs que vous fournissez lors de la composition de votre instruction sont remplacés par les valeurs réelles que vous sélectionnez pour la date ou le filtre global au moment de l’exécution.
 
-Une fois la requête exécutée, l’onglet Résultats affiche les résultats. Sélectionnez **[!UICONTROL Suivant]**.
+Une fois la requête exécutée, l’onglet Résultats affiche les résultats. Sélectionnez **[!UICONTROL Next]**.
 
 >[!NOTE]
 >
 >Par défaut, les résultats de la requête sont limités à 100 lignes. Pour renvoyer davantage de lignes, ajoutez une clause LIMIT à votre requête SQL avec le nombre de lignes souhaité. Pour récupérer toutes les lignes et supprimer la limite par défaut, utilisez LIMIT 0 dans votre requête.
 
-![La boîte de dialogue [!UICONTROL Créer un filtre global] avec le menu déroulant du jeu de données, l’icône d’exécution et Suivant en surbrillance.](../../images/sql-insights-query-pro-mode/global-filter.png)
+![La [!UICONTROL Create a global filter dialog] avec le menu déroulant du jeu de données, l’icône d’exécution et Suivant en surbrillance.](../../images/sql-insights-query-pro-mode/global-filter.png)
 
-La dernière étape du workflow de création de filtre global nécessite que vous ajoutiez un libellé pour votre filtre. Ajoutez un libellé au champ de texte **[!UICONTROL Libellé du filtre]** et sélectionnez un type de filtre dans la liste déroulante.
+La dernière étape du workflow de création de filtre global nécessite que vous ajoutiez un libellé pour votre filtre. Ajoutez un libellé au champ de texte **[!UICONTROL Filter label]** et sélectionnez un type de filtre dans la liste déroulante.
 
 >[!NOTE]
 >
->Seule l’option de type de filtre [!UICONTROL zone de liste déroulante] est actuellement prise en charge.
+>Seule l’option de type de filtre [!UICONTROL Combo box] est actuellement prise en charge.
 
-Enfin, sélectionnez **[!UICONTROL Sélectionner]** pour revenir à la vue de votre tableau de bord.
+Enfin, sélectionnez **[!UICONTROL Select]** pour revenir à la vue de votre tableau de bord.
 
-![&#x200B; La boîte de dialogue [!UICONTROL Créer un filtre global] avec Sélectionner et la saisie de texte Libellé du filtre mise en surbrillance.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
+![La [!UICONTROL Create a global filter dialog] avec Sélectionner et la saisie de texte Libellé du filtre mise en surbrillance.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
 ## Activer le filtre global pour chaque insight {#enable-global-filter}
 
@@ -61,12 +69,12 @@ Après avoir créé votre filtre global pour votre tableau de bord, le bouton (b
 
 ## Sélectionner un filtre global {#select-global-filter}
 
-Pour ouvrir la boîte de dialogue [!UICONTROL Filtres] qui répertorie tous vos filtres personnalisés, sélectionnez l’icône de filtre (![Une icône de filtre.](/help/images/icons/filter.png)) à gauche de votre tableau de bord. Ensuite, pour appliquer les effets sur les informations de votre tableau de bord, choisissez une option dans le menu déroulant de votre filtre global, puis sélectionnez **[!UICONTROL Appliquer]**.
+Pour ouvrir la boîte de dialogue [!UICONTROL Filters] qui répertorie tous vos filtres personnalisés, sélectionnez l’icône de filtre (![Icône Filtrer.](/help/images/icons/filter.png)) à gauche de votre tableau de bord. Ensuite, pour appliquer les effets sur les informations de votre tableau de bord, choisissez une option dans le menu déroulant de votre filtre global, puis sélectionnez **[!UICONTROL Apply]**.
 
 ![Tableau de bord personnalisé avec la boîte de dialogue de filtrage mise en surbrillance.](../../images/sql-insights-query-pro-mode/custom-filters.png)
 
 ## Effacer le filtre global {#clear-global-filter}
 
-Pour effacer tous vos filtres globaux personnalisés, sélectionnez **[!UICONTROL Effacer tout]** dans la boîte de dialogue [!UICONTROL Filtres].
+Pour effacer tous vos filtres globaux personnalisés, sélectionnez **[!UICONTROL Clear all]** dans la boîte de dialogue [!UICONTROL Filters].
 
 ![La boîte de dialogue Filtres avec Effacer tout mis en surbrillance.](../../images/sql-insights-query-pro-mode/clear-all.png)

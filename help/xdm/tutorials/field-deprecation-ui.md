@@ -2,10 +2,20 @@
 title: Rendre obsolète un champ XDM dans l’IU
 description: Découvrez comment rendre obsolètes les champs de modèle de données d’expérience (XDM) à l’aide de l’éditeur de schémas dans Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
-source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
+TQID: https://experienceleague.adobe.com/I1k95rHbY66tqi81Bj1nE2Z6ssgepZx62HGKNWk4g9Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '695'
-ht-degree: 100%
+source-wordcount: 683
+ht-degree: 88%
 
 ---
 
@@ -25,11 +35,11 @@ Dans cette documentation, vous allez apprendre à rendre obsolètes les champs d
 
 ## Rendre obsolète un champ {#deprecate}
 
-Pour rendre obsolète un champ personnalisé, accédez à l’éditeur de schémas du schéma à modifier. Dans la section [!UICONTROL Structure] de la zone de travail, sélectionnez le champ que vous souhaitez rendre obsolète, puis cliquez sur **[!UICONTROL Rendre obsolète]** dans les [!UICONTROL Propriétés du champ].
+Pour rendre obsolète un champ personnalisé, accédez à l’éditeur de schémas du schéma à modifier. Dans la section [!UICONTROL Structure] de la zone de travail, sélectionnez le champ que vous souhaitez rendre obsolète, puis **[!UICONTROL Deprecate]** dans la [!UICONTROL Field Properties].
 
 ![L’éditeur de schémas avec la sélection d’un champ et l’option Rendre obsolète mise en surbrillance.](../images/tutorials/field-deprecation/deprecate-single-field.png)
 
-Une boîte de dialogue s’affiche pour confirmer vos choix et vous informer que le champ sera supprimé de l’affichage de l’IU du schéma d’union et masqué des IU en aval. Pour acter l’obsolescence, cliquez sur **[!UICONTROL Confirmer]**.
+Une boîte de dialogue s’affiche pour confirmer vos choix et vous informer que le champ sera supprimé de l’affichage de l’IU du schéma d’union et masqué des IU en aval. Pour terminer l’action, sélectionnez **[!UICONTROL Confirm]**.
 
 ![La boîte de dialogue Rendre obsolète le champ, avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
 
@@ -41,21 +51,21 @@ Le champ est maintenant supprimé de l’affichage de l’IU.
 
 ## Afficher les champs obsolètes {#show-deprecated}
 
-Pour afficher les champs précédemment rendus obsolètes, accédez au schéma approprié dans l’éditeur de schémas. Dans la section [!UICONTROL Composition] de la zone de travail, cochez la case **[!UICONTROL Afficher les champs obsolètes]**.
+Pour afficher les champs précédemment rendus obsolètes, accédez au schéma approprié dans l’éditeur de schémas. Cochez la case **[!UICONTROL Show deprecated fields]** dans la section [!UICONTROL Composition] de la zone de travail.
 
-Le champ obsolète s’affiche désormais dans l’affichage de l’IU. Cliquez sur **[!UICONTROL Enregistrer]** pour confirmer les paramètres.
+Le champ obsolète s’affiche désormais dans l’affichage de l’IU. Sélectionnez **[!UICONTROL Save]** pour confirmer vos paramètres.
 
 ![L’éditeur de schémas avec la sélection d’un champ et les options Afficher les champs obsolètes et Enregistrer mises en surbrillance.](../images/tutorials/field-deprecation/show-deprecated-fields.png)
 
 ## Annuler l’obsolescence des champs {#undeprecate-fields}
 
-Pour annuler l’obsolescence d’un champ, procédez comme suit : [affichez le champ obsolète](#show-deprecated) comme décrit ci-dessus, puis sélectionnez le champ obsolète dans la section [!UICONTROL Structure] de l’éditeur. Sélectionnez ensuite **[!UICONTROL Annuler l’obsolescence]** dans la barre latérale [!UICONTROL Propriétés du champ], puis cliquez sur **[!UICONTROL Enregistrer]**.
+Pour annuler l’obsolescence d’un champ, commencez par [afficher le champ obsolète](#show-deprecated) comme décrit ci-dessus, puis sélectionnez le champ obsolète dans la section [!UICONTROL Structure] de l’éditeur. Sélectionnez ensuite **[!UICONTROL Undeprecate]** dans la barre latérale [!UICONTROL Field properties], puis **[!UICONTROL Save]**.
 
 ![L’éditeur de schémas avec la sélection du champ obsolète et les options Annuler l’obsolescence et Enregistrer mises en surbrillance.](../images/tutorials/field-deprecation/undeprecate-single-field.png)
 
-La boîte de dialogue [!UICONTROL Annuler l’obsolescence du champ] s’affiche. Pour confirmer les modifications, cliquez sur **[!UICONTROL Confirmer]**.
+La boîte de dialogue [!UICONTROL Undeprecate field] s’affiche. Pour confirmer vos modifications, sélectionnez **[!UICONTROL Confirm]**.
 
-![La boîte de dialogue [!UICONTROL Annuler l’obsolescence du champ] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
+![La boîte de dialogue [!UICONTROL Undeprecate field] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
 
 Le champ s’affiche désormais de manière standard dans l’affichage de l’IU et dans les IU en aval. Vous avez à présent la possibilité de rendre le champ obsolète à nouveau.
 

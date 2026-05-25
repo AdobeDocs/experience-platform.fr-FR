@@ -2,10 +2,25 @@
 title: (V2) Connexion à l’audience en temps réel Pega CDH
 description: Utilisez la destination Audience en temps réel de Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer des attributs de profil et des données d'appartenance à l'audience au Pega Customer Decision Hub pour la prise de décision la plus appropriée.
 exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+TQID: https://experienceleague.adobe.com/LJjW-jTj7nZ3P-wegINr1YmXPPmiFpGQ-pRKVXazoGs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 13%
+source-wordcount: 1251
+ht-degree: 12%
 
 ---
 
@@ -82,7 +97,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Profile-based]** | Exportez tous les membres d’une audience avec un identifiant (*CustomerID*), des attributs (nom, prénom, emplacement, etc.) et des données d’appartenance à l’audience. |
+| Type d’exportation | **[!UICONTROL Profile-based]** | Exporter tous les membres d&#39;une audience avec un identifiant (*CustomerID*), des attributs (nom, prénom, emplacement, etc.) et les données sur l’appartenance à une audience. |
 | Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API toujours actives. Dès qu’un profil est mis à jour dans Experience Platform, en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. Pour plus d’informations, voir [Destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -121,7 +136,7 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -157,8 +172,8 @@ Les champs de données Abonnement de l’audience client sont ajoutés comme pr�
 Pour plus d’informations, consultez la documentation [!DNL Pega] suivante :
 
 * [Configuration d’un enregistrement client OAuth 2.0](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
-* [Création d’une exécution en temps réel pour les flux de données](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
-* [Gérer les enregistrements de clients dans le Designer du profil client](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
+* [Créer une exécution en temps réel pour les flux de données](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
+* [Gestion des enregistrements de clients dans le Designer du profil client](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

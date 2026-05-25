@@ -2,12 +2,18 @@
 title: Mettre à jour la date de fin des flux de données d’exportation de jeux de données (Action requise pour le 1er mai 2025)
 type: Tutorial
 hide: true
-hidefromtoc: true
+hidefromtoc: yes
 description: Découvrez comment mettre à jour la date de fin des flux de données d’exportation de jeux de données avec une date de fin actuelle fixée au 1er mai 2025.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+TQID: https://experienceleague.adobe.com/pGLaEcZbgiYiUjmn6x9cZV8BZC4HeGc4WFlfkulp3Ws
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: 401
 ht-degree: 0%
 
 ---

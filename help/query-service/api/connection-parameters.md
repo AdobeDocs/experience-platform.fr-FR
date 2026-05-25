@@ -1,26 +1,31 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;guide api;paramètres de connexion;service de requête;
+keywords: Experience Platform;accueil;rubriques les plus consultées;query service;guide d’api;paramètres de connexion;Query service;
 solution: Experience Platform
-title: Point de terminaison de l’API des paramètres de connexion
-description: Vous pouvez récupérer vos paramètres de connexion pour utiliser le service interactif en envoyant une requête GET au point de terminaison /connection_parameters .
+title: Point d’entrée de l’API des paramètres de connexion
+description: Vous pouvez récupérer vos paramètres de connexion pour utiliser le service interactif en effectuant une requête GET au point d’entrée /connection_parameters.
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+TQID: https://experienceleague.adobe.com/1u6v6VEtKUBf-TRn--yulE9Tjm63FGQoeQJYv9i9Ilo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: 130
 ht-degree: 29%
 
 ---
 
-# Point d’entrée des paramètres de connexion
+# Point d&#39;entrée des paramètres de connexion
 
 ## Exemple d’appel API
 
-La section suivante vous guide tout au long de l’appel API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. L’appel inclut le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+La section suivante vous guide tout au long de l’appel API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. L’appel comprend le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-### Demande de paramètres de connexion
+### Paramètres de connexion de la requête
 
-Vous pouvez récupérer vos paramètres de connexion en effectuant une requête de GET sur le point de terminaison `/connection_parameters`. Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
+Vous pouvez récupérer vos paramètres de connexion en effectuant une requête GET au point d’entrée `/connection_parameters`. Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients du service de requête](../clients/overview.md).
 
 **Format d’API**
 

@@ -1,11 +1,21 @@
 ---
 title: Présentation du Source des profils utilisateur en Algérie
 description: En savoir plus sur la source Profils utilisateur d’Algolia dans le Adobe Experience Platform
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-04-29T00:00:00.000Z
 exl-id: b35d4753-4c33-4074-9ed5-50f94dedd8a4
-source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
+TQID: https://experienceleague.adobe.com/P5CZ9emzhyC2fT1XJNZLjO3gQWTXlGA1GVH47kSrIOw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: 369
 ht-degree: 1%
 
 ---
@@ -29,7 +39,7 @@ Les sources en libre-service (SDK par lots) fournissent toutes les fonctionnalit
 
 ![Architecture de l’intégration Algolia et Experience Platform](../../images/tutorials/create/algolia/user-profiles/algolia-aep-user-profiles-arch.png)
 
-## Prérequis {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Vous devez effectuer les étapes préalables suivantes avant de pouvoir connecter votre compte [!DNL Algolia] à Experience Platform.
 
@@ -41,11 +51,11 @@ Vous devez effectuer les étapes préalables suivantes avant de pouvoir connecte
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Algolia] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Algolia] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [place sur la liste autorisée d’adresse IP](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP[&#128279;](../../ip-address-allow-list.md) pour plus d’informations.
 
 ## Connexion de votre compte [!DNL Algolia] à Experience Platform
 

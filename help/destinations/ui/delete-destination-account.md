@@ -4,9 +4,15 @@ title: Supprimer les comptes de destination
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour supprimer des comptes de destination dans l’interface utilisateur de Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/3dwqYSVa-P46Yu401egYBUwx9Ims1ODNzV9a1gAs1hY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: 288
 ht-degree: 14%
 
 ---

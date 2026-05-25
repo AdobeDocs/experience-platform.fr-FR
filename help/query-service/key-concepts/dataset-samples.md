@@ -1,39 +1,45 @@
 ---
 title: Échantillon de jeux de données
-description: Les exemples de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos échantillons pour le traitement approximatif des requêtes.
+description: Les exemples de jeux de données du service de requête vous permettent de mener des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos échantillons pour le traitement approximatif des requêtes.
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/ik21VPmbtGkLNZVLPo61MGLQ4htulpmLxtSi--y7ABA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 97%
+source-wordcount: 634
+ht-degree: 94%
 
 ---
 
 # Échantillons de jeux de données
 
-Adobe Experience Platform Query Service fournit des exemples de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes. Des exemples de jeux de données sont créés avec des échantillons aléatoires uniformes issus de jeux de données [!DNL Azure Data Lake Storage] (ADLS), utilisant uniquement un pourcentage d’enregistrements de l’original. Ce pourcentage est connu sous le nom de taux d’échantillonnage. Le réglage du taux d’échantillonnage pour contrôler l’équilibre précision/temps de traitement permet d’effectuer des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, au détriment de la précision des requêtes.
+Le service de requête Adobe Experience Platform fournit des exemples de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes. Des exemples de jeux de données sont créés avec des échantillons aléatoires uniformes issus de jeux de données [!DNL Azure Data Lake Storage] (ADLS), utilisant uniquement un pourcentage d’enregistrements de l’original. Ce pourcentage est connu sous le nom de taux d’échantillonnage. Le réglage du taux d’échantillonnage pour contrôler l’équilibre précision/temps de traitement permet d’effectuer des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, au détriment de la précision des requêtes.
 
-Comme de nombreux utilisateurs et de nombreuses utilisatrices n’ont pas besoin d’une réponse exacte pour une opération d’agrégat sur un jeu de données, l’émission d’une requête approximative pour retourner une réponse approximative est plus efficace pour les requêtes exploratoires sur de grands jeux de données. Comme les exemples de jeux de données ne contiennent qu’un pourcentage des données du jeu de données d’origine, ils vous permettent d’échanger la précision des requêtes contre un temps de réponse amélioré. Lors de la lecture, Query Service doit analyser moins de lignes, ce qui produit des résultats plus rapidement que si vous deviez interroger l’ensemble du jeu de données.
+Comme de nombreux utilisateurs et de nombreuses utilisatrices n’ont pas besoin d’une réponse exacte pour une opération d’agrégat sur un jeu de données, l’émission d’une requête approximative pour retourner une réponse approximative est plus efficace pour les requêtes exploratoires sur de grands jeux de données. Comme les exemples de jeux de données ne contiennent qu’un pourcentage des données du jeu de données d’origine, ils vous permettent d’échanger la précision des requêtes contre un temps de réponse amélioré. Lors de la lecture, le service de requête doit analyser moins de lignes, ce qui produit des résultats plus rapidement que si vous deviez interroger l’ensemble du jeu de données.
 
-Pour vous aider à gérer vos échantillons pour le traitement approximatif des requêtes, Query Service prend en charge les opérations suivantes pour les échantillons de jeux de données :
+Pour vous aider à gérer vos échantillons pour le traitement approximatif des requêtes, le service de requête prend en charge les opérations suivantes pour les échantillons de jeux de données :
 
 - [Échantillons de jeux de données](#dataset-samples)
-   - [Commencer](#getting-started-get-started)
-   - [Créer un échantillon de jeu de données aléatoire uniforme](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [Vous pouvez également indiquer un critère de filtre.](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [Afficher la liste des échantillons](#view-the-list-of-samples-view-list-of-samples)
-   - [Interroger l’exemple de jeu de données](#query-the-sample-dataset-query-sample-datasets)
-   - [Supprimer des échantillons de jeux de données](#delete-dataset-samples-delete-a-sample)
+   - [Prise en main {#get-started}](#getting-started-get-started)
+   - [Créer un exemple de jeu de données aléatoire uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Spécifiez éventuellement un critère de filtre {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Afficher la liste des exemples {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [Interroger l’exemple de jeu de données {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [Supprimer des échantillons de jeux de données {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
-## Commencer {#get-started}
+## Prise en main {#get-started}
 
-Pour utiliser les fonctionnalités de création et de suppression du traitement approximatif des requêtes présentées dans ce document, vous devez définir l’indicateur de session sur `true`. Dans la ligne de commande de Query Editor ou de votre client PSQL, saisissez la commande `SET aqp=true;`.
+Pour utiliser les fonctionnalités de création et de suppression du traitement approximatif des requêtes présentées dans ce document, vous devez définir l’indicateur de session sur `true`. Dans la ligne de commande du requêteur ou de votre client PSQL, saisissez la commande `SET aqp=true;`.
 
 >[!NOTE]
 >
 >Vous devez activer l’indicateur de session chaque fois que vous vous connectez à Experience Platform.
 
-![L’éditeur de requêtes avec la commande SET aqp=true mise en surbrillance.](../images/key-concepts/set-session-flag.png)
+![Le requêteur avec la commande SET aqp=true mise en surbrillance.](../images/key-concepts/set-session-flag.png)
 
 ## Créer un échantillon de jeu de données aléatoire uniforme {#create-a-sample}
 
@@ -90,7 +96,7 @@ La liste des échantillons de jeux de données s’affiche au format de l’éch
 
 ## Interroger l’exemple de jeu de données {#query-sample-datasets}
 
-Utilisez `{EXAMPLE_DATASET_NAME}` pour interroger directement les tables d’échantillons. Vous pouvez également ajouter le mot-clé `WITHAPPROXIMATE` à la fin d’une requête pour que Query Service utilise automatiquement l’échantillon le plus récemment créé.
+Utilisez `{EXAMPLE_DATASET_NAME}` pour interroger directement les tables d’échantillons. Vous pouvez également ajouter le mot-clé `WITHAPPROXIMATE` à la fin d’une requête pour que le service de requête utilise automatiquement l’échantillon le plus récemment créé.
 
 ```sql
 SELECT * FROM example_dataset_name WITHAPPROXIMATE;

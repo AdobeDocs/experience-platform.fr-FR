@@ -3,10 +3,31 @@ keywords: Experience Platform;query service;Query service;requête
 title: Exemple de cas d’utilisation de Adobe Experience Platform Query Service
 description: Exemple complet pour démontrer la polyvalence et les avantages de Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+TQID: https://experienceleague.adobe.com/rwleF1-pMq0uCxuX1d3ut3uKDk0esgek9FOpOpXCOdM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 0%
+source-wordcount: 731
+ht-degree: 2%
 
 ---
 
@@ -59,7 +80,7 @@ order by price desc)D;
 
 La présentation vidéo présentée ci-dessous fournit un cas d’utilisation holistique et réel de vos données Experience Platform, axé sur les intégrations [!DNL Query Service] et Adobe Analytics.
 
->[!VIDEO](https://video.tv.adobe.com/v/3454937?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3454937?captions=fre_fr&quality=12&learn=on)
 
 ## Avantages de la [!DNL Query Service] {#benefits}
 

@@ -2,9 +2,15 @@
 title: Bonnes pratiques relatives à l’organisation des ressources de données dans Query Service
 description: Ce document décrit un moyen logique d’organiser les données pour faciliter leur utilisation avec Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+TQID: https://experienceleague.adobe.com/fc4XqaiiZX35ogs6r6w0szZrkdJjAIJb7RPz6wsoDB8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: 787
 ht-degree: 0%
 
 ---
@@ -15,7 +21,7 @@ Ce document fournit des conseils sur les bonnes pratiques d’organisation des r
 
 Il est important d’organiser logiquement vos ressources de données dans le [!DNL Data Lake] Experience Platform au fur et à mesure de leur croissance. Query Service étend les constructions SQL qui vous permettent de regrouper logiquement des ressources de données dans un sandbox. Cette méthode d’organisation permet de partager des ressources de données entre les schémas sans avoir à les déplacer physiquement.
 
-## Commencer
+## Prise en main
 
 Avant de poursuivre avec ce document, vous devez bien comprendre les fonctionnalités de [Query Service](../home.md) et avoir lu le guide de l’interface utilisateur [&#128279;](../ui/user-guide.md).
 

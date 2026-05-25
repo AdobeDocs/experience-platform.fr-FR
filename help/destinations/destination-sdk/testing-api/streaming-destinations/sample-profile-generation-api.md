@@ -2,13 +2,22 @@
 description: Découvrez comment utiliser l’API de test de destination pour générer des profils types pour la destination de diffusion en streaming, que vous pouvez utiliser dans les tests de destination.
 title: Génération de profils types en fonction d’un schéma source
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+TQID: https://experienceleague.adobe.com/zcllSUYnmG9X7LzTTq57Zp6dZnHjEw9TNtnT-Ub5gzs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 91%
+source-wordcount: 1020
+ht-degree: 83%
 
 ---
-
 
 # Génération de profils types en fonction d’un schéma source {#sample-profile-api-operations}
 
@@ -61,7 +70,7 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | Paramètre de requête | Description |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | Identifiant de l’instance de destination en fonction de laquelle vous générez des profils types. |
-| `{COUNT}` | *Facultatif*. Nombre de profils types que vous générez. Le paramètre peut prendre des valeurs entre `1 - 1000`. <br> Si le paramètre de nombre n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la valeur `maxUsersPerRequest` dans la [configuration du serveur de destination](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère alors un profil type. |
+| `{COUNT}` | *Facultatif*. Nombre de profils types que vous générez. Le paramètre peut prendre des valeurs comprises entre `1 - 1000`. <br> Si le paramètre count n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la valeur `maxUsersPerRequest` dans la configuration du serveur de destination [&#128279;](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère alors un profil type. |
 
 {style="table-layout:auto"}
 
@@ -211,7 +220,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | Paramètre de requête | Description |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | Identifiant de la configuration de destination en fonction de laquelle vous générez des profils types. |
-| `{COUNT}` | *Facultatif*. Nombre de profils types que vous générez. Le paramètre peut prendre des valeurs entre `1 - 1000`. <br> Si le paramètre de nombre n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la valeur `maxUsersPerRequest` dans la [configuration du serveur de destination](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère alors un profil type. |
+| `{COUNT}` | *Facultatif*. Nombre de profils types que vous générez. Le paramètre peut prendre des valeurs comprises entre `1 - 1000`. <br> Si le paramètre count n’est pas spécifié, le nombre de profils générés par défaut est déterminé par la valeur `maxUsersPerRequest` dans la configuration du serveur de destination [&#128279;](../../authoring-api/destination-server/create-destination-server.md). Si cette propriété n’est pas définie, Adobe génère alors un profil type. |
 
 {style="table-layout:auto"}
 

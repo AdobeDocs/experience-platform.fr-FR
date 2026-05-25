@@ -2,9 +2,26 @@
 title: Connexion à l’audience Acxiom
 description: Utilisez la destination  [!DNL Acxiom Audience Connection]  pour améliorer les audiences avec la technologie et les activer sur  [!DNL Acxiom]'s [!DNL Real ID]  plateformes publicitaires.
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: ac792ca2a548cca60319e1c4c49ca1ceade44b43
+TQID: https://experienceleague.adobe.com/DbA9ApNmY5Fi0C9JcQVV9MRxhnPOzxkDS4m6mHuKHGc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: 1514
 ht-degree: 14%
 
 ---

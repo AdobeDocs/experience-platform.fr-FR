@@ -2,9 +2,20 @@
 description: Experience Platform Destination SDK utilise des modèles Pebble, ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
 title: Fonctions de transformation prises en charge dans Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+TQID: https://experienceleague.adobe.com/Ffcr9a1289gNnWda79YxgEHcwuJCF9uYq2wEMroMo-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: 585
 ht-degree: 91%
 
 ---
@@ -36,8 +47,8 @@ Avant d’accéder aux fonctions décrites ci-dessous, consultez les exemples de
 Dans la section de balise [!DNL Pebble], Destination SDK ne prend en charge que les éléments suivants :
 
 * [filter](https://pebbletemplates.io/wiki/tag/filter/)
-* [for](https://pebbletemplates.io/wiki/tag/for/)
-* [if](https://pebbletemplates.io/wiki/tag/if/)
+* [pour](https://pebbletemplates.io/wiki/tag/for/)
+* [si](https://pebbletemplates.io/wiki/tag/if/)
 * [set](https://pebbletemplates.io/wiki/tag/set/)
 
 >[!TIP]

@@ -4,9 +4,16 @@ solution: Experience Platform
 title: Définir des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
+TQID: https://experienceleague.adobe.com/AKMAGVmtXgQKvPj5gdbHdVtdEPenkBuKZssQoG1RLxk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: 665
 ht-degree: 15%
 
 ---
