@@ -2,8 +2,7 @@
 title: LAVE
 description: En savoir plus sur la source LAVA sur Adobe Experience Platform
 badge: Beta
-hide: true
-source-git-commit: 04601673ca9c158c183469cdc6d704e859d057b4
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 2%
@@ -120,5 +119,5 @@ Le connecteur source [!DNL LAVA] ingère des profils de membres, des soldes de r
 
 Pour une configuration pas à pas :
 
-* [Créer une connexion source et un flux de données pour diffuser  [!DNL LAVA]  données à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../tutorials/api/create/loyalty/lava.md)
+* [Créer une connexion source et un flux de données pour diffuser  [!DNL LAVA]  données à l’aide de l’API  [!DNL Flow Service] ](../../tutorials/api/create/loyalty/lava.md)
 * [Créer une connexion source et un flux de données pour diffuser  [!DNL LAVA]  données à l’aide de l’interface utilisateur](../../tutorials/ui/create/loyalty/lava.md)

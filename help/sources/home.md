@@ -5,26 +5,14 @@ title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 TQID: https://experienceleague.adobe.com/V-4eFafnVuOwDnYpLjkxnFTznwbqb4usTiPyPv6j60M
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d1a87129-ba05-4f15-98b1-233618f1774aid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
-source-wordcount: 1764
+source-wordcount: 1766
 ht-degree: 48%
 
 ---
@@ -248,6 +236,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données de fidéli
 | Source | Type d’ingestion | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Diffusion en continu | Azure |
+| [[!DNL LAVA]](connectors/loyalty/lava.md) | Diffusion en continu | Azure |
 | [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | Lot, Diffusion en continu | Azure |
 
 {style="table-layout:auto"}
