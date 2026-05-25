@@ -4,10 +4,11 @@ user-guide-title: Aide pour les sandbox dans Adobe Experience Platform
 breadcrumb-title: Guide des sandbox
 user-guide-description: Découvrez le fonctionnement des sandbox et la partition d’une instance Experience Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
 feature: Sandboxes
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+nudge: true
+source-git-commit: ddcaf43820dc4ab464b548a3f28f0e4e2ad1be99
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 75%
+source-wordcount: '98'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 75%
    * [Partage de packages à l’échelle de l’organisation](ui/sharing-packages-across-orgs.md)
 * API Sandbox {#api}
    * [Vue d’ensemble](api/overview.md)
-   * [Commencer](api/getting-started.md)
+   * [Prise en main](api/getting-started.md)
    * [Sandbox disponibles](api/available.md)
    * [Gestion des sandbox](api/sandboxes.md)
    * [Types de sandbox](api/types.md)
@@ -30,7 +31,7 @@ ht-degree: 75%
 * API d’outils Sandbox {#sandbox-tooling-api}
    * [Vue d’ensemble](sandbox-tooling-api/overview.md)
    * [Prise en main](sandbox-tooling-api/getting-started.md)
-   * [Packages  &#x200B;](sandbox-tooling-api/packages.md)
+   * [Packages](sandbox-tooling-api/packages.md)
    * [Outils](sandbox-tooling-api/tools.md)
    * [Annexe](sandbox-tooling-api/appendix.md)
 * Cas d’utilisation {#use-cases}
@@ -38,4 +39,4 @@ ht-degree: 75%
    * [Centre d&#39;excellence](use-cases/center-of-excellence.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

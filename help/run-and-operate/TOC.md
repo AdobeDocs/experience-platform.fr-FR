@@ -6,10 +6,11 @@ user-guide-title: Guide d’exécution et d’exploitation
 user-guide-description: Inspectez, dépannez et optimisez vos implémentations Adobe Experience Platform à l’aide des outils Exécuter et exploiter . Gagnez de la visibilité sur les activations par lots planifiées, identifiez les problèmes de configuration et améliorez la fiabilité du système.
 description: Ce document répertorie la table des matières des outils Adobe Experience Platform Run et Operate
 role: Admin, User
-source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
+nudge: true
+source-git-commit: ddcaf43820dc4ab464b548a3f28f0e4e2ad1be99
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 6%
+source-wordcount: '66'
+ht-degree: 12%
 
 ---
 
@@ -17,8 +18,8 @@ ht-degree: 6%
 # Aide sur l’exécution et l’utilisation du guide {#run-and-operate}
 
 * [Vue d’ensemble](overview.md)
-* Plannings de tâches {#job-schedules}
+* Planifications de traitements {#job-schedules}
    * [Inspecter les plannings de tâches](job-schedules.md)
    * [Afficher les détails du traitement](job-schedules-details.md)
    * [Identification des modèles anti-pollution](job-schedules-anti-patterns.md)
-* [Contrôles d’intégrité](health-checks.md)
+* [Vérifications de l’état de santé](health-checks.md)
