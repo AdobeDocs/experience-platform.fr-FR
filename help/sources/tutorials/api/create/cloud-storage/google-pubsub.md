@@ -8,7 +8,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 568aa7fec2ca9f2a825cf90cd97fc4ee4dc4ff37
 workflow-type: tm+mt
 source-wordcount: 1211
 ht-degree: 45%
@@ -81,7 +81,7 @@ La source [!DNL PubSub] vous permet de spécifier le type d’accès que vous so
 
 >[!NOTE]
 >
->Les principaux (rôles) affectés à un projet [!DNL PubSub] sont hérités dans toutes les rubriques et tous les abonnements créés dans un projet [!DNL PubSub]. Si vous souhaitez qu’un principal (rôle) ait accès à une rubrique spécifique, ce principal (rôle) doit également être ajouté à l’abonnement correspondant à la rubrique. Pour plus d’informations, consultez la [[!DNL PubSub] documentation sur le contrôle d’accès](<https://cloud.google.com/pubsub/docs/access-control>).
+>Les principaux (rôles) affectés à un projet [!DNL PubSub] sont hérités dans toutes les rubriques et tous les abonnements créés dans un projet [!DNL PubSub]. Si vous souhaitez qu’un principal (rôle) ait accès à une rubrique spécifique, ce principal (rôle) doit également être ajouté à l’abonnement correspondant à la rubrique. Pour plus d’informations, consultez la [[!DNL PubSub] documentation sur le contrôle d’accès](https://cloud.google.com/pubsub/docs/access-control).
 
 **Format d’API**
 
