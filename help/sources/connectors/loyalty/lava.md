@@ -2,8 +2,7 @@
 title: LAVE
 description: En savoir plus sur la source LAVA sur Adobe Experience Platform
 badge: Beta
-hide: true
-source-git-commit: 04601673ca9c158c183469cdc6d704e859d057b4
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 2%

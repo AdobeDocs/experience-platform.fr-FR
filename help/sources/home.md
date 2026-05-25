@@ -22,9 +22,9 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
-source-wordcount: 1764
+source-wordcount: 1766
 ht-degree: 48%
 
 ---
@@ -248,6 +248,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données de fidéli
 | Source | Type d’ingestion | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Diffusion en continu | Azure |
+| [[!DNL LAVA]](connectors/loyalty/lava.md) | Diffusion en continu | Azure |
 | [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | Lot, Diffusion en continu | Azure |
 
 {style="table-layout:auto"}

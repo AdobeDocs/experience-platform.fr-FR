@@ -1,12 +1,11 @@
 ---
 title: Créer une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de LAVA vers Adobe Experience Platform à l’aide de l’interface utilisateur.
-badge: version bêta
-hide: true
-source-git-commit: 04601673ca9c158c183469cdc6d704e859d057b4
+badge: Beta
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 0%
+ht-degree: 19%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La source [!DNL LAVA] est en version bêta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL LAVA] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Suivez ce guide détaillé pour configurer votre propre connecteur source [!DNL LAVA] dans l’interface utilisateur d’Experience Platform.
 
@@ -24,12 +23,12 @@ Suivez ce guide détaillé pour configurer votre propre connecteur source [!DNL 
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données de l’expérience client.
-   * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Tutoriel de l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+   * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
+   * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 >[!TIP]
 >
@@ -39,7 +38,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
-Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique que vous souhaitez utiliser à l’aide de l’option de recherche.
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
 Dans la catégorie **Streaming**, sélectionnez [!DNL LAVA], puis sélectionnez **[!UICONTROL Add data]**.
 
@@ -122,15 +121,15 @@ Lors de l’utilisation du schéma fourni par [!DNL LAVA], utilisez le mappage r
 
 >[!ENDTABS]
 
-Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs calculées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
+Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
 
 ![Étape de mappage du workflow des sources.](../../../../images/tutorials/create/lava/mapping.png)
 
-## Révision
+## Réviser
 
-L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
 * **[!UICONTROL Connection]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **[!UICONTROL Assign dataset & map fields]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.

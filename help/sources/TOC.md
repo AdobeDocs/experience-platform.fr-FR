@@ -5,7 +5,7 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: de7562396f469992c52387503025b31d79e2049e
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 87%
@@ -108,7 +108,7 @@ ht-degree: 87%
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
    - Fidélité {#loyalty}
       - [Événements de streaming capillaire](connectors/loyalty/capillary.md)
-      - {hide-from-toc}[&#x200B; LAVE &#x200B;](connectors/loyalty/lava.md)
+      - [LAVE](connectors/loyalty/lava.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automatisation du marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -189,7 +189,7 @@ ht-degree: 87%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Streaming Shopify](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Fidélité {#loyalty}
-         - {hide-from-toc}[&#x200B; LAVE &#x200B;](tutorials/api/create/loyalty/lava.md)
+         - [LAVE](tutorials/api/create/loyalty/lava.md)
       - Automatisation du marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -328,7 +328,7 @@ ht-degree: 87%
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
          - {hide-from-toc}[Événements de streaming Kobie &#x200B;](tutorials/ui/create/loyalty/kobie-streaming.md)
-         - {hide-from-toc}[&#x200B; LAVE &#x200B;](tutorials/ui/create/loyalty/lava.md)
+         - [LAVE](tutorials/ui/create/loyalty/lava.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur source Talon.One Batch](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automatisation du marketing {#marketing-automation}

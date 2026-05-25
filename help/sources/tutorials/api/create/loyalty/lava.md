@@ -2,8 +2,7 @@
 title: Créez une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’API Flow Service
 description: Découvrez comment importer des données de flux de LAVA vers Adobe Experience Platform à l’aide de l’API Flow Service.
 badge: Beta
-hide: true
-source-git-commit: 2bc6e70df4567aaf22e10638d374a586d006c765
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
 source-wordcount: '1810'
 ht-degree: 39%

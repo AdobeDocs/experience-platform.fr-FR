@@ -27,10 +27,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
-source-wordcount: 1192
-ht-degree: 31%
+source-wordcount: 1269
+ht-degree: 30%
 
 ---
 
@@ -145,6 +145,14 @@ Pour plus d’informations, consultez la [présentation des audiences](../../seg
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
+**Sources nouvelles ou mises à jour**
+
+| Source | Description |
+| --- | --- |
+| [!BADGE Version bêta]{type=Informative} [!DNL LAVA] | Vous pouvez désormais importer des données de fidélité et d’engagement de [!DNL LAVA] dans Experience Platform à l’aide de la [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Diffusez les profils des membres, les soldes de récompenses et les événements d’analyse des tickets pour enrichir les [!DNL Real-Time Customer Profile] et prendre en charge la segmentation, la personnalisation et l’activation. Créez une connexion source distincte pour chaque type de données dont vous avez besoin et mappez les `email` sur les profils membres pour regrouper les enregistrements [!DNL LAVA] avec vos profils existants. Pour connaître les conditions préalables, le package de configuration facultatif et la configuration détaillée, consultez la [[!DNL LAVA] documentation sur les sources](../../sources/connectors/loyalty/lava.md). |
+
+{style="table-layout:auto"}
+
 **Mises à jour et correctifs**
 
 | Source | Description |
@@ -157,14 +165,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
 
 <!--
-
-**New or updated sources**
-
-| Source | Description |
-| --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL LAVA] | You can now bring loyalty and engagement data from [!DNL LAVA] into Experience Platform using the [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Stream member profiles, reward balances, and ticket scan events to enrich [!DNL Real-Time Customer Profile] and support segmentation, personalization, and activation. Create a separate source connection for each data type you need, and map `email` on member profiles to stitch [!DNL LAVA] records with your existing profiles. For prerequisites, an optional setup package, and step-by-step setup, read the [[!DNL LAVA] source documentation](../../sources/connectors/loyalty/lava.md). |
-
-{style="table-layout:auto"}
 
 | Automatic dataflow disabling | Source dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 -->
