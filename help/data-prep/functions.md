@@ -5,13 +5,10 @@ title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: f3ebbec0f5000c05bb5c40654b010073ef0f9658
 workflow-type: tm+mt
 source-wordcount: 6034
 ht-degree: 9%
@@ -150,7 +147,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Vérifie si un objet est vide ou non. | <ul><li>INPUT : **obligatoire** l’objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | False |
-| arrays_to_object | Crée une liste d’objets. | <ul><li>INPUT : **obligatoire** regroupement de paires clé-tableau.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
+| arrays_to_object | Crée une liste d’objets. | <ul><li>INPUT : **obligatoire** regroupement de paires clé-tableau.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | `[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]` |
 | to_object | Crée un objet en fonction des paires clé/valeur aplaties données. | <ul><li>INPUT : **obligatoire** liste plate de paires clé/valeur.</li></ul> | to_object(INPUT) | to_object&#x200B;(« firstName », « John », « lastName », « Doe ») | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING : **obligatoire** chaîne en cours d’analyse pour créer un objet.</li><li>VALUE_DELIMITER : *facultatif* délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *facultatif* délimiteur qui sépare les paires valeur de champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Remarque** : vous pouvez utiliser la fonction `get()` avec `str_to_object()` pour récupérer les valeurs des clés de la chaîne. | <ul><li>Exemple #1 : str_to_object(« firstName - John ; lastName - ; - 123 345 7890 », « - »,  »; »)</li><li>Exemple #2 : str_to_object(« firstName - John ; lastName - ; phone - 123 456 7890 », « - »,  »; »).get(« firstName »)</li></ul> | <ul><li>Exemple #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemple de #2 : « John »</li></ul> |
 | contains_key | Vérifie si l’objet existe dans les données source. **Remarque :** cette fonction remplace la fonction `is_set()` obsolète. | <ul><li>INPUT : **obligatoire** chemin d’accès à vérifier s’il existe dans les données source.</li></ul> | contains_key(INPUT) | contains_key(« evars.evar.field1 ») | vrai |
@@ -396,11 +393,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
-| &#124; | %5C |
-| &rbrack; | %5J |
+| [ | %5B |
+| | | %5C |
+| ] | %5J |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
