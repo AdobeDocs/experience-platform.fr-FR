@@ -5,7 +5,8 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: bb5bea48799b0f649229d7217070e056f7cedf69
+nudge: true
+source-git-commit: ddcaf43820dc4ab464b548a3f28f0e4e2ad1be99
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 66%
