@@ -7,9 +7,8 @@ topic: Content Management, Artificial Intelligence
 badge: label="Beta" type="Informative"
 role: User, Developer
 level: Beginner, Intermediate
-hide: true
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
-source-git-commit: 75e294c1e9b24c3d5c2ada99c0db6d1c891ad1e4
+source-git-commit: dbb8fe7e0faeb50b1faae82f15dc4e1ae039b865
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 2%
