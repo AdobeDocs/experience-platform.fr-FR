@@ -3,9 +3,13 @@ title: Afficher en plus
 description: Découvrez les différentes options d’affichage des données analysées SQL. Depuis votre tableau de bord personnalisé, vous pouvez afficher les résultats tabulés de votre analyse ou télécharger les données traitées au format CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
 TQID: https://experienceleague.adobe.com/fLQnexQ3eCABS9HtJ5Eq2X7IAUIxfPUQqVV9VU095zg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 751
@@ -15,7 +19,7 @@ ht-degree: 1%
 
 # Afficher plus {#view-more}
 
-Après avoir créé un insight personnalisé](./overview.md) à l’aide du [mode requête pro](./overview.md#query-pro-mode), vous pouvez afficher les données du graphique dans plusieurs formats. [Vous pouvez afficher un formulaire tabulé des résultats ou exporter les données au format CSV ou par e-mail.
+Après avoir créé un insight personnalisé[&#128279;](./overview.md) à l’aide du [mode requête pro](./overview.md#query-pro-mode), vous pouvez afficher les données du graphique dans plusieurs formats. Vous pouvez afficher un formulaire tabulé des résultats ou exporter les données au format CSV ou par e-mail.
 
 ## Résultats tabulés {#tabulated-results}
 
@@ -31,7 +35,7 @@ Dans la boîte de dialogue **[!UICONTROL View more]**, exportez les données du 
 
 >[!IMPORTANT]
 >
->Pour accéder aux options d’exportation, votre administrateur doit vous accorder l’autorisation **[!UICONTROL Export Dashboard Data]**. Si le bouton [!UICONTROL Export] est grisé, contactez votre administrateur. Pour plus d’informations sur les autorisations relatives aux tableaux de bord](../../access-control/home.md) consultez la [ Présentation du contrôle d’accès .
+>Pour accéder aux options d’exportation, votre administrateur doit vous accorder l’autorisation **[!UICONTROL Export Dashboard Data]**. Si le bouton [!UICONTROL Export] est grisé, contactez votre administrateur. Pour plus d’informations sur les autorisations relatives aux tableaux de bord[&#128279;](../../access-control/home.md) consultez la  Présentation du contrôle d’accès .
 
 >[!NOTE]
 >
@@ -101,4 +105,4 @@ Vous pouvez afficher jusqu’à 500 enregistrements par page. Pour parcourir les
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment afficher les résultats tabulés de l&#39;analyse SQL de votre graphique personnalisé et comment exporter ces données en toute sécurité. Consultez le document Afficher le SQL pour savoir comment [afficher le SQL derrière vos informations personnalisées](./view-sql.md).
 
-Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform à l’aide du [ guide du mode de conception guidé ](../standard-dashboards.md).
+Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform à l’aide du [&#x200B; guide du mode de conception guidé &#x200B;](../standard-dashboards.md).
