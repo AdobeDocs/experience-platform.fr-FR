@@ -4,7 +4,7 @@ title: Format des messages
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2558'
 ht-degree: 76%
 
 ---
