@@ -172,7 +172,7 @@ Lorsque vous sélectionnez la carte **[!UICONTROL Deprecated Identity Namespace]
 
 ![Panneau des détails Espace de noms d’identité obsolète présentant la description, l’impact et la liste des espaces de noms affectés](assets/health-checks/deprecated-namespace-detail.png)
 
-Pour plus d’informations, consultez l’article de la base de connaissances [Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Pour plus d’informations, consultez l’article de la base de connaissances [Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/fr/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Étapes suivantes {#next-steps}
 
