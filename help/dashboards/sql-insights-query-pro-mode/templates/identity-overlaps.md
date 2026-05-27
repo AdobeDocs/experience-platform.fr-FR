@@ -3,23 +3,11 @@ title: Chevauchements d’identité d’audience
 description: Découvrez comment analyser les chevauchements d’identités d’audience dans le tableau de bord Chevauchements d’identités d’audience. Filtrez les audiences, spécifiez les politiques de fusion et examinez les relations d’identité pour prendre des décisions pilotées par les données.
 exl-id: 355835b8-2a67-40b1-a0e8-6afef01ddc6a
 TQID: https://experienceleague.adobe.com/Gp3X3VJm6FV1YvtkrLHsu--wXLgJkW7IJzFBFxc6-AE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ff2b9b37-92e0-45fc-b853-379d44c08c89
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 873
@@ -41,7 +29,7 @@ La boîte de dialogue **[!UICONTROL Filters]** s’affiche. Dans cette vue, choi
 
 1. Sélectionnez un **[!UICONTROL Audience]** : choisissez le segment d’audience à analyser (par exemple, **Canada - Alberta**).
 2. Spécifiez une **[!UICONTROL Merge Policy]** : définissez la politique de fusion qui détermine la manière dont les identités sont combinées dans l’audience sélectionnée (dans l’exemple de capture d’écran, la politique **basée sur l’heure par défaut** est sélectionnée).
-3. Sélectionner un **[!UICONTROL Identity A]** et **[!UICONTROL &#x200B; Identity B]** à comparer **&#x200B; : choisissez les deux types d’identité à comparer. Dans l’exemple, &#x200B;** Identité A **&#x200B; est sélectionné comme « crmId » et &#x200B;** Identité B** est sélectionné comme « e-mail ».
+3. Sélectionner un **[!UICONTROL Identity A]** et **[!UICONTROL  Identity B]** à comparer ** : choisissez les deux types d’identité à comparer. Dans l’exemple, **Identité A** est sélectionné comme « crmId » et **Identité B** est sélectionné comme « e-mail ».
 4. **Définir une période** : sélectionnez une période prédéfinie telle que « Aujourd’hui » ou définissez manuellement les dates de début et de fin à l’aide des champs de calendrier.
 
 ![La boîte de dialogue Filtres du tableau de bord Chevauchements d’identités d’audience.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)

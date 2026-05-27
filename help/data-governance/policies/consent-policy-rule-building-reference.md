@@ -3,22 +3,10 @@ title: Référence de création de règle de politique de consentement
 description: Découvrez comment utiliser les types de données XDM, les opérateurs pris en charge et la logique avancée pour créer des règles de politique de consentement granulaire dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 541a0283-68cc-4510-a1a3-a862667b375a
 TQID: https://experienceleague.adobe.com/S8g82qJXbjyOmOBRojPALWN6a4h5HzWOGkuGfea6uG8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1582
@@ -45,7 +33,7 @@ Veillez à respecter les conditions préalables suivantes :
 * **Configuration de la politique terminée** : vous avez créé ou commencé à créer une politique de consentement dans l’interface utilisateur de Adobe Experience Platform. Pour obtenir des instructions détaillées, consultez le guide d’utilisation des [politiques d’utilisation des données](user-guide.md#consent-policy).
 
 * **Connaissance des structures de données** : cette référence nécessite une connaissance pratique des concepts de base suivants :
-   * **XDM et schéma d’union** : comprenez comment les structures du modèle de données d’expérience définissent les relations de données et comment le schéma d’union représente les profils client unifiés. Consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md) pour en savoir plus.
+   * **XDM et schéma d’union** : comprenez comment les structures du modèle de données d’expérience définissent les relations de données et comment le schéma d’union représente les profils client unifiés. Consultez la [ Présentation du système XDM ](../../xdm/home.md) pour en savoir plus.
    * **Cadre de gouvernance des données** : découvrez comment Adobe Experience Platform applique les politiques d’utilisation des données et les règles de gouvernance. Consultez la [présentation de la gouvernance des données](../home.md) pour plus d’informations.
    * **Traitement du consentement du client** : comprenez comment les données de consentement sont collectées, stockées et appliquées dans les workflows d’expérience client. Voir la [présentation du traitement du consentement](../../landing/governance-privacy-security/consent/adobe/overview.md).
 

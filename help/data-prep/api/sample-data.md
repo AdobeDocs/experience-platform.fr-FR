@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;préparation de données;guide d’api;données d’exemple;
 solution: Experience Platform
-title: Exemple de point d’entrée de l’API Data
-description: Vous pouvez utiliser le point d’entrée &grave;/samples&grave; dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les donnée d’exemple de mappage.
+title: Point d’entrée de l’API Sample Data
+description: Vous pouvez utiliser le point d’entrée « /samples » dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les données d’exemple de mappage.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '404'
 ht-degree: 91%
 
 ---
 
 
-# Exemple de point d’entrée de données
+# Point d’entrée des données d’exemple
 
-Des exemples de données peuvent être utilisés lors de la création d’un schéma pour votre jeu de mappages. Vous pouvez utiliser le point d’entrée `/samples` dans l’API Data Prep pour récupérer, créer et mettre à jour des données d’exemple par programmation.
+Des données d’exemple peuvent être utilisées lors de la création d’un schéma pour votre jeu de mappages. Vous pouvez utiliser le point d’entrée `/samples` dans l’API Data Prep pour récupérer, créer et mettre à jour des données d’exemple par programmation.
 
 ## Liste des données d’exemple
 
-Vous pouvez récupérer une liste de toutes les données d’exemple de mappage pour votre organisation en envoyant une requête de GET au point de terminaison `/samples`.
+Vous pouvez récupérer une liste de toutes les données d’exemple de mappage pour votre organisation en envoyant une requête GET au point d’entrée `/samples`.
 
 **Format d’API**
 
@@ -34,7 +34,7 @@ GET /samples?limit={LIMIT}&start={START}
 
 **Requête**
 
-La requête suivante récupère les deux dernières données d’exemple de mappage au sein de votre organisation.
+La requête suivante récupère les deux dernières données d’exemple de mappage de votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \

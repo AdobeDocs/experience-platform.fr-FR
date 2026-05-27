@@ -4,7 +4,7 @@ description: Découvrez comment la collecte de données utilise les ECID, les id
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Si vous effectuez une mise à niveau à partir de l’API visiteur ou que vous r
 
 ## Collection propriétaire et tierce {#first-party-and-third-party-collection}
 
-Le SDK Web définit toujours l’identité [cookies](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk) (tels que les cookies `kndctr_`) comme des cookies propriétaires sur votre domaine, quel que soit le point d’entrée qui reçoit la demande de collecte de données. Le point d’entrée de collecte (le domaine vers lequel votre implémentation envoie des données) est un choix distinct qui affecte la manière dont les navigateurs et les politiques réseau traitent la requête elle-même.
+Le SDK Web définit toujours l’identité [cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) (tels que les cookies `kndctr_`) comme des cookies propriétaires sur votre domaine, quel que soit le point d’entrée qui reçoit la demande de collecte de données. Le point d’entrée de collecte (le domaine vers lequel votre implémentation envoie des données) est un choix distinct qui affecte la manière dont les navigateurs et les politiques réseau traitent la requête elle-même.
 
-**Collecte propriétaire** achemine les demandes de collecte de données par le biais d’un domaine contrôlé par votre organisation (par exemple, `data.example.com`) à l’aide d’un CNAME qui pointe vers Adobe Edge Network. Comme la requête reste sur votre domaine, elle est moins susceptible d’être bloquée par des bloqueurs de publicités ou des restrictions réseau du navigateur. La collecte propriétaire est également un prérequis pour la définition des [identifiants d’appareil propriétaires](./fpid.md) à partir de votre propre infrastructure de serveur, ce qui constitue la stratégie d’identité la plus durable disponible. Adobe recommande d’utiliser le [programme de certificat géré par Adobe](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/adobe-managed-cert) pour configurer la collecte propriétaire pour votre implémentation.
+**Collecte propriétaire** achemine les demandes de collecte de données par le biais d’un domaine contrôlé par votre organisation (par exemple, `data.example.com`) à l’aide d’un CNAME qui pointe vers Adobe Edge Network. Comme la requête reste sur votre domaine, elle est moins susceptible d’être bloquée par des bloqueurs de publicités ou des restrictions réseau du navigateur. La collecte propriétaire est également un prérequis pour la définition des [identifiants d’appareil propriétaires](./fpid.md) à partir de votre propre infrastructure de serveur, ce qui constitue la stratégie d’identité la plus durable disponible. Adobe recommande d’utiliser le [programme de certificat géré par Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) pour configurer la collecte propriétaire pour votre implémentation.
 
 **Collection tierce** envoie directement les requêtes à une [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) appartenant à Adobe (telle que `example.data.adobedc.net`). Bien que les cookies d’identité soient toujours définis comme propriétaires sur votre domaine, la requête elle-même est envoyée à un domaine tiers, que certains navigateurs et bloqueurs de publicités peuvent restreindre.
 

@@ -6,8 +6,8 @@ description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '3279'
-ht-degree: 30%
+source-wordcount: '3360'
+ht-degree: 31%
 
 ---
 
@@ -132,7 +132,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | Accès en lecture seule aux configurations de modèles. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | La possibilité d’afficher et de modifier les configurations des plans. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Accès en lecture seule aux configurations des plans. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Possibilité de poser les questions [[!DNL [AI assistant]]](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Possibilité de poser les questions [!DNL [AI assistant]](../ai-assistant/access.md). |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Accès à pour obtenir des réponses aux requêtes [informations opérationnelles](../ai-assistant/home.md##operational-insights). |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Permet aux utilisateurs de générer du contenu à l’aide de l’[!DNL AI Assistant]. |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Permettre aux utilisateurs de créer des directives de marque à l’aide du [!DNL AI Assistant]. |
@@ -229,7 +229,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Accès en lecture seule pour afficher les destinations disponibles dans l’onglet **[!UICONTROL Catalog]** et les destinations authentifiées dans l’onglet **[!UICONTROL Browse]** . |
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Accès à la lecture, la création et la suppression des connexions de destinations et des comptes de destination. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. Cette autorisation nécessite également d’accorder [!UICONTROL View Destinations] ou [!UICONTROL Manage Destinations] à l’utilisateur ou utilisatrice qui activera les destinations. |
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | La possibilité d’activer des audiences vers des destinations existantes, sans afficher l’[étape de mappage](../destinations/ui/activate-batch-profile-destinations.md#mapping). Les utilisateurs peuvent ajouter et supprimer des audiences dans les workflows d’activation, mais ne peuvent pas ajouter ni supprimer des attributs ou des identités mappés. Cette autorisation nécessite également d’accorder l’autorisation [!UICONTROL View Destinations] à l’utilisateur ou l’utilisatrice qui activera les données vers les destinations. |
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | La possibilité d’activer des audiences vers des destinations existantes, sans afficher l’[étape de mappage](../destinations/ui/activate-batch-profile-destinations.md#mapping). Les utilisateurs et utilisatrices peuvent ajouter et supprimer des audiences dans les workflows d’activation, mais ne peuvent pas ajouter ni supprimer des identités ou des attributs mappés. Cette autorisation nécessite également d’accorder l’autorisation [!UICONTROL View Destinations] à l’utilisateur ou l’utilisatrice qui activera les données vers les destinations. |
 | [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Possibilité de lire, créer, modifier et désactiver les flux d’exportation des jeux de données. Possibilité d’activer les données vers les jeux de données actifs qui ont été créés. Cette autorisation nécessite également d’accorder l’autorisation [!UICONTROL View Destinations] à l’utilisateur ou l’utilisatrice qui activera les données vers les destinations. |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
 | [!DNL Federated Data] | [!UICONTROL Manage Federated Data] | La possibilité d’accéder à toutes les fonctionnalités de données fédérées, telles que la création de schémas, de modèles et de compositions. |
