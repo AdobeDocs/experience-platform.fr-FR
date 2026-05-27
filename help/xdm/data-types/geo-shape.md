@@ -5,10 +5,8 @@ title: Type de données de forme géographique
 description: En savoir plus sur le type de données XDM de forme géographique.
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
 TQID: https://experienceleague.adobe.com/2D0Z7wkA8uFm7UV26vfK46-bU6WetUzx3Qh6T5iuKv4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 244
@@ -30,4 +28,4 @@ ht-degree: 34%
 | `_schema.description` | Chaîne | Description de ce que la forme définit. |
 | `_schema.elevation` | Double | Élévation spécifique ou minimale de la forme. Cette valeur est conforme à la référence [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) et elle est mesurée en mètres. Combinée avec `ceiling`, vous pouvez utiliser cette propriété pour exprimer un cadre de sélection tridimensionnel pour un emplacement. |
 | `_id` | Chaîne | Identifiant unique généré par le système pour la forme. |
-| `ceiling` | Double | Élévation maximale de la forme. Cette propriété n’est valide que lorsqu’elle est utilisée en combinaison avec `elevation`. La valeur est conforme au système [&#128279;](https://gisgeography.com/wgs84-world-geodetic-system/) et est mesurée en mètres. Combinée avec `elevation`, vous pouvez utiliser cette propriété pour exprimer un cadre de sélection tridimensionnel pour un emplacement. |
+| `ceiling` | Double | Élévation maximale de la forme. Cette propriété n’est valide que lorsqu’elle est utilisée en combinaison avec `elevation`. La valeur est conforme au système [](https://gisgeography.com/wgs84-world-geodetic-system/) et est mesurée en mètres. Combinée avec `elevation`, vous pouvez utiliser cette propriété pour exprimer un cadre de sélection tridimensionnel pour un emplacement. |

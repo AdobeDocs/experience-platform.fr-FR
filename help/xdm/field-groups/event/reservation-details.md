@@ -4,10 +4,8 @@ title: Groupe de champs de schéma des détails de la réservation
 description: Découvrez le groupe de champs de schéma Détails de la réservation.
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 TQID: https://experienceleague.adobe.com/N1FtdebvPbxQaTHOLf5h2zWt2AAMr2X2GAUjZKqQCrY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 338
@@ -26,7 +24,7 @@ Le groupe de champs fournit un seul champ de type objet, `reservations`. Les pro
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `nonRefundableAmount` | [Devise](../../data-types/currency.md) | Montant du prix de la réservation marqué comme non remboursable. |
-| `transaction` | [&#x200B; Transaction &#x200B;](../../data-types/transaction.md) | Décrit la transaction de devise pour la réservation. |
+| `transaction` | [ Transaction ](../../data-types/transaction.md) | Décrit la transaction de devise pour la réservation. |
 | `id` | Chaîne | Identifiant unique de la réservation. |
 | `cancellation` | Entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
 | `confirmationNumber` | Chaîne | Numéro ou identifiant de confirmation de la réservation. |

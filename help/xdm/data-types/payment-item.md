@@ -5,10 +5,8 @@ title: Type de données d'élément de paiement
 description: Découvrez le type de données Modèle de données d'expérience des articles de paiement (XDM).
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 TQID: https://experienceleague.adobe.com/lxki-3fVq4DqBDEX1eyRiYsUq81pqOzkoBBghlkxI0Q
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 159
