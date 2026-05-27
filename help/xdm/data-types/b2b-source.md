@@ -3,12 +3,9 @@ title: Type de données Source B2B
 description: Découvrez le type de données du modèle de données d’expérience (XDM) Source B2B.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 TQID: https://experienceleague.adobe.com/IvDl-vg2WAfZUALcJJmaPrTwmuYqSPAX-O2b25TNSOk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 256
@@ -24,13 +21,13 @@ Lorsque l’on se fie uniquement aux identifiants basés sur des chaînes, il pe
 
 Le type de données [!UICONTROL B2B Source] vous permet d’utiliser l’identifiant de chaîne d’origine d’une entité et de le combiner avec des informations contextuelles spécifiques à la source afin de vous assurer qu’il reste entièrement unique dans le système Experience Platform, quelle que soit la source d’où il provient.
 
-![&#x200B; Structure Source B2B &#x200B;](../images/data-types/b2b-source.png)
+![ Structure Source B2B ](../images/data-types/b2b-source.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `sourceID` | Chaîne | ID unique de l’enregistrement source. |
 | `sourceInstanceID` | Chaîne | Identifiant d’instance ou d’organisation des données sources. |
-| `sourceKey` | Chaîne | Identifiant unique composé des `sourceId`, `sourceInstanceId` et `sourceType` concaténés ensemble au format suivant : `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Certains connecteurs source tels que Marketo concaténent automatiquement cette valeur pour certains identifiants. D’autres doivent être concaténés manuellement à l’aide de la fonction `concat` de la préparation des données[&#128279;](../../data-prep/functions.md#string) par exemple : `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | Chaîne | Identifiant unique composé des `sourceId`, `sourceInstanceId` et `sourceType` concaténés ensemble au format suivant : `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Certains connecteurs source tels que Marketo concaténent automatiquement cette valeur pour certains identifiants. D’autres doivent être concaténés manuellement à l’aide de la fonction `concat` de la préparation des données](../../data-prep/functions.md#string) par exemple : `concat(id,"@${ORG_ID}.Marketo")`[ |
 | `sourceType` | Chaîne | Nom de la plateforme qui fournit les données sources. |
 
 {style="table-layout:auto"}
