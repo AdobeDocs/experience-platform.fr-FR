@@ -5,13 +5,9 @@ title: Abonnement aux événements Privacy Service
 description: Découvrez comment vous abonner à des événements Privacy Service à l’aide d’un webhook préconfiguré.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 TQID: https://experienceleague.adobe.com/J05-9wr8DJ49kDAkn21TNhtiT-Yr-PogcK-aGrnr2ik
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 436
@@ -82,4 +78,4 @@ Le fichier JSON suivant est un exemple de payload de notification [!DNL Privacy 
 
 ## Étapes suivantes
 
-Ce document explique comment enregistrer des événements Privacy Service dans un webhook configuré et comment interpréter les payloads des notifications. Pour savoir comment effectuer le suivi des tâches de confidentialité à l’aide de l’interface utilisateur, consultez le guide d’utilisation de [&#128279;](./ui/user-guide.md).
+Ce document explique comment enregistrer des événements Privacy Service dans un webhook configuré et comment interpréter les payloads des notifications. Pour savoir comment effectuer le suivi des tâches de confidentialité à l’aide de l’interface utilisateur, consultez le guide d’utilisation de [](./ui/user-guide.md).

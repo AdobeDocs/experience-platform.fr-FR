@@ -3,13 +3,9 @@ title: Analyse Big Data efficace avec des hypercubes dans Experience Query Servi
 description: Découvrez comment utiliser les hypercubes dans Adobe Experience Platform Query Service pour optimiser l’analyse du Big Data avec un comptage unique approximatif, ce qui réduit la nécessité d’un retraitement complet des données.
 exl-id: 48af0003-0677-4828-982c-ebcbd9583e11
 TQID: https://experienceleague.adobe.com/xqPyRplF0HqBHvzTEPdQg0u6VgxC1HsoeKw0SxrnXBA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1520

@@ -4,13 +4,9 @@ title: Utiliser des structures de données imbriquées dans le service de requê
 description: Ce document fournit un exemple de travail pour le traitement et la transformation des champs de données imbriqués à l’aide des instructions CTAS et INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 TQID: https://experienceleague.adobe.com/syHuil-gTQqX8twTa-D7cC7uoh0eSCAWNe2f123YB4U
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 793

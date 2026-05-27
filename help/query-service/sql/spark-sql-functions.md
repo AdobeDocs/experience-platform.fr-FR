@@ -5,13 +5,9 @@ title: Fonctions Spark SQL dans le service de requête
 description: Découvrez les fonctions Spark SQL prises en charge qui étendent les fonctionnalités de SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 TQID: https://experienceleague.adobe.com/6zioMoWmhw0pxhFmZIym-ZU4ZmD2NDfe5RAzlh8Eiu0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3807

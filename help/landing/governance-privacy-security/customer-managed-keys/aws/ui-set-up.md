@@ -3,23 +3,11 @@ title: Configurer des clés gérées par la clientèle avec AWS à l’aide de l
 description: Découvrez comment configurer votre application CMK avec votre nom de ressource Amazon (ARN) et envoyer votre identifiant de clé de chiffrement à Adobe Experience Platform.
 exl-id: f0e38a60-d448-4975-977e-1367fca10515
 TQID: https://experienceleague.adobe.com/8A0xge-aj2kk4y-DTHzmrerFdUVFok4WBB7kQrFUVbE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1221
@@ -33,7 +21,7 @@ Utilisez ce guide pour activer les clés gérées par le client (CMK) pour les i
 
 >[!IMPORTANT]
 >
->Avant de poursuivre avec ce guide, assurez-vous d’avoir terminé la configuration détaillée dans le document [’Configuration d’AWS KMS pour &#x200B;](./configure-kms.md) CMK’.
+>Avant de poursuivre avec ce guide, assurez-vous d’avoir terminé la configuration détaillée dans le document [’Configuration d’AWS KMS pour ](./configure-kms.md) CMK’.
 
 ## Mettez à jour la stratégie de clé AWS pour intégrer la clé à Experience Platform.
 
@@ -193,7 +181,7 @@ Sélectionnez l’icône de copie pour copier votre ARN. Une boîte de dialogue 
 
 Revenez à présent à l’interface utilisateur d’Experience Platform [!UICONTROL Customer Managed Keys configuration]. Dans la section **[!UICONTROL Add AWS encryption key details]** , ajoutez un **[!UICONTROL Configuration name]** et les **[!UICONTROL KMS key ARN]** que vous avez copiés à partir de l’interface utilisateur d’AWS.
 
-![L’espace de travail Configuration du chiffrement d’Experience Platform avec le nom de la configuration et la clé KMS ARN en surbrillance dans la section Ajouter des détails de la clé de chiffrement AWS &#x200B;](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png).
+![L’espace de travail Configuration du chiffrement d’Experience Platform avec le nom de la configuration et la clé KMS ARN en surbrillance dans la section Ajouter des détails de la clé de chiffrement AWS ](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png).
 
 Sélectionnez ensuite **[!UICONTROL SAVE]** pour envoyer le nom de la configuration, l’ARN de la clé KMS et commencer la validation de la clé.
 
