@@ -7,29 +7,11 @@ role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 TQID: https://experienceleague.adobe.com/7Bz9gXvBHLFLZ2100KmwjJxquxDRaqJWxsL4khIkT-U
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1604
@@ -52,10 +34,10 @@ Ce document présente un aperçu de la configuration de vos opérations de donn�
 Ce guide nécessite une compréhension pratique des différents services Experience Platform impliqués dans le traitement des données de consentement :
 
 * [Modèle de données d’expérience (XDM)](/help/xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Adobe Experience Platform Identity Service &#x200B;](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [Adobe Experience Platform Identity Service ](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Real-Time Customer Profile](/help/profile/home.md) : utilise des fonctionnalités [!DNL Identity Service] pour créer des profils clients détaillés à partir de vos jeux de données en temps réel. Le profil client en temps réel extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) : bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Experience Platform à votre site web destiné aux clients.
-   * [Commandes de consentement SDK &#x200B;](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
+   * [Commandes de consentement SDK ](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md) : permet de diviser les données du profil client en temps réel en groupes d’individus qui partagent des caractéristiques similaires et qui réagissent de la même manière aux stratégies marketing.
 
 ## Résumé du flux de traitement du consentement {#summary}
@@ -75,7 +57,7 @@ Dans la version actuelle de la prise en charge du traitement du consentement dan
 
 >[!NOTE]
 >
->Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consents and Preferences] &#x200B;](/help/xdm/data-types/consents.md) .
+>Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consents and Preferences] ](/help/xdm/data-types/consents.md) .
 
 Une fois le système configuré, Experience Platform Web SDK interprète la valeur de consentement de la collecte de données pour l’utilisateur actuel afin de déterminer si les données doivent être envoyées à Adobe Experience Platform Edge Network, supprimées du client ou conservées jusqu’à ce que l’autorisation de collecte de données soit définie sur oui ou non.
 
@@ -154,4 +136,4 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 Ce guide explique comment configurer vos opérations Experience Platform pour traiter les données de consentement des clients à l’aide de la norme Adobe et faire en sorte que ces attributs soient représentés dans les profils clients. Vous pouvez désormais intégrer les préférences de consentement des clients en tant que facteur déterminant dans la qualification de segment et dans d’autres cas d’utilisation en aval.
 
-Pour plus d’informations sur les fonctionnalités Experience Platform relatives à la confidentialité, consultez la présentation de la [&#x200B; gouvernance, confidentialité et sécurité dans Experience Platform](../../overview.md).
+Pour plus d’informations sur les fonctionnalités Experience Platform relatives à la confidentialité, consultez la présentation de la [ gouvernance, confidentialité et sécurité dans Experience Platform](../../overview.md).

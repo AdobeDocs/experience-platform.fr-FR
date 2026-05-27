@@ -4,13 +4,9 @@ description: Découvrez comment récupérer vos données d’accès à l’aide 
 role: Developer
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
 TQID: https://experienceleague.adobe.com/0l-tOEOus-PA7yy52VfAvBCjdkfXkRRqapYLRA--J-A
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 670
@@ -22,7 +18,7 @@ ht-degree: 5%
 
 Utilisez le point d’entrée `/content` pour récupérer en toute sécurité *les informations d’accès* (les informations qu’un titulaire de confidentialité peut légitimement demander à accéder) pour vos clients. L’URL de téléchargement fournie dans la réponse à une requête GET `/jobs/{JOB_ID}` pointe vers un point d’entrée de service Adobe. Vous pouvez ensuite envoyer une requête GET à `/jobs/:JOB_ID/content` pour renvoyer vos données client au format JSON. Cette méthode d’accès met en œuvre plusieurs couches d’authentification et de contrôle d’accès pour améliorer la sécurité.
 
-Avant d’utiliser ce guide, reportez-vous au [&#x200B; guide de prise en main &#x200B;](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
+Avant d’utiliser ce guide, reportez-vous au [ guide de prise en main ](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
 
 >[!TIP]
 >

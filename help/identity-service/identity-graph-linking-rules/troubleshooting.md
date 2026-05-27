@@ -3,28 +3,11 @@ title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants dans les règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
 TQID: https://experienceleague.adobe.com/7N9WpiZelmRQ1U-TcbprPhjdfSoc8z1-Qn27-GhRpnU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3464
@@ -71,8 +54,8 @@ Il existe différentes raisons pour lesquelles cela peut se produire, notamment,
 * L’enregistrement est ignoré car il n’y a qu’une seule identité dans l’événement.
 * [Un échec de validation s’est produit dans Identity Service](../guardrails.md#identity-value-validation).
    * Par exemple, un ECID peut avoir dépassé la longueur maximale de 38 caractères.
-* Par défaut, les [&#x200B; AAID sont bloqués lors de l’ingestion](../guardrails.md#identity-namespace-ingestion).
-* L’identité est supprimée en raison des [&#x200B; mécanismes de sécurisation système &#x200B;](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
+* Par défaut, les [ AAID sont bloqués lors de l’ingestion](../guardrails.md#identity-namespace-ingestion).
+* L’identité est supprimée en raison des [ mécanismes de sécurisation système ](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
 Dans le contexte de [!DNL Identity Graph Linking Rules], un enregistrement peut être rejeté du Service d’identités car l’événement entrant comporte plusieurs identités avec le même espace de noms unique mais une valeur d’identité différente. Ce scénario se produit généralement en raison d’erreurs d’implémentation.
 
@@ -153,7 +136,7 @@ Pour que les [événements utilisateur authentifiés](implementation-guide.md#in
 
 Vous pouvez continuer à voir `primary=true` indicateur « événements » lors de la recherche d’un profil dans la visionneuse de profils. Toutefois, cette valeur est ignorée et ne sera pas utilisée par le profil.
 
-Les AAID sont bloqués par défaut. Par conséquent, si vous utilisez le connecteur source [&#128279;](../../sources/tutorials/ui/create/adobe-applications/analytics.md), vous devez vous assurer que l’ECID a une priorité supérieure à l’ECID afin que les événements non authentifiés aient une identité principale d’ECID.
+Les AAID sont bloqués par défaut. Par conséquent, si vous utilisez le connecteur source [](../../sources/tutorials/ui/create/adobe-applications/analytics.md), vous devez vous assurer que l’ECID a une priorité supérieure à l’ECID afin que les événements non authentifiés aient une identité principale d’ECID.
 
 **Étapes de dépannage**
 
@@ -306,11 +289,11 @@ Reportez-vous à la documentation relative à l’[algorithme d’optimisation d
 * Lisez le [guide de configuration des graphiques](./example-configurations.md) pour obtenir des exemples de structures de graphique prises en charge.
 * Vous pouvez également lire le [guide d’implémentation](./implementation-guide.md#appendix) pour obtenir des exemples de structures de graphique non prises en charge. Deux scénarios peuvent se produire :
    * Aucun espace de noms unique sur tous vos profils.
-   * Un scénario [&#x200B; « ID non résolu »](./implementation-guide.md#dangling-loginid-scenario) se produit. Dans ce scénario, Identity Service ne peut pas déterminer si l’ID suspendu est associé à l’une des entités de personne dans les graphiques.
+   * Un scénario [ « ID non résolu »](./implementation-guide.md#dangling-loginid-scenario) se produit. Dans ce scénario, Identity Service ne peut pas déterminer si l’ID suspendu est associé à l’une des entités de personne dans les graphiques.
 
 Vous pouvez également utiliser l’outil de simulation [graphique dans l’interface utilisateur](./graph-simulation.md) pour simuler des événements et configurer vos propres paramètres de priorité d’espace de noms et d’espace de noms uniques. Cela peut vous aider à comprendre les bases du comportement de l’algorithme d’optimisation des identités.
 
-Si les résultats de la simulation correspondent aux attentes en matière de comportement du graphique, vous pouvez vérifier si les [&#x200B; paramètres d’identité &#x200B;](./identity-settings-ui.md) correspondent aux paramètres que vous avez configurés dans la simulation.
+Si les résultats de la simulation correspondent aux attentes en matière de comportement du graphique, vous pouvez vérifier si les [ paramètres d’identité ](./identity-settings-ui.md) correspondent aux paramètres que vous avez configurés dans la simulation.
 
 ### Même après la configuration des paramètres d’identité, je vois toujours des graphiques réduits dans mon sandbox
 
@@ -424,7 +407,7 @@ Non. La priorité de l’espace de noms s’applique uniquement aux jeux de donn
 
 ### Comment cette fonctionnalité fonctionne-t-elle en tandem avec les mécanismes de sécurisation des graphiques d’identités de 50 identités par graphique ? La priorité de l’espace de noms affecte-t-elle ce mécanisme de sécurisation défini par le système ?
 
-L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation de l’entité personne. Par la suite, si le graphique tente de dépasser le [&#x200B; mécanisme de sécurisation des graphiques d’identités &#x200B;](../guardrails.md) (50 identités par graphique), cette logique est appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression du mécanisme de sécurisation des 50 identités/graphiques.
+L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation de l’entité personne. Par la suite, si le graphique tente de dépasser le [ mécanisme de sécurisation des graphiques d’identités ](../guardrails.md) (50 identités par graphique), cette logique est appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression du mécanisme de sécurisation des 50 identités/graphiques.
 
 ## Test
 

@@ -7,19 +7,10 @@ role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 TQID: https://experienceleague.adobe.com/bb9PfbxDmSr3mJt2bbWeY50xMCzZaWeO-W1HHcHTX9M
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1487
@@ -35,7 +26,7 @@ Ce document décrit les étapes de configuration d’un jeu de données pour tra
 
 >[!IMPORTANT]
 >
->Les exemples de ce guide utilisent un ensemble normalisé de champs pour représenter les valeurs de consentement du client, telles que définies par le groupe de champs de schéma [&#128279;](../../../../xdm/field-groups/profile/consents.md). [!UICONTROL Consent and Preference Details]La structure de ces champs est destinée à fournir un modèle de données efficace pour couvrir de nombreux cas d’utilisation courants de la collecte de consentement.
+>Les exemples de ce guide utilisent un ensemble normalisé de champs pour représenter les valeurs de consentement du client, telles que définies par le groupe de champs de schéma ](../../../../xdm/field-groups/profile/consents.md). [[!UICONTROL Consent and Preference Details]La structure de ces champs est destinée à fournir un modèle de données efficace pour couvrir de nombreux cas d’utilisation courants de la collecte de consentement.
 >
 >Cependant, vous pouvez également définir vos propres groupes de champs pour représenter le consentement en fonction de vos propres modèles de données. Consultez votre équipe juridique pour obtenir l’approbation d’un modèle de données de consentement adapté aux besoins de votre entreprise, en fonction des options suivantes :
 >
@@ -106,7 +97,7 @@ Le groupe de champs fournit un champ de type objet unique, `consents`, dont les 
 
 >[!NOTE]
 >
->Pour plus d’informations sur la structure et la signification des sous-propriétés dans `consents`, consultez la présentation du groupe de champs [[!UICONTROL Consent and Preference Details] &#x200B;](../../../../xdm/field-groups/profile/consents.md) .
+>Pour plus d’informations sur la structure et la signification des sous-propriétés dans `consents`, consultez la présentation du groupe de champs [[!UICONTROL Consent and Preference Details] ](../../../../xdm/field-groups/profile/consents.md) .
 
 ## Ajouter les groupes de champs obligatoires à votre schéma de [!DNL Profile] {#add-field-group}
 
@@ -115,7 +106,7 @@ Pour collecter des données de consentement à l’aide de la norme Adobe, vous 
 * [[!UICONTROL Consent and Preference Details]](../../../../xdm/field-groups/profile/consents.md)
 * [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (obligatoire si vous utilisez Experience Platform Web ou Mobile SDK pour envoyer des signaux de consentement)
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Browse]** pour afficher la liste des schémas existants. À partir de là, sélectionnez le nom du schéma [!DNL Profile] auquel vous souhaitez ajouter des champs de consentement. Les captures d’écran de cette section utilisent le schéma « Membres du programme de fidélité » créé dans le [&#x200B; tutoriel sur la création de schémas &#x200B;](../../../../xdm/tutorials/create-schema-ui.md) à titre d’exemple.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Browse]** pour afficher la liste des schémas existants. À partir de là, sélectionnez le nom du schéma [!DNL Profile] auquel vous souhaitez ajouter des champs de consentement. Les captures d’écran de cette section utilisent le schéma « Membres du programme de fidélité » créé dans le [ tutoriel sur la création de schémas ](../../../../xdm/tutorials/create-schema-ui.md) à titre d’exemple.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
