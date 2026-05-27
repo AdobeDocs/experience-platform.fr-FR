@@ -6,11 +6,18 @@ badge: Beta
 hide: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
 TQID: https://experienceleague.adobe.com/q37LtCNo-rubt6KMzUV8Hc6v2cfqlOMuUQR8pMYP05A
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 809
@@ -59,7 +66,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie **, sélectionnez **[!UICONTROL Pinterest Ads]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie **, sélectionnez &#x200B;** [!UICONTROL Pinterest Ads]&#x200B;**, puis &#x200B;** [!UICONTROL Add data]**.
 
 ![Le catalogue de sources sur Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
@@ -85,7 +92,7 @@ L’étape **[!UICONTROL Select data]** s’affiche, vous permettant de saisir l
 
 | Champ | Description |
 | --- | --- |
-| [!UICONTROL ad_account_id] | Identifiant de votre compte publicitaire [!DNL Pinterest Ads]. Reportez-vous au guide [[!DNL Pinterest]  sur la recherche d’identifiants dans Ads Manager ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) si vous avez besoin de conseils. |
+| [!UICONTROL ad_account_id] | Identifiant de votre compte publicitaire [!DNL Pinterest Ads]. Reportez-vous au guide [[!DNL Pinterest]  sur la recherche d’identifiants dans Ads Manager &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) si vous avez besoin de conseils. |
 | [!UICONTROL object_type] | Sélectionnez l’une des **campagnes**, **groupes publicitaires** ou **annonces** selon l’API [!DNL Pinterest] Analytics auprès de laquelle vous souhaitez obtenir des informations. |
 | [!UICONTROL object_ids] | Identifiants de l’objet sélectionné. Accédez à la page [!DNL Pinterest] de **Pinterest Business Hub** > **Résumé du compte publicitaire** > **Campagnes** / **Groupes publicitaires** / **Publicités** et copiez les identifiants requis mentionnés juste en dessous de chacun de leurs noms. |
 
@@ -114,7 +121,7 @@ Lors de la planification de votre flux de données [!DNL Pinterest Ads] pour l�
 | `Day` | 1 |
 | `Hour` | 24 |
 
-Pour plus d’informations sur la planification de votre flux de données [!DNL Pinterest Ads], consultez la section [Mécanismes de sécurisation de la présentation [!DNL Pinterest Ads] ](../../../../connectors/advertising/pinterest-ads.md#guardrails).
+Pour plus d’informations sur la planification de votre flux de données [!DNL Pinterest Ads], consultez la section [Mécanismes de sécurisation de la présentation [!DNL Pinterest Ads] &#x200B;](../../../../connectors/advertising/pinterest-ads.md#guardrails).
 
 Une fois que vous avez fourni les valeurs de votre planning, sélectionnez **[!UICONTROL Next]**.
 
