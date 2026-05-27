@@ -4,7 +4,7 @@ description: Découvrez l’objet Contexte ainsi que son rôle dans l’interact
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '710'
 ht-degree: 100%
 
 ---

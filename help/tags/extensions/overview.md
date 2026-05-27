@@ -4,16 +4,16 @@ description: Documentation pour les extensions de transfert de balises et d’é
 exl-id: 2433a64f-66f2-4c21-bdec-c6b8e1658b2b
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 21%
+source-wordcount: '198'
+ht-degree: 31%
 
 ---
 
 # Extensions de transfert de balises et d’événements
 
-Une extension est un ensemble empaqueté de codes qui étend les fonctionnalités fournies par les balises ou le transfert d’événement. Si vous installez une extension dans une bibliothèque, l’extension ajoute un ensemble d’événements, de conditions et/ou d’actions uniques qui peuvent être utilisés dans les [configurations de règles](../ui/managing-resources/rules.md) de cette bibliothèque.
+Une extension est un jeu de codes empaqueté qui étend les fonctionnalités fournies par les balises ou le transfert dʼévénements. Si vous installez une extension dans une bibliothèque, l’extension ajoute un ensemble d’événements, de conditions et/ou d’actions uniques qui peuvent être utilisés dans les [configurations de règles](../ui/managing-resources/rules.md) de cette bibliothèque.
 
-Pour plus d’informations sur le fonctionnement des extensions dans les structures de balises et de transfert d’événement, consultez la [&#x200B; présentation des extensions](../ui/managing-resources/extensions/overview.md).
+Pour plus d’informations sur le fonctionnement des extensions dans les structures de balises et de transfert d’événement, consultez la [ présentation des extensions](../ui/managing-resources/extensions/overview.md).
 
 Pour obtenir de la documentation sur l’installation et l’utilisation des extensions disponibles, reportez-vous aux catalogues suivants :
 

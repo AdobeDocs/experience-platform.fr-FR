@@ -4,14 +4,10 @@ description: Découvrez comment créer une connexion source Azure Event Hubs à 
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 TQID: https://experienceleague.adobe.com/nVdU3MAx-woCdGY7Q4y0QyYmOiyqgJC1gL1qCpGSgvo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1062
@@ -59,7 +55,7 @@ Pour authentifier votre connecteur source [!DNL Event Hubs], vous devez fournir 
 | Nom de la clé SAS | Nom de la règle d’autorisation, également appelé nom de la clé SAS. |
 | Clé SAS | Clé primaire de l’espace de noms [!DNL Event Hub]. La `sasPolicy` à laquelle correspond le `sasKey` doit disposer de droits `manage` configurés pour que la liste [!DNL Event Hubs] soit renseignée. |
 | Espace de noms | Espace de noms du [!DNL Event Hub] auquel vous accédez. Un espace de noms [!DNL Event Hub] fournit un conteneur de définition de portée unique dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
-| Nom du hub d’événements | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
+| Nom du hub d’événements | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
 
 >[!TAB Authentification Active Directory Azure Event Hub]
 
@@ -80,7 +76,7 @@ Pour plus d’informations sur [!DNL Azure Active Directory], consultez le guide
 | Identifiant client | Identifiant d’application attribué à votre application. Vous pouvez récupérer cet identifiant à partir du portail [!DNL Microsoft Entra ID] où vous avez enregistré votre [!DNL Azure Active Directory]. |
 | Valeur du secret client | Secret client utilisé avec l’identifiant client pour authentifier votre application . Vous pouvez récupérer votre secret client à partir du portail [!DNL Microsoft Entra ID] où vous avez enregistré votre [!DNL Azure Active Directory]. |
 | Espace de noms | Espace de noms du [!DNL Event Hub] auquel vous accédez. Un espace de noms [!DNL Event Hub] fournit un conteneur de définition de portée unique dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
-| Nom du hub d’événements | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
+| Nom du hub d’événements | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
 
 Pour plus d’informations sur [!DNL Azure Active Directory], consultez le guide [Azure sur l’utilisation de Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 
