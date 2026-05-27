@@ -69,7 +69,7 @@ Adobe a créé plusieurs applications sur Experience Platform. Vous trouverez la
 
 La vidéo ci-dessous décrit les cas d’utilisation de chaque application reposant sur Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428517/?captions=fre_fr&learn=on)
 
 ## Tutoriels [!DNL Experience Platform]
 
