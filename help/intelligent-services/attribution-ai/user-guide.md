@@ -5,10 +5,14 @@ title: Guide de l’interface utilisateur d’Attribution AI
 description: Ce document sert de guide pour interagir avec l’IA dédiée à l’attribution dans l’interface utilisateur des services intelligents.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 TQID: https://experienceleague.adobe.com/HUpxGf8n7OOx0YkwHlKZ16WHrNiGiXS0e6DDuK6EV6w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2413
@@ -88,7 +92,7 @@ Dans l’aperçu du jeu de données se trouve une valeur de pourcentage d’exha
 >
 >L’exhaustivité des jeux de données est calculée à l’aide de la fenêtre d’entraînement maximale pour Attribution AI (un an). Cela signifie que les données de plus d’un an ne sont pas prises en compte lors de l’affichage de la valeur d’exhaustivité de votre jeu de données.
 
-![ Exhaustivité du jeu de données ](./images/user-guide/dataset-completeness.png)
+![&#x200B; Exhaustivité du jeu de données &#x200B;](./images/user-guide/dataset-completeness.png)
 
 ### Sélectionner une identité {#identity}
 
@@ -108,7 +112,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [ Espaces de noms du service d’identités ](../../identity-service/features/namespaces.md).
+> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [&#x200B; Espaces de noms du service d’identités &#x200B;](../../identity-service/features/namespaces.md).
 
 ## Mappage des champs de canal média et de campagne {#aai-mapping}
 
