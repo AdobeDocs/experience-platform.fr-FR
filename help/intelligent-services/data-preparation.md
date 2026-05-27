@@ -5,14 +5,9 @@ title: Préparation des données en vue de leur utilisation dans les services in
 description: Pour qu’Intelligent Services puisse découvrir des informations à partir de vos données d’événements marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Pour ce faire, les services intelligents utilisent des schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 TQID: https://experienceleague.adobe.com/t-DwxAHdmMYKDTjDamh-fo5wJZw9MZ2DbIaaKXK-Ss8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3034
@@ -46,7 +41,7 @@ Le processus de préparation varie selon que vos données sont stockées dans Ad
 
 ### Préparation des données externes
 
-Si vos données sont stockées en dehors d’Experience Platform, vous devez les mapper aux champs obligatoires et pertinents d’un [schéma Consumer ExperienceEvent](#cee-schema). Ce schéma peut être complété par des groupes de champs personnalisés pour mieux capturer vos données client. Une fois mappé, vous pouvez créer un jeu de données à l’aide de votre schéma ExperienceEvent client et [&#x200B; ingérer vos données dans Experience Platform](../ingestion/home.md). Le jeu de données CEE peut ensuite être sélectionné lors de la configuration d&#39;un [!DNL Intelligent Service].
+Si vos données sont stockées en dehors d’Experience Platform, vous devez les mapper aux champs obligatoires et pertinents d’un [schéma Consumer ExperienceEvent](#cee-schema). Ce schéma peut être complété par des groupes de champs personnalisés pour mieux capturer vos données client. Une fois mappé, vous pouvez créer un jeu de données à l’aide de votre schéma ExperienceEvent client et [ ingérer vos données dans Experience Platform](../ingestion/home.md). Le jeu de données CEE peut ensuite être sélectionné lors de la configuration d&#39;un [!DNL Intelligent Service].
 
 Selon le [!DNL Intelligent Service] que vous souhaitez utiliser, différents champs peuvent être requis. Notez qu’il est recommandé d’ajouter des données à un champ si vous disposez des données. Pour en savoir plus sur les champs obligatoires, consultez le guide [IA dédiée à l’attribution](./attribution-ai/input-output.md) ou [IA dédiée aux clients](./customer-ai/data-requirements.md) sur les exigences en matière de données.
 
@@ -105,7 +100,7 @@ Le schéma CEE, comme tous les schémas XDM ExperienceEvent, capture l’état t
 
 Comme tous les schémas XDM, le groupe de champs de schéma CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au groupe de champs CEE et différentes variations peuvent être incluses dans plusieurs schémas si nécessaire.
 
-Vous trouverez un exemple complet du groupe de champs dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). En outre, vous pouvez afficher et copier le fichier [JSON](https://github.com/AdobeDocs/experience-platform.fr-FR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour un exemple de la manière dont les données peuvent être structurées pour se conformer au schéma CEE. Reportez-vous à ces deux exemples au fur et à mesure que vous en apprendrez plus sur les champs clés décrits dans la section ci-dessous, afin de déterminer comment vous pouvez mapper vos propres données au schéma.
+Vous trouverez un exemple complet du groupe de champs dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). En outre, vous pouvez afficher et copier le fichier [JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour un exemple de la manière dont les données peuvent être structurées pour se conformer au schéma CEE. Reportez-vous à ces deux exemples au fur et à mesure que vous en apprendrez plus sur les champs clés décrits dans la section ci-dessous, afin de déterminer comment vous pouvez mapper vos propres données au schéma.
 
 ## Champs clés
 
@@ -364,7 +359,7 @@ Si vous ingérez des données à partir d’un fichier CSV local, vous pouvez pa
 
 #### Mapper et ingérer des données {#ingest}
 
-Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Experience Platform. Consultez le tutoriel sur [le mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser l’[exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.fr-FR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour tester le processus d’ingestion avant d’utiliser vos propres données.
+Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Experience Platform. Consultez le tutoriel sur [le mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser l’[exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour tester le processus d’ingestion avant d’utiliser vos propres données.
 
 Une fois qu’un jeu de données a été renseigné, le même jeu de données peut être utilisé pour ingérer des fichiers de données supplémentaires.
 

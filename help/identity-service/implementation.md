@@ -3,22 +3,11 @@ title: Guide de mise en œuvre d’Identity Service
 description: Découvrez comment les données fournies à Adobe Experience Platform sont traitées avant d’être utilisées par Identity Service pour créer des graphiques d’identités.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
 TQID: https://experienceleague.adobe.com/ivGRbgSeErIFeOqy2NbsXXnmPU-ruhVGijoci-LhHxo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 603
@@ -48,7 +37,7 @@ Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous 
 
 ## Introduction de données d’identité dans le modèle de données d’expérience (XDM)
 
-En tant que cadre normalisé selon lequel Experience Platform organise les données clients, le modèle de données d’expérience (XDM) permet de partager et de comprendre les données sur Experience Platform et les autres services interagissant avec Experience Platform. Pour plus d’informations, consultez la [&#x200B; Présentation du système XDM &#x200B;](../xdm/home.md).
+En tant que cadre normalisé selon lequel Experience Platform organise les données clients, le modèle de données d’expérience (XDM) permet de partager et de comprendre les données sur Experience Platform et les autres services interagissant avec Experience Platform. Pour plus d’informations, consultez la [ Présentation du système XDM ](../xdm/home.md).
 
 Les schémas d’enregistrement et de série temporelle permettent d’inclure des données d’identité. À mesure que les données sont ingérées, le graphique d’identités crée de nouvelles relations entre les fragments de données provenant de différents espaces de noms s’il s’avère qu’ils partagent des données d’identité communes.
 
@@ -81,4 +70,4 @@ La vidéo suivante est destinée à vous aider à comprendre le service dʼident
 >
 >L’interface utilisateur d’Experience Platform affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation pour obtenir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/31637?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
