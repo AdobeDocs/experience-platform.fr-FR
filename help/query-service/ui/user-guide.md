@@ -5,20 +5,11 @@ title: Guide de l’interface utilisation du requêteur
 description: Le requêteur est un outil interactif fourni par le service de requête Adobe Experience Platform. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Le requêteur prend en charge le développement de requêtes pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 TQID: https://experienceleague.adobe.com/heUDuv13asGb6RZOgLqm2-3ngvI1dx1EylCbSRBAsL0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3379
@@ -158,7 +149,7 @@ Pour afficher une requête dans le Query Editor, sélectionnez n’importe quel 
 
 >[!NOTE]
 >
->Les options [!UICONTROL View schedule], [!UICONTROL Add schedule] et [!UICONTROL Delete query] ne sont disponibles qu’une fois la requête enregistrée en tant que modèle. L’option [!UICONTROL Add schedule] vous permet d’accéder directement au créateur de planning à partir du Query Editor. L’option [!UICONTROL View schedule] vous permet d’accéder directement à l’inventaire planifié pour cette requête. Consultez la documentation sur les plannings de requête pour savoir comment [&#x200B; créer des plannings de requête dans l’interface utilisateur &#x200B;](./query-schedules.md#create-schedule).
+>Les options [!UICONTROL View schedule], [!UICONTROL Add schedule] et [!UICONTROL Delete query] ne sont disponibles qu’une fois la requête enregistrée en tant que modèle. L’option [!UICONTROL Add schedule] vous permet d’accéder directement au créateur de planning à partir du Query Editor. L’option [!UICONTROL View schedule] vous permet d’accéder directement à l’inventaire planifié pour cette requête. Consultez la documentation sur les plannings de requête pour savoir comment [ créer des plannings de requête dans l’interface utilisateur ](./query-schedules.md#create-schedule).
 
 ![Requêteur avec le panneau des détails de la requête mis en surbrillance.](../images/ui/query-editor/query-details.png)
 
@@ -172,7 +163,7 @@ Pour générer un jeu de données de sortie, sélectionnez **[!UICONTROL Run as 
 
 ![Boîte de dialogue [!UICONTROL Enter output dataset details].](../images/ui/query-editor/output-dataset-details.png)
 
-Une fois l’action **[!UICONTROL Run as CTAS]** exécutée, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes[&#128279;](./query-logs.md) consultez la  documentation sur les journaux de requêtes .
+Une fois l’action **[!UICONTROL Run as CTAS]** exécutée, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes](./query-logs.md) consultez la [ documentation sur les journaux de requêtes .
 
 ### Enregistrement des requêtes {#saving-queries}
 
@@ -194,7 +185,7 @@ Les plannings sont définis dans le Query Editor. Lors de l’utilisation de Que
 >
 >Les requêtes planifiées qui échouent dix exécutions consécutives sont automatiquement mises à l’état [!UICONTROL Quarantined]. Une requête avec ce statut nécessite votre intervention avant que d’autres exécutions puissent avoir lieu. Consultez la documentation [requêtes en quarantaine](./monitor-queries.md#quarantined-queries) pour plus d’informations.
 
-Consultez la documentation sur les plannings de requête pour savoir comment [&#x200B; créer des plannings de requête dans l’interface utilisateur &#x200B;](./query-schedules.md). Vous pouvez également découvrir comment ajouter des plannings à l’aide de l’API dans le guide de point d’entrée [des requêtes planifiées](../api/scheduled-queries.md).
+Consultez la documentation sur les plannings de requête pour savoir comment [ créer des plannings de requête dans l’interface utilisateur ](./query-schedules.md). Vous pouvez également découvrir comment ajouter des plannings à l’aide de l’API dans le guide de point d’entrée [des requêtes planifiées](../api/scheduled-queries.md).
 
 Toutes les requêtes planifiées sont ajoutées à la liste dans l’onglet [!UICONTROL Scheduled queries] . Depuis cet espace de travail, vous pouvez surveiller le statut de toutes les tâches de requête planifiées via l’interface utilisateur. Sur l’onglet [!UICONTROL Scheduled queries] , vous pouvez trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Les informations disponibles incluent le statut, les détails du planning et les messages/codes d’erreur en cas d’échec de l’exécution. Pour plus d’informations, consultez le document [Surveiller les requêtes planifiées](./monitor-queries.md) .
 
@@ -329,7 +320,7 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 >
 >L’interface utilisateur illustrée dans la vidéo est obsolète, mais la logique utilisée dans le workflow reste la même.
 
->[!VIDEO](https://video.tv.adobe.com/v/32943?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Surveiller et gérer les sessions simultanées {#monitor-manage-sessions}
 

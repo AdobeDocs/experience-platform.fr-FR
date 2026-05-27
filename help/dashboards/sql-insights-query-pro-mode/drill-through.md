@@ -3,13 +3,9 @@ title: Exploration en amont du mode Query Pro
 description: Découvrez comment accéder à un nouveau tableau de bord à partir de n’importe quel graphique pour explorer vos données à l’aide de l’exploration amont.
 exl-id: d38550ba-1c56-4b6b-bf96-f21da232ba34
 TQID: https://experienceleague.adobe.com/fGS2i8Zv1Cjod23K71Ylx7A3D-UrgadQrf5xgACZoYM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 417
@@ -71,4 +67,4 @@ Dans le panneau de [!UICONTROL Properties], sélectionnez le bouton (bascule) po
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce document. À présent, vous savez comment créer une exploration en amont pour votre tableau de bord. Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform à l’aide du [&#x200B; guide du mode de conception guidé &#x200B;](../standard-dashboards.md).
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment créer une exploration en amont pour votre tableau de bord. Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform à l’aide du [ guide du mode de conception guidé ](../standard-dashboards.md).
