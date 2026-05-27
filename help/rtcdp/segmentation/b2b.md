@@ -2,17 +2,13 @@
 title: Cas d’utilisation de segmentation pour Real-Time Customer Data Platform B2B edition
 description: Présentation des différents cas d’utilisation d’Adobe Real-Time Customer Data Platform B2B edition disponibles.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 TQID: https://experienceleague.adobe.com/sldRLmJy7Yt2SiPTT-w9keXkWYQsvan0hzwdngYOreY
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1637
@@ -50,7 +46,7 @@ Avant de pouvoir utiliser les attributs de segmentation pour les classes B2B, vo
 
 1. Créez des schémas qui utilisent les classes B2B. Les classes B2B edition incluent Compte, Campagne, Opportunité, Liste marketing, etc. Pour plus d’informations sur [comment configurer des schémas à utiliser avec les classes B2B](../schemas/b2b.md) consultez la documentation sur les schémas.
 2. Créez des relations entre vos schémas B2B de modèle de données d’expérience (XDM). Les audiences basées sur des attributs B2B edition nécessitent des relations entre les classes pour utiliser pleinement la fonctionnalité de segmentation B2B étendue. Pour plus d’informations, consultez la documentation sur [comment définir une relation entre deux schémas B2B](../../xdm/tutorials/relationship-b2b.md).
-3. Ingérez des données à l’aide de jeux de données basés sur vos schémas B2B. Consultez la documentation sur les sources pour [&#x200B; d’informations sur l’ingestion de données &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo.md).
+3. Ingérez des données à l’aide de jeux de données basés sur vos schémas B2B. Consultez la documentation sur les sources pour [ d’informations sur l’ingestion de données ](../../sources/connectors/adobe-applications/marketo/marketo.md).
 4. Lisez le [guide d’utilisation du créateur de segments](../../segmentation/ui/segment-builder.md) pour obtenir des conseils plus détaillés sur la création d’audiences.
 
 Une fois ces exigences remplies, vous pouvez combiner ces attributs pour des cas d’utilisation B2B courants.
@@ -65,7 +61,7 @@ Pour créer efficacement des audiences pour les cas d’utilisation B2B, il est 
 
 L’image ci-dessous illustre les relations entre les classes B2B disponibles dans Real-Time CDP B2B edition.
 
-![&#x200B; Classe B2B ERD &#x200B;](../assets/segmentation/b2b/b2b-classes.png)
+![ Classe B2B ERD ](../assets/segmentation/b2b/b2b-classes.png)
 
 Comme votre modèle de données peut être complexe, vous pouvez utiliser l’interface utilisateur de Platform pour afficher une représentation visuelle plus détaillée de votre modèle de données afin de trouver les attributs appropriés à votre cas d’utilisation. Pour commencer, accédez à l’interface utilisateur de Platform et sélectionnez Schémas dans le volet de navigation de gauche.
 

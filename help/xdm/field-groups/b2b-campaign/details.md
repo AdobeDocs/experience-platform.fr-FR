@@ -3,12 +3,9 @@ title: Groupe de champs de schéma des détails de XDM Business Campaign
 description: Découvrez le groupe de champs de schéma Détails de XDM Business Campaign .
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
 TQID: https://experienceleague.adobe.com/Nla70G3CZQeV-wnghG7ZZDTVTl9Pa0oNQJaxYjAdpJU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 330
@@ -20,7 +17,7 @@ ht-degree: 1%
 
 [!UICONTROL XDM Business Campaign Details] est un groupe de champs de schéma standard pour la classe [[!UICONTROL XDM Business Campaign]](../../classes/b2b/business-campaign.md) qui recueille des informations détaillées sur une campagne commerciale.
 
-![&#x200B; Structure du groupe de champs Détails de XDM Business Campaign, telle qu’elle apparaît dans l’interface utilisateur](../../images/field-groups/b2b/business-campaign-details.png)
+![ Structure du groupe de champs Détails de XDM Business Campaign, telle qu’elle apparaît dans l’interface utilisateur](../../images/field-groups/b2b/business-campaign-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
