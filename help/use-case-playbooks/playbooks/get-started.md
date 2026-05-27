@@ -6,8 +6,8 @@ role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 source-git-commit: d6b62b9539a04be2d2adc7aa66436a294e08303a
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 8%
+source-wordcount: '1002'
+ht-degree: 10%
 
 ---
 
@@ -26,7 +26,7 @@ Pour accéder à une riche galerie de playbooks de cas d’utilisation dans l’
 
 Regardez cette vidéo pour en savoir plus sur les étapes nécessaires à la création de votre sandbox, à la configuration des autorisations et à la configuration des surfaces de canal pour les notifications par e-mail, push et SMS dans Journey Optimizer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449828?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
 
 ## Créer une sandbox de développement {#create-development-sandbox}
 
@@ -89,13 +89,13 @@ Une fois que vous avez [créé un nouveau rôle](/help/access-control/abac/ui/pe
 
 ## Configuration des surfaces de canal et de sandbox dans Journey Optimizer {#configure-channel-surfaces}
 
-Si votre organisation dispose d’une licence pour [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, configurez les surfaces de canal dans votre sandbox. Les surfaces de canal définissent tous les paramètres techniques requis pour vos messages, tels que le type d’e-mail, le nom et l’adresse e-mail de l’expéditeur, les applications mobiles, la configuration des SMS, etc. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/configuration/channel-surfaces).
+Si votre organisation dispose d’une licence pour [](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, configurez les surfaces de canal dans votre sandbox. Les surfaces de canal définissent tous les paramètres techniques requis pour vos messages, tels que le type d’e-mail, le nom et l’adresse e-mail de l’expéditeur, les applications mobiles, la configuration des SMS, etc. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Pour créer des instances de playbooks dans Journey Optimizer, vous devez configurer les surfaces des canaux pour les notifications par e-mail, push et SMS.
 
 ### Surface du canal e-mail
 
-Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=fr).
+Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
 ### Surface du canal SMS
 
@@ -111,8 +111,8 @@ Vérifiez que les configurations de canal sont configurées à partir de l’int
 
 Sélectionnez ensuite le canal, les plateformes et les applications que vous avez examinés dans les configurations de canal. Sélectionnez **Envoyer** pour créer la surface de canal push.
 
-Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=fr).
+Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
 ## Étapes suivantes {#next-steps}
 
-Maintenant que vous avez suivi toutes les étapes de ce document, vous devriez avoir créé un sandbox de développement avec des playbooks de cas d’utilisation disponibles dans le volet de navigation de gauche. Vous savez également comment accorder aux membres de votre équipe les autorisations requises pour afficher et gérer les playbooks et générer des ressources. L’étape suivante consiste à lire comment [choisir le playbook approprié](/help/use-case-playbooks/playbooks/choose.md) puis [&#x200B; créer des instances à partir de celui-ci](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Maintenant que vous avez suivi toutes les étapes de ce document, vous devriez avoir créé un sandbox de développement avec des playbooks de cas d’utilisation disponibles dans le volet de navigation de gauche. Vous savez également comment accorder aux membres de votre équipe les autorisations requises pour afficher et gérer les playbooks et générer des ressources. L’étape suivante consiste à lire comment [choisir le playbook approprié](/help/use-case-playbooks/playbooks/choose.md) puis [ créer des instances à partir de celui-ci](/help/use-case-playbooks/playbooks/create-share-reuse.md).
