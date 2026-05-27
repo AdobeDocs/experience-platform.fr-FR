@@ -3,20 +3,11 @@ title: Renvoyer et utiliser des variables de marchandisage à partir de données
 description: Découvrez comment fournir des champs XDM et des exemples de requêtes pour accéder aux variables de marchandisage dans vos jeux de données Analytics.
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
 TQID: https://experienceleague.adobe.com/6iWzOfWBaeqSO-JpcNpDJlZ-AAN221xqJRRsNC8cZus
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1118
@@ -41,7 +32,7 @@ Dans Adobe Analytics, les données personnalisées au niveau du produit peuvent 
 
 Ces variables sont appelées variables de marchandisage de syntaxe de produit. Cela permet de collecter des informations, telles qu’un « montant de remise » par produit ou des informations sur l’« emplacement sur la page » du produit dans les résultats de recherche du client.
 
-Pour en savoir plus sur l’utilisation de la syntaxe du produit, consultez la documentation d’Adobe Analytics sur [l’implémentation d’eVars à l’aide de la syntaxe du produit](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=fr#implement-using-product-syntax).
+Pour en savoir plus sur l’utilisation de la syntaxe du produit, consultez la documentation d’Adobe Analytics sur [l’implémentation d’eVars à l’aide de la syntaxe du produit](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
 
 Les sections ci-dessous décrivent les champs XDM nécessaires pour accéder aux variables de marchandisage dans votre jeu de données [!DNL Analytics] :
 
@@ -142,7 +133,7 @@ Dans le compte rendu des performances, les commandes, le chiffre d’affaires, l
 | recherche interne :summer chemise | 19,99 | 1 | 1 | 1 |
 | recherche interne:winter chapeau | 12,99 | 1 | 1 | 1 |
 
-Pour en savoir plus sur l’utilisation de la syntaxe de la variable de conversion, consultez la documentation d’Adobe Analytics sur l’[implémentation d’eVars à l’aide de la syntaxe de la variable de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=fr#implement-using-conversion-variable-syntax).
+Pour en savoir plus sur l’utilisation de la syntaxe de la variable de conversion, consultez la documentation d’Adobe Analytics sur l’[implémentation d’eVars à l’aide de la syntaxe de la variable de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
 
 Les champs XDM affichés ci-dessous permettent de générer la syntaxe de la variable de conversion dans votre jeu de données [!DNL Analytics] :
 

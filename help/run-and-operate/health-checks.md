@@ -1,5 +1,5 @@
 ---
-title: Contrôles d’intégrité
+title: Vérifications de l’état de santé
 description: Découvrez comment utiliser les contrôles d’intégrité dans Adobe Experience Platform pour détecter de manière proactive les problèmes de configuration des schémas et des identités avant qu’ils n’affectent vos opérations de données.
 solution: Experience Platform
 type: Documentation
@@ -7,12 +7,12 @@ role: Admin, User
 exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
 source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1613'
 ht-degree: 1%
 
 ---
 
-# Contrôles d’intégrité
+# Vérifications de l’état de santé
 
 Les contrôles d’intégrité analysent vos schémas et identités utilisés dans votre sandbox et fournissent un résumé des problèmes que vous pouvez utiliser pour explorer et résoudre les problèmes avec l’assistant AI. À l’avenir, davantage d’objets pourront être analysés pour obtenir un rapport plus complet.
 
@@ -33,7 +33,7 @@ Pour accéder aux contrôles d’intégrité, vous devez disposer de l’autoris
 Pour accéder aux contrôles d’intégrité à partir de l’interface utilisateur [!UICONTROL Experience Platform] :
 
 1. Sélectionnez **[!UICONTROL Run and Operate]** dans le volet de navigation de gauche.
-1. Sélectionnez **[!UICONTROL Health Checks]**.
+1. Sélectionner **[!UICONTROL Health Checks]**.
 
 Le tableau de bord des contrôles de l’intégrité affiche un résumé des résultats d’analyse les plus récents.
 
@@ -107,7 +107,7 @@ Lorsque vous sélectionnez la carte **[!UICONTROL Identity Graph Linking Rules]*
 
 ![Panneau détaillé Règles de liaison du graphique d’identités présentant la description, l’impact et le bouton Configurer les règles de liaison](assets/health-checks/identity-graph-linking-detail.png)
 
-Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [&#x200B; guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
+Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [ guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
 ### Configuration des identités des personnes et des non-personnes {#people-non-people-identity}
 
@@ -172,13 +172,13 @@ Lorsque vous sélectionnez la carte **[!UICONTROL Deprecated Identity Namespace]
 
 ![Panneau des détails Espace de noms d’identité obsolète présentant la description, l’impact et la liste des espaces de noms affectés](assets/health-checks/deprecated-namespace-detail.png)
 
-Pour plus d’informations, consultez l’article de la base de connaissances [Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/fr/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Pour plus d’informations, consultez l’article de la base de connaissances [Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Étapes suivantes {#next-steps}
 
 Après avoir examiné les résultats de votre contrôle de l’intégrité, explorez les ressources suivantes pour mieux comprendre :
 
 * Découvrez les [bonnes pratiques relatives aux schémas](/help/xdm/schema/best-practices.md) pour concevoir des modèles de données fiables.
-* Comprenez [&#x200B; règles de liaison des graphiques d’identités &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
+* Comprenez [ règles de liaison des graphiques d’identités ](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
 * Consultez la [documentation sur les espaces de noms d’identité](/help/identity-service/features/namespaces.md) pour connaître les bonnes pratiques de gestion des espaces de noms.
 * Explorez d’autres [outils d’exécution et d’exploitation](/help/run-and-operate/overview.md) y compris des [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) pour la visibilité des opérations par lots.

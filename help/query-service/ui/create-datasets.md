@@ -6,19 +6,11 @@ type: Tutorial
 description: Le service de requête Adobe Experience Platform permet de créer des jeux de données à partir de l’interface utilisateur. Une fois qu’un jeu de données est créé, il est possible d’y accéder comme à tout autre jeu de données du lac de données et de l’utiliser pour divers cas d’utilisation.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 TQID: https://experienceleague.adobe.com/Qf1c-E8r6TmvcIHXO72sxQOev8q5BxfZoCYxb-F9gH4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 489

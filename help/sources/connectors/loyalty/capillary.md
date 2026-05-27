@@ -4,17 +4,10 @@ description: Découvrez comment diffuser des données de Capillary vers Experien
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
 TQID: https://experienceleague.adobe.com/DdAfedXXnpRZGGLuXpHAr2W4zt2qovopubFBfycKPg8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513id: ff2b9b37-92e0-45fc-b853-379d44c08c89
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 536

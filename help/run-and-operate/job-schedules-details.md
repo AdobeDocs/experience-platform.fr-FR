@@ -6,8 +6,8 @@ type: Tutorial
 exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
 source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1778'
-ht-degree: 2%
+source-wordcount: '1790'
+ht-degree: 1%
 
 ---
 
@@ -80,7 +80,7 @@ Utilisez le tableau ci-dessous pour choisir la vue qui convient à votre tâche.
 | Vérifier les enregistrements traités en une seule exécution | [Détails de l’exécution de tâche](#view-job-details) |
 | Accéder aux messages d’erreur détaillés | [Détails de l’exécution de la tâche](#view-job-details) → Sélectionnez l’identifiant d’exécution du flux de données |
 
-## Afficher les détails du jeu de données {#view-dataset-details}
+## Affichage des détails du jeu de données {#view-dataset-details}
 
 Pour afficher les détails d’un jeu de données spécifique :
 
