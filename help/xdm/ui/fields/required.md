@@ -4,10 +4,8 @@ title: Définir les champs obligatoires dans l’interface utilisateur
 description: Découvrez comment définir un champ XDM obligatoire dans l’interface utilisateur d’Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
 TQID: https://experienceleague.adobe.com/7aWbwy7svAlW1aWnB9wKtGtPt4Vr4KHjjlYVBkecNhE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 359

@@ -3,12 +3,9 @@ title: Groupe de champs de schéma des détails des membres du secteur de la san
 description: Découvrez le groupe de champs de schéma Détails des membres du service de santé .
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
 TQID: https://experienceleague.adobe.com/zFlFJFZpUBVquQkTMaXdCkuxbhwxpdicQ-bOoi3ow94
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 636
@@ -29,7 +26,7 @@ ht-degree: 3%
 | `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse personnelle de la personne. |
 | `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone personnel de la personne. |
 | `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Adresse postale de la personne. |
-| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. Pour plus d’informations sur la structure de l’objet[&#128279;](#memberDetails) consultez la sous-section ci-dessous. |
+| `memberDetails` | Objet | Objet contenant des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. Pour plus d’informations sur la structure de l’objet](#memberDetails) consultez la [sous-section ci-dessous. |
 | `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numéro de téléphone mobile de la personne. |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | Acteur, contact ou propriétaire individuel lié à l’adhésion de la personne au système de santé. |
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Adresse e-mail personnelle de la personne. |
@@ -41,7 +38,7 @@ ht-degree: 3%
 
 `memberDetails` est un objet qui contient des informations détaillées sur les attributs et les relations de la personne liés aux soins de santé. La structure de `memberDetails` est décrite ci-dessous.
 
-![&#x200B; structure memberDetails &#x200B;](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![ structure memberDetails ](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |

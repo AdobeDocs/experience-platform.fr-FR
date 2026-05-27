@@ -6,20 +6,10 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 TQID: https://experienceleague.adobe.com/ZKEa-vyCMpCB4TkJeWEyZdNVt1m1RG2KQopF1tQQqzc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 4780
@@ -65,7 +55,7 @@ La boîte de dialogue [!UICONTROL Create a schema] s’affiche. Dans cette boît
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier chargé, consultez le guide de création de schéma assisté par machine learning [machine learning](../ui/ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -428,11 +418,11 @@ Vous pouvez également consulter et gérer le schéma « Membres du programme d
 
 La vidéo suivante montre comment créer un schéma simple dans l’interface utilisateur [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/3430220?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 La vidéo suivante est destinée à vous aider à mieux comprendre l’utilisation des groupes et classes de champ.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413606?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Annexe
 

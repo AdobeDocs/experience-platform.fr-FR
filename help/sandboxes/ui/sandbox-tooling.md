@@ -3,30 +3,11 @@ title: Outil Sandbox
 description: Exportez et importez facilement des configurations de sandbox entre des sandbox de manière transparente.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 TQID: https://experienceleague.adobe.com/owHoDUAwNAvbIkMHFb2OOuz3OwaJgBKji6d6Uv4rI-8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3668
@@ -83,7 +64,7 @@ Les objets suivants sont importés mais ont le statut brouillon ou désactivé :
 
 ### Objets Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] objets actuellement pris en charge pour les limites et les outils Sandbox. Pour obtenir la liste complète des bonnes pratiques, reportez-vous au guide des bonnes pratiques générales de [&#128279;](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
+Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] objets actuellement pris en charge pour les limites et les outils Sandbox. Pour obtenir la liste complète des bonnes pratiques, reportez-vous au guide des bonnes pratiques générales de [](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
 
 | Platform | Objet | Objets dépendants pris en charge | Détails |
 | --- | --- | --- | --- |
@@ -95,8 +76,8 @@ Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] objets actuelle
 | [!DNL Adobe Journey Optimizer] | Actions personnalisées |  | Les actions personnalisées peuvent être ajoutées indépendamment à un package. Une fois qu’une action personnalisée est affectée à un parcours, elle ne peut plus être modifiée. Pour mettre à jour les actions personnalisées, vous devez : <ul><li>déplacer les actions personnalisées avant de migrer un parcours</li><li>mettez à jour les configurations (telles que les en-têtes de requête, les paramètres de requête et l’authentification) pour les actions personnalisées après la migration</li><li>migrez les objets de parcours avec les actions personnalisées que vous avez ajoutées lors de la première étape</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Modèle de contenu | | Un modèle de contenu peut être copié en tant qu’objet dépendant de l’objet de parcours. Les modèles autonomes vous permettent de réutiliser facilement du contenu personnalisé dans les campagnes et parcours Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Tous les fragments imbriqués. | Un fragment peut être copié en tant qu’objet dépendant de l’objet de parcours. Les fragments sont des composants réutilisables qui peuvent être référencés dans un ou plusieurs e-mails dans les campagnes et parcours Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campagnes | Les objets suivants utilisés dans la campagne sont copiés en tant qu’objets dépendants : <ul><li>Campagnes</li><li>Audiences</li><li>Schémas</li><li>Modèles de contenu</li><li>Fragments</li><li>Message/Contenu</li><li>Configuration des canaux</li><li>Objets de décision unifiés</li><li>Paramètres d’expérience/variantes</li></ul> | <ul><li>Les campagnes peuvent être copiées avec tous les éléments liés au profil, à l’audience, au schéma, aux messages intégrés et aux objets dépendants. Certains éléments ne sont pas copiés, tels que les libellés d’utilisation des données et les paramètres de langue. Pour obtenir la liste complète des objets qui ne peuvent pas être copiés, reportez-vous au guide [exportation d’objets vers un autre sandbox](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Le système détecte automatiquement et réutilise un objet de configuration de canal existant dans le sandbox cible s’il existe une configuration identique. Si aucune configuration correspondante n’est trouvée, la configuration du canal est ignorée lors de l’importation et les utilisateurs doivent mettre à jour manuellement les paramètres du canal dans le sandbox cible pour ce parcours.</li><li>Les utilisateurs peuvent réutiliser des expériences et des audiences existantes dans le sandbox cible en tant qu’objets dépendants des campagnes sélectionnées.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | Prise de décision | Les objets suivants doivent être présents dans le sandbox de destination avant de copier des objets Decisioning : <ul><li>Attributs de profil utilisés dans les objets Decisioning</li><li>Le groupe de champs des attributs d’offre personnalisés</li><li>les schémas des trains de données utilisés pour les attributs de contexte dans les règles, le classement ou la limitation.</li></ul> | <ul><li>La copie de formules de classement qui utilisent des modèles d’IA n’est actuellement pas prise en charge.</li><li>Les éléments de décision (éléments d’offre) ne sont pas inclus automatiquement. Pour vous assurer qu’ils sont transférés, ajoutez-les manuellement à l’aide de l’option **Ajouter au package**.</li><li>Les politiques qui utilisent une stratégie de sélection nécessitent que les éléments de décision associés soient ajoutés manuellement pendant le processus de copie. Les politiques qui utilisent des éléments de décision manuels ou de secours incluront automatiquement ces éléments en tant que dépendances directes.</li><li>Les éléments de décision doivent d’abord être copiés, avant tout autre objet associé.</li><li>Pour obtenir la liste complète des objets pris en charge, reportez-vous au guide [exportation d’objets vers un autre sandbox](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campagnes | Les objets suivants utilisés dans la campagne sont copiés en tant qu’objets dépendants : <ul><li>Campagnes</li><li>Audiences</li><li>Schémas</li><li>Modèles de contenu</li><li>Fragments</li><li>Message/Contenu</li><li>Configuration des canaux</li><li>Objets de décision unifiés</li><li>Paramètres d’expérience/variantes</li></ul> | <ul><li>Les campagnes peuvent être copiées avec tous les éléments liés au profil, à l’audience, au schéma, aux messages intégrés et aux objets dépendants. Certains éléments ne sont pas copiés, tels que les libellés d’utilisation des données et les paramètres de langue. Pour obtenir la liste complète des objets qui ne peuvent pas être copiés, reportez-vous au guide [exportation d’objets vers un autre sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Le système détecte automatiquement et réutilise un objet de configuration de canal existant dans le sandbox cible s’il existe une configuration identique. Si aucune configuration correspondante n’est trouvée, la configuration du canal est ignorée lors de l’importation et les utilisateurs doivent mettre à jour manuellement les paramètres du canal dans le sandbox cible pour ce parcours.</li><li>Les utilisateurs peuvent réutiliser des expériences et des audiences existantes dans le sandbox cible en tant qu’objets dépendants des campagnes sélectionnées.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Prise de décision | Les objets suivants doivent être présents dans le sandbox de destination avant de copier des objets Decisioning : <ul><li>Attributs de profil utilisés dans les objets Decisioning</li><li>Le groupe de champs des attributs d’offre personnalisés</li><li>les schémas des trains de données utilisés pour les attributs de contexte dans les règles, le classement ou la limitation.</li></ul> | <ul><li>La copie de formules de classement qui utilisent des modèles d’IA n’est actuellement pas prise en charge.</li><li>Les éléments de décision (éléments d’offre) ne sont pas inclus automatiquement. Pour vous assurer qu’ils sont transférés, ajoutez-les manuellement à l’aide de l’option **Ajouter au package**.</li><li>Les politiques qui utilisent une stratégie de sélection nécessitent que les éléments de décision associés soient ajoutés manuellement pendant le processus de copie. Les politiques qui utilisent des éléments de décision manuels ou de secours incluront automatiquement ces éléments en tant que dépendances directes.</li><li>Les éléments de décision doivent d’abord être copiés, avant tout autre objet associé.</li><li>Pour obtenir la liste complète des objets pris en charge, reportez-vous au guide [exportation d’objets vers un autre sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
 
 ## Exporter des objets dans un package {#export-objects}
 
@@ -398,7 +379,7 @@ Une fois que vous avez identifié les objets cibles à mettre à jour, sélectio
 
 La vidéo suivante est destinée à vous aider à comprendre les outils Sandbox et explique comment créer un package, publier un package et importer un package.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446085/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Étapes suivantes
 

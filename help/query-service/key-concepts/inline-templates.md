@@ -3,11 +3,8 @@ title: Modèles intégrés
 description: Découvrez comment réutiliser plusieurs conditions dans de nombreuses requêtes à l’aide de modèles intégrés.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
 TQID: https://experienceleague.adobe.com/DZFag9t7-LKVavtSNbVvuqC-CRZ6xPGziJAzOliOdqQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 486

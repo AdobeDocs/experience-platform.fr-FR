@@ -4,15 +4,10 @@ title: Modèle de données du secteur de la vente au détail
 description: Affichez un modèle de données normalisé pour le secteur de la vente au détail, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
 TQID: https://experienceleague.adobe.com/I-31mivLoUPs2KMdso2had51xyVoQBLbUVFvNZRifls
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 464
@@ -53,6 +48,6 @@ Le tableau suivant décrit les classes et groupes de champs de schéma recommand
 | Analysez l’attribution multipoint pour améliorer l’efficacité marketing. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails de la campagne marketing](../../field-groups/event/campaign-marketing-details.md)</li><li>[Informations sur le canal](../../field-groups/event/channel-details.md)</li><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li></ul></li></ul> |
 | Améliorez la pertinence des e-mails grâce à une segmentation améliorée pour les hommes et les femmes. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 | Ingérez des données de fidélité (partenaires) pour augmenter les informations pertinentes sur les produits sur les canaux web, e-mail et marketing numérique. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li><li>[Détails de fidélité](../../field-groups/profile/loyalty-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
-| Recibler les abandons de panier par le biais d’e-mails automatisés et personnalisés. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
+| Recibler les abandons de panier par le biais d’e-mails automatisés et personnalisés. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Informations commerciales](../../field-groups/event/commerce-details.md)</li><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}

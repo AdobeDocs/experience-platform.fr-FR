@@ -5,23 +5,11 @@ title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 TQID: https://experienceleague.adobe.com/yevQxPbQDMaftqQBj5oeLlpGvoINcaQNnLe1eHUgTKk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: addc3a3a-2b1c-4fdf-aea4-4b1eb2931ba6
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: addc3a3a-2b1c-4fdf-aea4-4b1eb2931ba6id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 4712
@@ -57,7 +45,7 @@ Dans l’espace de travail [!UICONTROL Schemas], sélectionnez **[!UICONTROL Cre
 
 Sélectionnez **[!UICONTROL Relational]** pour définir des schémas de style relationnel structurés avec un contrôle précis des enregistrements. Les schémas relationnels prennent en charge l’application des clés primaires, le contrôle de version au niveau des enregistrements et les relations au niveau du schéma par le biais de clés primaires et étrangères. Ils sont également optimisés pour l’ingestion incrémentielle à l’aide de la capture de données de modification et prennent en charge plusieurs modèles de données utilisés dans les implémentations Campaign Orchestration, Data Distiller et B2B.
 
-Pour en savoir plus, consultez la présentation de [&#128279;](../../data-mirror/overview.md) ou [Schéma relationnel](../../schema/relational.md).
+Pour en savoir plus, consultez la présentation de [](../../data-mirror/overview.md) ou [Schéma relationnel](../../schema/relational.md).
 
 ### Créer manuellement {#create-manually}
 
@@ -97,7 +85,7 @@ Ensuite, passez à [définir des clés primaires](../fields/identity.md#define-a
 
 >[!NOTE]
 >
->Une fois enregistré, le champ [!UICONTROL Type] de la barre latérale [!UICONTROL &#x200B; Schema properties] indique qu’il s’agit d’un schéma [!UICONTROL Relational]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
+>Une fois enregistré, le champ [!UICONTROL Type] de la barre latérale [!UICONTROL  Schema properties] indique qu’il s’agit d’un schéma [!UICONTROL Relational]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
 >![Zone de travail de l’éditeur de schémas présentant une structure de schéma relationnel vide avec le type relationnel mis en surbrillance.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Charger un fichier DDL {#upload-ddl-file}
@@ -139,7 +127,7 @@ Si vous sélectionnez « Type de schéma standard » dans le menu déroulant « 
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le guide de création de schéma assisté par machine learning [machine learning](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -261,7 +249,7 @@ Une fois que vous avez choisi vos groupes de champs, sélectionnez **[!UICONTROL
 
 La [!DNL Schema Editor] réapparaît avec les champs fournis par le groupe de champs représentés dans la zone de travail.
 
-[!DNL Schema Editor] avec un exemple de schéma affiché.![&#128279;](../../images/ui/resources/schemas/field-groups-added.png)
+[!DNL Schema Editor] avec un exemple de schéma affiché.](../../images/ui/resources/schemas/field-groups-added.png)![
 
 >[!NOTE]
 >
@@ -295,7 +283,7 @@ Une boîte de dialogue s’affiche, affichant la structure du groupe de champs. 
 Sélectionnez **[!UICONTROL Confirm]** pour mettre à jour la zone de travail et refléter vos champs sélectionnés.
 
 
-![Champs ajoutés &#x200B;](../../images/ui/resources/schemas/fields-added.png)
+![Champs ajoutés ](../../images/ui/resources/schemas/fields-added.png)
 
 ### Comportement des champs lors de la suppression ou de l’obsolescence de champs {#field-removal-deprecation-behavior}
 
@@ -355,7 +343,7 @@ Tout comme pour le workflow des champs standard, vous pouvez également ajouter 
 
 Pour ajouter des champs au niveau racine d’un schéma, sélectionnez l’icône plus (**+**) à côté du nom du schéma dans la zone de travail. Un espace réservé **[!UICONTROL Untitled Field]** apparaît dans la structure du schéma et le rail de droite se met à jour pour afficher les commandes permettant de configurer le champ.
 
-![&#x200B; Champ personnalisé racine &#x200B;](../../images/ui/resources/schemas/root-custom-field.png)
+![ Champ personnalisé racine ](../../images/ui/resources/schemas/root-custom-field.png)
 
 Commencez à saisir le nom du champ que vous souhaitez ajouter et le système lance automatiquement la recherche des champs standard correspondants. Pour créer un champ personnalisé à la place, sélectionnez l’option supérieure avec **([!UICONTROL New Field])** ajouté.
 

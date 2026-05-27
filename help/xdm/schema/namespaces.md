@@ -5,12 +5,9 @@ title: Espace de noms dans le modèle de données d’expérience (XDM)
 description: Découvrez comment l’espace de noms dans le modèle de données d’expérience (XDM) vous permet d’étendre vos schémas et d’empêcher les collisions de champs lorsque différents composants de schéma sont rassemblés.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 TQID: https://experienceleague.adobe.com/o4ZdHoy6ipiCe1d73b9KYHDP3OJF0fskR0zEc7NRvyk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 684
@@ -28,7 +25,7 @@ Tous les champs des schémas de modèle de données d’expérience (XDM) sont a
 
 L’espace de noms vous permet de définir un champ dans un espace de noms comme étant différent du même champ dans un autre espace de noms. En pratique, l’espace de noms d’un champ indique qui a créé le champ (par exemple, XDM standard (Adobe), un fournisseur ou votre organisation).
 
-Prenons l’exemple d’un schéma XDM qui utilise le groupe de champs [&#128279;](../field-groups/profile/demographic-details.md), qui comporte un champ `mobilePhone` standard existant dans l’espace de noms `xdm`. [!UICONTROL Personal Contact Details]Dans le même schéma, vous êtes également libre de créer un champ de `mobilePhone` distinct sous un autre espace de noms (votre [identifiant client](../api/getting-started.md#know-your-tenant_id)). Ces deux champs peuvent coexister tout en ayant des significations ou des contraintes sous-jacentes différentes.
+Prenons l’exemple d’un schéma XDM qui utilise le groupe de champs ](../field-groups/profile/demographic-details.md), qui comporte un champ `mobilePhone` standard existant dans l’espace de noms `xdm`. [[!UICONTROL Personal Contact Details]Dans le même schéma, vous êtes également libre de créer un champ de `mobilePhone` distinct sous un autre espace de noms (votre [identifiant client](../api/getting-started.md#know-your-tenant_id)). Ces deux champs peuvent coexister tout en ayant des significations ou des contraintes sous-jacentes différentes.
 
 ## Syntaxe de l’espace de noms
 

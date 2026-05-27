@@ -6,18 +6,11 @@ description: Ce document fournit un tutoriel expliquant comment définir une rel
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 TQID: https://experienceleague.adobe.com/aUtYaCWzAAdOdLD7gYXq39YnJcMEKmjyzUgjZzhSNLU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1357
@@ -132,7 +125,7 @@ La boîte de dialogue [!UICONTROL Add relationship] s’affiche. Dans cette boî
 
 >[!NOTE]
 >
->Si vous avez accès à Real-Time CDP B2B edition, vous pouvez utiliser les contrôles du rail de droite de la zone de travail pour définir un champ de relation et créer une relation multiple-à-un à l’aide de la [&#x200B; boîte de dialogue identique &#x200B;](./relationship-b2b.md#relationship-field).
+>Si vous avez accès à Real-Time CDP B2B edition, vous pouvez utiliser les contrôles du rail de droite de la zone de travail pour définir un champ de relation et créer une relation multiple-à-un à l’aide de la [ boîte de dialogue identique ](./relationship-b2b.md#relationship-field).
 
 ![Boîte de dialogue Ajouter une relation.](../images/tutorials/relationship/add-relationship-dialog.png)
 

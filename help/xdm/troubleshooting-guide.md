@@ -5,23 +5,11 @@ title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 TQID: https://experienceleague.adobe.com/O4-612CGo5FKSlxcDjkhMgn0mN-VoTTbQxpo98QTLog
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2608
@@ -160,7 +148,7 @@ Le schéma n’est pas automatiquement activé pour le profil client en temps r�
 
 ### Puis-je supprimer des schémas activés pour Profile ? {#delete-profile-enabled}
 
-Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour le profil client en temps réel. Une fois qu’un schéma est activé pour Profil, il ne peut pas être désactivé ni supprimé, et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé pour Profil. Vous trouverez des informations ici : <https://experienceleague.adobe.com/fr/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour le profil client en temps réel. Une fois qu’un schéma est activé pour Profil, il ne peut pas être désactivé ni supprimé, et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé pour Profil. Vous trouverez des informations ici : <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Si vous ne souhaitez plus qu’un schéma activé pour Profile soit utilisé, il est recommandé de renommer le schéma pour inclure **Ne pas utiliser** ou **Inactif**.
 
