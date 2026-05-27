@@ -8,16 +8,16 @@ badge: label="Beta" type="Informative"
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
-source-git-commit: ec73ebc65b9f5f0e8b346299188ad8116cd67dc9
+source-git-commit: caa742231e1d2f0b3d7c0faa0f0a449e9bbf5f9a
 workflow-type: tm+mt
-source-wordcount: '2599'
+source-wordcount: '2634'
 ht-degree: 2%
 
 ---
 
 # Utilisation des clients MCP (Beta) {#rtcdp-mcp}
 
-Vous pouvez utiliser l’intégration Adobe Real-Time CDP MCP pour interroger les audiences, les destinations et l’intégrité de l’activation à l’aide d’invites en langage clair, sans écrire d’appels API ni parcourir les écrans du produit. Cette page explique le fonctionnement de l’intégration, ce que vous pouvez en faire et comment commencer.
+Vous pouvez utiliser l’intégration Adobe Real-Time CDP MCP pour interroger les audiences, les destinations et l’intégrité de l’activation à l’aide d’invites en langage clair, sans écrire d’appels API ni parcourir les écrans du produit. Cette intégration est destinée aux clients Adobe Real-Time CDP et Adobe Real-Time CDP B2B edition et permet d’examiner, par la conversation, les données et les workflows Real-Time CDP pris en charge à partir de clients compatibles avec MCP. Lisez ce guide pour découvrir comment fonctionne l’intégration, ce que vous pouvez en faire et comment commencer.
 
 >[!AVAILABILITY]
 >
