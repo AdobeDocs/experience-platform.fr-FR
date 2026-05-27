@@ -3,15 +3,10 @@ title: Utilisation d’Adobe Experience Platform Assurance
 description: Ce guide explique comment utiliser Adobe Experience Platform Assurance une fois qu’il a été installé et implémenté.
 exl-id: 872c83d1-82e8-40d8-9b66-3e51a91a955f
 TQID: https://experienceleague.adobe.com/Fu6Y9djbEAC07UcOYXbVbZReABptack3FLiG4gp0VVg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 687
@@ -25,7 +20,7 @@ Ce tutoriel explique comment utiliser Adobe Experience Platform Assurance. Pour 
 
 ## Créer des sessions
 
-Après vous être connecté à l’interface utilisateur [&#128279;](https://experience.adobe.com/assurance), vous pouvez sélectionner **[!UICONTROL Create Session]** pour commencer à créer une session.
+Après vous être connecté à l’interface utilisateur [](https://experience.adobe.com/assurance), vous pouvez sélectionner **[!UICONTROL Create Session]** pour commencer à créer une session.
 
 ![Le bouton Créer une session est mis en surbrillance et indique où vous pouvez créer une session.](./images/using-assurance/create-session.png)
 
@@ -69,7 +64,7 @@ Avant d’utiliser Quick Connect, vérifiez que votre application dispose des ve
 
 **Implémentation :**
 
-Votre application doit mettre en œuvre l’API [&#128279;](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) pour déclencher la connexion Assurance. `startSession`Cet appel API est généralement inclus dans un jeu d’actions ou déclenché dans votre application.
+Votre application doit mettre en œuvre l’API ](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) pour déclencher la connexion Assurance. [`startSession`Cet appel API est généralement inclus dans un jeu d’actions ou déclenché dans votre application.
 
 #### Création d’une session de connexion rapide
 

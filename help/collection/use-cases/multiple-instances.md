@@ -5,8 +5,8 @@ keywords: plusieurs propriétés
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
 source-git-commit: 192739967e6b050bb04893ee7bab5119dd7f870c
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 23%
+source-wordcount: '224'
+ht-degree: 24%
 
 ---
 
@@ -38,7 +38,7 @@ Par conséquent, le script crée deux fonctions globales (`titanium` et `copper`
 
 >[!TIP]
 >
->Si vous utilisez le code de base avec des balises, assurez-vous que tous les noms d’instance définis correspondent à tous les [noms d’instance SDK](/help/tags/extensions/client/web-sdk/configure/general.md) lors de la configuration de l’extension de balise.
+>Si vous utilisez le code de base avec des balises, assurez-vous que tous les noms d’instance définis correspondent à tous les [noms d’instance ](/help/tags/extensions/client/web-sdk/configure/general.md) lors de la configuration de l’extension de balise.
 
 En suivant l’exemple de modèle de dénomination de `titanium` et `copper` en tant qu’instances Web SDK, vous pouvez exécuter des commandes indépendamment :
 

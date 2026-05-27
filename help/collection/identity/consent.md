@@ -1,9 +1,10 @@
 ---
 title: Consentement et identité dans la collecte de données
 description: Découvrez comment les choix de consentement affectent le comportement des identités dans les implémentations de Web SDK, notamment la génération d’ECID, la persistance des cookies et la continuité des visiteurs.
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+exl-id: aee0ca1f-b846-4984-917f-8dfbcd6d3388
+source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1166'
 ht-degree: 2%
 
 ---
@@ -34,7 +35,7 @@ Le tableau suivant présente l’effet combiné de la `defaultConsent` et de la 
 
 >[!NOTE]
 >
->Les cookies d’identité et de consentement sont définis même lorsqu’un visiteur opt-out. Ces cookies sont nécessaires pour respecter les préférences de collecte de données du visiteur. Consultez [Cookies Web SDK](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk) pour obtenir la liste complète des cookies définis par Web SDK.
+>Les cookies d’identité et de consentement sont définis même lorsqu’un visiteur opt-out. Ces cookies sont nécessaires pour respecter les préférences de collecte de données du visiteur. Consultez [Cookies Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) pour obtenir la liste complète des cookies définis par Web SDK.
 
 Lorsqu’un visiteur accorde à nouveau son consentement après l’avoir précédemment révoqué (en appelant `setConsent` avec `"general": "in"` après `"general": "out"`), le SDK Web reprend l’envoi des événements et utilise l’ECID existant du cookie s’il n’a pas expiré. L’identité du visiteur est conservée.
 

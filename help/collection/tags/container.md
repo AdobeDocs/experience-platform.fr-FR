@@ -1,7 +1,8 @@
 ---
 title: _conteneur
 description: Voir l’intégralité du conteneur de balises dans un seul objet .
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+exl-id: aa3561e4-b39a-4a00-a770-c192b5bc1282
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%
