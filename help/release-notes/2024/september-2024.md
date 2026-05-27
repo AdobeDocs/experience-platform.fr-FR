@@ -3,38 +3,11 @@ title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
 exl-id: e5b40712-2a54-4c6f-a4a1-2f078305da59
 TQID: https://experienceleague.adobe.com/uFkzKfFeVHwHEZTu1vaeLUWBqg-zzr8RKL1GeA3oRGs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: ee602049-8a18-43df-9299-a689a025a371
-  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: ee602049-8a18-43df-9299-a689a025a371id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2229
@@ -83,7 +56,7 @@ Experience Platform propose de nombreux tableaux de bord qui vous permettent d�
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Tableau des modules complémentaires d’utilisation des licences | Bénéficiez d’une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Experience Platform à l’aide de tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations[&#128279;](../../dashboards/guides/license-usage.md#overview-tab) consultez le guide du tableau de bord [!UICONTROL License Usage] . |
+| Tableau des modules complémentaires d’utilisation des licences | Bénéficiez d’une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Experience Platform à l’aide de tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations](../../dashboards/guides/license-usage.md#overview-tab) consultez le guide du tableau de bord [[!UICONTROL License Usage] . |
 | Mode de requête pro - Mises à niveau des filtres globaux | Améliorez les analyses avec le nouveau filtre de date du mode de requête pro. Affinez les informations à l’aide de paramètres de date dynamiques dans vos requêtes SQL et filtrez les données par périodes spécifiques. Choisissez des périodes prédéfinies ou personnalisées dans une interface d’utilisation intuitive, en conservant les tableaux de bord pertinents pour tous les utilisateurs et toutes les utilisatrices. Simplifiez les workflows, conservez la précision et prenez des décisions opportunes. Pour plus d’informations, consultez le [guide sur la création de filtres de date](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md). |
 | Mode de requête pro - Explorations | Obtenez des informations plus précises avec la fonctionnalité d’exploration du mode de requête pro et naviguez facilement entre les graphiques généraux et les tableaux de bord détaillés. Utilisez cette fonctionnalité pour passer facilement des résumés aux analyses approfondies et explorer les tendances, les comportements de la clientèle et les KPI. Les passages de filtres automatiques et les explorations à plusieurs niveaux garantissent des données homogènes, assurant une exploration fluide. Simplifiez les workflows, conservez le contexte et accélérez les décisions. Pour plus d’informations, lisez le [guide détaillé sur la création d’explorations](../../dashboards/sql-insights-query-pro-mode/drill-through.md). |
 | Mode de requête pro - Attributs de table avancés | Utilisez les attributs de table avancés du mode de requête pro pour rationaliser la visualisation des données, améliorer l’efficacité des workflows et améliorer la clarté des données. Ajoutez un tri, un redimensionnement et une pagination automatiques à vos tableaux de bord directement depuis les tableaux de bord personnalisés. Triez les colonnes afin de hiérarchiser les données clés, redimensionnez-les pour une lisibilité optimale et parcourez facilement les jeux de données volumineux sans modifier les requêtes SQL. Pour découvrir comment intégrer ces fonctionnalités et améliorer vos informations sur les données, lisez le guide « [Afficher plus](../../dashboards/sql-insights-query-pro-mode/view-more.md) ». |
@@ -101,7 +74,7 @@ Utilisez la préparation des données pour mapper, transformer et valider des do
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} Nouvelles fonctions de préparation de données à utiliser dans les destinations | Vous pouvez désormais utiliser les fonctions de table suivantes pour les cas d’utilisation des destinations :<ul><li>`array_to_string`</li><li>`filterArray`</li><li>`transformArray`</li><li>`flattenArray`</li></ul> Pour plus d’informations, consultez le [guide des fonctions de préparation de données](../../data-prep/functions.md#arrays). |
+| [!BADGE Beta ]{type=Informative} Nouvelles fonctions de préparation de données à utiliser dans les destinations | Vous pouvez désormais utiliser les fonctions de table suivantes pour les cas d’utilisation des destinations :<ul><li>`array_to_string`</li><li>`filterArray`</li><li>`transformArray`</li><li>`flattenArray`</li></ul> Pour plus d’informations, consultez le [guide des fonctions de préparation de données](../../data-prep/functions.md#arrays). |
 
 {style="table-layout:auto"}
 
@@ -209,9 +182,9 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} Prise en charge de l’ingestion de données chiffrées dans l’interface utilisateur | Vous pouvez désormais ingérer des données chiffrées à partir d’une source par lots d’espace de stockage dans le cloud à l’aide de l’espace de travail Sources dans l’interface d’utilisation d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur l’[ingestion de données chiffrées dans l’interface d’utilisation](../../sources/tutorials/ui/encryped-ingestion.md). |
+| [!BADGE Beta ]{type=Informative} Prise en charge de l’ingestion de données chiffrées dans l’interface utilisateur | Vous pouvez désormais ingérer des données chiffrées à partir d’une source par lots d’espace de stockage dans le cloud à l’aide de l’espace de travail Sources dans l’interface d’utilisation d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur l’[ingestion de données chiffrées dans l’interface d’utilisation](../../sources/tutorials/ui/encryped-ingestion.md). |
 | Disponibilité générale de la source [!DNL Snowflake Streaming] | La source [!DNL Snowflake Streaming] est désormais en disponibilité générale. Utilisez cette source pour diffuser des données de votre compte [!DNL Snowflake] vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Snowflake Streaming] vue d’ensemble](../../sources/connectors/databases/snowflake-streaming.md). |
-| Prise en charge de l’authentification du compte de service dans [!DNL Google BigQuery] | Vous pouvez désormais connecter votre compte [!DNL Google BigQuery] à Experience Platform à l’aide de l’authentification du compte de service. Pour plus d’informations, consultez la [[!DNL Google BigQuery] vue d’ensemble. &#x200B;](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)<br> ![Image de l’interface d’utilisation d’Experience Platform qui illustre l’option Modifier le planning et les dossiers de l’étape de planification.](../2024/assets/september/service_auth.png "Authentification de service pour Google BigQuery."){width="250" align="center" zoomable="yes"} |
+| Prise en charge de l’authentification du compte de service dans [!DNL Google BigQuery] | Vous pouvez désormais connecter votre compte [!DNL Google BigQuery] à Experience Platform à l’aide de l’authentification du compte de service. Pour plus d’informations, consultez la [[!DNL Google BigQuery] vue d’ensemble. ](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)<br> ![Image de l’interface d’utilisation d’Experience Platform qui illustre l’option Modifier le planning et les dossiers de l’étape de planification.](../2024/assets/september/service_auth.png "Authentification de service pour Google BigQuery."){width="250" align="center" zoomable="yes"} |
 | Prise en charge de la possibilité d’ignorer la prévisualisation des données d’exemple | Vous pouvez maintenant choisir d’ignorer la prévisualisation des données lors de la création d’une connexion source avec les sources suivantes : <ul><li>[[!DNL Google BigQuery]](../../sources/tutorials/ui/create/databases/bigquery.md#skip-preview-of-sample-data)</li><li>[[!DNL Salesforce]](../../sources/tutorials/ui/create/crm/salesforce.md#skip-preview-of-sample-data)</li><li>[[!DNL Snowflake]](../../sources/tutorials/ui/create/databases/snowflake.md#skip-preview-of-sample-data)</li></ul> Vous pouvez ignorer la prévisualisation des données pour contourner un délai d’expiration qui peut se produire lors de l’ingestion de données par lots volumineuses. Cela peut empêcher la validation automatique de vos champs calculés et obligatoires. Si vous choisissez d’ignorer la prévisualisation des données, vous devrez peut-être valider manuellement vos champs calculés et obligatoires lors du mappage. |
 | Prise en charge de la désactivation du regroupement dans [!DNL SFTP] | Vous pouvez désormais configurer un paramètre qui permet de désactiver le regroupement dans la source [!DNL SFTP]. Pour plus d’informations, consultez la [[!DNL SFTP] vue d’ensemble](../../sources/connectors/cloud-storage/sftp.md). |
 

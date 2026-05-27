@@ -4,8 +4,8 @@ description: Les notes de mise à jour de septembre 2022 pour Adobe Experience
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2723'
-ht-degree: 86%
+source-wordcount: '3000'
+ht-degree: 87%
 
 ---
 
@@ -84,7 +84,7 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les différents types d’événements spécifiques aux ressources suivis par les journaux d’audit dans Experience Platform, reportez-vous à la [&#x200B; présentation des journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur les différents types d’événements spécifiques aux ressources suivis par les journaux d’audit dans Experience Platform, reportez-vous à la [ présentation des journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -109,10 +109,10 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | --- | --- |
 | Intégration de la navigation de gauche dans l’interface utilisateur d’Experience Platform | Toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de la collecte de données (y compris les balises, le transfert d’événement et les flux de données) sont désormais disponibles via la navigation de gauche dans Experience Platform, sous la catégorie **[!UICONTROL Data Collection]**. Il n’est donc pas nécessaire de basculer entre les IU lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform. |
 | Attribution utilisateur dans les balises et le transfert d’événement | Lors de l’énumération des [!UICONTROL Properties] disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais à quand remonte sa dernière mise à jour et quel utilisateur l’a effectuée. |
-| [[!DNL Snap Conversions API] Extension](https://exchange.adobe.com/apps/ec/108550) Snap Conversions API pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur l’authentification et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html) Snapchat Marketing API dédiée.  |
+| [[!DNL Snap Conversions API] Extension](https://exchange.adobe.com/apps/ec/108550) Snap Conversions API pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur l’authentification et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html) Snapchat Marketing API dédiée. |
 | [User-Agent Client Hints in Web SDK](/help/collection/use-cases/client-hints.md) | Web SDK prend désormais en charge [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Les conseils clients permettent aux propriétaires de site web d’accéder aux mêmes informations que celles disponibles dans la chaîne [!DNL User-Agent], mais d’une manière plus respectueuse de la vie privée. |
 | Migration page par page de Web SDK | Vous pouvez désormais migrer vos propriétés web existantes à partir d’autres bibliothèques Experience Cloud, telles que [!DNL at.js], vers le SDK Web, une page à la fois. Vous pouvez ainsi adopter une approche progressive dans la migration du SDK Web, sans qu’il soit nécessaire de migrer toutes vos pages à la fois. |
-| Prise en charge des flux de données d’[[!DNL Adobe Journey Optimizer] &#x200B;](../../datastreams/overview.md#aep) | Le service Adobe Experience Platform pour les flux de données prend désormais en charge [!DNL Adobe Journey Optimizer]. Cette option vous permet d’utiliser des canaux entrants web et basés sur des applications dans [!DNL Adobe Journey Optimizer]. |
+| Prise en charge des flux de données d’[[!DNL Adobe Journey Optimizer] ](../../datastreams/overview.md#aep) | Le service Adobe Experience Platform pour les flux de données prend désormais en charge [!DNL Adobe Journey Optimizer]. Cette option vous permet d’utiliser des canaux entrants web et basés sur des applications dans [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 
@@ -134,7 +134,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal ainsi qu’un environnement pour l’orchestration visuelle de campagnes, la gestion d’interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=fr). Notez que cette intégration fonctionne avec [Adobe Campaign version 8.4 ou ultérieure](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=fr#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal ainsi qu’un environnement pour l’orchestration visuelle de campagnes, la gestion d’interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=fr). Notez que cette intégration fonctionne avec [Adobe Campaign version 8.4 ou ultérieure](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | La destination [!DNL Salesforce CRM] a été mise à jour afin de prendre en charge à la fois les mises à jour des contacts et des prospects, ainsi que des améliorations des performances pour des mises à jour plus rapides. |
 
 {style="table-layout:auto"}
