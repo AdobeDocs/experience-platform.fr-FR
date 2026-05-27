@@ -19,7 +19,7 @@ Suivez ce guide détaillé pour configurer votre propre connecteur source [!DNL 
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par l’équipe [!DNL LAVA]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [&#128279;](mailto:info@lava.ai).
+>Cette page de documentation a été créée par l’équipe [!DNL LAVA]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [](mailto:info@lava.ai).
 
 ## Prise en main
 
@@ -32,7 +32,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 >[!TIP]
 >
->Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source &#x200B;](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
+>Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source ](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
 
 ## Connecter votre compte [!DNL LAVA]
 
@@ -121,7 +121,7 @@ Lors de l’utilisation du schéma fourni par [!DNL LAVA], utilisez le mappage r
 
 >[!ENDTABS]
 
-Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
+Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
 Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
 

@@ -5,8 +5,8 @@ description: Ce document présente un aperçu des configurations que vous devez 
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2107'
-ht-degree: 38%
+source-wordcount: '2121'
+ht-degree: 39%
 
 ---
 
@@ -426,7 +426,7 @@ Ce type de pagination permet d’utiliser une variable `pointer` pour pointer ve
 | `type` | Type de pagination utilisé pour renvoyer les données. |
 | `limitName` | Nom de la limite avec laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. |
 | `limitValue` | Nombre d’enregistrements à récupérer dans une page. |
-| `pointerPath` | Nom de l’attribut du pointeur. Nécessite un chemin d’accès json vers l’attribut qui pointe vers la page suivante. |
+| `pointerPath` | Nom de l’attribut du pointeur. Exige un chemin d’accès json vers l’attribut qui pointe vers la page suivante. |
 
 >[!TAB Jeton de continuation]
 
@@ -510,7 +510,7 @@ Le type de pagination `PAGE` vous permet de parcourir les données de retour par
 
 >[!TAB Aucun]
 
-Le type de pagination `NONE` peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Les sources qui utilisent le type de pagination `NONE` renvoient simplement tous les enregistrements récupérables lorsqu’une requête GET est effectuée.
+Le type de pagination `NONE` peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Les sources qui utilisent le type de pagination des `NONE` renvoient simplement tous les enregistrements récupérables lorsqu’une requête GET est effectuée.
 
 ```json
 "paginationParams": {
