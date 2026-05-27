@@ -5,11 +5,18 @@ title: Présentation de la bibliothèque JavaScript d’Adobe Privacy
 description: La bibliothèque JavaScript de confidentialité d’Adobe vous permet de récupérer les identités des titulaires de données à utiliser dans Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 TQID: https://experienceleague.adobe.com/fdU0VrJoLLWCPk6hJjLhvyMBbGX1jTMUKzqZHKnY1gM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1014
@@ -21,7 +28,7 @@ ht-degree: 55%
 
 En tant que responsable du traitement des données, Adobe traite les données personnelles conformément aux autorisations et aux instructions de votre entreprise. En tant que contrôleuse ou contrôleur de données, vous déterminez les données personnelles qu’Adobe traite et stocke pour vous. Selon les informations que vous choisissez d’envoyer par le biais des solutions Adobe Experience Cloud, Adobe peut stocker des informations privées applicables aux réglementations de confidentialité telles que le [!DNL General Data Protection Regulation] (RGPD) et le [!DNL California Consumer Privacy Act] (CCPA). Pour plus d’informations sur la manière dont les solutions Experience Cloud collectent les données privées, consultez le document sur la [confidentialité dans Adobe Experience Cloud](https://www.adobe.com/fr/privacy/experience-cloud.html).
 
-La bibliothèque Adobe Privacy JavaScript **** permet aux contrôleurs de données d’automatiser la récupération de toutes les identités des titulaires de données générées par les solutions [!DNL Experience Cloud] pour un domaine spécifique. Grâce à l’API fournie par [Adobe Experience Platform Privacy Service](home.md), ces identités peuvent ensuite être utilisées pour créer des demandes d’accès et de suppression de données privées appartenant à ces titulaires de données.
+La bibliothèque Adobe Privacy JavaScript **&#x200B;**&#x200B;permet aux contrôleurs de données d’automatiser la récupération de toutes les identités des titulaires de données générées par les solutions [!DNL Experience Cloud] pour un domaine spécifique. Grâce à l’API fournie par [Adobe Experience Platform Privacy Service](home.md), ces identités peuvent ensuite être utilisées pour créer des demandes d’accès et de suppression de données privées appartenant à ces titulaires de données.
 
 >[!NOTE]
 >
@@ -51,9 +58,9 @@ Puisque les trois fonctions représentent des processus asynchrones, toutes les 
 Pour commencer à utiliser le [!DNL Privacy JS Library], vous devez l’installer sur votre ordinateur en utilisant l’une des méthodes suivantes :
 
 * Installez-la à l’aide de npm en exécutant la commande suivante : `npm install @adobe/adobe-privacy`
-* Télécharger à partir du référentiel GitHub [](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* Télécharger à partir du référentiel GitHub [&#128279;](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-Vous pouvez également installer la bibliothèque par le biais d’une extension de balise. Pour plus d’informations, consultez la présentation de l’extension de balise d’accès à des informations personnelles [](../tags/extensions/client/privacy/overview.md).
+Vous pouvez également installer la bibliothèque par le biais d’une extension de balise. Pour plus d’informations, consultez la présentation de l’extension de balise d’accès à des informations personnelles [&#128279;](../tags/extensions/client/privacy/overview.md).
 
 ## Instanciation du [!DNL Privacy JS Library]
 
@@ -176,7 +183,7 @@ Si le code s’exécute correctement, `validIDs` est renseigné par une liste d�
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert les principales fonctionnalités de la [!DNL Privacy JS Library]. Après avoir utilisé la bibliothèque pour récupérer une liste d’identités, vous pouvez utiliser ces identités pour créer des demandes d’accès aux données et de suppression de données vers l’API [!DNL Privacy Service]. Pour plus d’informations](api/overview.md) consultez le guide de l’API Privacy Service [.
+En lisant ce document, vous avez découvert les principales fonctionnalités de la [!DNL Privacy JS Library]. Après avoir utilisé la bibliothèque pour récupérer une liste d’identités, vous pouvez utiliser ces identités pour créer des demandes d’accès aux données et de suppression de données vers l’API [!DNL Privacy Service]. Pour plus d’informations[&#128279;](api/overview.md) consultez le guide de l’API Privacy Service .
 
 ## Annexe
 
