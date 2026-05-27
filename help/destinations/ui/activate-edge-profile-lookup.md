@@ -4,11 +4,28 @@ description: Découvrez comment rechercher des attributs de profil Edge en temps
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
 TQID: https://experienceleague.adobe.com/VeOprxGtqpOre2e-JWEEZYqmbwvatrEnfw-gw36Xn6w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1895
@@ -36,7 +53,7 @@ Lors de la configuration du cas d’utilisation décrit sur cette page, vous uti
 * [Flux de données](../../datastreams/overview.md) : un flux de données reçoit des données d’événement entrantes de Web SDK et répond avec des données de profil Edge.
 * [Politiques de fusion](../../segmentation/ui/segment-builder.md#merge-policies) : vous allez créer une politique de fusion [!UICONTROL Active-On-Edge] pour vous assurer que les profils Edge utilisent les données de profil correctes.
 * [Connexion Personalization personnalisée](../catalog/personalization/custom-personalization.md) : vous allez configurer une nouvelle connexion de personnalisation personnalisée qui enverra les attributs de profil à Edge Network.
-* [API Edge Network ](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
+* [API Edge Network &#x200B;](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
 
 ## Mécanismes de sécurisation des performances {#guardrails}
 
@@ -99,7 +116,7 @@ Après avoir créé une connexion **[!UICONTROL Custom Personalization With Attr
 
 >[!IMPORTANT]
 >
-> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -145,7 +162,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 +++Évaluation des politiques de consentement
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 **Vérifications des politiques d’utilisation des données**
 
@@ -174,7 +191,7 @@ L’étape suivante consiste à configurer votre solution de personnalisation po
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez récupérer les attributs de profil via l’[API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/). De plus, vous devez récupérer les attributs de profil via l’API Edge Network [point d’entrée de la collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour que les appels API soient authentifiés.
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez récupérer les attributs de profil via l’[API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/). De plus, vous devez récupérer les attributs de profil via l’API Edge Network [point d’entrée de la collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour que les appels API soient authentifiés.
 >
 >Si vous ne suivez pas les exigences ci-dessus, la personnalisation sera basée sur l’appartenance à l’audience uniquement et les attributs de profil ne seront pas disponibles pour vous.
 
