@@ -5,10 +5,14 @@ title: Filtrage Des Données De Catalogue À L’Aide De Paramètres De Requête
 description: Utilisez des paramètres de requête pour filtrer les données de réponse dans l’API Catalog Service et récupérer uniquement les informations dont vous avez besoin. Appliquez des filtres à vos appels API pour réduire la charge et améliorer les performances, assurant ainsi une récupération des données plus rapide et plus efficace.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 TQID: https://experienceleague.adobe.com/5HYETHCp7k3J64Q4-bn6dleWrCUMmHiTg72v1-Uyjr8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2353
