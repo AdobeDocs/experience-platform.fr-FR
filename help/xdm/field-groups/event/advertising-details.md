@@ -3,15 +3,10 @@ title: Groupe de champs de schéma des détails Advertising
 description: Découvrez le groupe de champs de schéma Détails Advertising .
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
 TQID: https://experienceleague.adobe.com/MtgDXB-JJPPirEJdgOipwEqGPp6fS6xLsJUBLFv0-dI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 993
@@ -27,9 +22,9 @@ ht-degree: 13%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `adAssetReference` | Objet | Capture les informations sur la ressource relatives à la publicité. Pour plus d’informations sur la structure de cet objet[&#128279;](#adAssetReference) consultez la sous-section ci-dessous. |
-| `adAssetViewDetails` | Objet | Capture les détails d’affichage de la lecture de l’annonce publicitaire. Pour plus d’informations sur la structure de cet objet[&#128279;](#adAssetViewDetails) consultez la sous-section ci-dessous. |
-| `adViewability` | Objet | Capture le nombre d’impressions vues par les utilisateurs finaux, comme le volume du lecteur, la version de la bibliothèque, le statut de la fenêtre et les dimensions de fenêtre d’affichage des publicités. Pour plus d’informations sur la structure de cet objet[&#128279;](#adViewability) consultez la sous-section ci-dessous. |
+| `adAssetReference` | Objet | Capture les informations sur la ressource relatives à la publicité. Pour plus d’informations sur la structure de cet objet](#adAssetReference) consultez la [sous-section ci-dessous. |
+| `adAssetViewDetails` | Objet | Capture les détails d’affichage de la lecture de l’annonce publicitaire. Pour plus d’informations sur la structure de cet objet](#adAssetViewDetails) consultez la [sous-section ci-dessous. |
+| `adViewability` | Objet | Capture le nombre d’impressions vues par les utilisateurs finaux, comme le volume du lecteur, la version de la bibliothèque, le statut de la fenêtre et les dimensions de fenêtre d’affichage des publicités. Pour plus d’informations sur la structure de cet objet](#adViewability) consultez la [sous-section ci-dessous. |
 | `clicks` | [[!UICONTROL Measure]](../../data-types/measure.md) | Nombre d’actions de clic sur la publicité. |
 | `completes` | [[!UICONTROL Measure]](../../data-types/measure.md) | Nombre de fois qu’une ressource de média horodatée a été visionnée jusqu’à la fin. Cela ne signifie pas nécessairement que l’utilisateur final a visionné l’intégralité de la vidéo, car il a peut-être sauté certaines parties. |
 | `conversions` | [[!UICONTROL Measure]](../../data-types/measure.md) | Nombre de fois qu’une ou plusieurs actions prédéfinies ont déclenché un événement pour l’évaluation des performances. |

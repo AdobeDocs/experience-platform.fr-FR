@@ -9,7 +9,7 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1248'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Ce document explique comment configurer l’extension et les règles à l’aide
 
 ## Conditions préalables
 
-Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours &#x200B;](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
+Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours ](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
 
 Un compte Mailchimp est requis pour utiliser cette extension. Vous pouvez créer un compte [ici](https://login.mailchimp.com/signup/). Dans le tableau de bord du compte Mailchimp, notez les valeurs suivantes à utiliser dans ce guide :
 
@@ -79,7 +79,7 @@ Dans une propriété de transfert d’événement, [créez un secret [!UICONTROL
 
 Ensuite, [créez un élément de données](../../../ui/managing-resources/data-elements.md#create-a-data-element) à l’aide de l’extension [!UICONTROL Core] et d’un type d’élément de données [!UICONTROL Secret] pour référencer le secret de `Mailchimp API Key` que vous venez de créer. Saisissez `Mailchimp Token` comme nom de l’élément de données.
 
-### Installation et configuration de l’extension 
+### Installation et configuration de l’extension
 
 Dans la même propriété de transfert d’événement, sélectionnez **[!UICONTROL Extensions],** puis **[!UICONTROL Catalog]** pour afficher les extensions disponibles à l’installation. À partir de là, recherchez l’extension Mailchimp et sélectionnez **[!UICONTROL Install]**.
 
@@ -119,7 +119,7 @@ Le tableau ci-dessous fournit plus de détails sur chaque valeur possible.
 | `listId` | `arc.event.xdm._tenant.listId`<br /> ou <br /> `arc.event.data._tenant.listid` | Chaîne | ID de l’audience | **Oui** | Doit correspondre à un ID d’audience existant |
 | `name` | `arc.event.xdm._tenant.name`<br /> ou <br /> `arc.event.data._tenant.name` | Chaîne | Nom de l’événement | **Oui** | 2-30 caractères de longueur |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> ou <br /> `arc.event.data._tenant.properties` | Objet | Liste facultative des propriétés au format JSON avec des détails sur l’événement | Non |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou <br /> `arc.event.data._tenant.isSyncing` | booléen | Les événements créés avec `is_syncing` défini sur `true` **ne déclencheront pas** d’automatisation | Non |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou <br /> `arc.event.data._tenant.isSyncing` | boolean | Les événements créés avec `is_syncing` défini sur `true` **ne déclencheront pas** d’automatisation | Non |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> ou `arc.event.data._tenant.occuredAt`. | Chaîne | Horodatage ISO 8601 du moment où l’événement s’est produit | Non |  |
 
 {style="table-layout:auto"}
@@ -136,7 +136,7 @@ Vous pouvez désormais utiliser cette extension et l’action Ajouter un événe
 
 ## Validation des données
 
-Lorsque vous utilisez des extensions de transfert d’événement, l’[&#128279;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) est très utile. Dans la section Journaux , sous Journaux Edge , vous pouvez voir les requêtes effectuées par vos règles de transfert d’événement après leur déclenchement. Les captures d’écran suivantes montrent une requête envoyée à l’API Mailchimp par l’extension .
+Lorsque vous utilisez des extensions de transfert d’événement, l’[](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) est très utile. Dans la section Journaux , sous Journaux Edge , vous pouvez voir les requêtes effectuées par vos règles de transfert d’événement après leur déclenchement. Les captures d’écran suivantes montrent une requête envoyée à l’API Mailchimp par l’extension .
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 

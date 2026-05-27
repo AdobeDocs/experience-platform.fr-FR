@@ -5,14 +5,10 @@ title: Point d’entrée de l’API Schemas
 description: Le point d’entrée /schemas de l’API Schema Registry vous permet de gérer les schémas XDM par programmation dans votre application d’expérience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 TQID: https://experienceleague.adobe.com/P0NBe5hK8y-qeUimpRpb3PXqwjbxjKmS1l665a5nfj4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2120
@@ -288,7 +284,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 
 L’exécution d’une requête GET pour [répertorier tous les schémas](#list) dans le conteneur du tenant inclut désormais le nouveau schéma. Vous pouvez effectuer une [requête de recherche (GET)](#lookup) à l’aide de l’URI de `$id` codée en URL pour afficher directement le nouveau schéma.
 
-Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [&#128279;](#patch) afin d’ajouter des groupes de champs aux tableaux `allOf` et `meta:extends` du schéma.
+Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [](#patch) afin d’ajouter des groupes de champs aux tableaux `allOf` et `meta:extends` du schéma.
 
 ## Créer un schéma relationnel {#create-relational-schema}
 
@@ -304,7 +300,7 @@ Créez un schéma relationnel en adressant une requête POST au point d’entré
 
 Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les descripteurs requis avec l’[API Descriptors (`POST /tenant/descriptors`)](../api/descriptors.md) :
 
-- [descripteur de clé de Principal &#x200B;](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
+- [descripteur de clé de Principal ](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
 - [Descripteur de version](../api/descriptors.md#version-descriptor) : **obligatoire** lorsqu’il existe une clé primaire.
 - [Descripteur de relation](../api/descriptors.md#relationship-descriptor) : facultatif, définit les jointures ; la cardinalité n’est pas appliquée lors de l’ingestion.
 - [Descripteur d’horodatage](../api/descriptors.md#timestamp-descriptor) : pour les schémas de série temporelle, la clé primaire doit être une clé **composite** qui inclut le champ d’horodatage.
@@ -315,7 +311,7 @@ Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les des
 
 >[!CAUTION]
 >
->Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[&#128279;](./unions.md) consultez le  guide des points d’entrée des unions .
+>Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union](./unions.md) consultez le [ guide des points d’entrée des unions .
 
 **Format d’API**
 
@@ -464,7 +460,7 @@ Une requête réussie renvoie **HTTP 201 (Created)** et le schéma créé.
 | `meta:behaviorType` | Chaîne | Type de comportement (`record` ou `time-series`, lorsqu’il est activé). |
 | `meta:containerId` | Chaîne | Conteneur dans lequel le schéma est stocké (par exemple, `tenant`). |
 
-Pour ajouter des champs à un schéma relationnel après sa création, effectuez une requête [&#128279;](#patch). Les schémas relationnels n’héritent pas et n’évoluent pas automatiquement. Les modifications structurelles telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données. Une fois que les données existent, seules les **modifications supplémentaires** (telles que l’ajout de nouveaux champs) sont prises en charge.
+Pour ajouter des champs à un schéma relationnel après sa création, effectuez une requête [](#patch). Les schémas relationnels n’héritent pas et n’évoluent pas automatiquement. Les modifications structurelles telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données. Une fois que les données existent, seules les **modifications supplémentaires** (telles que l’ajout de nouveaux champs) sont prises en charge.
 
 Vous pouvez ajouter de nouveaux champs au niveau racine (dans la définition ou le `properties` racine), mais vous ne pouvez pas supprimer, renommer ni modifier le type des champs existants.
 
@@ -731,7 +727,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
 }
 ```
 
-Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [&#x200B; guide des points d’entrée des unions &#x200B;](./unions.md) .
+Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [ guide des points d’entrée des unions ](./unions.md) .
 
 ## Supprimer un schéma {#delete}
 

@@ -2,13 +2,13 @@
 title: Extension de l’API de conversion Nextdoor
 description: Découvrez comment utiliser l’extension d’API de conversion Nextdoor pour envoyer des événements de conversion afin de suivre les performances de vos campagnes publicitaires.
 last-substantial-update: 2025-12-18T00:00:00Z
-source-git-commit: 56c69696300dd9de8c0e98ecc71cafc7328f1620
+exl-id: fbab477d-a865-4a35-94ba-6e887d7d28db
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '1772'
-ht-degree: 9%
+source-wordcount: '1825'
+ht-degree: 8%
 
 ---
-
 
 # Extension de l’API de conversion [!DNL Nextdoor] - Guide de l’utilisateur
 
@@ -18,7 +18,7 @@ ht-degree: 9%
 
 Utilisez l’extension [[!DNL Nextdoor] API de conversion](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) pour envoyer directement des événements de conversion à [!DNL Nextdoor's]’API de conversion. Cette extension vous permet de suivre et de mesurer les performances de vos campagnes publicitaires [!DNL Nextdoor] en envoyant des données de conversion côté serveur.
 
-Ce guide vous explique comment installer, configurer et utiliser l’extension d’API de conversion [!DNL Nextdoor] dans vos [règles](https://experienceleague.adobe.com/fr/docs/experience-platform/tags/ui/rules) de transfert d’événement.
+Ce guide vous explique comment installer, configurer et utiliser l’extension d’API de conversion [!DNL Nextdoor] dans vos [règles](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) de transfert d’événement.
 
 ## Conditions préalables {#prerequisites}
 
@@ -64,10 +64,10 @@ Ces paramètres principaux définissent votre événement de conversion :
 
 | Paramètre | Description | Type de données | Obligatoire | Options/Format | Exemple |
 | ------------------------------------ | -------------- | -------------- | -------------- | -------------- | -------------- |
-| [!UICONTROL Event Name] | Indique le type d’événement de conversion suivi. | Chaîne (liste déroulante) | Obligatoire | <ul><li>Achat</li><li>Lead</li><li>S’inscrire</li><li>Ajouter au panier</li><li>Lancer le passage en caisse</li><li>Page vue</li><li>Recherche</li><li>Afficher le contenu</li><li>Ajouter à la liste de souhaits</li><li>S’abonner</li><li>Valeur personnalisée</li></li>Conversion 1-10</li></ul> | `Purchase` |
+| [!UICONTROL Event Name] | Indique le type d’événement de conversion suivi. | Chaîne (liste déroulante) | Obligatoire | <ul><li>Achat</li><li>Lead</li><li>S’inscrire</li><li>Ajouter au panier</li><li>Lancer le passage en caisse</li><li>Page vue</li><li>Rechercher</li><li>Afficher le contenu</li><li>Ajouter à la liste de souhaits</li><li>S’abonner</li><li>Valeur personnalisée</li></li>Conversion 1-10</li></ul> | `Purchase` |
 | [!UICONTROL Event ID] | Identifiant unique pour éviter les rapports d’événements en double. Cette valeur sera générée automatiquement si elle est vide. | Chaîne | Facultatif | Identifiant de chaîne unique | `order_12345` |
-| [!UICONTROL Event Time (Unix Epoch)] | Date et heure auxquelles l’événement de conversion s’est produit. La valeur par défaut est l’heure actuelle si rien n’est indiqué. | Nombre entier | Facultatif | Date et heure Unix en secondes | `1703980800` (30 décembre 2023) |
-| [!UICONTROL Action Source] | Canal ou plateforme sur lequel la conversion a eu lieu. | Chaîne (liste déroulante) | Obligatoire | <ul><li>site internet</li><li>e-mail</li><li>appli</li><li>phone_call</li><li>bavarder</li><li>physical_store</li><li>system_generated</li><li>autres frais</li></ul> | `website` |
+| [!UICONTROL Event Time (Unix Epoch)] | Date et heure auxquelles l’événement de conversion s’est produit. La valeur par défaut est l’heure actuelle si rien n’est indiqué. | Entier | Facultatif | Date et heure Unix en secondes | `1703980800` (30 décembre 2023) |
+| [!UICONTROL Action Source] | Canal ou plateforme sur lequel la conversion a eu lieu. | Chaîne (liste déroulante) | Obligatoire | <ul><li>site internet</li><li>E-mail</li><li>appli</li><li>phone_call</li><li>bavarder</li><li>physical_store</li><li>system_generated</li><li>autres frais</li></ul> | `website` |
 | [!UICONTROL Data Source ID] | Remplacer l’identifiant global de source de données pour des événements spécifiques. Hérite de la configuration si rien n’est indiqué. | Chaîne | Facultatif | Chaîne alphanumérique | `12345` |
 | [!UICONTROL Action Source URL] | URL spécifique où la conversion a eu lieu. | Chaîne | Facultatif | URL complète avec protocole | https://example.com/checkout/success |
 
@@ -77,9 +77,9 @@ Utilisez ces paramètres pour garantir la conformité en matière de confidentia
 
 | Paramètre | Description | Type de données | Obligatoire | Valeurs/Format | Exemple |
 | -------------------------------------------- | ---------------------------------------------------  | --------- | -------- | ---------------------------------------------------------- | ---------- |
-| [!UICONTROL Restricted Data Usage] | Indicateur pour limiter l’utilisation des données pour la conformité en matière de confidentialité. | Nombre entier | Facultatif | <ul><li>0 = Aucune restriction</li><li>1 = Restreindre</li></ul> | `0` |
-| [!UICONTROL Restricted Data Usage (Country)] | Restrictions de traitement des données spécifiques à un pays. | Nombre entier | Facultatif | 1 = USA (d&#39;autres codes peuvent être pris en charge) | `1` |
-| [!UICONTROL Restricted Data Usage (State)] | Restrictions spécifiques à l’État pour les utilisateurs américains. | Nombre entier | Facultatif | 1 000 = CA, 1 001 = CO, etc. | `1000` |
+| [!UICONTROL Restricted Data Usage] | Indicateur pour limiter l’utilisation des données pour la conformité en matière de confidentialité. | Entier | Facultatif | <ul><li>0 = Aucune restriction</li><li>1 = Restreindre</li></ul> | `0` |
+| [!UICONTROL Restricted Data Usage (Country)] | Restrictions de traitement des données spécifiques à un pays. | Entier | Facultatif | 1 = USA (d&#39;autres codes peuvent être pris en charge) | `1` |
+| [!UICONTROL Restricted Data Usage (State)] | Restrictions spécifiques à l’État pour les utilisateurs américains. | Entier | Facultatif | 1 000 = CA, 1 001 = CO, etc. | `1000` |
 | [!UICONTROL Test Event] | Marque l’événement en tant que test pour le développement/débogage. | Chaîne | Facultatif | Toute chaîne non vide | `test` |
 
 **Paramètres des informations sur le client**
@@ -128,7 +128,7 @@ Vous devez inclure ces paramètres lors de l’`Action Source = 'APP'` :
 | [!UICONTROL Platform] | Système d’exploitation mobile. | Chaîne | **REQUIS pour les événements d’application** | <ul><li>`iOS`</li><li>`Android`</li></ul> | `Android` |
 | [!UICONTROL App Version] | Version de l’application mobile. | Chaîne | **REQUIS pour les événements d’application** | Chaîne de version telle que définie par votre application | `2.0.0-beta` |
 
-## Types d’événements  {#event-types}
+## Types d’événements {#event-types}
 
 Les types d’événements suivants sont pris en charge pour différents scénarios de conversion :
 
@@ -188,8 +188,8 @@ Une gestion appropriée des données est essentielle pour optimiser la précisio
    * Respectez les préférences de désinscription des utilisateurs et les demandes de suppression de données.
    * Utilisez les paramètres d’utilisation des données restreintes pour les utilisateurs qui se sont désinscrits.
    * **Ressources** :
-      * [&#x200B; Guide de conformité au RGPD &#x200B;](https://gdpr.eu/compliance/)
-      * [&#x200B; Exigences de confidentialité du CCPA &#x200B;](https://oag.ca.gov/privacy/ccpa)
+      * [Guide de conformité au RGPD](https://gdpr.eu/compliance/)
+      * [Exigences de confidentialité du CCPA](https://oag.ca.gov/privacy/ccpa)
 
 * **Minimisation des données** : envoyez uniquement les données nécessaires au suivi des conversions :
 
