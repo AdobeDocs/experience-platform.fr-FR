@@ -5,11 +5,22 @@ description: Ce document fournit un guide complet sur le contrôle d’accès ba
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 TQID: https://experienceleague.adobe.com/2Pb2COgXO195Flde-cU-t-TWdgsSlcmJIVAtUZJQGm4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1567
@@ -61,7 +72,7 @@ Grâce à [!UICONTROL Permissions], vous pouvez créer et gérer des rôles et a
 
 Contactez votre administrateur système pour obtenir l’accès si vous ne disposez pas des privilèges d’administrateur.
 
-Une fois que vous disposez des privilèges d’administrateur, accédez à [](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Overview]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Permissions]** pour ouvrir l’espace de travail de votre intégration Experience Platform.
+Une fois que vous disposez des privilèges d’administrateur, accédez à [&#128279;](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Overview]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Permissions]** pour ouvrir l’espace de travail de votre intégration Experience Platform.
 
 ![Image illustrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -83,7 +94,7 @@ Pour commencer, sélectionnez **[!UICONTROL Roles]** dans le volet de navigation
 
 Sélectionnez ensuite **[!UICONTROL Labels]**, puis sélectionnez **[!UICONTROL Add Labels]**.
 
-![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés &#x200B;](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
 Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter le libellé à **[!UICONTROL PHI/Regulated Health Data]**, puis sélectionnez **[!UICONTROL Save]**.
 
@@ -103,7 +114,7 @@ Dans le volet de navigation supérieur, sélectionnez le **sélecteur d’applic
 
 Sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
-![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas ](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas &#x200B;](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
 Sélectionnez ensuite **[!UICONTROL Labels]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des libellés à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL BloodGlucose]** et **[!UICONTROL InsulinLevel]**, puis sélectionnez **[!UICONTROL Apply access and data governance labels]**.
 
@@ -154,7 +165,7 @@ La politique de contrôle d’accès par défaut utilise des libellés pour déf
 
 Pour activer la politique de contrôle d’accès, sélectionnez [!UICONTROL Permissions] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Policies]**.
 
-![ Liste des politiques affichées ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![&#x200B; Liste des politiques affichées &#x200B;](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Sélectionnez ensuite les points de suspension (`...`) à côté du **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche alors les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activate]** dans la liste déroulante.
 

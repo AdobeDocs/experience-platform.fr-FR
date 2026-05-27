@@ -3,9 +3,12 @@ title: Appliquez des libellés d’accès pour gérer l’accès des utilisateur
 description: Découvrez comment utiliser l’interface utilisateur d’Experience Platform pour appliquer des libellés d’accès et gérer l’accès des utilisateurs à vos flux de données sources.
 exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
 TQID: https://experienceleague.adobe.com/cpQ8zAQ2FLqOWJif9azYdBn-fgWPpC-HQZCU2JdcqeU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 493
