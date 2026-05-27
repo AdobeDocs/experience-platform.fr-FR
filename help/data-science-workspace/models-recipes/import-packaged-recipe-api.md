@@ -6,9 +6,13 @@ type: Tutorial
 description: Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, également appelé recette dans l’interface utilisateur.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 TQID: https://experienceleague.adobe.com/4J5oeJraiqqZfne9eV12TJfy2p1ANhDo990ViyTgC7s
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1032
