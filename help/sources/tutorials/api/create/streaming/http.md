@@ -4,12 +4,9 @@ title: Créer une connexion en continu d’API HTTP à l’aide de l’API Flow 
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 TQID: https://experienceleague.adobe.com/ZbdJ2H8j5XRcJTtz0WOyX-SWsd7u-d98XrgsIZ0bJhM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1719
@@ -704,7 +701,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des informatio
 
 Ce tutoriel vous a permis de créer une connexion HTTP en continu, qui vous permet d’utiliser le point d’entrée en continu pour ingérer des données dans Experience Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, consultez le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
 
-Pour savoir comment diffuser des données vers Experience Platform, consultez le tutoriel sur la [&#x200B; diffusion en continu de données de série temporelle &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [&#x200B; diffusion en continu de données d’enregistrement &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md).
+Pour savoir comment diffuser des données vers Experience Platform, consultez le tutoriel sur la [ diffusion en continu de données de série temporelle ](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [ diffusion en continu de données d’enregistrement ](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Annexe
 

@@ -6,10 +6,8 @@ type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à HubSpot à l’aide de l’API Flow Service.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 TQID: https://experienceleague.adobe.com/gBeL4MOksIKqh1qrUW4LRpnpGl9vEnXDsLgKX0ezQLU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 495
@@ -117,4 +115,4 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL HubSpot] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créer un flux de données pour importer des données d’automatisation marketing dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/marketing-automation.md)
+* [Créer un flux de données pour importer des données d’automatisation marketing dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/marketing-automation.md)

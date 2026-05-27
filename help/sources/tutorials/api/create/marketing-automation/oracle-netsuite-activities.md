@@ -3,10 +3,8 @@ title: Créer une connexion source et un flux de données pour les activités Or
 description: Découvrez comment créer une connexion source et un flux de données pour importer les données d’événements Oracle NetSuite dans Experience Platform à l’aide de l’API Flow Service.
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
 TQID: https://experienceleague.adobe.com/zOO7eWS6pQLEYvmv5dWdfF5Xm548RYcwrVUygdycJco
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2044
