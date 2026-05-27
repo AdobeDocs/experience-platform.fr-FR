@@ -3,27 +3,11 @@ title: Notes de mise à jour d’octobre 2025 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2025 pour Adobe Experience Platform
 exl-id: 93feff2b-d998-41f1-8d93-332238a1d88d
 TQID: https://experienceleague.adobe.com/D0lRhCHYWVNLFCVH06t1-5jbMU8aWLweqbef6F3ct2o
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1253
@@ -63,7 +47,7 @@ Adobe Experience Platform Agent Orchestrator est la nouvelle couche agentiqu
 | ------- | ----------- |
 | Agent Audience | Audience Agent prend désormais en charge les audiences basées sur un compte pour l’exploration d’audiences conversationnelles et la détection des audiences en double. Pour en savoir plus, consultez la [documentation de l’agent Audience](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Pour plus d’informations sur les agents, consultez la [documentation &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/home).
+Pour plus d’informations sur les agents, consultez la [documentation ](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Alertes {#alerts}
 
@@ -99,7 +83,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonctionnalité | Description |
 | --- | --- |
 | [Plusieurs nouvelles destinations qui prennent en charge la surveillance au niveau de l’audience](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Les destinations suivantes prennent désormais en charge la surveillance au niveau de l’audience : <ul><li>[!DNL Airship Tags]</li><li>[!DNL Salesforce Marketing Cloud] (API)</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>Engagement de compte [!DNL Salesforce Marketing Cloud]</li><li>[!DNL The Trade Desk]</li></ul> |
-| Correctif des mécanismes de sécurisation de l’exportation des jeux de données | Un correctif a été implémenté pour les mécanismes de sécurisation d’exportation des jeux de données. Auparavant, certains jeux de données qui incluaient une colonne d’horodatage mais n’étaient _pas_ basés sur le schéma XDM Experience Events étaient incorrectement traités comme des jeux de données Experience Events, ce qui limitait les exportations à un intervalle de recherche en amont de 365 jours. Le mécanisme de sécurisation de recherche en amont documenté de 365 jours s’applique désormais exclusivement aux jeux de données d’événements d’expérience. Les jeux de données utilisant un schéma autre que le schéma XDM Experience Events sont désormais régis par le mécanisme de sécurisation de 10 milliards d’enregistrements. Certains clients peuvent voir des nombres d’exportation accrus pour les jeux de données qui se trouvaient par erreur sous l’intervalle de recherche en amont de 365 jours. Vous pouvez ainsi exporter des jeux de données pour les workflows prédictifs disposant d’un long intervalle de recherche en amont. Pour plus d’informations, consultez la section [&#x200B; Mécanismes de sécurisation d’exportation de jeux de données &#x200B;](../../destinations/guardrails.md#dataset-exports). |
+| Correctif des mécanismes de sécurisation de l’exportation des jeux de données | Un correctif a été implémenté pour les mécanismes de sécurisation d’exportation des jeux de données. Auparavant, certains jeux de données qui incluaient une colonne d’horodatage mais n’étaient _pas_ basés sur le schéma XDM Experience Events étaient incorrectement traités comme des jeux de données Experience Events, ce qui limitait les exportations à un intervalle de recherche en amont de 365 jours. Le mécanisme de sécurisation de recherche en amont documenté de 365 jours s’applique désormais exclusivement aux jeux de données d’événements d’expérience. Les jeux de données utilisant un schéma autre que le schéma XDM Experience Events sont désormais régis par le mécanisme de sécurisation de 10 milliards d’enregistrements. Certains clients peuvent voir des nombres d’exportation accrus pour les jeux de données qui se trouvaient par erreur sous l’intervalle de recherche en amont de 365 jours. Vous pouvez ainsi exporter des jeux de données pour les workflows prédictifs disposant d’un long intervalle de recherche en amont. Pour plus d’informations, consultez la section [ Mécanismes de sécurisation d’exportation de jeux de données ](../../destinations/guardrails.md#dataset-exports). |
 | Rapports améliorés au niveau de l’audience pour les destinations d’entreprise | Après cette version, les clients verront des chiffres de création de rapports d’audience plus précis qui incluent uniquement les audiences pertinentes pour la destination sélectionnée. Cet ajustement de surveillance garantit que les rapports incluent uniquement les audiences mappées sur le flux de données, ce qui fournit des informations plus claires sur l’activation réelle des données. Cela n’a aucune incidence sur la quantité de données activées. Il s’agit simplement d’une amélioration de la surveillance visant à améliorer la précision des rapports. |
 | Flux de données grisés dans l’interface utilisateur en raison de libellés d’accès | Pour résoudre le problème où certains utilisateurs voyaient des pages vierges parce que les flux de données de destination auxquels ils n’avaient pas accès étaient complètement masqués, l’interface utilisateur affiche désormais ces flux de données restreints dans un état grisé au lieu de les omettre entièrement. Pour plus d’informations, consultez la documentation sur l’[utilisation de libellés d’accès pour gérer l’accès des utilisateurs aux flux de données de destination](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know). |
 
@@ -115,7 +99,7 @@ Real-Time CDP B2B Edition offre des fonctionnalités complètes de gestion des
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Obsolescence de la prise en charge B2B pour les relations non standard entre les entités B2B | À compter de janvier 2026, Real-Time CDP B2B edition ne prendra plus en charge les relations **non standard** entre les entités B2B. Par conséquent, nous vous recommandons de mettre à jour vos entités B2B pour utiliser les relations standard décrites dans le guide [&#x200B; Espaces de noms et schémas B2B &#x200B;](../../rtcdp/schemas/b2b.md). |
+| Obsolescence de la prise en charge B2B pour les relations non standard entre les entités B2B | À compter de janvier 2026, Real-Time CDP B2B edition ne prendra plus en charge les relations **non standard** entre les entités B2B. Par conséquent, nous vous recommandons de mettre à jour vos entités B2B pour utiliser les relations standard décrites dans le guide [ Espaces de noms et schémas B2B ](../../rtcdp/schemas/b2b.md). |
 
 {style="table-layout:auto"}
 
@@ -127,7 +111,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Modification de la création du jeu de données pour la source Adobe Analytics | Dans le cadre du processus de création de flux de données entre Adobe Analytics et Experience Platform, un jeu de données est créé via le service de catalogue. Ce jeu de données sert de conteneur pour les données à introduire. Actuellement, ce processus implique un identifiant de source de données extrait de la suite de rapports Analytics, envoyé au service de catalogue, puis associé au jeu de données nouvellement créé. Après la modification, l’option permettant de fournir l’identifiant de source de données ne sera plus disponible lors de la création du jeu de données. Par conséquent, les nouveaux jeux de données créés par la source Analytics n’auront plus d’ID de source de données associé dans le service de catalogue. Cette modification s’applique uniquement aux métadonnées et ne modifie en rien le stockage des données dans le jeu de données. Cependant, il est important de savoir que l’identifiant de source de données fourni par Catalog Service ne sera plus disponible dans les jeux de données nouvellement créés pour Adobe Analytics. Lisez la [documentation sur la source &#x200B;](../../sources/connectors/adobe-applications/analytics.md) pour plus d’informations sur le connecteur source Adobe Analytics. |
+| Modification de la création du jeu de données pour la source Adobe Analytics | Dans le cadre du processus de création de flux de données entre Adobe Analytics et Experience Platform, un jeu de données est créé via le service de catalogue. Ce jeu de données sert de conteneur pour les données à introduire. Actuellement, ce processus implique un identifiant de source de données extrait de la suite de rapports Analytics, envoyé au service de catalogue, puis associé au jeu de données nouvellement créé. Après la modification, l’option permettant de fournir l’identifiant de source de données ne sera plus disponible lors de la création du jeu de données. Par conséquent, les nouveaux jeux de données créés par la source Analytics n’auront plus d’ID de source de données associé dans le service de catalogue. Cette modification s’applique uniquement aux métadonnées et ne modifie en rien le stockage des données dans le jeu de données. Cependant, il est important de savoir que l’identifiant de source de données fourni par Catalog Service ne sera plus disponible dans les jeux de données nouvellement créés pour Adobe Analytics. Lisez la [documentation sur la source ](../../sources/connectors/adobe-applications/analytics.md) pour plus d’informations sur le connecteur source Adobe Analytics. |
 | Disponibilité générale de la source [!DNL Google Ads] (API uniquement) | La version [API de la source  [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md) est désormais en disponibilité générale. La documentation de l’API a été mise à jour afin de refléter le fait que la dernière version est désormais `v21` et qu’Experience Platform prend en charge toutes les versions v19 et ultérieures. [la version de l’interface utilisateur](../../sources/tutorials/ui/create/advertising/ads.md) reste en version bêta et ne prend en charge qu’une ingestion unique. Pour utiliser l’ingestion de données incrémentielle, utilisez l’itinéraire d’API. |
 | Prise en charge du réseau virtuel [!DNL Azure Event Hubs] | Adobe prend désormais explicitement en charge les connexions réseau virtuelles à [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), ce qui permet le transfert de données sur des réseaux privés plutôt que sur des réseaux publics. Les clients peuvent utiliser Experience Platform VNet pour acheminer le trafic Event Hubs de manière privée via la dorsale principale privée d’Azure, offrant ainsi une sécurité et une conformité améliorées aux workflows d’ingestion de données. |
 

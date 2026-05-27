@@ -3,29 +3,11 @@ title: Notes de mise à jour d’Adobe Experience Platform - Mars 2025
 description: Les notes de mise à jour de mars 2025 pour Adobe Experience Platform.
 exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
 TQID: https://experienceleague.adobe.com/T3TGN-iZDvzBf70O2YKKO4jPAqknrctENnu7cspkbxA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1271
@@ -121,7 +103,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Améliorations apportées à la source [!DNL Google Ads] | Vous pouvez désormais utiliser la source [[!DNL Google Ads] &#x200B;](../../sources/connectors/advertising/ads.md) pour ingérer des données agrégées. Vous pouvez utiliser [!DNL Google Ads Query Builder] pour spécifier les attributs, les segments et les ressources à ingérer dans Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion d’un compte  [!DNL Google Ads]  à Experience Platform](../../sources/tutorials/ui/create/advertising/ads.md). |
+| Améliorations apportées à la source [!DNL Google Ads] | Vous pouvez désormais utiliser la source [[!DNL Google Ads] ](../../sources/connectors/advertising/ads.md) pour ingérer des données agrégées. Vous pouvez utiliser [!DNL Google Ads Query Builder] pour spécifier les attributs, les segments et les ressources à ingérer dans Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion d’un compte  [!DNL Google Ads]  à Experience Platform](../../sources/tutorials/ui/create/advertising/ads.md). |
 | Améliorations apportées à la source [!DNL Microsoft Dynamics] | Vous pouvez désormais spécifier la clé primaire d’une table [!DNL Microsoft Dynamics] donnée lors de l’exploration du contenu et de la structure de vos données. Utilisez cette fonctionnalité pour optimiser vos requêtes avec la source [!DNL Microsoft Dynamics]. Pour plus d’informations, consultez le guide sur la [connexion d’une source  [!DNL Microsoft Dynamics]  à Experience Platform à l’aide de l’API](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
 | Prise en charge de l’authentification par clé API dans les sources en libre-service (SDK par lots) | Vous pouvez désormais utiliser l’authentification par clé API comme type d’authentification lors de l’intégration d’une nouvelle source à des sources en libre-service (SDK par lots). Pour plus d’informations, consultez le guide sur la [configuration de votre spécification d’authentification dans le SDK par lots](../../sources/sources-sdk/config/authspec.md). |
 | Prise en charge du contrôle d’accès basé sur les attributs dans les sources | Vous pouvez désormais utiliser des fonctions de contrôle d’accès basé sur les attributs sur vos flux de données sources. Pour plus d’informations, consultez les guides suivants : <ul><li>[Appliquer des libellés à vos flux de données sources à l’aide de l’API](../../sources/tutorials/api/labels.md)</li><li>[Appliquer des libellés à vos flux de données sources à l’aide de l’interface d’utilisation](../../sources/tutorials/ui/labels.md). |
