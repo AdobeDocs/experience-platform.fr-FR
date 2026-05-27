@@ -5,12 +5,9 @@ title: Groupe De Champs De Schéma Des Détails Du Contact Professionnel
 description: Découvrez le groupe de champs de schéma Détails du contact professionnel .
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 TQID: https://experienceleague.adobe.com/jiX9U9BNZ5HGzcVFyCrc9IV5Vq9QDBvRQAW-zIl8Pz8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 186
