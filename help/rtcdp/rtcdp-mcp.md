@@ -8,9 +8,9 @@ badge: label="Beta" type="Informative"
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
-source-git-commit: dbb8fe7e0faeb50b1faae82f15dc4e1ae039b865
+source-git-commit: ec73ebc65b9f5f0e8b346299188ad8116cd67dc9
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2599'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Vous pouvez utiliser l’intégration Adobe Real-Time CDP MCP pour interroger le
 
 >[!AVAILABILITY]
 >
->Le serveur MCP Real-Time CDP est distribué sous la forme d’un **serveur de transport HTTP distant** que les utilisateurs installent et configurent dans les clients MCP et les plateformes d’applications pris en charge (par exemple, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor] ou [!DNL VS Code]). L’authentification est gérée via un **flux de connexion basé sur un navigateur** — lorsque votre client se connecte pour la première fois au serveur, il ouvre votre navigateur par défaut afin que vous puissiez vous connecter à l’aide de vos informations d’identification Adobe et autoriser l’accès. Contactez votre représentant Adobe pour accéder à ce programme Beta.
+>Real-Time CDP MCP est dans Beta. La fonctionnalité et la documentation peuvent changer. Le serveur MCP Real-Time CDP est distribué sous la forme d’un **serveur de transport HTTP distant** que les utilisateurs installent et configurent dans les clients MCP et les plateformes d’applications pris en charge (par exemple, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor] ou [!DNL VS Code]). L’authentification est gérée via un **flux de connexion basé sur un navigateur** — lorsque votre client se connecte pour la première fois au serveur, il ouvre votre navigateur par défaut afin que vous puissiez vous connecter à l’aide de vos informations d’identification Adobe et autoriser l’accès. Contactez votre représentant Adobe pour accéder à ce programme Beta.
 
 ## Beta, sécurité et mentions légales {#mcp-notices}
 
