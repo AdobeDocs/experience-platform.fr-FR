@@ -4,10 +4,21 @@ title: Customer AI dans Real-Time Customer Data Platform
 description: Présentation de l’IA dédiée aux clients et de la manière dont elle peut aider à générer des scores pour des résultats spécifiques tels que les conversions ou l’attrition.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
 TQID: https://experienceleague.adobe.com/n982cLcGJPV-RNwhjMoOEat3HWCzml9VlD0-SL43mb8
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d00e9f03-e50b-4162-b143-0c0817c937c2id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 307

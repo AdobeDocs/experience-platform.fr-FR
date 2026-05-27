@@ -107,7 +107,7 @@ Lorsque vous sélectionnez la carte **[!UICONTROL Identity Graph Linking Rules]*
 
 ![Panneau détaillé Règles de liaison du graphique d’identités présentant la description, l’impact et le bouton Configurer les règles de liaison](assets/health-checks/identity-graph-linking-detail.png)
 
-Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [ guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
+Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [&#x200B; guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
 ### Configuration des identités des personnes et des non-personnes {#people-non-people-identity}
 
@@ -179,6 +179,6 @@ Pour plus d’informations, consultez l’article de la base de connaissances [E
 Après avoir examiné les résultats de votre contrôle de l’intégrité, explorez les ressources suivantes pour mieux comprendre :
 
 * Découvrez les [bonnes pratiques relatives aux schémas](/help/xdm/schema/best-practices.md) pour concevoir des modèles de données fiables.
-* Comprenez [ règles de liaison des graphiques d’identités ](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
+* Comprenez [&#x200B; règles de liaison des graphiques d’identités &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
 * Consultez la [documentation sur les espaces de noms d’identité](/help/identity-service/features/namespaces.md) pour connaître les bonnes pratiques de gestion des espaces de noms.
 * Explorez d’autres [outils d’exécution et d’exploitation](/help/run-and-operate/overview.md) y compris des [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) pour la visibilité des opérations par lots.
