@@ -6,11 +6,32 @@ last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 TQID: https://experienceleague.adobe.com/YJ2q23PLQR-3VXfuZU1ccV2JIr48CeOs5PwHQt3WgM8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: ee602049-8a18-43df-9299-a689a025a371id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1156
@@ -122,7 +143,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | ------- | ----------- |
 | Attributs calculés (Alpha) | ***Remarque : cette fonctionnalité est actuellement en version Alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Ces fonctions incluent notamment le nombre, la somme, la moyenne, les valeurs min. et max. ou encore la valeur vrai/faux. Les attributs calculés sont actuellement disponibles uniquement via l’API. |
 
-Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez tout d’abord la [ présentation du profil client en temps réel](../../profile/home.md).
+Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez tout d’abord la [&#x200B; présentation du profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -134,7 +155,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!DNL Google PubSub] | Vous pouvez désormais connecter [!DNL Google PubSub] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Google PubSub] ](../../sources/connectors/cloud-storage/google-pubsub.md). |
-| [!DNL Oracle Object Storage] | Vous pouvez désormais connecter [!DNL Oracle Object Storage] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Oracle Object Storage] ](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
+| [!DNL Google PubSub] | Vous pouvez désormais connecter [!DNL Google PubSub] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Google PubSub] &#x200B;](../../sources/connectors/cloud-storage/google-pubsub.md). |
+| [!DNL Oracle Object Storage] | Vous pouvez désormais connecter [!DNL Oracle Object Storage] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Oracle Object Storage] &#x200B;](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
 
 Pour des informations plus générales sur les sources, reportez-vous à la [présentation des sources](../../sources/home.md).
