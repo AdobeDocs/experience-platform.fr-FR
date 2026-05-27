@@ -3,10 +3,21 @@ title: Gouvernance des données dans Query Service
 description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
 TQID: https://experienceleague.adobe.com/9s6jw0fpJcs1pKksipJ2LMC7Nn4o5QFGljQKuAvdV3w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3182
@@ -179,7 +190,7 @@ Vous trouverez ci-dessous une liste de trois journaux de serveur étendus conten
 1. **Journaux de session** : le système crée un journal d’entrée de session pour un utilisateur lorsqu’il se connecte à Query Service, qu’il exécute ou non une requête.
 1. **Journaux de connexion client tiers** : un journal d’audit de connectivité est généré lorsqu’un utilisateur connecte correctement Query Service à un client tiers.
 
-Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [ présentation des journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur la manière dont les journaux d’audit peuvent aider votre organisation à aborder la conformité des données, consultez la [&#x200B; présentation des journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Utilisation des données {#data-usage}
 
@@ -197,7 +208,7 @@ Après avoir accédé au schéma, vous pouvez [appliquer des libellés à des ch
 
 ## Confidentialité {#privacy}
 
-[](../../privacy-service/home.md) vous aide à gérer les demandes d’accès et de suppression des données des clients conformément aux réglementations légales en matière de confidentialité. Pour ce faire, il recherche des identifiants préexistants dans les données et accède ou supprime ces données en fonction de la tâche de confidentialité demandée. Les données doivent disposer de libellés appropriés afin que le service puisse déterminer les champs auxquels accéder ou ceux qu’il doit supprimer au cours des tâches relatives à la confidentialité. Les données soumises à des demandes d’accès à des informations personnelles doivent contenir des informations d’identité client afin de lier les différents éléments de données avec la personne à laquelle la demande d’accès à des informations personnelles s’applique. Query Service peut enrichir les données qu’il utilise avec un identifiant unique dans le but de satisfaire les tâches liées à la confidentialité.
+[&#128279;](../../privacy-service/home.md) vous aide à gérer les demandes d’accès et de suppression des données des clients conformément aux réglementations légales en matière de confidentialité. Pour ce faire, il recherche des identifiants préexistants dans les données et accède ou supprime ces données en fonction de la tâche de confidentialité demandée. Les données doivent disposer de libellés appropriés afin que le service puisse déterminer les champs auxquels accéder ou ceux qu’il doit supprimer au cours des tâches relatives à la confidentialité. Les données soumises à des demandes d’accès à des informations personnelles doivent contenir des informations d’identité client afin de lier les différents éléments de données avec la personne à laquelle la demande d’accès à des informations personnelles s’applique. Query Service peut enrichir les données qu’il utilise avec un identifiant unique dans le but de satisfaire les tâches liées à la confidentialité.
 
 Les demandes d’accès à des informations personnelles peuvent être envoyées au lac de données ou à la banque de données Profile. Les enregistrements supprimés du lac de données n’entraînent pas la suppression des profils qui ont été effectués à partir de ces enregistrements. En outre, une tâche de confidentialité visant à supprimer des informations personnelles du lac de données ne supprime pas leur profil, de sorte que toute information (qui contient cet identifiant de profil) ingérée après la fin de la tâche de confidentialité met à jour ce profil comme d’habitude. Cela réaffirme la nécessité d’identifier correctement les données utilisées dans les schémas ad hoc.
 
