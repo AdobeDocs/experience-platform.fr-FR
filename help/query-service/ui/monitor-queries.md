@@ -3,11 +3,8 @@ title: Surveiller les requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur du service de requête.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
 TQID: https://experienceleague.adobe.com/w0AEwVkNeV5Bls6rqmVrb-67dUePifYsaxg8odpQLQE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2340
@@ -111,7 +108,7 @@ Le tableau ci-dessous décrit les types d’alerte de requête pris en charge :
 | `success` | Cette alerte vous informe lorsqu’une exécution de requête planifiée se termine avec succès, indiquant que la requête s’est exécutée sans erreur. |
 | `failed` | Cette alerte se déclenche lorsqu’une exécution de requête planifiée rencontre une erreur ou ne s’exécute pas correctement. Cela vous aide à identifier et à résoudre les problèmes rapidement. |
 | `quarantine` | Cette alerte est activée lorsqu’une exécution de requête planifiée est mise en quarantaine. Lorsque des requêtes sont inscrites dans la [fonction de quarantaine](#quarantined-queries), toute requête planifiée qui échoue dix exécutions consécutives est automatiquement mise en état de [!UICONTROL Quarantined]. Elles nécessitent ensuite votre intervention avant que d’autres exécutions ne puissent avoir lieu. |
-| `delay` | Cette alerte vous avertit en cas de [&#x200B; retard dans le résultat de l’exécution d’une requête](#query-run-delay) au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans terminer ni échouer. |
+| `delay` | Cette alerte vous avertit en cas de [ retard dans le résultat de l’exécution d’une requête](#query-run-delay) au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans terminer ni échouer. |
 
 >[!NOTE]
 >
