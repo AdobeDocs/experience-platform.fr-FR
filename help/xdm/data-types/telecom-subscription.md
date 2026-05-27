@@ -5,9 +5,12 @@ title: Type de données d'abonnement aux télécommunications
 description: Découvrez le type de données Modèle de données d’expérience d’abonnement aux télécommunications (XDM).
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 TQID: https://experienceleague.adobe.com/Uq0AcydyH9L8YhSGcJ4ymUajAg3-Fp5ocevOGNVg31g
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 615
@@ -21,7 +24,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->Ce document décrit le type de données. Pour le groupe de champs du même nom, reportez-vous au guide de référence du groupe de champs [[!UICONTROL Telecom Subscription] ](../field-groups/profile/telecom-subscription.md).
+>Ce document décrit le type de données. Pour le groupe de champs du même nom, reportez-vous au guide de référence du groupe de champs [[!UICONTROL Telecom Subscription] &#x200B;](../field-groups/profile/telecom-subscription.md).
 >
 >Si vous décrivez un type d’abonnement sans rapport avec le secteur des télécommunications, utilisez plutôt le type de données [[!UICONTROL Subscription] générique](./subscription.md).
 

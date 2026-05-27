@@ -3,10 +3,17 @@ title: Type de données de rapport sur les détails des données de qualité de 
 description: Découvrez le type de données Modèle de données d’expérience (XDM) des rapports sur les détails des données de qualité de l’expérience.
 exl-id: 608baa9b-12ca-466c-a962-1401abc0344e
 TQID: https://experienceleague.adobe.com/PjP7J9X7NTxgltIBhKgxNVJgwVGYR76PgUe6wWOw8kA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 690

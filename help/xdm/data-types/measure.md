@@ -5,11 +5,16 @@ title: Type de données de mesure
 description: Découvrez le type de données du modèle de données d’expérience de mesure (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 TQID: https://experienceleague.adobe.com/aNvqpcpEDybeIUE1pUW3hPE20hPIVcwnLyKa7x1v5sk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 227

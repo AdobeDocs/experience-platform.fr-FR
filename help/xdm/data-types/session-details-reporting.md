@@ -3,10 +3,18 @@ title: Type de données de rapport des détails de session
 description: Découvrez le type de données du modèle de données d’expérience de création de rapports (XDM) Détails de la session.
 exl-id: 8bcaa0d8-2f85-4189-b0b5-8c72ecbb0660
 TQID: https://experienceleague.adobe.com/d5up9DXvvwBOczR-nO4p6-LnHyvXF5O89arNJMng9Dk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1974

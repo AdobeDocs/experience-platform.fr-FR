@@ -4,8 +4,10 @@ title: Type de données de transaction
 description: Découvrez le type de données du modèle de données d’expérience des transactions (XDM).
 exl-id: 47b7152f-a853-44f0-8962-e902631ad8a4
 TQID: https://experienceleague.adobe.com/zlfRiaf0UxV3PPvE7LP-7zdXBPOaTLRsu7OxA7zR7cA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 87
