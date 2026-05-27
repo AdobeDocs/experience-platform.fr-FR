@@ -5,11 +5,19 @@ title: Point d’entrée de l’API Unions
 description: Le point d’entrée /unions de l’API Schema Registry vous permet de gérer par programmation les schémas d’union XDM dans votre application d’expérience.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 TQID: https://experienceleague.adobe.com/7DDAzUyAk70ca8JSTipoZd8GwuhXK2OS9AvXG9ZyZCo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 914
@@ -186,7 +194,7 @@ Le format de la réponse dépend de l’en-tête Accept envoyé dans la requête
 
 ## Activation d’un schéma pour un abonnement à l’union {#enable}
 
-Pour qu’un schéma soit inclus dans l’union pour sa classe, une balise `union` doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, envoyez une requête PATCH afin d’ajouter un tableau `meta:immutableTags` avec une seule valeur de chaîne de `union` au schéma en question. Pour obtenir un exemple détaillé](./schemas.md#union) consultez le guide [schemas endpoint guide .
+Pour qu’un schéma soit inclus dans l’union pour sa classe, une balise `union` doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, envoyez une requête PATCH afin d’ajouter un tableau `meta:immutableTags` avec une seule valeur de chaîne de `union` au schéma en question. Pour obtenir un exemple détaillé[&#128279;](./schemas.md#union) consultez le guide schemas endpoint guide .
 
 ## Liste des schémas dans une union {#list-schemas}
 

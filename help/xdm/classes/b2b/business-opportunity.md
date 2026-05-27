@@ -3,9 +3,12 @@ title: Classe d’opportunité commerciale XDM
 description: Découvrez la classe XDM Business Opportunity dans le modèle de données d’expérience (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 TQID: https://experienceleague.adobe.com/SYF6sbMhbh56TucygUFbW-dlTB1xJcnlS-fftNHZ-iI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 299
@@ -21,7 +24,7 @@ ht-degree: 4%
 
 [!UICONTROL XDM Business Opportunity] est une classe XDM (modèle de données d’expérience) standard qui capture les propriétés minimales requises d’une opportunité commerciale.
 
-![ Structure de la classe d’opportunité commerciale XDM telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-opportunity.png)
+![&#x200B; Structure de la classe d’opportunité commerciale XDM telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-opportunity.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |

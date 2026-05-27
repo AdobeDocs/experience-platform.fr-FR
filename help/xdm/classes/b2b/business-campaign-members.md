@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM Business Campaign Members] est une classe XDM (modèle de données d’expérience) standard qui décrit un contact ou un prospect associé à une campagne commerciale.
 
-![ Structure de la classe Membres de XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign-members.png)
+![&#x200B; Structure de la classe Membres de XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign-members.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
