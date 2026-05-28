@@ -3,8 +3,10 @@ title: Groupe de champs de schéma Détails du plan de soins de santé
 description: Découvrez le groupe de champs de schéma Détails du plan de soins de santé .
 exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
 TQID: https://experienceleague.adobe.com/jQwPtDXiKRM87D2VJBNG9hY-2PzrkJXFq7C6Tc5VJag
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 212

@@ -3,10 +3,14 @@ title: Groupe De Champs Enrichissement Du Partenaire De Profil (Exemple)
 description: Découvrez le groupe de champs de schéma Enrichissement du partenaire de profil (exemple) .
 exl-id: 02f7c358-3cf9-45cb-a5c5-e2cb1f140d93
 TQID: https://experienceleague.adobe.com/s8gEz35cvyxrhdjGRM7pGLq-v7jwbjr-2Ew7D7Gh-v4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 218
