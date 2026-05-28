@@ -4,11 +4,21 @@ description: Découvrez comment utiliser le point d’entrée /workorder dans l�
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 TQID: https://experienceleague.adobe.com/oKFqT0xEE47wgrh78-DKl6Ur-taOrFJTn81NQl2ljfM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3421
@@ -22,7 +32,7 @@ Utilisez le point d’entrée `/workorder` dans l’API Data Hygiene pour créer
 
 >[!IMPORTANT]
 >
->Les ordres de travail de suppression des enregistrements concernent le nettoyage des données, la suppression des données anonymes ou la minimisation des données. **N’utilisez pas d’ordres de travail de suppression d’enregistrements pour les demandes de droits des titulaires de données dans le cadre des réglementations de confidentialité telles que le RGPD.** Pour les cas d’utilisation de conformité, utilisez [](../../privacy-service/home.md).
+>Les ordres de travail de suppression des enregistrements concernent le nettoyage des données, la suppression des données anonymes ou la minimisation des données. **N’utilisez pas d’ordres de travail de suppression d’enregistrements pour les demandes de droits des titulaires de données dans le cadre des réglementations de confidentialité telles que le RGPD.** Pour les cas d’utilisation de conformité, utilisez [&#128279;](../../privacy-service/home.md).
 
 ## Prise en main
 
