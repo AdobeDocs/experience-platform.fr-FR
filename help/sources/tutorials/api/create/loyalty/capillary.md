@@ -4,15 +4,10 @@ description: Découvrez comment connecter Capillary à Experience Platform à l�
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
 TQID: https://experienceleague.adobe.com/5q6zrfcakez5OVw-ANj2qEWnPqtgIs1bFLxJfExXJfk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1180
@@ -24,7 +19,7 @@ ht-degree: 12%
 
 >[!AVAILABILITY]
 >
->La source [!DNL Capillary Streaming Events] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+La source [!DNL Capillary Streaming Events] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez ce guide pour savoir comment utiliser le [!DNL Capillary Streaming Events] et l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) pour diffuser des données de votre compte [!DNL Capillary] vers Adobe Experience Platform.
 
@@ -342,7 +337,7 @@ Mappez les champs capillaires aux champs de schéma XDM correspondants comme sui
 
 >[!TIP]
 >
->Vous pouvez télécharger le [Mappages d’événements et de profils](../../../../images/tutorials/create/capillary/mappings.zip) par [!DNL Capillary] et [importer les fichiers dans la préparation des données](../../../../../data-prep/ui/mapping.md#import-mapping) lorsque vous êtes prêt à mapper vos données.
+Vous pouvez télécharger le [Mappages d’événements et de profils](../../../../images/tutorials/create/capillary/mappings.zip) par [!DNL Capillary] et [importer les fichiers dans la préparation des données](../../../../../data-prep/ui/mapping.md#import-mapping) lorsque vous êtes prêt à mapper vos données.
 
 ### Créer un flux de données {#flow}
 
@@ -391,7 +386,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->`startTime` est en secondes UNIX epoch.
+`startTime` est en secondes UNIX epoch.
 
 **Réponse**
 

@@ -3,10 +3,8 @@ title: Créer une connexion source et un flux de données pour les entités Orac
 description: Découvrez comment créer une connexion source et un flux de données pour importer les contacts Oracle NetSuite et les données client dans Experience Platform à l’aide de l’API Flow Service.
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
 TQID: https://experienceleague.adobe.com/fqvuH79vrgdbXu4KpuDQgBY9LXLP2GgMC8uei6wB3IY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2249
@@ -16,7 +14,7 @@ ht-degree: 43%
 
 # Créer une connexion source et un flux de données pour [!DNL Oracle NetSuite Entities] à l’aide de l’API Flow Service
 
-Lisez le tutoriel suivant pour savoir comment importer des contacts et des données client de votre compte [!DNL Oracle NetSuite Activities Entities] à Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez le tutoriel suivant pour savoir comment importer des contacts et des données client de votre compte [!DNL Oracle NetSuite Activities Entities] à Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

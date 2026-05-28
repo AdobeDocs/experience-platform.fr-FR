@@ -5,14 +5,10 @@ last-substantial-update: 2023-06-21T00:00:00.000Z
 badge: Beta
 exl-id: 88e333e3-2b93-4d66-8412-efadea58ac46
 TQID: https://experienceleague.adobe.com/olP6fi0NQZKb4kQcDLgJvHqBV72QX56-af7BMPddSms
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: ff2b9b37-92e0-45fc-b853-379d44c08c89
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1002
@@ -107,7 +103,7 @@ Pour créer votre schéma pour les données [!DNL RainFocus], consultez la docum
 >[!IMPORTANT]
 >
 >* Le schéma doit étendre la classe **XDM ExperienceEvent**.
->* Vous devez vous assurer que le schéma inclut une **identité principale** et est **activé pour Profil**. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=fr)
+>* Vous devez vous assurer que le schéma inclut une **identité principale** et est **activé pour Profil**. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
 >* Vous pouvez remplacer l’exemple d’identité (E-mail) par un autre identifiant approprié, tel qu’un e-mail sha256 ou un ECID.
 
 ### Création d’un profil d’intégration dans Rainfocus {#create-an-integration-profile-in-rainfocus}
@@ -118,7 +114,7 @@ Connectez-vous à la [[!DNL RainFocus] plateforme](https://app.rainfocus.com). D
 
 ![L’interface utilisateur RainFocus avec les bibliothèques et les profils d’intégration sélectionnés.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile.png)
 
-Pour créer un profil, sélectionnez l’icône **(`+`)** . Ensuite, sélectionnez **&#x200B;**&#x200B;puis **OK**.
+Pour créer un profil, sélectionnez l’icône **(`+`)** . Ensuite, sélectionnez **** puis **OK**.
 
 ![Fenêtre Créer un profil d’intégration dans l’interface utilisateur de RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-select.png)
 
