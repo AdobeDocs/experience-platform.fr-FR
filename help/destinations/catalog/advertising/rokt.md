@@ -1,13 +1,13 @@
 ---
 title: Racine
 description: Découvrez comment connecter les audiences Adobe Experience Platform à Root pour améliorer les performances des campagnes grâce à un ciblage, une suppression et une personnalisation plus intelligents.
-source-git-commit: a281a7c961b8576105913feb7a7f8258c975e875
+exl-id: 50eaefeb-d394-49b1-9748-5d68f11b79a0
+source-git-commit: 52d78fef0e08e9bc8bd606339e685d743ebb90dc
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 25%
 
 ---
-
 
 # Connexion [!DNL Rokt] {#rokt-destination}
 
@@ -73,7 +73,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client. Utilisez-les pour cibler des groupes spécifiques de personnes dans le cadre de campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}

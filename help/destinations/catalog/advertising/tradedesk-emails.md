@@ -4,15 +4,10 @@ description: Activez les profils sur votre compte Trade Desk pour le ciblage et 
 last-substantial-update: 2026-04-29T00:00:00.000Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 TQID: https://experienceleague.adobe.com/ffAWVtX2AVWGf99mqthLKZI8prjJWRKJ2vM--zkSYag
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1861
@@ -49,7 +44,7 @@ Ce connecteur envoie des données à [!DNL The Trade Desk] pour l’activation d
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
-Selon le type d’identifiants ingérés dans [!DNL Adobe Experience Platform], vous devez respecter les exigences correspondantes. Lisez la [&#x200B; Présentation des espaces de noms d’identité &#x200B;](/help/identity-service/features/namespaces.md) pour plus d’informations.
+Selon le type d’identifiants ingérés dans [!DNL Adobe Experience Platform], vous devez respecter les exigences correspondantes. Lisez la [ Présentation des espaces de noms d’identité ](/help/identity-service/features/namespaces.md) pour plus d’informations.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -93,7 +88,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -114,7 +109,6 @@ Si vous choisissez de hacher les adresses e-mail vous-même, veillez à respecte
       * Point (`.`) (code ASCII 46). Par exemple, normalisez « jane.doe@gmail.com » en « janedoe@gmail.com ».
      * Le caractère plus (« + ») (code ASCII 43) et tous les caractères suivants. Par exemple, normalisez « janedoe+home@gmail.com » en « janedoe@gmail.com ».
   
-
 ## Normalisation des numéros de téléphone et exigences de hachage {#phone-hashing}
 
 Voici ce que vous devez savoir sur le téléchargement de numéros de téléphone :
@@ -162,7 +156,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 |---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
-| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [&#x200B; exportations par lots &#x200B;](/help/destinations/destination-types.md#file-based). |
+| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [ exportations par lots ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -187,7 +181,7 @@ Avant de pouvoir envoyer ou activer des données d’audience vers une destinati
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment remplir les détails de destination.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Lors de la connexion à la destination , la définition d’une politique de gouvernance des données est complètement facultative. Veuillez consulter la présentation de la gouvernance des données Experience Platform[&#128279;](/help/data-governance/policies/overview.md) pour plus d’informations.
+Lors de la connexion à la destination , la définition d’une politique de gouvernance des données est complètement facultative. Veuillez consulter la présentation de la gouvernance des données Experience Platform](/help/data-governance/policies/overview.md) pour plus d’informations.[
 
 ## Activer des audiences vers cette destination {#activate}
 
