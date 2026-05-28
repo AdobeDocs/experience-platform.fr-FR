@@ -67,7 +67,7 @@ Audiences prises en charge par type de données :
 | --- | --- | --- | --- |
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -143,7 +143,7 @@ Vous devez mapper au moins une des identités.
 
 Une fois vos audiences activées, vous pouvez les voir dans votre compte [!DNL Reddit] Ads Manager.
 
-Les audiences nouvellement créées dans [!DNL Reddit] apparaissent dans un statut en attente. Une fois que votre flux de données s’exécute et que les profils sont exportés, [!DNL Reddit] compare les profils aux utilisateurs [!DNL Reddit]. Une fois les données traitées, le statut de l’audience passe à **[!UICONTROL Valid]**. La taille de l’audience doit atteindre 1 000 utilisateurs [ ou plus](https://ads-api.reddit.com/docs/v3/manage-customer-lists) pour être considérée comme valide. Les audiences qui ne répondent pas à la taille requise s’affichent sous la forme **[!UICONTROL Invalid]**.
+Les audiences nouvellement créées dans [!DNL Reddit] apparaissent dans un statut en attente. Une fois que votre flux de données s’exécute et que les profils sont exportés, [!DNL Reddit] compare les profils aux utilisateurs [!DNL Reddit]. Une fois les données traitées, le statut de l’audience passe à **[!UICONTROL Valid]**. La taille de l’audience doit atteindre 1 000 utilisateurs [&#x200B; ou plus](https://ads-api.reddit.com/docs/v3/manage-customer-lists) pour être considérée comme valide. Les audiences qui ne répondent pas à la taille requise s’affichent sous la forme **[!UICONTROL Invalid]**.
 
 ![Gestionnaire de publicités Reddit affichant une audience exportée et son statut.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
 

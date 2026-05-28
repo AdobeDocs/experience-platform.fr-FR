@@ -13,7 +13,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Cette connexion était auparavant appelée connexion Adobe Advertising DSP. La nouvelle [connexion ](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md) contient la même fonctionnalité que la connexion héritée et prend en charge des types d’identité supplémentaires. La bonne pratique consiste à utiliser la nouvelle connexion Adobe Advertising DSP.
+>Cette connexion était auparavant appelée connexion Adobe Advertising DSP. La nouvelle [connexion &#x200B;](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md) contient la même fonctionnalité que la connexion héritée et prend en charge des types d’identité supplémentaires. La bonne pratique consiste à utiliser la nouvelle connexion Adobe Advertising DSP.
 
 ## Vue d’ensemble {#overview}
 
@@ -78,7 +78,7 @@ Pour vous connecter à la destination, indiquez le paramètre suivant dans la se
 
 * **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte DSP partagera cette clé avec vous après la création de la source.
 
-![ Champ de type de connexion ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![&#x200B; Champ de type de connexion &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### Renseigner les détails de la destination {#destination-details}
 
