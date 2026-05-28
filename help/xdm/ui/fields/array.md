@@ -5,10 +5,8 @@ title: Définir des champs de tableau dans l’interface utilisateur
 description: Découvrez comment définir un champ de tableau dans l’interface utilisateur Experience Platform.
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 TQID: https://experienceleague.adobe.com/XtVQvLNWT1sxSvUqk48goaCaX-KYBqH0QqkPaU3UyJM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 348

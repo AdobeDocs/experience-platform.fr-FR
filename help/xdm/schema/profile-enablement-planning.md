@@ -3,9 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;schéma;jeu de
 solution: Experience Platform
 title: Planification de l’activation du profil client en temps réel
 description: Passez en revue les principales considérations à prendre en compte avant d’activer des schémas et des jeux de données pour le profil client en temps réel.
-source-git-commit: da40dfde57b17b6a7387451eec48569174ad544b
+exl-id: 8d7c0e49-6138-42af-90ad-975adaa2aa99
+source-git-commit: ab4b42902a208fecf9c219ef3d3fa8db2a559392
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1852'
 ht-degree: 0%
 
 ---
@@ -84,7 +85,7 @@ La configuration des identités détermine la manière dont Profile regroupe les
 
 Activez un jeu de données pour Profil uniquement s’il contribue directement aux attributs de profil ou aux événements d’expérience utilisés dans les workflows en aval. Évitez d’activer des jeux de données contenant des données de recherche ou de référence non utilisées dans la segmentation, des données de test ou d’exemple, ou des enregistrements générés par le système d’exploitation non destinés à être activés. Ces types de données ne contribuent pas aux profils clients unifiés et créent une surcharge de stockage inutile. Si un jeu de données ne contient pas de champs d’identité ou de données de comportement client prenant en charge la segmentation et l’activation, ne l’activez pas pour le profil.
 
-**Exemple** :
+**Exemple**:
 
 Vous activez un jeu de données « Événements d’achat client » contenant des données de transaction avec des ID client. Le profil client en temps réel utilise ces événements pour créer des chronologies client et activer la segmentation en fonction du comportement d’achat.
 
@@ -96,7 +97,7 @@ Utilisez cette liste de contrôle pour confirmer la préparation avant d’activ
 
 ### Vérifications au niveau du schéma
 
-Commencez par vérifier que la conception de votre schéma est complète et stable. Vérifiez votre schéma pour confirmer que tous les champs requis pour votre cas d’utilisation sont présents et qu’aucun champ expérimental ou temporaire n’est inclus. Consultez les [&#x200B; bonnes pratiques relatives à la conception de schéma &#x200B;](./best-practices.md) pour vous assurer que votre schéma suit les modèles recommandés. Obtenez l’approbation de votre équipe sur la liste de champs finale (voir [&#x200B; Contraintes d’immuabilité des schémas &#x200B;](#why-planning-matters)).
+Commencez par vérifier que la conception de votre schéma est complète et stable. Vérifiez votre schéma pour confirmer que tous les champs requis pour votre cas d’utilisation sont présents et qu’aucun champ expérimental ou temporaire n’est inclus. Consultez les [ bonnes pratiques relatives à la conception de schéma ](./best-practices.md) pour vous assurer que votre schéma suit les modèles recommandés. Obtenez l’approbation de votre équipe sur la liste de champs finale (voir [ Contraintes d’immuabilité des schémas ](#why-planning-matters)).
 
 Ensuite, vérifiez que la configuration de votre identité principale est correcte. Ouvrez votre schéma dans le **[!UICONTROL Schema Editor]** et localisez le champ marqué de l’icône d’identité. Vérifiez que ce champ est systématiquement renseigné dans vos données source et que l’espace de noms d’identité est approprié à votre cas d’utilisation. L’identité principale doit être stable, unique et présente de manière fiable sur tous les enregistrements pour garantir un assemblage correct des profils.
 
@@ -145,4 +146,4 @@ Une fois que vous avez activé le schéma et les jeux de données, le profil cli
 
 ## Étapes suivantes {#next-steps}
 
-Vous avez examiné les effets permanents de l’activation du profil, confirmé que votre schéma et vos jeux de données sont prêts et validé que votre configuration d’identité prend en charge vos cas d’utilisation. Pour mieux comprendre la structure du schéma et les relations entre les champs, consultez la [Principes de base de la composition des schémas](../schema/composition.md) qui explique les règles d’évolution des schémas et la manière dont les champs interagissent dans le modèle de données. Si vous rencontrez des problèmes pendant ou après l’activation, consultez le guide de dépannage [XDM](../troubleshooting-guide.md) pour connaître les problèmes courants et les solutions. Pour en savoir plus sur la manière dont les espaces de noms d’identité affectent l’assemblage et la résolution des profils, consultez la [&#x200B; présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).
+Vous avez examiné les effets permanents de l’activation du profil, confirmé que votre schéma et vos jeux de données sont prêts et validé que votre configuration d’identité prend en charge vos cas d’utilisation. Pour mieux comprendre la structure du schéma et les relations entre les champs, consultez la [Principes de base de la composition des schémas](../schema/composition.md) qui explique les règles d’évolution des schémas et la manière dont les champs interagissent dans le modèle de données. Si vous rencontrez des problèmes pendant ou après l’activation, consultez le guide de dépannage [XDM](../troubleshooting-guide.md) pour connaître les problèmes courants et les solutions. Pour en savoir plus sur la manière dont les espaces de noms d’identité affectent l’assemblage et la résolution des profils, consultez la [ présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).
