@@ -6,9 +6,13 @@ type: Tutorial
 description: Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’API Adobe AI Machine Learning.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 TQID: https://experienceleague.adobe.com/VhA5sSNIEJCWME0x7BMjswFVYUPGLQof-O8U2-bYfdw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
 source-wordcount: 1573
@@ -28,7 +32,7 @@ Ce tutoriel décrit le processus de publication d’un modèle en tant que servi
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, consultez la [ Présentation du Workspace de science des données ](../home.md) pour une présentation détaillée du service.
+Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, consultez la [&#x200B; Présentation du Workspace de science des données &#x200B;](../home.md) pour une présentation détaillée du service.
 
 Pour suivre ce tutoriel, vous devez disposer d’un moteur ML, d’une instance ML et d’une expérience existants. Pour savoir comment les créer dans l’API, suivez le tutoriel sur [l’importation d’une recette empaquetée](./import-packaged-recipe-api.md).
 
