@@ -3,22 +3,11 @@ title: Guide de configuration des règles de liaison du graphique d’identités
 description: Découvrez les différents types d’implémentation que vous pouvez configurer à l’aide des règles de liaison de graphique d’identités.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 TQID: https://experienceleague.adobe.com/lb51Oazv4fAGSIVGe09Kethm0zYa0JNguNmnA-BlQKk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2005
@@ -415,7 +404,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 Les implémentations avancées impliquent des scénarios graphiques complexes et à plusieurs couches. Ces types d’implémentation incluent l’utilisation de la **priorité de l’espace de noms** afin d’identifier les liens corrects qui doivent être supprimés pour éviter la réduction du graphique.
 
-**Priorité des espaces de noms** est une métadonnée qui classe les espaces de noms en fonction de leur importance. Si un graphique contient deux identités, chacune ayant un espace de noms unique différent, Identity Service utilise la priorité de l’espace de noms pour décider quels liens supprimer. Pour plus d’informations, consultez la documentation [&#x200B; sur la priorité des espaces de noms &#x200B;](../identity-graph-linking-rules/namespace-priority.md).
+**Priorité des espaces de noms** est une métadonnée qui classe les espaces de noms en fonction de leur importance. Si un graphique contient deux identités, chacune ayant un espace de noms unique différent, Identity Service utilise la priorité de l’espace de noms pour décider quels liens supprimer. Pour plus d’informations, consultez la documentation [ sur la priorité des espaces de noms ](../identity-graph-linking-rules/namespace-priority.md).
 
 La priorité des espaces de noms joue un rôle essentiel dans les scénarios graphiques complexes. Les graphiques peuvent comporter plusieurs calques : un utilisateur final peut être associé à plusieurs ID de connexion qui peuvent être hachés. En outre, différents ECID peuvent être liés à différents ID de connexion. Pour vous assurer que le lien approprié, au niveau approprié, est supprimé, vos configurations de priorité d’espace de noms doivent être correctes.
 
