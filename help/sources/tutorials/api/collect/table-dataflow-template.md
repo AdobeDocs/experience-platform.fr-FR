@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2137'
+source-wordcount: '2172'
 ht-degree: 13%
 
 ---
@@ -38,7 +38,7 @@ Vous devez disposer d’un compte source entièrement authentifié et de son ide
 
 Un schéma de modèle de données d’expérience (XDM) offre un moyen normalisé d’organiser et de décrire les données d’expérience client dans Experience Platform. Pour ingérer les données sources dans Experience Platform, vous devez d’abord créer un schéma XDM cible qui définit la structure et les types de données à ingérer. Ce schéma sert de plan directeur pour le jeu de données Experience Platform où se trouveront vos données ingérées.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Lisez les guides suivants pour obtenir des instructions détaillées sur la création d’un schéma XDM cible :
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Lisez les guides suivants pour obtenir des instructions détaillées sur la création d’un schéma XDM cible :
 
 * [Créez un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 * [Créez un schéma à l’aide de l’interface utilisateur](../../../../xdm/tutorials/create-schema-ui.md).
@@ -47,7 +47,7 @@ Une fois créé, le schéma XDM cible `$id` sera requis ultérieurement pour vot
 
 ### Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont stockées dans le lac de données sous forme de jeux de données. Au cours de cette étape, vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
+Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont conservées sous forme de jeux de données dans le lac de données. Au cours de cette étape, vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
 
 Vous pouvez créer un jeu de données cible en adressant une requête POST à l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), tout en fournissant l’identifiant du schéma cible dans la payload. Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le guide [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
@@ -651,7 +651,7 @@ Au cours de cette étape, vous pouvez utiliser les paramètres suivants dans `sc
 | --- | --- |
 | `startTime` | Heure (en secondes) à laquelle le flux de données doit commencer. |
 | `frequency` | Fréquence d’ingestion. Configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir la fréquence sur : <ul><li>`once` : définissez la fréquence sur `once` pour créer une ingestion unique. Les configurations d’intervalle et de renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>`minute` : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>`hour` : définissez la fréquence sur `hour` pour planifier le flux de données afin d’ingérer les données toutes les heures.</li><li>`day` : définissez la fréquence sur `day` pour planifier le flux de données afin d’ingérer les données par jour.</li><li>`week` : définissez la fréquence sur `week` afin de planifier le flux de données pour l’ingestion de données sur une base hebdomadaire.</li></ul> |
-| `interval` | Intervalle entre des ingestions consécutives (requis pour toutes les fréquences, à l’exception de `once`). Configurez le paramètre d’intervalle pour établir la période entre chaque ingestion. Par exemple, si vous définissez la fréquence sur jour et configurez l’intervalle sur 15, votre flux de données s’exécutera tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>`once` : s.o.</li><li>`minute` : 15</li><li>`hour` : 1</li><li>`day` : 1</li><li>`week` : 1</li></ul> |
+| `interval` | Intervalle entre des ingestions consécutives (requis pour toutes les fréquences, à l’exception de `once`). Configurez le paramètre d’intervalle pour établir la période entre chaque ingestion. Par exemple, si vous définissez la fréquence sur jour et configurez l’intervalle sur 15, votre flux de données s’exécutera tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>`once` : s.o.</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
 | `backfill` | Indique s’il faut ingérer les données historiques antérieures à la `startTime`. |
 
 {style="table-layout:auto"}
@@ -744,11 +744,11 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 ### Utiliser l’interface utilisateur pour valider le workflow de l’API
 
-Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour valider la création de votre flux de données. Accédez au catalogue *[!UICONTROL Sources]* dans l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Flux de données]** dans les onglets d’en-tête. Ensuite, utilisez la colonne [!UICONTROL Nom du flux de données] et recherchez le flux de données que vous avez créé à l’aide de l’API [!DNL Flow Service].
+Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour valider la création de votre flux de données. Accédez au catalogue *[!UICONTROL Sources]* dans l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Dataflows]** dans les onglets d’en-tête. Ensuite, utilisez la colonne [!UICONTROL Dataflow Name] et recherchez le flux de données que vous avez créé à l’aide de l’API [!DNL Flow Service].
 
 ![Interface des flux de données de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform](../../../images/tutorials/validations/dataflows-interface.png)
 
-Vous pouvez valider davantage votre flux de données par le biais de l’interface [!UICONTROL Activité de flux de données]. Utilisez le rail de droite pour afficher les informations [!UICONTROL utilisation de l’API] de votre flux de données. Cette section affiche le même ID de flux de données, l’ID de jeu de données et l’ID de mappage que ceux générés lors du processus de création de flux de données dans [!DNL Flow Service].
+Vous pouvez valider davantage votre flux de données via l’interface [!UICONTROL Dataflow activity]. Utilisez le rail de droite pour afficher les informations de [!UICONTROL API usage] de votre flux de données. Cette section affiche le même ID de flux de données, l’ID de jeu de données et l’ID de mappage que ceux générés lors du processus de création de flux de données dans [!DNL Flow Service].
 
 ![Page d’affichage du flux de données de l’espace de travail des sources.](../../../images/tutorials/validations/api-usage.png)
 
@@ -766,4 +766,4 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ## Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]**, disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données](../../api/delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données](../../api/delete.md).

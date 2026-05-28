@@ -6,10 +6,8 @@ type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform au stockage d’objets Oracle à l’aide de l’API Flow Service.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 TQID: https://experienceleague.adobe.com/FuplUVJhO1YPllaR3JDjfdf6PUBngTUs8fOiruJ9o-Q
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 565
@@ -45,7 +43,7 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL Oracle Object Storage]
 | `folderPath` | Chemin d’accès au dossier autorisé requis si l’utilisateur dispose d’un accès restreint. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Oracle Object Storage] est `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
-Pour plus d’informations sur la manière d’obtenir ces valeurs, consultez le guide d’authentification du stockage d’objets Oracle [&#128279;](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Pour plus d’informations sur la manière d’obtenir ces valeurs, consultez le guide d’authentification du stockage d’objets Oracle [](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 ### Utilisation des API Experience Platform
 
