@@ -3,34 +3,15 @@ title: Notes De Mise À Jour De Adobe Experience Platform - Mai 2026
 description: Les notes de mise à jour de mai 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 1d0c6b31fa027abb01800ce200f485a8f4b0a64a
 workflow-type: tm+mt
-source-wordcount: 1269
-ht-degree: 30%
+source-wordcount: 1319
+ht-degree: 29%
 
 ---
 
@@ -136,6 +117,7 @@ Utilisez Segmentation Service pour créer des audiences à partir des données d
 | Activation express pour les audiences externes | Vous pouvez maintenant définir l’indicateur `expressActivation` pour vos audiences externes. La tâche d’activation express crée une tâche supplémentaire directement consommée par le pipeline d’activation en aval, ce qui réduit le temps de diffusion des données d’appartenance à l’audience vers les destinations par lots configurées. Il est préférable d’utiliser ce champ lors des activations d’audience **suivantes** car il peut ne pas aboutir à des temps d’activation plus rapides pour les activations d’audience **initiales**. Pour plus d’informations, consultez le guide [guide des points d’entrée des audiences externes](../../segmentation/api/external-audiences.md#create-audience). |
 | Audiences de compte avec événements d’expérience (B2B) | Après la mise à niveau de l’architecture B2B CDP, les audiences de compte avec des événements d’expérience ne sont plus directement prises en charge. Pour créer une audience de compte qui utilise des événements d’expérience, commencez par créer une audience de personnes avec les événements d’expérience, puis référencez cette audience de personnes lors de la création de l’audience de compte. Pour savoir comment effectuer une segmentation en flux continu d’entités multiples, lisez le [guide de segmentation en flux continu d’entités multiples](../../rtcdp/segmentation/multi-entity-segmentation.md). |
 | Objets personnalisés (B2B) | Vous pouvez désormais utiliser des objets personnalisés avec des relations de type « un à plusieurs » pour les cas d&#39;utilisation de segmentation dans B2BCDP. Pour savoir comment utiliser des objets personnalisés, consultez le tutoriel [Utilisation d’objets personnalisés](../../rtcdp/segmentation/custom-objects.md). |
+| Informations sur les données pour les audiences | Vous pouvez désormais afficher des données récapitulatives pour vos audiences basées sur des comptes et des personnes. Pour plus d’informations sur les données de synthèse pour les audiences basées sur des personnes, consultez la [présentation du créateur de segments](/help/segmentation/ui/segment-builder.md#attributes). Pour plus d’informations sur les données de synthèse pour les audiences basées sur un compte, lisez la [présentation du Créateur d’audience](/help/rtcdp/segmentation/audience-builder.md#attributes). |
 
 {style="table-layout:auto"}
 
