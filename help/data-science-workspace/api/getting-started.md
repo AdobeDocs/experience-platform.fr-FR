@@ -1,27 +1,22 @@
 ---
 keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;espace de travail de science des données;science des données
 solution: Experience Platform
-title: Guide de l’API Sensei Machine Learning
-description: L’API Sensei Machine Learning permet aux développeurs d’effectuer des opérations CRUD sur diverses ressources Workspace de science des données. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+title: Guide de l’API de machine learning d’Adobe AI
+description: L’API Adobe AI Machine Learning permet aux développeurs d’effectuer des opérations CRUD sur diverses ressources Workspace de science des données. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 TQID: https://experienceleague.adobe.com/CXuMFUClC9RJvEH6Q4Cbp7L8D4XclUrm42eGM75VNJE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 278
-ht-degree: 57%
+source-wordcount: 289
+ht-degree: 44%
 
 ---
 
-# Guide de l’API [!DNL Sensei Machine Learning]
+# Guide de l’API de machine learning d’Adobe AI
 
 >[!NOTE]
 >
@@ -29,9 +24,9 @@ ht-degree: 57%
 >
 >Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-L’API [!DNL Sensei Machine Learning] fournit un mécanisme aux spécialistes des données pour organiser et gérer les services de machine learning, de l’intégration des algorithmes à l’expérimentation et au déploiement des services.
+L’API Adobe AI Machine Learning fournit un mécanisme permettant aux spécialistes des données d’organiser et de gérer les services de machine learning, de l’intégration des algorithmes à l’expérimentation et au déploiement des services.
 
-Ce guide de développement décrit les étapes à suivre pour vous aider à prendre en main l’[API Sensei Machine Learning](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) et présente les appels d’API visant à effectuer des opérations CRUD sur diverses ressources de l’espace de travail de science des données.
+Ce guide de développement décrit les étapes à suivre pour commencer à utiliser l’API [Adobe AI Machine Learning](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) et présente les appels API pour effectuer des opérations CRUD sur diverses ressources Workspace de science des données.
 
 ## Prise en main
 

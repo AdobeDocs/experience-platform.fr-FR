@@ -2,22 +2,16 @@
 keywords: Experience Platform;Tutoriel;pipeline de fonctionnalités;Workspace de science des données;rubriques populaires
 title: Création d’un pipeline de fonctionnalités à l’aide du SDK de création de modèles
 type: Tutorial
-description: Adobe Experience Platform vous permet de créer des pipelines de fonctionnalités personnalisés pour concevoir des fonctionnalités à grande échelle via l’exécution du framework de machine learning de Sensei. Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide du SDK de création de modèles dans PySpark.
+description: Adobe Experience Platform vous permet de créer des pipelines de fonctionnalités personnalisés pour concevoir des fonctionnalités à grande échelle via l’exécution du framework de machine learning d’Adobe AI. Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide du SDK de création de modèles dans PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 TQID: https://experienceleague.adobe.com/HWziPP2Hj-x5e9fgPEVjtaPPLWfBthLSt-FSv0CC0AI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 1473
+source-wordcount: 1492
 ht-degree: 27%
 
 ---
@@ -34,9 +28,9 @@ ht-degree: 27%
 >
 > Actuellement, les pipelines de fonctionnalités ne sont disponibles que via l’API.
 
-Adobe Experience Platform vous permet de créer des pipelines de fonctionnalités personnalisés pour concevoir des fonctionnalités à grande échelle via l’exécution du framework de machine learning de Sensei (ci-après appelée « exécution »).
+Adobe Experience Platform vous permet de créer des pipelines de fonctionnalités personnalisés afin d’effectuer l’ingénierie des fonctionnalités à grande échelle via l’exécution du framework de machine learning d’Adobe AI (ci-après appelée « exécution »).
 
-Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide de la SDK de création de modèles[&#128279;](./sdk.md) dans PySpark.
+Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide de la SDK de création de modèles](./sdk.md) dans PySpark.[
 
 Le workflow suivant se produit lorsqu’un pipeline de fonctionnalité est exécuté :
 
@@ -404,7 +398,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Créer votre moteur de pipeline de fonctionnalité à l’aide de l’API {#create-feature-pipeline-engine-api}
 
-Maintenant que vous avez créé votre pipeline de fonctionnalité, vous devez créer une image Docker pour effectuer un appel aux points d’entrée du pipeline de fonctionnalité dans l’API [!DNL Sensei Machine Learning]. Vous avez besoin d’une URL d’image Docker pour effectuer un appel aux points d’entrée du pipeline de fonctionnalités.
+Maintenant que vous avez créé votre pipeline de fonctionnalités, vous devez créer une image Docker pour effectuer un appel aux points d’entrée du pipeline de fonctionnalités dans l’API de machine learning d’Adobe AI. Vous avez besoin d’une URL d’image Docker pour effectuer un appel aux points d’entrée du pipeline de fonctionnalités.
 
 >[!TIP]
 >
@@ -416,7 +410,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Créer un moteur de pipeline de fonctionnalité {#create-engine-api}
 
-Une fois que vous disposez de l’emplacement de votre image Docker, vous pouvez [créer un moteur de pipeline de fonctionnalités](../api/engines.md#feature-pipeline-docker) à l’aide de l’API [!DNL Sensei Machine Learning] en effectuant une opération POST vers `/engines`. La création réussie d’un moteur de pipeline de fonctionnalité vous fournit un identifiant unique de moteur (`id`). Veillez à enregistrer cette valeur avant de continuer.
+Une fois que vous disposez de l’emplacement de votre image Docker, vous pouvez [créer un moteur de pipeline de fonctionnalités](../api/engines.md#feature-pipeline-docker) à l’aide de l’API de machine learning d’Adobe AI en effectuant une opération POST vers `/engines`. La création réussie d’un moteur de pipeline de fonctionnalité vous fournit un identifiant unique de moteur (`id`). Veillez à enregistrer cette valeur avant de continuer.
 
 ### Création d’une instance MLInstance {#create-mlinstance}
 
@@ -454,4 +448,4 @@ Une fois la notation terminée, votre pipeline de fonctionnalités doit être op
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-En lisant ce document, vous avez créé un pipeline de fonctionnalités à l’aide du SDK de création de modèles, vous avez créé une image Docker et utilisé l’URL de l’image Docker pour créer un modèle de pipeline de fonctionnalités à l’aide de l’API [!DNL Sensei Machine Learning]. Vous êtes maintenant prêt à continuer à transformer les jeux de données et à extraire les fonctionnalités de données à grande échelle à l’aide de l’[[!DNL Sensei Machine Learning API]](../api/getting-started.md) .
+En lisant ce document, vous avez créé un pipeline de fonctionnalités à l’aide du SDK de création de modèles, vous avez créé une image Docker et utilisé l’URL de l’image Docker pour créer un modèle de pipeline de fonctionnalités à l’aide de l’API de machine learning d’Adobe AI. Vous êtes maintenant prêt à continuer à transformer des jeux de données et à extraire des fonctionnalités de données à grande échelle à l’aide de l’[[API de machine learning Adobe AI]](../api/getting-started.md).

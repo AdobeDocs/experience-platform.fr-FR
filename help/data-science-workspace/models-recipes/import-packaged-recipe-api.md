@@ -1,26 +1,22 @@
 ---
 keywords: Experience Platform;importer une recette empaquetée;Workspace de science des données;rubriques populaires;recettes;api;machine learning sensei;créer un moteur
 solution: Experience Platform
-title: Importer une recette empaquetée à l’aide de l’API Sensei Machine Learning
+title: Importer une recette empaquetée à l’aide de l’API Machine Learning d’Adobe AI
 type: Tutorial
-description: Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, également appelé recette dans l’interface utilisateur.
+description: Ce tutoriel utilise l’API de machine learning d’Adobe AI pour créer un moteur, également appelé recette dans l’interface utilisateur.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 TQID: https://experienceleague.adobe.com/4J5oeJraiqqZfne9eV12TJfy2p1ANhDo990ViyTgC7s
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 1032
-ht-degree: 50%
+source-wordcount: 1035
+ht-degree: 49%
 
 ---
 
-# Importer une recette empaquetée à l’aide de l’API Sensei Machine Learning
+# Importer une recette empaquetée à l’aide de l’API Machine Learning d’Adobe AI
 
 >[!NOTE]
 >
@@ -28,7 +24,7 @@ ht-degree: 50%
 >
 >Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Ce tutoriel utilise le [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) pour créer un [moteur](../api/engines.md), également appelé recette dans l’interface utilisateur.
+Ce tutoriel utilise le [[!DNL Adobe AI Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) pour créer un [moteur](../api/engines.md), également appelé recette dans l’interface utilisateur.
 
 Avant de commencer, il est important de noter que Adobe Experience Platform [!DNL Data Science Workspace] utilise des termes différents pour faire référence à des éléments similaires dans l’API et l’interface utilisateur. Les termes de l’API sont utilisés dans ce tutoriel et le tableau suivant décrit les termes corrélés :
 

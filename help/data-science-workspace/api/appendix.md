@@ -1,26 +1,22 @@
 ---
 keywords: Experience Platform;guide de développement;point d’entrée;Workspace de science des données;rubriques populaires;
 solution: Experience Platform
-title: Annexe du guide de l’API Sensei Machine Learning
-description: Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API Sensei Machine Learning.
+title: Annexe du guide de l’API de machine learning d’Adobe AI
+description: Les sections suivantes apportent des informations de référence sur les différentes fonctionnalités de l’API de machine learning d’Adobe AI.
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 TQID: https://experienceleague.adobe.com/XYM1i7-nK2MJRUdCv3HI0s2lYbTA3LlOdrXuyAeZtYE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 353
-ht-degree: 62%
+source-wordcount: 367
+ht-degree: 56%
 
 ---
 
-# Annexe du guide de l’API [!DNL Sensei Machine Learning]
+# Annexe du guide de l’API de machine learning d’Adobe AI
 
 >[!NOTE]
 >
@@ -28,11 +24,11 @@ ht-degree: 62%
 >
 >Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Les sections suivantes fournissent des informations de référence sur les différentes fonctionnalités de l’API [!DNL Sensei Machine Learning].
+Les sections suivantes apportent des informations de référence sur les différentes fonctionnalités de l’API de machine learning d’Adobe AI.
 
 ## Paramètres de requête pour la récupération des ressources {#query}
 
-L’API [!DNL Sensei Machine Learning] prend en charge les paramètres de requête avec récupération de ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
+L’API Adobe AI Machine Learning prend en charge les paramètres de requête avec récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
 
 | Paramètre de requête | Description | Valeur par défaut |
 | --------------- | ----------- | ------- |

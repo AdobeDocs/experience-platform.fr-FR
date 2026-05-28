@@ -6,19 +6,14 @@ description: Les informations contiennent des mesures qui permettent à un scien
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
 TQID: https://experienceleague.adobe.com/5-EtnCOjDU6JI-R7-uxgykd589WVGvZX9XZkfwJEwUs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 538
-ht-degree: 92%
+source-wordcount: 539
+ht-degree: 90%
 
 ---
 
@@ -134,7 +129,7 @@ GET /insights/{INSIGHT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{INSIGHT_ID}` | L’identifiant unique d’une information Sensei. |
+| `{INSIGHT_ID}` | Identifiant unique d’une Adobe AI insight. |
 
 **Requête**
 

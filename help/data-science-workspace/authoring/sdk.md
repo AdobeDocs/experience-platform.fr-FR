@@ -5,19 +5,13 @@ title: SDK de création de modèles
 description: La SDK de création de modèles vous permet de développer des pipelines de fonctionnalités et des recettes de machine learning personnalisés que vous pouvez utiliser dans Adobe Experience Platform Data Science Workspace pour fournir des modèles à mettre en œuvre dans PySpark et Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 TQID: https://experienceleague.adobe.com/OT-XeVDIl682BGceLNDLSe7osR5GSu3GrEBeumkFe3Y
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 1004
+source-wordcount: 1009
 ht-degree: 62%
 
 ---
@@ -410,7 +404,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-La classe DatasetTransformer modifie et transforme la structure d’un jeu de données. Le [!DNL Sensei Machine Learning Runtime] ne nécessite pas la définition de ce composant. Il est implémenté en fonction de vos besoins.
+La classe DatasetTransformer modifie et transforme la structure d’un jeu de données. L’exécution du machine learning d’Adobe AI ne nécessite pas la définition de ce composant et est implémentée en fonction de vos besoins.
 
 En ce qui concerne les pipelines de fonctionnalités, les transformateurs de jeux de données peuvent être utilisés en association avec une fabrique de pipelines de caractéristiques afin de préparer les données pour la conception des fonctionnalités.
 
