@@ -1,7 +1,7 @@
 ---
 title: Groupe de champs de schéma des composants Business Person XDM
 description: Découvrez le groupe de champs de schéma Composants professionnels XDM .
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 TQID: https://experienceleague.adobe.com/tRefVc6pfCLYZ9D9nraib63Squ4q5kDa5nNWQlGOOmA
 product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
