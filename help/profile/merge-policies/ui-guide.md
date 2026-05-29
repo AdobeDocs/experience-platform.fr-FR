@@ -4,11 +4,20 @@ type: Documentation
 description: Découvrez comment utiliser des politiques de fusion à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 TQID: https://experienceleague.adobe.com/vkselSOMjlatebwVea9h3S97dCnne08zdsgOmJUYx54
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2305
@@ -68,7 +77,7 @@ La première étape du workflow vous permet de configurer votre stratégie de fu
 * **[!UICONTROL ID stitching]** : ce champ définit la manière de déterminer les identités associées d’un client. Il existe deux valeurs possibles pour la combinaison d’identités. Il est important de comprendre l’impact du type de combinaison d’identités sélectionné sur vos données. Pour en savoir plus, consultez la [présentation des politiques de fusion](overview.md).
    * **[!UICONTROL None]** : n’effectue aucun regroupement d’identités.
    * **[!UICONTROL Private Graph]** : effectuez un groupement d’identités en fonction de votre graphique d’identités privé.
-* **[!UICONTROL Default merge policy]** : bouton de basculement qui vous permet de sélectionner cette politique de fusion ou non comme politique par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la politique de fusion par défaut de votre organisation. Voir la [ présentation des politiques de fusion ](overview.md) pour en savoir plus sur les politiques de fusion par défaut.
+* **[!UICONTROL Default merge policy]** : bouton de basculement qui vous permet de sélectionner cette politique de fusion ou non comme politique par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la politique de fusion par défaut de votre organisation. Voir la [&#x200B; présentation des politiques de fusion &#x200B;](overview.md) pour en savoir plus sur les politiques de fusion par défaut.
   ![Fenêtre contextuelle expliquant ce qui se produit lorsque la politique de fusion est définie comme politique de fusion par défaut.](../images/merge-policies/create-make-default.png)
 * **[!UICONTROL Active-On-Edge Merge Policy]** : bouton de basculement qui vous permet de sélectionner si cette politique de fusion sera active sur le serveur Edge ou non. Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée sur le serveur Edge (marquée comme audience Edge), elle doit être liée à une politique de fusion marquée comme Active-on-Edge (active sur le serveur Edge). Si une audience n’est **pas** liée à une politique de fusion marquée comme Active-On-Edge (active sur le bord), l’audience ne sera pas marquée comme Active-On-Edge (active sur le bord), et sera marquée comme une audience de diffusion en continu. En outre, chaque sandbox d’une organisation ne peut avoir qu’une seule politique de fusion **une** Active-On-Edge (active sur le bord).
 
@@ -222,4 +231,4 @@ Pour en savoir plus sur la manière dont la gouvernance des données est réalis
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé et configuré des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Experience Platform et pour créer des audiences à partir des données de profil. Consultez la [ présentation de la segmentation ](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation des audiences à l’aide de l’interface utilisateur et des API [!DNL Experience Platform].
+Maintenant que vous avez créé et configuré des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Experience Platform et pour créer des audiences à partir des données de profil. Consultez la [&#x200B; présentation de la segmentation &#x200B;](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation des audiences à l’aide de l’interface utilisateur et des API [!DNL Experience Platform].
