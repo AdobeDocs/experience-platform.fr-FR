@@ -3,9 +3,12 @@ title: Classe XDM Individual Prospect Profile
 description: Découvrez la classe XDM Individual Prospect Profile dans le modèle de données d’expérience (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
 TQID: https://experienceleague.adobe.com/E5Cy--a4G9AxEJzIezipcPbe011DJE5Lut3W6V7dG8Q
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 378

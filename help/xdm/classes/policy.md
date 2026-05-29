@@ -3,9 +3,12 @@ title: Classe de stratégie
 description: Découvrez la classe Politique dans le modèle de données d’expérience (XDM).
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
 TQID: https://experienceleague.adobe.com/MzXs-uS4UYdNY-Z49d4i1rvJyFunCq9fjB4MZhMUDzQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 215
