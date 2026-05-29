@@ -3,15 +3,11 @@ title: Parcourir les ordres de travail relatifs au cycle de vie des données
 description: Découvrez comment afficher et gérer les ordres de travail de cycle de vie des données existants dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 TQID: https://experienceleague.adobe.com/e8rzCUkYUbNbxNCublKt3eAFmqTJh4uodaz38SOJU30
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 5b2c5f06f9c9b597dabf0bd68f8560a65d32da87
 workflow-type: tm+mt
-source-wordcount: 846
+source-wordcount: 847
 ht-degree: 62%
 
 ---
@@ -96,7 +92,7 @@ Les détails d’une demande de suppression d’enregistrement incluent son stat
 
 >[!TIP]
 >
->Les demandes de suppression d’enregistrements sont traitées par lots avant le début du traitement et peuvent prendre jusqu’à 30 jours sous le SLA standard. Pour une répartition des actions qui se produisent à chaque étape, voir [Chronologies de suppression des enregistrements](../home.md#record-delete-transparency).
+>Les demandes de suppression d’enregistrements sont traitées par lots avant le début du traitement et peuvent prendre jusqu’à 30 jours sous le SLA standard. Pour une explication de ce qui se passe à chaque étape, voir [Chronologies du traitement du cycle de vie des données](../data-lifecycle-processing-timelines.md).
 
 ![Image illustrant la page de détails d’un ordre de travail de suppression d’enregistrement](../images/ui/browse/record-delete-details.png)
 
