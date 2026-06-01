@@ -5,21 +5,15 @@ title: Définir des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 TQID: https://experienceleague.adobe.com/syA6AOVPFb5DmmDsj76bsefVxMU6BXzHaMrcmQwpoEk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 1691
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -99,7 +93,7 @@ Vous pouvez continuer à suivre les étapes ci-dessus pour ajouter d’autres ch
 >[!CONTEXTUALHELP]
 >id="platform_xdm_schema_fieldproperties_defaultvalue"
 >title="Valeur par défaut"
->abstract="Définit une valeur de référence pour le champ du schéma. Cette valeur n’est pas automatiquement renseignée lors de l’ingestion des données."
+>abstract="Définit une valeur de référence pour le champ du schéma. Cette valeur n’est pas automatiquement renseignée lors de l’ingestion de données."
 
 Lors de la définition d’un nouveau champ, des options de configuration supplémentaires peuvent apparaître dans le rail de droite en fonction du **[!UICONTROL Type]** que vous choisissez pour le champ. Le tableau suivant décrit ces propriétés de champ supplémentaires, ainsi que leurs types compatibles.
 
@@ -126,7 +120,7 @@ Le rail de droite propose plusieurs cases à cocher pour désigner des rôles sp
 
 Pour en savoir plus sur ces types spéciaux, consultez la documentation suivante :
 
-* [Map](./map.md)
+* [Carte](./map.md)
 * [[!UICONTROL Required]](./required.md)
 * [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
