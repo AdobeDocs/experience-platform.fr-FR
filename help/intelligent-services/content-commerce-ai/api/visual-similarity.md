@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Similarité visuelle dans l’API IA dédiée au contenu et à Commerce
 description: Lorsqu’il reçoit une image, le service de similarité visuelle recherche automatiquement des images visuellement similaires dans un catalogue.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ La requête suivante récupère des images visuellement similaires d’un catalo
 
 >[!CAUTION]
 >
->`analyzer_id` détermine l’[!DNL Sensei Content Framework] utilisée. Vérifiez que vous disposez des `analyzer_id` appropriées avant d&#39;effectuer votre demande. Contactez l’équipe bêta de l’IA dédiée au contenu et à Commerce pour recevoir vos `analyzer_id` pour ce service.
+>`analyzer_id` détermine l’[!DNL Adobe AI Content Framework] utilisée. Vérifiez que vous disposez des `analyzer_id` appropriées avant d&#39;effectuer votre demande. Contactez l’équipe bêta de l’IA dédiée au contenu et à Commerce pour recevoir vos `analyzer_id` pour ce service.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -74,7 +74,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `analyzer_id` | Identifiant du service [!DNL Sensei] sous lequel votre requête est déployée. Cet identifiant détermine les [!DNL Sensei Content Frameworks] utilisés. Pour les services personnalisés, contactez l’équipe IA dédiée au contenu et à Commerce pour configurer un identifiant personnalisé. | Oui |
+| `analyzer_id` | L’identifiant du service Adobe AI sous lequel votre demande est déployée. Cet identifiant détermine les [!DNL Adobe AI Content Frameworks] utilisés. Pour les services personnalisés, contactez l’équipe IA dédiée au contenu et à Commerce pour configurer un identifiant personnalisé. | Oui |
 | `application-id` | Identifiant de l’application créée. | Oui |
 | `data` | Un tableau qui contient un objet JSON avec chaque objet dans le tableau représentant une image. Tous les paramètres transmis dans le cadre de ce tableau remplacent les paramètres globaux spécifiés en dehors du tableau `data`. Toutes les propriétés restantes décrites ci-dessous dans ce tableau peuvent être remplacées à partir de `data`. | Oui |
 | `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si ce paramètre n’est pas transmis, un identifiant généré automatiquement est attribué. | Non |

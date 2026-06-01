@@ -3,22 +3,14 @@ keywords: Experience Platform;guide de l’utilisateur;ia dédiée aux clients;r
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Configuration d’une instance IA dédiée aux clients
-description: Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe Sensei simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
+description: Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe AI simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 TQID: https://experienceleague.adobe.com/Eu5uG-1g0jnRAJdqlvjWOJZVGxQeGqUo5cCpbW0yVas
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
 source-wordcount: 3028
 ht-degree: 6%
@@ -29,7 +21,7 @@ ht-degree: 6%
 
 L’IA dédiée aux clients, dans le cadre des services d’IA/ML, vous permet de générer des scores de propension personnalisés sans avoir à vous soucier du machine learning.
 
-Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe Sensei simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
+Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe AI simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 
 ## Création d’une instance {#set-up-your-instance}
 
@@ -124,7 +116,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [&#x200B; Espaces de noms du service d’identités &#x200B;](../../../identity-service/features/namespaces.md).
+> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [ Espaces de noms du service d’identités ](../../../identity-service/features/namespaces.md).
 
 ## Définition d’un objectif {#define-a-goal}
 
@@ -195,7 +187,7 @@ Une fois l’opération terminée, sélectionnez **[!UICONTROL Next]** dans le c
 
 ### Attributs de profil personnalisés (*facultatif*)
 
-Vous pouvez définir des champs de jeu de données de profil importants (avec horodatages) dans vos données en plus des [&#x200B; champs d’événement standard &#x200B;](../data-requirements.md#standard-events) utilisés par l’IA dédiée aux clientes et clients pour générer des scores de propension. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. En outre, l’ajout d’attributs de profil personnalisés permet à l’IA dédiée aux clientes et clients de mieux présenter la manière dont des profils particuliers ont fini dans un compartiment de propension.
+Vous pouvez définir des champs de jeu de données de profil importants (avec horodatages) dans vos données en plus des [ champs d’événement standard ](../data-requirements.md#standard-events) utilisés par l’IA dédiée aux clientes et clients pour générer des scores de propension. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. En outre, l’ajout d’attributs de profil personnalisés permet à l’IA dédiée aux clientes et clients de mieux présenter la manière dont des profils particuliers ont fini dans un compartiment de propension.
 
 >[!NOTE]
 >
@@ -267,4 +259,4 @@ La vidéo suivante est conçue pour vous aider à comprendre le workflow de conf
 >
 > La vidéo suivante est obsolète. Pour obtenir les informations les plus récentes, reportez-vous à la documentation .
 
->[!VIDEO](https://video.tv.adobe.com/v/36548?captions=fre_fr&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)

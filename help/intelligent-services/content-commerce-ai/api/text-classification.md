@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classification de texte dans l’API IA dédiée au contenu et à Commerce
 description: Lorsqu’il reçoit un fragment de texte, le service de classification de texte peut le classer en une ou plusieurs étiquettes. La classification peut être mono-libellé, multi-libellé ou hiérarchique.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '452'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ La requête suivante classe le texte d’un fragment en fonction des paramètres
 
 >[!CAUTION]
 >
->`analyzer_id` détermine l’[!DNL Sensei Content Framework] utilisée. Vérifiez que vous disposez des `analyzer_id` appropriées avant d&#39;effectuer votre demande. Contactez l’équipe bêta de l’IA dédiée au contenu et à Commerce pour recevoir vos `analyzer_id` pour ce service.
+>`analyzer_id` détermine l’[!DNL Adobe AI Content Framework] utilisée. Vérifiez que vous disposez des `analyzer_id` appropriées avant d&#39;effectuer votre demande. Contactez l’équipe bêta de l’IA dédiée au contenu et à Commerce pour recevoir vos `analyzer_id` pour ce service.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -60,7 +60,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `analyzer_id` | Identifiant du service [!DNL Sensei] sous lequel votre requête est déployée. Cet identifiant détermine les [!DNL Sensei Content Frameworks] utilisés. Pour les services personnalisés, contactez l’équipe IA dédiée au contenu et à Commerce pour configurer un identifiant personnalisé. | Oui |
+| `analyzer_id` | L’identifiant du service Adobe AI sous lequel votre demande est déployée. Cet identifiant détermine les [!DNL Adobe AI Content Frameworks] utilisés. Pour les services personnalisés, contactez l’équipe IA dédiée au contenu et à Commerce pour configurer un identifiant personnalisé. | Oui |
 | `application-id` | Identifiant de l’application créée. | Oui |
 | `data` | Un tableau qui contient un objet JSON avec chaque objet dans le tableau représentant un document. Tous les paramètres transmis dans le cadre de ce tableau remplacent les paramètres globaux spécifiés en dehors du tableau `data`. Toutes les propriétés restantes décrites ci-dessous dans ce tableau peuvent être remplacées à partir de `data`. | Oui |
 | `language` | Langue du texte saisi. La valeur par défaut est `en`. | Non |
