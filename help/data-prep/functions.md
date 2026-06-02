@@ -5,13 +5,10 @@ title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: f3ebbec0f5000c05bb5c40654b010073ef0f9658
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 30f6d4430be88f2c3fdbc8f7c7a78c457c0efd56
 workflow-type: tm+mt
 source-wordcount: 6034
 ht-degree: 9%
@@ -127,7 +124,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Récupère l’heure actuelle. | | now() | now() | `2021-10-26T10:10:24Z` |
-| date et heure | Récupère l’heure Unix actuelle. | | timestamp() | timestamp() | 1571850624571 |
+| timestamp | Récupère l’heure Unix actuelle. | | timestamp() | timestamp() | 1571850624571 |
 | format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** date d’entrée, sous la forme d’un objet ZonedDateTime, que vous souhaitez formater.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que la date soit modifiée.</li></ul> | format(DATE, FORMAT) | format(2019-10-:24:00+00:00, « `yyyy-MM-dd HH:mm:ss` ») | `2019-10-23 11:24:35` |
 | dformat | Convertit une date et une heure en chaîne de date selon un format spécifié. | <ul><li>TIMESTAMP : **obligatoire** date et heure à formater. Il est écrit en millisecondes.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que l’horodatage soit défini.</li></ul> | format(TIMESTAMP, FORMAT) | dformat(1571829875000, « `yyyy-MM-dd'T'HH:mm:ss.SSSX` ») | `2019-10-23T11:24:35.000Z` |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li><li>FORMAT : **Obligatoire** Chaîne représentant le format de la date source.**Remarque :** il ne s’agit **pas** du format dans lequel vous souhaitez convertir la chaîne de date. </li><li>DEFAULT_DATE : **Obligatoire** date par défaut renvoyée, si la date fournie est nulle.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(« 2019-10-23 11:24 », « yyyy-MM-dd HH:mm », now()) | `2019-10-23T11:24:00Z` |
@@ -396,11 +393,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
-| | | %5C |
-| &rbrack; | %5J |
+| [ | %5B |
+| `\|` | %5C |
+| ] | %5J |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
