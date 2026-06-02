@@ -1,11 +1,11 @@
 ---
 title: Paramètres de configuration de Brand Concierge
-description: Configurez la persistance de session et les délais d’expiration de diffusion pour la conversation Brand Concierge.
+description: Configurez les paramètres souhaités pour la conversation Brand Concierge.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
-source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
+source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 21%
+source-wordcount: '249'
+ht-degree: 14%
 
 ---
 
@@ -28,11 +28,17 @@ La section **[!UICONTROL Brand Concierge]** vous permet de contrôler le comport
 1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
 1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Brand Concierge]** .
 
-Les options disponibles sont les suivantes :
+Les options suivantes sont disponibles. Pour obtenir des paramètres de bibliothèque JavaScript équivalents, consultez [`conversation`](/help/collection/js/commands/configure/conversation.md) dans la documentation de Web SDK.
+
+## [!UICONTROL Region]
+
+Champ de texte qui achemine les demandes de conversation Brand Concierge vers un centre de données spécifique au lieu du centre disponible le plus proche. La plupart des organisations n’ont pas besoin de définir cette valeur. Définissez-le uniquement si les événements de conversation n’arrivent pas au centre de données souhaité.
+
+Ce paramètre affecte uniquement les événements de conversation ; les commandes d’événement d’envoi standard ne sont pas affectées. `va7`, `or2` ou `irl1` sont des exemples de valeurs possibles.
 
 ## [!UICONTROL Sticky conversation session]
 
-Une case à cocher qui conserve les sessions Brand Concierge sur plusieurs chargements de page à l’aide d’un cookie de session. Par défaut, cette option est désactivée. Voir [`conversation`](/help/collection/js/commands/configure/conversation.md) dans la documentation de la bibliothèque JavaScript pour obtenir des conseils sur la définition de cette valeur.
+Une case à cocher qui conserve les sessions Brand Concierge sur plusieurs chargements de page à l’aide d’un cookie de session. Par défaut, cette option est désactivée.
 
 ## [!UICONTROL Stream timeout (seconds)]
 
