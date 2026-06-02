@@ -22,14 +22,22 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
 workflow-type: tm+mt
-source-wordcount: 873
-ht-degree: 97%
+source-wordcount: 925
+ht-degree: 90%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
+
+## Version 1.7.0 - 27 Mai 2026
+
+* Amélioration des fonctionnalités de recherche de l’outil [!UICONTROL Logs], notamment :
+   * Amélioration du filtrage des recherches, en veillant à ce que seuls les journaux pertinents s’affichent.
+   * Correspondance des expressions mise en surbrillance.
+   * Développement des objets de journal imbriqués pour afficher les correspondances de recherche.
+   * Bouton **[!UICONTROL Download CSV]** permettant d’exporter les données du journal pour les afficher dans Microsoft Excel ou les partager avec un agent d’IA.
 
 ## Version 1.6.5 - 24 Mars 2026
 
@@ -47,7 +55,7 @@ ht-degree: 97%
 
 ## Version 1.6.2 - 1er octobre 2024
 
-* Correction d’un problème qui rendait le Debugger trop réactif à toutes les erreurs CSP.
+* Correction d’un problème en raison duquel le débogueur était trop sensible à toutes les erreurs CSP.
 
 ## Version 1.6.1 - 25 juillet 2024
 

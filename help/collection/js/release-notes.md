@@ -3,18 +3,22 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
+source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
 workflow-type: tm+mt
-source-wordcount: '2988'
-ht-degree: 56%
+source-wordcount: '2994'
+ht-degree: 55%
 
 ---
 
 
 # Notes de mise à jour de Web SDK
 
-Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
-Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+Ce document présente les notes de mise à jour de Adobe Experience Platform Web SDK.
+Pour obtenir les dernières notes de mise à jour sur l’extension de balise Web SDK, voir les [notes de mise à jour de l’extension de balise Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.34.0 - 26 Mai 2026
+
+- Ajout de `region` à l’objet de configuration [`conversation`](commands/configure/conversation.md). Lorsqu’il est défini, remplace le centre de données auquel la bibliothèque envoie les événements de conversation Brand Concierge.
 
 ## Version 2.33.1 - 7 Mai 2026
 

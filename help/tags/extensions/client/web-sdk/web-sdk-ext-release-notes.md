@@ -35,16 +35,22 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
 workflow-type: tm+mt
-source-wordcount: 3355
-ht-degree: 84%
+source-wordcount: 3375
+ht-degree: 83%
 
 ---
 
 # Notes de mise à jour de l’extension de balises Web SDK
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [notes de mise à jour de Adobe Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Version 2.36.0 - 26 Mai 2026
+
+- Contient [version 2.34.0](/help/collection/js/release-notes.md) du SDK Web Adobe Experience Platform.
+- Ajout du champ de texte [!UICONTROL Region] au composant [[!UICONTROL Brand Concierge]](configure/brand-concierge.md).
+- Correction d’un problème en raison duquel les éléments de données pouvaient être rompus après la copie d’une règle sur une nouvelle propriété.
 
 ## Version 2.35.1 - 7 Mai 2026
 
@@ -509,7 +515,7 @@ Contient la version 2.3.0 de la bibliothèque SDK Web Adobe Experience Platfo
 - Changements liés à `Get Decisions` :
    - Suppression de la commande `getDecisions`.
    - Ajout d’une option `scopes` à la commande `sendEvent`. Les décisions sont renvoyées dans la promesse `sendEvent` résolue.
-   - Ajout d’une portée intégrée `__view__` qui résultera en un renvoi d’offres à l’échelle de la page/vue. (Offres du compositeur d’expérience visuelle dans Target, par exemple).
+   - Ajout d’une portée de `__view__` intégrée qui se traduira par le retour d’offres à l’échelle de la page/vue. (Offres du compositeur d’expérience visuelle dans Target, par exemple).
 Ces décisions sont renvoyées à partir de la commande `sendEvent` uniquement si `renderDecisions` est défini sur false.
    - Ajout d’un événement `Decisions Received`, qui se déclenche lorsque des décisions deviennent disponibles.
 - Combinaison de plusieurs notifications de personnalisation sous un seul appel de serveur.

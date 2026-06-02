@@ -2,10 +2,10 @@
 title: conversation
 description: Configurez les paramètres de conversation Brand Concierge.
 exl-id: 0f64c7f1-2c28-4c67-af05-dc9ee688fdc0
-source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
+source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 13%
+source-wordcount: '181'
+ht-degree: 9%
 
 ---
 
@@ -22,6 +22,7 @@ L’objet `conversation` contient des options de configuration pour les sessions
 | Propriété | Type | Description |
 | --- | --- | --- |
 | **`collectSources`** | `boolean` | Détermine si le SDK Web lit le paramètre de chaîne de requête `adobe_brand_concierge_source` et l&#39;inclut dans `xdm.channel.referringSource`. La valeur par défaut est `false`. |
+| **`region`** | `string` | Achemine les demandes de conversation Brand Concierge vers un centre de données spécifique plutôt que vers le centre disponible le plus proche. La plupart des organisations n’ont pas besoin de définir cette valeur. Définissez-le uniquement si les événements de conversation n’arrivent pas au centre de données souhaité. Ce paramètre affecte uniquement les événements de conversation ; les commandes [`sendEvent`](../sendevent/overview.md) standard ne sont pas affectées. `va7`, `or2` ou `irl1` sont des exemples de valeurs possibles. |
 | **`stickyConversationSession`** | `boolean` | Détermine si le SDK Web définit un cookie de session pour conserver les sessions de conversation Brand Concierge entre les chargements de page. La valeur par défaut est `false`. Si cet attribut est omis ou défini sur `false`, la conversation Brand Concierge démarre une nouvelle session à chaque chargement de page. |
 
 ## Exemple
@@ -31,7 +32,8 @@ alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   conversation: {
-    collectSources: true
+    collectSources: true,
+    region: "va7",
     stickyConversationSession: true
   }
 });
