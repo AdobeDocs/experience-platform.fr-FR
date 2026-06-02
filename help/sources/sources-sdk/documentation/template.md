@@ -5,7 +5,7 @@ description: Découvrez comment connecter Adobe Experience Platform à YOURSOURC
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2173'
 ht-degree: 51%
 
 ---

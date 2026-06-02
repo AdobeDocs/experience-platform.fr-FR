@@ -1,13 +1,13 @@
 ---
 title: Racine
 description: Découvrez comment connecter les audiences Adobe Experience Platform à Root pour améliorer les performances des campagnes grâce à un ciblage, une suppression et une personnalisation plus intelligents.
-source-git-commit: a281a7c961b8576105913feb7a7f8258c975e875
+exl-id: 50eaefeb-d394-49b1-9748-5d68f11b79a0
+source-git-commit: 52d78fef0e08e9bc8bd606339e685d743ebb90dc
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 25%
 
 ---
-
 
 # Connexion [!DNL Rokt] {#rokt-destination}
 

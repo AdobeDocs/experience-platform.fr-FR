@@ -16,9 +16,9 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+source-git-commit: f7d3a21309c855f2eb7e3c7e550e759ccbd73132
 workflow-type: tm+mt
-source-wordcount: 2680
+source-wordcount: 2679
 ht-degree: 46%
 
 ---
@@ -435,7 +435,7 @@ En cas d’erreur lors de la création de l’audience, une alerte s’affiche, 
 
 ### Activation plus rapide {#faster-activation}
 
-Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Si vous définissez la destination à activer après l’évaluation du segment, vous n’avez **plus** besoin d’attendre 24 heures pour que la tâche d’évaluation se termine.
+Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Si vous définissez la destination à activer après l’évaluation du segment, vous **plus** avez besoin d’attendre 24 heures après l’exécution de la tâche d’évaluation.
 
 Pour savoir comment gérer la destination, lisez le guide [&#x200B; Activer les audiences vers des destinations de profils par lots &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
 

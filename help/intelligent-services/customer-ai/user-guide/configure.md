@@ -3,7 +3,7 @@ keywords: Experience Platform;guide de l’utilisateur;ia dédiée aux clients;r
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Configuration d’une instance IA dédiée aux clients
-description: Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe Sensei simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
+description: Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe AI simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 TQID: https://experienceleague.adobe.com/Eu5uG-1g0jnRAJdqlvjWOJZVGxQeGqUo5cCpbW0yVas
 product_v2:
@@ -18,7 +18,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
 source-wordcount: 3028
 ht-degree: 6%
@@ -29,7 +29,7 @@ ht-degree: 6%
 
 L’IA dédiée aux clients, dans le cadre des services d’IA/ML, vous permet de générer des scores de propension personnalisés sans avoir à vous soucier du machine learning.
 
-Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe Sensei simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
+Les services d’IA/ML fournissent l’IA dédiée aux clients en tant que service Adobe AI simple d’utilisation configurable pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 
 ## Création d’une instance {#set-up-your-instance}
 

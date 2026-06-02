@@ -88,7 +88,7 @@ La connaissance des produits fait référence aux concepts et aux sujets reposan
 | --- | --- |
 | Apprentissage par points | <ul><li>Quelle est la différence entre une identité et une clé primaire ou étrangère ?</li><li>Que sont les audiences semblables ?</li></ul> |
 | Découverte ouverte | <ul><li>Comment exporter ce jeu de données ?</li><li>Existe-t-il des schémas pour les clients du secteur de la santé ?</li></ul> |
-| Résolution des problèmes | <ul><li>Pourquoi ne puis-je pas activer un schéma détenu par Adobe pour le profil ?</li><li>Pourquoi ne puis-je pas supprimer un segment ?</li></ul> |
+| Dépannage | <ul><li>Pourquoi ne puis-je pas activer un schéma détenu par Adobe pour le profil ?</li><li>Pourquoi ne puis-je pas supprimer un segment ?</li></ul> |
 
 {style="table-layout:auto"}
 

@@ -29,7 +29,7 @@ ht-degree: 45%
 
 # Connexion [!DNL Amazon Kinesis]
 
-## Vue d’ensemble {#overview}
+## Vue d&#39;ensemble {#overview}
 
 >[!AVAILABILITY]
 >

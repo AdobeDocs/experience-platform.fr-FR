@@ -1,7 +1,8 @@
 ---
 title: _moniteurs
 description: Ajoutez des écouteurs d’événement pour déboguer votre implémentation de balise.
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+exl-id: 046094c1-afeb-48e6-8649-590e5116421b
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 1%
@@ -38,7 +39,7 @@ La fonction de rappel `ruleCompleted` se déclenche après `ruleTriggered` lorsq
 
 La fonction de rappel `ruleConditionFailed` se déclenche après `ruleTriggered` lorsqu’au moins une des conditions de la règle échoue.
 
-## objet `Rule`
+## `Rule` objet
 
 Chaque fonction de rappel expose un objet `Rule` qui fournit des informations sur la règle elle-même.
 

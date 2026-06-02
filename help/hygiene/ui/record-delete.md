@@ -18,9 +18,9 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 5b2c5f06f9c9b597dabf0bd68f8560a65d32da87
 workflow-type: tm+mt
-source-wordcount: 2555
+source-wordcount: 2515
 ht-degree: 12%
 
 ---
@@ -198,14 +198,7 @@ Les quotas sont réinitialisés le premier jour de chaque mois civil. Le quota i
 
 ### Chronologies de traitement des envois d’identifiants {#sla-processing-timelines}
 
-Après l’envoi, les demandes de suppression d’enregistrements sont mises en file d’attente et traitées en fonction de votre niveau de droits.
-
-| Description du produit et des droits | Durée de la file d’attente | Durée Maximale De Traitement (SLA) |
-|------------------------------------------------------------------------------------|---------------------|-------------------------------|
-| Sans Privacy and Security Shield ni module complémentaire Healthcare Shield | Jusqu’à 15 jours | 30 jours |
-| Avec le module complémentaire Privacy and Security Shield ou Healthcare Shield | Généralement 24 heures | 15 jours |
-
-Si votre organisation requiert des limites plus élevées, contactez votre représentant Adobe pour une révision des droits.
+Les demandes de suppression d’enregistrements sont traitées en fonction du niveau de droit, avec différents engagements SLA pour les clients standard et Shield. Pour une répartition complète des étapes et des délais de traitement, voir [Chronologies du traitement tout au long du cycle de données](../data-lifecycle-processing-timelines.md).
 
 >[!TIP]
 >
@@ -229,7 +222,7 @@ Une fois la requête soumise, un ordre de travail est créé et s’affiche dans
 
 >[!NOTE]
 >
->Consultez la section de présentation sur [la chronologie et la transparence](../home.md#record-delete-transparency) pour plus d’informations sur le traitement des suppressions d’enregistrements une fois qu’elles sont exécutées.
+>Pour plus d’informations sur le traitement des suppressions d’enregistrements une fois qu’elles sont exécutées, voir [Chronologies du traitement du cycle de vie des données](../data-lifecycle-processing-timelines.md).
 
 ![Onglet [!UICONTROL Record] de l’espace de travail [!UICONTROL Data Lifecycle] avec la nouvelle demande mise en surbrillance.](../images/ui/record-delete/request-log.png)
 

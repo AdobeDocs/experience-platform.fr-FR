@@ -2,10 +2,11 @@
 title: Collecter des analyses et appliquer une personnalisation dans les applications ChatGPT (collecte de données MCP)
 description: Utilisez un serveur MCP hybride + modèle applyResponse de Web SDK pour envoyer des événements à Adobe Experience Platform Edge Network et effectuer le rendu de la personnalisation dans une interface utilisateur d'application ChatGPT.
 keywords: Adobe Experience Platform, Web SDK, Edge Network, MCP, applications ChatGPT, applyResponse, point d’entrée d’interaction, personnalisation, analyse
-source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
+exl-id: 9ab611c7-7595-46c6-b990-433e59bffe48
+source-git-commit: 421474aa1be5976f741cb001b9c9ffe1257e0000
 workflow-type: tm+mt
-source-wordcount: '1126'
-ht-degree: 0%
+source-wordcount: '1190'
+ht-degree: 1%
 
 ---
 
@@ -40,7 +41,7 @@ Ce cas d’utilisation est accompagné d’un exemple de code entièrement opér
 1. **Utilisateur** invite **ChatGPT** à l’aide de votre serveur MCP.
 1. **ChatGPT** interprète l’intention de l’invite et appelle l’**outil MCP principal approprié**.
 1. Le **serveur MCP principal** utilise les API Data Collection (point d’entrée `interact`) pour envoyer un événement d’expérience à **Edge Network** pour la collecte d’analyses et la personnalisation facultative.
-1. **Edge Network** renvoie les handles de réponse, y compris les mises à jour d’état et les décisions de personnalisation, à l’outil **MCP principal**.
+1. **&#x200B;**&#x200B;renvoie les handles de réponse, y compris les mises à jour d’état et les décisions de personnalisation, à l’outil **MCP principal**.
 1. **Outil MCP principal** renvoie un résultat d’outil contenant des données métier dans les métadonnées `structuredContent` et Adobe en `_meta` à **ChatGPT**.
 1. **ChatGPT** fournit le résultat de l’outil au **widget frontend**, qui effectue le rendu des données métier et applique les métadonnées Adobe à l’aide de la commande `applyResponse` de la bibliothèque JavaScript Web SDK. Cette commande hydrate l’état côté client et rend les décisions de personnalisation éligibles dans l’interface utilisateur.
 

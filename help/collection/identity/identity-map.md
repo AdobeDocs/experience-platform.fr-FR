@@ -1,21 +1,22 @@
 ---
 title: Utilisation d’identityMap dans la collecte de données
 description: Découvrez comment créer et envoyer des payloads identityMap pour identifier les visiteurs connus dans les espaces de noms de votre implémentation de Web SDK.
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+exl-id: 33b409cb-48f5-4e77-ba2f-7dfe0b2cb2a9
+source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '1671'
-ht-degree: 0%
+source-wordcount: '1718'
+ht-degree: 1%
 
 ---
 
 # Utilisation d’identityMap dans la collecte de données
 
-L’objet de payload `identityMap` est la manière dont vous indiquez à Edge Network qui est un visiteur au-delà de son [ECID](./overview.md) au niveau de l’appareil. Lorsqu’un visiteur se connecte, effectue un achat ou est connu d’une autre manière, vous pouvez envoyer des identifiants au niveau de la personne (identifiant CRM, e-mail haché, identifiant de fidélité, etc.) avec l’ECID. Ces identifiants au niveau de la personne fournissent des informations précieuses aux services en aval afin qu’ils puissent :
+L’objet de payload `identityMap` est la manière dont vous indiquez à Edge Network qui est un visiteur au-delà de son [ECID](./overview.md) au niveau de l’appareil. Lorsqu’un visiteur se connecte, effectue un achat ou autre chose est connu, vous pouvez envoyer des identifiants au niveau de la personne (identifiant CRM, e-mail haché, identifiant de fidélité, etc.) avec l’ECID. Ces identifiants au niveau de la personne fournissent des informations précieuses aux services en aval afin qu’ils puissent :
 
-* **Regrouper l’activité à une personne sur plusieurs appareils et canaux.** [Service d’identités](/help/identity-service/home.md) associe les identités que vous envoyez à un [graphique d’identités](/help/identity-service/features/identity-graph-viewer.md), établissant ainsi une connexion entre le comportement anonyme au niveau de l’appareil et une personne connue.
-* **Créer des profils client unifiés.** [profil client en temps réel](/help/profile/home.md) utilise l’identité principale que vous avez définie pour ancrer les événements et les attributs à un seul profil, ce qui permet la segmentation au niveau de la personne et la création d’audiences.
-* **Activer les audiences sur les destinations en aval.** de nombreuses [destinations](/help/destinations/home.md) nécessitent des identités résolues au niveau de la personne (e-mails hachés, numéros de téléphone, etc.) pour faire correspondre vos audiences à leurs bases d’utilisateurs.
-* **Orchestrer des parcours cross-canal.** [Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) utilise des identités résolues pour déclencher et personnaliser des parcours sur les canaux e-mail, push et in-app en fonction du comportement authentifié d’un visiteur.
+* **Regrouper l’activité à une personne sur plusieurs appareils et canaux.** Le [Service d’identités](/help/identity-service/home.md) associe les identités que vous envoyez à un [graphique d’identités](/help/identity-service/features/identity-graph-viewer.md), établissant ainsi une connexion entre le comportement anonyme au niveau de l’appareil et une personne connue.
+* **Créer des profils client unifiés.** Le [profil client en temps réel](/help/profile/home.md) utilise l’identité principale que vous avez définie pour ancrer les événements et les attributs à un seul profil, ce qui permet la segmentation au niveau de la personne et la création d’audiences.
+* **Activer des audiences sur des destinations en aval.** De nombreuses [destinations](/help/destinations/home.md) nécessitent des identités résolues au niveau de la personne (e-mails hachés, numéros de téléphone, etc.) pour faire correspondre vos audiences à leurs bases d’utilisateurs.
+* **Orchestrer des parcours cross-canal.** [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) utilise des identités résolues pour déclencher et personnaliser des parcours sur les canaux e-mail, push et in-app en fonction du comportement authentifié d’un visiteur.
 
 Cette page explique comment créer des payloads `identityMap`, choisir les paramètres appropriés pour chaque identité et gérer les scénarios d’implémentation courants.
 
@@ -262,8 +263,8 @@ Chaque payload de `identityMap` qui atteint Experience Platform est traitée par
 Comportements clés à connaître :
 
 * **Les identités envoyées sur le même événement sont liées.** Si vous incluez un CRMID et un espace de noms d’e-mail sur le même appel `sendEvent`, Identity Service crée un lien entre ces deux identités. La diffusion des identifiants sur des événements distincts génère des liens plus faibles et peut entraîner la fragmentation des graphiques.
-* **L’identité `primary` ancre l’événement dans le profil client en temps réel.** profil utilise l’identité principale pour déterminer à quel profil l’événement appartient. Le marquage d’une identité incorrecte en tant que principale (par exemple, la définition de l’ECID en tant que principal lorsqu’un identifiant au niveau de la personne est disponible) peut entraîner le stockage d’événements par rapport aux profils au niveau de l’appareil plutôt que des profils au niveau de la personne.
-* **La `authenticatedState` influence le degré de confiance du graphique.** L’envoi de `authenticated` pour une identité qui n’a pas réellement été vérifiée peut créer des liens incorrects entre appareils, qui sont difficiles à annuler. N’utilisez `authenticated` que lorsque le visiteur a prouvé activement son identité au cours de la session en cours.
+* **L’identité `primary` ancre l’événement dans le profil client en temps réel.** Le profil utilise l’identité principale pour déterminer à quel profil l’événement appartient. Le marquage d’une identité incorrecte en tant que principale (par exemple, la définition de l’ECID en tant que principal lorsqu’un identifiant au niveau de la personne est disponible) peut entraîner le stockage d’événements par rapport aux profils au niveau de l’appareil plutôt que des profils au niveau de la personne.
+* **Le `authenticatedState` influence le degré de confiance des graphiques.** L’envoi de `authenticated` pour une identité qui n’a pas réellement été vérifiée peut créer des liens incorrects entre appareils, qui sont difficiles à annuler. N’utilisez `authenticated` que lorsque le visiteur a prouvé activement son identité au cours de la session en cours.
 
 Si votre implémentation utilise des [règles de liaison de graphiques d’identités](/help/identity-service/identity-graph-linking-rules/overview.md) (telles que la priorité de l’espace de noms ou l’algorithme d’optimisation des identités), consultez le [guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md) pour comprendre comment ces règles interagissent avec les identités que vous envoyez via `identityMap`.
 

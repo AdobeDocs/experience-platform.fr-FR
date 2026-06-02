@@ -22,9 +22,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 72b2761eabbce78363faca6df8d4e18fe9520afc
 workflow-type: tm+mt
-source-wordcount: 1664
+source-wordcount: 1666
 ht-degree: 38%
 
 ---
@@ -55,10 +55,10 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 | Mécanisme de sécurisation | Limite | Notes |
 | --- | --- | --- |
 | Nombre d’identités dans un graphique | 50 | Lorsqu’un graphique avec 50 identités liées est mis à jour, Identity Service applique un mécanisme de « premier entré, premier sorti » et supprime l’identité la plus ancienne afin de libérer de l’espace pour l’identité la plus récente de ce graphique (**Remarque** : le profil client en temps réel n’est pas affecté). La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [comprendre la logique de suppression](#deletion-logic). |
-| Nombre de liens vers une identité pour une ingestion par lots unique | 50 | Un seul lot peut contenir des identités anormales qui provoquent des fusions de graphiques indésirables. Pour éviter cela, Identity Service n’ingère pas les identités déjà liées à 50 identités ou plus. |
+| Nombre de liens vers une identité pour une ingestion par lots unique | 50 | Si une identité unique d’un lot est liée à 50 autres identités ou plus du lot, l’identité est considérée comme non valide et est filtrée hors des liens du lot. |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
-| Nombre d’espaces de noms personnalisés | Aucun | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
-| Nombre de caractères présents dans le nom d’affichage d’un espace de noms ou un symbole d’identité | Aucun | Le nombre de caractères dans le nom d’affichage d’un espace de noms ou un symbole d’identité est illimité. |
+| Nombre d’espaces de noms personnalisés | None | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
+| Nombre de caractères présents dans le nom d’affichage d’un espace de noms ou un symbole d’identité | None | Le nombre de caractères dans le nom d’affichage d’un espace de noms ou un symbole d’identité est illimité. |
 
 {style="table-layout:auto"}
 

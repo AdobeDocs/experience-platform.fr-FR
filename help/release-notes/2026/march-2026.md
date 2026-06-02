@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform - Mars 2026
-description: Les notes de mise à jour de mars 2026 pour Adobe Experience Platform.
+title: Notes De Mise À Jour De Adobe Experience Platform - Mars 2026
+description: Les notes de mise à jour de mars 2026 pour Adobe Experience Platform.
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
 source-git-commit: cd09f9e510052f6bae89ff730ba83aa16e95f193
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 21%
+source-wordcount: '1876'
+ht-degree: 24%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 21%
 >- [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/release-notes)
 >- [Collaboration dans Real-Time CDP](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/latest)
 
-**Date de publication : mercredi 24 mars 2026**
+**Date de publication : 24 mars 2026**
 
 Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -32,7 +32,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Profil client en temps réel](#real-time-customer-profile)
-- [Segmentation Service](#segmentation-service)
+- [Service de segmentation](#segmentation-service)
 - [Sources](#sources)
 
 ## Gestion avancée du cycle de vie des données {#advanced-data-lifecycle-management}
@@ -63,7 +63,7 @@ Pour en savoir plus, consultez la [documentation d’Agent Orchestrator](https:
 
 ## Capacité {#capacity}
 
-La capacité fournit une vue d’ensemble complète des [mécanismes de sécurisation](../../rtcdp/guardrails/overview.md) de votre organisation et fournit des recommandations sur la manière de résoudre les violations de capacité potentielles en allouant vos capacités à un niveau sandbox.
+La capacité fournit une vue d’ensemble complète des [mécanismes de sécurisation](../../rtcdp/guardrails/overview.md) de votre organisation et fournit des recommandations sur la manière de résoudre les violations de capacité potentielles en allouant vos capacités à un niveau de sandbox.
 
 **Nouvelle fonctionnalité**
 
@@ -107,7 +107,7 @@ Pour plus d’informations, consultez la [présentation des flux de données](..
 
 **Correctifs et améliorations**
 
-| Correction | Description |
+| Corriger | Description |
 | --- | --- |
 | [&#128279;](../../destinations/catalog/social/tiktok.md) hachage du numéro de téléphone du connecteur | Correction d’un problème en raison duquel une mauvaise configuration de la carte de destination signifiait que les identités saisies sur les numéros de téléphone n’étaient pas activées sur TikTok. Pour bénéficier de ce correctif, configurez un nouveau flux d’activation ou supprimez le mappage des numéros de téléphone de votre flux existant, enregistrez-le et ajoutez-le à nouveau. |
 | Validation de l’identifiant de compte [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) et [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) | Un programme de validation d’expression régulière a été ajouté à l’étape ID de compte . Lorsque vous saisissez votre identifiant, il est désormais validé afin de s’assurer que l’identifiant de l’organisation et l’identifiant du compte sont au bon format (séparés par un point). Cette mise à jour sera déployée jusqu’à la fin du mois de mars. |

@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 483
+source-wordcount: 484
 ht-degree: 2%
 
 ---
@@ -81,7 +81,7 @@ Le cours Workspace de science des données est divisé en cinq leçons.
 
 ## Étapes suivantes
 
-Après avoir terminé le cours Workspace de science des données, consultez les [guides de l’API de machine learning de Sensei](./api/getting-started.md) pour savoir comment utiliser les API RESTful pour faire tout ce que vous venez d’apprendre et plus encore.
+Après avoir terminé le cours Workspace de science des données , consultez les [guides de l’API de machine learning d’Adobe AI](./api/getting-started.md) pour savoir comment utiliser les API RESTful pour faire tout ce que vous venez d’apprendre et plus encore.
 
 
 

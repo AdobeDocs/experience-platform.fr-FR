@@ -15,10 +15,10 @@ role_v2:
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 538
-ht-degree: 92%
+source-wordcount: 539
+ht-degree: 90%
 
 ---
 
@@ -134,7 +134,7 @@ GET /insights/{INSIGHT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{INSIGHT_ID}` | L’identifiant unique d’une information Sensei. |
+| `{INSIGHT_ID}` | Identifiant unique d’une Adobe AI insight. |
 
 **Requête**
 

@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 510
-ht-degree: 32%
+source-wordcount: 511
+ht-degree: 28%
 
 ---
 
@@ -44,7 +44,7 @@ Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. 
 
 Ce tutoriel nécessite un modèle existant avec une opération de formation réussie. Si vous ne disposez pas d’un modèle publiable, suivez le tutoriel [Formation et notation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md) avant de poursuivre.
 
-Si vous préférez publier un modèle à l’aide des API Sensei Machine Learning, reportez-vous au [tutoriel sur l’API](./publish-model-service-api.md).
+Si vous préférez publier un modèle à l’aide des API Adobe AI Machine Learning, reportez-vous au tutoriel [API](./publish-model-service-api.md).
 
 ## Publication d’un modèle {#publish-a-model}
 

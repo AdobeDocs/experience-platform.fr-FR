@@ -4,7 +4,7 @@ description: Ajustez les paramètres de collection de clics.
 exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
 source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---

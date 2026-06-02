@@ -35,7 +35,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
 source-wordcount: 1501
 ht-degree: 21%
@@ -167,7 +167,7 @@ Pour plus d’informations sur les points d’entrée spécifiques dans les API 
 | [&#x200B; Guide de l’API Sandbox &#x200B;](.././sandboxes/api/getting-started.md) | L’API Sandbox permet aux développeurs de gérer par programmation les environnements de sandbox virtuels isolés dans Adobe Experience Platform. |
 | [[!DNL Schema Registry] Guide de l’API](.././xdm/api/overview.md) <br> (XDM) | L’API [!DNL Schema Registry] permet aux développeurs de gérer par programmation tous les schémas et les ressources de modèle de données d’expérience (XDM) associées dans Adobe Experience Platform. |
 | [[!DNL Segmentation Service]  Guide de l’API &#x200B;](.././segmentation/api/overview.md) | L’API [!DNL Segmentation Service] permet aux développeurs et développeuses de gérer par programmation les opérations de segmentation dans Adobe Experience Platform. Cela inclut la création de segments et la génération d’audiences à partir de vos données de profil client en temps réel. |
-| [[!DNL Sensei Machine Learning] Guide de l’API](.././data-science-workspace/api/getting-started.md) <br> (Workspace de science des données) | L’API [!DNL Sensei Machine Learning] fournit un mécanisme permettant aux spécialistes des données d’organiser et de gérer les services de machine learning (ML) depuis l’intégration des algorithmes, l’expérimentation et le déploiement des services. |
+| [[!DNL Adobe AI Machine Learning] Guide de l’API](.././data-science-workspace/api/getting-started.md) <br> (Workspace de science des données) | L’API [!DNL Adobe AI Machine Learning] fournit un mécanisme permettant aux spécialistes des données d’organiser et de gérer les services de machine learning (ML) depuis l’intégration des algorithmes, l’expérimentation et le déploiement des services. |
 
 Pour plus d’informations sur les points d’entrée et opérations spécifiques disponibles pour chaque service, consultez la [documentation de référence sur les API](https://www.adobe.com/go/platform-api-reference-en) sur Adobe I/O.
 

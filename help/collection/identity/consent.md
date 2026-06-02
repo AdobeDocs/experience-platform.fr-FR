@@ -1,9 +1,10 @@
 ---
 title: Consentement et identité dans la collecte de données
 description: Découvrez comment les choix de consentement affectent le comportement des identités dans les implémentations de Web SDK, notamment la génération d’ECID, la persistance des cookies et la continuité des visiteurs.
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+exl-id: aee0ca1f-b846-4984-917f-8dfbcd6d3388
+source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1166'
 ht-degree: 2%
 
 ---

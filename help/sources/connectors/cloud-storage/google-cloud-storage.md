@@ -9,18 +9,14 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 3076ad91be562c5c7b1506890c732e213ff7687d
 workflow-type: tm+mt
-source-wordcount: 607
-ht-degree: 46%
+source-wordcount: 561
+ht-degree: 50%
 
 ---
 
 # Connecteur Google Cloud Storage
-
->[!IMPORTANT]
->
->Vous pouvez désormais utiliser la source [!DNL Google Cloud Storage] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs de services cloud comme AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
 

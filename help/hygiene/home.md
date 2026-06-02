@@ -13,10 +13,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 5b2c5f06f9c9b597dabf0bd68f8560a65d32da87
 workflow-type: tm+mt
-source-wordcount: 877
-ht-degree: 21%
+source-wordcount: 752
+ht-degree: 25%
 
 ---
 
@@ -65,21 +65,7 @@ Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données]
 
 ### Chronologies de suppression des enregistrements {#record-delete-transparency}
 
-Ce qui suit se produit après l’envoi d’une [demande de suppression d’enregistrement](./ui/record-delete.md).
-
->[!NOTE]
->
->Les durées sont approximatives et varient en fonction de la charge du système, de la planification par lots et du niveau de droits. Le SLA de bout en bout (30 jours standard, 15 jours pour Privacy and Security Shield ou Healthcare Shield) constitue l’engagement opérationnel.
-
-| Étape | Env. synchronisation | Description |
-| --- | --- | --- |
-| Demande envoyée et groupée | Jour 1-15 | Un ordre de travail est créé et mis en file d’attente. Les demandes peuvent être mises en file d’attente et traitées par lots pendant 14 jours au maximum avant le début du traitement. Le traitement par lots est la principale raison pour laquelle la suppression n’est pas immédiate. |
-| Les systèmes en aval traitent la demande de suppression | Jour 16-25 | Les services en aval reçoivent et exécutent la requête de suppression d’enregistrement. |
-| Tampon — contrôles d&#39;intégrité et renvois | Jour 25-30 | Une fenêtre de mémoire tampon permet de vérifier l’intégrité et de soumettre à nouveau les tâches ayant échoué avant que la fenêtre SLA ne se ferme. Le statut de l’ordre de travail est mis à jour sur `completed` une fois que tous les systèmes confirment la suppression. |
-
-{style="table-layout:auto"}
-
-Pour les durées de file d’attente basées sur les droits et les valeurs SLA maximales, consultez [Traitement des chronologies pour les envois d’identifiants](./ui/record-delete.md#sla-processing-timelines).
+Les demandes de suppression d’enregistrements sont traitées en fonction du niveau de droit, avec différents engagements SLA pour les clients standard et Shield. Pour une répartition complète des étapes et des délais de traitement, voir [Chronologies du traitement tout au long du cycle de données](./data-lifecycle-processing-timelines.md).
 
 ## Étapes suivantes {#next-steps}
 

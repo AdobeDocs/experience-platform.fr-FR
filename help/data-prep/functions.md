@@ -11,7 +11,7 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 30f6d4430be88f2c3fdbc8f7c7a78c457c0efd56
 workflow-type: tm+mt
 source-wordcount: 6034
 ht-degree: 9%
@@ -127,7 +127,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Récupère l’heure actuelle. | | now() | now() | `2021-10-26T10:10:24Z` |
-| date et heure | Récupère l’heure Unix actuelle. | | timestamp() | timestamp() | 1571850624571 |
+| timestamp | Récupère l’heure Unix actuelle. | | timestamp() | timestamp() | 1571850624571 |
 | format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** date d’entrée, sous la forme d’un objet ZonedDateTime, que vous souhaitez formater.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que la date soit modifiée.</li></ul> | format(DATE, FORMAT) | format(2019-10-:24:00+00:00, « `yyyy-MM-dd HH:mm:ss` ») | `2019-10-23 11:24:35` |
 | dformat | Convertit une date et une heure en chaîne de date selon un format spécifié. | <ul><li>TIMESTAMP : **obligatoire** date et heure à formater. Il est écrit en millisecondes.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que l’horodatage soit défini.</li></ul> | format(TIMESTAMP, FORMAT) | dformat(1571829875000, « `yyyy-MM-dd'T'HH:mm:ss.SSSX` ») | `2019-10-23T11:24:35.000Z` |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li><li>FORMAT : **Obligatoire** Chaîne représentant le format de la date source.**Remarque :** il ne s’agit **pas** du format dans lequel vous souhaitez convertir la chaîne de date. </li><li>DEFAULT_DATE : **Obligatoire** date par défaut renvoyée, si la date fournie est nulle.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(« 2019-10-23 11:24 », « yyyy-MM-dd HH:mm », now()) | `2019-10-23T11:24:00Z` |
@@ -150,7 +150,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Vérifie si un objet est vide ou non. | <ul><li>INPUT : **obligatoire** l’objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | False |
-| arrays_to_object | Crée une liste d’objets. | <ul><li>INPUT : **obligatoire** regroupement de paires clé-tableau.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
+| arrays_to_object | Crée une liste d’objets. | <ul><li>INPUT : **obligatoire** regroupement de paires clé-tableau.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | `[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]` |
 | to_object | Crée un objet en fonction des paires clé/valeur aplaties données. | <ul><li>INPUT : **obligatoire** liste plate de paires clé/valeur.</li></ul> | to_object(INPUT) | to_object&#x200B;(« firstName », « John », « lastName », « Doe ») | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>STRING : **obligatoire** chaîne en cours d’analyse pour créer un objet.</li><li>VALUE_DELIMITER : *facultatif* délimiteur qui sépare un champ de la valeur. Le délimiteur par défaut est `:`.</li><li>FIELD_DELIMITER : *facultatif* délimiteur qui sépare les paires valeur de champ. Le délimiteur par défaut est `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Remarque** : vous pouvez utiliser la fonction `get()` avec `str_to_object()` pour récupérer les valeurs des clés de la chaîne. | <ul><li>Exemple #1 : str_to_object(« firstName - John ; lastName - ; - 123 345 7890 », « - »,  »; »)</li><li>Exemple #2 : str_to_object(« firstName - John ; lastName - ; phone - 123 456 7890 », « - »,  »; »).get(« firstName »)</li></ul> | <ul><li>Exemple #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemple de #2 : « John »</li></ul> |
 | contains_key | Vérifie si l’objet existe dans les données source. **Remarque :** cette fonction remplace la fonction `is_set()` obsolète. | <ul><li>INPUT : **obligatoire** chemin d’accès à vérifier s’il existe dans les données source.</li></ul> | contains_key(INPUT) | contains_key(« evars.evar.field1 ») | vrai |
@@ -397,7 +397,7 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | ? | %3F |
 | @ | %40 |
 | &lbrack; | %5B |
-| &#124; | %5C |
+| `\|` | %5C |
 | &rbrack; | %5J |
 | ^ | %5E |
 | &grave; | %60 |

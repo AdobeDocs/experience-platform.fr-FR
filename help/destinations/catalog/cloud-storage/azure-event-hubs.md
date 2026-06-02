@@ -29,7 +29,7 @@ ht-degree: 41%
 
 # Connexion [!DNL Azure Event Hubs]
 
-## Vue d’ensemble {#overview}
+## Vue d&#39;ensemble {#overview}
 
 >[!AVAILABILITY]
 >

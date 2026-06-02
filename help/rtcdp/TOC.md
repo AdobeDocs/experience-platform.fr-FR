@@ -8,7 +8,7 @@ user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
 nudge: true
-source-git-commit: 11c7f7dd89fd31a1965e64982c19e44f91d47695
+source-git-commit: 9bfcaedcb985c3111aeff92b02f0659be363ddfb
 workflow-type: tm+mt
 source-wordcount: 406
 ht-degree: 56%
@@ -30,7 +30,7 @@ ht-degree: 56%
       * [Tutoriel de bout en bout](./b2b-tutorial.md)
       * [Barrières de sécurité de l’édition B2B de Real-Time CDP](b2b-guardrails.md)
       * [Mises à niveau de l’architecture de Real-Time CDP B2B edition](b2b-architecture-upgrade.md)
-   * {hide-from-toc}[Real-Time CDP MCP](rtcdp-mcp.md)
+   * [REAL-TIME CDP MCP](rtcdp-mcp.md)
 * Audience Manager et Real-Time CDP {#evolution}
    * [Évolution à partir d’Audience Manager](aam-to-rtcdp.md)
 * Profils de compte {#account}

@@ -13,7 +13,7 @@ topic_v2:
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 2216
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -71,7 +71,7 @@ L’espace de travail des plannings s’affiche. L’interface utilisateur affic
 >[!CONTEXTUALHELP]
 >id="platform_queryService_querySchedules_noEndDate"
 >title="Requête planifiée sans date de fin"
->abstract="Cette requête planifiée n’a pas de date de fin et continue de s’exécuter jusqu’à ce que vous la suspendiez ou la supprimiez manuellement. Passez régulièrement en revue les plannings de longue durée pour éviter toute utilisation inutile des ordinateurs."
+>abstract="Cette requête planifiée n’a pas de date de fin et continue de s’exécuter jusqu’à ce que vous la suspendiez ou la supprimiez manuellement. Vérifiez régulièrement les plannings de longue durée pour éviter toute utilisation inutile des ressources de calcul."
 
 La page Détails du planning s’affiche. Sur cette page, vous pouvez modifier différents détails pour la requête planifiée. Les détails incluent la [fréquence et jour de la semaine de la requête planifiée](#scheduled-query-frequency) l’exécution, les dates de début et de fin, le jeu de données vers lequel exporter les résultats et les [alertes de statut de la requête](#alerts-for-query-status).
 

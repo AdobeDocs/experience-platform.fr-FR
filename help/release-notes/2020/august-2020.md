@@ -7,8 +7,8 @@ author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 38%
+source-wordcount: '588'
+ht-degree: 39%
 
 ---
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur [!DNL JupyterLab], veuillez consulter le [[!DNL J
 
 ## Destinations {#destinations}
 
-Dans [Real-Time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 

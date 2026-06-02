@@ -6,10 +6,10 @@ user-guide-description: Supprimez des enregistrements individuels et planifiez l
 feature: Data Hygiene
 role: User, Developer, Admin
 nudge: true
-source-git-commit: 0cd7986ba2407a6db367245cacb06a8befa234c1
+source-git-commit: 5b2c5f06f9c9b597dabf0bd68f8560a65d32da87
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 63%
+source-wordcount: '75'
+ht-degree: 60%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 63%
 # Gestion avancée du cycle de vie des données {#data-lifecycle}
 
 * [Présentation de la gestion avancée du cycle de vie des données](./home.md)
+* [Chronologies du traitement du cycle de vie des données](./data-lifecycle-processing-timelines.md)
 * Interface utilisateur du cycle de vie des données {#ui}
    * [Vue d’ensemble](./ui/overview.md)
    * [Expirations automatisées des jeux de données](./ui/dataset-expiration.md)

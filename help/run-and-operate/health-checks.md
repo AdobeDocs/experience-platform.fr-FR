@@ -1,5 +1,5 @@
 ---
-title: Contrôles d’intégrité
+title: Vérifications de l’état de santé
 description: Découvrez comment utiliser les contrôles d’intégrité dans Adobe Experience Platform pour détecter de manière proactive les problèmes de configuration des schémas et des identités avant qu’ils n’affectent vos opérations de données.
 solution: Experience Platform
 type: Documentation
@@ -7,12 +7,12 @@ role: Admin, User
 exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
 source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1613'
 ht-degree: 1%
 
 ---
 
-# Contrôles d’intégrité
+# Vérifications de l’état de santé
 
 Les contrôles d’intégrité analysent vos schémas et identités utilisés dans votre sandbox et fournissent un résumé des problèmes que vous pouvez utiliser pour explorer et résoudre les problèmes avec l’assistant AI. À l’avenir, davantage d’objets pourront être analysés pour obtenir un rapport plus complet.
 
@@ -33,7 +33,7 @@ Pour accéder aux contrôles d’intégrité, vous devez disposer de l’autoris
 Pour accéder aux contrôles d’intégrité à partir de l’interface utilisateur [!UICONTROL Experience Platform] :
 
 1. Sélectionnez **[!UICONTROL Run and Operate]** dans le volet de navigation de gauche.
-1. Sélectionnez **[!UICONTROL Health Checks]**.
+1. Sélectionner **[!UICONTROL Health Checks]**.
 
 Le tableau de bord des contrôles de l’intégrité affiche un résumé des résultats d’analyse les plus récents.
 

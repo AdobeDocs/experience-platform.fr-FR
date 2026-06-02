@@ -15,9 +15,9 @@ subfeature_v2:
   - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: f7d3a21309c855f2eb7e3c7e550e759ccbd73132
 workflow-type: tm+mt
-source-wordcount: 483
+source-wordcount: 480
 ht-degree: 0%
 
 ---
@@ -73,6 +73,6 @@ Gardez les détails et mécanismes de sécurisation suivants à l’esprit lors 
 
 ## Activation plus rapide {#faster-activation}
 
-Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Par conséquent, si votre destination est définie pour s’activer après l’évaluation du segment, vous n’avez plus besoin d’attendre 24 heures pour que la tâche d’évaluation se termine.
+Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Si vous définissez la destination à activer après l’évaluation du segment, vous **plus** avez besoin d’attendre 24 heures après l’exécution de la tâche d’évaluation.
 
 Pour plus d’informations, consultez le guide [Activer les audiences vers des destinations de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).

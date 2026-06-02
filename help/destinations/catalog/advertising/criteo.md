@@ -22,7 +22,7 @@ ht-degree: 32%
 
 # Connexion Criteo
 
-## Vue d’ensemble {#overview}
+## Vue d&#39;ensemble {#overview}
 
 >[!IMPORTANT]
 >

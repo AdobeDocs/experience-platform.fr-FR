@@ -2,10 +2,11 @@
 title: Amazon Ads v2
 description: Amazon Ads v2 offre toute une gamme d’options pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs, les marchands de livres, les auteurs Kindle Direct Publishing (KDP), les développeurs d’applications ou les agences peuvent tirer parti de ces options. L’intégration d’Amazon Ads v2 à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads.
 last-substantial-update: 2026-03-31T00:00:00Z
-source-git-commit: 1e93c78b13159a2aed24d283e3768c670ad14097
+exl-id: 8656e114-af22-4696-b109-ffdf99b5316e
+source-git-commit: 76c2059a94d629aadc379985bb4fb907c9cfcc33
 workflow-type: tm+mt
-source-wordcount: '1667'
-ht-degree: 16%
+source-wordcount: '1762'
+ht-degree: 15%
 
 ---
 
@@ -188,7 +189,7 @@ Ces identifiants sont généralement fournis par les partenaires respectifs en t
 
 ## Valider l’exportation des données {#exported-data}
 
-Après l’activation, validez l’ingestion de votre audience dans la console **[!DNL Ads Data Manager].**
+Après l’activation, validez l’ingestion de votre audience dans la console **.**&#x200B;[!DNL Ads Data Manager]
 
 Accédez à **[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]**. Vérifiez le statut d’ingestion de votre audience, sa taille et les journaux d’erreurs. Les pages [Gérer les données](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data) et [Destinations](https://advertising.amazon.com/API/docs/en-us/adm/7_adm-destinations) de la documentation [!DNL Amazon Ads] fournissent d’autres conseils de validation.
 

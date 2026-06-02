@@ -33,10 +33,10 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: 547
-ht-degree: 45%
+source-wordcount: 548
+ht-degree: 41%
 
 ---
 
@@ -76,7 +76,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] est un service entièrem
 
 **Problèmes connus**
 
-* Il n’existe actuellement aucun moyen accessible dans le [!DNL Service Gallery] pour supprimer un service existant. En attendant, consultez la [référence de l’API Sensei Machine Learning](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) pour supprimer un service existant par le biais d’appels API.
+* Il n’existe actuellement aucun moyen accessible dans le [!DNL Service Gallery] pour supprimer un service existant. En attendant, reportez-vous à la référence [API Adobe AI Machine Learning](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) pour supprimer un service existant par le biais d’appels API.
 * Le [!DNL Service Gallery] ne dispose pas de la prise en charge de la pagination pour filtrer les exécutions de formation et de notation d’un service.
 * Lors de la configuration de l’entraînement ou de la notation planifiés via [!DNL Service Gallery], la définition de la fréquence sur toutes les heures empêche l’application du planning.
 

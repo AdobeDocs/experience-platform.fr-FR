@@ -68,7 +68,7 @@ Pour savoir comment des contrôles d‘exportation de données spécifiques se m
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Instructions"
->abstract="<ul><li>Étiquetez et classez les segments et champs XDM dont vous souhaitez restreindre l’accès.</li><li>Étiquetez les rôles et définissez les restrictions applicables aux personnes membres de ce rôle.</li><li>Créez des stratégies et associez les libellés sur les objets libellés, tels que les champs et les segments XDM, aux libellés sur les rôles. Si les libellés correspondent, un accès autorisé ou restreint peut être défini.</li></ul>"
+>abstract="<ul><li>Étiquetez et classez les champs et segments XDM dont vous souhaitez restreindre l’accès.</li><li>Étiquetez les rôles et définissez les restrictions applicables aux membres de ce rôle.</li><li>Créez des stratégies et associez les libellés sur les objets libellés, tels que les champs et les segments XDM, aux libellés sur les rôles. Si les libellés correspondent, un accès autorisé ou restreint peut être défini.</li></ul>"
 
 Vous pouvez gérer les libellés d’utilisation des données à l’aide des API [!DNL Experience Platform] ou de l’interface utilisateur. Consultez les sous-sections ci-dessous pour plus de détails sur chaque option.
 

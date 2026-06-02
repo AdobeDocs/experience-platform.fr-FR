@@ -17,9 +17,9 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 1881
+source-wordcount: 1891
 ht-degree: 89%
 
 ---
@@ -61,7 +61,7 @@ La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Ex
 
 * **[!DNL Catalog Service] :** Accédez à des jeux de données et explorez-les avec des fonctionnalités de lecture et d’écriture.
 * **[!DNL Query Service] :** accédez aux jeux de données et explorez-les à l’aide de SQL, ce qui vous permet de réduire les frais généraux d’accès aux données lorsque vous traitez de grandes quantités de données.
-* **[!DNL Sensei ML Framework] :** développement de modèles avec la possibilité de former et de noter des données, ainsi que de créer des recettes en un seul clic.
+* **[!DNL Adobe AI ML Framework] :** développement de modèles avec la possibilité de former et de noter des données, ainsi que de créer des recettes en un seul clic.
 * **[!DNL Experience Data Model (XDM)]:** La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. [Le modèle de données d’expérience (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr), optimisé par Adobe vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
 >[!NOTE]
@@ -165,9 +165,9 @@ Certaines fonctionnalités sont limitées à des noyaux particuliers, comme déc
 
 | Noyau | Prise en charge de l’installation de la bibliothèque | Intégrations à [!DNL Experience Platform] |
 | :----: | :--------------------------: | :-------------------- |
-| **[!DNL Python]** | Oui | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
-| **R** | Oui | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
-| **Scala** | Non | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
+| **[!DNL Python]** | Oui | <ul><li>Framework ML d’Adobe AI</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
+| **R** | Oui | <ul><li>Framework Adobe AI</li><li>[!DNL Catalog Service]</li></ul> |
+| **Scala** | Non | <ul><li>Framework Adobe AI</li><li>[!DNL Catalog Service]</li></ul> |
 
 ### Sessions de noyau {#kernel-sessions}
 

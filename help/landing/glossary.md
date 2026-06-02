@@ -39,9 +39,9 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: 8436
+source-wordcount: 8438
 ht-degree: 12%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 12%
 
 **&#x200B;**&#x200B;: Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Experience Platform, y compris aux API, aux événements, à la console de développement et aux outils utiles.
 
-**&#x200B;**&#x200B;: Adobe Sensei est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**&#x200B;**&#x200B;: Adobe AI est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
 **Compartiment Amazon S3** : les compartiments [!DNL Amazon S3] sont les conteneurs de base pour les données stockées dans l’écosystème [!DNL Amazon]. Les compartiments contiennent des objets, chaque objet est stocké et récupéré à l’aide d’une clé unique attribuée par le développeur.
 
@@ -92,7 +92,7 @@ ht-degree: 12%
 
 **Fusion d’attributs** : lors de la définition d’une politique de fusion à l’aide de l’API Real-Time Customer Profile, l’objet `attributeMerge` indique la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. Cela revient à sélectionner un [!UICONTROL Merge method] lors de la définition d’une politique de fusion dans l’interface utilisateur d’Experience Platform.
 
-**IA dédiée à l’attribution** : [!DNL Attribution AI] est un service intelligent optimisé par Adobe Sensei qui offre des fonctionnalités d’attribution algorithmique multicanal tout au long du cycle de vie du client.
+**IA dédiée à l’attribution** : [!DNL Attribution AI] est un service intelligent optimisé par Adobe AI qui offre des fonctionnalités d’attribution algorithmique multicanal tout au long du cycle de vie du client.
 
 **Audience** : une audience est l’ensemble des profils ainsi obtenus qui répondent aux critères d’une définition de segment.
 
@@ -180,7 +180,7 @@ ht-degree: 12%
 
 **Libellés personnalisés** : les libellés d’utilisation des données personnalisés vous permettent de créer et d’appliquer des libellés spécifiques aux champs de données qui répondent à des besoins professionnels spécifiques.
 
-**IA dédiée aux clients** : l’IA dédiée aux clients est un service intelligent optimisé par Adobe Sensei qui enrichit les profils clients avec des propensions basées sur l’IA et renforce la segmentation et le ciblage des clients.
+**IA dédiée aux clients** : l’IA dédiée aux clients est un service intelligent optimisé par Adobe AI qui enrichit les profils clients avec des propensions basées sur l’IA et renforce la segmentation et le ciblage des clients.
 
 ## D
 
@@ -536,7 +536,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Segmentation** : la segmentation est le processus de division d’un groupe important de clients, de prospects ou de consommateurs en groupes plus petits qui partagent des attributs similaires et qui réagissent de la même manière à des stratégies marketing spécifiques.
 
-**Sensei ML Framework** : Sensei ML Framework est une structure de machine learning (ML) unifiée qui utilise les données Experience Platform pour permettre aux spécialistes des données de développer des services intelligents pilotés par ML de manière plus rapide, évolutive et réutilisable.
+**Adobe AI ML Framework** : Adobe AI ML Framework est un framework de machine learning (ML) unifié qui utilise les données Experience Platform pour permettre aux spécialistes des données de développer des services intelligents pilotés par ML de manière plus rapide, évolutive et réutilisable.
 
 **Libellés sensibles (« S »)** : les libellés sensibles (« S ») sont utilisés pour catégoriser les données considérées comme sensibles, telles que les différents types de données comportementales ou géographiques que vous souhaitez marquer comme sensibles.
 

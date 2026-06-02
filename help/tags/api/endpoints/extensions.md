@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /exten
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '945'
 ht-degree: 98%
 
 ---
@@ -576,7 +576,7 @@ DELETE /extensions/{EXTENSION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_ID` |  `id` de l’extension que vous souhaitez supprimer. |
+| `EXTENSION_ID` | `id` de l’extension que vous souhaitez supprimer. |
 
 {style="table-layout:auto"}
 

@@ -1,8 +1,8 @@
 ---
-source-git-commit: 1ab56cf2495238385d726277f6409d2e0c0cb017
+source-git-commit: 7af1fbddfa13ea8d58945a1c1297fb7118ec1b2b
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 3%
+source-wordcount: '303'
+ht-degree: 2%
 
 ---
 # Extraits
@@ -37,14 +37,3 @@ Les quotas sont réinitialisés le premier jour de chaque mois civil. Le quota i
 >Les quotas sont basés sur les droits mensuels sous licence de votre entreprise pour les **identifiants envoyés**. Elles ne sont pas appliquées par les mécanismes de sécurisation du système, mais peuvent être surveillées et examinées.
 >
 >La suppression d’enregistrements est un **service partagé**. Votre limite mensuelle reflète les droits les plus élevés pour Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics et tous les modules complémentaires Shield applicables.
-
-### Chronologies de traitement des envois d’identifiants {#sla-processing-timelines}
-
-Après l’envoi, les demandes de suppression d’enregistrements sont mises en file d’attente et traitées en fonction de votre niveau de droits.
-
-| Description du produit et des droits | Durée de la file d’attente | Durée Maximale De Traitement (SLA) |
-|------------------------------------------------------------------------------------|---------------------|-------------------------------|
-| Sans Privacy and Security Shield ni module complémentaire Healthcare Shield | Jusqu’à 15 jours | 30 jours |
-| Avec le module complémentaire Privacy and Security Shield ou Healthcare Shield | Généralement 24 heures | 15 jours |
-
-Si votre organisation requiert des limites plus élevées, contactez votre représentant Adobe pour une révision des droits.

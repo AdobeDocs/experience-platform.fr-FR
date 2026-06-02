@@ -20,7 +20,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2340
+source-wordcount: 2305
 ht-degree: 39%
 
 ---
@@ -46,7 +46,7 @@ Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Exp
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Stratégie de fusion introuvable"
->abstract="Cela signifie qu’Experience Platform n’a pas pu trouver la politique de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Vérifiez que le bon identifiant de politique de fusion figure dans l’URL.</li><li>Assurez-vous de disposer de la bonne combinaison d’organisation et de sandbox pour accéder à la stratégie de fusion souhaitée.</li></ul>"
+>abstract="Cela signifie qu’Experience Platform n’a pas pu trouver la politique de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Vérifiez que le bon identifiant de stratégie de fusion figure dans l’URL.</li><li>Assurez-vous de disposer de la bonne combinaison d’organisation et de sandbox pour accéder à la stratégie de fusion souhaitée.</li></ul>"
 
 Dans l’interface utilisateur de [!DNL Experience Platform], vous pouvez commencer à utiliser des politiques de fusion en sélectionnant **[!UICONTROL Profiles]** dans le volet de navigation de gauche, puis en sélectionnant l’onglet **[!UICONTROL Merge Policies]** .
 
@@ -77,7 +77,7 @@ La première étape du workflow vous permet de configurer votre stratégie de fu
 * **[!UICONTROL ID stitching]** : ce champ définit la manière de déterminer les identités associées d’un client. Il existe deux valeurs possibles pour la combinaison d’identités. Il est important de comprendre l’impact du type de combinaison d’identités sélectionné sur vos données. Pour en savoir plus, consultez la [présentation des politiques de fusion](overview.md).
    * **[!UICONTROL None]** : n’effectue aucun regroupement d’identités.
    * **[!UICONTROL Private Graph]** : effectuez un groupement d’identités en fonction de votre graphique d’identités privé.
-* **[!UICONTROL Default merge policy]** : bouton de basculement qui vous permet de sélectionner cette politique de fusion ou non comme politique par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la politique de fusion par défaut de votre organisation. Voir la [présentation des politiques de fusion](overview.md) pour en savoir plus sur les politiques de fusion par défaut.
+* **[!UICONTROL Default merge policy]** : bouton de basculement qui vous permet de sélectionner cette politique de fusion ou non comme politique par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la politique de fusion par défaut de votre organisation. Voir la [&#x200B; présentation des politiques de fusion &#x200B;](overview.md) pour en savoir plus sur les politiques de fusion par défaut.
   ![Fenêtre contextuelle expliquant ce qui se produit lorsque la politique de fusion est définie comme politique de fusion par défaut.](../images/merge-policies/create-make-default.png)
 * **[!UICONTROL Active-On-Edge Merge Policy]** : bouton de basculement qui vous permet de sélectionner si cette politique de fusion sera active sur le serveur Edge ou non. Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée sur le serveur Edge (marquée comme audience Edge), elle doit être liée à une politique de fusion marquée comme Active-on-Edge (active sur le serveur Edge). Si une audience n’est **pas** liée à une politique de fusion marquée comme Active-On-Edge (active sur le bord), l’audience ne sera pas marquée comme Active-On-Edge (active sur le bord), et sera marquée comme une audience de diffusion en continu. En outre, chaque sandbox d’une organisation ne peut avoir qu’une seule politique de fusion **une** Active-On-Edge (active sur le bord).
 

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;publier un modèle;Workspace de science des données;rubriques populaires;api de machine learning sensei
 solution: Experience Platform
-title: Publication d’un modèle en tant que service à l’aide de l’API Sensei Machine Learning
+title: Publication d’un modèle en tant que service à l’aide de l’API Adobe AI Machine Learning
 type: Tutorial
-description: Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’API Sensei Machine Learning.
+description: Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’API Adobe AI Machine Learning.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 TQID: https://experienceleague.adobe.com/VhA5sSNIEJCWME0x7BMjswFVYUPGLQof-O8U2-bYfdw
 product_v2:
@@ -13,14 +13,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 1553
-ht-degree: 44%
+source-wordcount: 1573
+ht-degree: 43%
 
 ---
 
-# Publication d’un modèle en tant que service à l’aide du [!DNL Sensei Machine Learning API]
+# Publier un modèle en tant que service à l’aide de l’API Adobe AI Machine Learning
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ ht-degree: 44%
 >
 >Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’[[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) .
+Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’API [Adobe AI Machine Learning](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Prise en main
 
@@ -36,7 +36,7 @@ Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform 
 
 Pour suivre ce tutoriel, vous devez disposer d’un moteur ML, d’une instance ML et d’une expérience existants. Pour savoir comment les créer dans l’API, suivez le tutoriel sur [l’importation d’une recette empaquetée](./import-packaged-recipe-api.md).
 
-Enfin, avant de commencer ce tutoriel, consultez la section [prise en main](../api/getting-started.md) du guide de développement pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Sensei Machine Learning], y compris les en-têtes requis utilisés tout au long de ce tutoriel :
+Enfin, avant de commencer ce tutoriel, consultez la section [prise en main](../api/getting-started.md) du guide de développement pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API Adobe AI Machine Learning, y compris les en-têtes requis utilisés tout au long de ce tutoriel :
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
@@ -52,7 +52,7 @@ Le tableau suivant présente la terminologie courante utilisée dans ce tutoriel
 
 | Terme | Définition |
 | --- | --- |
-| **Instance de machine learning (instance ML)** | Instance d’un moteur de [!DNL Sensei] pour un client spécifique, contenant des données, des paramètres et un code [!DNL Sensei] spécifiques. |
+| **Instance de machine learning (instance ML)** | Instance d’un moteur Adobe AI pour un client particulier, contenant des données spécifiques, des paramètres et du code Adobe AI. |
 | **Expérience** | Entité parapluie permettant d’organiser des exécutions d’expériences de formation ou de notation ou les deux. |
 | **Expérience planifiée** | Terme décrivant l’automatisation des exécutions d’expériences de formation ou de notation, régies par un calendrier défini par l’utilisateur. |
 | **Exécution de l’expérience** | Une instance particulière d’expériences de formation ou de notation. Les exécutions d’expériences multiples provenant d’une expérience particulière peuvent différer des valeurs de jeu de données utilisées pour la formation ou la notation. |

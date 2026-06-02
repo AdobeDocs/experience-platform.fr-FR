@@ -12,9 +12,9 @@ role_v2:
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: efd99630e88fc5bfe703565fc8a365b06e76e931
 workflow-type: tm+mt
-source-wordcount: 1167
+source-wordcount: 1150
 ht-degree: 9%
 
 ---
@@ -62,15 +62,15 @@ L’onglet [!UICONTROL Attributes] vous permet de parcourir les attributs de com
 
 ![L’onglet Attributs s’affiche dans le Créateur d’audience](../assets/segmentation/audience-builder/attributes.png)
 
->[!AVAILABILITY]
->
->Les données récapitulatives sont en **disponibilité limitée** et peuvent être utilisées dans B2B edition et dans l’édition B2P.
-
-Lors de la sélection d’un attribut, vous pouvez afficher des données de résumé en sélectionnant l’icône [informations](../../images/icons/info.png). Les données récapitulatives incluent des informations telles que les principales valeurs, une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
+Lors de la sélection d’un attribut, vous pouvez afficher les informations sur les données en sélectionnant l’icône [informations](../../images/icons/info.png). Le résumé des informations sur les données comprend des informations telles que les valeurs principales, une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
 
 La section **[!UICONTROL Populated]** indique le pourcentage de comptes ayant une valeur pour ce champ.
 
-La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, le nombre d’enregistrements ayant la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente. Le nombre d’enregistrements pour chaque champ est déterminé par l’instantané de profil, qui fournit une vue consolidée des enregistrements une fois toutes les données du jeu de données de contribution fusionnées.
+>[!NOTE]
+>
+>Les premières valeurs ne s’affichent que si les valeurs de l’attribut ne sont **pas** stockées dans un tableau ou dans une paire clé/valeur.
+
+La section **[!UICONTROL Top values]** affiche les 50 valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente. Le nombre d’enregistrements pour chaque champ est déterminé par l’instantané de profil, qui fournit une vue consolidée des enregistrements une fois toutes les données du jeu de données de contribution fusionnées.
 
 ![Fenêtre contextuelle qui affiche une version entièrement remplie des données de résumé pour un attribut.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
@@ -92,7 +92,7 @@ Vous pouvez utiliser la liste déroulante pour sélectionner l’une des valeurs
 
 >[!NOTE]
 >
->Les données récapitulatives sont mises à jour **quotidiennement**. En outre, les données récapitulatives ne sont **pas** prises en charge pour les attributs dont les valeurs sont des tableaux ou des paires clé/valeur.
+>Les données récapitulatives sont mises à jour **quotidiennement**.
 
 En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
 

@@ -18,9 +18,9 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 72a6d18976bbeae2759dee035076e5e00c74a5e7
 workflow-type: tm+mt
-source-wordcount: 6786
+source-wordcount: 6827
 ht-degree: 43%
 
 ---
@@ -172,11 +172,15 @@ Pour plus d’informations sur les fonctions d’heure et de date, consultez la 
 
 +++
 
-Lorsque vous sélectionnez un attribut, vous pouvez afficher les données de synthèse en sélectionnant l’icône [informations](../../images/icons/info.png). Les données récapitulatives incluent des informations telles qu’une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
+Lorsque vous sélectionnez un attribut, vous pouvez afficher les informations sur les données pour l’attribut en sélectionnant l’icône [informations](../../images/icons/info.png). Le résumé des informations sur les données comprend des informations telles qu’une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de profils qui contiennent des valeurs pour cet attribut.
 
-La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, le nombre d’enregistrements ayant la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente.
+>[!NOTE]
+>
+>Les premières valeurs ne s’affichent que si les valeurs de l’attribut ne sont **pas** stockées dans un tableau ou dans une paire clé/valeur.
 
-![Fenêtre contextuelle qui affiche les données récapitulatives d’un attribut](/help/segmentation/images/ui/segment-builder/summary-data.png)
+La section **[!UICONTROL Top values]** affiche les 50 valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente.
+
+![Fenêtre contextuelle qui affiche les données récapitulatives d’un attribut](/help/segmentation/images/ui/segment-builder/summary-data.png){width="300"}
 
 Si un attribut est renseigné par moins de 25 % des profils, l’icône ![avis de données](../../images/icons/data-notice.png) s’affiche à la place. Les mêmes données de résumé s’affichent pour l’attribut, quelles que soient les conditions.
 
@@ -184,9 +188,17 @@ Si un attribut est renseigné par moins de 25 % des profils, l’icône ![avis d
 >
 >Les premières valeurs ne s’affichent que si le champ ne contient **pas** trop de valeurs différentes et si les valeurs de ces champs sont généralement répétées. En outre, ces données récapitulatives sont mises à jour **quotidiennement**.
 
+Lorsque vous ajoutez un attribut avec des données de résumé, vous pouvez également voir les données de résumé dans la zone de travail de création des règles.
+
+![L’attribut avec les données de résumé s’affiche.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+Vous pouvez utiliser la liste déroulante pour sélectionner l’une des valeurs principales ou saisir votre valeur, qui peut être automatiquement résolue sur l’une des valeurs principales.
+
+![La liste déroulante dans laquelle vous pouvez ajouter la valeur de l’attribut est mise en surbrillance.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
 
-![Le type d’ingestion de l’attribut s’affiche.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
+![Le type d’ingestion de l’attribut s’affiche.](/help/segmentation/images/ui/segment-builder/ingestion-type.png){width="300"}
 
 #### Attributs calculés {#computed-attributes}
 
@@ -487,7 +499,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 
 >[!NOTE]
 >
->Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >>Par exemple, si vous disposez d’un événement Page vue et d’un événement Extraction et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Extraction 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >

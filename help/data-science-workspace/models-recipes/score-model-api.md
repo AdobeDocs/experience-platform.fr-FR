@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;Noter un modèle;Workspace de science des données;rubriques populaires;api de machine learning sensei
 solution: Experience Platform
-title: Notation d’un modèle à l’aide de l’API Sensei Machine Learning
+title: Notation d’un modèle à l’aide de l’API de machine learning d’Adobe AI
 type: Tutorial
-description: Ce tutoriel vous explique comment tirer parti des API de machine learning de Sensei pour créer une expérience et une exécution d’expérience.
+description: Ce tutoriel vous explique comment tirer parti des API de machine learning d’Adobe AI pour créer une expérience et une exécution d’expérience.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 TQID: https://experienceleague.adobe.com/5bu-W9ypp2xDunBHXRk6UPX9eCCW4JlE2yF1bIWe4-A
 product_v2:
@@ -15,14 +15,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: 578
-ht-degree: 73%
+source-wordcount: 586
+ht-degree: 72%
 
 ---
 
-# Notation d’un modèle à l’aide de l’[!DNL Sensei Machine Learning API]
+# Noter un modèle à l’aide de l’API de machine learning d’Adobe AI
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ ht-degree: 73%
 >
 >Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour obtenir la liste de tous les points d’entrée de l’API de machine learning de Sensei, reportez-vous à [ce document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour obtenir la liste de tous les points d’entrée de l’API de machine learning d’Adobe AI, reportez-vous à [ce document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Création d’une expérience planifiée pour la notation
 

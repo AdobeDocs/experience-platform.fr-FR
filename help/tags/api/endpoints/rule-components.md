@@ -4,8 +4,8 @@ description: Découvrez comment effectuer des appels au point d’entrée /rule_
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 92%
+source-wordcount: '1154'
+ht-degree: 86%
 
 ---
 
@@ -15,13 +15,13 @@ Dans les balises de collecte de données, les [règles](./rules.md) contrôlent 
 
 >[!NOTE]
 >
->Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles et les composants de règle dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
+>Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles et les composants de règle dans l’interface utilisateur, reportez-vous au guide de l’interface utilisateur [UI](../../ui/managing-resources/rules.md).
 
 Les composants de règle possèdent trois types de base :
 
 | Type de composant de règle | Description |
 | --- | --- |
-| Événements | Un événement correspond au déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. « [!UICONTROL Chargement de bibliothèque] », « [!UICONTROL Haut de page] » et « [!UICONTROL Cliquer sur] » sont des exemples d’événements. |
+| Événements | Un événement correspond au déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. « [!UICONTROL Library Load] », « [!UICONTROL Page Top] » et « [!UICONTROL Click] » sont des exemples d’événements. |
 | Conditions | Une condition correspond à une évaluation déterminant si certains critères sont satisfaits avant l’exécution d’actions. Une fois qu’un événement se produit, les conditions sont évaluées. Les actions de la règle ne s’exécutent que si toutes les conditions sont remplies. |
 | Actions | Il s’agit des actions que la règle doit effectuer, telles que l’envoi d’une balise Adobe Analytics, la récupération d’un identifiant visiteur personnalisé ou le déclenchement d’une mBox spécifique. |
 
@@ -359,7 +359,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les [packages d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un identifiant de descripteur délégué pour indiquer le package d’extension sur lequel ce composant de règle est basé, le type du composant (événement, condition ou action) ainsi que le nom du composant spécifique tel que défini par l’extension (comme l’événement « Cliquer sur » dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur les [ID de descripteur de délégué](../guides/delegate-descriptor-ids.md). |
+| `attributes.delegate_descriptor_id` | **(Obligatoire)** Les types de composants de règle que vous pouvez définir sont fournis par les [packages d’extension](./extension-packages.md). Lorsque vous créez un composant de règle, vous devez fournir un identifiant de descripteur délégué pour indiquer le package d’extension sur lequel ce composant de règle est basé, le type du composant (événement, condition ou action) ainsi que le nom du composant spécifique tel que défini par l’extension (comme l’événement « Cliquer sur » dans l’extension Core).<br><br>Pour plus d’informations, consultez le guide sur [les identifiants de descripteur délégué](../guides/delegate-descriptor-ids.md). |
 | `attributes.name` | **(Obligatoire)** Nom compréhensible pour le composant de règle. |
 | `attributes.delay_next` | Valeur booléenne qui indique s’il faut retarder les actions ultérieures. |
 | `attributes.order` | Nombre entier indiquant l’ordre de chargement du composant par type. |

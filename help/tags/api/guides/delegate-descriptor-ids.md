@@ -4,7 +4,7 @@ description: Découvrez les ID de descripteur de délégué dans l’API Reactor
 exl-id: 2c2b9b31-0618-4b93-97ec-0798fc06aac0
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '503'
 ht-degree: 99%
 
 ---

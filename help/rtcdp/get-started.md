@@ -22,10 +22,10 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
 source-wordcount: 2356
-ht-degree: 61%
+ht-degree: 60%
 
 ---
 
@@ -127,7 +127,7 @@ Elle accède à la page d’accueil pour en parcourir d’autres.
 
 Sarah bénéficie d’une expérience de page d’accueil personnalisée diffusée dynamiquement, en fonction de son [!DNL Real-Time Customer Profile] dans Adobe Experience Platform.
 
-Elle voit le contenu pertinent, grâce à la personnalisation optimisée par Adobe Sensei dans Adobe Target, qui prend en compte ses achats précédents et son intérêt pour les vêtements et l’équipement de course à pied. Luma adapte également le contenu du catalogue pour hommes en fonction de l’équipement de course à pied masculin en fonction de sa dernière navigation.
+Elle voit le contenu pertinent, grâce à la personnalisation optimisée par Adobe AI dans Adobe Target, qui prend en compte ses achats précédents et son intérêt pour les vêtements et l’équipement de course à pied. Luma adapte également le contenu du catalogue pour hommes en fonction de l’équipement de course à pied masculin en fonction de sa dernière navigation.
 
 Plus bas sur la page, Sarah découvre les produits phares, ainsi que de nouvelles recommandations basées sur les derniers articles consultés.
 

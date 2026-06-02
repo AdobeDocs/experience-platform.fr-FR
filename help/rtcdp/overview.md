@@ -19,10 +19,10 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
 source-wordcount: 824
-ht-degree: 16%
+ht-degree: 14%
 
 ---
 
@@ -44,7 +44,7 @@ Avec Real-Time CDP, vous pouvez :
 
 * obtenir une vue unique de votre client en combinant les données de toute lʼentreprise ;
 * gérer de manière responsable les profils avec des contrôles de confidentialité et de gouvernance fiables pour les identifiants connus et anonymes ;
-* générer des informations exploitables et adapter les audiences grâce à l’IA et au machine learning optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
+* Générez des informations exploitables et adaptez les audiences grâce à l’IA et au machine learning optimisés par Adobe AI et conçus pour les professionnels du marketing.
 * Proposez des expériences personnalisées en temps réel sur tous les canaux et destinations.
 
 ## Éditions Real-Time Customer Data Platform (Business-to-Consumer, Business-to-Business, Business-to-Person) {#rtcdp-editions}

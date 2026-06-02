@@ -4,8 +4,8 @@ description: Les notes de mise à jour de septembre 2023 pour Adobe Experience
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2242'
-ht-degree: 91%
+source-wordcount: '2302'
+ht-degree: 83%
 
 ---
 
@@ -69,7 +69,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Type | Fonctionnalité | Description |
 | --- | --- | --- |
-| Trains de données | Prise en charge de la recherche d’appareils | Lors de la configuration d’un train de données, vous pouvez désormais sélectionner le niveau d’informations de recherche des appareils à collecter. Les informations de recherche d’appareils incluent des données sur l’appareil, le matériel, le système d’exploitation et le navigateur utilisés pour interagir avec votre page. <br> Les informations de recherche d’appareils ne peuvent pas être collectées avec les indices clients et l’agent utilisateur. Si vous choisissez de collecter des informations sur l’appareil, la collecte de l’agent utilisateur et des indices clients sera désactivée, et vice versa. Toutes les informations de recherche d’appareils sont stockées dans le groupe de champs `xdm:device`. Pour en savoir plus, consultez la documentation sur la [configuration des trains de données](../../datastreams/configure.md#geolocation-device-lookup). |
+| Trains de données | Prise en charge de la recherche d’appareils | Lors de la configuration d’un train de données, vous pouvez désormais sélectionner le niveau d’informations de recherche des appareils à collecter. Les informations de recherche d’appareil incluent des données sur l’appareil, le matériel, le système d’exploitation et le navigateur utilisé pour interagir avec votre page. <br>  Les informations de recherche d’appareil ne peuvent pas être collectées avec l’agent utilisateur et les indications du client. Si vous choisissez de collecter des informations sur l’appareil, la collecte de l’agent utilisateur et des indices clients sera désactivée, et vice versa. Toutes les informations de recherche d’appareils sont stockées dans le groupe de champs `xdm:device`. Pour en savoir plus, consultez la documentation sur la [configuration des trains de données](../../datastreams/configure.md#geolocation-device-lookup). |
 | Extensions | Extension de l’API pour les événements web [!DNL TikTok] | L’extension de l’[[!DNL TikTok] API pour les événements web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) vous permet d’exploiter les données capturées sur Adobe Experience Platform Edge Network et de les envoyer à [!DNL TikTok] sous la forme d’événements côté serveur à l’aide de l’API pour les événements web [!DNL TikTok]. |
 
 {style="table-layout:auto"}
@@ -98,7 +98,7 @@ Experience Platform offre toute une gamme de fonctionnalités d’hygiène des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| {type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans tous les entrepôts de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de gestion du cycle de vie des données de Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour le jeu de données à supprimer.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
+| {type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans toutes les banques de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de Data Lifecycle Management dans Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour la suppression du jeu de données.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
 | Expirations de jeux de données | Limitez vos données et gardez le contrôle de vos contrats de licence avec l’expiration automatisée du jeu de données. Réduisez les volumes de données en supprimant des jeux de données entiers et en définissant une date et une heure pour le jeu de données à supprimer. Pour plus d’informations, consultez la [documentation sur l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md). |
 
 {style="table-layout:auto"}
@@ -113,7 +113,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Nouveau ou mis à jour | Description |
 | ----------- |----------------|----------- |
-| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nouveau | Activez les audiences précédemment intégrées dans [!DNL LiveRamp] aux éditeurs Premium sur les supports mobiles, web, d’affichage et de TV connectée. <br> Après l’intégration d’audiences à votre compte [!DNL LiveRamp] par le biais de la connexion [LiveRamp - Intégration](../../destinations/catalog/advertising/liveramp-onboarding.md), utilisez la nouvelle connexion [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) pour activer les audiences vers les destinations en aval. |
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nouveau | Activez les audiences précédemment intégrées pour [!DNL LiveRamp] aux éditeurs premium sur les supports mobiles, web, d’affichage et de télévision connectée. <br> Après l’intégration des audiences à votre compte [!DNL LiveRamp] via la connexion [LiveRamp - Intégration](../../destinations/catalog/advertising/liveramp-onboarding.md), utilisez la nouvelle connexion [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) pour activer les audiences vers les destinations en aval. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nouveau | [[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM proposant l’ensemble des logiciels, intégrations et ressources dont vous avez besoin pour connecter les services marketing, ventes, gestion de contenu et clientèle. Elle vous permet de connecter vos données, vos équipes et votre clientèle sur une seule et même plateforme CRM. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Mis à jour | Ajout de la prise en charge de préfixes de champ personnalisés [!DNL Dynamics 365] pour les champs personnalisés qui n’ont pas été créés dans la solution par défaut dans [!DNL Dynamics 365]. Un nouveau champ d’entrée, **[!UICONTROL Customization Prefix]**, a été ajouté à l’étape [Renseigner les détails de la destination](#destination-details). |
 | [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Mis à jour | La destination Audiences Experience Cloud est désormais disponible. Utilisez cette destination pour activer les audiences de Real-Time CDP vers Audience Manager et Adobe Analytics. Vous avez besoin d’une licence Audience Manager pour envoyer des audiences à Adobe Analytics. |
@@ -152,14 +152,14 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Actions rapides ajoutées à l’éditeur de schémas | De nouvelles actions rapides ont été ajoutées à la zone de travail de l’éditeur de schémas. Vous pouvez désormais copier la structure JSON ou supprimer le schéma directement à partir de l’éditeur.<br>![Actions rapides dans l’éditeur de schémas.](../2023/assets/schema-editor-copy-json.png "Éditeur de schémas avec « Plus » et « Copier vers JSON » mis en surbrillance."){width="100" zoomable="yes"} |
-| Filter des ressources XDM par créateur personnalisé ou standard | Les listes des schémas, des groupes de champs, des types de données et des classes disponibles sont désormais préfiltrées en fonction de leur méthode de création. Vous pouvez ainsi filtrer les ressources selon qu’elles ont été créées de manière personnalisée ou créées par Adobe.<br>![Filtres standard et personnalisés dans l’espace de travail des schémas.](../2023/assets/standard-and-custom-classes.png "Espace de travail des schémas avec filtres standard et personnalisés mis en surbrillance."){width="100" zoomable="yes"} <br> Voir la [documentation sur la création et la modification de ressources](../../xdm/ui/resources/classes.md#filter.md) pour plus d’informations. |
+| Actions rapides ajoutées à l’éditeur de schémas | De nouvelles actions rapides ont été ajoutées à la zone de travail de l’éditeur de schémas. Vous pouvez désormais copier la structure JSON ou supprimer le schéma directement à partir de l’éditeur.<br>![Les actions rapides dans l’éditeur de schémas.](../2023/assets/schema-editor-copy-json.png "L’éditeur de schémas avec Plus et Copier dans JSON mis en surbrillance."){width="100" zoomable="yes"} |
+| Filter des ressources XDM par créateur personnalisé ou standard | Les listes des schémas, des groupes de champs, des types de données et des classes disponibles sont désormais préfiltrées en fonction de leur méthode de création. Vous pouvez ainsi filtrer les ressources selon qu’elles ont été personnalisées ou créées par Adobe.<br>![Les filtres standard et personnalisés de l’espace de travail Schémas .](../2023/assets/standard-and-custom-classes.png "Espace de travail des schémas avec les filtres standard et personnalisés mis en surbrillance."){width="100" zoomable="yes"} <br> Pour plus d’informations, consultez la [documentation sur la création et la modification de ressources](../../xdm/ui/resources/classes.md#filter.md). |
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Workflow de création de schéma mis à jour | Un nouveau workflow de création de schéma a été mis en œuvre pour rationaliser le processus. <br> ![Nouvelle interface utilisateur de création de schéma.](../2023/assets/schema-class-options.png "Nouveau sélecteur de détails de schéma mis en surbrillance."){width="100" zoomable="yes"} <br> Pour plus d’informations, voir la [documentation sur la création de schéma](../../xdm/ui/resources/schemas.md#create). |
+| Workflow de création de schéma mis à jour | Un nouveau workflow de création de schéma a été mis en œuvre pour rationaliser le processus. <br> ![Sélecteur de détails du nouveau schéma.UI de création de schéma.](../2023/assets/schema-class-options.png "Nouveau schéma mis en surbrillance."){width="100" zoomable="yes"} <br> Pour plus d’informations, consultez la [documentation sur la création de schémas](../../xdm/ui/resources/schemas.md#create). |
 
 **Nouveaux composants XDM**
 
@@ -195,7 +195,7 @@ Le service d’identités d’Adobe Experience Platform vous offre la possibil
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur le Service d’identités, consultez la [vue d’ensemble du Service d’identités](../../identity-service/home.md).
+Pour en savoir plus sur le service d’identités, consultez la [vue d’ensemble du service d’identités](../../identity-service/home.md).
 
 ## Service de requête {#query-service}
 
@@ -205,7 +205,7 @@ Le service de requête vous permet d’utiliser le langage SQL standard pour int
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mises à jour de l’interface utilisateur de filtrage des journaux | Le filtrage amélioré des journaux de requêtes optimise la visibilité des journaux générés par l’utilisateur pour la surveillance, l’administration et la résolution des problèmes. Vous pouvez filtrer la liste des journaux de requêtes en fonction de différents paramètres. <br> ![Paramètres des filtres des journaux de requêtes.](../2023/assets/log-filter-settings.png "Les nouveaux filtres des journaux de requêtes sont mis en surbrillance."){width="100" zoomable="yes"} <br> Pour plus d’informations, consultez la [documentation sur les journaux de requêtes](../../query-service/ui/query-logs.md#filter-logs). |
+| Mises à jour de l’interface utilisateur de filtrage des journaux | Le filtrage amélioré des journaux de requêtes optimise la visibilité des journaux générés par l’utilisateur pour la surveillance, l’administration et la résolution des problèmes. Vous pouvez filtrer la liste des journaux de requêtes en fonction de différents paramètres. <br> ![Paramètres des filtres des journaux de requêtes.](../2023/assets/log-filter-settings.png "Les nouveaux filtres du journal des requêtes sont mis en surbrillance."){width="100" zoomable="yes"} <br> Pour plus d’informations, consultez la [documentation sur les journaux de requêtes](../../query-service/ui/query-logs.md#filter-logs). |
 | Mises à jour de l’interface utilisateur du requêteur multiples | Vous pouvez désormais exécuter plusieurs requêtes séquentielles dans le requêteur ou écrire plusieurs requêtes et les exécuter de manière séquentielle. Pour plus de flexibilité dans l’exécution de votre requête, vous pouvez mettre en surbrillance la requête de votre choix et sélectionner cette requête spécifique à exécuter indépendamment des autres. Voir le [guide de l’interface d’utilisation du requêteur](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) pour plus d’informations. |
 
 {style="table-layout:auto"}

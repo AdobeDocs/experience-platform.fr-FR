@@ -1,10 +1,10 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform - Février 2026
-description: Les notes de mise à jour de février 2026 pour Adobe Experience Platform.
+title: Notes De Mise À Jour De Adobe Experience Platform - Février 2026
+description: Les notes de mise à jour de février 2026 pour Adobe Experience Platform.
 exl-id: a677026f-e07e-4e69-bd6c-5ddcb13e8e38
 source-git-commit: da84f77bbe328747ad7befd92d0bc4a12d8477fb
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '790'
 ht-degree: 49%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 49%
 >- [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/release-notes)
 >- [Collaboration dans Real-Time CDP](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/latest)
 
-**Date de mise à jour : mercredi 17 février 2026**
+**Date de publication : 17 février 2026**
 
 Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -59,7 +59,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 **Correctifs et améliorations**
 
-| Correction | Description |
+| Corriger | Description |
 | --- | --- |
 | Alerte Taux d’échec de l’activation dépassé | L’alerte de destination Taux d’échec de l’activation dépassé utilise désormais correctement le seuil que vous configurez lors de l’évaluation et de l’envoi de l’alerte. Auparavant, l’alerte se déclenchait à un taux d’échec de 1 %, quel que soit le pourcentage que vous avez configuré. Voir [règles d’alerte standard](../../observability/alerts/rules.md#destinations) pour plus d’informations sur cette alerte. |
 | Compte rendu des performances des identités exclues de la correspondance client Google | Correction d’un bug dans la logique de comptage des enregistrements ignorés en raison duquel un nombre exagéré de profils exclus s’affichait pour les destinations de correspondance client Google. Le comportement d’activation et d’exportation n’a pas été affecté ; seuls les nombres signalés étaient incorrects. |

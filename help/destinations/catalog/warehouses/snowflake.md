@@ -25,9 +25,9 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 48ac02ac19dc0e734ad700add6f35ff56d1a971c
 workflow-type: tm+mt
-source-wordcount: 1681
+source-wordcount: 1746
 ht-degree: 18%
 
 ---
@@ -155,6 +155,11 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Co
 >id="platform_destinations_snowflake_accountID"
 >title="Saisir votre identifiant de compte Snowflake"
 >abstract="Si votre compte est lié à une organisation, utilisez le format suivant : `OrganizationName.AccountName`<br><br>. Si votre compte n’est pas lié à une organisation, utilisez le format suivant : `AccountName`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_privatelink"
+>title="Lien privé activé"
+>abstract="Activez ce bouton si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>Son activation sur un compte qui n’utilise pas la liaison privée contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que ce bouton est désactivé, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 

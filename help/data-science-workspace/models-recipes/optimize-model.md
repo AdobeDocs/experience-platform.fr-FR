@@ -17,10 +17,10 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 1335
-ht-degree: 80%
+source-wordcount: 1340
+ht-degree: 79%
 
 ---
 
@@ -177,7 +177,7 @@ Les données sont d’abord chargées dans un jeu de données à partir d’une 
 
 ## Utilisation de mesures préconfigurées et de graphiques de visualisation
 
-Le [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme de machine learning. Le tableau ci-dessous présente les classes d’algorithme de machine learning de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
+Le framework d’informations du modèle Adobe AI prend en charge un modèle par défaut pour chaque type d’algorithme de machine learning. Le tableau ci-dessous présente les classes d’algorithme de machine learning de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
 
 | Type d’algorithme de ML | Mesures d’évaluation | Visualisations |
 | --- | --- | --- |

@@ -28,7 +28,7 @@ ht-degree: 30%
 
 # Connexion [!DNL Algolia]
 
-## Vue d’ensemble {#overview}
+## Vue d&#39;ensemble {#overview}
 
 >[!IMPORTANT]
 >

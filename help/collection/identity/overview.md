@@ -4,7 +4,7 @@ description: Découvrez comment la collecte de données utilise les ECID, les id
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---

@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: f3ebbec0f5000c05bb5c40654b010073ef0f9658
 workflow-type: tm+mt
 source-wordcount: 1136
 ht-degree: 13%
@@ -138,7 +138,7 @@ Pour récupérer vos **[!UICONTROL Dataflow ID]** et **[!UICONTROL Streaming end
 
 ![Point d’entrée de flux continu dans l’activité de flux de données.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
 
-Une fois que vous avez récupéré votre point d’entrée de diffusion en continu et votre identifiant de flux de données, créez une URL basée sur le modèle suivant : ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. Par exemple, une URL webhook construite peut ressembler à ceci : ``https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983``
+Une fois que vous avez récupéré votre point d’entrée de diffusion en continu et votre identifiant de flux de données, créez une URL basée sur le modèle suivant : `{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}`. Par exemple, une URL webhook construite peut ressembler à ceci : `https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983`
 
 ## Configuration du webhook dans [!DNL Chatlio] {#set-up-webhook}
 

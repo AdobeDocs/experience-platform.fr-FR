@@ -12,7 +12,7 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+source-git-commit: 7c8919e972bf0a62ea00e6435aa60a48aa11f53d
 workflow-type: tm+mt
 source-wordcount: 2839
 ht-degree: 0%
@@ -261,7 +261,7 @@ Dans le panneau de filtrage, vous pouvez :
 - **[!UICONTROL Compatible classes]** — Utilisez la liste déroulante pour filtrer les groupes de champs par compatibilité de classe
 - **[!UICONTROL Industry tags]** — Utilisez des cases à cocher pour filtrer par une ou plusieurs catégories de secteur
 
-Lors de la navigation, sélectionnez une ligne dans le tableau pour mettre à jour le rail d’informations. Le rail d’informations affiche des métadonnées telles que les classes compatibles et les balises de secteur afin que vous puissiez consulter les détails clés sans ouvrir le groupe de champs.
+Lors de la navigation, sélectionnez une ligne dans le tableau pour déclencher le rail d’informations. Le rail d’informations affiche des métadonnées telles que les classes compatibles et les balises de secteur afin que vous puissiez consulter les détails clés sans ouvrir le groupe de champs.
 
 #### Métadonnées des détails du groupe de champs
 

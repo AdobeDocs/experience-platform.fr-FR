@@ -25,7 +25,7 @@ topic_v2:
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 4940
-ht-degree: 37%
+ht-degree: 39%
 
 ---
 
@@ -632,7 +632,7 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.se
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_info_alert"
 >title="Sortie hiérarchique activée"
->abstract="Cette destination prend en charge la sortie hiérarchique, car le bouton (bascule) Activer l’exportation de tableaux, de mappages et d’objets est activé. Vous pouvez exporter des tableaux de niveau supérieur, des éléments de tableau ou plusieurs champs du même tableau dans un seul mappage. Voir la documentation pour plus de détails."
+>abstract="Cette destination prend en charge la sortie hiérarchique, car le bouton bascule Activer l’exportation de tableaux, de mappages et d’objets est activé. Vous pouvez exporter des tableaux de niveau supérieur, des éléments de tableau ou plusieurs champs du même tableau dans un seul mappage. Voir la documentation pour plus de détails."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_source_field"

@@ -19,7 +19,7 @@ topic_v2:
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 1691
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -99,7 +99,7 @@ Vous pouvez continuer à suivre les étapes ci-dessus pour ajouter d’autres ch
 >[!CONTEXTUALHELP]
 >id="platform_xdm_schema_fieldproperties_defaultvalue"
 >title="Valeur par défaut"
->abstract="Définit une valeur de référence pour le champ du schéma. Cette valeur n’est pas automatiquement renseignée lors de l’ingestion des données."
+>abstract="Définit une valeur de référence pour le champ du schéma. Cette valeur n’est pas automatiquement renseignée lors de l’ingestion de données."
 
 Lors de la définition d’un nouveau champ, des options de configuration supplémentaires peuvent apparaître dans le rail de droite en fonction du **[!UICONTROL Type]** que vous choisissez pour le champ. Le tableau suivant décrit ces propriétés de champ supplémentaires, ainsi que leurs types compatibles.
 
@@ -126,7 +126,7 @@ Le rail de droite propose plusieurs cases à cocher pour désigner des rôles sp
 
 Pour en savoir plus sur ces types spéciaux, consultez la documentation suivante :
 
-* [Map](./map.md)
+* [Carte](./map.md)
 * [[!UICONTROL Required]](./required.md)
 * [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)

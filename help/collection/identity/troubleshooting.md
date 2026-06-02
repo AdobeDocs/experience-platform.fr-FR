@@ -1,9 +1,10 @@
 ---
 title: Résolution des problèmes d’identité dans la collecte de données
 description: Diagnostiquez les problèmes d’identité courants dans les implémentations de Web SDK, notamment le gonflement des visiteurs, les incohérences d’ECID, les conflits de cookies et les problèmes FPID.
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+exl-id: c569b1a1-1171-4264-872c-87e15779bd28
+source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1065'
 ht-degree: 0%
 
 ---
