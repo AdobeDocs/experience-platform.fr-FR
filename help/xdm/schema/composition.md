@@ -21,7 +21,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 34af27062cff5296db2a711cffe0bac4e4f1dafc
 workflow-type: tm+mt
 source-wordcount: 4466
 ht-degree: 25%
@@ -145,7 +145,7 @@ Le maintien de la rétrocompatibilité étant essentiel à l’évolution des sc
 
 >[!NOTE]
 >
->Vous ne pouvez introduire une modification avec rupture dans un schéma que s’il n’a pas encore été utilisé pour ingérer des données dans Experience Platform et n’a pas été activé pour une utilisation dans le profil client en temps réel. Cependant, une fois le schéma utilisé dans Experience Platform, il doit respecter la politique de contrôle de version additif. Une fois qu’un jeu de données est créé pour le schéma, les règles de l’évolution des schémas sont strictement appliquées par le système à tous les champs du schéma. Les champs ne seront plus modifiables dans tous les schémas XDM dans lesquels ils sont référencés.
+>Vous ne pouvez introduire une modification avec rupture dans un schéma que s’il n’a pas encore été utilisé pour ingérer des données dans Experience Platform et n’a pas été activé pour une utilisation dans le profil client en temps réel. Cependant, une fois le schéma utilisé dans Experience Platform, il doit respecter la politique de contrôle de version additif. Une fois qu’un jeu de données est créé pour le schéma, les règles d’évolution du schéma sont strictement appliquées par le système à tous les champs du schéma. Les champs ne seront plus modifiables dans tous les schémas XDM dans lesquels ils sont référencés.
 
 Le tableau suivant détaille les modifications prises en charge lors de la modification de schémas, de groupes de champs et de types de données :
 
