@@ -46,7 +46,7 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/bitrate) | `bitrate` | entier | Non | Valeur du débit (en Kbits/s). |
-| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/dropped-frames) | `droppedFrames` | entier | Non | Nombre total d’images perdues lors de la lecture. |
-| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/frames-per-second) | `framesPerSecond` | entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
-| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/time-to-start) | `timeToStart` | entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |
+| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/bitrate) | `bitrate` | entier | Non | Valeur du débit (en Kbits/s). |
+| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/dropped-frames) | `droppedFrames` | entier | Non | Nombre total d’images perdues lors de la lecture. |
+| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/frames-per-second) | `framesPerSecond` | entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
+| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/time-to-start) | `timeToStart` | entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |

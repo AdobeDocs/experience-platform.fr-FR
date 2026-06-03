@@ -35,8 +35,8 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 | Nom d’affichage | Propriété | Type de données | Description |
 |---|---|---|---|
 | [!UICONTROL Ad Break ID] | `ID` | chaîne | Identifiant de la coupure publicitaire. |
-| [[!UICONTROL Pod Friendly Name]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/pod-name) | `friendlyName` | chaîne | Nom facilement compréhensible de la coupure publicitaire. |
-| [[!UICONTROL Ad In Pod Position]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/pod-position) | `index` | entier | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
+| [[!UICONTROL Pod Friendly Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/pod-name) | `friendlyName` | chaîne | Nom facilement compréhensible de la coupure publicitaire. |
+| [[!UICONTROL Ad In Pod Position]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/pod-position) | `index` | entier | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
 | [!UICONTROL Pod Offset] | `offset` | entier | Décalage de la coupure publicitaire dans le contenu, en secondes. |
 
 Voir [advertisingpoddetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

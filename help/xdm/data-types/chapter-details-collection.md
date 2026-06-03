@@ -34,7 +34,7 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-length) | `length` | entier | Oui | Durée du chapitre, en secondes. |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-name) | `friendlyName` | chaîne | Non | Nom du chapitre et/ou du segment. |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-offset) | `offset` | entier | Oui | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-position) | `index` | entier | Oui | Position (index, entier) du chapitre à l’intérieur du contenu. |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-length) | `length` | entier | Oui | Durée du chapitre, en secondes. |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-name) | `friendlyName` | chaîne | Non | Nom du chapitre et/ou du segment. |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-offset) | `offset` | entier | Oui | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-position) | `index` | entier | Oui | Position (index, entier) du chapitre à l’intérieur du contenu. |

@@ -34,6 +34,6 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [[!UICONTROL Ad In Pod Position]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/ads/ad-in-pod-position) | `index` | entier | Oui | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
-| [[!UICONTROL Pod Friendly Name]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/ads/ad-break-name) | `friendlyName` | chaîne | Non | Nom facilement compréhensible de la coupure publicitaire. |
-| [[!UICONTROL Pod Offset]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/ads/ad-break-start-time) | `offset` | entier | Oui | Décalage de la coupure publicitaire dans le contenu, en secondes. |
+| [[!UICONTROL Ad In Pod Position]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-in-pod-position) | `index` | entier | Oui | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
+| [[!UICONTROL Pod Friendly Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-break-name) | `friendlyName` | chaîne | Non | Nom facilement compréhensible de la coupure publicitaire. |
+| [[!UICONTROL Pod Offset]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-break-start-time) | `offset` | entier | Oui | Décalage de la coupure publicitaire dans le contenu, en secondes. |

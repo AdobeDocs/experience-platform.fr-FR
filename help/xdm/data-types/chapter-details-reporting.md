@@ -34,13 +34,13 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |---|---|---|---|
-| [[!UICONTROL Chapter Completed]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/chapter-completes) | `isCompleted` | booléen | Indique si le chapitre est terminé. |
-| [[!UICONTROL Chapter ID]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter) | `ID` | chaîne | Identifiant généré automatiquement pour le chapitre. |
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-length) | `length` | entier | Durée du chapitre, en secondes. |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-name) | `friendlyName` | chaîne | Nom du chapitre et/ou du segment. |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-offset) | `offset` | entier | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-position) | `index` | entier | Position (index, entier) du chapitre à l’intérieur du contenu. |
-| [[!UICONTROL Chapter Started]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/chapter-starts) | `isStarted` | booléen | Indique si le chapitre a commencé ou non. |
-| [[!UICONTROL Chapter Time Played]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/chapter-time-spent) | `timePlayed` | entier | Temps passé sur le chapitre, en secondes. |
+| [[!UICONTROL Chapter Completed]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/chapter-completes) | `isCompleted` | booléen | Indique si le chapitre est terminé. |
+| [[!UICONTROL Chapter ID]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter) | `ID` | chaîne | Identifiant généré automatiquement pour le chapitre. |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-length) | `length` | entier | Durée du chapitre, en secondes. |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-name) | `friendlyName` | chaîne | Nom du chapitre et/ou du segment. |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-offset) | `offset` | entier | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-position) | `index` | entier | Position (index, entier) du chapitre à l’intérieur du contenu. |
+| [[!UICONTROL Chapter Started]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/chapter-starts) | `isStarted` | booléen | Indique si le chapitre a commencé ou non. |
+| [[!UICONTROL Chapter Time Played]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/chapter-time-spent) | `timePlayed` | entier | Temps passé sur le chapitre, en secondes. |
 
 Voir [chapterdetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.
