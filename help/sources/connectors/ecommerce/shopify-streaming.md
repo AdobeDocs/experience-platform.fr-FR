@@ -5,9 +5,12 @@ badge: Beta
 last-substantial-update: 2023-04-26T00:00:00.000Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
 TQID: https://experienceleague.adobe.com/WHz5WqfeMaaBKIfSRVo1PP347-YmLfo9rQXzr7qFEYk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 41d3147d526c4515ef7cf2e6a60585d8b74fc488
 workflow-type: tm+mt
 source-wordcount: 846
@@ -31,7 +34,7 @@ Vous devez disposer d’un compte partenaire [!DNL Shopify] valide pour vous con
 
 ### Création de votre application
 
-Avec un compte partenaire [!DNL Shopify] valide, vous pouvez maintenant continuer et créer votre application à l’aide du tableau de bord des partenaires. Pour obtenir des instructions complètes sur la création de votre application dans [!DNL Shopify], consultez le guide [[!DNL Shopify]  de prise en main ](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+Avec un compte partenaire [!DNL Shopify] valide, vous pouvez maintenant continuer et créer votre application à l’aide du tableau de bord des partenaires. Pour obtenir des instructions complètes sur la création de votre application dans [!DNL Shopify], consultez le guide [[!DNL Shopify]  de prise en main &#x200B;](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
 Une fois votre application créée, récupérez vos **identifiant client** et **secret client** dans l’onglet **informations d’identification du client** du tableau de bord des partenaires [!DNL Shopify]. L’identifiant client et le secret client seront utilisés dans les étapes suivantes pour récupérer votre code d’autorisation et votre jeton d’accès.
 

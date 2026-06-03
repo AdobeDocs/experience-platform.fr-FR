@@ -4,8 +4,10 @@ description: Découvrez comment créer une connexion source en flux continu et u
 badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
 TQID: https://experienceleague.adobe.com/ZOHi9eHM3HxtkpiLfOnPOBbrzo4PBbYGB4liRKm0T8Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fb621ec70700ac0f171817a7447f7022e6a04f79
 workflow-type: tm+mt
 source-wordcount: 1635
@@ -19,7 +21,7 @@ ht-degree: 40%
 >
 >La source [!DNL Shopify Streaming] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Lisez ce guide pour savoir comment diffuser des données de la [[!DNL Shopify Streaming]  source ](../../../../connectors/ecommerce/shopify-streaming.md) vers Adobe Experience Platform à l’aide de l’[[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service).
+Lisez ce guide pour savoir comment diffuser des données de la [[!DNL Shopify Streaming]  source &#x200B;](../../../../connectors/ecommerce/shopify-streaming.md) vers Adobe Experience Platform à l’aide de l’[[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main {#getting-started}
 
