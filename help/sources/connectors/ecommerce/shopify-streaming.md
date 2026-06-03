@@ -11,9 +11,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 41d3147d526c4515ef7cf2e6a60585d8b74fc488
 workflow-type: tm+mt
-source-wordcount: 702
+source-wordcount: 846
 ht-degree: 3%
 
 ---
@@ -157,6 +157,19 @@ Une réponse réussie renvoie des informations sur votre webhook, y compris son 
   }
 }
 ```
+
+## Authentification pour [!DNL Shopify Streaming] {#authentication}
+
+Vous pouvez utiliser l’authentification par clé HMAC (Hash-based Message Authentication Code) lors de la création d’un compte source [!DNL Shopify Streaming] dans Experience Platform. Vous pouvez configurer des secrets partagés lors de la configuration du compte afin que les payloads Shopify webhook entrants puissent être validés avant l’ingestion.
+
+| Champ | Obligatoire | Description |
+| --- | --- | --- |
+| `primarySecretKey` | Oui | Secret partagé HMAC actuel configuré pour le webhook [!DNL Shopify]. Experience Platform utilise cette clé pour valider les payloads webhook [!DNL Shopify] entrants. |
+| `secondarySecretKey` | Non | Le secret partagé HMAC précédent. Fournissez-le lors de la rotation des clés afin que les messages en cours de vol signés avec l’ancien secret continuent à être acceptés pendant que le nouveau trafic utilise le nouveau secret. Ne renseignez pas cette valeur lors de la première configuration. |
+
+>[!TIP]
+>
+>Pour faire pivoter votre secret HMAC sans interrompre la diffusion webhook, indiquez le nouveau secret comme `primarySecretKey` et le secret précédent comme `secondarySecretKey`. Cela permet aux messages en cours signés avec le secret précédent de continuer à être acceptés pendant que le nouveau trafic utilise le secret actuel.
 
 ### Limites {#limitations}
 
