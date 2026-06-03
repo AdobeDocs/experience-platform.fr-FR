@@ -35,7 +35,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
 source-wordcount: 3375
 ht-degree: 83%
@@ -54,7 +54,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 ## Version 2.35.1 - 7 Mai 2026
 
-- Contient [version 2.35.1](/help/collection/js/release-notes.md) de Adobe Experience Platform Web SDK.
+- Contient [version 2.33.1](/help/collection/js/release-notes.md) de Adobe Experience Platform Web SDK.
 - Correction d’un problème où les composants requis, tels que le contexte, étaient exclus du lot SDK et empêchaient l’envoi d’événements.
 
 ## Version 2.35.0 - 7 Mai 2026

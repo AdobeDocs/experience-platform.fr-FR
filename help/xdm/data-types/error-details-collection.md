@@ -7,22 +7,28 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 101
-ht-degree: 10%
+source-wordcount: 225
+ht-degree: 8%
 
 ---
 
 # Type de données de la collecte de [!UICONTROL Error Details]
 
-La collecte de [!UICONTROL Error Details] est un type de données standard des modèles de données d’expérience (XDM) qui décrit les détails de l’erreur. Utilisez le type de données Collecte de [!UICONTROL Error Details] pour capturer les détails de la source de l’erreur et de l’identification. L’ID d’erreur identifie l’erreur et la source de l’erreur indique si elle provient du lecteur ou d’une source externe.
+La collecte de [!UICONTROL Error Details] est un type de données standard des modèles de données d’expérience (XDM) qui décrit les détails de l’erreur. Utilisez le type de données Collecte de [!UICONTROL Error Details] pour capturer les détails de la source de l’erreur et de l’identification. L’ID d’erreur identifie l’erreur et la source de l’erreur indique si elle provient du lecteur ou d’une source externe (telle qu’un réseau CDN). Les agrégats d’erreurs calculés, notamment le nombre d’erreurs, les flux impactés et les tableaux d’ID d’erreur, sont disponibles dans le type de données [Rapports sur les détails des données de la qualité de service](./qoe-data-details-reporting.md).
 
-![Diagramme du type de données Informations sur les détails de l’erreur.](../images/data-types/error-details-collection.png)
++++Sélectionnez cette option pour afficher un diagramme du type de données Collecte de [!UICONTROL Error Details] .
+![Diagramme du type de données de collecte des détails de l’erreur.](../images/data-types/error-details-collection.png)
++++
+
+>[!NOTE]
+>
+>Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
-|----------------------------|--------------|-----------|----------|-----------------------------------------------|
-| [!UICONTROL Error ID] | `name` | string | Non | ID de l’erreur. |
-| [!UICONTROL Error Source] | `source` | string | Non | Source de l’erreur. Énumérées : « player », « external » avec les significations respectives. |
+|---|---|---|---|---|
+| [!UICONTROL Error ID] | `name` | chaîne | Non | ID de l’erreur. |
+| [!UICONTROL Error Source] | `source` | chaîne | Non | Source de l’erreur. Utilisez « lecteur » pour les erreurs générées par le lecteur multimédia lui-même et « externe » pour les erreurs provenant de l’extérieur du lecteur, telles que les erreurs CDN. |
 
-{style="table-layout:auto"}
+Voir [errordetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

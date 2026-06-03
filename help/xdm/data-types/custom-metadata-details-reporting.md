@@ -12,22 +12,28 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 118
-ht-degree: 11%
+source-wordcount: 170
+ht-degree: 8%
 
 ---
 
 # Type de données [!UICONTROL Custom Metadata Details] Reporting
 
-[!UICONTROL Custom Metadata Details] Reporting est un type de données standard du modèle de données d’expérience (XDM) qui définit une structure de stockage des métadonnées personnalisées. Le type de données Rapports [!UICONTROL Custom Metadata Details] capture des détails tels que le nom et la valeur des métadonnées personnalisées associées au contenu ou aux interactions. Les champs de création de rapports multimédia sont utilisés par les services Adobe pour analyser les champs de collecte multimédia envoyés par les utilisateurs. Ces données, ainsi que d’autres mesures d’utilisateur spécifiques, sont calculées et font l’objet de rapports.
+[!UICONTROL Custom Metadata Details] Reporting est un type de données standard des modèles de données d’expérience (XDM) qui définit une structure de stockage des métadonnées personnalisées. Le type de données Rapports [!UICONTROL Custom Metadata Details] capture des détails tels que le nom et la valeur des métadonnées personnalisées associées au contenu ou aux interactions.
 
++++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Custom Metadata Details] Reporting .
 ![Diagramme du type de données Rapports sur les détails des métadonnées personnalisées.](../images/data-types/the-custom-metadata-reporting.png)
++++
+
+>[!NOTE]
+>
+>Ce type de données appartient au schéma `mediaReporting` : champs calculés par le serveur principal des médias en flux continu à partir des données `mediaCollection` envoyées par votre implémentation. Il s’agit des champs qu’Adobe ingère dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
 | Nom d’affichage | Propriété | Type de données | Description |
-|--------------------------------------------|------------------|-----------|-----------------------------------------|
+|---|---|---|---|
 | [!UICONTROL Custom Metadata Field Name] | `name` | chaîne | Nom du champ personnalisé. |
 | [!UICONTROL Custom Metadata Field Value] | `value` | chaîne | Valeur du champ personnalisé. |
 
-{style="table-layout:auto"}
+Voir [custommetadatadetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/custommetadatadetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

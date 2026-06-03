@@ -7,21 +7,23 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 108
-ht-degree: 8%
+source-wordcount: 159
+ht-degree: 5%
 
 ---
 
 # Type de données [!UICONTROL List of States Start]
 
-Le type de données [!UICONTROL List of States Start] est un type de données de modèle de données d’expérience (XDM) conçu pour représenter les informations liées à l’état de départ de divers attributs du lecteur. Elle inclut les propriétés [!UICONTROL Player State Name] qui indiquent l’état spécifique de l’attribut (par exemple, « fullscreen », « mute », « closedCaptioning »). Ce type de données est utilisé pour capturer et décrire les conditions initiales de différents états du lecteur.
+Le type de données [!UICONTROL List of States Start] est un type de données de modèle de données d’expérience (XDM) conçu pour représenter les informations liées à l’état de départ de divers attributs du lecteur. Elle inclut la propriété [!UICONTROL Player State Name] qui indique l’état spécifique de l’attribut (par exemple, « fullscreen », « mute », « closedCaptioning »). Ce type de données est utilisé pour capturer et décrire les conditions initiales de différents états du lecteur.
 
 ![Diagramme de [!UICONTROL List of States Start] type de données.](../images/data-types/list-of-states-start-collection.png)
 
-| Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
-|--------------------------------|--------------|-----------|-----------|-------------------------------------------------|
-| [!UICONTROL Player State Name] | `name` | string | Non | Nom de l’état du lecteur. Énumérées : « fullscreen », « mute », « closeCaptioning », « pictureInPicture », « inFocus » avec leurs significations respectives. |
+>[!NOTE]
+>
+>Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
-{style="table-layout:auto"}
+| Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
+|---|---|---|---|---|
+| [!UICONTROL Player State Name] | `name` | chaîne | Non | Nom de l’état du lecteur. Énumérées : « fullscreen », « mute », « closeCaptioning », « pictureInPicture », « inFocus » avec leurs significations respectives. |

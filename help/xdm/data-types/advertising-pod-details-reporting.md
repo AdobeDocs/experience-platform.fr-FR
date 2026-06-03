@@ -11,10 +11,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 164
-ht-degree: 11%
+source-wordcount: 275
+ht-degree: 6%
 
 ---
 
@@ -22,15 +22,21 @@ ht-degree: 11%
 
 [!UICONTROL Advertising Pod Details Reporting] est un type de données standard du modèle de données d’expérience (XDM). Il définit une séquence ou un groupe d’annonces généralement lues successivement pendant les pauses de contenu. Utilisez le type de données [!UICONTROL Advertising Pod Details Reporting] pour capturer des détails tels que l’identifiant de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités dans la coupure et le décalage de la coupure publicitaire dans le journal du contenu en secondes.
 
++++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Advertising Pod Details Reporting].
 ![Diagramme du type de données Rapports détaillés sur les pods Advertising.](../images/data-types/advertising-pod-details-information.png)
++++
+
+>[!NOTE]
+>
+>Ce type de données appartient au schéma `mediaReporting` : champs calculés par le serveur principal des médias en flux continu à partir des données `mediaCollection` envoyées par votre implémentation. Il s’agit des champs qu’Adobe ingère dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
+
+Chaque nom d’affichage contient un lien vers des informations supplémentaires sur sa dimension ou sa mesure de reporting. Les pages liées contiennent des détails sur la manière dont Adobe calcule et signale ces données, y compris les répartitions par système de rapports.
 
 | Nom d’affichage | Propriété | Type de données | Description |
-|----------------------------|------------------------|-----------|-------------------------------------------------------|
+|---|---|---|---|
 | [!UICONTROL Ad Break ID] | `ID` | chaîne | Identifiant de la coupure publicitaire. |
-| [!UICONTROL Pod Friendly Name] | `friendlyName` | chaîne | Nom facilement compréhensible de la coupure publicitaire. |
-| [!UICONTROL Ad In Pod Position] | `index` | entier | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
-| [!UICONTROL Pod Offset] | `offset` | entier | **Obligatoire** décalage de la coupure publicitaire dans le contenu, en secondes. |
+| [[!UICONTROL Pod Friendly Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/pod-name) | `friendlyName` | chaîne | Nom facilement compréhensible de la coupure publicitaire. |
+| [[!UICONTROL Ad In Pod Position]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/pod-position) | `index` | entier | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
+| [!UICONTROL Pod Offset] | `offset` | entier | Décalage de la coupure publicitaire dans le contenu, en secondes. |
 
-{style="table-layout:auto"}
-
-Pour plus d’informations sur le groupe de champs , consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json)
+Voir [advertisingpoddetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

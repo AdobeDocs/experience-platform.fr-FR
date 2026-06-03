@@ -13,10 +13,10 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 496
-ht-degree: 1%
+source-wordcount: 529
+ht-degree: 3%
 
 ---
 
@@ -26,14 +26,14 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Les champs de collecte de médias capturent des données et les envoient à d’autres services Adobe en vue d’un traitement ultérieur. Les champs de création de rapports multimédia sont utilisés par les services Adobe pour analyser les champs de collecte multimédia envoyés par les utilisateurs. Ces données, ainsi que d’autres mesures d’utilisateur spécifiques, sont calculées et font l’objet de rapports.
+>Ce type de données appartient au schéma `mediaCollection`, c’est-à-dire aux champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données de collecte et génère des champs de schéma `mediaReporting`, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations sur ce flux de données.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Media Collection details].
 ![Diagramme du type de données [!UICONTROL Media Collection details information].](../images/data-types/media-collection-details.png)
 +++
 
 | Nom d’affichage | Propriété | Événements requis pour | Type de données | Description |
-| ------------------------------------ | ----------------------- | ---------------------------------------------------------- | --------- | ----------- |
+|---|---|---|---|---|
 | [!UICONTROL Advertising Details] | `advertisingDetails` | `adStart` | [[!UICONTROL advertisingDetails] - Collection](./advertising-details-collection.md) | Les détails d’Advertising font référence à des informations spécifiques relatives aux activités publicitaires au cours de l’événement d’expérience. Cela inclut les métadonnées de publicité, les caractéristiques de ciblage et les mesures de performances. |
 | [!UICONTROL Advertising Pod Details] | `advertisingPodDetails` | `adBreakStart` | [[!UICONTROL advertisingPodDetails] - Collection](./advertising-pod-details-collection.md) | Les détails des pods Advertising contiennent des informations sur les pods publicitaires au sein de l’événement d’expérience. Il fournit des informations sur la séquence publicitaire, le contenu et les mesures d’engagement. |
 | [!UICONTROL Chapter Details] | `chapterDetails` | `chapterStart` | [[!UICONTROL chapterDetails] - Collection](./chapter-details-collection.md) | Détails du chapitre capture les données relatives aux chapitres ou aux parties segmentées du contenu. Il fournit des informations sur les marqueurs de chapitre, les chronologies et les métadonnées associées. |
@@ -42,8 +42,8 @@ ht-degree: 1%
 | [!UICONTROL List Of States Start] | `statesStart` | Utilisé dans `statesUpdate` | [[!UICONTROL statesStart] - Collection](./list-of-states-start-collection.md) | Le Début des états fournit un tableau pour répertorier les états au début de l’événement d’expérience. Il contient des données relatives à la lecture, aux actions des utilisateurs ou à des caractéristiques spécifiques au contenu. |
 | [!UICONTROL Qoe Data Details] | `qoeDataDetails` | Facultatif pour tous | [[!UICONTROL qoeDataDetails] - Collection](./qoe-data-details-collection.md) | Les détails des données QoE (qualité de l’expérience) capturent les mesures liées aux performances et les données d’expérience utilisateur. Il fournit des informations sur la qualité, la réactivité et les interactions utilisateur. |
 | [!UICONTROL Session Details] | `sessionDetails` | `sessionStart` | [[!UICONTROL sessionDetails] - Collection](./session-details-collection.md) | Les détails de session englobent des informations complètes associées à l’événement d’expérience, offrant des informations sur les interactions utilisateur, la durée et les données contextuelles pertinentes pour la session de lecture. |
-| [!UICONTROL The Custom Metadata] | `customMetadata` | Facultatif pour `sessionStart`, `adStart`, `sessionStart` | [[!UICONTROL customMetadataDetails] - Collection](./custom-metadata-details-collection.md) | Les métadonnées personnalisées contiennent des métadonnées définies par l’utilisateur ou des métadonnées supplémentaires associées à l’événement d’expérience. Ces métadonnées permettent d’inclure des données personnalisées ou spécifiques dans le contexte de l’événement. |
+| [!UICONTROL The Custom Metadata] | `customMetadata` | Facultatif pour `sessionStart`, `adStart`, `chapterStart` | [[!UICONTROL customMetadataDetails] - Collection](./custom-metadata-details-collection.md) | Les métadonnées personnalisées contiennent des métadonnées définies par l’utilisateur ou des métadonnées supplémentaires associées à l’événement d’expérience. Ces métadonnées permettent d’inclure des données personnalisées ou spécifiques dans le contexte de l’événement. |
 | [!UICONTROL Media Session ID] | `sessionID` | Tous les événements **sauf** contenu `sessionStart` et téléchargé. | chaîne | L’ID de session multimédia identifie de manière unique une instance d’un flux de contenu au cours d’une session de lecture individuelle. Il sert d’identifiant distinct pour le suivi et la gestion de l’expérience de lecture spécifique associée à un utilisateur ou à une visionneuse.<br><em>Remarque :<em>`sessionId` est envoyé sur tous les événements, à l’exception des `sessionStart` et de tous les événements téléchargés. |
 | [!UICONTROL Playhead] | `playhead` | Tous les événements | entier | Le curseur de lecture représente la position de lecture actuelle dans le contenu multimédia. Pour le contenu en direct, il indique la seconde actuelle de la journée (0 &lt;= curseur de lecture &lt; 86400). Pour le contenu enregistré, il reflète la seconde actuelle de la durée du contenu (0 &lt;= tête de lecture &lt; longueur du contenu). |
 
-{style="table-layout:auto"}
+Voir [mediadetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

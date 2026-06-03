@@ -15,25 +15,23 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 106
+source-wordcount: 113
 ht-degree: 3%
 
 ---
 
 # Type de données [!UICONTROL Media Event Information]
 
-[!UICONTROL Media Event Information] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les informations détaillées sur les médias liées à l’événement d’expérience.
+[!UICONTROL Media Event Information] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails de l’événement multimédia liés à l’événement d’expérience.
 
 ![Diagramme du type de données Informations sur l’événement multimédia.](../images/data-types/media-event-information.png)
 
 | Propriété | Type de données | Description |
-| --- | --- | --- |
-| `mediaCollection` | [!UICONTROL mediaDetails] | Informations détaillées sur le média relatives à l’événement d’expérience. Ce type de données est utilisé pour la [collecte de données multimédia](./media-collection-details.md) et la [création de rapports sur les données multimédia](./media-reporting-details.md). |
-| `mediaEventTimestamp` | [!UICONTROL String] | Heure à laquelle un événement multimédia s’est produit. |
-| `mediaEventType` | [!UICONTROL String] | Type d’événement multimédia. |
+|---|---|---|
+| `mediaCollection` | [!UICONTROL mediaDetails] | Détails du média liés à l’événement d’expérience. Ce type de données est utilisé pour la [collecte de données multimédia](./media-collection-details.md) et la [création de rapports sur les données multimédia](./media-reporting-details.md). |
+| `mediaEventTimestamp` | [!UICONTROL String] | Heure à laquelle un événement multimédia s’est produit, au format ISO 8601 (par exemple, `2024-09-26T15:52:24+00:00`). |
+| `mediaEventType` | [!UICONTROL String] | Type d’événement multimédia. Valeurs acceptées : `media.sessionStart`, `media.adBreakStart`, `media.adStart`, `media.adComplete`, `media.adBreakComplete`, `media.play`, `media.pauseStart`, `media.ping`, `media.bufferStart`, `media.bitrateChange`, `media.statesUpdate`, `media.error`, `media.chapterStart`, `media.chapterComplete`, `media.sessionComplete`, `media.sessionEnd`, `media.downloaded`,,. |
 
-{style="table-layout:auto"}
-
-Pour plus d’informations sur le groupe de champs , consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json)
+Voir [mediaevent.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json) dans le référentiel XDM public pour obtenir la définition complète du schéma.

@@ -11,10 +11,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 176
-ht-degree: 10%
+source-wordcount: 258
+ht-degree: 7%
 
 ---
 
@@ -24,13 +24,15 @@ ht-degree: 10%
 
 ![Diagramme du type de données Rapport sur les données de l’état du lecteur.](../images/data-types/player-state-data-information.png)
 
+>[!NOTE]
+>
+>Ce type de données appartient au schéma `mediaReporting` : champs calculés par le serveur principal des médias en flux continu à partir des données `mediaCollection` envoyées par votre implémentation. Il s’agit des champs qu’Adobe ingère dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
+
 | Nom d’affichage | Propriété | Type de données | Description |
-|-------------------|----------------|-----------|----------------------------------------------|
-| [!UICONTROL Player State Name] | `name` | chaîne | Nom de l’état du lecteur. Énumérées : « fullscreen », « mute », « closeCaptioning », « pictureInPicture », « inFocus » avec leurs significations respectives. |
+|---|---|---|---|
+| [!UICONTROL Player State Name] | `name` | chaîne | Nom de l’état du lecteur. Énuméré : « fullScreen » (le lecteur occupe le plein écran), « mute » (l’audio est réduit au silence), « closedCaptioning » (les sous-titres sont actifs), « pictureInPicture » (le lecteur est dans un recouvrement flottant), « inFocus » (le lecteur a l’attention active de la visionneuse, généralement parce que l’onglet ou la fenêtre du lecteur est au premier plan). |
 | [!UICONTROL Player State Set] | `isSet` | booléen | Indique si l’état du lecteur est défini sur cet état. |
 | [!UICONTROL Player State Count] | `count` | entier | Nombre de fois que l’état du lecteur a été défini sur le flux. |
-| [!UICONTROL Player State Time] | `time` | entier | Durée totale de cet état de lecteur. |
+| [!UICONTROL Player State Time] | `time` | entier | Durée totale de cet état de lecteur, en secondes. |
 
-{style="table-layout:auto"}
-
-Pour plus d’informations sur le groupe de champs , consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json)
+Voir [playerstatedata.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) dans le référentiel XDM public pour obtenir la définition complète du schéma.
