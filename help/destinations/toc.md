@@ -6,9 +6,9 @@ description: Ce document répertorie la table des matières des destinations Ado
 feature: Destinations
 role: Admin,User
 nudge: true
-source-git-commit: f4447656c42ad4f5315fde511143d3af1733070d
+source-git-commit: c7a0556e47b5440ffeb7f3770b577584e73ee204
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1418'
 ht-degree: 69%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 69%
    * [Créer une connexion à une destination](./ui/connect-destination.md)
    * Activer des données vers les destinations{#activate}
       * [Présentation de l’activation](./ui/activation-overview.md)
+      * [(Beta) Quand activer](./ui/when-to-activate.md)
       * [Activer les audiences vers des destinations d’export d’audiences en flux continu](./ui/activate-segment-streaming-destinations.md)
       * [Activer les audiences vers des destinations d’export de profils en flux continu](./ui/activate-streaming-profile-destinations.md)
       * [Activer les audiences vers des destinations d’export de profils par lots](./ui/activate-batch-profile-destinations.md)
