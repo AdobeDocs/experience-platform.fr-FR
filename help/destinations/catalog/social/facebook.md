@@ -23,14 +23,18 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: dd343a1e716d9426fd1f6e4ce67d6eedc6c5786b
 workflow-type: tm+mt
-source-wordcount: 2777
-ht-degree: 16%
+source-wordcount: 3084
+ht-degree: 15%
 
 ---
 
 # Connexion [!DNL Facebook]
+
+>[!IMPORTANT]
+>
+>À compter du 4 juin, avec la mise à jour de l’API Ads v25, certaines audiences seront marquées et non acceptées par Facebook. Pour plus d’informations, consultez la section sur les [données d’audience restreintes](#restricted-audience-data).
 
 ## Vue d’ensemble {#overview}
 
@@ -130,6 +134,14 @@ Avant d’envoyer vos audiences à [!DNL Facebook], veillez à respecter les exi
   >[!IMPORTANT]
   >
   >Lors de la signature des Conditions d’utilisation de [!DNL Facebook Custom Audiences], veillez à utiliser le même compte utilisateur que celui utilisé pour vous authentifier dans l’API Facebook.
+
+## Données d’audience restreintes {#restricted-audience-data}
+
+[!DNL Facebook] applique des règles relatives aux données d’audience restreintes ou sensibles (telles que des informations financières ou de santé) dans le cadre de ses Conditions d’utilisation. Ces restrictions ont été introduites dans l’API [Meta Advertiser v24](https://developers.facebook.com/documentation/ads-commerce/marketing-api/marketing-api-changelog/version24.0#audiences) et s’appliquent à toutes les versions d’API à partir de la version 24. Depuis le 5 septembre 2025, les audiences qui enfreignent ces règles [ne peuvent de toute façon pas être utilisées pour de la publicité [!DNL Facebook] &#x200B;](https://developers.facebook.com/documentation/ads-commerce/marketing-api/audiences/guides/lookalike-audiences).
+
+À compter du 4 juin 2026, Experience Platform effectuera les mises à niveau vers l’API Meta Advertiser v25. Lorsque des audiences sont envoyées d’Experience Platform vers [!DNL Facebook] via l’API Ads, les audiences qui enfreignent les Conditions d’utilisation de [!DNL Facebook] sont marquées comme étant inutilisables pour les campagnes. Les audiences avec indicateur seront bloquées pour l’activation et ne recevront pas de données d’Experience Platform. Pour résoudre une audience restreinte, vous devez soit mettre à jour l’audience pour supprimer les données restreintes, soit contacter directement [!DNL Facebook]. Pour plus d’informations, voir [Résoudre les audiences marquées](https://www.facebook.com/business/help/1055828013359808?id=188852726110565) dans la documentation [!DNL Facebook].
+
+Si vos audiences sont affectées, voir [&#x200B; Audiences restreintes &#x200B;](#restricted-audiences) dans la section Dépannage pour connaître les étapes de résolution de ce problème.
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
@@ -333,4 +345,19 @@ Cette erreur se produit lorsque les clients utilisent des comptes nouvellement c
 
 Si vous recevez le message d’erreur `400 Bad Request` après avoir suivi les étapes de la section [Conditions préalables du compte Facebook](#facebook-account-prerequisites), patientez quelques jours pour que les autorisations [!DNL Facebook] prennent effet.
 
+### Audiences restreintes {#restricted-audiences}
+
+[!DNL Facebook] applique des règles qui bloquent les audiences contenant des données non autorisées en vertu de ses Conditions d&#39;utilisation, telles que des informations financières ou de santé.
+
+À compter du 4 juin 2026, les clients Experience Platform seront soumis à ces restrictions et les audiences bloquées ne recevront pas de données d’Experience Platform.
+
+Pour identifier les audiences restreintes, vérifiez le statut de l’audience dans [!DNL Facebook Ads Manager]. Les audiences restreintes affichent un avis indiquant que l’audience ne peut pas exécuter d’annonces.
+
+Pour résoudre une audience restreinte, choisissez l’une des options suivantes :
+
+* Passez en revue l&#39;audience et supprimez toute information non autorisée en vertu des Conditions d&#39;utilisation de [!DNL Facebook], puis recréez-la.
+* Créez une audience personnalisée qui n’inclut pas d’informations restreintes.
+* Choisissez une autre audience existante conforme aux Conditions d’utilisation de [!DNL Facebook].
+
+Pour plus d’informations, voir la documentation [!DNL Facebook] sur la [résolution des audiences marquées](https://www.facebook.com/business/help/1055828013359808?id=188852726110565).
 
