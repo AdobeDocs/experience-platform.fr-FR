@@ -13,9 +13,9 @@ role_v2:
 topic_v2:
   - id: beb7a3c1-66ab-4786-b879-7621375b3c40
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: d3978f17a1f3d21231d5a78bc8d9fd287b2b0abe
 workflow-type: tm+mt
-source-wordcount: 1122
+source-wordcount: 1170
 ht-degree: 3%
 
 ---
@@ -31,6 +31,10 @@ Consultez la [Documentation View SQL](../view-sql.md) pour plus d’informations
 Les informations suivantes peuvent toutes être utilisées dans le [tableau de bord des audiences](../guides/audiences.md) ou dans un [tableau de bord personnalisé défini par l’utilisateur](../standard-dashboards.md). Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et dans le tableau de bord [défini par l’utilisateur](../standard-dashboards.md#create-widget).
 
 Les informations suivantes peuvent toutes être utilisées dans le [tableau de bord des audiences](../guides/audiences.md) ou dans un tableau de bord personnalisé.
+
+>[!NOTE]
+>
+>Plusieurs informations de ce document utilisent les mesures de nombre de profils de `adwh_fact_profile_by_segment_trendlines`. Pour obtenir des définitions de `count_of_profiles`, `count_of_calculated_realized_profiles`, `count_of_calculated_existing_profiles` et `count_of_calculated_exited_profiles`, ainsi que des conseils sur la manière dont ces mesures diffèrent des données d’instantané de profil, consultez la section [mesures de tendance de segment](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) de la documentation du modèle de données Real-Time CDP Insights (B2C Edition) .
 
 ## Rapport de chevauchement des audiences {#audience-overlap-report}
 
@@ -471,7 +475,7 @@ Pour plus d’informations sur l’aspect et les fonctionnalités de cette insig
 
 Questions traitées par cette insight :
 
-- Quelle est l’intersection commune entre [!UICONTROL Identity Type A] et [!UICONTROL Identity Type B] pour une audience filtrée ?
+- Quelle est l’intersection commune entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] pour une audience filtrée ?
 - Comment affiner les audiences des clients en fonction du chevauchement de types d’identité spécifiques, afin d’améliorer les stratégies marketing ciblées ?
 - Quels enseignements peut-on tirer de l’évaluation des performances de la campagne dans les zones qui se croisent ?
 - Sur la base de ces informations, comment optimiser les futurs efforts marketing ?

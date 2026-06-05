@@ -12,9 +12,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: d3978f17a1f3d21231d5a78bc8d9fd287b2b0abe
 workflow-type: tm+mt
-source-wordcount: 1674
+source-wordcount: 1718
 ht-degree: 3%
 
 ---
@@ -204,6 +204,10 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 Consultez la documentation du widget [&#x200B; Audiences mappées au statut de destination &#x200B;](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
 
 ## Taille des audiences {#audiences-size}
+
+>[!NOTE]
+>
+>Le code SQL de cette insight utilise le `count_of_profiles` de `adwh_fact_profile_by_segment_trendlines`. Pour la définition de cette mesure et sa différence avec les données d’instantané de profil, consultez la section [mesures de tendance de segment](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) de la documentation du modèle de données Real-Time CDP Insights (B2C Edition).
 
 Questions traitées par cette insight :
 
@@ -418,7 +422,7 @@ Pour plus d’informations sur l’aspect et les fonctionnalités de cette insig
 
 Questions traitées par cette insight :
 
-- Quelle est l’intersection commune entre [!UICONTROL Identity Type A] et [!UICONTROL Identity Type B] ?
+- Quelle est l’intersection commune entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] ?
 - Comment puis-je affiner les audiences de clients en fonction du chevauchement de types d’identité spécifiques pour améliorer les stratégies marketing ciblées ?
 - Quels enseignements peut-on tirer de l’évaluation des performances de la campagne dans les zones qui se croisent ?
 - À l’aide de ces performances de campagne insight, comment optimiser les futurs efforts marketing ?
