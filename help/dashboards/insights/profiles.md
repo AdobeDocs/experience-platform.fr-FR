@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: d3978f17a1f3d21231d5a78bc8d9fd287b2b0abe
+source-git-commit: 4be356e7e58f8140c98e7d4becdc633f890f1202
 workflow-type: tm+mt
 source-wordcount: 1718
 ht-degree: 3%
@@ -796,3 +796,4 @@ En lisant ce document, vous comprenez désormais le langage SQL qui génère des
 Consultez la [Documentation View SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos informations directement via l’interface utilisateur de Platform.
 
 Vous pouvez également lire et comprendre le langage SQL qui génère des informations pour les tableaux de bord [Audiences](./audiences.md), [Profils de compte](./account-profiles.md) et [Destinations](./destinations.md).
+
