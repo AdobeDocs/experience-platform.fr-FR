@@ -510,7 +510,7 @@ Adobe recommande de sélectionner un espace de noms d’identité, tel qu’un [
 
 ### Comportement de déduplication pour les profils ayant le même horodatage {#deduplication-same-timestamp}
 
-Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considérations principales {#key-considerations}
 
@@ -669,7 +669,7 @@ Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#rev
 >id="platform_destinations_enrichment_attributes_source_field"
 >title="Champ source"
 >abstract="Sélectionnez un attribut d’enrichissement à exporter. Pour les champs à l’intérieur d’un tableau, la source est automatiquement renseignée avec une expression de transformation. Pour exporter plusieurs champs dans un mappage, ajoutez un champ en premier, puis modifiez l’expression source. Voir la documentation pour plus de détails."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-multiple-array-fields" text="Exporter plusieurs champs d’un tableau"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#export-multiple-array-fields" text="Exporter plusieurs champs d’un tableau"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_target_field"
