@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: d50a9dc5e0afacd9b61ad5836032c53a6bf32533
+source-git-commit: 2f1bf845656f1605a8aee670b1e944fc297c68e9
 workflow-type: tm+mt
 source-wordcount: 2824
 ht-degree: 7%
@@ -284,3 +284,4 @@ Sélectionnez **[!UICONTROL Supprimer un planning]** pour supprimer le planning 
 ![Espace de travail des plannings avec l’option Supprimer le planning mise en surbrillance.](../images/ui/query-schedules/delete-schedule.png)
 
 L’onglet [!UICONTROL Requêtes planifiées] propose également une collection d’actions intégrées pour chaque requête planifiée. Les actions intégrées disponibles sont les suivantes : [!UICONTROL Désactiver le planning] ou [!UICONTROL Activer le planning], [!UICONTROL Supprimer le planning] et [!UICONTROL S’abonner] aux alertes pour la requête planifiée. Pour obtenir des instructions complètes sur la suppression ou la désactivation d’une requête planifiée via l’onglet Requêtes planifiées , consultez le guide [surveiller les requêtes planifiées](./monitor-queries.md#inline-actions).
+
