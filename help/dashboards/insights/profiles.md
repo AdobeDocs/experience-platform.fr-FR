@@ -3,18 +3,13 @@ title: Profile Insights
 description: Découvrez le langage SQL qui alimente les informations de votre profil et utilisez ces requêtes pour générer des informations personnalisées qui explorent davantage vos clients et leurs expériences client.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 TQID: https://experienceleague.adobe.com/x-B2yvty3I-jNBhwgspFI8T5dg6n6Ah3H-Sh4a5bcbw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: d3978f17a1f3d21231d5a78bc8d9fd287b2b0abe
 workflow-type: tm+mt
-source-wordcount: 1674
+source-wordcount: 1718
 ht-degree: 3%
 
 ---
@@ -141,7 +136,7 @@ SELECT source_segment_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#audience-overlap-report) consultez la documentation sur le widget  Rapport de chevauchement d’audience .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#audience-overlap-report) consultez la documentation sur le widget [ Rapport de chevauchement d’audience .
 
 ## Audiences (nombre) {#audiences}
 
@@ -169,7 +164,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#audiences) consultez la  documentation sur le widget Audiences .
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#audiences) consultez la [ documentation sur le widget Audiences .
 
 ## Audiences mappées au statut de destination {#audiences-mapped-to-destination-status}
 
@@ -201,9 +196,13 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consultez la documentation du widget [&#x200B; Audiences mappées au statut de destination &#x200B;](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
+Consultez la documentation du widget [ Audiences mappées au statut de destination ](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
 
 ## Taille des audiences {#audiences-size}
+
+>[!NOTE]
+>
+>Le code SQL de cette insight utilise le `count_of_profiles` de `adwh_fact_profile_by_segment_trendlines`. Pour la définition de cette mesure et sa différence avec les données d’instantané de profil, consultez la section [mesures de tendance de segment](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) de la documentation du modèle de données Real-Time CDP Insights (B2C Edition).
 
 Questions traitées par cette insight :
 
@@ -234,7 +233,7 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#audiences-size) consultez la documentation sur le widget Taille des audiences.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#audiences-size) consultez la [documentation sur le widget Taille des audiences.
 
 ## Répartition des scores (IA dédiée aux clients) {#customer-ai-distribution-of-scores}
 
@@ -371,7 +370,7 @@ SELECT b.model_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#customer-ai-distribution-of-scores) consultez la documentation sur le widget Distribution des scores de l’IA dédiée aux clients.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#customer-ai-distribution-of-scores) consultez la documentation sur le widget [Distribution des scores de l’IA dédiée aux clients.
 
 ## Résumé du score de l’IA dédiée aux clients {#customer-ai-scoring-summary}
 
@@ -418,7 +417,7 @@ Pour plus d’informations sur l’aspect et les fonctionnalités de cette insig
 
 Questions traitées par cette insight :
 
-- Quelle est l’intersection commune entre [!UICONTROL Identity Type A] et [!UICONTROL Identity Type B] ?
+- Quelle est l’intersection commune entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] ?
 - Comment puis-je affiner les audiences de clients en fonction du chevauchement de types d’identité spécifiques pour améliorer les stratégies marketing ciblées ?
 - Quels enseignements peut-on tirer de l’évaluation des performances de la campagne dans les zones qui se croisent ?
 - À l’aide de ces performances de campagne insight, comment optimiser les futurs efforts marketing ?
@@ -469,7 +468,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#identity-overlap) consultez la documentation sur le widget Chevauchement des identités.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#identity-overlap) consultez la documentation sur le widget [Chevauchement des identités.
 
 ## Nombre de profils {#profile-count}
 
@@ -491,9 +490,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Vous trouverez des informations complètes sur l’aspect et les fonctionnalités de cette insight dans le [guide du widget Nombre de profils](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=fr#profile-count).
+Vous trouverez des informations complètes sur l’aspect et les fonctionnalités de cette insight dans le [guide du widget Nombre de profils](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#profile-count) consultez la documentation du widget Nombre de profils.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#profile-count) consultez la documentation du widget [Nombre de profils.
 
 ## Modification du nombre de profils {#profile-count-change}
 
@@ -603,7 +602,7 @@ SELECT date_key,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#profile-count-trend) consultez la documentation du widget Tendance du nombre de profils.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#profile-count-trend) consultez la documentation du widget [Tendance du nombre de profils.
 
 ## Profils par identité {#profiles-by-identity}
 
@@ -732,7 +731,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#single-identity-profiles) consultez la documentation du widget Profils d’identité unique.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#single-identity-profiles) consultez la documentation du widget [Profils d’identité unique.
 
 ## Profils à une seule identité par identité {#single-identity-profiles-by-identity}
 
@@ -759,7 +758,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#single-identity-profiles-by-identity) consultez la documentation du widget Profils d’identité uniques par identité.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#single-identity-profiles-by-identity) consultez la documentation du widget [Profils d’identité uniques par identité.
 
 ## Profils non segmentés {#unsegmented-profiles}
 
@@ -783,7 +782,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Pour plus d’informations sur l’aspect et les fonctionnalités de cette [&#128279;](../guides/profiles.md#unsegmented-profiles) consultez la documentation du widget Profils non segmentés.
+Pour plus d’informations sur l’aspect et les fonctionnalités de cette ](../guides/profiles.md#unsegmented-profiles) consultez la documentation du widget [Profils non segmentés.
 
 ## Étapes suivantes
 
