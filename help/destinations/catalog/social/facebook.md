@@ -23,10 +23,10 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: dd343a1e716d9426fd1f6e4ce67d6eedc6c5786b
+source-git-commit: e646727c0d536a6634a3362ae3c4310972cd6d7f
 workflow-type: tm+mt
-source-wordcount: 3084
-ht-degree: 15%
+source-wordcount: 3134
+ht-degree: 14%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->À compter du 4 juin, avec la mise à jour de l’API Ads v25, certaines audiences seront marquées et non acceptées par Facebook. Pour plus d’informations, consultez la section sur les [données d’audience restreintes](#restricted-audience-data).
+>À compter du 8 juin, avec la mise à jour de l’API Ads v25, certaines audiences seront marquées et non acceptées par Facebook. Pour plus d’informations, consultez la section sur les [données d’audience restreintes](#restricted-audience-data).
 
 ## Vue d’ensemble {#overview}
 
@@ -68,8 +68,8 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifia
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | `IDFA` | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
-| `phone_sha256` | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les numéros de téléphone hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| `phone_sha256` | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les numéros de téléphone hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | `extern_id` | ID d’utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 | `gender` | Genre | Valeurs acceptées : <ul><li>`m` pour homme</li><li>`f` pour femme</li></ul> Experience Platform **hache automatiquement** cette valeur avant de l’envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
 | `date_of_birth` | Date of birth | Format accepté : `yyyy-MM-DD`. <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
@@ -112,8 +112,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination Facebook. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination Facebook. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -184,8 +184,8 @@ Si vous choisissez de hacher les adresses e-mail vous-même, veillez à respecte
 >[!NOTE]
 >
 >Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
-> Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
-> L’option **[!UICONTROL Apply transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Elle ne s’affiche pas lorsque vous choisissez des espaces de noms.
+> Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
+> L’option **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Elle ne s’affiche pas lorsque vous choisissez des espaces de noms.
 
 ![Appliquez le contrôle de transformation mis en surbrillance dans l’étape de mappage.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -197,7 +197,7 @@ Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des donné
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -211,8 +211,8 @@ La vidéo ci-dessous montre également les étapes à suivre pour configurer une
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-1. Recherchez la destination Facebook dans le catalogue de destinations et sélectionnez **[!UICONTROL Set Up]**.
-2. Sélectionnez **[!UICONTROL Connect to destination]**.
+1. Recherchez la destination Facebook dans le catalogue de destinations et sélectionnez **[!UICONTROL Configurer]**.
+2. Sélectionnez **[!UICONTROL Se connecter à la destination]**.
    ![Étape S’authentifier sur Facebook affichée dans le workflow d’activation.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Saisissez vos identifiants Facebook et sélectionnez **Connexion**.
 
@@ -220,7 +220,7 @@ La vidéo ci-dessous montre également les étapes à suivre pour configurer une
 
 Les jetons d’authentification Facebook expirent tous les 60 jours. Une fois le jeton expiré, les exportations de données vers la destination cessent de fonctionner.
 
-Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Account expiration date]** dans les onglets **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** .
+Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Date d’expiration du compte]** dans les onglets **[[!UICONTROL Comptes]](../../ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Parcourir]](../../ui/destinations-workspace.md#browse)**.
 
 ![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Parcourir &#x200B;](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
@@ -228,12 +228,12 @@ Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la c
 
 Pour éviter que l’expiration du jeton ne provoque des interruptions dans vos flux de données d’activation, réauthentifiez-vous en procédant comme suit :
 
-1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]**
 2. (Facultatif) Utilisez les filtres disponibles sur la page pour afficher uniquement les comptes Facebook.
    ![Filtrer pour afficher uniquement les comptes Facebook](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
-3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Edit details]**.
+3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Modifier les détails]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnect OAuth]** et réauthentifiez-vous à l’aide de vos informations d’identification Facebook.
+4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnecter OAuth]** et réauthentifiez-vous à l’aide de vos informations d’identification Facebook.
    ![Fenêtre modale avec l’option Reconnecter OAuth &#x200B;](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -249,15 +249,15 @@ Pour éviter que l’expiration du jeton ne provoque des interruptions dans vos 
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Account ID]** : Votre [!DNL Facebook Ad Account ID]. Cet identifiant se trouve dans votre compte [!DNL Facebook Ads Manager]. Lors de la saisie de cet identifiant, faites-le toujours précéder de `act_`.
+* **[!UICONTROL Identifiant de compte]** : votre [!DNL Facebook Ad Account ID]. Cet identifiant se trouve dans votre compte [!DNL Facebook Ads Manager]. Lors de la saisie de cet identifiant, faites-le toujours précéder de `act_`.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
@@ -283,12 +283,12 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
-À l’étape **[!UICONTROL Segment schedule]**, vous devez fournir l’[!UICONTROL Origin of audience] lors de l’envoi d’audiences à [!DNL Facebook Custom Audiences].
+Dans l’étape **[!UICONTROL Planning des segments]** vous devez indiquer l’[!UICONTROL origine de l’audience] lors de l’envoi d’audiences à [!DNL Facebook Custom Audiences].
 
 ![Liste déroulante Origine de l’audience affichée à l’étape d’activation Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -317,7 +317,7 @@ Sélection des champs cibles :
 >
 >Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
 > 
->Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
+>Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
 
 ![Appliquez le contrôle de transformation mis en surbrillance dans l’étape de mappage.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
