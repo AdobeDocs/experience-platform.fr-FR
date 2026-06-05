@@ -8,9 +8,9 @@ product_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: ba224299fc116ff391e266f3ac7d84b693fd1553
 workflow-type: tm+mt
-source-wordcount: 269
+source-wordcount: 307
 ht-degree: 0%
 
 ---
@@ -21,13 +21,15 @@ Le tableau de bord d’utilisation de la licence fournit des rapports granulaire
 
 Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté, l’utilisation consolidée des mesures dans tous les sandbox de production ou de développement, ainsi que les mesures d’utilisation d’un sandbox spécifique. Les informations affichées ici sont capturées lors d’un instantané quotidien de votre instance Experience Platform. Les administrateurs peuvent surveiller et mettre fin aux sessions inactives de Query Service afin de libérer de la capacité lorsqu’aucune session supplémentaire n’est disponible et que les utilisateurs sont bloqués en raison de sessions inactives (non actives). Voir [Gérer les sessions Query Service](../ui/session-management.md) pour plus d’informations.
 
+Les heures de calcul annuelles de Data Distiller sont réinitialisées à la date anniversaire de votre contrat Data Distiller. Cette date correspond à la date à laquelle votre licence Data Distiller a été achetée ou renouvelée, comme indiqué sur votre commande client.
+
 >[!NOTE]
 >
->Le tableau de bord d’utilisation de la licence n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation « Afficher le tableau de bord d’utilisation des licences » pour pouvoir consulter le tableau de bord. Pour obtenir des instructions sur l’octroi des autorisations d’accès pour l’affichage du tableau de bord d’utilisation des licences, consultez le guide [autorisations des tableaux de bord](../../dashboards/permissions.md).
+>Le tableau de bord d’utilisation de la licence n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation « [!UICONTROL Afficher le tableau de bord d’utilisation des licences] » pour pouvoir consulter le tableau de bord. Pour obtenir des instructions sur l’octroi des autorisations d’accès pour l’affichage du tableau de bord d’utilisation des licences, consultez le guide [autorisations des tableaux de bord](../../dashboards/permissions.md).
 
 ## Heures de calcul {#compute-hours}
 
-La mesure [!UICONTROL Compute hours] s’applique uniquement aux clients disposant de la licence Data Distiller pour les requêtes par lots. [!UICONTROL Compute hours] sont les mesures du temps pris par les moteurs de Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée.
+La mesure [!UICONTROL Heures de calcul] ne s’applique qu’aux clients disposant de la licence Data Distiller pour les requêtes par lots. Les [!UICONTROL heures de calcul] sont la mesure du temps pris par les moteurs de Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée.
 
 ![Tableau de bord d’utilisation de la licence avec la mesure Calculer les heures mise en surbrillance.](../images/data-distiller/compute-hours.png)
 
