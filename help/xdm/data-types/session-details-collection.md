@@ -32,7 +32,7 @@ La collecte de [!UICONTROL Session Details] est un type de données standard du 
 
 >[!NOTE]
 >
->Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
+>Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
 Chaque nom d’affichage contient un lien vers des informations supplémentaires sur sa variable d’implémentation. Les pages liées contiennent des détails sur les données collectées par Adobe, les valeurs d’implémentation, les paramètres réseau et des considérations importantes.
 
@@ -70,4 +70,4 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 | [[!UICONTROL Show Type]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/show-type) | `showType` | Chaîne | Non | Type de contenu. Par exemple, une bande-annonce ou un épisode complet. Le type de contenu est exprimé sous la forme d’un nombre entier compris entre 0 et 3. Par exemple, « 0 » = Épisode complet ; « 1 » = Aperçu/bande-annonce ; « 2 » = Clip ; « 3 » = Autre. |
 | [[!UICONTROL Stream Format]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/stream-format) | `streamFormat` | Chaîne | Non | Format du flux (HD, SD). |
 | [[!UICONTROL Stream Type]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/core/stream-type) | `streamType` | Chaîne | Non | Type du flux de médias. |
-| [[!UICONTROL Version]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/app-version) | `appVersion` | Chaîne | Non | Version de l’application du lecteur multimédia. Cela peut avoir n’importe quelle valeur personnalisée adaptée à votre lecteur. |
+| [[!UICONTROL Version]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/core/app-version) | `appVersion` | Chaîne | Non | Version de l’application du lecteur multimédia. Cela peut avoir n’importe quelle valeur personnalisée adaptée à votre lecteur. |
