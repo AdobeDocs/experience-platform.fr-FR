@@ -27,8 +27,8 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 48ac02ac19dc0e734ad700add6f35ff56d1a971c
 workflow-type: tm+mt
-source-wordcount: 1746
-ht-degree: 18%
+source-wordcount: 1780
+ht-degree: 21%
 
 ---
 
@@ -130,8 +130,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Snowflake]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans [!DNL Adobe Experience Platform] en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Snowflake]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans [!DNL Adobe Experience Platform] en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -139,13 +139,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination](../../assets/catalog/warehouses/snowflake/authenticate-destination.png)
 
@@ -159,22 +159,22 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Co
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_privatelink"
 >title="Lien privé activé"
->abstract="Activez ce bouton si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>Son activation sur un compte qui n’utilise pas la liaison privée contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que ce bouton est désactivé, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
+>abstract="Activez ce bouton si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>Son activation sur un compte qui n’utilise pas de lien privée contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que ce bouton est désactivé, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 ![Exemple de capture d’écran montrant comment remplir les détails pour votre destination](../../assets/catalog/warehouses/snowflake/configure-destination-details.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Snowflake Account ID]** : identifiant de votre compte Snowflake. Utilisez le format d’identifiant de compte suivant selon que votre compte est lié ou non à une organisation :
+* **[!UICONTROL ID de compte Snowflake]** : ID de votre compte Snowflake. Utilisez le format d’identifiant de compte suivant selon que votre compte est lié ou non à une organisation :
    * Si votre compte est lié à une organisation, procédez comme suit `OrganizationName.AccountName`.
    * Si votre compte n’est pas lié à une organisation, `AccountName`.
-* **[!UICONTROL Account acknowledgment]** : activez/désactivez l’accusé de réception de l’ID de compte Snowflake pour confirmer que l’ID de compte est correct et qu’il vous appartient.
+* **[!UICONTROL Accusé de réception de compte]** : activez l’accusé de réception de l’ID de compte Snowflake pour confirmer que votre ID de compte est correct et qu’il vous appartient.
 
 >[!NOTE]
 >
-> Le **[!UICONTROL Snowflake Account ID]** ne peut pas être modifié par le biais du workflow [modifier la destination](../../ui/edit-destination.md) après avoir créé la destination. Pour utiliser un autre compte, [créez une connexion de destination](../../ui/connect-destination.md).
+> L’identifiant de compte **&#x200B;**&#x200B;ne peut pas être modifié par le biais du workflow [modifier la destination](../../ui/edit-destination.md) après la création de la destination. Pour utiliser un autre compte, [créez une connexion de destination](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
@@ -184,14 +184,14 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -201,7 +201,7 @@ La destination Snowflake prend en charge le mappage des attributs de profil aux 
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’écran de mappage pour la destination Snowflake.](../../assets/catalog/warehouses/snowflake/mapping.png)
 
-Les attributs de la cible sont automatiquement créés dans Snowflake à l’aide du nom d’attribut que vous fournissez dans le champ **[!UICONTROL Attribute name]** .
+Les attributs cibles sont automatiquement créés dans Snowflake à l’aide du nom d’attribut que vous fournissez dans le champ **[!UICONTROL Nom de l’attribut]**.
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 

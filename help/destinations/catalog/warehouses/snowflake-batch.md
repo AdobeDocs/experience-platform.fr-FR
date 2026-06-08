@@ -27,8 +27,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 48ac02ac19dc0e734ad700add6f35ff56d1a971c
 workflow-type: tm+mt
-source-wordcount: 1939
-ht-degree: 16%
+source-wordcount: 1984
+ht-degree: 19%
 
 ---
 
@@ -140,8 +140,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Snowflake]. |
-| Fréquence des exportations | **[!UICONTROL Batch]** | Cette destination fournit des instantanés périodiques de l’adhésion complète à l’audience via le partage de données Snowflake. Chaque instantané remplace les données précédentes, ce qui vous permet de toujours disposer de la dernière vue complète de votre audience. |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Snowflake]. |
+| Fréquence des exportations | **[!UICONTROL Lot]** | Cette destination fournit des instantanés périodiques de l’adhésion complète à l’audience via le partage de données Snowflake. Chaque instantané remplace les données précédentes, ce qui vous permet de toujours disposer de la dernière vue complète de votre audience. |
 
 {style="table-layout:auto"}
 
@@ -149,13 +149,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Connect to destination]** et indiquez un nom de compte et, éventuellement, une description de compte.
+Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]** et indiquez un nom de compte et, éventuellement, une description de compte.
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
 
@@ -169,23 +169,23 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Co
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_privatelink"
 >title="Lien privé activé"
->abstract="Activez ce bouton si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>Son activation sur un compte qui n’utilise pas la liaison privée contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que ce bouton est désactivé, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
+>abstract="Activez ce bouton si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>Son activation sur un compte qui n’utilise pas de lien privée contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que ce bouton est désactivé, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 ![Exemple de capture d’écran montrant comment remplir les détails pour votre destination](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Snowflake Account ID]** : Identifiant De Votre Compte De Partage De Données [Snowflake](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Utilisez le format suivant selon que votre compte est lié ou non à une organisation :
+* **[!UICONTROL Identifiant de compte Snowflake]** : votre [identifiant de compte de partage de données Snowflake](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Utilisez le format suivant selon que votre compte est lié ou non à une organisation :
    * Si votre compte est lié à une organisation : saisissez le nom de l’organisation et le nom du compte séparés par un **point** (`.`). Par exemple, si le nom de votre organisation est ACME et le nom de votre compte AsiaRegion, saisissez `ACME.AsiaRegion`.
    * Si votre compte n’est pas lié à une organisation : `AccountName`.
-* **[!UICONTROL Snowflake Region]** : sélectionnez la région dans laquelle votre instance Snowflake est configurée. Consultez la [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) de Snowflake pour plus d’informations sur les régions cloud prises en charge.
-* **[!UICONTROL Account acknowledgment]** : après avoir saisi votre **[!UICONTROL Snowflake Account ID]**, sélectionnez **[!UICONTROL Yes]** dans cette liste déroulante pour confirmer que votre **[!UICONTROL Snowflake Account ID]** est correcte et qu’elle vous appartient.
+* **[!UICONTROL Région Snowflake]** : sélectionnez la région dans laquelle votre instance Snowflake est configurée. Consultez la [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) de Snowflake pour plus d’informations sur les régions cloud prises en charge.
+* **[!UICONTROL Accusé de réception de compte]** : après avoir saisi votre **[!UICONTROL ID de compte Snowflake]**, sélectionnez **[!UICONTROL Oui]** dans cette liste déroulante pour confirmer que votre **[!UICONTROL ID de compte Snowflake]** est correct et qu’il vous appartient.
 
 >[!NOTE]
 >
-> Les **[!UICONTROL Snowflake Account ID]** et **[!UICONTROL Snowflake Region]** ne peuvent pas être modifiés par le biais du workflow [modifier la destination](../../ui/edit-destination.md) après avoir créé la destination. Pour utiliser des valeurs de compte ou de région différentes, [créez une connexion de destination](../../ui/connect-destination.md).
+> L’identifiant de compte **&#x200B;**&#x200B;et la zone géographique **[!UICONTROL Snowflake]** ne peuvent pas être modifiés par le biais du workflow [modifier la destination](../../ui/edit-destination.md) après la création de la destination. Pour utiliser des valeurs de compte ou de région différentes, [créez une connexion de destination](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
@@ -195,14 +195,14 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -214,7 +214,7 @@ Vous pouvez exporter des identités et des attributs de profil vers cette destin
 
 Vous pouvez utiliser le contrôle [champs calculés](../../ui/data-transformations-calculated-fields.md) pour exporter et effectuer des opérations sur des tableaux.
 
-Les attributs de la cible sont automatiquement créés dans Snowflake à l’aide du nom d’attribut que vous fournissez dans le champ **[!UICONTROL Attribute name]** .
+Les attributs cibles sont automatiquement créés dans Snowflake à l’aide du nom d’attribut que vous fournissez dans le champ **[!UICONTROL Nom de l’attribut]**.
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
