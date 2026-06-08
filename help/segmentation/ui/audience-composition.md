@@ -4,11 +4,18 @@ title: Guide de l’interface utilisateur d’Audiences
 description: La composition d’audiences dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 TQID: https://experienceleague.adobe.com/CxgOpknFxBvL7tjZuOTFcLwuPcVp0WUjjUtcbGwtphI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: f5b4eb416748a8cb543a9131a5e74f5d12b9ca15
 workflow-type: tm+mt
 source-wordcount: 2839
@@ -181,7 +188,7 @@ Le bloc **[!UICONTROL Exclure]** est ajouté. Lorsque ce bloc est sélectionné,
 
 Si vous excluez par audience, vous pouvez sélectionner l’audience à exclure en sélectionnant **[!UICONTROL Ajouter une audience]**.
 
-![Le bouton [!UICONTROL  Ajouter une audience] est sélectionné, ce qui vous permet de choisir l’audience à exclure.](../images/ui/audience-composition/add-excluded-audience.png)
+![Le bouton [!UICONTROL &#x200B; Ajouter une audience] est sélectionné, ce qui vous permet de choisir l’audience à exclure.](../images/ui/audience-composition/add-excluded-audience.png)
 
 >[!IMPORTANT]
 >
@@ -246,7 +253,7 @@ Le bloc **[!UICONTROL Enrichir]** est ajouté. Lors de la sélection du bloc, le
 
 Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Sélectionner un jeu de données]. ](../images/ui/audience-composition/enrich-select-dataset.png)
+![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Sélectionner un jeu de données]. &#x200B;](../images/ui/audience-composition/enrich-select-dataset.png)
 
 La fenêtre contextuelle **[!UICONTROL Sélectionner un jeu de données]** s’affiche. Sélectionnez le jeu de données à ajouter pour l’enrichissement, puis **[!UICONTROL Sélectionner]** pour ajouter le jeu de données pour l’enrichissement.
 
@@ -260,11 +267,11 @@ La fenêtre contextuelle **[!UICONTROL Sélectionner un jeu de données]** s’a
 >   - Le jeu de données **ne peut pas** être de type d’événement, être généré par le système ou être marqué pour le profil.
 >- La taille du jeu de données **doit** être inférieure ou égale à 1 Go.
 
-La section **[!UICONTROL Critères d’enrichissement]** s’affiche désormais sur le rail de droite. Dans cette section, vous pouvez sélectionner la clé de jointure **** et la clé de jointure **[!UICONTROL Enrichissement du jeu de données]**, qui vous permet de lier le jeu de données d’enrichissement à l’audience que vous essayez de créer.
+La section **[!UICONTROL Critères d’enrichissement]** s’affiche désormais sur le rail de droite. Dans cette section, vous pouvez sélectionner la clé de jointure **&#x200B;**&#x200B;et la clé de jointure **[!UICONTROL Enrichissement du jeu de données]**, qui vous permet de lier le jeu de données d’enrichissement à l’audience que vous essayez de créer.
 
 ![La zone [!UICONTROL Critères d’enrichissement] est mise en surbrillance.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Pour sélectionner la clé de jointure ****, sélectionnez l&#39;icône ![filter](/help/images/icons/project-edit.png).
+Pour sélectionner la clé de jointure **&#x200B;**, sélectionnez l&#39;icône ![filter](/help/images/icons/project-edit.png).
 
 La fenêtre contextuelle **[!UICONTROL Sélectionner un attribut de profil]** s’affiche. Sélectionnez l’attribut de profil à utiliser comme clé de jointure source, puis **[!UICONTROL Sélectionner]** pour choisir cet attribut comme clé de jointure source.
 
@@ -436,7 +443,7 @@ En cas d’erreur lors de la création de l’audience, une alerte s’affiche, 
 
 Une activation plus rapide vous permet d’activer votre audience vers une destination en aval immédiatement après l’évaluation de la composition. Si vous définissez la destination à activer après l’évaluation du segment, vous **plus** avez besoin d’attendre 24 heures après l’exécution de la tâche d’évaluation.
 
-Pour savoir comment gérer la destination, lisez le guide [ Activer les audiences vers des destinations de profils par lots ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
+Pour savoir comment gérer la destination, lisez le guide [&#x200B; Activer les audiences vers des destinations de profils par lots &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
 
 ## Étapes suivantes
 
