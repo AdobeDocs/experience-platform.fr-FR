@@ -4,11 +4,24 @@ type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 TQID: https://experienceleague.adobe.com/lw8XX2QCjJqNvd1GXAMQtuhr8uVi9giAKIDhgcQAtwA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: f494c124cf4fd7f68a132cfa8263ce7aa5c69441
 workflow-type: tm+mt
 source-wordcount: 5669
@@ -20,9 +33,9 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->* Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**[](/help/access-control/home.md#permissions).
+>* Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**&#x200B;[&#128279;](/help/access-control/home.md#permissions).
 >* Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous devez disposer des **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation du segment sans mappage]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
@@ -296,7 +309,7 @@ Au cours de cette étape, vous devez sélectionner les attributs de profil à aj
 
    ![Ajouter un nouveau contrôle de champ en surbrillance dans le workflow de mappage.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. Sélectionnez la flèche située à droite de l&#39;entrée Champ de Source ****.
+1. Sélectionnez la flèche située à droite de l&#39;entrée Champ de Source **&#x200B;**.
 
    ![Sélectionnez le contrôle du champ source en surbrillance dans le workflow de mappage.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
@@ -372,7 +385,7 @@ Les clés de déduplication empêchent dʼavoir plusieurs enregistrements du mê
 
 Vous pouvez utiliser les clés de déduplication de trois manières différentes dans :[!DNL Experience Platform]
 
-* Utilisation d’un espace de noms d’identité unique comme [!UICONTROL  clé de déduplication ]
+* Utilisation d’un espace de noms d’identité unique comme [!UICONTROL &#x200B; clé de déduplication &#x200B;]
 * Utilisation d’un attribut de profil unique à partir d’un profil [!DNL XDM] comme [!UICONTROL clé de déduplication]
 * Utiliser une combinaison de deux attributs de profil à partir d’un profil [!DNL XDM] en tant que clé composite
 
@@ -571,7 +584,7 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 
 >[!IMPORTANT]
 >
->Toutes les destinations d’espace de stockage du catalogue peuvent afficher une étape améliorée [[!UICONTROL Mappage] ](#mapping) qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
+>Toutes les destinations d’espace de stockage du catalogue peuvent afficher une étape améliorée [[!UICONTROL Mappage] &#x200B;](#mapping) qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
 >
 >Cette étape **[!UICONTROL Sélectionner des attributs]** reste affichée pour les destinations de marketing par e-mail [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua et Salesforce Marketing Cloud.
 
@@ -636,11 +649,11 @@ Pour sélectionner des attributs d’enrichissement pour chaque audience externe
 
 Si vous souhaitez activer des audiences externes vers vos destinations sans exporter d’attribut, activez le bouton (bascule) **[!UICONTROL Exclure les attributs d’enrichissement]**. Cette option exporte les profils des audiences externes, mais aucun de leurs attributs correspondants n’est envoyé à votre destination.
 
-![ Image de l’interface utilisateur affichant le bouton (bascule) Exclure les attributs d’enrichissement ](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png).
+![&#x200B; Image de l’interface utilisateur affichant le bouton (bascule) Exclure les attributs d’enrichissement &#x200B;](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png).
 
 Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#review).
 
-### [!BADGE Beta ]{type=Informative} Exporter des tableaux et des objets à partir d’attributs d’enrichissement {#export-arrays-enrichment-attributes}
+### [!BADGE Beta &#x200B;]{type=Informative} Exporter des tableaux et des objets à partir d’attributs d’enrichissement {#export-arrays-enrichment-attributes}
 
 >[!AVAILABILITY]
 >
@@ -662,9 +675,9 @@ Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#rev
 >title="Champ cible"
 >abstract="Le champ cible est automatiquement renseigné avec le nom du champ source. Modifiez-le pour utiliser un autre alias si vous souhaitez que le champ porte un nom différent dans vos fichiers exportés."
 
-Lors de l’exportation d’audiences vers des destinations d’espace de stockage avec une sortie JSON ou [!DNL Parquet] et le bouton [**[!UICONTROL Exporter des tableaux, des mappages et des objets ]**activé](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), vous pouvez exporter des structures de données complexes, y compris des tableaux entiers ou des champs sélectionnés à partir de tableaux d’objets, en tant qu’attributs d’enrichissement.
+Lors de l’exportation d’audiences vers des destinations d’espace de stockage avec une sortie JSON ou [!DNL Parquet] et le bouton [**[!UICONTROL Exporter des tableaux, des mappages et des objets &#x200B;]**&#x200B;activé](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), vous pouvez exporter des structures de données complexes, y compris des tableaux entiers ou des champs sélectionnés à partir de tableaux d’objets, en tant qu’attributs d’enrichissement.
 
-![ La boîte de dialogue Sélectionner des attributs d’enrichissement affichant la bannière Exporter des tableaux et des objets complexes activée et l’interface de mappage Source et Target à deux colonnes. ](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png)
+![&#x200B; La boîte de dialogue Sélectionner des attributs d’enrichissement affichant la bannière Exporter des tableaux et des objets complexes activée et l’interface de mappage Source et Target à deux colonnes. &#x200B;](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png)
 
 L’étape Attributs d’enrichissement affiche une interface de mappage à deux colonnes :
 
@@ -686,7 +699,7 @@ Sélectionnez le nom de l’attribut de tableau dans l’écran de sélection de
 
 #### Exporter un champ unique à partir d’un tableau d’objets {#export-single-array-field}
 
-Lorsque vous sélectionnez une propriété imbriquée dans un tableau d’objets, le champ **** est automatiquement renseigné avec une expression calculée `transformArray` à l’aide de `to_object` pour extraire cette propriété de chaque objet du tableau.
+Lorsque vous sélectionnez une propriété imbriquée dans un tableau d’objets, le champ **&#x200B;**&#x200B;est automatiquement renseigné avec une expression calculée `transformArray` à l’aide de `to_object` pour extraire cette propriété de chaque objet du tableau.
 
 Par exemple, la sélection de `someArray[*].amount` renseigne le champ source avec :
 
@@ -728,7 +741,7 @@ Seuls les champs que vous spécifiez sont inclus dans chaque objet dans le table
 >* Les champs sont utilisés dans la définition de l’audience.
 >* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination cible.
 >
-> Par exemple, si le champ `person.name.firstName` comporte certains libellés d’utilisation des données entrant en conflit avec l’action marketing de la destination, une violation de la politique d’utilisation des données s’afficherait dans l’étape de révision. Pour plus d’informations, voir [ Gouvernance des données dans  [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Par exemple, si le champ `person.name.firstName` comporte certains libellés d’utilisation des données entrant en conflit avec l’action marketing de la destination, une violation de la politique d’utilisation des données s’afficherait dans l’étape de révision. Pour plus d’informations, voir [&#x200B; Gouvernance des données dans  [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Sur la page **[!UICONTROL Réviser]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
 
@@ -741,7 +754,7 @@ Sur la page **[!UICONTROL Réviser]**, vous pouvez voir un résumé de votre sé
 >title="Affichage des politiques de consentement applicables"
 >abstract="Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
 
-Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 
