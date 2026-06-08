@@ -22,7 +22,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 712f78fa6c42c5d99ccb0a042d8eb6c70962ef96
+source-git-commit: f494c124cf4fd7f68a132cfa8263ce7aa5c69441
 workflow-type: tm+mt
 source-wordcount: 5669
 ht-degree: 35%
@@ -554,7 +554,6 @@ La nouvelle page **[!UICONTROL Mappage]** présente les limites connues suivante
 En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner le champ]** pour ajouter des `segmentMembership.seg_namespace.seg_id.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur `xdm: segmentMembership.seg_namespace.seg_id.status` dans le champ de schéma, comme illustré ci-dessous.
 
 ![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à une audience à l’étape de mappage du workflow d’activation.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
-
 
 >[!NOTE]
 >
