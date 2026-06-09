@@ -2,30 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-TQID: https://experienceleague.adobe.com/tnuEgiXV20aBnMSXIgum5i97-Ycwct7EggFyU4hA3QI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+source-git-commit: 5ffdc773cb78a45d14f0614ff26fd262136799fa
 workflow-type: tm+mt
-source-wordcount: 1302
-ht-degree: 30%
+source-wordcount: '1376'
+ht-degree: 21%
 
 ---
 
@@ -45,42 +25,32 @@ ht-degree: 30%
 >- [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/release-notes)
 >- [Collaboration dans Real-Time CDP](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/latest)
 
-**Date de publication : mai 2026**
+**Date de publication : juin 2026**
 
 Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Alertes](#alerts)
-- [Attributs calculés](#computed-attributes)
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
-- [Profil client en temps réel](#profile)
+- [Service de requête](#query-service)
+- [Exécuter et exploiter](#run-and-operate)
 - [Service de segmentation](#segmentation-service)
 - [Sources](#sources)
+- [Modèle de données d’expérience (XDM)](#xdm)
 
-## Alertes {#alerts}
+## Agent Orchestrator {#agent-orchestrator}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Utilisez Agent Orchestrator pour créer et déployer des agents optimisés par l’IA qui automatisent les workflows et interagissent avec les clients sur plusieurs canaux.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Historique des alertes : filtrage et capacité de découverte | La page Historique des alertes affiche désormais le nom de l’objet associé, ajoute la recherche par type d’alerte et le filtrage par nom d’objet, et comprend un sélecteur de période amélioré, ce qui facilite la corrélation des alertes et la recherche de ce dont vous avez besoin. |
+| Agent de notifications | Utilisez l’agent de notifications pour faire apparaître les alertes, les événements système et les mises à jour d’audience ou de parcours par le biais d’invites conversationnelles. L’agent fournit des résumés de notifications contextuelles afin que vous puissiez agir sur les événements critiques sans avoir à parcourir plusieurs tableaux de bord. |
+| [!BADGE Beta &#x200B;]{type=Informative} Adobe Marketing Agent pour les plateformes d’IA | Utilisez Adobe Marketing Agent pour intégrer des informations opérationnelles, des données d’audience, des informations de parcours et la découverte de ressources Experience Platform à des plateformes d’IA tierces, notamment [!DNL ChatGPT], [!DNL Claude], [!DNL Gemini], [!DNL Amazon Q], [!DNL Databricks Genie] et [!DNL IBM Watsonx]. Contactez votre représentant Adobe pour demander l’accès. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [[!DNL Observability Insights] vue d’ensemble](/help/observability/home.md).
-
-## Attributs calculés {#computed-attributes}
-
-Les attributs calculés permettent de résumer facilement les données d’événement dans les attributs de profil par le biais d’une interface utilisateur intuitive pour une segmentation, une personnalisation et une activation optimisées basées sur le comportement. Grâce à cette fonctionnalité, vous pouvez créer des attributs calculés en libre-service, les gérer et les utiliser dans la segmentation, dans les destinations Real-Time CDP ou dans Adobe Journey Optimizer. En outre, les attributs calculés simplifient la segmentation et les workflows de parcours pour vous aider à diffuser facilement des expériences pertinentes.
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Fonction de liste dans les attributs calculés | Utilisez la fonction List dans les attributs calculés pour renvoyer un tableau de valeurs à partir d’événements de qualification. Cette fonction est destinée à être utilisée lorsque les événements de qualification proviennent d’un seul jeu de données. Si les événements de qualification s’étendent sur plusieurs jeux de données, les résultats peuvent être incomplets. |
-
-{style="table-layout:auto"}
-
-Pour en savoir plus sur les attributs calculés, veuillez lire la [Vue d’ensemble sur les attributs calculés](../profile/computed-attributes/overview.md).
+Pour plus d’informations, consultez la [documentation d’](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
@@ -90,9 +60,13 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} Exporter des tableaux pour les attributs d’enrichissement | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage. Sélectionnez des champs internes individuels dans un tableau et ils sont exportés en tant que colonnes distinctes dans les sorties JSON et Parquet. Cette fonctionnalité est disponible pour un nombre limité de clientes et clients. Pour obtenir l’accès, contactez votre représentant ou représentante Adobe. |
-| Prise en charge des audiences externes pour [[!DNL Criteo]](../destinations/catalog/advertising/criteo.md) | Activez les audiences d’origines autres que Segmentation Service vers la destination [Criteo](../destinations/catalog/advertising/criteo.md), y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Voir la section [audiences prises en charge](../destinations/catalog/advertising/criteo.md#supported-audiences) pour plus d’informations. |
-| Nouvelles destinations prises en charge pour [[!DNL Acxiom Audience Connection]](../destinations/catalog/advertising/acxiom-audience-connection.md) et [[!DNL Acxiom Real ID Audience Connection]](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Cinq nouvelles destinations sont désormais prises en charge : [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1ère partie), [!DNL Warner Bros. Discovery] et [!DNL Yahoo]. Pour plus d’informations, consultez les documents [Acxiom Audience Connection](../destinations/catalog/advertising/acxiom-audience-connection.md) et [Acxiom Real ID Audience Connection](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md). |
+| {type=Informative} [Quand activer &#x200B;](../destinations/ui/when-to-activate.md) | Contrôler les types de modification de profil qui déclenchent des exportations vers une destination. Activez ou désactivez trois types de déclencheurs par flux de données : modifications d’attributs, qualification et disqualification d’audience et modifications d’identité. Les trois déclencheurs sont activés par défaut. Cette fonctionnalité est disponible pour un nombre limité de clientes et clients. Pour obtenir l’accès, contactez votre représentant ou représentante Adobe. |
+| Lien privé Azure pour les destinations Azure | Acheminez les exportations de données vers [[!DNL Azure Blob Storage]](../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL Azure Data Lake Storage Gen2]](../destinations/catalog/cloud-storage/adls-gen2.md) et [[!DNL Azure Event Hubs]](../destinations/catalog/cloud-storage/azure-event-hubs.md) via des adresses IP privées sur la colonne vertébrale [!DNL Microsoft Azure] plutôt que sur l’Internet public. Cette fonctionnalité est disponible pour les clients disposant de droits Healthcare Shield ou Privacy and Security Shield. Contactez votre représentant Adobe pour demander la configuration. |
+| Prise en charge d’[[!DNL Snowflake Streaming]](../destinations/catalog/warehouses/snowflake.md) et de [[!DNL Snowflake Batch]](../destinations/catalog/warehouses/snowflake-batch.md) Private Link | Un nouveau bouton (bascule) Lien privé est désormais disponible lors de la configuration de connexions de destination par lots et en flux continu [!DNL Snowflake]. Activez ce bouton uniquement si votre compte [!DNL Snowflake] est configuré pour un accès entrant privé en liaison seule. Si vous désactivez cette option pour les comptes de liaison privés uniquement, le partage des données échoue. |
+| {type=Informative} [Exportez des tableaux en tant qu’attributs d’enrichissement](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage.Sélectionnez des champs individuels dans un tableau d’objets ou exportez le tableau complet. Les données sont ensuite exportées en tant que colonnes distinctes dans les sorties JSON et Parquet. |
+| [[!DNL Google Ad Manager 360]](../destinations/catalog/advertising/google-ad-manager-360-connection.md) désormais généralement disponible | La destination [!DNL Google Ad Manager 360] (anciennement en version Beta) est désormais disponible pour tous. |
+| [[!DNL Google Customer Match + Display & Video 360]](../destinations/catalog/advertising/google-customer-match-dv360.md) désormais généralement disponible | La destination [!DNL Google Customer Match + Display & Video 360] (anciennement en disponibilité limitée) est désormais disponible pour tous. La surveillance a été mise à jour afin d’afficher une exécution de flux de données par jour, au lieu de plusieurs exécutions distinctes pour les événements réalisés et sortis par espace de noms d’identité. |
+| [Rapports au niveau de l’audience pour les destinations supplémentaires](../dataflows/ui/monitor-destinations.md#audience-level-view) | La création de rapports sur les flux de données au niveau de l’audience est désormais disponible pour les destinations suivantes : [Gainsight PX](../destinations/catalog/analytics/gainsight-px.md), [TikTok](../destinations/catalog/social/tiktok.md), [Audiences correspondantes Linkedin](../destinations/catalog/social/linkedin.md), [Demandbase People](../destinations/catalog/advertising/demandbase-people.md), [(héritée) Amazon Ads](../destinations/catalog/advertising/amazon-ads.md), [Liste de clients Pinterest](../destinations/catalog/advertising/pinterest.md), [Twitter Custom Audiences](../destinations/catalog/social/twitter.md), [Braze](../destinations/catalog/mobile-engagement/braze.md), [(Companies) LinkedIn](../destinations/catalog/social/linkedin-b2b.md), [Facebook](../destinations/catalog/social/facebook.md), [Mailchimp Tags](../destinations/catalog/email-marketing/mailchimp-tags.md) et [Salesforce CRM](../destinations/catalog/crm/salesforce.md). |
 
 {style="table-layout:auto"}
 
@@ -100,29 +74,53 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Corriger | Description |
 | --- | --- |
-| Prise en charge des macros [[!DNL Google Cloud Storage]](../destinations/catalog/cloud-storage/google-cloud-storage.md) | Le [`%SEGMENT_NAME%`](../destinations/catalog/cloud-storage/overview.md#use-macros) et d’autres macros de chemin de dossier fonctionnent désormais correctement pour les destinations [!DNL Google Cloud Storage]. Auparavant, les macros n’étaient pas remplacées par le nom de l’audience dans le chemin d’exportation. |
-| [[!DNL Federated Audiences]](https://www.adobe.com/go/destinations-federated-audience-composition) exporter le fichier maintenant | L’option **[!UICONTROL Export file now]** est désormais prise en charge pour les destinations [!DNL Federated Audience Composition]. |
-| Correctif de l’interface utilisateur de planification [[!DNL Snowflake]](../destinations/catalog/warehouses/snowflake.md) | Correction d’un problème en raison duquel le basculement de la fréquence d’exportation entre quotidienne et unique dans la configuration de destination [!DNL Snowflake] entraînait le blocage de l’interface utilisateur. |
-| Comportement du type de clé [[!DNL Google Customer Match]](../destinations/catalog/advertising/google-customer-match.md) | Mise à jour de la documentation pour clarifier la façon dont [!DNL Google] gère les types de clés d’identité dans un flux de données de destination. Vous pouvez mapper plusieurs types de clés dans la même connexion, mais si vous mettez à jour les mappages, toute identité que vous ajoutez doit utiliser le même type de clé que l’identité que vous avez supprimée. La suppression de tous les champs d’un type de clé donné ou le changement de type de clé entre les exécutions d’activation [!DNL Google] entraîne la suppression de la liste d’audiences correspondante. Voir la section [comportement du type de clé](../destinations/catalog/advertising/google-customer-match.md#key-type-behavior) pour plus d’informations. |
-| [Affichage des jeux de données dans un flux de données d’exportation de jeu de données](../destinations/api/export-datasets.md#view-datasets-in-dataflow) | Mise à jour de la documentation pour montrer comment récupérer les jeux de données associés à un flux de données d’exportation de jeu de données existant à l’aide de l’API Flow Service. Pour plus d’informations, consultez la [documentation sur l’exportation de jeux de données](../destinations/api/export-datasets.md#view-datasets-in-dataflow) . |
+| [[!DNL Reddit Custom Audience]](../destinations/catalog/advertising/reddit-custom-audience.md) le correctif d’activation | Correction d’un problème qui empêchait les clients d’activer les données lorsqu’ils le tentaient plus de 24 heures après l’authentification. |
+| Application d’audience restreinte [[!DNL Facebook]](../destinations/catalog/social/facebook.md) | À compter du 8 juin 2026, [!DNL Facebook] bloquera les audiences contenant des données restreintes ou sensibles (telles que des informations financières ou de santé) en vertu de ses Conditions d’utilisation. Consultez la section [données d’audience restreintes](../destinations/catalog/social/facebook.md#restricted-audiences) pour connaître les étapes de dépannage. |
+| [Mise à jour du mécanisme de sécurisation pour l’activation des audiences externes](../destinations/guardrails.md#batch-file-based-activation) | Le nombre maximal d’audiences externes (telles que le chargement personnalisé, la composition d’audiences fédérées et la composition d’audiences) pouvant être activées par instance de destination a été porté à 100. |
+| [Filtres supplémentaires à l’étape Sélectionner la destination &#x200B;](../destinations/ui/activate-segment-streaming-destinations.md#select-destination) | L’étape **[!UICONTROL Sélectionner la destination]** du workflow d’activation comprend désormais des filtres supplémentaires pour vous aider à localiser plus rapidement le flux de données de destination approprié. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [vue d’ensemble des destinations](../destinations/home.md).
 
-## Profil client en temps réel {#profile}
+## Modèle de données d’expérience (XDM) {#xdm}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces.
+Le modèle de données d’expérience (XDM) est une spécification open source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Experience Platform.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Progression de l’ingestion des profils par lots | Effectuez le suivi en temps réel des traitements d’ingestion de profils par lots depuis le tableau de bord de surveillance. Affichez le lancement de la tâche, le temps dans la file d’attente et la progression du point de contrôle critique, y compris le moment où les données sont prêtes pour la segmentation et la recherche de profil. Utilisez ces informations pour prédire la disponibilité des données en aval et planifier les lancements de campagne en toute confiance. |
+| [Améliorations de l’inventaire des schémas](../xdm/ui/resources/schemas.md) | La page de navigation des schémas comprend désormais des métadonnées de schéma supplémentaires, des options de filtrage amélioré, des balises et des dossiers définis par l’utilisateur, ainsi que des actions intégrées pour les tâches courantes de gestion des schémas. Ces mises à jour vous aident à rechercher, organiser et gérer des schémas plus efficacement à partir d’un seul emplacement. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [vue d’ensemble du profil client en temps réel](../profile/home.md).
+Pour plus d’informations, consultez la [vue d’ensemble XDM](../xdm/home.md).
+
+## Service de requête {#query-service}
+
+Utilisez Query Service pour interroger des données dans Adobe Experience Platform à l’aide de SQL standard.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Personalization à long terme avec des accélérateurs de Distiller de données | De nouveaux conseils expliquent comment utiliser les accélérateurs de Distiller de données et les données historiques stockées dans le lac de données pour générer des informations prêtes pour la personnalisation et l’activation de l’audience. Cette approche vous permet de prendre en charge des intervalles de recherche en amont étendus tout en optimisant l’utilisation du magasin de profils et la consommation totale du volume de données. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations, consultez la [présentation de Query Service](../query-service/home.md).
+
+## Exécuter et exploiter {#run-and-operate}
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [Détection de motifs dans les planifications de tâches](../run-and-operate/job-schedules-anti-patterns.md) | Trois antimodèles sont désormais automatiquement détectés dans la vue Planifications de tâches : plus de 90 exécutions d’ingestion de profils par jour, ingestion de profils planifiée trop proche de la segmentation et segmentation planifiée trop proche de l’activation de destination. La recherche en amont des 7 derniers jours comprend désormais une vue Calendrier pour la sélection de la date. Cette fonctionnalité sera déployée jusqu’à la fin juin 2026. |
+| [Contrôles d’intégrité pour P-TTL et e-TTL](../run-and-operate/health-checks.md) | Deux nouveaux contrôles d’intégrité sont désormais disponibles : la durée de vie du profil pseudonyme (P-TTL) vérifie si la politique d’expiration est active pour votre sandbox et répertorie les espaces de noms non authentifiés pertinents. La TTL des jeux de données d’événements d’expérience (e-TTL) analyse les jeux de données de lac de données et d’événements de profil pour identifier les endroits où l’expiration automatique des données n’est pas configurée. |
+
+{style="table-layout:auto"}
 
 ## Service de segmentation {#segmentation-service}
 
@@ -132,9 +130,7 @@ Utilisez Segmentation Service pour créer des audiences à partir des données d
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Améliorations de la composition de l’audience | Tous les clients disposent désormais d’une base de 50 compositions. Les autres améliorations comprennent l’activation chaînée et l’enrichissement de l’audience. |
-| Mode express pour les audiences externes | Utilisez le mode express pour activer des audiences externes directement via l’API sans le workflow d’activation complet. |
-| Audiences de compte avec événements d’expérience (B2B) | Après la mise à niveau de l’architecture B2B CDP, les audiences de compte avec des événements d’expérience ne sont plus directement prises en charge. Pour créer une audience de compte qui utilise des événements d’expérience, commencez par créer une audience de personnes avec les événements d’expérience, puis référencez cette audience de personnes lors de la création de l’audience de compte. |
+| [Répartition persistante ou aléatoire dans la composition de l’audience](../segmentation/ui/audience-composition.md) | Utilisez le nouveau sélecteur de mode de partage dans la composition de l’audience pour choisir entre les divisions de pourcentage persistantes et aléatoires. La division persistante conserve le même profil dans le même compartiment entre les évaluations. Le partage aléatoire peut placer un profil dans un compartiment différent entre les évaluations. Lors de l’utilisation de la division persistante, sélectionnez un espace de noms d’identité avec peu de variance pour garantir une appartenance fiable à l’audience. |
 
 {style="table-layout:auto"}
 
@@ -148,9 +144,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Source | Description |
 | --- | --- |
-| [!DNL Delta Sharing] | Vous pouvez utiliser la source [!DNL Delta Sharing] pour importer des tables Delta dans Experience Platform par le biais d’un protocole de partage de données ouvert et sécurisé. Une fois que vous avez configuré une connexion [!DNL Delta Sharing] et sélectionné les partages et les tableaux à ingérer, Experience Platform importe automatiquement ces données dans vos jeux de données afin que vous puissiez les utiliser pour l’analyse, la segmentation et l’activation. |
-| [!DNL LAVA] | Utilisez le connecteur source [!DNL LAVA] pour ingérer des données à partir de [!DNL LAVA] dans Experience Platform à l’aide de schémas et de contrôles de gouvernance normalisés, ce qui réduit l’effort d’intégration personnalisé et améliore le délai de rentabilisation pour l’activation et les informations en aval. |
-| [!DNL Meta Ads] (Beta) | Vous pouvez utiliser le connecteur source [!DNL Meta Ads] (Beta) dans l’espace de travail Sources pour vous authentifier auprès de [!DNL Meta], sélectionner vos comptes publicitaires et planifier l’ingestion des données de campagne et de performances [!DNL Meta Ads] dans les jeux de données Experience Platform. |
+| [!BADGE Version bêta]{type=Informative} [!DNL Meta Ads] | Utilisez la source [!DNL Meta Ads] pour configurer le workflow complet d’ingestion de [!DNL Meta Ads] dans l’interface utilisateur Sources. Connectez votre compte [!DNL Meta Ads] et importez les données de médias payants directement dans Experience Platform pour activation et analyse. Cette source est disponible pour un nombre limité de clients. Contactez votre représentant Adobe pour demander l’accès. |
+| [!BADGE Version bêta]{type=Informative} [!DNL Delta Sharing] | Utilisez la source [!DNL Delta Sharing] pour importer des jeux de données partagés en direct de partenaires ou d’environnements de lac internes dans Experience Platform sans copier ni charger manuellement de fichiers. Connectez-vous à un point d’entrée [!DNL Delta Sharing], choisissez les tables dont vous avez besoin et utilisez ces données gouvernées avec vos profils et informations existants. |
 
 {style="table-layout:auto"}
 
@@ -158,11 +153,29 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Source | Description |
 | --- | --- |
-| Mise à jour de la place sur la liste autorisée IP de la région NLD2 | Cinq plages d’adresses IP ont été ajoutées à la place sur la liste autorisée de la région NLD2 : `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28` et `57.153.246.96/30`. Mettez à jour votre liste autorisée réseau si vous utilisez des sources dans la région NLD2. |
-| Limites des champs de lot [!DNL Shopify] | Certains champs [!DNL Shopify] ne sont pris en charge qu’en mode Aperçu. Pour ingérer ces champs, utilisez l’API pour créer vos flux de données au lieu du workflow de l’interface utilisateur. Pour obtenir la liste des champs concernés, consultez la documentation sur les sources de [!DNL Shopify] . |
-| Désactivation automatique du flux de données | Les flux de données Source qui échouent en continu pendant 30 jours sont automatiquement désactivés. Lorsqu’un flux de données est désactivé, passez en revue la raison de l’échec dans Surveillance, appliquez les mises à jour nécessaires et réactivez le flux de données. Les raisons d’échec courantes incluent les informations d’identification, les autorisations ou les modifications de configuration des schémas et des mappages. |
+| [[!DNL Shopify Streaming]](../sources/connectors/ecommerce/shopify-streaming.md) l’authentification HMAC | L’authentification HMAC est désormais prise en charge dans le connecteur [!DNL Shopify Streaming], disponible dans l’interface utilisateur et l’API. Voir la [[!DNL Shopify Streaming] présentation](../sources/connectors/ecommerce/shopify-streaming.md) pour connaître le comportement de rotation des clés et les instructions de configuration. |
+| [Désactivation automatique du flux de données](../sources/home.md) | Les flux de données des sources qui échouent en continu pendant 30 jours sont automatiquement désactivés. Lorsqu’un flux de données est désactivé, passez en revue la raison de l’échec dans Surveillance, appliquez les mises à jour nécessaires et réactivez le flux de données. Les raisons d’échec courantes incluent les informations d’identification, les autorisations ou les modifications de configuration des schémas et des mappages. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [vue d’ensemble des sources](../sources/home.md).
 
+<!--
+
+| [Scheduled queries with no end date](../query-service/api/scheduled-queries.md) | Create scheduled queries that run indefinitely without specifying an end date. Use this for continuous recurring workflows. The UI may display indefinite schedules using a far-future date such as 31.12.9999. |
+
+## Advanced data lifecycle management {#advanced-data-lifecycle-management}
+
+Experience Platform provides a suite of data hygiene capabilities that let you manage your stored data through programmatic deletions of consumer records and datasets.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Multi-dataset and targeted services for work orders](../hygiene/api/jobs.md) | Two new API-only capabilities are now available for data lifecycle work orders. Use targeted services to scope deletion to specific services (profile, identity, or [!DNL Adobe Journey Optimizer]) without modifying data in the lake. Use multi-dataset support to target one, many, or all datasets in a single work order submission. |
+
+{style="table-layout:auto"}
+
+For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
+
+-->
