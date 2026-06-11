@@ -1,17 +1,22 @@
 ---
 title: Partage Delta
 description: Découvrez comment utiliser la source de partage Delta sur Adobe Experience Platform.
+badge: Beta
 exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
-source-git-commit: 050f84fef2fd3a3eef9971e6245e3ea971d5a099
+source-git-commit: e379dce3cffb073a44bcf1c85c8456f75a635ec3
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '698'
 ht-degree: 3%
 
 ---
 
-# [!DNL Deltashare]
+# [!DNL Delta Sharing]
 
-Vous pouvez utiliser le connecteur source [!DNL Deltashare] pour établir une connectivité sécurisée aux serveurs [!DNL Databricks Delta Sharing] et créer des jeux de données virtuels dans Adobe Experience Platform. Grâce à cette fonctionnalité, vous pouvez interroger des jeux de données virtuels, inspecter et mapper des tables externes à des schémas de modèle de données d’expérience (XDM) et les exploiter dans les applications et services Experience Platform. Grâce à [!DNL Deltashare], vous pouvez éviter l’ingestion physique des jeux de données et réduire ainsi la duplication, les coûts de stockage et les frais généraux d’exploitation.
+>[!AVAILABILITY]
+>
+>Cette fonctionnalité est actuellement en version bêta fermée et n’est pas disponible pour tous les utilisateurs et utilisatrices. Contactez votre équipe de compte Adobe pour demander l’accès à la version bêta.
+
+Grâce au connecteur source [!DNL Delta Sharing], vous pouvez vous connecter en toute sécurité à vos serveurs [!DNL Databricks Delta Sharing] et créer facilement des jeux de données virtuels directement dans Adobe Experience Platform. Cela signifie que vous pouvez interroger et utiliser des tables externes comme si elles étaient natives à Platform, en les mappant directement aux schémas du modèle de données d’expérience (XDM) pour les utiliser dans toutes vos applications et tous vos services Platform, sans avoir à ingérer physiquement les données. Grâce à [!DNL Delta Sharing], vous évitez le stockage de données en double, réduisez les coûts de stockage et simplifiez la gestion de vos données.
 
 ## Conditions préalables {#prerequisites}
 
@@ -29,7 +34,7 @@ Du côté du fournisseur, assurez-vous que vous disposez des éléments suivants
 - **Tables delta éligibles** : les tables que vous envisagez de partager doivent :
    - Soyez **tables delta**.
    - être configuré sur un stockage qui prend en charge les [!DNL Delta Sharing] ouverts (stockage externe ou configuration prise en charge par le [!DNL Databricks]).
-   - Les filtres de ligne ou les masques de colonne ne sont pas appliqués **&#x200B;**&#x200B;[!DNL Databricks] ne permet pas le partage de tels tableaux).
+   - Les filtres de ligne ou les masques de colonne ne sont pas appliqués ****[!DNL Databricks] ne permet pas le partage de tels tableaux).
 
 #### Configuration des destinataires et des partages
 
@@ -118,4 +123,4 @@ Lors du mappage de tables partagées à des schémas Experience Platform, seuls 
 
 ## Connexion à [!DNL Delta Sharing] dans l’interface utilisateur
 
-Lisez le [[!DNL Delta Sharing &#x200B;]  guide de l’interface utilisateur &#x200B;](../../tutorials/ui/create/data-sharing/delta-sharing.md) pour savoir comment ingérer des données dans Experience Platform avec la source [!DNL Delta Sharing].
+Lisez le [[!DNL Delta Sharing ]  guide de l’interface utilisateur ](../../tutorials/ui/create/data-sharing/delta-sharing.md) pour savoir comment ingérer des données dans Experience Platform avec la source [!DNL Delta Sharing].

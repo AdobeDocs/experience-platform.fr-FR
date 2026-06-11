@@ -1,11 +1,12 @@
 ---
 title: Utiliser le connecteur Source de partage Delta dans l’interface utilisateur
 description: Découvrez comment utiliser le connecteur source de partage Delta dans l’interface utilisateur d’Experience Platform.
+badge: Beta
 exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
-source-git-commit: 050f84fef2fd3a3eef9971e6245e3ea971d5a099
+source-git-commit: e379dce3cffb073a44bcf1c85c8456f75a635ec3
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 14%
+source-wordcount: '1169'
+ht-degree: 13%
 
 ---
 
@@ -16,8 +17,11 @@ ht-degree: 14%
 >title="Structure d&#39;un schéma"
 >abstract="Veillez à passer en revue la structure de votre schéma, car une fois que vous aurez commencé, vous ne pourrez plus y apporter de modifications."
 
-Lisez ce guide pour savoir comment utiliser le connecteur source [!DNL Delta Sharing] dans l’interface utilisateur de Adobe Experience Platform.
+>[!AVAILABILITY]
+>
+>Cette fonctionnalité est actuellement en version bêta fermée et n’est pas disponible pour tous les utilisateurs et utilisatrices. Contactez votre équipe de compte Adobe pour demander l’accès à la version bêta.
 
+Lisez ce guide pour savoir comment utiliser le connecteur source [!DNL Delta Sharing] dans l’interface utilisateur de Adobe Experience Platform.
 
 ## Commencer
 
@@ -114,7 +118,7 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 | --- | --- |
 | Nom du flux de données | Nom du flux de données. Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes ](../../alerts.md) [<ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 {style="table-layout:auto"}
 
