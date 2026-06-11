@@ -184,5 +184,5 @@ Le connecteur source [!DNL LAVA] ingère des profils de membres, des soldes de r
 
 Pour une configuration pas à pas :
 
-* [Créer une connexion source et un flux de données pour diffuser  [!DNL LAVA]  données à l’aide de l’API  [!DNL Flow Service] ](../../tutorials/api/create/loyalty/lava.md)
+* [Créer une connexion source et un flux de données pour diffuser  [!DNL LAVA]  données à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../tutorials/api/create/loyalty/lava.md)
 * [Créer une connexion source et un flux de données pour diffuser  [!DNL LAVA]  données à l’aide de l’interface utilisateur](../../tutorials/ui/create/loyalty/lava.md)
