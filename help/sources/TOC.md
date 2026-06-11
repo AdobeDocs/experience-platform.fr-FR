@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
+source-git-commit: 050f84fef2fd3a3eef9971e6245e3ea971d5a099
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1126'
 ht-degree: 87%
 
 ---
@@ -99,7 +99,7 @@ ht-degree: 87%
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
    - Partage de données {#data-sharing}
-      - {hide-from-toc}[Deltashare &#x200B;](connectors/data-sharing/deltashare.md)
+      - [Partage Delta](connectors/data-sharing/delta-sharing.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -318,7 +318,7 @@ ht-degree: 87%
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Résolution d’identité d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
       - Partage de données {#data-sharing}
-         - {hide-from-toc}[Deltashare &#x200B;](tutorials/ui/create/data-sharing/deltashare.md)
+         - [Partage Delta](tutorials/ui/create/data-sharing/delta-sharing.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -327,7 +327,7 @@ ht-degree: 87%
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
-         - {hide-from-toc}[Événements de streaming Kobie &#x200B;](tutorials/ui/create/loyalty/kobie-streaming.md)
+         - {hide-from-toc}[Événements de streaming Kobie ](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [LAVE](tutorials/ui/create/loyalty/lava.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur source Talon.One Batch](tutorials/ui/create/loyalty/talon-one-batch.md)
