@@ -1,11 +1,10 @@
 ---
 title: LAVE
 description: En savoir plus sur la source LAVA sur Adobe Experience Platform
-badge: Beta
-source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
+source-git-commit: d3704d813a30636b6b38fa35335325cfe15c293f
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 2%
+source-wordcount: '1606'
+ht-degree: 1%
 
 ---
 
@@ -17,8 +16,6 @@ ht-degree: 2%
 
 [[!DNL LAVA]](https://lava.ai/) est une plateforme d’engagement client. [!DNL LAVA] s&#39;intègre à vos billetteries, points de vente, applications mobiles et autres points de contact et crée des moments qui comptent avec nos solutions d&#39;automatisation, de fidélité et de laissez-passer mobile.
 
-Le connecteur source [!DNL LAVA] peut être utilisé pour plusieurs jeux différents de données et d’événements de profil. Vous pouvez décider lesquelles sont pertinentes pour vous. Pour chaque type de données que vous souhaitez diffuser de [!DNL LAVA] à Adobe, répétez les étapes de « Connexion à votre compte LAVA ».
-
 ## Conditions préalables
 
 Avant de pouvoir utiliser ce connecteur source, vérifiez les points suivants :
@@ -27,6 +24,9 @@ Avant de pouvoir utiliser ce connecteur source, vérifiez les points suivants :
 * Vous disposez d’un compte [Console LAVA](https://app.lava.ai/) avec un accès « Administrateur » ou « Gestionnaire d’exportation ».
 * (Recommandé) Vous disposez des autorisations de gestionnaire de sandbox dans Adobe Experience Cloud.
 
+## Flux de données
+
+Le connecteur source [!DNL LAVA] peut être utilisé pour plusieurs jeux différents de données et d’événements de profil. Vous pouvez décider lesquels sont pertinents pour vous, en diffusant uniquement ces enregistrements vers Adobe.
 
 ### Profils de membre
 
@@ -96,26 +96,91 @@ Téléchargez le fichier de données [exemple d’événement d’analyse de tic
 
 {style="table-layout:auto"}
 
-### Charger le package [!DNL LAVA]
+### Événements de transaction
+
+La source d&#39;événement de transaction fournit des informations détaillées chaque fois qu&#39;un achat est effectué dans un système de point de vente par un utilisateur identifié comme [!DNL LAVA]. Ces données peuvent être utilisées pour évaluer le taux d’utilisation des promotions, comprendre les préférences des clients et évaluer le rendement des ventes. En diffusant des événements d’analyse de ticket vers Experience Platform, vous pouvez augmenter les profils des membres et activer la personnalisation ou l’analyse pilotée par les événements. Chaque enregistrement d’événement de transaction comprend des métadonnées sur l’achat, [!DNL LAVA] récompenses utilisées et les articles achetés. Notez que certains fournisseurs ne fournissent ces données que lorsqu&#39;une récompense a été appliquée.
+
+Téléchargez le fichier de données [exemple d’événement de transaction ici.](../../assets/lava/lava_transaction_sample.json)
+
+| Champ [!DNL LAVA] connecteur Source | Exemple de valeur | Description |
+| --- | --- | --- |
+| `lavaId` | `52b6a289-f5a0-47f5-b5b5-da3e08aaedb9` | ID de [!DNL LAVA] de l’utilisateur qui a effectué un achat. |
+| `transactionId` | `8d515630-eb0f-43bc-a9f6-221f3813f438` | ID [!DNL LAVA] pour la transaction. |
+| `referenceId` | `2aed9e2c-77a4-496c-81cc-e9772d128c0e` | ID créé au point de vente pour la transaction. |
+| `subtotal` | `974` | Sous-total de la transaction dans l&#39;unité de dénomination la plus basse (centimes). |
+| `total` | `974` | Total de la transaction dans l&#39;unité de dénomination la plus basse (centimes). |
+| `location` | `64312` | Emplacement où la transaction a eu lieu. |
+| `items[]` | - | Liste des articles achetés dans cette transaction. Ce champ est absent (liste non vide) lorsque les données au niveau de l&#39;article ne sont pas fournies par le fournisseur. |
+| `items[].sku` | `1083947` | SKU de l’élément. |
+| `items[].amount` | `1949` | Prix unitaire de l’article dans l’unité de dénomination la plus basse (centimes). |
+| `items[].quantity` | `1` | Quantité de cet article achetée. |
+| `items[].adjustedTotal` | `1949` | Prix total de cet élément de ligne après application de toute récompense au niveau de l’élément, dans l’unité de dénomination la plus basse (centimes). |
+| `items[].rewardsApplied[]` | - | Liste des récompenses appliquées à cet élément. |
+| `items[].rewardsApplied[].amount` | `975` | Montant de la remise appliquée par cette récompense, dans l’unité de dénomination la plus basse (centimes). |
+| `items[].rewardsApplied[].rewardId` | `5` | Identifiant [!DNL LAVA] de la récompense appliquée. |
+| `redeemedAmount` | `0` | Montant de la valeur stockée remboursée dans cette transaction, dans l&#39;unité de dénomination la plus basse (centimes). |
+| `rewardsApplied[]` | - | Liste des récompenses appliquées à cette transaction. |
+| `rewardsApplied[].amount` | `975` | Montant de la remise appliquée par cette récompense, dans l’unité de dénomination la plus basse (centimes). |
+| `rewardsApplied[].rewardId` | `5` | Identifiant [!DNL LAVA] de la récompense appliquée. |
+| `type` | `transaction` | Indicateur du type d’enregistrement concerné. |
+| `id` | `8aa43866-173f-4c6e-bfa1-f231e34d6d71` | ID unique pour l’enregistrement. |
+| `timestamp` | `2026-05-09T22:24:43.951Z` | Lorsque la transaction a été effectuée. |
+
+{style="table-layout:auto"}
+
+### Événements comptables
+
+La source d&#39;événement comptable fournit un enregistrement de chaque modification des soldes d&#39;un membre, y compris les allocations dans un moment, les allocations provenant du remplissage d&#39;un formulaire, les rachats effectués dans le cadre d&#39;un achat ou par l&#39;intermédiaire de l&#39;application [!DNL LAVA], et les transferts. Une `amount` positive indique que des récompenses ont été ajoutées au solde ; une `amount` négative indique que des récompenses ont été échangées ou supprimées. Les événements de transfert produisent deux enregistrements : l&#39;un pour le membre qui perd le solde et l&#39;autre pour le membre qui le reçoit. Les paiements et les transactions peuvent utiliser plusieurs soldes, chacun d&#39;eux étant présenté comme un événement distinct.
+
+Téléchargez le fichier [exemple de données d’événements comptables ici.](../../assets/lava/lava_ledger_sample.json)
+
+| Champ [!DNL LAVA] connecteur Source | Exemple de valeur | Description |
+| --- | --- | --- |
+| `lavaId` | `292c367c-19ee-4d56-8d33-b2ab2c8fd553` | ID de [!DNL LAVA] du membre dont le solde a changé. |
+| `amount` | `-100` | Le changement du solde de récompense. Les valeurs positives indiquent des subventions ; les valeurs négatives indiquent des remboursements ou des déductions. Pour la valeur stockée, il s’agit de l’unité de dénomination la plus basse (centimes). |
+| `expiresAt` | `2026-05-31T22:40:43.109Z` | À l’expiration du solde concerné. |
+| `rewardId` | `1` | ID d’une récompense [!DNL LAVA]. Cela ne change jamais pour une récompense donnée. |
+| `rewardName` | `F&B Credit` | Nom de la récompense configurée dans la console Activation du moment [!DNL LAVA]. Cela peut être modifié. |
+| `rewardSlug` | `Credit` | Slogan principal de la récompense configurée dans la console d’activation du moment [!DNL LAVA]. Cela peut être modifié. |
+| `rewardType` | `stored` | Le type de récompense (accès, offre, points, stocké ou bon). |
+| `type` | `ledger` | Indicateur du type d’enregistrement concerné. |
+| `id` | `8aa43866-173f-4c6e-bfa1-f231e34d6d71` | ID unique pour l’enregistrement. |
+| `timestamp` | `2026-05-21T22:40:43.109Z` | Lorsque le solde a été modifié. |
+
+{style="table-layout:auto"}
+
+### Événements combinés
+
+Utilisez ce [fichier d’exemple de données d’événement combiné](../../assets/lava/lava_transaction_sample.json) pour configurer un flux de données unique qui ingère tous les types d’événements.
+
+## Considérations relatives au déploiement
+
+1. Créez un flux de données pour les données de profil de membre si vous avez besoin de données de base sur [!DNL LAVA] membres et/ou si vous souhaitez que [!DNL LAVA] données soient regroupées dans d’autres profils par adresse e-mail.
+2. Si vous utilisez les données de soldes de membres, elles doivent être stockées dans un jeu de données distinct de celui du profil de membres.
+3. Les événements peuvent être stockés dans un ou plusieurs jeux de données. Pour stocker dans un seul jeu de données, créez un flux de données à l’aide du fichier/mappage de données d’événement « combiné », puis configurez plusieurs exportations dans le [!DNL LAVA MAC] vers la même URL d’ingestion et le même ID de flux. Pour stocker chaque type d’événement dans un jeu de données différent, créez un flux de données pour chaque jeu de données, puis configurez chaque exportation du [!DNL LAVA MAC] vers l’URL d’ingestion et l’ID de flux pour le flux de données approprié.
+
+## Charger le package [!DNL LAVA]
 
 [!DNL LAVA] fournit un package qui inclut nos groupes de champs, schémas, espaces de noms d’identité et jeux de données recommandés pour l’utilisation de [!DNL LAVA] dans Experience Platform. L’utilisation de ces packages est recommandée, mais pas obligatoire.
 
-Pour charger ces packages, dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sandboxes]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sandboxes]. L’écran [!UICONTROL Packages] affiche les packages disponibles. Sélectionnez **[!UICONTROL Create package]** et **[!UICONTROL Paste package payload]**, puis collez les éléments suivants.
+Pour charger ces packages, dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sandbox]. L’écran [!UICONTROL Packages] affiche les packages disponibles. Sélectionnez **[!UICONTROL Créer un package]** et **[!UICONTROL Coller la payload du package]** et collez les éléments suivants.
 
 ```json
 {
   "imsOrgId": "1EF71E43679AAD1E0A495C77@AdobeOrg",
-  "packageId": "416a0c2a32794092aa1a957cbe9a6698"
+  "packageId": "7ec94330c1ca43a09266a9a3b85f3727"
 }
 ```
 
 Pour plus d’informations sur le chargement du package, consultez le tutoriel [partage de packages](../../../sandboxes/ui/sharing-packages-across-orgs.md#create-a-new-package-using-a-package-payload).
 
-Une fois le package créé, sélectionnez les points de suspension (`...`) pour ouvrir le menu, puis sélectionnez **[!UICONTROL Import Package]** pour importer le package. Pour plus d’informations sur l’importation d’un package, consultez le [guide d’utilisation des sandbox](../../../sandboxes/ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox).
+Une fois le package créé, sélectionnez les points de suspension (`...`) pour ouvrir le menu, puis sélectionnez **[!UICONTROL Importer le package]** pour importer le package. Pour plus d’informations sur l’importation d’un package, consultez le [guide d’utilisation des sandbox](../../../sandboxes/ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox).
+
+Le package [!DNL LAVA] comprend trois jeux de données : [!DNL LAVA Profiles], [!DNL LAVA Balances] et [!DNL LAVA Events]. Bien que les profils et soldes utilisent le même schéma, ils doivent être des jeux de données distincts afin que les mises à jour des soldes ne remplacent pas les mises à jour des profils, et vice versa.
 
 ## Étapes suivantes
 
-Le connecteur source [!DNL LAVA] ingère des profils de membres, des soldes de récompenses et des événements d’analyse de ticket dans Experience Platform. Planifiez les conditions préalables répertoriées, mappez et étendez les schémas à l’aide des tables de référence de champ et des fichiers d’exemple JSON, et importez éventuellement le package recommandé de [!DNL LAVA] dans un sandbox avant de créer des connexions et des flux de données.
+Le connecteur source [!DNL LAVA] ingère des profils de membres, des soldes de récompenses, des événements d’analyse de ticket, des événements de transaction et des événements comptables dans Experience Platform. Planifiez les conditions préalables répertoriées, mappez et étendez les schémas à l’aide des tables de référence de champ et des fichiers d’exemple JSON, et importez éventuellement le package recommandé de [!DNL LAVA] dans un sandbox avant de créer des connexions et des flux de données.
 
 Pour une configuration pas à pas :
 

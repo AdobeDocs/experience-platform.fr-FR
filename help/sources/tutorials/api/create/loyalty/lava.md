@@ -1,10 +1,9 @@
 ---
 title: Créez une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’API Flow Service
 description: Découvrez comment importer des données de flux de LAVA vers Adobe Experience Platform à l’aide de l’API Flow Service.
-badge: Beta
-source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
+source-git-commit: c8928f87299aa68e229512acfb4b0910d9129b43
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1815'
 ht-degree: 39%
 
 ---
@@ -296,7 +295,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Format des données [!DNL LAVA] que vous souhaitez importer dans Experience Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
@@ -386,6 +385,187 @@ Lors de l’utilisation du schéma fourni par [!DNL LAVA], le mappage suivant es
 }
 ```
 
+>[!TAB Événements combinés]
+
+```json
+{
+  "version": 0,
+  "xdmSchema": "{TARGET_XDM_SCHEMA}",
+  "xdmVersion": "1.0",
+  "mappings": [
+    {
+      "destinationXdmPath": "identityMap",
+      "sourceExpression": "to_map(\"LavaId\",to_array(false,to_object(\"id\",lavaId,\"primary\",true)))",
+      "sourceType": "EXPRESSION",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "eventType",
+      "sourceAttribute": "type",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "timestamp",
+      "sourceAttribute": "timestamp",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.eventId",
+      "sourceAttribute": "eventId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.eventName",
+      "sourceAttribute": "eventName",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.eventLabel",
+      "sourceAttribute": "eventLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.venue",
+      "sourceAttribute": "venue",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.venueLabel",
+      "sourceAttribute": "venueLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.section",
+      "sourceAttribute": "section",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.sectionLabel",
+      "sourceAttribute": "sectionLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.row",
+      "sourceAttribute": "row",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.seat",
+      "sourceAttribute": "seat",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.gate",
+      "sourceAttribute": "gate",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.gateLabel",
+      "sourceAttribute": "gateLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.transactionId",
+      "sourceAttribute": "transactionId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.referenceId",
+      "sourceAttribute": "referenceId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.subtotal",
+      "sourceAttribute": "subtotal",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.total",
+      "sourceAttribute": "total",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.location",
+      "sourceAttribute": "location",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.items",
+      "sourceAttribute": "items",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.redeemedAmount",
+      "sourceAttribute": "redeemedAmount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.rewardsApplied",
+      "sourceAttribute": "rewardsApplied",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.amount",
+      "sourceAttribute": "amount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.expiresAt",
+      "sourceAttribute": "expiresAt",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardId",
+      "sourceAttribute": "rewardId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardName",
+      "sourceAttribute": "rewardName",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardSlug",
+      "sourceAttribute": "rewardSlug",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardType",
+      "sourceAttribute": "rewardType",
+      "identity": false,
+      "version": 0
+    }
+  ]
+}
+```
+
 >[!TAB Événements d’analyse de ticket]
 
 ```json
@@ -464,6 +644,152 @@ Lors de l’utilisation du schéma fourni par [!DNL LAVA], le mappage suivant es
     {
       "destinationXdmPath": "_{TENANT_ID}.ticketScan.gateLabel",
       "sourceAttribute": "gateLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "eventType",
+      "sourceAttribute": "type",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "timestamp",
+      "sourceAttribute": "timestamp",
+      "identity": false,
+      "version": 0
+    }
+  ]
+}
+```
+
+>[!TAB  Événements de transaction ]
+
+```json
+{
+  "version": 0,
+  "xdmSchema": "{TARGET_XDM_SCHEMA}",
+  "xdmVersion": "1.0",
+  "mappings": [
+    {
+      "destinationXdmPath": "identityMap",
+      "sourceExpression": "to_map(\"LavaId\",to_array(false,to_object(\"id\",lavaId,\"primary\",true)))",
+      "sourceType": "EXPRESSION",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.transactionId",
+      "sourceAttribute": "transactionId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.referenceId",
+      "sourceAttribute": "referenceId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.subtotal",
+      "sourceAttribute": "subtotal",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.total",
+      "sourceAttribute": "total",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.location",
+      "sourceAttribute": "location",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.items",
+      "sourceAttribute": "items",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.redeemedAmount",
+      "sourceAttribute": "redeemedAmount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.rewardsApplied",
+      "sourceAttribute": "rewardsApplied",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "eventType",
+      "sourceAttribute": "type",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "timestamp",
+      "sourceAttribute": "timestamp",
+      "identity": false,
+      "version": 0
+    }
+  ]
+}
+```
+
+>[!TAB Événements comptables]
+
+```json
+{
+  "version": 0,
+  "xdmSchema": "{TARGET_XDM_SCHEMA}",
+  "xdmVersion": "1.0",
+  "mappings": [
+    {
+      "destinationXdmPath": "identityMap",
+      "sourceExpression": "to_map(\"LavaId\",to_array(false,to_object(\"id\",lavaId,\"primary\",true)))",
+      "sourceType": "EXPRESSION",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.amount",
+      "sourceAttribute": "amount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.expiresAt",
+      "sourceAttribute": "expiresAt",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardId",
+      "sourceAttribute": "rewardId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardName",
+      "sourceAttribute": "rewardName",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardSlug",
+      "sourceAttribute": "rewardSlug",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardType",
+      "sourceAttribute": "rewardType",
       "identity": false,
       "version": 0
     },
