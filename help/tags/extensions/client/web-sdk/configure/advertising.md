@@ -21,10 +21,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 219
-ht-degree: 31%
+source-wordcount: 246
+ht-degree: 26%
 
 ---
 
@@ -39,25 +39,25 @@ ht-degree: 31%
 >title="Adobe Advertising"
 >abstract="Configurez les paramètres des intégrations Adobe Advertising. Notez qu’aucune configuration publicitaire n’est nécessaire pour activer la mesure des clics publicitaires. Aucune autre action n’est requise de la part des clientes et clients Search, Social et Commerce. Toutefois, les utilisateurs et utilisatrices de la plateforme côté demande (DSP) doivent configurer les annonceurs dans cette section afin de mesurer les conversions d’affichage publicitaire."
 
-La section **[!UICONTROL Adobe Advertising]** vous permet d’activer ou de désactiver la fonctionnalité Demand-side Platform (DSP) si elle est utilisée dans votre mise en œuvre. Vous ne devez définir ce champ que si votre implémentation utilise un DSP.
+La section **&#x200B;**&#x200B;vous permet d’activer ou de désactiver la fonctionnalité de plateforme côté demande (DSP) si elle est utilisée dans votre implémentation. Vous ne devez définir ce champ que si votre implémentation utilise un DSP.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
-1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Adobe Advertising]** .
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Faites défiler l’écran jusqu’à la section **&#x200B;**.
 
 Actuellement, une option est disponible.
 
-## [!UICONTROL Adobe Advertising DSP]
+## &#x200B;
 
 Un menu déroulant qui active ou désactive la fonctionnalité DSP pour Adobe Advertising.
 
-* **[!UICONTROL Enabled]** : permet le suivi des vues publicitaires.
-* **[!UICONTROL Disabled]** : désactive le suivi des vues publicitaires.
+* **[!UICONTROL Activé]** : active le suivi des vues publicitaires.
+* **[!UICONTROL Désactivé]** : désactive le suivi des affichages publicitaires.
 
 Lorsqu’ils sont activés, les paramètres suivants sont disponibles :
 
-* **[!UICONTROL Advertisers]** : annonceurs pour lesquels activer le suivi des affichages publicitaires.
-* **[!UICONTROL ID5 partner ID]** : facultatif. Identifiant partenaire ID5 de votre organisation. Ce paramètre permet au SDK Web de collecter les ID5 universels.
-* **[!UICONTROL RampID JavaScript path]** : facultatif. Chemin d’accès au code JavaScript [!DNL LiveRamp RampID] de votre organisation (`ats.js`).  Ce paramètre permet au SDK Web de collecter les identifiants universels [!DNL RampID].
+* **[!UICONTROL Annonceurs]** : annonceurs pour lesquels le suivi des affichages publicitaires doit être activé.
+* **[!UICONTROL ID5 de partenaire]** : facultatif. Identifiant partenaire ID5 de votre organisation. Ce paramètre permet au SDK Web de collecter les ID5 universels.
+* **[!UICONTROL Chemin JavaScript RampID]** : facultatif. Chemin d’accès au code JavaScript [!DNL LiveRamp RampID] de votre organisation (`ats.js`).  Ce paramètre permet au SDK Web de collecter les identifiants universels [!DNL RampID].

@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
+source-git-commit: 6a7591682bc019be2672f543dbcc495b356b1c09
 workflow-type: tm+mt
-source-wordcount: '2994'
+source-wordcount: '3014'
 ht-degree: 55%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 55%
 
 Ce document présente les notes de mise à jour de Adobe Experience Platform Web SDK.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise Web SDK, voir les [notes de mise à jour de l’extension de balise Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.34.1 - 10 Juin 2026
+
+- Correction d’un problème en raison duquel des `event.destinations` manquaient pour les clients qui utilisaient la personnalisation de Commerce sans Adobe Journey Optimizer.
 
 ## Version 2.34.0 - 26 Mai 2026
 

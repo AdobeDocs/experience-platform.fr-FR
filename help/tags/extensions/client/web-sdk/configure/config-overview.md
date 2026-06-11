@@ -21,10 +21,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 713224af62da12436df4225233f2db7cac7d00fa
 workflow-type: tm+mt
-source-wordcount: 215
-ht-degree: 2%
+source-wordcount: 308
+ht-degree: 1%
 
 ---
 
@@ -32,25 +32,33 @@ ht-degree: 2%
 
 L’extension de balise Adobe Experience Platform Web SDK propose plusieurs options que vous pouvez personnaliser. Ces paramètres de configuration sont l’équivalent de balise de l’utilisation de la commande [`configure`](/help/collection/js/commands/configure/overview.md) dans la bibliothèque JavaScript.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
 
-## Composants de build personnalisés
+La page de configuration est organisée en trois accordéons : [!UICONTROL Options de création], [!UICONTROL Instances de SDK] et [!UICONTROL Actions de propriété].
 
-Si l’optimisation de la taille de la version est une priorité pour votre organisation, vous pouvez désactiver certaines fonctionnalités que vous n’utilisez pas pour réduire la taille de la version de l’extension. Voir [Composants de version personnalisés](custom-build-components.md) pour plus d’informations.
+## Options de build
+
+L’accordéon **[!UICONTROL Options de création]** contient les paramètres de gestion de bibliothèque et l’option permettant de désactiver des composants de création Web SDK spécifiques. La désactivation des composants inutilisés réduit la taille de la version de l’extension et peut améliorer les performances. Voir [Options de création](custom-build-components.md) pour plus d’informations.
 
 ## Instances du SDK
 
-La plupart des implémentations nécessitent généralement une seule instance SDK. Cependant, si votre organisation nécessite plusieurs instances de tracking Web SDK, vous pouvez utiliser le bouton **[!UICONTROL Add instance]** . Les sections principales suivantes sont disponibles lors de la configuration de chaque instance de balise Web SDK :
+La plupart des implémentations nécessitent généralement une seule instance SDK. Cependant, si votre organisation nécessite plusieurs instances de tracking Web SDK, vous pouvez utiliser le bouton **[!UICONTROL Ajouter une instance]**. Les sections principales suivantes sont disponibles lors de la configuration de chaque instance de balise Web SDK :
 
-* [**[!UICONTROL SDK instance]**](general.md) : paramètres généraux de l’instance. Tous les champs de cette section sont obligatoires.
-* [**[!UICONTROL Datastreams]**](datastreams.md) : emplacement des données pour chaque environnement de balises.
-* [**[!UICONTROL Consent]**](consent.md) : paramètres de consentement par défaut pour l’extension.
-* [**[!UICONTROL Identity]**](identity.md) : paramètres de migration des cookies et des visiteurs.
-* [**[!UICONTROL Personalization]**](personalization.md) : personnalisation de l’expérience du visiteur au niveau individuel.
-* [**[!UICONTROL Data collection]**](data-collection.md) : incluez ou omettez les données collectées automatiquement.
+* [**[!UICONTROL Instance SDK &#x200B;]**](general.md) : paramètres généraux de l&#39;instance. Tous les champs de cette section sont obligatoires.
+* [**[!UICONTROL Flux de données]**](datastreams.md) : emplacement des données pour chaque environnement de balises.
+* [**[!UICONTROL Consentement]**](consent.md) : paramètres de consentement par défaut pour l’extension.
+* [**[!UICONTROL Identité]**](identity.md) : paramètres de migration des cookies et des visiteurs.
+* [**&#128279;**](personalization.md) : personnalisez l&#39;expérience du visiteur au niveau individuel.
+* [**[!UICONTROL Collecte de données]**](data-collection.md) : incluez ou omettez les données collectées automatiquement.
 * [**[!UICONTROL Streaming media]**](streaming-media.md) : paramètres spécifiques à la collecte de médias en flux continu.
-* [**[!UICONTROL Datastream configuration overrides]**](configuration-overrides.md) : modifiez les paramètres de configuration lorsque certaines conditions sont remplies.
-* [**[!UICONTROL Advanced settings]**](advanced-settings.md) : spécifiez le chemin d’accès de base d’Edge Network.
+* [**[!UICONTROL Remplacements de la configuration des trains de données]**](configuration-overrides.md) : modifiez les paramètres de configuration lorsque certaines conditions sont remplies.
+* [**[!UICONTROL Paramètres avancés]**](advanced-settings.md) : spécifiez le chemin de base de l’Edge Network.
+
+## Actions de propriété
+
+L’accordéon **[!UICONTROL Actions de propriété]** contient des utilitaires de maintenance à l’échelle de la propriété qui s’appliquent à la propriété de balise dans son ensemble plutôt qu’à des instances SDK individuelles.
+
+* [**[!UICONTROL Réparer les références d’élément de données]**](repair-data-element-references.md) : analysez toutes les actions d’extension Web SDK dans la propriété et remplacez les références d’élément de données obsolètes si possible.

@@ -20,10 +20,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 209
-ht-degree: 13%
+source-wordcount: 231
+ht-degree: 11%
 
 ---
 
@@ -34,21 +34,21 @@ ht-degree: 13%
 >title="Consentement"
 >abstract="Sélectionne le niveau de consentement par défaut supposé si aucune autre préférence de consentement explicite n’est fournie."
 
-La section **[!UICONTROL Consent]** vous permet de sélectionner le niveau de consentement par défaut supposé si aucune autre préférence de consentement explicite n’est fournie. Le niveau de consentement par défaut n’est pas enregistré dans les profils utilisateur.
+La section **[!UICONTROL Consentement]** vous permet de sélectionner le niveau de consentement par défaut supposé si aucune autre préférence de consentement explicite n’est fournie. Le niveau de consentement par défaut n’est pas enregistré dans les profils utilisateur.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
-1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Consent]** .
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Consentement]**.
 
 ![Image montrant les paramètres de confidentialité de l’extension de balise Web SDK dans l’interface utilisateur des balises](../assets/web-sdk-ext-privacy.png)
 
 Cette section contient un seul ensemble de boutons radio qui déterminent le niveau de consentement par défaut :
 
-* **[!UICONTROL In]** : collectez les événements qui se produisent avant que l’utilisateur ne fournisse des préférences de consentement.
-* **[!UICONTROL Out]** : ignorez les événements qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement.
-* **[!UICONTROL Pending]** : événements de file d’attente qui se produisent avant que l’utilisateur ne fournisse des préférences de consentement. Lorsque le consentement est accordé, les événements placés en file d’attente sont envoyés à Adobe. Lorsque le consentement est refusé, les événements placés en file d’attente sont ignorés.
-* **[!UICONTROL Provide a data element]** : sélectionnez un élément de données qui détermine l’un des paramètres de configuration ci-dessus. Les valeurs valides comprennent les chaînes `"in"`, `"out"` ou `"pending"`.
+* **[!UICONTROL In]** : collectez les événements qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement.
+* **[!UICONTROL Sortie]** : ignorez les événements qui se produisent avant que l’utilisateur ne fournisse des préférences de consentement.
+* **[!UICONTROL En attente]** : événements de file d’attente qui se produisent avant que l’utilisateur ne fournisse ses préférences de consentement. Lorsque le consentement est accordé, les événements placés en file d’attente sont envoyés à Adobe. Lorsque le consentement est refusé, les événements placés en file d’attente sont ignorés.
+* **[!UICONTROL Fournir un élément de données]** : sélectionnez un élément de données qui détermine l’un des paramètres de configuration ci-dessus. Les valeurs valides comprennent les chaînes `"in"`, `"out"` ou `"pending"`.
 
-Si votre organisation nécessite le consentement explicite de l’utilisateur pour collecter des données, Adobe recommande de définir le consentement par défaut sur **[!UICONTROL Out]** ou **[!UICONTROL Pending]**.
+Si votre organisation nécessite le consentement explicite de l’utilisateur pour collecter des données, Adobe recommande de définir le consentement par défaut sur **[!UICONTROL Expiré]** ou **[!UICONTROL En attente]**.

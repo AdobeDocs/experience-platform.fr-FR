@@ -18,10 +18,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 180
-ht-degree: 11%
+source-wordcount: 211
+ht-degree: 9%
 
 ---
 
@@ -38,27 +38,27 @@ Cette section de configuration vous permet de définir une clé publique VALIDE 
 >
 >Cette fonctionnalité doit d’abord être activée à l’aide de [Composants de version personnalisés](custom-build-components.md) ; elle est désactivée par défaut.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK].
-1. Développez **[!UICONTROL Custom build components]**, puis activez **[!UICONTROL Push notifications]**.
-1. Sous [!UICONTROL SDK instances], faites défiler vers le bas pour localiser la section [!UICONTROL Push Notifications].
-1. Saisissez votre clé publique VALIDE dans le champ **[!UICONTROL VAPID Public Key]** .
+1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Développez **[!UICONTROL Composants de build personnalisés]**, puis activez **[!UICONTROL Notifications push]**.
+1. Sous [!UICONTROL Instances &#x200B;], faites défiler l’écran vers le bas pour accéder à la section [!UICONTROL Notifications push].
+1. Saisissez votre clé publique VAPID dans le champ **[!UICONTROL Clé publique VAPID]**.
 
 ![Image montrant les paramètres de notifications push à l’aide de l’extension de balise Web SDK](../assets/push-notifications.png)
 
 Les champs disponibles sont les suivants :
 
-## [!UICONTROL VAPID public key]
+## [!UICONTROL Clé publique valide]
 
 Clé publique VALIDE utilisée pour les abonnements aux notifications push. Il s’agit d’une chaîne codée en Base64.
 
-## [!UICONTROL Application ID]
+## [!UICONTROL ID de l’application]
 
 ID de l’application associé à la clé publique valide.
 
-## [!UICONTROL Tracking dataset ID]
+## [!UICONTROL Identifiant du jeu de données de tracking]
 
 Identifiant du jeu de données pour le suivi et l’analyse des notifications push.
 

@@ -18,26 +18,26 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 151
-ht-degree: 2%
+source-wordcount: 182
+ht-degree: 1%
 
 ---
 
 # Obtention du suivi Media Analytics
 
-L’action **[!UICONTROL Get Media Analytics tracker]** est utilisée pour obtenir l’API Media Analytics héritée. Lors de la configuration de l’action et qu’un nom d’objet est fourni, l’API Media Analytics héritée est exportée vers cet objet de fenêtre. Cette action est utile pour passer de l’ancienne version de Media Analytics à Streaming Media Analytics.
+L’action **[!UICONTROL Get Media Analytics tracker]** permet d’obtenir l’API Media Analytics héritée. Lors de la configuration de l’action et qu’un nom d’objet est fourni, l’API Media Analytics héritée est exportée vers cet objet de fenêtre. Cette action est utile pour passer de l’ancienne version de Media Analytics à Streaming Media Analytics.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Rules]**, puis sélectionnez la règle de votre choix.
+1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
 1. Sous [!UICONTROL Actions], sélectionnez une action existante ou créez-en une.
-1. Définissez le champ déroulant du [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Action type] sur **[!UICONTROL Get Media Analytics tracker]**.
+1. Définissez le champ déroulant [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Type d’action] sur **[!UICONTROL Obtenir le suivi Media Analytics]**.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant le type d’action Get Media Analytics Tracker.](../assets/get-media-analytics-tracker.png)
 
 Cette action contient un seul champ que vous pouvez configurer :
 
-* **[!UICONTROL Export the Media Legacy API to this window object]** : sélectionne l’objet vers lequel exporter l’API héritée du média. Si aucun n’est fourni, l’action exporte l’API vers `window.Media`.
+* **[!UICONTROL Exporter l’API Media héritée vers cet objet de fenêtre]** : sélectionne l’objet vers lequel exporter l’API Media héritée. Si aucun n’est fourni, l’action exporte l’API vers `window.Media`.

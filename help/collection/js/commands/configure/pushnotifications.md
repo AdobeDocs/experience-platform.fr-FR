@@ -17,9 +17,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 301d9785acd28811f1c6fbf9efdc5378e81d4c2c
 workflow-type: tm+mt
-source-wordcount: 416
+source-wordcount: 418
 ht-degree: 3%
 
 ---
@@ -74,7 +74,7 @@ alloy("configure", {
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   pushNotifications: {
     vapidPublicKey: "BEl62iUYgU[...]KGP4jAQlJz",
-    applicationId: "my-app-id",
+    appId: "my-app-id",
     trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
   },
 });
@@ -85,7 +85,7 @@ alloy("configure", {
 | Propriété | Type | Obligatoire | Description |
 |---|---|---|---|
 | **`vapidPublicKey`** | Chaîne | Oui | Clé publique VALIDE utilisée pour les abonnements aux notifications push. Doit être une chaîne codée en Base64. |
-| **`applicationId`** | Chaîne | Oui | ID de l’application associé à la clé publique valide. |
+| **`appId`** | Chaîne | Oui | ID de l’application associé à la clé publique valide. |
 | **`trackingDatasetId`** | Chaîne | Oui | Identifiant du jeu de données système utilisé pour le suivi des notifications push. |
 
 ## Considérations importantes {#important-considerations}
@@ -96,7 +96,7 @@ alloy("configure", {
 
 ## Configuration des notifications push à l’aide de l’extension de balise Web SDK {#configure-push-notifications-tag-extension}
 
-L’extension de balise Web SDK équivalente à cette propriété est la section [[!UICONTROL Push notifications]](/help/tags/extensions/client/web-sdk/configure/push-notifications.md) lors de la configuration de l’extension.
+L’extension de balise Web SDK équivalente à cette propriété est la section [[!UICONTROL Notifications push]](/help/tags/extensions/client/web-sdk/configure/push-notifications.md) lors de la configuration de l’extension.
 
 ## Étapes suivantes {#next-steps}
 

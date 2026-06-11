@@ -19,10 +19,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 313
-ht-degree: 11%
+source-wordcount: 339
+ht-degree: 10%
 
 ---
 
@@ -35,11 +35,11 @@ ht-degree: 11%
 
 La fonctionnalité de collecte de médias vous permet de collecter des données relatives aux sessions de médias, telles que les lectures de médias, les pauses, les fins de session et d’autres événements associés. Une fois collectées, vous pouvez envoyer ces données à Adobe Experience Platform ou Adobe Analytics pour générer des rapports. Cette fonctionnalité fournit une solution complète pour suivre et comprendre le comportement de consommation des médias sur votre site web.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
-1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Streaming media]** .
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Médias en flux continu]**.
 
 ![Image montrant les paramètres de collection de médias de l’extension de balise Web SDK dans l’interface utilisateur des balises](../assets/media-collection.png)
 
@@ -52,22 +52,22 @@ Pour utiliser le composant Streaming Media du Web SDK, vous devez remplir les co
 * Assurez-vous que le schéma utilisé par votre flux de données comprend les champs de schéma Media Collection.
 * Configurez la fonction Streaming Media dans l’extension de balises Web SDK, comme illustré sur cette page.
 
-## [!UICONTROL Channel]
+## [!UICONTROL Canal]
 
 Nom du canal sur lequel la collecte de médias a lieu. Par exemple : `Video channel`. Toute valeur de chaîne est valide.
 
-## [!UICONTROL Player Name]
+## [!UICONTROL Nom du lecteur]
 
 Nom du lecteur multimédia que votre propriété utilise pour la lecture multimédia.
 
-## [!UICONTROL Application Version]
+## [!UICONTROL Version de l’application]
 
 Version de l’application du lecteur multimédia que votre propriété utilise pour la lecture multimédia.
 
-## [!UICONTROL Main ping interval]
+## [!UICONTROL Intervalle de ping principal]
 
 Fréquence des pings pour le contenu principal, en secondes. La valeur par défaut est `10`. Les valeurs peuvent aller de `10` à `50` secondes. Si aucune valeur n’est spécifiée, la valeur par défaut est utilisée lors de l’utilisation de [sessions suivies automatiquement](/help/collection/js/commands/createmediasession.md#automatic).
 
-## [!UICONTROL Ad ping interval]
+## [!UICONTROL Intervalle de ping des annonces]
 
 Fréquence des pings pour le contenu publicitaire, en secondes. La valeur par défaut est `10`. Les valeurs peuvent aller de `1` à `10` secondes. Si aucune valeur n’est spécifiée, la valeur par défaut est utilisée lors de l’utilisation de [sessions suivies automatiquement](/help/collection/js/commands/createmediasession.md#automatic).

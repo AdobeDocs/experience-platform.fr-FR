@@ -24,23 +24,23 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 365
-ht-degree: 2%
+source-wordcount: 415
+ht-degree: 3%
 
 ---
 
 # Rediriger avec identité
 
-Le type d’action **[!UICONTROL Redirect with identity]** vous permet de partager un identifiant visiteur de la page en cours avec un autre domaine appartenant à votre organisation. Il est conçu pour être utilisé avec un événement de clic et une condition de comparaison de valeurs. Sur le plan fonctionnel, elle est similaire à la commande [`appendIdentityToUrl`](/help/collection/js/commands/appendidentitytourl.md) de la bibliothèque JavaScript.
+Le type d’action **[!UICONTROL Rediriger avec identité]** vous permet de partager un identifiant visiteur de la page active vers un autre domaine détenu par votre organisation. Il est conçu pour être utilisé avec un événement de clic et une condition de comparaison de valeurs. Sur le plan fonctionnel, elle est similaire à la commande [`appendIdentityToUrl`](/help/collection/js/commands/appendidentitytourl.md) de la bibliothèque JavaScript.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Rules]**, puis sélectionnez la règle de votre choix.
+1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
 1. Sous [!UICONTROL Actions], sélectionnez une action existante ou créez-en une.
-1. Définissez le champ déroulant du [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Action type] sur **[!UICONTROL Redirect with identity]**.
+1. Définissez le champ déroulant [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Type d’action] sur **[!UICONTROL Rediriger avec une identité]**.
 
 ## Cas d’utilisation
 
@@ -50,7 +50,7 @@ Le type d’action **[!UICONTROL Redirect with identity]** vous permet de partag
 ## Champs disponibles
 
 * **[!UICONTROL Instance]** : instance SDK à laquelle l’action s’applique. Ce menu déroulant est désactivé si votre implémentation utilise une seule instance SDK.
-* **[!UICONTROL Datastream configuration overrides]** : cette commande prend en charge les remplacements de configuration des trains de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [&#x200B; Remplacements de configuration de train de données &#x200B;](../configure/configuration-overrides.md) pour plus d’informations.
+* **[!UICONTROL Remplacements de la configuration des trains de données]** : cette commande prend en charge les remplacements de la configuration des trains de données, ce qui vous permet de contrôler les applications et les services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [&#x200B; Remplacements de configuration de train de données &#x200B;](../configure/configuration-overrides.md) pour plus d’informations.
 
 ## Exemple de règle
 
@@ -60,10 +60,10 @@ Cette commande est généralement utilisée avec une règle spécifique qui éco
 
 Se déclenche lorsqu’un utilisateur clique sur une balise d’ancrage avec une propriété `href`.
 
-* **[!UICONTROL Extension]** : Core
-* **[!UICONTROL Event type]** : cliquez sur
-* **[!UICONTROL When the user clicks on]** : éléments spécifiques
-* **[!UICONTROL Elements matching the CSS selector]** : `a[href]`
+* **[!UICONTROL Extension]** : Core
+* **[!UICONTROL Type d’événement]** : cliquez sur
+* **[!UICONTROL Lorsque l&#39;utilisateur clique sur]** : Eléments spécifiques
+* **[!UICONTROL Éléments correspondant au sélecteur CSS]** : `a[href]`
 
 ![Événement de règle](../assets/id-sharing-event-configuration.png)
 
@@ -73,12 +73,12 @@ Se déclenche lorsqu’un utilisateur clique sur une balise d’ancrage avec une
 
 Déclenche uniquement sur les domaines souhaités.
 
-* **[!UICONTROL Logic type]** : Régulier
-* **[!UICONTROL Extension]** : Core
-* **[!UICONTROL Condition Type]** : comparaison de valeurs
-* **[!UICONTROL Left Operand]** : `%this.hostname%`
+* **[!UICONTROL Type de logique]** : Standard
+* **[!UICONTROL Extension]** : Core
+* **[!UICONTROL Type de condition]** : comparaison de valeurs
+* **[!UICONTROL Opérande de gauche]** : `%this.hostname%`
 * **[!UICONTROL Operator]** : Correspond à l’expression régulière
-* **[!UICONTROL Right Operand]** : expression régulière correspondant aux domaines souhaités. Par exemple : `adobe.com$|behance.com$`
+* **[!UICONTROL Opérande droit]** : expression régulière correspondant aux domaines souhaités. Par exemple : `adobe.com$|behance.com$`
 
 ![Condition de règle](../assets/id-sharing-condition-configuration.png)
 
@@ -88,8 +88,8 @@ Déclenche uniquement sur les domaines souhaités.
 
 Ajoutez l’identité à l’URL.
 
-* **[!UICONTROL Extension]** : Adobe Experience Platform Web SDK
-* **[!UICONTROL Action Type]** : redirection avec identité
+* **[!UICONTROL Extension]** : SDK Web Adobe Experience Platform
+* **[!UICONTROL Type d’action]** : redirection avec identité
 
 ![Action de la règle](../assets/id-sharing-action-configuration.png)
 

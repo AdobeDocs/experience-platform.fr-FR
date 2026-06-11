@@ -35,10 +35,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
+source-git-commit: 6a7591682bc019be2672f543dbcc495b356b1c09
 workflow-type: tm+mt
-source-wordcount: 3375
-ht-degree: 83%
+source-wordcount: 3426
+ht-degree: 80%
 
 ---
 
@@ -46,32 +46,37 @@ ht-degree: 83%
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, consultez les [notes de mise à jour de Adobe Experience Platform Web SDK](/help/collection/js/release-notes.md).
 
+## Version 2.37.0 - 10 Juin 2026
+
+- Contient la [version 2.34.1](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
+- Ajout de la mention [Réparer les références d’élément de données](configure/repair-data-element-references.md), qui actualise les références d’élément de données obsolètes dans toutes les règles après avoir copié une règle sur une nouvelle propriété.
+
 ## Version 2.36.0 - 26 Mai 2026
 
-- Contient [version 2.34.0](/help/collection/js/release-notes.md) du SDK Web Adobe Experience Platform.
+- Contient la [version 2.34.0](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 - Ajout du champ de texte [!UICONTROL Region] au composant [[!UICONTROL Brand Concierge]](configure/brand-concierge.md).
 - Correction d’un problème en raison duquel les éléments de données pouvaient être rompus après la copie d’une règle sur une nouvelle propriété.
 
 ## Version 2.35.1 - 7 Mai 2026
 
-- Contient [version 2.33.1](/help/collection/js/release-notes.md) de Adobe Experience Platform Web SDK.
+- Contient la [version 2.33.1](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 - Correction d’un problème où les composants requis, tels que le contexte, étaient exclus du lot SDK et empêchaient l’envoi d’événements.
 
 ## Version 2.35.0 - 7 Mai 2026
 
-- Contient [version 2.33.0](/help/collection/js/release-notes.md) du SDK Web Adobe Experience Platform.
+- Contient la [version 2.33.0](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 - Suppression de l’indicateur bêta des sections Advertising et Notifications push dans la page de configuration de l’extension.
 - Correction d&#39;un problème en raison duquel la configuration des notifications push affichait des erreurs avant d&#39;être modifiée.
 - Correction d’un problème où les événements d’analyse étaient remplacés par des actions Mettre à jour la variable séquentielles.
 
 ## Version 2.34.2 - 23 Mars 2026
 
-- Contient [version 2.32.0](/help/collection/js/release-notes.md) du SDK Web Adobe Experience Platform.
+- Contient la [version 2.32.0](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 - Correction d’un problème spécifique à la copie d’une propriété Balises dans laquelle les actions Mettre à jour la variable pouvaient conserver les références aux éléments de données de la propriété d’origine. Pour réparer les propriétés copiées existantes, ouvrez et enregistrez à nouveau chaque action Mettre à jour la variable affectée et sa règle. Évitez de renommer les éléments de données copiés avant de les enregistrer à nouveau.
 
 ## Version 2.34.1 - 11 Février 2026
 
-- Contient [version 2.31.1](/help/collection/js/release-notes.md) de Adobe Experience Platform Web SDK.
+- Contient la [&#x200B; version 2.31.1](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 - Correction d’un problème en raison duquel les paramètres de configuration d’Adobe Advertising [&#128279;](configure/advertising.md) ne pouvaient pas être modifiés dans les actions [Envoyer l’événement](actions/send-event.md).
 - Ajout d’une version de secours à `edge.adobedc.net` pour le paramètre de configuration [domaine Edge](configure/general.md) lorsqu’un `tenant-id` n’est pas disponible.
 
@@ -79,16 +84,16 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 **Nouvelles fonctionnalités**
 
-- Contient [version 2.31.0](/help/collection/js/release-notes.md) du SDK Web Adobe Experience Platform.
+- Contient la [version 2.31.0](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 - Ajout de la mention [Prise en charge du code de base](/help/collection/js/install/base-code.md) pour l’extension de balise.
-- Ajout de **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [context](configure/data-collection.md#context-settings) aux paramètres de l’extension.
+- Ajout de l’option **[!UICONTROL Envoyer le référent à Adobe Analytics une seule fois par page vue]** [contexte](configure/data-collection.md#context-settings) aux paramètres d’extension.
 - Ajout du composant Brand Concierge .
 - Ajout d’une option permettant d’utiliser une instance d’alliage auto-hébergée avec des balises.
 
 **Correctifs et améliorations**
 
 - Mise à jour de [domaine Edge par défaut](configure/general.md#edge-domain) pour inclure l’ID de société comme sous-domaine.
-- Ajout d’une option **[!UICONTROL No overrides]** à [&#x200B; Remplacements de la configuration des trains de données &#x200B;](configure/configuration-overrides.md).
+- Ajout d’une option **[!UICONTROL Aucun remplacement]** à [&#x200B; Remplacements de la configuration des trains de données &#x200B;](configure/configuration-overrides.md).
 - Ajout du bouton d’actualisation pour renseigner à nouveau les éléments sur certains champs de saisie.
 - Les noms d’instance uniques sont désormais générés automatiquement chaque fois qu’une instance est créée.
 - Correction d’une erreur en raison de laquelle `combinedValidator` renvoyait une erreur lorsque la valeur était `undefined` ou `null`.
@@ -103,13 +108,13 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 **Nouvelles fonctionnalités**
 
 - Ajout de la prise en charge de l’affichage des notifications push.
-- Contient [version 2.30.0](/help/collection/js/release-notes.md#2-30-0) du SDK Web Adobe Experience Platform.
+- Contient la [&#x200B; version 2.30.0](/help/collection/js/release-notes.md#2-30-0) de la bibliothèque JavaScript Web SDK.
 
 ## Version 2.32.0 - 4 septembre 2025
 
 **Nouvelles fonctionnalités**
 
-- Contient la [version 2.29.0](/help/collection/js/release-notes.md#2-29-0) du SDK Web d’Adobe Experience Platform.
+- Contient la [version 2.29.0](/help/collection/js/release-notes.md#2-29-0) de la bibliothèque JavaScript Web SDK.
 - Ajout de la prise en charge d’Adobe Advertising en tant que nouveau composant de version personnalisée. Paramétrage dans la configuration de l’extension et dans les appels d’événement d’envoi.
 - Ajout de la prise en charge de l’enregistrement des détails d’abonnement push dans le profil. Cela s’effectue par le biais d’une nouvelle action, « Détails de l’abonnement push »
 
@@ -120,13 +125,13 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 ## Version 2.31.1 - 31 juillet 2025
 
 - Correction d’un problème qui empêchait l’exécution des versions personnalisées.
-- Contient la [version 2.28.1](/help/collection/js/release-notes.md#2-28-1) du SDK Web Adobe Experience Platform.
+- Contient [version 2.28.1](/help/collection/js/release-notes.md#2-28-1) de la bibliothèque JavaScript Web SDK.
 
 ## Version 2.31.0 - 24 juillet 2025
 
 **Nouvelles fonctionnalités**
 
-- Contient la [version 2.28.0](/help/collection/js/release-notes.md#2-28-0) du SDK Web d’Adobe Experience Platform.
+- Contient la [version 2.28.0](/help/collection/js/release-notes.md#2-28-0) de la bibliothèque JavaScript Web SDK.
 
 **Correctifs et améliorations**
 
@@ -150,7 +155,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 - Vous pouvez désormais spécifier un élément de données lors de l’activation des cookies tiers.
 - Ajout de boutons d’effacement aux champs de code.
-- Contient la [version 2.27.0](/help/collection/js/release-notes.md) du SDK web d’Adobe Experience Platform.
+- Contient la [version 2.27.0](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 
 **Correctifs et améliorations**
 
@@ -167,7 +172,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 **Nouvelles fonctionnalités**
 
 - Vous pouvez désormais créer des versions SDK web personnalisées et choisir les composants dont vous avez besoin à partir de l’interface d’utilisation de l’extension des balises. Vous pouvez ainsi obtenir des versions plus petites en excluant des composants non utilisés. Voir [Composants de build personnalisés](configure/custom-build-components.md).
-- Contient la [version 2.26.0](/help/collection/js/release-notes.md) du SDK web d’Adobe Experience Platform.
+- Contient la [version 2.26.0](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 
 **Correctifs et améliorations**
 
@@ -186,7 +191,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 **Nouvelles fonctionnalités**
 
 - Ajout d’une nouvelle fonctionnalité permettant de basculer entre les noms techniques et les noms d’affichage dans l’objet XDM.
-- Contient la [version 2.25.0](/help/collection/js/release-notes.md) du SDK web d’Adobe Experience Platform.
+- Contient la [version 2.25.0](/help/collection/js/release-notes.md) de la bibliothèque JavaScript Web SDK.
 
 ## Version 2.27.0 - 31 octobre 2024
 
@@ -252,7 +257,7 @@ Contient la version 2.20.0 du SDK web d’Adobe Experience Platform.
 **Correctifs et améliorations**
 
 - Correction d’une erreur qui se produisait lors de la recherche d’éléments de données dans l’action [Mettre à jour la variable](actions/update-variable.md).
-- Suppression de [!UICONTROL Media] types d’événement parmi ceux suggérés pour une utilisation dans l’action `sendEvent`.
+- Suppression des types d’événement [!UICONTROL Media] des types d’événement suggérés à utiliser dans l’action `sendEvent`.
 
 ## Version 2.22.0 - 3 mai 2024
 
@@ -319,7 +324,7 @@ Contient la version 2.19.1 du SDK web d’Adobe Experience Platform.
 
 ## Version 2.19.0 - 21 juin 2023
 
-- L’élément de données **[!UICONTROL Variable]** et les actions **[!UICONTROL Update Variable]** sont désormais disponibles au public.
+- Les actions **[!UICONTROL Variable]** élément de données et **[!UICONTROL Mettre à jour la variable]** sont désormais disponibles.
 
 ## Version 2.18.0 - 18 mai 2023
 
@@ -345,12 +350,12 @@ Contient la version 2.19.1 du SDK web d’Adobe Experience Platform.
 
 **Nouvelles fonctionnalités**
 
-- (Beta) Ajout d’une action **[!UICONTROL Update variable]** et d’un élément de données **[!UICONTROL Variable]**.
+- (Beta) Ajout d’une action **[!UICONTROL Mettre à jour la variable]** et d’un élément de données **[!UICONTROL Variable]**.
 - Ajout de la configuration pour la fonction de rappel [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md).
 
 **Correctifs et améliorations**
 
-- Correction d’un problème en raison duquel le clic sur les éléments d’une balise d’ancrage ne fonctionnait pas lorsque l’action **[!UICONTROL Redirect with identity]** était utilisée.
+- Correction d’un problème en raison duquel le clic sur les éléments d’une balise d’ancrage ne fonctionnait pas lorsque l’action **[!UICONTROL Rediriger avec une identité]** était utilisée.
 - Correction d’un problème en raison duquel les éléments de données d’objet XDM ne fonctionnaient pas lorsqu’un seul schéma était présent.
 - Contient la version 2.15.0 du SDK web d’Adobe Experience Platform.
 
@@ -384,7 +389,7 @@ Contient la version 2.12.0 de la bibliothèque SDK Web Adobe Experience Platf
 ## Version 2.12.0 - 13 juin 2022
 
 - Mise à jour de l’élement de données `identityMap` pour renseigner les options d’espace de noms en fonction des sandbox définis par les paramètres d’extension.
-- Ajout d’une action **[!UICONTROL Redirect with identity]** pour permettre le partage d’identités inter-domaines.
+- Ajout d’une action **[!UICONTROL Rediriger avec une identité]** pour permettre le partage d’identités inter-domaines.
 - Ajout de liens vers de la documentation à l’action `sendEvent`.
 - Mise à niveau de la bibliothèque de l’IU React Spectrum.
 - Plusieurs améliorations de l’interface utilisateur.

@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 301d9785acd28811f1c6fbf9efdc5378e81d4c2c
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 413
 ht-degree: 4%
 
 ---
@@ -84,7 +84,7 @@ Conditions d’erreur courantes et leurs messages :
 
 | Erreur | Cause |
 | ------- | ---- |
-| `"Push notifications module is not configured. No VAPID public key was provided."` | Configuration des notifications push manquante ou non valide |
+| `"Push notifications module is not configured."` | Configuration de `pushNotifications` manquante ou non valide |
 | `"Service workers are not supported in this browser."` | Le navigateur ne prend pas en charge les agents de service |
 | `"Push notifications are not supported in this browser."` | Le navigateur ne prend pas en charge les notifications push ou l’API de notification |
 | `"The user has not given permission to send push notifications."` | L&#39;utilisateur n&#39;a pas accordé d&#39;autorisation de notification (`Notification.permission === "granted"`) |
@@ -99,8 +99,8 @@ La commande envoie les données de notification push au format suivant :
 {
   pushNotificationDetails: [
     {
-      appID: "example.com", // Current domain
-      token: "...", // Serialized subscription details + ECID
+      appID: "my-app-id", // The configured application ID
+      token: "...", // Serialized push subscription details (endpoint and keys)
       platform: "web", // Always "web" for Web SDK
       denylisted: false, // Always false
       identity: {
@@ -116,7 +116,7 @@ La commande envoie les données de notification push au format suivant :
 
 ## Enregistrement d’un abonnement push à l’aide de l’extension de balise Web SDK {#register-push-subscription-tag-extension}
 
-L’extension de balise Web SDK équivalente à ce champ utilise l’action [[!UICONTROL Send Push Subscription]](/help/tags/extensions/client/web-sdk/actions/send-push-subscription.md) dans une règle de balise.
+L’extension de balise Web SDK équivalente à ce champ utilise l’action [[!UICONTROL Envoyer un abonnement push]](/help/tags/extensions/client/web-sdk/actions/send-push-subscription.md) dans une règle de balise.
 
 >[!MORELIKETHIS]
 >

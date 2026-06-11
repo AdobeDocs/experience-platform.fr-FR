@@ -19,10 +19,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 153
-ht-degree: 22%
+source-wordcount: 169
+ht-degree: 19%
 
 ---
 
@@ -35,17 +35,17 @@ ht-degree: 22%
 
 Cette section de configuration vous permet de modifier les paramètres avancés. Adobe recommande de conserver ces options en l’état pour la plupart des implémentations.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
-1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Advanced Settings]** .
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Paramètres avancés]**.
 
 ![Image montrant les paramètres avancés à l’aide de la page d’extension de balise Web SDK](../assets/advanced-settings.png)
 
 Actuellement, une option est disponible.
 
-## [!UICONTROL Edge base path]
+## [!UICONTROL Chemin de base &#x200B;]
 
 Utilisez ce champ pour modifier le chemin d’accès de base utilisé pour interagir avec Edge Network. Adobe peut vous demander de modifier ce champ si vous participez à certains tests alpha ou bêta ; dans le cas contraire, Adobe recommande de le laisser à la valeur par défaut de `ee`.
 

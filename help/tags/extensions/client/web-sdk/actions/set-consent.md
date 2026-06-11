@@ -27,23 +27,23 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 534
+source-wordcount: 607
 ht-degree: 0%
 
 ---
 
 # Définir le consentement
 
-L’action **[!UICONTROL Set consent]** détermine si l’extension de balise doit envoyer des données (opt-in), ignorer des données (opt-out) ou utiliser [le consentement par défaut](../configure/consent.md) (consentement inconnu). Lorsqu’un utilisateur autorise ou refuse le consentement sur votre site, vous pouvez utiliser cette action pour synchroniser ses préférences avec l’extension de balise. L’équivalent de la bibliothèque JavaScript de cette action est la commande [`setConsent`](/help/collection/js/commands/setconsent.md).
+L’action **[!UICONTROL Définir le consentement]** détermine si l’extension de balise doit envoyer des données (opt-in), les ignorer (opt-out) ou utiliser [le consentement par défaut](../configure/consent.md) (consentement inconnu). Lorsqu’un utilisateur autorise ou refuse le consentement sur votre site, vous pouvez utiliser cette action pour synchroniser ses préférences avec l’extension de balise. L’équivalent de la bibliothèque JavaScript de cette action est la commande [`setConsent`](/help/collection/js/commands/setconsent.md).
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Rules]**, puis sélectionnez la règle de votre choix.
+1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
 1. Sous [!UICONTROL Actions], sélectionnez une action existante ou créez-en une.
-1. Définissez le champ déroulant du [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Action type] sur **[!UICONTROL Set consent]**.
+1. Définissez le champ déroulant [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Type d’action] sur **[!UICONTROL Définir le consentement]**.
 
 L’extension de balise prend en charge les normes suivantes :
 
@@ -59,21 +59,21 @@ Adobe vous recommande de stocker séparément toutes les préférences de boîte
 Ce type d’action prend en charge les options de configuration suivantes :
 
 * **[!UICONTROL Instance]** : instance SDK à laquelle l’action s’applique. Ce menu déroulant est désactivé si votre implémentation utilise une seule instance SDK.
-* **[!UICONTROL Identity map]** : élément de données qui contrôle la manière dont un ECID est généré et à quels ID les informations de consentement sont liées.
-* **[!UICONTROL Consent information]** : détermine si vous souhaitez remplir un formulaire ou fournir un élément de données contenant des informations de consentement.
-* **[!UICONTROL Standard]** : norme de consentement que vous souhaitez utiliser. Les options disponibles sont « [!UICONTROL Adobe] » et « [!UICONTROL IAB TCF] ».
-* **[!UICONTROL Version]** : version de la norme de consentement à utiliser.
-* **[!UICONTROL Datastream configuration overrides]** : cette commande prend en charge les remplacements de configuration des trains de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [&#x200B; Remplacements de configuration de train de données &#x200B;](../configure/configuration-overrides.md) pour plus d’informations.
+* **[!UICONTROL Mappage d’identités]** : élément de données qui contrôle la manière dont un ECID est généré et à quels ID les informations de consentement sont liées.
+* **[!UICONTROL Informations de consentement]** : détermine si vous souhaitez remplir un formulaire ou fournir un élément de données contenant des informations de consentement.
+* **[!UICONTROL Standard]** : norme de consentement que vous souhaitez utiliser. Les options disponibles sont les suivantes : «  » et « [!UICONTROL IAB TCF] ».
+* **[!UICONTROL Version]** : version de la norme de consentement que vous souhaitez utiliser.
+* **[!UICONTROL Remplacements de la configuration des trains de données]** : cette commande prend en charge les remplacements de la configuration des trains de données, ce qui vous permet de contrôler les applications et les services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [&#x200B; Remplacements de configuration de train de données &#x200B;](../configure/configuration-overrides.md) pour plus d’informations.
 
 ## Création d’une règle qui met à jour les informations de consentement
 
 Le moment idéal pour utiliser cette action est lorsque les préférences de consentement d’un client ou d’une cliente ont changé. Vous pouvez créer une règle de balise pour prendre en compte cette modification.
 
-1. Dans une propriété de balise, accédez à **[!UICONTROL Rules]** et sélectionnez **[!UICONTROL Add rule]**.
-1. Attribuez un nom à la règle, puis sélectionnez l’icône « `+` » en regard de **[!UICONTROL Events]**.
+1. Dans une propriété de balise, accédez à **[!UICONTROL Règles]** et sélectionnez **[!UICONTROL Ajouter une règle]**.
+1. Attribuez un nom à la règle, puis sélectionnez l’icône « `+` » en regard de **[!UICONTROL Événements]**.
 1. Définissez les propriétés suivantes sur la gauche :
-   * **[!UICONTROL Extension]** : [!UICONTROL Core]
-   * **[!UICONTROL EVent type]** : [!UICONTROL Custom code]
+   * **[!UICONTROL Extension]** : [!UICONTROL Core]
+   * **[!UICONTROL Type EVent]** : [!UICONTROL Code personnalisé]
 1. Ouvrez l’éditeur à droite et utilisez le code suivant comme modèle :
 
 ```javascript
@@ -96,24 +96,24 @@ function addEventListener() {
 addEventListener();
 ```
 
-1. Sélectionnez **[!UICONTROL Keep changes]**.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 Le bloc de code personnalisé ci-dessus effectue deux opérations :
 
 * Déclenche la règle lorsque les préférences de consentement ont été modifiées.
 * Définit deux éléments de données : **chaîne de consentement IAB TCF** et **RGPD de consentement IAB TCF**.
 
-Ces éléments de données sont utiles lors de la définition de l&#39;action &#39;[!UICONTROL Set Consent]&#39; :
+Ces éléments de données sont utiles lors de la définition de l’action « [!UICONTROL Définir le consentement] » :
 
 1. Sélectionnez l’icône « `+` » en regard de **[!UICONTROL Actions]**.
 1. Définissez les propriétés suivantes sur la gauche :
-   * **[!UICONTROL Extension]** : [!UICONTROL Adobe Experience Platform Web SDK]
-   * **[!UICONTROL Action type]** : [!UICONTROL Set consent]
+   * **[!UICONTROL Extension]** : [!UICONTROL Adobe Experience Platform Web SDK]
+   * **[!UICONTROL Type d’action]** : [!UICONTROL Définir le consentement]
 1. Définissez les propriétés suivantes sur la droite :
-   * **[!UICONTROL Standard]** : [!UICONTROL IAB TCF]
-   * **[!UICONTROL Version]** : [!UICONTROL 2.0]
-   * **[!UICONTROL Value]** : `%IAB TCF Consent String%`
-   * **[!UICONTROL Does GDPR apply to this consent value]** : [!UICONTROL Provide a data element], avec la valeur `%IAB TCF Consent GDPR%`
+   * **[!UICONTROL Standard]** : [!UICONTROL IAB TCF]
+   * **[!UICONTROL Version]** : [!UICONTROL 2.0]
+   * **[!UICONTROL Valeur]** : `%IAB TCF Consent String%`
+   * **[!UICONTROL Le RGPD s’applique-t-il à cette valeur de consentement]** : [!UICONTROL Fournissez un élément de données], avec la valeur `%IAB TCF Consent GDPR%`
 
 ![IAB Set Consent Action](../assets/iab-action.png)
 

@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 191
 ht-degree: 1%
 
 ---
@@ -26,10 +26,10 @@ La propriété `orgId` est une chaîne qui indique à Adobe à quelle organisati
 
 Pour localiser votre `orgID` :
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. N’importe où dans le Adobe Experience Cloud, appuyez sur **`[Ctrl]`** + **`[I]`**. Une fenêtre de [!UICONTROL User Data Debugger] s’ouvre.
-1. Cliquez sur **[!UICONTROL Copy]** ![Copier](../../assets/copy.png) en regard de la [!UICONTROL Current Org ID], ou cliquez sur l’onglet **[!UICONTROL Assigned Orgs]** pour afficher d’autres ID d’organisation auxquels vous pouvez accéder.
-1. Lorsque vous avez fini de localiser les informations souhaitées, cliquez sur **[!UICONTROL Close]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Où que vous soyez dans Adobe Experience Cloud, appuyez sur **`[Ctrl]`** + **`[I]`**. Une fenêtre [!UICONTROL Débogueur de données utilisateur] s’ouvre.
+1. Cliquez sur **[!UICONTROL Copier]** ![Copier](../../assets/copy.png) en regard de l’[!UICONTROL ID d’organisation actuel] ou cliquez sur l’onglet **[!UICONTROL Organisations affectées]** pour afficher d’autres ID d’organisation auxquels vous pouvez accéder.
+1. Lorsque vous avez terminé de localiser les informations souhaitées, cliquez sur **[!UICONTROL Fermer]**.
 
 Les identifiants d’organisation sont toujours des chaînes alphanumériques de 24 caractères et se terminent toujours par `@AdobeOrg`.
 

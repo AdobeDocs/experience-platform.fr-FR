@@ -29,10 +29,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 758
-ht-degree: 5%
+source-wordcount: 871
+ht-degree: 2%
 
 ---
 
@@ -42,8 +42,8 @@ Utilisez Adobe Experience Platform **balises** (anciennement Launch) pour envoye
 
 Avant de suivre ces étapes, vérifiez que vous pouvez accéder aux [droits de propriété](/help/tags/ui/administration/user-permissions.md) suivants :
 
-* [!UICONTROL Develop]
-* [!UICONTROL Manage extensions]
+* [!UICONTROL Développer]
+* [!UICONTROL Gérer les extensions]
 
 Assurez-vous également de disposer de toutes les [autorisations](/help/access-control/home.md#permissions) dans les catégories suivantes :
 
@@ -54,11 +54,11 @@ Assurez-vous également de disposer de toutes les [autorisations](/help/access-c
 
 Le [modèle de données d’expérience (XDM)](/help/xdm/home.md) est une spécification open source qui fournit des structures et des définitions communes pour les données sous la forme de schémas. La configuration d’un schéma est vivement recommandée lors de l’envoi de données à Edge Network.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Schemas]**.
-1. Sélectionnez **[!UICONTROL Create schema]**.
-1. Sélectionnez **[!UICONTROL Experience Event]**, puis sélectionnez **[!UICONTROL Next]**.
-1. Attribuez un nom au schéma, puis sélectionnez **[!UICONTROL Finish]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Schémas]**.
+1. Sélectionnez **[!UICONTROL Créer un schéma]**.
+1. Sélectionnez **[!UICONTROL Événement d’expérience]**, puis sélectionnez **[!UICONTROL Suivant]**.
+1. Attribuez un nom au schéma, puis sélectionnez **[!UICONTROL Terminer]**.
 1. (Facultatif) Vous pouvez ajouter d’autres champs ou [groupes de champs](/help/xdm/ui/resources/field-groups.md) pour toutes les données supplémentaires que vous souhaitez collecter.
 
 ![Zone de travail des schémas](assets/getting-started/schema-structure.png)
@@ -71,10 +71,10 @@ Le [modèle de données d’expérience (XDM)](/help/xdm/home.md) est une spéci
 
 Un [flux de données](/help/datastreams/overview.md) est une configuration qui indique à Edge Network comment gérer les données que vous lui envoyez. Lorsque vous configurez un flux de données pour envoyer des données à un produit donné, le flux de données transmet automatiquement les données pertinentes à chaque produit respectif d’une manière que le produit spécifique comprend.
 
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
-1. Sélectionnez **[!UICONTROL New datastream]**.
-1. Attribuez le nom souhaité au flux de données, puis sélectionnez le schéma récemment créé sous **[!UICONTROL Mapping schema]**.
-1. Sélectionnez **[!UICONTROL Save]**.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Flux de données]**.
+1. Sélectionnez **[!UICONTROL Nouveau flux de données]**.
+1. Attribuez au flux de données le nom souhaité, puis sélectionnez le schéma récemment créé sous **[!UICONTROL Schéma de mappage]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Liste des flux de données](assets/getting-started/datastreams.png)
 
@@ -82,18 +82,18 @@ Un [flux de données](/help/datastreams/overview.md) est une configuration qui i
 
 Une fois que vous avez créé un schéma et un flux de données, vous pouvez créer et configurer une propriété de balise.
 
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Sélectionnez **[!UICONTROL New property]**.
-1. Attribuez un nom et un domaine à la propriété de balise, puis sélectionnez **[!UICONTROL Save]**.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
+1. Sélectionnez **[!UICONTROL Nouvelle propriété]**.
+1. Attribuez un nom et un domaine à la propriété de balise, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ## Installation de l’extension de balise
 
 L’extension de balise Web SDK est installée sur une propriété de balise donnée.
 
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]** > **[!UICONTROL Extensions]**.
-1. Sélectionnez l’onglet **[!UICONTROL Catalog]** .
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]** > **[!UICONTROL Extensions]**.
+1. Sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 1. Utilisez la recherche pour localiser l’extension **[!UICONTROL Adobe Experience Platform Web SDK]**.
-1. Sélectionnez la carte d’extension, puis sélectionnez **[!UICONTROL Install]** à droite.
+1. Sélectionnez la carte d’extension, puis sélectionnez **[!UICONTROL Installer]** à droite.
 
 ![Installer SDK](assets/getting-started/install-sdk.png)
 
@@ -103,48 +103,48 @@ Lorsque vous installez l’extension de balise Web SDK, vous accédez automatiqu
 
 1. Sous la section [Flux de données](configure/datastreams.md), sélectionnez le flux de données de votre choix pour chaque environnement.
 
-Tous les autres paramètres de configuration sont renseignés pour vous ou facultatifs. Définissez les paramètres de configuration souhaités, puis sélectionnez **[!UICONTROL Save]**.
+Tous les autres paramètres de configuration sont renseignés pour vous ou facultatifs. Définissez les paramètres de configuration souhaités, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ## Créer un élément de données variable
 
 Adobe recommande d’utiliser des éléments de données [Variable](data-element-types.md#variable) pour stocker la payload que vous souhaitez envoyer à Adobe. Les objets XDM sont également des éléments de données disponibles, mais ils sont plus anciens et plus limités dans les cas d’utilisation applicables.
 
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Sélectionnez **[!UICONTROL Data elements]** > **[!UICONTROL Create new data element]**.
+1. Sélectionnez **[!UICONTROL Éléments de données]** > **[!UICONTROL Créer un élément de données]**.
 1. Attribuez à l’élément de données les propriétés suivantes sur la gauche :
    * **[!UICONTROL Name]** : tout nom souhaité
-   * **[!UICONTROL Extension]** : [!UICONTROL Adobe Experience Platform Web SDK]
-   * **[!UICONTROL Data element type]** : [!UICONTROL Variable]
+   * **[!UICONTROL Extension]** : [!UICONTROL Adobe Experience Platform Web SDK]
+   * **[!UICONTROL Type d’élément de données]** : [!UICONTROL Variable]
 1. Définissez les propriétés suivantes sur la droite :
    **Type de variable** : XDM
    **[!UICONTROL Sandbox]** : sandbox dans lequel vous avez créé votre schéma
-   **[!UICONTROL Schema]** : schéma souhaité
-1. Sélectionnez **[!UICONTROL Save]**.
+   **[!UICONTROL Schéma]** : schéma souhaité
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 ## Création d’une règle
 
 Les règles déterminent à quel moment déclencher quelque chose ou définir des variables. La création d’une règle qui s’exécute chaque fois que la bibliothèque est chargée vous permet de renseigner facilement les variables que vous souhaitez voir contenir une valeur sur chaque page.
 
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Sélectionnez **[!UICONTROL Rules]** > **[!UICONTROL Add rule]**.
+1. Sélectionnez **[!UICONTROL Règles]** > **[!UICONTROL Ajouter une règle]**.
 1. Donnez un nom à la règle.
-1. Sélectionnez l’icône « `+` » en regard de **[!UICONTROL Events]**.
+1. Sélectionnez l’icône « `+` » en regard de **[!UICONTROL Événements]**.
 1. Attribuez à l’événement les paramètres suivants :
-   * **[!UICONTROL Extension]** : [!UICONTROL Core]
-   * **[!UICONTROL Event type]** : [!UICONTROL Library loaded (page top)]
-1. Sélectionnez **[!UICONTROL Keep changes]**.
+   * **[!UICONTROL Extension]** : [!UICONTROL Core]
+   * **[!UICONTROL Type d’événement]** : [!UICONTROL Bibliothèque chargée (en haut de la page)]
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 Les étapes ci-dessus établissent la partie critères de la règle, qui doit se déclencher une fois la bibliothèque chargée. Les étapes suivantes définissent l’action à entreprendre lorsque ce critère est rempli.
 
 1. Sélectionnez l’icône « `+` » en regard de **[!UICONTROL Actions]**.
 1. Définissez l’action sur les paramètres suivants à gauche :
-   * **[!UICONTROL Extension]** : [!UICONTROL Adobe Experience Platform Web SDK]
-   * **[!UICONTROL Action type]** : [!UICONTROL Send event]
+   * **[!UICONTROL Extension]** : [!UICONTROL Adobe Experience Platform Web SDK]
+   * **[!UICONTROL Type d’action]** : [!UICONTROL Envoyer l’événement]
 1. Définissez les champs suivants sur la droite :
    * **[!UICONTROL XDM]** : élément de données de la variable XDM
-1. Sélectionnez **[!UICONTROL Keep changes]**.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 ![Configuration de l’action](assets/getting-started/action-config.png)
 
@@ -152,20 +152,20 @@ Les étapes ci-dessus établissent la partie critères de la règle, qui doit se
 
 La propriété de balise contient tous les composants nécessaires pour envoyer des données à Edge Network.
 
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Publishing flow]**.
-1. Sélectionnez **[!UICONTROL Add library]**.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Flux de publication]**.
+1. Sélectionnez **[!UICONTROL Ajouter une bibliothèque]**.
 1. Attribuez un nom à la bibliothèque. Ce nom doit être similaire à un nom de validation lorsque vous utilisez un logiciel de contrôle de version.
-1. Définissez le menu déroulant de l’environnement sur **[!UICONTROL Development]**.
-1. Sélectionnez **[!UICONTROL Add all changed resources]**.
-1. Sélectionnez **[!UICONTROL Save & build to Development]**.
+1. Définissez le menu déroulant de l’environnement sur **[!UICONTROL Développement]**.
+1. Sélectionnez **[!UICONTROL Ajouter toutes les ressources modifiées]**.
+1. Sélectionnez **[!UICONTROL Enregistrer et créer dans le développement]**.
 
 Vos modifications sont maintenant déployées dans votre environnement de développement.
 
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Environments]**.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Environnements]**.
 1. Sélectionnez l’icône d’installation en regard de l’environnement de développement
 1. Installez le code incorporé dans une page web de test sur votre site.
 
-Une fois que vous avez vérifié que la balise fonctionne dans votre environnement de développement, vous pouvez utiliser l’interface [!UICONTROL Publishing flow] pour publier la bibliothèque vers l’environnement d’évaluation, puis éventuellement vers l’environnement de production.
+Une fois que vous avez vérifié que la balise fonctionne dans votre environnement de développement, vous pouvez utiliser l’interface [!UICONTROL Flux de publication] pour publier la bibliothèque dans l’environnement d’évaluation, puis dans l’environnement de production.
 
 1. Ajoutez l’extension et la règle à une **bibliothèque**, créez-les dans un **environnement** et installez le code incorporé sur votre site.
 2. Validez avec **&#x200B;**.

@@ -19,23 +19,23 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 142
-ht-degree: 2%
+source-wordcount: 166
+ht-degree: 1%
 
 ---
 
 # Évaluation d’ensembles de règles
 
-Le type d’action **[!UICONTROL Evaluate rulesets]** vous permet de déclencher manuellement des évaluations d’ensemble de règles. Les ensembles de règles sont renvoyés par Adobe Journey Optimizer pour prendre en charge des fonctionnalités telles que les messages dans le navigateur.
+Le type d’action **[!UICONTROL Évaluer les ensembles de règles]** permet de déclencher manuellement des évaluations d’ensembles de règles. Les ensembles de règles sont renvoyés par Adobe Journey Optimizer pour prendre en charge des fonctionnalités telles que les messages dans le navigateur.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Rules]**, puis sélectionnez la règle de votre choix.
+1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
 1. Sous [!UICONTROL Actions], sélectionnez une action existante ou créez-en une.
-1. Définissez le champ déroulant du [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Action type] sur **[!UICONTROL Evaluate rulesets]**.
+1. Définissez le champ déroulant [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]**, puis définissez le [!UICONTROL Type d’action] sur **[!UICONTROL Évaluer les ensembles de règles]**.
 
 ![Image de l’interface utilisateur d’Experience Platform affichant le type d’action de réponse Évaluer des ensembles de règles.](../assets/evaluate-rulesets.png)
 
@@ -43,5 +43,5 @@ Le type d’action **[!UICONTROL Evaluate rulesets]** vous permet de déclencher
 
 Ce type d’action prend en charge les options suivantes :
 
-* **[!UICONTROL Render visual personalization decisions]** : une case à cocher qui, lorsqu’elle est activée, rend des décisions de personnalisation visuelles pour les éléments d’ensemble de règles qui correspondent.
-* **[!UICONTROL Decision context]** : mappage clé-valeur utilisé lors de l’évaluation des ensembles de règles Adobe Journey Optimizer pour la prise de décision sur l’appareil. Vous pouvez fournir le contexte de décision manuellement ou par le biais d&#39;un élément de données.
+* **[!UICONTROL Rendre les décisions de personnalisation visuelle]** : une case à cocher qui, lorsqu’elle est activée, rend les décisions de personnalisation visuelle pour les éléments d’ensemble de règles qui correspondent.
+* **[!UICONTROL Contexte de décision]** : mappage clé-valeur utilisé lors de l’évaluation des ensembles de règles Adobe Journey Optimizer pour la prise de décision sur l’appareil. Vous pouvez fournir le contexte de décision manuellement ou par le biais d&#39;un élément de données.

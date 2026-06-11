@@ -17,10 +17,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 201
-ht-degree: 11%
+source-wordcount: 221
+ht-degree: 9%
 
 ---
 
@@ -30,14 +30,14 @@ ht-degree: 11%
 >
 >Les notifications push pour le Web SDK sont actuellement en version **bêta**. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
-L’action **[!UICONTROL Send push subscription]** enregistre les abonnements aux notifications push auprès de Adobe Experience Platform. Il gère la récupération des détails d’abonnement push à partir du navigateur et les envoie à votre flux de données configuré. Il est disponible dans les versions 2.32.0 ou ultérieures de l’extension Web SDK.
+L’action **[!UICONTROL Envoyer un abonnement push]** enregistre les abonnements aux notifications push auprès de Adobe Experience Platform. Il gère la récupération des détails d’abonnement push à partir du navigateur et les envoie à votre flux de données configuré. Il est disponible dans les versions 2.32.0 ou ultérieures de l’extension Web SDK.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Rules]**, puis sélectionnez la règle de votre choix.
+1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
 1. Sous [!UICONTROL Actions], sélectionnez une action existante ou créez-en une.
-1. Définissez le champ déroulant [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]** et définissez la [!UICONTROL Action Type] sur **[!UICONTROL Send push subscription]**.
+1. Définissez le champ déroulant [!UICONTROL Extension] sur **[!UICONTROL Adobe Experience Platform Web SDK]** puis définissez le [!UICONTROL Type d’action] sur **[!UICONTROL Envoyer l’abonnement push]**.
 
 L’action ne comporte aucun paramètre de configuration, à part la sélection d’une instance SDK.
 

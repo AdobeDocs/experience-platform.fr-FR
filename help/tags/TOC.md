@@ -7,9 +7,9 @@ feature: Tags
 solution: Data Collection
 role: Developer
 nudge: true
-source-git-commit: dd49c0506595c80dbc1674849ecd428524d9f185
+source-git-commit: 6a7591682bc019be2672f543dbcc495b356b1c09
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1190'
 ht-degree: 67%
 
 ---
@@ -123,6 +123,7 @@ ht-degree: 67%
             * [Advertising](extensions/client/web-sdk/configure/advertising.md)
             * [Remplacements de configuration](extensions/client/web-sdk/configure/configuration-overrides.md)
             * [Paramètres avancés](extensions/client/web-sdk/configure/advanced-settings.md)
+            * [Réparer les références d’élément de données](extensions/client/web-sdk/configure/repair-data-element-references.md)
          * [Types d’événements](extensions/client/web-sdk/event-types.md)
          * Types d’actions {#actions}
             * [Vue d’ensemble](extensions/client/web-sdk/actions/actions-overview.md)
@@ -252,13 +253,13 @@ ht-degree: 67%
          * [Certificats mTLS](./extensions/server/cloud-connector/mtls.md)
          * [Notes de mise à jour](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
-         * [Vue d&#39;ensemble](./extensions/server/adform/overview.md)
+         * [Vue d’ensemble](./extensions/server/adform/overview.md)
       * [!DNL Algolia] {#algolia}
-         * [Vue d&#39;ensemble](./extensions/server/algolia/overview.md)
+         * [Vue d’ensemble](./extensions/server/algolia/overview.md)
       * [!DNL Amazon] {#amazon}
-         * [Vue d&#39;ensemble](./extensions/server/amazon/overview.md)
+         * [Vue d’ensemble](./extensions/server/amazon/overview.md)
       * [!DNL AWS] {#aws}
-         * [Vue d&#39;ensemble](./extensions/server/aws/overview.md)
+         * [Vue d’ensemble](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [Vue d’ensemble](./extensions/server/braze/overview.md)
       * [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)
@@ -268,34 +269,34 @@ ht-degree: 67%
       * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
          * [Vue d’ensemble](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
-         * [Vue d&#39;ensemble](./extensions/server/google-cloud-platform/overview.md)
+         * [Vue d’ensemble](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Vue d’ensemble](./extensions/server/linkedin/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
-         * [Vue d&#39;ensemble](./extensions/server/mailchimp/overview.md)
+         * [Vue d’ensemble](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
-         * [Vue d&#39;ensemble](./extensions/server/meta/overview.md)
+         * [Vue d’ensemble](./extensions/server/meta/overview.md)
       * [!DNL Microsoft Azure] {#azure}
-         * [Vue d&#39;ensemble](./extensions/server/azure/overview.md)
+         * [Vue d’ensemble](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
-         * [Vue d&#39;ensemble](./extensions/server/mixpanel/overview.md)
+         * [Vue d’ensemble](./extensions/server/mixpanel/overview.md)
       * [!DNL Nextdoor] {#nextdoor}
          * [Vue d’ensemble](./extensions/server/nextdoor/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
-         * [Vue d&#39;ensemble](./extensions/server/pinterest/overview.md)
+         * [Vue d’ensemble](./extensions/server/pinterest/overview.md)
       * [!DNL Reddit] {#reddit}
-         * [Vue d&#39;ensemble](./extensions/server/reddit/overview.md)
+         * [Vue d’ensemble](./extensions/server/reddit/overview.md)
       * [!DNL Snapchat] {#snap}
-         * [Vue d&#39;ensemble](./extensions/server/snap/overview.md)
+         * [Vue d’ensemble](./extensions/server/snap/overview.md)
       * [!DNL Snowflake] {#snowflake}
-         * [Vue d&#39;ensemble](./extensions/server/snowflake/overview.md)
+         * [Vue d’ensemble](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
-         * [Vue d&#39;ensemble](./extensions/server/splunk/overview.md)
+         * [Vue d’ensemble](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Vue d’ensemble](./extensions/server/twitter/overview.md)
       * API d’événements web [!DNL Tiktok] {#tiktok}
-         * [Vue d&#39;ensemble](./extensions/server/tiktok/overview.md)
+         * [Vue d’ensemble](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Vue d’ensemble](./extensions/server/tradedesk/overview.md)
       * API d’événements [!DNL Zendesk] {#zendesk}

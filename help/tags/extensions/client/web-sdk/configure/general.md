@@ -18,9 +18,9 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 293
+source-wordcount: 312
 ht-degree: 11%
 
 ---
@@ -34,25 +34,25 @@ ht-degree: 11%
 
 Cette section de configuration régit le nom de l’instance Web SDK, l’organisation IMS à laquelle elle s’applique et l’emplacement auquel vous souhaitez envoyer des données. Par défaut, une instance est nommée `alloy`.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
-1. Recherchez le nom de l’instance juste en dessous de l’accordéon [!UICONTROL SDK instances] développé.
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Recherchez le nom de l’instance juste en dessous de l’accordéon [!UICONTROL Instances &#x200B;] développé.
 
 ![Image montrant les paramètres généraux de l’extension de balise Web SDK dans l’interface utilisateur des balises](../assets/web-sdk-ext-general.png)
 
 Les options disponibles sont les suivantes :
 
-## [!UICONTROL Name]
+## [!UICONTROL Nom]
 
 L’extension de balise Adobe Experience Platform Web SDK prend en charge plusieurs instances sur la page. Le nom permet d’envoyer des données à plusieurs organisations sans avoir besoin de bibliothèques de balises Web SDK en double. Vous pouvez remplacer le nom de l’instance par n’importe quel nom d’objet JavaScript valide.
 
-## [!UICONTROL IMS organization ID]
+## [!UICONTROL Identifiant de l&#39;organisation IMS]
 
 L’identifiant de l’organisation à laquelle vous souhaitez que les données soient envoyées chez Adobe. La plupart du temps, utilisez la valeur par défaut qui est automatiquement renseignée. Lorsque la page comporte plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
 
-## [!UICONTROL Edge domain]
+## [!UICONTROL domaine &#x200B;]
 
 Domaine vers lequel/à partir duquel l’extension envoie et reçoit des données. Par défaut, le champ contient `<COMPANYID>.data.adobedc.net`. Les implémentations plus anciennes peuvent contenir une valeur par défaut de `edge.adobedc.net`, qui est également valide.
 

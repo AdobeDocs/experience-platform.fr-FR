@@ -17,10 +17,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 216
-ht-degree: 1%
+source-wordcount: 221
+ht-degree: 0%
 
 ---
 
@@ -30,9 +30,9 @@ La propriété `datastreamId` est une chaîne qui détermine le [flux de donnée
 
 Pour localiser un identifiant de flux de données :
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
-1. Utilisez le champ de recherche pour localiser le flux de données de votre choix, puis sélectionnez **[!UICONTROL Copy]** ![Copier](../../assets/copy.png) en regard de l’identifiant du flux de données.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Flux de données]**.
+1. Utilisez le champ de recherche pour localiser le flux de données de votre choix, puis sélectionnez **[!UICONTROL Copier]** ![Copier](../../assets/copy.png) en regard de l’identifiant du flux de données.
 
 Vous pouvez également sélectionner le nom du flux de données de votre choix et l’identifiant du flux de données s’affiche dans la colonne de droite pour que vous puissiez le copier.
 

@@ -17,10 +17,10 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 297
-ht-degree: 6%
+source-wordcount: 306
+ht-degree: 5%
 
 ---
 
@@ -38,11 +38,11 @@ La valeur que vous utilisez pour `edgeDomain` dépend de votre participation au 
 
 **Si votre organisation ne participe pas au programme de certificat**, définissez la valeur sur un sous-domaine de `data.adobedc.net`. Adobe recommande d’utiliser l’ID de société IMS attribué par Adobe à votre organisation par souci de cohérence. Par exemple : `example.data.adobedc.net`. Procédez comme suit pour déterminer votre ID d’entreprise IMS :
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. N’importe où dans l’interface d’Experience Cloud, appuyez sur `[Cmd]` + `[I]` (macOS) ou `[Ctrl]` + `[I]` (Windows).
-1. Une **[!UICONTROL User data debugger]** s’affiche. Sélectionnez l’onglet **[!UICONTROL Assigned orgs]** .
+1. Un **[!UICONTROL Débogueur de données utilisateur]** s’affiche. Sélectionnez l’onglet **[!UICONTROL Organisations affectées]**.
 1. Développez l’organisation IMS souhaitée.
-1. Recherchez le champ **[!UICONTROL Tenant]** . Cette valeur est le sous-domaine de `data.adobedc.net` recommandé à utiliser.
+1. Recherchez le champ **[!UICONTROL Client]**. Cette valeur est le sous-domaine de `data.adobedc.net` recommandé à utiliser.
 
 Définissez la chaîne de `edgeDomain` lors de l’exécution de la commande `configure`. Si vous omettez cette propriété lors de la configuration du SDK, elle est définie par défaut sur `edge.adobedc.net`. Bien que la valeur par défaut soit acceptable, Adobe considère qu’il est recommandé de définir une valeur spécifique à l’organisation.
 
@@ -56,4 +56,4 @@ alloy("configure", {
 
 ## Domaine Edge utilisant l’extension de balise Web SDK
 
-L’extension de balise équivalente à cette propriété est le champ **[!UICONTROL Edge domain]** sous [Paramètres de configuration de l’instance SDK](/help/tags/extensions/client/web-sdk/configure/general.md) lors de la configuration de l’extension.
+L’extension de balise équivalente à cette propriété est le champ **[!UICONTROL domaine]** sous [paramètres de configuration de l’instance SDK](/help/tags/extensions/client/web-sdk/configure/general.md) lors de la configuration de l’extension.
