@@ -1,11 +1,10 @@
 ---
 title: Créer une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de LAVA vers Adobe Experience Platform à l’aide de l’interface utilisateur.
-badge: Beta
-source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
+source-git-commit: c8928f87299aa68e229512acfb4b0910d9129b43
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 19%
+source-wordcount: '899'
+ht-degree: 23%
 
 ---
 
@@ -19,7 +18,7 @@ Suivez ce guide détaillé pour configurer votre propre connecteur source [!DNL 
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par l’équipe [!DNL LAVA]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [&#128279;](mailto:info@lava.ai).
+>Cette page de documentation a été créée par l’équipe [!DNL LAVA]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [](mailto:info@lava.ai).
 
 ## Prise en main
 
@@ -32,32 +31,32 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 >[!TIP]
 >
->Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source &#x200B;](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
+>Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source ](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
 
 ## Connecter votre compte [!DNL LAVA]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie **Streaming**, sélectionnez [!DNL LAVA], puis sélectionnez **[!UICONTROL Add data]**.
+Dans la catégorie **Streaming**, sélectionnez [!DNL LAVA], puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Catalogue des sources Experience Platform](../../../../images/tutorials/create/lava/catalog.png)
 
 ## Sélectionner les données
 
-L’étape **[!UICONTROL Select data]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous apportez à Platform.
+L’étape **[!UICONTROL Sélectionner les données]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous apportez à Platform.
 
 * La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
 
-Sélectionnez **[!UICONTROL Upload files]** pour charger un fichier JSON à partir de votre système local ou chargez l’exemple de fichier depuis la section Présentation correspondant au jeu de données que vous configurez. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le panneau [!UICONTROL Drag and drop files].
+Sélectionnez **[!UICONTROL Charger des fichiers]** pour charger un fichier JSON à partir de votre système local ou chargez l’exemple de fichier depuis la section Présentation correspondant au jeu de données que vous configurez. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le panneau [!UICONTROL Glisser-déposer des fichiers].
 
 ![Étape d’ajout de données du workflow des sources.](../../../../images/tutorials/create/lava/add-data.png)
 
-Une fois votre fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface de prévisualisation vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser l’utilitaire [!UICONTROL Search field] pour accéder à des éléments spécifiques depuis votre schéma.
+Une fois votre fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface de prévisualisation vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser l’utilitaire [!UICONTROL Champ de recherche] pour accéder à des éléments spécifiques à partir de votre schéma.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape de prévisualisation du workflow des sources.](../../../../images/tutorials/create/lava/preview.png)
 
@@ -65,13 +64,13 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 L’étape **Détails du flux de données** s’affiche, vous offrant des options pour utiliser un jeu de données existant ou établir un nouveau jeu de données pour votre flux de données, ainsi que la possibilité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer les paramètres d’ingestion de profil, de diagnostics d’erreur, d’ingestion partielle et d’alertes.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape du flux de données-détail du workflow des sources.](../../../../images/tutorials/create/lava/dataflow-detail.png)
 
 ## Mappage
 
-L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
+L’étape [!UICONTROL Mappage] s’affiche, vous fournissant une interface pour mapper les champs de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
 Lors de l’utilisation du schéma fourni par [!DNL LAVA], utilisez le mappage recommandé suivant :
 
@@ -98,6 +97,41 @@ Lors de l’utilisation du schéma fourni par [!DNL LAVA], utilisez le mappage r
 
 {style="table-layout:auto"}
 
+>[!TAB Événements combinés]
+
+| Champ [!DNL LAVA] connecteur Source | Champ de schéma d’événement [!DNL LAVA] |
+| --- | --- |
+| `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` de champ calculé | `identityMap` |
+| `type` | `eventType` |
+| `timestamp` | `timestamp` |
+| `eventId` | `_tenant.ticketScan.eventId` |
+| `eventName` | `_tenant.ticketScan.eventName` |
+| `eventLabel` | `_tenant.ticketScan.eventLabel` |
+| `venue` | `_tenant.ticketScan.venue` |
+| `venueLabel` | `_tenant.ticketScan.venueLabel` |
+| `section` | `_tenant.ticketScan.section` |
+| `sectionLabel` | `_tenant.ticketScan.sectionLabel` |
+| `row` | `_tenant.ticketScan.row` |
+| `seat` | `_tenant.ticketScan.seat` |
+| `gate` | `_tenant.ticketScan.gate` |
+| `gateLabel` | `_tenant.ticketScan.gateLabel` |
+| `transactionId` | `_tenant.transaction.transactionId` |
+| `referenceId` | `_tenant.transaction.referenceId` |
+| `subtotal` | `_tenant.transaction.subtotal` |
+| `total` | `_tenant.transaction.total` |
+| `location` | `_tenant.transaction.location` |
+| `items[]` | `_tenant.transaction.items[]` |
+| `redeemedAmount` | `_tenant.transaction.redeemedAmount` |
+| `rewardsApplied[]` | `_tenant.transaction.rewardsApplied[]` |
+| `amount` | `_tenant.ledger.amount` |
+| `expiresAt` | `_tenant.ledger.expiresAt` |
+| `rewardId` | `_tenant.ledger.rewardId` |
+| `rewardName` | `_tenant.ledger.rewardName` |
+| `rewardSlug` | `_tenant.ledger.rewardSlug` |
+| `rewardType` | `_tenant.ledger.rewardType` |
+
+{style="table-layout:auto"}
+
 >[!TAB Événements d’analyse des tickets]
 
 | Champ [!DNL LAVA] connecteur Source | Champ de schéma d’événement [!DNL LAVA] |
@@ -119,22 +153,56 @@ Lors de l’utilisation du schéma fourni par [!DNL LAVA], utilisez le mappage r
 
 {style="table-layout:auto"}
 
+>[!TAB Événements de transaction]
+
+| Champ [!DNL LAVA] connecteur Source | Champ de schéma d’événement [!DNL LAVA] |
+| --- | --- |
+| `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` de champ calculé | `identityMap` |
+| `transactionId` | `_tenant.transaction.transactionId` |
+| `referenceId` | `_tenant.transaction.referenceId` |
+| `subtotal` | `_tenant.transaction.subtotal` |
+| `total` | `_tenant.transaction.total` |
+| `location` | `_tenant.transaction.location` |
+| `items[]` | `_tenant.transaction.items[]` |
+| `redeemedAmount` | `_tenant.transaction.redeemedAmount` |
+| `rewardsApplied[]` | `_tenant.transaction.rewardsApplied[]` |
+| `type` | `eventType` |
+| `timestamp` | `timestamp` |
+
+{style="table-layout:auto"}
+
+>[!TAB Événements comptables]
+
+| Champ [!DNL LAVA] connecteur Source | Champ de schéma d’événement [!DNL LAVA] |
+| --- | --- |
+| `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` de champ calculé | `identityMap` |
+| `amount` | `_tenant.ledger.amount` |
+| `expiresAt` | `_tenant.ledger.expiresAt` |
+| `rewardId` | `_tenant.ledger.rewardId` |
+| `rewardName` | `_tenant.ledger.rewardName` |
+| `rewardSlug` | `_tenant.ledger.rewardSlug` |
+| `rewardType` | `_tenant.ledger.rewardType` |
+| `type` | `eventType` |
+| `timestamp` | `timestamp` |
+
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
+Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
-Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
+Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape de mappage du workflow des sources.](../../../../images/tutorials/create/lava/mapping.png)
 
 ## Réviser
 
-L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connection]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
-* **[!UICONTROL Assign dataset & map fields]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 
-Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Finish]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![Étape de révision du workflow des sources.](../../../../images/tutorials/create/lava/review.png)
 
@@ -142,7 +210,7 @@ Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONT
 
 Une fois votre flux de données en continu créé, vous pouvez récupérer l’URL du point d’entrée en continu et l’identifiant du flux de données. Ils seront utilisés pour configurer [!DNL LAVA], ce qui permettra à votre source de diffusion en continu de communiquer avec Experience Platform.
 
-Pour récupérer votre point d’entrée de diffusion en continu, accédez à la page [!UICONTROL Dataflow activity] du flux de données que vous venez de créer et copiez le point d’entrée à partir du bas du panneau de [!UICONTROL Properties].
+Pour récupérer votre point d’entrée de flux continu, accédez à la page [!UICONTROL Activité du flux de données] du flux de données que vous venez de créer, puis copiez le point d’entrée au bas du panneau [!UICONTROL Propriétés].
 
 ![Point d’entrée de flux continu dans l’activité de flux de données.](../../../../images/tutorials/create/lava/endpoint-test.png)
 
