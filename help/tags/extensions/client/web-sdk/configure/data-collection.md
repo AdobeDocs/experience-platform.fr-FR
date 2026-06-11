@@ -3,30 +3,15 @@ title: Paramètres de configuration de la collecte de données
 description: Configurez les paramètres de collecte de données dans l’extension de balise Web SDK.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 TQID: https://experienceleague.adobe.com/i1Q45GvFU8S73NBxDsGPKyLU8S-EdzbKyys2-7DNchs
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: eadea719-cf89-469b-a6fd-a236a7138047id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: 722
-ht-degree: 4%
+source-wordcount: 827
+ht-degree: 3%
 
 ---
 
@@ -39,17 +24,17 @@ ht-degree: 4%
 
 Cette section de configuration vous permet de déterminer comment les données sont collectées dans l’extension.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
-1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Data collection]** .
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Collecte de données]**.
 
 ![Image montrant les paramètres de collecte de données de l’extension de balise Web SDK dans l’interface utilisateur des balises.](../assets/web-sdk-ext-collection.png)
 
 Les options disponibles sont les suivantes :
 
-## [!UICONTROL On before event send callback]
+## [!UICONTROL  Activé avant le rappel d’envoi d’événement ]
 
 Fonction de rappel permettant d’évaluer et de modifier la payload envoyée à Adobe. Dans l’éditeur de code, vous avez accès aux variables suivantes :
 
@@ -94,34 +79,34 @@ if (myBotDetector.isABot()) {
 
 Ce rappel est la balise équivalente à [`onBeforeEventSend`](/help/collection/js/commands/configure/onbeforeeventsend.md) dans la bibliothèque JavaScript.
 
-## [!UICONTROL Collect internal link clicks]
+## [!UICONTROL Collecter les clics sur les liens internes]
 
 Case à cocher permettant la collecte de données de suivi des liens internes à votre site ou propriété. Cette case à cocher correspond à la balise [`clickCollection.internalLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) dans la bibliothèque JavaScript. Lorsque vous activez cette case à cocher, les options de regroupement d&#39;événements s&#39;affichent :
 
-* **[!UICONTROL No event grouping]** : les données de suivi des liens sont envoyées à Adobe dans des événements distincts. Les clics sur les liens envoyés dans des événements distincts peuvent accroître l’utilisation contractuelle des données envoyées à Adobe Experience Platform.
-* **[!UICONTROL Event grouping using session storage]** : stockez les données de suivi des liens dans le stockage de session jusqu’à l’événement « page vue » suivant. Lors de l’événement suivant considéré comme une « page vue », les données de suivi des liens stockées sont fusionnées avec la payload de l’événement « page vue ». Adobe recommande d’activer ce paramètre lors du suivi des liens internes.
-* **[!UICONTROL Event grouping using local object]** : stockez les données de suivi des liens dans un objet local jusqu’à l’événement « page vue » suivant. Si un visiteur accède à une nouvelle page de navigateur, les données de suivi des liens sont perdues. Ce paramètre est particulièrement utile dans le contexte des applications monopages.
+* **[!UICONTROL Aucun regroupement d’événements]** : les données de suivi des liens sont envoyées à Adobe dans des événements distincts. Les clics sur les liens envoyés dans des événements distincts peuvent accroître l’utilisation contractuelle des données envoyées à Adobe Experience Platform.
+* **[!UICONTROL Regroupement des événements à l’aide du stockage de session]** : stockez les données de suivi des liens dans le stockage de session jusqu’à l’événement « page vue » suivant. Lors de l’événement suivant considéré comme une « page vue », les données de suivi des liens stockées sont fusionnées avec la payload de l’événement « page vue ». Adobe recommande d’activer ce paramètre lors du suivi des liens internes.
+* **[!UICONTROL Regroupement d’événements à l’aide de l’objet local]** : stockez les données de suivi des liens dans un objet local jusqu’à l’événement « page vue » suivant. Si un visiteur accède à une nouvelle page de navigateur, les données de suivi des liens sont perdues. Ce paramètre est particulièrement utile dans le contexte des applications monopages.
 
 La bibliothèque de balises considère un événement donné comme une « page vue » lorsque les éléments suivants sont inclus dans le payload :
 
 * `xdm.web.webPageDetails.name` contient une valeur de chaîne
 * `xdm.web.webPageDetails.pageViews.value` est supérieur à `0`
 
-## [!UICONTROL Collect external link clicks]
+## [!UICONTROL Collecter les clics sur les liens externes]
 
 Case à cocher permettant de collecter les liens externes. Cette case à cocher correspond à la balise [`clickCollection.externalLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) dans la bibliothèque JavaScript.
 
-## [!UICONTROL Collect download link clicks]
+## [!UICONTROL Collecter les clics sur les liens de téléchargement]
 
 Case à cocher permettant de collecter les liens de téléchargement. Cette case à cocher correspond à la balise [`clickCollection.downloadLinkEnabled`](/help/collection/js/commands/configure/clickcollection.md) dans la bibliothèque JavaScript.
 
-## [!UICONTROL Download link qualifier]
+## [!UICONTROL Téléchargement du qualificateur de lien]
 
 Expression régulière qui qualifie une URL de lien comme lien de téléchargement. Cette chaîne est la balise équivalente à [`downloadLinkQualifier`](/help/collection/js/commands/configure/downloadlinkqualifier.md) dans la bibliothèque JavaScript.
 
-## [!UICONTROL Filter click properties]
+## [!UICONTROL Propriétés des clics de filtre]
 
-Fonction de rappel permettant d’évaluer et de modifier les propriétés liées aux clics avant la collecte. Cette fonction s’exécute avant la [!UICONTROL On before event send callback] et est l’équivalent de la balise [`clickCollection.filterClickDetails`](/help/collection/js/commands/configure/clickcollection.md) dans la bibliothèque JavaScript. Dans l’éditeur de code, vous avez accès aux variables suivantes :
+Fonction de rappel permettant d’évaluer et de modifier les propriétés liées aux clics avant la collecte. Cette fonction s’exécute avant le rappel d’envoi d’événement [!UICONTROL Activé avant] et est l’équivalent de la balise [`clickCollection.filterClickDetails`](/help/collection/js/commands/configure/clickcollection.md) dans la bibliothèque JavaScript. Dans l’éditeur de code, vous avez accès aux variables suivantes :
 
 * **`content.clickedElement`** : élément DOM sur lequel l’utilisateur a cliqué.
 * **`content.pageName`** : nom de la page lorsque le clic s’est produit.
@@ -135,15 +120,15 @@ Fonction de rappel permettant d’évaluer et de modifier les propriétés liée
 
 >[!TIP]
 >
->Le champ **[!UICONTROL On before link click send]** est un rappel obsolète qui n’est visible que pour les propriétés qui l’ont déjà configuré. Il s’agit de la balise équivalente à [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md) dans la bibliothèque JavaScript. Utilisez le rappel **[!UICONTROL Filter click properties]** pour filtrer ou ajuster les données de clic, ou utilisez le **[!UICONTROL On before event send callback]** pour filtrer ou ajuster la payload globale envoyée à Adobe. Si le rappel **[!UICONTROL Filter click properties]** et le rappel **[!UICONTROL On before link click send]** sont tous deux définis, seul le rappel **[!UICONTROL Filter click properties]** s’exécute.
+>Le champ **[!UICONTROL Activé avant l’envoi du clic sur le lien]** est un rappel obsolète qui n’est visible que pour les propriétés qui l’ont déjà configuré. Il s’agit de la balise équivalente à [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md) dans la bibliothèque JavaScript. Utilisez le rappel **[!UICONTROL Filtrer les propriétés des clics]** pour filtrer ou ajuster les données de clics, ou utilisez le rappel **[!UICONTROL Activé avant l’envoi de l’événement]** pour filtrer ou ajuster la payload globale envoyée à Adobe. Si les rappels **[!UICONTROL Filtrer les propriétés des clics]** et **[!UICONTROL Activer avant l’envoi du clic sur les liens]** sont définis, seul le rappel **[!UICONTROL Filtrer les propriétés des clics]** s’exécute.
 
 ## Paramètres de contexte
 
-Collectez automatiquement les informations sur les visiteurs, qui renseignent des champs XDM spécifiques pour vous. Vous pouvez choisir entre **[!UICONTROL All default context information]** ou **[!UICONTROL Specific context information]**. Il s’agit de la balise équivalente à [`context`](/help/collection/js/commands/configure/context.md) dans la bibliothèque JavaScript.
+Collectez automatiquement les informations sur les visiteurs, qui renseignent des champs XDM spécifiques pour vous. Vous pouvez choisir **[!UICONTROL Toutes les informations contextuelles par défaut]** ou **[!UICONTROL Informations contextuelles spécifiques]**. Il s’agit de la balise équivalente à [`context`](/help/collection/js/commands/configure/context.md) dans la bibliothèque JavaScript.
 
 * **[!UICONTROL Web]** : collecte des informations sur la page active.
-* **[!UICONTROL Device]** : collecte des informations sur l’appareil de l’utilisateur.
-* **[!UICONTROL Environment]** : collecte des informations sur le navigateur de l’utilisateur.
-* **[!UICONTROL Place context]** : collecte des informations sur l’emplacement de l’utilisateur.
-* **[!UICONTROL High entropy user-agent hints]** : collecte des informations plus détaillées sur l’appareil de l’utilisateur.
-* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** : empêcher l’envoi de données de référent en double à Adobe Analytics.
+* **[!UICONTROL Appareil]** : collecte des informations sur l’appareil de l’utilisateur.
+* **[!UICONTROL Environnement]** : collecte des informations sur le navigateur de l’utilisateur.
+* **[!UICONTROL Contexte d’emplacement]** : collecte des informations sur l’emplacement de l’utilisateur.
+* **[!UICONTROL Indications agent-utilisateur à entropie élevée]** : collecte des informations plus détaillées sur l’appareil de l’utilisateur.
+* **[!UICONTROL Envoyer le référent à Adobe Analytics une seule fois par page vue]** : empêchez l’envoi de données de référent en double à Adobe Analytics.

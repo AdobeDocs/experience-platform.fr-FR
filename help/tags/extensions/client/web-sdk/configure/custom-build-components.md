@@ -2,10 +2,10 @@
 title: Options de build
 description: Créez une version Web SDK personnalisée qui désactive les fonctionnalités pour réduire la taille de la version.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 9%
+source-wordcount: '336'
+ht-degree: 8%
 
 ---
 
@@ -20,11 +20,11 @@ La bibliothèque Web SDK comprend plusieurs modules pour différentes fonctionna
 
 Lorsque vous désactivez un composant, vous ne pouvez plus modifier les paramètres de ce composant. Si vous utilisez plusieurs instances Web SDK, les composants de build sélectionnés s’appliquent à toutes les instances.
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configure]** sur la carte [!UICONTROL Adobe Experience Platform Web SDK] .
-1. Développez l’accordéon **[!UICONTROL Custom build components]** en haut.
+1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
+1. Développez l’accordéon **[!UICONTROL Créer des options]** en haut.
 
 >[!WARNING]
 >
@@ -34,14 +34,14 @@ Adobe permet de désactiver les composants de build Web SDK suivants :
 
 | Créer un composant | Description | Fonctionnalités dépendantes |
 | --- | --- | --- |
-| **[!UICONTROL Activity collector]** | Permet la collecte automatique de liens et le suivi d’Activity Map. | |
-| **[!UICONTROL Advertising]** | Active l’intégration d’Adobe Advertising à Customer Journey Analytics. | |
+| **[!UICONTROL Collecteur d’activités]** | Permet la collecte automatique de liens et le suivi d’Activity Map. | |
+| **[!UICONTROL Publicité]** | Active l’intégration d’Adobe Advertising à Customer Journey Analytics. | |
 | **[!UICONTROL Audiences]** | Prend en charge l’intégration à Adobe Audience Manager, comme la synchronisation des identifiants. | |
-| **[!UICONTROL Brand concierge]** | Permet l’intégration à Brand Concierge. | |
-| **[!UICONTROL Consent]** | Permet d’utiliser les fonctionnalités de consentement. | action [[!UICONTROL Set consent]](../actions/set-consent.md) |
-| **[!UICONTROL Event merge]** | Obsolète. | [[!UICONTROL Event merge ID]](../data-element-types.md) élément de données (obsolète)<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) action (obsolète) |
-| **[!UICONTROL Media Analytics bridge]** | Prend en charge l’intégration à l’ancienne version de Media Analytics. | action [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) |
-| **[!UICONTROL Personalization]** | Prend en charge les intégrations avec Adobe Target et Adobe Journey Optimizer. | action [[!UICONTROL Apply propositions]](../actions/apply-propositions.md) |
-| **[!UICONTROL Push notifications]** | Active les notifications push web pour Adobe Journey Optimizer. | action [[!UICONTROL Send push subscription]](../actions/send-push-subscription.md) |
-| **[!UICONTROL Rules engine]** | Active la prise de décision de l’appareil avec Adobe Journey Optimizer. | [[!UICONTROL Evaluate rulsets]](../actions/evaluate-rulesets.md) action <br> Événement [[!UICONTROL Subscribe ruleset items]](../event-types.md#subscribe-ruleset-items) |
-| **[!UICONTROL Streaming media]** | Prend en charge l’intégration à la collecte de médias en flux continu. | action [[!UICONTROL Send media event]](../actions/send-media-event.md) |
+| **[!UICONTROL Concierge de marque]** | Permet l’intégration à Brand Concierge. | |
+| **[!UICONTROL Consentement]** | Permet d’utiliser les fonctionnalités de consentement. | Action [[!UICONTROL Définir le consentement]](../actions/set-consent.md) |
+| **[!UICONTROL Fusion des événements]** | Obsolète. | [[!UICONTROL ID de fusion d’événements]](../data-element-types.md) élément de données (obsolète)<br>[[!UICONTROL Réinitialiser l’ID de fusion d’événements]](../actions/reset-event-merge-id.md) action (obsolète) |
+| **[!UICONTROL Pont Media Analytics]** | Prend en charge l’intégration à l’ancienne version de Media Analytics. | Action [[!UICONTROL Obtenir le suivi Media Analytics]](../actions/get-media-analytics-tracker.md) |
+| **[!UICONTROL Personnalisation]** | Prend en charge les intégrations avec Adobe Target et Adobe Journey Optimizer. | [[!UICONTROL Application de propositions]](../actions/apply-propositions.md) action |
+| **[!UICONTROL Notifications push]** | Active les notifications push web pour Adobe Journey Optimizer. | [[!UICONTROL Envoyer un abonnement push]](../actions/send-push-subscription.md) action |
+| **[!UICONTROL Moteur de règles]** | Active la prise de décision de l’appareil avec Adobe Journey Optimizer. | [[!UICONTROL Évaluation des ensembles de règles]](../actions/evaluate-rulesets.md) action<br> Événement [[!UICONTROL Abonner des éléments d’ensemble de règles]](../event-types.md#subscribe-ruleset-items) |
+| **[!UICONTROL Streaming Media]** | Prend en charge l’intégration à la collecte de médias en flux continu. | Action [[!UICONTROL Envoyer l’événement multimédia]](../actions/send-media-event.md) |
