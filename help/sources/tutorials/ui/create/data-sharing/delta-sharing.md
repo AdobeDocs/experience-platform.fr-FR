@@ -1,11 +1,12 @@
 ---
 title: Utiliser le connecteur Source de partage Delta dans l’interface utilisateur
 description: Découvrez comment utiliser le connecteur source de partage Delta dans l’interface utilisateur d’Experience Platform.
+badge: Beta
 exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
-source-git-commit: 050f84fef2fd3a3eef9971e6245e3ea971d5a099
+source-git-commit: e379dce3cffb073a44bcf1c85c8456f75a635ec3
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 14%
+source-wordcount: '1169'
+ht-degree: 13%
 
 ---
 
@@ -16,8 +17,11 @@ ht-degree: 14%
 >title="Structure d&#39;un schéma"
 >abstract="Veillez à passer en revue la structure de votre schéma, car une fois que vous aurez commencé, vous ne pourrez plus y apporter de modifications."
 
-Lisez ce guide pour savoir comment utiliser le connecteur source [!DNL Delta Sharing] dans l’interface utilisateur de Adobe Experience Platform.
+>[!AVAILABILITY]
+>
+>Cette fonctionnalité est actuellement en version bêta fermée et n’est pas disponible pour tous les utilisateurs et utilisatrices. Contactez votre équipe de compte Adobe pour demander l’accès à la version bêta.
 
+Lisez ce guide pour savoir comment utiliser le connecteur source [!DNL Delta Sharing] dans l’interface utilisateur de Adobe Experience Platform.
 
 ## Commencer
 
