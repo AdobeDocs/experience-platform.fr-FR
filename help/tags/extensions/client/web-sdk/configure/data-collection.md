@@ -3,11 +3,26 @@ title: Paramètres de configuration de la collecte de données
 description: Configurez les paramètres de collecte de données dans l’extension de balise Web SDK.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 TQID: https://experienceleague.adobe.com/i1Q45GvFU8S73NBxDsGPKyLU8S-EdzbKyys2-7DNchs
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: eadea719-cf89-469b-a6fd-a236a7138047id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
 source-wordcount: 827
@@ -34,7 +49,7 @@ Cette section de configuration vous permet de déterminer comment les données s
 
 Les options disponibles sont les suivantes :
 
-## [!UICONTROL  Activé avant le rappel d’envoi d’événement ]
+## [!UICONTROL &#x200B; Activé avant le rappel d’envoi d’événement &#x200B;]
 
 Fonction de rappel permettant d’évaluer et de modifier la payload envoyée à Adobe. Dans l’éditeur de code, vous avez accès aux variables suivantes :
 

@@ -3,11 +3,32 @@ title: Prise en main de l’extension de balises Web SDK
 description: Envoyez des données d’événement à Adobe Experience Platform Edge Network à l’aide de l’extension de balise Web SDK.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 TQID: https://experienceleague.adobe.com/mMRG-nYUTs7o8N3VPd4H30cklcr2eTJJU0XQpBm2HQg
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: de9975b2-c43a-4287-9698-4f4cad92b83fid: ee602049-8a18-43df-9299-a689a025a371id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: ee602049-8a18-43df-9299-a689a025a371
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
 source-wordcount: 871
@@ -42,7 +63,8 @@ Le [modèle de données d’expérience (XDM)](/help/xdm/home.md) est une spéci
 
 ![Zone de travail des schémas](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
+>[!NOTE]
+>\
 >Une fois enregistrés, les schémas n’autorisent que des modifications *additifs*. Voir [évolution des schémas](/help/xdm/schema/composition.md#evolution) pour plus d’informations.
 
 ## Création dʼun flux de données {#datastream}
@@ -146,6 +168,6 @@ Vos modifications sont maintenant déployées dans votre environnement de dével
 Une fois que vous avez vérifié que la balise fonctionne dans votre environnement de développement, vous pouvez utiliser l’interface [!UICONTROL Flux de publication] pour publier la bibliothèque dans l’environnement d’évaluation, puis dans l’environnement de production.
 
 1. Ajoutez l’extension et la règle à une **bibliothèque**, créez-les dans un **environnement** et installez le code incorporé sur votre site.
-2. Validez avec ****.
+2. Validez avec **&#x200B;**.
 
 Vous disposez désormais d’une configuration allégée qui capture les événements et les envoie à Edge Network. Vous pouvez désormais développer davantage votre implémentation en ajoutant des champs à votre schéma, en ajoutant des produits à un flux de données ou en ajoutant des éléments de données à votre propriété de balise.
