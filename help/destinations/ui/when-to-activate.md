@@ -2,9 +2,9 @@
 title: Quand activer
 description: Découvrez la fonctionnalité Quand activer pour les destinations de diffusion en streaming et comment l’utiliser pour contrôler quelles modifications de profil déclenchent des exportations vers vos destinations.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: cb39b53b0d377bc4f48b9da7561b0d21b970363a
+source-git-commit: 8f338c286483f0041a4f6c1afa85cf341fdbe1e3
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1138'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ La fonction **[!UICONTROL Quand activer]** est prise en charge pour les types de
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activation_triggers"
 >title="Quand activer"
->abstract="Sélectionnez les types de modifications de profil qui déclenchent des exportations vers cette destination. Les trois déclencheurs sont activés par défaut. <ul><li><b>Modifications d’attribut :</b> les attributs de profil sont mis à jour à partir de toute source de données en amont.</li><li><b>Modifications de segmentation </b> le profil entre ou sort d’une audience évaluée par le service de segmentation d’Experience Platform.</li><li><b>Modifications d’identité :</b> graphique d’identité de profil est mis à jour, par exemple lorsqu’une nouvelle identité est ajoutée.</li></ul>"
+>abstract="Sélectionnez les types de modifications de profil qui déclenchent des exportations vers cette destination. Les trois déclencheurs sont activés par défaut. Les modifications d’attribut se produisent lorsque les attributs de profil sont mis à jour à partir d’une source de données en amont. Les modifications de segmentation se produisent lorsqu’un profil entre ou sort d’une audience évaluée par le service de segmentation d’Experience Platform. Les changements d’identité se produisent lorsqu’un graphique d’identité de profil est mis à jour, par exemple lorsqu’une nouvelle identité est ajoutée."
 
 Le tableau ci-dessous décrit chaque type de déclencheur. Les déclencheurs sont répertoriés dans l’ordre du volume d’activation attendu, du plus élevé au plus bas.
 
