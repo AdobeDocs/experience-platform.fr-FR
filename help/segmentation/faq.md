@@ -3,27 +3,14 @@ title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
 TQID: https://experienceleague.adobe.com/uIgNpBdbgynUJcsisLGwpNGOnRZ-Wkws2YlWzQIJFWY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e0eb8757-182f-49f3-94a4-1587d16f5094id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 2165b294f87139a07bec0553b380aba4699b1d40
 workflow-type: tm+mt
-source-wordcount: 4871
+source-wordcount: 4902
 ht-degree: 24%
 
 ---
@@ -189,7 +176,7 @@ Si une audience évaluée à l’aide de la segmentation par lots est republiée
 
 La méthode pour mettre une audience à l’état de brouillon dépend de l’origine de l’audience.
 
-Pour les audiences créées à l’aide du créateur de segments, vous pouvez définir l’audience sur l’état de brouillon en sélectionnant « [!UICONTROL Save as draft] » dans le créateur de segments.
+Pour les audiences créées à l’aide du créateur de segments, vous pouvez définir l’audience sur l’état de brouillon en sélectionnant « [!UICONTROL Enregistrer en tant que brouillon] » dans le créateur de segments.
 
 Pour les audiences créées dans Composition de l’audience, les audiences sont automatiquement enregistrées en tant que brouillon jusqu’à leur publication.
 
@@ -199,13 +186,13 @@ Une fois qu’une audience est à l’état publié, vous **pouvez pas** l’aud
 
 ### Comment puis-je placer une audience à l’état publié ?
 
-Pour les audiences créées à l’aide du créateur de segments ou de la composition de l’audience, vous pouvez définir l’audience sur l’état publié en sélectionnant « [!UICONTROL Publish] » dans leurs interfaces utilisateur respectives.
+Pour les audiences créées à l’aide du créateur de segments ou de la composition de l’audience, vous pouvez définir l’audience sur l’état publié en sélectionnant « [!UICONTROL Publier] » dans leurs interfaces utilisateur respectives.
 
 Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL Deactivate] ».
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL  Désactiver ].
 
 ### Comment republier une audience ?
 
@@ -213,7 +200,7 @@ Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d�
 >
 >L’état « republié » est le même que l’état publié pour le comportement de l’audience.
 
-Vous pouvez republier une audience en sélectionnant une audience qui est inactive, en ouvrant le menu d’actions rapides sur Audience Portal et en sélectionnant [!UICONTROL Publish].
+Vous pouvez republier une audience en sélectionnant une audience dont le statut est inactif, en ouvrant le menu d’actions rapides sur Audience Portal et en sélectionnant [!UICONTROL Publier].
 
 ### Comment mettre une audience à l’état supprimé ?
 
@@ -221,7 +208,7 @@ Vous pouvez republier une audience en sélectionnant une audience qui est inacti
 >
 >Vous pouvez uniquement supprimer les audiences qui ne sont **pas** utilisées dans les activations en aval. De plus, vous ne pouvez pas supprimer une audience référencée dans une autre audience. Si vous ne pouvez pas supprimer votre audience, assurez-vous de ne **pas** l’utiliser dans des services en aval ou comme bloc de création d’une autre audience.
 
-Vous pouvez mettre une audience en état de suppression en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant [!UICONTROL Delete].
+Pour supprimer une audience, ouvrez le menu des actions rapides dans Audience Portal et sélectionnez [!UICONTROL Supprimer].
 
 ### Existe-t-il des avertissements pour les transitions d’état de cycle de vie ?
 
@@ -323,11 +310,11 @@ Oui ! Vous pouvez utiliser des audiences à partir de la composition de l’aud
 
 Le placement du composant de composition suit une structure rigide comme suit :
 
-1. Vous **toujours** commencer par le bloc de [!UICONTROL Audience] pour sélectionner votre activité de départ. Vous pouvez avoir un maximum de **un** bloc [!UICONTROL Audience].
-2. Vous pouvez éventuellement ajouter un bloc de [!UICONTROL Exclude] qui suit le bloc de [!UICONTROL Audience].
-3. Vous pouvez éventuellement ajouter un bloc de [!UICONTROL Enrich] qui suit le bloc de [!UICONTROL Exclude]. Vous ne pouvez utiliser qu’**un** bloc de [!UICONTROL Enrich] par composition.
-4. Vous pouvez éventuellement ajouter un bloc de [!UICONTROL Rank] ou de [!UICONTROL Split]. Vous pouvez **uniquement** avoir l’un de ces blocs par composition.
-5. Vous **toujours** vous terminez par un bloc de [!UICONTROL Save] pour enregistrer votre audience.
+1. Commencez **toujours** par le bloc [!UICONTROL Audience] pour sélectionner votre activité de départ. Vous pouvez avoir un bloc **un** [!UICONTROL Audience] maximum.
+2. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Exclure] qui suit le bloc [!UICONTROL Audience].
+3. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Enrichir] qui suit le bloc [!UICONTROL Exclure]. Vous ne pouvez utiliser qu’un seul bloc **one** [!UICONTROL Enrich] par composition.
+4. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Classement] ou [!UICONTROL Fractionner]. Vous pouvez **uniquement** avoir l’un de ces blocs par composition.
+5. Vous **toujours** vous terminez par un bloc [!UICONTROL Enregistrer] pour enregistrer votre audience.
 
 En outre, les restrictions suivantes s’appliquent lors de l’utilisation de ces blocs :
 
@@ -379,7 +366,7 @@ La section suivante répertorie les questions relatives à l’appartenance à u
 
 ### Comment puis-je confirmer l’appartenance d’un profil à une audience ?
 
-Pour confirmer l’appartenance d’un profil à une audience, consultez la page des détails du profil que vous souhaitez confirmer. Sélectionnez **[!UICONTROL Attributes]**, suivi de **[!UICONTROL View JSON]**, et vous pouvez confirmer que l’objet `segmentMembership` contient l’identifiant de l’audience.
+Pour confirmer l’appartenance d’un profil à une audience, consultez la page des détails du profil que vous souhaitez confirmer. Sélectionnez **[!UICONTROL Attributs]**, suivi de **[!UICONTROL Affichage JSON]** et vous pouvez confirmer que l’objet `segmentMembership` contient l’identifiant de l’audience.
 
 ### L’adhésion à l’audience peut-elle dériver entre l’adhésion idéale et l’adhésion réelle ?
 
@@ -451,5 +438,5 @@ La disponibilité d’une définition de segment peut prendre jusqu’à une heu
 
 ### Existe-t-il des limitations aux données diffusées en continu dans ?
 
-Lors de l’utilisation de la segmentation Edge ou en flux continu, assurez-vous que les événements de chaque profil sont espacés de manière appropriée. Pour maintenir la stabilité et les performances du système, si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Segmentation Service peut traiter ces événements comme des données générées par les robots et ignorer l’évaluation de l’audience pour ces événements. Ces événements seront toujours stockés. En règle générale, vous devez disposer d’au **cinq secondes** entre les événements pour le même profil afin d’assurer une évaluation fiable de l’audience.
+Lors de l’utilisation de la segmentation Edge ou en flux continu, assurez-vous que les événements de chaque profil sont espacés de manière appropriée. Pour maintenir la stabilité et les performances du système, si un trop grand nombre d’événements sont diffusés en continu dans la même seconde (par exemple, 1 000 événements en 3 secondes à l’aide du même ECID), Segmentation Service peut traiter ces événements comme des données générées par des robots et ignorer l’évaluation de l’audience pour ces événements. Ces événements seront toujours stockés. En règle générale, vous devez disposer d’au **cinq secondes** entre les événements pour le même profil afin d’assurer une évaluation fiable de l’audience.
 
