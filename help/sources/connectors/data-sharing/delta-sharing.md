@@ -29,7 +29,7 @@ Du côté du fournisseur, assurez-vous que vous disposez des éléments suivants
 - **Tables delta éligibles** : les tables que vous envisagez de partager doivent :
    - Soyez **tables delta**.
    - être configuré sur un stockage qui prend en charge les [!DNL Delta Sharing] ouverts (stockage externe ou configuration prise en charge par le [!DNL Databricks]).
-   - Les filtres de ligne ou les masques de colonne ne sont pas appliqués ****[!DNL Databricks] ne permet pas le partage de tels tableaux).
+   - Les filtres de ligne ou les masques de colonne ne sont pas appliqués **&#x200B;**&#x200B;[!DNL Databricks] ne permet pas le partage de tels tableaux).
 
 #### Configuration des destinataires et des partages
 
@@ -118,4 +118,4 @@ Lors du mappage de tables partagées à des schémas Experience Platform, seuls 
 
 ## Connexion à [!DNL Delta Sharing] dans l’interface utilisateur
 
-Lisez le [[!DNL Delta Sharing ]  guide de l’interface utilisateur ](../../tutorials/ui/create/data-sharing/delta-sharing.md) pour savoir comment ingérer des données dans Experience Platform avec la source [!DNL Delta Sharing].
+Lisez le [[!DNL Delta Sharing &#x200B;]  guide de l’interface utilisateur &#x200B;](../../tutorials/ui/create/data-sharing/delta-sharing.md) pour savoir comment ingérer des données dans Experience Platform avec la source [!DNL Delta Sharing].
