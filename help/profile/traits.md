@@ -2,9 +2,9 @@
 title: Présentation des caractéristiques
 description: Découvrez comment utiliser les caractéristiques, qui sont un moyen léger et plus efficace de stocker l’activité des profils. Vous pouvez utiliser les caractéristiques pour maintenir la conformité aux droits de licence de votre profil tout en préservant l’activation enrichie des profils.
 hide: true
-source-git-commit: b86770c580e495fb9e2d80d4ef59f642ac15c1f2
+source-git-commit: dd91b0f34db97515e9fd0cd284353b2c6466119f
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1242'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Actuellement, vous pouvez stocker l’ensemble de l’« événement brut » dan
 
 Avec les caractéristiques, vous pouvez ajouter des données « précalculées » basées sur les règles que vous avez définies. Les caractéristiques sont basées sur la logique conditionnelle que vous spécifiez et sont plus efficaces en termes de stockage que l’événement d’expérience brut.
 
-Les caractéristiques offrent une approche plus légère et plus efficace du stockage de l’activité des profils. Par conséquent, cela peut vous aider à maintenir la conformité avec vos droits de licence de profil tout en préservant l’activation des données de profil riches. Par exemple, vous pouvez utiliser les caractéristiques pour prendre en charge la collecte de données si le débit d’ingestion est élevé.
+Les caractéristiques offrent une approche plus légère et plus efficace du stockage de l’activité des profils. Par conséquent, cela peut vous aider à capturer des signaux comportementaux pour les cas d’utilisation d’activation, même lorsque vous ingérez des données d’événement à grande échelle, tout en maintenant la conformité avec vos droits de licence de profil.
 
 ## Conditions préalables {#prerequisites}
 
@@ -56,17 +56,17 @@ Avec la version Beta des caractéristiques actuelle, gardez à l’esprit les re
 >- Actuellement, les caractéristiques ne prennent en charge que la **logique booléenne**
 >- Les caractéristiques sont évaluées par événement
 
-Pour créer une caractéristique, accédez à la section **[!UICONTROL Profiles]** et sélectionnez **[!UICONTROL Traits]**.
+Pour créer une caractéristique, accédez à la section **[!UICONTROL Profils]** et sélectionnez **[!UICONTROL Caractéristiques]**.
 
 ![Le bouton Caractéristiques est mis en surbrillance.](/help/profile/images/traits/access-traits.png)
 
-La page de navigation des caractéristiques s’affiche. Avant de pouvoir créer une caractéristique, vous devez activer les jeux de données à utiliser avec les caractéristiques en sélectionnant **[!UICONTROL Enable dataset for traits]**.
+La page de navigation des caractéristiques s’affiche. Avant de pouvoir créer une caractéristique, vous devez activer les jeux de données à utiliser avec les caractéristiques en sélectionnant **[!UICONTROL Activer le jeu de données pour les caractéristiques]**.
 
 ![Le bouton Activer le jeu de données pour les caractéristiques est mis en surbrillance.](/help/profile/images/traits/select-enable.png)
 
 >[!IMPORTANT]
 >
->L’activation d’un jeu de données pour les caractéristiques est un **processus irréversible**. Si vous activez un jeu de données pour les caractéristiques, il ne peut pas être activé pour le profil.
+>L’activation d’un jeu de données pour les caractéristiques est un **processus irréversible**. Si vous activez un jeu de données pour les caractéristiques, il commencera à stocker les caractéristiques et ne stockera plus les événements d’expérience à l’avenir.
 >
 >Pour activer un jeu de données pour les caractéristiques, le jeu de données **doit** satisfaire aux conditions suivantes :
 >
@@ -74,7 +74,7 @@ La page de navigation des caractéristiques s’affiche. Avant de pouvoir créer
 >- Le jeu de données **ne doit** contenir aucune donnée déjà ingérée
 >- Le jeu de données **doit** être activé pour Profil
 
-La fenêtre contextuelle **[!UICONTROL Enable dataset for traits]** s’affiche. Une liste de tous vos jeux de données s’affiche. Sélectionnez les jeux de données que vous souhaitez activer pour les caractéristiques, puis **[!UICONTROL Continue]**.
+La fenêtre contextuelle **[!UICONTROL Activer le jeu de données pour les caractéristiques]** s’affiche. Une liste de tous vos jeux de données s’affiche. Sélectionnez les jeux de données à activer pour les caractéristiques, puis **[!UICONTROL Continuer]**.
 
 >[!NOTE]
 >
@@ -82,9 +82,13 @@ La fenêtre contextuelle **[!UICONTROL Enable dataset for traits]** s’affiche.
 
 ![La fenêtre contextuelle Activer le jeu de données pour les caractéristiques s’affiche. Le bouton Continuer est mis en surbrillance.](/help/profile/images/traits/enable-traits-popover.png)
 
-Maintenant que vous disposez d’un jeu de données compatible avec les caractéristiques, vous pouvez créer votre caractéristique. Sélectionnez **[!UICONTROL Create trait]** pour afficher le créateur de caractéristiques.
+Maintenant que vous disposez d’un jeu de données compatible avec les caractéristiques, vous pouvez créer votre caractéristique. Sélectionnez **[!UICONTROL Créer une caractéristique]** pour afficher le créateur de caractéristiques.
 
 ![&#x200B; La fenêtre contextuelle Jeu de données activé pour les caractéristiques s’affiche. Le bouton Créer une caractéristique est mis en surbrillance.](/help/profile/images/traits/select-create-trait.png)
+
+Si vous avez déjà activé un jeu de données pour les caractéristiques, vous pouvez également sélectionner **[!UICONTROL Créer une caractéristique]** dans la page de navigation des caractéristiques pour ouvrir le créateur de caractéristiques.
+
+![Le bouton Créer des caractéristiques est mis en surbrillance sur la page de navigation des caractéristiques.](/help/profile/images/traits/select-create-trait-browse.png)
 
 Dans le créateur de caractéristiques, vous pouvez créer la caractéristique et en définir les détails. Pour créer une caractéristique, choisissez un événement dans la barre de navigation de gauche et ajoutez-le à la zone de travail.
 
@@ -100,7 +104,7 @@ Après avoir ajouté vos événements, vous pouvez ajouter les détails de la ca
 | Description | Description de la caractéristique. |
 | Expiration des données | Expiration des données de la caractéristique. Cela détermine la durée pendant laquelle les données de la caractéristique sont actives. Cette valeur peut être définie sur un maximum de 120 jours. Par défaut, cette valeur est définie sur 1 jour. |
 
-Une fois que les détails de la caractéristique sont définis, vous pouvez **[!UICONTROL Save as draft]** ou **[!UICONTROL Publish]** la caractéristique. Pour utiliser votre caractéristique dans une audience, vous **devez** la publier.
+Une fois que les détails de votre caractéristique sont définis, vous pouvez **[!UICONTROL Enregistrer en tant que brouillon]** ou **[!UICONTROL Publier]** votre caractéristique. Pour utiliser votre caractéristique dans une audience, vous **devez** la publier.
 
 >[!NOTE]
 >
@@ -112,7 +116,7 @@ Une fois que les détails de la caractéristique sont définis, vous pouvez **[!
 >
 >Vous pouvez **uniquement** utiliser des caractéristiques dans les audiences évaluées à l’aide de la segmentation par lots ou de la segmentation Edge. La segmentation en flux continu n’est **pas** prise en charge pour le moment.
 
-Une fois votre caractéristique créée, vous pouvez l’utiliser dans vos définitions d’audience. Pour ouvrir le créateur de segments, sélectionnez **[!UICONTROL Audiences]**, puis **[!UICONTROL Create audience]**, **[!UICONTROL Build rule]** et **[!UICONTROL Create]**.
+Une fois votre caractéristique créée, vous pouvez l’utiliser dans vos définitions d’audience. Pour ouvrir le créateur de segments, sélectionnez **[!UICONTROL Audiences]** puis **[!UICONTROL Créer une audience]**, **[!UICONTROL Créer une règle]** et **[!UICONTROL Créer]**.
 
 ![Le chemin d’accès au Créateur d’audience s’affiche et est mis en surbrillance.](/help/profile/images/traits/create-audience.png)
 
@@ -120,7 +124,7 @@ Le créateur de segments s’affiche. Dans le créateur de segments, vous pouvez
 
 ![L’onglet Caractéristiques s’affiche dans le Créateur d’audience, affichant toutes les caractéristiques que vous pouvez utiliser lors de la création de l’audience.](/help/profile/images/traits/traits-in-audience-builder.png)
 
-Après avoir ajouté les caractéristiques à la zone de travail de création des règles, vous pouvez choisir de créer une audience qui **inclut** ou **exclut** la caractéristique ajoutée. Vous pouvez éventuellement sélectionner **[!UICONTROL Recency]** pour vérifier si la condition de caractéristique a été remplie dans la période spécifiée.
+Après avoir ajouté les caractéristiques à la zone de travail de création des règles, vous pouvez choisir de créer une audience qui **inclut** ou **exclut** la caractéristique ajoutée. Vous pouvez éventuellement sélectionner **[!UICONTROL Récence]** pour vérifier si la condition de caractéristique a été remplie dans la période spécifiée.
 
 ![Les options disponibles dans les caractéristiques dans le Créateur d’audience s’affichent.](/help/profile/images/traits/trait-attribute.png)
 
@@ -128,7 +132,7 @@ Après avoir ajouté les caractéristiques à la zone de travail de création de
 
 Vous pouvez surveiller et gérer vos caractéristiques par le biais de diverses interfaces.
 
-Dans la vue Liste **[!UICONTROL Traits]**, vous pouvez voir toutes les caractéristiques créées dans le sandbox, ainsi qu’un aperçu de toutes les définitions des caractéristiques.
+Dans la vue de liste **[!UICONTROL Caractéristiques]**, vous pouvez voir toutes les caractéristiques qui ont été créées dans le sandbox, ainsi qu’un aperçu de toutes les définitions des caractéristiques.
 
 ![La page Parcourir les caractéristiques s’affiche, affichant les caractéristiques disponibles pour le sandbox.](/help/profile/images/traits/browse-traits.png)
 
@@ -139,11 +143,17 @@ Dans la vue Liste **[!UICONTROL Traits]**, vous pouvez voir toutes les caractér
 | Jeu de données | Jeu de données auquel appartient la caractéristique. |
 | Créé par | Nom d’utilisateur de la personne qui a créé la caractéristique. |
 | Expiration des données | Valeur d’expiration des données pour la caractéristique. Cela détermine la durée pendant laquelle les données de la caractéristique sont actives. |
-| Statut du cycle de vie | Statut de la caractéristique. Les valeurs possibles sont **[!UICONTROL Invalid]**, **[!UICONTROL Pending]** et **[!UICONTROL Published]**. |
+| Statut du cycle de vie | Statut de la caractéristique. Les valeurs possibles sont les suivantes : **[!UICONTROL Non valide]**, **[!UICONTROL En attente]** et **[!UICONTROL Publié]**. |
 | Dernière mise à jour | Date et heure de la dernière mise à jour de la caractéristique. |
 | Created | Date et heure de création de la caractéristique. |
 
-Vous pouvez également sélectionner les points de suspension (...) à côté de la caractéristique pour d’autres options, y compris la création d’une audience à l’aide de la caractéristique sélectionnée, la désactivation de la caractéristique et la suppression de la caractéristique.
+Vous pouvez également sélectionner les points de suspension (...) en regard de la caractéristique pour des actions rapides, notamment la création d’une audience à l’aide de la caractéristique sélectionnée, la désactivation de la caractéristique et la suppression de la caractéristique.
+
+| Action rapide | Description |
+| ------------ | ----------- |
+| Créer une audience à l’aide d’une caractéristique | Ouvre automatiquement le Créateur d’audiences avec la caractéristique ajoutée aux règles de l’audience. |
+| Désactiver | Désactive la caractéristique. La désactivation de la caractéristique ne la supprime **pas** de l’interface utilisateur. Cependant, il n’affecte plus vos droits de licence et ne peut plus être utilisé dans les audiences. Une fois qu’une caractéristique est désactivée, vous pouvez la réactiver pour une utilisation ultérieure. |
+| Supprimer | Supprime la caractéristique. La suppression de la caractéristique supprime la caractéristique de l’interface utilisateur, elle ne peut donc plus être utilisée. |
 
 Vous pouvez afficher plus de détails en sélectionnant le nom de la caractéristique. La page de détails des caractéristiques s’affiche. Cette page affiche des informations, notamment le résumé de la caractéristique, les profils qualifiés au fil du temps et les audiences avec cette caractéristique.
 
