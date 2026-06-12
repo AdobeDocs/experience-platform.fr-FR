@@ -5,7 +5,7 @@ badgeBeta: label="Beta" type="Informative"
 source-git-commit: 83c30fb345f38aba65c47f16e3cb026dd2734066
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +36,7 @@ La fonction **[!UICONTROL Quand activer]** est prise en charge pour les types de
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activation_triggers"
 >title="Quand activer"
->abstract="Sélectionnez les types de modifications de profil qui déclenchent des exportations vers cette destination. Les trois déclencheurs sont activés par défaut. <ul><li><b>Modifications d’attribut :</b> les attributs de profil sont mis à jour à partir de toute source de données en amont.</li><li><b>Modifications de segmentation </b> le profil entre ou sort d’une audience évaluée par le service de segmentation d’Experience Platform.</li><li><b>Modifications d’identité :</b> graphique d’identité de profil est mis à jour, par exemple lorsqu’une nouvelle identité est ajoutée.</li></ul>"
+>abstract="Sélectionnez les types de modifications de profil qui déclenchent des exports vers cette destination. Les trois déclencheurs sont activés par défaut. <ul><li><b>Modifications d’attribut :</b> les attributs de profil sont mis à jour à partir de toute source de données en amont.</li><li><b>Modifications de segmentation :</b> le profil entre ou sort d’une audience évaluée par le service de segmentation d’Experience Platform.</li><li><b>Modifications d’identité :</b> le graphique d’identité de profil est mis à jour, par exemple lorsqu’une nouvelle identité est ajoutée.</li></ul>"
 
 Le tableau ci-dessous décrit chaque type de déclencheur. Les déclencheurs sont répertoriés dans l’ordre du volume d’activation attendu, du plus élevé au plus bas.
 

@@ -25,7 +25,7 @@ topic_v2:
 source-git-commit: f494c124cf4fd7f68a132cfa8263ce7aa5c69441
 workflow-type: tm+mt
 source-wordcount: 5669
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -653,7 +653,7 @@ Si vous souhaitez activer des audiences externes vers vos destinations sans expo
 
 Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#review).
 
-### [!BADGE Beta &#x200B;]{type=Informative} Exporter des tableaux et des objets à partir d’attributs d’enrichissement {#export-arrays-enrichment-attributes}
+### [!BADGE Beta]{type=Informative} Exporter des tableaux et des objets à partir d’attributs d’enrichissement {#export-arrays-enrichment-attributes}
 
 >[!AVAILABILITY]
 >
@@ -661,8 +661,8 @@ Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#rev
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_info_alert"
->title="Exportation de tableaux et d’objets complexes activée"
->abstract="Cette destination prend en charge l’exportation de tableaux et d’objets complexes, car le bouton Exporter des tableaux, des mappages et des objets est activé. Vous pouvez exporter des tableaux de niveau supérieur, des éléments de tableau ou plusieurs champs du même tableau dans un seul mappage. Voir la documentation pour plus de détails."
+>title="Export de tableaux et d’objets complexes activée"
+>abstract="Cette destination prend en charge l’export de tableaux et d’objets complexes, car le bouton Exporter des tableaux, des mappages et des objets est activé. Vous pouvez exporter des tableaux de niveau supérieur, des éléments de tableau ou plusieurs champs du même tableau dans un seul mappage. Voir la documentation pour plus de détails."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_source_field"
