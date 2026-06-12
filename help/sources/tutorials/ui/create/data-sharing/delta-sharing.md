@@ -3,14 +3,14 @@ title: Utiliser le connecteur Source de partage Delta dans l’interface utilisa
 description: Découvrez comment utiliser le connecteur source de partage Delta dans l’interface utilisateur d’Experience Platform.
 badge: Beta
 exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
-source-git-commit: e379dce3cffb073a44bcf1c85c8456f75a635ec3
+source-git-commit: d820a764b7adc6001992964e4245396161325937
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 13%
+source-wordcount: '1194'
+ht-degree: 5%
 
 ---
 
-# Utiliser le connecteur source [!DNL Delta Sharing] dans l’interface d’utilisation {#use-deltashare-in-the-ui}
+# Utiliser le connecteur source [!DNL Databricks Delta Sharing] dans l’interface d’utilisation {#use-deltashare-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_deltashare_schema"
@@ -19,18 +19,18 @@ ht-degree: 13%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est actuellement en version bêta fermée et n’est pas disponible pour tous les utilisateurs et utilisatrices. Contactez votre équipe de compte Adobe pour demander l’accès à la version bêta.
+>Cette fonctionnalité est actuellement en version bêta **limitée** et ne sera disponible que jusqu’au 15 juillet 2026. Contactez votre équipe de compte Adobe pour demander l’accès à la version bêta.
 
-Lisez ce guide pour savoir comment utiliser le connecteur source [!DNL Delta Sharing] dans l’interface utilisateur de Adobe Experience Platform.
+Lisez ce guide pour savoir comment utiliser le connecteur source [!DNL Databricks Delta Sharing] dans l’interface utilisateur de Adobe Experience Platform.
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
+Ce tutoriel nécessite une connaissance pratique des composants Experience Platform suivants :
 
-- [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-   - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+- [Sources](../../../../home.md) : utilisez les sources pour créer des connexions et des flux de données pour les sources de données externes prises en charge.
+- [Schémas du modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : les tables partagées sont représentées dans Experience Platform par des schémas relationnels.
+- [Jeux de données](../../../../../catalog/home.md) : les données partagées sont représentées sous la forme de jeux de données virtuels dans Experience Platform. Les données sources ne sont pas physiquement ingérées ou copiées dans le lac de données Experience Platform.
+- [Query Service/Data Distiller](../../../../../query-service/home.md) : utilisez Query Service ou Data Distiller pour interroger et utiliser des jeux de données virtuels.
 
 >[!IMPORTANT]
 >
@@ -40,7 +40,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour utiliser [!DNL Delta Sharing], sélectionnez la carte source **[!UICONTROL Partage Delta]** sous le *[!UICONTROL Partage de données]*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Pour utiliser [!DNL Delta Sharing], sélectionnez la carte source **[!UICONTROL Partage Delta pour les briques de données]** sous le *[!UICONTROL Partage de données]*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
@@ -73,7 +73,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la sourc
 
 ## Sélectionner vos données
 
-Sélectionnez ensuite les données à ingérer dans Experience Platform. Utilisez le répertoire du tableau pour accéder aux données à ingérer et utilisez l’interface de prévisualisation pour afficher le contenu et la structure de vos données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Sélectionnez ensuite le pour lequel vous souhaitez créer un jeu de données virtuel dans Experience Platform et les applications basées sur une plateforme. Utilisez le répertoire du tableau pour accéder aux données souhaitées et l’interface de prévisualisation pour afficher le contenu et la structure des données sélectionnées. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour sélectionner les colonnes de votre schéma.
 
 ![Étape de sélection des données présentant le répertoire du tableau et l’aperçu des données à ingérer.](../../../../images/tutorials/create/delta-sharing/select-data.png)
 
@@ -110,15 +110,15 @@ Vous pouvez laisser le descripteur de version vide si vous effectuez l’une des
 
 ## Fournir des détails sur le jeu de données et le flux de données
 
-Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (colonnes/champs) et des enregistrements (lignes). Les données correctement ingérées par Experience Platform sont conservées sous forme de jeux de données dans le lac de données.
+Un jeu de données est une structure de gestion pour une collecte de données, généralement sous la forme d’un tableau, qui contient un schéma avec des colonnes ou des champs. Dans **Partage de données**, les données sélectionnées sont représentées dans Experience Platform sous la forme d’un jeu de données virtuel. Les données restent dans le système source et ne sont pas ingérées ou conservées dans le lac de données.
 
-Une fois votre jeu de données configuré, vous devez fournir des détails sur votre flux de données, y compris un nom, une description facultative et des configurations d’alerte.
+Une fois votre jeu de données virtuel configuré, fournissez les détails de votre flux de données, y compris un nom, une description facultative et des configurations d’alerte.
 
 | Configurations du flux de données | Description |
 | --- | --- |
 | Nom du flux de données | Nom du flux de données. Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes ](../../alerts.md) [<ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -137,4 +137,4 @@ Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTR
 
 ## Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées et afficher les informations relatives au taux d’ingestion, aux succès et aux erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur la [surveillance des comptes et des flux de données dans l’interface utilisateur](../../../../../dataflows/ui/monitor-sources.md).
+Une fois votre flux de données créé, vous pouvez surveiller son statut et son activité pour afficher des informations telles que le statut d’exécution, la réussite et les erreurs. Pour plus d’informations, consultez le tutoriel sur la [surveillance des comptes et des flux de données dans l’interface utilisateur](../../../../../dataflows/ui/monitor-sources.md).
