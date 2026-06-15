@@ -1,18 +1,14 @@
 ---
 title: LAVE
 description: En savoir plus sur la source LAVA sur Adobe Experience Platform
-source-git-commit: d3704d813a30636b6b38fa35335325cfe15c293f
+source-git-commit: b1810a83a3eda5674d91a8c122f3ad858ef94aa1
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1584'
 ht-degree: 1%
 
 ---
 
 # [!DNL LAVA]
-
->[!AVAILABILITY]
->
->La source [!DNL LAVA] est en version Beta. Lisez les [termes et conditions](../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 [[!DNL LAVA]](https://lava.ai/) est une plateforme d’engagement client. [!DNL LAVA] s&#39;intègre à vos billetteries, points de vente, applications mobiles et autres points de contact et crée des moments qui comptent avec nos solutions d&#39;automatisation, de fidélité et de laissez-passer mobile.
 

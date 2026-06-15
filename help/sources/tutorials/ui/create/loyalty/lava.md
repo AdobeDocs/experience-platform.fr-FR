@@ -1,18 +1,14 @@
 ---
 title: Créer une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de LAVA vers Adobe Experience Platform à l’aide de l’interface utilisateur.
-source-git-commit: c8928f87299aa68e229512acfb4b0910d9129b43
+source-git-commit: b1810a83a3eda5674d91a8c122f3ad858ef94aa1
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '877'
 ht-degree: 23%
 
 ---
 
 # Créer une connexion source et un flux de données pour diffuser des données [!DNL LAVA] à l’aide de l’interface utilisateur
-
->[!AVAILABILITY]
->
->La source [!DNL LAVA] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Suivez ce guide détaillé pour configurer votre propre connecteur source [!DNL LAVA] dans l’interface utilisateur d’Experience Platform.
 

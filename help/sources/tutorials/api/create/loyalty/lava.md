@@ -1,18 +1,14 @@
 ---
 title: Créez une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’API Flow Service
 description: Découvrez comment importer des données de flux de LAVA vers Adobe Experience Platform à l’aide de l’API Flow Service.
-source-git-commit: c8928f87299aa68e229512acfb4b0910d9129b43
+source-git-commit: b1810a83a3eda5674d91a8c122f3ad858ef94aa1
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1793'
 ht-degree: 39%
 
 ---
 
 # Créez une connexion source et un flux de données pour diffuser [!DNL LAVA] données à l’aide de l’API [!DNL Flow Service]
-
->[!AVAILABILITY]
->
->La source [!DNL LAVA] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 ## Prise en main
 
@@ -233,7 +229,7 @@ Pour que les données sources soient utilisées dans Experience Platform, un sch
 
 Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=fr#create).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Créer un jeu de données cible {#target-dataset}
 
