@@ -17,10 +17,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+source-git-commit: f4e7603e088454b5be2d454835e9f58644a23fe4
 workflow-type: tm+mt
-source-wordcount: 1178
-ht-degree: 18%
+source-wordcount: 1240
+ht-degree: 17%
 
 ---
 
@@ -95,8 +95,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Bombora]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Bombora]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -105,25 +105,25 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 Pour exporter des audiences de compte vers Bombora, vous avez besoin des informations suivantes.
 
 1. Un compte Bombora. Si vous n&#39;en avez pas, vous pouvez demander un compte Bombora en utilisant le [formulaire de demande d&#39;activation d&#39;audience Bombora](https://customers.bombora.com/artcdp/audience-activation-request).
-2. Un **[!UICONTROL client ID]** et un **[!UICONTROL client secret]** Bombora.
+2. Un Bombora **[!UICONTROL identifiant client]** et **[!UICONTROL secret client]**.
 3. Les données envoyées à Bombora doivent provenir de jeux de données **activés pour Profil**, de sorte que le jeu de données soit inclus dans Profil. Assurez-vous que vos jeux de données sont [activés pour le profil](/help/catalog/datasets/enable-for-profile.md) avant d’activer des audiences vers cette destination.
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des autorisations **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 ![Ajouter un jeton porteur](../../assets/catalog/advertising/bombora/add-bearer-token.png)
 
-* **[!UICONTROL Client ID]** : saisissez votre identifiant client [!DNL Bombora].
-* **[!UICONTROL Client secret]** : saisissez votre secret client [!DNL Bombora].
+* **[!UICONTROL Identifiant client]** : saisissez votre identifiant client [!DNL Bombora].
+* **[!UICONTROL Secret client]** : saisissez votre secret client [!DNL Bombora].
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -131,7 +131,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Ajouter des informations sur la connexion de destination](../..//assets/catalog/advertising/bombora/name-and-description.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 
 Vous êtes maintenant prêt à activer vos audiences dans Bombora.
@@ -140,8 +140,8 @@ Vous êtes maintenant prêt à activer vos audiences dans Bombora.
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md) pour obtenir des instructions sur l’activation des audiences de compte vers cette destination.
 
@@ -153,6 +153,7 @@ La destination Bombora nécessite que vous configuriez les mappages suivants pou
 |---------|----------|---------|
 | Toute valeur | `Identity: primaryId` | Ce mappage est obligatoire pour qu’Experience Platform établisse une connexion à Bombora. Cette valeur n’est pas exportée vers Bombora, mais elle est requise pour la configuration de destination. Vous pouvez sélectionner n’importe quel attribut pour le champ source. |
 | `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora utilise des adresses de sites Web ou de domaines pour créer une liste de comptes. |
+| `xdm: accountKey.sourceKey` | `xdm: externalAccountId` | Identifiant de compte unique. Bombora utilise ce champ pour identifier les comptes de manière unique. Si plusieurs enregistrements partagent la même valeur de domaine, mais n’ont pas d’ID de compte unique, l’API de Bombora rejette la requête. |
 
 ![Ajouter des mappages obligatoires](../..//assets/catalog/advertising/bombora/mappings.png)
 
