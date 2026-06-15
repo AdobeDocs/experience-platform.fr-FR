@@ -1,24 +1,20 @@
 ---
 title: Créer une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de LAVA vers Adobe Experience Platform à l’aide de l’interface utilisateur.
-source-git-commit: c8928f87299aa68e229512acfb4b0910d9129b43
+source-git-commit: b1810a83a3eda5674d91a8c122f3ad858ef94aa1
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '877'
 ht-degree: 23%
 
 ---
 
 # Créer une connexion source et un flux de données pour diffuser des données [!DNL LAVA] à l’aide de l’interface utilisateur
 
->[!AVAILABILITY]
->
->La source [!DNL LAVA] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
-
 Suivez ce guide détaillé pour configurer votre propre connecteur source [!DNL LAVA] dans l’interface utilisateur d’Experience Platform.
 
 >[!IMPORTANT]
 >
->Cette page de documentation a été créée par l’équipe [!DNL LAVA]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [&#128279;](mailto:info@lava.ai).
+>Cette page de documentation a été créée par l’équipe [!DNL LAVA]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [](mailto:info@lava.ai).
 
 ## Prise en main
 
@@ -31,7 +27,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 >[!TIP]
 >
->Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source &#x200B;](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
+>Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source ](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
 
 ## Connecter votre compte [!DNL LAVA]
 
@@ -189,7 +185,7 @@ Lors de l’utilisation du schéma fourni par [!DNL LAVA], utilisez le mappage r
 
 >[!ENDTABS]
 
-Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
+Vous pouvez également ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
 Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
