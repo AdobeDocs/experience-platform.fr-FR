@@ -11,10 +11,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 84674304ba9184ac5e937b491db170ea6ecc57a7
 workflow-type: tm+mt
-source-wordcount: 293
-ht-degree: 40%
+source-wordcount: 292
+ht-degree: 38%
 
 ---
 
@@ -47,7 +47,7 @@ Pour comprendre la différence entre les connexions et les extensions, consultez
 * [Connexion Google Display &amp; Video 360](google-dv360.md)
 * [Connexion Google Ads](google-ads-destination.md)
 * [Connexion Google Ad Manager](google-ad-manager.md)
-* [(Beta) Connexion à Google Ad Manager 360](google-ad-manager-360-connection.md)
+* [Connexion à Google Ad Manager 360](google-ad-manager-360-connection.md)
 * [Connexion à Google Customer Match](google-customer-match.md)
 * [Connexion par lots Magnite](magnite-batch.md)
 * [Connexion en temps réel en flux continu Magnite](magnite-streaming.md)

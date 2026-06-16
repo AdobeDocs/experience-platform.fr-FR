@@ -6,10 +6,10 @@ description: Ce document répertorie la table des matières des destinations Ado
 feature: Destinations
 role: Admin,User
 nudge: true
-source-git-commit: 3a5b6654143306716c2d4ba8d9947472592f55b0
+source-git-commit: 84674304ba9184ac5e937b491db170ea6ecc57a7
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 70%
+source-wordcount: '1406'
+ht-degree: 69%
 
 ---
 
@@ -98,7 +98,7 @@ ht-degree: 70%
       * {hide-from-toc}[&#x200B; (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
       * [(Disponibilité limitée) Correspondance client Google + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
