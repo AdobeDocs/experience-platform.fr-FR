@@ -6,10 +6,10 @@ description: Ce document répertorie la table des matières des destinations Ado
 feature: Destinations
 role: Admin,User
 nudge: true
-source-git-commit: c7a0556e47b5440ffeb7f3770b577584e73ee204
+source-git-commit: 3a5b6654143306716c2d4ba8d9947472592f55b0
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 69%
+source-wordcount: '1407'
+ht-degree: 70%
 
 ---
 
@@ -51,7 +51,6 @@ ht-degree: 69%
       * [Activer les audiences de compte vers les destinations](./ui/activate-account-audiences.md)
       * [Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-file-now.md)
       * [Exporter des jeux de données à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-datasets.md)
-      * [Étendre les plannings d’exportation de jeux de données pour les flux de données créés avant novembre 2024](./ui/dataset-expiration-update.md)
       * [(Beta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version Beta](./ui/activate-last-qualification-time.md)
       * [Exporter des tableaux, mappages et objets](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Effectuer des transformations sur les données exportées vers des destinations d’espace de stockage](/help/destinations/ui/data-transformations-calculated-fields.md)
