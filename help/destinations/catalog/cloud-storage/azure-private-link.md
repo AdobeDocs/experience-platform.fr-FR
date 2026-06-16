@@ -66,7 +66,7 @@ Il n’existe actuellement aucune interface utilisateur qui vous permet de confi
 
 >[!TIP]
 >
->Si vous disposez déjà d’un point d’entrée privé pour [!DNL Azure Event Hubs] configuré pour une source [!DNL Experience Platform], ce point d’entrée peut également être utilisé pour les destinations. Vous n’avez pas besoin de configurer un point d’entrée distinct. Pour plus d’informations](/help/sources/tutorials/ui/private-link.md) voir [ Prise en charge des liens privés pour les sources .
+>Si vous disposez déjà d’un point d’entrée privé pour [!DNL Azure Event Hubs] configuré pour une source [!DNL Experience Platform], ce point d’entrée peut également être utilisé pour les destinations. Vous n’avez pas besoin de configurer un point d’entrée distinct. Pour plus d’informations[&#128279;](/help/sources/tutorials/ui/private-link.md) voir  Prise en charge des liens privés pour les sources .
 
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
