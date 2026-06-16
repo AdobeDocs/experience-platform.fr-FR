@@ -67,11 +67,11 @@ Les contrôles d’intégrité évaluent actuellement sept zones dans la configu
 
 | Vérifier | Type d’objet |
 | --- | --- |
-| [ Validation des champs d’identité ](#identity-field-validation) | Schéma |
-| [ Règles de liaison des graphiques d’identités ](#identity-graph-linking-rules) | Identité |
+| [&#x200B; Validation des champs d’identité &#x200B;](#identity-field-validation) | Schéma |
+| [&#x200B; Règles de liaison des graphiques d’identités &#x200B;](#identity-graph-linking-rules) | Identité |
 | [Configuration des identités des personnes et des non-personnes](#people-non-people-identity) | Schéma, identité |
 | [Description de l’espace de noms d’identité personnalisé](#namespace-missing-description) | Identité |
-| [ Espace de noms d’identité obsolète ](#deprecated-namespace) | Identité |
+| [&#x200B; Espace de noms d’identité obsolète &#x200B;](#deprecated-namespace) | Identité |
 | [TTL de profil pseudonyme](#pseudonymous-profile-ttl) | Profile |
 | [TTL de jeux de données d’événements d’expérience](#experience-event-datasets-ttl) | Jeu de données |
 
@@ -119,7 +119,7 @@ Lorsque vous sélectionnez la vignette **[!UICONTROL Règles de liaison de graph
 
 ![Panneau détaillé Règles de liaison du graphique d’identités présentant la description, l’impact et le bouton Configurer les règles de liaison](assets/health-checks/identity-graph-linking-detail.png)
 
-Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [ guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
+Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [&#x200B; guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
 ### Configuration des identités des personnes et des non-personnes {#people-non-people-identity}
 
@@ -184,7 +184,7 @@ Lorsque vous sélectionnez la vignette **[!UICONTROL Espace de noms d’identit�
 
 ![Panneau des détails Espace de noms d’identité obsolète présentant la description, l’impact et la liste des espaces de noms affectés](assets/health-checks/deprecated-namespace-detail.png)
 
-Pour plus d’informations, consultez l’article de la base de connaissances [ Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Pour plus d’informations, consultez l’article de la base de connaissances [&#x200B; Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ### TTL de profil pseudonyme {#pseudonymous-profile-ttl}
 
@@ -235,7 +235,7 @@ Pour plus d’informations, consultez la documentation sur [la rétention du jeu
 Après avoir examiné les résultats de votre contrôle de l’intégrité, explorez les ressources suivantes pour mieux comprendre :
 
 * Découvrez les [bonnes pratiques relatives aux schémas](/help/xdm/schema/best-practices.md) pour concevoir des modèles de données fiables.
-* Comprenez [ règles de liaison des graphiques d’identités ](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
+* Comprenez [&#x200B; règles de liaison des graphiques d’identités &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
 * Consultez la [documentation sur les espaces de noms d’identité](/help/identity-service/features/namespaces.md) pour connaître les bonnes pratiques de gestion des espaces de noms.
 * Configurez [expiration de profil pseudonyme](/help/profile/pseudonymous-profiles.md) pour gérer la conservation des données et réduire les dépassements d’audiences adressables.
 * Configurez [rétention du jeu de données d’événement d’expérience](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) pour éviter une surcharge de données et une dégradation des performances.
