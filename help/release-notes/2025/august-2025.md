@@ -3,32 +3,15 @@ title: Notes de mise à jour d’Adobe Experience Platform - Août 2025
 description: Les notes de mise à jour d’août 2025 pour Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
 TQID: https://experienceleague.adobe.com/k3X9zsECo7MB6vX39NEkAEaJLYLniF45ITUKryCo4GE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 3a5b6654143306716c2d4ba8d9947472592f55b0
 workflow-type: tm+mt
-source-wordcount: 1577
-ht-degree: 84%
+source-wordcount: 1586
+ht-degree: 81%
 
 ---
 
@@ -59,7 +42,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Nouvelles fonctionnalités**
 
@@ -89,7 +72,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 >
 >**Prolongation du planning d’export du jeu de données**
 >
->Si votre organisation a créé des flux de données d’export de jeux de données avant novembre 2024, ces flux cesseront de fonctionner le **1er septembre 2025**. Si vous avez besoin que les flux de données continuent d’exporter des données après le 1er septembre 2025, vous devez prolonger leur planning pour chaque destination vers laquelle vous exportez des jeux de données, en suivant les étapes de [ce guide](../../destinations/ui/dataset-expiration-update.md).
+>Si votre organisation a créé des flux de données d’export de jeux de données avant novembre 2024, ces flux cesseront de fonctionner le **1er septembre 2025**. Si vous avez besoin des flux de données pour continuer à exporter des données après le 1er septembre 2025, vous devez étendre leurs plannings pour chaque destination vers laquelle vous exportez des jeux de données.
 
 >[!IMPORTANT]
 >
@@ -125,8 +108,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| Mise à niveau interne de [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | Depuis le 11 août 2025, et pendant une courte période, vous avez peut-être vu deux cartes **[!DNL Microsoft Bing]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. Le connecteur de destination **[!DNL Microsoft Bing]** existant a été renommé **[!UICONTROL (Deprecated) Microsoft Bing]** et une nouvelle carte portant le nom **[!UICONTROL Microsoft Bing]** est désormais disponible. <br> La mise à niveau est terminée et la carte obsolète a été supprimée du catalogue de destination. Utilisez la connexion **[!UICONTROL Microsoft Bing]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous aviez des flux de données actifs vers la destination **[!UICONTROL (Deprecated) Microsoft Bing]**, ils seront automatiquement mis à jour. Aucune action n’est donc requise de votre part. <br><br>Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] avec les valeurs suivantes :<ul><li>ID de spécification de flux : `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de spécification de connexion : `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Suite à cette mise à niveau, il se peut que **le nombre de profils activés baisse** dans vos flux de données vers [!DNL Microsoft Bing]. Cette baisse est due à l’introduction de l’**exigence de mappage ECID** pour toutes les activations vers cette plateforme de destination. |
-| Détails de l’expiration de l’authentification pour les destinations [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) et [Audiences correspondantes LinkedIn](../../destinations/catalog/social/linkedin-b2b.md). | Les informations d’expiration de l’authentification pour les destinations [!DNL LinkedIn] sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi voir à quel moment votre authentification arrivera à expiration et la renouveler avant qu’elle ne provoque des interruptions de vos flux de données. Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Account expiration date]** dans les onglets **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
+| Mise à niveau interne de [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | Depuis le 11 août 2025, et pendant une courte période, vous avez peut-être vu deux cartes **[!DNL Microsoft Bing]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. Le connecteur de destination **[!DNL Microsoft Bing]** existant a été renommé **[!UICONTROL (obsolète) Microsoft Bing]** et une nouvelle carte portant le nom **[!UICONTROL Microsoft Bing]** est désormais disponible. <br> La mise à niveau est terminée et la carte obsolète a été supprimée du catalogue de destination. Utilisez la connexion **[!UICONTROL Microsoft Bing]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous aviez des flux de données actifs vers la destination **[!UICONTROL (obsolète) Microsoft Bing]** , ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part. <br><br>Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] avec les valeurs suivantes :<ul><li>ID de spécification de flux : `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de spécification de connexion : `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Suite à cette mise à niveau, il se peut que **le nombre de profils activés baisse** dans vos flux de données vers [!DNL Microsoft Bing]. Cette baisse est due à l’introduction de l’**exigence de mappage ECID** pour toutes les activations vers cette plateforme de destination. |
+| Détails de l’expiration de l’authentification pour les destinations [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) et [Audiences correspondantes LinkedIn](../../destinations/catalog/social/linkedin-b2b.md). | Les informations d’expiration de l’authentification pour les destinations [!DNL LinkedIn] sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi voir à quel moment votre authentification arrivera à expiration et la renouveler avant qu’elle ne provoque des interruptions de vos flux de données. Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Date d’expiration du compte]** dans les onglets **[[!UICONTROL Comptes]](../../destinations/ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Parcourir]](../../destinations/ui/destinations-workspace.md#browse)**. |
 | Suppression de la prise en charge des identités [!DNL IDFA] [Audiences appariées LinkedIn](../../destinations/catalog/social/linkedin-b2b.md) | À compter de septembre 2025, vous ne pourrez plus mapper [!DNL IDFA] en tant qu’identité cible, car [!DNL IDFA] n’est plus pris en charge par la destination [!DNL LinkedIn Matched Audiences]. Pour plus d’informations, consultez la documentation sur l’intégration [!DNL LinkedIn Matched Audiences] [documentation](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes). Cette modification est due aux exigences de LinkedIn et n’est liée à aucune mise à niveau du service de destination d’Experience Platform. |
 
 **Fonctionnalité nouvelle ou mise à jour**
