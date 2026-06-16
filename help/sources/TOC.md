@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 050f84fef2fd3a3eef9971e6245e3ea971d5a099
+source-git-commit: 15f583fe5559f253548c9a9d2ef1d2c18149cf11
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1124'
 ht-degree: 87%
 
 ---
@@ -123,8 +123,8 @@ ht-degree: 87%
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
       - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
    - Paiements {#payments}
-      - [Connecteur Square](connectors/payments/square.md)
-      - [Connecteur Stripe](connectors/payments/stripe.md)
+      - [Square](connectors/payments/square.md)
+      - [Stripe](connectors/payments/stripe.md)
    - Protocoles {#protocols}
       - [Connecteur OData générique](connectors/protocols/odata.md)
       - [Connecteur API REST générique](connectors/protocols/generic-rest.md)

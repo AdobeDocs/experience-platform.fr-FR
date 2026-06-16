@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Inspecter les planifications de tâches
 type: Tutorial
 exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
-source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
+source-git-commit: b85e459abe3745b4e14aaa745094783dd21a5d32
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 1%
+source-wordcount: '923'
+ht-degree: 0%
 
 ---
 
@@ -15,26 +15,26 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Actuellement, les [!UICONTROL Job schedules] ne sont disponibles que pour les tâches Real-Time CDP suivantes :
+>Actuellement les  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
 > * Segmentation par lots
 > * Activation de la destination par lots
 
-[!UICONTROL Job Schedules] fournit une vue unifiée de toutes les tâches de traitement par lots planifiées sur votre pipeline de données, de l’ingestion à l’activation de la destination. Inspectez le statut d’exécution, identifiez les conflits de planification et diagnostiquez les problèmes de configuration avant qu’ils n’affectent les opérations de votre entreprise.
+Le tableau [!UICONTROL Plannings de traitement] fournit une vue unifiée de tous les traitements par lots planifiés sur votre pipeline de données, de l’ingestion à l’activation de la destination. Inspectez le statut d’exécution, identifiez les conflits de planification et diagnostiquez les problèmes de configuration avant qu’ils n’affectent les opérations de votre entreprise.
 
 Utilisez les planifications de tâches pour enquêter sur les échecs, optimiser la synchronisation des tâches et comprendre les dépendances entre l’ingestion du lac de données, le traitement des profils, la segmentation et l’activation de destination. Pour obtenir des conseils sur la résolution de problèmes de configuration courants, consultez la documentation sur l&#39;[identification des antimodèles de planification des tâches](job-schedules-anti-patterns.md).
 
 ## Conditions préalables {#prerequisites}
 
-Pour accéder à [!UICONTROL Job Schedules], vous avez besoin des **[!UICONTROL View Job Schedules]** et **[!UICONTROL View Profile Management]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+Pour accéder à [!UICONTROL Planifications de tâches], vous devez disposer des **[!UICONTROL Afficher les planifications de tâches]** et **[!UICONTROL Afficher la gestion des profils]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 
 Contactez votre administrateur système pour vous assurer que vous disposez des autorisations appropriées.
 
 ## Prise en main {#getting-started}
 
-Avant d’utiliser [!UICONTROL Job Schedules], vous devez connaître les concepts d’Experience Platform suivants :
+Avant d’utiliser [!UICONTROL planifications de tâches], vous devez connaître les concepts Experience Platform suivants :
 
 * **[Ingestion par lots](../ingestion/batch-ingestion/overview.md)** : méthode de chargement des données dans le lac de données et la banque de profils à des intervalles planifiés.
 * **[Segmentation](../segmentation/home.md)** : méthode d’évaluation et de mise à jour des audiences en fonction des données de profil et des définitions de segment.
@@ -45,12 +45,12 @@ La compréhension de ces composants vous aide à interpréter les modèles d’e
 
 ## Présentation de l&#39;interface des planifications de tâches {#understanding-interface}
 
-Pour accéder à [!UICONTROL Job Schedules] :
+Pour accéder aux [!UICONTROL planifications de tâches] :
 
-1. Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Run and Operate]** dans le volet de navigation de gauche.
-2. Sélectionnez **[!UICONTROL Job Schedules]**.
+1. Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Exécuter et opérer]** dans le volet de navigation de gauche.
+2. Sélectionnez **[!UICONTROL Plannings de tâches]**.
 
-La page [!UICONTROL Job Schedules] donne un aperçu de toutes les tâches de traitement par lots planifiées.
+La page [!UICONTROL Plannings de traitement] donne un aperçu de tous vos traitements par lots planifiés.
 
 ![Exécuter et utiliser le volet de navigation de gauche](assets/job-schedules/run-and-operate-left-nav.png)
 
@@ -77,9 +77,13 @@ Utilisez les sélecteurs de période pour choisir la période à prendre en comp
 * **Hier** : affichez les tâches exécutées hier.
 * **7 derniers jours** : affichez les tâches de la semaine dernière.
 
+Lorsque vous sélectionnez **[!UICONTROL 7 derniers jours]**, un sélecteur de date de calendrier est disponible. Sélectionnez l’icône de calendrier en regard de la période affichée pour ouvrir le sélecteur et choisir une période spécifique de 7 jours. Seules les périodes de 7 jours sont prises en charge.
+
+![Le sélecteur de période des 7 derniers jours dans les planifications de tâches affiche un pop-up de calendrier pour mai 2026 avec une période de sept jours mise en surbrillance du 19 au 25 mai.](assets/job-schedules/calendar-date-picker.png)
+
 ### Détails des plannings de traitement par lots {#job-schedules-details}
 
-La vue principale vous indique le moment où les traitements par lots sont planifiés pour s’exécuter tout au long de la journée. Vous pouvez :
+La vue principale vous indique le moment où les traitements par lots sont planifiés pour s’exécuter tout au long de la journée. Vous pouvez ainsi :
 
 * **Afficher les tâches par jeu de données ou entité** : la colonne de gauche affiche les noms des jeux de données ou des tâches de traitement (par exemple, les jeux de données d’ingestion ou les tâches de segmentation).
 * **Voir Durée de la tâche** : la chronologie indique la date d’exécution planifiée de chaque tâche et les indicateurs visuels indiquent cette heure.
