@@ -4,17 +4,13 @@ title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple, DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 TQID: https://experienceleague.adobe.com/8asBs32HsOcweA-KZdt4CFQSUYQudd-bBqAYdau0Tc8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 84674304ba9184ac5e937b491db170ea6ecc57a7
 workflow-type: tm+mt
-source-wordcount: 293
-ht-degree: 40%
+source-wordcount: 292
+ht-degree: 38%
 
 ---
 
@@ -47,7 +43,7 @@ Pour comprendre la différence entre les connexions et les extensions, consultez
 * [Connexion Google Display &amp; Video 360](google-dv360.md)
 * [Connexion Google Ads](google-ads-destination.md)
 * [Connexion Google Ad Manager](google-ad-manager.md)
-* [(Beta) Connexion à Google Ad Manager 360](google-ad-manager-360-connection.md)
+* [Connexion à Google Ad Manager 360](google-ad-manager-360-connection.md)
 * [Connexion à Google Customer Match](google-customer-match.md)
 * [Connexion par lots Magnite](magnite-batch.md)
 * [Connexion en temps réel en flux continu Magnite](magnite-streaming.md)
