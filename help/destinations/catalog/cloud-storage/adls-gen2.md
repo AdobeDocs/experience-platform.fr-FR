@@ -1,7 +1,7 @@
 ---
 title: Connexion Azure Data Lake Storage Gen2
 description: Découvrez comment vous connecter à Azure Data Lake Storage Gen2 pour activer des audiences et exporter des jeux de données.
-last-substantial-update: 2023-07-26T00:00:00.000Z
+last-substantial-update: 2023-07-26
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 TQID: https://experienceleague.adobe.com/mI7udBGz-yyB1wGO-j6IbpQDX7Zhyk1lxE-sTYyWkd4
 product_v2:
@@ -16,10 +16,10 @@ subfeature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: a7d1ad3e673cd5e787a5dce02c98e78524790614
+source-git-commit: 60f06579084e0debd19db4b9ae5ad0234e9ef715
 workflow-type: tm+mt
-source-wordcount: 1101
-ht-degree: 36%
+source-wordcount: 1144
+ht-degree: 34%
 
 ---
 
@@ -80,6 +80,10 @@ Cette destination prend en charge les exportations de jeux de données. Pour obt
 Lors de l’exportation de *données d’audience*, Experience Platform crée un fichier `.csv`, `parquet` ou `.json` à l’emplacement de stockage indiqué. Pour plus d’informations sur les fichiers, consultez la section [formats de fichiers pris en charge pour l’exportation](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) dans le tutoriel sur l’activation des audiences.
 
 Lors de l’exportation de *jeux de données*, Experience Platform crée un fichier `.parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, consultez la section [vérifier la réussite de l’exportation du jeu de données](../../ui/export-datasets.md#verify) dans le tutoriel sur l’exportation des jeux de données.
+
+## Se connecter à l’aide d’Azure Private Link {#private-link}
+
+Si votre organisation a des exigences strictes en matière de sécurité réseau, vous pouvez configurer cette destination pour acheminer les exportations de données sur la dorsale principale privée [!DNL Microsoft Azure] plutôt que sur Internet public. Consultez [Lien privé Azure pour les destinations](./azure-private-link.md) pour connaître les conditions préalables, les mécanismes de sécurisation et les étapes de configuration.
 
 ## Se connecter à la destination {#connect}
 

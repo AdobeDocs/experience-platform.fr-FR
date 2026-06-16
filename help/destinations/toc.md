@@ -6,9 +6,9 @@ description: Ce document répertorie la table des matières des destinations Ado
 feature: Destinations
 role: Admin,User
 nudge: true
-source-git-commit: 84674304ba9184ac5e937b491db170ea6ecc57a7
+source-git-commit: fea52e4813bd65790c6fe520b699a6027e824a8a
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1409'
 ht-degree: 69%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 69%
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
-      * [(Disponibilité limitée) Correspondance client Google + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
+      * [Correspondance client Google + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extension Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Connexion à l&#39;échange d&#39;index](./catalog/advertising/index-exchange.md)
@@ -155,6 +155,7 @@ ht-degree: 69%
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
       * [PLACE SUR LA LISTE AUTORISÉE d’adresse IP pour les destinations de stockage dans le cloud basées sur des fichiers](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [Lien privé pour les destinations Azure](./catalog/cloud-storage/azure-private-link.md)
    * Destinations de la gestion de la relation client (CRM) {#crm}
       * [Connexion Hubspot](./catalog/crm/hubspot.md)
       * [Connexion CRM à Salesforce](./catalog/crm/salesforce.md)
