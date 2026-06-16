@@ -3,11 +3,30 @@ title: Notes De Mise À Jour De Adobe Experience Platform (Juin 2026)
 description: Les notes de mise à jour de juin 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: c2ea50b7f4a8936d9f28105923d6e60e76f075f1
 workflow-type: tm+mt
 source-wordcount: 1435
@@ -47,10 +66,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE ]{type=Informative} [Quand activer ](../../destinations/ui/when-to-activate.md) | Contrôler les types de modification de profil qui déclenchent des exportations vers une destination. Activez ou désactivez trois types de déclencheurs par flux de données : modifications d’attributs, qualification et disqualification d’audience et modifications d’identité. Les trois déclencheurs sont activés par défaut. En version bêta, cette fonctionnalité est disponible sur demande. Contactez votre représentant Adobe pour demander l’accès. <br> ![Le panneau Quand activer affiche trois cases à cocher : modifications des attributs, modifications de la segmentation et modifications de l’identité, toutes activées.](../../destinations/assets/ui/when-to-activate/when-to-activate.png){zoomable="yes"} |
+| {type=Informative} [Quand activer &#x200B;](../../destinations/ui/when-to-activate.md) | Contrôler les types de modification de profil qui déclenchent des exportations vers une destination. Activez ou désactivez trois types de déclencheurs par flux de données : modifications d’attributs, qualification et disqualification d’audience et modifications d’identité. Les trois déclencheurs sont activés par défaut. En version bêta, cette fonctionnalité est disponible sur demande. Contactez votre représentant Adobe pour demander l’accès. <br> ![Le panneau Quand activer affiche trois cases à cocher : modifications des attributs, modifications de la segmentation et modifications de l’identité, toutes activées.](../../destinations/assets/ui/when-to-activate/when-to-activate.png){zoomable="yes"} |
 | Lien privé Azure pour les destinations Azure | Acheminez les exportations de données vers [[!DNL Azure Blob Storage]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) et [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) via des adresses IP privées sur la colonne vertébrale [!DNL Microsoft Azure] plutôt que sur l’Internet public. Cette fonctionnalité est disponible pour les clients et clientes disposant de droits **Healthcare Shield** ou **Privacy and Security Shield**. Contactez votre représentant Adobe pour demander la configuration. |
 | Prise en charge d’[[!DNL Snowflake Streaming]](../../destinations/catalog/warehouses/snowflake.md) et de [[!DNL Snowflake Batch]](../../destinations/catalog/warehouses/snowflake-batch.md) Private Link | Un nouveau sélecteur de liste déroulante **[!UICONTROL Lien privé activé]** est désormais disponible lors de la configuration de connexions de destination par lots et en flux continu [!DNL Snowflake]. Activez cette option uniquement si votre compte [!DNL Snowflake] est configuré pour un accès entrant privé uniquement lié. Si vous laissez ce paramètre défini sur **[!UICONTROL False]** pour les comptes de liaison privés uniquement, le partage des données échoue. Cette mise à jour est déployée jusqu’au 19 juin 2026. <br> ![Page de détails de la destination Snowflake affichant le sélecteur déroulant Lien privé activé défini sur False.](../2026/assets/june/snowflake-private-link.png){zoomable="yes"} |
-| [!BADGE ]{type=Informative} [Exportez des tableaux en tant qu’attributs d’enrichissement](../../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage. Sélectionnez des champs individuels dans un tableau d’objets ou exportez le tableau complet. Les données sont ensuite exportées en tant que colonnes distinctes dans les sorties JSON et Parquet. <br> ![ La boîte de dialogue Sélectionner des attributs d’enrichissement affichant la bannière Exporter des tableaux et des objets complexes activée et l’interface de mappage Source et Target à deux colonnes. ](../../destinations/assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png){zoomable="yes"} |
+| {type=Informative} [Exportez des tableaux en tant qu’attributs d’enrichissement](../../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Exportez les champs du tableau en tant qu’attributs d’enrichissement lors de l’activation des audiences vers des destinations d’espace de stockage. Sélectionnez des champs individuels dans un tableau d’objets ou exportez le tableau complet. Les données sont ensuite exportées en tant que colonnes distinctes dans les sorties JSON et Parquet. <br> ![&#x200B; La boîte de dialogue Sélectionner des attributs d’enrichissement affichant la bannière Exporter des tableaux et des objets complexes activée et l’interface de mappage Source et Target à deux colonnes. &#x200B;](../../destinations/assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png){zoomable="yes"} |
 | [[!DNL Google Ad Manager 360]](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) désormais généralement disponible | La destination [!DNL Google Ad Manager 360] (anciennement en version Beta) est désormais disponible pour tous. |
 | [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md) désormais généralement disponible | La destination [!DNL Google Customer Match + Display & Video 360] (anciennement en disponibilité limitée) est désormais disponible pour tous. |
 | [Rapports au niveau de l’audience pour les destinations supplémentaires](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Les rapports au niveau de l’audience sont désormais disponibles pour plusieurs destinations à forte utilisation : [Facebook](../../destinations/catalog/social/facebook.md), [TikTok](../../destinations/catalog/social/tiktok.md), [(hérité) Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md), [Braze](../../destinations/catalog/mobile-engagement/braze.md), [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin.md), [(Entreprises) LinkedIn](../../destinations/catalog/social/linkedin-b2b.md), [Twitter Custom Audiences](../../destinations/catalog/social/twitter.md), [Pinterest Customer List](../../destinations/catalog/advertising/pinterest.md), [Salesforce CRM](../../destinations/catalog/crm/salesforce.md), [Mailchimp Tags](../../destinations/catalog/email-marketing/mailchimp-tags.md), [Gainsight PX](../../destinations/catalog/analytics/gainsight-px.md) et [Demandbase People](../../destinations/catalog/advertising/demandbase-people.md). Auparavant, ces destinations ne prenaient en charge que les rapports au niveau de l’exécution du flux de données, ce qui rendait plus difficile la compréhension du nombre de profils activés pour chaque audience. Pour plus d’informations, consultez la documentation sur la [vue au niveau de l’audience](../../dataflows/ui/monitor-destinations.md#audience-level-view). <br> ![Tableau de bord de surveillance présentant l’onglet Audiences de clients avec les mesures d’activation au niveau de l’audience, y compris les enregistrements activés, exclus et ayant échoué par audience.](../2026/assets/june/audience-level-reporting.png){zoomable="yes"} |
