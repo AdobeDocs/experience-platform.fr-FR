@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Actuellement] les [!UICONTROL  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
+>Actuellement les  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
@@ -38,8 +38,8 @@ La vue chronologique [!UICONTROL Planifications de tâches] vous permet d’iden
 
 Avant d’identifier les anti-modèles, vous devez :
 
-* Accédez à [!UICONTROL Planifications de tâches] avec l’autorisation de contrôle d’accès **[!UICONTROL Afficher les planifications de tâches]** [](/help/access-control/home.md#permissions).
-* Familiarisez-vous avec l’interface [ Planifications de tâches ](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
+* Accédez à [!UICONTROL Planifications de tâches] avec l’autorisation de contrôle d’accès **[!UICONTROL Afficher les planifications de tâches]** [&#128279;](/help/access-control/home.md#permissions).
+* Familiarisez-vous avec l’interface [&#x200B; Planifications de tâches &#x200B;](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
 * comprendre les concepts de base [ingestion par lots](../ingestion/batch-ingestion/overview.md), [segmentation](../segmentation/home.md) et [traitement des profils](../profile/home.md) ;
 
 ## Référence rapide {#anti-pattern-quick-reference}
