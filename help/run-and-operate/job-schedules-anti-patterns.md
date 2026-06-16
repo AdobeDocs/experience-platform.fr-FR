@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Identifier les modèles antiprogramme de travail
 type: Tutorial
 exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
-source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
+source-git-commit: b85e459abe3745b4e14aaa745094783dd21a5d32
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 0%
+source-wordcount: '1578'
+ht-degree: 1%
 
 ---
 
@@ -15,29 +15,40 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Actuellement, les [!UICONTROL Job schedules] ne sont disponibles que pour les tâches Real-Time CDP suivantes :
+>Actuellement] les [!UICONTROL  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
 > * Segmentation par lots
 > * Activation de la destination par lots
 
-La vue chronologique [Planifications de tâches](job-schedules.md) vous permet d’identifier les problèmes de configuration courants susceptibles de nuire aux performances et à la fiabilité de votre pipeline de données. Ces antimodèles entraînent souvent des échecs de tâche, des incohérences de données ou une dégradation des performances du système. En repérant ces modèles dès le début, vous pouvez reconfigurer vos tâches afin d’éviter les problèmes avant qu’ils n’affectent vos activités commerciales.
+La vue chronologique [!UICONTROL Planifications de tâches] vous permet d’identifier les problèmes de configuration courants susceptibles de nuire aux performances et à la fiabilité de votre pipeline de données. Ces antimodèles entraînent souvent des échecs de tâche, des incohérences de données ou une dégradation des performances du système. Trois des anti-motifs les plus courants sont automatiquement détectés et affichés au moyen d&#39;indicateurs d&#39;avertissement dans l&#39;interface. En repérant ces modèles dès le début, vous pouvez reconfigurer vos tâches afin d’éviter les problèmes avant qu’ils n’affectent vos activités commerciales.
+
+## Détection automatique des anti-motifs {#auto-detection}
+
+[!UICONTROL Planifications de tâches] détecte automatiquement trois indicateurs d&#39;avertissement courants relatifs aux surfaces et aux anti-motifs sur les [cartes récapitulatives](job-schedules.md#summary-cards). Sélectionnez un indicateur d’avertissement pour ouvrir un panneau de détails avec une description du problème, des actions recommandées et une liste des jeux de données ou des destinations affectés.
+
+| Détection automatique d’un antimodèle | Emplacement de l&#39;indicateur d&#39;avertissement | Informations supplémentaires |
+|---|---|---|
+| Limite quotidienne d&#39;ingestion de profils | Carte **[!UICONTROL Ingestion du profil]** | [Limite quotidienne d&#39;ingestion de profil](#profile-ingestion-daily-limit) |
+| Ingestion des profils trop proche de la segmentation | Carte **[!UICONTROL Segmentation]** | [Densité des tâches planifiées](#scheduled-density) |
+| Segmentation trop proche de l’activation de la destination planifiée | Carte **[!UICONTROL Activation de la destination]** | [Chevauchement des planifications](#schedule-overlap-pattern) |
 
 ## Conditions préalables {#prerequisites}
 
 Avant d’identifier les anti-modèles, vous devez :
 
-* Ayez accès à [!UICONTROL Job Schedules] avec l’**[!UICONTROL View Job Schedules]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions).
-* Familiarisez-vous avec l’interface [&#x200B; Planifications de tâches &#x200B;](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
+* Accédez à [!UICONTROL Planifications de tâches] avec l’autorisation de contrôle d’accès **[!UICONTROL Afficher les planifications de tâches]** [](/help/access-control/home.md#permissions).
+* Familiarisez-vous avec l’interface [ Planifications de tâches ](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
 * comprendre les concepts de base [ingestion par lots](../ingestion/batch-ingestion/overview.md), [segmentation](../segmentation/home.md) et [traitement des profils](../profile/home.md) ;
 
 ## Référence rapide {#anti-pattern-quick-reference}
 
-| Anti-motif | Ce que vous verrez sur la chronologie | impact du Principal | Gravité |
-|--------------|----------------------------------|----------------|----------|
+| Anti-motif | Ce que vous verrez | impact du Principal | Gravité |
+|---|---|---|---|
 | [Chevauchement des planifications](#schedule-overlap-pattern) | Plusieurs traitements s’exécutant simultanément | Contention des ressources et échecs des tâches | Élevé |
 | [Densité des tâches planifiées](#scheduled-density) | De nombreux jeux de données avec des lots regroupés dans la même heure | Goulets d’étranglement de pipeline et segmentation incomplète | Élevé |
+| [Limite quotidienne d&#39;ingestion de profil](#profile-ingestion-daily-limit) | Indicateur d’avertissement sur la carte Résumé de l’ingestion de profil | Mécanisme de sécurisation système dépassé | Élevé |
 | [Lots excessifs par jeu de données](#excessive-batches-per-dataset) | Jeu de données unique avec des dizaines de lots quotidiens | Traitement inefficace et complexité opérationnelle | Méthode |
 
 ## Chevauchement des planifications {#schedule-overlap-pattern}
@@ -61,7 +72,11 @@ Un exemple courant est celui des tâches d’ingestion par lots s’exécutant e
 * **Ajouter une durée de mémoire tampon** : laissez un espacement adéquat entre les tâches pour tenir compte des variations de traitement.
 * **Vérifier les dépendances** : identifier les tâches à terminer avant que d’autres puissent commencer en toute sécurité.
 
-## Densité des tâches planifiées {#scheduled-density}
+Lorsque [!UICONTROL Planifications de tâches] détecte une segmentation s’exécutant trop près d’une activation de destination planifiée, un indicateur d’avertissement s’affiche sur la carte récapitulative **[!UICONTROL Activation de destination]**. Sélectionnez l’indicateur d’avertissement pour ouvrir un panneau affichant le nombre d’occurrences détectées, une description du conflit de minutage, des recommandations et un tableau des destinations affectées.
+
+![Segmentation trop proche du panneau d’activation de destination planifiée dans les planifications de tâches, présentant une description du conflit de minutage, des recommandations et un tableau des destinations affectées.](assets/job-schedules/segmentation-too-close-to-activation.png)
+
+## Densité des traitements planifiés {#scheduled-density}
 
 **Gravité de l’impact** : élevée | **Problème de Principal** : goulets d’étranglement du pipeline
 
@@ -88,6 +103,35 @@ Ce modèle comprend généralement :
 * **Ajouter une durée de mémoire tampon** : assurez-vous qu’une mémoire tampon minimale de 1 à 2 heures sépare la fin de l’ingestion du profil et le début de la segmentation.
 * **Exigences en matière de révision** : déterminez si tous les jeux de données ont vraiment besoin de plusieurs lots quotidiens. De nombreux cas d’utilisation fonctionnent avec des mises à jour moins fréquentes.
 
+Lorsque [!UICONTROL Planifications de tâches] détecte que des tâches d’ingestion de profil s’exécutant trop près d’une exécution de segmentation planifiée, un indicateur d’avertissement s’affiche sur la carte de résumé **[!UICONTROL Segmentation]**. Sélectionnez l’indicateur d’avertissement pour ouvrir un panneau affichant le nombre d’occurrences détectées, une description du conflit de durée, des recommandations et un tableau des jeux de données affectés.
+
+![Ingestion du profil trop proche du panneau de segmentation dans les planifications de tâches, affichant une ligne verticale bleue indiquant l’heure d’exécution de la segmentation, une description du conflit de durée, des recommandations et un tableau des jeux de données affectés.](assets/job-schedules/profile-ingestion-too-close-to-segmentation.png)
+
+## Limite quotidienne d&#39;ingestion de profils {#profile-ingestion-daily-limit}
+
+**Gravité de l’impact** : élevée | **Problème de Principal** : mécanisme de sécurisation du système
+
+**Que rechercher** : un indicateur d’avertissement sur la carte de résumé **[!UICONTROL Ingestion des profils]** lorsque l’ingestion de profils quotidienne approche ou dépasse le mécanisme de sécurisation système à 90 exécutions. Sélectionnez l’indicateur d’avertissement pour afficher un graphique à barres indiquant le nombre d’exécutions quotidiennes pour chaque jour de la période sélectionnée.
+
+Le graphique utilise des barres de code-couleur pour indiquer l’emplacement du décompte par rapport à la limite :
+
+* **Barres rouges (90 exécutions ou plus)** : la limite quotidienne est dépassée. Les inefficacités de traitement peuvent affecter tous les jeux de données activés pour le profil.
+* **Barres orange (72 à 89 passages)**: Proche de la limite journalière.
+* **Barres vertes (moins de 72 passages)** : dans la plage acceptable.
+
+![Graphique Nombre quotidien d’exécutions d’ingestion de profils dans les planifications de tâches, affichant les nombres d’exécutions quotidiennes avec un code de couleur sous la forme de barres rouges qui dépassaient la limite quotidienne de 90 exécutions, de barres orange dans la zone d’avertissement entre 72 et 89 exécutions et d’une barre verte dans la plage acceptable.](assets/job-schedules/profile-ingestion-daily-limit.png)
+
+**Pourquoi cela pose problème** :
+
+* **Inefficacité du traitement** : le dépassement de 90 exécutions d’ingestion de profils par jour crée une surcharge de traitement qui peut affecter tous les jeux de données activés pour le profil.
+* **Contention de ressources** : un nombre total d’exécutions élevé peut retarder les tâches de segmentation et d’activation en aval.
+* **Obsolescence des données** : lorsque le traitement des profils s’exécute en continu, l’exécution des lots individuels peut prendre plus de temps, ce qui retarde la disponibilité des données pour la segmentation.
+
+**Comment résoudre ce problème** :
+
+* **Réduire la fréquence des lots par jeu de données** : consolidez les lots afin de déclencher moins d’exécutions d’ingestion de profils par jour. Voir [Lots excessifs par jeu de données](#excessive-batches-per-dataset) pour des conseils détaillés.
+* **Contrôler tous les plannings d’ingestion** : passez en revue tous les jeux de données planifiés pour l’ingestion de profils et identifiez ceux dont la fréquence des lots est inutilement élevée.
+
 ## Lots excessifs par jeu de données {#excessive-batches-per-dataset}
 
 **Gravité de l’impact** : Medium | **Problème de Principal** : traitement inefficace
@@ -111,6 +155,7 @@ Ce modèle implique un seul jeu de données avec de nombreuses tâches d’inges
 * **Augmenter la taille du lot** : accumulez plus de données avant de déclencher l’ingestion plutôt que de les ingérer immédiatement.
 * **S’aligner sur les besoins de l’entreprise** : vérifier si des mises à jour horaires sont vraiment requises ou si des mises à jour quotidiennes/biquotidiennes sont suffisantes.
 * **Utiliser la diffusion en continu pour le temps réel** : passez à l’ingestion en continu pour les exigences en temps réel réelles au lieu de la simuler avec des lots fréquents.
+* **Surveillance du nombre total d’exécutions quotidiennes** : si plusieurs jeux de données ont une fréquence de lots élevée, le total combiné peut dépasser le mécanisme de sécurisation du système. Voir [Limite quotidienne d’ingestion de profil](#profile-ingestion-daily-limit).
 
 ## Étapes suivantes {#next-steps}
 
@@ -121,3 +166,4 @@ Après avoir identifié les anti-modèles dans vos planifications de tâches :
 * Découvrez [ingestion par lots](../ingestion/batch-ingestion/overview.md) pour optimiser vos plannings de chargement des données.
 * Comprenez les [plannings de segmentation](../segmentation/home.md) pour garantir un timing approprié des évaluations d’audience.
 * Explorez la [surveillance des flux de données de destination](../dataflows/ui/monitor-destinations.md) pour une visibilité de bout en bout du pipeline.
+* Configurez les [alertes](/help/observability/alerts/overview.md) pour recevoir des notifications lorsque la limite quotidienne d’ingestion de profil est proche.
