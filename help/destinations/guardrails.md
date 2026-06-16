@@ -20,9 +20,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 5750b5d4f798613ba27c6a1be43dcf119c681da6
 workflow-type: tm+mt
-source-wordcount: 1910
+source-wordcount: 1915
 ht-degree: 34%
 
 ---
@@ -91,7 +91,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 | Fréquence d’activation | Exportation complète quotidienne ou exportation incrémentielle plus fréquente toutes les 3, 6, 8 ou 12 heures. | Mécanisme de sécurisation mis en œuvre par le système | Consultez les sections de documentation [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) pour plus d’informations sur les incréments de fréquence pour les exportations par lots. |
 | Nombre maximal d’audiences pouvant être exportées à une heure donnée | 100 | Mécanisme de sécurisation des performances | Il est recommandé d’ajouter un maximum de 100 audiences aux instances de destination par lots. |
 | Nombre maximum de lignes (enregistrements) par fichier à activer | 5 million | Mécanisme de sécurisation mis en œuvre par le système | Adobe Experience Platform fractionne automatiquement les fichiers exportés à raison de 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil. Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`. Pour plus d’informations, reportez-vous à la [section de planification](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) du tutoriel d’activation des destinations par lot. |
-| Nombre maximal d’audiences externes (par exemple : FAX, chargement personnalisé, composition de l’audience) pouvant être activées dans une instance de destination | 20 | Mécanisme de sécurisation mis en œuvre par le système | Lors de l’activation d’audiences externes (par exemple, [Composition d’audience fédérée](/help/segmentation/ui/audience-portal.md#fac), [chargement personnalisé](/help/segmentation/ui/audience-portal.md#import-audience), [Composition d’audience](/help/segmentation/ui/audience-portal.md#audience-composition)) vers des destinations basées sur des fichiers par lots, il existe une limite de 20 audiences de ce type que vous pouvez activer dans une instance de destination. Voir [Types et personnalisation d’audience](/help/segmentation/ui/audience-portal.md#customize) pour plus d’informations sur ces types d’audience. En savoir plus sur le workflow d’[activation des audiences externes vers des destinations basées sur des fichiers par lots](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Nombre maximal d’audiences externes (par exemple : FAX, chargement personnalisé, composition de l’audience) pouvant être activées dans une instance de destination | 100 | Mécanisme de sécurisation mis en œuvre par le système | Lors de l’activation d’audiences externes (par exemple, [Composition d’audience fédérée](/help/segmentation/ui/audience-portal.md#fac), [chargement personnalisé](/help/segmentation/ui/audience-portal.md#import-audience), [Composition d’audience](/help/segmentation/ui/audience-portal.md#audience-composition)) vers des destinations basées sur des fichiers par lots, il existe une limite de 100 audiences de ce type que vous pouvez activer dans une instance de destination. Voir [Types et personnalisation d’audience](/help/segmentation/ui/audience-portal.md#customize) pour plus d’informations sur ces types d’audience. En savoir plus sur le workflow d’[activation des audiences externes vers des destinations basées sur des fichiers par lots](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -119,7 +119,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 ### Exportations de jeux de données {#dataset-exports}
 
-Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL First Full and then Incremental]** [modèle](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
+Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL modèle complet, puis incrémentiel]** [&#128279;](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
 
 <!--
 
