@@ -7,22 +7,14 @@ type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
 TQID: https://experienceleague.adobe.com/1MtJnkHPrFEHtlYHIKZL1rbj6SfsHsUJuqSwn1TovcA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 5750b5d4f798613ba27c6a1be43dcf119c681da6
 workflow-type: tm+mt
-source-wordcount: 1910
+source-wordcount: 1915
 ht-degree: 34%
 
 ---
@@ -91,7 +83,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 | Fréquence d’activation | Exportation complète quotidienne ou exportation incrémentielle plus fréquente toutes les 3, 6, 8 ou 12 heures. | Mécanisme de sécurisation mis en œuvre par le système | Consultez les sections de documentation [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) pour plus d’informations sur les incréments de fréquence pour les exportations par lots. |
 | Nombre maximal d’audiences pouvant être exportées à une heure donnée | 100 | Mécanisme de sécurisation des performances | Il est recommandé d’ajouter un maximum de 100 audiences aux instances de destination par lots. |
 | Nombre maximum de lignes (enregistrements) par fichier à activer | 5 million | Mécanisme de sécurisation mis en œuvre par le système | Adobe Experience Platform fractionne automatiquement les fichiers exportés à raison de 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil. Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`. Pour plus d’informations, reportez-vous à la [section de planification](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) du tutoriel d’activation des destinations par lot. |
-| Nombre maximal d’audiences externes (par exemple : FAX, chargement personnalisé, composition de l’audience) pouvant être activées dans une instance de destination | 20 | Mécanisme de sécurisation mis en œuvre par le système | Lors de l’activation d’audiences externes (par exemple, [Composition d’audience fédérée](/help/segmentation/ui/audience-portal.md#fac), [chargement personnalisé](/help/segmentation/ui/audience-portal.md#import-audience), [Composition d’audience](/help/segmentation/ui/audience-portal.md#audience-composition)) vers des destinations basées sur des fichiers par lots, il existe une limite de 20 audiences de ce type que vous pouvez activer dans une instance de destination. Voir [Types et personnalisation d’audience](/help/segmentation/ui/audience-portal.md#customize) pour plus d’informations sur ces types d’audience. En savoir plus sur le workflow d’[activation des audiences externes vers des destinations basées sur des fichiers par lots](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Nombre maximal d’audiences externes (par exemple : FAX, chargement personnalisé, composition de l’audience) pouvant être activées dans une instance de destination | 100 | Mécanisme de sécurisation mis en œuvre par le système | Lors de l’activation d’audiences externes (par exemple, [Composition d’audience fédérée](/help/segmentation/ui/audience-portal.md#fac), [chargement personnalisé](/help/segmentation/ui/audience-portal.md#import-audience), [Composition d’audience](/help/segmentation/ui/audience-portal.md#audience-composition)) vers des destinations basées sur des fichiers par lots, il existe une limite de 100 audiences de ce type que vous pouvez activer dans une instance de destination. Voir [Types et personnalisation d’audience](/help/segmentation/ui/audience-portal.md#customize) pour plus d’informations sur ces types d’audience. En savoir plus sur le workflow d’[activation des audiences externes vers des destinations basées sur des fichiers par lots](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -119,7 +111,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 ### Exportations de jeux de données {#dataset-exports}
 
-Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL First Full and then Incremental]** [modèle](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
+Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL modèle complet, puis incrémentiel]** [](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
 
 <!--
 
@@ -186,7 +178,7 @@ En savoir plus sur l’[export de jeux de données](/help/destinations/ui/export
 
 ### Mécanismes de sécurisation de Destination SDK {#destination-sdk-guardrails}
 
-[&#128279;](/help/destinations/destination-sdk/overview.md) est une suite d’API de configuration permettant de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée, en fonction des données et des formats d’authentification de votre choix. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
+[](/help/destinations/destination-sdk/overview.md) est une suite d’API de configuration permettant de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée, en fonction des données et des formats d’authentification de votre choix. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
@@ -211,7 +203,7 @@ Détails sur les seuils de limitations ou les limites pour des destinations donn
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence à partir des documents de description [!DNL Real-Time CDP] produit :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
