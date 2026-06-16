@@ -3,10 +3,16 @@ title: Présentation De La Gestion Avancée Du Cycle De Vie Des Données
 description: La gestion avancée du cycle de vie des données vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 TQID: https://experienceleague.adobe.com/iUo7h2mcsIwyECpzhl3NMAkqayBZuBSI1kvcYwOcupw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 0307ca1b2007ad9d688c9cc486ff6cab4581e07f
 workflow-type: tm+mt
 source-wordcount: 766
@@ -18,7 +24,7 @@ ht-degree: 24%
 
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
-Ces activités peuvent être effectuées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL cycle de vie des données] ](#ui) ou de l’API [Data Hygiene](#api). Lorsqu’une tâche du cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
+Ces activités peuvent être effectuées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL cycle de vie des données] &#x200B;](#ui) ou de l’API [Data Hygiene](#api). Lorsqu’une tâche du cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
 
 >[!NOTE]
 >
@@ -42,7 +48,7 @@ Les demandes [suppression d’enregistrements](./ui/record-delete.md) et d’exp
 >
 >Pour plus d’informations de référence :
 >- Pour surveiller votre utilisation actuelle par rapport aux limites de quota, consultez le [Guide de référence des quotas](./api/quota.md).
->- Pour les règles de droits, les limites mensuelles, la chronologie SLA et les politiques de gestion des exceptions, consultez les guides [ Guide du quota de suppression d’enregistrements (IU)](./ui/record-delete.md#quotas) et [ Guide du quota d’ordres de travail (API)](./api/workorder.md#quotas).
+>- Pour les règles de droits, les limites mensuelles, la chronologie SLA et les politiques de gestion des exceptions, consultez les guides [&#x200B; Guide du quota de suppression d’enregistrements (IU)](./ui/record-delete.md#quotas) et [&#x200B; Guide du quota d’ordres de travail (API)](./api/workorder.md#quotas).
 
 ### Délais d’expiration des jeux de données {#dataset-expiration-timelines}
 
@@ -65,4 +71,4 @@ Les demandes de suppression d’enregistrements sont traitées en fonction du ni
 
 ## Étapes suivantes {#next-steps}
 
-Ce document présente les fonctionnalités du cycle de vie des données d’Experience Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, consultez le [guide de l’interface utilisateur du cycle de vie des données](./ui/overview.md). Pour créer des tâches de cycle de vie des données par programmation, consultez le [ Guide de l’API Data Hygiene ](./api/overview.md).
+Ce document présente les fonctionnalités du cycle de vie des données d’Experience Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, consultez le [guide de l’interface utilisateur du cycle de vie des données](./ui/overview.md). Pour créer des tâches de cycle de vie des données par programmation, consultez le [&#x200B; Guide de l’API Data Hygiene &#x200B;](./api/overview.md).
