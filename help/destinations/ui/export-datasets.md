@@ -23,9 +23,9 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: e0274701d376954ef3da84e53fc8145ff80c0a4e
 workflow-type: tm+mt
-source-wordcount: 3039
+source-wordcount: 2997
 ht-degree: 23%
 
 ---
@@ -35,14 +35,6 @@ ht-degree: 23%
 >[!AVAILABILITY]
 >
 >Cette fonctionnalité est disponible pour les clients qui ont acheté le package [!DNL Real-Time CDP] Prime ou Ultimate, [!DNL Adobe Journey Optimizer] ou Customer Journey Analytics. Contactez votre représentant ou représentante Adobe pour plus d’informations.
-
->[!IMPORTANT]
->
->**Action item** : la version [septembre 2024 d’Experience Platform](/help/release-notes/latest/latest.md#destinations) a introduit l’option permettant de définir une date `endTime` pour l’exportation des flux de données du jeu de données. Adobe a également introduit une date de fin par défaut du 1er septembre 2025 pour tous les flux de données d’exportation de jeux de données créés *avant le 1er novembre 2024*.
->
->Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er septembre 2025.
->
->Consultez la [section de planification](#scheduling) pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeu de données.
 
 Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de [!DNL Adobe Experience Platform] vers l’emplacement de l’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -131,35 +123,35 @@ Notez les conditions préalables suivantes pour exporter des jeux de données :
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activate]** ou **[!UICONTROL Export datasets]**, vous disposez des autorisations appropriées.
+Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
 ## Sélectionner votre destination {#select-destination}
 
 Suivez les instructions pour sélectionner une destination vers laquelle vous pouvez exporter vos jeux de données :
 
-1. Accédez à **[!UICONTROL Connections > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** .
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
    ![Onglet Catalogue de destination avec le contrôle Catalogue mise en surbrillance.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. Sélectionnez **[!UICONTROL Activate]** ou **[!UICONTROL Export datasets]** sur la carte correspondant à la destination vers laquelle vous souhaitez exporter des jeux de données.
+1. Sélectionnez **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]** sur la vignette correspondant à la destination vers laquelle vous souhaitez exporter des jeux de données.
 
    ![Onglet Catalogue de destinations avec le contrôle Activer mis en surbrillance.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. Sélectionnez **[!UICONTROL Data type Datasets]** et sélectionnez la connexion de destination vers laquelle vous souhaitez exporter les jeux de données, puis sélectionnez **[!UICONTROL Next]**.
+1. Sélectionnez **[!UICONTROL Type de données des jeux de données]** et sélectionnez la connexion de destination vers laquelle vous souhaitez exporter les jeux de données, puis sélectionnez **[!UICONTROL Suivant]**.
 
 >[!TIP]
 > 
->Si vous souhaitez configurer une nouvelle destination pour exporter des jeux de données, sélectionnez **[!UICONTROL Configure new destination]** pour déclencher le workflow [Se connecter à la destination](/help/destinations/ui/connect-destination.md).
+>Si vous souhaitez configurer une nouvelle destination pour exporter des jeux de données, sélectionnez **[!UICONTROL Configurer une nouvelle destination]** pour déclencher le workflow [Se connecter à la destination](/help/destinations/ui/connect-destination.md).
 
 ![Workflow d’activation de destination avec le contrôle Jeux de données mis en surbrillance.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-1. La vue **[!UICONTROL Select datasets]** s’affiche. Passez à la section suivante pour [sélectionner vos jeux de données](#select-datasets) pour l’exportation.
+1. La vue **[!UICONTROL Sélectionner des jeux de données]** s’affiche. Passez à la section suivante pour [sélectionner vos jeux de données](#select-datasets) pour l’exportation.
 
 ## Sélectionner vos jeux de données {#select-datasets}
 
-Utilisez les cases à cocher situées à gauche des noms des jeux de données pour sélectionner les jeux de données à exporter vers la destination, puis sélectionnez **[!UICONTROL Next]**.
+Utilisez les cases à cocher situées à gauche des noms des jeux de données pour sélectionner les jeux de données à exporter vers la destination, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Workflow d’exportation des jeux de données présentant l’étape de sélection des jeux de données permettant de sélectionner les jeux de données à exporter.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
@@ -194,13 +186,13 @@ Utilisez les cases à cocher situées à gauche des noms des jeux de données po
 >
 >**Exemple :** si le jeu de données A est exporté de manière incrémentielle et que vous ajoutez le jeu de données B avec un planning d’exportation complet unique, le jeu de données A sera également mis à jour vers le planning d’exportation complet unique.
 
-Utilisez l’étape **[!UICONTROL Scheduling]** pour :
+Utilisez l’étape **[!UICONTROL Planification]** pour :
 
 * Définissez une date de début et une date de fin, ainsi qu’une cadence d’exportation pour vos exportations de jeux de données.
 * Configurez si les fichiers de jeu de données exportés doivent exporter l’appartenance complète du jeu de données ou simplement des modifications incrémentielles de l’appartenance à chaque occurrence d’exportation.
 * Personnalisez le chemin du dossier à l’emplacement de stockage où les jeux de données doivent être exportés. En savoir plus sur la [modification du chemin du dossier d’exportation](#edit-folder-path).
 
-Utilisez le contrôle **[!UICONTROL Edit schedule]** de la page pour modifier le rythme d’exportation des exportations et pour choisir d’exporter des fichiers complets ou incrémentiels.
+Utilisez la commande **[!UICONTROL Modifier le planning]** sur la page pour modifier le rythme d’exportation des exportations et choisir d’exporter des fichiers complets ou incrémentiels.
 
 >[!WARNING]
 >
@@ -208,7 +200,7 @@ Utilisez le contrôle **[!UICONTROL Edit schedule]** de la page pour modifier le
 
 ![Modifier le contrôle de planification mis en surbrillance à l’étape Planification.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
-L’option **[!UICONTROL Export incremental files]** est sélectionnée par défaut. Cela déclenche l’exportation d’un ou de plusieurs fichiers représentant un instantané complet du jeu de données. Les fichiers suivants sont des ajouts incrémentiels au jeu de données depuis l’exportation précédente. Vous pouvez également sélectionner **[!UICONTROL Export full files]**. Dans ce cas, sélectionnez la fréquence **[!UICONTROL Once]** pour une exportation complète unique du jeu de données.
+L’option **[!UICONTROL Exporter des fichiers incrémentiels]** est sélectionnée par défaut. Cela déclenche l’exportation d’un ou de plusieurs fichiers représentant un instantané complet du jeu de données. Les fichiers suivants sont des ajouts incrémentiels au jeu de données depuis l’exportation précédente. Vous pouvez également sélectionner **[!UICONTROL Exporter des fichiers complets]**. Dans ce cas, sélectionnez la fréquence **[!UICONTROL Une fois]** pour une exportation complète unique du jeu de données.
 
 >[!IMPORTANT]
 >
@@ -216,16 +208,16 @@ L’option **[!UICONTROL Export incremental files]** est sélectionnée par déf
 
 ![Workflow d’exportation de jeu de données présentant l’étape de planification.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. Utilisez le sélecteur **[!UICONTROL Frequency]** pour sélectionner la fréquence d’exportation :
+1. Utilisez le sélecteur **[!UICONTROL Fréquence]** pour sélectionner la fréquence d’exportation :
 
-   * **[!UICONTROL Daily]** : planification d’exportations de fichiers incrémentiels une fois par jour, tous les jours, au moment choisi.
-   * **[!UICONTROL Hourly]** : planification d’exportations de fichiers incrémentiels toutes les 3, 6, 8 ou 12 heures.
+   * **[!UICONTROL Quotidien]** : planification d’exportations de fichiers incrémentiels une fois par jour, tous les jours, au moment choisi.
+   * **[!UICONTROL Par heure]** : planification d’exportations de fichiers incrémentiels toutes les 3, 6, 8 ou 12 heures.
 
-2. Utilisez le sélecteur **[!UICONTROL Time]** pour choisir l’heure de la journée à laquelle l’exportation doit avoir lieu, au format [!DNL UTC].
+2. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée à laquelle l’exportation doit avoir lieu, au format [!DNL UTC].
 
 3. Utilisez le sélecteur **[!UICONTROL Date]** pour choisir l’intervalle à partir duquel l’exportation doit avoir lieu.
 
-4. Sélectionnez **[!UICONTROL Save]** pour enregistrer le planning et passer à l’étape **[!UICONTROL Review]**.
+4. Sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le planning et passer à l’étape **[!UICONTROL Réviser]**.
 
 >[!NOTE]
 >
@@ -243,7 +235,7 @@ L’option **[!UICONTROL Export incremental files]** est sélectionnée par déf
 >title="Aperçu du chemin du dossier du jeu de données"
 >abstract="Obtenez un aperçu de la structure de dossiers créée à l’emplacement de stockage en fonction des macros que vous avez ajoutées dans cette fenêtre."
 
-Sélectionnez **[!UICONTROL Edit folder path]** pour personnaliser la structure de dossiers de l’emplacement de stockage où les jeux de données exportés sont déposés.
+Sélectionnez **[!UICONTROL Modifier le chemin du dossier]** pour personnaliser la structure de dossiers de l’emplacement de stockage où les jeux de données exportés sont déposés.
 
 ![Modifier le contrôle du chemin d’accès au dossier mis en surbrillance à l’étape de planification.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
 
@@ -251,7 +243,7 @@ Vous pouvez utiliser plusieurs macros disponibles pour personnaliser le nom de d
 
 ![Sélection des macros mise en surbrillance dans la fenêtre modale du dossier personnalisé.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-Après avoir sélectionné les macros souhaitées, vous pouvez voir un aperçu de la structure de dossiers qui sera créée à votre emplacement de stockage. Le premier niveau de la structure de dossiers représente le **[!UICONTROL Folder path]** que vous avez indiqué lorsque vous [êtes connecté à la destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) pour exporter des jeux de données.
+Après avoir sélectionné les macros souhaitées, vous pouvez voir un aperçu de la structure de dossiers qui sera créée à votre emplacement de stockage. Le premier niveau de la structure de dossiers représente le **[!UICONTROL chemin du dossier]** que vous avez indiqué lorsque vous [êtes connecté à la destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) pour exporter des jeux de données.
 
 ![Aperçu du chemin du dossier mis en surbrillance dans la fenêtre modale du dossier personnalisé.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
@@ -266,7 +258,7 @@ Lors de l’exportation de plusieurs jeux de données, tenez compte des bonnes p
 
 ## Réviser {#review}
 
-Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Cancel]** pour interrompre le flux, **[!UICONTROL Back]** pour modifier vos paramètres ou **[!UICONTROL Finish]** pour confirmer votre sélection et commencer à exporter des jeux de données vers la destination.
+Sur la page **[!UICONTROL Réviser]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à exporter les jeux de données vers la destination.
 
 ![Workflow d’exportation des jeux de données présentant l’étape de révision.](/help/destinations/assets/ui/export-datasets/review.png)
 
@@ -278,7 +270,7 @@ Experience Platform crée une structure de dossiers dans l’emplacement de sto
 
 >[!TIP]
 >
->Le premier niveau de cette structure de dossiers, `folder-name-you-provided`, représente le **[!UICONTROL Folder path]** que vous avez indiqué lorsque vous [connecté à la destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) pour exporter des jeux de données.
+>Le premier niveau de cette structure de dossiers - `folder-name-you-provided` - représente le **[!UICONTROL chemin du dossier]** que vous avez indiqué lorsque vous [êtes connecté à la destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) pour exporter des jeux de données.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -305,7 +297,7 @@ Les exportations vers des fichiers JSON sont prises en charge *en mode compress�
 
 Pour supprimer des jeux de données d’un flux de données existant, procédez comme suit :
 
-1. Accédez à l’[interface utilisateur d’](https://experience.adobe.com/platform/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Browse]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
+1. Accédez à l’[interface utilisateur d’](https://experience.adobe.com/platform/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
    ![La vue de navigation de destination avec une connexion de destination affichée et le reste s’est estompée.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -313,15 +305,15 @@ Pour supprimer des jeux de données d’un flux de données existant, procédez 
    >
    >Sélectionnez l’icône filtre ![Icône Filtre](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
-2. Dans la colonne **[!UICONTROL Activation data]** , sélectionnez le contrôle des jeux de données pour afficher tous les jeux de données mappés à ce flux de données d’exportation.
+2. Dans la colonne **[!UICONTROL Données d’activation]**, sélectionnez le contrôle des jeux de données pour afficher tous les jeux de données mappés à ce flux de données d’exportation.
 
    ![L’option de navigation des jeux de données disponibles est affichée en surbrillance dans la colonne Données d’activation.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. La page **[!UICONTROL Activation data]** de la destination s’affiche. Utilisez les cases à cocher situées sur le côté gauche de la liste des jeux de données pour sélectionner les jeux de données à supprimer, puis sélectionnez **[!UICONTROL Remove datasets]** dans le rail de droite pour déclencher la boîte de dialogue de confirmation de suppression du jeu de données.
+3. La page **[!UICONTROL Données d’activation]** de la destination s’affiche. Utilisez les cases à cocher situées sur le côté gauche de la liste des jeux de données pour sélectionner les jeux de données à supprimer, puis sélectionnez **[!UICONTROL Supprimer des jeux de données]** dans le rail de droite pour déclencher la boîte de dialogue de confirmation de suppression du jeu de données.
 
    ![Boîte de dialogue Supprimer le jeu de données présentant la commande Supprimer le jeu de données dans le rail de droite.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-4. Dans la boîte de dialogue de confirmation, sélectionnez **[!UICONTROL Remove]** pour supprimer immédiatement le jeu de données des exportations vers la destination.
+4. Dans la boîte de dialogue de confirmation, sélectionnez **[!UICONTROL Supprimer]** pour supprimer immédiatement le jeu de données des exportations vers la destination.
 
    ![Boîte de dialogue présentant l’option Confirmer la suppression du jeu de données du flux de données.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
