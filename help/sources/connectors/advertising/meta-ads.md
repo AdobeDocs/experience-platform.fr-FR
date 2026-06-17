@@ -2,9 +2,10 @@
 title: Présentation de Meta Ads Source
 description: Découvrez comment connecter Meta Ads à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badge: Beta
-source-git-commit: fc795d46e7515724553edb1bdfd0f5f6b4c88914
+hide: true
+source-git-commit: 00c2cc19c006cb966ca99bf924fa61b4a8cea698
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1359'
 ht-degree: 1%
 
 ---
@@ -38,7 +39,7 @@ Cela permet de nombreux cas d’utilisation, notamment la modélisation du mix m
 
 ### Configuration des autorisations sur Experience Platform
 
-Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Meta Ads] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Pour connecter votre compte [!DNL Meta Ads] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Conditions préalables relatives au compte [!DNL Meta]
 

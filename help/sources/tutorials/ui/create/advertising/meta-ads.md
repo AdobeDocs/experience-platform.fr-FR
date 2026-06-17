@@ -2,10 +2,11 @@
 title: Connexion de Meta Ads à l’interface utilisateur d’Experience Platform
 description: Découvrez comment connecter votre compte Meta Ads à Adobe Experience Platform dans l’interface utilisateur.
 badge: Beta
-source-git-commit: e548ae0b95a92ae2c9fb41f6689cf3064e9b75c2
+hide: true
+source-git-commit: 00c2cc19c006cb966ca99bf924fa61b4a8cea698
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 15%
+source-wordcount: '632'
+ht-degree: 14%
 
 ---
 
@@ -32,29 +33,29 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Parcourir le catalogue des sources
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Categories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour ingérer des données à partir de [!DNL Meta Ads], sélectionnez la carte source **[!UICONTROL Meta Ads]** sous *[!UICONTROL Advertising]*, puis sélectionnez **[!UICONTROL Add data]**.
+Pour ingérer des données à partir de [!DNL Meta Ads], sélectionnez la carte source **[!UICONTROL Meta Ads]** sous *[!UICONTROL Advertising]* puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte source Meta Ads sous Advertising et Ajouter des données disponibles.](../../../../images/tutorials/create/meta-ads/catalog.png)
 
 ### Utiliser un compte existant
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]** et sélectionnez le compte [!DNL Meta Ads] à utiliser dans l’interface Comptes .
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** et sélectionnez le compte [!DNL Meta Ads] à utiliser dans l’interface Comptes.
 
 ![L’étape Compte du workflow des sources avec Compte existant sélectionné et un compte Meta Ads parmi lequel choisir.](../../../../images/tutorials/create/meta-ads/existing.png)
 
 ### Créer un nouveau compte
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom et une description pour votre nouveau compte source [!DNL Meta Ads]. Sélectionnez **[!UICONTROL Connect to source]**.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description pour votre nouveau compte source [!DNL Meta Ads]. Sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Nouvelle étape de compte avec un nom de compte source Meta Ads, une description facultative et Se connecter à la source.](../../../../images/tutorials/create/meta-ads/new.png)
 
-Après avoir sélectionné **[!UICONTROL Connect to source]**, vous serez redirigé vers la page de connexion [!DNL Facebook]. Saisissez vos informations d’identification pour l’authentification. Une fois la connexion effectuée, vous serez invité à configurer les autorisations [!DNL Facebook] nécessaires pour Experience Platform.
+Après avoir sélectionné **[!UICONTROL Se connecter à la source]**, vous serez redirigé vers la page de connexion [!DNL Facebook]. Saisissez vos informations d’identification pour l’authentification. Une fois la connexion effectuée, vous serez invité à configurer les autorisations [!DNL Facebook] nécessaires pour Experience Platform.
 
 ### Configuration des autorisations sur [!DNL Meta]
 
@@ -68,21 +69,21 @@ Sélectionnez ensuite les comptes Instagram auxquels Experience Platform doit ac
 - **Opt-in à tous les comptes Instagram actuels et futurs** : Autorisez l’accès à tous vos comptes Instagram actuels et futurs.
 - **Opt-in aux comptes Instagram actuels uniquement** : Autorisez l’accès uniquement aux comptes Instagram que vous sélectionnez actuellement.
 
-Après avoir examiné les demandes d’accès, sélectionnez **[!UICONTROL Save]** pour confirmer vos autorisations et continuer.
+Après avoir examiné les demandes d’accès, sélectionnez **[!UICONTROL Enregistrer]** pour confirmer vos autorisations et continuer.
 
 ## Fournir des détails sur le flux de données
 
-Utilisez la page [!UICONTROL Dataflow details] pour indiquer un nom et une description à votre flux de données. De plus, vous pouvez configurer des alertes pour votre flux de données au cours de cette étape.
+Utilisez la page [!UICONTROL Détails du flux de données] pour indiquer un nom et une description à votre flux de données. De plus, vous pouvez configurer des alertes pour votre flux de données au cours de cette étape.
 
 ![Page Détails du flux de données de la source Meta Ads, avec le nom, la description et les paramètres facultatifs d’alerte de flux de données.](../../../../images/tutorials/create/meta-ads/dataflow-detail.png)
 
 ## Vérifier le flux de données
 
-Enfin, utilisez l’interface [!UICONTROL Review] pour consulter les détails de votre flux de données avant de le créer. Les détails sont regroupés dans les catégories suivantes :
+Enfin, utilisez l’interface [!UICONTROL Révision] pour consulter les détails de votre flux de données avant de le créer. Les détails sont regroupés dans les catégories suivantes :
 
-- **[!UICONTROL Connection]** : affiche le nom du compte, la plateforme source et le nom de la source.
-- **[!UICONTROL Assign dataset and map fields]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
+- **[!UICONTROL Connexion]** : affiche le nom du compte, la plateforme source et le nom de la source.
+- **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
 
-Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Finish]**.
+Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**.
 
 ![Étape de révision du workflow des sources Meta Ads, affichant la connexion et le résumé du jeu de données ou du mappage avant la fin.](../../../../images/tutorials/create/meta-ads/review.png)
