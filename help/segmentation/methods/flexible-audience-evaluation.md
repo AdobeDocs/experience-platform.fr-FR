@@ -19,9 +19,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 592a55cd7853232711cf53f005d96ad732da68ee
 workflow-type: tm+mt
-source-wordcount: 1219
+source-wordcount: 1239
 ht-degree: 6%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 6%
 >
 >L’évaluation flexible des audiences est **uniquement** disponible sur les instances d’Experience Platform s’exécutant sur [!DNL Microsoft Azure]. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../landing/multi-cloud.md).
 >
->En outre, l’évaluation d’audience flexible est **uniquement** disponible avec Real-Time CDP B2C Edition.
+>En outre, l’évaluation flexible des audiences est **uniquement** disponible avec Real-Time CDP B2C Edition et Adobe Journey Optimizer.
 
 L’évaluation d’audience flexible vous permet d’exécuter une tâche de segmentation par lots à la demande. Grâce à une évaluation d’audience flexible, vous pouvez exécuter des lancements de campagne ad hoc, des communications juste à temps ou d’autres activités sensibles au facteur temps.
 
@@ -63,7 +63,7 @@ Lorsque vous exécutez l’évaluation d’audience flexible, gardez à l’espr
 
 Pour utiliser l’évaluation d’audience flexible, vous devez disposer des autorisations suivantes :
 
-- **[!UICONTROL Evaluate Segment to an Audience]** sous la section **[!DNL Profile Management]** .
+- **[!UICONTROL Évaluer le segment par rapport à une audience]** sous la section **[!DNL Profile Management]** .
 
 Pour plus d’informations sur le contrôle d’accès en fonction du rôle, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 
@@ -318,15 +318,15 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 >[!TAB Interface utilisateur ]
 
-Pour exécuter une évaluation d’audience flexible dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Customers]** .
+Pour exécuter une évaluation d’audience flexible dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Clients]**.
 
 ![Le bouton Audiences de la section Clients est mis en surbrillance. Audience Portal pour les profils client s’affiche.](../images/methods/fae/audience-portal.png)
 
-Le Portail d’audiences s’affiche, affichant une liste de toutes les audiences de personnes pour l’organisation. Dans Audience Portal, vous pouvez choisir les audiences que vous souhaitez évaluer et sélectionner **[!UICONTROL Evaluate audience]**.
+Le Portail d’audiences s’affiche, affichant une liste de toutes les audiences de personnes pour l’organisation. Dans Audience Portal, vous pouvez choisir les audiences à évaluer et sélectionner **[!UICONTROL Évaluer l’audience]**.
 
 ![Les audiences pour lesquelles vous souhaitez utiliser l’évaluation d’audience flexible sont sélectionnées.](../images/methods/fae/evaluate-audiences.png)
 
-La fenêtre contextuelle **[!UICONTROL Evaluate audiences on demand]** apparaît, affichant la liste des audiences qui seront évaluées avec la tâche de segmentation à la demande. Si une audience ne peut pas être évaluée à la demande, elle sera automatiquement supprimée de la tâche d’évaluation. Vérifiez que les audiences répertoriées sont celles que vous souhaitez évaluer.
+La fenêtre contextuelle **[!UICONTROL Évaluer les audiences à la demande]** s’affiche. Elle répertorie les audiences qui seront évaluées avec la tâche de segmentation à la demande. Si une audience ne peut pas être évaluée à la demande, elle sera automatiquement supprimée de la tâche d’évaluation. Vérifiez que les audiences répertoriées sont celles que vous souhaitez évaluer.
 
 ![Les audiences qui peuvent être évaluées à l’aide de l’évaluation d’audience flexible s’affichent.](../images/methods/fae/evaluate-audiences-modal.png)
 
@@ -336,7 +336,7 @@ Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requ�
 >
 >Le statut de la tâche de segmentation peut être indiqué comme dans l’état « En file d’attente » dans le tableau de bord de surveillance. Vous pouvez afficher l’état le plus à jour de la tâche de segmentation en adressant une requête GET au point d’entrée `/segment/jobs` et en fournissant l’identifiant de la tâche de segmentation dans le chemin d’accès de la requête. Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée dans l’onglet API .
 >
->Si vous exécutez l’évaluation d’audience flexible et souhaitez qu’elle active l’audience vers une destination, vous devez vous assurer que la fréquence est définie sur **[!UICONTROL After segment evaluation]**. L’exécution de l’évaluation d’audience flexible sur des audiences déjà définies pour être activées [après l’évaluation des segments](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) active les audiences dès que la tâche d’évaluation d’audience flexible se termine, indépendamment des tâches d’activation quotidiennes précédentes.
+>Si vous exécutez l’évaluation d’audience flexible et souhaitez qu’elle active l’audience vers une destination, vous devez vous assurer que la fréquence est définie sur **[!UICONTROL Après l’évaluation du segment]**. L’exécution de l’évaluation d’audience flexible sur des audiences déjà définies pour être activées [après l’évaluation des segments](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) active les audiences dès que la tâche d’évaluation d’audience flexible se termine, indépendamment des tâches d’activation quotidiennes précédentes.
 
 >[!ENDTABS]
 
