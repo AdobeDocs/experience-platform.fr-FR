@@ -1,8 +1,7 @@
 ---
 title: 'Lien privé pour les  [!DNL Azure] '
 description: Découvrez comment acheminer les exportations de données de  [!DNL Experience Platform]   [!DNL Azure]  vers vos ressources sur la colonne vertébrale  [!DNL Microsoft Azure]  privée à l’aide d’ [!DNL Azure]  lien privé.
-nudge: true
-source-git-commit: 3016a3ee59f469f7bc6bdff87b28a5ce9ce7259b
+source-git-commit: 57884c36a2a1e05a5bf77c12ba33113e293559a1
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 3%
@@ -66,7 +65,7 @@ Il n’existe actuellement aucune interface utilisateur qui vous permet de confi
 
 >[!TIP]
 >
->Si vous disposez déjà d’un point d’entrée privé pour [!DNL Azure Event Hubs] configuré pour une source [!DNL Experience Platform], ce point d’entrée peut également être utilisé pour les destinations. Vous n’avez pas besoin de configurer un point d’entrée distinct. Pour plus d’informations[&#128279;](/help/sources/tutorials/ui/private-link.md) voir  Prise en charge des liens privés pour les sources .
+>Si vous disposez déjà d’un point d’entrée privé pour [!DNL Azure Event Hubs] configuré pour une source [!DNL Experience Platform], ce point d’entrée peut également être utilisé pour les destinations. Vous n’avez pas besoin de configurer un point d’entrée distinct. Pour plus d’informations](/help/sources/tutorials/ui/private-link.md) voir [ Prise en charge des liens privés pour les sources .
 
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
