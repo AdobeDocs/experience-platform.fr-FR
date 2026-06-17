@@ -12,9 +12,9 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7c8919e972bf0a62ea00e6435aa60a48aa11f53d
+source-git-commit: 96edf5301f1fa53cf875c5c791d67bd96e94ad6b
 workflow-type: tm+mt
-source-wordcount: 2839
+source-wordcount: 3085
 ht-degree: 0%
 
 ---
@@ -23,115 +23,134 @@ ht-degree: 0%
 
 Dans Adobe Experience Platform, toutes les ressources de schéma du modèle de données d’expérience (XDM) sont stockées dans le [!DNL Schema Library], y compris les ressources standard fournies par Adobe et les ressources personnalisées définies par votre organisation. Dans l’interface utilisateur d’Experience Platform, vous pouvez afficher la structure et les champs de n’importe quel schéma, classe, groupe de champs ou type de données existant dans le [!DNL Schema Library]. Cela s’avère particulièrement utile lors de la planification et de la préparation de l’ingestion de données, car l’interface utilisateur fournit des informations sur les types de données attendus et les cas d’utilisation de chaque champ fourni par ces ressources XDM.
 
-Ce tutoriel décrit les étapes à suivre pour explorer les schémas, classes, groupes de champs et types de données existants dans l’interface utilisateur d’Experience Platform.
+Ce guide explique comment explorer les schémas, classes, groupes de champs, types de données et relations existants dans l’interface utilisateur d’Experience Platform.
 
 ## Recherche d’une ressource de schéma {#lookup}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche. L’espace de travail [!UICONTROL Schemas] propose un onglet **[!UICONTROL Browse]** pour explorer tous les schémas de votre organisation, ainsi que des onglets dédiés supplémentaires pour explorer respectivement **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]** et **[!UICONTROL Relationships]**.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le rail de gauche. L’espace de travail [!UICONTROL Schémas] fournit un onglet **[!UICONTROL Parcourir]** dans lequel vous pouvez afficher tous les schémas de votre organisation. Vous pouvez également utiliser les onglets **[!UICONTROL Classes]**, **[!UICONTROL Groupes de champs]**, **[!UICONTROL Types de données]** et **[!UICONTROL Relations]** pour afficher ces ressources.
 
 ![Espace de travail des schémas avec plusieurs onglets mis en surbrillance.](../images/ui/explore/tabs.png)
 
-L’icône de filtre (![Icône de filtre Image](/help/images/icons/filter.png)) affiche des commandes dans le rail de gauche pour réduire les résultats répertoriés. Les filtres de ressources sont disponibles pour les schémas et les relations dans les onglets **[!UICONTROL Browse]** et **[!UICONTROL Relationships]**, respectivement. Sur l’onglet **[!UICONTROL Field groups]** , utilisez les filtres décrits à la section [Métadonnées et filtrage des groupes de champs](#field-group-metadata-and-filtering) pour limiter la liste par classe et balises de secteur compatibles.
+## Filtrage et recherche de schémas {#filter-search}
 
-Dans l’onglet [!UICONTROL Browse] de l’espace de travail [!UICONTROL Schemas], vous pouvez filtrer l’inventaire des schémas. Utilisez le bouton **[!UICONTROL Included in Profile]** pour afficher uniquement les schémas qui ont été activés pour une utilisation dans [Real-Time Customer Profile](../../profile/home.md). Utilisez le bouton **[!UICONTROL Show adhoc schemas]** pour filtrer la liste des schémas créés avec un espace de noms de champs à utiliser uniquement par un seul jeu de données.
+Utilisez les outils de filtrage et de recherche de l’espace de travail **[!UICONTROL Schémas]** pour affiner la liste des schémas et localiser plus rapidement des ressources spécifiques. L’icône de filtre (![icône de filtre](/help/images/icons/filter.png)) ouvre le panneau de filtrage, où vous pouvez filtrer les schémas à l’aide de métadonnées, d’identité, de relation, de date et de critères de propriété. Les filtres de ressources sont disponibles dans les onglets **[!UICONTROL Parcourir]** et **[!UICONTROL Relations]**.
 
-![Onglet [!UICONTROL Browse] de l’espace de travail [!UICONTROL Schemas] avec le panneau Filtres mis en surbrillance.](../images/ui/explore/filters.png)
+![Onglet [!UICONTROL Schémas] de l’espace de travail [!UICONTROL Parcourir] avec le panneau de filtres complet en surbrillance.](../images/ui/explore/schemas-filter-sidebar.png)
 
-Dans l’onglet [!UICONTROL Relationship] de l’espace de travail [!UICONTROL Schemas], vous pouvez filtrer la liste des relations en fonction de quatre critères. Les filtres incluent [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class] et le [!UICONTROL Destination class]. Le tableau ci-dessous fournit une description des filtres.
 
-| Filtre | Description |
-|-----------------------------------|------------|
-| [!UICONTROL Source schema] | Pour afficher toutes les relations où le schéma sélectionné est le point de départ ou la « source », sélectionnez un schéma dans le menu déroulant [!UICONTROL Source schema]. |
-| [!UICONTROL Destination schema] | Pour afficher toutes les relations où le schéma sélectionné est la cible ou la « destination », sélectionnez un schéma dans le menu déroulant [!UICONTROL Destination schema]. |
-| [!UICONTROL Source class] | Pour filtrer les relations en fonction de la classe du schéma initiateur, sélectionnez une classe dans le menu déroulant [!UICONTROL Source class]. |
-| [!UICONTROL Destination class] | Pour afficher les relations qui se terminent par des schémas d’une classe spécifique, sélectionnez une classe dans le menu déroulant [!UICONTROL Destination class]. |
+### Filtres de métadonnées de schéma
+
+Filtrez les schémas en fonction de leurs caractéristiques fondamentales et de leurs attributs d’organisation.
+
+| Filtre | Type de contrôle | Description |
+|--------|-------------|-------------|
+| [!UICONTROL Afficher les profils] | Cases d&#39;option | Afficher [!UICONTROL Tous], [!UICONTROL Activé] uniquement ou [!UICONTROL Désactivé] uniquement. Les schémas activés pour Profil participent au [profil client en temps réel](../../profile/home.md) et prennent en charge les vues unifiées des clients dans l’ensemble de votre organisation. |
+| [!UICONTROL &#x200B; Type de schéma &#x200B;] | Cases à cocher | Filtrer par origine de schéma : schémas [!UICONTROL standard] (fournis par Adobe), [!UICONTROL relationnels] (fonctionnalités de modélisation des données structurées et relationnelles) ou [!UICONTROL ad hoc] (espaces de noms de champs utilisables par un seul jeu de données). |
+| [!UICONTROL Classe] | Liste déroulante | Affichez uniquement les schémas créés sur des bases de classe spécifiques telles que XDM Individual Profile, XDM ExperienceEvent ou les classes personnalisées définies par votre organisation. |
+| [!UICONTROL Balises] | Liste déroulante | Filtrage des schémas par balises définies par l’utilisateur et appliquées par l’utilisateur. Les options incluent [!UICONTROL A une balise] et [!UICONTROL A toutes les balises]. Utilisez les balises pour localiser les schémas organisés par projet, équipe, domaine d’activité ou taxonomies personnalisées qui prennent en charge les pratiques de gestion des schémas de votre organisation. |
 
 {style="table-layout:auto"}
 
-![Onglet Relations avec la section Filtres mise en surbrillance.](../images/ui/explore/relationships-filter.png)
+### Filtres d’attributs de schéma
 
-Vous pouvez également utiliser la barre de recherche pour affiner davantage les résultats.
+Limitation des résultats en fonction de la structure du schéma et de la configuration des identités.
+
+| Filtre | Type de contrôle | Description |
+|--------|-------------|-------------|
+| [!UICONTROL A une relation] | Cases à cocher Oui/Non | Afficher uniquement les schémas contenant des champs de relation se connectant à d’autres schémas. Les champs de relation permettent des connexions de données entre différents schémas et prennent en charge des scénarios de modélisation de données complexes. |
+| [!UICONTROL A une identité principale] | Cases à cocher Oui/Non | Filtrez les schémas avec des champs d’identité principaux désignés. Les champs d’identité de Principal sont requis pour l’activation du profil et servent de base à l’unification des données client. |
+| [!UICONTROL Espace de noms d’identité du Principal &#x200B;] | Liste déroulante | Recherchez des schémas à l’aide de types d’identité particuliers tels que l’e-mail, l’ECID, le téléphone ou des espaces de noms personnalisés comme identifiant principal. |
+
+{style="table-layout:auto"}
+
+### Filtres temporels et de créateur
+
+Filtrez les schémas en fonction des modèles de création et de la propriété.
+
+| Filtre | Type de contrôle | Description |
+|--------|-------------|-------------|
+| [!UICONTROL Date de création] | Sélecteurs de date de début et de fin | Filtrez les schémas par périodes de création. Recherchez les schémas récemment créés ou recherchez les schémas créés au cours de phases de projet ou de périodes spécifiques. |
+| [!UICONTROL Date de modification] | Sélecteurs de date de début et de fin | Filtrage des schémas par périodes de modification. Identifiez les schémas avec des mises à jour ou des modifications récentes pour prendre en charge les workflows de maintenance et de gouvernance. |
+| [!UICONTROL Créé par] | Liste déroulante | Filtrez les schémas selon leur créateur d’origine. Localisez les schémas créés par des membres de l’équipe, des systèmes ou des comptes de service spécifiques pour prendre en charge le suivi de la propriété et la collaboration. |
+
+{style="table-layout:auto"}
+
+### Filtres de l’onglet Relation
+
+Lors de l’affichage des relations de schéma dans l’onglet [!UICONTROL Relations], utilisez des filtres supplémentaires pour explorer les connexions de schéma :
+
+| Filtre | Type de contrôle | Description |
+|--------|-------------|-------------|
+| [!UICONTROL Schéma &#x200B;] | Liste déroulante | Afficher les relations dans lesquelles le schéma sélectionné est le point de départ ou la « source ». |
+| [!UICONTROL Schéma destination] | Liste déroulante | Afficher les relations dans lesquelles le schéma sélectionné est la cible ou la « destination ». |
+| [!UICONTROL classe &#x200B;] | Liste déroulante | Filtrez les relations en fonction de la classe du schéma initiateur. |
+| [!UICONTROL Classe de destination] | Liste déroulante | Afficher les relations qui se terminent par les schémas d’une classe spécifique. |
+
+{style="table-layout:auto"}
+
+![Onglet Relation de l’espace de travail Schémas avec les champs de filtre mis en surbrillance.](../images/ui/explore/relationships-filter.png)
+
+### Combinaison de plusieurs filtres
+
+Combinez des filtres pour limiter la liste des schémas et rechercher plus rapidement des ressources spécifiques. Par exemple, vous pouvez rechercher des schémas standard [!UICONTROL activés pour Profil] avec des balises personnalisées qui ont été créées au cours du dernier mois, ou localiser des schémas ad hoc qui utilisent une identité principale d’e-mail et qui contiennent des champs de relation.
+
+![Panneau de filtrage amélioré de l’espace de travail Schémas affichant plusieurs types de filtres appliqués simultanément.](../images/ui/explore/enhanced-filters.png)
+
+Les filtres appliqués apparaissent sous forme de puces amovibles dans la ligne d&#39;en-tête d&#39;inventaire. Pour supprimer un filtre, sélectionnez le ×**sur sa puce.** Pour supprimer tous les filtres actifs en même temps, sélectionnez **[!UICONTROL Effacer tout]**.
+
+Utilisez la barre de recherche pour affiner davantage les résultats.
 
 ![Onglet Parcourir de l’espace de travail Schémas avec le champ de recherche en surbrillance.](../images/ui/explore/search.png)
 
-Les ressources affichées dans les résultats de recherche sont d’abord classées par correspondance de titre, puis par correspondance de description. Plus il y a de correspondances de mots dans l’une de ces catégories, plus la ressource apparaît en haut de la liste.
+Les résultats de recherche sont classés en fonction des correspondances dans les titres et les descriptions des ressources. Les correspondances de titres sont prioritaires sur les correspondances de descriptions, et les ressources comportant davantage de termes correspondants apparaissent plus haut dans la liste des résultats.
 
 Lorsque vous avez trouvé la ressource à explorer, sélectionnez son nom dans la liste pour afficher sa structure dans la zone de travail.
 
-## Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression {#xdm-resource-actions}
+## Parcourir, organiser et gérer les schémas {#browse-organize-manage-schemas}
 
-Utilisez cette section lorsque vous devez gérer ou supprimer des ressources XDM ou lorsqu’une action (telle que la suppression) n’est pas disponible et que vous devez en comprendre la raison.
+Utilisez l’espace de travail [!UICONTROL Schémas] pour rechercher, organiser et gérer des schémas. Vous pouvez filtrer l’inventaire des schémas, trier les colonnes de métadonnées et effectuer des actions de schéma courantes directement à partir de la vue d’inventaire.
 
-### Où trouver les actions (page en ligne ou page de détails) {#where-to-find-actions}
+### Parcourir et filtrer les métadonnées
 
-Pour effectuer des actions telles que la suppression, l’exportation ou la copie d’une ressource, utilisez l’un des points d’entrée suivants :
+L’inventaire des schémas affiche les métadonnées clés des schémas dans une seule vue de tableau. Vous pouvez afficher les balises, le type de schéma, le statut d’activation du profil, la date de création, la date de dernière modification, la classe, les identités, les relations, le comportement et d’autres métadonnées sans ouvrir les schémas individuels.
 
-Sur les onglets **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field groups]** et **[!UICONTROL Data types]**, les actions de gestion sont disponibles à deux emplacements :
+Pour trier l’inventaire, sélectionnez un en-tête de colonne. Sélectionnez à nouveau le même en-tête de colonne pour inverser l’ordre de tri.
 
-- **En ligne dans le tableau** : chaque ligne de ressource comprend un menu d’actions (par exemple, **[!UICONTROL …]**) qui permet d’accéder directement aux actions disponibles.
+Si l’inventaire contient plus de résultats que nécessaire sur une seule page, utilisez les commandes de page au bas de la liste pour naviguer entre les pages.
 
-![Inventaire des schémas montrant les actions intégrées disponibles à partir du menu représentant des points de suspension pour chaque ressource.](../images/ui/explore/xdm-schema-inventory-inline-actions-menu.png)
+![Inventaire des schémas de l’espace de travail Schémas présentant les colonnes balises, type de schéma, activation du profil, date de création, dernière modification, classe, identités, relations et comportement.](../images/ui/explore/schema-inventory-columns.png)
 
-- **Vue détaillée des ressources** : pour accéder aux actions complètes dans la vue détaillée, vous devez sélectionner une ressource **personnalisée (définie par le client)**. Les ressources standard (fournies par Adobe) ont des actions limitées et n’affichent pas d’options telles que Supprimer, Copier la structure JSON ou Ajouter au package. Sélectionnez une ressource personnalisée dans l’inventaire pour ouvrir sa vue détaillée, puis utilisez le menu **[!UICONTROL More]** dans l’en-tête de la page pour accéder aux mêmes actions disponibles.
+### Actions intégrées sur les schémas
 
-![En-tête d’affichage des détails de la ressource affichant le menu Plus avec les actions disponibles, telles que Supprimer, Copier la structure JSON et Télécharger l’exemple de fichier.](../images/ui/explore/more-actions.png)
+Utilisez le menu représentant des points de suspension pour une ligne de schéma afin d’effectuer des actions de schéma courantes directement à partir de la vue d’inventaire.
 
-Ces actions sont cohérentes sur les deux points d’entrée pour les types de ressources pris en charge (schémas, classes, groupes de champs et types de données).
+Les actions sont disponibles dans les vues Inventaire et Détails des ressources. Certaines actions ne sont disponibles que pour les ressources personnalisées (définies par le client). Les ressources standard fournies par Adobe peuvent avoir des options d’action limitées.
 
-### Actions disponibles {#available-actions}
+![Menu représentant des points de suspension pour une ligne de schéma présentant des actions intégrées telles que Modifier, Supprimer, Appliquer des libellés et Gérer les balises.](../images/ui/explore/schema-inline-actions.png)
 
-Selon le type de ressource et vos autorisations, les actions suivantes peuvent être disponibles :
+Selon le type de ressource et les autorisations, vous pouvez modifier les propriétés du schéma, appliquer des libellés de gouvernance des données, supprimer des schémas et gérer les balises sans ouvrir le schéma. Les autres actions incluent le déplacement des schémas vers des dossiers, l’ajout de schémas aux packages de déploiement, la copie du schéma JSON et le téléchargement de fichiers d’exemple à des fins de test.
 
-- **[!UICONTROL Delete]** — Supprimer définitivement une ressource personnalisée de votre organisation (lorsque les contraintes le permettent). Si la suppression est bloquée, voir [&#x200B; Contraintes &#x200B;](#delete-constraints).
-- **[!UICONTROL Download sample file]** — Générer un fichier de données d&#39;exemple en fonction de la structure des ressources. Étape par étape : [générer des exemples de données XDM](./sample.md).
-- **[!UICONTROL Copy JSON structure]** — Copiez la définition de la ressource au format JSON pour la réutilisation, l&#39;exportation ou le contrôle. Procédure pas à pas : [Exporter des schémas XDM](./export.md).
-- **[!UICONTROL Add to package]** — Incluez la ressource dans un package sandbox pour l&#39;exportation ou l&#39;importation dans des sandbox. Etape par étape : [Exporter des objets dans un package](../../sandboxes/ui/sandbox-tooling.md#export-objects).
-
-Ce qui suit s’applique à différents types de ressources :
-
-- Pour les **schémas personnalisés (définis par le client)** les classes, les groupes de champs et les types de données, toutes les actions ci-dessus peuvent être disponibles.
-- Pour les classes, les groupes de champs et les types de données **standard** (définis par Adobe) :
-   - Seul **[!UICONTROL Download sample file]** est disponible.
-   - Les **Supprimer**, **Copier la structure JSON** et **Ajouter au package** ne sont pas disponibles.
-
-### Comportement de suppression {#delete-behavior}
-
-Utilisez l’action **[!UICONTROL Delete]** lorsque vous souhaitez supprimer une ressource personnalisée qui n’est plus nécessaire.
-
->[!IMPORTANT]
+>[!NOTE]
 >
-> La suppression d’une ressource la supprime définitivement de votre organisation et ne peut pas être annulée. Certaines ressources ne peuvent pas être supprimées en raison de contraintes d’utilisation, d’autorisations ou de système.
+>Utilisez des fichiers d’exemple uniquement pour tester la structure du schéma. N’incluez pas de données de production.
 
-Pour supprimer une ressource :
+Pour obtenir des instructions détaillées sur chaque action, consultez le [guide des actions de schéma](./resources/schemas.md#manage-from-browse).
 
-1. Recherchez la ressource dans la table ou ouvrez sa vue détaillée.
-2. Sélectionnez le menu d’actions (**[!UICONTROL …]** ou **[!UICONTROL More]**).
-3. Sélectionnez **[!UICONTROL Delete]**.
-4. Confirmez l’action dans la boîte de dialogue en sélectionnant à nouveau **[!UICONTROL Delete]**.
+### Navigation dans les schémas à l’aide de balises et de dossiers
 
-La ressource est définitivement supprimée de votre organisation après confirmation.
+Utilisez des balises et des dossiers pour organiser et localiser les schémas dans l’inventaire. Les balises vous permettent de regrouper des schémas par projet, équipe, domaine de données ou autres catégories définies par votre organisation. Les dossiers fournissent une structure hiérarchique pour organiser les schémas associés.
 
-Si la suppression n’est pas disponible pour une ressource, l’option apparaît désactivée avec une info-bulle expliquant pourquoi l’action ne peut pas être effectuée.
+Pour filtrer les schémas par balise, sélectionnez l’icône de filtre (![icône de filtre](/help/images/icons/filter.png)) pour ouvrir le panneau de filtrage. Sélectionnez ensuite une ou plusieurs balises dans le menu déroulant **[!UICONTROL A n’importe quelle balise]**.
 
-![Info-bulle d’action de suppression en ligne désactivée dans l’inventaire des schémas expliquant la restriction.](../images/ui/explore/xdm-schema-inventory-disabled-delete-tooltip.png)
+![Filtrez les schémas par balises définies par l’utilisateur dans l’inventaire des schémas pour localiser des schémas spécifiques.](../images/ui/explore/user-defined-tags.png)
 
-### Contraintes (jeu de données, profil, RBAC, client par rapport au global) {#delete-constraints}
+Pour parcourir les schémas par dossier, sélectionnez l’icône Afficher les dossiers (![icône Afficher les dossiers](/help/images/icons/rail-left.png)). La hiérarchie des dossiers s’affiche dans le rail de gauche. Sélectionnez un dossier pour afficher ses schémas associés.
 
-Si une action telle que **[!UICONTROL Delete]** n’est pas disponible ou est désactivée, cela est généralement dû à l’une des conditions suivantes :
+![Parcourez les hiérarchies de dossiers dans le rail de gauche pour parcourir et localiser les schémas.](../images/ui/explore/move-to-folder.png)
 
-- **Autorisations (RBAC)** : vous devez disposer des autorisations requises (telles que **[!UICONTROL Manage Schemas]**) pour effectuer des actions de gestion. Si des autorisations sont manquantes, les actions sont désactivées avec des info-bulles. Pour en savoir plus sur la configuration des autorisations, consultez la [présentation de l’interface utilisateur du contrôle d’accès](../../access-control/ui/overview.md).
+Les balises et les dossiers fonctionnent avec le système de filtrage d’inventaire, ce qui vous permet de réduire la liste des schémas en fonction des balises et des emplacements de dossiers qui leur sont attribués.
 
-- **Association de jeux de données** : les ressources utilisées par un ou plusieurs jeux de données (tels que les schémas associés aux jeux de données) ne peuvent pas être supprimées. Pour identifier et supprimer les dépendances des jeux de données, voir [Supprimer un jeu de données](../../catalog/datasets/user-guide.md#delete).
-
-- **Activation du profil** : les schémas activés pour le profil client en temps réel ne peuvent pas être supprimés. Pour savoir comment l’activation du profil affecte votre schéma, consultez [Planification de l’activation du profil client en temps réel](../schema/profile-enablement-planning.md).
-
-- **Ressources client ou globales** : les ressources définies par le client (personnalisées) peuvent être supprimées (sous réserve de contraintes), tandis que les classes, groupes de champs et types de données standard (fournis par Adobe) ne peuvent pas être supprimés.
-
-Ces contraintes sont directement reflétées dans l’interface utilisateur. Lorsqu’une action n’est pas disponible, elle apparaît désactivée et comprend une info-bulle expliquant la limitation spécifique.
-
-Si vous ne pouvez pas supprimer une ressource, consultez les conditions ci-dessus pour déterminer si vous devez mettre à jour les autorisations, supprimer les dépendances ou ajuster votre modèle de données.
-
-Pour d’autres workflows de modification de schéma dans la zone de travail, consultez [Création et modification de schémas dans l’interface utilisateur](./resources/schemas.md).
+Pour plus d’informations sur la création et la gestion des balises dans Experience Platform, consultez le guide [gestion des balises unifiées](../../administrative-tags/ui/managing-tags.md).
 
 ## Explorer une ressource XDM dans la zone de travail {#explore}
 
@@ -145,11 +164,11 @@ Tous les champs de type objet contenant des sous-propriétés sont réduits par 
 
 ### Classe standard et indicateur de groupe de champs {#standard-class-and-field-group-indicator}
 
-Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas (![icône de cadenas A.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+Dans l’éditeur de schémas, les classes et groupes de champs standard affichent une icône de cadenas (![Icône de cadenas.](/help/images/icons/lock-closed.png)). L’icône identifie les ressources générées par Adobe qui comportent des restrictions de modification. Il s’affiche dans le rail de gauche à côté des noms de classe et de groupe de champs, ainsi qu’à côté des champs qui appartiennent aux ressources générées par Adobe dans le diagramme de schéma.
 
 ![Éditeur de schémas avec l’icône de cadenas mise en surbrillance](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Consultez la documentation [Ajouter des champs personnalisés aux groupes de champs standard](./resources/schemas.md) pour obtenir des conseils. Vous ne pouvez pas modifier une classe standard.
+Vous ne pouvez pas modifier une classe standard. Pour étendre un groupe de champs standard, consultez la documentation [Ajouter des champs personnalisés aux groupes de champs standard](./resources/schemas.md#custom-fields-for-standard-groups).
 
 ### Champs générés par le système {#system-fields}
 
@@ -163,15 +182,15 @@ Pour chaque champ affiché dans la zone de travail, le type de données correspo
 
 ![Type de données d’adresse postale affiché sur la zone de travail avec ses types de données associés mis en surbrillance.](../images/ui/explore/data-types.png)
 
-Tout type de données ajouté entre crochets (`[]`) représente un tableau de ce type de données particulier. Par exemple, un type de données **[!UICONTROL String]\[]** indique que le champ attend un tableau de valeurs de chaîne. Un type de données **[!UICONTROL Payment Item]\[]** indique un tableau d’objets conformes au type de données [!UICONTROL Payment Item].
+Tout type de données ajouté entre crochets (`[]`) représente un tableau de ce type de données particulier. Par exemple, un type de données **[!UICONTROL Chaîne]\[]** indique que le champ attend un tableau de valeurs de chaîne. Un type de données **[!UICONTROL Élément de paiement]\[]** indique un tableau d’objets conformes au type de données [!UICONTROL Élément de paiement].
 
 Si un champ de tableau est basé sur un type d’objet, vous pouvez sélectionner son icône dans la zone de travail pour afficher les attributs attendus pour chaque élément de tableau.
 
 ![Un objet dans la zone de travail avec un champ de tableau en surbrillance et les attributs attendus pour chaque élément de tableau affiché.](../images/ui/explore/array-type.png)
 
-### [!UICONTROL Field properties] {#field-properties}
+### [!UICONTROL Propriétés du champ] {#field-properties}
 
-Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Field properties]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, des **[!UICONTROL Default value]** (métadonnées de schéma d’information qui ne sont pas appliquées lors de l’ingestion), des modèles, des formats, si le champ est obligatoire, etc. Voir [propriétés de champ spécifiques au type](./fields/overview.md#type-specific-properties) pour connaître les différences par rapport **[!UICONTROL Default value]** paramètres de validation de l’ingestion. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [&#x200B; Libellés dans la vue de structure &#x200B;](#field-group-labels-in-structure).
+Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Propriétés du champ]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, **[!UICONTROL Valeur par défaut]** (métadonnées de schéma d’information qui ne sont pas appliquées lors de l’ingestion), des modèles, des formats, si le champ est obligatoire, etc. Voir [Propriétés de champ spécifiques au type](./fields/overview.md#type-specific-properties) pour connaître les différences entre **[!UICONTROL Valeur par défaut]** et les paramètres de validation de l’ingestion. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [&#x200B; Libellés dans la vue de structure &#x200B;](#field-group-labels-in-structure).
 
 ![Champ sélectionné à partir du type de données Commerce avec les propriétés du champ mises en surbrillance.](../images/ui/explore/field-properties.png)
 
@@ -193,11 +212,11 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 ### Champs de relation {#relationship}
 
-Si vous inspectez un schéma contenant un champ de relation, le champ est répertorié dans le rail de gauche sous **[!UICONTROL Relationships]**. Sélectionnez le nom du champ de relation dans le rail de gauche pour afficher le champ dans la zone de travail, quelle que soit sa profondeur d’imbrication. Les champs de relation sont également mis en surbrillance de manière unique dans la zone de travail, affichant le nom du schéma de référence auquel le champ renvoie. Pour les organisations disposant de fonctionnalités B2B, des noms de relation personnalisés peuvent être écrits et s’affichent sur la zone de travail dans ces cas.
+Si vous inspectez un schéma qui contient un champ de relation, le champ est répertorié dans le rail de gauche sous **[!UICONTROL Relations]**. Sélectionnez le nom du champ de relation dans le rail de gauche pour afficher le champ dans la zone de travail, quelle que soit sa profondeur d’imbrication. Les champs de relation sont également mis en surbrillance de manière unique dans la zone de travail, affichant le nom du schéma de référence auquel le champ renvoie. Pour les organisations disposant de fonctionnalités B2B, des noms de relation personnalisés peuvent être écrits et s’affichent sur la zone de travail dans ces cas.
 
 ![Éditeur de schémas avec le champ de relation et Modifier la relation en surbrillance.](../images/ui/explore/relationship-field.png)
 
-Pour afficher l’espace de noms d’identité de l’identité principale du schéma de référence, sélectionnez le champ de relation, puis **[!UICONTROL Edit relationship]** dans la barre latérale [!UICONTROL Field properties]. Les paramètres de la relation s’affichent dans la boîte de dialogue [!UICONTROL Edit relationship] qui s’affiche.
+Pour afficher l’espace de noms d’identité de l’identité principale du schéma de référence, sélectionnez le champ de relation, puis **[!UICONTROL Modifier la relation]** dans la barre latérale [!UICONTROL Propriétés du champ]. Les paramètres de la relation s’affichent dans la boîte de dialogue [!UICONTROL Modifier la relation] qui s’affiche.
 
 ![Boîte de dialogue Modifier la relation avec les paramètres de relation affichés.](../images/ui/explore/edit-relationship-dialog.png)
 
@@ -205,17 +224,17 @@ Pour plus d’informations sur l’utilisation des relations dans les schémas X
 
 ## Explorer les groupes de champs : utilisation et métadonnées {#explore-field-groups}
 
-Accédez à **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** pour explorer les groupes de champs. Dans l’onglet **[!UICONTROL Field groups]** , des fonctionnalités supplémentaires vous aident à comprendre où un groupe de champs est utilisé sur l’ensemble des schémas et ce qu’il inclut, comme la compatibilité, les champs obligatoires (qui appliquent les exigences d’ingestion) et les signaux de gouvernance.
+Accédez à **[!UICONTROL Schémas]** > **[!UICONTROL Groupes de champs]** pour explorer les groupes de champs. Dans l’onglet **[!UICONTROL Groupes de champs]** des fonctionnalités supplémentaires vous permettent de comprendre où un groupe de champs est utilisé sur l’ensemble des schémas et ce qu’il inclut, comme la compatibilité, les champs obligatoires (qui appliquent les exigences d’ingestion) et les signaux de gouvernance.
 
 Ces fonctionnalités vous permettent d’évaluer l’impact avant d’apporter des modifications et d’identifier plus efficacement les groupes de champs pertinents lors de la conception du schéma.
 
 ### Afficher l’utilisation du schéma pour les groupes de champs {#view-schema-usage-for-field-groups}
 
-Dans le tableau **[!UICONTROL Field groups]**, sélectionnez un groupe de champs pour ouvrir sa vue détaillée. La zone de travail se met à jour pour afficher la structure du groupe de champs, et le rail des propriétés affiche des informations supplémentaires sur la ressource sélectionnée.
+Dans le tableau **[!UICONTROL Groupes de champs]**, sélectionnez un groupe de champs pour ouvrir sa vue détaillée. La zone de travail se met à jour pour afficher la structure du groupe de champs, et le rail des propriétés affiche des informations supplémentaires sur la ressource sélectionnée.
 
 #### Schémas utilisant ce groupe de champs
 
-Dans le rail de propriétés de droite, la section **[!UICONTROL Schemas using this field group]** répertorie les schémas qui incluent actuellement le groupe de champs .
+Dans le rail de propriétés de droite, la section **[!UICONTROL Schémas utilisant ce groupe de champs]** répertorie les schémas qui incluent actuellement le groupe de champs.
 
 ![Rail des propriétés du groupe de champs affichant les schémas utilisant cette section de groupe de champs.](../images/ui/explore/field-group-properties.png)
 
@@ -226,15 +245,15 @@ Sélectionnez un nom de schéma pour ouvrir sa vue détaillée dans un nouvel on
 
 #### Afficher plus et la liste complète des schémas
 
-S’il existe plus de schémas que ce qui peut être affiché en ligne, sélectionnez **[!UICONTROL View more]** pour ouvrir la boîte de dialogue complète.
+S’il existe plus de schémas que ce qui peut être affiché en ligne, sélectionnez **[!UICONTROL Afficher plus]** pour ouvrir la boîte de dialogue complète.
 
 ![L’option Afficher plus dans la section Schémas utilisant ce groupe de champs.](../images/ui/explore/view-more-schemas.png)
 
-La boîte de dialogue **[!UICONTROL Schemas using this field group]** s’affiche, affichant la liste complète des schémas qui utilisent le groupe de champs .
+La boîte de dialogue **[!UICONTROL Schémas utilisant ce groupe de champs]** s’affiche, affichant la liste complète des schémas qui utilisent le groupe de champs.
 
 ![La boîte de dialogue Schémas utilisant ce groupe de champs affiche la liste des schémas et leurs colonnes.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
 
-Dans la boîte de dialogue **[!UICONTROL Schemas using this field group]**, vous pouvez effectuer les opérations suivantes :
+Dans la boîte de dialogue **[!UICONTROL Schémas utilisant ce groupe de champs]** vous pouvez :
 
 - Parcourir tous les schémas qui utilisent le groupe de champs
 - Parcourir les grands ensembles de résultats
@@ -246,11 +265,11 @@ Ce workflow est destiné uniquement à l’analyse et à l’exploration d’imp
 
 ### Métadonnées et filtrage des groupes de champs {#field-group-metadata-and-filtering}
 
-L’onglet **[!UICONTROL Field groups]** fournit des outils de métadonnées et de filtrage pour vous aider à localiser et à évaluer les groupes de champs avant de les sélectionner.
+L’onglet **[!UICONTROL Groupes de champs]** fournit des outils de métadonnées et de filtrage pour vous aider à localiser et à évaluer les groupes de champs avant de les sélectionner.
 
 #### Parcourir le tableau et les filtres
 
-Le tableau d’inventaire des groupes de champs comprend des colonnes supplémentaires qui exposent les métadonnées directement dans la vue Liste, telles que **[!UICONTROL Compatible classes]**, qui indique à quelles classes un groupe de champs peut être appliqué. Les groupes de champs ne peuvent être ajoutés qu’aux schémas qui utilisent l’une des classes compatibles répertoriées, en fonction du comportement des données qu’ils représentent (par exemple, les données basées sur des enregistrements ou des séries temporelles). Le tableau peut s’afficher **[!UICONTROL All]** lorsque le groupe de champs est compatible avec toutes les classes. **[!UICONTROL Industry tags]** aider à catégoriser les groupes de champs pour la découverte.
+Le tableau d’inventaire des groupes de champs comprend des colonnes supplémentaires qui exposent les métadonnées directement dans la vue Liste, telles que **[!UICONTROL Classes compatibles]**, qui indique à quelles classes un groupe de champs peut être appliqué. Les groupes de champs ne peuvent être ajoutés qu’aux schémas qui utilisent l’une des classes compatibles répertoriées, en fonction du comportement des données qu’ils représentent (par exemple, les données basées sur des enregistrements ou des séries temporelles). Le tableau peut afficher **[!UICONTROL Tous]** lorsque le groupe de champs est compatible avec toutes les classes. **[!UICONTROL Balises de secteur]** permettent de classer les groupes de champs à découvrir.
 
 Pour affiner la liste, sélectionnez l’icône de filtre (![Icône de filtre Image](/help/images/icons/filter.png)) pour ouvrir le panneau de filtrage dans le rail de gauche. L’image suivante montre l’ouverture du panneau de filtrage dans le rail de gauche.
 
@@ -258,8 +277,8 @@ Pour affiner la liste, sélectionnez l’icône de filtre (![Icône de filtre Im
 
 Dans le panneau de filtrage, vous pouvez :
 
-- **[!UICONTROL Compatible classes]** — Utilisez la liste déroulante pour filtrer les groupes de champs par compatibilité de classe
-- **[!UICONTROL Industry tags]** — Utilisez des cases à cocher pour filtrer par une ou plusieurs catégories de secteur
+- **[!UICONTROL Classes compatibles]** — Utilisez la liste déroulante pour filtrer les groupes de champs par compatibilité de classe
+- **[!UICONTROL Balises de secteur]** — Utilisez des cases à cocher pour filtrer par une ou plusieurs catégories de secteur
 
 Lors de la navigation, sélectionnez une ligne dans le tableau pour déclencher le rail d’informations. Le rail d’informations affiche des métadonnées telles que les classes compatibles et les balises de secteur afin que vous puissiez consulter les détails clés sans ouvrir le groupe de champs.
 
@@ -269,19 +288,19 @@ Lorsque vous ouvrez un groupe de champs, le rail des propriétés affiche des m�
 
 Le rail des propriétés peut afficher les métadonnées suivantes :
 
-- **[!UICONTROL Compatible classes]** — Classes que le groupe de champs peut étendre
-- **[!UICONTROL Required attributes]** — Attributs qui doivent avoir des valeurs valides lorsque le groupe de champs l’exige lors de l’ingestion des données. Les exigences dépendent de la structure des données et les enregistrements dont les valeurs requises sont manquantes ou non valides ne sont pas validés
-- **[!UICONTROL Labels]** — Les libellés ne s’affichent pas au niveau du groupe de champs. Sélectionnez un champ pour afficher les détails du libellé dans le rail de **[!UICONTROL Field properties]**
+- **[!UICONTROL Classes compatibles]** — Classes que le groupe de champs peut étendre
+- **[!UICONTROL Attributs requis]** — Attributs qui doivent avoir des valeurs valides lorsqu’ils sont requis par le groupe de champs lors de l’ingestion des données. Les exigences dépendent de la structure des données et les enregistrements dont les valeurs requises sont manquantes ou non valides ne sont pas validés
+- **[!UICONTROL Libellés]** — Les libellés ne s’affichent pas au niveau du groupe de champs. Sélectionnez un champ pour afficher les détails du libellé dans le rail **[!UICONTROL Propriétés du champ]**
 
 Ces informations vous aident à comprendre les contraintes et les exigences avant d’utiliser ou de modifier le groupe de champs.
 
 #### Libellés dans la vue Structure
 
-Lorsqu’un groupe de champs est ouvert dans la zone de travail, vous pouvez afficher les informations de libellé directement dans la structure. Sélectionnez l’icône des paramètres (![Icône des paramètres.](../../images/icons/settings.png)) dans la barre d’outils de la zone de travail et **[!UICONTROL Show labels on tree]** permettre d’afficher les indicateurs de libellé sur les champs de la zone de travail.
+Lorsqu’un groupe de champs est ouvert dans la zone de travail, vous pouvez afficher les informations de libellé directement dans la structure. Sélectionnez l’icône des paramètres (![Icône des paramètres.](../../images/icons/settings.png)) dans la barre d’outils de la zone de travail et activez **[!UICONTROL Afficher les libellés dans l’arborescence]** pour afficher les indicateurs de libellé dans les champs de la zone de travail.
 
 ![Zone de travail du groupe de champs affichant la boîte de dialogue des options d’affichage de l’arborescence avec Afficher les libellés de l’arborescence mise en surbrillance.](../images/ui/explore/show-labels-on-tree.png)
 
-Sélectionnez un champ dans la zone de travail pour afficher les détails des libellés dans le rail de **[!UICONTROL Field properties]**, y compris les libellés appliqués à ce champ.
+Sélectionnez un champ dans la zone de travail pour afficher les détails du libellé dans le rail **[!UICONTROL Propriétés du champ]**, y compris les libellés appliqués à ce champ.
 
 ![Zone de travail du groupe de champs affichant les libellés des champs et les détails des libellés dans le rail des propriétés des champs.](../images/ui/explore/field-group-labels.png)
 
@@ -291,4 +310,9 @@ Ces indicateurs sont utilisés à des fins de visibilité uniquement et ne modif
 
 ## Étapes suivantes
 
-Ce document explique comment explorer les ressources XDM existantes dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les différentes fonctionnalités de l’espace de travail [!UICONTROL Schemas] et de [!DNL Schema Editor], consultez la présentation de l’espace de travail [[!UICONTROL Schemas]](./overview.md).
+Utilisez les ressources suivantes pour continuer à travailler avec les schémas XDM et les fonctionnalités Experience Platform associées :
+
+- Pour en savoir plus sur l’espace de travail et les **[!DNL Schema Editor]** **[!UICONTROL Schémas]**, consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](./overview.md).
+- Pour plus d’informations sur la création et la gestion des balises, consultez le guide [gestion des balises unifiées](../../administrative-tags/ui/managing-tags.md).
+- Pour plus d’informations sur les vues d’inventaire, le filtrage, la recherche et les modèles de navigation de l’espace de travail, consultez le guide d’utilisation [jeux de données](../../catalog/datasets/user-guide.md).
+- Pour plus d’informations sur l’application et la gestion des libellés de gouvernance des données, consultez le guide d’utilisation [libellés d’utilisation des données](../../data-governance/labels/user-guide.md).
