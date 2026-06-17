@@ -2,6 +2,7 @@
 title: Google Customer Match + connexion Display & Video 360
 description: Avec le connecteur de destination Google Customer Match + Display & Video 360, vous pouvez utiliser vos données en ligne et hors ligne d’Experience Platform pour atteindre et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+nudge: yes
 TQID: https://experienceleague.adobe.com/EQw7wxAqZYEha2OjNkfiyITaeVgx-hz5eHHeJPb41Uc
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -25,7 +26,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: a1a85ffa59aad3bf3e451a13b62bd68b76a44e13
+source-git-commit: 513dd165b942c6afe1189b8b59fedb02b541255d
 workflow-type: tm+mt
 source-wordcount: 2452
 ht-degree: 13%
