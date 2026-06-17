@@ -4,25 +4,14 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
+nudge: true
 TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-  - id: eec185bd-7d60-4193-ba3f-da427569936a
-subfeature_v2:
-  - id: ac9ff56e-fdaf-4412-aba7-1f588cb8aa2b
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: dcded644-509e-49c5-ae85-3862a2a08609
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: f1c7a907e1ef1fcebf4ce6f7eac562c2158c4bb1
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2: id: ac9ff56e-fdaf-4412-aba7-1f588cb8aa2bid: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: dcded644-509e-49c5-ae85-3862a2a08609
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 315ef465955d574a215461dcb5138376519f1311
 workflow-type: tm+mt
 source-wordcount: 3731
 ht-degree: 12%
@@ -192,7 +181,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 - **[!UICONTROL Profils reçus]** : nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes.
 - **[!UICONTROL Identités activées]** : nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées dans les audiences exportées.
 - **[!UICONTROL Identités exclues]** : nombre total d’identités de profil qui sont exclues de l’activation en fonction des attributs manquants et de la violation du consentement.
-- **[!UICONTROL Statut]** : représente le statut du flux de données. Il peut s’agir de l’un des trois états suivants : [!UICONTROL &#x200B; Succès &#x200B;], [!UICONTROL &#x200B; Échec &#x200B;] et [!UICONTROL &#x200B; Traitement &#x200B;]. [!UICONTROL Succès] signifie que le flux de données est actif et exporte les données selon son planning fourni. [!UICONTROL &#x200B; Échec &#x200B;] signifie que l’activation des données a été suspendue en raison d’erreurs. Le [!UICONTROL Traitement] signifie que le flux de données n’est pas encore actif et qu’il est généralement rencontré lors de la création d’un nouveau flux de données.
+- **[!UICONTROL Statut]** : représente le statut du flux de données. Il peut s’agir de l’un des trois états suivants : [!UICONTROL  Succès ], [!UICONTROL  Échec ] et [!UICONTROL  Traitement ]. [!UICONTROL Succès] signifie que le flux de données est actif et exporte les données selon son planning fourni. [!UICONTROL  Échec ] signifie que l’activation des données a été suspendue en raison d’erreurs. Le [!UICONTROL Traitement] signifie que le flux de données n’est pas encore actif et qu’il est généralement rencontré lors de la création d’un nouveau flux de données.
 
 Pour afficher les détails d’une exécution de flux de données spécifique, sélectionnez l’heure de début de l’exécution dans la liste.
 
@@ -241,7 +230,7 @@ Pour accéder au tableau de bord [!UICONTROL Surveillance], sélectionnez **[!UI
 
 Utilisez le tableau de bord [!UICONTROL Destinations] pour avoir une idée globale de l’intégrité de vos flux d’activation. Commencez par obtenir des informations à un niveau agrégé pour toutes les destinations par lots et de diffusion en continu, puis explorez les vues détaillées pour les flux de données, les exécutions de flux de données et les audiences activées pour une analyse approfondie de vos données d’activation. Les écrans du tableau de bord [!UICONTROL Surveillance] fournissent des informations exploitables par le biais de mesures et de descriptions d’erreur afin de vous aider à résoudre les problèmes susceptibles de se produire dans vos scénarios d’activation.
 
-Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [&#x200B; guide du tableau de bord de surveillance &#x200B;](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [ guide du tableau de bord de surveillance ](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Filtre de type de données mis en surbrillance dans la vue du tableau de bord de surveillance.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
@@ -334,7 +323,7 @@ Par exemple, vous activez une audience appelée « Membres du programme de fidé
 >   - [[!DNL Custom Personalization]](../../destinations/catalog/personalization/custom-personalization.md)
 >   - [[!DNL Demandbase]](../../destinations/catalog/advertising/demandbase.md)
 >   - [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md)
->   - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
+>   - [Composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
 >   - [[!DNL Google Ad Manager]](../../destinations/catalog/advertising/google-ad-manager.md)
 >   - [[!DNL Google Ads]](../../destinations/catalog/advertising/google-ads-destination.md)
 >   - [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md)
@@ -379,7 +368,7 @@ La page de détails comporte également un bouton (bascule) pour basculer entre 
 
 La vue Erreurs d’exécution du flux de données affiche une liste des enregistrements ayant échoué et des enregistrements ayant été ignorés. Les informations relatives aux enregistrements ayant échoué et ignorés s’affichent, y compris le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les enregistrements ayant échoué. Pour afficher les enregistrements ignorés, activez le bouton (bascule) **[!UICONTROL Enregistrements ignorés]**.
 
-![&#x200B; Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
+![ Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
 
 Lorsque **[!UICONTROL Audiences]** est sélectionné, la liste des audiences qui ont été activées dans l’exécution du flux de données sélectionné s’affiche. Cet écran comprend des informations au niveau de l’audience sur les enregistrements activés, les enregistrements exclus, ainsi que le statut et l’heure de la dernière exécution du flux de données.
 
