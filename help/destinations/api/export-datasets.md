@@ -5,19 +5,13 @@ description: Découvrez comment utiliser l’API Flow Service pour exporter des 
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 TQID: https://experienceleague.adobe.com/QgDkRqCY8-yoCXo7ba1-62pKKwUlSgxhILGoLuejv9c
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: e0274701d376954ef3da84e53fc8145ff80c0a4e
 workflow-type: tm+mt
-source-wordcount: 5417
+source-wordcount: 5253
 ht-degree: 12%
 
 ---
@@ -27,21 +21,6 @@ ht-degree: 12%
 >[!AVAILABILITY]
 >
 >* Cette fonctionnalité est disponible pour les clients qui ont acheté le package [!DNL Real-Time CDP] Prime et Ultimate, [!DNL Adobe Journey Optimizer] ou Customer Journey Analytics. Contactez votre représentant ou représentante Adobe pour plus d’informations.
-
->[!IMPORTANT]
->
->**Action item** : la version [septembre 2024 d’Experience Platform](/help/release-notes/latest/latest.md#destinations) a introduit l’option permettant de définir une date `endTime` pour l’exportation des flux de données du jeu de données. Adobe a également introduit une date de fin par défaut du 1er septembre 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre 2024*.
->
->Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er septembre 2025.
->
->De même, pour les flux de données que vous créez sans spécifier de date de `endTime`, ils prennent par défaut une heure de fin six mois à compter de leur création.
-
-<!--
-
->You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
->
-
--->
 
 Cet article explique le processus requis pour utiliser l’[!DNL Flow Service API] afin d’exporter des [jeux de données](/help/catalog/datasets/overview.md) de [!DNL Adobe Experience Platform] vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage].
 
@@ -88,9 +67,9 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activate]** ou **[!UICONTROL Export datasets]**, vous disposez des autorisations appropriées.
+Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
 ### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
@@ -1643,7 +1622,7 @@ En utilisant la spécification ci-dessus, vous pouvez créer une demande de conn
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation sur la destination [!DNL Amazon S3].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1696,7 +1675,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation sur la destination [!DNL Azure Blob Storage].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
 
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1750,7 +1729,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation sur la destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1802,7 +1781,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1854,7 +1833,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination [!DNL Google Cloud Storage].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
 
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1908,7 +1887,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination SFTP.
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
