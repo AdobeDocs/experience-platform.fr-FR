@@ -23,7 +23,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: e0274701d376954ef3da84e53fc8145ff80c0a4e
+source-git-commit: afa6c119431878f87165cf9ab5c56f16e19aadab
 workflow-type: tm+mt
 source-wordcount: 2997
 ht-degree: 23%
@@ -278,7 +278,7 @@ Le nom de fichier par défaut est généré de manière aléatoire pour garantir
 
 ### Exemples de fichiers de jeu de données {#sample-files}
 
-La présence de ces fichiers dans votre emplacement de stockage confirme que l’export a été réalisé avec succès. Pour comprendre la structure des fichiers exportés, vous pouvez télécharger un exemple de [fichier parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) ou de [fichier JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+La présence de ces fichiers dans votre emplacement de stockage confirme que l’export a été réalisé avec succès. Pour comprendre la structure des fichiers exportés, vous pouvez télécharger un exemple de [fichier parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet.zip) ou de [fichier JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
 #### Fichiers de jeu de données compressés {#compressed-dataset-files}
 
