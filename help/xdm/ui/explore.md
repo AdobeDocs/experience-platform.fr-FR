@@ -6,9 +6,12 @@ description: Découvrez comment explorer les schémas, classes, groupes de champ
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 TQID: https://experienceleague.adobe.com/xB6Pe34IWxVlkDy9oP9k4tTWHa62UUhaGUbzXRIGjlU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 96edf5301f1fa53cf875c5c791d67bd96e94ad6b
 workflow-type: tm+mt
 source-wordcount: 3085
@@ -42,7 +45,7 @@ Filtrez les schémas en fonction de leurs caractéristiques fondamentales et de 
 | Filtre | Type de contrôle | Description |
 |--------|-------------|-------------|
 | [!UICONTROL Afficher les profils] | Cases d&#39;option | Afficher [!UICONTROL Tous], [!UICONTROL Activé] uniquement ou [!UICONTROL Désactivé] uniquement. Les schémas activés pour Profil participent au [profil client en temps réel](../../profile/home.md) et prennent en charge les vues unifiées des clients dans l’ensemble de votre organisation. |
-| [!UICONTROL  Type de schéma ] | Cases à cocher | Filtrer par origine de schéma : schémas [!UICONTROL standard] (fournis par Adobe), [!UICONTROL relationnels] (fonctionnalités de modélisation des données structurées et relationnelles) ou [!UICONTROL ad hoc] (espaces de noms de champs utilisables par un seul jeu de données). |
+| [!UICONTROL &#x200B; Type de schéma &#x200B;] | Cases à cocher | Filtrer par origine de schéma : schémas [!UICONTROL standard] (fournis par Adobe), [!UICONTROL relationnels] (fonctionnalités de modélisation des données structurées et relationnelles) ou [!UICONTROL ad hoc] (espaces de noms de champs utilisables par un seul jeu de données). |
 | [!UICONTROL Classe] | Liste déroulante | Affichez uniquement les schémas créés sur des bases de classe spécifiques telles que XDM Individual Profile, XDM ExperienceEvent ou les classes personnalisées définies par votre organisation. |
 | [!UICONTROL Balises] | Liste déroulante | Filtrage des schémas par balises définies par l’utilisateur et appliquées par l’utilisateur. Les options incluent [!UICONTROL A une balise] et [!UICONTROL A toutes les balises]. Utilisez les balises pour localiser les schémas organisés par projet, équipe, domaine d’activité ou taxonomies personnalisées qui prennent en charge les pratiques de gestion des schémas de votre organisation. |
 
@@ -56,7 +59,7 @@ Limitation des résultats en fonction de la structure du schéma et de la config
 |--------|-------------|-------------|
 | [!UICONTROL A une relation] | Cases à cocher Oui/Non | Afficher uniquement les schémas contenant des champs de relation se connectant à d’autres schémas. Les champs de relation permettent des connexions de données entre différents schémas et prennent en charge des scénarios de modélisation de données complexes. |
 | [!UICONTROL A une identité principale] | Cases à cocher Oui/Non | Filtrez les schémas avec des champs d’identité principaux désignés. Les champs d’identité de Principal sont requis pour l’activation du profil et servent de base à l’unification des données client. |
-| [!UICONTROL Espace de noms d’identité du Principal ] | Liste déroulante | Recherchez des schémas à l’aide de types d’identité particuliers tels que l’e-mail, l’ECID, le téléphone ou des espaces de noms personnalisés comme identifiant principal. |
+| [!UICONTROL Espace de noms d’identité du Principal &#x200B;] | Liste déroulante | Recherchez des schémas à l’aide de types d’identité particuliers tels que l’e-mail, l’ECID, le téléphone ou des espaces de noms personnalisés comme identifiant principal. |
 
 {style="table-layout:auto"}
 
@@ -78,9 +81,9 @@ Lors de l’affichage des relations de schéma dans l’onglet [!UICONTROL Relat
 
 | Filtre | Type de contrôle | Description |
 |--------|-------------|-------------|
-| [!UICONTROL Schéma ] | Liste déroulante | Afficher les relations dans lesquelles le schéma sélectionné est le point de départ ou la « source ». |
+| [!UICONTROL Schéma &#x200B;] | Liste déroulante | Afficher les relations dans lesquelles le schéma sélectionné est le point de départ ou la « source ». |
 | [!UICONTROL Schéma destination] | Liste déroulante | Afficher les relations dans lesquelles le schéma sélectionné est la cible ou la « destination ». |
-| [!UICONTROL classe ] | Liste déroulante | Filtrez les relations en fonction de la classe du schéma initiateur. |
+| [!UICONTROL classe &#x200B;] | Liste déroulante | Filtrez les relations en fonction de la classe du schéma initiateur. |
 | [!UICONTROL Classe de destination] | Liste déroulante | Afficher les relations qui se terminent par les schémas d’une classe spécifique. |
 
 {style="table-layout:auto"}
@@ -171,7 +174,7 @@ Vous ne pouvez pas modifier une classe standard. Pour étendre un groupe de cham
 
 Certains noms de champ sont précédés d’un trait de soulignement, tels que `_repo` et `_id`. Il s’agit d’espaces réservés pour les champs que le système génère et attribue automatiquement au fur et à mesure de l’ingestion des données.
 
-Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent ](../api/getting-started.md#know-your-tenant_id) un espace de noms.
+Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent &#x200B;](../api/getting-started.md#know-your-tenant_id) un espace de noms.
 
 ### Types de données {#data-types}
 
@@ -187,7 +190,7 @@ Si un champ de tableau est basé sur un type d’objet, vous pouvez sélectionne
 
 ### [!UICONTROL Propriétés du champ] {#field-properties}
 
-Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Propriétés du champ]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, **[!UICONTROL Valeur par défaut]** (métadonnées de schéma d’information qui ne sont pas appliquées lors de l’ingestion), des modèles, des formats, si le champ est obligatoire, etc. Voir [Propriétés de champ spécifiques au type](./fields/overview.md#type-specific-properties) pour connaître les différences entre **[!UICONTROL Valeur par défaut]** et les paramètres de validation de l’ingestion. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [ Libellés dans la vue de structure ](#field-group-labels-in-structure).
+Lorsque vous sélectionnez le nom d’un champ de la zone de travail, le rail de droite se met à jour pour afficher les détails de ce champ sous **[!UICONTROL Propriétés du champ]**. Vous pouvez y trouver une description du cas d’utilisation prévu du champ, **[!UICONTROL Valeur par défaut]** (métadonnées de schéma d’information qui ne sont pas appliquées lors de l’ingestion), des modèles, des formats, si le champ est obligatoire, etc. Voir [Propriétés de champ spécifiques au type](./fields/overview.md#type-specific-properties) pour connaître les différences entre **[!UICONTROL Valeur par défaut]** et les paramètres de validation de l’ingestion. Lorsque vous explorez un groupe de champs, les détails liés aux libellés du champ sélectionné peuvent également s’afficher à cet emplacement ; consultez [&#x200B; Libellés dans la vue de structure &#x200B;](#field-group-labels-in-structure).
 
 ![Champ sélectionné à partir du type de données Commerce avec les propriétés du champ mises en surbrillance.](../images/ui/explore/field-properties.png)
 
@@ -205,7 +208,7 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 >[!NOTE]
 >
->Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval](./fields/identity.md) consultez le guide sur la [ définition des champs d’identité .
+>Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval[&#128279;](./fields/identity.md) consultez le guide sur la  définition des champs d’identité .
 
 ### Champs de relation {#relationship}
 

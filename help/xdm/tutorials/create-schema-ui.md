@@ -6,10 +6,20 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 TQID: https://experienceleague.adobe.com/ZKEa-vyCMpCB4TkJeWEyZdNVt1m1RG2KQopF1tQQqzc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: f10b92da1edfd5c9be8d5ab1e853d86431e18712
 workflow-type: tm+mt
 source-wordcount: 5023
@@ -37,7 +47,7 @@ Ce tutoriel demande une bonne compréhension des différents aspects d’Adobe 
    * [Principes de base de la composition des schémas](../schema/composition.md) : présentation des schémas XDM et de leurs blocs de création, notamment les classes, les groupes de champs de schéma, les types de données et les champs individuels.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-## Ouvrez l’espace de travail [!UICONTROL  Schémas ] {#browse}
+## Ouvrez l’espace de travail [!UICONTROL &#x200B; Schémas &#x200B;] {#browse}
 
 Utilisez l’espace de travail [!UICONTROL Schémas] dans l’interface utilisateur d’Experience Platform pour afficher et gérer les schémas disponibles pour votre organisation. L’espace de travail comprend également le [!DNL Schema Editor], dans lequel vous allez créer et modifier des schémas tout au long de ce tutoriel.
 
@@ -55,7 +65,7 @@ La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette bo�
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier chargé, consultez le guide de création de schéma assisté par machine learning [machine learning](../ui/ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -111,11 +121,11 @@ Une nouvelle boîte de dialogue apparait. Elle présente la liste des groupes de
 
 Vous pouvez utiliser l’un des filtres dans le rail de gauche pour limiter la liste des groupes de champs standard à des [secteurs](../schema/industries/overview.md) comme la vente au détail, les services financiers et les services de santé.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec les groupes de champs du secteur mis en surbrillance.](../images/tutorials/create-schema/industry-field-groups.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec les groupes de champs du secteur mis en surbrillance.](../images/tutorials/create-schema/industry-field-groups.png)
 
 Lorsqu’un groupe de champs est sélectionné dans la liste, il s’affiche dans le rail de droite. Si vous le souhaitez, vous pouvez sélectionner plusieurs groupes de champs en les ajoutant chacun à la liste dans le rail de droite avant de confirmer la sélection. En outre, l’icône qui s’affiche sur le côté droit du groupe de champs sélectionné vous permet de prévisualiser la structure des champs qu’il présente.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec l’icône d’aperçu du groupe de champs sélectionné en surbrillance.](../images/tutorials/create-schema/preview-field-group-button.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec l’icône d’aperçu du groupe de champs sélectionné en surbrillance.](../images/tutorials/create-schema/preview-field-group-button.png)
 
 Lors de la prévisualisation d’un groupe de champs, une description détaillée du schéma du groupe de champs est fournie dans le rail droit. Vous pouvez également parcourir les champs du groupe de champs dans la zone de travail. Lorsque vous sélectionnez différents champs, le rail de droite se met à jour pour afficher les détails du champ en question. Sélectionnez **[!UICONTROL Précédent]** lorsque vous avez terminé la prévisualisation pour revenir à la boîte de dialogue de sélection du groupe de champs.
 
@@ -151,7 +161,7 @@ Vous pouvez maintenant répéter les mêmes étapes pour ajouter un autre groupe
 
 Pour ce tutoriel, sélectionnez les groupes de champs standard **[!UICONTROL Coordonnées personnelles]** et **[!UICONTROL Détails de fidélité]** dans la liste, puis sélectionnez **[!UICONTROL Ajouter des groupes de champs]** pour les ajouter au schéma.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec deux nouveaux groupes de champs sélectionnés et [!UICONTROL Ajouter des groupes de champs] en surbrillance.](../images/tutorials/create-schema/more-field-groups.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec deux nouveaux groupes de champs sélectionnés et [!UICONTROL Ajouter des groupes de champs] en surbrillance.](../images/tutorials/create-schema/more-field-groups.png)
 
 La zone de travail réapparaît avec les groupes de champs ajoutés sous **[!UICONTROL Groupes de champs]** dans la section **[!UICONTROL Composition]** et leurs champs composites ajoutés à la structure du schéma.
 
@@ -164,11 +174,11 @@ Le schéma [!UICONTROL Membres du programme de fidélité] est destiné à captu
 Cependant, il peut arriver que vous souhaitiez inclure d’autres champs personnalisés non couverts par des groupes de champs standard afin d’atteindre vos cas d’utilisation. Dans le cas de l’ajout de champs de fidélité personnalisés, vous disposez de deux options :
 
 1. Créer un groupe de champs personnalisé pour capturer ces champs. Il s’agit de la méthode qui sera abordée dans ce tutoriel.
-1. Étendez le groupe de champs standard [!UICONTROL Détails de fidélité] avec des champs personnalisés. Cela entraîne la conversion de [!UICONTROL Détails de fidélité] en un groupe de champs personnalisés et le groupe de champs standard d’origine ne sera plus disponible. Pour plus d’informations sur l’ajout de champs personnalisés à la structure des groupes de champs standard] [ consultez le guide de l’interface utilisateur [!UICONTROL Schémas](../ui/resources/schemas.md#custom-fields-for-standard-groups).
+1. Étendez le groupe de champs standard [!UICONTROL Détails de fidélité] avec des champs personnalisés. Cela entraîne la conversion de [!UICONTROL Détails de fidélité] en un groupe de champs personnalisés et le groupe de champs standard d’origine ne sera plus disponible. Pour plus d’informations sur l’ajout de champs personnalisés à la structure des groupes de champs standard&rbrack; &lbrack; consultez le guide de l’interface utilisateur [[!UICONTROL Schémas]](../ui/resources/schemas.md#custom-fields-for-standard-groups).
 
 Pour créer un groupe de champs, sélectionnez **[!UICONTROL Ajouter]** dans la sous-section **[!UICONTROL Groupes de champs]** comme avant, mais cette fois, sélectionnez **[!UICONTROL Créer un groupe de champs]** dans la partie supérieure de la boîte de dialogue qui s’affiche. Vous êtes alors invité à fournir un nom d’affichage et une description pour le nouveau groupe de champs. Pour ce tutoriel, nommez le nouveau groupe de champs « [!DNL Custom Loyalty Details] », puis sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec [!UICONTROL Créer un groupe de champs], [!UICONTROL Nom d’affichage] et [!UICONTROL Description] en surbrillance.](../images/tutorials/create-schema/create-new-field-group.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec [!UICONTROL Créer un groupe de champs], [!UICONTROL Nom d’affichage] et [!UICONTROL Description] en surbrillance.](../images/tutorials/create-schema/create-new-field-group.png)
 
 >[!NOTE]
 >
@@ -249,7 +259,7 @@ Lorsque vous définissez des champs dans le [!DNL Schema Editor], vous pouvez ap
 | --- | --- |
 | [!UICONTROL Obligatoire] | Indique que le champ est obligatoire pour l’ingestion de données. Toute donnée chargée dans un jeu de données basé sur ce schéma qui ne contient pas ce champ sera défaillante lors de l’ingestion. |
 | [!UICONTROL Tableau] | Indique que le champ contient un tableau de valeurs, chacune avec le type de données spécifié. Par exemple, l’utilisation de cette contrainte sur un champ avec un type de données « [!UICONTROL String] » indique que le champ contiendra un tableau de chaînes. |
-| [!UICONTROL  Énumération et valeurs suggérées ] | Une énumération indique que ce champ doit contenir une des valeurs d’une liste énumérée de valeurs possibles. Vous pouvez également utiliser cette option pour fournir une liste des valeurs suggérées pour un champ de chaîne sans limiter le champ à ces valeurs. |
+| [!UICONTROL &#x200B; Énumération et valeurs suggérées &#x200B;] | Une énumération indique que ce champ doit contenir une des valeurs d’une liste énumérée de valeurs possibles. Vous pouvez également utiliser cette option pour fournir une liste des valeurs suggérées pour un champ de chaîne sans limiter le champ à ces valeurs. |
 | [!UICONTROL Identité] | Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité [dans la suite de ce tutoriel](#identity-field). |
 | [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas partageant la même classe. La contrainte [!UICONTROL Relation] indique que ce champ fait référence à l’identité principale d’un schéma basée sur une classe différente, ce qui implique une relation entre les deux schémas. Pour plus d’informations, consultez le tutoriel sur [la définition d’une relation](./relationship-ui.md). |
 
@@ -311,7 +321,7 @@ La structure de données standard fournie par les schémas peut être exploitée
 
 [!DNL Experience Platform] permet d’indiquer facilement un champ d’identité grâce à une case à cocher **[!UICONTROL Identité]** dans le [!DNL Schema Editor]. Cependant, vous devez déterminer quel champ est le meilleur candidat à utiliser comme identité, en fonction de la nature de vos données.
 
-Par exemple, il peut y avoir des milliers de membres du programme de fidélité appartenant au même niveau de fidélité, et plusieurs d’entre eux peuvent partager la même adresse physique. Dans ce scénario, cependant, chaque membre du programme de fidélité fournit lors de l’inscription son adresse électronique personnelle. Puisque les adresses e-mail personnelles sont généralement gérées par une seule personne, le `personalEmail.address` de champ (fourni par le groupe de champs [!UICONTROL  Coordonnées personnelles ]) est un bon candidat pour un champ d’identité.
+Par exemple, il peut y avoir des milliers de membres du programme de fidélité appartenant au même niveau de fidélité, et plusieurs d’entre eux peuvent partager la même adresse physique. Dans ce scénario, cependant, chaque membre du programme de fidélité fournit lors de l’inscription son adresse électronique personnelle. Puisque les adresses e-mail personnelles sont généralement gérées par une seule personne, le `personalEmail.address` de champ (fourni par le groupe de champs [!UICONTROL &#x200B; Coordonnées personnelles &#x200B;]) est un bon candidat pour un champ d’identité.
 
 >[!IMPORTANT]
 >
