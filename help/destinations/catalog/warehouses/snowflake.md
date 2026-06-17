@@ -1,7 +1,7 @@
 ---
 title: Connexion en continu Snowflake
 description: Créez un partage de données Snowflake en direct pour recevoir des mises à jour d’audience en flux continu directement sous forme de tables partagées dans votre compte .
-last-substantial-update: 2026-04-28T00:00:00.000Z
+last-substantial-update: 2026-05-28
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 TQID: https://experienceleague.adobe.com/vu6WWijCtgC7CpgDvE--290DfNlQePYvSZQjjh3e9FU
@@ -25,10 +25,10 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 48ac02ac19dc0e734ad700add6f35ff56d1a971c
+source-git-commit: 915d23b6d4698d5d5d9d1435828c50b389837011
 workflow-type: tm+mt
-source-wordcount: 1780
-ht-degree: 21%
+source-wordcount: 1891
+ht-degree: 16%
 
 ---
 
@@ -159,7 +159,7 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_privatelink"
 >title="Lien privé activé"
->abstract="Activez ce bouton si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>Son activation sur un compte qui n’utilise pas de lien privée contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que ce bouton est désactivé, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
+>abstract="Sélectionnez Vrai si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>La sélection de True sur un compte qui n’utilise pas de lien privé ignore la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que vous sélectionnez Faux, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
@@ -170,6 +170,12 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL ID de compte Snowflake]** : ID de votre compte Snowflake. Utilisez le format d’identifiant de compte suivant selon que votre compte est lié ou non à une organisation :
    * Si votre compte est lié à une organisation, procédez comme suit `OrganizationName.AccountName`.
    * Si votre compte n’est pas lié à une organisation, `AccountName`.
+* **[!UICONTROL Lien privé activé]** : sélectionnez **[!UICONTROL Vrai]** si le lien privé est activé pour votre compte [!DNL Snowflake] et que l’accès public aux points d’entrée du service [!DNL Snowflake] est désactivé. Si votre compte utilise un accès en lien privé uniquement et que vous sélectionnez **[!UICONTROL False]**, [!DNL Adobe] ne pouvez pas résoudre votre compte [!DNL Snowflake] ni partager les données d’audience. Consultez la documentation [!DNL Snowflake] sur [l’application de l’accès en lien privé uniquement](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
+  >[!IMPORTANT]
+  >
+  >Sélectionnez **[!UICONTROL Vrai]** pour **[!UICONTROL Lien privé activé]** uniquement si votre compte [!DNL Snowflake] applique un accès en lien privé uniquement. La sélection de **[!UICONTROL True]** sur un compte qui n’utilise pas de lien privé ignore la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Consultez la documentation [!DNL Snowflake] sur [l’application de l’accès en lien privé uniquement](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
 * **[!UICONTROL Accusé de réception de compte]** : activez l’accusé de réception de l’ID de compte Snowflake pour confirmer que votre ID de compte est correct et qu’il vous appartient.
 
 >[!NOTE]

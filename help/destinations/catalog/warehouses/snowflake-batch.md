@@ -1,7 +1,7 @@
 ---
 title: Connexion par lots à Snowflake
 description: Créez un partage de données Snowflake en direct pour recevoir des mises à jour quotidiennes de l’audience directement sous forme de tables partagées dans votre compte.
-last-substantial-update: 2026-02-17T00:00:00.000Z
+last-substantial-update: 2026-05-29
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 TQID: https://experienceleague.adobe.com/9rHuZjQpD9FAjKdktXxBEUjhc5ZGeKlqFFl2K-Y-9HE
@@ -25,10 +25,10 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 48ac02ac19dc0e734ad700add6f35ff56d1a971c
+source-git-commit: 915d23b6d4698d5d5d9d1435828c50b389837011
 workflow-type: tm+mt
-source-wordcount: 1984
-ht-degree: 19%
+source-wordcount: 2073
+ht-degree: 16%
 
 ---
 
@@ -108,10 +108,6 @@ Avant de configurer votre connexion Snowflake, veillez à respecter les conditio
 
 Lisez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) pour plus d’informations sur les autorisations nécessaires.
 
->[!IMPORTANT]
->
->Cette destination ne prend pas en charge les comptes Snowflake qui se trouvent derrière un pare-feu ou qui utilisent [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure).
-
 ## Audiences prises en charge {#supported-audiences}
 
 Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination. Les deux tableaux ci-dessous indiquent les audiences prises en charge par ce connecteur, par _origine de l’audience_ et _types de profil inclus dans l’audience_ :
@@ -169,7 +165,7 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_privatelink"
 >title="Lien privé activé"
->abstract="Activez ce bouton si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>Son activation sur un compte qui n’utilise pas de lien privée contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que ce bouton est désactivé, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
+>abstract="Sélectionnez Vrai si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>La sélection de True sur un compte qui n’utilise pas de lien privé ignore la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que vous sélectionnez Faux, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
@@ -180,6 +176,12 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Identifiant de compte Snowflake]** : votre [identifiant de compte de partage de données Snowflake](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Utilisez le format suivant selon que votre compte est lié ou non à une organisation :
    * Si votre compte est lié à une organisation : saisissez le nom de l’organisation et le nom du compte séparés par un **point** (`.`). Par exemple, si le nom de votre organisation est ACME et le nom de votre compte AsiaRegion, saisissez `ACME.AsiaRegion`.
    * Si votre compte n’est pas lié à une organisation : `AccountName`.
+* **[!UICONTROL Lien privé activé]** : sélectionnez **[!UICONTROL Vrai]** si le lien privé est activé pour votre compte [!DNL Snowflake] et que l’accès public aux points d’entrée du service [!DNL Snowflake] est désactivé. Si votre compte utilise un accès en lien privé uniquement et que vous sélectionnez **[!UICONTROL False]**, [!DNL Adobe] ne pouvez pas résoudre votre compte [!DNL Snowflake] ni partager les données d’audience. Consultez la documentation [!DNL Snowflake] sur [l’application de l’accès en lien privé uniquement](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
+  >[!IMPORTANT]
+  >
+  >Sélectionnez **[!UICONTROL Vrai]** pour **[!UICONTROL Lien privé activé]** uniquement si votre compte [!DNL Snowflake] applique un accès en lien privé uniquement. La sélection de **[!UICONTROL True]** sur un compte qui n’utilise pas de lien privé ignore la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Consultez la documentation [!DNL Snowflake] sur [l’application de l’accès en lien privé uniquement](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
 * **[!UICONTROL Région Snowflake]** : sélectionnez la région dans laquelle votre instance Snowflake est configurée. Consultez la [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) de Snowflake pour plus d’informations sur les régions cloud prises en charge.
 * **[!UICONTROL Accusé de réception de compte]** : après avoir saisi votre **[!UICONTROL ID de compte Snowflake]**, sélectionnez **[!UICONTROL Oui]** dans cette liste déroulante pour confirmer que votre **[!UICONTROL ID de compte Snowflake]** est correct et qu’il vous appartient.
 
