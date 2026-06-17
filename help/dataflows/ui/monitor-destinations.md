@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
+nudge: true
 TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -22,7 +23,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: f1c7a907e1ef1fcebf4ce6f7eac562c2158c4bb1
+source-git-commit: 315ef465955d574a215461dcb5138376519f1311
 workflow-type: tm+mt
 source-wordcount: 3731
 ht-degree: 12%
