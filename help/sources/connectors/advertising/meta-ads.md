@@ -39,7 +39,7 @@ Cela permet de nombreux cas d’utilisation, notamment la modélisation du mix m
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Meta Ads] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Pour connecter votre compte [!DNL Meta Ads] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Conditions préalables relatives au compte [!DNL Meta]
 
