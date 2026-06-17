@@ -500,7 +500,7 @@ Supprime le schéma de votre organisation. La suppression est disponible uniquem
 
 #### Appliquer les libellés de gouvernance des données {#apply-data-governance-labels}
 
-Permet d’accéder directement à l’onglet [!UICONTROL Libellé] de l’espace de travail Schémas. Pour obtenir des instructions complètes, reportez-vous à la documentation [Gérer les libellés d’utilisation des données pour un schéma](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/labels#select-schema-field).
+Permet d’accéder directement à l’onglet [!UICONTROL Libellé] de l’espace de travail Schémas. Pour obtenir des instructions complètes, reportez-vous à la documentation [Gérer les libellés d’utilisation des données pour un schéma](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/tutorials/labels#select-schema-field).
 
 #### Création d’un jeu de données {#create-dataset}
 
