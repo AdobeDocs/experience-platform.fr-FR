@@ -3,18 +3,20 @@ title: Ingestion de données chiffrées
 description: Découvrez comment ingérer des fichiers chiffrés par le biais de sources de lots d’espaces de stockage à l’aide de l’API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 TQID: https://experienceleague.adobe.com/I6lbpFs6nw7sg2t-0xTFygeIB49tmzU0tbzwN-sIsuk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 056962dbf895e9bc3e957dd40e18c39fbc10306f
 workflow-type: tm+mt
-source-wordcount: 1839
-ht-degree: 63%
+source-wordcount: 1858
+ht-degree: 62%
 
 ---
 
 # Ingestion de données chiffrées
+
+>[!AVAILABILITY]
+>
+>L’ingestion de données chiffrées n’est pas disponible lors de l’utilisation de la région VA6 et de la connexion à [Adobe Experience Platform sur AWS](../../../landing/multi-cloud.md).
 
 Vous pouvez ingérer des fichiers de données chiffrés vers Adobe Experience Platform à l’aide de sources de lots de stockage dans le cloud. Avec l’ingestion de données chiffrées, vous pouvez utiliser des mécanismes de chiffrement asymétrique pour transférer en toute sécurité des données par lots dans Experience Platform. Actuellement, les mécanismes de chiffrement asymétrique pris en charge sont PGP et GPG.
 
@@ -629,4 +631,4 @@ Dans ce scénario, l’exécution du flux échoue et renvoie un message d’erre
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour de statut sur l’exhaustivité, les erreurs et les mesures de votre flux de données, consultez le guide sur la [surveillance de votre flux de données à l’aide de l’API [!DNL Flow Service] &#x200B;](./monitor.md).
+En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour de statut sur l’exhaustivité, les erreurs et les mesures de votre flux de données, consultez le guide sur la [surveillance de votre flux de données à l’aide de l’API [!DNL Flow Service] ](./monitor.md).
