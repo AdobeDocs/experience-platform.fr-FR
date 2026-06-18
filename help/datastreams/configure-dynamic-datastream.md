@@ -20,7 +20,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
+source-git-commit: 7624fa99da99f97b217f1811c4f9a148ba1b98d1
 workflow-type: tm+mt
 source-wordcount: 1029
 ht-degree: 3%
@@ -38,14 +38,14 @@ Les configurations dynamiques de train de données corrigent ce problème par le
 
 Si vous découvrez [!DNL Dynamic Datastream Configurations] ou planifiez une implémentation de production, lisez le guide complet avant de configurer des règles. Le guide couvre la taxonomie des événements, les stratégies de jeux de données, les cas d’utilisation, les bonnes pratiques et l’approche de test.
 
-* [Présentation &#x200B;](/help/datastreams/dynamic-configurations/overview.md) — Évaluation des règles, taxonomie des événements et exclusivité mutuelle avec remplacements côté client
-* [Liste de contrôle des conditions préalables et de la planification](/help/datastreams/dynamic-configurations/prerequisites.md) — Configuration des flux de données, préparation des schémas et des jeux de données, et inventaire des événements
-* [Modèles de configuration](/help/datastreams/dynamic-configurations/configuration-patterns.md) — Stratégies de premier jeu de données exploitables et analytiques
-* [Cas d’utilisation &#x200B;](/help/datastreams/dynamic-configurations/use-cases.md) — Six scénarios de routage courants avec des exemples de tables de règles
-* [Exemple complet](/help/datastreams/dynamic-configurations/example.md) — Une implémentation e-commerce complète
-* [Bonnes pratiques](/help/datastreams/dynamic-configurations/best-practices.md) — Conception de règles, stratégie de jeu de données et conseils opérationnels
-* [Tester et valider](/help/datastreams/dynamic-configurations/testing.md) — Liste de contrôle des tests basés sur Assurance
-* [FAQ](/help/datastreams/dynamic-configurations/faq.md) — Questions courantes sur le comportement des règles et les interactions système
+* [Présentation &#x200B;](/help/datastreams/dynamic-configurations/overview.md) : évaluation des règles, taxonomie des événements et exclusivité mutuelle avec les remplacements côté client
+* [Liste de contrôle des conditions préalables et de la planification](/help/datastreams/dynamic-configurations/prerequisites.md) : configuration des trains de données, préparation des schémas et des jeux de données, et inventaire des événements
+* [Modèles de configuration](/help/datastreams/dynamic-configurations/configuration-patterns.md) : Stratégies de premier jeu de données exploitables et analytiques
+* [Cas pratiques &#x200B;](/help/datastreams/dynamic-configurations/use-cases.md) : six scénarios de routage courants avec des exemples de tables de règles
+* [Exemple complet](/help/datastreams/dynamic-configurations/example.md) : une implémentation e-commerce complète
+* [Bonnes pratiques](/help/datastreams/dynamic-configurations/best-practices.md) : conception de règles, stratégie de jeu de données et conseils opérationnels
+* [Tester et valider](/help/datastreams/dynamic-configurations/testing.md) : liste de contrôle de test basée sur Assurance
+* [FAQ](/help/datastreams/dynamic-configurations/faq.md) : questions courantes sur le comportement des règles et les interactions système
 
 ## Conditions préalables {#prerequisites}
 
