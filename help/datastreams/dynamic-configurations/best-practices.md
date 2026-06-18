@@ -47,7 +47,7 @@ Pour obtenir des conseils sur la configuration de la conservation des données, 
 - `[Brand] Bot Traffic - Quarantine (30d)`
 - `[Brand] System Events - Quarantine (30d)`
 
-**Aligner votre connexion [!DNL Customer Journey Analytics] sur votre stratégie de jeu de données.** Après avoir configuré [!DNL Dynamic Datastream Configuration] routage des règles et des événements vers des jeux de données distincts, mettez à jour votre connexion [!DNL Customer Journey Analytics] pour inclure uniquement les jeux de données qui doivent être utilisés dans les rapports. Excluez les jeux de données de quarantaine pour le trafic de robots et les événements système. Pour plus d’informations, consultez la documentation sur les connexions [&#128279;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-connections/overview){target="_blank"}.
+**Aligner votre connexion [!DNL Customer Journey Analytics] sur votre stratégie de jeu de données.** Après avoir configuré [!DNL Dynamic Datastream Configuration] routage des règles et des événements vers des jeux de données distincts, mettez à jour votre connexion [!DNL Customer Journey Analytics] pour inclure uniquement les jeux de données qui doivent être utilisés dans les rapports. Excluez les jeux de données de quarantaine pour le trafic de robots et les événements système. Pour plus d’informations, consultez la documentation sur les connexions [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-connections/overview){target="_blank"}.
 
 ## Pratiques opérationnelles {#operational}
 
