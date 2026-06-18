@@ -7,14 +7,18 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 056962dbf895e9bc3e957dd40e18c39fbc10306f
 workflow-type: tm+mt
-source-wordcount: 1839
-ht-degree: 63%
+source-wordcount: 1858
+ht-degree: 62%
 
 ---
 
 # Ingestion de données chiffrées
+
+>[!AVAILABILITY]
+>
+>L’ingestion de données chiffrées n’est pas disponible lors de l’utilisation de la région VA6 et de la connexion à [Adobe Experience Platform sur AWS](../../../landing/multi-cloud.md).
 
 Vous pouvez ingérer des fichiers de données chiffrés vers Adobe Experience Platform à l’aide de sources de lots de stockage dans le cloud. Avec l’ingestion de données chiffrées, vous pouvez utiliser des mécanismes de chiffrement asymétrique pour transférer en toute sécurité des données par lots dans Experience Platform. Actuellement, les mécanismes de chiffrement asymétrique pris en charge sont PGP et GPG.
 
