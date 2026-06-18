@@ -3,9 +3,13 @@ title: Prise en charge des liens privés pour les sources dans l’interface uti
 description: Découvrez comment utiliser les liens privés Azure pour les sources dans l’interface utilisateur d’Experience Platform.
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
 TQID: https://experienceleague.adobe.com/XdFZo7l7QF5O7khwkOMZydTdd2-8jwzAsSAPU21YIPs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: b7d2fc614e23e861e7a6da33b4e15ba1f7b28da3
 workflow-type: tm+mt
 source-wordcount: 864
