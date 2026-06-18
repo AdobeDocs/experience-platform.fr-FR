@@ -20,10 +20,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 0ea51945e5d7ffc2571fde1edc453ba26c47286b
 workflow-type: tm+mt
-source-wordcount: 1022
-ht-degree: 3%
+source-wordcount: 914
+ht-degree: 4%
 
 ---
 
@@ -108,7 +108,7 @@ Pour configurer l’ordre des règles, faites glisser et déposez les fenêtres 
 
 ## Critères d’éligibilité des règles {#eligibility-criteria}
 
-Les configurations de train de données dynamiques doivent répondre à des critères d’éligibilité spécifiques pour garantir des performances élevées, une maintenabilité et une clarté optimale. Vous trouverez ci-dessous les principales exigences et les bonnes pratiques pour définir des règles.
+Les configurations de train de données dynamiques doivent répondre à des critères d’éligibilité spécifiques pour garantir des performances élevées et un routage fiable.
 
 ### Types de données pris en charge {#supported-data-types}
 
@@ -143,9 +143,7 @@ Les règles peuvent utiliser les opérateurs suivants, selon le type de données
 
 ### Structure de règle {#rule-structure}
 
-Lors de la création de règles pour [!DNL Dynamic Datastream Configurations], il est important de comprendre les exigences structurelles qui assurent des performances optimales et la compatibilité du système. La structure des règles a une incidence directe sur l’efficacité du traitement et du routage de vos données dans le système.
-
-**Utilisez uniquement des expressions aplaties**. Vous devez définir des règles sous la forme d’expressions logiques aplaties. Les expressions logiques imbriquées (utilisant des conteneurs ou plusieurs niveaux de [!DNL AND]/[!DNL OR]) ne sont pas prises en charge. Si vous avez besoin d’une logique complexe, divisez-la en plusieurs règles aplaties.
+Les règles doivent être des expressions logiques plates. Les expressions logiques imbriquées (utilisant des conteneurs ou plusieurs niveaux de [!DNL AND]/[!DNL OR]) ne sont pas prises en charge. Si vous avez besoin d’une logique complexe, divisez-la en plusieurs règles aplaties.
 
 Prenons l’exemple de la règle complexe suivante.
 
@@ -157,13 +155,9 @@ Vous pouvez décomposer cette règle en plusieurs règles plus simples :
 
 ![Deuxième règle simplifiée, remplaçant la règle complexe imbriquée.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
-**Évitez les règles complexes**. Des règles plus simples garantissent une évaluation plus rapide et une meilleure maintenabilité.
+## Étapes suivantes
 
-### Bonnes pratiques {#best-practices}
-
-Le respect des bonnes pratiques lors de la création de règles [!DNL Dynamic Datastream Configuration] garantit des performances optimales, la fiabilité du système et des configurations gérables. Ces instructions vous aident à éviter les pièges courants et à créer des règles efficaces qui fonctionnent en toute transparence avec l’architecture de la plateforme.
-
-* **Simplifiez et aplatissez les règles.** Si vous devez exprimer une logique complexe, utilisez plusieurs règles au lieu d’imbriquer.
-* **Utiliser uniquement [types de données pris en charge](#supported-data-types) et [opérateurs](#supported-operators).**
-* **Tester les performances de vos règles.** Des règles trop complexes ou non prises en charge peuvent entraîner leur rejet par le système ou nuire aux performances du système.
+* Examinez les [bonnes pratiques pour [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) pour la conception de règles, la stratégie de jeux de données et les conseils opérationnels.
+* Voir [Cas d’utilisation de configuration de train de données dynamique](/help/datastreams/dynamic-configurations/use-cases.md) pour des configurations de règle complètes.
+* Suivez [Tester et valider [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md) pour vérifier que vos règles s’appliquent correctement au routage.
 
