@@ -1,7 +1,7 @@
 ---
 title: Bonnes pratiques relatives aux configurations de flux de données dynamiques
 description: Découvrez les bonnes pratiques de conception, d’organisation et d’exploitation  [!DNL Dynamic Datastream Configuration]  règles pour garantir un routage d’événement et des performances système fiables.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Bonnes pratiques pour [!DNL Dynamic Datastream Configurations]
 
-Utilisez ces pratiques lorsque vous concevez et utilisez des règles [!DNL Dynamic Datastream Configuration]. Ils vous aident à gérer les [mécanismes de sécurisation système](/help/datastreams/dynamic-configurations/configure.md#guardrails), à éviter les erreurs courantes et à maintenir des configurations faciles à comprendre et à résoudre les problèmes.
+Utilisez ces pratiques lorsque vous concevez et utilisez des règles [!DNL Dynamic Datastream Configuration]. Ils vous aident à gérer les [mécanismes de sécurisation système](/help/datastreams/configure-dynamic-datastream.md#guardrails), à éviter les erreurs courantes et à maintenir des configurations faciles à comprendre et à résoudre les problèmes.
 
 ## Conception de règle {#rule-design}
 

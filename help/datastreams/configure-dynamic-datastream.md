@@ -20,18 +20,32 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 0ea51945e5d7ffc2571fde1edc453ba26c47286b
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
-source-wordcount: 914
-ht-degree: 4%
+source-wordcount: 1029
+ht-degree: 3%
 
 ---
+
 
 # Créer [!DNL Dynamic Datastream Configurations]
 
 Par défaut, le [!DNL Adobe Experience Platform Edge Network] envoie tous les événements qui atteignent un flux de données à tous les [!DNL Experience Cloud] [services](/help/datastreams/configure.md#add-services) que vous avez activés pour vos flux de données. Selon vos cas d’utilisation, il peut ne pas toujours s’agir du workflow idéal.
 
 Les configurations dynamiques de train de données corrigent ce problème par le biais d’ensembles de règles que vous définissez pour chaque service activé pour votre train de données, qui contrôlent [!DNL Experience Cloud] solution reçoit chaque type de données.
+
+## guide de [!DNL Dynamic Datastream Configurations] {#guide}
+
+Si vous découvrez [!DNL Dynamic Datastream Configurations] ou planifiez une implémentation de production, lisez le guide complet avant de configurer des règles. Le guide couvre la taxonomie des événements, les stratégies de jeux de données, les cas d’utilisation, les bonnes pratiques et l’approche de test.
+
+* [Présentation &#x200B;](/help/datastreams/dynamic-configurations/overview.md) — Évaluation des règles, taxonomie des événements et exclusivité mutuelle avec remplacements côté client
+* [Liste de contrôle des conditions préalables et de la planification](/help/datastreams/dynamic-configurations/prerequisites.md) — Configuration des flux de données, préparation des schémas et des jeux de données, et inventaire des événements
+* [Modèles de configuration](/help/datastreams/dynamic-configurations/configuration-patterns.md) — Stratégies de premier jeu de données exploitables et analytiques
+* [Cas d’utilisation &#x200B;](/help/datastreams/dynamic-configurations/use-cases.md) — Six scénarios de routage courants avec des exemples de tables de règles
+* [Exemple complet](/help/datastreams/dynamic-configurations/example.md) — Une implémentation e-commerce complète
+* [Bonnes pratiques](/help/datastreams/dynamic-configurations/best-practices.md) — Conception de règles, stratégie de jeu de données et conseils opérationnels
+* [Tester et valider](/help/datastreams/dynamic-configurations/testing.md) — Liste de contrôle des tests basés sur Assurance
+* [FAQ](/help/datastreams/dynamic-configurations/faq.md) — Questions courantes sur le comportement des règles et les interactions système
 
 ## Conditions préalables {#prerequisites}
 
@@ -66,33 +80,33 @@ Si vous activez les deux, les remplacements de configuration sont prioritaires e
 
 ## Création d’un [!DNL Dynamic Datastream Configuration] {#create-dynamic-configuration}
 
-Après avoir [créé un flux de données](configure.md) et [ajouté un service](configure.md#add-services), procédez comme suit pour ajouter une configuration dynamique au service.
+Après avoir [créé un flux de données](/help/datastreams/configure.md) et [ajouté un service](/help/datastreams/configure.md#add-services), procédez comme suit pour ajouter une configuration dynamique au service.
 
 1. Accédez à la page **[!UICONTROL Collecte de données]** > **[!UICONTROL Flux de données]** et sélectionnez le flux de données que vous avez créé.
 
-   ![Interface utilisateur des flux de données affichant la liste des flux de données.](assets/configure-dynamic-datastream/select-datastream.png)
+   ![Interface utilisateur des flux de données affichant la liste des flux de données.](assets/dynamic-datastreams/select-datastream.png)
 
 1. Sélectionnez l&#39;option **[!UICONTROL Modifier]** sur le service pour lequel vous souhaitez définir une configuration dynamique.
 
-   ![Interface utilisateur des flux de données affichant les services ajoutés à un flux de données.](assets/configure-dynamic-datastream/select-service.png)
+   ![Interface utilisateur des flux de données affichant les services ajoutés à un flux de données.](assets/dynamic-datastreams/select-service.png)
 
 1. Sur la page **[!UICONTROL Configurer]**, sélectionnez **[!UICONTROL Enregistrer et modifier la configuration dynamique]**.
 
-   ![Interface utilisateur des flux de données affichant la page de configuration des flux de données.](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![Interface utilisateur des flux de données affichant la page de configuration des flux de données.](assets/dynamic-datastreams/save-and-edit.png)
 
 1. Sélectionnez **[!UICONTROL Ajouter une configuration dynamique]**.
 
-   ![Interface utilisateur des flux de données affichant la page de configuration dynamique avant l’ajout de règles.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   ![Interface utilisateur des flux de données affichant la page de configuration dynamique avant l’ajout de règles.](assets/dynamic-datastreams/add-dynamic-config.png)
 
 1. Dans le panneau **[!UICONTROL Ressources]**, faites glisser et déposez les éléments avec lesquels vous souhaitez créer votre règle sur le côté droit de la fenêtre. Vous pouvez combiner plusieurs ressources pour créer des règles complexes.
 
    Utilisez les options de chaque ressource, telles que **[!UICONTROL égal à]**, **[!UICONTROL n’est pas égal à]**, **[!UICONTROL existe]**, etc. pour affiner vos règles.
 
-   ![Interface utilisateur des flux de données présentant le créateur de règles de configuration dynamique avec les ressources en cours de déplacement.](assets/configure-dynamic-datastream/drag-resources.png)
+   ![Interface utilisateur des flux de données présentant le créateur de règles de configuration dynamique avec les ressources en cours de déplacement.](assets/dynamic-datastreams/drag-resources.png)
 
 1. Dans la section **[!UICONTROL Configuration]**, activez ou désactivez les services pour chaque règle, selon que vous souhaitez ou non que les données soient envoyées à chaque service. Si vous désactivez un service, le routage est désactivé et *aucune donnée* n’est envoyée au service en aval.
 
-   ![Interface utilisateur des flux de données présentant la règle de configuration dynamique avec les bascules de service.](assets/configure-dynamic-datastream/enable-service.png)
+   ![Interface utilisateur des flux de données présentant la règle de configuration dynamique avec les bascules de service.](assets/dynamic-datastreams/enable-service.png)
 
 1. Une fois la configuration des règles terminée, sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -104,7 +118,7 @@ Pour obtenir le comportement de routage des données souhaité, prêtez attentio
 
 Pour configurer l’ordre des règles, faites glisser et déposez les fenêtres des règles dans l’ordre de votre choix.
 
-![Réorganisation des règles de flux de données dynamiques à l’aide du glisser-déposer.](assets/configure-dynamic-datastream/move-rules.gif)
+![Réorganisation des règles de flux de données dynamiques à l’aide du glisser-déposer.](assets/dynamic-datastreams/move-rules.gif)
 
 ## Critères d’éligibilité des règles {#eligibility-criteria}
 
@@ -147,17 +161,16 @@ Les règles doivent être des expressions logiques plates. Les expressions logiq
 
 Prenons l’exemple de la règle complexe suivante.
 
-![Exemple de règle complexe imbriquée avec plusieurs conditions ET/OU.](assets/configure-dynamic-datastream/complex-rule.png)
+![Exemple de règle complexe imbriquée avec plusieurs conditions ET/OU.](assets/dynamic-datastreams/complex-rule.png)
 
 Vous pouvez décomposer cette règle en plusieurs règles plus simples :
 
-![Première règle simplifiée, remplaçant la règle complexe imbriquée.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Première règle simplifiée, remplaçant la règle complexe imbriquée.](assets/dynamic-datastreams/simple-rule-1.png)
 
-![Deuxième règle simplifiée, remplaçant la règle complexe imbriquée.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Deuxième règle simplifiée, remplaçant la règle complexe imbriquée.](assets/dynamic-datastreams/simple-rule-2.png)
 
 ## Étapes suivantes
 
 * Examinez les [bonnes pratiques pour [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) pour la conception de règles, la stratégie de jeux de données et les conseils opérationnels.
 * Voir [Cas d’utilisation de configuration de train de données dynamique](/help/datastreams/dynamic-configurations/use-cases.md) pour des configurations de règle complètes.
 * Suivez [Tester et valider [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md) pour vérifier que vos règles s’appliquent correctement au routage.
-

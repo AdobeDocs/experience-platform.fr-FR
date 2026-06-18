@@ -1,7 +1,7 @@
 ---
 title: Modèles de configuration de flux de données dynamiques
 description: Découvrez  [!DNL Dynamic Datastream Configuration]  modèles et quand utiliser en premier lieu les stratégies de jeu de données Exploitable par rapport à Analytics pour Experience Platform.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 0%
@@ -77,4 +77,4 @@ Choisissez en fonction du type d’événement qui constitue la majorité de vot
 
 - Voir [Cas d’utilisation de configuration de train de données dynamique](/help/datastreams/dynamic-configurations/use-cases.md) pour des configurations de règles concrètes basées sur ces modèles.
 - Consultez l’[exemple complet](/help/datastreams/dynamic-configurations/example.md) pour voir si les deux modèles sont appliqués ensemble dans un scénario de production.
-- Suivez les instructions de l’interface utilisateur dans [Créer des configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md) pour créer vos règles.
+- Suivez les instructions de l’interface utilisateur dans [Créer des configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour créer vos règles.

@@ -1,7 +1,7 @@
 ---
 title: FAQ sur les configurations de flux de données dynamiques
 description: Découvrez les questions courantes sur  [!DNL Dynamic Datastream Configurations], notamment le comportement des règles, le routage des événements, les interactions système, les performances et les limites.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Non. Les configurations de train de données dynamiques acheminent les événeme
 
 La limite de 5 règles par service détermine la réponse. Si votre configuration actuelle multi-flux de données nécessite plus de 5 chemins de routage distincts par service, vous pouvez toujours avoir besoin de plusieurs flux de données. Cependant, la plupart des mises en œuvre estiment que 5 règles sont suffisantes pour consolider deux à quatre flux de données en un seul.
 
-Consultez [Créer des configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md#guardrails) pour obtenir la liste complète des mécanismes de sécurisation, y compris le nombre maximal de règles par service et le nombre maximal de conditions par règle.
+Consultez [Créer des configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md#guardrails) pour obtenir la liste complète des mécanismes de sécurisation, y compris le nombre maximal de règles par service et le nombre maximal de conditions par règle.
 
 ## Quel est l’impact de la [!DNL Dynamic Datastream Configurations] sur les performances ?
 
@@ -73,4 +73,4 @@ Pour respecter le budget, veillez à ce que les règles soient simples, utilisez
 
 - Voir [Cas d’utilisation de la configuration dynamique des trains de données](/help/datastreams/dynamic-configurations/use-cases.md) pour obtenir des configurations de règles détaillées.
 - Lisez [bonnes pratiques pour [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) pour obtenir des conseils opérationnels.
-- Revenez à [Créer des configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md) pour ajuster les conditions des règles ou l’ordre des règles.
+- Revenez à [Créer des configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour ajuster les conditions des règles ou l’ordre des règles.

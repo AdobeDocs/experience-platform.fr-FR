@@ -1,7 +1,7 @@
 ---
 title: Présentation De La Configuration Du Flux De Données Dynamique
 description: Découvrez comment  [!DNL Dynamic Datastream Configurations] achemine les événements vers les services Experience Cloud en fonction de règles et en quoi il se compare à d’autres options de routage.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Comprendre comment Edge Network évalue les **règles** vous aide à concevoir d
 - **budget d’évaluation de 25 ms.** Toutes les règles d’un flux de données doivent être évaluées dans un délai de 25 ms au total. Si l’évaluation dépasse ce budget, l’événement retourne à la configuration de train de données par défaut. Veillez à ce que les règles restent simples et axées sur des champs fiables tels que les `eventType`.
 - **Expressions plates uniquement.** Le système ne prend pas en charge les expressions logiques imbriquées (conteneurs dans des conteneurs). Si votre logique nécessite l’imbrication, divisez-la plutôt en plusieurs règles aplaties.
 
-Pour obtenir la liste complète des types de données, des opérateurs et des mécanismes de sécurisation pris en charge, voir [Créer des configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md).
+Pour obtenir la liste complète des types de données, des opérateurs et des mécanismes de sécurisation pris en charge, voir [Créer des configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md).
 
 ## Taxonomie des valeurs d’événement {#event-taxonomy}
 
@@ -73,4 +73,4 @@ Planifiez l’implémentation afin d’utiliser une approche ou l’autre par ty
 
 - Consultez les [conditions préalables et liste de contrôle de planification](/help/datastreams/dynamic-configurations/prerequisites.md) avant de configurer vos premières règles.
 - Lisez [Modèles de configuration de train de données dynamique](/help/datastreams/dynamic-configurations/configuration-patterns.md) pour choisir la bonne stratégie de jeu de données.
-- Suivez les étapes de l’interface utilisateur pour [créer [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/configure.md).
+- Suivez les étapes de l’interface utilisateur pour [créer [!DNL Dynamic Datastream Configurations]](/help/datastreams/configure-dynamic-datastream.md).

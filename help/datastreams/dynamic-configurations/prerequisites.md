@@ -1,7 +1,7 @@
 ---
 title: Conditions Préalables De Configuration Des Flux De Données Dynamiques
 description: Découvrez comment préparer votre flux de données, vos schémas, vos jeux de données et votre inventaire des événements avant de configurer  [!DNL Dynamic Datastream Configuration]  règles afin d’éviter les erreurs de configuration.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 0%
@@ -73,4 +73,4 @@ Après avoir terminé cette liste de contrôle, vous êtes prêt à concevoir vo
 
 - Lisez [Modèles de configuration de train de données dynamique](/help/datastreams/dynamic-configurations/configuration-patterns.md) pour choisir la bonne stratégie de jeu de données.
 - Voir [Cas d’utilisation de la configuration dynamique des trains de données](/help/datastreams/dynamic-configurations/use-cases.md) pour obtenir des configurations de règles détaillées.
-- Suivez les instructions de l’interface utilisateur dans [Créer des configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md) pour créer et enregistrer vos règles.
+- Suivez les instructions de l’interface utilisateur dans [Créer des configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour créer et enregistrer vos règles.

@@ -1,7 +1,7 @@
 ---
 title: Exemple de configuration de flux de données dynamique de bout en bout
 description: Découvrez comment combiner des cas  [!DNL Dynamic Datastream Configuration] ’utilisation dans un seul flux de données pour une implémentation d’e-commerce à l’aide du premier modèle Analytics.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 6%
@@ -66,7 +66,7 @@ Le tableau suivant présente l’ensemble complet des règles pour le service [!
 
 Cette configuration utilise des règles explicites **4** sur la limite de 5 règles par service pour [!DNL Adobe Experience Platform]. Un emplacement de règle reste disponible pour les besoins futurs. Par exemple, le filtrage du trafic interne par domaine d’e-mail ou le routage d’un nouveau type d’événement.
 
-Pour obtenir la liste complète des mécanismes de sécurisation, voir [Création de configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md#guardrails).
+Pour obtenir la liste complète des mécanismes de sécurisation, voir [Création de configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md#guardrails).
 
 Si vous avez besoin d’une granularité plus élevée, combinez d’autres types d’événements en tant que conditions [!DNL OR] dans une règle existante. Par exemple, la règle 4 combine déjà `commerce.productViews` et `commerce.productListAdds`. Vous pouvez ajouter des `commerce.productListOpens` ou des `commerce.saveForLaters` à la même règle sans utiliser d’emplacement de règle supplémentaire. Chaque règle prend en charge jusqu’à 100 conditions.
 
