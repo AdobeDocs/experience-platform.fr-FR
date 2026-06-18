@@ -21,10 +21,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
 workflow-type: tm+mt
-source-wordcount: 2098
-ht-degree: 8%
+source-wordcount: 2124
+ht-degree: 9%
 
 ---
 
@@ -76,7 +76,7 @@ Dans ces services, les mécanismes de sécurisation suivants sont suivis :
 - Le nombre maximal d’audiences de diffusion en continu est de 500
 - Le nombre maximal d’audiences Edge est de 150
 - Le débit combiné initial pour l’ingestion en flux continu est de 1 500 enregistrements par seconde (rps)
-   - Ce débit de diffusion en continu combiné mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans le profil client en temps réel sur vos sandbox de production et de développement.
+   - Ce débit de streaming combiné mesure le pic combiné d’événements entrants par seconde pour l’ingestion en streaming dans le profil client en temps réel sur vos sandbox de production et de développement.
    - Vous pouvez acheter une prise en charge supplémentaire de la segmentation en flux continu pour un maximum de 13 500 enregistrements par seconde. Vous trouverez plus d’informations sur l’achat de droits supplémentaires dans la description du produit [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 - Le débit combiné pour la segmentation Edge est de 1 500 enregistrements par seconde (rps)
 
@@ -102,7 +102,7 @@ Si votre utilisation dépasse 100 % de votre capacité sous licence, vous serez 
 
 ## Accès {#access}
 
-Pour accéder à la présentation de la capacité, sélectionnez **[!UICONTROL License usage]** suivi de **[!UICONTROL Capacity]**.
+Pour accéder à la présentation de la capacité, sélectionnez **[!UICONTROL Utilisation de la licence]** suivie de **[!UICONTROL Capacité]**.
 
 ![La méthode d’accès à la section Capacité est mise en surbrillance.](/help/landing/images/capacity/access-capacity.png)
 
@@ -112,7 +112,7 @@ La page Aperçu de la capacité s’affiche, avec des informations, notamment un
 
 ### Historique des alertes {#alert-history}
 
-La section **[!UICONTROL Alert history]** affiche une liste des violations de capacité les plus récentes au sein de votre organisation.
+La section **[!UICONTROL Historique des alertes]** affiche une liste des violations de capacité les plus récentes au sein de votre organisation.
 
 ![La section Historique des alertes s’affiche.](/help/landing/images/capacity/alert-history.png)
 
@@ -122,7 +122,7 @@ La section **[!UICONTROL Alert history]** affiche une liste des violations de ca
 | Alerte | Capacité qui a été dépassée dans le sandbox. |
 | Date et heure | Données et heure auxquelles la violation s’est produite. |
 
-Pour afficher un historique complet des alertes de votre organisation, sélectionnez l’icône ![des trois petits points](/help/images/icons/more.png), puis **[!UICONTROL View all]**.
+Pour afficher l’historique complet des alertes de votre organisation, sélectionnez l’icône ![des trois petits points](/help/images/icons/more.png), puis **[!UICONTROL Afficher tout]**.
 
 ![L’historique complet des alertes s’affiche pour une organisation.](/help/landing/images/capacity/full-alert-history.png)
 
@@ -134,7 +134,7 @@ La section Capacités de diffusion en continu décrit les informations sur les c
 
 #### Débit de streaming {#streaming-throughput}
 
-La section **[!UICONTROL Streaming throughput]** affiche des informations sur le débit de diffusion en continu dans les sandbox de votre organisation. La valeur de débit de diffusion mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans Profile.
+La section **[!UICONTROL Débit de diffusion en continu]** affiche des informations sur le débit de diffusion en continu dans les sandbox de votre organisation. La valeur de débit de diffusion mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans Profile.
 
 ![La section Débit de diffusion en continu de la page des détails de la capacité s’affiche.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -155,7 +155,7 @@ La page Détails du débit de diffusion en continu s’affiche. Vous pouvez voir
 
 ![La page Débit de diffusion en continu s’affiche, affichant des informations détaillées sur le débit de diffusion en continu pour le sandbox sélectionné.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
-Pour mettre à jour les capacités de débit de diffusion en continu de l’organisation, sélectionnez **[!UICONTROL Allocate capacities]**.
+Pour mettre à jour les capacités de débit de diffusion en continu de l’organisation, sélectionnez **[!UICONTROL Allouer les capacités]**.
 
 ![Le bouton Allouer des capacités est mis en surbrillance dans la page des détails du débit de diffusion en continu.](/help/landing/images/capacity/select-allocate.png)
 
@@ -169,11 +169,11 @@ La page d’attribution s’affiche. Sur cette page, vous pouvez définir vos ca
 >
 >Si la valeur n’est pas de l’ordre de 100, elle sera arrondie à l’unité supérieure ou inférieure en conséquence.
 
-Après avoir mis à jour les allocations de capacité, sélectionnez **[!UICONTROL Save]** pour terminer les mises à jour. Notez que la prise en compte des modifications dans votre organisation peut prendre jusqu’à 10 minutes.
+Après avoir mis à jour les allocations de capacité, sélectionnez **[!UICONTROL Enregistrer]** pour terminer les mises à jour. Notez que la prise en compte des modifications dans votre organisation peut prendre jusqu’à 10 minutes.
 
 #### Nombre d’audiences en streaming {#streaming-audience-count}
 
-La section **[!UICONTROL Streaming audience count]** affiche le nombre d’audiences en flux continu dans le sandbox ainsi que le nombre maximal d’audiences en flux continu autorisées dans le sandbox.
+La section nombre de profils des audiences de diffusion **affiche le nombre d’audiences de diffusion en continu dans le sandbox ainsi que le nombre maximal d’audiences de diffusion en continu autorisées dans le sandbox.**
 
 ![Les sections Nombres de profils des audiences s’affichent.](/help/landing/images/capacity/audience-count.png)
 
@@ -186,13 +186,13 @@ La section **[!UICONTROL Streaming audience count]** affiche le nombre d’audie
 
 ### Capacités Edge {#edge-capacities}
 
-La section **[!UICONTROL Edge capacities]** présente des informations sur les capacités de périphérie de votre organisation. Plus précisément, cette section affiche des informations de capacité sur le débit de segmentation Edge et les audiences Edge. Vous pouvez modifier la période de recherche en amont des capacités Edge de l’organisation.
+La section **[!UICONTROL Capacités d’]** présente des informations sur les capacités Edge de votre organisation. Plus précisément, cette section affiche des informations de capacité sur le débit de segmentation Edge et les audiences Edge. Vous pouvez modifier la période de recherche en amont des capacités Edge de l’organisation.
 
 ![La section Capacités d’Edge s’affiche. Cette section décrit les informations, y compris le débit de segmentation Edge et le nombre de profils des audiences Edge.](/help/landing/images/capacity/edge-capacities.png)
 
 #### Débit de segmentation Edge {#edge-streaming-throughput}
 
-La section **[!UICONTROL Edge segmentation throughput]** affiche des informations sur le débit de segmentation Edge au sein des sandbox de votre organisation. La valeur de débit de segmentation Edge mesure le pic combiné d’événements entrants par seconde pour l’ingestion Edge dans Profile.
+La section **[!UICONTROL Débit de segmentation]** affiche des informations sur le débit de segmentation Edge au sein des sandbox de votre organisation. La valeur de débit de segmentation Edge mesure le pic combiné d’événements entrants par seconde pour l’ingestion Edge dans Profile.
 
 ![La section Débit de segmentation d’Edge s’affiche. Cette section affiche des informations sur le débit de segmentation Edge de votre organisation et de ses sandbox.](/help/landing/images/capacity/edge-segmentation-throughput.png)
 
@@ -208,13 +208,13 @@ Vous pouvez sélectionner l’organisation pour afficher une vue plus détaillé
 
 ![L’organisation est mise en surbrillance.](/help/landing/images/capacity/select-organization.png)
 
-La page **[!UICONTROL Edge Segmentation Throughput]** s’affiche. Vous pouvez voir un graphique qui affiche le débit des requêtes par rapport à la limite de capacité. Dans cette page, vous pouvez ajuster la période de recherche en amont du graphique affiché.
+La page **[!UICONTROL Débit de segmentation d’]** s’affiche. Vous pouvez voir un graphique qui affiche le débit des requêtes par rapport à la limite de capacité. Dans cette page, vous pouvez ajuster la période de recherche en amont du graphique affiché.
 
 ![La page Débit de segmentation d’Edge s’affiche. Vous voyez ici un graphique qui détaille le débit par rapport à la limite de capacité.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
 
 #### Nombre d’audiences en périphérie {#edge-audience-count}
 
-La section **[!UICONTROL Edge audience count]** affiche le nombre d’audiences Edge dans chaque sandbox ainsi que le nombre maximal d’audiences Edge autorisées dans le sandbox.
+La section **[!UICONTROL nombre de profils des audiences Edge]** affiche le nombre d’audiences Edge dans chaque sandbox ainsi que le nombre maximal d’audiences Edge autorisées dans le sandbox.
 
 ![La section nombre de profils des audiences Edge s’affiche. Affiche des informations relatives au nombre de profils des audiences Edge.](/help/landing/images/capacity/edge-audience-count.png)
 
@@ -238,7 +238,7 @@ En outre, vous pouvez consulter vos flux de données et voir si vous pouvez opti
 | Facteur contributif | Signification | Impact sur les cas d’utilisation | Bonnes pratiques |
 | --- | --- | --- | --- |
 | Conversion par lots en flux continu | Les charges de travail par lots converties en flux continu peuvent augmenter considérablement le débit et affecter les performances et l’allocation des ressources. Par exemple, l’exécution d’une mise à jour de profil en bloc après un événement sans limites de débit. | Les stratégies de diffusion en continu sont inutiles pour les cas d’utilisation par lots lorsqu’un traitement à faible latence n’est pas nécessaire. | Évaluez les exigences du cas d’utilisation. Pour le marketing sortant par lots, pensez à utiliser l’[ingestion par lots](/help/ingestion/batch-ingestion/overview.md) plutôt que la diffusion en continu pour gérer plus efficacement l’ingestion des données. |
-| Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**&#x200B;** : utilisez le [filtrage au niveau des lignes](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](/help/sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
+| Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**&#x200B;** : utilisez le [filtrage au niveau des lignes](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](/help/sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
 
 ## Bonnes pratiques relatives au débit de segmentation d’Edge {#edge-best-practices}
 

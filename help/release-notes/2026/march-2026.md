@@ -2,7 +2,7 @@
 title: Notes De Mise À Jour De Adobe Experience Platform - Mars 2026
 description: Les notes de mise à jour de mars 2026 pour Adobe Experience Platform.
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
-source-git-commit: cd09f9e510052f6bae89ff730ba83aa16e95f193
+source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
 workflow-type: tm+mt
 source-wordcount: '1876'
 ht-degree: 24%
@@ -80,7 +80,7 @@ Un flux de données représente la configuration côté serveur lors de l’impl
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Disponibilité générale des configurations de trains de données dynamiques | Les configurations de train de données dynamiques sont désormais disponibles. Avec les configurations de train de données dynamiques, vous pouvez définir des ensembles de règles configurables par l’utilisateur pour chaque service activé pour votre train de données, qui déterminent quelle solution Experience Cloud doit recevoir chaque type de données. Pour plus d’informations, consultez le [guide de configuration des trains de données dynamiques](../../datastreams/configure-dynamic-datastream.md). |
+| Disponibilité générale des configurations de trains de données dynamiques | Les configurations de train de données dynamiques sont désormais disponibles. Grâce aux configurations de train de données dynamiques, vous pouvez définir des ensembles de règles configurables par l’utilisateur pour chaque service activé pour votre train de données, ce qui détermine quelle solution Experience Cloud doit recevoir chaque type de données. Pour plus d’informations, consultez le [guide de configuration des trains de données dynamiques](../../datastreams/dynamic-configurations/configure.md). |
 
 {style="table-layout:auto"}
 
