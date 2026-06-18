@@ -3,26 +3,14 @@ title: Surveiller l’ingestion des profils de streaming
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller l’ingestion des profils de diffusion en continu
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 TQID: https://experienceleague.adobe.com/qs7MXGxTsLZYxyKweSjDq12yptwbFMmx88PMjUnAMmM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773id: d3f95e25-a50e-4fd0-bc23-9a22409a183bid: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
 workflow-type: tm+mt
-source-wordcount: 1883
+source-wordcount: 1918
 ht-degree: 20%
 
 ---
@@ -44,7 +32,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!NOTE]
 >
->La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Surveillance des mesures pour l’ingestion de profils de streaming {#streaming-profile-metrics}
 
@@ -118,31 +106,31 @@ Utilisez le tableau des mesures pour obtenir des informations spécifiques à vo
 
 ## Utiliser le tableau de bord de surveillance pour l’ingestion de profils en flux continu
 
-Pour accéder au tableau de bord de surveillance de l’ingestion de profils en flux continu, accédez à l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Monitoring]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Streaming end-to-end]**.
+Pour accéder au tableau de bord de surveillance de l’ingestion de profils en flux continu, accédez à l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Diffusion en flux continu de bout en bout]**.
 
 ![Tableau de bord de surveillance de l’ingestion des profils en flux continu.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Reportez-vous à l’en-tête supérieur du tableau de bord pour la carte Mesures *[!UICONTROL Profile]* . Utilisez cet affichage pour afficher des informations sur les enregistrements ingérés, en échec et ignorés, ainsi que sur le statut actuel du débit des demandes.
+Reportez-vous à l’en-tête supérieur du tableau de bord pour la carte de mesures *[!UICONTROL Profil]*. Utilisez cet affichage pour afficher des informations sur les enregistrements ingérés, en échec et ignorés, ainsi que sur le statut actuel du débit des demandes.
 
 ![Carte de profil.](../assets/ui/streaming-profiles/profile-card.png)
 
 Ensuite, utilisez l’interface pour afficher des informations détaillées sur les mesures d’ingestion de votre profil de diffusion en continu. Utilisez la fonction de calendrier pour basculer entre différentes périodes. Vous pouvez effectuer un choix parmi les fenêtres temporelles préconfigurées suivantes :
 
-* [!UICONTROL Last 6 hours]
-* [!UICONTROL Last 12 hours]
-* [!UICONTROL Last 24 hours]
-* [!UICONTROL Last 7 days]
-* [!UICONTROL Last 30 days]
+* [!UICONTROL 6 dernières heures]
+* [!UICONTROL 12 dernières heures]
+* [!UICONTROL Dernières 24 heures]
+* [!UICONTROL 7 derniers jours]
+* [!UICONTROL 30 derniers jours]
 
 Vous pouvez également configurer manuellement votre propre période à l’aide du calendrier.
 
-Vous pouvez utiliser deux catégories de mesures différentes dans le tableau de bord de surveillance pour l’ingestion de profils en flux continu : [!UICONTROL Throughput] et [!UICONTROL Ingestion].
+Vous pouvez utiliser deux catégories de mesures différentes dans le tableau de bord de surveillance pour l’ingestion de profils en flux continu : [!UICONTROL Débit] et [!UICONTROL Ingestion].
 
 >[!BEGINTABS]
 
 >[!TAB Débit]
 
-Sélectionnez **[!UICONTROL Throughput]** pour afficher des informations sur la quantité de données qu’Experience Platform traite selon une période configurée. Consultez cette mesure pour évaluer l’efficacité et la capacité de votre système.
+Sélectionnez **[!UICONTROL Débit]** pour afficher des informations sur la quantité de données qu’Experience Platform traite selon une période configurée. Consultez cette mesure pour évaluer l’efficacité et la capacité de votre système.
 
 ![Tableau de bord avec l’affichage défini sur « débit ».](../assets/ui/streaming-profiles/throughput.png)
 
@@ -166,7 +154,7 @@ Sélectionnez **[!UICONTROL Throughput]** pour afficher des informations sur la 
 
 Le tableau des flux de données répertorie toutes les activités d’ingestion en flux continu avec l’ensemble de mesures correspondant pour le profil client en temps réel. Chaque flux de données est répertorié avec son jeu de données correspondant.
 
-Si vous approchez des limites de votre capacité au niveau du sandbox, vous pouvez vous reporter à la colonne [!UICONTROL Max throughput] pour identifier tous les flux de données existants qui contribuent à vos taux de consommation. Lisez la [section des bonnes pratiques](#best-practices) pour plus d’informations sur les bonnes pratiques de gestion des flux de données.
+Si vous approchez des limites de votre capacité au niveau du sandbox, vous pouvez vous reporter à la colonne [!UICONTROL Débit maximal] pour identifier tous les flux de données existants qui contribuent à vos taux de consommation. Lisez la [section des bonnes pratiques](#best-practices) pour plus d’informations sur les bonnes pratiques de gestion des flux de données.
 
 Pour surveiller les données ingérées dans un flux de données spécifique, sélectionnez l’icône de filtre ![filtre](/help/images/icons/filter-add.png) à côté du nom du flux de données.
 
@@ -205,7 +193,7 @@ Si votre limite actuelle de 1 500 événements **par seconde** est insuffisante,
 | Facteur contributif | Signification | Impact sur les cas d’utilisation | Bonnes pratiques |
 | --- | --- | --- | --- |
 | Conversion par lots en flux continu | Les charges de travail par lots converties en flux continu peuvent augmenter considérablement le débit et affecter les performances et l’allocation des ressources. Par exemple, l’exécution d’une mise à jour de profil en bloc après un événement sans limites de débit. | Les stratégies de diffusion en continu sont inutiles pour les cas d’utilisation par lots lorsqu’un traitement à faible latence n’est pas nécessaire. | Évaluez les exigences du cas d’utilisation. Pour le marketing sortant par lots, pensez à utiliser l’[ingestion par lots](../../ingestion/batch-ingestion/overview.md) plutôt que la diffusion en continu pour gérer plus efficacement l’ingestion des données. |
-| Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**&#x200B;** : utilisez le [filtrage au niveau des lignes](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](../../sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](../../datastreams/configure-dynamic-datastream.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
+| Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**** : utilisez le [filtrage au niveau des lignes](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](../../sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](../../datastreams/dynamic-configurations/configure.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -217,17 +205,17 @@ Lisez cette section pour obtenir des réponses aux questions fréquentes sur la 
 
 +++Réponse
 
-Le tableau de bord [!UICONTROL Monitoring] affiche des mesures en temps réel pour l’ingestion et le traitement. Ces chiffres sont des mesures exactes enregistrées au moment de l’activité. Inversement, le tableau de bord [!UICONTROL Capacity] utilise un mécanisme de lissage pour le calcul de la capacité de débit. Ce mécanisme permet de réduire les pics de courte durée qui peuvent être immédiatement qualifiés de violations. Il garantit également que les alertes de capacité se concentrent sur des tendances durables, plutôt que sur des sursauts momentanés.
+Le tableau de bord [!UICONTROL Surveillance] affiche des mesures en temps réel pour l’ingestion et le traitement. Ces chiffres sont des mesures exactes enregistrées au moment de l’activité. Inversement, le tableau de bord [!UICONTROL Capacité] utilise un mécanisme de lissage pour le calcul de la capacité de débit. Ce mécanisme permet de réduire les pics de courte durée qui peuvent être immédiatement qualifiés de violations. Il garantit également que les alertes de capacité se concentrent sur des tendances durables, plutôt que sur des sursauts momentanés.
 
 En raison du mécanisme de lissage, vous remarquerez peut-être :
 
-* Petits pics de [!UICONTROL Monitoring] qui n’apparaissent pas dans les [!UICONTROL Capacity].
-* Valeurs légèrement inférieures dans [!UICONTROL Capacity] par rapport à [!UICONTROL Monitoring] au même horodatage.
+* Petits pics dans [!UICONTROL Surveillance] qui n’apparaissent pas dans [!UICONTROL Capacité].
+* Des valeurs légèrement inférieures dans [!UICONTROL Capacité] par rapport à [!UICONTROL Surveillance] au même horodatage.
 
 Les deux tableaux de bord sont précis, mais sont conçus à des fins différentes.
 
-* [!UICONTROL Monitoring] : visibilité opérationnelle détaillée, à chaque instant.
-* [!UICONTROL Capacity] : affichage stratégique pour l’identification des schémas d’utilisation et de violation.
+* [!UICONTROL Surveillance] : visibilité opérationnelle détaillée, à chaque instant.
+* [!UICONTROL Capacité] : vue stratégique permettant d’identifier les schémas d’utilisation et de violation.
 
 +++
 
