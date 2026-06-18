@@ -10,9 +10,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: b7d2fc614e23e861e7a6da33b4e15ba1f7b28da3
 workflow-type: tm+mt
-source-wordcount: 1585
+source-wordcount: 1604
 ht-degree: 7%
 
 ---
@@ -28,6 +28,8 @@ ht-degree: 7%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >
 >Actuellement, la prise en charge des liens privés n’est disponible que pour les organisations qui ont acheté Adobe Healthcare Shield ou Adobe Privacy &amp; Security Shield.
+>
+>La prise en charge de lien privé n’est pas disponible lors de l’utilisation de la zone géographique VA6 et de la connexion à [Adobe Experience Platform sur AWS](../../../landing/multi-cloud.md).
 
 Vous pouvez utiliser la fonction Lien privé pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources à un réseau virtuel en toute sécurité à l’aide d’adresses IP privées, éliminant ainsi le besoin d’adresses IP publiques et réduisant votre surface d’attaque. Simplifiez la configuration de votre réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d’adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
 
