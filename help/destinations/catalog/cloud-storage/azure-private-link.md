@@ -1,9 +1,9 @@
 ---
 title: 'Lien privé pour les  [!DNL Azure] '
 description: Découvrez comment acheminer les exportations de données de  [!DNL Experience Platform]   [!DNL Azure]  vers vos ressources sur la colonne vertébrale  [!DNL Microsoft Azure]  privée à l’aide d’ [!DNL Azure]  lien privé.
-source-git-commit: 57884c36a2a1e05a5bf77c12ba33113e293559a1
+source-git-commit: 04138bbe56392193ab295c964f7486ea59699595
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -52,6 +52,10 @@ Les limites suivantes s’appliquent à [!DNL Azure] lien privé pour les destin
 |-----------|-------|
 | Points d’entrée du sandbox de production | Maximum de 10 points d’entrée par organisation, pour tous les types de destination Azure ([!DNL Azure Blob Storage], [!DNL Azure Data Lake Storage Gen2] et [!DNL Azure Event Hubs]) |
 | Points d’entrée de sandbox de développement | Maximum de 1 point d’entrée par organisation |
+
+>[!NOTE]
+>
+>Un point d’entrée privé ne se limite pas à un sandbox [!DNL Experience Platform] individuel. Une fois [!DNL Adobe] avez créé un point d’entrée privé pour votre ressource [!DNL Azure], celle-ci est accessible de manière privée sur tous les sandbox de votre organisation Experience Platform.
 
 ## Demander la configuration du lien privé {#request-setup}
 
