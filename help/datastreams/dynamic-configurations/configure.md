@@ -3,27 +3,15 @@ title: Créer  [!DNL Dynamic Datastream Configurations]
 description: Découvrez comment ajouter des règles de routage à un et acheminer  [!DNL Dynamic Datastream Configuration]  événements vers des jeux de données et des services Experience Cloud spécifiques en fonction des données d’événement.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
 TQID: https://experienceleague.adobe.com/9wUD6vPq5i-OsBDqy57fa2j5QD2-wZiiOpAVgMnGIp4
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-  - id: e1971122-7081-4556-9222-8a31bd71800c
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e1971122-7081-4556-9222-8a31bd71800cid: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 0ea51945e5d7ffc2571fde1edc453ba26c47286b
 workflow-type: tm+mt
-source-wordcount: 1022
-ht-degree: 3%
+source-wordcount: 914
+ht-degree: 4%
 
 ---
 
@@ -58,7 +46,7 @@ Les configurations de flux de données dynamiques comportent des limites et des 
 
 ## Configurations de train de données dynamiques et remplacements de la configuration de train de données {#dynamic-versus-overrides}
 
-Les configurations dynamiques de train de données et [&#x200B; remplacements de configuration de train de données](/help/datastreams/overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
+Les configurations dynamiques de train de données et [ remplacements de configuration de train de données](/help/datastreams/overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
 
 Vous ne pouvez pas utiliser [!DNL Dynamic Datastream Configurations] avec des remplacements de configuration de train de données. Il faut choisir l&#39;un ou l&#39;autre.
 
@@ -108,7 +96,7 @@ Pour configurer l’ordre des règles, faites glisser et déposez les fenêtres 
 
 ## Critères d’éligibilité des règles {#eligibility-criteria}
 
-Les configurations de train de données dynamiques doivent répondre à des critères d’éligibilité spécifiques pour garantir des performances élevées, une maintenabilité et une clarté optimale. Vous trouverez ci-dessous les principales exigences et les bonnes pratiques pour définir des règles.
+Les configurations de train de données dynamiques doivent répondre à des critères d’éligibilité spécifiques pour garantir des performances élevées et un routage fiable.
 
 ### Types de données pris en charge {#supported-data-types}
 
@@ -143,9 +131,7 @@ Les règles peuvent utiliser les opérateurs suivants, selon le type de données
 
 ### Structure de règle {#rule-structure}
 
-Lors de la création de règles pour [!DNL Dynamic Datastream Configurations], il est important de comprendre les exigences structurelles qui assurent des performances optimales et la compatibilité du système. La structure des règles a une incidence directe sur l’efficacité du traitement et du routage de vos données dans le système.
-
-**Utilisez uniquement des expressions aplaties**. Vous devez définir des règles sous la forme d’expressions logiques aplaties. Les expressions logiques imbriquées (utilisant des conteneurs ou plusieurs niveaux de [!DNL AND]/[!DNL OR]) ne sont pas prises en charge. Si vous avez besoin d’une logique complexe, divisez-la en plusieurs règles aplaties.
+Les règles doivent être des expressions logiques plates. Les expressions logiques imbriquées (utilisant des conteneurs ou plusieurs niveaux de [!DNL AND]/[!DNL OR]) ne sont pas prises en charge. Si vous avez besoin d’une logique complexe, divisez-la en plusieurs règles aplaties.
 
 Prenons l’exemple de la règle complexe suivante.
 
@@ -157,13 +143,9 @@ Vous pouvez décomposer cette règle en plusieurs règles plus simples :
 
 ![Deuxième règle simplifiée, remplaçant la règle complexe imbriquée.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
-**Évitez les règles complexes**. Des règles plus simples garantissent une évaluation plus rapide et une meilleure maintenabilité.
+## Étapes suivantes
 
-### Bonnes pratiques {#best-practices}
-
-Le respect des bonnes pratiques lors de la création de règles [!DNL Dynamic Datastream Configuration] garantit des performances optimales, la fiabilité du système et des configurations gérables. Ces instructions vous aident à éviter les pièges courants et à créer des règles efficaces qui fonctionnent en toute transparence avec l’architecture de la plateforme.
-
-* **Simplifiez et aplatissez les règles.** Si vous devez exprimer une logique complexe, utilisez plusieurs règles au lieu d’imbriquer.
-* **Utiliser uniquement [types de données pris en charge](#supported-data-types) et [opérateurs](#supported-operators).**
-* **Tester les performances de vos règles.** Des règles trop complexes ou non prises en charge peuvent entraîner leur rejet par le système ou nuire aux performances du système.
+* Examinez les [bonnes pratiques pour [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) pour la conception de règles, la stratégie de jeux de données et les conseils opérationnels.
+* Voir [Cas d’utilisation de configuration de train de données dynamique](/help/datastreams/dynamic-configurations/use-cases.md) pour des configurations de règle complètes.
+* Suivez [Tester et valider [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md) pour vérifier que vos règles s’appliquent correctement au routage.
 
