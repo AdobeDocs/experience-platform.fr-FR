@@ -24,7 +24,7 @@ Le tableau suivant récapitule les actions de routage disponibles.
 | Acheminer des événements vers différents jeux de données | Les pages vues accèdent à un jeu de données ne concernant pas les profils ; les achats accèdent à un jeu de données activé pour les profils |
 | Désactivation d’un service pour les événements correspondants | Désactiver l’ingestion des [!DNL Adobe Experience Platform] pour le trafic de robots |
 | Remplacer les paramètres de service par événement | Envoyer des événements à différentes suites de rapports [!DNL Adobe Analytics] ou jetons de propriété [!DNL Adobe Target] en fonction des conditions d’événement |
-| Activation ou désactivation des sous-services Experience Platform | Désactivez [!UICONTROL Segmentation ], [!DNL Adobe Journey Optimizer], [!UICONTROL Gestion des décisions] ou [!UICONTROL Destinations Personalization] pour des types d’événements spécifiques |
+| Activation ou désactivation des sous-services Experience Platform | Désactivez [!UICONTROL Segmentation &#x200B;], [!DNL Adobe Journey Optimizer], [!UICONTROL Gestion des décisions] ou [!UICONTROL Destinations Personalization] pour des types d’événements spécifiques |
 
 ## Ce que [!DNL Dynamic Datastream Configurations] ne peut pas faire {#cannot-do}
 
@@ -65,7 +65,7 @@ La classification des événements avant de configurer des règles est l’étap
 >
 >Les événements qui comportent un remplacement côté client contournent [!DNL Dynamic Datastream Configuration] règles de manière silencieuse, sans erreur ni avertissement. Si vos règles ne correspondent pas aux événements que vous prévoyez qu’elles correspondent, vérifiez si ces événements comportent une payload `edgeConfigOverrides`.
 
-Les configurations de train de données dynamiques et [ remplacements de configuration de train de données](/help/datastreams/overrides.md) s’excluent mutuellement par événement. Lorsqu’un événement est associé à un remplacement côté client envoyé via Web SDK [`sendEvent`](/help/collection/js/commands/sendevent/overview.md) ou [`configure`](/help/collection/js/commands/configure/overview.md), le remplacement est prioritaire et Edge Network ignore [!DNL Dynamic Datastream Configuration] règles pour cet événement.
+Les configurations de train de données dynamiques et [&#x200B; remplacements de configuration de train de données](/help/datastreams/overrides.md) s’excluent mutuellement par événement. Lorsqu’un événement est associé à un remplacement côté client envoyé via Web SDK [`sendEvent`](/help/collection/js/commands/sendevent/overview.md) ou [`configure`](/help/collection/js/commands/configure/overview.md), le remplacement est prioritaire et Edge Network ignore [!DNL Dynamic Datastream Configuration] règles pour cet événement.
 
 Planifiez l’implémentation afin d’utiliser une approche ou l’autre par type d’événement. N’utilisez pas les deux. Dans la mesure du possible, utilisez [!DNL Dynamic Datastream Configurations] plutôt que des remplacements côté client. Ils offrent une meilleure visibilité, traçabilité et contrôle.
 

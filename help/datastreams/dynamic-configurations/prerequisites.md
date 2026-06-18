@@ -19,14 +19,14 @@ Votre flux de données doit exister et tous les services requis doivent être ac
 
 Selon les services que vous prévoyez d’utiliser :
 
-- **[!DNL Adobe Analytics]:** configurer au moins une suite de rapports. Vous pouvez ajouter d’autres suites de rapports sous **[!UICONTROL Options avancées]** comme [ remplacements de suites de rapports](/help/datastreams/configure.md#analytics).
+- **[!DNL Adobe Analytics]:** configurer au moins une suite de rapports. Vous pouvez ajouter d’autres suites de rapports sous **[!UICONTROL Options avancées]** comme [&#x200B; remplacements de suites de rapports](/help/datastreams/configure.md#analytics).
 - **[!DNL Adobe Target]:** Configurez au moins un jeton de propriété. Vous pouvez ajouter d’autres jetons de propriété sous **[!UICONTROL Options avancées]** comme [remplacements de jeton de propriété](/help/datastreams/configure.md#target).
-- **[!DNL Adobe Audience Manager]:** Aucune configuration supplémentaire n’est requise. Voir [Paramètres ](/help/datastreams/configure.md#audience-manager).
+- **[!DNL Adobe Audience Manager]:** Aucune configuration supplémentaire n’est requise. Voir [Paramètres &#x200B;](/help/datastreams/configure.md#audience-manager).
 - **[!DNL Event Forwarding]:** permet de configurer une propriété. Voir [Paramètres Transfert d’événement](/help/datastreams/configure.md#event-forwarding).
 - **[!DNL Adobe Experience Platform]:**
    - [Configurez un jeu de données d’événement principal](/help/datastreams/configure.md#aep). Ce jeu de données reçoit tous les événements qui ne correspondent à aucune règle (solution de secours par défaut).
    - Configurez des jeux de données d’événement secondaires supplémentaires vers lesquels vos règles achemineront les événements. Si ces jeux de données n’existent pas encore, effectuez l’étape [Préparation du schéma et du jeu de données](#schema-dataset) avant de configurer des règles.
-   - Activez les [!DNL Adobe Experience Platform] services Edge dont vous avez besoin, notamment **[!UICONTROL Gestion des décisions]**, **[!UICONTROL Segmentation Edge]**, **[!UICONTROL Destinations Personalization]** ou **[!UICONTROL Adobe Journey Optimizer]**. Voir [Paramètres ](/help/datastreams/configure.md#aep).
+   - Activez les [!DNL Adobe Experience Platform] services Edge dont vous avez besoin, notamment **[!UICONTROL Gestion des décisions]**, **[!UICONTROL Segmentation Edge]**, **[!UICONTROL Destinations Personalization]** ou **[!UICONTROL Adobe Journey Optimizer]**. Voir [Paramètres &#x200B;](/help/datastreams/configure.md#aep).
 
 ## Préparation des schémas et des jeux de données {#schema-dataset}
 
@@ -41,7 +41,7 @@ Pour plus d’informations sur la configuration des fenêtres de conservation de
 
 >[!TIP]
 >
->Créez d’abord des jeux de données sans activer de profil. Vérifiez que les événements sont acheminés vers les jeux de données corrects à l’aide de [](/help/assurance/home.md), puis activez les paramètres de profil et de conservation des données. Cela empêche d’abord l’ingestion d’événements inutiles dans le [!DNL Real-Time Customer Profile].
+>Créez d’abord des jeux de données sans activer de profil. Vérifiez que les événements sont acheminés vers les jeux de données corrects à l’aide de [&#128279;](/help/assurance/home.md), puis activez les paramètres de profil et de conservation des données. Cela empêche d’abord l’ingestion d’événements inutiles dans le [!DNL Real-Time Customer Profile].
 
 ## Inventaire des événements {#event-inventory}
 

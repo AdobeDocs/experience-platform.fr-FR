@@ -38,7 +38,7 @@ Comme les événements non correspondants reviennent à la configuration de trai
 
 Lors du routage d’événements vers des [!DNL Adobe Experience Platform], choisissez une stratégie de jeu de données principale avant de créer des règles. La stratégie détermine l’emplacement des événements sans correspondance, ce qui est le cas de la majorité des événements dans la plupart des mises en œuvre.
 
-Les deux modèles prennent en charge les mêmes services Edge Network : [!UICONTROL Gestion des décisions], [!UICONTROL Segmentation Edge], [!UICONTROL Destinations Personalization] et [!DNL Adobe Journey Optimizer]. Voir [Paramètres ](/help/datastreams/configure.md#aep) pour les activer dans votre flux de données.
+Les deux modèles prennent en charge les mêmes services Edge Network : [!UICONTROL Gestion des décisions], [!UICONTROL Segmentation Edge], [!UICONTROL Destinations Personalization] et [!DNL Adobe Journey Optimizer]. Voir [Paramètres &#x200B;](/help/datastreams/configure.md#aep) pour les activer dans votre flux de données.
 
 >[!NOTE]
 >
