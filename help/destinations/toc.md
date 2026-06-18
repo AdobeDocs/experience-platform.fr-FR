@@ -6,7 +6,8 @@ description: Ce document répertorie la table des matières des destinations Ado
 feature: Destinations
 role: Admin,User
 nudge: true
-source-git-commit: fea52e4813bd65790c6fe520b699a6027e824a8a
+debug: true
+source-git-commit: 7871cb54ee20295b04ec7ecc0c9a659ec67721f1
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 69%
