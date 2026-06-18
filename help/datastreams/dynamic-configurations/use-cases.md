@@ -53,7 +53,7 @@ Ajoutez des conditions supplémentaires à l’aide de la logique [!DNL OR] pour
 
 - Service **[!DNL Adobe Experience Platform]:** activé
 - **Remplacement du jeu de données d’événement :** `Web Events - Profile`
-- **Services Edge :** activez [!DNL Adobe Journey Optimizer], [!UICONTROL Segmentation Edge] ou [!UICONTROL Gestion des décisions] selon les besoins pour vos cas d’utilisation de personnalisation. Voir [Paramètres ](/help/datastreams/configure.md#aep).
+- **Services Edge :** activez [!DNL Adobe Journey Optimizer], [!UICONTROL Segmentation Edge] ou [!UICONTROL Gestion des décisions] selon les besoins pour vos cas d’utilisation de personnalisation. Voir [Paramètres &#x200B;](/help/datastreams/configure.md#aep).
 
 **Exemple 2 : utilisable en premier — règle des événements analytiques**
 
@@ -80,7 +80,7 @@ Ajoutez des conditions supplémentaires pour d’autres types d’événements *
 
 **Utilisation :** vous avez besoin de différentes fenêtres de conservation pour différents types d’événements. Par exemple, une rétention plus longue pour les données d’achat et une rétention plus courte pour les interactions de produits dans [!DNL Adobe Real-Time CDP].
 
-Pour plus d’informations sur la configuration de la conservation des jeux de données, consultez le [ Guide de conservation des jeux de données des événements Experience ](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+Pour plus d’informations sur la configuration de la conservation des jeux de données, consultez le [&#x200B; Guide de conservation des jeux de données des événements Experience &#x200B;](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
 ### Stratégie du jeu de données {#uc2-dataset-strategy}
 
@@ -140,7 +140,7 @@ Ajoutez une condition de [!DNL OR] pour les `personalization.request` et tout au
 
 - Service **[!DNL Adobe Experience Platform]:** activé
 - **Remplacement du jeu de données d’événement :** `System Events - Quarantine` (jeu de données non activé pour un profil avec une fenêtre de conservation de 30 jours, à des fins de débogage et d’audit)
-- **[!UICONTROL Segmentation ] / [!DNL Adobe Journey Optimizer] / [!UICONTROL Gestion des décisions]:** Activé si nécessaire
+- **[!UICONTROL Segmentation &#x200B;] / [!DNL Adobe Journey Optimizer] / [!UICONTROL Gestion des décisions]:** Activé si nécessaire
 
 Après avoir acheminé ces événements vers le jeu de données de quarantaine, assurez-vous qu’il est exclu de votre connexion [!DNL Customer Journey Analytics].
 
@@ -307,5 +307,5 @@ Après avoir validé les résultats, désactivez le connecteur source.
 ## Étapes suivantes
 
 - Consultez l’[exemple complet](/help/datastreams/dynamic-configurations/example.md) pour voir plusieurs cas d’utilisation combinés dans une configuration de flux de données unique.
-- Lisez [ Bonnes pratiques relatives à  [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) avant de procéder au déploiement en production.
+- Lisez [&#x200B; Bonnes pratiques relatives à  [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) avant de procéder au déploiement en production.
 - Suivez les étapes de la section [Tester et valider [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md) pour vérifier que vos règles s’appliquent correctement au routage.

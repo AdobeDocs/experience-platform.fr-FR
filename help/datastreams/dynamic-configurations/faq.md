@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Puis-je utiliser des remplacements de flux de données côté [!DNL Dynamic Datastream Configurations] et côté client ensemble ?
 
-Non. Les configurations de train de données dynamiques et [ remplacements de configuration de train de données](/help/datastreams/overrides.md) s’excluent mutuellement par événement. Lorsqu’un événement est associé à un remplacement côté client (envoyé par le biais de Web SDK `sendEvent` ou `configure`), le remplacement est prioritaire et Edge Network ignore [!DNL Dynamic Datastream Configuration] règles pour cet événement.
+Non. Les configurations de train de données dynamiques et [&#x200B; remplacements de configuration de train de données](/help/datastreams/overrides.md) s’excluent mutuellement par événement. Lorsqu’un événement est associé à un remplacement côté client (envoyé par le biais de Web SDK `sendEvent` ou `configure`), le remplacement est prioritaire et Edge Network ignore [!DNL Dynamic Datastream Configuration] règles pour cet événement.
 
 Planifiez votre implémentation autour d’une approche pour chaque flux de données. Si vous migrez des remplacements vers [!DNL Dynamic Datastream Configurations], supprimez les `edgeConfigOverrides` de votre code SDK à mesure que vous activez les règles correspondantes.
 
