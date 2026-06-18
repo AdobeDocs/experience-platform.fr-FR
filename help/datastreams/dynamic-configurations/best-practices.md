@@ -1,7 +1,7 @@
 ---
 title: Bonnes pratiques relatives aux configurations de flux de données dynamiques
 description: Découvrez les bonnes pratiques de conception, d’organisation et d’exploitation  [!DNL Dynamic Datastream Configuration]  règles pour garantir un routage d’événement et des performances système fiables.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Bonnes pratiques pour [!DNL Dynamic Datastream Configurations]
 
-Utilisez ces pratiques lorsque vous concevez et utilisez des règles [!DNL Dynamic Datastream Configuration]. Ils vous aident à gérer les [mécanismes de sécurisation système](/help/datastreams/dynamic-configurations/configure.md#guardrails), à éviter les erreurs courantes et à maintenir des configurations faciles à comprendre et à résoudre les problèmes.
+Utilisez ces pratiques lorsque vous concevez et utilisez des règles [!DNL Dynamic Datastream Configuration]. Ils vous aident à gérer les [mécanismes de sécurisation système](/help/datastreams/configure-dynamic-datastream.md#guardrails), à éviter les erreurs courantes et à maintenir des configurations faciles à comprendre et à résoudre les problèmes.
 
 ## Conception de règle {#rule-design}
 
@@ -38,7 +38,7 @@ Placer des règles **consommables** permet de s’assurer que Edge Network inter
 
 **Créer des jeux de données avant de configurer des règles.** Tous les jeux de données cibles doivent exister avec le schéma correct avant de les référencer dans les configurations de routage. Après avoir validé vos règles à l’aide d’Assurance, activez le profil, configurez la conservation des données et mettez à jour votre connexion [!DNL Customer Journey Analytics].
 
-Pour obtenir des conseils sur la configuration de la conservation des données, consultez le [&#x200B; Guide de conservation des jeux de données des événements Experience &#x200B;](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+Pour obtenir des conseils sur la configuration de la conservation des données, consultez le [ Guide de conservation des jeux de données des événements Experience ](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
 **Utilisez une convention de nommage cohérente.** Des noms de jeux de données clairs facilitent l’identification de l’objectif de chaque jeu de données lors de la révision de votre configuration ou de la surveillance de l’ingestion. Un modèle recommandé :
 
@@ -47,7 +47,7 @@ Pour obtenir des conseils sur la configuration de la conservation des données, 
 - `[Brand] Bot Traffic - Quarantine (30d)`
 - `[Brand] System Events - Quarantine (30d)`
 
-**Aligner votre connexion [!DNL Customer Journey Analytics] sur votre stratégie de jeu de données.** Après avoir configuré [!DNL Dynamic Datastream Configuration] routage des règles et des événements vers des jeux de données distincts, mettez à jour votre connexion [!DNL Customer Journey Analytics] pour inclure uniquement les jeux de données qui doivent être utilisés dans les rapports. Excluez les jeux de données de quarantaine pour le trafic de robots et les événements système. Pour plus d’informations, consultez la documentation sur les connexions [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-connections/overview){target="_blank"}.
+**Aligner votre connexion [!DNL Customer Journey Analytics] sur votre stratégie de jeu de données.** Après avoir configuré [!DNL Dynamic Datastream Configuration] routage des règles et des événements vers des jeux de données distincts, mettez à jour votre connexion [!DNL Customer Journey Analytics] pour inclure uniquement les jeux de données qui doivent être utilisés dans les rapports. Excluez les jeux de données de quarantaine pour le trafic de robots et les événements système. Pour plus d’informations, consultez la documentation sur les connexions [](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-connections/overview){target="_blank"}.
 
 ## Pratiques opérationnelles {#operational}
 

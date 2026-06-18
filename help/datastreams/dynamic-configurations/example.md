@@ -1,7 +1,7 @@
 ---
 title: Exemple de configuration de flux de données dynamique de bout en bout
 description: Découvrez comment combiner des cas  [!DNL Dynamic Datastream Configuration] ’utilisation dans un seul flux de données pour une implémentation d’e-commerce à l’aide du premier modèle Analytics.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 6%
@@ -26,14 +26,14 @@ Comme la plupart des événements sont des pages vues (**Analytique**), le retai
 
 ## Stratégie du jeu de données {#dataset-strategy}
 
-Créez ces jeux de données avant de configurer des règles. Pour obtenir des conseils sur la configuration de la conservation des données, consultez le [&#x200B; Guide de conservation des jeux de données des événements Experience &#x200B;](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+Créez ces jeux de données avant de configurer des règles. Pour obtenir des conseils sur la configuration de la conservation des données, consultez le [ Guide de conservation des jeux de données des événements Experience ](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 
 | Jeu de données | Activé pour Profil | Rétention | Rôle |
 |---------|----------------|-----|---------|
 | `Bot Traffic - Quarantine` | Non | 30 jours | Isoler les événements de robots pour analyse avant de les ignorer |
 | `System Events - Quarantine` | Non | 30 jours | Isolation d’événements `propositionFetch` pour le débogage |
-| `Purchases` | Oui | 3 mois | Conversions à forte valeur ajoutée pour le profil, la [!UICONTROL segmentation &#x200B;] et [!DNL Adobe Journey Optimizer] |
-| `Product Interactions` | Oui | 30 jours | Consultations de produits et ajout au panier pour le profil et la [!UICONTROL segmentation &#x200B;] |
+| `Purchases` | Oui | 3 mois | Conversions à forte valeur ajoutée pour le profil, la [!UICONTROL segmentation ] et [!DNL Adobe Journey Optimizer] |
+| `Product Interactions` | Oui | 30 jours | Consultations de produits et ajout au panier pour le profil et la [!UICONTROL segmentation ] |
 | `Browsing - General` **(principal)** | Non | 12 mois | Pages vues et recherche de site pour la création de rapports [!DNL Customer Journey Analytics] |
 
 `Browsing - General` est le jeu de données principal du flux de données. Tous les événements qui ne correspondent à aucune règle reviennent à ce jeu de données.
@@ -42,7 +42,7 @@ Créez ces jeux de données avant de configurer des règles. Pour obtenir des co
 
 Le tableau suivant présente l’ensemble complet des règles pour le service [!DNL Adobe Experience Platform]. Edge Network évalue les règles dans l’ordre indiqué.
 
-| Règle | Nom | Conditions | [!DNL Adobe Experience Platform] | Remplacement du jeu de données | [!UICONTROL Segmentation &#x200B;] | [!DNL Adobe Journey Optimizer] | Cas d’utilisation |
+| Règle | Nom | Conditions | [!DNL Adobe Experience Platform] | Remplacement du jeu de données | [!UICONTROL Segmentation ] | [!DNL Adobe Journey Optimizer] | Cas d’utilisation |
 |------|------|-----------|------------|-----------------|-------------------|-------------------------------|----------|
 | 1 | Trafic de robots | `botDetection.score` est égal à `1` | Activé | `Bot Traffic - Quarantine` | Désactivé | Désactivé | [UC 4](/help/datastreams/dynamic-configurations/use-cases.md#uc4) |
 | 2 | Événements système | `eventType` est égal à `decisioning.propositionFetch` [!DNL OR] `eventType` est égal à `personalization.request` | Activé | `System Events - Quarantine` | Désactivé | Désactivé | [UC 3](/help/datastreams/dynamic-configurations/use-cases.md#uc3) |
@@ -66,7 +66,7 @@ Le tableau suivant présente l’ensemble complet des règles pour le service [!
 
 Cette configuration utilise des règles explicites **4** sur la limite de 5 règles par service pour [!DNL Adobe Experience Platform]. Un emplacement de règle reste disponible pour les besoins futurs. Par exemple, le filtrage du trafic interne par domaine d’e-mail ou le routage d’un nouveau type d’événement.
 
-Pour obtenir la liste complète des mécanismes de sécurisation, voir [Création de configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md#guardrails).
+Pour obtenir la liste complète des mécanismes de sécurisation, voir [Création de configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md#guardrails).
 
 Si vous avez besoin d’une granularité plus élevée, combinez d’autres types d’événements en tant que conditions [!DNL OR] dans une règle existante. Par exemple, la règle 4 combine déjà `commerce.productViews` et `commerce.productListAdds`. Vous pouvez ajouter des `commerce.productListOpens` ou des `commerce.saveForLaters` à la même règle sans utiliser d’emplacement de règle supplémentaire. Chaque règle prend en charge jusqu’à 100 conditions.
 
@@ -82,7 +82,7 @@ Les règles de service Experience Platform de la section précédente sont indé
 
 ## Validation d’Assurance {#assurance-validation}
 
-Après avoir enregistré vos règles, attendez 15 minutes que les modifications se propagent dans Edge Network. Validez ensuite chaque chemin d’accès à l’aide de [&#128279;](/help/assurance/home.md).
+Après avoir enregistré vos règles, attendez 15 minutes que les modifications se propagent dans Edge Network. Validez ensuite chaque chemin d’accès à l’aide de [](/help/assurance/home.md).
 
 Pour une présentation complète du processus de validation, voir [Tester et valider [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md).
 

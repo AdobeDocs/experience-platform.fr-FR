@@ -1,7 +1,7 @@
 ---
 title: Test et validation des configurations de flux de données dynamiques
 description: Découvrez comment utiliser Adobe Experience Platform Assurance pour tester  [!DNL Dynamic Datastream Configuration]  règles et confirmer le routage des événements entre les jeux de données et les services.
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%
@@ -51,4 +51,4 @@ Validez chaque chemin d’accès à l’événement dans Assurance avant de pass
 
 - Examiner les [bonnes pratiques pour [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) pour obtenir des conseils opérationnels continus.
 - Voir la [FAQ](/help/datastreams/dynamic-configurations/faq.md) si vous rencontrez un comportement de routage inattendu.
-- Revenez à [Créer des configurations de flux de données dynamiques](/help/datastreams/dynamic-configurations/configure.md) pour ajuster les conditions des règles ou l’ordre des règles.
+- Revenez à [Créer des configurations de flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour ajuster les conditions des règles ou l’ordre des règles.
