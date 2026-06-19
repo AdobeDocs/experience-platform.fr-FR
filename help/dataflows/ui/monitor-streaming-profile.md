@@ -20,10 +20,10 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 738597c837440cb66aa80b24f1f877c9c4cb758b
+source-git-commit: 160096d79724c2869b56d3a25f805bf8234a9bfe
 workflow-type: tm+mt
-source-wordcount: 1918
-ht-degree: 20%
+source-wordcount: 1993
+ht-degree: 19%
 
 ---
 
@@ -162,7 +162,13 @@ Sélectionnez **[!UICONTROL Débit]** pour afficher des informations sur la quan
 
 >[!ENDTABS]
 
-### Utiliser le tableau des mesures de flux de données
+### Utiliser le tableau des mesures de flux de données {#dataflow-metrics-table}
+
+>[!CONTEXTUALHELP]
+>id="platform_dataflow_metrics_refresh_rates"
+>title="Intervalles d’actualisation des mesures"
+>abstract="Les mesures agrégées affichées dans la carte du classement sont actualisées toutes les minutes. En revanche, les exécutions de flux de données sont générées dans des fenêtres horaires et mises à jour toutes les 15 minutes. Par conséquent, un certain retard dans les mesures au niveau de l’exécution du flux de données est attendu."
+
 
 Le tableau des flux de données répertorie toutes les activités d’ingestion en flux continu avec l’ensemble de mesures correspondant pour le profil client en temps réel. Chaque flux de données est répertorié avec son jeu de données correspondant.
 
@@ -173,6 +179,10 @@ Pour surveiller les données ingérées dans un flux de données spécifique, s�
 ![Page des mesures](../assets/ui/streaming-profiles/metrics.png)
 
 Ensuite, utilisez l’interface des mesures de flux de données pour sélectionner l’exécution de flux spécifique à inspecter. Sélectionnez l’icône de filtre ![filtre](/help/images/icons/filter-add.png) à côté d’une itération d’exécution de flux pour afficher les mesures spécifiques à l’exécution de flux sélectionnée.
+
+>[!NOTE]
+>
+>Les mesures agrégées affichées dans la carte du classement sont actualisées toutes les minutes. En revanche, les exécutions de flux de données sont générées dans des fenêtres horaires et mises à jour toutes les 15 minutes. Par conséquent, un certain retard dans les mesures au niveau de l’exécution du flux de données est attendu.
 
 ![Interface des mesures de flux de données.](../assets/ui/streaming-profiles/flows.png)
 
