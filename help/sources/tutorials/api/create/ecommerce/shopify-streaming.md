@@ -1,25 +1,20 @@
 ---
 title: Créer une connexion Source en flux continu et un flux de données pour les données Shopify à l’aide de l’API Flow Service
 description: Découvrez comment créer une connexion source en flux continu et un flux de données pour les données Shopify à l’aide de l’API Flow Service.
-badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
 TQID: https://experienceleague.adobe.com/ZOHi9eHM3HxtkpiLfOnPOBbrzo4PBbYGB4liRKm0T8Y
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fb621ec70700ac0f171817a7447f7022e6a04f79
+source-git-commit: d7b637534116255cbf0b99039dea0ea83eb4f68b
 workflow-type: tm+mt
-source-wordcount: 1635
+source-wordcount: 1616
 ht-degree: 40%
 
 ---
 
 # Créer une connexion source en continu et un flux de données pour les données [!DNL Shopify] à l’aide de l’API Flow Service
-
->[!NOTE]
->
->La source [!DNL Shopify Streaming] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez ce guide pour savoir comment diffuser des données de la [[!DNL Shopify Streaming]  source &#x200B;](../../../../connectors/ecommerce/shopify-streaming.md) vers Adobe Experience Platform à l’aide de l’[[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
