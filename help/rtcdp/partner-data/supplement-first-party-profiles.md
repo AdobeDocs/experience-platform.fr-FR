@@ -4,27 +4,14 @@ description: Découvrez comment compléter les profils propriétaires avec des a
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 TQID: https://experienceleague.adobe.com/LECI7Qmy9iuxLwnlztI3qVqNimsgyyQZreKbVGcbf-A
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: addf009e-030a-4310-8534-776a3e62ed48
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: addf009e-030a-4310-8534-776a3e62ed48id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1320
-ht-degree: 72%
+source-wordcount: 1315
+ht-degree: 71%
 
 ---
 
@@ -59,13 +46,13 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 
 >[!WARNING]
 >
->Les attributs supplémentaires fournis par les partenaires ingérés dans Real-Time CDP ont un impact sur votre *volume total de données*. Lisez la Description du produit [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) pour plus d&#39;informations sur le volume total de données.
+>Les attributs supplémentaires fournis par les partenaires ingérés dans Real-Time CDP ont un impact sur votre *volume total de données*. Lisez la Description du produit [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) pour plus d&#39;informations sur le volume total de données.
 
 ## Présentation vidéo {#video-walkthrough}
 
 Regardez le tutoriel vidéo ci-dessous pour une présentation détaillée de la manière de compléter les audiences propriétaires par des attributs fournis par les partenaires :
 
->[!VIDEO](https://video.tv.adobe.com/v/3452451/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Comment réaliser le cas d’utilisation : aperçu de haut niveau {#achieve-the-use-case-high-level}
 
@@ -89,7 +76,7 @@ Cette étape est décrite dans la section [conditions préalables](#prerequisite
 
 À ce stade, vous étendez votre structure de gestion des données dans Real-Time CDP pour prendre en compte les attributs fournis par les partenaires.
 
-Vous avez la possibilité de créer un nouveau schéma de la classe **[!UICONTROL XDM Individual Profile]** ou d’étendre un schéma existant du même type afin d’inclure des attributs fournis par le partenaire. Adobe recommande vivement de créer un schéma avec un nouvel ensemble de groupes de champs qui représentent le mieux les attributs supplémentaires du fournisseur de données. Cela garantit que vos schémas de données sont propres et peuvent évoluer indépendamment les uns des autres.
+Vous avez la possibilité de créer un nouveau schéma de la classe **[!UICONTROL XDM Individual Profile]** ou d’étendre un schéma existant du même type pour inclure les attributs fournis par le partenaire. Adobe recommande vivement de créer un schéma avec un nouvel ensemble de groupes de champs qui représentent le mieux les attributs supplémentaires du fournisseur de données. Cela garantit que vos schémas de données sont propres et peuvent évoluer indépendamment les uns des autres.
 
 Pour inclure des attributs fournis par un partenaire dans un schéma, vous pouvez créer un groupe de champs avec les attributs attendus ou utiliser l’un des groupes de champs préconfigurés fournis par Adobe.
 
@@ -117,10 +104,10 @@ Au cours de cette étape, réfléchissez également à la manière dont votre mo
 
 >[!TIP]
 >
->Si vous choisissez de compléter vos profils client avec un identifiant basé sur la personne du fournisseur de données, vous pouvez créer un nouveau type d’identité de type **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**.
+>Si vous choisissez de compléter vos profils client avec un identifiant basé sur la personne du fournisseur de données, vous pouvez créer un nouveau type d’identité du type **[[!UICONTROL ID de partenaire]](/help/identity-service/features/namespaces.md)**.
 >
->En savoir plus sur l’identifiant de partenaire dans la [section Types d’identité](/help/identity-service/features/namespaces.md).
->Découvrez [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
+>Pour en savoir plus sur les identifiants de partenaire, consultez la section [types d’identité](/help/identity-service/features/namespaces.md).
+>Découvrez comment [définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
 
 ### Exportez les audiences que vous souhaitez enrichir en saisissant des informations d’identification personnelles (PII) ou hachées {#export-audiences}
 

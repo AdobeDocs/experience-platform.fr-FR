@@ -5,13 +5,9 @@ title: Recette Ventes au détail
 description: La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 TQID: https://experienceleague.adobe.com/XkDQ7H-IOqqf6hqriHfcJDJpeMIk-PWaBHR5LL8Vw08
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 610

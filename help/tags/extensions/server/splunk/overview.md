@@ -3,38 +3,15 @@ title: Présentation de l’extension Splunk
 description: Découvrez l’extension Splunk pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 TQID: https://experienceleague.adobe.com/x64cMZkZ1uOB3B1hdawo1oQvscOx530dL-42FULgT9Y
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-  - id: f73667dc-d296-4875-8975-ac3fdc3adc42
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: df312454-73c4-43f6-a90e-18f5043f074c
-  - id: e4f5f438-eabb-4c54-9133-b817e3d125f5
-  - id: e992d880-33bc-4949-a648-aa7d410276cd
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: f73667dc-d296-4875-8975-ac3fdc3adc42id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: df312454-73c4-43f6-a90e-18f5043f074cid: e4f5f438-eabb-4c54-9133-b817e3d125f5id: e992d880-33bc-4949-a648-aa7d410276cdid: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1036
-ht-degree: 95%
+source-wordcount: 1054
+ht-degree: 94%
 
 ---
 
@@ -55,7 +32,7 @@ Les équipes marketing peuvent utiliser l’extension pour les cas d’utilisati
 
 {style="table-layout:auto"}
 
-## Conditions préalables requises {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Vous devez disposer d’un compte Splunk pour pouvoir utiliser cette extension. Vous pouvez créer un compte Splunk sur la [page d’accueil de Splunk](https://www.splunk.com/fr_fr/page/sign_up).
 
@@ -90,13 +67,13 @@ Sélectionner **Extensions** dans le volet de navigation de gauche. Sous **Insta
 
 ![Bouton Configurer pour l’extension Splunk sélectionnée dans l’interface utilisateur](../../../images/extensions/server/splunk/configure.png)
 
-Par **[!UICONTROL HTTP Event Collector URL]**, saisissez l’adresse et le port de votre instance de plateforme Splunk. Sous **[!UICONTROL Access Token]**, saisissez votre valeur [!DNL Event Collector Token]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Pour **[!UICONTROL URL du collecteur d’événements HTTP]**, saisissez l’adresse et le port de votre instance de plateforme Splunk. Sous **[!UICONTROL Jeton d’accès]**, saisissez votre valeur [!DNL Event Collector Token]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Options de configuration renseignées dans l’interface utilisateur](../../../images/extensions/server/splunk/input.png)
 
 ## Configurer une règle de transfert d’événement {#config_rule}
 
-Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension de [!UICONTROL Splunk], puis sélectionnez le type d’action de [!UICONTROL Create Event]. D’autres commandes s’affichent pour configurer davantage l’événement Splunk.
+Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension [!UICONTROL Splunk], puis sélectionnez le type d’action [!UICONTROL Créer un événement]. D’autres commandes s’affichent pour configurer davantage l’événement Splunk.
 
 ![Définir la configuration d’une action](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -104,13 +81,13 @@ L’étape suivante consiste à mapper les propriétés d’événement Splunk v
 
 | Nom du champ | Description |
 | --- | --- |
-| [!UICONTROL Event]<br><br>**(OBLIGATOIRE)** | Indiquez comment vous souhaitez fournir les données d’événement. Les données d’événement peuvent être affectées à la clé `event` de l’objet JSON dans la requête HTTP, ou il peut s’agir de texte brut. La clé `event` se trouve au même niveau du paquet d’événement JSON que les clés de métadonnées. Dans les accolades clé-valeur `event`, les données peuvent se trouver sous n’importe quel formulaire dont vous avez besoin (chaîne, nombre, autre objet JSON, etc.). |
-| [!UICONTROL Host] | Le nom d’hôte du client à partir duquel vous envoyez des données. |
-| [!UICONTROL Source Type] | Le type de source à affecter aux données d’événement. |
+| [!UICONTROL Event ]<br><br>**(REQUIRED)** | Indiquez comment vous souhaitez fournir les données d’événement. Les données d’événement peuvent être affectées à la clé `event` de l’objet JSON dans la requête HTTP, ou il peut s’agir de texte brut. La clé `event` se trouve au même niveau du paquet d’événement JSON que les clés de métadonnées. Dans les accolades clé-valeur `event`, les données peuvent se trouver sous n’importe quel formulaire dont vous avez besoin (chaîne, nombre, autre objet JSON, etc.). |
+| [!UICONTROL Hôte] | Le nom d’hôte du client à partir duquel vous envoyez des données. |
+| [!UICONTROL Type ] | Le type de source à affecter aux données d’événement. |
 | [!UICONTROL Source] | La valeur source à affecter aux données d’événement. Par exemple, si vous envoyez des données à partir d’une application que vous développez, définissez cette clé sur le nom de l’application. |
-| [!UICONTROL Index] | Le nom de l’index des données d’événement. L’index que vous spécifiez ici doit figurer dans la liste des index autorisés si le paramètre d’index est défini pour le jeton. |
-| [!UICONTROL Time] | L’heure de l’événement. Le format d’heure par défaut est en temps UNIX (au format `<sec>.<ms>`) et dépend du fuseau horaire local. Par exemple, `1433188255.500` indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
-| [!UICONTROL Fields] | Spécifiez un objet JSON brut ou un ensemble de paires clé-valeur contenant des champs personnalisés explicites à définir au moment de l’index.  La clé `fields` ne s’applique pas aux données brutes.<br><br>Les requêtes contenant les propriétés `fields` doivent être envoyées au point d’entrée `/collector/event`, ou ils ne seront pas indexés. Pour plus d’informations, voir la documentation Splunk sur [extraction de champs indexés](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Index ] | Le nom de l’index des données d’événement. L’index que vous spécifiez ici doit figurer dans la liste des index autorisés si le paramètre d’index est défini pour le jeton. |
+| [!UICONTROL Heure] | L’heure de l’événement. Le format d’heure par défaut est en temps UNIX (au format `<sec>.<ms>`) et dépend du fuseau horaire local. Par exemple, `1433188255.500` indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
+| [!UICONTROL Champs] | Spécifiez un objet JSON brut ou un ensemble de paires clé-valeur contenant des champs personnalisés explicites à définir au moment de l’index.  La clé `fields` ne s’applique pas aux données brutes.<br><br>Les requêtes contenant les propriétés `fields` doivent être envoyées au point d’entrée `/collector/event`, ou ils ne seront pas indexés. Pour plus d’informations, voir la documentation Splunk sur [extraction de champs indexés](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Valider des données dans Splunk {#validate}
 

@@ -3,30 +3,15 @@ title: Présentation de l’extension Cloud Connector
 description: Découvrez l’extension de transfert d’événements Cloud Connector dans Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 TQID: https://experienceleague.adobe.com/NDCI4yJ7qlJYtRARL7KQtGeYHxUJmjaC3NB5gVG00gI
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1975
-ht-degree: 79%
+source-wordcount: 2010
+ht-degree: 75%
 
 ---
 
@@ -42,7 +27,7 @@ Cette section décrit le type d’action Envoyer les données disponible dans l�
 
 ### Type de requête
 
-Pour sélectionner le type de requête requis par le point d’entrée, sélectionnez le type approprié dans la liste déroulante [!UICONTROL Request Type].
+Pour sélectionner le type de requête requis par le point d’entrée, sélectionnez le type approprié dans le menu déroulant [!UICONTROL Type de requête].
 
 | Méthode | Description |
 |---|---|
@@ -64,13 +49,13 @@ Utilisez chacun de ces onglets (Paramètres de requête, En-têtes et Éléments
 
 Définissez une clé et une valeur pour chaque paire clé-valeur à envoyer en tant que paramètre de chaîne de requête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « siteSection » en tant que clé ou valeur, saisissez `{{siteSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
-Pour ajouter d’autres paramètres de requête, sélectionnez **[!UICONTROL Add Another]**.
+Pour ajouter d’autres paramètres de requête, sélectionnez **[!UICONTROL Ajouter autre]**.
 
 #### En-têtes
 
 Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer en tant qu’en-tête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « pageName » en tant que clé ou valeur, saisissez `{{pageName}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
-Pour ajouter d’autres en-têtes, sélectionnez **[!UICONTROL Add Another]**.
+Pour ajouter d’autres en-têtes, sélectionnez **[!UICONTROL Ajouter autre]**.
 
 Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas limité à ces en-têtes et vous pouvez ajouter vos propres en-têtes personnalisés si nécessaire, mais ils sont mis à votre disposition pour votre commodité.
 
@@ -123,7 +108,7 @@ Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas li
 
 Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer dans le corps de la requête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « appSection » en tant que clé ou valeur, saisissez `{{appSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
-Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Add Another]**.
+Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter autre]**.
 
 #### Corps comme brut
 
@@ -133,7 +118,7 @@ Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez
 
 Les actions dans les règles du transfert d’événement s’exécutent de manière séquentielle. Dans certaines situations, vous pourriez souhaiter récupérer des données provenant d’une source externe non présente sur l’événement entrant du client, puis prendre cette réponse et transformer ou envoyer ces données vers une destination finale lors d’une action ultérieure au sein d’une seule règle. L’option « Enregistrer la réponse à la requête » de la section avancée l’active.
 
-Pour enregistrer le corps de la réponse à partir d’un point d’entrée, cochez la case **[!UICONTROL Save the request response]** et définissez une clé de réponse dans le champ de texte.
+Pour enregistrer le corps de la réponse à partir d’un point d’entrée, cochez la case **[!UICONTROL Enregistrer la réponse de la requête]** et définissez une clé de réponse dans le champ de texte.
 
 Si vous avez défini la clé de réponse comme `productDetails`, référencez ces données dans un élément de données, puis référencez cet élément de données dans une action ultérieure au sein de la même règle. Pour créer un élément de données qui référence `productDetail`, créez un élément de données de type `path` et saisissez le chemin suivant :
 
@@ -151,7 +136,7 @@ Le certificat [!DNL mTLS] est une information d’identification numérique qui 
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou sélectionnez une propriété existante à modifier à la place.
 
-Sélectionnez **[!UICONTROL Extensions]** dans le panneau de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez la vignette **[!UICONTROL Adobe Cloud Connector]** , puis **[!UICONTROL Install]**.
+Sélectionnez **[!UICONTROL Extensions]** dans le panneau de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez la vignette **[!UICONTROL Adobe Cloud Connector]** puis sélectionnez **[!UICONTROL Installer]**.
 
 ![Catalogue d’extensions affichant la carte d’extension [!DNL Adobe Cloud Connector] mettant en surbrillance install.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -163,20 +148,20 @@ Sélectionnez **[!UICONTROL Extensions]** dans le panneau de gauche. Dans l’on
 
 Après avoir installé l’extension, vous pouvez créer une règle de transfert d’événement qui utilise [!DNL mTLS] et l’ajouter à votre bibliothèque.
 
-Créez une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement dans votre propriété de transfert d’événement. Attribuez un nom à votre règle, puis, sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Adobe Cloud Connector]**. Sélectionnez ensuite **[!UICONTROL Make Fetch Call]** pour le **[!UICONTROL Action Type]**.
+Créez une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement dans votre propriété de transfert d’événement. Attribuez un nom à votre règle, puis sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Adobe Cloud Connector]**. Sélectionnez ensuite **[!UICONTROL Effectuer un appel de récupération]** pour le **[!UICONTROL Type d’action]**.
 
 ![Vue des règles de propriété de transfert d’événement, avec les champs requis pour ajouter une configuration d’action de règle de transfert d’événement en surbrillance.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Une fois votre sélection effectuée, des commandes supplémentaires s’affichent pour configurer la méthode et la destination de la requête [!DNL mTLS]. Pour activer l’utilisation de certificats actifs dans les environnements, sélectionnez **[!UICONTROL Enable in [!DNL mTLS]]**, puis **[!UICONTROL Keep Changes]** pour enregistrer la règle.
+Une fois votre sélection effectuée, des commandes supplémentaires s’affichent pour configurer la méthode et la destination de la requête [!DNL mTLS]. Pour activer l’utilisation de certificats actifs dans les environnements, sélectionnez **[!UICONTROL Activer dans[!DNL mTLS]]**, puis sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la règle.
 
 ![Vue des règles de propriété Transfert d’événement, avec les champs de contrôle supplémentaires et conserver les modifications en surbrillance.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
-Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Save to Library]**, puis **[!UICONTROL Build]** pour le déployer. La requête [!DNL mTLS] est maintenant active et disponible dans votre bibliothèque.
+Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**, puis sélectionnez **[!UICONTROL Créer]** pour la déployer. La requête [!DNL mTLS] est maintenant active et disponible dans votre bibliothèque.
 
 ![Règle de transfert d’événement avec l’option Enregistrer dans la bibliothèque et créer mise en surbrillance.](../../../images/extensions/server/cloud-connector/save-build.png)
 
 ## Étapes suivantes
 
-Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [&#x200B; Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
+Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [ Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
 
 Pour plus d’informations sur les fonctionnalités de transfert d’événement d’Experience Platform, consultez la [présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).

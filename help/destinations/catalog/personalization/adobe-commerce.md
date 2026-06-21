@@ -3,25 +3,14 @@ title: Connecteur de destination Adobe Commerce
 description: Découvrez comment les commerçants Adobe Commerce et Real-Time CDP peuvent personnaliser l’expérience d’achat en proposant du contenu et des promotions de sites hautement pertinents, personnalisés en fonction des audiences de clients créées et gérées dans Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 TQID: https://experienceleague.adobe.com/b1Bq5LRQiqzMfhdhh7xfhxzKX2ILNwAHoR4kA3RPWns
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 869
+source-wordcount: 898
 ht-degree: 34%
 
 ---
@@ -39,12 +28,12 @@ Ce connecteur est disponible dans le catalogue des destinations pour les clients
 Pour utiliser cette connexion de destination, vérifiez que vous avez accès aux éléments suivants :
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [&#128279;](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=fr#configure-the-extension) de l’extension dans Adobe Commerce.
-- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/fr/products/commerce.html)
+- [](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de l’extension dans Adobe Commerce.
+- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/products/commerce.html)
 
 Dans Experience Platform, créez les éléments suivants :
 
-- [Schéma](../../../xdm/schema/composition.md). Le schéma que vous créez représente les données que vous prévoyez d’ingérer à partir d’Adobe Commerce. [En savoir plus](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=fr) sur la création d’un schéma contenant des groupes de champs spécifiques à Commerce.
+- [Schéma](../../../xdm/schema/composition.md). Le schéma que vous créez représente les données que vous prévoyez d’ingérer à partir d’Adobe Commerce. [En savoir plus](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) sur la création d’un schéma contenant des groupes de champs spécifiques à Commerce.
 - [Jeu de données](../../../catalog/datasets/user-guide.md#create). Un jeu de données est une structure de stockage et de gestion pour une collecte de données. Vous créez ce jeu de données à partir du schéma que vous avez créé ci-dessus.
 - [Flux de données](../../../datastreams/configure.md#create). Identifiant qui permet aux données de passer de [!DNL Adobe Experience Platform] à d’autres produits Adobe DX. Cet identifiant doit être associé à un site web spécifique au sein de votre instance Adobe Commerce spécifique. Lorsque vous créez ce train de données, spécifiez le schéma XDM que vous avez créé ci-dessus.
 
@@ -69,7 +58,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -79,47 +68,47 @@ Audiences prises en charge par type de données d’audience :
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à la destination [!DNL Adobe Commerce] :
 
-1. Dans l’interface d’[&#128279;](https://experience.adobe.com/platform/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
-1. Sélectionnez **[!UICONTROL Personalization]**.
-1. Sélectionnez la destination Adobe Commerce à mettre en surbrillance, puis sélectionnez **[!UICONTROL Set up]**.
+1. Dans l’interface [](https://experience.adobe.com/platform/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+1. Sélectionnez ****.
+1. Sélectionnez la destination Adobe Commerce à mettre en surbrillance, puis sélectionnez **[!UICONTROL Configurer]**.
 1. Suivez les étapes décrites dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
 ### Paramètres de connexion {#parameters}
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
-- **[!UICONTROL Name]** : renseignez le nom de votre choix pour cette destination.
-- **[!UICONTROL Description]** : saisissez une description de la destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
-- **[!UICONTROL Integration alias]** : cette valeur est envoyée au SDK Web Experience Platform sous la forme d’un nom d’objet JSON.
-- **[!UICONTROL Datastream ID]** : cela détermine le flux de données de collecte de données qui contient les audiences incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
+- **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
+- **[!UICONTROL Description]** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
+- **[!UICONTROL Alias d’intégration]** : cette valeur est envoyée au SDK Web Experience Platform sous la forme d’un nom d’objet JSON.
+- **[!UICONTROL Identifiant du flux de données]** : détermine le flux de données de collecte de données qui contient les audiences incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers la destination [!DNL Commerce] {#activate}
 
 >[!IMPORTANT]
 >
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Lisez [Activer des profils et des audiences vers les destinations de requête de profil](../../ui/activate-edge-personalization-destinations.md) pour obtenir des instructions sur l’activation des audiences vers la destination [!DNL Commerce].
 
 ## Étapes suivantes dans [!DNL Adobe Commerce] {#next-steps-adobe-commerce}
 
-Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez installer l’extension [!DNL Audience Activation] dans [!DNL Commerce] et configurer le [!DNL Commerce Admin] pour importer les audiences [!DNL Real-Time CDP] que vous avez créées. Consultez la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=fr) pour en savoir plus.
+Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez installer l’extension [!DNL Audience Activation] dans [!DNL Commerce] et configurer le [!DNL Commerce Admin] pour importer les audiences [!DNL Real-Time CDP] que vous avez créées. Consultez la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) pour en savoir plus.
 
 ## Valider l’activation de l’audience dans Commerce {#exported-data}
 
-Une fois les audiences [!DNL Real-Time CDP] activées sur votre compte [!DNL Adobe Commerce], elles sont disponibles lorsque vous accédez à la barre latérale _Admin_, puis à **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
+Une fois les audiences [!DNL Real-Time CDP] activées sur votre compte [!DNL Adobe Commerce], elles sont disponibles lorsque vous accédez à la barre latérale _Admin_, puis à **[!UICONTROL Clients]** > **[!UICONTROL Audience Real-Time CDP]**.
 
-![Tableau de bord des audiences &#x200B;](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
+![Tableau de bord des audiences ](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

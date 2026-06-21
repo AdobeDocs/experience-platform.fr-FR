@@ -3,30 +3,11 @@ title: Présentation de Data Ingestion
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Experience Platform, avec des liens vers leur documentation de présentation respective pour des informations plus détaillées.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 TQID: https://experienceleague.adobe.com/iTttvMpFM54JSco2OSY5G8vS4IyIvyh8SgOH9frpzqw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: a230274e-7e6e-49eb-b817-514495a710acid: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: aff8c1fa-1be7-48bd-92b8-4b12a668ca13id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1a87129-ba05-4f15-98b1-233618f1774aid: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1277
@@ -72,7 +53,7 @@ Pour plus d’informations, reportez-vous à la [présentation des sources](../s
 
 Pour intégrer rapidement de nouvelles sources de données, vous pouvez désormais utiliser des algorithmes de machine learning pour générer un schéma à partir de données d’exemple. Cette automatisation simplifie la création de schémas précis, réduit les erreurs et accélère le processus de la collecte de données à l’analyse et aux informations.
 
-Pour plus d’informations sur ce workflow[&#128279;](../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning .
+Pour plus d’informations sur ce workflow](../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
 
 ## Préparation des données {#data-prep}
 
@@ -126,7 +107,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:222px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/sources/connectors/streaming/http" style="color:#0563c1; text-decoration:underline">Connecteur API HTTP</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/streaming/http" style="color:#0563c1; text-decoration:underline">Connecteur API HTTP</a></span></span></span></p>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
@@ -144,7 +125,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:222px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/data-collection/interactive-data-collection.html?lang=fr" style="color:#0563c1; text-decoration:underline">[!DNL Edge Network] API</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/data-collection/interactive-data-collection.html?lang=en" style="color:#0563c1; text-decoration:underline">[!DNL Edge Network] API</a></span></span></span></p>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
@@ -162,7 +143,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:222px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/analytics.html?lang=fr" style="color:#0563c1; text-decoration:underline">Applications Adobe</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/analytics.html?lang=en" style="color:#0563c1; text-decoration:underline">Applications Adobe</a></span></span></span></p>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
@@ -180,7 +161,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:222px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html?lang=fr" style="color:#0563c1; text-decoration:underline">Sources de streaming</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html?lang=en" style="color:#0563c1; text-decoration:underline">Sources de streaming</a></span></span></span></p>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
@@ -198,7 +179,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:222px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/sources/sdk/streaming-sdk/getting-started" style="color:#0563c1; text-decoration:underline">SDK des sources en flux continu</span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/getting-started" style="color:#0563c1; text-decoration:underline">SDK des sources en flux continu</span></span></span></p>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:39px; vertical-align:top; width:401px">
 <ul style="list-style-type:square">
@@ -244,7 +225,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:217px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/ingestion/batch/overview" style="color:#0563c1; text-decoration:underline">API Batch Ingestion</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch/overview" style="color:#0563c1; text-decoration:underline">API Batch Ingestion</a></span></span></span></p>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
@@ -262,7 +243,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:217px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/sources/home" style="color:#0563c1; text-decoration:underline">Sources de lot</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/en/docs/experience-platform/sources/home" style="color:#0563c1; text-decoration:underline">Sources de lot</a></span></span></span></p>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
@@ -281,7 +262,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:217px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/cloud-storage/data-landing-zone.html?lang=fr" style="color:#0563c1; text-decoration:underline">Zone d’atterrissage des données</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/cloud-storage/data-landing-zone.html?lang=en" style="color:#0563c1; text-decoration:underline">Zone d’atterrissage des données</a></span></span></span></p>
 </td>
 <td style="background-color:#e8eeff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
@@ -299,7 +280,7 @@ Le tableau suivant décrit les différentes méthodes que vous pouvez utiliser p
 </tr>
 <tr>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:1px solid white; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:217px">
-<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/sources/sdk/overview.html?lang=fr" style="color:#0563c1; text-decoration:underline">SDK des sources par lots</a></span></span></span></p>
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><a href="https://experienceleague.adobe.com/docs/experience-platform/sources/sdk/overview.html?lang=en" style="color:#0563c1; text-decoration:underline">SDK des sources par lots</a></span></span></span></p>
 </td>
 <td style="background-color:#cddbff; border-bottom:1px solid white; border-left:none; border-right:1px solid white; border-top:none; height:62px; vertical-align:top; width:397px">
 <ul style="list-style-type:square">
@@ -329,4 +310,4 @@ Ce document vous a présenté brièvement les différents aspects de [!DNL Data 
 >
 >Le terme « Profil unifié » utilisé dans la vidéo suivante est obsolète. Les termes [!DNL "Profile"] ou [!DNL "Real-Time Customer Profile"] sont les termes appropriés utilisés dans la documentation dʼ[!DNL Experience Platform]. Reportez-vous à la documentation pour connaître les dernières fonctionnalités.
 
->[!VIDEO](https://video.tv.adobe.com/v/346831?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

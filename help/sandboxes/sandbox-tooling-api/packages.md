@@ -3,18 +3,10 @@ title: Point d’entrée de l’API des packages d’outils Sandbox
 description: Le point d’entrée /packages de l’API Sandbox Tooling vous permet de gérer les packages par programmation dans Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
 TQID: https://experienceleague.adobe.com/Q6sl1kMYL9VXgUMLO59R9olaMUNfrOE1mvElFeuTK3g
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2944
@@ -243,7 +235,7 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour supprimer des artefacts d&#39;un package, la valeur de l&#39;action doit être **&#x200B;**. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
+| `action` | Pour supprimer des artefacts d&#39;un package, la valeur de l&#39;action doit être ****. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
 | `artifacts` | Liste des artefacts à supprimer du package. Le package ne sera pas modifié si la liste est **nulle** ou **vide**. | Tableau | Non |
 
 **Réponse**

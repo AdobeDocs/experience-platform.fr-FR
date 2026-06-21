@@ -3,25 +3,20 @@ title: Groupe de champs de schéma d’extension complète Adobe Analytics Exper
 description: Découvrez le groupe de champs de schéma d’extension complète Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
 TQID: https://experienceleague.adobe.com/0MZsb2TrdlQmdmMgDtood6SiPGAWNPYF72xIBJO2cfY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 889
-ht-degree: 88%
+source-wordcount: 908
+ht-degree: 86%
 
 ---
 
-# [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] groupe de champs de schéma
+# [!UICONTROL Extension complète Adobe Analytics ExperienceEvent ] groupe de champs de schéma
 
-[!UICONTROL Adobe Analytics ExperienceEvent Full Extension] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), qui capture les mesures courantes collectées par Adobe Analytics.
+[!UICONTROL Extension complète Adobe Analytics ExperienceEvent] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), qui capture les mesures courantes collectées par Adobe Analytics.
 
 Ce document décrit la structure et le cas d’utilisation du groupe de champs de l’extension Analytics.
 
@@ -55,8 +50,8 @@ Le groupe de champs fournit un seul objet `_experience` à un schéma, qui conti
 | --- | --- | --- |
 | `eVars` | Objet | Objet qui capture jusqu’à 250 variables de conversion ([eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=fr)). Les propriétés de cet objet sont indexées de `eVar1` à `eVar250` et n’acceptent que des chaînes comme type de données. |
 | `hierarchies` | Objet | Objet qui capture jusqu’à cinq variables hiérarchiques personnalisées ([hiers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=fr)). Les propriétés de cet objet sont indexées de `hier1` à `hier5`, qui sont elles-mêmes des objets avec les sous-propriétés suivantes :<ul><li>`delimiter` : délimiteur original utilisé pour générer la liste fournie sous `values`.</li><li>`values` : liste délimitée de noms de niveau de hiérarchie, représentés sous forme de chaîne.</li></ul> |
-| `listProps` | Objet | Objet capturant jusqu’à 75 [props de liste](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=fr#props-de-liste). Les propriétés de cet objet sont indexées de `prop1` à `prop75`, qui sont elles-mêmes des objets avec les sous-propriétés suivantes :<ul><li>`delimiter` : délimiteur original utilisé pour générer la liste fournie sous `values`.</li><li>`values` : liste délimitée de valeurs pour la variable prop, représentée sous la forme d’une chaîne.</li></ul> |
-| `lists` | Objet | Objet capturant jusqu’à trois [listes](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=fr). Les propriétés de cet objet sont indexées de `list1` à `list3`. Chacune de ces propriétés contient un seul tableau de `list` de types de données [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md). |
+| `listProps` | Objet | Objet capturant jusqu’à 75 [props de liste](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=fr#props-de-liste). Les propriétés de cet objet sont indexées de `prop1` à `prop75`, qui sont elles-mêmes des objets avec les sous-propriétés suivantes :<ul><li>`delimiter` : délimiteur d’origine utilisé pour générer la liste fournie sous `values`.</li><li>`values` : liste délimitée de valeurs pour la variable prop, représentée sous la forme d’une chaîne.</li></ul> |
+| `lists` | Objet | Objet capturant jusqu’à trois [listes](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=fr). Les propriétés de cet objet sont indexées de `list1` à `list3`. Chacune de ces propriétés contient un seul tableau de `list` de types de données [[!UICONTROL Paire clé-valeur]](../../data-types/key-value-pair.md). |
 | `props` | Objet | Objet capturant jusqu’à 75 [props](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=fr). Les propriétés de cet objet sont indexées de `prop1` à `prop75` et n’acceptent que les chaînes pour leur type de données. |
 | `postalCode` | Chaîne | Code postal fourni par le client. |
 | `stateProvince` | Chaîne | Emplacement de province ou d’État fourni par le client. |
@@ -71,7 +66,7 @@ Le groupe de champs fournit un seul objet `_experience` à un schéma, qui conti
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `firstWeb` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | Informations relatives à la page, au lien et au référent web à partir du premier événement d’expérience de cet utilisateur final. |
+| `firstWeb` | [[!UICONTROL Informations web]](../../data-types/web-information.md) | Informations relatives à la page, au lien et au référent web à partir du premier événement d’expérience de cet utilisateur final. |
 | `firstTimestamp` | Entier | Horodatage Unix pour le premier modèle ExperienceEvent de cette personne. |
 
 ## `environment` {#environment}
@@ -91,7 +86,7 @@ Le groupe de champs d’extension Analytics fournit dix champs d’objet qui cap
 
 Chaque objet d’événement de niveau supérieur contient les objets d’événement individuels pour sa plage respective. Par exemple, `event101to200` contient les événements indexés de `event101` à `event200`.
 
-Chaque objet pair utilise le type de données [[!UICONTROL Measure]](../../data-types/measure.md), fournissant un identifiant unique et une valeur quantifiable.
+Chaque objet pair utilise le type de données [[!UICONTROL Mesure]](../../data-types/measure.md), fournissant un identifiant unique et une valeur quantifiable.
 
 ![Champ d’événement personnalisé](../../images/field-groups/analytics-full-extension/event-vars.png)
 
@@ -103,8 +98,8 @@ Chaque objet pair utilise le type de données [[!UICONTROL Measure]](../../data-
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `search` | [[!UICONTROL Search]](../../data-types/search.md) | Capture les informations relatives à la recherche web ou mobile pour l’entrée de session. |
-| `web` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | Capture des informations sur les clics sur les liens, les détails de la page web, les informations sur le référent et les détails du navigateur pour l’entrée de session. |
+| `search` | [[!UICONTROL Rechercher]](../../data-types/search.md) | Capture les informations relatives à la recherche web ou mobile pour l’entrée de session. |
+| `web` | [[!UICONTROL Informations web]](../../data-types/web-information.md) | Capture des informations sur les clics sur les liens, les détails de la page web, les informations sur le référent et les détails du navigateur pour l’entrée de session. |
 | `depth` | Entier | Profondeur de session actuelle (numéro de page, par exemple) de l’utilisateur final. |
 | `num` | Entier | Numéro de session actuel de l’utilisateur final. |
 | `timestamp` | Entier | Horodatage Unix pour l’entrée de session. |

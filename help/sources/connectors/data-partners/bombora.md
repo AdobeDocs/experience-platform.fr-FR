@@ -4,17 +4,13 @@ description: Découvrez la source d’intention Bombora sur Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00.000Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
 TQID: https://experienceleague.adobe.com/DFFKck5q-ru1dPHZBGsX-15E-RJ343Dl4u-5CbUxAeA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1775
+source-wordcount: 1779
 ht-degree: 11%
 
 ---
@@ -51,11 +47,11 @@ Lisez les sections suivantes pour connaître les étapes préalables requises av
 
 ### Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP[&#128279;](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page place sur la liste autorisée d’adresse IP](../../ip-address-allow-list.md) pour plus d’informations.[
 
 ### Configuration des autorisations sur Experience Platform
 
-Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Bombora] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Pour connecter votre compte [!DNL Bombora] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 

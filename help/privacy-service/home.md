@@ -5,17 +5,12 @@ title: Présentation de Privacy Service
 description: Découvrez comment Privacy Service peut faciliter la mise en conformité automatisée avec les réglementations légales en matière de confidentialité dans vos opérations de données Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 TQID: https://experienceleague.adobe.com/Y-VDhBnsrSr-sFRAD8BHquyIt2BFAwKa6tjCoYHLkhI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1669
+source-wordcount: 1673
 ht-degree: 44%
 
 ---
@@ -26,7 +21,7 @@ Pour offrir de meilleures expériences client, vous devez collecter et stocker l
 
 Adobe Experience Platform Privacy Service a été développé en réponse à un changement fondamental dans la façon dont les entreprises sont tenues de gérer les données personnelles de leurs clients. Le principal objectif de Privacy Service est d’automatiser la conformité aux réglementations de confidentialité des données qui, en cas de violation, peuvent entraîner des amendes importantes et perturber les opérations de données de votre entreprise.
 
-Privacy Service fournit une API RESTful et une interface utilisateur pour vous aider à gérer les demandes de données des clients. Vous pouvez utiliser Privacy Service pour envoyer des demandes d’accès et de suppression de données clients personnelles des applications Adobe Experience Cloud, ce qui facilite l’automatisation de la conformité aux réglementations de confidentialité légales et au sein de l’organisation.
+Privacy Service fournit une API RESTful et une interface utilisateur pour vous aider à gérer les demandes de données des clients. Vous pouvez utiliser Privacy Service pour envoyer des demandes d’accès et de suppression de données clients personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la mise en conformité avec les réglementations légales et organisationnelles liées à la confidentialité.
 
 >[!IMPORTANT]
 >
@@ -55,7 +50,7 @@ Les sections ci-dessous fournissent des instructions générales sur ces étapes
 
 En fonction de la nature de votre entreprise et des juridictions sous lesquelles elle opère, vos opérations de données peuvent être assujetties à des règlements juridiques sur la confidentialité. Généralement, ces règlements donnent à vos clients le droit de demander l’accès aux données que vous collectez et qui les concernent. Ils peuvent également demander la suppression de ces données stockées. Ces demandes de données personnelles de la part des clients sont appelées « demandes d’accès à des informations personnelles » dans toute la documentation.
 
-Pour plus d’informations sur les différents règlements juridiques en matière de confidentialité pour lesquels Privacy Service gère les demandes, y compris les termes clés et les réponses aux questions les plus fréquentes, reportez-vous à la documentation sur les [&#x200B; règlements en matière de confidentialité &#x200B;](./regulations/overview.md).
+Pour plus d’informations sur les différents règlements juridiques en matière de confidentialité pour lesquels Privacy Service gère les demandes, y compris les termes clés et les réponses aux questions les plus fréquentes, reportez-vous à la documentation sur les [ règlements en matière de confidentialité ](./regulations/overview.md).
 
 Si vos opérations de données relèvent de l’un des règlements pris en charge, consultez leur documentation pour obtenir des informations importantes, telles que les droits spécifiques relatifs à la confidentialité qu’ils accordent à vos clients, et les fenêtres de conformité permettant de répondre aux demandes d’accès à des informations personnelles. Ces informations doivent être prises en compte pour déterminer comment intégrer Privacy Service dans votre système CRM et comment les clients doivent interagir avec votre site web pour leurs demandes d’accès à des informations personnelles.
 
@@ -89,7 +84,7 @@ La réponse à une **requête de suppression** ne contient **aucune URL de tél�
 >
 >Les sections ci-dessous contiennent des liens menant à la documentation qui explique comment effectuer des demandes d’accès à des informations personnelles génériques dans l’API ou l’interface utilisateur. Toutefois, en fonction des applications [!DNL Experience Cloud] que vous utilisez, les champs à envoyer dans la payload de requête peuvent différer des exemples qui se trouvent dans ces guides.
 >
->Tout en suivant les instructions des guides relatifs à l’API ou à l’interface utilisateur, reportez-vous au document sur les applications [Privacy Service et Experience Cloud](./experience-cloud-apps.md) pour obtenir de plus amples informations sur la manière de formater les demandes d’accès à des informations personnelles pour vos applications [!DNL Experience Cloud] spécifiques.
+>Tout en suivant les instructions des guides relatifs à l’API ou à l’interface utilisateur, reportez-vous au document sur [les applications Privacy Service et Experience Cloud](./experience-cloud-apps.md) pour obtenir de plus amples informations sur la manière de formater les demandes d’accès à des informations personnelles pour vos applications [!DNL Experience Cloud] spécifiques.
 >
 >Il est également important de noter que les demandes d’accès à des informations personnelles sont traitées de manière asynchrone dans les applications Experience Cloud. Lorsqu’une demande est reçue par Privacy Service, quelques minutes à plusieurs semaines peuvent être nécessaires à chaque application pour répondre à la requête. Le temps nécessaire à l’exécution de chaque demande est spécifique à l’application que vous utilisez et dépend également de la quantité de données à traiter.
 
@@ -103,7 +98,7 @@ Pour approcher par programmation la conformité à la réglementation de confide
 >
 >Actuellement, l’interface utilisateur de Privacy Service ne prend en charge que les demandes d’accès et de suppression. Toutes les demandes de désinscription doivent être effectuées par le biais de l’API.
 
-Vous pouvez créer et surveiller les tâches de confidentialité à l’aide d’une interface graphique avec l’interface utilisateur de Privacy Service. L’interface utilisateur de comprend un widget **[!UICONTROL Status Report]** qui fournit une représentation visuelle du statut de toutes les requêtes actives. Vous pouvez créer des requêtes avec le **[!UICONTROL Request Builder]** intégré ou en chargeant des fichiers JSON. Pour plus d’informations sur l’utilisation de l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/overview.md).
+Vous pouvez créer et surveiller les tâches de confidentialité à l’aide d’une interface graphique avec l’interface utilisateur de Privacy Service. L’interface utilisateur comprend un widget **[!UICONTROL Rapport de statut]** qui fournit une représentation visuelle du statut de toutes les requêtes actives. Vous pouvez également créer des requêtes avec le créateur de requêtes **[!UICONTROL intégré]** ou en chargeant des fichiers JSON. Pour plus d’informations sur l’utilisation de l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/overview.md).
 
 ### Surveillance des tâches de confidentialité {#monitor}
 

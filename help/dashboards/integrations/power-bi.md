@@ -3,22 +3,14 @@ title: Modèles de rapport Power BI pour les tableaux de bord Experience Platfor
 description: Utilisez les modèles de rapport pour explorer les données d’Experience Platform à l’aide de Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 TQID: https://experienceleague.adobe.com/-L7BuDUv7QP18lxTbRQjlgUcVRkmOiFQmkyAs0u6d-w
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-  - id: eec185bd-7d60-4193-ba3f-da427569936a
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377id: eec185bd-7d60-4193-ba3f-da427569936a
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1477
-ht-degree: 64%
+source-wordcount: 1506
+ht-degree: 63%
 
 ---
 
@@ -49,23 +41,23 @@ Vous devez également disposer d’un compte Power BI pour suivre ce tutoriel. P
 
 ## Installation de l’intégration de l’application Power BI
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Dashboards]** dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Dashboards]. L’onglet [!UICONTROL Browse] affiche une liste des vues de tableau de bord actuellement disponibles. Pour en savoir plus sur l’affichage des tableaux de bord disponibles, consultez la [documentation relative à l’inventaire](../inventory.md).
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Tableaux de bord]. L’onglet [!UICONTROL Parcourir] affiche une liste des vues de tableau de bord actuellement disponibles. Pour en savoir plus sur l’affichage des tableaux de bord disponibles, consultez la [documentation relative à l’inventaire](../inventory.md).
 
-Sélectionnez ensuite l’onglet **[!UICONTROL Integrations]** . La page d’intégration de l’application Power BI s’affiche. À partir de là, sélectionnez **[!UICONTROL Install]** pour commencer l’installation.
+Sélectionnez ensuite l’onglet **[!UICONTROL Intégrations]**. La page d’intégration de l’application Power BI s’affiche. À partir de là, sélectionnez **[!UICONTROL Installer]** pour commencer l’installation.
 
 >[!NOTE]
 >
->Le bouton [!UICONTROL Install] est désactivé, sauf si vous disposez des autorisations de gestion des sandbox et de Query Service.
+>Le bouton [!UICONTROL Installer] est désactivé, sauf si vous disposez des autorisations de gestion des sandbox et de Query Service.
 
 ![Écran de détails de Power BI avec le bouton Installer en surbrillance.](../images/power-bi/details-screen.png)
 
 ### Fournir les informations d’identification
 
-La première étape du processus d’installation consiste à fournir des informations d’identification non expirantes pour l’intégration de l’application Power BI. Deux options sont disponibles pour fournir celles-ci : [[!UICONTROL Create new credentials]](#create-new-credentials) ou [[!UICONTROL Use existing credentials]](#use-existing-credentials). Sélectionnez le bouton (bascule) approprié pour continuer.
+La première étape du processus d’installation consiste à fournir des informations d’identification non expirantes pour l’intégration de l’application Power BI. Deux options sont disponibles pour fournir celles-ci : [[!UICONTROL Créer des informations d’identification]](#create-new-credentials) ou [[!UICONTROL Utiliser des informations d’identification existantes]](#use-existing-credentials). Sélectionnez le bouton (bascule) approprié pour continuer.
 
 #### Création d’informations d’identification {#create-new-credentials}
 
-Deux champs sont obligatoires lors de la génération d’informations d’identification : [!UICONTROL Name] et [!UICONTROL Assigned to]. Le champ [!UICONTROL Assigned to] correspond à l’adresse e-mail associée à votre compte Power BI.
+Deux champs sont obligatoires lors de la génération d’informations d’identification : [!UICONTROL Nom] et [!UICONTROL Affecté à]. Le champ [!UICONTROL  Affecté à ] correspond à l’adresse e-mail associée à votre compte Power BI.
 
 ![Écran de génération d’informations d’identification de Power BI.](../images/power-bi/generate-new-credentials.png)
 
@@ -85,21 +77,21 @@ Un fichier d’informations d’identification JSON peut également être charg�
 >
 >Pour utiliser des informations d’identification non expirantes existantes, l’utilisateur doit déjà avoir reçu des informations d’identification. Si l’utilisateur n’a pas d’informations d’identification attribuées et ne peut pas en créer à l’aide d’Adobe Admin Console, il ne peut pas poursuivre le processus d’installation.
 
-Sélectionnez **[!UICONTROL Upload credential file]**, puis sélectionnez le fichier JSON approprié à charger dans la boîte de dialogue qui s’affiche.
+Sélectionnez **[!UICONTROL Charger le fichier d’informations d’identification]**, puis sélectionnez le fichier JSON approprié à charger dans la boîte de dialogue qui s’affiche.
 
 ![Écran des informations d’identification de Power BI avec le bouton Charger le fichier d’informations d’identification en surbrillance](../images/power-bi/upload-credential-file.png).
 
-Une fois que vous avez fourni les informations d’identification non expirantes, elles sont automatiquement validées par Experience Platform. Un message de confirmation apparaît lorsque la validation est effectuée avec succès. Sélectionnez **[!UICONTROL Next]** pour consulter l’accord de consentement pour l’application Power BI.
+Une fois que vous avez fourni les informations d’identification non expirantes, elles sont automatiquement validées par Experience Platform. Un message de confirmation apparaît lorsque la validation est effectuée avec succès. Sélectionnez **[!UICONTROL Suivant]** pour consulter l’accord de consentement pour l’application Power BI.
 
 ![Écran de validation des informations d’identification non expirantes avec le bouton Suivant en surbrillance.](../images/power-bi/successfully-uploaded-credential-file.png)
 
 ### Donner son consentement
 
-L’écran relatif au consentement s’affiche. Sélectionnez **[!UICONTROL Review consent]** pour ouvrir une nouvelle fenêtre détaillant les autorisations requises pour que Power BI accède et utilise vos données conformément aux conditions d’utilisation et à la déclaration de confidentialité.
+L’écran relatif au consentement s’affiche. Sélectionnez **[!UICONTROL Vérifier le consentement]** pour ouvrir une nouvelle fenêtre détaillant les autorisations requises pour que Power BI accède et utilise vos données conformément aux conditions d’utilisation et à la déclaration de confidentialité.
 
 ![Écran relatif au consentement avec le bouton Vérifier le consentement en surbrillance.](../images/power-bi/provide-consent-display.png)
 
-Sélectionnez **[!UICONTROL Accept]** pour accorder à Power BI l’autorisation d’accéder et d’utiliser vos données Experience Platform.
+Sélectionnez **[!UICONTROL Accepter]** pour accorder à Power BI l’autorisation d’accéder et d’utiliser vos données Experience Platform.
 
 ![Demande d’autorisations pour l’application Power BI.](../images/power-bi/permissions.png)
 
@@ -109,11 +101,11 @@ Sélectionnez **[!UICONTROL Accept]** pour accorder à Power BI l’autorisation
 
 Après avoir donné votre consentement, le modèle de rapport est automatiquement installé dans l’environnement Power BI dans le cadre du processus d’installation. Power BI utilise ensuite les informations d’identification non expirantes pour accéder à Experience Platform, exécuter séquentiellement toutes les requêtes SQL et remplir le modèle de rapport avec les données renvoyées.
 
-Sélectionnez **[!UICONTROL Finish]** pour revenir à l’inventaire des tableaux de bord.
+Sélectionnez **[!UICONTROL Terminer]** pour revenir à l’inventaire des tableaux de bord.
 
 ![Écran relatif au consentement avec le bouton Terminer en surbrillance.](../images/power-bi/finish-consent-review.png)
 
-Maintenant que le modèle de rapport Power BI est installé, il apparaît dans la liste des tableaux de bord disponibles sous l’onglet [!UICONTROL Browse] . Sélectionnez **[!UICONTROL Power BI]** dans la liste pour accéder à l’environnement Power BI.
+Maintenant que le modèle de rapport Power BI est installé, il apparaît dans la liste des tableaux de bord disponibles sous l’onglet [!UICONTROL Parcourir]. Sélectionnez **** dans la liste pour accéder à l’environnement Power BI.
 
 ![Power BI répertorié dans l’inventaire des tableaux de bord.](../images/power-bi/power-bi-dashboard-inventory.png)
 
@@ -165,7 +157,7 @@ Pour supprimer le tableau de bord, accédez à l’inventaire des tableaux de bo
 
 ![Onglet Parcourir de l’écran d’inventaire des tableaux de bord affiché avec le bouton Parcourir et l’icône Supprimer en surbrillance.](../images/power-bi/delete-power-bi-dashboard.png)
 
-Une fenêtre contextuelle de confirmation apparaît. Sélectionnez **[!UICONTROL Delete]** pour confirmer le processus.
+Une fenêtre contextuelle de confirmation apparaît. Sélectionnez **[!UICONTROL Supprimer]** pour confirmer le processus.
 
 >[!IMPORTANT]
 >

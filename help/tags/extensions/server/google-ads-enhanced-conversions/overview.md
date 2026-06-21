@@ -4,33 +4,14 @@ description: Découvrez l’extension Google Ads Enhanced Conversions pour le tr
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00.000Z
 TQID: https://experienceleague.adobe.com/VZT7S-BSc-cq7jAd-7ER205HZ6yiUCxSKBOqtPq9SKo
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1232
+source-wordcount: 1340
 ht-degree: 2%
 
 ---
@@ -64,7 +45,7 @@ Comme l’envoi d’événements de conversion implique une implémentation côt
 
 La vidéo suivante présente l’extension [!DNL Enhanced Conversions] et décrit les étapes d’implémentation à un haut niveau :
 
->[!VIDEO](https://video.tv.adobe.com/v/3416062?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Envoyer une conversion à l’aide de balises
 
@@ -72,11 +53,11 @@ Pour envoyer un événement de conversion à partir d’un site web, [!DNL Googl
 
 ### Configuration et installation de l’extension [!DNL Google Global Site Tag]
 
-Accédez à l’interface utilisateur [!UICONTROL Data Collection] ou à l’interface utilisateur Experience Platform et sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche. Sélectionnez la propriété de balise sur laquelle vous souhaitez installer l’extension, puis sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Sous l’onglet **[!UICONTROL Catalog]** , recherchez l’extension [!UICONTROL Google Global Site Tag (gtag)] et sélectionnez **[!UICONTROL Install]**.
+Accédez à l’interface utilisateur [!UICONTROL Collecte de données] ou Experience Platform, puis sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche. Sélectionnez la propriété de balise sur laquelle vous souhaitez installer l’extension, puis sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Sous l’onglet **[!UICONTROL Catalogue]**, recherchez l’extension [!UICONTROL Google Global Site Tag (gtag)] et sélectionnez **[!UICONTROL Installer]**.
 
-![Extension [!UICONTROL Google Global Site Tag (gtag)] sélectionnée sous la vue [!UICONTROL Extensions] dans l’interface utilisateur de [!UICONTROL Data Collection].](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
+![L’extension [!UICONTROL Google Global Site Tag (gtag)] sélectionnée sous la vue [!UICONTROL Extensions] dans l’interface utilisateur [!UICONTROL Collecte de données].](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
-La boîte de dialogue d’installation s’affiche. À partir de là, sélectionnez **[!UICONTROL Add Account]** et indiquez les valeurs suivantes lorsque vous y êtes invité :
+La boîte de dialogue d’installation s’affiche. À partir de là, sélectionnez **[!UICONTROL Ajouter un compte]** et indiquez les valeurs suivantes lorsque vous y êtes invité :
 
 | Propriété du compte | Description |
 | --- | --- |
@@ -86,25 +67,25 @@ La boîte de dialogue d’installation s’affiche. À partir de là, sélection
 
 {style="table-layout:auto"}
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Add Account]**, puis sélectionnez **[!UICONTROL Save]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter un compte]** puis **[!UICONTROL Enregistrer]**.
 
 ### Ajouter une action de conversion d’envoi {#conversion-action-tags}
 
-Après avoir installé l’extension, vous pouvez commencer à inclure des actions de conversion dans vos règles de balise. Lors de la création ou de la modification d’une règle qui écoute la conversion que vous souhaitez améliorer, sélectionnez **[!UICONTROL Add]** sous [!UICONTROL Actions]. Dans la boîte de dialogue suivante, sélectionnez **[!UICONTROL Google Global Site Tag (gtag)]** dans la liste déroulante [!UICONTROL Extension], puis sélectionnez **[!UICONTROL Send an event]** sous [!UICONTROL Action Type].
+Après avoir installé l’extension, vous pouvez commencer à inclure des actions de conversion dans vos règles de balise. Lors de la création ou de la modification d’une règle qui écoute la conversion que vous souhaitez améliorer, sélectionnez **[!UICONTROL Ajouter]** sous [!UICONTROL Actions]. Dans la boîte de dialogue suivante, sélectionnez **[!UICONTROL Google Global Site Tag (gtag)]** dans la liste déroulante [!UICONTROL Extension], puis sélectionnez **[!UICONTROL Envoyer un événement]** sous [!UICONTROL Type d’action].
 
-![Type d’action [!UICONTROL Send an event] sélectionné dans la vue de configuration des actions du workflow d’édition de règles.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
+![Le type d’action [!UICONTROL Envoyer un événement] sélectionné dans la vue de configuration d’action du workflow d’édition de règles.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
 
 D’autres commandes s’affichent pour vous permettre de configurer l’événement [!DNL gtag]. Au minimum, les champs suivants doivent être renseignés :
 
-1. **[!UICONTROL Event Name (Action)]** : saisissez `conversion` comme valeur.
+1. **[!UICONTROL Nom de l’événement (action)]** : saisissez `conversion` comme valeur.
 1. Ajoutez un nouveau champ dans lequel la clé est `transaction_id` et la valeur est un [élément de données](../../../ui/managing-resources/data-elements.md) contenant la valeur [ID de transaction](https://support.google.com/google-ads/answer/6386790).
-1. **[!UICONTROL Conversion Label]** : saisissez le libellé de conversion approprié à partir de votre compte [!DNL Google Ads]. Pour trouver cette valeur, connectez-vous à Google Ads et accédez à **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. Le libellé de conversion se trouve sous [!DNL Instructions].
+1. **[!UICONTROL Libellé de conversion]** : saisissez le libellé de conversion approprié à partir de votre compte [!DNL Google Ads]. Pour trouver cette valeur, connectez-vous à Google Ads et accédez à **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. Le libellé de conversion se trouve sous [!DNL Instructions].
 
    >[!IMPORTANT]
    >
    >Lorsque vous êtes dans la zone de configuration des balises de votre compte [!DNL Google Ads], assurez-vous que les conversions améliorées sont activées. Pour ce faire, examinez et acceptez les Conditions d’utilisation, puis sélectionnez **[!DNL Turn on enhanced conversions]** et **[!DNL API]** comme méthode de mise en œuvre.
 
-Une fois l’action configurée, sélectionnez **[!UICONTROL Keep Changes]** pour ajouter l’action à la configuration de la règle. Lorsque la règle vous convient, sélectionnez **[!UICONTROL Save to Library]**.
+Après avoir configuré l’action, sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’action à la configuration de la règle. Lorsque la règle vous convient, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 
 Enfin, publiez une nouvelle version [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
 
@@ -116,28 +97,28 @@ Une fois que vous avez la possibilité d’envoyer des événements de conversio
 
 Avant de configurer l’extension, vous devez créer un jeton d’accès dans le transfert d’événement pour vous authentifier auprès de l’API [!DNL Google Ads].
 
-Consultez le guide sur la [création de secrets de transfert d’événement](../../../ui/event-forwarding/secrets.md) pour obtenir des instructions détaillées. Veillez à sélectionner **[!UICONTROL Google OAuth 2]** comme type de secret. Continuez à suivre les invites et, lorsque vous êtes invité à sélectionner un profil de compte Google, sélectionnez le compte ayant accès à l&#39;action de conversion que vous configurez.
+Consultez le guide sur la [création de secrets de transfert d’événement](../../../ui/event-forwarding/secrets.md) pour obtenir des instructions détaillées. Assurez-vous de sélectionner **[!UICONTROL Google OAuth 2]** comme type de secret. Continuez à suivre les invites et, lorsque vous êtes invité à sélectionner un profil de compte Google, sélectionnez le compte ayant accès à l&#39;action de conversion que vous configurez.
 
-Une fois le secret créé, [créez un nouvel élément de données](../../../ui/managing-resources/data-elements.md#create-a-data-element) et sélectionnez **[!UICONTROL Secret]** pour le type d’élément de données. Sélectionnez le secret OAuth 2 Google approprié pour chaque environnement et sélectionnez **[!UICONTROL Save to Library]**.
+Une fois le secret créé, [créez un nouvel élément de données](../../../ui/managing-resources/data-elements.md#create-a-data-element) et sélectionnez **[!UICONTROL Secret]** pour le type d’élément de données. Sélectionnez le secret OAuth 2 Google approprié pour chaque environnement et sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 
 ### Configuration et installation de l’extension [!DNL Enhanced Conversions] {#install-enhanced-conversions}
 
-Recherchez l’extension [!UICONTROL Google Ads Enhanced Conversions] dans le catalogue de transfert d’événements et sélectionnez **[!UICONTROL Install]**.
+Recherchez l’extension [!UICONTROL Google Ads Enhanced Conversions] dans le catalogue du transfert d’événements et sélectionnez **[!UICONTROL Installer]**.
 
-![Extension [!UICONTROL Google Ads Enhanced Conversions] sélectionnée sous la vue [!UICONTROL Extensions] dans l’interface utilisateur de [!UICONTROL Data Collection].](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
+![L’extension [!UICONTROL Google Ads Enhanced Conversions] sélectionnée sous la vue [!UICONTROL Extensions] dans l’interface utilisateur [!UICONTROL Collecte de données].](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
 
 Pour configurer l’extension, vous devez renseigner les deux champs obligatoires :
 
-1. **[!UICONTROL Customer ID]** : identifiant qui identifie de manière unique votre compte [!DNL Google Ads]. Pour trouver cette valeur, connectez-vous à [!DNL Google Ads] et accédez à **[!DNL Help]** > **[!DNL Customer ID]**.
-2. **[!UICONTROL Access Token Data Element]** : sélectionnez l’icône de l’élément de données (![icône de l’élément de données](/help/images/icons/database.png)) et choisissez l’élément de données secret OAuth 2 de Google que vous [avez configuré à l’étape précédente](#create-secret-data-element) dans le menu.
+1. **[!UICONTROL Identifiant client]** : l’identifiant qui identifie votre compte [!DNL Google Ads] de manière unique. Pour trouver cette valeur, connectez-vous à [!DNL Google Ads] et accédez à **[!DNL Help]** > **[!DNL Customer ID]**.
+2. **[!UICONTROL Élément de données de jeton d’accès]** : sélectionnez l’icône de l’élément de données (![icône d’élément de données](/help/images/icons/database.png)) et choisissez l’élément de données secret OAuth 2 de Google que vous [avez configuré à l’étape précédente](#create-secret-data-element) dans le menu.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]** pour installer l’extension.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour installer l’extension.
 
-### Ajout d’une action [!UICONTROL Send Conversion] à une règle {#conversion-action-event-forwarding}
+### Ajouter une action [!UICONTROL Envoyer une conversion] à une règle {#conversion-action-event-forwarding}
 
-Une fois l’extension installée, vous pouvez commencer à inclure des actions [!UICONTROL Send Conversion] dans vos règles de transfert d’événement. Lors de la création ou de la modification d’une règle qui écoute la conversion que vous souhaitez améliorer, sélectionnez **[!UICONTROL Add]** sous [!UICONTROL Actions]. Dans la boîte de dialogue suivante, sélectionnez **[!UICONTROL Google Ads Enhanced Conversions]** dans la liste déroulante [!UICONTROL Extension], puis sélectionnez **[!UICONTROL Send Conversion]** sous [!UICONTROL Action Type].
+Une fois l’extension installée, vous pouvez commencer à inclure les actions [!UICONTROL Envoyer la conversion] dans vos règles de transfert d’événement. Lors de la création ou de la modification d’une règle qui écoute la conversion que vous souhaitez améliorer, sélectionnez **[!UICONTROL Ajouter]** sous [!UICONTROL Actions]. Dans la boîte de dialogue suivante, sélectionnez **[!UICONTROL Conversions améliorées de Google Ads]** dans la liste déroulante [!UICONTROL Extension], puis sélectionnez **[!UICONTROL Envoyer la conversion]** sous [!UICONTROL Type d’action].
 
-![Type d’action [!UICONTROL Send Conversion] sélectionné dans la vue de configuration des actions du workflow d’édition de règles.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
+![Le type d’action [!UICONTROL Envoyer la conversion] sélectionné dans la vue de configuration des actions du workflow d’édition de règles.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
 
 De nouvelles commandes s’affichent dans le panneau de droite pour vous permettre de configurer votre conversion. Au minimum, les champs suivants doivent être renseignés :
 
@@ -158,11 +139,11 @@ De nouvelles commandes s’affichent dans le panneau de droite pour vous permett
 
 >[!TIP]
 >
->Les données d’identification utilisateur doivent être hachées avant d’être envoyées à Google. Si les données ne sont pas hachées lors de leur réception par le transfert d’événement, activez le bouton (bascule) **[!UICONTROL Normalize & Hash]** d’un champ donné pour demander à l’extension de hacher la valeur.
+>Les données d’identification utilisateur doivent être hachées avant d’être envoyées à Google. Si les données ne sont pas hachées lorsque le transfert d’événement les reçoit, activez le bouton (bascule) **[!UICONTROL Normaliser et hacher]** sur un champ donné pour demander à l’extension de hacher la valeur.
 >
->![Bouton [!UICONTROL Normalize & Hash] activé pour l’entrée [!UICONTROL Email] dans le formulaire de configuration d’action [!UICONTROL Send Conversion].](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
+>![Le bouton (bascule) [!UICONTROL Normaliser et hacher] activé pour l’entrée [!UICONTROL E-mail] dans le formulaire de configuration de l’action [!UICONTROL Envoyer la conversion].](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Keep Changes]** pour ajouter l’action à la configuration de la règle. Lorsque la règle vous convient, sélectionnez **[!UICONTROL Save to Library]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’action à la configuration de la règle. Lorsque la règle vous convient, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 
 Enfin, publiez un nouveau transfert d’événement [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
 

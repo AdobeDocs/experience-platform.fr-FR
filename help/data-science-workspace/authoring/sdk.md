@@ -5,16 +5,10 @@ title: SDK de création de modèles
 description: La SDK de création de modèles vous permet de développer des pipelines de fonctionnalités et des recettes de machine learning personnalisés que vous pouvez utiliser dans Adobe Experience Platform Data Science Workspace pour fournir des modèles à mettre en œuvre dans PySpark et Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 TQID: https://experienceleague.adobe.com/OT-XeVDIl682BGceLNDLSe7osR5GSu3GrEBeumkFe3Y
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
 source-wordcount: 1009

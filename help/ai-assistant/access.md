@@ -3,17 +3,10 @@ title: Accéder à l’assistant AI (hérité) dans Experience Platform
 description: Découvrez comment accéder à l’assistant AI dans l’interface utilisateur d’Experience Cloud.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
 TQID: https://experienceleague.adobe.com/BD0anxydq-2tfsJ1zCZnjPFWag70OmqnGYgC6Johs-k
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 963
@@ -25,7 +18,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Ce document s’applique à l’assistant d’IA (hérité). Pour plus d’informations sur l’assistant AI (Next-Gen), consultez le guide de l’interface utilisateur de l’assistant [AI](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) dans la documentation [AI dans Experience Cloud](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/home).
+>Ce document s’applique à l’assistant d’IA (hérité). Pour plus d’informations sur l’assistant AI (Next-Gen), consultez le guide de l’interface utilisateur de l’assistant [AI](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) dans la documentation [AI dans Experience Cloud](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 Reportez-vous au tableau suivant pour une comparaison de l’assistant AI (hérité) et de l’assistant AI (nouvelle génération) :
 
@@ -33,11 +26,11 @@ Reportez-vous au tableau suivant pour une comparaison de l’assistant AI (héri
 | --- | --- | --- |
 | Expérience utilisateur | L’assistant d’IA (hérité) est disponible dans un panneau du rail de droite uniquement. | L’assistant d’IA (version suivante) est disponible dans le panneau du rail droit et dans une expérience immersive en plein écran. |
 | Portée des fonctionnalités | Vous pouvez utiliser l’assistant d’IA (hérité) pour obtenir des connaissances sur les produits et des informations opérationnelles. | Vous pouvez utiliser l’assistant d’IA (nouvelle génération) pour acquérir des connaissances sur les produits, obtenir des informations opérationnelles, ainsi que des compétences avancées en matière d’agentisme et exécuter des tâches en plusieurs étapes. |
-| Architecture de Platform | L’assistant AI (hérité) n’est pas créé sur la pile Agent Orchestrator. | L’assistant d’IA (nouvelle génération) est optimisé par [&#128279;](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), ce qui permet l’extensibilité et une coordination avancée entre les fonctionnalités. |
+| Architecture de Platform | L’assistant AI (hérité) n’est pas créé sur la pile Agent Orchestrator. | L’assistant d’IA (nouvelle génération) est optimisé par [](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), ce qui permet l’extensibilité et une coordination avancée entre les fonctionnalités. |
 | Couverture de l’application | L’assistant d’IA (hérité) est une implémentation spécifique à l’application. | Vous pouvez utiliser l’assistant d’IA (version suivante) pour une expérience d’assistant d’IA unifiée dans toutes les applications Adobe Experience Cloud. |
-| Modèle d’accès et d’autorisation | Modèle d’accès au niveau de l’application aligné sur les limites de chaque produit. | Tous les utilisateurs ont accès à l’assistant AI (version suivante) et aux agents Experience Platform associés. **Remarque** : <ul><li>**Adobe Experience Manager** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI (Next-Gen) via [Adobe Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI par le biais du contrôle d’accès de [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/technotes/access-control?lang=en). Cela vous permet de poser des questions sur la connaissance des produits et les informations sur les données. |
+| Modèle d’accès et d’autorisation | Modèle d’accès au niveau de l’application aligné sur les limites de chaque produit. | Tous les utilisateurs ont accès à l’assistant AI (version suivante) et aux agents Experience Platform associés. **Remarque** : <ul><li>**Adobe Experience Manager** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI (Next-Gen) via [Adobe Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI par le biais du contrôle d’accès de [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en). Cela vous permet de poser des questions sur la connaissance des produits et les informations sur les données. |
 
-Vous pouvez accéder à l’assistant d’IA (hérité) dans plusieurs applications de Adobe Experience Cloud.
+Vous pouvez accéder à l’assistant d’IA (hérité) dans plusieurs applications d’Adobe Experience Cloud.
 
 >[!NOTE]
 >
@@ -72,13 +65,13 @@ Si votre entreprise est légalement autorisée à utiliser l’assistant AI (hé
 
 L’accès à l’assistant d’IA (hérité) est régi par les paramètres suivants :
 
-* **Accéder à l’application :** vous pouvez accéder à l’assistant AI (hérité) dans Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer et [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant).
+* **Accéder à l’application :** vous pouvez accéder à l’assistant AI (hérité) dans Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer et [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant (Legacy). Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant (Legacy).  -->
 * **Autorisations :** utilisez l’[interface utilisateur des autorisations](../access-control/abac/ui/permissions.md) pour accorder ou révoquer l’accès à l’assistant d’IA (hérité) de votre organisation. Pour utiliser l’assistant d’IA (hérité), un utilisateur donné doit appartenir à un rôle disposant des autorisations **Activer l’assistant d’IA** et **Afficher les informations opérationnelles**.
    * En tant qu’administrateur ou administratrice, vous pouvez ajouter l’**Activer l’assistant AI** à un rôle donné et ajouter un utilisateur ou une utilisatrice à ce rôle, pour lui permettre d’accéder à l’assistant AI (hérité) dans votre organisation. **Remarque** : cette autorisation permet audit utilisateur d’accéder à l’assistant AI (hérité), elle ne lui accorde aucune capacité administrative pour donner ensuite à d’autres utilisateurs accès à l’assistant AI (hérité).
    * En tant qu’administrateur, vous pouvez ajouter l’**Afficher les informations opérationnelles** à un rôle donné et ajouter un utilisateur à ce rôle, pour lui permettre d’utiliser les fonctionnalités d’informations opérationnelles de l’assistant AI (hérité).
 
-Utilisez l’[interface utilisateur des autorisations](../access-control/abac/ui/roles.md) pour accorder des autorisations d’utilisation de l’assistant AI (hérité) dans Experience Platform et Journey Optimizer. Pour plus d’informations sur l’accès à l’assistant AI (hérité) dans Customer Journey Analytics. Lisez la documentation dans [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant).
+Utilisez l’[interface utilisateur des autorisations](../access-control/abac/ui/roles.md) pour accorder des autorisations d’utilisation de l’assistant AI (hérité) dans Experience Platform et Journey Optimizer. Pour plus d’informations sur l’accès à l’assistant AI (hérité) dans Customer Journey Analytics. Lisez la documentation dans [](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 
 ![Page de l’interface utilisateur des autorisations avec les autorisations Activer l’assistant d’IA (hérité) et Afficher les informations opérationnelles incluses dans un rôle donné.](./images/access/access-permissions.png)
 
@@ -88,7 +81,7 @@ Une fois que vous disposez des autorisations nécessaires, vous pouvez accéder 
 
 Regardez la vidéo suivante pour savoir comment configurer l’accès à l’assistant d’IA (hérité) pour vos organisations et utilisateurs.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475921/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## Étapes suivantes
 

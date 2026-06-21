@@ -4,28 +4,24 @@ title: Type de données de champ de consentement générique
 description: Découvrez le type de données XDM Champ de consentement générique.
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 TQID: https://experienceleague.adobe.com/GKH7uA8uXmmx22iWweMG79gK5Uf3ye-phuSh5-KriPo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 605
+source-wordcount: 614
 ht-degree: 1%
 
 ---
 
-# Type de données [!UICONTROL Generic Consent Field]
+# [!UICONTROL Champ de consentement générique] type de données
 
-[!UICONTROL Generic Consent Field] est un type de données XDM standard qui décrit la sélection d’un client pour une préférence de consentement particulière.
+Le [!UICONTROL champ de consentement générique] est un type de données XDM standard qui décrit la sélection d’une préférence de consentement particulière par un client ou une cliente.
 
 >[!NOTE]
 >
->Ce type de données est conçu pour être utilisé afin de personnaliser la structure des schémas de consentement de votre organisation à l’aide du groupe de champs [[!UICONTROL Consents and Preferences] comme ligne de base](../field-groups/profile/consents.md)
+>Ce type de données est destiné à être utilisé pour personnaliser la structure des schémas de consentement de votre organisation à l’aide du groupe de champs [[!UICONTROL Consentements et préférences] comme ligne de base](../field-groups/profile/consents.md).
 
 ![](../images/data-types/consent-field.png)
 

@@ -3,34 +3,14 @@ title: Présentation des trains de données
 description: Découvrez comment les flux de données vous aident à connecter votre intégration Experience Platform SDK côté client aux produits Adobe et aux destinations tierces.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 TQID: https://experienceleague.adobe.com/RKMXa4lwEGzns3NPt8k-Sac-y3lCmorR7v-v2cglNHc
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: baaa0dd2-d27e-4921-aae3-7888623a5fa5
-  - id: c814092e-2730-45e8-a12d-e084529f52cb
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-  - id: e8a4c7eb-7254-4984-ac46-e651a57c7e39
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: baaa0dd2-d27e-4921-aae3-7888623a5fa5id: c814092e-2730-45e8-a12d-e084529f52cbid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13id: b64298cc-90cc-46b7-8917-ee391f1c7516id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: e8a4c7eb-7254-4984-ac46-e651a57c7e39
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 710
+source-wordcount: 713
 ht-degree: 48%
 
 ---
@@ -41,7 +21,7 @@ Un flux de données représente la configuration côté serveur pour les SDK Web
 
 Lorsque vous envoyez une requête au [!DNL Edge Network], le `datastreamId` référence le flux de données où les données sont envoyées. Vous pouvez mettre à jour la configuration côté serveur sans modifier le code de votre site web.
 
-Vous pouvez créer et gérer des flux de données en sélectionnant **[!UICONTROL Datastreams]** dans le volet de navigation de gauche de l’interface utilisateur de [!DNL Adobe Experience Platform] ou de la collecte de données.
+Vous pouvez créer et gérer des flux de données en sélectionnant **[!UICONTROL Flux de données]** dans le volet de navigation de gauche de l’interface utilisateur de [!DNL Adobe Experience Platform] ou de collecte de données.
 
 ![Copie d’écran de l’onglet Flux de données dans l’interface utilisateur de Adobe Experience Platform.](assets/overview/datastreams-tab.png)
 
@@ -71,13 +51,13 @@ Les flux de données utilisent les fonctionnalités de gouvernance des données 
 
 La vidéo suivante présente une brève vue d’ensemble de la manière dont les restrictions d’utilisation des données sont configurées et appliquées pour les trains de données dans l’interface utilisateur :
 
->[!VIDEO](https://video.tv.adobe.com/v/3413102/?captions=fre_fr&quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
 Dans Experience Platform, vous pouvez appliquer des [libellés d’utilisation des données sensibles](/help/data-governance/labels/reference.md#sensitive) aux schémas et aux champs contenant des données que votre organisation juge sensibles. Par exemple, le libellé `RHD` est utilisé pour désigner les informations protégées sur la santé ; le libellé `S1` représente les données de géolocalisation.
 
 >[!NOTE]
 >
->Pour plus d’informations sur l’application des libellés d’utilisation des données dans l’onglet [!UICONTROL Schemas] de l’interface utilisateur d’Experience Platform ou de la collecte de données, consultez le tutoriel [étiquetage des schémas](/help/xdm/tutorials/labels.md).
+>Pour plus d’informations sur l’application des libellés d’utilisation des données dans l’onglet [!UICONTROL Schémas] de l’interface utilisateur d’Experience Platform ou de la collecte de données, consultez le tutoriel [étiquetage des schémas](/help/xdm/tutorials/labels.md).
 
 Lorsque vous créez un flux de données, si le schéma sélectionné contient des libellés d’utilisation de données sensibles, vous pouvez uniquement configurer le flux de données pour envoyer ces données vers des destinations conformes à la loi HIPAA. Actuellement, la seule destination conforme à la norme HIPAA prise en charge par les flux de données est [!DNL Adobe Experience Platform]. D’autres services de destination, notamment les destinations [!DNL Adobe Target], [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], de transfert d’événement et Edge, sont désactivés pour les flux de données contenant des libellés d’utilisation de données sensibles.
 
@@ -87,7 +67,7 @@ Si un schéma est utilisé dans un train de données existant avec des services 
 
 Dans Experience Platform, les activités du train de données peuvent être surveillées sous la forme de journaux d’audit. Les journaux d’audit indiquent **qui** a effectué **quoi** action et **quand**, ainsi que d’autres données contextuelles qui peuvent vous aider à résoudre les problèmes liés aux flux de données afin d’aider votre entreprise à se conformer aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
 
-Chaque fois qu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un train de données, un journal d’audit est créé pour enregistrer l’action. Il en va de même lorsqu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un mappage par le biais de la [Préparation de données pour la collecte de données](/help/datastreams/data-prep.md). Qu’il s’agisse d’un flux de données ou d’un mappage mis à jour, le journal d’audit obtenu est classé sous le type de ressource [!UICONTROL Datastreams].
+Chaque fois qu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un train de données, un journal d’audit est créé pour enregistrer l’action. Il en va de même lorsqu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un mappage par le biais de la [Préparation de données pour la collecte de données](/help/datastreams/data-prep.md). Qu’il s’agisse d’un flux de données ou d’un mappage mis à jour, le journal d’audit obtenu est classé sous le type de ressource [!UICONTROL Flux de données].
 
 Consultez la documentation relative aux [journaux d’audit](/help/landing/governance-privacy-security/audit-logs/overview.md) pour plus d’informations sur la manière d’interpréter les journaux des trains de données et autres services pris en charge.
 

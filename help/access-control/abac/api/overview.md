@@ -6,15 +6,10 @@ description: L’API de contrôle d’accès basé sur les attributs vous permet
 role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
 TQID: https://experienceleague.adobe.com/8TNUmUgp-4H9M27UgpyAJAZjsOf-qvpYgIZBYaZZPuQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 463
@@ -36,16 +31,16 @@ Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque po
 
 ## Rôles
 
-Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. Pour plus d’informations sur l’utilisation des rôles dans l’API[&#128279;](./roles.md) consultez le  guide des points d’entrée des rôles .
+Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. Pour plus d’informations sur l’utilisation des rôles dans l’API](./roles.md) consultez le [ guide des points d’entrée des rôles .
 
 ## Politiques
 
-Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le point d’entrée `/policies` vous permet de gérer par programmation les politiques de votre organisation. Pour plus d’informations sur l’utilisation des politiques dans l’API[&#128279;](./policies.md) consultez le  guide des points d’entrée des politiques .
+Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le point d’entrée `/policies` vous permet de gérer par programmation les politiques de votre organisation. Pour plus d’informations sur l’utilisation des politiques dans l’API](./policies.md) consultez le [ guide des points d’entrée des politiques .
 
 ## Produits
 
-Le point d’entrée `/products` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre organisation. Pour plus d’informations sur l’utilisation des produits et des catégories d’autorisations et des jeux d’autorisations correspondants dans l’API[&#128279;](./products.md) consultez le  guide des points d’entrée de produits .
+Le point d’entrée `/products` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre organisation. Pour plus d’informations sur l’utilisation des produits et des catégories d’autorisations et des jeux d’autorisations correspondants dans l’API](./products.md) consultez le [ guide des points d’entrée de produits .
 
 ## Étapes suivantes
 
-Pour commencer à effectuer des appels à l’aide de l’API de contrôle d’accès basé sur les attributs, lisez le [&#x200B; guide de prise en main &#x200B;](./getting-started.md) puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques.
+Pour commencer à effectuer des appels à l’aide de l’API de contrôle d’accès basé sur les attributs, lisez le [ guide de prise en main ](./getting-started.md) puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques.

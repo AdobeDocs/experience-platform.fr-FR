@@ -3,18 +3,14 @@ title: Créer une connexion source  [!DNL Oracle NetSuite Entities]  dans l’in
 description: Découvrez comment créer une connexion source Oracle NetSuite Entities à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
 TQID: https://experienceleague.adobe.com/zD-kb0DQPOKKAaevlcu-sjYtZo4BGzY0SYkpLzaIjUI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 677
-ht-degree: 33%
+source-wordcount: 693
+ht-degree: 32%
 
 ---
 
@@ -41,11 +37,11 @@ Si vous disposez déjà d’un compte [!DNL Oracle NetSuite], vous pouvez ignore
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *Automatisation du marketing*, sélectionnez **[!DNL Oracle NetSuite Entities]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie *Automatisation du marketing*, sélectionnez **[!DNL Oracle NetSuite Entities]**, puis **[!UICONTROL Ajouter des données]**.
 
 ![Capture d’écran de l’interface utilisateur Experience Platform pour le catalogue avec la carte Oracle NetSuite Entities](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
 
-La page **[!UICONTROL Connect Oracle NetSuite Entities account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Oracle NetSuite Entities]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 >[!IMPORTANT]
 >
@@ -53,13 +49,13 @@ La page **[!UICONTROL Connect Oracle NetSuite Entities account]** s’affiche. S
 
 ### Compte existant {#existing-account}
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL Oracle NetSuite Entities] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL Oracle NetSuite Entities] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte Oracle NetSuite Entities à un compte existant](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
 
 ### Nouveau compte {#new-account}
 
-Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte Oracle NetSuite Entities à un nouveau compte](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
 
@@ -94,7 +90,7 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 ### Mappage {#mapping}
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
@@ -110,6 +106,6 @@ Lors de la planification de votre flux de données [!DNL Oracle NetSuite Entitie
 
 Lors de la récupération des données, le [!DNL Oracle NetSuite] répond avec la date de dernière modification ou création sous la forme d’un format de date au lieu d’un horodatage. Par conséquent, la planification est limitée à un jour.
 
-Une fois que vous avez fourni les valeurs de votre planning, sélectionnez **[!UICONTROL Next]**.
+Une fois que vous avez fourni les valeurs de votre planification, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape de planification du workflow des sources.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/scheduling.png)

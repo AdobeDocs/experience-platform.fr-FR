@@ -6,10 +6,8 @@ description: Vous pouvez récupérer vos paramètres de connexion pour utiliser 
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 TQID: https://experienceleague.adobe.com/1u6v6VEtKUBf-TRn--yulE9Tjm63FGQoeQJYv9i9Ilo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 130

@@ -1,7 +1,8 @@
 ---
 title: track()
 description: Déclenchez une règle d’appel direct.
-source-git-commit: a36e5af39f904370c1e97a9ee1badad7a2eac32e
+exl-id: 738cecb0-3dd4-4326-ad64-403ce584fda5
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 2%

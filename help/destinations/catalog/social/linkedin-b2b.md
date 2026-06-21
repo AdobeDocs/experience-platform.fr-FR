@@ -3,24 +3,15 @@ title: (Entreprises) Connexion LinkedIn
 description: Utilisez cette destination pour activer vos audiences de comptes pour les cas d’utilisation d’Account-Based Marketing (ABM). Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des e-mails hachés.
 exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
 TQID: https://experienceleague.adobe.com/6l-EqFCKoKUxUhjkJM-j8FfEg9WuVdZ6rt7RXbWwyxs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 795
-ht-degree: 20%
+source-wordcount: 838
+ht-degree: 19%
 
 ---
 
@@ -30,7 +21,7 @@ ht-degree: 20%
 >
 >La fonctionnalité d’activation des audiences de compte vers la destination LinkedIn (Entreprises) est disponible pour les entreprises qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de [!DNL Real-Time Customer Data Platform].
 
-Utilisez cette destination pour activer vos cas d’utilisation [audiences de compte](/help/segmentation/types/account-audiences.md) pour Account-Based Marketing (ABM). Faites de la publicité pour les personnes et les rôles appropriés dans vos comptes cibles via la destination business-to-business **[!UICONTROL (Companies) LinkedIn]**. Consultez la documentation LinkedIn pour [en savoir plus sur le ciblage des comptes](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) sur la plateforme LinkedIn.
+Utilisez cette destination pour activer vos cas d’utilisation [audiences de compte](/help/segmentation/types/account-audiences.md) pour Account-Based Marketing (ABM). Faites de la publicité pour des rôles et des rôles pertinents dans vos comptes cibles via la destination **[!UICONTROL (Entreprises) LinkedIn]** business-to-business. Consultez la documentation LinkedIn pour [en savoir plus sur le ciblage des comptes](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) sur la plateforme LinkedIn.
 
 >[!TIP]
 >
@@ -57,7 +48,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Non | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Oui | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -74,13 +65,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style="table-layout:auto"}
 
-## Conditions préalables requises {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Veillez à respecter les conditions préalables ci-dessous pour exporter les audiences de compte vers LinkedIn :
 
 ### Conditions préalables relatives au compte LinkedIn {#LinkedIn-account-prerequisites}
 
-Avant de pouvoir utiliser la destination [!UICONTROL (Companies) LinkedIn Matched Audience], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] dispose du niveau d’autorisation [!DNL Creative Manager] ou supérieur.
+Avant d’utiliser la destination [!UICONTROL (Entreprises) LinkedIn Matched Audience] , assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] dispose du niveau d’autorisation [!DNL Creative Manager] ou supérieur.
 
 Pour savoir comment modifier vos autorisations d’utilisateur [!DNL LinkedIn Campaign Manager], voir [Ajouter, modifier et supprimer des autorisations d’utilisateur sur les comptes Advertising](https://www.linkedin.com/help/lms/answer/5753) dans la documentation LinkedIn.
 
@@ -88,14 +79,14 @@ Pour savoir comment modifier vos autorisations d’utilisateur [!DNL LinkedIn Ca
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des autorisations **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-1. Recherchez la destination [!DNL (Companies) LinkedIn Matched Audiences] dans le catalogue de destinations et sélectionnez **[!UICONTROL Set Up]**.
-2. Sélectionnez **[!UICONTROL Connect to destination]**.
+1. Recherchez la destination [!DNL (Companies) LinkedIn Matched Audiences] dans le catalogue de destinations et sélectionnez **[!UICONTROL Configurer]**.
+2. Sélectionnez **[!UICONTROL Se connecter à la destination]**.
    ![S’authentifier sur LinkedIn](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
 3. Saisissez vos identifiants LinkedIn et sélectionnez **Connexion**.
 
@@ -105,9 +96,9 @@ Après avoir terminé le processus de connexion avec LinkedIn, vous pouvez passe
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Account ID]** : Votre [!DNL LinkedIn Campaign Manager Account ID]. Cet identifiant se trouve dans votre compte [!DNL LinkedIn Campaign Manager].
+* **[!UICONTROL Identifiant de compte]** : votre [!DNL LinkedIn Campaign Manager Account ID]. Cet identifiant se trouve dans votre compte [!DNL LinkedIn Campaign Manager].
 
 Vous êtes maintenant prêt à activer les audiences de compte sur LinkedIn.
 
@@ -115,21 +106,21 @@ Vous êtes maintenant prêt à activer les audiences de compte sur LinkedIn.
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md) pour obtenir des instructions sur l’activation des audiences de compte vers cette destination.
 
-## Paires de mappage obligatoires à l’étape de mappage lors de l’activation des audiences de compte vers la destination **[!UICONTROL (Companies) LinkedIn Matched Audiences]** {#required-mappings}
+## Paires de mappage requises à l’étape de mappage lors de l’activation des audiences de compte vers la destination **[!UICONTROL (Entreprises) LinkedIn Matched Audiences]** {#required-mappings}
 
-Lors de l’activation des audiences de compte vers la destination **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, notez que les deux paires de mappage suivantes sont obligatoires pour exporter des données :
+Lors de l’activation des audiences de compte vers la destination **[!UICONTROL (Entreprises) LinkedIn Matched Audiences]** , notez que les deux paires de mappage suivantes sont obligatoires pour exporter des données :
 
 ![Mappage LinkedIn des champs obligatoires.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Champ source | Champ cible |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (sélectionnez ce champ dans la vue **[!UICONTROL Select Identity namespace]** lors de la sélection du **[!UICONTROL Target Field]**). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations."){width="100" zoomable="yes"} |
+| `accountKey.sourceKey` | `primaryId` (sélectionnez ce champ dans la vue **[!UICONTROL Sélectionner l’espace de noms d’identité]** lors de la sélection du **[!UICONTROL Champ cible]**). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

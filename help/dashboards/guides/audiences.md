@@ -5,21 +5,11 @@ description: Adobe Experience Platform fournit un tableau de bord grâce auquel 
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 TQID: https://experienceleague.adobe.com/o0jRC0n0aPAt7jrVkAtH6Hd-G3IzutOVensrCrMD-gM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7c46400c29d2655ff7033030cd4916325a88e9dc
 workflow-type: tm+mt
 source-wordcount: 3132
@@ -83,7 +73,7 @@ Pour choisir une autre audience, sélectionnez la liste déroulante à côté du
 
 ![Présentation du tableau de bord des audiences avec le menu déroulant de l’audience globale en surbrillance.](../images/audiences/change-audience.png)
 
-![Boîte de dialogue [!UICONTROL &#x200B; Sélectionner une audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
+![Boîte de dialogue [!UICONTROL  Sélectionner une audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
 
 ## Widgets et mesures {#widgets-and-metrics}
 
@@ -121,7 +111,7 @@ Customer AI est utilisé pour générer des scores de propension personnalisés 
 >title="Distribution des scores"
 >abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de cinq pour cent. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée. Vous pouvez modifier le modèle d’IA dans le menu déroulant sous le titre du widget."
 
-Le widget [!UICONTROL &#x200B; Distribution des scores de l’IA dédiée aux clients &#x200B;] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée, puis visualisée par incréments de cinq pour cent qui indiquent leur propension. Le nombre de profils est indiqué le long de l’axe Y et les scores de propension le long de l’axe X.
+Le widget [!UICONTROL  Distribution des scores de l’IA dédiée aux clients ] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée, puis visualisée par incréments de cinq pour cent qui indiquent leur propension. Le nombre de profils est indiqué le long de l’axe Y et les scores de propension le long de l’axe X.
 
 >[!NOTE]
 >
@@ -231,7 +221,7 @@ Ce widget illustre la tendance de la taille de l’audience pour une audience pa
 
 ### [!UICONTROL Ordre d’activation de l’audience] {#audience-activation-order}
 
-Le widget [!UICONTROL &#x200B; Ordre d’activation de l’audience &#x200B;] fournit un tableau à trois colonnes qui répertorie le nom de la destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
+Le widget [!UICONTROL  Ordre d’activation de l’audience ] fournit un tableau à trois colonnes qui répertorie le nom de la destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
 
 ![Le widget Ordre d’activation de l’audience.](../images/audiences/audience-activation-order.png)
 
@@ -253,7 +243,7 @@ Sélectionnez **[!UICONTROL Afficher plus]** pour ouvrir une boîte de dialogue 
 
 ![Le widget Rapport de chevauchement des audiences avec l’option Afficher plus en surbrillance.](../images/audiences/audience-overlap-report.png)
 
-La boîte de dialogue [!UICONTROL &#x200B; Rapport de chevauchement d’audiences &#x200B;] s’affiche. Cette boîte de dialogue peut contenir jusqu’à 50 lignes d’analyses de chevauchement des audiences, divisées en six colonnes. Sélectionnez l’icône des paramètres (![Icône des paramètres.](/help/images/icons/settings.png)) pour supprimer ou ajouter des colonnes du tableau.
+La boîte de dialogue [!UICONTROL  Rapport de chevauchement d’audiences ] s’affiche. Cette boîte de dialogue peut contenir jusqu’à 50 lignes d’analyses de chevauchement des audiences, divisées en six colonnes. Sélectionnez l’icône des paramètres (![Icône des paramètres.](/help/images/icons/settings.png)) pour supprimer ou ajouter des colonnes du tableau.
 
 ![Boîte de dialogue Rapport de chevauchement des audiences.](../images/audiences/audience-overlap-report-dialog.png)
 
@@ -315,4 +305,4 @@ Le widget vous permet de découvrir en un coup d’œil où et quand l’audienc
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord [!UICONTROL Audiences] et sélectionner une audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur d’Experience Platform, reportez-vous au [&#x200B; Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord [!UICONTROL Audiences] et sélectionner une audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur d’Experience Platform, reportez-vous au [ Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).

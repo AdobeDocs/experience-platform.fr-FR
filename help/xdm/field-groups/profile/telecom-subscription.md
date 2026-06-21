@@ -5,26 +5,23 @@ title: Groupe De Champs De Schéma D’Abonnement Aux Télécommunications
 description: Découvrez le groupe de champs Schéma d’abonnement aux télécommunications .
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 TQID: https://experienceleague.adobe.com/DmMb7XO36y-qlUsLs3icFn1Um2C7BnR-7IxWJa81Chg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 702
-ht-degree: 9%
+source-wordcount: 719
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Telecom Subscription] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Abonnement aux télécommunications]
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Telecom Subscription] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui décrit la formule d’abonnement d’un client, y compris les tarifs, les forfaits et les abonnements aux différents produits.
+[!UICONTROL Abonnement aux télécommunications] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui décrit la formule d’abonnement aux télécommunications d’un client, y compris les tarifs, les forfaits et les abonnements aux différents produits.
 
 Le groupe de champs fournit un champ de type objet unique, `telecomSubscription`, dont les propriétés sont décrites ci-dessous.
 
@@ -36,7 +33,7 @@ Le groupe de champs fournit un champ de type objet unique, `telecomSubscription`
 | `landlineSubscription` | Tableau d’objets | Décrit les détails de la formule d’abonnement de téléphonie fixe, y compris les fonctions, minutes et formules de numérotation sélectionnées. Pour plus d’informations, consultez la [section ci-dessous](#landlineSubscription). |
 | `mediaSubscription` | Tableau d’objets | Décrit les détails de la formule d’abonnement au média, y compris le nombre de canaux et les services de streaming inclus. Pour plus d’informations, consultez la [section ci-dessous](#mediaSubscription). |
 | `mobileSubscription` | Tableau d’objets | Décrit les détails de la formule d’abonnement mobile, notamment le nombre de lignes, les tarifs de données, le coût, etc. Pour plus d’informations, consultez la [section ci-dessous](#mobileSubscription). |
-| `primarySubscriber` | [[!UICONTROL Person]](../../data-types/person.md) | Décrit le propriétaire de l’abonnement. |
+| `primarySubscriber` | [[!UICONTROL  Personne ]](../../data-types/person.md) | Décrit le propriétaire de l’abonnement. |
 | `bundleName` | Chaîne | Capture le nom du type de la formule d’abonnement à laquelle le client est inscrit (`Internet + Media`, par exemple). |
 | `primaryPartyID` | Chaîne | Identifiant de la personne principale responsable de l’abonnement. Il peut s’agir, par exemple, du numéro de téléphone de cette personne. |
 
@@ -55,7 +52,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
+| `subscriptionDetails` | [[!UICONTROL Abonnement télécom]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
 | `connectionType` | Chaîne | Type de connexion de l’abonnement. |
 | `dataCap` | Entier | Limite de données pour le compte, en mégaoctets (Mo). |
 | `downloadSpeed` | Entier | Vitesse de téléchargement maximale disponible pour l’abonnement, en mégaoctets (Mo). |
@@ -72,8 +69,8 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `phoneNumber` | [[!UICONTROL Phone Number]](../../data-types/telecom-subscription.md) | Numéro de téléphone affecté à cet abonnement. |
-| `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
+| `phoneNumber` | [[!UICONTROL Numéro de téléphone]](../../data-types/telecom-subscription.md) | Numéro de téléphone affecté à cet abonnement. |
+| `subscriptionDetails` | [[!UICONTROL Abonnement télécom]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
 | `callBlocking` | Booléen | Indique si les fonctions d’abonnement de téléphonie fixe incluent le blocage des appels. |
 | `callForwarding` | Booléen | Indique si les fonctions d’abonnement de téléphonie fixe incluent le transfert d’appel. |
 | `callWaiting` | Booléen | Indique si les appels en attente sont inclus dans l’abonnement de téléphonie fixe. |
@@ -96,7 +93,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `streamingServices` | Tableau d’objets | Liste de tous les services de streaming inclus dans l’abonnement. Chaque élément de tableau comprend les propriétés suivantes : <ul><li>`promotionLength` : durée de la promotion, en mois, si le service de streaming a été ajouté dans le cadre d’une promotion.</li><li>`promotionalAddition` : indique si le service de streaming a été ajouté dans le cadre d’une promotion.</li><li>`serviceName` : nom du service de streaming.</li></ul> |
-| `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
+| `subscriptionDetails` | [[!UICONTROL Abonnement télécom]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
 | `channels` | Entier | Nombre de canaux inclus dans l’abonnement au média. |
 
 {style="table-layout:auto"}
@@ -109,8 +106,8 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `phoneNumber` | [[!UICONTROL Phone Number]](../../data-types/telecom-subscription.md) | Numéro de téléphone affecté à cet abonnement. |
-| `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
+| `phoneNumber` | [[!UICONTROL Numéro de téléphone]](../../data-types/telecom-subscription.md) | Numéro de téléphone affecté à cet abonnement. |
+| `subscriptionDetails` | [[!UICONTROL Abonnement télécom]](../../data-types/telecom-subscription.md) | Décrit les détails généraux sur l’abonnement, y compris la durée de l’abonnement, les frais, le statut, etc. |
 | `earlyUpgradeEnrollment` | Booléen | Indique si le client choisit des mises à niveau anticipées. |
 | `planLevel` | Chaîne | Nom du forfait mobile affecté à cet abonnement. |
 | `portedNumber` | Booléen | Indique si le client a transféré son numéro depuis un autre opérateur. |

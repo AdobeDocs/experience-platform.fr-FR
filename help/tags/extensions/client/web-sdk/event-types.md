@@ -4,19 +4,14 @@ description: Découvrez comment utiliser les types d’événements fournis par 
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 TQID: https://experienceleague.adobe.com/vSI32w-jPns0bNRzw4LRTn7CgVcmvKHiOB0VNAofEQc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1437
-ht-degree: 1%
+source-wordcount: 1508
+ht-degree: 0%
 
 ---
 
@@ -35,36 +30,36 @@ Pour plus d’informations sur les paramètres contenus dans chaque événement 
 L’extension de balise Web SDK prend en charge les hooks de surveillance suivants :
 
 * **[!UICONTROL onInstanceCreated]** : cet événement de hook de surveillance est déclenché lorsque vous avez réussi à créer une instance de Web SDK.
-* **[!UICONTROL onInstanceConfigured]** : cet événement de hook de surveillance est déclenché par le Web SDK lorsque la commande [`configure`](/help/collection/js/commands/configure/overview.md) est résolue avec succès
+* **[!UICONTROL onInstanceConfigured]** : cet événement de hook de surveillance est déclenché par le SDK Web lorsque la commande [`configure`](/help/collection/js/commands/configure/overview.md) est résolue avec succès
 * **[!UICONTROL onBeforeCommand]** : cet événement de hook de surveillance est déclenché par Web SDK avant l’exécution de toute autre commande. Vous pouvez utiliser ce hook de surveillance pour récupérer les options de configuration d’une commande spécifique.
 * **[!UICONTROL onCommandResolved]** : cet événement de hook de surveillance est déclenché avant la résolution de la promesse de commande. Vous pouvez utiliser cette fonction pour afficher les options de commande et le résultat.
 * **[!UICONTROL onCommandRejected]** : cet événement de hook de surveillance est déclenché lorsqu’une promesse de commande est rejetée et qu’il contient des informations sur la cause de l’erreur.
-* **[!UICONTROL onBeforeNetworkRequest]** : cet événement de hook de surveillance est déclenché avant l&#39;exécution d&#39;une requête réseau.
+* **[!UICONTROL onBeforeNetworkRequest]** : cet événement de hook de surveillance est déclenché avant l’exécution d’une requête réseau.
 * **[!UICONTROL onNetworkResponse]** : cet événement de hook de surveillance est déclenché lorsque le navigateur reçoit une réponse.
-* **[!UICONTROL onNetworkError]** : cet événement de crochet de surveillance est déclenché lorsque la requête réseau a échoué.
-* **[!UICONTROL onBeforeLog]** : cet événement de hook de surveillance est déclenché avant que le Web SDK ne consigne quoi que ce soit dans la console.
+* **[!UICONTROL onNetworkError]** : cet événement de hook de surveillance est déclenché lorsque la requête réseau a échoué.
+* **[!UICONTROL onBeforeLog]** : cet événement de hook de surveillance est déclenché avant que le SDK Web consigne quoi que ce soit dans la console.
 * **[!UICONTROL onContentRendering]** : cet événement de hook de surveillance est déclenché par le composant `personalization` et vous aide à déboguer le rendu du contenu de personnalisation. Cet événement peut avoir différents statuts :
    * `rendering-started` : indique que le Web SDK est sur le point de rendre des propositions. Avant que le SDK Web ne commence à effectuer le rendu d&#39;une portée de décision ou d&#39;une vue, dans l&#39;objet `data`, vous pouvez voir les propositions qui sont sur le point d&#39;être effectuées par le composant `personalization` et le nom de la portée.
    * `no-offers` : indique qu&#39;aucune payload n&#39;a été reçue pour les paramètres demandés.
    * `rendering-failed` : indique que Web SDK n’a pas réussi à effectuer le rendu d’une proposition.
    * `rendering-succeeded` : indique que le rendu est terminé pour une portée de décision.
    * `rendering-redirect` : indique que Web SDK va exécuter une proposition de redirection.
-* **[!UICONTROL onContentHiding]** : cet événement de crochet de surveillance est déclenché lorsqu’un style de masquage préalable est appliqué ou supprimé.
+* **[!UICONTROL onContentHidden]** : cet événement de hook de surveillance est déclenché lorsqu’un style de pré-masquage est appliqué ou supprimé.
 
 
-## [!UICONTROL Send event complete]
+## [!UICONTROL Envoi de l’événement terminé]
 
-En règle générale, votre propriété comporte une ou plusieurs règles utilisant l’action [[!UICONTROL Send event]](actions/send-event.md) pour envoyer des événements à Adobe Experience Platform Edge Network. Chaque fois qu’un événement est envoyé à Edge Network, une réponse est renvoyée au navigateur avec des données utiles. Sans le type d’événement [!UICONTROL Send event complete], vous n’auriez pas accès à ces données renvoyées.
+En règle générale, votre propriété comporte une ou plusieurs règles utilisant l’action [[!UICONTROL Envoyer l’événement]](actions/send-event.md) pour envoyer des événements à Adobe Experience Platform Edge Network. Chaque fois qu’un événement est envoyé à Edge Network, une réponse est renvoyée au navigateur avec des données utiles. Sans le type d’événement [!UICONTROL Envoyer l’événement terminé], vous n’auriez pas accès à ces données renvoyées.
 
-Pour accéder aux données renvoyées, créez une règle distincte, puis ajoutez un événement [!UICONTROL Send event complete] à la règle. Cette règle est déclenchée chaque fois qu’une réponse réussie est reçue du serveur à la suite d’une action [!UICONTROL Send event].
+Pour accéder aux données renvoyées, créez une règle distincte, puis ajoutez un événement [!UICONTROL Envoyer l’événement terminé] à la règle. Cette règle est déclenchée chaque fois qu’une réponse réussie est reçue du serveur à la suite d’une action [!UICONTROL Envoyer l’événement].
 
-Lorsqu’un événement [!UICONTROL Send event complete] déclenche une règle, il fournit des données renvoyées par le serveur qui peuvent être utiles pour accomplir certaines tâches. En règle générale, vous ajoutez une action [!UICONTROL Custom code] (à partir de l’extension [!UICONTROL Core]) à la même règle que celle qui contient l’événement [!UICONTROL Send event complete]. Dans l’action [!UICONTROL Custom code], votre code personnalisé aura accès à une variable nommée `event`. Cette variable `event` contiendra les données renvoyées par le serveur.
+Lorsqu’un événement [!UICONTROL Envoi de l’événement terminé] déclenche une règle, il fournit des données renvoyées par le serveur qui peuvent s’avérer utiles pour accomplir certaines tâches. En règle générale, vous ajoutez une action [!UICONTROL Code personnalisé] (à partir de l’extension [!UICONTROL Core]) à la même règle que celle qui contient l’événement [!UICONTROL Envoi de l’événement terminé]. Dans l’action [!UICONTROL Code personnalisé], votre code personnalisé aura accès à une variable nommée `event`. Cette variable `event` contiendra les données renvoyées par le serveur.
 
 Voici à quoi pourrait ressembler votre règle de gestion des données renvoyées par Edge Network :
 
 ![](assets/send-event-complete.png)
 
-Vous trouverez ci-dessous quelques exemples d’exécution de certaines tâches à l’aide de l’action [!UICONTROL Custom code] dans cette règle.
+Vous trouverez ci-dessous quelques exemples d’exécution de certaines tâches à l’aide de l’action [!UICONTROL Code personnalisé] dans cette règle.
 
 ### Rendu manuel de contenu personnalisé
 
@@ -76,7 +71,7 @@ var propositions = event.propositions;
 
 Si `event.propositions` existe, il s’agit d’un tableau contenant des objets de proposition de personnalisation. Les propositions incluses dans le tableau sont déterminées, en grande partie, par la manière dont l’événement a été envoyé au serveur.
 
-Pour ce premier scénario, supposons que vous n’ayez pas coché la case [!UICONTROL Render decisions] et que vous n’ayez fourni aucune [!UICONTROL decision scopes] dans l’action [!UICONTROL Send event] responsable de l’envoi de l’événement.
+Pour ce premier scénario, supposons que vous n’ayez pas coché la case [!UICONTROL Rendre des décisions] et que vous n’ayez fourni aucune [!UICONTROL portée de décision] dans l’action [!UICONTROL Envoyer l’événement] responsable de l’envoi de l’événement.
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
@@ -123,17 +118,17 @@ Le tableau `propositions` peut ressembler à cet exemple :
 ]
 ```
 
-Lors de l’envoi de l’événement, la case à cocher [!UICONTROL Render decisions] n’était pas cochée. Par conséquent, le SDK n’a pas tenté d’effectuer automatiquement le rendu d’un contenu. Cependant, le SDK a toujours récupéré automatiquement le contenu éligible au rendu automatique et vous l’a fourni pour qu’il soit rendu manuellement si vous le souhaitez. Notez que la propriété `renderAttempted` de chaque objet de proposition est définie sur `false`.
+Lors de l’envoi de l’événement, la case [!UICONTROL Rendre les décisions] n’était pas cochée, de sorte que le SDK n’a pas tenté de générer automatiquement du contenu. Cependant, le SDK a toujours récupéré automatiquement le contenu éligible au rendu automatique et vous l’a fourni pour qu’il soit rendu manuellement si vous le souhaitez. Notez que la propriété `renderAttempted` de chaque objet de proposition est définie sur `false`.
 
-Si, à la place, vous aviez coché la case [!UICONTROL Render decisions] lors de l’envoi de l’événement, le SDK aurait tenté de rendre toutes les propositions éligibles au rendu automatique. Par conséquent, la propriété `renderAttempted` de chacun des objets de proposition est définie sur `true`. Dans ce cas, il n’est pas nécessaire d’effectuer manuellement le rendu de ces propositions.
+Si vous aviez plutôt coché la case [!UICONTROL Rendre les décisions] lors de l’envoi de l’événement, le SDK aurait tenté de rendre toutes les propositions éligibles au rendu automatique. Par conséquent, la propriété `renderAttempted` de chacun des objets de proposition est définie sur `true`. Dans ce cas, il n’est pas nécessaire d’effectuer manuellement le rendu de ces propositions.
 
-Jusqu’à présent, vous n’avez examiné que le contenu de personnalisation éligible au rendu automatique (par exemple, tout contenu créé dans le compositeur d’expérience visuelle d’Adobe Target). Pour récupérer un contenu de personnalisation _non éligible_ au rendu automatique, demandez le contenu en fournissant des portées de décision à l’aide du champ [!UICONTROL Decision scopes] dans l’action [!UICONTROL Send event]. Une portée est une chaîne qui identifie une proposition particulière que vous souhaitez récupérer à partir du serveur.
+Jusqu’à présent, vous n’avez examiné que le contenu de personnalisation éligible au rendu automatique (par exemple, tout contenu créé dans le compositeur d’expérience visuelle d’Adobe Target). Pour récupérer un contenu de personnalisation _non éligible_ au rendu automatique, demandez le contenu en fournissant des portées de décision à l’aide du champ [!UICONTROL Portées de décision] dans l’action [!UICONTROL Envoyer l’événement]. Une portée est une chaîne qui identifie une proposition particulière que vous souhaitez récupérer à partir du serveur.
 
-L’action [!UICONTROL Send event] se présenterait comme suit :
+L’action [!UICONTROL Envoyer l’événement] se présente comme suit :
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-Dans cet exemple, si des propositions sont trouvées sur le serveur correspondant à la portée `salutation` ou `discount`, elles sont renvoyées et incluses dans le tableau `propositions` . N’oubliez pas que les propositions qui remplissent les critères du rendu automatique continueront à être incluses dans le tableau `propositions`, quelle que soit la manière dont vous configurez les champs [!UICONTROL Render decisions] ou [!UICONTROL Decision scopes] dans l’action [!UICONTROL Send event]. Le tableau `propositions`, dans ce cas, ressemble à cet exemple :
+Dans cet exemple, si des propositions sont trouvées sur le serveur correspondant à la portée `salutation` ou `discount`, elles sont renvoyées et incluses dans le tableau `propositions` . N’oubliez pas que les propositions qui remplissent les critères du rendu automatique continueront à être incluses dans le tableau de `propositions`, quelle que soit la manière dont vous configurez les champs [!UICONTROL  Rendre des décisions ] ou [!UICONTROL  Portées de décision ] dans l’action [!UICONTROL Envoyer l’événement]. Le tableau `propositions`, dans ce cas, ressemble à cet exemple :
 
 ```json
 [
@@ -214,7 +209,7 @@ Dans cet exemple, si des propositions sont trouvées sur le serveur correspondan
 1. Si vous trouvez une proposition, parcourez chaque élément de la proposition, en recherchant l’élément correspondant au contenu HTML. (Mieux vaut vérifier que supposer.)
 1. Si vous trouvez un élément contenant du contenu HTML, recherchez l’élément `daily-special` sur la page et remplacez son HTML par le contenu personnalisé.
 
-Votre code personnalisé dans l’action [!UICONTROL Custom code] peut se présenter comme suit :
+Votre code personnalisé dans l’action [!UICONTROL Code personnalisé] peut se présenter comme suit :
 
 ```javascript
 var propositions = event.propositions;
@@ -255,7 +250,7 @@ if (discountHtml) {
 
 ### Accès aux jetons de réponse Adobe Target
 
-Le contenu Personalization renvoyé par Adobe Target comprend des [jetons de réponse](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=fr), qui sont des détails sur l’activité, l’offre, l’expérience, le profil utilisateur, les informations géographiques, etc. Ces informations peuvent être partagées avec des outils tiers ou utilisées à des fins de débogage. Les jetons de réponse peuvent être configurés dans l’interface utilisateur d’Adobe Target.
+Le contenu Personalization renvoyé par Adobe Target comprend des [jetons de réponse](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), qui sont des détails sur l’activité, l’offre, l’expérience, le profil utilisateur, les informations géographiques, etc. Ces informations peuvent être partagées avec des outils tiers ou utilisées à des fins de débogage. Les jetons de réponse peuvent être configurés dans l’interface utilisateur d’Adobe Target.
 
 Dans l’action Code personnalisé, qui se trouve dans la règle de gestion des données de réponse, vous pouvez accéder aux propositions de personnalisation renvoyées par le serveur. Pour ce faire, saisissez le code personnalisé suivant :
 
@@ -299,13 +294,13 @@ if (propositions) {
 }
 ```
 
-## [!UICONTROL Subscribe ruleset items] {#subscribe-ruleset-items}
+## [!UICONTROL Abonner des éléments d’ensemble de règles] {#subscribe-ruleset-items}
 
-Le type d’événement **[!UICONTROL Subscribe ruleset items]** vous permet de vous abonner à des cartes de contenu Adobe Journey Optimizer pour une surface. Chaque fois que les ensembles de règles sont évalués, le rappel fourni à cette commande reçoit un objet de résultat avec des propositions qui contiennent les données de la carte de contenu.
+Le type d’événement **[!UICONTROL Abonner des éléments d’ensemble de règles]** vous permet de vous abonner à des cartes de contenu Adobe Journey Optimizer pour une surface. Chaque fois que les ensembles de règles sont évalués, le rappel fourni à cette commande reçoit un objet de résultat avec des propositions qui contiennent les données de la carte de contenu.
 
 ![Image de l’interface utilisateur des balises Experience Platform affichant le type d’événement d’éléments d’ensemble de règles S’abonner.](assets/subscribe-ruleset-items.png)
 
 Ce type d’événement prend en charge les propriétés configurables suivantes :
 
-* **[!UICONTROL Schemas]** : tableau de schémas pour lesquels vous souhaitez vous abonner aux cartes de contenu. Vous pouvez saisir les schémas manuellement ou en fournissant un élément de données.
+* **[!UICONTROL Schémas]** : tableau de schémas pour lesquels vous souhaitez vous abonner aux cartes de contenu. Vous pouvez saisir les schémas manuellement ou en fournissant un élément de données.
 * **[!UICONTROL Surfaces]** : tableau de surfaces pour lesquelles vous souhaitez vous abonner à des cartes de contenu. Vous pouvez saisir les surfaces manuellement ou en fournissant un élément de données.

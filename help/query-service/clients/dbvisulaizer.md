@@ -5,16 +5,12 @@ title: Connexion de DbVisualizer à Query Service
 description: Ce document décrit les étapes à suivre pour connecter DbVisualizer à Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
 TQID: https://experienceleague.adobe.com/GtA4-9y9x4viiBEQX7v5HYN0mC2x3zZ9sHBnLaRKOxk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 922
+source-wordcount: 940
 ht-degree: 3%
 
 ---
@@ -27,7 +23,7 @@ Ce document décrit les étapes à suivre pour connecter l’outil de base de do
 
 Ce guide nécessite que vous ayez déjà accès à l’application [!DNL DbVisualizer] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger l’application de bureau [!DNL DbVisualizer] ou pour plus d’informations, consultez la [documentation [!DNL DbVisualizer] officielle](https://www.dbvis.com/download/).
 
-Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL &#x200B; DbVisualizer] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes.
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL  DbVisualizer] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes.
 
 ## Créer une connexion à la base de données {#connect-database}
 
@@ -47,10 +43,10 @@ Saisissez ensuite les propriétés du pilote décrites dans le tableau ci-dessou
 
 | Propriété | Description |
 | ------ | ------ |
-| `PGHOST` | Nom d’hôte du serveur [!DNL PostgreSQL]. Cette valeur correspond à vos informations d’identification Experience Platform **[!UICONTROL Host]**. |
+| `PGHOST` | Nom d’hôte du serveur [!DNL PostgreSQL]. Cette valeur correspond à vos informations d’identification Experience Platform **[!UICONTROL hôte]**. |
 | `ssl` | Définissez la valeur SSL `1` pour activer l’utilisation de SSL. |
 | `sslmode` | Cela contrôle le niveau de protection SSL. Il est recommandé d’utiliser le mode SSL `require` lors de la connexion de clients tiers à Adobe Experience Platform. Le mode `require` garantit que le chiffrement est requis pour toutes les communications et que le réseau est approuvé pour se connecter au serveur approprié. La validation du certificat SSL du serveur n’est pas requise. |
-| `user` | Le nom d’utilisateur connecté à la base de données est votre identifiant d’organisation. Il s’agit d’une chaîne alphanumérique se terminant par `@Adobe.Org`. Cette valeur correspond à vos informations d’identification Experience Platform **[!UICONTROL Username]**. |
+| `user` | Le nom d’utilisateur connecté à la base de données est votre identifiant d’organisation. Il s’agit d’une chaîne alphanumérique se terminant par `@Adobe.Org`. Cette valeur correspond à vos informations d’identification Experience Platform **[!UICONTROL Nom d’utilisateur]**. |
 
 Utilisez la barre de recherche pour rechercher chaque propriété, puis sélectionnez la cellule correspondante pour la valeur du paramètre. La cellule est mise en surbrillance en bleu. Saisissez vos informations d’identification Experience Platform dans le champ de valeur et sélectionnez **[!DNL Apply]** pour ajouter la propriété du pilote.
 
@@ -62,7 +58,7 @@ La colonne [!DNL Edited] affiche une coche pour indiquer que la valeur du param�
 
 ### Informations d’identification d’Input Query Service {#query-service-credentials}
 
-Pour obtenir les informations d’identification nécessaires à la connexion de BBVisualizer à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis **[!UICONTROL Credentials]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [&#128279;](../ui/credentials.md) credentials.
+Pour obtenir les informations d’identification nécessaires à la connexion de BBVisualizer à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [](../ui/credentials.md) credentials.
 
 ![Page Informations d’identification de l’espace de travail Requêtes Experience Platform avec les Informations d’identification et les Informations d’identification arrivant à expiration en surbrillance.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
@@ -86,12 +82,12 @@ Vous pouvez établir une connexion à l’aide d’informations d’identificati
 
 | Paramètre de connexion | Description |
 |---|---|
-| **[!UICONTROL Name]** | Créez un nom pour votre connexion. Il est recommandé de fournir un nom convivial pour reconnaître la connexion. |
-| **[!UICONTROL Database Server]** | Il s’agit de vos informations d’identification Experience Platform **[!UICONTROL Host]**. |
-| **[!UICONTROL Database Port]** | Port de [!DNL Query Service]. Vous devez utiliser le port **80** ou **5432** pour vous connecter à [!DNL Query Service]. |
-| **[!UICONTROL Database]** | Utilisez la valeur de vos informations d’identification Experience Platform **[!UICONTROL Database]** : `prod:all`. |
-| **[!UICONTROL Database Userid]** | Il s’agit de votre identifiant d’organisation Experience Platform. Utilisez la valeur de vos informations d’identification Experience Platform **[!UICONTROL Username]**. L’ID aura le format `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL Database Password]** | Cette chaîne alphanumérique correspond à vos informations d’identification Experience Platform **[!UICONTROL Password]**. Si vous souhaitez utiliser des informations d’identification non expirantes, cette valeur correspond aux arguments concaténés des `technicalAccountID` et `credential` téléchargés dans le fichier de configuration JSON. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier JSON de configuration pour les informations d’identification non expirantes est un téléchargement unique pendant leur initialisation dont Adobe ne conserve pas de copie. |
+| **[!UICONTROL Nom]** | Créez un nom pour votre connexion. Il est recommandé de fournir un nom convivial pour reconnaître la connexion. |
+| **[!UICONTROL Serveur de base de données]** | Il s’agit de vos informations d’identification Experience Platform **[!UICONTROL hôte]**. |
+| **[!UICONTROL Port de base de données]** | Port de [!DNL Query Service]. Vous devez utiliser le port **80** ou **5432** pour vous connecter à [!DNL Query Service]. |
+| **[!UICONTROL Base de données]** | Utilisez votre valeur d’informations d’identification Experience Platform **[!UICONTROL Base de données]** : `prod:all`. |
+| **[!UICONTROL Identifiant utilisateur de la base de données]** | Il s’agit de votre identifiant d’organisation Experience Platform. Utilisez votre valeur d’identification Experience Platform **[!UICONTROL Nom d’utilisateur]**. L’ID aura le format `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL Mot de passe de la base de données]** | Cette chaîne alphanumérique correspond à vos informations d’identification Experience Platform **[!UICONTROL mot de passe]**. Si vous souhaitez utiliser des informations d’identification non expirantes, cette valeur correspond aux arguments concaténés des `technicalAccountID` et `credential` téléchargés dans le fichier de configuration JSON. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier JSON de configuration pour les informations d’identification non expirantes est un téléchargement unique pendant leur initialisation dont Adobe ne conserve pas de copie. |
 
 Après avoir saisi toutes les informations d’identification pertinentes, sélectionnez **[!DNL Connect]**.
 
@@ -99,4 +95,4 @@ La boîte de dialogue [!DNL Connect] s’affiche à la première occasion de la 
 
 ## Étapes suivantes
 
-Maintenant que vous avez connecté [!DNL DbVisualizer] à [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur l’écriture et l’exécution de requêtes, consultez le guide [&#x200B; sur l’exécution de requêtes](../best-practices/writing-queries.md).
+Maintenant que vous avez connecté [!DNL DbVisualizer] à [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur l’écriture et l’exécution de requêtes, consultez le guide [ sur l’exécution de requêtes](../best-practices/writing-queries.md).

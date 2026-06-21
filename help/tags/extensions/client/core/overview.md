@@ -3,33 +3,15 @@ title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 TQID: https://experienceleague.adobe.com/PikhqnR--WUiowunORXrFQzTxdBab-XG4LWw8py8B-I
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7aid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 5449
-ht-degree: 94%
+source-wordcount: 5459
+ht-degree: 93%
 
 ---
 
@@ -198,8 +180,8 @@ Chacun des types d’événements de formulaire utilise les paramètres suivants
 
 #### Specific Elements \| Any Element
 
-* Si vous choisissez **[!UICONTROL Specific Elements]**, les options permettant de sélectionner les éléments et les valeurs de propriété s’affichent.
-* Si vous choisissez **[!UICONTROL Any Element]**, aucune autre option n’est nécessaire pour réduire les éléments.
+* Si vous choisissez **[!UICONTROL Éléments spécifiques]**, les options permettant de sélectionner les éléments et les valeurs de propriété s’affichent.
+* Si vous choisissez **[!UICONTROL N’importe quel élément]**, aucune autre option n’est nécessaire pour réduire les éléments.
 
 #### Elements matching the CSS selector
 
@@ -251,9 +233,9 @@ Spécifiez un code personnalisé qui doit exister comme condition de l’événe
 
 Utilisez l’éditeur de code intégré pour saisir le code personnalisé :
 
-1. Sélectionner **[!UICONTROL Open Editor]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Une variable nommée `event` sera automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 
@@ -577,8 +559,8 @@ Fournissez le code qui s’exécute une fois que l’événement est déclenché
    * JavaScript
    * HTML
 1. Indiquez si le code d’action doit être exécuté globalement.
-1. Sélectionner **[!UICONTROL Open Editor]**.
-1. Modifiez le code, puis cliquez sur **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
+1. Modifiez le code, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 Lorsque JavaScript est sélectionné comme langage, une variable nommée `event` est automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 

@@ -3,18 +3,12 @@ title: Activer un centre d’excellence à l’aide des outils de sandbox
 description: Créez un centre d’excellence à l’aide de l’outil sandbox en créant un package « sandbox doré » pour normaliser les bonnes pratiques sur plusieurs sandbox.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
 TQID: https://experienceleague.adobe.com/uaWArD7gFpe3GFQTu3BoRe-bGd0DTCYTYvFvDPZBtuc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 914
+source-wordcount: 915
 ht-degree: 8%
 
 ---
@@ -49,14 +43,14 @@ Lorsque vous prévoyez créer votre propre centre d&#39;excellence au sein de vo
 
 ### Fonctionnalités de l’interface utilisateur, composants Experience Platform et produits Experience Cloud que vous utiliserez {#ui-functionality-and-elements}
 
-Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser plusieurs zones de Adobe Experience Platform. Vérifiez que vous disposez des autorisations de contrôle d’accès basé sur les attributs [&#x200B; nécessaires](../../access-control/abac/overview.md) pour toutes ces zones, ou demandez à votre administrateur système de vous accorder les autorisations nécessaires.
+Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser plusieurs zones de Adobe Experience Platform. Vérifiez que vous disposez des autorisations de contrôle d’accès basé sur les attributs [ nécessaires](../../access-control/abac/overview.md) pour toutes ces zones, ou demandez à votre administrateur système de vous accorder les autorisations nécessaires.
 
 - [Outil Sandbox](../ui/sandbox-tooling.md)
 - [Gestion des sandbox](../ui/user-guide.md)
 - [Jeux de données](../../catalog/datasets/overview.md)
 - [Schémas](../../xdm//home.md)
 - [Audiences](../../segmentation/home.md)
-- [Parcours depuis Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Parcours depuis Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Comment réaliser le cas d’utilisation : vue d’ensemble de haut niveau {#achieve-the-use-case-high-level}
 
@@ -91,7 +85,7 @@ L’outil Sandbox vous permet de partager des packages que vous avez créés dan
 
 ### Surveiller les importations et les exportations au moyen de journaux d’audit
 
-Lorsque vous importez ou exportez votre package, vous pouvez surveiller le statut des tâches à l’aide du tableau de bord **[!UICONTROL Jobs]** dans Experience Platform. Pour en savoir plus sur la surveillance des tâches, consultez le guide sur la [surveillance des détails d’importation](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Lorsque vous importez ou exportez votre package, vous pouvez surveiller le statut des tâches à l’aide du tableau de bord **[!UICONTROL Tâches]** dans Experience Platform. Pour en savoir plus sur la surveillance des tâches, consultez le guide sur la [surveillance des détails d’importation](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### Mettez régulièrement à jour le sandbox doré
 
@@ -99,7 +93,7 @@ Maintenant que votre package sandbox doré est terminé, vous avez établi un ce
 
 >[!NOTE]
 >
-> Les étapes ci-dessus suivent le processus décrit dans l’interface utilisateur d’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API[&#128279;](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
+> Les étapes ci-dessus suivent le processus décrit dans l’interface utilisateur d’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` [endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 

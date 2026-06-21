@@ -4,24 +4,14 @@ description: Amazon Ads propose toute une gamme d’options pour vous aider à a
 last-substantial-update: 2025-10-08T00:00:00.000Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 TQID: https://experienceleague.adobe.com/EBaIP492yo-ojWg9hkx3TiZ442ah-YiOQSSDXTaG1U0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d00e9f03-e50b-4162-b143-0c0817c937c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2263
-ht-degree: 28%
+source-wordcount: 2327
+ht-degree: 27%
 
 ---
 
@@ -35,7 +25,7 @@ ht-degree: 28%
 >
 >[[!DNL Amazon Ads v2]](./amazon-ads-v2.md) est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [!DNL Amazon Ads] existante (héritée), elle continue à fonctionner sans aucune modification requise. [[!DNL Amazon Ads v2]](./amazon-ads-v2.md) se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à cette destination héritée.
 >
->Après la fin avril 2026, [!DNL Amazon Ads v2] sera renommé [!DNL Amazon Ads] et la carte héritée sera masquée, laissant une seule carte de destination dans le catalogue. Les flux de données hérités existants continueront à fonctionner et vous pouvez les gérer dans l’onglet **[!UICONTROL Browse]** au-delà de cette date.
+>Après la fin avril 2026, [!DNL Amazon Ads v2] sera renommé [!DNL Amazon Ads] et la carte héritée sera masquée, laissant une seule carte de destination dans le catalogue. Les flux de données hérités existants continueront à fonctionner et vous pourrez les gérer dans l’onglet **[!UICONTROL Parcourir]** au-delà de cette date.
 
 L’intégration [!DNL Amazon Ads] à [!DNL Adobe Experience Platform] offre une intégration clé en main aux produits [!DNL Amazon Ads], y compris aux [!DNL Amazon DSP] (ADSP) et [!DNL Amazon Marketing Cloud] (AMC).
 
@@ -76,15 +66,15 @@ La connexion *[!DNL Amazon Ads]* prend en charge l’activation des identités d
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| `firstName` | Prénom de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Apply transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
-| `lastName` | Nom de famille de l&#39;utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Apply transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
-| `street` | Adresse de l’utilisateur au niveau de la rue | Seule SHA256 entrée hachée est prise en charge. Normalisez avant de procéder au hachage. N’activez **&#x200B;**&#x200B;la transformation côté Adobe. |
-| `city` | Ville de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Apply transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
-| `state` | Département ou province de l&#39;utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Apply transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
-| `zip` | Code postal de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Apply transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
-| `country` | Pays de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Apply transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
+| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| `firstName` | Prénom de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Appliquer la transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
+| `lastName` | Nom de famille de l&#39;utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Appliquer la transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
+| `street` | Adresse de l’utilisateur au niveau de la rue | Seule SHA256 entrée hachée est prise en charge. Normalisez avant de procéder au hachage. N’activez **** la transformation côté Adobe. |
+| `city` | Ville de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Appliquer la transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
+| `state` | Département ou province de l&#39;utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Appliquer la transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
+| `zip` | Code postal de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Appliquer la transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
+| `country` | Pays de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez **[!UICONTROL Appliquer la transformation]** dans l’interface utilisateur de [!DNL Adobe Experience Platform]. |
 
 {style="table-layout:auto"}
 
@@ -105,7 +95,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -116,8 +106,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 | ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination *[!DNL Amazon Ads]*. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination *[!DNL Amazon Ads]*. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -125,13 +115,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](/help/destinations/ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 Vous accédez à l’interface de connexion [!DNL Amazon Ads] où vous sélectionnez d’abord les comptes de l’annonceur auxquels vous souhaitez vous connecter. Lors de la connexion, vous êtes redirigé vers [!DNL Adobe Experience Platform] avec une nouvelle connexion fournie avec l’ID du compte publicitaire que vous avez sélectionné. Sélectionnez le compte publicitaire approprié dans l’écran de configuration de destination pour continuer.
 
@@ -139,17 +129,17 @@ Vous accédez à l’interface de connexion [!DNL Amazon Ads] où vous sélectio
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaissez cette destination.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaissez cette destination.
 * **[!UICONTROL Description]** : description qui vous aide à identifier cette destination.
-* **[!UICONTROL Amazon Ads Connection]** : sélectionnez l’identifiant du compte [!DNL Amazon Ads] cible utilisé pour la destination.
+* **[!UICONTROL Connexion Amazon Ads]** : sélectionnez l’identifiant du compte [!DNL Amazon Ads] cible utilisé pour la destination.
 
 >[!NOTE]
 >
 >Après avoir enregistré la configuration de destination, vous ne pouvez pas modifier l’ID publicitaire [!DNL Amazon Ads], même si vous vous authentifiez à nouveau via votre compte Amazon. Pour utiliser un autre ID publicitaire [!DNL Amazon Ads], vous devez créer une nouvelle connexion de destination. Les annonceurs qui sont déjà configurés sur une intégration avec ADSP doivent créer un nouveau flux de destination s’ils souhaitent que leurs audiences soient diffusées à l’AMC ou sur un compte ADSP différent.
 
-* **[!UICONTROL Advertiser Region]** : sélectionnez la région dans laquelle votre annonceur est hébergé. Pour plus d’informations sur les marchés pris en charge par chaque zone géographique, consultez la [documentation Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+* **[!UICONTROL Zone géographique des annonceurs]** : sélectionnez la zone géographique dans laquelle votre annonceur est hébergé. Pour plus d’informations sur les marchés pris en charge par chaque zone géographique, consultez la [documentation Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-* **[!UICONTROL Amazon Ads Consent Signal]** : vérifiez que toutes les données envoyées via cette connexion ont consenti à utiliser les données personnelles à des fins publicitaires. « ACCORDÉ » indique le consentement donné par Amazon pour utiliser les données personnelles du client à des fins publicitaires. Les valeurs autorisées sont « ACCORDÉ » et « REFUSÉ ». Tous les enregistrements envoyés par le biais de connexions avec « REFUSÉ » sont rejetés pour une utilisation ultérieure dans [!DNL Amazon Ads].
+* **[!UICONTROL Signal de consentement Amazon Ads]** : vérifiez que toutes les données envoyées via cette connexion ont consenti à utiliser des données personnelles à des fins publicitaires. « ACCORDÉ » indique le consentement donné par Amazon pour utiliser les données personnelles du client à des fins publicitaires. Les valeurs autorisées sont « ACCORDÉ » et « REFUSÉ ». Tous les enregistrements envoyés par le biais de connexions avec « REFUSÉ » sont rejetés pour une utilisation ultérieure dans [!DNL Amazon Ads].
 
 ![Configurer une nouvelle destination](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
@@ -157,14 +147,14 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](/help/destinations/ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -176,7 +166,7 @@ La connexion [!DNL Amazon Ads] prend en charge les adresses e-mail et numéros d
 
 * Pour mapper des adresses e-mail hachées, sélectionnez l’espace de noms d’identité `Email_LC_SHA256` comme champ source.
 * Pour mapper des numéros de téléphone hachés, sélectionnez l’espace de noms d’identité `Phone_SHA256` comme champ source.
-* Pour mapper des adresses e-mail ou des numéros de téléphone non hachés, sélectionnez les espaces de noms d’identité correspondants comme champs source, puis cochez l’option **[!UICONTROL Apply transformation]** pour que les identités soient [!DNL Experience Platform] au hachage lors de l’activation.
+* Pour mapper des adresses e-mail ou des numéros de téléphone non hachés, sélectionnez les espaces de noms d’identité correspondants comme champs source, puis cochez l’option **[!UICONTROL Appliquer la transformation]** pour que les identités [!DNL Experience Platform] hachées lors de l’activation.
 * *NOUVEAU à partir de la version de septembre 2024* : Amazon Ads exige que vous mappiez un champ contenant une valeur `countryCode` au format ISO à 2 caractères pour faciliter le processus de résolution d’identité (par exemple : US, GB, MX, CA, etc.). Les connexions sans mappages `countryCode` ont un impact négatif sur les taux de correspondance d’identité.
 
 >[!NOTE]
@@ -197,13 +187,13 @@ Une fois votre audience chargée, vérifiez qu’elle a été créée et chargé
 
 **Par[!DNL Amazon DSP]**
 
-Accédez à **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**. Si votre audience a été créée avec succès et qu’elle contient le nombre minimum de membres, le statut `Active` s’affiche. Vous trouverez plus d’informations sur la taille et la portée de votre audience dans le panneau Portée prévue sur le côté droit de l’interface utilisateur de [!DNL Amazon DSP].
+Accédez à **[!UICONTROL ID publicitaire]** > **[!UICONTROL Audiences]** > **[!UICONTROL Audiences publicitaires]**. Si votre audience a été créée avec succès et qu’elle contient le nombre minimum de membres, le statut `Active` s’affiche. Vous trouverez plus d’informations sur la taille et la portée de votre audience dans le panneau Portée prévue sur le côté droit de l’interface utilisateur de [!DNL Amazon DSP].
 
 ![Validation de la création d’audiences Amazon DSP.](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Par[!DNL Amazon Marketing Cloud]**
 
-Dans le navigateur de schéma de gauche, recherchez votre audience sous **[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]**. Vous pouvez ensuite interroger votre audience dans l’éditeur SQL AMC avec la clause suivante :
+Dans le navigateur de schéma de gauche, recherchez votre audience sous **[!UICONTROL Annonceur téléchargé]** > **[!UICONTROL aep_audiences]**. Vous pouvez ensuite interroger votre audience dans l’éditeur SQL AMC avec la clause suivante :
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
@@ -228,7 +218,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
 | Octobre 2025 | Ajout de la prise en charge des champs d’identité supplémentaires | Ajout d’identifiants personnels supplémentaires pris en charge, tels que `firstName`, `lastName`, `street`, `city`, `state`, `zip` et `country`. Le mappage de ces champs peut améliorer les taux de correspondance d’audience. |
-| Février 2025 | Ajout de l’exigence d’ajouter des **[!UICONTROL Amazon Ads Consent Signal]** aux flux de données d’exportation et promotion de la destination de la version bêta vers la version disponible pour tous. |  |
+| Février 2025 | Ajout de l’exigence d’ajouter **[!UICONTROL un signal de consentement Amazon Ads]** pour exporter les flux de données et promouvoir la destination de la version bêta vers la version générale. |  |
 | Mai 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Ajout de l’option de mappage pour exporter `countryCode` paramètre dans Amazon Ads. Utilisez `countryCode` dans l’[étape de mappage](#map) pour améliorer vos taux de correspondance d’identité avec Amazon. |
 | Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Ajout de l’option permettant d’exporter les audiences à utiliser dans [!DNL Amazon Marketing Cloud] (AMC). |
 | Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge de la sélection de la zone géographique de l’annonceur dans le [workflow de connexion de destination](#destination-details).</li><li>Documentation mise à jour sur la fonctionnalité de sélection de la zone géographique de l’annonceur. Pour plus d’informations sur la sélection de la zone géographique de l’annonceur appropriée, consultez la [documentation d’Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |

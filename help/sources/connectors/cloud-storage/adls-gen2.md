@@ -3,10 +3,8 @@ title: Présentation Du Connecteur Source Azure Data Lake Storage Gen2
 description: Découvrez comment connecter Azure Data Lake Storage Gen2 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
 TQID: https://experienceleague.adobe.com/7LUxoK4Y5yE7tB-3IhRuHRk1d2MnrDvmecgE7ZIaWgk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 460
@@ -22,7 +20,7 @@ Les sources de stockage dans le cloud peuvent importer vos propres données dans
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 >[!IMPORTANT]
 >

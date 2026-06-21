@@ -4,24 +4,11 @@ title: Mécanismes de sécurisation pour Identity Service
 description: Ce document fournit des informations sur les limites d’utilisation et de débit pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 TQID: https://experienceleague.adobe.com/TxDQAH3mDss11-5alyyZG0e6ulXpvKuvwAWlaQ64oRY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: e0c8953a-a203-4291-bef3-3560160d3041id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 72b2761eabbce78363faca6df8d4e18fe9520afc
 workflow-type: tm+mt
 source-wordcount: 1666
@@ -218,7 +205,7 @@ Pour plus d’informations sur [!DNL Identity Service], consultez la documentati
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

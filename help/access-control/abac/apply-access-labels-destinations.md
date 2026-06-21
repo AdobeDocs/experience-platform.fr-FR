@@ -4,24 +4,19 @@ description: Découvrez comment utiliser les libellés d’accès pour gérer l�
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
 TQID: https://experienceleague.adobe.com/i5TpbwfUKR06q-HN-cW1YzatETbCwVIc1fZWBGsZ6-E
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1027
+source-wordcount: 1048
 ht-degree: 3%
 
 ---
 
 # Utiliser des libellés d’accès pour gérer l’accès des utilisateurs et utilisatrices aux flux de données de destination
 
-Dans le cadre de la fonctionnalité [[!UICONTROL attribute-based access control]](overview.md) de Real-Time CDP, vous pouvez désormais appliquer des libellés d’accès aux [flux de données de destination](../../dataflows/ui/monitor-destinations.md). Ainsi, vous pouvez vous assurer que seul un sous-ensemble d’utilisateurs de votre organisation a accès à des flux de données de destination spécifiques.
+Dans le cadre de la fonctionnalité [[!UICONTROL contrôle d’accès basé sur les attributs]](overview.md) de Real-Time CDP, vous pouvez désormais appliquer des libellés d’accès aux [flux de données de destination](../../dataflows/ui/monitor-destinations.md). Ainsi, vous pouvez vous assurer que seul un sous-ensemble d’utilisateurs de votre organisation a accès à des flux de données de destination spécifiques.
 
 Lorsque vous ajoutez un libellé d’accès à une destination particulière, seuls les utilisateurs et utilisatrices ayant accès à un rôle auquel ce libellé est affecté peuvent voir et modifier ce flux de données de destination. Si un flux de données de destination n’est marqué d’aucun libellé, il est visible par tous les utilisateurs appartenant à votre organisation.
 
@@ -29,18 +24,18 @@ Lisez cette page pour comprendre les exemples de cas d’utilisation, les condit
 
 ## Conditions préalables {#prerequisites}
 
-Notez les conditions préalables suivantes à remplir avant de commencer à utiliser cette fonctionnalité. Pour vous familiariser avec [!UICONTROL attribute-based access control], Adobe vous recommande également de lire les articles suivants :
+Notez les conditions préalables suivantes à remplir avant de commencer à utiliser cette fonctionnalité. Pour vous familiariser avec le [!UICONTROL contrôle d’accès basé sur les attributs], Adobe vous recommande également de lire les articles suivants :
 
 * [Présentation du contrôle d’accès basé sur les attributs](/help/access-control/abac/overview.md)
 * [Guide complet du contrôle d’accès basé sur les attributs](/help/access-control/abac/end-to-end-guide.md)
 
 ### Accès à l’interface utilisateur des autorisations {#access-permissions-ui}
 
-[!UICONTROL Permissions] est la zone d’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles d’utilisateur et des politiques afin de gérer les autorisations pour les fonctionnalités et objets d’une application de produit. Pour commencer, consultez la [section relative aux autorisations](/help/access-control/abac/end-to-end-guide.md#permissions).
+La zone [!UICONTROL Autorisations] d’Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des politiques afin de gérer les autorisations des fonctionnalités et des objets dans une application de produit. Pour commencer, consultez la [section relative aux autorisations](/help/access-control/abac/end-to-end-guide.md#permissions).
 
 ### Créer des rôles, des libellés et affecter des utilisateurs {#create-roles-labels-assign-users}
 
-Après avoir obtenu l’accès à l’interface utilisateur de [!UICONTROL permissions], vous ou un membre de votre équipe devez configurer des rôles et ajouter les libellés requis à ces rôles. Enfin, les utilisateurs et utilisatrices qui doivent accéder aux ressources libellées avec des libellés spécifiques doivent être ajoutés au rôle. Consultez les sections de documentation suivantes :
+Après avoir obtenu l’accès à l’interface utilisateur [!UICONTROL autorisations], vous ou un membre de votre équipe devez configurer des rôles et ajouter les libellés requis à ces rôles. Enfin, les utilisateurs et utilisatrices qui doivent accéder aux ressources libellées avec des libellés spécifiques doivent être ajoutés au rôle. Consultez les sections de documentation suivantes :
 
 * [Créer un rôle](/help/access-control/abac/ui/roles.md)
 * [Ajouter des libellés à un rôle](/help/access-control/abac/end-to-end-guide.md#label-roles)
@@ -64,10 +59,10 @@ Avec le contrôle d’accès au niveau de l’objet pour les destinations, limit
 
 Pour appliquer des libellés d’accès à un flux de données spécifique :
 
-1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** et localisez le flux de données de destination pour lequel vous souhaitez limiter l’accès des utilisateurs et utilisatrices.
-1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande **[!UICONTROL Apply access labels]** ![Modifier les détails](/help/images/icons/key.png) pour ajouter de nouveaux libellés et gérer les libellés existants du flux de données.
+1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et localisez le flux de données de destination pour lequel vous souhaitez limiter l’accès des utilisateurs et utilisatrices.
+1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier les détails](/help/images/icons/key.png) **[!UICONTROL Appliquer les libellés d’accès]** pour ajouter de nouveaux libellés et gérer les libellés existants du flux de données.
    ![Sélectionnez Appliquer les libellés d’accès dans la vue Parcourir de l’espace de travail des destinations.](/help/access-control/images/olac/apply-access-labels.png)
-1. Sélectionnez les libellés à ajouter au flux de données de destination et sélectionnez **[!UICONTROL Save]**.
+1. Sélectionnez les libellés à ajouter au flux de données de destination et sélectionnez **[!UICONTROL Enregistrer]**.
    ![Sélectionnez les libellés d’accès dans qui doivent s’appliquer au flux de données de destination.](/help/access-control/images/olac/view-access-labels.png)
 1. Notez que le flux de données dispose désormais d’un libellé d’accès affiché dans l’interface utilisateur.
    ![Affichage de plusieurs flux de données de destination avec le flux de données sélectionné et affichage d’un libellé d’accès.](/help/access-control/images/olac/dataflow-with-access-label.png)
@@ -99,4 +94,4 @@ Vous pouvez ajouter des libellés standard et personnalisés aux flux de donnée
 
 En suivant les étapes de ce document, vous savez maintenant comment appliquer des libellés d’accès aux flux de données de destination afin que seul un sous-ensemble d’utilisateurs de votre organisation ait accès à des flux de données de destination spécifiques.
 
-Vous pouvez ensuite en savoir plus sur les autres fonctionnalités prises en charge par [!UICONTROL attribute-based access control] lors de l’activation de données vers les destinations. Par exemple, vous pouvez limiter l’accès des utilisateurs et utilisatrices à l’[affichage et activation de champs spécifiques uniquement](/help/access-control/abac/overview.md#destinations).
+Vous pouvez ensuite en savoir plus sur les autres fonctionnalités prises en charge par le [!UICONTROL contrôle d’accès basé sur les attributs] lors de l’activation des données vers les destinations. Par exemple, vous pouvez limiter l’accès des utilisateurs et utilisatrices à l’[affichage et activation de champs spécifiques uniquement](/help/access-control/abac/overview.md#destinations).

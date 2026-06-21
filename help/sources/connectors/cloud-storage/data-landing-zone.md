@@ -3,18 +3,13 @@ title: Source de la zone d’atterrissage des données
 description: Découvrez comment connecter Data Landing Zone à Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
 TQID: https://experienceleague.adobe.com/-yrTnh4LVgXOHrgyNxOq-TmulMCnJxzv9HmYeeOlNBc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1426
+source-wordcount: 1430
 ht-degree: 19%
 
 ---
@@ -169,7 +164,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/landing/multi-cloud).
+>Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Pour découvrir comment configurer votre compte [!DNL Data Landing Zone] pour Experience Platform sur Amazon Web Services (AWS), procédez comme suit.
 
@@ -315,7 +310,7 @@ Enfin, accédez à l’URL générée pour vous connecter directement à la cons
 
 >[!IMPORTANT]
 >
->- Pour vous connecter à la source, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]**. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
+>- Pour vous connecter à la source, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les sources]** et **[!UICONTROL Gérer les sources]**. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
 >
 >- Les liens privés ne sont actuellement pas pris en charge lors de la connexion à Experience Platform à l’aide de l’[!DNL Data Landing Zone] . Les seules méthodes d’accès prises en charge sont les méthodes répertoriées [ici](#manage-the-contents-of-your-data-landing-zone).
 

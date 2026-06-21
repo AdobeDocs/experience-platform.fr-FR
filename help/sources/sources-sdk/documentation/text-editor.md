@@ -5,10 +5,8 @@ title: Utiliser un éditeur de texte dans votre environnement local pour créer 
 description: Ce document décrit les étapes à suivre pour utiliser votre environnement local afin de créer de la documentation pour votre source et d’envoyer une requête de tirage (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
 TQID: https://experienceleague.adobe.com/2cI60PYEFSn-EAZCnKuJDC9TO7Qys6-pfCzzLHjEL2E
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 678
@@ -22,7 +20,7 @@ Ce document décrit les étapes à suivre pour utiliser votre environnement loca
 
 >[!TIP]
 >
->Les documents suivants du guide de contribution d’Adobe peuvent être utilisés pour continuer à prendre en charge votre processus de documentation : <ul><li>[Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=fr)</li><li>[Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr)</li><li>[Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=fr)</li></ul>
+>Les documents suivants du guide de contribution d’Adobe peuvent être utilisés pour continuer à prendre en charge votre processus de documentation : <ul><li>[Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Conditions préalables
 
@@ -30,7 +28,7 @@ Le tutoriel suivant nécessite l’installation préalable de GitHub Desktop sur
 
 ## Connexion à GitHub et configuration de votre environnement de création local
 
-La première étape de la configuration de votre environnement de création local consiste à accéder au référentiel GitHub de [&#128279;](https://github.com/AdobeDocs/experience-platform.fr-FR).
+La première étape de la configuration de votre environnement de création local consiste à accéder au référentiel GitHub de [](https://github.com/AdobeDocs/experience-platform.en).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -42,7 +40,7 @@ Pour cloner le référentiel sur votre ordinateur local, sélectionnez **Code**.
 
 >[!TIP]
 >
->Pour plus d’informations, consultez le tutoriel sur [la configuration locale du référentiel Git pour obtenir de la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr#create-a-local-clone-of-the-repository).
+>Pour plus d’informations, consultez le tutoriel sur [la configuration locale du référentiel Git pour obtenir de la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -64,11 +62,11 @@ Sélectionnez ensuite **Branche de publication**.
 
 ## Créer la page de documentation pour votre source
 
-Avec le référentiel cloné sur votre ordinateur local et une nouvelle branche créée, vous pouvez maintenant commencer à créer la page de documentation de votre nouvelle source via l’éditeur de texte [&#x200B; de votre choix](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=fr#understand-markdown-editors).
+Avec le référentiel cloné sur votre ordinateur local et une nouvelle branche créée, vous pouvez maintenant commencer à créer la page de documentation de votre nouvelle source via l’éditeur de texte [ de votre choix](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
 Adobe vous recommande d’utiliser [Visual Studio Code](https://code.visualstudio.com/) et d’installer l’extension de création Adobe Markdown. Pour installer l’extension, lancez Visual Studio Code, puis sélectionnez l’onglet **Extensions** dans le volet de navigation de gauche.
 
-![&#x200B; extension](../assets/extension.png)
+![ extension](../assets/extension.png)
 
 Ensuite, saisissez `Adobe Markdown Authoring` dans la barre de recherche, puis sélectionnez **Installer** dans la page qui s’affiche.
 
@@ -102,6 +100,6 @@ Vérifiez que les branches de base et de comparaison sont correctes. Ajoutez une
 
 ![create-pr](../assets/create-pr.png)
 
-Vous pouvez confirmer que la demande d’extraction a été envoyée en examinant l’onglet Demandes d’extraction dans https://github.com/AdobeDocs/experience-platform.fr-FR.
+Vous pouvez confirmer que la demande d’extraction a été envoyée en examinant l’onglet Demandes d’extraction dans https://github.com/AdobeDocs/experience-platform.en.
 
 ![confirm-pr](../assets/confirm-pr.png)

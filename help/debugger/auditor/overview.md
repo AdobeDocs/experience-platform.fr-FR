@@ -4,22 +4,15 @@ description: Découvrez comment utiliser l’onglet Auditor dans Adobe Experienc
 keywords: debugger;extension experience platform debugger;chrome;extension;auditor;dtm;target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
 TQID: https://experienceleague.adobe.com/dZ9qYzzCOZr1KfnUSLk6fdFeXylDviKiHXRLZ80O8-s
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 362
-ht-degree: 34%
+source-wordcount: 367
+ht-degree: 32%
 
 ---
 
@@ -30,7 +23,7 @@ Dans Adobe Experience Platform Debugger, vous pouvez utiliser l’onglet **[!UIC
 Pour utiliser cette fonctionnalité :
 
 1. Sélectionnez **[!UICONTROL Auditor]** dans le volet de navigation de gauche.
-1. Sélectionnez **[!UICONTROL Run Auditor Tests]**. Une fois les tests terminés, leurs résultats apparaissent ci-dessous.
+1. Sélectionnez **[!UICONTROL Exécuter les tests d’Auditor]**. Une fois les tests terminés, leurs résultats apparaissent ci-dessous.
 
 ![Capture d’écran des résultats du test dans l’onglet Auditor](../images/auditor-results.png)
 
@@ -44,7 +37,7 @@ Chaque test est pondéré et votre score de test est égal au poids attribué. S
 | --- | --- |
 | 0 | Vous avertit des problèmes que vous devez connaître, mais n’affectez pas votre score. |
 | 1 | Recommande une optimisation. Aucune incidence sur la précision des données. |
-| 2 | L’échec de ce test signifie que vous n’aurez pas accès aux dernières fonctionnalités et correctifs de Adobe Experience Cloud. |
+| 2 | L’échec de ce test signifie que vous n’aurez pas accès aux fonctionnalités et correctifs les plus récents d’Adobe Experience Cloud. |
 | 3 | Tests d’efficacité et de respect des bonnes pratiques lors de la mise en œuvre. |
 | 4 | L’échec signifie que vous collectez peut-être des données non fiables. |
 | 5 | Un échec peut entraîner une perte de données. |

@@ -3,23 +3,14 @@ title: streamingMedia
 description: Configurez le SDK Web pour collecter des données relatives à l’utilisation des médias sur vos propriétés web.
 exl-id: f7733619-d35e-43eb-ac90-052717310c39
 TQID: https://experienceleague.adobe.com/p60r5QGs2W6uqX11MNuRA-9keaWhESwZxG3IIiu3Ak4
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 301
+source-wordcount: 303
 ht-degree: 7%
 
 ---
@@ -64,4 +55,4 @@ alloy("configure", {
 
 ## Configuration des médias en flux continu à l’aide de l’extension de balise Web SDK
 
-Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [&#x200B; Paramètres de configuration des médias en flux continu &#x200B;](/help/tags/extensions/client/web-sdk/configure/streaming-media.md).
+Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [ Paramètres de configuration des médias en flux continu ](/help/tags/extensions/client/web-sdk/configure/streaming-media.md).

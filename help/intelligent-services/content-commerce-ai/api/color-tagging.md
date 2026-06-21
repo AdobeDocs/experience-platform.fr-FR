@@ -5,12 +5,9 @@ title: Balisage des couleurs dans l’API de balisage de contenu
 description: Le service Balisage des couleurs, lorsqu’il reçoit une image, peut calculer l’histogramme des couleurs de pixel et les trier en fonction des couleurs dominantes dans des compartiments.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 TQID: https://experienceleague.adobe.com/-3IcRpEwb6-nMVQKV-5-y7D8Ms2Nt0bX3BsatLZmvZU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 667
@@ -381,4 +378,4 @@ Outre les couleurs de l’image globale, vous pouvez désormais voir les couleur
 | `repo:path` | chaîne | - | - | - | URL prédéfinie du document. |
 | `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
 | `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez cette option lors de la transmission du fichier image en tant qu’argument multipartie au lieu d’utiliser des URL prédéfinies. |
-| `dc:format` | string | Oui | - | « image/jpg »,<br>« image/jpeg »,<br>« image/png »,<br>« image/tiff » | Le codage de l’image est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
+| `dc:format` | chaîne | Oui | - | « image/jpg »,<br>« image/jpeg »,<br>« image/png »,<br>« image/tiff » | Le codage de l’image est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |

@@ -3,17 +3,13 @@ title: Connexion de votre compte Salesforce Marketing Cloud (V2) à Experience P
 description: Découvrez comment connecter votre compte Salesforce Marketing Cloud (V2) à Experience Platform via l’interface utilisateur.
 exl-id: a42a37c2-f75d-4237-8e09-442b38a41052
 TQID: https://experienceleague.adobe.com/-4CERuxZJOSCNO1Fzg1MmsbfVJdMiY19a11Op-Nbg40
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 841
+source-wordcount: 874
 ht-degree: 10%
 
 ---
@@ -39,23 +35,23 @@ Lisez la [[!DNL Salesforce Marketing Cloud] présentation](../../../../connector
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Pour vous connecter à [!DNL Salesforce Marketing Cloud], accédez à la catégorie *[!UICONTROL Marketing Automation]* , sélectionnez la carte source **[!UICONTROL (V2) Salesforce Marketing Cloud]**, puis sélectionnez **[!UICONTROL Set up]**.
+Pour vous connecter à [!DNL Salesforce Marketing Cloud], accédez à la catégorie *[!UICONTROL Automatisation du marketing]*, sélectionnez la carte source **[!UICONTROL (V2) Salesforce Marketing Cloud]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la source Salesforce Marketing Cloud sélectionnée.](../../../../images/tutorials/create/sfmc/catalog.png)
 
 ## Utiliser un compte existant {#existing}
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte [!DNL Salesforce Marketing Cloud] à utiliser.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL Salesforce Marketing Cloud] à utiliser.
 
 ![Interface du compte existant du workflow des sources](../../../../images/tutorials/create/sfmc/existing.png)
 
 ## Créer un nouveau compte {#new}
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom et une description sous votre [!UICONTROL Source connection details]. Ensuite, sous [!UICONTROL Account authentication], indiquez les valeurs de vos **ID client**, **Secret client** et **Point d’entrée de base**. Vous pouvez lire le [guide d’authentification](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) pour plus d’informations sur ces informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques secondes le temps que votre connexion s’établisse.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description sous les [!UICONTROL détails de connexion Source]. Ensuite, sous [!UICONTROL Authentification du compte], indiquez les valeurs de votre **ID client**, **Secret client** et **Point d’entrée de base**. Vous pouvez lire le [guide d’authentification](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) pour plus d’informations sur ces informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques secondes le temps que votre connexion s’établisse.
 
 ![Nouvelle interface de compte du workflow des sources.](../../../../images/tutorials/create/sfmc/new.png)
 
@@ -63,7 +59,7 @@ Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un
 
 La source de [!DNL Salesforce Marketing Cloud] prend uniquement en charge l’ingestion de données à partir d’extensions de données [!DNL Salesforce Marketing Cloud].
 
-Utilisez l’interface [!UICONTROL Select data] pour sélectionner l’extension de données à ingérer à partir de l’instance [!DNL Salesforce Marketing Cloud]. Une fois que vous avez sélectionné l’extension de données, vous pouvez utiliser le panneau d’aperçu pour confirmer que le jeu de données contient les champs attendus avant de continuer.
+Utilisez l’interface [!UICONTROL Sélectionner des données] pour sélectionner l’extension de données à ingérer à partir de votre instance [!DNL Salesforce Marketing Cloud]. Une fois que vous avez sélectionné l’extension de données, vous pouvez utiliser le panneau d’aperçu pour confirmer que le jeu de données contient les champs attendus avant de continuer.
 
 ![Étape de sélection des données du workflow des sources](../../../../images/tutorials/create/sfmc/select-data.png)
 
@@ -81,7 +77,7 @@ Dans [!DNL Salesforce Marketing Cloud], les extensions de données ne sont pas c
 
 ## Planifier un flux de données
 
-Une fois le mappage terminé, vous pouvez configurer un planning d’ingestion pour votre flux de données. Définissez votre [!UICONTROL Frequency] sur `Once` pour configurer une exécution d’ingestion unique. Pour une ingestion incrémentielle, vous pouvez définir votre [!UICONTROL Frequency] sur `Hour`, `Day` ou `Week`. Lors de l’utilisation de l’ingestion incrémentielle, vous devez également configurer le [!UICONTROL Interval] pour définir le temps écoulé entre les exécutions d’ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
+Une fois le mappage terminé, vous pouvez configurer un planning d’ingestion pour votre flux de données. Définissez votre [!UICONTROL Fréquence] sur `Once` pour configurer une exécution d’ingestion unique. Pour une ingestion incrémentielle, vous pouvez définir votre [!UICONTROL Fréquence] sur `Hour`, `Day` ou `Week`. Lors de l’utilisation de l’ingestion incrémentielle, vous devez également configurer l’[!UICONTROL  Intervalle ] pour définir le temps écoulé entre les exécutions d’ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
 
 >[!TIP]
 >
@@ -93,7 +89,7 @@ Vous devez sélectionner un champ delta (date/heure) dans votre jeu de données 
 
 ## Réviser
 
-Une fois le planning d’ingestion configuré, utilisez l’interface [!UICONTROL Review] pour confirmer les détails de votre flux de données. Sélectionnez **[!UICONTROL Finish]** pour terminer la configuration et patientez quelques instants le temps que votre flux de données se lance.
+Une fois le planning d’ingestion configuré, utilisez l’interface [!UICONTROL Révision] pour confirmer les détails de votre flux de données. Sélectionnez **[!UICONTROL Terminer]** pour terminer la configuration et patienter quelques instants le temps que votre flux de données se lance.
 
 ![Étape de révision du workflow des sources.](../../../../images/tutorials/create/sfmc/review.png)
 

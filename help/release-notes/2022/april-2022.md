@@ -3,42 +3,15 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 TQID: https://experienceleague.adobe.com/f8lT77RmA-W-SjJ-2Q0K8rP1EC0m24GDreUn7LAWcVY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: ee602049-8a18-43df-9299-a689a025a371
-  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: ee602049-8a18-43df-9299-a689a025a371id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2866
-ht-degree: 92%
+source-wordcount: 2990
+ht-degree: 88%
 
 ---
 
@@ -69,18 +42,18 @@ Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs
 
 | Widget | Tableau de bord | Description |
 | ------ | --------- | ----------- |
-| [!UICONTROL Profiles added trend] | Profils | Ce widget utilise un graphique linéaire pour illustrer le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. |
-| [!UICONTROL Audiences mapped to destination status] | Profils | Ce widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. |
-| [!UICONTROL Audiences size] | Profils | Ce widget fournit un tableau à deux colonnes qui répertorie jusqu’à 20 segments et le nombre total d’audiences contenues dans chaque segment. La liste dépend de la politique de fusion appliquée et le nombre total d’audiences est classé par ordre décroissant. |
-| [!UICONTROL Profile count trend] | Profils | Ce widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Les données peuvent être consultées sur des périodes de 30 jours, 90 jours et 12 mois. |
-| [!UICONTROL Single identity profiles by identity] | Profils | Ce widget utilise un graphique en barres pour illustrer le nombre total de profils qui sont identifiés à l’aide d’un identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes. |
-| [!UICONTROL Destination status] | Destinations | Ce widget affiche le nombre total de destinations activées sous la forme d’une mesure unique et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les destinations activées et désactivées. |
-| [!UICONTROL Active destinations by destination platform] | Destinations | Ce widget utilise un tableau à deux colonnes pour afficher la liste des plateformes de destination actives et le nombre total de destinations actives pour chaque plateforme de destination. |
-| [!UICONTROL Activated audiences across all destinations] | Destinations | Ce widget fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. |
-| [!UICONTROL Audience activation order] | Segments | Ce widget fournit un tableau à trois colonnes qui répertorie le nom de destination, la plateforme et la date d’activation de l’audience. |
-| [!UICONTROL Audience size trend] | Segments | Ce widget fournit un graphique linéaire qui illustre le nombre total de profils qui répondent aux critères d’une définition de segment sur des périodes de 30 jours, 90 jours et 12 mois. |
-| [!UICONTROL Audience size change trend] | Segments | Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les aperçus quotidiens les plus récents. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. |
-| [!UICONTROL Audience size trend by identity] | Segments | Ce widget illustre la tendance de la taille de l’audience d’un segment particulier en fonction d’un type d’identité sélectionné. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. |
+| [!UICONTROL Tendance des profils ajoutés] | Profils | Ce widget utilise un graphique linéaire pour illustrer le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. |
+| [!UICONTROL Audiences mappées au statut de destination] | Profils | Ce widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. |
+| [!UICONTROL Taille des audiences] | Profils | Ce widget fournit un tableau à deux colonnes qui répertorie jusqu’à 20 segments et le nombre total d’audiences contenues dans chaque segment. La liste dépend de la politique de fusion appliquée et le nombre total d’audiences est classé par ordre décroissant. |
+| [!UICONTROL Tendance du nombre de profils] | Profils | Ce widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Les données peuvent être consultées sur des périodes de 30 jours, 90 jours et 12 mois. |
+| [!UICONTROL Profils à identité unique par identité] | Profils | Ce widget utilise un graphique en barres pour illustrer le nombre total de profils qui sont identifiés à l’aide d’un identifiant unique. Le widget prend en charge jusqu’à cinq des identités les plus courantes. |
+| [!UICONTROL  Statut de destination ] | Destinations | Ce widget affiche le nombre total de destinations activées sous la forme d’une mesure unique et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les destinations activées et désactivées. |
+| [!UICONTROL Destinations actives par plateforme de destination] | Destinations | Ce widget utilise un tableau à deux colonnes pour afficher la liste des plateformes de destination actives et le nombre total de destinations actives pour chaque plateforme de destination. |
+| [!UICONTROL Audiences activées sur toutes les destinations] | Destinations | Ce widget fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. |
+| [!UICONTROL Ordre d’activation de l’audience] | Segments | Ce widget fournit un tableau à trois colonnes qui répertorie le nom de destination, la plateforme et la date d’activation de l’audience. |
+| [!UICONTROL Tendance de la taille de l’audience] | Segments | Ce widget fournit un graphique linéaire qui illustre le nombre total de profils qui répondent aux critères d’une définition de segment sur des périodes de 30 jours, 90 jours et 12 mois. |
+| [!UICONTROL Tendance de changement de la taille de l’audience] | Segments | Ce widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour un segment donné et les aperçus quotidiens les plus récents. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. |
+| [!UICONTROL Tendance de la taille des audiences par identité] | Segments | Ce widget illustre la tendance de la taille de l’audience d’un segment particulier en fonction d’un type d’identité sélectionné. La période d’analyse des tendances peut être consultée sur des périodes de 30 jours, 90 jours et 12 mois. |
 
 **Nouvelles fonctionnalités** {#new-features}
 
@@ -165,24 +138,24 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Schéma global | [[!UICONTROL Data Hygiene Operation Request]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Capture les détails d’une demande de nettoyage des données pour supprimer ou modifier des enregistrements dans un jeu de données ou un sandbox spécifié. |
-| Descripteur | [[!UICONTROL Time-series Granularity Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indique la granularité des données récapitulatives et de série temporelle. Lorsqu’il est appliqué à un schéma, le champ `timestamp` du schéma est la première date et heure d’une période de cette granularité. |
-| Classe | [[!UICONTROL XDM Summary Metrics]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Fournit des mesures préalablement résumées avec des dimensions de regroupement, telles que les résultats d’une instruction SQL SELECT avec GROUP BY. |
-| Groupe de champs | [[!UICONTROL Consent policies evaluation results map]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Capture le résultat de l’évaluation de la politique de consentement pour un individu. |
-| Groupe de champs | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Capture les informations relatives à la recherche de site, telles que la requête, le filtrage et le classement. |
-| Groupe de champs | [[!UICONTROL Merge Leads]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Capture les détails d’un événement pendant lequel plusieurs leads sont fusionnés. |
-| Groupe de champs | [[!UICONTROL Email Sent]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Capture les détails d’un événement pendant lequel un e-mail est envoyé à un destinataire. |
-| Groupe de champs | [[!UICONTROL Stitching Fields]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Capture les valeurs calculées via le processus de combinaison d’identités pour un événement. |
-| Groupe de champs | [[!UICONTROL Secondary Recipient Detail For Audit]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Groupe de champs Adobe Journey Optimizer capturant les détails d’un destinataire secondaire pour un audit. |
-| Groupe de champs | [[!UICONTROL XDM Business Account Person Relation Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Capture les détails liés à une relation compte-personne. |
-| Groupe de champs | [[!UICONTROL Account Person Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Capture les détails liés à une relation compte-personne. |
-| Type de données | [[!UICONTROL Cart]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Capture les informations sur un panier de commerce électronique. |
-| Type de données | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Capture les informations d’expédition pour un ou plusieurs produits. |
-| Type de données | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Capture des informations sur l’activité de recherche de site. |
-| Extension (Workfront) | [[!UICONTROL Operational Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Capture les détails relatifs à une tâche opérationnelle. |
-| Extension (Workfront) | [[!UICONTROL Work Portfolio Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Capture les détails liés à un portfolio de travail. |
-| Extension (Workfront) | [[!UICONTROL Work Program Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Capture les détails liés à un programme de travail. |
-| Extension (Workfront) | [[!UICONTROL Work Project Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Capture les détails liés à un projet de travail. |
+| Schéma global | [[!UICONTROL Demande d’opération d’hygiène des données]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Capture les détails d’une demande de nettoyage des données pour supprimer ou modifier des enregistrements dans un jeu de données ou un sandbox spécifié. |
+| Descripteur | [[!UICONTROL Descripteur de granularité de série temporelle]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indique la granularité des données récapitulatives et de série temporelle. Lorsqu’il est appliqué à un schéma, le champ `timestamp` du schéma est la première date et heure d’une période de cette granularité. |
+| Classe | [[!UICONTROL  Mesures récapitulatives XDM ]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Fournit des mesures préalablement résumées avec des dimensions de regroupement, telles que les résultats d’une instruction SQL SELECT avec GROUP BY. |
+| Groupe de champs | [[!UICONTROL Mappage des résultats d’évaluation des politiques de consentement]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Capture le résultat de l’évaluation de la politique de consentement pour un individu. |
+| Groupe de champs | [[!UICONTROL Recherche de site]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Capture les informations relatives à la recherche de site, telles que la requête, le filtrage et le classement. |
+| Groupe de champs | [[!UICONTROL Fusionner les prospects]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Capture les détails d’un événement pendant lequel plusieurs leads sont fusionnés. |
+| Groupe de champs | [[!UICONTROL E-mail envoyé]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Capture les détails d’un événement pendant lequel un e-mail est envoyé à un destinataire. |
+| Groupe de champs | [[!UICONTROL Combinaison de champs]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Capture les valeurs calculées via le processus de combinaison d’identités pour un événement. |
+| Groupe de champs | [[!UICONTROL Détails Secondaires Du Destinataire Pour L&#39;Audit]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Groupe de champs Adobe Journey Optimizer capturant les détails d’un destinataire secondaire pour un audit. |
+| Groupe de champs | [[!UICONTROL Détails de relation de la personne avec le compte professionnel XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Capture les détails liés à une relation compte-personne. |
+| Groupe de champs | [[!UICONTROL Détails de la personne du compte]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Capture les détails liés à une relation compte-personne. |
+| Type de données | [[!UICONTROL panier]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Capture les informations sur un panier de commerce électronique. |
+| Type de données | [[!UICONTROL Expédition]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Capture les informations d’expédition pour un ou plusieurs produits. |
+| Type de données | [[!UICONTROL Recherche de site]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Capture des informations sur l’activité de recherche de site. |
+| Extension (Workfront) | [[!UICONTROL Attributs de tâche opérationnelle]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Capture les détails relatifs à une tâche opérationnelle. |
+| Extension (Workfront) | [[!UICONTROL Attributs de Portfolio de travail]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Capture les détails liés à un portfolio de travail. |
+| Extension (Workfront) | [[!UICONTROL  Attributs du programme de travail ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Capture les détails liés à un programme de travail. |
+| Extension (Workfront) | [[!UICONTROL Attributs de projet de travail]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Capture les détails liés à un projet de travail. |
 
 {style="table-layout:auto"}
 
@@ -190,15 +163,15 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description de la mise à jour |
 | --- | --- | --- |
-| Schéma global | [[!UICONTROL Destinations]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Nouvelles valeurs d’énumération de `destinationCategory`. |
-| Descripteur | [[!UICONTROL Friendly Name Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Prise en charge ajoutée pour la suppression des valeurs suggérées (`meta:enum`) qui ne sont pas nécessaires dans les champs standard. |
-| Groupe de champs | [[!UICONTROL User Login Process]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | Champ `createProfile` ajouté. |
-| Type de données | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Plusieurs champs liés au panier ont été ajoutés. |
-| Type de données | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Nouveaux champs ajoutés pour les options sélectionnées et le montant de la remise. |
-| Extension (Intelligent Services) | [[!UICONTROL Intelligent Services JourneyAI Send Time Optimization]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Optimisez le format de stockage pour les scores de temps d’envoi. |
-| Extension (Workfront) | [[!UICONTROL Workfront Change Event]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Plusieurs champs remplacés par un champ `workfront:customData` pour les champs de formulaire personnalisé. |
-| Extension (Workfront) | [[!UICONTROL Work Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Plusieurs champs ont été ajoutés. |
-| Extension (Workfront) | [[!UICONTROL Work Object]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Nouveaux champs pour le type d’objet parent et les champs de formulaire personnalisé. |
+| Schéma global | [[!UICONTROL  Destinations ]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Nouvelles valeurs d’énumération de `destinationCategory`. |
+| Descripteur | [[!UICONTROL  Descripteur de nom convivial ]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Prise en charge ajoutée pour la suppression des valeurs suggérées (`meta:enum`) qui ne sont pas nécessaires dans les champs standard. |
+| Groupe de champs | [[!UICONTROL Processus de connexion utilisateur]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | Champ `createProfile` ajouté. |
+| Type de données | [](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Plusieurs champs liés au panier ont été ajoutés. |
+| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Nouveaux champs ajoutés pour les options sélectionnées et le montant de la remise. |
+| Extension (Intelligent Services) | [[!UICONTROL Optimisation du temps d’envoi d’Intelligent Services JourneyAI]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Optimisez le format de stockage pour les scores de temps d’envoi. |
+| Extension (Workfront) | [[!UICONTROL Événement de modification ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Plusieurs champs remplacés par un champ `workfront:customData` pour les champs de formulaire personnalisé. |
+| Extension (Workfront) | [[!UICONTROL  Attributs de tâche de travail ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Plusieurs champs ont été ajoutés. |
+| Extension (Workfront) | [[!UICONTROL Objet de travail]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Nouveaux champs pour le type d’objet parent et les champs de formulaire personnalisé. |
 
 {style="table-layout:auto"}
 

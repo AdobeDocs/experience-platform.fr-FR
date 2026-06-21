@@ -5,23 +5,14 @@ description: Découvrez les alertes dans Adobe Experience Platform, y compris 
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 TQID: https://experienceleague.adobe.com/W9qoPLT84yYYU-n36xmkRceMtpkiH4kEtkwf1CI3MC0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
-  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a7150a74-b8a9-4042-b066-147c5f0ca505id: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 899
+source-wordcount: 904
 ht-degree: 63%
 
 ---
@@ -79,20 +70,20 @@ Des alertes peuvent être envoyées vers un webhook configuré afin de faciliter
 
 L’interface utilisateur d’Experience Platform vous permet d’afficher les alertes reçues et de gérer les règles d’alerte. La vidéo ci-après présente ces capacités.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423919?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Pour utiliser des alertes dans l’interface utilisateur d’Experience Platform, vous devez disposer des autorisations de contrôle d’accès suivantes activées via Adobe Admin Console :
 
 | Autorisation | Description |
 | --- | --- |
 | Affichage des alertes | Permet d’afficher les messages d’alerte reçus. |
-| Afficher l’historique des alertes* | Permet de visualiser l&#39;historique des alertes reçues à partir de l&#39;onglet [!UICONTROL Alerts] . |
-| Gérer les alertes* | Permet d’activer et de désactiver les règles d’alerte à partir de l’onglet [!UICONTROL Alerts] . |
-| Résoudre les alertes* | Permet de résoudre les alertes déclenchées à partir de l’onglet [!UICONTROL Alerts] . |
+| Afficher l’historique des alertes* | Permet de visualiser l&#39;historique des alertes reçues à partir de l&#39;onglet [!UICONTROL Alertes]. |
+| Gérer les alertes* | Permet d’activer et de désactiver les règles d’alerte à partir de l’onglet [!UICONTROL Alertes]. |
+| Résoudre les alertes* | Permet de résoudre les alertes déclenchées à partir de l’onglet [!UICONTROL Alertes]. |
 
 {style="table-layout:auto"}
 
-** Pour accéder à l’onglet [!UICONTROL Alerts], vous devez également disposer de l’autorisation Afficher les alertes, associée à l’une des autres autorisations.*
+** Pour accéder à l’onglet [!UICONTROL Alertes], vous devez également disposer de l’autorisation Afficher les alertes, associée à l’une des autres autorisations.*
 
 >[!NOTE]
 >
@@ -106,13 +97,13 @@ Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes re�
 >
 > Sélectionnez une alerte pour accéder à un tableau de bord associé et obtenir des informations plus détaillées sur les raisons pour lesquelles l’alerte a été déclenchée.
 
-En outre, l’onglet [!UICONTROL Alerts] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
+En outre, l’onglet [!UICONTROL Alertes] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
 
 ### Intégration de Slack {#slack-integration}
 
 Vous pouvez utiliser un proxy webhook sur [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) pour recevoir [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) d’Experience Platform vers votre [!DNL Slack]. Le proxy gère l’établissement de liaison de vérification d’Adobe et transforme les payloads des événements en messages [!DNL Slack], de sorte que vous puissiez recevoir des alertes destinées aux clients directement dans votre espace de travail.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480197?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
 
 Pour plus d’informations sur la manière de recevoir des notifications Experience Platform dans [!DNL Slack] en intégrant un proxy webhook Adobe App Builder, voir [surveiller les événements Experience Platform dans [!DNL Slack]](https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 

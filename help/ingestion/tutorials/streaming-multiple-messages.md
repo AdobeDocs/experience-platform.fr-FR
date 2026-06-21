@@ -6,24 +6,15 @@ type: Tutorial
 description: Ce document fournit un tutoriel permettant d’envoyer plusieurs messages vers Adobe Experience Platform dans une seule requête HTTP à l’aide de l’ingestion par flux.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 TQID: https://experienceleague.adobe.com/2xJYZLgRjlCRLNbPmn4Fox1YanluEgSMMpdHJRErpiY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d1a87129-ba05-4f15-98b1-233618f1774aid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1724
-ht-degree: 51%
+source-wordcount: 1713
+ht-degree: 50%
 
 ---
 
@@ -58,7 +49,7 @@ Après l’enregistrement d’une connexion en continu, vous, en tant que produc
 
 L’exemple suivant vous montre comment envoyer plusieurs messages vers un jeu de données spécifique au sein d’une requête HTTP unique. Insérez l’identifiant du jeu de données dans l’en-tête du message pour que ce message soit directement ingéré.
 
-Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [&#128279;](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Datasets]** , en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Info]** . Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
+Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Jeux de données]**, en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Infos]**. Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
 
 Au lieu d’utiliser un jeu de données existant, vous pouvez créer un nouveau jeu de données. Pour plus d’informations sur la création d’un jeu de données à l’aide d’API, lisez le tutoriel [Création d’un jeu de données à l’aide d’API](../../catalog/api/create-dataset.md).
 
@@ -530,8 +521,8 @@ Le quatrième message a échoué, car il ne suivait pas le schéma XDM attendu. 
 
 ### Récupérer les messages ayant échoué depuis [!DNL Experience Platform]
 
-Les messages en échec sont identifiés par un code d’état d’erreur dans le tableau de réponse.
-Les messages invalides sont collectés et stockés dans un lot « erreur » au sein du jeu de données spécifié par `{DATASET_ID}`.
+Les messages en échec sont identifiés par un code de statut d’erreur dans le tableau de réponse.
+Les messages non valides sont collectés et stockés dans un lot « error » dans le jeu de données spécifié par `{DATASET_ID}`.
 
 Pour plus d’informations sur la récupération des messages par lots en échec, lisez le guide [Récupération des messages en échec](../quality/retrieve-failed-batches.md).
 
@@ -567,7 +558,7 @@ Utilisez cette méthode lorsque vous :
 - Travaillent avec des exportations basées sur des fichiers provenant de systèmes en amont.
 - Préférez l’ingestion planifiée ou en bloc.
 
-Voir [&#x200B; Guide d’ingestion par lots](../batch-ingestion/api-overview.md) pour obtenir des instructions détaillées.
+Voir [ Guide d’ingestion par lots](../batch-ingestion/api-overview.md) pour obtenir des instructions détaillées.
 
 >[!ENDTABS]
 
@@ -575,7 +566,7 @@ Voir [&#x200B; Guide d’ingestion par lots](../batch-ingestion/api-overview.md)
 
 Les messages qui réussissent la validation DCCS sont diffusés en continu vers [!DNL Experience Platform]. Sur [!DNL Experience Platform], les messages par lot sont testés par validation de diffusion en continu avant d’être ingérés dans le [!DNL Data Lake]. L’état des lots, qu’ils soient réussis ou non apparaissent au sein du jeu de données spécifié par `{DATASET_ID}`.
 
-Vous pouvez afficher l’état de messages par lots qui diffusent avec succès vers [!DNL Experience Platform] à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com) en vous rendant dans l’onglet **[!UICONTROL Datasets]** , en cliquant sur le jeu de données sur lequel vous diffusez, et en vérifiant l’onglet **[!UICONTROL Dataset Activity]** .
+Vous pouvez afficher l’état de messages par lots qui diffusent avec succès vers [!DNL Experience Platform] à l’aide de l’interface utilisateur [Experience Platform](https://platform.adobe.com) en vous rendant dans l’onglet **[!UICONTROL Jeux de données]**, en cliquant sur le jeu de données sur lequel vous diffusez, et en vérifiant l’onglet **[!UICONTROL Activité du jeu de données]**.
 
 Les messages par lots qui réussissent la validation de diffusion en continu sur [!DNL Experience Platform] sont ingérés dans le [!DNL Data Lake]. Les messages sont ensuite disponibles à des fins d’analyse ou d’exportation.
 

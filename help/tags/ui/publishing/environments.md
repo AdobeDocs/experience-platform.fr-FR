@@ -3,27 +3,15 @@ title: Environnements
 description: Découvrez le concept des environnements de balises et leur fonctionnement dans Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 TQID: https://experienceleague.adobe.com/qpesZyFpuOeVl-kRKb1JPxfigloMdJXQ19rzxIhPFkA
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1415
-ht-degree: 98%
+source-wordcount: 1427
+ht-degree: 91%
 
 ---
 
@@ -67,7 +55,7 @@ Chaque environnement comporte un ensemble d’instructions utilisées pour la co
 >
 >Par exemple, le code intégré de production d’une propriété web prend en charge la mise en cache du navigateur, contrairement aux codes intégrés de développement et d’évaluation. Par conséquent, vous ne devez pas utiliser les codes intégrés de développement ou d’évaluation dans les contextes à trafic élevé ou de production.
 
-Pour accéder aux instructions d’installation d’un environnement, accédez à l’onglet **[!UICONTROL Environments]** correspondant à votre propriété, puis sélectionnez l’icône **[!UICONTROL Install]** correspondant à cet environnement.
+Pour accéder aux instructions d’installation d’un environnement, accédez à l’onglet **[!UICONTROL Environnements]** correspondant à votre propriété, puis sélectionnez l’icône **[!UICONTROL Installer]** correspondant à cet environnement.
 
 ![](./images/environments/install-buttons.png)
 
@@ -95,13 +83,13 @@ Les paramètres de l’environnement affecté déterminent les éléments suivan
 * **Paramètre d’archivage** : indique si le système doit générer un ensemble de fichiers déployable ou les compresser dans un format d’archive.
 * **Code intégré** : code `<script>` à incorporer dans le code HTML des pages de votre site web, utilisé pour déployer la version de la bibliothèque au moment de l’exécution.
 
-Dans l’onglet [!UICONTROL Environments], sélectionnez un environnement répertorié pour afficher ses commandes de configuration.
+Dans l’onglet [!UICONTROL Environnements], sélectionnez un environnement répertorié pour afficher ses commandes de configuration.
 
 ![](./images/environments/environment-config.png)
 
 ### Hôte {#host}
 
-Sélectionnez **[!UICONTROL Host]** pour choisir un hôte préconfiguré pour l’environnement dans le menu déroulant.
+Sélectionnez **[!UICONTROL Hôte]** pour choisir un hôte préconfiguré pour l’environnement dans le menu déroulant.
 
 ![](./images/environments/select-host.png)
 
@@ -111,7 +99,7 @@ Lors de la création d’une version, celle-ci est distribuée à l’emplacemen
 
 La plupart des versions se composent de plusieurs fichiers. Les versions multi-fichiers contiennent un fichier de bibliothèque principal (lié dans le code intégré) qui contient les références internes aux autres fichiers qui sont extraites selon les besoins.
 
-Le bouton **[!UICONTROL Create archive]** vous permet d’activer/désactiver le paramètre d’archivage de l’environnement. Par défaut, l’option d’archivage est désactivée et la version est diffusée dans un format qui s’exécute en l’état (JavaScript pour les propriétés web et JSON pour les propriétés mobiles).
+Le bouton **[!UICONTROL Créer une archive]** vous permet d’activer/désactiver le paramètre d’archivage de l’environnement. Par défaut, l’option d’archivage est désactivée et la version est diffusée dans un format qui s’exécute en l’état (JavaScript pour les propriétés web et JSON pour les propriétés mobiles).
 
 Si vous choisissez d’activer le paramètre d’archivage, d’autres paramètres de configuration s’affichent dans l’interface utilisateur, vous permettant éventuellement de chiffrer le fichier d’archive et de définir un chemin d’accès à la bibliothèque si vous utilisez l’auto-hébergement.
 
@@ -163,19 +151,19 @@ Les codes intégrés étant générés en fonction des configurations de votre e
 
 Trois environnements sont automatiquement affectés à une propriété lors de sa création : développement, évaluation et production. Ces environnements suffisent pour exécuter le processus de publication. Cependant, vous pouvez ajouter d’autres environnements de développement si vous le souhaitez, car cela peut s’avérer utile pour des équipes plus importantes dans lesquelles plusieurs développeurs travaillent simultanément sur différents projets.
 
-Dans l’onglet [!UICONTROL Environments] correspondant à votre propriété, sélectionnez **[!UICONTROL Add Environment]**.
+Dans l’onglet [!UICONTROL  Environnements ] de votre propriété, sélectionnez **[!UICONTROL Ajouter un environnement]**.
 
 ![](./images/environments/create-new.png)
 
-Dans l’écran suivant, sélectionnez l’option **[!UICONTROL Development]**.
+Dans l’écran suivant, sélectionnez l’option **[!UICONTROL Développement]**.
 
 ![](./images/environments/create-development.png)
 
-L’écran suivant vous permet de nommer le nouvel environnement, de sélectionner un hôte et de choisir un paramètre d’archivage. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]** pour créer l’environnement.
+L’écran suivant vous permet de nommer le nouvel environnement, de sélectionner un hôte et de choisir un paramètre d’archivage. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour créer l’environnement.
 
 ![](./images/environments/create-config.png)
 
-L’onglet [!UICONTROL Environments] s’affiche à nouveau, et les instructions d’installation du nouvel environnement s’affichent.
+L’onglet [!UICONTROL Environnements] réapparaît, et les instructions d’installation du nouvel environnement s’affichent.
 
 ![](./images/environments/create-install.png)
 

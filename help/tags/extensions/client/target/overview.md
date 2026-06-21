@@ -3,29 +3,15 @@ title: Présentation de l’extension Adobe Target
 description: Découvrez l’extension de balise pour Adobe Target dans Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 TQID: https://experienceleague.adobe.com/Fk1AsfFcOtlOFyCB1FvwqcNTMQEczSLiIpeAqRBw3Dw
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1170
-ht-degree: 93%
+source-wordcount: 1178
+ht-degree: 89%
 
 ---
 
@@ -39,9 +25,9 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 >
 > L’extension Adobe Target requiert at.js. Elle ne prend pas en charge mbox.js.
 
-Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Target et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension cible avec la souris et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/ext-target-config.png)
 
@@ -88,7 +74,7 @@ Pour plus d’informations sur le fonctionnement du délai d’expiration, consu
 
 #### Autres paramètres at.js disponibles dans l’interface utilisateur de Target
 
-Plusieurs paramètres disponibles sur la page [!UICONTROL Edit at.js settings] de l’interface utilisateur de Target ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
+Plusieurs des paramètres disponibles sur la page [!UICONTROL Modifier les paramètres at.js] de l’interface utilisateur de Target ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
 
 * Auto-create global mbox (Créer automatiquement la mbox globale) : ce paramètre est remplacé par l’action Fire Global Mbox (Déclencher la mbox globale) dans l’extension Target.
 * Library Header (En-tête de bibliothèque) : ce paramètre ne fait pas partie de l’extension Target. Placez le code devant être chargé avant at.js dans une action Core Extension (Extension Core) > Custom Code (Code personnalisé) avant d’utiliser l’action Load Target (Charger Target).

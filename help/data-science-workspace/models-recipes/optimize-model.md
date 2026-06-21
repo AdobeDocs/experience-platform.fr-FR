@@ -6,17 +6,10 @@ type: Tutorial
 description: Le framework d’informations sur les modèles fournit aux spécialistes des données des outils dans la Workspace de science des données pour faire des choix rapides et éclairés afin d’optimiser les modèles de machine learning basés sur les expériences.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 TQID: https://experienceleague.adobe.com/un5HcJ2-cfwNJiSi1mjUfjKBS-MEdXpubxOS3Pu2-EY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
 source-wordcount: 1340

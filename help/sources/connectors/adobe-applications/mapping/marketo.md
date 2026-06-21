@@ -5,15 +5,12 @@ title: Mapper des champs pour la source Marketo Engage
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 TQID: https://experienceleague.adobe.com/g2-hGKFTAQ0jvTRJnxZCHXgaD9fORd90BOvZ-2pvI6M
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1432
+source-wordcount: 1435
 ht-degree: 43%
 
 ---
@@ -34,9 +31,9 @@ Lisez la documentation relative à la [classe d’événement d’expérience XD
 
 >[!NOTE]
 >
->Le champ source `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` est un champ calculé qui doit être ajouté à l’aide de l’option **[!UICONTROL Add calculated field]** dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur [l’ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) .
+>Le champ source `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` est un champ calculé qui doit être ajouté à l’aide de l’option **[!UICONTROL Ajouter un champ calculé]** dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur [l’ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) .
 
-| Champ source Marketo | Identifiant du type d’activité | Jeu de données source | Champ cible XDM | Remarques |
+| Champ source Marketo | Identifiant du type d’activité | Jeu de données source | Champ cible XDM | Notes |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
 | `_id` |  | `_id` | `_id` |  |
 |  |  | `"Marketo"` | `personKey.sourceType` |  |
@@ -149,7 +146,7 @@ Lisez la [présentation de XDM Business Campaign](../../../../xdm/classes/b2b/bu
 >
 >Pour les types de balises personnalisés, accédez aux schémas et créez des groupes de champs. Ajoutez ensuite tous les noms de champ supplémentaires requis pour mapper les champs source aux champs XDM de destination.
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | --------------- | ----- |
 | `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
 | `"Marketo"` | `campaignKey.sourceType` |  |
@@ -180,7 +177,7 @@ Lisez la [présentation de XDM Business Campaign](../../../../xdm/classes/b2b/bu
 
 Lisez la [présentation des membres XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign-members.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez le guide [Groupe de champs de schéma des détails des membres XDM Business Campaign](../../../../xdm/field-groups/b2b-campaign-members/details.md).
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -213,7 +210,7 @@ Lisez la [présentation des membres XDM Business Campaign](../../../../xdm/class
 
 Lisez la [présentation des comptes professionnels XDM](../../../../xdm/classes/b2b/business-account.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` | |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -245,7 +242,7 @@ Lisez la [présentation des comptes professionnels XDM](../../../../xdm/classes/
 
 Lisez la [présentation de la liste XDM Business Marketing](../../../../xdm/classes/b2b/business-marketing-list.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -263,7 +260,7 @@ Lisez la [présentation de la liste XDM Business Marketing](../../../../xdm/clas
 
 Lisez la [Présentation des membres de la liste XDM Business Marketing](../../../../xdm/classes/b2b/business-marketing-list-members.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -284,7 +281,7 @@ Lisez la [Présentation des membres de la liste XDM Business Marketing](../../
 
 Lisez la [Présentation des comptes professionnels XDM](../../../../xdm/classes/b2b/business-account.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -312,7 +309,7 @@ Lisez la [Présentation des comptes professionnels XDM](../../../../xdm/classes/
 
 Lisez la [Présentation des opportunités commerciales XDM](../../../../xdm/classes/b2b/business-opportunity.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | --------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |  |
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
@@ -349,7 +346,7 @@ Lisez la [Présentation des opportunités commerciales XDM](../../../../xdm/clas
 
 Lisez la [Présentation de la relation Personne-opportunité commerciale XDM](../../../../xdm/classes/b2b/business-account-person-relation.md) pour plus d’informations sur la classe XDM.
 
-| Jeu de données source | Champ cible XDM | Remarques |
+| Jeu de données source | Champ cible XDM | Notes |
 | -------------- | --------------- | ----- |
 | `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |  |

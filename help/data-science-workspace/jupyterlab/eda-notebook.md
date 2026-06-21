@@ -6,16 +6,10 @@ type: Tutorial
 description: Ce guide porte sur l’utilisation du notebook d’analyse exploratoire des données (AED) pour découvrir des modèles dans les données web, agréger les événements avec un objectif de prédiction, nettoyer les données agrégées et comprendre la relation entre les prédicteurs et un objectif.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 TQID: https://experienceleague.adobe.com/jURxlYkuUMDreblqEN-BLfVOoFNYunWNkMNURzQIWS8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2824
@@ -39,7 +33,7 @@ La seconde partie commence par une analyse descriptive sur les données agrégé
 
 ## Prise en main
 
-Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données. En outre, si vous utilisez vos propres données, veuillez consulter la documentation relative à l’[accès aux données dans les notebooks  [!DNL Jupyterlab] &#x200B;](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
+Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données. En outre, si vous utilisez vos propres données, veuillez consulter la documentation relative à l’[accès aux données dans les notebooks  [!DNL Jupyterlab] ](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
 
 Ce notebook utilise un jeu de données de valeurs moyennes sous la forme de données d’événements d’expérience Adobe Analytics trouvées dans Analytics Analysis Workspace. Pour utiliser le notebook AED, vous devez définir votre tableau de données avec les valeurs `target_table` et `target_table_id` suivantes. Tout jeu de données de valeurs moyennes peut être utilisé.
 
@@ -83,7 +77,7 @@ pd.set_option('display.max_colwidth', -1)
 
 [!DNL JupyterLab] sur Experience Platform vous permet d’utiliser SQL dans un notebook [!DNL Python] pour accéder aux données via [Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=fr). L’accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour la gestion de jeux de données volumineux grâce à ses temps d’exécution plus performants. Notez que l’interrogation de données à l’aide de [!DNL Query Service] est limitée à dix minutes de traitement.
 
-Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
+Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
 
 Pour utiliser Query Service dans JupyterLab, vous devez d’abord créer une connexion entre votre notebook Python de travail et Query Service. Pour ce faire, exécutez la cellule suivante.
 

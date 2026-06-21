@@ -4,8 +4,8 @@ description: Découvrez comment supprimer des ressources dʼune bibliothèque de
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 100%
+source-wordcount: '269'
+ht-degree: 99%
 
 ---
 
@@ -43,7 +43,7 @@ Vous devez plutôt désactiver la ressource. Cette désactivation est une modifi
 
 1. Désactivez la ressource.
    1. Sélectionnez la ressource dans la vue Liste.
-   1. Sélectionner **[!UICONTROL Disable]**.
+   1. Sélectionnez **[!UICONTROL Désactiver]**.
 1. Créez une bibliothèque de développement.
 1. Ajoutez la `latest` version de la ressource désactivée.
 1. Enregistrez et générez.

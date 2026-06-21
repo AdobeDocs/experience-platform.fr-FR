@@ -4,18 +4,18 @@ description: Découvrez l’extension de balises Marketo Munchkin dans Adobe Ex
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 97%
+source-wordcount: '172'
+ht-degree: 67%
 
 ---
 
 # Présentation de l’extension Marketo Munchkin
 
-Utilisez cette extension pour intégrer le code de suivi JavaScript [!DNL Marketo Munchkin] à votre propriété. [!DNL Marketo Munchkin] JavaScript permet le suivi des visites et des clics des pages des utilisateurs finaux vers vos pages web externes et vos pages de destination Marketo.
+Utilisez cette extension pour intégrer le code de suivi [!DNL Marketo Munchkin] JavaScript à votre propriété. [!DNL Marketo Munchkin] JavaScript permet de suivre les visites de pages des utilisateurs finaux et d’accéder à vos pages de destination Marketo et à vos pages web externes.
 
 ## Installer l’extension Marketo Munchkin
 
-Si l’extension [!DNL Marketo Munchkin] n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension [!DNL Marketo Munchkin] avec votre souris et cliquez sur **[!UICONTROL Install]**.
+Si [!DNL Marketo Munchkin] extension n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension [!DNL Marketo Munchkin] avec la souris et cliquez sur **[!UICONTROL Installer]**.
 
 Cette extension n’a pas besoin d’être configurée.
 

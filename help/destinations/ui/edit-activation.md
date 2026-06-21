@@ -5,18 +5,13 @@ type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 TQID: https://experienceleague.adobe.com/wE6eVboAogPDZd-rk7pWS3T9S8FDbYPNSwh-xFU6qj4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 917
+source-wordcount: 952
 ht-degree: 8%
 
 ---
@@ -38,7 +33,7 @@ Dans [!DNL Adobe Experience Platform], vous pouvez configurer différents compos
 
 Suivez les étapes ci-dessous pour parcourir vos flux de données d’activation existants et identifier celui que vous souhaitez modifier.
 
-1. Accédez à l’[interface utilisateur d’](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Browse]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
+1. Accédez à l’[interface utilisateur d’](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
    ![Parcourir les destinations](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -50,56 +45,56 @@ Suivez les étapes ci-dessous pour parcourir vos flux de données d’activation
 
    ![Sélectionnez des destinations](../assets/ui/edit-activation/destination-select.png)
 
-4. La page **[!UICONTROL Dataflow runs]** de la destination s’affiche, affichant les commandes disponibles. Selon le type de destination, vous pouvez effectuer diverses opérations de flux de données. Reportez-vous aux sections suivantes pour chaque opération de flux de données prise en charge.
+4. La page **[!UICONTROL Exécution du flux de données]** de la destination s’affiche, affichant ses commandes disponibles. Selon le type de destination, vous pouvez effectuer diverses opérations de flux de données. Reportez-vous aux sections suivantes pour chaque opération de flux de données prise en charge.
 
 ## Activer ou désactiver les flux de données d’activation {#enable-disable-dataflows}
 
-Utilisez le bouton (bascule) **[!UICONTROL Enabled]/[!UICONTROL Disabled]** pour démarrer ou suspendre toutes les exportations de données vers la destination.
+Utilisez le bouton (bascule) **[!UICONTROL Activé]/[!UICONTROL Désactivé]** pour démarrer ou suspendre toutes les exportations de données vers la destination.
 
 ![Image de l’interface utilisateur d’Experience Platform affichant le bouton (bascule) Activer/Désactiver l’exécution du flux de données.](../assets/ui/edit-activation/enable-toggle.png)
 
 ## Ajouter des audiences à un flux de données d’activation {#add-audiences}
 
-Sélectionnez **[!UICONTROL Activate audiences]** dans le rail de droite pour modifier les audiences à envoyer à la destination. Cette action vous mène au workflow d’activation.
+Sélectionnez **[!UICONTROL Activer les audiences]** dans le rail de droite pour modifier les audiences à envoyer à la destination. Cette action vous mène au workflow d’activation.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option Activer le flux de données des audiences.](../assets/ui/edit-activation/activate-audiences.png)
 
-Dans l’étape **[!UICONTROL Select audiences]** du workflow d’activation, vous pouvez supprimer des audiences existantes ou ajouter de nouvelles audiences au workflow d’activation.
+À l’étape **[!UICONTROL Sélectionner des audiences]** du workflow d’activation, vous pouvez supprimer des audiences existantes ou ajouter de nouvelles audiences au workflow d’activation.
 
 Le workflow d’activation diffère légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
 ## Modifier le planning d’activation et la fréquence d’exportation {#edit-schedule-frequency}
 
-Sélectionnez **[!UICONTROL Activate audiences]** dans le rail de droite. Cette action vous mène au workflow d’activation.
+Sélectionnez **[!UICONTROL Activer les audiences]** dans le rail de droite. Cette action vous mène au workflow d’activation.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option Activer le flux de données des audiences.](../assets/ui/edit-activation/activate-audiences.png)
 
-Sélectionnez l’étape **[!UICONTROL Scheduling]** du workflow d’activation pour modifier le planning d’activation et la fréquence d’exportation de votre flux de données. Utilisez cette étape pour configurer la fréquence d’exportation des données vers la destination.
+Sélectionnez l’étape **[!UICONTROL Planification]** dans le workflow d’activation pour modifier le planning d’activation et la fréquence d’exportation de votre flux de données. Utilisez cette étape pour configurer la fréquence d’exportation des données vers la destination.
 
-Dans l’étape **[!UICONTROL Scheduling]** du workflow d’activation, vous pouvez :
+À l’étape **[!UICONTROL Planification]** du workflow d’activation, vous pouvez :
 
 * Ajustez la fréquence d’exportation.
 * Définissez ou modifiez les dates de début et de fin du flux de données d’activation, etc.
 
 Les opérations de planification que vous pouvez effectuer varient légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
 ## Modifier les attributs et les identités mappés {#edit-mapped-attributes}
 
-Sélectionnez **[!UICONTROL Activate audiences]** dans le rail de droite. Cette action vous mène au workflow d’activation.
+Sélectionnez **[!UICONTROL Activer les audiences]** dans le rail de droite. Cette action vous mène au workflow d’activation.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option Activer le flux de données des audiences.](../assets/ui/edit-activation/activate-audiences.png)
 
-Sélectionnez l’étape **[!UICONTROL Mapping]** dans le workflow d’activation pour modifier les attributs et les identités mappés pour votre flux de données d’activation. Utilisez cette étape pour ajuster les attributs de profil et les identités exportés vers la destination.
+Sélectionnez l’étape **[!UICONTROL Mappage]** dans le workflow d’activation pour modifier les attributs et les identités mappés pour votre flux de données d’activation. Utilisez cette étape pour ajuster les attributs de profil et les identités exportés vers la destination.
 
-Dans l’étape **[!UICONTROL Mapping]** du workflow d’activation, vous pouvez :
+À l’étape **[!UICONTROL Mappage]** du workflow d’activation, vous pouvez :
 
 * Ajoutez de nouveaux attributs ou de nouvelles identités au mappage.
 * Supprimez les attributs ou les identités existants du mappage.
@@ -107,13 +102,13 @@ Dans l’étape **[!UICONTROL Mapping]** du workflow d’activation, vous pouvez
 
 Le workflow d’activation diffère légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
 ## Ajouter des jeux de données à un flux de données d’activation {#add-datasets}
 
-Sélectionnez **[!UICONTROL Export datasets]** dans le rail de droite pour sélectionner des jeux de données supplémentaires à exporter vers la destination. Cette option vous mène au [workflow d’exportation de jeu de données](export-datasets.md).
+Sélectionnez **[!UICONTROL Exporter des jeux de données]** dans le rail de droite pour sélectionner des jeux de données supplémentaires à exporter vers la destination. Cette option vous mène au [workflow d’exportation de jeu de données](export-datasets.md).
 
 >[!NOTE]
 >
@@ -125,33 +120,33 @@ Sélectionnez **[!UICONTROL Export datasets]** dans le rail de droite pour séle
 
 >[!IMPORTANT]
 >
->Pour modifier les actions marketing, vous avez besoin des **[!UICONTROL Activate Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour modifier les actions marketing, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Activer les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Vous pouvez ajouter ou supprimer des actions marketing que vous configurez lors de la connexion initiale à la destination.
 
-Sélectionnez **[!UICONTROL Edit marketing actions]** dans le rail de droite pour ouvrir l’écran de sélection des actions marketing.
+Sélectionnez **[!UICONTROL Modifier les actions marketing]** dans le rail de droite pour ouvrir l’écran de sélection des actions marketing.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option modifier les actions marketing.](../assets/ui/edit-activation/edit-marketing-actions.png)
 
-Sélectionnez les actions marketing applicables, puis cliquez sur **[!UICONTROL Save]** pour appliquer les modifications.
+Sélectionnez les actions marketing applicables, puis sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications.
 
 ![Image de l’interface utilisateur d’Experience Platform affichant l’écran de modification des actions marketing.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
 
 
 ## Appliquer les libellés d’accès {#apply-access-labels}
 
-Sélectionnez **[!UICONTROL Apply access labels]** pour modifier les libellés d’utilisation des données exportées. Pour en savoir plus[&#128279;](../../data-governance/labels/overview.md) consultez la documentation sur les  libellés d’utilisation des données .
+Sélectionnez **[!UICONTROL Appliquer les libellés d’accès]** pour modifier les libellés d’utilisation des données pour les données exportées. Pour en savoir plus](../../data-governance/labels/overview.md) consultez la documentation sur les [ libellés d’utilisation des données .
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Modifier les noms et descriptions des flux de données d’activation {#edit-names-descriptions}
 
-Pour modifier le nom et la description du flux de données d’activation, utilisez les champs **[!UICONTROL Destination name]** et **[!UICONTROL Description]** .
+Pour modifier le nom et la description du flux de données d’activation, utilisez les champs **[!UICONTROL Nom de la destination]** et **[!UICONTROL Description]**.
 
 ![Détails de la destination](../assets/ui/edit-activation/edit-destination-name-description.png)
 
 ## Étapes suivantes {#next-steps}
 
-Vous avez correctement mis à jour vos flux de données de destination à l’aide de l’espace de travail **[!UICONTROL destinations]**.
+Vous avez mis à jour vos flux de données de destination à l’aide de l’espace de travail **[!UICONTROL destinations]**.
 
 Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../catalog/overview.md).

@@ -5,34 +5,21 @@ description: Découvrez comment créer, partager et réutiliser des instances de
 role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 TQID: https://experienceleague.adobe.com/wT2519oTh0EN678WmrUc3nsUVnXiU8EG3yd12G0BFKk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-  - id: ed87b366-4dcf-4108-97b9-e29ea31192dd
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: e0c8953a-a203-4291-bef3-3560160d3041id: ed87b366-4dcf-4108-97b9-e29ea31192ddid: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 773
-ht-degree: 70%
+source-wordcount: 789
+ht-degree: 69%
 
 ---
 
 # Créer, partager et réutiliser des instances de playbook
 
-Pour utiliser un playbook, accédez à **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
+Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilisation] > [!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
 
 ## Créer une instance de playbook {#create-playbook-instance}
 
@@ -41,7 +28,7 @@ Pour utiliser un playbook, accédez à **[!UICONTROL Use Case Playbooks]>[!UICON
 >title="Créer une instance"
 >abstract="Générez une liste de ressources telles que des parcours, des audiences, des schémas ou des destinations à utiliser dans des scénarios de parcours ou d’activation."
 
-Avant de créer une instance de playbook, explorez les playbooks disponibles pour [choisir le bon playbook](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Create Instance]** pour poursuivre le playbook et générer des ressources techniques.
+Avant de créer une instance de playbook, explorez les playbooks disponibles pour [choisir le bon playbook](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
 
 ![Créer une instance d’un playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -51,7 +38,7 @@ Cette action génère plusieurs ressources que vous pouvez utiliser pour réalis
 
 ### Utilisez les commandes de configuration pour modifier les noms et les descriptions des instances. {#edit-instance-metadata}
 
-Après avoir créé une instance basée sur un playbook, vous pouvez la personnaliser pour la différencier des autres instances créées à partir du même playbook. Sélectionnez la commande de configuration tel qu’indiqué ci-dessous. Modifiez le nom, la description et les notes, puis sélectionnez **[!UICONTROL Save]** lorsque vous avez terminé.
+Après avoir créé une instance basée sur un playbook, vous pouvez la personnaliser pour la différencier des autres instances créées à partir du même playbook. Sélectionnez la commande de configuration tel qu’indiqué ci-dessous. Modifiez le nom, la description et les notes, puis sélectionnez **[!UICONTROL Enregistrer]** lorsque vous avez terminé.
 
 ![Modifier le nom et la description d’une instance.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
@@ -64,9 +51,9 @@ Après avoir créé une instance basée sur un playbook, vous pouvez la personna
 Il est important de comprendre que les ressources générées varient selon le cas d’utilisation que vous activez :
 
 * Différentes ressources sont générées pour différents types de playbooks. Ces ressources sont créées spécifiquement pour le cas d’utilisation réalisé via le playbook. Par exemple, un playbook génère un schéma, une audience, un parcours et des messages. Un autre playbook génère un schéma, une audience et une destination vers lesquels activer les données.
-* Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Send A Birthday Message To Guests]**, l’audience créée comporte la règle `birthday=today AND year=any`.
+* Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Envoyer un message d’anniversaire aux invités]**, l’audience créée comporte la règle `birthday=today AND year=any`.
 
-À titre d’exemple, pour le playbook **[!UICONTROL Abandoned Cart: Merchandise]**, vous pouvez constater qu’un parcours spécifique est créé et contient les messages créés pour ce cas d’utilisation.
+À titre d’exemple, pour le playbook **[!UICONTROL Panier abandonné : contenu]**, vous pouvez constater qu’un parcours spécifique est créé et contient les messages créés pour ce cas d’utilisation.
 
 ![Parcours créé à partir du playbook de cas d’utilisation.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 

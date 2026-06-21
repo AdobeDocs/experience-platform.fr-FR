@@ -4,19 +4,10 @@ description: Découvrez comment utiliser l’assistant AI pour surveiller les mo
 badge: Alpha
 exl-id: 8f34d378-a8a0-420d-8e45-39a5aafdd7b7
 TQID: https://experienceleague.adobe.com/ozJ5fYFkmPigWF5g7Ig2XQlLsTJrKSf5jh6mxSLW3qE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1919

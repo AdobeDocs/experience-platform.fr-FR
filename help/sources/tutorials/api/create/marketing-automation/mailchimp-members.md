@@ -5,15 +5,10 @@ title: Créer un flux de données pour les membres Mailchimp à l’aide de l’
 description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’API Flow Service.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 TQID: https://experienceleague.adobe.com/3A8QDXhr-AVaDv58Dxmsm02HLv6d6-Yu2hpU5-Yggjw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2157
@@ -387,7 +382,7 @@ curl -X POST \
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion source. |
 | `baseConnectionId` | Identifiant de connexion de base de [!DNL Mailchimp]. Cet identifiant a été généré lors d’une étape précédente. |
 | `connectionSpec.id` | Identifiant de spécification de connexion correspondant à votre source. |
-| `data.format` | Format des données [!DNL Mailchimp] que vous souhaitez ingérer. |
+| `data.format` | Format des données [!DNL Mailchimp] à ingérer. |
 | `params.listId` | Également appelé identifiant de l’audience, l’identifiant de liste [!DNL Mailchimp] permet le transfert des données de l’audience vers d’autres intégrations. |
 
 **Réponse**
@@ -463,7 +458,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond à [!DNL Data Lake]. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion correspondant à [!DNL Data Lake]. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Format des données [!DNL Mailchimp] que vous souhaitez importer dans Experience Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 

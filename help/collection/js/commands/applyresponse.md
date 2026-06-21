@@ -4,7 +4,7 @@ description: Utiliser une réponse d'Edge Network pour initialiser le SDK Web.
 exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
 source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---

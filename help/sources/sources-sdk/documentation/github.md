@@ -5,10 +5,8 @@ title: Utiliser l’interface web GitHub pour créer une page de documentation s
 description: Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub afin de créer de la documentation et d’envoyer une requête de tirage.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
 TQID: https://experienceleague.adobe.com/HCx0E53IUNzcd8if2oxQ5cCz4x2rjeeotAf1ItXpnws
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 639
@@ -22,11 +20,11 @@ Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub
 
 >[!TIP]
 >
->Les documents suivants du guide de contribution d’Adobe peuvent être utilisés pour continuer à prendre en charge votre processus de documentation : <ul><li>[Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=fr)</li><li>[Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr)</li><li>[Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=fr)</li></ul>
+>Les documents suivants du guide de contribution d’Adobe peuvent être utilisés pour continuer à prendre en charge votre processus de documentation : <ul><li>[Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Configuration de votre environnement GitHub
 
-La première étape de la configuration de votre environnement GitHub consiste à accéder au référentiel GitHub [&#128279;](https://github.com/AdobeDocs/experience-platform.fr-FR).
+La première étape de la configuration de votre environnement GitHub consiste à accéder au référentiel GitHub [](https://github.com/AdobeDocs/experience-platform.en).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -38,11 +36,11 @@ Une fois le branchement terminé, sélectionnez **principal** et saisissez le no
 
 ![create-branch](../assets/create-branch.png)
 
-Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.fr-FR/tree/main/help/sources/tutorials/api/create) , puis sélectionnez la catégorie appropriée pour votre source dans la liste. Par exemple, si vous créez une documentation pour une nouvelle source CRM, sélectionnez **crm**.
+Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) , puis sélectionnez la catégorie appropriée pour votre source dans la liste. Par exemple, si vous créez une documentation pour une nouvelle source CRM, sélectionnez **crm**.
 
 >[!TIP]
 >
->Si vous créez une documentation pour l’interface utilisateur de , accédez à [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.fr-FR/tree/main/help/sources/tutorials/ui/create) et sélectionnez la catégorie appropriée pour votre source. Pour ajouter vos images, accédez à [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.fr-FR/tree/main/help/sources/images/tutorials/create) , puis ajoutez vos captures d’écran au dossier `sdk` .
+>Si vous créez une documentation pour l’interface utilisateur de , accédez à [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) et sélectionnez la catégorie appropriée pour votre source. Pour ajouter vos images, accédez à [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) , puis ajoutez vos captures d’écran au dossier `sdk` .
 
 ![crm](../assets/crm.png)
 
@@ -82,6 +80,6 @@ Vérifiez que les branches de base et de comparaison sont correctes. Ajoutez une
 
 À ce stade, une notification s’affiche vous invitant à signer le contrat de licence du contributeur (CLA) d’Adobe. Il s’agit d’une étape obligatoire. Après avoir signé le contrat de licence du contributeur, actualisez la page de requête de tirage et envoyez la demande d’extraction.
 
-Vous pouvez confirmer que la demande d’extraction a été envoyée en examinant l’onglet Demandes d’extraction dans https://github.com/AdobeDocs/experience-platform.fr-FR.
+Vous pouvez confirmer que la demande d’extraction a été envoyée en examinant l’onglet Demandes d’extraction dans https://github.com/AdobeDocs/experience-platform.en.
 
 ![confirm-pr](../assets/confirm-pr.png)

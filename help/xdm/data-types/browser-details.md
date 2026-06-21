@@ -5,20 +5,18 @@ title: Type de données des détails du navigateur
 description: Découvrez le type de données XDM des détails du navigateur.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 TQID: https://experienceleague.adobe.com/1hqeCYQFLf8OOEK32XnkIXQWuX4Jf017u8cvyjhnQCE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 262
+source-wordcount: 266
 ht-degree: 18%
 
 ---
 
-# Type de données [!UICONTROL Browser details]
+# [!UICONTROL Informations sur le navigateur] type de données
 
-[!UICONTROL Browser details] est un type de données XDM standard qui décrit les détails relatifs à un navigateur ou à une application.
+[!UICONTROL Détails du navigateur] est un type de données XDM standard qui décrit les détails relatifs à un navigateur ou à une application.
 
 ![](../images/data-types/browser-details.png){width=450}
 

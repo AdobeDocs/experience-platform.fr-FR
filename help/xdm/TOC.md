@@ -8,8 +8,8 @@ role: Developer
 nudge: true
 source-git-commit: 312423949f8a5d6d8ea3b835a3e575d49f444948
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 72%
+source-wordcount: '731'
+ht-degree: 71%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 72%
          * {hide-from-toc}[Concept codable](./schema/healthcare/data-types/codeable-concept.md)
          * {hide-from-toc}[Référence codable](./schema/healthcare/data-types/codeable-reference.md)
          * {hide-from-toc}[Codage](./schema/healthcare/data-types/coding.md)
-         * {hide-from-toc}[&#x200B; Point de contact &#x200B;](./schema/healthcare/data-types/contact-point.md)
+         * {hide-from-toc}[ Point de contact ](./schema/healthcare/data-types/contact-point.md)
          * {hide-from-toc}[Posologie](./schema/healthcare/data-types/dosage.md)
          * {hide-from-toc}[Durée](./schema/healthcare/data-types/duration.md)
          * {hide-from-toc}[Détails de contact étendus](./schema/healthcare/data-types/extended-contact-detail.md)
@@ -66,7 +66,7 @@ ht-degree: 72%
          * {hide-from-toc}[Identifiant](./schema/healthcare/data-types/identifier.md)
          * {hide-from-toc}[Argent](./schema/healthcare/data-types/money.md)
          * {hide-from-toc}[Période](./schema/healthcare/data-types/period.md)
-         * {hide-from-toc}[&#x200B; Personne &#x200B;](./schema/healthcare/data-types/person.md)
+         * {hide-from-toc}[ Personne ](./schema/healthcare/data-types/person.md)
          * {hide-from-toc}[Quantité](./schema/healthcare/data-types/quantity.md)
          * {hide-from-toc}[Plage](./schema/healthcare/data-types/range.md)
          * {hide-from-toc}[Rapport](./schema/healthcare/data-types/ratio.md)
@@ -236,7 +236,7 @@ ht-degree: 72%
    * [Informations web](./data-types/web-information.md)
    * [Interaction web](./data-types/web-interaction.md)
    * [Détails de la page web](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] Interface utilisateur {#ui}
+* Interface utilisateur [!UICONTROL Schémas] {#ui}
    * [Vue d’ensemble](./ui/overview.md)
    * [Explorer des ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}

@@ -5,13 +5,9 @@ title: Exemple de transformations ETL
 description: Cet article présente les exemples de transformations qu’un développeur ETL (extraction, transformation et chargement) peut rencontrer.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 TQID: https://experienceleague.adobe.com/6ISOt0aJgt6Z-CoFEKMJPXpIQTvC1d8nMJ8Ayq1q-ew
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 474

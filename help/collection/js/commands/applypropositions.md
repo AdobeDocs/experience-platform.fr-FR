@@ -4,7 +4,7 @@ description: Restituer des propositions qui ont déjà été rendues avec sendEv
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
 source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---

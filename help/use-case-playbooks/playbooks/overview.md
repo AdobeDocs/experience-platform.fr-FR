@@ -5,21 +5,14 @@ description: Découvrez comment utiliser la fonction des playbooks de cas d’ut
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 TQID: https://experienceleague.adobe.com/cakqaVe-j7rrl4-ZkgZYzlpwNdac2AxqDzP8uuFGtyI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 535
-ht-degree: 31%
+source-wordcount: 541
+ht-degree: 30%
 
 ---
 
@@ -41,7 +34,7 @@ Ce guide vous apportera la documentation suivante :
 
 ## Vue d’ensemble {#overview}
 
-[!UICONTROL Use Case Playbooks] peut vous aider à résoudre le problème lors de la prise en main de Real-Time CDP ou de Adobe Journey Optimizer, car vous ne savez pas exactement par quoi commencer ou comment créer les ressources appropriées pour atteindre les cas d’utilisation souhaités.
+[!UICONTROL Playbooks de cas d’utilisation] peuvent vous aider à surmonter le problème lors de la prise en main de Real-Time CDP ou de Adobe Journey Optimizer, lorsque vous ne savez pas exactement par quoi commencer ou comment créer les bonnes ressources afin d’atteindre les cas d’utilisation souhaités.
 
 Les playbooks de cas d’utilisation peuvent vous y aider en :
 
@@ -64,7 +57,7 @@ Regardez cette vidéo pour découvrir, créer, publier et résoudre les problèm
 
 ## Disponibilité {#availability}
 
-Certains [!UICONTROL Use Case Playbooks] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients qui utilisent Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. Découvrez-en plus sur Real-Time CDP et Journey Optimizer dans les [descriptions de produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html).
+Certains [!UICONTROL  Playbooks de cas d’utilisation ] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients ou clientes utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. Découvrez-en plus sur Real-Time CDP et Journey Optimizer dans les [descriptions de produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html).
 
 ## Guides d’interface utilisateur {#ui-guides}
 

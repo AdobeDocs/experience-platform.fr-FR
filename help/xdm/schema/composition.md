@@ -5,32 +5,20 @@ title: Principes de base de la composition des schémas
 description: Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 TQID: https://experienceleague.adobe.com/aWe8rBHi9h54CeVw2w7-s5itqPHoBy3y8ABtRj-J5Ak
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 34af27062cff5296db2a711cffe0bac4e4f1dafc
 workflow-type: tm+mt
-source-wordcount: 4466
+source-wordcount: 4508
 ht-degree: 25%
 
 ---
 
 # Principes de base de la composition des schémas
 
-Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans Experience Platform, consultez la [&#x200B; présentation du système XDM &#x200B;](../home.md).
+Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans Experience Platform, consultez la [ présentation du système XDM ](../home.md).
 
 ## Compréhension des schémas {#understanding-schemas}
 
@@ -65,7 +53,7 @@ Tous les schémas XDM décrivent des données pouvant être catégorisées en ta
 
 Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un objet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
-### [!UICONTROL Identity] {#identity}
+### [!UICONTROL Identité] {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
@@ -74,16 +62,16 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 
 Les schémas définissent la structure des données ingérées dans Experience Platform. Ces données alimentent plusieurs services au sein de Platform et permettent de créer une vue unique et unifiée de chaque individu. Ainsi, lors de la conception de schémas, réfléchissez soigneusement aux champs à marquer comme identités, car ils contrôlent la manière dont les profils sont regroupés dans les jeux de données.
 
-Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Lors de l’ingestion des données, les données de ces champs sont insérées dans le « [!UICONTROL Identity Graph] » de cet individu. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-Time Customer Profile]](../../profile/home.md) et d’autres services Experience Platform afin de fournir une vue d’ensemble de chaque client individuel.
+Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Lors de l’ingestion des données, les données de ces champs sont insérées dans le « [!UICONTROL graphique d’identités] » de cet individu. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-Time Customer Profile]](../../profile/home.md) et d’autres services Experience Platform afin de fournir une vue d’ensemble de chaque client individuel.
 
-Les champs généralement désignés comme champs « [!UICONTROL Identity] » sont les suivants : adresse e-mail, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identification uniques. Tenez compte des identifiants uniques spécifiques à votre organisation, car il peut également s’agir de bons champs « [!UICONTROL Identity] ».
+Les champs généralement désignés comme champs « [!UICONTROL Identité] » sont les suivants : adresse e-mail, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identification uniques. Tenez compte des identifiants uniques spécifiques à votre organisation, car il peut également s’agir de bons champs « [!UICONTROL Identité] ».
 
-Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [&#x200B; présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [&#x200B; sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
+Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [ présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [ sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
 
 Il existe deux manières d’envoyer des données d’identité à Experience Platform :
 
 1. Ajouter des descripteurs d’identité à des champs individuels, par le biais de l’interface utilisateur [Éditeur de schémas](../ui/fields/identity.md) ou à l’aide de l’API [Schema Registry](../api/descriptors.md#create)
-2. En utilisant un champ de [&#128279;](#identityMap)`identityMap`
+2. En utilisant un champ de ](#identityMap)[`identityMap`
 
 #### `identityMap` {#identityMap}
 
@@ -126,7 +114,7 @@ Voici un exemple de mappage d’identités simple :
 }
 ```
 
-Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [&#x200B; liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
+Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [ liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
 
 >[!NOTE]
 >
@@ -183,9 +171,9 @@ Experience Platform utilise une approche de composition dans laquelle des blocs
 
 Les schémas sont composés à l’aide de la formule suivante :
 
-**Classe + Groupe de champs de schéma&ast; = Schéma XDM**
+**Classe + Groupe de champs de schéma&amp;ast; = Schéma XDM**
 
-&ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
+&amp;ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
 
 ### Classe {#class}
 
@@ -207,7 +195,7 @@ Adobe fournit plusieurs classes XDM standard (« principales »). Deux de ces cl
 
 La capture d’écran suivante montre comment les classes sont représentées dans l’interface utilisateur d’Experience Platform. Comme l’exemple de schéma illustré ne contient aucun groupe de champs, tous les champs affichés sont fournis par la classe du schéma ([!UICONTROL XDM Individual Profile]).
 
-![Le [!UICONTROL XDM Individual Profile] dans l’éditeur de schémas.](../images/schema-composition/class.png)
+![Profil individuel [!UICONTROL XDM] dans l’éditeur de schémas.](../images/schema-composition/class.png)
 
 Pour obtenir la liste la plus récente des classes XDM standard disponibles, reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/classes). Si vous préférez afficher les ressources dans l’interface utilisateur, vous pouvez également consulter le guide sur l’[exploration des composants XDM](../ui/explore.md).
 
@@ -229,7 +217,7 @@ Les groupes de champs définissent la ou les classes avec lesquelles ils sont co
 
 Experience Platform comprend de nombreux groupes de champs Adobe standard, tout en permettant également aux fournisseurs de définir des groupes de champs pour leurs utilisateurs et aux utilisateurs individuels de définir des groupes de champs pour leurs propres concepts spécifiques.
 
-Par exemple, pour capturer des détails tels que « [!UICONTROL First Name] » et « [!UICONTROL Home Address] » pour votre schéma « [!UICONTROL Loyalty Members] », vous pouvez utiliser des groupes de champs standard qui définissent ces concepts courants. Toutefois, les concepts plus spécifiques à votre organisation (tels que les détails du programme de fidélité personnalisé ou les attributs de produit) qui peuvent ne pas être couverts par les groupes de champs standard. Dans ce cas, vous devez définir votre propre groupe de champs pour capturer ces informations.
+Par exemple, pour capturer des informations telles que « [!UICONTROL Prénom] » et « [!UICONTROL Adresse personnelle] » pour votre schéma « [!UICONTROL Membres du programme de fidélité] », vous pouvez utiliser des groupes de champs standard qui définissent ces concepts communs. Toutefois, les concepts plus spécifiques à votre organisation (tels que les détails du programme de fidélité personnalisé ou les attributs de produit) qui peuvent ne pas être couverts par les groupes de champs standard. Dans ce cas, vous devez définir votre propre groupe de champs pour capturer ces informations.
 
 >[!NOTE]
 >
@@ -239,9 +227,9 @@ Par exemple, pour capturer des détails tels que « [!UICONTROL First Name] » e
 
 N’oubliez pas que les schémas sont composés de groupes de champs « zéro ou plus ». Cela signifie que vous pouvez composer un schéma valide sans utiliser de groupes de champs.
 
-La capture d’écran suivante montre comment les groupes de champs sont représentés dans l’interface utilisateur d’Experience Platform. Dans cet exemple, un seul groupe de champs ([!UICONTROL Demographic Details]) est ajouté à un schéma, ce qui fournit un regroupement de champs à la structure du schéma.
+La capture d’écran suivante montre comment les groupes de champs sont représentés dans l’interface utilisateur d’Experience Platform. Un seul groupe de champs ([!UICONTROL Détails démographiques]) est ajouté à un schéma dans cet exemple, qui fournit un regroupement de champs à la structure du schéma.
 
-![Éditeur de schémas avec le groupe de champs [!UICONTROL Demographic Details] mis en surbrillance dans un exemple de schéma.](../images/schema-composition/field-group.png)
+![Éditeur de schémas avec le groupe de champs [!UICONTROL Détails démographiques] mis en surbrillance dans un exemple de schéma.](../images/schema-composition/field-group.png)
 
 Pour obtenir la liste la plus récente des groupes de champs XDM standard disponibles, reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Si vous préférez afficher les ressources dans l’interface utilisateur, vous pouvez également consulter le guide sur l’[exploration des composants XDM](../ui/explore.md).
 
@@ -259,7 +247,7 @@ Les types de données sont utilisés comme types de champ de référence dans de
 
 Experience Platform fournit un certain nombre de types de données courants dans le cadre de la [!DNL Schema Registry] pour prendre en charge l’utilisation de modèles standard pour décrire des structures de données courantes. Cela est expliqué plus en détail dans les tutoriels [registre des schémas](../tutorials/create-schema-api.md) et sera plus clair lorsque vous parcourrez les étapes de définition des types de données.
 
-La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur d’Experience Platform. L’un des champs fournis par le groupe de champs [!UICONTROL Demographic Details] utilise le type de données « [!UICONTROL Object] », comme indiqué par le texte suivant le caractère de barre verticale (`|`) en regard du nom du champ. Ce type de données spécifique fournit plusieurs sous-champs liés au nom d’une personne, un concept qui peut être réutilisé pour d’autres champs dans lesquels le nom d’une personne doit être capturé.
+La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur d’Experience Platform. L’un des champs fournis par le groupe de champs [!UICONTROL Détails démographiques] utilise le type de données « [!UICONTROL Objet] », comme indiqué par le texte suivant le caractère de barre verticale (`|`) en regard du nom du champ. Ce type de données spécifique fournit plusieurs sous-champs liés au nom d’une personne, un concept qui peut être réutilisé pour d’autres champs dans lesquels le nom d’une personne doit être capturé.
 
 ![Diagramme dans l’éditeur de schémas pour une personne individuelle avec l’objet Nom complet et les attributs mis en surbrillance.](../images/schema-composition/data-type.png)
 
@@ -302,11 +290,11 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 Les schémas sont créés à l’aide d’un modèle de composition et représentent le format et la structure des données à ingérer dans Experience Platform. Comme mentionné précédemment, ces schémas sont composés d’une classe et de zéro ou plusieurs groupes de champs compatibles avec cette classe.
 
-Par exemple, un schéma décrivant les achats effectués dans un magasin de vente au détail peut être appelé « [!UICONTROL Store Transactions] ». Le schéma implémente la classe [!DNL XDM ExperienceEvent] combinée avec le groupe de champs [!UICONTROL Commerce] standard et un groupe de champs [!UICONTROL Product Info] défini par l’utilisateur.
+Par exemple, un schéma décrivant les achats effectués dans un magasin de vente au détail peut être appelé « [!UICONTROL  Transactions de magasin ] ». Le schéma implémente la classe [!DNL XDM ExperienceEvent] associée au groupe de champs standard [!UICONTROL Commerce] et à un groupe de champs [!UICONTROL Informations sur les produits] défini par l’utilisateur.
 
-Un autre schéma qui suit le trafic du site web peut être appelé « [!UICONTROL Web Visits] ». Il implémente également la classe [!DNL XDM ExperienceEvent], mais cette fois combine le groupe de champs [!UICONTROL Web] standard.
+Un autre schéma qui suit le trafic du site Web peut être appelé « [!UICONTROL Visites Web] ». Il implémente également la classe [!DNL XDM ExperienceEvent], mais cette fois combine le groupe de champs standard [!UICONTROL Web].
 
-Le diagramme ci-dessous présente ces schémas et les champs fournis par chaque groupe de champs. Il contient également deux schémas basés sur la classe [!DNL XDM Individual Profile], y compris le schéma « [!UICONTROL Loyalty Members] » mentionné précédemment dans ce guide.
+Le diagramme ci-dessous présente ces schémas et les champs fournis par chaque groupe de champs. Il contient également deux schémas basés sur la classe [!DNL XDM Individual Profile], y compris le schéma « [!UICONTROL Membres du programme de fidélité] » mentionné précédemment dans ce guide.
 
 ![Diagramme de flux de quatre schémas et des groupes de champs qui y contribuent.](../images/schema-composition/composition.png)
 
@@ -328,8 +316,8 @@ Tous les fichiers de données ingérés dans Experience Platform doivent être 
 
 Si vous importez des audiences de systèmes externes dans Experience Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
 
-* [[!UICONTROL Segment definition] class &#x200B;](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
-* [[!UICONTROL Segment Membership Details] le groupe de champs &#x200B;](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL XDM Individual Profile] pour associer des profils client à des audiences spécifiques.
+* [[!UICONTROL Définition de segment] classe](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
+* [[!UICONTROL Détails sur l’appartenance à un segment] groupe de champs ](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL Profil individuel XDM] pour associer des profils client à des audiences spécifiques.
 
 ## Étapes suivantes
 
@@ -386,7 +374,7 @@ Les avantages et inconvénients de l’utilisation d’objets sur des champs à 
 **Inconvénients** :
 
 * Les champs deviennent plus imbriqués.
-* Lors de l’utilisation d’Experience Platform Query Service [&#128279;](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
+* Lors de l’utilisation d’Experience Platform Query Service [](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
 
 #### Champs à structure libre
 

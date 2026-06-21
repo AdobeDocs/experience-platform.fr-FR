@@ -5,12 +5,9 @@ title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 30f6d4430be88f2c3fdbc8f7c7a78c457c0efd56
 workflow-type: tm+mt
 source-wordcount: 6034
@@ -188,7 +185,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 | [!BADGE Destinations uniquement]{type=Informative} array_to_string | Rejoint les représentations sous forme de chaînes des éléments d’un tableau à l’aide du séparateur spécifié. Si le tableau est multidimensionnel, il est aplati avant d’être joint. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>SEPARATOR : **obligatoire** séparateur utilisé pour joindre les éléments du tableau.</li><li>TABLEAU : **obligatoire** tableau à joindre (après aplatissement).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | « Bonjour, le monde » |
 | [!BADGE Destinations uniquement]{type=Informative} filterArray* | Filtre le tableau donné en fonction d’un prédicat. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à filtrer</li><li>PREDICATE : **Obligatoire** prédicat à appliquer à chaque élément du tableau donné. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
 | [!BADGE Destinations uniquement]{type=Informative} transformArray* | Transforme le tableau donné en fonction d’un prédicat. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à transformer.</li><li>PREDICATE : **Obligatoire** prédicat à appliquer à chaque élément du tableau donné. | transformArray(ARRAY, PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
-| [!BADGE Destinations uniquement]{type=Informative} flattenArray* | Aplatit le tableau donné (multidimensionnel) en un tableau unidimensionnel. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à aplatir.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE Destinations uniquement]{type=Informative} flattenArray* | Aplatit le tableau donné (multidimensionnel) en un tableau unidimensionnel. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à aplatir.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -214,7 +211,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| decode | Étant donné qu’une clé et une liste de paires clé-valeur sont aplaties dans un tableau, la fonction renvoie la valeur si la clé est trouvée ou renvoie une valeur par défaut si elle est présente dans le tableau. | <ul><li>KEY : **Obligatoire** clé à faire correspondre.</li><li>OPTIONS : **obligatoire** tableau aplati de paires clé/valeur. Vous pouvez éventuellement placer une valeur par défaut à la fin.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, « ca », « California », « pa », « Pennsylvania », « N/A ») | Si le stateCode donné est « ca », « California ».<br>Si le stateCode donné est « pa », « Pennsylvania ».<br>Si le stateCode ne correspond pas à ce qui suit, « N/A ». |
+| decode | Étant donné qu’une clé et une liste de paires clé-valeur sont aplaties dans un tableau, la fonction renvoie la valeur si la clé est trouvée ou renvoie une valeur par défaut si elle est présente dans le tableau. | <ul><li>KEY : **Obligatoire** clé à faire correspondre.</li><li>OPTIONS : **Obligatoire** tableau aplati de paires clé/valeur. Vous pouvez éventuellement placer une valeur par défaut à la fin.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, « ca », « California », « pa », « Pennsylvania », « N/A ») | Si le stateCode donné est « ca », « California ».<br>Si le stateCode donné est « pa », « Pennsylvania ».<br>Si le stateCode ne correspond pas à ce qui suit, « N/A ». |
 | iif | Évalue une expression booléenne donnée et renvoie la valeur spécifiée en fonction du résultat. | <ul><li>EXPRESSION : **obligatoire** expression booléenne en cours d’évaluation.</li><li>TRUE_VALUE : **obligatoire** valeur renvoyée si l’expression est évaluée comme vraie.</li><li>FALSE_VALUE : **obligatoire** valeur renvoyée si l’expression est évaluée comme égale à false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
 {style="table-layout:auto"}
@@ -227,7 +224,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| min | Renvoie le minimum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **obligatoire** un ou plusieurs objets pouvant être comparés les uns aux autres.</li></ul> | min (OPTIONS) | min(3, 1, 4) | 1 |
+| min | Renvoie le minimum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **obligatoire** un ou plusieurs objets pouvant être comparés les uns aux autres.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Renvoie le maximum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **obligatoire** un ou plusieurs objets pouvant être comparés les uns aux autres.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 {style="table-layout:auto"}
@@ -396,11 +393,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | `\|` | %5C |
-| &rbrack; | %5J |
+| ] | %5J |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

@@ -3,22 +3,15 @@ title: Connecter PostgreSQL à Experience Platform à l’aide de l’interface 
 description: Découvrez comment connecter votre base de données PostgreSQL à Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
 TQID: https://experienceleague.adobe.com/Fm6r-oglh5xdOFOTccUG3FCB4V1gfNN1Zp-30mq1YoY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 628
-ht-degree: 19%
+source-wordcount: 655
+ht-degree: 18%
 
 ---
 
@@ -54,20 +47,20 @@ Voici un exemple de chaîne de connexion [!DNL PostgreSQL] ajoutée avec le chif
 
 ## Parcourir le catalogue des sources {#navigate}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Categories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour utiliser [!DNL PostgreSQL], sélectionnez la carte source **[!UICONTROL PostgreSQL DB]** sous *[!UICONTROL Databases]*, puis sélectionnez **[!UICONTROL Set up]**.
+Pour utiliser [!DNL PostgreSQL], sélectionnez la carte source **[!UICONTROL Base de données PostgreSQL]** sous *[!UICONTROL Bases de données]*, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte source PostgreSQL sélectionnée.](../../../../images/tutorials/create/postgresql/catalog.png)
 
 
 ## Utiliser un compte existant {#existing}
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte [!DNL PostgreSQL] à utiliser.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL PostgreSQL] à utiliser.
 
 ![Interface de compte existante du workflow des sources.](../../../../images/tutorials/create/postgresql/existing.png)
 
@@ -75,7 +68,7 @@ Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]*
 
 Si vous ne disposez pas d’un compte existant, vous devez créer un compte en fournissant les informations d’authentification nécessaires qui correspondent à votre source.
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et éventuellement une description pour votre compte.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement ajoutez une description pour votre compte.
 
 ![Nouvelle interface de compte dans le workflow des sources avec un nom de compte et une description facultative fournis.](../../../../images/tutorials/create/postgresql/new.png)
 
@@ -87,13 +80,13 @@ Vous pouvez connecter votre compte [!DNL PostgreSQL] à Experience Platform sur 
 
 >[!TAB Authentification de la clé de compte]
 
-Pour utiliser l’authentification par clé de compte, sélectionnez **[!UICONTROL Account key authentication]**, fournissez votre [chaîne de connexion](../../../../connectors/databases/postgres.md#azure), puis sélectionnez **[!UICONTROL Connect to source]**.
+Pour utiliser l’authentification par clé de compte, sélectionnez **[!UICONTROL Authentification par clé de compte]**, fournissez votre [chaîne de connexion](../../../../connectors/databases/postgres.md#azure), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Nouvelle interface de compte dans le workflow des sources avec « Authentification par clé de compte » sélectionné.](../../../../images/tutorials/create/postgresql/account-key.png)
 
 >[!TAB  Authentification de base ]
 
-Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Basic authentication]**, saisissez les valeurs de vos [&#x200B; informations d’authentification &#x200B;](../../../../connectors/databases/postgres.md#azure), puis sélectionnez **[!UICONTROL Connect to source]**.
+Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Authentification de base]**, indiquez les valeurs de vos [informations d’authentification](../../../../connectors/databases/postgres.md#azure), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Nouvelle interface de compte dans le workflow des sources avec « Authentification de base » sélectionnée.](../../../../images/tutorials/create/postgresql/basic-auth.png)
 

@@ -5,16 +5,13 @@ description: Découvrez comment choisir le bon playbook pour votre cas d’utili
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 TQID: https://experienceleague.adobe.com/fAHzsQOgehcxvy80mBeQPNk-U-u7cR5RxmvK-YgjwfU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 739
-ht-degree: 87%
+source-wordcount: 758
+ht-degree: 86%
 
 ---
 
@@ -42,7 +39,7 @@ Testez les options de recherche et de filtres et trouvez le playbook approprié.
 
 ## Afficher le playbook et générer les ressources {#view-playbook-generate-assets}
 
-Avant d’opter pour un playbook et de créer des instances à partir de celui-ci, vous devez l’examiner pour vous assurer qu’il correspond à vos besoins. Pour vous aider à mieux comprendre les cas d’utilisation qu’ils couvrent, tous les playbooks contiennent les sections répertoriées ci-dessous. Lorsque vous êtes prêt(e) à continuer et à générer des ressources, sélectionnez **[!UICONTROL Create Instance]**.
+Avant d’opter pour un playbook et de créer des instances à partir de celui-ci, vous devez l’examiner pour vous assurer qu’il correspond à vos besoins. Pour vous aider à mieux comprendre les cas d’utilisation qu’ils couvrent, tous les playbooks contiennent les sections répertoriées ci-dessous. Lorsque vous êtes prêt(e) à continuer et à générer des ressources, sélectionnez **[!UICONTROL Créer une instance]**.
 
 ### Mind mapping {#mindmap}
 
@@ -63,9 +60,9 @@ Consultez la section de résumé pour identifier les ressources qui sont génér
 
 | Élément | Description |
 |---------|----------|
-| **[!UICONTROL Target audience]** | Décrit les personnes que vous souhaitez cibler via ce playbook de cas d’utilisation. |
-| **[!UICONTROL Marketing Channels]** | Décrit les canaux utilisés pour atteindre les personnes ciblées dans le playbook. |
-| **[!UICONTROL Technical assets]** | Liste des ressources techniques générées après la création d’instances du playbook. Les ressources générées diffèrent en fonction du playbook, selon le cas d’utilisation. Certains playbooks peuvent générer des schémas, des segments et des parcours. D’autres peuvent générer des destinations. Pour plus d’informations sur l’utilisation et la réutilisation des ressources générées, consultez la section [Présentation des ressources générées](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) plus loin dans le guide sur la création et la réutilisation d’instances. |
+| **[!UICONTROL Audience cible]** | Décrit les personnes que vous souhaitez cibler via ce playbook de cas d’utilisation. |
+| **[!UICONTROL Canaux marketing]** | Décrit les canaux utilisés pour atteindre les personnes ciblées dans le playbook. |
+| **[!UICONTROL Ressources techniques]** | Liste des ressources techniques générées après la création d’instances du playbook. Les ressources générées diffèrent en fonction du playbook, selon le cas d’utilisation. Certains playbooks peuvent générer des schémas, des segments et des parcours. D’autres peuvent générer des destinations. Pour plus d’informations sur l’utilisation et la réutilisation des ressources générées, consultez la section [Présentation des ressources générées](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) plus loin dans le guide sur la création et la réutilisation d’instances. |
 
 {style="table-layout:auto"}
 
@@ -77,11 +74,11 @@ Faites défiler jusqu’à la section Instances pour obtenir une vue d’ensembl
 
 | Élément | Description |
 |---------|----------|
-| **[!UICONTROL Name]** | Nom de l’instance basé sur le playbook. Vous pouvez personnaliser le nom et la description d’une instance. Pour plus d’informations, consultez la section sur la [modification des métadonnées d’instance](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata). |
-| **[!UICONTROL Status]** | Signale le statut de l’instance. Une instance **[!UICONTROL submitted]** est prête à être utilisée. |
-| **[!UICONTROL Created]** | Indique la date de création de l’instance. |
-| **[!UICONTROL Created By]** | Indique la personne ayant créé l’instance. |
-| **[!UICONTROL Last Modified]** | Indique la date de la dernière modification de l’instance. |
+| **[!UICONTROL Nom]** | Nom de l’instance basé sur le playbook. Vous pouvez personnaliser le nom et la description d’une instance. Pour plus d’informations, consultez la section sur la [modification des métadonnées d’instance](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata). |
+| **[!UICONTROL Statut]** | Signale le statut de l’instance. Une instance **[!UICONTROL soumise]** est prête à être utilisée. |
+| **[!UICONTROL Créé]** | Indique la date de création de l’instance. |
+| **[!UICONTROL Créé par]** | Indique la personne ayant créé l’instance. |
+| **[!UICONTROL Dernière modification]** | Indique la date de la dernière modification de l’instance. |
 
 {style="table-layout:auto"}
 
@@ -89,4 +86,4 @@ Faites défiler jusqu’à la section Instances pour obtenir une vue d’ensembl
 
 ## Étapes suivantes - Créer une instance de playbook {#next-steps-create-instance}
 
-Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Create Instance]** pour poursuivre le playbook et générer des ressources techniques. Pour plus d’informations, consultez le guide sur [la création, le partage et la réutilisation d’instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques. Pour plus d’informations, consultez le guide sur [la création, le partage et la réutilisation d’instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md).

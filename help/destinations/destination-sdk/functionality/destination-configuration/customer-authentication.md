@@ -3,20 +3,14 @@ description: Découvrez comment configurer un mécanisme d’authentification po
 title: Configuration de l’authentification du client
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
 TQID: https://experienceleague.adobe.com/ZzTDW-QIhAapJddgnhvNbWJV7gok3ozpae7RQoga4ZU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1105
-ht-degree: 88%
+source-wordcount: 1114
+ht-degree: 87%
 
 ---
 
@@ -118,7 +112,7 @@ Pour configurer l’authentification de type porteur pour la destination, config
 
 ## Authentification OAuth 2 {#oauth2}
 
-Les utilisateurs sélectionnent **[!UICONTROL Connect to destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point d’entrée de destination, consultez la page [Authentification OAuth 2 de Destination SDK](oauth2-authorization.md).
+Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point d’entrée de destination, consultez la page [Authentification OAuth 2 de Destination SDK](oauth2-authorization.md).
 
 ![Rendu de l’interface utilisateur avec authentification OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -174,7 +168,7 @@ L’authentification [!DNL Azure Data Lake Storage] est prise en charge pour les
 
 Quand vous configurez le type d’authentification[!DNL Azure Data Lake Storage], les utilisateurs doivent saisir les informations d’identification d’Azure Service Principal et leurs informations de client.
 
-![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification &#x200B;](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
+![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification ](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
 Pour configurer l’authentification [!DNL Azure Data Lake Storage] (ADLS) de la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
@@ -226,7 +220,7 @@ Pour configurer l’authentification SFTP avec la clé SSH pour la destination, 
 
 L’authentification [!DNL Google Cloud Storage] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
-Lorsque vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leurs [!UICONTROL access key ID] et [!UICONTROL secret access key] [!DNL Google Cloud Storage].
+Lorsque vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leur [!DNL Google Cloud Storage] [!UICONTROL identifiant de clé d’accès] et [!UICONTROL clé d’accès secrète].
 
 ![Rendu de l’interface utilisateur avec l’authentification Google Cloud Storage](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 

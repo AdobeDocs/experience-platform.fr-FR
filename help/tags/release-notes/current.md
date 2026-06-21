@@ -4,7 +4,7 @@ description: Dernières notes de mise à jour concernant les balises et le trans
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '866'
 ht-degree: 94%
 
 ---
@@ -61,9 +61,9 @@ De nouvelles extensions ont été publiées :
 
 ## jeudi 28 septembre 2022
 
-* **Intégration à la navigation de gauche de Adobe Experience Platform** : toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de la collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur d’Experience Platform, sous la catégorie **[!UICONTROL Data Collection]**. Il n’est donc pas nécessaire de basculer entre les IU lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform.
+* **Intégration à la navigation de gauche de Adobe Experience Platform** : toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur d’Experience Platform, sous la catégorie **[!UICONTROL Collecte de données]**. Il n’est donc pas nécessaire de basculer entre les IU lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform.
 * **Attribution utilisateur dans les balises et le transfert d’événement** : lors de l’énumération des propriétés disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais la date de sa dernière mise à jour et la personne qui l’a effectuée.
-* Extension **[[!DNL Snap Conversions API] &#x200B;](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement** : vous pouvez désormais envoyer des données à l’[!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur la configuration et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation dédiée](https://marketingapi.snapchat.com/docs/conversion.html).
+* Extension **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement** : vous pouvez désormais envoyer des données à l’[!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur la configuration et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation dédiée](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## jeudi 27 juillet 2022
 

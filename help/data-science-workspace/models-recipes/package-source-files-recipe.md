@@ -6,17 +6,12 @@ type: Tutorial
 description: Ce tutoriel explique comment regrouper les fichiers sources fournis d’exemples de ventes au détail dans un fichier d’archives, pouvant être utilisé pour créer une recette dans l’espace de travail de science des données d’Adobe Experience Platform en suivant le processus d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 TQID: https://experienceleague.adobe.com/TGLcqrXjGgC-bEj3aFmwiQBgBhw40EdNPxRih0a8gbQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1177
+source-wordcount: 1190
 ht-degree: 42%
 
 ---
@@ -53,11 +48,11 @@ Une image Docker permet au développeur d’empaqueter une application avec tous
 
 L’image Docker créée est transmise au registre des conteneurs d’Azure à l’aide des informations d’identification fournies lors du workflow de création de recette.
 
-Pour obtenir vos informations d’identification Azure Container Registry, connectez-vous à [Adobe Experience Platform](https://platform.adobe.com). Dans la colonne de navigation de gauche, accédez à **[!UICONTROL Workflows]**. Sélectionnez **[!UICONTROL Import Recipe]**, puis sélectionnez **[!UICONTROL Launch]**. Voir la capture d’écran ci-dessous pour référence.
+Pour obtenir vos informations d’identification Azure Container Registry, connectez-vous à [Adobe Experience Platform](https://platform.adobe.com). Dans la colonne de navigation de gauche, accédez à **[!UICONTROL Workflows]**. Sélectionnez **[!UICONTROL Importer la recette]** puis **[!UICONTROL Lancer]**. Voir la capture d’écran ci-dessous pour référence.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-La page **[!UICONTROL Configure]** s’ouvre. Fournissez une **[!UICONTROL Recipe Name]** appropriée, par exemple, « Recette de ventes au détail », et éventuellement une description ou une URL de documentation. Une fois l’opération terminée, cliquez **[!UICONTROL Next]**.
+La page **[!UICONTROL Configurer]** s’ouvre. Fournissez un **[!UICONTROL Nom de la recette]** approprié, par exemple, « Recette Ventes au détail », et éventuellement une description ou une URL de documentation. Une fois l’opération terminée, cliquez sur **[!UICONTROL Suivant]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 

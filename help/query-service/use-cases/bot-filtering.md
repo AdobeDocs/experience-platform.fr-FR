@@ -3,16 +3,9 @@ title: Filtrage des robots dans Query Service avec le machine learning
 description: Ce document présente un aperçu de l’utilisation de Query Service et du machine learning pour déterminer l’activité des robots et filtrer leurs actions du trafic réel des visiteurs et visiteuses de sites Web.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 TQID: https://experienceleague.adobe.com/bi7a-XL3awI6OtBZTugcoSq4yjfOWJTzIiLvLlA0DFg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 913
@@ -40,7 +33,7 @@ Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développemen
 
 Les deux attributs utilisés pour extraire des données pour la détection des robots sont les suivants :
 
-* Identifiant visiteur Experience Cloud (ECID, également appelé MCID) : il s’agit d’un identifiant universel et persistant qui identifie vos visiteurs dans toutes les solutions Adobe.
+* Identifiant visiteur Experience Cloud (ECID, également appelé MCID) : il fournit un identifiant universel et persistant qui identifie vos visiteurs dans toutes les solutions Adobe.
 * Horodatage : fournit l’heure et la date au format UTC auxquelles une activité s’est produite sur le site web.
 
 >[!NOTE]
@@ -127,7 +120,7 @@ Le résultat de cette expression peut ressembler au tableau fourni ci-dessous.
 
 ## Identification de nouveaux seuils de pic à l’aide du machine learning
 
-Ensuite, exportez le jeu de données de requête obtenu au format CSV, puis importez-le dans [!DNL Jupyter Notebook]. À partir de cet environnement, vous pouvez entraîner un modèle de machine learning à l’aide des bibliothèques de machine learning actuelles. Consultez le guide de dépannage pour plus d’informations sur [&#x200B; comment exporter des données de  [!DNL Query Service]  au format CSV &#x200B;](../troubleshooting-guide.md#export-csv)
+Ensuite, exportez le jeu de données de requête obtenu au format CSV, puis importez-le dans [!DNL Jupyter Notebook]. À partir de cet environnement, vous pouvez entraîner un modèle de machine learning à l’aide des bibliothèques de machine learning actuelles. Consultez le guide de dépannage pour plus d’informations sur [ comment exporter des données de  [!DNL Query Service]  au format CSV ](../troubleshooting-guide.md#export-csv)
 
 Les seuils de pic ad hoc initialement établis ne sont pas pilotés par les données et manquent donc de précision. Les modèles de machine learning peuvent être utilisés pour entraîner des paramètres en tant que seuils. Par conséquent, vous pouvez augmenter l’efficacité des requêtes en réduisant le nombre de mots-clés `GROUP BY` en supprimant les fonctionnalités inutiles.
 

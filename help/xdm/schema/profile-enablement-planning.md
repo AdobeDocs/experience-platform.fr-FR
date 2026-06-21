@@ -6,7 +6,7 @@ description: Passez en revue les principales considérations à prendre en compt
 exl-id: 8d7c0e49-6138-42af-90ad-975adaa2aa99
 source-git-commit: ab4b42902a208fecf9c219ef3d3fa8db2a559392
 workflow-type: tm+mt
-source-wordcount: '1852'
+source-wordcount: '1868'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Utilisez cette page pour confirmer que votre schéma et votre jeu de données sont prêts avant de les activer pour le profil client en temps réel. Effectuez cette révision de planification après avoir conçu vos champs de schéma, mais avant d’activer le schéma pour Profile. L’activation du profil applique des changements de comportement permanents à votre modèle de données. Vous ne pouvez pas annuler l’activation du schéma. En outre, l’activation d’un jeu de données affecte le traitement de ses enregistrements dans le profil client en temps réel. Consultez ces conseils pour éviter toute activation involontaire, tout problème de qualité des données ou toute contrainte à long terme dans la conception de votre schéma.
 
-L’activation du profil détermine la manière dont vos données sont regroupées, fusionnées et activées dans Experience Platform. La planification garantit que la structure du schéma, la configuration de l’identité et l’objectif du jeu de données sont corrects avant d’effectuer la modification. Une fois la révision de la planification terminée, vous pouvez activer les données du profil dans l’interface utilisateur de **[!UICONTROL Schema Editor]** ou de **[!UICONTROL Dataset]**.
+L’activation du profil détermine la manière dont vos données sont regroupées, fusionnées et activées dans Experience Platform. La planification garantit que la structure du schéma, la configuration de l’identité et l’objectif du jeu de données sont corrects avant d’effectuer la modification. Une fois la révision de planification terminée, vous pouvez activer les données pour le profil dans l’interface utilisateur **[!UICONTROL Éditeur de schéma]** ou **[!UICONTROL Jeu de données]**.
 
 ## Conditions préalables
 
 Avant d’utiliser ce guide de planification, vérifiez que vous disposez des éléments suivants :
 
-* Concevoir un schéma à l’aide de l’API **[!UICONTROL Schema Editor]** ou Schema Registry. Pour commencer, consultez le [tutoriel sur la création de schémas](../tutorials/create-schema-ui.md).
+* Concevoir un schéma à l’aide de l’API **[!UICONTROL Éditeur de schémas]** ou Schema Registry. Pour commencer, consultez le [tutoriel sur la création de schémas](../tutorials/create-schema-ui.md).
 * configuré au moins un champ d’identité dans votre schéma. Consultez le [guide de configuration des champs d’identité](../ui/fields/identity.md) pour obtenir des instructions.
 * Compréhension de base du [profil client en temps réel](../../profile/home.md) et de la manière dont il utilise des schémas pour créer des vues client unifiées.
 * Autorisations appropriées pour activer les schémas et les jeux de données pour le profil. Contactez votre administrateur système si vous n’avez pas accès aux options d’activation du profil.
@@ -42,7 +42,7 @@ Comme ces modifications affectent les processus en aval, vérifiez qu’un sché
 
 Vous devez activer le schéma ET les jeux de données qui utilisent ce schéma pour Profile. Activez les ressources dans l’ordre suivant :
 
-1. **Activer le schéma pour Profil** : tout d’abord, activez Profil sur le schéma dans le **[!UICONTROL Schema Editor]**. Cela permet à tout jeu de données utilisant ce schéma d’être activé pour Profil.
+1. **Activer le schéma pour Profil** : tout d’abord, activez Profil sur le schéma dans l’**[!UICONTROL Éditeur de schémas]**. Cela permet à tout jeu de données utilisant ce schéma d’être activé pour Profil.
 2. **Activer les jeux de données individuels pour le profil** : une fois le schéma activé, activez le profil sur chaque jeu de données qui doit contribuer aux profils clients unifiés.
 
 Vous ne pouvez pas activer un jeu de données pour Profil si son schéma n’est pas déjà activé. Le schéma agit comme une condition préalable à l’activation du jeu de données. Ce processus en deux étapes garantit que votre modèle de données est validé avant que le profil client en temps réel ne commence le traitement des enregistrements.
@@ -97,9 +97,9 @@ Utilisez cette liste de contrôle pour confirmer la préparation avant d’activ
 
 ### Vérifications au niveau du schéma
 
-Commencez par vérifier que la conception de votre schéma est complète et stable. Vérifiez votre schéma pour confirmer que tous les champs requis pour votre cas d’utilisation sont présents et qu’aucun champ expérimental ou temporaire n’est inclus. Consultez les [&#x200B; bonnes pratiques relatives à la conception de schéma &#x200B;](./best-practices.md) pour vous assurer que votre schéma suit les modèles recommandés. Obtenez l’approbation de votre équipe sur la liste de champs finale (voir [&#x200B; Contraintes d’immuabilité des schémas &#x200B;](#why-planning-matters)).
+Commencez par vérifier que la conception de votre schéma est complète et stable. Vérifiez votre schéma pour confirmer que tous les champs requis pour votre cas d’utilisation sont présents et qu’aucun champ expérimental ou temporaire n’est inclus. Consultez les [ bonnes pratiques relatives à la conception de schéma ](./best-practices.md) pour vous assurer que votre schéma suit les modèles recommandés. Obtenez l’approbation de votre équipe sur la liste de champs finale (voir [ Contraintes d’immuabilité des schémas ](#why-planning-matters)).
 
-Ensuite, vérifiez que la configuration de votre identité principale est correcte. Ouvrez votre schéma dans le **[!UICONTROL Schema Editor]** et localisez le champ marqué de l’icône d’identité. Vérifiez que ce champ est systématiquement renseigné dans vos données source et que l’espace de noms d’identité est approprié à votre cas d’utilisation. L’identité principale doit être stable, unique et présente de manière fiable sur tous les enregistrements pour garantir un assemblage correct des profils.
+Ensuite, vérifiez que la configuration de votre identité principale est correcte. Ouvrez votre schéma dans l’**[!UICONTROL éditeur de schémas]** et recherchez le champ marqué par l’icône d’identité. Vérifiez que ce champ est systématiquement renseigné dans vos données source et que l’espace de noms d’identité est approprié à votre cas d’utilisation. L’identité principale doit être stable, unique et présente de manière fiable sur tous les enregistrements pour garantir un assemblage correct des profils.
 
 Enfin, vérifiez que vous n’avez pas besoin de renommer ou de réorganiser la structure du schéma. Les modifications de la structure du schéma sont limitées aux mises à jour additifs uniquement (voir [contraintes d’immuabilité du schéma](#why-planning-matters)). Toute ambiguïté à long terme dans le nom ou l’organisation ne peut pas être corrigée ultérieurement. Résolvez donc ces problèmes avant l’activation.
 
@@ -121,10 +121,10 @@ Une fois la liste de contrôle de préactivation terminée, procédez comme suit
 
 Commencez par activer le profil sur votre schéma :
 
-1. Accédez à **[!UICONTROL Schemas]** dans l’interface utilisateur d’Experience Platform.
-2. Sélectionnez le schéma dans la liste pour l’ouvrir dans la **[!UICONTROL Schema Editor]**.
-3. Sélectionnez le bouton (bascule) **[!UICONTROL Profile]** dans le rail de droite. Le panneau des propriétés du schéma affiche une boîte de dialogue de confirmation.
-4. Sélectionnez **[!UICONTROL Enable]** pour confirmer. Le schéma est maintenant activé pour Profil.
+1. Accédez à **[!UICONTROL Schémas]** dans l’interface utilisateur d’Experience Platform.
+2. Sélectionnez le schéma dans la liste pour l’ouvrir dans l’**[!UICONTROL Éditeur de schémas]**.
+3. Sélectionnez le bouton (bascule) **[!UICONTROL Profil]** dans le rail de droite. Le panneau des propriétés du schéma affiche une boîte de dialogue de confirmation.
+4. Sélectionnez **[!UICONTROL Activer]** pour confirmer. Le schéma est maintenant activé pour Profil.
 
 Pour obtenir des instructions détaillées, consultez le [guide d’activation des schémas](../ui/resources/schemas.md#profile) dans la documentation de l’éditeur de schémas.
 
@@ -132,9 +132,9 @@ Pour obtenir des instructions détaillées, consultez le [guide d’activation d
 
 Une fois que votre schéma est activé pour Profil, activez chaque jeu de données qui doit contribuer aux profils unifiés :
 
-1. Accédez à **[!UICONTROL Datasets]** dans l’interface utilisateur d’Experience Platform.
+1. Accédez à **[!UICONTROL Jeux de données]** dans l’interface utilisateur d’Experience Platform.
 2. Sélectionnez un jeu de données dans la liste pour ouvrir la page des détails du jeu de données.
-3. Sélectionnez le bouton (bascule) **[!UICONTROL Profile]** dans le rail de droite. Le panneau des propriétés du jeu de données se met à jour pour afficher le profil activé.
+3. Sélectionnez le bouton (bascule) **[!UICONTROL Profil]** dans le rail de droite. Le panneau des propriétés du jeu de données se met à jour pour afficher le profil activé.
 
 Répétez ce processus pour chaque jeu de données qui doit contribuer au profil client en temps réel. Pour obtenir des instructions détaillées et des options d’activation des API, consultez le guide d’utilisation des jeux de données référencé dans la section Conditions préalables .
 
@@ -146,4 +146,4 @@ Une fois que vous avez activé le schéma et les jeux de données, le profil cli
 
 ## Étapes suivantes {#next-steps}
 
-Vous avez examiné les effets permanents de l’activation du profil, confirmé que votre schéma et vos jeux de données sont prêts et validé que votre configuration d’identité prend en charge vos cas d’utilisation. Pour mieux comprendre la structure du schéma et les relations entre les champs, consultez la [Principes de base de la composition des schémas](../schema/composition.md) qui explique les règles d’évolution des schémas et la manière dont les champs interagissent dans le modèle de données. Si vous rencontrez des problèmes pendant ou après l’activation, consultez le guide de dépannage [XDM](../troubleshooting-guide.md) pour connaître les problèmes courants et les solutions. Pour en savoir plus sur la manière dont les espaces de noms d’identité affectent l’assemblage et la résolution des profils, consultez la [&#x200B; présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).
+Vous avez examiné les effets permanents de l’activation du profil, confirmé que votre schéma et vos jeux de données sont prêts et validé que votre configuration d’identité prend en charge vos cas d’utilisation. Pour mieux comprendre la structure du schéma et les relations entre les champs, consultez la [Principes de base de la composition des schémas](../schema/composition.md) qui explique les règles d’évolution des schémas et la manière dont les champs interagissent dans le modèle de données. Si vous rencontrez des problèmes pendant ou après l’activation, consultez le guide de dépannage [XDM](../troubleshooting-guide.md) pour connaître les problèmes courants et les solutions. Pour en savoir plus sur la manière dont les espaces de noms d’identité affectent l’assemblage et la résolution des profils, consultez la [ présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).

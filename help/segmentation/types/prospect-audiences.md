@@ -4,20 +4,14 @@ description: Découvrez comment créer et utiliser des audiences de prospects po
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
 TQID: https://experienceleague.adobe.com/oKtO-4M8Wt50tUqosqGQk6zQCTPpSQgZNJbtoec9g18
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 387
-ht-degree: 66%
+source-wordcount: 395
+ht-degree: 64%
 
 ---
 
@@ -27,7 +21,7 @@ Adobe Experience Platform vous permet d’apporter toute la facilité et la so
 
 ## Accès {#access}
 
-Pour accéder aux audiences de prospects, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Prospects]** .
+Pour accéder aux audiences de prospects, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Prospects]**.
 
 ![Le bouton [!UICONTROL Audiences] est mis en surbrillance dans la section [!UICONTROL Prospects].](../images/types/prospect/prospect-audiences.png)
 
@@ -55,9 +49,9 @@ Pour plus d’informations sur la page des détails de l’audience, veuillez li
 
 ## Créer une audience {#create}
 
-Pour créer une audience de prospects, sélectionnez **[!UICONTROL Create audience]** sur le Portail d’audiences.
+Pour créer une audience de prospects, sélectionnez **[!UICONTROL Créer une audience]** sur le portail d’audiences.
 
-![Le bouton [!UICONTROL Create audience] est mis en surbrillance sur la page de navigation de l’audience du prospect.](../images/types/prospect/select-create-audience.png)
+![Le bouton [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l’audience du prospect.](../images/types/prospect/select-create-audience.png)
 
 Le créateur de segments s’affiche. Les attributs de profil de prospect apparaissent dans la barre de navigation de gauche.
 

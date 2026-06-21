@@ -4,36 +4,14 @@ description: Découvrez le transfert d’événements dans Adobe Experience Pl
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 TQID: https://experienceleague.adobe.com/lJWevoZHpHlTKp15DzOR86xChLszIDHDc7ejlbTh26E
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1162
+source-wordcount: 1171
 ht-degree: 44%
 
 ---
@@ -77,7 +55,7 @@ Tandis que les balises collectent les données d’événement directement sur v
 
 ### Propriétés {#properties}
 
-Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur d’Experience Platform ou dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Event Forwarding]** dans le volet de navigation de gauche.
+Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur d’Experience Platform ou dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche.
 
 >[!TIP]
 >
@@ -85,11 +63,11 @@ Le transfert d’événement conserve sa propre banque de propriétés séparée
 
 ![Propriétés de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/properties.png)
 
-Toutes les propriétés de transfert d’événement répertorient les **[!UICONTROL Edge]** comme leur plateforme. Elles ne font pas la distinction entre web et mobile, car elles traitent uniquement les données reçues d’Experience Platform Edge Network, qui peut lui-même recevoir des données d’événement des plateformes web et mobiles.
+Toutes les propriétés de transfert d’événement répertorient **** comme leur plateforme. Elles ne font pas la distinction entre web et mobile, car elles traitent uniquement les données reçues d’Experience Platform Edge Network, qui peut lui-même recevoir des données d’événement des plateformes web et mobiles.
 
 ### Extensions {#extensions}
 
-Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalog]**.
+Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalogue]**.
 
 Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![à propos](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
@@ -103,7 +81,7 @@ Bien que les éléments de données eux-mêmes soient créés et configurés de 
 
 #### Référencer des données d’Experience Platform Edge Network {#data-element-path}
 
-Pour référencer des données à partir d’Experience Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Path]** pour le type.
+Pour référencer des données à partir d’Experience Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Chemin]** pour le type.
 
 La valeur **[!UICONTROL Path]** de l’élément de données doit suivre le modèle `arc.event.{ELEMENT}` (par exemple : `arc.event.xdm.web.webPageDetails.URL`). Ce chemin d’accès doit être spécifié correctement pour que les données soient envoyées.
 

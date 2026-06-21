@@ -3,30 +3,14 @@ title: Extension de transfert d’événement Zendesk
 description: Extension de transfert d’événement Zendesk pour Adobe Experience Platform.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 TQID: https://experienceleague.adobe.com/i3J1LovLJ8S2mPIc7RDC3fBZtg40JWEutnxdtRxLpuo
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1327
+source-wordcount: 1335
 ht-degree: 84%
 
 ---
@@ -50,7 +34,7 @@ Vous devez également rassembler les détails suivants pour votre configuration 
 
 {style="table-layout:auto"}
 
-Enfin, vous devez créer un secret de transfert d’événement pour le jeton API. Définissez le type de secret sur **[!UICONTROL Token]**, puis définissez la valeur sur le jeton API que vous avez collecté à partir de votre configuration Zendesk. Reportez-vous à la documentation relative aux [secrets du transfert d’événement](../../../ui/event-forwarding/secrets.md) pour plus d’informations sur la configuration des secrets.
+Enfin, vous devez créer un secret de transfert d’événement pour le jeton API. Définissez le type de secret sur **[!UICONTROL Jeton]**, puis définissez la valeur sur le jeton API que vous avez collecté à partir de votre configuration Zendesk. Reportez-vous à la documentation relative aux [secrets du transfert d’événement](../../../ui/event-forwarding/secrets.md) pour plus d’informations sur la configuration des secrets.
 
 ## Installer l’extension {#install}
 
@@ -70,13 +54,13 @@ Sélectionner **Extensions** dans le volet de navigation de gauche. Sous **Insta
 
 ![Bouton Configurer pour l’extension Zendesk sélectionnée dans l’interface utilisateur](../../../images/extensions/server/zendesk/configure.png)
 
-Sous **[!UICONTROL Zendesk Domain]**, saisissez la valeur de votre sous-domaine Zendesk. Sous **[!UICONTROL Zendesk Token]**, sélectionnez le secret que vous avez créé précédemment et qui contient le jeton API.
+Sous **[!UICONTROL Domaine de Zendesk]**, saisissez la valeur de votre sous-domaine Zendesk. Sous **[!UICONTROL Jeton Zendesk]**, sélectionnez le secret que vous avez créé précédemment et qui contient le jeton API.
 
 ![Options de configuration renseignées dans l’interface utilisateur](../../../images/extensions/server/zendesk/input.png)
 
 ## Configurer une règle de transfert d’événement
 
-Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension de [!UICONTROL Zendesk], puis sélectionnez le type d’action de [!UICONTROL Create Event].
+Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension [!UICONTROL Zendesk], puis sélectionnez le type d’action [!UICONTROL Créer un événement].
 
 ![Définir une règle](../../../images/extensions/server/zendesk/rule.png)
 
@@ -145,7 +129,7 @@ En fonction du type de compte, le Zendesk [!DNL Events API] peut gérer le nombr
 | [!DNL Growth] | 250 |
 | [!DNL Professional] | 500 |
 | [!DNL Enterprise] | 750 |
-| [!DNL Enterprise Plus] | 1000 |
+| [!DNL Enterprise Plus] | 1 000 |
 
 {style="table-layout:auto"}
 

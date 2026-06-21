@@ -5,13 +5,11 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: f46b5fb6-d64a-4a37-91f6-b470599d9130
 TQID: https://experienceleague.adobe.com/nNjD91aRGu-G2TynRKHjnfmz8iACd0wwdzSl7rptL3c
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 126
+source-wordcount: 134
 ht-degree: 8%
 
 ---
@@ -24,10 +22,10 @@ ht-degree: 8%
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Author Reference] | `authorReference` | [[!UICONTROL Reference]](../data-types/reference.md) | Référence à l’auteur. |
-| [!UICONTROL Author] | `authorString` | Chaîne | Personne responsable de l’annotation. |
-| [!UICONTROL Text] | `text` | Chaîne | Contenu de l’annotation. |
-| [!UICONTROL Time] | `time` | DateTime | Date à laquelle l’annotation a été créée. |
+| [!UICONTROL Référence de l’auteur] | `authorReference` | [[!UICONTROL Référence]](../data-types/reference.md) | Référence à l’auteur. |
+| [!UICONTROL Auteur] | `authorString` | Chaîne | Personne responsable de l’annotation. |
+| [!UICONTROL Texte] | `text` | Chaîne | Contenu de l’annotation. |
+| [!UICONTROL Heure] | `time` | DateTime | Date à laquelle l’annotation a été créée. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

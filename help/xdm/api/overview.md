@@ -5,15 +5,10 @@ title: Guide de l’API Schema Registry
 description: L’API Schema Registry permet aux développeurs de gérer par programmation tous les schémas et les ressources de modèle de données d’expérience (XDM) associées dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 TQID: https://experienceleague.adobe.com/vJJirubxD5D2tolsVNNY3ETu8YVeZSstUpjKMmd1ElY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1161
@@ -57,7 +52,7 @@ Les groupes de champs sont des composants réutilisables qui définissent un ou 
 
 ## Types de données
 
-Les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de la même manière que les champs littéraux de base, la principale différence étant que les types de données peuvent définir plusieurs sous-champs. Bien qu’ils soient similaires aux groupes de champs en ce qu’ils permettent l’utilisation cohérente d’une structure à champs multiples, les types de données sont plus flexibles, car ils peuvent être inclus n’importe où dans la structure du schéma, tandis que les groupes de champs ne peuvent être ajoutés qu’au niveau racine. Pour plus d’informations sur l’utilisation des types de données dans l’API[&#128279;](./data-types.md) consultez le  guide des points d’entrée des types de données .
+Les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de la même manière que les champs littéraux de base, la principale différence étant que les types de données peuvent définir plusieurs sous-champs. Bien qu’ils soient similaires aux groupes de champs en ce qu’ils permettent l’utilisation cohérente d’une structure à champs multiples, les types de données sont plus flexibles, car ils peuvent être inclus n’importe où dans la structure du schéma, tandis que les groupes de champs ne peuvent être ajoutés qu’au niveau racine. Pour plus d’informations sur l’utilisation des types de données dans l’API](./data-types.md) consultez le [ guide des points d’entrée des types de données .
 
 >[!NOTE]
 >
@@ -87,25 +82,25 @@ Pour plus d’informations, consultez le guide [CSV to schema conversion endpoin
 
 L’API Schema Registry vous permet de transférer et de partager des ressources XDM entre les sandbox et les organisations. Pour tout schéma, groupe de champs ou type de données, vous pouvez générer une payload d’exportation contenant la structure de la ressource et des ressources dépendantes. Cette payload peut ensuite être utilisée pour importer la ressource dans un sandbox et une organisation de destination.
 
-Pour plus d’informations sur la création d’une payload d’exportation pour une ressource XDM existante[&#128279;](./export.md) consultez le  guide de point d’entrée d’exportation .
+Pour plus d’informations sur la création d’une payload d’exportation pour une ressource XDM existante](./export.md) consultez le [ guide de point d’entrée d’exportation .
 
 ## Importer
 
 Si vous utilisez les points d’entrée [export](#export) ou [CSV vers la conversion de schéma](./import.md) pour créer une payload d’exportation, vous pouvez envoyer cette payload à une organisation cible et à un sandbox pour importer les ressources spécifiées.
 
-Pour plus d’informations sur la génération de ressources XDM à partir de payloads d’exportation[&#128279;](./export.md) consultez le  guide de point d’entrée d’importation .
+Pour plus d’informations sur la génération de ressources XDM à partir de payloads d’exportation](./export.md) consultez le [ guide de point d’entrée d’importation .
 
 ## Données d’exemple
 
 Vous pouvez générer des données d’exemple pour n’importe quel schéma spécifié dans la bibliothèque de schémas. L’objet de réponse renvoyé peut ensuite être utilisé comme source d’ingestion de données.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée[&#128279;](./sample-data.md) consultez le  guide de point d’entrée d’exemple de données .
+Pour plus d’informations sur l’utilisation de ce point d’entrée](./sample-data.md) consultez le [ guide de point d’entrée d’exemple de données .
 
 ## Journal d’audit
 
 Le registre des schémas conserve un journal de toutes les modifications apportées à une ressource (classe, groupe de champs, type de données ou schéma) entre différentes mises à jour. Vous pouvez récupérer le journal d’une ressource spécifique en fournissant son `$id` ou son `meta:altId` dans le chemin d’accès d’une requête GET vers ce point d’entrée.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée[&#128279;](./audit-log.md) consultez le  guide de point d’entrée du journal d’audit .
+Pour plus d’informations sur l’utilisation de ce point d’entrée](./audit-log.md) consultez le [ guide de point d’entrée du journal d’audit .
 
 ## Étapes suivantes
 

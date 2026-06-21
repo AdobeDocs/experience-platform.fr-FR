@@ -3,16 +3,11 @@ title: Connecter Salesforce Marketing Cloud à Experience Platform à l’aide d
 description: Découvrez comment connecter votre compte Salesforce Marketing Cloud à Experience Platform à l’aide d’API.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 TQID: https://experienceleague.adobe.com/I3Wj1ZhKu91kKQY2iHNYAspj-r3ze3OQeHDjDFEmKUM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 595

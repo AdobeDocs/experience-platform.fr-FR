@@ -6,13 +6,9 @@ type: Tutorial
 description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points d’entrée en flux continu en temps réel. Les API d’ingestion en flux continu prennent en charge deux modes de validation : synchrone et asynchrone.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 TQID: https://experienceleague.adobe.com/ZoZWx4l4uuWPr-mgTcbnGafkn6p4K0XADyme-wmS3kk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 940

@@ -3,21 +3,11 @@ title: Paramètres des notifications push
 description: Configurez les paramètres de notification push pour l’extension de balise Web SDK.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
 TQID: https://experienceleague.adobe.com/VgGzBccAStme5jPkQ-szKaebhisbDHrn6ds850CLQMk
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
 workflow-type: tm+mt
 source-wordcount: 211
@@ -43,7 +33,7 @@ Cette section de configuration vous permet de définir une clé publique VALIDE 
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
 1. Développez **[!UICONTROL Composants de build personnalisés]**, puis activez **[!UICONTROL Notifications push]**.
-1. Sous [!UICONTROL Instances &#x200B;], faites défiler l’écran vers le bas pour accéder à la section [!UICONTROL Notifications push].
+1. Sous [!UICONTROL Instances ], faites défiler l’écran vers le bas pour accéder à la section [!UICONTROL Notifications push].
 1. Saisissez votre clé publique VAPID dans le champ **[!UICONTROL Clé publique VAPID]**.
 
 ![Image montrant les paramètres de notifications push à l’aide de l’extension de balise Web SDK](../assets/push-notifications.png)

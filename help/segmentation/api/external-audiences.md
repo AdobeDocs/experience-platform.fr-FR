@@ -3,18 +3,11 @@ title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
 TQID: https://experienceleague.adobe.com/LMW9Y9JhBUhwz-p6hBNSwdriklaDaQg0BG-E9M7-bYQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 2884
@@ -208,7 +201,7 @@ Une réponse réussie renvoie le statut HTTP 202 avec les détails de votre audi
 
 ## Récupérer le statut de création de l’audience {#retrieve-status}
 
-Vous pouvez récupérer le statut de l’envoi de votre audience externe en adressant une requête GET au point d’entrée `/external-audiences/operations` et en fournissant l’identifiant de l’opération que vous avez reçu de la réponse de création d’audience externe.
+Vous pouvez récupérer le statut de l’envoi de votre audience externe en adressant une requête GET au point d’entrée `/external-audiences/operations` et en fournissant l’identifiant de l’opération que vous avez reçue de la réponse de création d’audience externe.
 
 **Format d’API**
 
@@ -766,7 +759,7 @@ La section suivante affiche les codes d’erreur disponibles lors de l’utilisa
 
 Pour utiliser l’activation rapide, vous devez d’abord effectuer une requête POST au point d’entrée `/external-audience` avec `expressActivation` défini sur `true`. Dans la réponse, veillez à noter les `operationId`.
 
-Vous souhaitez maintenant confirmer que l’audience a bien été traitée. Envoyez une requête GET au `/external-audience/operations` tout en fournissant les `operationId` que vous avez précédemment mentionnées. Si le statut est `SUCCESS`, vous pouvez ajouter l’audience à la destination.
+Vous souhaitez maintenant confirmer que l’audience a bien été traitée. Envoyez une requête GET à l’`/external-audience/operations` tout en fournissant les `operationId` que vous avez précédemment mentionnées. Si le statut est `SUCCESS`, vous pouvez ajouter l’audience à la destination.
 
 Lorsque vous ajoutez l’audience à une destination, il existe une configuration de 30 minutes entre l’audience et la destination. Patientez au moins 30 minutes avant de déclencher l’exécution du flux.
 

@@ -5,12 +5,9 @@ title: Qualité des données
 description: Le document suivant présente un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 TQID: https://experienceleague.adobe.com/6WfJEb0xsEjGlUf2BtUOIBDRDOyy8axoqpXfPp1gImM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 430

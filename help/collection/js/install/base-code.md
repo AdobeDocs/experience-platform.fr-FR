@@ -1,9 +1,10 @@
 ---
 title: Code de base
 description: Mettre les commandes en file d’attente (amorçage) pendant le chargement asynchrone de la bibliothèque de collecte de données.
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: 10265747-f6d2-4ae7-bf22-9904c5a96f8e
+source-git-commit: 1281c16ea9cc459646e3e326826a117f63e8173a
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -100,4 +101,4 @@ ingot("configure", {
 
 ## Plusieurs instances SDK
 
-Vous pouvez éventuellement utiliser le code de base pour configurer plusieurs instances SDK sur une page. Pour plus d’informations[&#x200B; voir &#x200B;](../../use-cases/multiple-instances.md) Utilisation de plusieurs instances Web SDK .
+Vous pouvez éventuellement utiliser le code de base pour configurer plusieurs instances SDK sur une page. Pour plus d’informations](../../use-cases/multiple-instances.md) voir [ Utilisation de plusieurs instances Web SDK .

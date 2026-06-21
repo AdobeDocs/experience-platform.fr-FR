@@ -3,19 +3,13 @@ description: Découvrez comment configurer les identités cibles prises en charg
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
 TQID: https://experienceleague.adobe.com/GvF3ln-NZyz8gK8u7k0o0MclR1KnHNWtzsHp7WAr-KY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 919
+source-wordcount: 898
 ht-degree: 52%
 
 ---
@@ -72,9 +66,9 @@ Pendant la définition des identités cibles prises en charge par la destination
 |---------|----------|---|------|
 | `acceptsAttributes` | Booléen | Facultatif | Indique si la clientèle peut mapper des attributs de profil standard à l’identité que vous configurez. |
 | `acceptsCustomNamespaces` | Booléen | Facultatif | Indique si la clientèle peut mapper des espaces de noms d’identité personnalisés à l’espace de noms d’identité que vous configurez. |
-| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) (par exemple, [!UICONTROL IDFA]) la clientèle peut mapper l’identité que vous configurez. |
-| `transformation` | Chaîne | Facultatif | Affiche la case à cocher [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) dans l’interface utilisateur d’Experience Platform, lorsque le champ source est un attribut XDM ou un espace de noms d’identité personnalisée. Utilisez cette option pour permettre aux utilisateurs de hacher les attributs sources au moment de l’exportation. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
-| `requiredTransformation` | Chaîne | Facultatif | Lorsque la clientèle sélectionne cet espace de noms d’identité source, la case à cocher [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) est automatiquement appliquée au mappage et il n’est pas possible de la désactiver. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
+| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) (par exemple, [!UICONTROL IDFA]) la clientèle peut mapper à l’identité que vous configurez. |
+| `transformation` | Chaîne | Facultatif | Affiche la case [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) dans l’interface utilisateur d’Experience Platform, lorsque le champ source est un attribut XDM ou un espace de noms d’identité personnalisée. Utilisez cette option pour permettre aux utilisateurs de hacher les attributs sources au moment de l’exportation. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
+| `requiredTransformation` | Chaîne | Facultatif | Lorsque la clientèle sélectionne cet espace de noms d’identité source, la case [[!UICONTROL Appliquer la transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) est automatiquement cochée pour le mappage et il n’est pas possible de la désactiver. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 

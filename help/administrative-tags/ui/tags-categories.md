@@ -4,19 +4,13 @@ title: Catégories de balises
 description: Ce document est consacré à la gestion des catégories de balises unifiées dans Adobe Experience Cloud.
 exl-id: 0369d4e1-c091-4702-890a-3882a4916217
 TQID: https://experienceleague.adobe.com/jJ5OFJ-NtmnH8NGmsmP2OAYKJZAf-gK0sYlrieLlaWU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 393
-ht-degree: 65%
+source-wordcount: 417
+ht-degree: 62%
 
 ---
 
@@ -26,11 +20,11 @@ Les catégories de balises regroupent les balises dans des ensembles significati
 
 ## Créer une catégorie de balises {#create-tag-category}
 
-Pour créer une catégorie, sélectionnez **[!UICONTROL tags]** dans le volet de navigation de gauche, puis sélectionnez [!UICONTROL Create tag category].
+Pour créer une catégorie, sélectionnez **[!UICONTROL balises]** dans le volet de navigation de gauche, puis sélectionnez [!UICONTROL Créer une catégorie de balises].
 
 ![Création d’une catégorie de balises.](./images/create-tag-category.png)
 
-La boîte de dialogue **[!UICONTROL Create tag category]** s’affiche, vous invitant à saisir un nom de catégorie et une description facultative. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Créer une catégorie de balises]** s’affiche, vous invitant à saisir un nom de catégorie et une description facultative. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Boîte de dialogue Créer une catégorie de balises.](./images/create-tag-category-dialog.png)
 
@@ -44,15 +38,15 @@ La nouvelle catégorie de balises a été créée avec succès et nous vous redi
 >
 >La modification ou le changement de nom d’une catégorie de balises conserve l’association de la balise à tous les objets où elle est actuellement appliquée.
 
-Pour modifier une catégorie de balises, sélectionnez **[!UICONTROL tags]** dans le volet de navigation de gauche, puis sélectionnez la catégorie de balises à modifier.
+Pour modifier une catégorie de balises, sélectionnez **[!UICONTROL balises]** dans le volet de navigation de gauche, puis sélectionnez la catégorie de balises à modifier.
 
 ![Modification d’une catégorie de balises.](./images/edit-tag-category.png)
 
-Dans la catégorie de balises, sélectionnez les points de suspension (`...`) en regard de [!UICONTROL Create Tag]. Une liste déroulante affiche les commandes permettant de modifier ou de supprimer une catégorie, sélectionnez **[!UICONTROL Edit category]**.
+Dans la catégorie de balises, sélectionnez les points de suspension (`...`) en regard de [!UICONTROL Créer une balise]. Une liste déroulante affiche les commandes permettant de modifier ou de supprimer une catégorie, sélectionnez **[!UICONTROL Modifier la catégorie]**.
 
 ![Sélection de Modifier la catégorie dans la liste déroulante.](./images/select-edit-tag-category.png)
 
-La boîte de dialogue **[!UICONTROL Edit category]** s’affiche, vous invitant à mettre à jour le nom de la catégorie et la description facultative. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Modifier la catégorie]** s’affiche, vous invitant à mettre à jour le nom de la catégorie et la description facultative. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Boîte de dialogue Modifier la catégorie de balises.](./images/edit-category-dialog.png)
 
@@ -66,15 +60,15 @@ La catégorie de balises a été mise à jour avec succès et nous vous redirige
 >
 >Pour qu’une catégorie de balises puisse être supprimée, elle doit être vide et ne comporter aucune balise.
 
-Pour supprimer une catégorie de balises, sélectionnez **[!UICONTROL tags]** dans le volet de navigation de gauche, puis sélectionnez la catégorie de balises à supprimer.
+Pour supprimer une catégorie de balises, sélectionnez **[!UICONTROL balises]** dans le volet de navigation de gauche, puis sélectionnez la catégorie de balises à supprimer.
 
 ![Suppression d’une catégorie de balises.](./images/edit-tag-category.png)
 
-Dans la catégorie de balises, sélectionnez les points de suspension (`...`) en regard de [!UICONTROL Create Tag]. Une liste déroulante affiche les commandes permettant de modifier ou de supprimer une catégorie, sélectionnez **[!UICONTROL Delete category]**.
+Dans la catégorie de balises, sélectionnez les points de suspension (`...`) en regard de [!UICONTROL Créer une balise]. Une liste déroulante affiche les commandes permettant de modifier ou de supprimer une catégorie, sélectionnez **[!UICONTROL Supprimer une catégorie]**.
 
 ![Sélection de Supprimer une catégorie de balises dans la liste déroulante.](./images/select-delete-tag-category.png)
 
-La boîte de dialogue **[!UICONTROL Delete category]** s’affiche, vous invitant à confirmer la suppression de la catégorie de balises. Sélectionnez **[!UICONTROL Delete]** pour confirmer.
+La boîte de dialogue **[!UICONTROL Supprimer une catégorie]** s’affiche, vous invitant à confirmer la suppression de la catégorie de balises. Sélectionnez **[!UICONTROL Supprimer]** pour confirmer.
 
 ![Boîte de dialogue Supprimer une catégorie.](./images/delete-category-dialog.png)
 

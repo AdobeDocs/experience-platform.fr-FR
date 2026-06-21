@@ -4,12 +4,9 @@ description: Découvrez comment créer, mettre à jour, gérer et supprimer des 
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
 TQID: https://experienceleague.adobe.com/0OQl3U9h1csv9C0al2IvTMhQZd9WU6A9RRbv4vXWvk4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 821
@@ -387,7 +384,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 Vous pouvez supprimer un dossier spécifique qui appartient à votre organisation en adressant une requête DELETE au `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
-***Format API**
+Format ***API**
 
 ```http
 DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}

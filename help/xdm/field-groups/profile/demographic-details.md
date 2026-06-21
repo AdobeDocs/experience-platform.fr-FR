@@ -5,32 +5,29 @@ title: Groupe de champs de schéma des détails démographiques
 description: Découvrez le groupe de champs de schéma Détails démographiques .
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 TQID: https://experienceleague.adobe.com/MWviOBEMgrBSyVDBvMtyLUzdfriHML8P1ZZJAzSDQaQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 285
+source-wordcount: 289
 ht-degree: 28%
 
 ---
 
-# [!UICONTROL Demographic Details] groupe de champs de schéma
+# [!UICONTROL Détails démographiques] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Demographic Details] groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un objet `person` de niveau racine dont les sous-champs décrivent des informations sur une personne individuelle.
+[!UICONTROL Détails démographiques] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un objet `person` de niveau racine dont les sous-champs décrivent des informations sur une personne individuelle.
 
 ![](../../images/field-groups/demographic-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `person.name` | [&#x200B; Nom de la personne &#x200B;](../../data-types/person-name.md) | Objet dont les sous-champs décrivent divers éléments du nom d’une personne. |
+| `person.name` | [ Nom de la personne ](../../data-types/person-name.md) | Objet dont les sous-champs décrivent divers éléments du nom d’une personne. |
 | `person.birthDate` | Date | Date de naissance complète d’une personne, sous la forme d’un horodatage ISO 8601. |
 | `person.birthDayAndMonth` | Chaîne | Jour et mois de naissance d’une personne, au format MM-JJ. Ce champ doit être utilisé lorsque le jour et le mois de naissance d’une personne sont connus, mais pas l’année. |
 | `person.birthYear` | Entier | Année de naissance d’une personne, y compris le siècle (comme 1989). Ce champ doit être utilisé lorsque seul l’âge de la personne est connu, pas sa date de naissance complète. |

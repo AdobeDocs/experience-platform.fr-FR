@@ -3,26 +3,15 @@ title: Présentation de l’extension Adobe Audience Manager
 description: Découvrez lʼextension de balises d’Adobe Audience Manager dans Adobe Experience Platform.
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 TQID: https://experienceleague.adobe.com/4fU8whgMl6AX1tmn2rIV5YAokblPJIAOF5U8zlfwQh0
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 428
-ht-degree: 100%
+source-wordcount: 439
+ht-degree: 84%
 
 ---
 
@@ -38,9 +27,9 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 
 ## Configuration de l’extension Adobe Audience Manager
 
-Si l’extension Adobe Audience Manager n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Adobe Audience Manager avec la souris et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Adobe Audience Manager n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe Audience Manager et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ### Paramètres DIL
 
@@ -58,7 +47,7 @@ Ce paramètre ne peut pas être modifié.
 
 Si l’URL correspond à l’un des chemins exclus, l’extension n’est pas chargée.
 
-Cliquez sur **[!UICONTROL Add Path]** pour spécifier une URL exclue.
+Sélectionnez **[!UICONTROL Ajouter un chemin]** pour spécifier une URL exclue.
 
 Activez les Regex si l’URL est une expression régulière.
 
@@ -78,11 +67,11 @@ Activez le [module Google Analytics](https://experiencecloud.adobe.com/resource
 
 Ajoutez les propriétés d’initialisation utilisées par [DIL.create](https://experiencecloud.adobe.com/resources/help/fr_FR/aam/r_dil_create.html) et la sous-propriété de l’espace de noms pour l’[objet visitorService](https://experiencecloud.adobe.com/resources/help/fr_FR/aam/r_dil_visitor_service.html). Dans l’éditeur de code, deux exemples d’utilisation sont inclus dans les commentaires de code.
 
-Cliquez sur **[!UICONTROL Choose an Item]** pour ajouter des propriétés supplémentaires.
+Sélectionnez **[!UICONTROL Choisir un élément]** pour ajouter des propriétés supplémentaires.
 
 Survolez les icônes « i » avec la souris pour connaître les fonctions de chaque propriété. Vous trouverez plus d’informations sur les propriétés dans la [documentation DIL pour Audience Manager](https://experiencecloud.adobe.com/resources/help/fr_FR/aam/r_dil_create.html).
 
-Cliquez sur **[!UICONTROL Save]** quand vous avez fini de configurer l’extension.
+Sélectionnez **[!UICONTROL Enregistrer]** lorsque vous avez terminé de configurer l’extension.
 
 ## Types d’actions de l’extension Adobe Audience Manager
 

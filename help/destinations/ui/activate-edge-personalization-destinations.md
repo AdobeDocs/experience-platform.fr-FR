@@ -4,34 +4,15 @@ description: Découvrez comment activer des audiences de Adobe Experience Platfo
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 TQID: https://experienceleague.adobe.com/-W-vvtL2Lcg5ntwUs3h2fJUaYu1-LDqHCZeeo0aMGek
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1895
-ht-degree: 9%
+source-wordcount: 1976
+ht-degree: 10%
 
 ---
 
@@ -49,9 +30,9 @@ Les connexions [[!DNL Adobe Target]](../../destinations/catalog/personalization/
 
 >[!IMPORTANT]
 >
->* Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
->* Pour activer les données sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions).
+>* Pour activer les données sans passer par l’étape [mappage](#mapping) du workflow, vous devez disposer des **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation du segment sans mappage]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -63,11 +44,11 @@ Pour un bref aperçu sur la configuration de la connexion [!DNL Adobe Target] po
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous aux étapes de configuration décrites dans les sections ci-dessous.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449795/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Pour un bref aperçu de la manière de partager des audiences et des attributs de profil vers des destinations de personnalisation [!DNL Adobe Target] et personnalisées, regardez la vidéo ci-dessous.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447357/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Cas pratiques {#use-cases}
 
@@ -101,7 +82,7 @@ Une société de location et de vente d’habitations souhaite personnaliser sa 
 
 La première étape de la configuration de votre destination de personnalisation consiste à configurer un flux de données pour le SDK web Experience Platform. Cette opération est effectuée dans l’interface utilisateur de la collecte de données.
 
-Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experience Platform]** assurez-vous que **[!UICONTROL Edge Segmentation]** et **[!UICONTROL Personalization Destinations]** sont sélectionnés.
+Lors de la configuration du flux de données, sous **** assurez-vous que la **[!UICONTROL segmentation Edge]** et les **[!UICONTROL destinations Personalization]** sont sélectionnées.
 
 >[!TIP]
 >
@@ -119,7 +100,7 @@ Une fois la connexion de destination créée, vous devez créer une politique de
 >
 >Actuellement, les destinations Edge ne prennent en charge que l’activation des audiences qui utilisent la [politique de fusion Active-on-Edge](../../segmentation/ui/segment-builder.md#merge-policies) définie par défaut. Si vous mappez des audiences qui utilisent une politique de fusion différente avec des destinations Edge, ces audiences ne seront pas évaluées.
 
-Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Active-On-Edge Merge Policy]**.
+Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton (bascule) **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
 ### Création d’une audience dans Experience Platform {#create-audience}
 
@@ -142,15 +123,15 @@ Selon la destination configurée, reportez-vous aux articles suivants pour conna
 
 Une fois les conditions préalables remplies, vous pouvez sélectionner la destination de personnalisation Edge à utiliser pour la personnalisation de la même page et de la page suivante.
 
-1. Accédez à **[!UICONTROL Connections > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** .
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
    ![Onglet Catalogue de destinations mis en surbrillance dans l’interface utilisateur d’Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Sélectionnez **[!UICONTROL Activate audiences]** sur la carte correspondant à la destination de personnalisation vers laquelle vous souhaitez activer vos audiences, comme illustré dans l’image ci-dessous.
+1. Sélectionnez **[!UICONTROL Activer les audiences]** sur la vignette correspondant à la destination de personnalisation vers laquelle vous souhaitez activer vos audiences, comme illustré dans l’image ci-dessous.
 
    ![Activer le contrôle d’audience en surbrillance sur une carte de destination dans le catalogue.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. Sélectionnez la connexion de destination à utiliser pour activer des audiences, puis sélectionnez **[!UICONTROL Next]**.
+1. Sélectionnez la connexion de destination à utiliser pour activer les audiences, puis sélectionnez **[!UICONTROL Suivant]**.
 
    ![Sélectionnez l’étape de destination dans le workflow d’activation.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
@@ -158,14 +139,14 @@ Une fois les conditions préalables remplies, vous pouvez sélectionner la desti
 
 ## Sélectionner vos audiences {#select-audiences}
 
-Utilisez les cases à cocher situées à gauche des noms d’audience pour sélectionner les audiences à activer vers la destination, puis sélectionnez **[!UICONTROL Next]**.
+Utilisez les cases à cocher situées à gauche des noms d’audience pour sélectionner les audiences à activer vers la destination, puis sélectionnez **[!UICONTROL Suivant]**.
 
-Pour sélectionner les audiences à activer vers la destination, utilisez les cases à cocher situées à gauche des noms d’audience, puis sélectionnez **[!UICONTROL Next]**.
+Pour sélectionner les audiences à activer vers la destination, utilisez les cases à cocher situées à gauche des noms d’audience, puis sélectionnez **[!UICONTROL Suivant]**.
 
 Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
-* **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par Segmentation Service. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Custom upload]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par le service de segmentation. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+* **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![L’étape Sélectionner les audiences du workflow d’activation avec plusieurs audiences mises en surbrillance.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -188,13 +169,13 @@ L’ajout d’attributs est facultatif et vous pouvez toujours passer à l’ét
 
 ### Sélectionner les attributs sources {#select-source-attributes}
 
-Pour ajouter des attributs sources, sélectionnez la commande **[!UICONTROL Add new field]** sur la colonne **[!UICONTROL Source field]** et recherchez ou accédez au champ d’attribut XDM de votre choix, comme illustré ci-dessous.
+Pour ajouter des attributs sources, sélectionnez le contrôle **[!UICONTROL Ajouter un nouveau champ]** dans la colonne **[!UICONTROL Source]** et recherchez ou accédez au champ d’attribut XDM de votre choix, comme illustré ci-dessous.
 
 ![Enregistrement d’écran montrant comment sélectionner un attribut cible dans l’étape de mappage.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Sélectionner les attributs cibles {#select-target-attributes}
 
-Pour ajouter des attributs cibles, sélectionnez le contrôle **[!UICONTROL Add new field]** sur la colonne **[!UICONTROL Target field]** et saisissez le nom de l’attribut personnalisé auquel vous souhaitez mapper l’attribut source.
+Pour ajouter des attributs cibles, sélectionnez le contrôle **[!UICONTROL Ajouter un nouveau champ]** dans la colonne **[!UICONTROL Champ cible]** et saisissez le nom de l’attribut personnalisé auquel vous souhaitez mapper l’attribut source.
 
 >[!NOTE]
 >
@@ -204,31 +185,31 @@ Pour ajouter des attributs cibles, sélectionnez le contrôle **[!UICONTROL Add 
 
 ## Planifier l’export d’audience {#scheduling}
 
-Par défaut, la page [!UICONTROL Audience schedule] n’affiche que les audiences nouvellement sélectionnées que vous avez choisies dans le flux d’activation actuel.
+Par défaut, la page [!UICONTROL Planning des audiences] affiche uniquement les audiences nouvellement sélectionnées que vous avez sélectionnées dans le flux d’activation actuel.
 
-Pour afficher toutes les audiences activées vers la destination, utilisez l’option de filtrage et désactivez le filtre **[!UICONTROL Show new audiences only]**.
+Pour afficher toutes les audiences activées vers la destination, utilisez l’option de filtrage et désactivez le filtre **[!UICONTROL Afficher les nouvelles audiences uniquement]**.
 
 ![Toutes les audiences sont mises en surbrillance.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
-Sur la page **[!UICONTROL Audience schedule]**, sélectionnez chaque audience, puis utilisez les sélecteurs **[!UICONTROL Start date]** et **[!UICONTROL End date]** pour configurer l’intervalle de temps pour envoyer les données vers la destination.
+Sur la page **[!UICONTROL Planning des audiences]**, sélectionnez chaque audience, puis utilisez les sélecteurs **[!UICONTROL Date de début]** et **[!UICONTROL Date de fin]** pour configurer l’intervalle de temps pour l’envoi des données vers la destination.
 
 ![Étape du planning d’audience du workflow d’activation avec les dates de début et de fin mises en surbrillance.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-Sélectionnez **[!UICONTROL Next]** pour accéder à la page [!UICONTROL Review].
+Sélectionnez **[!UICONTROL Suivant]** pour accéder à la page [!UICONTROL Réviser].
 
 ## Réviser {#review}
 
-Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Cancel]** pour interrompre le flux, **[!UICONTROL Back]** pour modifier vos paramètres ou **[!UICONTROL Finish]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
+Sur la page **[!UICONTROL Réviser]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
 
 ![Résumé de la sélection à l’étape de révision.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 
-À l’étape **[!UICONTROL Review]**, Experience Platform vérifie également les violations de la politique d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de politique, consultez la section sur les violations de politique d’utilisation des données [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la documentation sur la gouvernance des données .
+À l’étape **[!UICONTROL Révision]**, Experience Platform vérifie également les violations de la politique d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de politique, consultez la section sur les violations de politique d’utilisation des données [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la documentation sur la gouvernance des données .
 
 ![Exemple de violation de politique de données.](../assets/common/data-policy-violation.png)
 
@@ -238,7 +219,7 @@ Au cours de cette étape, vous pouvez utiliser les filtres disponibles sur la pa
 
 ![Enregistrement d’écran affichant les filtres d’audience disponibles à l’étape de révision.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
-Si vous êtes satisfait(e) de votre sélection et qu’aucune violation de politique n’a été détectée, sélectionnez **[!UICONTROL Finish]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
+Si vous êtes satisfait(e) de votre sélection et qu’aucune violation de politique n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
 
 <!--
 

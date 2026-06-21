@@ -3,15 +3,12 @@ title: Filtrer les données au niveau des lignes pour un Source à l’aide de l
 description: Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 TQID: https://experienceleague.adobe.com/uUOQaQF4llmEs3v-F7Q2m30cnkwPCMPk6AaNtpBO7cE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2086
+source-wordcount: 2089
 ht-degree: 13%
 
 ---
@@ -587,7 +584,7 @@ Une réponse réussie renvoie le code d’état 200 et les spécifications de co
 
 ## Filtrage des entités d’activité pour les [!DNL Marketo Engage] {#filter-for-marketo}
 
-Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source &#x200B;](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
+Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source ](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] types d’activité standard {#marketo-standard-activity-types}
 
@@ -637,7 +634,7 @@ Créez tout d’abord un [[!DNL Marketo] flux de données](../ui/create/adobe-ap
 
 Une fois que vous disposez d’un brouillon de flux de données, vous devez récupérer son identifiant correspondant.
 
-Dans l’interface utilisateur , accédez au catalogue de sources, puis sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur. Utilisez la colonne Statut pour identifier tous les flux de données enregistrés en mode brouillon, puis sélectionnez le nom de votre flux de données. Ensuite, utilisez le panneau **[!UICONTROL Properties]** à droite pour localiser votre identifiant de flux de données.
+Dans l’interface utilisateur d’, accédez au catalogue de sources, puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur. Utilisez la colonne Statut pour identifier tous les flux de données enregistrés en mode brouillon, puis sélectionnez le nom de votre flux de données. Ensuite, utilisez le panneau **[!UICONTROL Propriétés]** sur la droite pour localiser votre identifiant de flux de données.
 
 ### Récupérer les détails de votre flux de données
 
@@ -1061,7 +1058,7 @@ Une réponse réussie renvoie l’identifiant et l’`etag` correspondant du flu
 
 +++
 
-Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour vérifier que votre brouillon de flux de données a été publié. Accédez à la page Flux de données dans le catalogue de sources et référencez le **[!UICONTROL Status]** de votre flux de données. En cas de réussite, le statut doit maintenant être défini sur **Activé**.
+Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour vérifier que votre brouillon de flux de données a été publié. Accédez à la page Flux de données dans le catalogue de sources et référencez le **[!UICONTROL Statut]** de votre flux de données. En cas de réussite, le statut doit maintenant être défini sur **Activé**.
 
 >[!TIP]
 >

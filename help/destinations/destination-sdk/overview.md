@@ -3,17 +3,10 @@ description: Adobe Experience Platform Destination SDK est un ensemble d’API d
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 TQID: https://experienceleague.adobe.com/prlSQ3-eQS9ETlrUaTEKq5wWX20c0Hf4ZA2nxRG-HVg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: df401a2a-327d-468c-a5e4-b7b7ccd071a0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1150
@@ -44,7 +37,7 @@ Consultez la documentation dans les liens ci-dessous pour commencer rapidement �
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Explication de toutes les options de configuration</a></li>
                 <li> Configuration du serveur de destination : <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">spécifications du serveur</a> et <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">spécifications de modèle</a>.</li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Champs de données client et autres composants de configuration de destination</a></li>
-                <li><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modélisation et macros</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modélisation et macros</a></li>
             </ul>
         </td>
         <td>
@@ -80,7 +73,7 @@ Consultez la documentation dans les liens ci-dessous pour commencer rapidement �
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configurer un guide complet de destination de diffusion en continu</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Comprendre la transformation des données par le biais des modèles Pebble</a> et <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">afficher les fonctions de modèle prises en charge</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Comprendre les politiques d’agrégation des données</a></li>
-                <li><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Exemple de configuration en direct</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Exemple de configuration en direct</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Test de la destination de diffusion en streaming</a></li>
             </ul>
         </td>
@@ -146,7 +139,7 @@ Grâce à Destination SDK, vous pouvez également configurer des intégrations p
 * Exportation de fichiers dans plusieurs formats pris en charge (CSV, Parquet, JSON)
 * Options de formatage de fichier configurables pour structurer le format des fichiers exportés afin de répondre à vos besoins en aval.
 
-Découvrez les exigences techniques du côté des destinations dans l’article [&#x200B; Conditions préalables à l’intégration &#x200B;](integration-prerequisites.md) et découvrez toutes les configurations prises en charge dans l’article [options de configuration](functionality/configuration-options.md)
+Découvrez les exigences techniques du côté des destinations dans l’article [ Conditions préalables à l’intégration ](integration-prerequisites.md) et découvrez toutes les configurations prises en charge dans l’article [options de configuration](functionality/configuration-options.md)
 
 ## Accéder à Destination SDK {#get-access}
 
@@ -155,8 +148,8 @@ L’accès à Destination SDK varie en fonction de votre statut de partenaire ou
 | Type de partenaire ou de client | Accéder à Destination SDK |
 |---------|----------|
 | Fournisseur de logiciels indépendant (ISV) | Rejoignez le [Programme de partenariat technologique d’](https://partners.adobe.com/technologyprogram/experiencecloud.html) et demandez à ce qu’un sandbox d’Experience Platform soit configuré pour accéder à Destination SDK. |
-| Intégrateur système (SI) | Vous devez être au niveau Gold ou Platinum du [Programme Partenaires en solutions &#x200B;](https://solutionpartners.adobe.com/home.html) pour qu’un sandbox Experience Platform soit configuré et puisse accéder à Destination SDK. |
-| Client Experience Platform sur le package Real-Time CDP Ultimate [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) | Par défaut, vous avez accès aux sandbox Experience Platform et à Destination SDK, ce qui vous permet de créer des destinations privées pour votre organisation. |
+| Intégrateur système (SI) | Vous devez être au niveau Gold ou Platinum du [Programme Partenaires en solutions ](https://solutionpartners.adobe.com/home.html) pour qu’un sandbox Experience Platform soit configuré et puisse accéder à Destination SDK. |
+| Client Experience Platform sur le package Real-Time CDP Ultimate [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) | Par défaut, vous avez accès aux sandbox Experience Platform et à Destination SDK, ce qui vous permet de créer des destinations privées pour votre organisation. |
 
 {style="table-layout:auto"}
 
@@ -164,12 +157,12 @@ L’accès à Destination SDK varie en fonction de votre statut de partenaire ou
 
 Pour configurer votre destination dans Experience Platform, procédez comme suit :
 
-1. Si vous êtes un fournisseur de logiciels indépendant ou un intégrateur de système, reportez-vous aux informations [obtention de l’accès](#get-access) dans la section ci-dessus. [Package Real-Time CDP Ultimate &#x200B;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) les clients peuvent ignorer cette étape.
+1. Si vous êtes un fournisseur de logiciels indépendant ou un intégrateur de système, reportez-vous aux informations [obtention de l’accès](#get-access) dans la section ci-dessus. [Package Real-Time CDP Ultimate ](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) les clients peuvent ignorer cette étape.
 2. [Faites la demande dʼun sandbox Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) et activez l’autorisation de création de destination.
 3. Créez votre intégration. Suivez les instructions de la documentation du produit pour configurer les [destinations de diffusion en continu](guides/configure-destination-instructions.md) ou [destinations basées sur des fichiers](guides/configure-file-based-destination-instructions.md).
 4. Testez votre intégration. Suivez les instructions de la documentation du produit pour tester les [destinations de diffusion en continu](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou [destinations basées sur des fichiers](testing-api/batch-destinations/file-based-destination-testing-overview.md).
 5. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](./overview.md#productized-custom-integrations), [envoyez votre intégration](guides/submit-destination.md) pour révision Adobe (le temps de réponse standard est de cinq jours ouvrables).
-6. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une intégration personnalisée, utilisez le processus de documentation en libre-service [&#128279;](docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur Experience League pour votre destination.
+6. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une intégration personnalisée, utilisez le processus de documentation en libre-service ](docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur Experience League pour votre destination.[
 7. Pour les intégrations standardisées, une fois approuvées par Adobe, votre intégration s’affichera dans le [catalogue Experience Platform](../catalog/overview.md).
 8. Si vous souhaitez mettre à jour votre intégration, suivez la même procédure.
 

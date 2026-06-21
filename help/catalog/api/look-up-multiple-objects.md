@@ -5,12 +5,9 @@ title: Recherche de plusieurs objets de catalogue
 description: Si vous souhaitez afficher plusieurs objets spécifiques au lieu d’effectuer une requête par objet, le catalogue fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 TQID: https://experienceleague.adobe.com/3XALKVnTerGjsrvQDoKYtmemEZ21PSrM-6qXLEOgWyc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 241

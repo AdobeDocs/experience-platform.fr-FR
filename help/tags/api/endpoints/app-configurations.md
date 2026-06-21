@@ -4,8 +4,8 @@ description: Découvrez comment effectuer des appels vers le point d’entrée /
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 96%
+source-wordcount: '569'
+ht-degree: 97%
 
 ---
 
@@ -215,7 +215,7 @@ curl -X POST \
 | `platform` | Plateforme sur laquelle l’application s’exécute (web ou mobile). Cela détermine les services de messagerie disponibles. |
 | `messaging_service` | Service de messagerie associé à l’application, tel que [Apple Push Notification Service (APNs)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) et [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Cela détermine les types de clés qui peuvent être utilisés. |
 | `key_type` | Représente le protocole pris en charge par un fournisseur de service Push et détermine le format de l’objet `push_credential`. À mesure que les protocoles évoluent pour les services de messagerie, de nouvelles valeurs `key_type` sont créées pour prendre en charge les protocoles mis à jour. |
-| `push_credential` | La valeur d’identification réelle, qui est chiffrée au repos. Ce champ n’est normalement pas déchiffré ou inclus dans les réponses de l’API. Seuls certains services Adobe peuvent obtenir une réponse contenant des informations d’identification push déchiffrées. |
+| `push_credential` | La valeur d’informations d’identification réelle, qui est chiffrée au repos. Ce champ n’est normalement pas déchiffré ou inclus dans les réponses de l’API. Seuls certains services Adobe peuvent obtenir une réponse contenant des informations d’identification push déchiffrées. |
 
 {style="table-layout:auto"}
 
@@ -258,7 +258,7 @@ Une réponse réussie renvoie les détails de la configuration d’application q
 
 ## Mise à jour d’une configuration d’application
 
-Vous pouvez mettre à jour une configuration d’application en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour une configuration d’application en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
 **Format d’API**
 

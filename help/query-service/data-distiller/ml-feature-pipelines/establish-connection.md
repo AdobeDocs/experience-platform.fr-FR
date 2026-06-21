@@ -3,20 +3,12 @@ title: Connexion à Data Distiller à partir d’un notebook Jupyter
 description: Découvrez comment vous connecter à Data Distiller à partir d’un notebook Jupyter.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
 TQID: https://experienceleague.adobe.com/Dvo7aOq-BkYp30KCMJlce9vRmiD31LL7FZIABrCC-7I
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 685
+source-wordcount: 698
 ht-degree: 1%
 
 ---
@@ -31,18 +23,18 @@ Ce guide suppose que vous connaissez les notebooks [!DNL Python] interactifs et 
 
 ### Obtention des informations de connexion {#obtain-credentials}
 
-Pour vous connecter à Data Distiller et à d’autres services Adobe Experience Platform, vous avez besoin d’informations d’identification d’API Experience Platform. Les informations d&#39;identification d&#39;API peuvent être créées dans [&#128279;](https://developer.adobe.com/console/home) par une personne disposant d&#39;un accès développeur à Experience Platform. Il est recommandé de créer des informations d’identification d’API Oauth2 spécifiquement pour les workflows de science des données et de demander à un administrateur système Adobe de votre organisation d’affecter les informations d’identification à un rôle avec les autorisations appropriées.
+Pour vous connecter à Data Distiller et à d’autres services Adobe Experience Platform, vous avez besoin d’informations d’identification d’API Experience Platform. Les informations d&#39;identification d&#39;API peuvent être créées dans [](https://developer.adobe.com/console/home) par une personne disposant d&#39;un accès développeur à Experience Platform. Il est recommandé de créer des informations d’identification d’API Oauth2 spécifiquement pour les workflows de science des données et de demander à un administrateur système Adobe de votre organisation d’affecter les informations d’identification à un rôle avec les autorisations appropriées.
 
 Consultez [Authentification et accès aux API Experience Platform](../../../landing/api-authentication.md) pour obtenir des instructions détaillées sur la création d’informations d’identification d’API et l’obtention des autorisations requises.
 
 Les autorisations recommandées pour la science des données sont les suivantes :
 
 - Sandbox(s) qui seront utilisés pour la science des données (généralement `prod`)
-- Modélisation des données : [!UICONTROL Manage Schemas]
-- Gestion des données : [!UICONTROL Manage Datasets]
-- Ingestion des données : [!UICONTROL View Sources]
-- Destinations : [!UICONTROL Manage and Activate Dataset Destinations]
-- Query Service : [!UICONTROL Manage Queries]
+- Modélisation des données : [!UICONTROL Gérer les schémas]
+- Gestion des données : [!UICONTROL  Gérer les jeux de données ]
+- Ingestion des données : [!UICONTROL Afficher les sources]
+- Destinations : [!UICONTROL Gérer et activer des destinations de jeu de données]
+- Query Service : [!UICONTROL Gérer les requêtes]
 
 Par défaut, un rôle (et les informations d’identification d’API affectées à ce rôle) ne peut accéder à aucune donnée libellée. Sous réserve des politiques de gouvernance des données de l’organisation, un administrateur système peut accorder au rôle l’accès à certaines données libellées jugées appropriées à l’utilisation de la science des données. Il est de la responsabilité des clients d’Experience Platform de gérer les politiques et l’accès aux libellés de manière appropriée afin de se conformer aux réglementations et aux politiques organisationnelles pertinentes.
 

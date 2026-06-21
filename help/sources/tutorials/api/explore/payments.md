@@ -5,12 +5,9 @@ title: Explorer un système de paiement à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer les applications de paiement.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
 TQID: https://experienceleague.adobe.com/b1Cm5pamUHu4hbxwVU1YU-G4RI2jHviRqWu4-L3dNsc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 582

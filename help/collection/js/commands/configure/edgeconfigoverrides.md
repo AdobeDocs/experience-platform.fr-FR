@@ -1,10 +1,11 @@
 ---
 title: edgeConfigOverrides
 description: Configurez les remplacements de train de données pour votre implémentation.
-source-git-commit: f4a2778c71ad6a48621212f3ece1776d1b3ac643
+exl-id: 9c5dde06-ae73-4cad-b8b4-4cb5cd00988c
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 0%
+source-wordcount: '400'
+ht-degree: 1%
 
 ---
 
@@ -97,4 +98,4 @@ alloy("configure", {
 
 ## Remplacements de configuration à l’aide de l’extension de balise Web SDK
 
-L’équivalent de l’extension de balise Web SDK de ce champ se trouve sous [&#x200B; Remplacements de configuration &#x200B;](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) lors de la configuration de l’extension de balise.
+L’équivalent de l’extension de balise Web SDK de ce champ se trouve sous [ Remplacements de configuration ](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) lors de la configuration de l’extension de balise.

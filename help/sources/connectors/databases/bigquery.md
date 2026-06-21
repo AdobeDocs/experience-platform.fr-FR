@@ -4,10 +4,8 @@ description: Découvrez comment connecter Google BigQuery à Adobe Experience Pl
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 TQID: https://experienceleague.adobe.com/EqFVEtlgWzHy0-YWuMkzCkDJllZt7d0nnwcSd5bpowk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 862

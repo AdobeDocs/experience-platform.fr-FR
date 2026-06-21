@@ -3,20 +3,14 @@ description: Découvrez comment configurer les paramètres d’exportation de fi
 title: Configuration par lots
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
 TQID: https://experienceleague.adobe.com/wqtETHVbW7en7bCuO-3khGwjEzT4la5uQc3zwEaC288
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1056
-ht-degree: 79%
+source-wordcount: 1083
+ht-degree: 77%
 
 ---
 
@@ -126,17 +120,17 @@ Utilisez les macros de configuration des noms de fichiers pour définir les noms
 | Macro | Libellé de l’interface utilisateur | Description | Exemple |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destination] | Nom de la destination dans l’interface utilisateur. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment ID] | ID d’audience unique généré par Experience Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Nom d’audience défini par l’utilisateur ou l’utilisatrice | abonné VIP |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Identifiant unique de l’instance de destination, généré par Experience Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
-| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
-| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Nom de l’organisation du client en [!DNL Adobe Experience Platform]. | Mon nom d’organisation |
-| `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Nom du sandbox utilisé par le client. | prod |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` et `TIMESTAMP` définissent tous deux le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : AAAAMMJJ_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
-| `CUSTOM_TEXT` | [!UICONTROL Custom text] | Texte personnalisé défini par l’utilisateur à inclure dans le nom du fichier. Ne peut pas être utilisé dans `defaultFilename`. | My_Custom_Text |
-| `TIMESTAMP` | [!UICONTROL Date and time] | Date et heure à 10 chiffres indiquant l’heure à laquelle le fichier a été généré, au format Unix. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | Identifiant de la [politique de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des audiences exportées dans des fichiers, en fonction d’une politique de fusion. Utilisez cette macro avec `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | Nom de la [politique de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des audiences exportées dans des fichiers, en fonction d’une politique de fusion. Utilisez cette macro avec `segmentGroupingEnabled:true`. | Ma politique de fusion personnalisée |
+| `SEGMENT_ID` | [!UICONTROL Identifiant du segment] | ID d’audience unique généré par Experience Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Nom du segment] | Nom d’audience défini par l’utilisateur ou l’utilisatrice | abonné VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Identifiant de destination] | Identifiant unique de l’instance de destination, généré par Experience Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nom de la destination] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
+| `ORGANIZATION_NAME` | [!UICONTROL Nom de l’organisation] | Nom de l’organisation du client en [!DNL Adobe Experience Platform]. | Mon nom d’organisation |
+| `SANDBOX_NAME` | [!UICONTROL Nom du sandbox] | Nom du sandbox utilisé par le client. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date et heure ] | `DATETIME` et `TIMESTAMP` définissent tous deux le moment où le fichier a été généré, mais dans des formats différents. <br><br><ul><li>`DATETIME` utilise le format suivant : AAAAMMJJ_HHMMSS.</li><li>`TIMESTAMP` utilise le format Unix à 10 chiffres. </li></ul> `DATETIME` et `TIMESTAMP` s’excluent mutuellement et ne peuvent pas être utilisés simultanément. | <ul><li>`DATETIME` : 20220509_210543</li><li>`TIMESTAMP` : 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL  Texte personnalisé ] | Texte personnalisé défini par l’utilisateur à inclure dans le nom du fichier. Ne peut pas être utilisé dans `defaultFilename`. | My_Custom_Text |
+| `TIMESTAMP` | [!UICONTROL Date et heure ] | Date et heure à 10 chiffres indiquant l’heure à laquelle le fichier a été généré, au format Unix. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL ID de la politique de fusion] | Identifiant de la [politique de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des audiences exportées dans des fichiers, en fonction d’une politique de fusion. Utilisez cette macro avec `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Nom de la politique de fusion] | Nom de la [politique de fusion](../../../../profile/merge-policies/overview.md) utilisé pour générer l’audience exportée. Utilisez cette macro lorsque vous regroupez des audiences exportées dans des fichiers, en fonction d’une politique de fusion. Utilisez cette macro avec `segmentGroupingEnabled:true`. | Ma politique de fusion personnalisée |
 
 {style="table-layout:auto"}
 

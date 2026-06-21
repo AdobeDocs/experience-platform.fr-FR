@@ -5,33 +5,14 @@ description: Cette extension de transfert d’événement Adobe Experience Platf
 last-substantial-update: 2023-04-27T00:00:00.000Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
 TQID: https://experienceleague.adobe.com/oBoefrt3wDx3GSXT-nFdb6L5aoVBUvrX-dJATsjaaFw
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: dfc56824-e8b9-499e-85d4-21aedb507314
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a075b2c1-7748-4328-b7f6-343aa314616a
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1497
+source-wordcount: 1563
 ht-degree: 5%
 
 ---
@@ -58,7 +39,7 @@ Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Pin
 
 Vous devez disposer d’un [!DNL Pinterest] [compte professionnel](https://help.pinterest.com/en/business/article/get-a-business-account) valide pour utiliser cette extension. Accédez à la [[!DNL Pinterest] page d’enregistrement](https://www.pinterest.com/business/create/) pour vous enregistrer et créer un compte si vous n’en avez pas déjà un.
 
-Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte professionnel [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d’entreprise, reportez-vous à la section [[!DNL Pinterest &#x200B;] Compte de développeur](https://developers.pinterest.com/account-setup/).
+Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte professionnel [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d’entreprise, reportez-vous à la section [[!DNL Pinterest ] Compte de développeur](https://developers.pinterest.com/account-setup/).
 
 ### Collecter les détails de configuration requis {#configuration-details}
 
@@ -66,16 +47,16 @@ Pour connecter Experience Platform à [!DNL Pinterest], les entrées suivantes s
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| ID de compte publicitaire | Identifiant De Votre Compte [!DNL Pinterest] Ads. Reportez-vous à la documentation de [[!DNL Pinterest] &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
+| ID de compte publicitaire | Identifiant De Votre Compte [!DNL Pinterest] Ads. Reportez-vous à la documentation de [[!DNL Pinterest] ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
 | Jeton d’accès de conversion | Votre Jeton D’Accès À La Conversion [!DNL Pinterest]. Reportez-vous au document [[!DNL Pinterest] API de conversion](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) pour obtenir des conseils. <br> **Vous ne devrez effectuer cette opération qu’une seule fois, car ce jeton n’expire pas.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## Installation et configuration de l’extension [!DNL Pinterest] {#install}
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou choisissez plutôt une propriété existante à modifier.
 
-Dans le volet de navigation de gauche, sélectionnez **[!UICONTROL Extensions]**. Sélectionnez **[!UICONTROL Install]** sur la carte de l’extension [!DNL Pinterest] dans l’onglet **[!UICONTROL Catalog]** .
+Dans le volet de navigation de gauche, sélectionnez **[!UICONTROL Extensions]**. Sélectionnez **[!UICONTROL Installer]** sur la carte de l’extension [!DNL Pinterest] dans l’onglet **[!UICONTROL Catalogue]**.
 
-![Catalogue affichant l’extension de [!DNL Pinterest] avec [!UICONTROL Install] mise en surbrillance.](../../../images/extensions/server/pinterest/install.png)
+![Catalogue affichant l’extension [!DNL Pinterest] avec [!UICONTROL Installer] en surbrillance.](../../../images/extensions/server/pinterest/install.png)
 
 ### Configuration de l’extension [!DNL Pinterest]
 
@@ -83,37 +64,37 @@ Dans le volet de navigation de gauche, sélectionnez **[!UICONTROL Extensions]**
 >
 >Selon vos besoins d’implémentation, vous devrez peut-être créer un schéma, des éléments de données et un jeu de données avant de configurer l’extension. Avant de commencer, consultez toutes les étapes de configuration afin de déterminer les entités à configurer pour votre cas d’utilisation.
 
-Dans le volet de navigation de gauche, sélectionnez **[!UICONTROL Extensions]**. Sélectionnez **[!UICONTROL Configure]** sur la carte de l’extension [!DNL Pinterest] dans l’onglet [!UICONTROL Installed]** .
+Dans le volet de navigation de gauche, sélectionnez **[!UICONTROL Extensions]**. Sélectionnez **[!UICONTROL Configurer]** sur la carte de l’extension [!DNL Pinterest] dans l’onglet [!UICONTROL Installé]**.
 
-![[!DNL Pinterest] extension affichée dans l’onglet [!UICONTROL Install] avec le [!UICONTROL Configure] en surbrillance.](../../../images/extensions/server/pinterest/configure.png)
+![[!DNL Pinterest] extension affichée dans l’onglet [!UICONTROL Installer] avec l’option [!UICONTROL Configurer] mise en surbrillance.](../../../images/extensions/server/pinterest/configure.png)
 
-Dans l’écran suivant, saisissez les [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token] que vous avez précédemment rassemblés dans la section [détails de la configuration](#configuration-details). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Dans l’écran suivant, saisissez les [!UICONTROL ID de compte publicitaire] et [!UICONTROL Jeton d’accès de conversion] que vous avez précédemment collectés dans la section [détails de configuration](#configuration-details). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Écran [!DNL Pinterest] [!UICONTROL Configure] mettant en surbrillance les champs de saisie [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token].](../../../images/extensions/server/pinterest/input.png)
+![Écran [!DNL Pinterest] [!UICONTROL Configurer] mettant en surbrillance les champs de saisie [!UICONTROL ID de compte publicitaire] et [!UICONTROL Jeton d’accès de conversion].](../../../images/extensions/server/pinterest/input.png)
 
 ## Configurer une règle de transfert d’événement {#config-rule}
 
 Une fois tous vos éléments de données configurés, vous pouvez commencer à créer des règles de transfert d’événement qui déterminent quand et comment vos événements seront envoyés à [!DNL Pinterest].
 
-Créez une [règle](../../../ui/managing-resources/rules.md) dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Pinterest]**. Pour envoyer des événements Edge Network à [!DNL Pinterest], définissez la **[!UICONTROL Action Type]** sur **[!UICONTROL Send Event].**
+Créez une [règle](../../../ui/managing-resources/rules.md) dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Pinterest]**. Pour envoyer des événements Edge Network à [!DNL Pinterest], définissez le **[!UICONTROL Type d’action]** sur **[!UICONTROL Envoyer l’événement].**
 
-![Création de la règle de [!UICONTROL Send Event] [!DNL Pinterest].](../../../images/extensions/server/pinterest/rule.png)
+![Création de la règle [!DNL Pinterest] [!UICONTROL Envoyer l’événement].](../../../images/extensions/server/pinterest/rule.png)
 
 Après la sélection, des commandes supplémentaires apparaissent pour configurer plus en détail l’événement. Vous devez mapper les propriétés d’événement [!DNL Pinterest] aux éléments de données que vous avez précédemment créés.
 
-### [!UICONTROL Event Data]
+### [!UICONTROL Données d’événement]
 
 Les données d’événement suivantes seront nécessaires pour créer la règle :
 
 | Nom du champ | Description | Exemple |
 | --- | --- | --- |
-| [!UICONTROL Event Name] | Type de l’événement utilisateur. Cependant, il peut s’agir de n’importe quel type d’événement. Pour tirer parti de [!DNL Pinterest Analytics], il est recommandé d’utiliser des [[!DNL Pinterest] codes d’événement](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [événement défini par l’utilisateur] |
-| [!UICONTROL Action Source] | Source indiquant où l’événement de conversion s’est produit. | &ast; app_android <br> &ast; app_ios <br> &ast; <br> web &ast; hors ligne |
-| [!UICONTROL Event Time] | Fait référence à l’heure de l’événement. Le format d’heure par défaut utilisé est UNIX, au format `<seconds>.<miliseconds>` en fonction du fuseau horaire local. Pour plus d’informations, consultez la section [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255,500 indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
-| [!UICONTROL Event ID] | Chaîne d’identifiant unique qui identifie cet événement et qui peut être utilisée pour dédupliquer les événements ingérés à la fois par l’intermédiaire de l’API de conversion et du suivi Pinterest. Sans cela, les données de l&#39;événement seront probablement comptées deux fois et signaleront l&#39;inflation métrique. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
-| [!UICONTROL Event Properties] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | { « event_source_url »: « http://site.com » } |
+| [!UICONTROL Nom de l’événement] | Type de l’événement utilisateur. Cependant, il peut s’agir de n’importe quel type d’événement. Pour tirer parti de [!DNL Pinterest Analytics], il est recommandé d’utiliser des [[!DNL Pinterest] codes d’événement](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;ast; checkout <br> &amp;ast; add_to_cart <br> &amp;ast; page_visit <br> &amp;ast; signup <br> &amp;ast; [événement défini par l’utilisateur] |
+| [!UICONTROL Action Source] | Source indiquant où l’événement de conversion s’est produit. | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; <br> web &amp;ast; hors ligne |
+| [!UICONTROL Heure de l’événement] | Fait référence à l’heure de l’événement. Le format d’heure par défaut utilisé est UNIX, au format `<seconds>.<miliseconds>` en fonction du fuseau horaire local. Pour plus d’informations, consultez la section [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255,500 indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
+| [!UICONTROL Identifiant de l’événement] | Chaîne d’identifiant unique qui identifie cet événement et qui peut être utilisée pour dédupliquer les événements ingérés à la fois par l’intermédiaire de l’API de conversion et du suivi Pinterest. Sans cela, les données de l&#39;événement seront probablement comptées deux fois et signaleront l&#39;inflation métrique. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
+| [!UICONTROL Propriétés des événements] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | { « event_source_url »: « http://site.com » } |
 
-![La [!DNL Pinterest] [!UICONTROL Event Data] mise en surbrillance dans l’action de règle.](../../../images/extensions/server/pinterest/event-data.png)
+![Le [!DNL Pinterest] [!UICONTROL Données d’événement] mis en surbrillance dans l’action de règle.](../../../images/extensions/server/pinterest/event-data.png)
 
 Les propriétés d’événement suivantes peuvent être configurées :
 
@@ -130,19 +111,19 @@ Les propriétés d’événement suivantes peuvent être configurées :
 | Version du système d’exploitation | Version du système d’exploitation de l’appareil. |
 | Langue de l&#39;utilisateur | Code de langue ISO-639-1 à deux caractères indiquant la langue de l’utilisateur. |
 
-### [!UICONTROL User Data]
+### [!UICONTROL Données utilisateur]
 
 Les données utilisateur suivantes peuvent être saisies par : ne sont pas des champs obligatoires :
 
 | Nom du champ | Description | Exemple |
 | --- | --- | --- |
-| [!UICONTROL Email] | Adresse e-mail de l’utilisateur ou hachage SHA256 de l’adresse e-mail de l’utilisateur. | ebd543592...f2b7e1 |
-| [!UICONTROL Mobile Adverstising IDs] | Hachages Sha256 des « ID Google Advertising » (GAID) ou « Identifiant Apple pour les annonceurs » (IDFA) de l’utilisateur | ebd543592...f2b7e1 |
-| [!UICONTROL Client IP Address] | L’adresse IP de l’utilisateur, qui peut être au format IPv4 ou IPv6. Utilisé pour la correspondance. | 192.168.0.1 |
-| [!UICONTROL Client User Agent] | Chaîne de l’agent utilisateur du navigateur web de l’utilisateur. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
-| [!UICONTROL Customer information data] | Un objet JSON contenant d’autres informations sur le client. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | { « ph »: « 122333445 » } |
+| [!UICONTROL E-mail] | Adresse e-mail de l’utilisateur ou hachage SHA256 de l’adresse e-mail de l’utilisateur. | ebd543592...f2b7e1 |
+| [!UICONTROL ID de publicité mobile] | Hachages Sha256 des « ID Google Advertising » (GAID) ou « Identifiant Apple pour les annonceurs » (IDFA) de l’utilisateur | ebd543592...f2b7e1 |
+| [!UICONTROL Adresse IP du client] | L’adresse IP de l’utilisateur, qui peut être au format IPv4 ou IPv6. Utilisé pour la correspondance. | 192.168.0.1 |
+| [!UICONTROL Agent utilisateur client] | Chaîne de l’agent utilisateur du navigateur web de l’utilisateur. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
+| [!UICONTROL Données d’informations sur le client] | Un objet JSON contenant d’autres informations sur le client. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | { « ph »: « 122333445 » } |
 
-![La [!DNL Pinterest] [!UICONTROL User Data] mise en surbrillance dans l’action de règle.](../../../images/extensions/server/pinterest/user-data.png)
+![Le [!DNL Pinterest] [!UICONTROL Données utilisateur] mis en surbrillance dans l’action de règle.](../../../images/extensions/server/pinterest/user-data.png)
 
 Les propriétés d’informations client configurables sont les suivantes :
 
@@ -164,7 +145,7 @@ Les propriétés d’informations client configurables sont les suivantes :
 >
 >Avant d’envoyer les données au point d’entrée de l’API [!DNL Pinterest], l’extension hache et normalise les valeurs des champs suivants : e-mail, numéro de téléphone, prénom, nom, genre, date de naissance, ville, État, code postal, pays et ID externe. L’extension ne hache pas la valeur de ces champs si une chaîne SHA256 est déjà présente.
 
-### [!UICONTROL Custom Data]
+### [!UICONTROL Données personnalisées]
 
 Les données personnalisées suivantes peuvent être saisies pour la règle :
 
@@ -178,7 +159,7 @@ Les données personnalisées suivantes peuvent être saisies pour la règle :
 | ID de contenu | Liste (tableau) des ID de produits. |
 | Contenus | Liste (tableau) d’objets contenant des informations sur les produits, telles que le prix et la quantité. |
 
-![La [!DNL Pinterest] [!UICONTROL Custom Data] mise en surbrillance dans l’action de règle.](../../../images/extensions/server/pinterest/custom-data.png)
+![Le [!DNL Pinterest] [!UICONTROL Données personnalisées] mis en surbrillance dans l’action de règle.](../../../images/extensions/server/pinterest/custom-data.png)
 
 ## Valider les données dans [!DNL Pinterest]
 

@@ -5,12 +5,9 @@ title: Annexe du guide de l’API Catalog Service
 description: Ce document contient des informations supplémentaires pour vous aider à utiliser l’API Catalog dans Adobe Experience Platform.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 TQID: https://experienceleague.adobe.com/IcibZLmy1hwqPlWQ95xrI78EFXkjmhG7XXoWKTtci9M
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 461

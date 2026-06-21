@@ -4,16 +4,13 @@ description: Le document suivant décrit les étapes à suivre pour tester et v�
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 badge: Beta
 TQID: https://experienceleague.adobe.com/HeRMiAbZSKiuZmt-oZkzEAbS6R03uikBbaJZMpP1yyY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1259
-ht-degree: 11%
+source-wordcount: 1288
+ht-degree: 13%
 
 ---
 
@@ -32,7 +29,7 @@ Le document suivant décrit les étapes à suivre pour tester et déboguer votre
 * Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 * Pour plus d’informations sur la génération de vos informations d’identification pour les API Experience Platform, consultez le tutoriel sur l’[authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
 * Pour plus d’informations sur la configuration de [!DNL Postman] pour les API Experience Platform, consultez le tutoriel sur [configuration de Developer Console et  [!DNL Postman]](../../../landing/postman.md).
-* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service [&#128279;](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.
+* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service ](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.[
 
 ## Tester votre source à l’aide de l’API
 
@@ -77,40 +74,40 @@ L’interface [!DNL Runner] s’affiche, vous permettant de configurer l’ordre
 
 Pour tester votre source dans l’interface utilisateur, accédez au catalogue de sources du sandbox de votre entreprise dans l’interface utilisateur d’Experience Platform. À partir de là, votre nouvelle source devrait apparaître sous la catégorie *Diffusion en continu*.
 
-Maintenant que votre nouvelle source est disponible dans votre sandbox, vous devez suivre le workflow des sources pour tester les fonctionnalités. Pour commencer, sélectionnez **[!UICONTROL Set up]**.
+Maintenant que votre nouvelle source est disponible dans votre sandbox, vous devez suivre le workflow des sources pour tester les fonctionnalités. Pour commencer, sélectionnez **[!UICONTROL Configurer]**.
 
 ![Le catalogue des sources affichant la nouvelle source de diffusion en continu.](../assets/testing/catalog-test.png)
 
-L’étape [!UICONTROL Add data] s’affiche. Pour tester si votre source peut diffuser des données, utilisez le côté gauche de l’interface pour charger [un exemple de données JSON](../assets/testing/raw.json.zip). Une fois vos données chargées, le côté droit de l’interface se met à jour vers un aperçu de la hiérarchie de fichiers de vos données. Sélectionnez **[!UICONTROL Next]** pour continuer.
+L’étape [!UICONTROL Ajouter des données] s’affiche. Pour tester si votre source peut diffuser des données, utilisez le côté gauche de l’interface pour charger [un exemple de données JSON](../assets/testing/raw.json.zip). Une fois vos données chargées, le côté droit de l’interface se met à jour vers un aperçu de la hiérarchie de fichiers de vos données. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Étape d’ajout de données dans le workflow des sources où vous pouvez charger et prévisualiser vos données avant l’ingestion.](../assets/testing/add-data-test.png)
 
-La page [!UICONTROL Dataflow detail] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer vos données à ingérer dans le profil et activer des paramètres tels que [!UICONTROL Error diagnostics] et [!UICONTROL Partial ingestion].
+La page [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer vos données à ingérer dans le profil et activer des paramètres tels que [!UICONTROL Diagnostics d’erreur] et [!UICONTROL Ingestion partielle].
 
-Pour les tests, sélectionnez **[!UICONTROL New dataset]** et indiquez un nom de jeu de données de sortie. Au cours de cette étape, vous pouvez également fournir une description facultative pour ajouter des informations supplémentaires à votre jeu de données. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Advanced search] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
+Pour les tests, sélectionnez **[!UICONTROL Nouveau jeu de données]** et indiquez un nom de jeu de données de sortie. Au cours de cette étape, vous pouvez également fournir une description facultative pour ajouter des informations supplémentaires à votre jeu de données. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL  Recherche avancée ] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape Détails du flux de données dans le workflow des sources.](../assets/testing/dataflow-details-test.png)
 
-L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
+L’étape [!UICONTROL Mappage] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
 Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le guide de l’interface utilisateur de la [préparation des données](../../../data-prep/ui/mapping.md)
 
-Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
+Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape de mappage du workflow des sources.](../assets/testing/mapping-test.png)
 
-L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connection]** : affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source d’espace de stockage en flux continu que vous utilisez.
-* **[!UICONTROL Assign dataset and map fields]** : affiche le jeu de données cible et le schéma que vous utilisez pour votre flux de données.
+* **[!UICONTROL Connexion]** : affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source de stockage dans le cloud en flux continu que vous utilisez.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données et le schéma cibles que vous utilisez pour votre flux de données.
 
-Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Finish]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![Étape de révision du workflow des sources.](../assets/testing/review-test.png)
 
-Enfin, vous devez récupérer le point d’entrée de flux continu de votre flux de données. Ce point d’entrée sera utilisé pour vous abonner à votre webhook, ce qui permettra à votre source de diffusion en continu de communiquer avec Experience Platform. Pour récupérer votre point d’entrée de diffusion en continu, accédez à la page [!UICONTROL Dataflow activity] du flux de données que vous venez de créer et copiez le point d’entrée à partir du bas du panneau de [!UICONTROL Properties].
+Enfin, vous devez récupérer le point d’entrée de flux continu de votre flux de données. Ce point d’entrée sera utilisé pour vous abonner à votre webhook, ce qui permettra à votre source de diffusion en continu de communiquer avec Experience Platform. Pour récupérer votre point d’entrée de flux continu, accédez à la page [!UICONTROL Activité du flux de données] du flux de données que vous venez de créer, puis copiez le point d’entrée au bas du panneau [!UICONTROL Propriétés].
 
 ![Point d’entrée de flux continu dans l’activité de flux de données.](../assets/testing/endpoint-test.png)
 

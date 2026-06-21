@@ -3,20 +3,10 @@ title: Collectez des informations sur le commerce, les produits et les commandes
 description: Découvrez comment ajouter des données relatives à des produits ou à un panier à l’aide de Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 TQID: https://experienceleague.adobe.com/2ISKS1Vq-MFW6Kw3AkNoIsS8m0SDsCGsawvZyfFQ4HU
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: dfc56824-e8b9-499e-85d4-21aedb507314
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a075b2c1-7748-4328-b7f6-343aa314616a
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: eadea719-cf89-469b-a6fd-a236a7138047id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1116
@@ -28,7 +18,7 @@ ht-degree: 27%
 
 Si votre entreprise vend des produits ou des services, vous pouvez utiliser cette page comme guide sur la manière de suivre ces produits et services.
 
-Cette page utilise le groupe de champs Schéma XDM [&#128279;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md).
+Cette page utilise le groupe de champs Schéma XDM [](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md).
 
 Ce groupe de champs se compose de deux parties principales :
 

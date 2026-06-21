@@ -5,18 +5,13 @@ last-substantial-update: 2024-01-30T00:00:00.000Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
 TQID: https://experienceleague.adobe.com/eMrd-O8reuZNvyj2-lXg0n7CPzBWwctx1-53m4fw98I
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1018
+source-wordcount: 1000
 ht-degree: 16%
 
 ---
@@ -35,7 +30,7 @@ Lisez le tutoriel suivant pour savoir comment importer des données d’événem
 
 Pour suivre les étapes de ce guide, vous devez :
 
-* Une connexion à [&#128279;](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
+* Une connexion à [](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
 * Une connexion à votre [[!DNL Braze] tableau de bord](https://dashboard.braze.com/sign_in), une [licence actuelle du connecteur](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents) inutilisée et des autorisations pour créer un connecteur. Pour plus d’informations, consultez la [configuration requise [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ## Prise en main
@@ -57,11 +52,11 @@ Si vous disposez déjà d’une connexion [!DNL Braze], vous pouvez ignorer le r
 >
 >Vous devez créer un schéma de modèle de données d’expérience (XDM) si c’est la première fois que vous créez une connexion [!DNL Braze Currents]. Si vous avez déjà créé un schéma pour [!DNL Braze Currents], vous pouvez ignorer cette étape et passer à la [connexion de votre compte à Experience Platform](#connect).
 
-Dans l’interface utilisateur d’Experience Platform, utilisez le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schemas]** pour accéder à l’espace de travail [!UICONTROL Schemas]. Sélectionnez ensuite **[!UICONTROL Create schema]**, puis sélectionnez **[!UICONTROL Experience Event]**. Pour continuer, sélectionnez **[!UICONTROL Next]**.
+Dans l’interface utilisateur d’Experience Platform, utilisez le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schémas]** pour accéder à l’espace de travail [!UICONTROL Schémas]. Sélectionnez ensuite **[!UICONTROL Créer un schéma]**, puis **[!UICONTROL Événement d’expérience]**. Pour continuer, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Schéma terminé.](../../../../images/tutorials/create/braze/schema.png)
 
-Attribuez un nom et une description à votre schéma. Utilisez ensuite le panneau [!UICONTROL Composition] pour configurer les attributs de schéma. Sous [!UICONTROL Field groups], sélectionnez **[!UICONTROL Add]** et ajoutez le groupe de champs [!UICONTROL Braze Currents User Event]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Attribuez un nom et une description à votre schéma. Utilisez ensuite le panneau [!UICONTROL Composition] pour configurer les attributs de schéma. Sous [!UICONTROL Groupes de champs], sélectionnez **[!UICONTROL Ajouter]** et ajoutez le groupe de champs [!UICONTROL Événement utilisateur Braze Current]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 Pour plus d’informations sur les schémas, consultez le guide [création de schémas dans l’interface utilisateur](../../../../../xdm/tutorials/create-schema-ui.md).
 
@@ -69,7 +64,7 @@ Pour plus d’informations sur les schémas, consultez le guide [création de sc
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *Automatisation du marketing*, sélectionnez **[!UICONTROL Braze Currents]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie *Automatisation du marketing*, sélectionnez **[!UICONTROL Courants brasés]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources sur l’interface utilisateur d’Experience Platform avec la source Courants de brasage sélectionnée.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -78,7 +73,7 @@ Ensuite, chargez le fichier fourni [exemple Braze Currents](https://github.com/A
 ![Écran « Ajouter des données ».](../../../../images/tutorials/create/braze/select-data.png)
 
 Une fois votre fichier chargé, vous devez fournir les détails de votre flux de données, y compris des informations sur votre jeu de données et le schéma auquel vous mappez.  Si c’est la première fois que vous connectez une source Braze Current, créez un jeu de données.  Sinon, vous pouvez utiliser n’importe quel jeu de données existant qui fait référence au schéma Braze.  Si vous créez un jeu de données, utilisez le schéma que nous avons créé dans la section précédente.
-![&#x200B; Écran « Détails du flux de données » mettant en surbrillance « Détails du jeu de données » &#x200B;](../../../../images/tutorials/create/braze/dataflow-detail.png)
+![ Écran « Détails du flux de données » mettant en surbrillance « Détails du jeu de données » ](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Configurez ensuite le mappage pour vos données à l’aide de l’interface de mappage.
 
@@ -88,9 +83,9 @@ Le mappage présente les problèmes suivants qui doivent être résolus.
 
 Dans les données sources, *id* sera incorrectement mappé à *_braze.appID*. Vous devez remplacer le champ de mapping de ciblage par *_id* au niveau racine du schéma. Ensuite, assurez-vous que *properties.is_amp* est mappé à *_braze.messaging.email.isAMP*.
 
-Ensuite, supprimez le mappage *heure* à *horodatage*, puis sélectionnez l’icône d’ajout (`+`) et **[!UICONTROL Add calculated field]**. Dans la zone fournie, saisissez *heure \* 1 000* et sélectionnez **[!UICONTROL Save]**.
+Supprimez ensuite le mappage *heure* à *horodatage*, puis sélectionnez l’icône d’ajout (`+`) et enfin **[!UICONTROL Ajouter un champ calculé]**. Dans la zone fournie, saisissez *heure \* 1 000* et sélectionnez **[!UICONTROL Enregistrer]**.
 
-Une fois le nouveau champ calculé ajouté, sélectionnez **[!UICONTROL Map target field]** en regard du nouveau champ source et mappez-le à *horodatage* au niveau racine du schéma. Vous devez ensuite sélectionner **[!UICONTROL Validate]** pour vous assurer qu’il n’y a plus d’erreurs.
+Une fois le nouveau champ calculé ajouté, sélectionnez **[!UICONTROL Mapper le champ cible]** en regard du nouveau champ source et mappez-le à *horodatage* au niveau racine du schéma. Vous devez ensuite sélectionner **[!UICONTROL Valider]** pour vous assurer qu’il n’y a plus d’erreurs.
 
 >[!IMPORTANT]
 >
@@ -100,7 +95,7 @@ Une fois le nouveau champ calculé ajouté, sélectionnez **[!UICONTROL Map targ
 
 ![Mappage sans erreur.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**. Utilisez la page de révision pour confirmer les détails de votre flux de données, puis sélectionnez **[!UICONTROL Finish]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**. Utilisez la page de révision pour confirmer les détails de votre flux de données, puis sélectionnez **[!UICONTROL Terminer]**.
 
 ### Collecter les informations d’identification requises
 

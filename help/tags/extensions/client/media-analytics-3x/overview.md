@@ -3,25 +3,15 @@ title: Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio
 description: Découvrez lʼextension Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 TQID: https://experienceleague.adobe.com/SIfGqM-kdtMyQyfkorCmUzmkaGVSDxZPR9ePnv5IRYI
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 722
-ht-degree: 95%
+source-wordcount: 738
+ht-degree: 85%
 
 ---
 
@@ -45,9 +35,9 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 
 ## Installation et configuration de l’extension MA
 
-* **Installer :** Pour installer l’extension MA, ouvrez la propriété d’extension, cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** avec votre souris et cliquez sur **[!UICONTROL Install]**.
+* **Installation :** pour installer l’extension MA, ouvrez la propriété de votre extension, puis sélectionnez **[!UICONTROL Extensions > Catalogue]** et placez le curseur sur l’extension **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** et sélectionnez **[!UICONTROL Installer]**.
 
-* **Configurer :** Pour configurer l’extension MA, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension avec votre souris, puis cliquez sur **[!UICONTROL Configure]** :
+* **Configurer :** pour configurer l’extension MA, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]** :
 
 ![Configuration de l’extension MA](../../../images/ext-ma-config.png)
 
@@ -70,7 +60,7 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 
 ### Utilisation depuis une page web/application JavaScript
 
-L’extension MA exporte les API Media dans l’objet global window en activant le paramètre « Export APIs to Window Object » dans la page [!UICONTROL Configuration]. Il exporte les API sous le nom de variable configuré. Par exemple, si le nom de variable est configuré pour être `ADB`, vous pouvez alors accéder aux API Media via `window.ADB.Media`.
+L’extension MA exporte les API Media dans l’objet fenêtre global en activant le paramètre « Exporter les API vers l’objet fenêtre » de la page [!UICONTROL Configuration]. Il exporte les API sous le nom de variable configuré. Par exemple, si le nom de variable est configuré pour être `ADB`, vous pouvez alors accéder aux API Media via `window.ADB.Media`.
 
 >[!IMPORTANT]
 >

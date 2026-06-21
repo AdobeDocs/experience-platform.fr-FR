@@ -4,13 +4,9 @@ description: Découvrez comment créer, mettre à jour, gérer et supprimer des 
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
 TQID: https://experienceleague.adobe.com/EEwmEnOYdcRTAJ9soqgwSHrFod-kTxJr0fGwgUx7-sE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: f8667931-f646-4dd3-af2a-b9d0cb8098ad
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1861
@@ -815,4 +811,4 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse vide.
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [&#x200B; guide des catégories de balises](../ui/tags-categories.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [ guide des catégories de balises](../ui/tags-categories.md).

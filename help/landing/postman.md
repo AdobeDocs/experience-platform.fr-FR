@@ -7,10 +7,8 @@ role: Developer
 feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 TQID: https://experienceleague.adobe.com/TSfyd-YpWj4GntOUgq-ySsA2--oAAD2J-d9aD4KRs4c
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 566
@@ -26,7 +24,7 @@ Postman est une plateforme de collaboration pour le développement d’API qui v
 
 Le guide vidéo suivant décrit la création et la configuration de votre environnement Postman. Un environnement Postman contient tous les en-têtes requis pour effectuer des appels API vers les différentes collections fournies ci-dessous. Une fois configurée, chaque fois qu’une valeur expire (par exemple, une `ACCESS_TOKEN`), vous pouvez mettre à jour la valeur actuelle dans l’environnement, et cette nouvelle valeur est utilisée dans toutes vos collections.
 
->[!VIDEO](https://video.tv.adobe.com/v/31635?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/28832)
 
 ## Collections Postman {#collections}
 
@@ -38,7 +36,7 @@ Pour télécharger une collection Postman, sélectionnez **[!DNL Raw]** dans la 
 
 ## Importer une collection Postman {#import}
 
-Pour utiliser une collection [&#128279;](#collections), vous devez avoir configuré un environnement. Une fois la configuration de l’environnement terminée, sélectionnez le sélecteur de **[!DNL Manage Environments]** dans le coin supérieur droit.
+Pour utiliser une collection [](#collections), vous devez avoir configuré un environnement. Une fois la configuration de l’environnement terminée, sélectionnez le sélecteur de **[!DNL Manage Environments]** dans le coin supérieur droit.
 
 ![gérer le sélecteur d’environnement](./images/api-guide/environment-selector.png)
 
@@ -62,7 +60,7 @@ Pour en savoir plus sur l’interface utilisateur de Postman et ses fonctionnali
 
 La vidéo ci-dessous utilise la collection Postman [d’Identity Management Service (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) qui peut être téléchargée à partir du référentiel GitHub public.
 
->[!VIDEO](https://video.tv.adobe.com/v/33190/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
 ## Étapes suivantes
 

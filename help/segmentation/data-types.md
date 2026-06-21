@@ -4,20 +4,11 @@ title: Types de données pris en charge dans Segmentation Service
 description: Tous les types de données des modèles de données d’expérience (XDM) sont pris en charge dans Adobe Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 TQID: https://experienceleague.adobe.com/5LfyxR4YImiPa4XwBBGtIuo-VV2GzzsvNDoq-yOk8ac
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 510
@@ -71,7 +62,7 @@ Actuellement, seul Adobe Audience Manager est pris en charge en tant qu’audien
 
 ### Partage de la définition de segment
 
-Les définitions de segment créées dans Experience Platform peuvent être utilisées dans d’autres [services principaux de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
+Les définitions de segment créées dans Experience Platform peuvent être utilisées dans d’autres [services principaux Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 

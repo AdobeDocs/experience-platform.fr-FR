@@ -3,18 +3,14 @@ title: Connectez votre compte PathFactory à Experience Platform via l’interfa
 description: Découvrez comment connecter votre compte PathFactory à Experience Platform via l’interface utilisateur.
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
 TQID: https://experienceleague.adobe.com/VZZcmtNtWuQKfjdbnsXqkjbFSLYr0MCsZSe1LxX6hu8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 558
-ht-degree: 16%
+source-wordcount: 576
+ht-degree: 15%
 
 ---
 
@@ -50,27 +46,27 @@ Pour obtenir des instructions détaillées sur la sécurisation et l’utilisati
 
 ## Connecter votre compte [!DNL PathFactory]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL Catalog] affiche diverses sources prises en charge par Experience Platform.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL Catalogue] affiche diverses sources prises en charge par Experience Platform.
 
 Vous pouvez sélectionner la catégorie appropriée dans la liste des catégories. Vous pouvez également utiliser la barre de recherche pour filtrer une source spécifique.
 
-Sous la catégorie [!UICONTROL Marketing automation] , sélectionnez **[!UICONTROL PathFactory]** puis **[!UICONTROL Set up]**.
+Dans la catégorie [!UICONTROL Automatisation marketing], sélectionnez **[!UICONTROL PathFactory]** puis sélectionnez **[!UICONTROL Configurer]**.
 
 ![Le catalogue des sources avec la source PathFactory sélectionnée.](../../../../images/tutorials/create/pathfactory/catalog.png)
 
-La page **[!UICONTROL Connect to PathFactory]** s’affiche. Sur cette page, vous pouvez créer un compte ou utiliser un compte existant.
+La page **[!UICONTROL Se connecter à PathFactory]** s’affiche. Sur cette page, vous pouvez créer un compte ou utiliser un compte existant.
 
 ### Nouveau compte
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom de compte, une description facultative et les informations d’authentification qui correspondent à votre compte [!DNL PathFactory].
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom de compte, une description facultative et les informations d’authentification qui correspondent à votre compte [!DNL PathFactory].
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvelle interface de compte dans laquelle vous pouvez authentifier un nouveau compte pour PathFactory.](../../../../images/tutorials/create/pathfactory/new.png)
 
 ### Compte existant
 
-Si vous disposez déjà d’un compte , sélectionnez **[!UICONTROL Existing account]** puis sélectionnez le compte à utiliser dans la liste qui s’affiche.
+Si vous disposez déjà d’un compte, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans la liste qui s’affiche.
 
 ![Interface du compte existant dans laquelle vous pouvez effectuer une sélection dans une liste de comptes PathFactory existants.](../../../../images/tutorials/create/pathfactory/existing.png)
 

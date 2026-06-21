@@ -4,25 +4,15 @@ description: Découvrez lʼextension Core Event Forwarding dans Adobe Experienc
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
 TQID: https://experienceleague.adobe.com/kzzgvG2nl1IQ61dvSp0zEVSoxDyHO4oKRdHmFLbeNeI
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1680
-ht-degree: 96%
+source-wordcount: 1688
+ht-degree: 94%
 
 ---
 
@@ -40,9 +30,9 @@ Cette section décrit les types de conditions disponibles dans l’extension Cor
 
 Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert d’événement dans Adobe Experience Platform prend en charge ES13.
 
-1. Sélectionner **[!UICONTROL Open Editor]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
@@ -170,8 +160,8 @@ Cette section décrit les types d’actions disponibles dans l’extension Core.
 Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert d’événement dans Adobe Experience Platform prend en charge ES13.
 
 1. Nommez le code d’action.
-1. Sélectionner **[!UICONTROL Open Editor]**.
-1. Modifiez le code, puis cliquez sur **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
+1. Modifiez le code, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
@@ -195,7 +185,7 @@ Les sections suivantes décrivent les types d’éléments de données disponibl
 
 ### Custom code
 
-Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur **[!UICONTROL Open Editor]** et en insérant le code dans la fenêtre de l’éditeur.
+Vous pouvez saisir du code JavaScript personnalisé dans l’interface utilisateur en sélectionnant **[!UICONTROL Ouvrir l’éditeur]** et en insérant le code dans la fenêtre de l’éditeur.
 
 Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être utilisée en tant que valeur de l’élément de données. Si aucune instruction de retour n’est incluse ou si la valeur `null` ou `undefined` est renvoyée, la valeur par défaut de l’élément de données reflète `null` ou `undefined`.
 

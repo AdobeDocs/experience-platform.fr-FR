@@ -4,7 +4,7 @@ description: Découvrez comment utiliser le tableau de bord de surveillance pour
 exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '555'
 ht-degree: 6%
 
 ---
@@ -19,11 +19,11 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [Flux de données](../../datastreams/overview.md) : les flux de données vous permettent de connecter Experience Platform Edge Network à votre jeu de données.
 * [Capacités](../../landing/license-usage-and-guardrails/capacity.md) : dans Experience Platform, les capacités vous permettent de savoir si votre organisation a dépassé l’un de vos mécanismes de sécurisation et vous donnent des informations sur la manière de résoudre ces problèmes.
-* [segmentation Edge &#x200B;](../../segmentation/methods/edge-segmentation.md) : la segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform [sur le serveur Edge](../../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+* [segmentation Edge ](../../segmentation/methods/edge-segmentation.md) : la segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform [sur le serveur Edge](../../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
 ## Accès {#access}
 
-Pour accéder au tableau de bord de surveillance du débit de segmentation Edge, sélectionnez **[!UICONTROL Monitoring]** dans la section **[!UICONTROL Data management]** , puis **[!UICONTROL Edge]**.
+Pour accéder au tableau de bord de surveillance du débit de segmentation Edge, sélectionnez **[!UICONTROL Surveillance]** dans la section **[!UICONTROL Gestion des données]**, suivie de **[!UICONTROL Edge]**.
 
 ![La méthode d’accès au tableau de bord de segmentation Edge de la surveillance est mise en surbrillance.](/help/dataflows/assets/ui/monitor-edge/access.png)
 
@@ -33,13 +33,13 @@ Le tableau de bord de surveillance s’affiche. Vous y trouverez des mesures de 
 
 >[!NOTE]
 >
->Vous pouvez afficher la vue Flux de données **uniquement** si vous sélectionnez [!UICONTROL Edge segmentation throughput].
+>Vous pouvez afficher la vue Flux de données **uniquement** si vous sélectionnez [!UICONTROL Débit de segmentation Edge].
 
 Si vous filtrez par service, vous pouvez choisir le service à propos duquel vous souhaitez afficher les informations de débit. Cela inclut des services tels que la segmentation Edge, la collecte de données, Target, Adobe Journey Optimizer, Offer Decisioning, les destinations personnalisées, le transfert d’événement, Adobe Analytics et Adobe Audience Manager.
 
 Si vous filtrez par arête, vous pouvez choisir l’arête sur laquelle vous souhaitez afficher des informations. Les périphéries prises en charge comprennent la côte Est des États-Unis, la côte Ouest des États-Unis, l’Europe, l’Inde, Singapour, l’Australie, le Japon et la Suisse. Vous pouvez sélectionner plusieurs arêtes à afficher à la fois.
 
-Si vous filtrez par date, vous pouvez choisir l’échelle de temps pour filtrer vos événements. Cette échelle de temps peut être configurée sur 30 jours. Vous pouvez également utiliser l’une des échelles de temps préconfigurées suivantes : [!UICONTROL Last 6 hours], [!UICONTROL Last 12 hours], [!UICONTROL Last 24 hours], [!UICONTROL Last 7 days] et [!UICONTROL Last 30 days].
+Si vous filtrez par date, vous pouvez choisir l’échelle de temps pour filtrer vos événements. Cette échelle de temps peut être configurée sur 30 jours. Vous pouvez également utiliser l’une des échelles de temps préconfigurées suivantes : [!UICONTROL 6 dernières heures], [!UICONTROL 12 dernières heures], [!UICONTROL 24 dernières heures], [!UICONTROL 7 derniers jours] et [!UICONTROL 30 derniers jours].
 
 ## Surveillance des mesures de débit Edge
 

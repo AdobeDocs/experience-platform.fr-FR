@@ -2,19 +2,15 @@
 title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 TQID: https://experienceleague.adobe.com/oIUjDYEGD0j8r2vn-nItHAoL7GIhtDRUUlEftr87hT0
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: efd99630e88fc5bfe703565fc8a365b06e76e931
 workflow-type: tm+mt
-source-wordcount: 1150
+source-wordcount: 1185
 ht-degree: 9%
 
 ---
@@ -48,29 +44,29 @@ Vous pouvez sélectionner l’icône ![paramètres](../../images/icons/settings.
 
 ![L’icône des paramètres est mise en surbrillance dans le Créateur d’audience.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
-La section [!UICONTROL Settings] s’affiche. Dans cette section, vous pouvez mettre à jour les champs affichés ainsi que la relation des champs.
+La section [!UICONTROL Paramètres] s’affiche. Dans cette section, vous pouvez mettre à jour les champs affichés ainsi que la relation des champs.
 
-Pour le **[!UICONTROL Field options]**, vous pouvez afficher uniquement les champs contenant des données ou le schéma XDM complet.
+Pour les **[!UICONTROL options de champ]**, vous pouvez afficher uniquement les champs contenant des données ou le schéma XDM complet.
 
-Pour la **[!UICONTROL Relationship of fields]**, vous pouvez utiliser les relations standard pour votre organisation ou afficher les sélecteurs de relation.
+Pour la **[!UICONTROL Relation des champs]**, vous pouvez utiliser les relations standard pour votre organisation ou afficher les sélecteurs de relation.
 
 ![Le module de paramètres s’affiche.](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### Attributs {#attributes}
 
-L’onglet [!UICONTROL Attributes] vous permet de parcourir les attributs de compte appartenant à la classe XDM Business Account, ainsi que les attributs basés sur les opportunités et les personnes. Chaque dossier peut être développé pour afficher des attributs supplémentaires, où chaque attribut est une mosaïque qui peut être glissée sur la zone de travail [créateur de règles](#rule-builder-canvas) au centre de l’espace de travail.
+L’onglet [!UICONTROL Attributs] vous permet de parcourir les attributs de compte appartenant à la classe XDM Business Account, ainsi que les attributs basés sur les opportunités et les personnes. Chaque dossier peut être développé pour afficher des attributs supplémentaires, où chaque attribut est une mosaïque qui peut être glissée sur la zone de travail [créateur de règles](#rule-builder-canvas) au centre de l’espace de travail.
 
 ![L’onglet Attributs s’affiche dans le Créateur d’audience](../assets/segmentation/audience-builder/attributes.png)
 
 Lors de la sélection d’un attribut, vous pouvez afficher les informations sur les données en sélectionnant l’icône [informations](../../images/icons/info.png). Le résumé des informations sur les données comprend des informations telles que les valeurs principales, une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
 
-La section **[!UICONTROL Populated]** indique le pourcentage de comptes ayant une valeur pour ce champ.
+La section **[!UICONTROL Renseignée]** indique le pourcentage de comptes ayant une valeur pour ce champ.
 
 >[!NOTE]
 >
 >Les premières valeurs ne s’affichent que si les valeurs de l’attribut ne sont **pas** stockées dans un tableau ou dans une paire clé/valeur.
 
-La section **[!UICONTROL Top values]** affiche les 50 valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente. Le nombre d’enregistrements pour chaque champ est déterminé par l’instantané de profil, qui fournit une vue consolidée des enregistrements une fois toutes les données du jeu de données de contribution fusionnées.
+La section **[!UICONTROL Principales valeurs]** affiche les 50 valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente. Le nombre d’enregistrements pour chaque champ est déterminé par l’instantané de profil, qui fournit une vue consolidée des enregistrements une fois toutes les données du jeu de données de contribution fusionnées.
 
 ![Fenêtre contextuelle qui affiche une version entièrement remplie des données de résumé pour un attribut.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
@@ -94,7 +90,7 @@ Vous pouvez utiliser la liste déroulante pour sélectionner l’une des valeurs
 >
 >Les données récapitulatives sont mises à jour **quotidiennement**.
 
-En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
+En outre, l’attribut possède un **[!UICONTROL type d’ingestion]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Lot]**, **[!UICONTROL Diffusion en continu/Edge]** ou **[!UICONTROL Aucune donnée ingérée]**.
 
 ![Le type d’ingestion de l’attribut s’affiche.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
@@ -112,7 +108,7 @@ Vous pouvez placer le pointeur de la souris sur l’icône ![informations](../..
 
 Une audience créée dans le créateur d’audiences est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. Ces règles sont créées à l’aide du canevas du créateur de règles, situé au centre du créateur d’audiences.
 
-Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque de l’onglet **[!UICONTROL Fields]** et déposez-la sur la zone de travail du créateur de règles.
+Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque de l’onglet **[!UICONTROL Champs]** et déposez-la sur la zone de travail du créateur de règles.
 
 ![Zone de travail du créateur de règles avec un champ ajouté.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
@@ -126,25 +122,25 @@ Pour plus d’informations sur les conteneurs, consultez la [documentation du cr
 
 ## Propriétés de l’audience {#properties}
 
-La section **[!UICONTROL Audience properties]** affiche des informations sur l’audience, y compris une taille estimée de l’audience. Vous pouvez également spécifier des détails sur votre audience, y compris son nom, sa description et ses balises.
+La section **[!UICONTROL Propriétés de l’audience]** affiche des informations sur l’audience, notamment une taille estimée de l’audience. Vous pouvez également spécifier des détails sur votre audience, y compris son nom, sa description et ses balises.
 
 ![La section des propriétés de l’audience s’affiche pour l’audience dans le Créateur d’audience.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-La **[!UICONTROL Qualified accounts]** indique le nombre réel de comptes qui correspondent aux règles de l’audience. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche de segmentation.
+Le **[!UICONTROL Comptes qualifiés]** indique le nombre réel de comptes qui correspondent aux règles de l’audience. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche de segmentation.
 
-La **[!UICONTROL Estimated accounts]** indique le nombre approximatif de comptes basés sur l’exemple de tâche. Vous pouvez mettre à jour cette valeur après avoir ajouté de nouvelles règles ou conditions et sélectionné **[!UICONTROL Refresh estimate]**.
+Le **[!UICONTROL Comptes estimés]** indique le nombre approximatif de comptes basés sur l’exemple de tâche. Vous pouvez mettre à jour cette valeur après avoir ajouté de nouvelles règles ou conditions et sélectionné **[!UICONTROL Actualiser l’estimation]**.
 
 ![La section Estimations de la section Propriétés de l’audience s’affiche.](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
-Vous pouvez sélectionner **[!UICONTROL View accounts]** pour afficher un échantillon des comptes qui répondraient aux critères de l’audience avec les règles actuelles.
+Vous pouvez sélectionner **[!UICONTROL Afficher les comptes]** pour afficher un échantillon des comptes qui répondraient aux critères de l’audience avec les règles actuelles.
 
 ![Le bouton Afficher les comptes est mis en surbrillance.](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
-Le **[!UICONTROL Code view]** fournit une description textuelle des règles de l’audience.
+L’**[!UICONTROL affichage du code]** fournit une description textuelle du code des règles de l’audience.
 
 ![Version d’affichage du code de l’audience du compte.](../assets/segmentation/audience-builder/code-view.png)
 
-Vous pouvez sélectionner **[!UICONTROL Apply access labels]** pour appliquer les libellés d’accès appropriés à l’audience. Pour plus d’informations sur les libellés d’accès, consultez le [guide de gestion des libellés](../../access-control/abac/ui/labels.md){target="_blank"}.
+Vous pouvez sélectionner **[!UICONTROL Appliquer les libellés d’accès]** pour appliquer les libellés d’accès appropriés à l’audience. Pour plus d’informations sur les libellés d’accès, consultez le [guide de gestion des libellés](../../access-control/abac/ui/labels.md){target="_blank"}.
 
 ![La fenêtre contextuelle Appliquer l’accès et Étiquettes de gouvernance des données s’affiche.](../assets/segmentation/audience-builder/apply-access-labels.png)
 

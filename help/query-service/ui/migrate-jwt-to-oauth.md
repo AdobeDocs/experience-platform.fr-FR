@@ -3,16 +3,12 @@ title: Migration des informations d’identification de serveur à serveur JWT v
 description: Découvrez comment migrer les informations d’identification JWT non expirantes vers les informations d’identification de serveur à serveur OAuth dans Adobe Experience Platform afin de conserver un accès sécurisé et ininterrompu à Query Service avant la fin de la prise en charge de JWT le 30 juin 2025. Ce guide fournit des instructions détaillées, explique le comportement post-migration et répond aux questions courantes.
 exl-id: a8bab296-becf-4255-b0df-cd41a1d432c2
 TQID: https://experienceleague.adobe.com/4tKftU5VxmGNhoVKJu-gz-8k4xUEItP3j0tTVg72EQY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 739
+source-wordcount: 764
 ht-degree: 1%
 
 ---
@@ -31,11 +27,11 @@ Ce document fournit des instructions détaillées pour effectuer la migration, c
 
 Si vous utilisez des informations d’identification non expirantes dans Query Service, vous devez migrer chacune d’elles. Cela s’applique aux informations d’identification utilisées dans les workflows automatisés, les requêtes planifiées ou les intégrations d’API personnalisées.
 
-Si les informations d’identification sont répertoriées sous la section **[!UICONTROL Non-expiring Credentials]** de l’onglet **[!UICONTROL Credentials]** , elles sont affectées.
+Si les informations d’identification sont répertoriées sous la section **[!UICONTROL Informations d’identification non expirantes]** de l’onglet **[!UICONTROL Informations d’identification]**, elles sont affectées.
 
 ## Comment migrer des informations d’identification {#how-to-migrate}
 
-Vous pouvez migrer les informations d’identification directement dans l’interface utilisateur d’Experience Platform. Pour ce faire, accédez à **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Credentials]** . Dans la section **[!UICONTROL Non-expiring Credentials]** , identifiez des informations d’identification marquées comme éligibles à la migration et sélectionnez **[!UICONTROL Migrate]** en regard de celles-ci.
+Vous pouvez migrer les informations d’identification directement dans l’interface utilisateur d’Experience Platform. Pour ce faire, accédez à **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Informations d’identification]**. Dans la section **[!UICONTROL Informations d’identification non expirantes]**, identifiez des informations d’identification marquées comme éligibles à la migration et sélectionnez **[!UICONTROL Migrer]** en regard de celles-ci.
 
 >[!NOTE]
 >
@@ -43,7 +39,7 @@ Vous pouvez migrer les informations d’identification directement dans l’inte
 
 ![Espace de travail Informations d’identification de Query Service avec les options Requêtes, Informations d’identification et Migrer mises en surbrillance.](../images/ui/migrate-jwt-to-oauth/migrate.png)
 
-Après la migration, le système met à jour les informations d’identification pour utiliser l’authentification de serveur à serveur OAuth. La méthode basée sur JWT est automatiquement retirée et le statut est mis à jour sur **[!UICONTROL Migrated]**.
+Après la migration, le système met à jour les informations d’identification pour utiliser l’authentification de serveur à serveur OAuth. La méthode basée sur JWT est automatiquement retirée et le statut est mis à jour sur **[!UICONTROL Migré]**.
 
 Aucune reconfiguration n’est requise. Les traitements et intégrations existants continuent à fonctionner sans interruption.
 
@@ -73,7 +69,7 @@ Les informations d’identification JWT ne s’actualiseront plus et les intégr
 
 ### Comment savoir si je dois migrer ?
 
-Si des informations d’identification apparaissent sous la section **[!UICONTROL Non-expiring Credentials]** de l’onglet Informations d’identification , ces informations doivent être migrées.
+Si des informations d’identification apparaissent sous la section **[!UICONTROL Informations d’identification non expirantes]** de l’onglet Informations d’identification , ces informations d’identification doivent être migrées.
 
 ### Dois-je mettre à jour mes intégrations ou reconfigurer quoi que ce soit ?
 
@@ -81,17 +77,17 @@ Non. Après la migration, les informations d’identification OAuth prennent aut
 
 ### Puis-je migrer toutes les informations d’identification en même temps ?
 
-Non. Vous devez migrer chaque information d’identification individuellement à l’aide du bouton **[!UICONTROL Migrate]** .
+Non. Vous devez migrer chaque information d’identification individuellement à l’aide du bouton **[!UICONTROL Migrer]**.
 
 ### Puis-je continuer à utiliser les informations d’identification arrivant à expiration ?
 
 Oui. Les informations d’identification arrivant à expiration ne sont pas affectées par cette modification. Seules les informations d’identification JWT non expirantes doivent être migrées.
 
-### Je vois un message disant « [!UICONTROL No non-expiring credentials found.] » Qu&#39;est-ce que cela signifie ? Dois-je prendre des mesures ?
+### Un message indiquant « [!UICONTROL Aucune information d’identification non expirante n’a été trouvée.] » apparaît. Qu&#39;est-ce que cela signifie ? Dois-je prendre des mesures ?
 
 Ce message signifie que vous n’avez pas encore créé d’informations d’identification non expirantes. Vous n’avez donc rien à faire.
 
-### Je vois un message disant « [!UICONTROL AEP admin verification failed]... » Qu&#39;est-ce que cela signifie ? Dois-je prendre des mesures ?
+### Je vois un message indiquant « [!UICONTROL La vérification de l’administrateur AEP a échoué]... » Qu&#39;est-ce que cela signifie ? Dois-je prendre des mesures ?
 
 Ce message indique que vous n’êtes pas un administrateur ou que vous ne disposez pas des autorisations nécessaires pour créer des informations d’identification sans date d’expiration.
 
@@ -104,4 +100,4 @@ Oui, mais seulement si vous êtes un administrateur. Seuls les administrateurs d
 
 ## Étapes suivantes {#next-steps}
 
-Examinez chaque information d’identification non expirante dans l’onglet [!UICONTROL Credentials] et migrez-la individuellement avant le 30 juin 2025. Pour toute question ou assistance, contactez votre représentant de compte Adobe.
+Passez en revue chaque information d’identification non expirante dans l’onglet [!UICONTROL  Informations d’identification ] et migrez-la individuellement avant le 30 juin 2025. Pour toute question ou assistance, contactez votre représentant de compte Adobe.

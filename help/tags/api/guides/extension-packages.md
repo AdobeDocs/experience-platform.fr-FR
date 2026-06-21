@@ -4,7 +4,7 @@ description: Découvrez comment autoriser d’autres entreprises à partager des
 exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
 source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '504'
 ht-degree: 3%
 
 ---

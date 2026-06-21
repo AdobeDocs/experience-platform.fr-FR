@@ -1,41 +1,36 @@
 ---
 title: Groupe de champs de schéma Détails professionnels XDM
 description: Découvrez le groupe de champs de schéma Détails professionnels XDM .
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 TQID: https://experienceleague.adobe.com/OsVRQv-ZSeKOaQ4H0nx-P-IKZ42W2hZK6ss8RFMT9eo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 613
+source-wordcount: 627
 ht-degree: 10%
 
 ---
 
-# [!UICONTROL XDM Business Person Details] groupe de champs de schéma
+# [!UICONTROL Détails professionnels XDM] groupe de champs de schéma
 
 >[!AVAILABILITY]
 >
 >Ce groupe de champs n’est disponible que pour les organisations ayant accès au B2B edition Real-Time CDP.
 
-[!UICONTROL XDM Business Person Details] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui recueille les informations sur une personne individuelle dans le contexte d’une entreprise B2B (business-to-business).
+[!UICONTROL Détails professionnels XDM] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui recueille les informations sur une personne individuelle dans le contexte d’une entreprise B2B (business-to-business).
 
 ![](../../images/field-groups/business-person-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `b2b` | Objet | Objet capturant les détails spécifiques B2B de la personne. |
-| `b2b.accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite du compte professionnel associé à la personne. |
-| `b2b.convertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite du contact associé si le prospect a été converti. |
-| `b2b.personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite de la personne ou du fragment de profil. |
+| `b2b.accountKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite du compte professionnel associé à la personne. |
+| `b2b.convertedContactKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite du contact associé si le prospect a été converti. |
+| `b2b.personKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite de la personne ou du fragment de profil. |
 | `b2b.accountID` | Chaîne | ID unique du compte professionnel auquel cette personne est associée. |
 | `b2b.blockedCause` | Chaîne | Si la personne est bloquée, cette propriété en indique la raison. |
 | `b2b.convertedContactID` | Chaîne | ID de contact en cas de conversion réussie du prospect. |
@@ -62,7 +57,7 @@ ht-degree: 10%
 | `mobilePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Numéro de téléphone mobile de la personne. |
 | `otherAddress` | [Adresse postale](../../data-types/postal-address.md) | Adresse de remplacement de la personne. |
 | `otherPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Autre numéro de téléphone de la personne. |
-| `person` | [&#x200B; Personne &#x200B;](../../data-types/person.md) | Acteur, contact ou propriétaire individuel. |
+| `person` | [ Personne ](../../data-types/person.md) | Acteur, contact ou propriétaire individuel. |
 | `personalEmail` | [Adresse électronique](../../data-types/email-address.md) | Adresse e-mail personnelle de la personne. |
 | `workAddress` | [Adresse postale](../../data-types/postal-address.md) | Adresse professionnelle de la personne. |
 | `workEmail` | [Adresse électronique](../../data-types/email-address.md) | Adresse e-mail professionnelle de la personne. |

@@ -5,31 +5,29 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 0664f52d-bea6-4aa1-b2a5-de0bd6d5edd9
 TQID: https://experienceleague.adobe.com/JE-CBy0UEi0yljUHHIT7UX4ERkqtSTu9Rm1pSbMzutg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 165
+source-wordcount: 176
 ht-degree: 7%
 
 ---
 
-# Type de données [!UICONTROL Identifier]
+# [!UICONTROL Identifiant] type de données
 
-[!UICONTROL Identifier] est un type de données standard du modèle de données d’expérience (XDM) qui fournit un identifiant destiné au calcul. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Identifiant] est un type de données standard du modèle de données d’expérience (XDM) qui fournit un identifiant destiné au calcul. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure du type de données de l’identifiant](../../../images/healthcare/data-types/identifier.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Period] | `period` | [[!UICONTROL Period]](../data-types/period.md) | Période pendant laquelle l’ID est ou était valide pour être utilisé. |
-| [!UICONTROL Type] | `type` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Description de l’identifiant. |
-| [!UICONTROL Assigner] | `assigner` | Chaîne | Organisation qui a émis l’ID. |
-| [!UICONTROL System] | `system` | Chaîne | Espace de noms de la valeur d’identifiant, représentée sous la forme d’un URI. |
-| [!UICONTROL Use] | `use` | Chaîne | Utilisation de l’identifiant. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `usual` </li> <li> `offical` </li> <li> `temp` </li> <li> `secondary` </li> <li> `old` </li> |
-| [!UICONTROL Value] | `value` | Chaîne | Valeur unique de l’ID. |
+| [!UICONTROL Période] | `period` | [[!UICONTROL Période]](../data-types/period.md) | Période pendant laquelle l’ID est ou était valide pour être utilisé. |
+| [!UICONTROL Type] | `type` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Description de l’identifiant. |
+| [!UICONTROL Affectateur] | `assigner` | Chaîne | Organisation qui a émis l’ID. |
+| [!UICONTROL Système] | `system` | Chaîne | Espace de noms de la valeur d’identifiant, représentée sous la forme d’un URI. |
+| [!UICONTROL Utiliser] | `use` | Chaîne | Utilisation de l’identifiant. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `usual` </li> <li> `offical` </li> <li> `temp` </li> <li> `secondary` </li> <li> `old` </li> |
+| [!UICONTROL Valeur] | `value` | Chaîne | Valeur unique de l’ID. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

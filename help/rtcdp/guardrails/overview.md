@@ -4,18 +4,10 @@ description: Découvrez les mécanismes de sécurisation des données dans les d
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
 TQID: https://experienceleague.adobe.com/FG6q8ZiUOM8o10kfJd-58ZcrlOvWyAQe06efuZeapPI
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-  - id: ebefeaba-efa6-45e2-ae01-f6171cdb8d1e
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7id: ebefeaba-efa6-45e2-ae01-f6171cdb8d1e
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 514
@@ -43,7 +35,7 @@ Commencez ici et suivez les liens ci-dessous pour découvrir tous les mécanisme
 
 >[!TIP]
 >
->Consultez également la page [Plans directeurs de l’expérience digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr) pour obtenir plus d’informations, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+>Consultez également la page [Plans directeurs de l’expérience digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) pour obtenir plus d’informations, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 
 ## Types de mécanismes de sécurisation {#guardrail-types}
 
@@ -62,15 +54,15 @@ Consultez également les liens de description du produit ci-dessous pour obtenir
 
 * [Toutes les descriptions des produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html)
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (édition B2P - packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (édition B2P - packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B edition - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Mécanismes de sécurisation pour d’autres applications Experience Platform  {#guardrails-other-aep-apps}
 
 Des mécanismes de sécurisation similaires existent pour d’autres applications Experience Platform. Pour plus d’informations, consultez les liens ci-dessous :
 
-* [Mécanismes de sécurisation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=fr)
-* [Mécanismes de sécurisation de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=fr)
+* [Mécanismes de sécurisation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Mécanismes de sécurisation de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Étapes suivantes
 

@@ -4,7 +4,7 @@ description: Découvrez comment créer et envoyer des payloads identityMap pour 
 exl-id: 33b409cb-48f5-4e77-ba2f-7dfe0b2cb2a9
 source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ L’objet de payload `identityMap` est la manière dont vous indiquez à Edge Ne
 * **Regrouper l’activité à une personne sur plusieurs appareils et canaux.** Le [Service d’identités](/help/identity-service/home.md) associe les identités que vous envoyez à un [graphique d’identités](/help/identity-service/features/identity-graph-viewer.md), établissant ainsi une connexion entre le comportement anonyme au niveau de l’appareil et une personne connue.
 * **Créer des profils client unifiés.** Le [profil client en temps réel](/help/profile/home.md) utilise l’identité principale que vous avez définie pour ancrer les événements et les attributs à un seul profil, ce qui permet la segmentation au niveau de la personne et la création d’audiences.
 * **Activer des audiences sur des destinations en aval.** De nombreuses [destinations](/help/destinations/home.md) nécessitent des identités résolues au niveau de la personne (e-mails hachés, numéros de téléphone, etc.) pour faire correspondre vos audiences à leurs bases d’utilisateurs.
-* **Orchestrer des parcours cross-canal.** [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) utilise des identités résolues pour déclencher et personnaliser des parcours sur les canaux e-mail, push et in-app en fonction du comportement authentifié d’un visiteur.
+* **Orchestrer des parcours cross-canal.** [](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) utilise des identités résolues pour déclencher et personnaliser des parcours sur les canaux e-mail, push et in-app en fonction du comportement authentifié d’un visiteur.
 
 Cette page explique comment créer des payloads `identityMap`, choisir les paramètres appropriés pour chaque identité et gérer les scénarios d’implémentation courants.
 
@@ -66,7 +66,7 @@ Avant d’inclure une valeur dans `identityMap`, préparez-la selon le format at
 | **Téléphone (E.164)** | Formatez le nombre en [E.164](https://en.wikipedia.org/wiki/E.164) : un `+` de début, l&#39;indicatif du pays et le numéro de l&#39;abonné sans espaces ni ponctuation. | `+15551234567` |
 | **FPID** | Générez une chaîne [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Consultez [Identifiants d’appareil propriétaires](./fpid.md) pour connaître les exigences de génération. | `123e4567-e89b-42d3-9456-426614174000` |
 
-Pour obtenir la liste complète des espaces de noms standard et leurs définitions, voir [&#x200B; Présentation des espaces de noms d’identité &#x200B;](/help/identity-service/features/namespaces.md#standard).
+Pour obtenir la liste complète des espaces de noms standard et leurs définitions, voir [ Présentation des espaces de noms d’identité ](/help/identity-service/features/namespaces.md#standard).
 
 >[!TIP]
 >
@@ -157,10 +157,10 @@ alloy("sendEvent", {
 
 Utilisez le type d’élément de données [Mappage d’identités](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) pour créer la payload d’identité dans l’interface utilisateur des balises :
 
-1. Créez un élément de données avec l’extension **[!UICONTROL Adobe Experience Platform Web SDK]** et le type d’élément de données **[!UICONTROL Identity map]**.
+1. Créez un élément de données avec l’extension **[!UICONTROL Adobe Experience Platform Web SDK]** et le type d’élément de données **[!UICONTROL Mappage d’identités]**.
 2. Ajoutez des identités en spécifiant l’espace de noms, l’élément de données ou la valeur qui est résolu sur l’identifiant et l’état authentifié.
 3. Marquez une identité comme principale.
-4. Référencez cet élément de données dans votre action **[!UICONTROL Send event]** sous **[!UICONTROL Identity map]**.
+4. Référencez cet élément de données dans votre action **[!UICONTROL Envoyer l’événement]** sous **[!UICONTROL Mappage d’identité]**.
 
 >[!ENDTABS]
 
@@ -270,4 +270,4 @@ Si votre implémentation utilise des [règles de liaison de graphiques d’ident
 
 >[!NOTE]
 >
->Le `identityMap` n’est envoyé que lorsque le SDK Web adresse une requête à Edge Network, qui est validée par l’état de consentement du visiteur. Si votre implémentation utilise `defaultConsent: "pending"`, les identités ne sont pas envoyées tant que le consentement n’a pas été accordé. Voir [&#x200B; Consentement et identité &#x200B;](./consent.md) pour plus d’informations.
+>Le `identityMap` n’est envoyé que lorsque le SDK Web adresse une requête à Edge Network, qui est validée par l’état de consentement du visiteur. Si votre implémentation utilise `defaultConsent: "pending"`, les identités ne sont pas envoyées tant que le consentement n’a pas été accordé. Voir [ Consentement et identité ](./consent.md) pour plus d’informations.

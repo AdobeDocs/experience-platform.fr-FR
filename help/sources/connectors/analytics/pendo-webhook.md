@@ -4,12 +4,9 @@ description: Découvrez comment connecter Pendo à Adobe Experience Platform à 
 badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
 TQID: https://experienceleague.adobe.com/K3ehdkUA-4pw7qaiCKD2jb-el-DXptmbGWLDhIZnT7c
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 394

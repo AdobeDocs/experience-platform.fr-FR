@@ -6,18 +6,11 @@ type: Tutorial
 description: La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que le profil client en temps réel et le service d’identités, de distinguer les enregistrements provenant de sources approuvées de ceux provenant de sources non approuvées.
 exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 TQID: https://experienceleague.adobe.com/rSF15EXRpdZvjrdW3KpHbf823T4mre8WJwPNMlM9pEA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: d1a87129-ba05-4f15-98b1-233618f1774a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 118

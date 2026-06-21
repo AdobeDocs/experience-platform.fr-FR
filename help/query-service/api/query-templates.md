@@ -6,10 +6,8 @@ description: Ce guide détaille les différents appels de l’API de modèle de 
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 TQID: https://experienceleague.adobe.com/29-sMVEKEw6yHYjFF6yz2y1MAKKgRY8bl27AfVAvuQI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 980
@@ -23,7 +21,7 @@ ht-degree: 44%
 
 Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-Pour plus d’informations sur la création de modèles via l’interface utilisateur d’[&#128279;](../ui/query-templates.md) consultez la documentation sur les modèles de requête de l’interface utilisateur .
+Pour plus d’informations sur la création de modèles via l’interface utilisateur d’](../ui/query-templates.md) consultez la documentation sur les modèles de requête de l’interface utilisateur [.
 
 ### Récupération d’une liste de modèles de requête
 

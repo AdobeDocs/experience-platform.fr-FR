@@ -5,20 +5,18 @@ title: Type de données de nom de personne
 description: Découvrez le type de données XDM Nom de la personne.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 TQID: https://experienceleague.adobe.com/9m-caim56fk6RIJgUXSb-SZiKsWF-9UDhuhDevWMAtQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 248
+source-wordcount: 252
 ht-degree: 13%
 
 ---
 
-# Type de données [!UICONTROL Person name]
+# [!UICONTROL Nom de la personne] type de données
 
-[!UICONTROL Person name] est un type de données XDM standard qui décrit le nom complet d’une personne. Les conventions relatives aux structures de noms variant considérablement selon les langues et les cultures, les noms doivent toujours être modélisés à l’aide de ce type de données.
+[!UICONTROL Nom de la personne] est un type de données XDM standard qui décrit le nom complet d’une personne. Les conventions relatives aux structures de noms variant considérablement selon les langues et les cultures, les noms doivent toujours être modélisés à l’aide de ce type de données.
 
 En outre, le type de données fournit un certain nombre de propriétés facultatives qui peuvent être utilisées dans les situations qui nécessitent uniquement un fragment du nom complet, comme la création d’un message d’accueil formel ou informel.
 

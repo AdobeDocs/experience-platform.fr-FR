@@ -4,8 +4,8 @@ description: Découvrez comment filtrer les résultats lorsque les ressources so
 exl-id: 49dcf0b6-4ce8-41d9-9e3a-e44f5c0ff905
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 100%
+source-wordcount: '124'
+ht-degree: 51%
 
 ---
 
@@ -15,21 +15,21 @@ Répertorier les points d’entrée de l’API Reactor vous permet de trier les 
 
 ## Tri croissant
 
-Les ressources peuvent être triées par attribut dans l’ordre croissant en spécifiant
-l’attribut avec lequel trier et en lui ajoutant un préfixe `+` :
+Les ressources peuvent être triées par attribut dans l’ordre croissant en spécifiant la variable
+attribut selon lequel trier et lui ajouter un préfixe `+` :
 
 `GET /companies/:company_id/properties?sort=+name`
 
 ## Tri décroissant
 
-Les ressources peuvent être triées par attribut dans l’ordre décroissant en spécifiant
-l’attribut avec lequel trier et en lui ajoutant un préfixe `-` :
+Les ressources peuvent être triées par attribut dans l’ordre décroissant en spécifiant la variable
+attribut selon lequel trier et lui ajouter un préfixe `-` :
 
 `GET /companies/:company_id/properties?sort=-name`
 
 ## Tris multiples
 
-Pour trier par plusieurs valeurs, indiquez les directives de tri sous la forme d’une liste
-aux termes séparés par des virgules :
+Pour trier par plusieurs valeurs, indiquez les directives de tri sous la forme de virgules séparées
+liste :
 
 `GET /companies/:company_id/properties?sort=+name,-org_id`

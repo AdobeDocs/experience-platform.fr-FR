@@ -63,7 +63,7 @@ Obtenez et stockez l’identifiant unique (`$id`) de la connexion, puis passez �
 
 Pour que les données sources soient utilisées dans [!DNL Experience Platform], un schéma cible doit également être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données [!DNL Experience Platform] contenant les données sources.
 
-Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [&#x200B; &#x200B;](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [ ](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
 
 **Format d’API**
 
@@ -352,7 +352,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `baseConnectionId` | Identifiant de la connexion de base au jeu de données. |
-| `data.schema.id` | `$id` du schéma XDM cible. |
+| `data.schema.id` | Lʼ`$id` du schéma XDM cible. |
 | `params.dataSetId` | L’identifiant du jeu de données cible. |
 | `connectionSpec.id` | Identifiant de spécification de connexion pour votre espace de stockage dans le cloud. |
 

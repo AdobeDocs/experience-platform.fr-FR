@@ -4,14 +4,14 @@ description: Découvrez comment effectuer des appels vers le point d’entrée d
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 94%
+source-wordcount: '242'
+ht-degree: 95%
 
 ---
 
 # Point d’entrée des entreprises
 
-Une société représente une organisation client, généralement une entreprise. Dans l’API Reactor, ces sociétés correspondent 1:1 à l’ID d’organisation. Les utilisateurs d’API n’ont de visibilité que sur les sociétés auxquelles ils ont accès. Une société peut contenir de nombreuses [propriétés](./properties.md). Une propriété appartient à exactement une seule société.
+Une société représente une organisation client, généralement une entreprise. Dans l’API Reactor, ces sociétés correspondent à 1:1 avec l’ID d’organisation. Les utilisateurs d’API n’ont de visibilité que sur les sociétés auxquelles ils ont accès. Une société peut contenir de nombreuses [propriétés](./properties.md). Une propriété appartient à exactement une seule société.
 
 Le point d’entrée `/companies` de l’API Reactor vous permet de récupérer par programmation les sociétés auxquelles vous avez accès dans votre application d’expérience.
 
@@ -23,7 +23,7 @@ Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](http
 
 Vous pouvez répertorier les sociétés que vous êtes autorisé à utiliser en envoyant une requête GET au point d’entrée `/companies`. Dans la plupart des cas, il y en a exactement une.
 
-**Format d&#39;API**
+**Format d’API**
 
 ```http
 GET /companies

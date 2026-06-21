@@ -6,24 +6,13 @@ last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 TQID: https://experienceleague.adobe.com/0s9NHA5BzWTX8TySxaSY3RyW8gv47BW7BAFp1HqN70Q
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 899
+source-wordcount: 902
 ht-degree: 71%
 
 ---
@@ -54,7 +43,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 **Problèmes connus**
 
-* Aucune
+* None
 
 Pour en savoir plus sur l’utilisation de XDM à l’aide de l’API [!DNL Schema Registry] et de [!DNL Schema Editor]’interface utilisateur, consultez la [documentation du système XDM](../../xdm/home.md).
 
@@ -74,9 +63,9 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 
 **Problèmes connus**
 
-* Aucune
+* None
 
-Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [&#128279;](../../privacy-service/home.md).
+Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [](../../privacy-service/home.md).
 
 ## Sources {#sources}
 
@@ -97,17 +86,17 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 | Catégorie | Autorisation | Description |
 |--- | --- | ---|
 | Ingestion de données | Gestion des sources | Accès à la lecture, la création, la modification et la désactivation des sources. |
-| Ingestion de données | Affichage des sources | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalog]** et aux sources authentifiées dans l’onglet **[!UICONTROL Browse]** . |
+| Ingestion de données | Affichage des sources | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).
 
 ## Destinations {#destinations}
 
-Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles fonctionnalités**
 
@@ -120,11 +109,11 @@ Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégratio
 | Catégorie | Autorisation | Description |
 |--- | --- | ---|
 | Destinations | Gestion des destinations | Accès à la lecture, la création, la modification et la désactivation des destinations. |
-| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalog]** et aux destinations authentifiées dans l’onglet **Parcourir**. |
+| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **Parcourir**. |
 | Destinations | Activation des destinations | Possibilité d’activer les données vers les destinations. Cette autorisation nécessite l’ajout de « Gestion des destinations » ou « Affichage des destinations » au profil de produits. |
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).

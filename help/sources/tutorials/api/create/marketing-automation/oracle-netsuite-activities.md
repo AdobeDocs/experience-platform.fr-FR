@@ -3,10 +3,8 @@ title: Créer une connexion source et un flux de données pour les activités Or
 description: Découvrez comment créer une connexion source et un flux de données pour importer les données d’événements Oracle NetSuite dans Experience Platform à l’aide de l’API Flow Service.
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
 TQID: https://experienceleague.adobe.com/zOO7eWS6pQLEYvmv5dWdfF5Xm548RYcwrVUygdycJco
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2044
@@ -444,8 +442,8 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | Format des données [!DNL Oracle NetSuite Activities] que vous souhaitez ingérer. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `data.format` | Format des données [!DNL Oracle NetSuite Activities] à ingérer. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
 **Réponse**

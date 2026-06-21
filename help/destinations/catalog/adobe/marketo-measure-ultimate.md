@@ -4,21 +4,13 @@ description: Découvrez comment connecter et activer des données vers la destin
 last-substantial-update: 2023-03-07T00:00:00.000Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
 TQID: https://experienceleague.adobe.com/OtNVIlcZPsIlGkRY07s0pc0hqT6GzIN1lwpTKj-Z9-A
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5520579-b31f-4df7-9281-f0d9f91e2edcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 801
+source-wordcount: 821
 ht-degree: 25%
 
 ---
@@ -66,7 +58,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Non | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Oui | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -78,8 +70,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Dataset export]** | Vous exportez des jeux de données bruts, qui ne sont pas regroupés ou structurés par intérêt ou qualification d’audience. En savoir plus sur les [exportations de jeux de données](/help/destinations/destination-types.md#dataset-export-destinations). |
-| Fréquence des exportations | **[!UICONTROL Batch]** | Cette destination par lots exporte des fichiers vers la plateforme Marketo Measure toutes les deux heures. En savoir plus sur la [planification d’exportations de jeux de données](/help/destinations/ui/export-datasets.md#scheduling). |
+| Type d’exportation | **[!UICONTROL Exportation de jeu de données]** | Vous exportez des jeux de données bruts, qui ne sont pas regroupés ou structurés par intérêt ou qualification d’audience. En savoir plus sur les [exportations de jeux de données](/help/destinations/destination-types.md#dataset-export-destinations). |
+| Fréquence des exportations | **[!UICONTROL Lot]** | Cette destination par lots exporte des fichiers vers la plateforme Marketo Measure toutes les deux heures. En savoir plus sur la [planification d’exportations de jeux de données](/help/destinations/ui/export-datasets.md#scheduling). |
 
 {style="table-layout:auto"}
 
@@ -87,7 +79,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations du jeu de données]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration de la destination, renseignez les champs répertoriés dans la section ci-dessous.
 
@@ -95,7 +87,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 
 ![Le workflow Se connecter à la destination pour la destination Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
@@ -104,19 +96,19 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Exporter des jeux de données vers cette destination {#export-datasets}
 
 >[!IMPORTANT]
 >
->Pour activer les données, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations du jeu de données]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Lisez le tutoriel [Exporter des jeux de données](/help/destinations/ui/export-datasets.md) pour obtenir des instructions détaillées sur l’exportation de jeux de données vers cette destination.
 
 ## Valider l’exportation des données {#exported-data}
 
-Pour valider une exportation réussie de jeu de données, vous pouvez vérifier que votre jeu de données a réussi à atteindre votre entrepôt de données [&#128279;](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=fr).
+Pour valider une exportation réussie de jeu de données, vous pouvez vérifier que votre jeu de données a réussi à atteindre votre entrepôt de données [](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

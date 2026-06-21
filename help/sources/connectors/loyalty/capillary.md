@@ -4,20 +4,13 @@ description: Découvrez comment diffuser des données de Capillary vers Experien
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
 TQID: https://experienceleague.adobe.com/DdAfedXXnpRZGGLuXpHAr2W4zt2qovopubFBfycKPg8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513id: ff2b9b37-92e0-45fc-b853-379d44c08c89
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 536
+source-wordcount: 561
 ht-degree: 2%
 
 ---
@@ -41,20 +34,20 @@ En intégrant [!DNL Capillary] à Experience Platform, vous pouvez :
 Avant de connecter [!DNL Capillary] à Adobe Experience Platform, vérifiez que vous disposez des éléments suivants :
 
 * Un **ID d’organisation Adobe valide** et l’accès à un sandbox Experience Platform activé.
-* Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Capillary] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+* Pour connecter votre compte [!DNL Capillary] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Créer un schéma
 
 Vous devez créer un schéma de modèle de données d’expérience (XDM) pour décrire un jeu de données pouvant stocker les champs et types de données possibles qui seront envoyés depuis [!DNL Capillary].
 
 1. Connectez-vous à Adobe Experience Platform et accédez à Experience Platform via la connexion de votre organisation.
-2. Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Schemas]** pour ouvrir l’espace de travail [!UICONTROL Schemas].
-3. Sélectionnez **[!UICONTROL Create schema]** dans le coin supérieur droit.
-4. Dans la boîte de dialogue Créer un schéma , choisissez entre **[!UICONTROL Manual creation]** (Ajouter des champs et des groupes de champs vous-même) ou **[!UICONTROL ML-assisted creation]** (Charger un fichier CSV et utiliser le machine learning pour générer un schéma recommandé).
-5. Choisissez une classe de base pour votre schéma (par exemple, XDM Individual Profile, XDM ExperienceEvent ou Autre). Si vous sélectionnez **[!UICONTROL Other]**, vous pouvez effectuer une sélection parmi les classes personnalisées ou standard disponibles.
+2. Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Schémas]** pour ouvrir l’espace de travail [!UICONTROL Schémas].
+3. Sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit.
+4. Dans la boîte de dialogue Créer un schéma , choisissez entre **[!UICONTROL Création manuelle]** (ajouter vous-même des champs et des groupes de champs) ou **[!UICONTROL création assistée par ML]** (chargez un fichier CSV et utilisez le machine learning pour générer un schéma recommandé).
+5. Choisissez une classe de base pour votre schéma (par exemple, XDM Individual Profile, XDM ExperienceEvent ou Autre). Si vous sélectionnez **[!UICONTROL Autre]**, vous pouvez effectuer une sélection parmi les classes personnalisées ou standard disponibles.
 6. Saisissez un nom et une description conviviaux pour votre schéma.
 7. Utilisez l’éditeur de schémas pour : ajouter des groupes de champs (blocs de champs réutilisables), définir des champs individuels (personnaliser les noms, les types de données et les options) et, éventuellement, créer des types de données ou des groupes de champs personnalisés si les types existants ne répondent pas à vos besoins.
-8. Examinez la structure du schéma dans la zone de travail. Sélectionnez **[!UICONTROL Finish]** pour créer le schéma.
+8. Examinez la structure du schéma dans la zone de travail. Sélectionnez **[!UICONTROL Terminer]** pour créer le schéma.
 9. (Facultatif) Modifiez des champs, ajoutez des descriptions et ajustez les groupes de champs selon les besoins dans l’éditeur de schémas.
 
 Pour obtenir des instructions détaillées sur la création d’un schéma XDM, consultez le guide sur la [création d’un schéma à l’aide de l’éditeur de schéma](../../../xdm/tutorials/create-schema-ui.md).
@@ -63,13 +56,13 @@ Pour obtenir des instructions détaillées sur la création d’un schéma XDM, 
 
 Ensuite, vous devez créer un jeu de données qui fait référence au schéma que vous venez de créer.
 
-1. Dans l’interface utilisateur d’Experience Platform, sélectionnez [!UICONTROL Datasets] dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Datasets].
-2. Sélectionnez **[!UICONTROL Create dataset]** en haut à droite.
-3. Dans les options de création, sélectionnez **[!UICONTROL Create dataset from schema]**.
-4. Dans la liste, recherchez et sélectionnez le schéma XDM que vous avez précédemment créé. Une fois le schéma localisé, sélectionnez **[!UICONTROL Next]**.
+1. Dans l’interface utilisateur d’Experience Platform, sélectionnez [!UICONTROL Jeux de données] dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Jeux de données].
+2. Sélectionnez **[!UICONTROL Créer un jeu de données]** en haut à droite.
+3. Dans les options de création, sélectionnez **[!UICONTROL Créer un jeu de données à partir d’un schéma]**.
+4. Dans la liste, recherchez et sélectionnez le schéma XDM que vous avez précédemment créé. Une fois le schéma localisé, sélectionnez **[!UICONTROL Suivant]**.
 5. Saisissez un nom unique et descriptif pour votre jeu de données.
 6. Si vous le souhaitez, ajoutez une description qui aidera les futurs utilisateurs à identifier le jeu de données.
-7. Sélectionnez **[!UICONTROL Finish]** pour créer le jeu de données.
+7. Sélectionnez **[!UICONTROL Terminer]** pour créer le jeu de données.
 
 Pour obtenir des instructions détaillées sur la création d’un jeu de données, consultez le [guide de l’interface utilisateur des jeux de données](../../../catalog/datasets/user-guide.md).
 

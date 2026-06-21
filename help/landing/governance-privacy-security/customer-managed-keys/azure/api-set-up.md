@@ -5,18 +5,13 @@ role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
 TQID: https://experienceleague.adobe.com/ZVIwLn5sMIG5-RS0A7sYW5i7t9X7lY-k5KTma8jIkEg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1074
-ht-degree: 43%
+source-wordcount: 1086
+ht-degree: 42%
 
 ---
 
@@ -28,9 +23,9 @@ Pour obtenir des instructions spécifiques à AWS, consultez le [guide de config
 
 ## Conditions préalables
 
-Pour afficher et consulter la section [!UICONTROL Encryption] dans Adobe Experience Platform, vous devez avoir créé un rôle et attribué l’autorisation [!UICONTROL Manage Customer Managed Key] à ce rôle. Tout utilisateur disposant de l’autorisation [!UICONTROL Manage Customer Managed Key] peut activer la fonction CMK pour son organisation.
+Pour afficher et consulter la section [!UICONTROL Chiffrement] dans Adobe Experience Platform, vous devez avoir créé un rôle et attribué l’autorisation [!UICONTROL Gérer les clés gérées par le client] à ce rôle. Tout utilisateur disposant de l’autorisation [!UICONTROL Gérer les clés gérées par le client] peut activer la fonction CMK pour son organisation.
 
-Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr).
+Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Pour activer la fonction CMK pour les instances Experience Platform hébergées sur Azure, votre coffre [[!DNL Azure] Key Vault doit être configuré](./azure-key-vault-config.md) avec les paramètres suivants :
 
@@ -45,7 +40,7 @@ Une fois votre coffre de clés configuré, l’étape suivante consiste à enreg
 
 ### Prise en main
 
-L’enregistrement de l’application CMK nécessite que vous exécutiez des appels vers les API Experience Platform. Pour plus d’informations sur la collecte des en-têtes d’authentification requis pour effectuer ces appels, consultez le [guide d’authentification des API &#x200B;](../../../api-authentication.md).
+L’enregistrement de l’application CMK nécessite que vous exécutiez des appels vers les API Experience Platform. Pour plus d’informations sur la collecte des en-têtes d’authentification requis pour effectuer ces appels, consultez le [guide d’authentification des API ](../../../api-authentication.md).
 
 Le guide d’authentification fournit des instructions sur la génération de votre propre valeur unique pour l’en-tête de requête `x-api-key`, toutes les opérations API de ce guide utilisent plutôt la valeur statique `acp_provisioning`. Cependant, vous devez toujours fournir vos propres valeurs pour `{ACCESS_TOKEN}` et `{ORG_ID}`.
 
@@ -81,7 +76,7 @@ Une réponse réussie renvoie une propriété `applicationRedirectUrl` contenant
 
 Copiez et collez l’adresse `applicationRedirectUrl` dans un navigateur pour ouvrir une boîte de dialogue d’authentification. Sélectionnez **[!DNL Accept]** pour ajouter le principal de service de l’application CMK à votre client [!DNL Azure].
 
-![Boîte de dialogue de demande d’autorisation Microsoft avec [!UICONTROL Accept] mis en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![Boîte de dialogue de demande d’autorisation Microsoft avec [!UICONTROL Accepter] en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### Attribuer l’application CMK à un rôle {#assign-to-role}
 
@@ -115,7 +110,7 @@ Sélectionnez la dernière version de la clé et sa page de détails s’affiche
 >
 >Les opérations minimales requises pour être autorisées pour la clé sont les autorisations **[!DNL Wrap Key]** et **[!DNL Unwrap Key]**. Vous pouvez inclure [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign] et [!DNL Verify] si vous le souhaitez.
 
-Le champ **[!UICONTROL Key Identifier]** affiche l’identifiant d’URI de la clé. Copiez cette valeur d’URI à utiliser à l’étape suivante.
+Le champ **[!UICONTROL Identifiant de clé]** affiche l’identifiant d’URI de la clé. Copiez cette valeur d’URI à utiliser à l’étape suivante.
 
 ![Détails clés du tableau de bord Microsoft Azure avec les sections [!DNL Permitted operations] et Copier l’URL clé en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
@@ -148,7 +143,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il est nécessaire de vérifier le statut de la configuration à une [&#x200B; étape ultérieure](#check-status). La valeur respecte la casse. |
+| `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il est nécessaire de vérifier le statut de la configuration à une [ étape ultérieure](#check-status). La valeur respecte la casse. |
 | `type` | Le type de configuration. Cette propriété doit être définie sur `BYOK_CONFIG`. |
 | `imsOrgId` | Votre identifiant d’organisation. Cet identifiant doit être la même valeur que celle fournie sous l’en-tête `x-gw-ims-org-id`. |
 | `configData` | Cette propriété contient les détails suivants sur la configuration :<ul><li>`providerType` : Cette propriété doit être définie sur `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier` : URI de coffre de clés que vous avez copié [précédemment](#send-to-adobe).</li></ul> |

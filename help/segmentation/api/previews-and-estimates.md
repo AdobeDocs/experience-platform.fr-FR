@@ -5,16 +5,10 @@ description: Au fur et à mesure que la définition de segment est développée,
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 TQID: https://experienceleague.adobe.com/fu7pR-uaSo46gZb63V42NCJ2ajCGKw-g0Gq1ygfWSDs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1020
@@ -204,7 +198,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `results` | Une liste des identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées à l’aide du [&#x200B; point d’entrée de l’API d’accès aux profils](../../profile/api/entities.md). |
+| `results` | Une liste des identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées à l’aide du [ point d’entrée de l’API d’accès aux profils](../../profile/api/entities.md). |
 
 +++
 

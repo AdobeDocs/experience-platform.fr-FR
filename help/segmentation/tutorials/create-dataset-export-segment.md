@@ -5,24 +5,15 @@ type: Tutorial
 description: Découvrez comment créer un jeu de données pouvant être utilisé pour exporter une audience à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 TQID: https://experienceleague.adobe.com/WbCW3AB9X1eHC8C6CxHDjfhJWz4kEs145S-xAiEpssc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 710
-ht-degree: 16%
+source-wordcount: 737
+ht-degree: 15%
 
 ---
 
@@ -38,15 +29,15 @@ Ce tutoriel est directement lié aux étapes décrites dans le tutoriel sur [l�
 
 Pour exporter une audience, le jeu de données doit être basé sur la [!DNL XDM Individual Profile Union Schema] . Un schéma d’union est un schéma généré par le système en lecture seule qui agrège les champs de tous les schémas partageant la même classe. Pour plus d’informations sur les schémas d’union, consultez le guide sur [les principes de base de la composition des schémas](../../xdm/schema/composition.md#union).
 
-Pour afficher les schémas d’union dans l’interface utilisateur, sélectionnez **[!UICONTROL Profiles]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Union Schema]** comme illustré ci-dessous.
+Pour afficher les schémas d’union dans l’interface utilisateur, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schéma d’union]** comme illustré ci-dessous.
 
 ![L’onglet Schéma d’union est mis en surbrillance.](../images/tutorials/segment-export-dataset/union.png)
 
 ## Espace de travail des jeux de données
 
-L’espace de travail [!UICONTROL Datasets] vous permet d’afficher et de gérer tous les jeux de données de votre organisation.
+L’espace de travail [!UICONTROL Jeux de données] vous permet d’afficher et de gérer tous les jeux de données de votre organisation.
 
-Sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour accéder à l’espace de travail, puis sélectionnez **[!UICONTROL Browse]**. Cet onglet affiche une liste des jeux de données et leurs détails. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
+Sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à l’espace de travail, puis sélectionnez **[!UICONTROL Parcourir]**. Cet onglet affiche une liste des jeux de données et leurs détails. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
 
 >[!NOTE]
 >
@@ -56,23 +47,23 @@ Sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche po
 
 ## Créer un jeu de données
 
-Pour créer un jeu de données, sélectionnez **[!UICONTROL Create Dataset]**.
+Pour créer un jeu de données, sélectionnez **[!UICONTROL Créer un jeu de données]**.
 
 ![Le bouton Créer un jeu de données est mis en surbrillance.](../images/tutorials/segment-export-dataset/create-dataset.png)
 
-Dans l’écran suivant, sélectionnez **[!UICONTROL Create Dataset from Schema]**.
+Dans l’écran suivant, sélectionnez **[!UICONTROL Créer un jeu de données à partir d’un schéma]**.
 
 ![L’option Créer un jeu de données à partir d’un schéma est mise en surbrillance.](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## Sélection du schéma d’union XDM Individual Profile
 
-Pour sélectionner le [!DNL XDM Individual Profile Union Schema] à utiliser dans votre jeu de données, recherchez le schéma « [!UICONTROL XDM Individual Profile] » sur l’écran **[!UICONTROL Select Schema]**. Une fois le schéma sélectionné, vous pouvez confirmer s’il s’agit du schéma d’union sous **[!UICONTROL API Usage]** dans le rail de droite. Si le chemin d’accès [!UICONTROL Schema] se termine par `_union`, il s’agit d’un schéma d’union.
+Pour sélectionner le [!DNL XDM Individual Profile Union Schema] à utiliser dans votre jeu de données, recherchez le schéma « [!UICONTROL Profil individuel XDM] » sur l’écran **[!UICONTROL Sélectionner un schéma]**. Une fois le schéma sélectionné, vous pouvez confirmer s’il s’agit du schéma d’union sous **[!UICONTROL Utilisation de l’API]** dans le rail de droite. Si le chemin d’accès [!UICONTROL Schéma] se termine par `_union`, il s’agit d’un schéma d’union.
 
 >[!NOTE]
 >
 >Bien que les schémas d’union participent par définition au profil client en temps réel, ils sont répertoriés comme « Non activé » en raison du fait qu’ils ne sont pas activés pour le profil de la même manière que les schémas traditionnels.
 
-Sélectionnez le bouton radio **[!UICONTROL XDM Individual Profile]**, puis sélectionnez **[!UICONTROL Next]**.
+Sélectionnez le bouton radio en regard de **[!UICONTROL Profil individuel XDM]**, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Le schéma Profil individuel XDM est mis en surbrillance.](../images/tutorials/segment-export-dataset/select-schema.png)
 
@@ -86,7 +77,7 @@ Sur l’écran suivant, vous devez donner un nom à votre jeu de données. Vous 
 * Les noms des jeux de données doivent être uniques, ce qui signifie qu’ils doivent également être suffisamment spécifiques pour ne plus être réutilisés à l’avenir.
 * Vous devez fournir des informations supplémentaires sur le jeu de données à l’aide du champ de description, car cela peut aider d’autres utilisateurs et utilisatrices à différencier les jeux de données à l’avenir.
 
-Une fois que le jeu de données a un nom et une description, sélectionnez **[!UICONTROL Finish]**.
+Une fois que le jeu de données comporte un nom et une description, sélectionnez **[!UICONTROL Terminer]**.
 
 ![La page Configurer le jeu de données s’affiche. Les options de configuration sont mises en surbrillance.](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
@@ -94,7 +85,7 @@ Une fois que le jeu de données a un nom et une description, sélectionnez **[!U
 
 Une fois le jeu de données créé, la page d’activité correspondant à ce jeu de données s’affiche. Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-Le rail de droite contient des informations relatives à votre nouveau jeu de données, telles que l’identifiant du jeu de données, le nom, la description, le schéma, etc. Notez la **[!UICONTROL Dataset ID]**, car cette valeur est requise pour terminer le workflow d’exportation d’audience.
+Le rail de droite contient des informations relatives à votre nouveau jeu de données, telles que l’identifiant du jeu de données, le nom, la description, le schéma, etc. Notez l’ID de **[!UICONTROL jeu de données]**, car cette valeur est requise pour terminer le workflow d’exportation de l’audience.
 
 ![La page de l’activité du jeu de données s’affiche. L’identifiant du jeu de données est mis en surbrillance, car cette valeur doit être notée pour les étapes suivantes.](../images/tutorials/segment-export-dataset/activity.png)
 

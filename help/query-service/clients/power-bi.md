@@ -5,14 +5,11 @@ title: Connexion de Power BI au service de requête
 description: Ce document décrit les étapes à suivre pour connecter Power BI au service de requête Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 TQID: https://experienceleague.adobe.com/ilqxjUpWl3bViHW9BRIHeo-tS0FotZoTDYG6iy0MUIY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1081
+source-wordcount: 1084
 ht-degree: 88%
 
 ---
@@ -23,7 +20,7 @@ Ce document décrit les étapes à suivre pour connecter [!DNL Power BI] Desktop
 
 ## Prise en main
 
-Ce guide nécessite que vous ayez déjà accès à l’application [!DNL Power BI] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger [!DNL Power BI] Desktop ou pour plus d’informations, consultez la [documentation officielle de  [!DNL Power BI] &#x200B;](https://docs.microsoft.com/fr-FR/power-bi/).
+Ce guide nécessite que vous ayez déjà accès à l’application [!DNL Power BI] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger [!DNL Power BI] Desktop ou pour plus d’informations, consultez la [documentation officielle de  [!DNL Power BI] ](https://docs.microsoft.com/fr-FR/power-bi/).
 
 >[!IMPORTANT]
 >
@@ -37,7 +34,7 @@ Pour connecter [!DNL Power BI] au service de requête, ouvrez [!DNL Power BI] et
 
 La boîte de dialogue de base de données [!DNL PostgreSQL] s’affiche, vous demandant des valeurs pour votre serveur et votre base de données. Vous pouvez consulter des instructions supplémentaires sur la manière de [se connecter à la base de données PostgreSQL à partir de Power Query Desktop](https://learn.microsoft.com/fr-fr/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) dans la documentation de [!DNL PowerBI].
 
-Ces valeurs requises proviennent de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis **[!UICONTROL Credentials]**. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md).
+Ces valeurs requises proviennent de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
@@ -45,7 +42,7 @@ Ces valeurs requises proviennent de vos informations d’identification Adobe E
 
 ![L’espace de travail Requêtes Experience Platform avec l’onglet Informations d’identification et Informations d’identification arrivant à expiration en surbrillance.](../images/clients/power-bi/query-service-credentials-page.png)
 
-Dans le champ **[!DNL Server]** de la boîte de dialogue [!DNL PostgreSQL database] , saisissez la valeur de l’hôte trouvé dans la section [!UICONTROL Credentials] de Query Service. Pour la production, ajoutez le port `:80` à la fin de la chaîne hôte. Par exemple : `made-up.platform-query.adobe.io:80`.
+Dans le champ **[!DNL Server]** de la boîte de dialogue [!DNL PostgreSQL database] , saisissez la valeur de l’hôte trouvé dans la section Query Service [!UICONTROL Informations d’identification]. Pour la production, ajoutez le port `:80` à la fin de la chaîne hôte. Par exemple : `made-up.platform-query.adobe.io:80`.
 
 Le champ **[!DNL Database]** peut être « all » ou un nom de table de jeu de données. Par exemple : `prod:all`.
 
@@ -75,7 +72,7 @@ En sélectionnant le **[!DNL Import]** [!DNL Data Connectivity mode], le jeu de 
 >
 >Pour afficher les modifications de données qui se sont produites depuis l’importation initiale, vous devez actualiser les données dans [!DNL Power BI] en important à nouveau le jeu de données complet.
 
-Pour importer une table, saisissez les détails du serveur et de la base de données [comme décrit ci-dessus](#connect-power-bi) et sélectionnez le **[!DNL Import]**&#x200B;[!DNL Data Connectivity mode], puis **[!DNL OK]**. La boîte de dialogue [!DNL Navigator] apparaît, affichant une liste de tous les tableaux disponibles. Sélectionnez le tableau à prévisualiser, puis choisissez **[!DNL Load]** pour mettre le jeu de données dans Power BI. Le tableau est maintenant importé dans [!DNL Power BI].
+Pour importer une table, saisissez les détails du serveur et de la base de données [comme décrit ci-dessus](#connect-power-bi) et sélectionnez le **[!DNL Import]**[!DNL Data Connectivity mode], puis **[!DNL OK]**. La boîte de dialogue [!DNL Navigator] apparaît, affichant une liste de tous les tableaux disponibles. Sélectionnez le tableau à prévisualiser, puis choisissez **[!DNL Load]** pour mettre le jeu de données dans Power BI. Le tableau est maintenant importé dans [!DNL Power BI].
 
 L’application [Informations générales sur la connexion aux données dans PowerBi Desktop](https://learn.microsoft.com/fr-fr/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) est disponible dans la documentation officielle.
 

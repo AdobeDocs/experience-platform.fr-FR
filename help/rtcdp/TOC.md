@@ -1,8 +1,7 @@
 ---
 product: adobe experience platform
 solution: Real-Time Customer Data Platform
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
@@ -53,12 +52,12 @@ ht-degree: 56%
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)
 * Mécanismes de sécurisation {#guardrails}
    * [Présentation des mécanismes de sécurisation de Real-Time CDP](guardrails/overview.md)
-   * [Barrières de sécurité pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=fr){target="_blank"}
+   * [Barrières de sécurité pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Mécanismes de sécurisation pour les  [!DNL Real-Time Customer Profile]  et la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
-   * [Mécanismes de sécurisation pour  [!DNL Identity Service]  données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=fr){target="_blank"}
-   * [Mécanismes de sécurisation pour  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=fr){target="_blank"}
-   * [Mécanismes de sécurisation pour l’activation des données via les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=fr){target="_blank"}
+   * [Mécanismes de sécurisation pour  [!DNL Identity Service]  données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Mécanismes de sécurisation pour  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Mécanismes de sécurisation pour l’activation des données via les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identités {#identity}
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
 * Politiques de fusion {#merge-policies}

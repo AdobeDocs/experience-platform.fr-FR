@@ -5,8 +5,8 @@ title: Présentation Du Connecteur Source Apache Cassandra
 description: Découvrez comment connecter Apache Cassandra à Adobe Experience Platform à l’aide d’API.
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 33%
+source-wordcount: '150'
+ht-degree: 34%
 
 ---
 

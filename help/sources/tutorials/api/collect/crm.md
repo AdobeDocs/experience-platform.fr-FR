@@ -3,17 +3,13 @@ title: Création d’un flux de données pour ingérer des données d’un CRM d
 description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données sources dans Experience Platform.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 TQID: https://experienceleague.adobe.com/yPP9iyQc98tlLWwr24pPyrnwKWwD-yttgcIPa-utAuk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2147
+source-wordcount: 2157
 ht-degree: 11%
 
 ---
@@ -657,7 +653,7 @@ Au cours de cette étape, vous pouvez utiliser les paramètres suivants dans `sc
 | --- | --- |
 | `startTime` | Heure (en secondes) à laquelle le flux de données doit commencer. |
 | `frequency` | Fréquence d’ingestion. Configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir la fréquence sur : <ul><li>`once` : définissez la fréquence sur `once` pour créer une ingestion unique. Les paramètres d’intervalle et de renvoi ne sont pas disponibles pour les tâches d’ingestion uniques. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>`minute` : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>`hour` : définissez la fréquence sur `hour` pour planifier le flux de données afin d’ingérer les données toutes les heures.</li><li>`day` : définissez la fréquence sur `day` pour planifier le flux de données afin d’ingérer les données par jour.</li><li>`week` : définissez la fréquence sur `week` afin de planifier le flux de données pour l’ingestion de données sur une base hebdomadaire.</li></ul> |
-| `interval` | Intervalle entre des ingestions consécutives (requis pour toutes les fréquences, à l’exception de `once`). Configurez le paramètre d’intervalle pour établir la période entre chaque ingestion. Par exemple, si votre fréquence est définie sur le jour et que l’intervalle est de 15, le flux de données s’exécute tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>`once` : s.o.</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `interval` | Intervalle entre des ingestions consécutives (requis pour toutes les fréquences, à l’exception de `once`). Configurez le paramètre d’intervalle pour établir la période entre chaque ingestion. Par exemple, si votre fréquence est définie sur le jour et que l’intervalle est de 15, le flux de données s’exécute tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>`once` : s.o.</li><li>`minute`: 15</li><li>`hour` : 1</li><li>`day` : 1</li><li>`week` : 1</li></ul> |
 | `backfill` | Indique s’il faut ingérer les données historiques antérieures à la `startTime`. |
 
 {style="table-layout:auto"}
@@ -750,11 +746,11 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 ### Utiliser l’interface utilisateur pour valider le workflow de l’API {#validate-in-ui}
 
-Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour valider la création de votre flux de données. Accédez au catalogue *[!UICONTROL Sources]* dans l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Dataflows]** dans les onglets d’en-tête. Ensuite, utilisez la colonne [!UICONTROL Dataflow Name] et recherchez le flux de données que vous avez créé à l’aide de l’API [!DNL Flow Service].
+Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour valider la création de votre flux de données. Accédez au catalogue *[!UICONTROL Sources]* dans l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Flux de données]** dans les onglets d’en-tête. Ensuite, utilisez la colonne [!UICONTROL Nom du flux de données] et recherchez le flux de données que vous avez créé à l’aide de l’API [!DNL Flow Service].
 
 ![Interface des flux de données de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform](../../../images/tutorials/validations/dataflows-interface.png)
 
-Vous pouvez valider davantage votre flux de données via l’interface [!UICONTROL Dataflow activity]. Utilisez le rail de droite pour afficher les informations de [!UICONTROL API usage] de votre flux de données. Cette section affiche le même ID de flux de données, l’ID de jeu de données et l’ID de mappage que ceux générés lors du processus de création de flux de données dans [!DNL Flow Service].
+Vous pouvez valider davantage votre flux de données par le biais de l’interface [!UICONTROL Activité de flux de données]. Utilisez le rail de droite pour afficher les informations [!UICONTROL utilisation de l’API] de votre flux de données. Cette section affiche le même ID de flux de données, l’ID de jeu de données et l’ID de mappage que ceux générés lors du processus de création de flux de données dans [!DNL Flow Service].
 
 ![Page d’affichage du flux de données de l’espace de travail des sources.](../../../images/tutorials/validations/api-usage.png)
 
@@ -772,4 +768,4 @@ Pour mettre à jour des configurations pour la planification, le mappage ou des 
 
 ## Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données](../../api/delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]** disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données](../../api/delete.md).

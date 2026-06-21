@@ -5,17 +5,13 @@ title: Aperçu de l’ingestion par lots partielle
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 TQID: https://experienceleague.adobe.com/6-IqkSaGjRlvaIB5Ju1b7lmpGTSlRqBn8-SRQrpS23M
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1223
-ht-degree: 31%
+source-wordcount: 1282
+ht-degree: 29%
 
 ---
 
@@ -62,7 +58,7 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 
 Vous pouvez créer un lot pour lequel l’ingestion partielle est activée.
 
-Pour créer un lot, suivez les étapes du guide de développement de l’ingestion par lots [batch ingestion](./api-overview.md). Une fois l’étape **[!UICONTROL Create batch]** atteinte, ajoutez le champ suivant dans le corps de la requête :
+Pour créer un lot, suivez les étapes du guide de développement de l’ingestion par lots [batch ingestion](./api-overview.md). Une fois que vous avez atteint l’étape **[!UICONTROL Créer un lot]**, ajoutez le champ suivant dans le corps de la requête :
 
 ```json
 {
@@ -83,21 +79,21 @@ Pour créer un lot, suivez les étapes du guide de développement de l’ingesti
 >
 >Cette section décrit l’activation d’un lot pour l’ingestion par lots partielle à l’aide de l’interface utilisateur. Si vous avez déjà activé un lot pour l’ingestion de lots partiels à l’aide de l’API , vous pouvez passer à la section suivante.
 
-Pour activer un lot pour une ingestion partielle via l’interface utilisateur de [!DNL Experience Platform], vous pouvez créer un lot à l’aide des connexions source, créer un lot dans un jeu de données existant ou créer un lot à l’aide de la fonction « [!UICONTROL Map CSV to XDM flow] ».
+Pour activer un lot pour une ingestion partielle via l’interface utilisateur de [!DNL Experience Platform], vous pouvez créer un lot par le biais des connexions source, créer un nouveau lot dans un jeu de données existant ou créer un lot par le biais du « [!UICONTROL Mapper CSV à XDM flow] ».
 
 ### Créer une connexion source {#new-source}
 
-Pour créer une connexion source, procédez comme indiqué dans la section [Présentation des sources](../../sources/home.md). Une fois l’étape **[!UICONTROL Dataflow detail]** atteinte, notez les champs **[!UICONTROL Partial ingestion]** et **[!UICONTROL Error diagnostics]** .
+Pour créer une connexion source, procédez comme indiqué dans la section [Présentation des sources](../../sources/home.md). Une fois que vous avez atteint l’étape **[!UICONTROL Détails du flux de données]**, notez la présence des champs **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]**.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-Le bouton (bascule) **[!UICONTROL Partial ingestion]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
+Le bouton (bascule) **[!UICONTROL Ingestion partielle]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-Le bouton **[!UICONTROL Error diagnostics]** n’apparaît que lorsque le bouton **[!UICONTROL Partial ingestion]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton **[!UICONTROL Partial ingestion]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
+Le bouton (bascule) **[!UICONTROL Diagnostics d’erreur]** ne s’affiche que lorsque le bouton (bascule) **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton (bascule) **[!UICONTROL Ingestion partielle]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-Le **[!UICONTROL Error threshold]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
+Le **[!UICONTROL Seuil d’erreur]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
 ### Utiliser un jeu de données existant {#existing-dataset}
 
@@ -105,29 +101,29 @@ Pour utiliser un jeu de données existant, commencez par sélectionner un jeu de
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-Le bouton (bascule) **[!UICONTROL Partial ingestion]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
+Le bouton (bascule) **[!UICONTROL Ingestion partielle]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-Le bouton **[!UICONTROL Error diagnostics]** n’apparaît que lorsque le bouton **[!UICONTROL Partial ingestion]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton **[!UICONTROL Partial ingestion]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
+Le bouton (bascule) **[!UICONTROL Diagnostics d’erreur]** ne s’affiche que lorsque le bouton (bascule) **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton (bascule) **[!UICONTROL Ingestion partielle]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-Le **[!UICONTROL Error threshold]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
+Le **[!UICONTROL Seuil d’erreur]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
 Désormais, vous pouvez charger des données à l’aide du bouton **Ajouter des données**, et elles seront ingérées à l’aide de l’ingestion partielle.
 
-### Utiliser le flux « [!UICONTROL Map CSV to XDM schema] » {#map-flow}
+### Utiliser le flux « [!UICONTROL Mapper CSV à un schéma XDM] » {#map-flow}
 
-Pour utiliser le flux « [!UICONTROL Map CSV to XDM schema] », suivez les étapes répertoriées dans le tutoriel [Mapper un fichier CSV](../tutorials/map-csv/overview.md). Une fois l’étape **[!UICONTROL Add data]** atteinte, notez les champs **[!UICONTROL Partial ingestion]** et **[!UICONTROL Error diagnostics]** .
+Pour utiliser le flux « [!UICONTROL Mapper CSV à un schéma XDM] », suivez les étapes répertoriées dans le tutoriel [Mapper un fichier CSV](../tutorials/map-csv/overview.md). Une fois que vous avez atteint l’étape **[!UICONTROL Ajouter des données]**, notez la présence des champs **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]**.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-Le bouton (bascule) **[!UICONTROL Partial ingestion]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
+Le bouton (bascule) **[!UICONTROL Ingestion partielle]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-Le bouton **[!UICONTROL Error diagnostics]** n’apparaît que lorsque le bouton **[!UICONTROL Partial ingestion]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton **[!UICONTROL Partial ingestion]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
+Le bouton (bascule) **[!UICONTROL Diagnostics d’erreur]** ne s’affiche que lorsque le bouton (bascule) **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton (bascule) **[!UICONTROL Ingestion partielle]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL Error threshold]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
+**[!UICONTROL Seuil d’erreur]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
 ## Activation des diagnostics d’ingestion et d’erreur partiels pour un flux de données existant
 
@@ -139,7 +135,7 @@ Suivez les étapes ci-dessous pour activer les diagnostics d’ingestion et d’
 
 ### Récupérer les détails du flux
 
-Pour récupérer vos configurations de flux de données, envoyez une requête GET au point d’entrée `/flows/{FLOW_ID}` et indiquez l’identifiant de votre flux de données. Pour plus d’informations sur la récupération des détails du flux de données, reportez-vous au guide [Mettre à jour les flux de données à l’aide de l’API [!DNL Flow Service]  &#x200B;](../../sources/tutorials/api/update-dataflows.md).
+Pour récupérer vos configurations de flux de données, envoyez une requête GET au point d’entrée `/flows/{FLOW_ID}` et indiquez l’identifiant de votre flux de données. Pour plus d’informations sur la récupération des détails du flux de données, reportez-vous au guide [Mettre à jour les flux de données à l’aide de l’API [!DNL Flow Service]  ](../../sources/tutorials/api/update-dataflows.md).
 
 Veillez à enregistrer la valeur du champ `etag` renvoyé dans la réponse. Cela est nécessaire pour que la demande de mise à jour garantisse la cohérence des versions.
 

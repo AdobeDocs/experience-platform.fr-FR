@@ -6,14 +6,10 @@ description: Le développement et la formation de modèle se déroulent au nivea
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 TQID: https://experienceleague.adobe.com/flhB4oFa9hHWu2Oj6nrOqF1LOOElhFJRg3IbG3IjHC0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 806
@@ -274,7 +270,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Paramètre | Description |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Un identifiant d’expérience valide. |
-| `{QUERY_PARAMETER}` | L’un des [paramètres de requête disponibles](./appendix.md#query) utilisé pour filtrer les résultats. |
+| `{QUERY_PARAMETER}` | L’un des [paramètres de requête disponibles](./appendix.md#query) utilisés pour filtrer les résultats. |
 | `{VALUE}` | La valeur du paramètre de requête précédent. |
 
 **Requête**

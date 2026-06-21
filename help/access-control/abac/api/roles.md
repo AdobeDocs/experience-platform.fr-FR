@@ -6,20 +6,11 @@ description: Le point d’entrée /roles de l’API de contrôle d’accès bas�
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 TQID: https://experienceleague.adobe.com/t7-Yo2mof3hy1IqFkfzIg4NSUYfCLtqVoFjARcOPg0I
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-  - id: d175cb4c-5781-454e-a826-bf6dff786265
-  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1681

@@ -6,10 +6,8 @@ description: Vous pouvez étiqueter des champs contenant des informations d’id
 role: Developer
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
 TQID: https://experienceleague.adobe.com/j8K5cX4bRdHe9Aip7UwBsh2UXRMfYE8OeB5qXVol7ms
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 196

@@ -1,9 +1,10 @@
 ---
 title: cookie
 description: Écrivez, modifiez ou supprimez manuellement les cookies pour la propriété de balise.
-source-git-commit: 434d6913ea391b127b4b52c8494730c496bbcfe2
+exl-id: d9de504b-de5d-4b82-b72c-327cdf386cd8
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '410'
 ht-degree: 7%
 
 ---
@@ -36,7 +37,7 @@ Les paramètres de méthode disponibles sont les suivants :
 
 L’objet `attributes` prend en charge les propriétés suivantes :
 
-| Nom de l’attribut | Type | Obligatoire | Par défaut | Description |
+| Attribute name | Type | Obligatoire | Par défaut | Description |
 |---|---|---|---|---|
 | **`expires`** | `number` ou [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | Non | Le cookie expire à la fin de la session du navigateur | Nombre de jours pendant lesquels vous souhaitez que le cookie expire. |
 | **`path`** | `string` | Non | Cookie visible sur tout le site | Emplacement du cookie sur votre domaine. |

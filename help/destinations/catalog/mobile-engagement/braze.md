@@ -5,25 +5,15 @@ description: Braze est une plateforme d’engagement client complète qui alimen
 last-substantial-update: 2024-08-20T00:00:00.000Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 TQID: https://experienceleague.adobe.com/9YYwt3GlWNJ5VOzv6Nkzxzsj0J-QFh61pz7g6T02STU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1229
-ht-degree: 26%
+source-wordcount: 1285
+ht-degree: 25%
 
 ---
 
@@ -80,7 +70,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -92,8 +82,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Profile-based]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom) et/ou les identités, en fonction de votre mappage de champs.[!DNL Adobe Experience Platform] les audiences sont exportées vers [!DNL Braze] sous l’attribut `AdobeExperiencePlatformSegments` . |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom) et/ou les identités, en fonction de votre mappage de champs.[!DNL Adobe Experience Platform] les audiences sont exportées vers [!DNL Braze] sous l’attribut `AdobeExperiencePlatformSegments` . |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -101,36 +91,36 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL Braze account token]** : il s’agit de votre clé de [!DNL API] [!DNL Braze]. Vous trouverez des instructions détaillées sur la manière d’obtenir votre clé [!DNL API] ici : [Présentation de la clé API REST](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Jeton de compte Braze]** : il s’agit de votre clé de [!DNL API] [!DNL Braze]. Vous trouverez des instructions détaillées sur la manière d’obtenir votre clé [!DNL API] ici : [Présentation de la clé API REST](https://www.braze.com/docs/api/api_key/).
 
 ### Renseigner les détails de la destination {#destination-details}
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : saisissez une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Endpoint Instance]** : tous les points d’entrée [spécifiques à une région](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pris en charge par [!DNL Braze] peuvent être sélectionnés. Demandez à votre représentant [!DNL Braze] quelle instance de point d’entrée vous devez utiliser.
+* **[!UICONTROL Instance de point d’entrée]** : tous les points d’entrée [spécifiques à une région](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pris en charge par [!DNL Braze] peuvent être sélectionnés. Demandez à votre représentant [!DNL Braze] quelle instance de point d’entrée vous devez utiliser.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -142,38 +132,38 @@ Le mappage consiste à créer un lien entre vos champs de schéma [!DNL Experien
 
 Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Braze], procédez comme suit :
 
-À l’étape [!UICONTROL Mapping], sélectionnez **[!UICONTROL Add new mapping]**.
+À l’étape [!UICONTROL Mappage], sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
 ![Braze Destination Ajouter Un Mappage](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-Dans la section [!UICONTROL Source Field] , cliquez sur le bouton fléché en regard du champ vide.
+Dans la section [!UICONTROL Champ ], cliquez sur le bouton fléché en regard du champ vide.
 
 ![Mappage Braze Destination Source](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-Dans la fenêtre [!UICONTROL Select source field] , vous pouvez choisir entre deux catégories de champs XDM :
+Dans la fenêtre [!UICONTROL Sélectionner le champ source] vous pouvez choisir entre deux catégories de champs XDM :
 
-* [!UICONTROL Select attributes] : utilisez cette option pour mapper un champ spécifique de votre schéma XDM à un attribut [!DNL Braze].
+* [!UICONTROL Sélectionner des attributs] : utilisez cette option pour mapper un champ spécifique de votre schéma XDM à un attribut [!DNL Braze].
 
 ![Attribut Source de mappage de destination Braze](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Select identity namespace] : utilisez cette option pour mapper un espace de noms d’identité [!DNL Experience Platform] à un espace de noms [!DNL Braze].
+* [!UICONTROL Sélectionner un espace de noms d’identité ] : utilisez cette option pour mapper un espace de noms d’identité [!DNL Experience Platform] à un espace de noms d’[!DNL Braze].
 
 ![Espace de noms Source du mappage de destination Braze](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Choisissez votre champ source, puis sélectionnez **[!UICONTROL Select]**.
+Choisissez votre champ source, puis sélectionnez **[!UICONTROL Sélectionner]**.
 
-Dans la section [!UICONTROL Target Field] , cliquez sur l’icône de mappage à droite du champ.
+Dans la section [!UICONTROL Champ cible], cliquez sur l’icône de mappage située à droite du champ.
 
 ![Mapping de ciblage de destination Braze](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-Dans la fenêtre [!UICONTROL Select target field] , vous pouvez choisir entre deux catégories de champs cibles :
+Dans la fenêtre [!UICONTROL Sélectionner le champ cible], vous pouvez choisir entre deux catégories de champs cibles :
 
-* [!UICONTROL Select identity namespace] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Experience Platform] aux espaces de noms d’identité [!DNL Braze].
-* [!UICONTROL Select custom attributes] : utilisez cette option pour mapper les attributs XDM aux attributs [!DNL Braze] personnalisés que vous avez définis dans votre compte [!DNL Braze]. <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Braze]. Par exemple, le mappage d’un attribut XDM `lastName` à un attribut `Last_Name` personnalisé dans [!DNL Braze] crée l’attribut `Last_Name` dans [!DNL Braze], s’il n’existe pas déjà, et lui associe l’attribut XDM `lastName`.
+* [!UICONTROL Sélectionner un espace de noms d’identité ] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Experience Platform] aux espaces de noms d’identité [!DNL Braze].
+* [!UICONTROL Sélectionner des attributs personnalisés ] : utilisez cette option pour mapper les attributs XDM aux attributs [!DNL Braze] personnalisés que vous avez définis dans votre compte [!DNL Braze]. <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Braze]. Par exemple, le mappage d’un attribut XDM `lastName` à un attribut `Last_Name` personnalisé dans [!DNL Braze] crée l’attribut `Last_Name` dans [!DNL Braze], s’il n’existe pas déjà, et lui associe l’attribut XDM `lastName`.
 
 ![Braze Champs De Mapping De Destination](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Choisissez votre champ cible, puis sélectionnez **[!UICONTROL Select]**.
+Choisissez votre champ cible, puis sélectionnez **[!UICONTROL Sélectionner]**.
 
 Votre mappage de champs doit maintenant s’afficher dans la liste.
 

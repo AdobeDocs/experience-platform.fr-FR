@@ -3,37 +3,14 @@ title: Gestion de la conservation des jeux de données d’événements d’exp�
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
 TQID: https://experienceleague.adobe.com/qSbHu9ejtvLpiisdp5lrGXXTJaa4IQo7xLlkx9lHeJU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-  - id: ee602049-8a18-43df-9299-a689a025a371
-  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: cc72dcf1-72e1-48cc-b434-e7c27d62d67cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2525
+source-wordcount: 2526
 ht-degree: 1%
 
 ---
@@ -155,7 +132,7 @@ GET /ttl/{DATASET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[&#128279;](../api/list-objects.md) consultez le guide API list catalog objects). |
+| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents](../api/list-objects.md) consultez le guide [API list catalog objects). |
 
 **Requête**
 
@@ -376,7 +353,7 @@ Oui, vous pouvez définir différentes politiques de conservation pour les servi
 ### Comment puis-je vérifier l’utilisation actuelle de mon jeu de données ?
 
 +++Réponse
-Vous pouvez vérifier la dernière taille de stockage du jeu de données pour le lac de données et les magasins de profils en tant que mesures distinctes dans l’espace de travail de l’inventaire des [!UICONTROL Dataset]. Triez les colonnes pour identifier les jeux de données les plus volumineux et vérifiez que les politiques de conservation sont appliquées.
+Vous pouvez vérifier la dernière taille de stockage du jeu de données pour le lac de données et les magasins de profils en tant que mesures distinctes sur l’espace de travail d’inventaire [!UICONTROL Jeu de données]. Triez les colonnes pour identifier les jeux de données les plus volumineux et vérifiez que les politiques de conservation sont appliquées.
 
 Pour plus d’informations sur l’utilisation au niveau du sandbox, consultez le tableau de bord Utilisation des licences . Pour plus d’informations, consultez la [documentation relative à l’utilisation des licences](../../dashboards/guides/license-usage.md).
 +++
@@ -419,6 +396,6 @@ Pour plus d’informations, consultez le guide [Créer des jeux de données dér
 
 Maintenant que vous avez appris à gérer les paramètres de TTL pour l’expiration au niveau des lignes, consultez la documentation suivante pour mieux comprendre la gestion des TTL :
 
-- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur d’Experience Platform à l’aide du [&#x200B; guide de l’interface utilisateur du cycle de vie des données &#x200B;](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
+- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur d’Experience Platform à l’aide du [ guide de l’interface utilisateur du cycle de vie des données ](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
 - [Guide du point d’entrée de l’API d’expiration de jeu de données](../../hygiene/api/dataset-expiration.md) : découvrez comment supprimer des jeux de données entiers plutôt que seulement des lignes. Découvrez comment planifier, gérer et automatiser l’expiration des jeux de données à l’aide de l’API pour garantir une conservation efficace des données.
 - [Présentation des politiques d’utilisation des données](../../data-governance/policies/overview.md) : découvrez comment aligner votre stratégie de conservation des données sur les exigences de conformité plus larges et les restrictions d’utilisation marketing.

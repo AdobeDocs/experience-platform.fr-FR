@@ -1,21 +1,16 @@
 ---
 title: Informations sur le profil de compte
 description: Découvrez le langage SQL qui alimente les informations de profil de votre compte et utilisez ces requêtes pour générer des informations personnalisées qui explorent davantage vos clients et leurs expériences client.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 TQID: https://experienceleague.adobe.com/PuxetMqlwAVAisy27-r1SCPriB8iE-dEfL24Azn2JEA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 765
+source-wordcount: 781
 ht-degree: 0%
 
 ---
@@ -294,7 +289,7 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->Le graphique [!UICONTROL Customers per Account Overview] comprend trois informations d’exploration amont : [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] et [!UICONTROL Opportunities per Account Detail]. Ces analyses détaillées fournissent des informations plus granulaires, en répartissant le nombre de clients et d’opportunités par catégories (par exemple, clients directs et indirects) et par plages (comme les tranches de nombre de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
+>Le graphique [!UICONTROL Présentation des clients par compte] comprend trois informations détaillées : [!UICONTROL Clients par détail de compte], [!UICONTROL Présentation des opportunités par compte] et [!UICONTROL Opportunités par détail de compte]. Ces analyses détaillées fournissent des informations plus granulaires, en répartissant le nombre de clients et d’opportunités par catégories (par exemple, clients directs et indirects) et par plages (comme les tranches de nombre de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
 
 Questions traitées par cette insight :
 

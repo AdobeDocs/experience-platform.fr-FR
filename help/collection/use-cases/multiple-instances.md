@@ -38,7 +38,7 @@ Par conséquent, le script crée deux fonctions globales (`titanium` et `copper`
 
 >[!TIP]
 >
->Si vous utilisez le code de base avec des balises, assurez-vous que tous les noms d’instance définis correspondent à tous les [noms d’instance &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md) lors de la configuration de l’extension de balise.
+>Si vous utilisez le code de base avec des balises, assurez-vous que tous les noms d’instance définis correspondent à tous les [noms d’instance ](/help/tags/extensions/client/web-sdk/configure/general.md) lors de la configuration de l’extension de balise.
 
 En suivant l’exemple de modèle de dénomination de `titanium` et `copper` en tant qu’instances Web SDK, vous pouvez exécuter des commandes indépendamment :
 

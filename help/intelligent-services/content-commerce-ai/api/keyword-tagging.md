@@ -5,12 +5,9 @@ title: Balisage de mots-clés dans l’API de balisage de contenu
 description: Lorsqu’il reçoit un document texte, le service Balisage des mots-clés extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux l’objet du document. Pour extraire des mots-clés, on utilise une combinaison d'algorithmes de reconnaissance d'entités nommées (NER) et de balisage de mots-clés non supervisé.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 TQID: https://experienceleague.adobe.com/iOmCfCfAhDGqiiRHDs9qjI6fD41yfDl9SBaf6a-JdSM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 448
@@ -111,7 +108,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `repo:path` | chaîne | - | - | - | URL prédéfinie du document à partir duquel les expressions clés doivent être extraites. |
 | `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel le document est stocké. |
 | `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez ceci lors de la transmission du document en tant qu’argument multipartie au lieu d’utiliser des URL présignées. |
-| `dc:format` | string | Oui | - | « text/plain »,<br>« application/pdf »,<br>« text/pdf »,<br>« text/html »,<br>« text/rtf »,<br>« application/rtf »,<br>« application/msword »,<br>« application/vnd.openxmlformats-officedocument.wordprocessingml.document »,<br>« application/mspowerpoint »,<br>« application/vnd.ms-powerpoint »,<br>« application/vnd.openxmlformats-officedocument.presentationml.presentation » | Le codage du document est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
+| `dc:format` | chaîne | Oui | - | « text/plain »,<br>« application/pdf »,<br>« text/pdf »,<br>« text/html »,<br>« text/rtf »,<br>« application/rtf »,<br>« application/msword »,<br>« application/vnd.openxmlformats-officedocument.wordprocessingml.document »,<br>« application/mspowerpoint »,<br>« application/vnd.ms-powerpoint »,<br>« application/vnd.openxmlformats-officedocument.presentationml.presentation » | Le codage du document est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
 
 **Réponse**
 

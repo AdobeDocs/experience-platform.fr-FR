@@ -4,29 +4,14 @@ title: Exemple de workflow complet de Adobe Experience Platform
 description: Découvrez le workflow de base de bout en bout pour Adobe Experience Platform à un niveau élevé.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
 TQID: https://experienceleague.adobe.com/WmodBks576CJjMwfzfSBLdjFJwOFVGUiSDMtqrXIE8Q
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1893
+source-wordcount: 1894
 ht-degree: 12%
 
 ---
@@ -37,7 +22,7 @@ Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexible
 
 Basé sur des API RESTful, Experience Platform offre toutes les fonctionnalités du système aux développeurs, en facilitant l’intégration des solutions d’entreprise à l’aide d’outils courants. Experience Platform vous permet d’obtenir une vue d’ensemble de vos clients en ingérant vos données client, en segmentant vos données aux audiences que vous souhaitez cibler et en activant ces audiences vers une destination externe. Le tutoriel suivant présente un workflow de bout en bout, montrant toutes les étapes de l’ingestion par le biais de sources à l’activation d’audiences par le biais de destinations.
 
-![Workflow de bout en bout &#x200B;](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
+![Workflow de bout en bout ](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
 
 ## Prise en main
 
@@ -77,7 +62,7 @@ Lors du premier chargement de données vers un nouveau jeu de données ou de la 
 
 ## Évaluation des données
 
-Une fois que vous avez généré des profils à partir des données ingérées, vous pouvez évaluer les données à l’aide de la segmentation. La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble d’individus de votre banque de profils, afin de distinguer un groupe de clients potentiels de votre base de clients. Pour en savoir plus sur la segmentation, veuillez lire la [&#x200B; présentation du service de segmentation &#x200B;](../segmentation/home.md).
+Une fois que vous avez généré des profils à partir des données ingérées, vous pouvez évaluer les données à l’aide de la segmentation. La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble d’individus de votre banque de profils, afin de distinguer un groupe de clients potentiels de votre base de clients. Pour en savoir plus sur la segmentation, veuillez lire la [ présentation du service de segmentation ](../segmentation/home.md).
 
 ### Création d’une définition de segment
 
@@ -115,7 +100,7 @@ Pour obtenir des instructions sur l’activation des données vers des destinati
 
 Experience Platform vous permet de suivre le traitement des données par l’utilisation des flux de données, qui sont des représentations des tâches qui déplacent les données entre les différents composants d’Experience Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, où elles sont ensuite utilisées par les [!DNL Identity Service] et les [!DNL Real-Time Customer Profile] avant d’être finalement activées vers les destinations. Le tableau de bord de surveillance vous fournit une représentation visuelle du parcours d’un flux de données. Pour découvrir comment surveiller les flux de données dans l’interface utilisateur d’Experience Platform, consultez les tutoriels sur [surveillance des flux de données pour les sources](../dataflows/ui/monitor-sources.md) et [surveillance des flux de données pour les destinations](../dataflows/ui/monitor-destinations.md).
 
-Vous pouvez également surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement [!DNL Observability Insights]. Vous pouvez vous abonner aux notifications d’alerte par le biais de l’interface utilisateur d’Experience Platform ou les envoyer à un webhook configuré. Pour plus d’informations sur l’affichage, l’activation, la désactivation et l’abonnement aux alertes disponibles à partir de l’interface utilisateur d’Experience Platform, consultez le guide de l’interface utilisateur [[!UICONTROL Alerts]](../observability/alerts/ui.md). Pour plus d’informations sur la réception d’alertes par le biais de Webhooks, consultez le guide sur [l’abonnement aux notifications d’événement d’Adobe I/O](../observability/alerts/subscribe.md).
+Vous pouvez également surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement [!DNL Observability Insights]. Vous pouvez vous abonner aux notifications d’alerte par le biais de l’interface utilisateur d’Experience Platform ou les envoyer à un webhook configuré. Pour plus d’informations sur l’affichage, l’activation, la désactivation et l’abonnement aux alertes disponibles depuis l’interface utilisateur d’Experience Platform, consultez le guide de l’interface utilisateur [[!UICONTROL Alertes]](../observability/alerts/ui.md). Pour plus d’informations sur la réception d’alertes par le biais de Webhooks, consultez le guide sur [l’abonnement aux notifications d’événement d’Adobe I/O](../observability/alerts/subscribe.md).
 
 ## Étapes suivantes
 

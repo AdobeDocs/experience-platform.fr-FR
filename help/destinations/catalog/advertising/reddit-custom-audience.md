@@ -6,7 +6,7 @@ exl-id: bcce02bd-d508-47a0-8f5c-bf162db1859d
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1303'
 ht-degree: 27%
 
 ---
@@ -45,8 +45,8 @@ Avant de configurer cette destination, veillez à respecter les conditions préa
 
 | Identité cible | Description | Considérations |
 | --- | --- | --- |
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** afin que [!DNL Platform] hache automatiquement les données lors de l’activation. |
-| servante | Google Advertising ID ou Apple ID pour les annonceurs, tous deux hachés avec l’algorithme SHA256 | Mappez GAID ou IDFA sur **maid**. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** afin que [!DNL Platform] hache automatiquement les données lors de l’activation. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** afin que [!DNL Platform] hache automatiquement les données lors de l’activation. |
+| servante | Google Advertising ID ou Apple ID pour les annonceurs, tous deux hachés avec l’algorithme SHA256 | Mappez GAID ou IDFA sur **maid**. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** afin que [!DNL Platform] hache automatiquement les données lors de l’activation. |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Audiences prises en charge par type de données :
 | --- | --- | --- | --- |
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -78,8 +78,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 | --- | --- | --- |
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Reddit Custom Audience]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Reddit Custom Audience]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -87,17 +87,17 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 ![Écran d’authentification de destination Reddit Custom Audience affichant les champs requis pour la connexion.](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png)
 
-On vous redirige pour vous connecter avec [!DNL Reddit]. Après avoir examiné les autorisations demandées, sélectionnez **[!UICONTROL Allow]** afin que [!DNL Experience Platform] puissiez créer des audiences et mettre à jour l’appartenance au nom de votre compte publicitaire.
+On vous redirige pour vous connecter avec [!DNL Reddit]. Après avoir examiné les autorisations demandées, sélectionnez **[!UICONTROL Autoriser]** afin que [!DNL Experience Platform] puissiez créer des audiences et mettre à jour l’appartenance au nom de votre compte publicitaire.
 
 ![Écran d’autorisation Reddit OAuth.](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png)
 
@@ -107,22 +107,22 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Écran de détails de la destination Reddit Custom Audience.](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaissez cette destination.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaissez cette destination.
 * **[!UICONTROL Description]** : description qui vous aide à identifier cette destination.
-* **[!UICONTROL Ad Account ID]** : ID de votre compte publicitaire [!DNL Reddit].
+* **[!UICONTROL ID de compte publicitaire]** : ID de votre compte publicitaire [!DNL Reddit].
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -132,8 +132,8 @@ Les espaces de noms d’identité cibles suivants doivent être mappés selon le
 
 | Champ source | Champ cible | Remarques |
 | --- | --- | --- |
-| E-mail (texte brut ou haché) | email_lc_sha256 | Votre champ source peut être haché ou non haché. [!DNL Reddit] accepte uniquement les valeurs hachées. Activez **[!UICONTROL Apply transformation]** afin que [!DNL Experience Platform] hache l’e-mail avant l’envoi. |
-| MAID (texte brut ou haché) | servante | Votre champ source peut être haché ou non haché. [!DNL Reddit] accepte uniquement les valeurs hachées. Activez **[!UICONTROL Apply transformation]** afin que [!DNL Experience Platform] hache la valeur avant l’envoi. |
+| E-mail (texte brut ou haché) | email_lc_sha256 | Votre champ source peut être haché ou non haché. [!DNL Reddit] accepte uniquement les valeurs hachées. Activez **[!UICONTROL Appliquer la transformation]** afin que [!DNL Experience Platform] hache l’e-mail avant envoi. |
+| MAID (texte brut ou haché) | servante | Votre champ source peut être haché ou non haché. [!DNL Reddit] accepte uniquement les valeurs hachées. Activez l’option **[!UICONTROL Appliquer la transformation]** afin que [!DNL Experience Platform] hache la valeur avant l’envoi. |
 
 Vous devez mapper au moins une des identités.
 
@@ -143,7 +143,7 @@ Vous devez mapper au moins une des identités.
 
 Une fois vos audiences activées, vous pouvez les voir dans votre compte [!DNL Reddit] Ads Manager.
 
-Les audiences nouvellement créées dans [!DNL Reddit] apparaissent dans un statut en attente. Une fois que votre flux de données s’exécute et que les profils sont exportés, [!DNL Reddit] compare les profils aux utilisateurs [!DNL Reddit]. Une fois les données traitées, le statut de l’audience passe à **[!UICONTROL Valid]**. La taille de l’audience doit atteindre 1 000 utilisateurs [&#x200B; ou plus](https://ads-api.reddit.com/docs/v3/manage-customer-lists) pour être considérée comme valide. Les audiences qui ne répondent pas à la taille requise s’affichent sous la forme **[!UICONTROL Invalid]**.
+Les audiences nouvellement créées dans [!DNL Reddit] apparaissent dans un statut en attente. Une fois que votre flux de données s’exécute et que les profils sont exportés, [!DNL Reddit] compare les profils aux utilisateurs [!DNL Reddit]. Une fois les données traitées, le statut de l’audience passe à **[!UICONTROL Valide]**. La taille de l’audience doit atteindre 1 000 utilisateurs [ ou plus](https://ads-api.reddit.com/docs/v3/manage-customer-lists) pour être considérée comme valide. Les audiences qui ne répondent pas à la taille requise s’affichent comme **[!UICONTROL Non valide]**.
 
 ![Gestionnaire de publicités Reddit affichant une audience exportée et son statut.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
 

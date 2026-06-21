@@ -3,26 +3,15 @@ title: Test des codes intégrés à l’aide du débogeur Adobe Experience Pla
 description: Découvrez comment utiliser Experience Platform Debugger pour tester localement différents codes incorporés pour Adobe Experience Platform sur votre site web.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
 TQID: https://experienceleague.adobe.com/G-Ua-ZduAbFrQ48yS0ENxKRBrCr5V2wknJ40izLcpWo
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 453
-ht-degree: 51%
+source-wordcount: 463
+ht-degree: 36%
 
 ---
 
@@ -40,7 +29,7 @@ Ce tutoriel nécessite également l’installation de l’extension de navigateu
 
 ## Ouvrez Experience Platform Debugger sur votre site web.
 
-À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Experience Platform Debugger. Le site auquel Experience Platform Debugger est actuellement connecté s’affiche au bas de la fenêtre. Si les balises sont en cours d’exécution sur votre site, celui-ci est répertorié dans l’onglet [!UICONTROL Summary] .
+À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Experience Platform Debugger. Le site auquel Experience Platform Debugger est actuellement connecté s’affiche au bas de la fenêtre. Si les balises sont en cours d’exécution sur votre site, celui-ci est répertorié dans l’onglet [!UICONTROL Résumé].
 
 ![](./images/embed-code-testing/summary.png)
 
@@ -50,21 +39,21 @@ Ce tutoriel nécessite également l’installation de l’extension de navigateu
 
 ## Remplacement des codes intégrés
 
-Une fois Experience Platform Debugger connecté à votre site, sélectionnez **[!UICONTROL Launch]** dans le volet de navigation de gauche. Vous trouverez ici des informations sur la version de bibliothèque en cours d’exécution sur votre site, y compris son environnement et les extensions associées. À partir de là, sélectionnez **[!UICONTROL Configuration]** pour afficher les commandes de gestion des codes intégrés.
+Une fois Experience Platform Debugger connecté à votre site, sélectionnez **[!UICONTROL Launch]** dans le volet de navigation de gauche. Vous trouverez ici des informations sur la version de bibliothèque en cours d’exécution sur votre site, y compris son environnement et les extensions associées. À partir de là, sélectionnez **[!UICONTROL Configuration]** pour afficher les commandes de gestion des codes incorporés.
 
 ![](./images/embed-code-testing/launch-tab.png)
 
-Sous [!UICONTROL Page Embed Codes], le code intégré actuellement utilisé par votre site s’affiche. Sélectionnez **[!UICONTROL Actions]** sur le côté droit du code intégré, puis sélectionnez **[!UICONTROL Replace]**.
+Sous [!UICONTROL Codes incorporés de la page], le code incorporé actuellement utilisé par votre site s’affiche. Sélectionnez **[!UICONTROL Actions]** sur le côté droit du code incorporé, puis sélectionnez **[!UICONTROL Remplacer]**.
 
 ![](./images/embed-code-testing/replace.png)
 
 Une fenêtre contextuelle s’affiche, vous invitant à fournir un code intégré pour remplacer le code actuel. Notez que le remplacement du code incorporé à l’aide d’Experience Platform Debugger ne modifie pas le code incorporé déployé sur votre site. Il remplace uniquement le code intégré s’exécutant localement afin que vous puissiez tester et déboguer son implémentation.
 
-Collez le code intégré à tester dans la zone de texte fournie, puis sélectionnez **[!UICONTROL Apply]**.
+Collez le code incorporé à tester dans la zone de texte fournie, puis sélectionnez **[!UICONTROL Appliquer]**.
 
 ![](./images/embed-code-testing/paste-code.png)
 
-L’onglet **[!UICONTROL Configuration]** réapparaît, indiquant que le code intégré actif a été remplacé par celui que vous avez fourni. Vous pouvez désormais utiliser le navigateur web pour déterminer si le code intégré que vous testez fonctionne comme prévu.
+L’onglet **[!UICONTROL Configuration]** réapparaît, indiquant que le code incorporé actif a été remplacé par celui que vous avez fourni. Vous pouvez désormais utiliser le navigateur web pour déterminer si le code intégré que vous testez fonctionne comme prévu.
 
 ![](./images/embed-code-testing/code-replaced.png)
 

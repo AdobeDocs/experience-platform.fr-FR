@@ -5,12 +5,9 @@ title: Workflow ETL
 description: Différents outils d’extraction, de transformation et de chargement (ETL) peuvent avoir des formats différents, mais la plupart présentent des fonctionnalités similaires pour faciliter la combinaison de plusieurs sources de données.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 TQID: https://experienceleague.adobe.com/z709WSX9n7CPwTlDvdlSif3V5Tk5CTL4aqjAd8OEMMk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 226

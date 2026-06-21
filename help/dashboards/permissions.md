@@ -5,27 +5,14 @@ type: Documentation
 description: Octroyez aux utilisateurs la possibilité dʼafficher, de modifier et de mettre à jour les tableaux de bord Experience Platform à lʼaide dʼAdobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 TQID: https://experienceleague.adobe.com/ZuPk5map-epe3a7-yCh6BmkrsxRWUIfy6t6MzKuQ2gM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-  - id: eec185bd-7d60-4193-ba3f-da427569936a
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-  - id: d175cb4c-5781-454e-a826-bf6dff786265
-  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 621
+source-wordcount: 653
 ht-degree: 28%
 
 ---
@@ -42,12 +29,12 @@ Pour configurer le contrôle dʼaccès dans [!DNL Experience Platform], vous dev
 
 ## Autorisations disponibles pour les tableaux de bord {#available-permissions}
 
-Le service [!DNL Dashboards] fournit trois autorisations qui, lorsqu’elles sont combinées, offrent un accès complet aux tableaux de bord [!UICONTROL Profiles], [!UICONTROL Segments], [!UICONTROL Destinations] et [!UICONTROL License Usage] dans Adobe Experience Platform. Ces autorisations sont les suivantes :
+Le service [!DNL Dashboards] fournit trois autorisations qui, lorsqu’elles sont combinées, offrent un accès complet aux tableaux de bord [!UICONTROL Profils], [!UICONTROL Segments], [!UICONTROL Destinations] et [!UICONTROL Utilisation de la licence] dans Adobe Experience Platform. Ces autorisations sont les suivantes :
 
 | Autorisation | Description |
 |---|---|
-| **Gestion des tableaux de bord standard** | Cette autorisation est une **autorisation globale en lecture et écriture**. Il vous permet de [créer des widgets personnalisés](./customize/custom-widgets.md) et [modifier le schéma de widget](./customize/edit-schema.md) via le [!UICONTROL Widget library]. |
-| **Afficher les tableaux de bord standard** | Cette fonctionnalité **lecture seule** est destinée aux tableaux de bord [!UICONTROL Profiles], [!UICONTROL Destinations] et [!UICONTROL Segments]. Elle permet d’y accéder via le volet de navigation de gauche d’Experience Platform. Il ajoute également des [!UICONTROL Dashboards] au volet de navigation de gauche et permet d’accéder à l’onglet Inventaire et intégrations des [!UICONTROL Dashboards] . |
+| **Gestion des tableaux de bord standard** | Cette autorisation est une **autorisation globale en lecture et écriture**. Il vous permet de [créer des widgets personnalisés](./customize/custom-widgets.md) et [modifier le schéma de widget](./customize/edit-schema.md) via la [!UICONTROL bibliothèque de widgets]. |
+| **Afficher les tableaux de bord standard** | Cette interface fournit une fonctionnalité **lecture seule** pour les tableaux de bord [!UICONTROL Profils], [!UICONTROL Destinations] et [!UICONTROL Segments] et permet d’y accéder via le volet de navigation de gauche d’Experience Platform. Elle ajoute également [!UICONTROL Tableaux de bord] au volet de navigation de gauche et permet d’accéder à l’onglet Inventaire et intégrations [!UICONTROL Tableaux de bord]. |
 | **Afficher le tableau de bord d’utilisation des licences** | Cette autorisation permet aux utilisateurs d’accéder **en lecture seule** au tableau de bord [’utilisation des licences](./guides/license-usage.md) dans l’interface utilisateur d’Experience Platform. |
 
 Cinq autorisations non incluses dans la catégorie [!DNL Dashboard] peuvent être requises en fonction de vos besoins. Le tableau suivant décrit les emplacements des catégories dans Admin Console :
@@ -68,7 +55,7 @@ Cinq autorisations non incluses dans la catégorie [!DNL Dashboard] peuvent êtr
 
 La matrice de contrôle d’accès suivante fournit une répartition des autorisations requises et des fonctions qu’elles fournissent concernant l’accès aux différentes fonctionnalités des tableaux de bord. Les autorisations sont répertoriées dans la ligne horizontale supérieure et l’espace de travail de l’interface utilisateur d’Experience Platform est répertorié dans la colonne de gauche.
 
-|   | [!UICONTROL View Standard Dashboard] OU [!UICONTROL Manage Standard Dashboard] | [!UICONTROL View Profiles],<br/>[!UICONTROL View Segments],<br/> [!UICONTROL View Destinations] | [!UICONTROL Manage Queries] &amp; [!UICONTROL Manage Sandboxes] | [!UICONTROL View License Usage Dashboard] |
+|   | [!UICONTROL Afficher le tableau de bord standard] OU [!UICONTROL Gérer le tableau de bord standard] | [!UICONTROL Affichage des profils],<br/>[!UICONTROL Affichage des segments],<br/> [!UICONTROL Afficher les destinations] | [!UICONTROL Gérer les requêtes] et [!UICONTROL Gérer les sandbox] | [!UICONTROL Afficher le tableau de bord d’utilisation des licences] |
 |---|---|---|---|---|
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dans le volet de navigation de gauche. | S.O. | **Une autorisation « Afficher » ou « Gérer » est REQUISE** pour chaque tableau de bord respectif. | S.O. | S.O. |
 | [!DNL Dashboards] dans le volet de navigation de gauche. | ACTIVÉ | **Au moins un OBLIGATOIRE**. | S.O. | S.O. |

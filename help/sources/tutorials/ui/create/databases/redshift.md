@@ -4,23 +4,15 @@ description: Découvrez comment connecter un compte AWS Redshift à Experience P
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 TQID: https://experienceleague.adobe.com/FPdemGIDPy-gOInJNktinBaP8PD9e7BmXxtiGR1Fwy8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 717
-ht-degree: 21%
+source-wordcount: 735
+ht-degree: 20%
 
 ---
 
@@ -47,11 +39,11 @@ Si vous disposez déjà d’une connexion [!DNL AWS Redshift] valide, vous pouve
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sélectionnez **[!DNL AWS Redshift]** sous la catégorie *[!UICONTROL Databases]*, puis sélectionnez **[!UICONTROL Set up]**.
+Sélectionnez **[!DNL AWS Redshift]** sous la catégorie *[!UICONTROL Bases de données]*, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte source AWS Redshift sélectionnée.](../../../../images/tutorials/create/redshift/catalog.png)
 
@@ -59,7 +51,7 @@ Sélectionnez **[!DNL AWS Redshift]** sous la catégorie *[!UICONTROL Databases]
 
 Ensuite, vous passez à l’étape d’authentification du workflow des sources. Ici, vous pouvez utiliser un compte existant ou en créer un nouveau.
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL AWS Redshift] dans le répertoire des comptes, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL AWS Redshift] dans le répertoire des comptes, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Répertoire des comptes dans le workflow des sources où les comptes existants sont répertoriés.](../../../../images/tutorials/create/redshift/existing.png)
 
@@ -67,11 +59,11 @@ Pour utiliser un compte existant, sélectionnez le compte [!DNL AWS Redshift] da
 
 Si vous ne disposez pas d’un compte existant, vous devez créer un compte en fournissant les informations d’authentification nécessaires qui correspondent à votre source.
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et éventuellement une description pour votre compte.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement ajoutez une description pour votre compte.
 
 ### Connexion à Experience Platform sur Azure {#azure}
 
-Pour connecter votre compte [!DNL AWS Redshift] à Experience Platform sur Azure, saisissez vos informations d’authentification dans le formulaire de saisie, puis sélectionnez **([!UICONTROL Connect to source])**.
+Pour connecter votre compte [!DNL AWS Redshift] à Experience Platform sur Azure, indiquez vos informations d’authentification dans le formulaire de saisie, puis sélectionnez **([!UICONTROL Se connecter à la source])**.
 
 ![Nouvelle interface de compte pour connecter AWS Redshift à Experience Platform sur Azure.](../../../../images/tutorials/create/redshift/new.png)
 
@@ -91,7 +83,7 @@ Pour plus d’informations sur la prise en main, consultez [ce [!DNL AWS Redshif
 >
 >Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur AWS Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../../../landing/multi-cloud.md).
 
-Pour créer un compte [!DNL AWS Redshift] et vous connecter à Experience Platform sur AWS, vérifiez que vous êtes dans un sandbox VA6, fournissez les informations d’identification nécessaires pour l’authentification, puis sélectionnez **[!UICONTROL Connect to source]**.
+Pour créer un compte [!DNL AWS Redshift] et vous connecter à Experience Platform sur AWS, vérifiez que vous êtes dans un sandbox VA6, fournissez les informations d’identification nécessaires pour l’authentification, puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Nouvelle interface de compte pour connecter AWS Redshift à Experience Platform sur AWS.](../../../../images/tutorials/create/redshift/aws-auth.png)
 

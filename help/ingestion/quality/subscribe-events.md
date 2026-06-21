@@ -6,7 +6,7 @@ description: Pour faciliter la surveillance du processus d’ingestion, Adobe Ex
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '680'
 ht-degree: 22%
 
 ---
@@ -21,17 +21,17 @@ Pour faciliter la surveillance du processus d’ingestion, [!DNL Experience Plat
 
 ## Enregistrer un webhook pour les notifications d’ingestion de données
 
-Pour recevoir des notifications d’ingestion de données, vous devez utiliser [&#128279;](https://www.adobe.com/go/devs_console_ui) pour enregistrer un webhook auprès de votre intégration Experience Platform.
+Pour recevoir des notifications d’ingestion de données, vous devez utiliser [](https://www.adobe.com/go/devs_console_ui) pour enregistrer un webhook auprès de votre intégration Experience Platform.
 
-Suivez le tutoriel sur [l’abonnement aux notifications [!DNL Adobe I/O Event]  &#x200B;](../../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
+Suivez le tutoriel sur [l’abonnement aux notifications [!DNL Adobe I/O Event]  ](../../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
 
 >[!IMPORTANT]
 >
->Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Platform notifications]** comme fournisseur d’événement et à sélectionner l’abonnement à l’événement **[!UICONTROL Data ingestion notification]** lorsque vous y êtes invité.
+>Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications Platform]** comme fournisseur d’événement et à sélectionner l’abonnement à l’événement **[!UICONTROL Notification d’ingestion de données]** lorsque vous y êtes invité.
 
 ## Recevoir des notifications d’ingestion de données
 
-Une fois que vous avez enregistré votre webhook et que les nouvelles données ont été ingérées, vous pouvez commencer à recevoir des notifications d’événement. Vous pouvez afficher ces événements à l’aide du webhook lui-même ou en sélectionnant l’onglet **[!UICONTROL Debug Tracing]** dans la présentation de l’enregistrement des événements de votre projet dans Adobe Developer Console.
+Une fois que vous avez enregistré votre webhook et que les nouvelles données ont été ingérées, vous pouvez commencer à recevoir des notifications d’événement. Ces événements peuvent être affichés à l’aide du webhook lui-même ou en sélectionnant l’onglet **[!UICONTROL Debug Tracing]** dans la présentation de l’enregistrement des événements de votre projet dans Adobe Developer Console.
 
 Le fichier JSON suivant est un exemple de payload de notification envoyée à votre webhook en cas d’échec de l’ingestion par lots :
 
@@ -71,7 +71,7 @@ Pour afficher le schéma complet des notifications d’événement, reportez-vou
 
 ## Étapes suivantes
 
-Une fois que vous avez enregistré des notifications [!DNL Experience Platform] dans votre projet, vous pouvez afficher les événements reçus du [!UICONTROL Project overview]. Reportez-vous au guide sur le [suivi de Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) pour obtenir des instructions détaillées sur la manière de suivre vos événements.
+Une fois que vous avez enregistré des notifications [!DNL Experience Platform] dans votre projet, vous pouvez afficher les événements reçus à partir de la [!UICONTROL Présentation du projet]. Reportez-vous au guide sur le [suivi de Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) pour obtenir des instructions détaillées sur la manière de suivre vos événements.
 
 ## Annexe
 

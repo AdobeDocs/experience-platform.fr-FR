@@ -5,38 +5,15 @@ description: Cette extension de transfert d’événement Adobe Experience Platf
 last-substantial-update: 2023-03-29T00:00:00.000Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
 TQID: https://experienceleague.adobe.com/dY1OHyH--qDK2hL6FKY0nOOvMiz870Q7xWesqsQfbYY
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: dfc56824-e8b9-499e-85d4-21aedb507314
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a075b2c1-7748-4328-b7f6-343aa314616a
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: b12f6872-9271-4369-85e5-86969a0b99a2
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: f73667dc-d296-4875-8975-ac3fdc3adc42
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: bf97c196-a4d1-4fa3-a151-e68a114c8ac0
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: adee20bd-51f4-461d-b9db-d215f8756eebid: b12f6872-9271-4369-85e5-86969a0b99a2id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46id: f73667dc-d296-4875-8975-ac3fdc3adc42id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bf97c196-a4d1-4fa3-a151-e68a114c8ac0id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1707
-ht-degree: 2%
+source-wordcount: 1835
+ht-degree: 3%
 
 ---
 
@@ -99,131 +76,131 @@ Créez un [secret de transfert d’événement](../../../ui/event-forwarding/sec
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou choisissez plutôt une propriété existante à modifier.
 
-Sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez **[!UICONTROL Install]** sur la carte de l’extension [!DNL Braze].
+Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez **[!UICONTROL Installer]** sur la carte de l’extension [!DNL Braze].
 
 ![Installez l’extension [!DNL Braze].](../../../images/extensions/server/braze/install-extension.png)
 
 Dans l’écran suivant, saisissez les [valeurs de configuration](#configuration-details) suivantes que vous avez précédemment collectées à partir de [!DNL Braze] :
 
-- **[!UICONTROL Braze Rest Endpoint URL]** : vous pouvez saisir la valeur de votre URL de point d’entrée REST [!DNL Braze] en tant que texte brut dans l’entrée fournie.
-- **[!UICONTROL API Key]** : sélectionnez l’[élément de données secret](#create-a-secret) que vous avez créé précédemment et qui contient votre clé API [!DNL Braze].
+- **[!UICONTROL URL du point d’entrée REST Braze]** : vous pouvez saisir la valeur de votre URL de point d’entrée REST [!DNL Braze] en tant que texte brut dans l’entrée fournie.
+- **[!UICONTROL Clé API]** : sélectionnez l’[élément de données secret](#create-a-secret) que vous avez créé précédemment et qui contient votre clé API [!DNL Braze].
 
-Sélectionnez **[!UICONTROL Save]** (Enregistrer) une fois terminé.
+Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
 ![Page de configuration de l’extension [!DNL Braze].](../../../images/extensions/server/braze/configure-extension.png)
 
 ## Créer une règle de [!DNL Send Event] {#tracking-rule}
 
-Après avoir installé l’extension, créez une nouvelle [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la configuration des actions pour la règle, cliquez sur l’extension **[!UICONTROL Braze]**, puis sélectionnez **[!UICONTROL Send Event]** pour le type d’action.
+Après avoir installé l’extension, créez une nouvelle [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la configuration des actions pour la règle, cliquez sur l’extension **[!UICONTROL Braze]**, puis sélectionnez **[!UICONTROL Envoyer l’événement]** pour le type d’action.
 
 ![Ajoutez une configuration d’action de règle de transfert d’événement.](../../../images/extensions/server/braze/braze-event-action.png)
 
-**[!UICONTROL User Identification]**
+**[!UICONTROL Identification de l&#39;utilisateur]**
 
 | Entrée | Description |
 | --- | --- |
-| [!UICONTROL External User ID] | UUID ou GUID long, aléatoire et bien distribué. Si vous choisissez une autre méthode pour nommer vos identifiants d’utilisateur, ils doivent également être longs, aléatoires et bien répartis. En savoir plus sur la [convention d’affectation des noms d’utilisateur suggérée](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
-| [!UICONTROL Braze User ID] | Identifiant utilisateur Braze. |
-| [!UICONTROL User Alias] | Un alias sert d’identifiant utilisateur unique alternatif. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions par rapport à votre ID d’utilisateur principal. <br><br> L&#39;objet alias utilisateur se compose de deux parties : un alias_name pour l&#39;identifiant lui-même, et un alias_label indiquant le type d&#39;alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul nom_alias par libellé_alias. |
+| [!UICONTROL ID utilisateur externe] | UUID ou GUID long, aléatoire et bien distribué. Si vous choisissez une autre méthode pour nommer vos identifiants d’utilisateur, ils doivent également être longs, aléatoires et bien répartis. En savoir plus sur la [convention d’affectation des noms d’utilisateur suggérée](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
+| [!UICONTROL Identifiant utilisateur Braze] | Identifiant utilisateur Braze. |
+| [!UICONTROL Alias de l’utilisateur] | Un alias sert d’identifiant utilisateur unique alternatif. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions par rapport à votre ID d’utilisateur principal. <br><br> L&#39;objet alias utilisateur se compose de deux parties : un alias_name pour l&#39;identifiant lui-même, et un alias_label indiquant le type d&#39;alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul nom_alias par libellé_alias. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> Pour lier l’événement à un utilisateur, vous devez renseigner le champ [!UICONTROL External User ID], le champ [!UICONTROL Braze User Identifier] ou la section [!UICONTROL User Alias] .
+> Pour lier l’événement à un utilisateur, vous devez renseigner le champ [!UICONTROL ID d’utilisateur externe], le champ [!UICONTROL Identifiant d’utilisateur Braze] ou la section [!UICONTROL Alias d’utilisateur].
 
-**[!UICONTROL Event Data]**
+**[!UICONTROL Données d’événement]**
 
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
-| [!UICONTROL Event Name &#x200B;] | Nom de l’événement. | Oui |
-| [!UICONTROL Event Time] | Date et heure sous forme de chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | Oui |
-| [!UICONTROL App Identifier] | L’identifiant d’application ou <strong>app_id</strong> est un paramètre associant une activité à une application spécifique de votre groupe d’applications. Il désigne l’application au sein du groupe d’applications avec lequel vous interagissez. En savoir plus sur les [types d’identifiants d’API](https://www.braze.com/docs/api/identifier_types/). | |
-| [!UICONTROL Event Properties &#x200B;] | Un objet JSON contenant les propriétés personnalisées de l’événement. |  |
+| [!UICONTROL Nom de l’événement &#x200B;] | Nom de l’événement. | Oui |
+| [!UICONTROL Heure de l’événement] | Date et heure sous forme de chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | Oui |
+| [!UICONTROL Identifiant de l’application] | L’identifiant d’application ou <strong>app_id</strong> est un paramètre associant une activité à une application spécifique de votre groupe d’applications. Il désigne l’application au sein du groupe d’applications avec lequel vous interagissez. En savoir plus sur les [types d’identifiants d’API](https://www.braze.com/docs/api/identifier_types/). | |
+| [!UICONTROL Propriétés des événements &#x200B;] | Un objet JSON contenant les propriétés personnalisées de l’événement. |  |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> L’action **[!UICONTROL Braze Send Event]** ne nécessite que la spécification d’un **[!UICONTROL Event Name]** et d’un **[!UICONTROL Event Time]**, mais vous devez inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur l’objet d’événement [!DNL Braze], consultez la [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
+> L’action **[!UICONTROL Braze Send Event]** nécessite uniquement la spécification d’un **[!UICONTROL Event Name]** et d’un **[!UICONTROL Event Time]**, mais vous devez inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur l’objet d’événement [!DNL Braze], consultez la [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
 
-**[!UICONTROL User Attributes]**
+**[!UICONTROL Attributs de l’utilisateur]**
 
 Les attributs utilisateur peuvent être un objet JSON contenant des champs qui créent ou mettent à jour un attribut avec le nom et la valeur fournis sur le profil utilisateur spécifié. Les propriétés suivantes sont prises en charge :
 
 | Attribut de l’utilisateur | Description |
 | --- | --- |
-| [!UICONTROL First Name] | |
-| [!UICONTROL Last Name] | |
-| [!UICONTROL Phone] | |
-| [!UICONTROL Email] | |
-| [!UICONTROL Gender] | L&#39;une des chaînes suivantes : « M », « F », « O » (autre), « N » (sans objet), « P » (ne pas dire). |
-| [!UICONTROL City] | |
-| [!UICONTROL Country] | Pays sous forme de chaîne au format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
-| [!UICONTROL Language] | Langue sous forme de chaîne au format [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
-| [!UICONTROL Date of Birth] | Chaîne au format « AAAA-MM-JJ » (par exemple, 1980-12-21). |
-| [!UICONTROL Time Zone] | Nom du fuseau horaire [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &#39;America/New_York&#39; ou &#39;Heure de l&#39;Est (États-Unis &amp; Canada)&#39;). |
-| [!UICONTROL Facebook] | Hachage contenant n’importe quel identifiant (chaîne), likes (tableau de chaînes), num_amis (entier). |
-| [!UICONTROL Twitter] | Hachage contenant n’importe quel identifiant (entier), nom_écran (chaîne, pseudo Twitter), nombre_abonnés (entier), nombre_amis (entier), statuts_nombre (entier). |
+| [!UICONTROL Prénom] | |
+| [!UICONTROL Nom] | |
+| [!UICONTROL Téléphone] | |
+| [!UICONTROL E-mail] | |
+| [!UICONTROL Genre] | L&#39;une des chaînes suivantes : « M », « F », « O » (autre), « N » (sans objet), « P » (ne pas dire). |
+| [!UICONTROL Ville] | |
+| [!UICONTROL Pays] | Pays sous forme de chaîne au format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
+| [!UICONTROL Langue] | Langue sous forme de chaîne au format [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
+| [!UICONTROL  Date de naissance ] | Chaîne au format « AAAA-MM-JJ » (par exemple, 1980-12-21). |
+| [!UICONTROL Fuseau horaire] | Nom du fuseau horaire [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &#39;America/New_York&#39; ou &#39;Heure de l&#39;Est (États-Unis &amp; Canada)&#39;). |
+| [!UICONTROL  Facebook ] | Hachage contenant n’importe quel identifiant (chaîne), likes (tableau de chaînes), num_amis (entier). |
+| [!UICONTROL  Twitter ] | Hachage contenant n’importe quel identifiant (entier), nom_écran (chaîne, pseudo Twitter), nombre_abonnés (entier), nombre_amis (entier), statuts_nombre (entier). |
 
 {style="table-layout:auto"}
 
 ## Créer une règle de [!DNL Send Purchase Event] {#purchase-rule}
 
-Après avoir installé l’extension, créez une nouvelle [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la configuration des actions pour la règle, cliquez sur l’extension **[!UICONTROL Braze]**, puis sélectionnez **[!UICONTROL Send Purchase Event]** pour le type d’action.
+Après avoir installé l’extension, créez une nouvelle [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la configuration des actions pour la règle, cliquez sur l’extension **[!UICONTROL Braze]**, puis sélectionnez **[!UICONTROL Envoyer l’événement d’achat]** pour le type d’action.
 
 ![Ajoutez une configuration d’action de règle de transfert d’événement de type Action Braze Purchase.](../../../images/extensions/server/braze/braze-purchase-event-action.png)
 
-**[!UICONTROL User Identification]**
+**[!UICONTROL Identification de l&#39;utilisateur]**
 
 | Entrée | Description |
 | --- | --- |
-| [!UICONTROL External User ID] | UUID ou GUID long, aléatoire et bien distribué. Si vous choisissez une autre méthode pour nommer vos identifiants d’utilisateur, ils doivent également être longs, aléatoires et bien répartis. En savoir plus sur la [convention d’affectation des noms d’utilisateur suggérée](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
-| [!UICONTROL Braze User ID] | Identifiant utilisateur Braze. |
-| [!UICONTROL User Alias] | Un alias sert d’identifiant utilisateur unique alternatif. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions par rapport à votre ID d’utilisateur principal. <br><br> L&#39;objet alias utilisateur se compose de deux parties : un alias_name pour l&#39;identifiant lui-même, et un alias_label indiquant le type d&#39;alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul nom_alias par libellé_alias. |
+| [!UICONTROL ID utilisateur externe] | UUID ou GUID long, aléatoire et bien distribué. Si vous choisissez une autre méthode pour nommer vos identifiants d’utilisateur, ils doivent également être longs, aléatoires et bien répartis. En savoir plus sur la [convention d’affectation des noms d’utilisateur suggérée](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
+| [!UICONTROL Identifiant utilisateur Braze] | Identifiant utilisateur Braze. |
+| [!UICONTROL Alias de l’utilisateur] | Un alias sert d’identifiant utilisateur unique alternatif. Utilisez des alias pour identifier les utilisateurs selon différentes dimensions par rapport à votre ID d’utilisateur principal. <br><br> L&#39;objet alias utilisateur se compose de deux parties : un alias_name pour l&#39;identifiant lui-même, et un alias_label indiquant le type d&#39;alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul nom_alias par libellé_alias. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> Pour lier l’événement à un utilisateur, vous devez renseigner le champ [!UICONTROL External User ID], le champ [!UICONTROL Braze User Identifier] ou la section [!UICONTROL User Alias] .
+> Pour lier l’événement à un utilisateur, vous devez renseigner le champ [!UICONTROL ID d’utilisateur externe], le champ [!UICONTROL Identifiant d’utilisateur Braze] ou la section [!UICONTROL Alias d’utilisateur].
 
-**[!UICONTROL Purchase Data]**
+**[!UICONTROL Données d’achat]**
 
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
-| [!UICONTROL Product ID &#x200B;] | Identifiant de l’achat. (par exemple, nom du produit ou catégorie de produits) | Oui |
-| [!UICONTROL Purchase Time] | Date et heure sous forme de chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | Oui |
-| [!UICONTROL Currency &#x200B;] | Devise sous forme de chaîne au format [code de devise alphabétique ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217). | Oui |
-| [!UICONTROL Price &#x200B;] | Prix. | Oui |
-| [!UICONTROL Quantity &#x200B;] | Si elle n’est pas fournie, la valeur par défaut est 1. La valeur maximale doit être inférieure à 100. | |
-| [!UICONTROL App Identifier] | L’identifiant d’application ou <strong>app_id</strong> est un paramètre associant une activité à une application spécifique de votre groupe d’applications. Il désigne l’application au sein du groupe d’applications avec lequel vous interagissez. En savoir plus sur les [types d’identifiants d’API](https://www.braze.com/docs/api/identifier_types/). | |
-| [!UICONTROL Purchase Properties &#x200B;] | Un objet JSON contenant les propriétés personnalisées de l’achat. |  |
+| [!UICONTROL ID de produit &#x200B;] | Identifiant de l’achat. (par exemple, nom du produit ou catégorie de produits) | Oui |
+| [!UICONTROL Heure d’achat] | Date et heure sous forme de chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | Oui |
+| &#x200B; de devise][!UICONTROL  | Devise sous forme de chaîne au format [code de devise alphabétique ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217). | Oui |
+| [!UICONTROL Prix &#x200B;] | Prix. | Oui |
+| [!UICONTROL Quantité &#x200B;] | Si elle n’est pas fournie, la valeur par défaut est 1. La valeur maximale doit être inférieure à 100. | |
+| [!UICONTROL Identifiant de l’application] | L’identifiant d’application ou <strong>app_id</strong> est un paramètre associant une activité à une application spécifique de votre groupe d’applications. Il désigne l’application au sein du groupe d’applications avec lequel vous interagissez. En savoir plus sur les [types d’identifiants d’API](https://www.braze.com/docs/api/identifier_types/). | |
+| &#x200B; Propriétés d’achat][!UICONTROL  | Un objet JSON contenant les propriétés personnalisées de l’achat. |  |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> L’action **[!UICONTROL Braze Send Event]** ne nécessite que la spécification d’un **[!UICONTROL Event Name]** et d’un **[!UICONTROL Event Time]**. Vous devez toutefois inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur l’objet d’événement [!DNL Braze], consultez la [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
+> L’action **[!UICONTROL Braze Send Event]** nécessite uniquement la spécification d’un **[!UICONTROL Event Name]** et d’un **[!UICONTROL Event Time]**, mais vous devez inclure autant d’informations que possible dans le champ des propriétés personnalisées. Pour plus d’informations sur l’objet d’événement [!DNL Braze], consultez la [documentation officielle](https://www.braze.com/docs/api/objects_filters/event_object/).
 
-**[!UICONTROL User Attributes]**
+**[!UICONTROL Attributs de l’utilisateur]**
 
 Les attributs utilisateur peuvent être un objet JSON contenant des champs qui créent ou mettent à jour un attribut avec le nom et la valeur fournis sur le profil utilisateur spécifié. Les propriétés suivantes sont prises en charge :
 
 | Attribut de l’utilisateur | Description |
 | --- | --- |
-| [!UICONTROL First Name] | |
-| [!UICONTROL Last Name] | |
-| [!UICONTROL Phone] | |
-| [!UICONTROL Email] | |
-| [!UICONTROL Gender] | L&#39;une des chaînes suivantes : « M », « F », « O » (autre), « N » (sans objet), « P » (ne pas dire). |
-| [!UICONTROL City] | |
-| [!UICONTROL Country] | Pays sous forme de chaîne au format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
-| [!UICONTROL Language] | Langue sous forme de chaîne au format [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
-| [!UICONTROL Date of Birth] | Chaîne au format « AAAA-MM-JJ » (par exemple, 1980-12-21). |
-| [!UICONTROL Time Zone] | Nom du fuseau horaire [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &#39;America/New_York&#39; ou &#39;Heure de l&#39;Est (États-Unis &amp; Canada)&#39;). |
-| [!UICONTROL Facebook] | Hachage contenant n’importe quel identifiant (chaîne), likes (tableau de chaînes), num_amis (entier). |
-| [!UICONTROL Twitter] | Hachage contenant n’importe quel identifiant (entier), nom_écran (chaîne, pseudo Twitter), nombre_abonnés (entier), nombre_amis (entier), statuts_nombre (entier). |
+| [!UICONTROL Prénom] | |
+| [!UICONTROL Nom] | |
+| [!UICONTROL Téléphone] | |
+| [!UICONTROL E-mail] | |
+| [!UICONTROL Genre] | L&#39;une des chaînes suivantes : « M », « F », « O » (autre), « N » (sans objet), « P » (ne pas dire). |
+| [!UICONTROL Ville] | |
+| [!UICONTROL Pays] | Pays sous forme de chaîne au format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
+| [!UICONTROL Langue] | Langue sous forme de chaîne au format [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
+| [!UICONTROL  Date de naissance ] | Chaîne au format « AAAA-MM-JJ » (par exemple, 1980-12-21). |
+| [!UICONTROL Fuseau horaire] | Nom du fuseau horaire [Base de données des fuseaux horaires IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (par exemple, &#39;America/New_York&#39; ou &#39;Heure de l&#39;Est (États-Unis &amp; Canada)&#39;). |
+| [!UICONTROL  Facebook ] | Hachage contenant n’importe quel identifiant (chaîne), likes (tableau de chaînes), num_amis (entier). |
+| [!UICONTROL  Twitter ] | Hachage contenant n’importe quel identifiant (entier), nom_écran (chaîne, pseudo Twitter), nombre_abonnés (entier), nombre_amis (entier), statuts_nombre (entier). |
 
 {style="table-layout:auto"}
 

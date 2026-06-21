@@ -5,27 +5,15 @@ title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 TQID: https://experienceleague.adobe.com/V-4eFafnVuOwDnYpLjkxnFTznwbqb4usTiPyPv6j60M
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d1a87129-ba05-4f15-98b1-233618f1774aid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
-source-wordcount: 1766
-ht-degree: 48%
+source-wordcount: 1796
+ht-degree: 47%
 
 ---
 
@@ -306,15 +294,15 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données de protoco
 
 ## Contrôle d’accès des sources dans l’ingestion des données
 
-Vous pouvez gérer les autorisations relatives aux sources dans l’ingestion des données dans Adobe Admin Console. Vous pouvez accéder aux autorisations via l’onglet **[!UICONTROL Permissions]** dans un profil de produit spécifique. Dans le panneau **[!UICONTROL Edit Permissions]**, vous pouvez accéder aux autorisations relatives aux sources via l’entrée du menu **[!UICONTROL data ingestion]**. L’autorisation **[!UICONTROL View Sources]** accorde un accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalog]** et aux sources authentifiées dans l’onglet **[!UICONTROL Browse]** , tandis que l’autorisation **[!UICONTROL Manage Sources]** accorde un accès complet à la lecture, la création, la modification et la désactivation de sources.
+Vous pouvez gérer les autorisations relatives aux sources dans l’ingestion des données dans Adobe Admin Console. Vous pouvez accéder aux autorisations via l’onglet **[!UICONTROL Autorisations]** dans un profil de produit particulier. Dans le panneau **[!UICONTROL Modifier les autorisations]**, vous pouvez accéder aux autorisations relatives aux sources via l’entrée de menu **[!UICONTROL ingestion de données]**. L’autorisation **[!UICONTROL Afficher les sources]** accorde un accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**, tandis que l’autorisation **[!UICONTROL Gérer les sources]** accorde un accès complet à la lecture, la création, la modification et la désactivation de sources.
 
 Le tableau suivant décrit le comportement de l’interface utilisateur en fonction des différentes combinaisons d’autorisations :
 
 | Niveau d’autorisation | Description |
 | ---- | ----|
-| **[!UICONTROL View Sources]** le | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue, ainsi que dans les onglets Parcourir, Comptes et Flux de données. |
-| **[!UICONTROL Manage Sources]** le | En plus des fonctions incluses dans **[!UICONTROL View Sources]**, accorde l’accès à **[!UICONTROL Connect Source]** option dans **[!UICONTROL Catalog]** et à **[!UICONTROL Select Data]** option dans **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** vous permet également d’activer ou de désactiver des **[!UICONTROL DataFlows]** et de modifier leurs planifications. |
-| **[!UICONTROL View Sources]** désactivé et **[!UICONTROL Manage Sources]** désactivé | Révoquez tous les accès aux sources. |
+| **[!UICONTROL Affichage Des Sources]** Activé | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue, ainsi que dans les onglets Parcourir, Comptes et Flux de données. |
+| **[!UICONTROL Gérer Les Sources]** Activé | Outre les fonctions incluses dans **[!UICONTROL Afficher les sources]**, accorde l’accès à l’option **[!UICONTROL Connecter Source]** dans **[!UICONTROL Catalogue]** et à l’option **[!UICONTROL Sélectionner les données]** dans **[!UICONTROL Parcourir]**. **[!UICONTROL Gérer les sources]** vous permet également d’activer ou de désactiver **[!UICONTROL DataFlows]** et de modifier leurs plannings. |
+| **[!UICONTROL Affichage des sources]** Désactivé et **[!UICONTROL Gestion des sources]** Désactivé | Révoquez tous les accès aux sources. |
 
 Pour plus d’informations sur les autorisations disponibles accordées par le biais des autorisations d’Adobe, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 

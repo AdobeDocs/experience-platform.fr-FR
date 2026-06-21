@@ -3,27 +3,15 @@ title: Présentation de lʼextension Service d’identités d’Adobe Experience
 description: Découvrez lʼextension de balises du service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 TQID: https://experienceleague.adobe.com/p0fm5HTNKzXVXYxi2mvAhAIHG46WdcWApvuQ0eGnFLo
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2:
-  - id: c975b431-530e-4c29-9216-0301b9e204c1
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: c975b431-530e-4c29-9216-0301b9e204c1id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 752
-ht-degree: 95%
+source-wordcount: 761
+ht-degree: 87%
 
 ---
 
@@ -37,9 +25,9 @@ Utilisez cette extension pour intégrer le service d’identités d’Experience
 
 Cette section fournit des informations relatives aux options disponibles lors de la configuration de l’extension Experience Cloud ID.
 
-Si l’extension Experience Cloud ID n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Experience Cloud ID avec votre souris et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Experience Cloud ID n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Experience Cloud ID et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet Extensions, survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet Extensions , placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/optin.jpg)
 
@@ -57,7 +45,7 @@ L’ID Experience Cloud ID ne se charge pas si l’URL correspond à l’un des
 
 (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 
-Cliquez sur **[!UICONTROL Add]** pour exclure un autre chemin.
+Sélectionnez **[!UICONTROL Ajouter]** pour exclure un autre chemin.
 
 ### Opt-in (Accord préalable)
 
@@ -87,7 +75,7 @@ Utilisez ce paramètre facultatif pour spécifier le domaine dans lequel le cook
 
 Indiquez quand le cookie Opt-in (Accord préalable) expire si le stockage est activé, en secondes.
 
-Saisissez un nombre, puis sélectionnez une unité de temps dans la liste déroulante. Par exemple, saisissez 2 et sélectionnez **[!UICONTROL Weeks]** (Semaines). La valeur par défaut est de 13 mois.
+Saisissez un nombre, puis sélectionnez une unité de temps dans la liste déroulante. Par exemple, saisissez 2 et sélectionnez **[!UICONTROL Semaines]**. La valeur par défaut est de 13 mois.
 
 **Permissions?** (Autorisations ?)
 
@@ -131,5 +119,5 @@ Définissez un ou plusieurs ID de client.
    * Authenticated (Authentifié)
    * Logged out (Déconnecté)
 
-1. (Facultatif) Cliquez sur **[!UICONTROL Add]** pour définir d’autres ID de client.
-1. Sélectionner **[!UICONTROL Keep Changes]**.
+1. (Facultatif) Sélectionnez **[!UICONTROL Ajouter]** pour définir d’autres ID de client.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.

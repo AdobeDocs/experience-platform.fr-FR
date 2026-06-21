@@ -3,16 +3,10 @@ title: Installer le SDK Web à l’aide du package NPM
 description: Utilisez un package NPM pour installer et référencer la bibliothèque Web SDK.
 exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
 TQID: https://experienceleague.adobe.com/72KJtyfIf-2QXKbRLxuTuttBOFsmovDBGIeK8uNkOr8
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 174

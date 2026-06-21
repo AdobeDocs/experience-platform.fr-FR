@@ -3,18 +3,11 @@ description: Pour utiliser Destination SDK, une société partenaire doit rempli
 title: Conditions préalables à l’intégration
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
 TQID: https://experienceleague.adobe.com/N4-F6aO64EDtasmxMYrRF2bCUW-en2G9S2llv0T1soI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 196

@@ -3,10 +3,8 @@ title: Champs de mappage Microsoft Dynamics
 description: Les tableaux ci-dessous contiennent les mappages entre les champs source Microsoft Dynamics et leurs champs XDM correspondants.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 TQID: https://experienceleague.adobe.com/rXcxLFz-YlY-DE5t7NhfLv7cABYFb7W9pKEv6Xh8LAY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 531
@@ -20,7 +18,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Contacts {#contacts}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |  |
 | `address1_city` | `workAddress.city` |  |
@@ -104,7 +102,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Comptes {#accounts}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -141,7 +139,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Opportunités {#opportunities}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `name` | `opportunityName` |  |
 | `"Dynamics"` | `opportunityKey.sourceType` |  |
@@ -165,7 +163,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Rôles de contact d’opportunité {#opportunity-contact-roles}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -183,7 +181,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Campagnes {#campaigns}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |  |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -208,7 +206,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Liste marketing {#marketing-list}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -223,7 +221,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Personnes membres de la liste marketing {#marketing-list-members}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -270,4 +268,4 @@ Dans ce scénario, la valeur correspond à la clé, si celle-ci se trouve dans l
 >
 >Une itération imbriquée de l’opération ci-dessus serait similaire à : `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Pour plus d’informations, consultez le document [&#x200B; sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Pour plus d’informations, consultez le document [ sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

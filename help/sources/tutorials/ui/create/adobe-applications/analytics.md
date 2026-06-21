@@ -3,31 +3,15 @@ title: Connexion D’Adobe Analytics À Experience Platform
 description: Découvrez comment importer les données de votre suite de rapports Adobe Analytics dans Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 TQID: https://experienceleague.adobe.com/9bCvEqM-V97tG839lRQRhizF-O65xfwcg-8UlY-BxRE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: dba482e5-29a8-4127-afa2-c4b913512ef8
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: dba482e5-29a8-4127-afa2-c4b913512ef8id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2813
-ht-degree: 16%
+source-wordcount: 2938
+ht-degree: 15%
 
 ---
 
@@ -48,7 +32,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources et du schéma Analytics d’Analytics .
-* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr) consultez la documentation Analytics sur les variables de conversion .
+* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) consultez la [documentation Analytics sur les variables de conversion .
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
 
 ## Parcourir le catalogue des sources
@@ -60,7 +44,7 @@ Il est important de comprendre les termes clés suivants utilisés dans ce docum
 >* Flux de données qui renvoie pendant 13 mois les données historiques de la suite de rapports dans le lac de données. Ce flux de données se termine lorsque le renvoi est terminé.
 >* Flux de données qui envoie des données actives au lac de données et à [!DNL Real-Time Customer Profile]. Ce flux de données s’exécute en continu.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Dans la catégorie *[!UICONTROL Adobe applications]* , sélectionnez la vignette Adobe Analytics , puis sélectionnez **[!UICONTROL Add data]**.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Dans la catégorie *[!UICONTROL Applications]*, sélectionnez la vignette Adobe Analytics puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte source Adobe Analytics sélectionnée.](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -77,7 +61,7 @@ Vous pouvez ingérer des suites de rapports à partir de n’importe quelle rég
 
 Il est possible d’établir plusieurs connexions entrantes pour importer plusieurs suites de rapports dans le même sandbox. Si les suites de rapports comportent des schémas différents pour les variables (telles que des eVars ou des événements), elles doivent être mappées à des champs spécifiques dans les groupes de champs personnalisés et éviter les conflits de données à l’aide de [Préparation de données](../../../../../data-prep/ui/mapping.md). Les suites de rapports ne peuvent être ajoutées qu’à un seul sandbox.
 
-Sélectionnez **[!UICONTROL Report suite]** puis utilisez l’interface *[!UICONTROL Analytics source add data]* pour parcourir la liste et identifier la suite de rapports Analytics à ingérer dans Experience Platform. Vous pouvez également rechercher une suite de rapports spécifique. Sélectionnez **[!UICONTROL Next]** pour continuer.
+Sélectionnez **[!UICONTROL Suite de rapports]** puis utilisez l’interface *[!UICONTROL Ajout de données à la source Analytics]* pour parcourir la liste et identifier la suite de rapports Analytics à ingérer dans Experience Platform. Vous pouvez également rechercher une suite de rapports spécifique. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Une suite de rapports Analytics est sélectionnée pour l’ingestion et le bouton « Suivant » est mis en surbrillance](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -95,13 +79,13 @@ Avant de pouvoir mapper vos données Analytics à un schéma XDM cible, vous dev
 
 >[!TAB  Schéma par défaut ]
 
-Un schéma par défaut crée un schéma à votre place. Ce schéma nouvellement créé contient le groupe de champs [!DNL Adobe Analytics ExperienceEvent Template]. Pour utiliser un schéma par défaut, sélectionnez **[!UICONTROL Default schema]**.
+Un schéma par défaut crée un schéma à votre place. Ce schéma nouvellement créé contient le groupe de champs [!DNL Adobe Analytics ExperienceEvent Template]. Pour utiliser un schéma par défaut, sélectionnez **[!UICONTROL Schéma par défaut]**.
 
 ![Étape de sélection du schéma du workflow source Analytics, avec « Schéma par défaut » sélectionné.](../../../../images/tutorials/create/analytics/default-schema.png)
 
 >[!TAB  Schéma personnalisé ]
 
-Un schéma personnalisé vous permet de choisir n’importe quel schéma disponible pour vos données Analytics, à condition que ce schéma contienne le groupe de champs [!DNL Adobe Analytics ExperienceEvent Template]. Pour utiliser un schéma personnalisé, sélectionnez **[!UICONTROL Custom schema]**.
+Un schéma personnalisé vous permet de choisir n’importe quel schéma disponible pour vos données Analytics, à condition que ce schéma contienne le groupe de champs [!DNL Adobe Analytics ExperienceEvent Template]. Pour utiliser un schéma personnalisé, sélectionnez **[!UICONTROL Schéma personnalisé]**.
 
 ![Étape de sélection du schéma du workflow source Analytics, avec « Schéma personnalisé » sélectionné.](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -115,17 +99,17 @@ Utilisez l’interface *[!UICONTROL Mapping]* pour mapper les champs source aux 
 
 ![Panneau de sélection du schéma cible de l’interface de mappage.](../../../../images/tutorials/create/analytics/select-schema.png)
 
-Reportez-vous au panneau [!UICONTROL Map standard fields] pour connaître les mesures de votre [!UICONTROL Standard mappings applied]. [!UICONTROL Standard mappings with descriptor name conflicts] et [!DNL Custom mappings].
+Reportez-vous au panneau [!UICONTROL Mappage des champs standard] pour connaître les mesures de vos [!UICONTROL Mappages standard appliqués]. [!UICONTROL Mappages standard avec conflits de noms de descripteur] et [!DNL Custom mappings].
 
 | Mappage des champs standard | Description |
 | --- | --- |
-| [!UICONTROL Standard mappings applied] | Le panneau [!UICONTROL Standard mappings applied] affiche le nombre total d’attributs mappés. Les mappages standard font référence aux mappages entre tous les attributs des données Analytics sources et les attributs correspondants du groupe de champs Analytics . Ils sont prémappés et ne peuvent pas être modifiés. |
-| [!UICONTROL Standard mappings with descriptor name conflicts] | Le panneau [!UICONTROL Standard mappings with descriptor name conflicts] fait référence au nombre d’attributs mappés contenant des conflits de noms. Ces conflits apparaissent lorsque vous réutilisez un schéma qui contient déjà un ensemble de descripteurs de champ provenant d’une autre suite de rapports. Vous pouvez continuer à utiliser votre flux de données Analytics malgré la présence de conflits de noms. |
-| [!UICONTROL Custom mappings] | Le panneau [!UICONTROL Custom mappings] affiche le nombre d’attributs personnalisés mappés, y compris les eVars, les props et les listes. Les mappages personnalisés font référence au mappage entre les attributs personnalisés des données Analytics sources et les attributs des groupes de champs personnalisés inclus dans le schéma sélectionné. |
+| [!UICONTROL  Mappages standard appliqués ] | Le panneau [!UICONTROL Mappages standard appliqués] affiche le nombre total d’attributs mappés. Les mappages standard font référence aux mappages entre tous les attributs des données Analytics sources et les attributs correspondants du groupe de champs Analytics . Ils sont prémappés et ne peuvent pas être modifiés. |
+| [!UICONTROL Mappages standard avec conflits de noms de descripteur] | Le panneau [!UICONTROL  Mappages standard avec conflits de noms de descripteur ] fait référence au nombre d’attributs mappés contenant des conflits de noms. Ces conflits apparaissent lorsque vous réutilisez un schéma qui contient déjà un ensemble de descripteurs de champ provenant d’une autre suite de rapports. Vous pouvez continuer à utiliser votre flux de données Analytics malgré la présence de conflits de noms. |
+| [!UICONTROL Mappages personnalisés] | Le panneau [!UICONTROL Mappages personnalisés] affiche le nombre d’attributs personnalisés mappés, y compris les eVars, les props et les listes. Les mappages personnalisés font référence au mappage entre les attributs personnalisés des données Analytics sources et les attributs des groupes de champs personnalisés inclus dans le schéma sélectionné. |
 
 ### Mappages standard {#standard-mappings}
 
-Experience Platform détecte automatiquement tout conflit de nom dans votre mappage. S’il n’y a aucun conflit avec vos mappages, sélectionnez **[!UICONTROL Next]** pour continuer.
+Experience Platform détecte automatiquement tout conflit de nom dans votre mappage. S’il n’y a aucun conflit avec vos mappages, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![En-tête de mappages standard sans conflit de nom](../../../../images/tutorials/create/analytics/standard.png)
 
@@ -141,15 +125,15 @@ Experience Platform détecte automatiquement tout conflit de nom dans votre mapp
 >abstract="Téléchargez le modèle CSV pour effectuer le mapping hors ligne."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importer le mapping"
 
-Vous pouvez utiliser les fonctions de préparation de données pour ajouter de nouveaux mappages personnalisés ou des champs calculés pour les attributs personnalisés. Pour ajouter des mappages personnalisés, sélectionnez **[!UICONTROL Custom]**.
+Vous pouvez utiliser les fonctions de préparation de données pour ajouter de nouveaux mappages personnalisés ou des champs calculés pour les attributs personnalisés. Pour ajouter des mappages personnalisés, sélectionnez **[!UICONTROL Personnalisé]**.
 
 ![Onglet de mappage personnalisé dans le workflow source Analytics.](../../../../images/tutorials/create/analytics/custom.png)
 
-* **[!UICONTROL Filter fields]** : utilisez la saisie de texte [!UICONTROL Filter fields] pour filtrer les champs de mappage spécifiques dans vos mappages.
-* **[!UICONTROL Add new mapping]** : pour ajouter un nouveau mappage champ source et champ cible, sélectionnez **[!UICONTROL Add new mapping]**.
-* **[!UICONTROL Add calculated field]** : si nécessaire, vous pouvez sélectionner **[!UICONTROL Add calculated field]** pour créer un champ calculé pour vos mappages.
-* **[!UICONTROL Import mapping]** : vous pouvez réduire le temps de configuration manuelle de votre processus d’ingestion de données et limiter les erreurs à l’aide de la fonctionnalité de mappage d’importation de la préparation des données. Sélectionnez **[!UICONTROL Import mapping]** pour importer des mappages à partir d’un flux existant ou d’un fichier exporté. Pour plus d’informations, consultez [le guide sur l’importation et l’exportation de mappages](../../../../../data-prep/ui/mapping.md#import-mapping).
-* **[!UICONTROL Download template]** : vous pouvez également télécharger une copie CSV de vos mappages et configurer vos mappages sur votre appareil local. Sélectionnez **[!UICONTROL Download template]** pour télécharger une copie CSV de vos mappages. Vous devez vous assurer que vous utilisez uniquement les champs fournis dans votre fichier source et votre schéma cible.
+* **[!UICONTROL Filtrer les champs]** : utilisez la saisie de texte [!UICONTROL Filtrer les champs] pour filtrer les champs de mappage spécifiques dans vos mappages.
+* **[!UICONTROL Ajouter un nouveau mappage]** : pour ajouter un nouveau mappage de champ source et de champ cible, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
+* **[!UICONTROL Ajouter un champ calculé]** : si nécessaire, vous pouvez sélectionner **[!UICONTROL Ajouter un champ calculé]** pour créer un champ calculé pour vos mappages.
+* **[!UICONTROL Mappage d’importation]** : vous pouvez réduire le temps de configuration manuelle de votre processus d’ingestion de données et limiter les erreurs à l’aide de la fonctionnalité de mappage d’importation de la préparation des données. Sélectionnez **[!UICONTROL Importer le mappage]** pour importer des mappages à partir d’un flux existant ou d’un fichier exporté. Pour plus d’informations, consultez [le guide sur l’importation et l’exportation de mappages](../../../../../data-prep/ui/mapping.md#import-mapping).
+* **[!UICONTROL Télécharger le modèle]** : vous pouvez également télécharger une copie CSV de vos mappages et configurer vos mappages sur votre appareil local. Sélectionnez **[!UICONTROL Télécharger le modèle]** pour télécharger une copie CSV de vos mappages. Vous devez vous assurer que vous utilisez uniquement les champs fournis dans votre fichier source et votre schéma cible.
 
 Pour plus d’informations sur la préparation des données, consultez la documentation suivante.
 
@@ -225,7 +209,7 @@ Une fois que vous avez terminé les mappages pour les données de votre suite de
 
 Vous pouvez filtrer les données pour l’ingestion de profils au niveau des lignes et des colonnes. Utilisez le filtrage au niveau des lignes pour définir des critères tels que la chaîne contient, est égal à, commence ou se termine par. Vous pouvez également utiliser le filtrage au niveau des lignes pour joindre des conditions à l’aide de `AND` et de `OR`, et annuler des conditions à l’aide de `NOT`.
 
-Pour filtrer vos données Analytics au niveau des lignes, sélectionnez **[!UICONTROL Row filter]** et utilisez le rail de gauche pour parcourir la hiérarchie du schéma et identifier l’attribut de schéma à sélectionner.
+Pour filtrer vos données Analytics au niveau des lignes, sélectionnez **[!UICONTROL Filtre de ligne]** et utilisez le rail de gauche pour parcourir la hiérarchie du schéma et identifier l’attribut de schéma à sélectionner.
 
 ![Interface de filtre de ligne pour les données Analytics.](../../../../images/tutorials/create/analytics/row-filter.png)
 
@@ -233,23 +217,23 @@ Une fois que vous avez identifié l’attribut à configurer, sélectionnez-le e
 
 ![Attribut « Manufacturer » sélectionné pour le filtrage.](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
-Pour configurer différentes conditions, sélectionnez **[!UICONTROL equals]**, puis sélectionnez une condition dans la fenêtre déroulante qui s’affiche.
+Pour configurer différentes conditions, sélectionnez **[!UICONTROL égal à]** puis sélectionnez une condition dans la fenêtre déroulante qui s’affiche.
 
 La liste des conditions configurables comprend :
 
-* [!UICONTROL equals]
-* [!UICONTROL does not equal]
-* [!UICONTROL starts with]
-* [!UICONTROL ends with]
-* [!UICONTROL does not end with]
-* [!UICONTROL contains]
-* [!UICONTROL does not contain]
-* [!UICONTROL exists]
-* [!UICONTROL does not exist]
+* [!UICONTROL égal à]
+* [!UICONTROL différent de]
+* [!UICONTROL commence par]
+* [!UICONTROL se termine par]
+* [!UICONTROL  ne se termine pas par ]
+* [!UICONTROL contient ]
+* [!UICONTROL ne contient pas ]
+* [!UICONTROL existe]
+* [!UICONTROL  n’existe pas ]
 
 ![Liste déroulante des conditions avec une liste d’opérateurs de condition.](../../../../images/tutorials/create/analytics/conditions.png)
 
-Saisissez ensuite les valeurs à inclure en fonction de l’attribut que vous avez sélectionné. Dans l’exemple ci-dessous, [!DNL Apple] et [!DNL Google] sont sélectionnés pour l’ingestion dans le cadre de l’attribut **[!UICONTROL Manufacturer]** .
+Saisissez ensuite les valeurs à inclure en fonction de l’attribut que vous avez sélectionné. Dans l’exemple ci-dessous, [!DNL Apple] et [!DNL Google] sont sélectionnés pour l’ingestion dans le cadre de l’attribut **[!UICONTROL Fabricant]**.
 
 ![Panneau de filtrage avec les attributs et valeurs sélectionnés inclus.](../../../../images/tutorials/create/analytics/include.png)
 
@@ -257,17 +241,17 @@ Pour spécifier davantage vos conditions de filtrage, ajoutez un autre attribut 
 
 ![Attributs et valeurs supplémentaires inclus dans le conteneur.](../../../../images/tutorials/create/analytics/include-model.png)
 
-Pour ajouter un nouveau conteneur, sélectionnez les points de suspension (`...`) en haut à droite de l’interface de filtrage, puis sélectionnez **[!UICONTROL Add container]**.
+Pour ajouter un nouveau conteneur, sélectionnez les points de suspension (`...`) en haut à droite de l’interface de filtrage, puis sélectionnez **[!UICONTROL Ajouter un conteneur]**.
 
 ![Menu déroulant « Ajouter un conteneur » sélectionné.](../../../../images/tutorials/create/analytics/add-container.png)
 
-Une fois qu’un nouveau conteneur est ajouté, sélectionnez **[!UICONTROL Include]** , puis **[!UICONTROL Exclude]** dans le menu déroulant. Ajoutez les attributs et les valeurs à exclure, puis, lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Une fois qu’un nouveau conteneur est ajouté, sélectionnez **[!UICONTROL Inclure]** puis **[!UICONTROL Exclure]** dans le menu déroulant. Ajoutez les attributs et les valeurs à exclure, puis, lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Attributs et valeurs filtrés pour l’exclusion.](../../../../images/tutorials/create/analytics/exclude.png)
 
 ### Filtrage au niveau des colonnes
 
-Sélectionnez **[!UICONTROL Column filter]** dans l’en-tête pour appliquer le filtrage au niveau des colonnes.
+Sélectionnez **[!UICONTROL Filtre de colonne]** dans l’en-tête pour appliquer un filtrage au niveau des colonnes.
 
 La page se met à jour dans une arborescence de schéma interactif, affichant les attributs de votre schéma au niveau de la colonne. À partir de là, vous pouvez sélectionner les colonnes de données que vous souhaitez exclure de l’ingestion de profils. Vous pouvez également développer une colonne et sélectionner des attributs spécifiques à exclure.
 
@@ -277,7 +261,7 @@ Par défaut, toutes les analyses sont transmises au profil et ce processus perme
 
 ### Filtrer les identités secondaires
 
-Utilisez un filtre de colonne pour exclure les identités secondaires de l’ingestion de profils. Pour filtrer les identités secondaires, sélectionnez **[!UICONTROL Column filter]** puis **[!UICONTROL _identities]**.
+Utilisez un filtre de colonne pour exclure les identités secondaires de l’ingestion de profils. Pour filtrer les identités secondaires, sélectionnez **[!UICONTROL Filtre de colonne]** puis sélectionnez **[!UICONTROL _identities]**.
 
 Le filtre s’applique uniquement lorsqu’une identité est marquée comme secondaire. Si des identités sont sélectionnées, mais qu’un événement arrive avec l’une des identités marquées comme principales, elles ne sont pas filtrées.
 
@@ -285,16 +269,16 @@ Le filtre s’applique uniquement lorsqu’une identité est marquée comme seco
 
 ### Fournir des détails sur le flux de données
 
-L’étape **[!UICONTROL Dataflow detail]** s’affiche, où vous devez fournir un nom et une description facultative pour le flux de données. Sélectionnez **[!UICONTROL Next]** (Enregistrer) une fois terminé.
+L’étape **[!UICONTROL Détails du flux de données]** s’affiche, où vous devez fournir un nom et une description facultative du flux de données. Sélectionnez **[!UICONTROL Suivant]** lorsque vous avez terminé.
 
 ![Interface détaillée du flux de données. du workflow d’ingestion.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### Réviser
 
-L’étape [!UICONTROL Review] s’affiche, vous permettant de vérifier votre nouveau flux de données Analytics avant sa création. Les détails de la connexion sont regroupés par catégories, notamment :
+L’étape [!UICONTROL Révision] s’affiche, vous permettant de vérifier votre nouveau flux de données Analytics avant sa création. Les détails de la connexion sont regroupés par catégories, notamment :
 
-* [!UICONTROL Connection] : affiche la plateforme source de la connexion.
-* [!UICONTROL Data type] : affiche la suite de rapports sélectionnée et l’identifiant de suite de rapports correspondant.
+* [!UICONTROL Connexion] : affiche la plateforme source de la connexion.
+* [!UICONTROL Type de données] : affiche la suite de rapports sélectionnée et l’identifiant de suite de rapports correspondant.
 
 ![Interface de révision du workflow d’ingestion.](../../../../images/tutorials/create/analytics/review.png)
 
@@ -308,9 +292,9 @@ L’étape [!UICONTROL Review] s’affiche, vous permettant de vérifier votre n
 
 ## Surveiller votre flux de données {#monitor-your-dataflow}
 
-Une fois votre flux de données terminé, vous pouvez utiliser l’interface *[!UICONTROL Dataflows]* pour surveiller le statut de votre flux de données Analytics.
+Une fois votre flux de données terminé, vous pouvez utiliser l’interface *[!UICONTROL Flux de données]* pour surveiller le statut de votre flux de données Analytics.
 
-Utilisez l’interface [!UICONTROL Dataset activity] pour plus d’informations sur la progression des données envoyées d’Analytics vers Experience Platform. L’interface affiche des mesures telles que le total des enregistrements du mois précédent, le total des enregistrements ingérés au cours des sept derniers jours et la taille des données du mois précédent.
+Utilisez l’interface [!UICONTROL Activité du jeu de données] pour plus d’informations sur la progression des données envoyées d’Analytics vers Experience Platform. L’interface affiche des mesures telles que le total des enregistrements du mois précédent, le total des enregistrements ingérés au cours des sept derniers jours et la taille des données du mois précédent.
 
 La source instancie deux flux de jeux de données. L’un représente les données de renvoi, l’autre les données actives. Les données de renvoi ne sont pas configurées pour l’ingestion dans le profil client en temps réel, mais sont envoyées au lac de données à des fins d’analyse et de cas d’utilisation en science des données.
 
@@ -328,7 +312,7 @@ Pour plus d’informations sur le renvoi, les données actives et leurs latences
 >
 >Vous ne pouvez pas désactiver un flux de données Analytics. Pour arrêter le flux de données Analytics, vous devez **supprimer** l’intégralité du flux de données.
 
-Pour supprimer votre flux de données Analytics, sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur de l’espace de travail des sources. Utilisez la page Flux de données pour localiser le flux de données Analytics à supprimer, puis sélectionnez les points de suspension (`...`) en regard. Ensuite, utilisez le menu déroulant et sélectionnez **[!UICONTROL Delete]**.
+Pour supprimer votre flux de données Analytics, sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur de l’espace de travail des sources. Utilisez la page Flux de données pour localiser le flux de données Analytics à supprimer, puis sélectionnez les points de suspension (`...`) en regard. Utilisez ensuite le menu déroulant et sélectionnez **[!UICONTROL Supprimer]**.
 
 * La suppression du flux de données Analytics actif supprimera également son jeu de données sous-jacent.
 * La suppression du flux de données d’analyse de renvoi ne supprime pas le jeu de données sous-jacent, mais arrête le processus de renvoi de la suite de rapports correspondante. Si vous supprimez le flux de données de renvoi, les données ingérées peuvent toujours être consultées via le jeu de données.
@@ -348,5 +332,5 @@ La vidéo suivante est destinée à vous aider à comprendre l’ingestion de do
 >
 > Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430255?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 

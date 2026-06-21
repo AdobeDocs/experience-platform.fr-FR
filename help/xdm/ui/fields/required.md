@@ -4,13 +4,11 @@ title: Définir les champs obligatoires dans l’interface utilisateur
 description: Découvrez comment définir un champ XDM obligatoire dans l’interface utilisateur d’Experience Platform.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
 TQID: https://experienceleague.adobe.com/7aWbwy7svAlW1aWnB9wKtGtPt4Vr4KHjjlYVBkecNhE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 359
+source-wordcount: 365
 ht-degree: 0%
 
 ---
@@ -23,15 +21,15 @@ Dans le modèle de données d’expérience (XDM), un champ obligatoire indique 
 >
 >Qu’un champ de schéma soit obligatoire ou non, Experience Platform n’accepte pas les valeurs `null` ou vides pour les champs ingérés. S’il n’existe aucune valeur pour un champ particulier dans un enregistrement ou un événement, la clé de ce champ doit être exclue de la payload d’ingestion.
 
-Lors de la [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez le définir comme champ obligatoire en cochant la case **[!UICONTROL Required]** dans le rail de droite. Sélectionnez **[!UICONTROL Apply]** pour appliquer la modification au schéma.
+Lors de la [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez le définir comme champ obligatoire en cochant la case **[!UICONTROL Obligatoire]** dans le rail de droite. Sélectionnez **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
 
 ![Case à cocher obligatoire](../../images/ui/fields/required/root.png)
 
-Si le champ est un attribut de niveau racine sous l’objet d’identifiant client, son chemin d’accès apparaît immédiatement sous **[!UICONTROL Required fields]** dans le rail de gauche.
+Si le champ est un attribut de niveau racine sous l’objet d’identifiant client, son chemin d’accès s’affiche immédiatement sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche.
 
 ![Champ obligatoire de niveau racine](../../images/ui/fields/required/applied.png)
 
-Cependant, si un champ obligatoire est imbriqué dans un objet qui n’est pas marqué comme obligatoire, le champ imbriqué n’apparaît pas sous **[!UICONTROL Required fields]** dans le rail de gauche.
+Cependant, si un champ obligatoire est imbriqué dans un objet qui n’est pas marqué comme obligatoire, le champ imbriqué n’apparaît pas sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche.
 
 Dans l’exemple ci-dessous, le champ `internalSKU` est défini comme requis, mais pas son `SKUs` d’objet parent. Dans ce cas, aucune erreur de validation ne se produit si `SKUs` est exclu lors de l’ingestion de données, même si le champ enfant `internalSKU` est marqué comme requis. En d’autres termes, bien que `SKUs` soit facultatif, il doit contenir un champ `internalSKU` dans le cas où il est inclus.
 

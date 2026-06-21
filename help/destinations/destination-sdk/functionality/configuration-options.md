@@ -4,7 +4,7 @@ title: Options de configuration dans Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '825'
 ht-degree: 79%
 
 ---

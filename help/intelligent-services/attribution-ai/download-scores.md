@@ -5,17 +5,12 @@ title: Télécharger des scores dans l’IA dédiée à l’attribution
 description: Ce document sert de guide de téléchargement des notes pour l’IA dédiée à l’attribution.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 TQID: https://experienceleague.adobe.com/3DLniFrsMWLQKj2CxGyYNeA7rANLlGhlT9tO9tByGV4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1058
+source-wordcount: 1060
 ht-degree: 59%
 
 ---
@@ -32,7 +27,7 @@ En outre, pour accéder aux scores pour l’IA dédiée à l’attribution, vous
 
 ## Recherche de votre identifiant de jeu de données {#dataset-id}
 
-Dans votre instance de service pour les insights IA dédiée à l’attribution, cliquez sur le menu déroulant *Plus d’actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
+Dans votre instance de service pour les insights IA dédiée à l’attribution, cliquez sur le menu déroulant *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
 
 ![actions supplémentaires](./images/download-scores/more-actions.png)
 

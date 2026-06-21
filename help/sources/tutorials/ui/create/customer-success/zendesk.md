@@ -3,18 +3,14 @@ title: Créer une connexion Source Zendesk dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Zendesk à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 TQID: https://experienceleague.adobe.com/yqAmXcJm92UgCJE45bfhDqcnzlggltjsY8FjIdCmWNE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 776
-ht-degree: 25%
+source-wordcount: 798
+ht-degree: 24%
 
 ---
 
@@ -42,11 +38,11 @@ Pour accéder au compte [!DNL Zendesk] sur Experience Platform, vous devez fourn
 
 Pour plus d’informations sur l’authentification de votre source [!DNL Zendesk], consultez la [[!DNL Zendesk] présentation de la source](../../../../connectors/customer-success/zendesk.md).
 
-![&#x200B; Jeton API Zendesk &#x200B;](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![ Jeton API Zendesk ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 ### Création d’un schéma Experience Platform pour [!DNL Zendesk]
 
-Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
 
 Pour plus d’informations sur le schéma de [!DNL Zendesk] requis pour le [!DNL Zendesk Search API], reportez-vous à la section [limites](#limits) ci-dessous.
 
@@ -54,31 +50,31 @@ Pour plus d’informations sur le schéma de [!DNL Zendesk] requis pour le [!DNL
 
 ## Connecter votre compte [!DNL Zendesk]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie *Succès client*, sélectionnez **[!UICONTROL Zendesk]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie *Succès client*, sélectionnez **[!UICONTROL Zendesk]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/zendesk/catalog.png)
 
-La page **[!UICONTROL Connect Zendesk account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Zendesk]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte *Zendesk* avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte *Zendesk* avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![nouveau](../../../../images/tutorials/create/zendesk/new.png)
 
 ### Sélectionner les données
 
-Une fois votre source authentifiée, la page se met à jour dans une arborescence de schéma interactif qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Next]** pour continuer.
+Une fois votre source authentifiée, la page se met à jour dans une arborescence de schéma interactif qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
@@ -94,7 +90,7 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 Vous trouverez ci-dessous un aperçu des étapes que vous pouvez suivre pour vérifier que vous avez correctement connecté votre source [!DNL Zendesk] et que [!DNL Zendesk] profils sont ingérés dans Experience Platform.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Datasets]. L’écran [!UICONTROL Dataset Activity] affiche les détails des exécutions.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Jeux de données]. L’écran [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
 
 ![Page Activité](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -102,7 +98,7 @@ Sélectionnez ensuite l’identifiant d’exécution du flux de données du flux
 
 ![Page Flux de données](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-Enfin, sélectionnez **[!UICONTROL Preview dataset]** pour afficher les données ingérées.
+Enfin, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour afficher les données ingérées.
 
 ![Jeu de données Zendesk](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
@@ -123,8 +119,8 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 | `results.active` | Booléen |
 | `results.alias` | Chaîne |
 | `results.created_at` | Chaîne |
-| `results.custom_role_id` | Entier |
-| `results.default_group_id` | Entier |
+| `results.custom_role_id` | Nombre entier |
+| `results.default_group_id` | Nombre entier |
 | `results.details` | Chaîne |
 | `results.email` | Chaîne |
 | `results.external_id` | Entier |
@@ -137,7 +133,7 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 | `results.name` | Chaîne |
 | `results.notes` | Chaîne |
 | `results.only_private_comments` | Booléen |
-| `results.organization_id` | Entier |
+| `results.organization_id` | Nombre entier |
 | `results.phone` | Chaîne |
 | `results.photo` | Chaîne |
 | `results.report_csv` | Booléen |

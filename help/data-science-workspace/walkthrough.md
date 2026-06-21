@@ -5,16 +5,10 @@ title: Cours sur le Workspace de la science des données
 description: Ce document fournit un lien et une description pour le cours Adobe Experience Platform Data Science Workspace .
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
 TQID: https://experienceleague.adobe.com/pTsvNlJOSEGs8VwjcYSEEtHkcRD-5mfVFq66CpHdQ6w
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
 source-wordcount: 484

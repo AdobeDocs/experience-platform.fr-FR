@@ -3,22 +3,15 @@ title: Connecter MySQL à Experience Platform à l’aide de l’interface utili
 description: Découvrez comment connecter votre base de données MySQL à Experience Platform à l’aide de l’interface utilisateur.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
 TQID: https://experienceleague.adobe.com/dBOoAZWqTRDYSCGQ0jiKu3BAfM-o06Xj8ux8st21UHE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 517
-ht-degree: 15%
+source-wordcount: 542
+ht-degree: 14%
 
 ---
 
@@ -45,23 +38,23 @@ Lisez la [[!DNL MySQL] présentation](../../../../connectors/databases/mysql.md#
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Pour vous connecter à [!DNL MySQL], accédez à la catégorie *[!UICONTROL Databases]* , sélectionnez la carte source **[!UICONTROL MySQL]**, puis sélectionnez **[!UICONTROL Set up]**.
+Pour vous connecter à [!DNL MySQL], accédez à la catégorie *[!UICONTROL Bases de données]*, sélectionnez la vignette source **[!UICONTROL MySQL]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte source MySQL sélectionnée.](../../../../images/tutorials/create/my-sql/catalog.png)
 
 ## Utiliser un compte existant {#existing}
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte [!DNL MySQL] à utiliser.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL MySQL] à utiliser.
 
 ![Interface des comptes existants dans le workflow des sources avec « Compte existant » sélectionné.](../../../../images/tutorials/create/my-sql/existing.png)
 
 ## Créer un nouveau compte {#new}
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et éventuellement une description pour votre compte.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement ajoutez une description pour votre compte.
 
 ![Nouvelle interface de compte dans le workflow des sources avec un nom de compte et une description facultative fournis.](../../../../images/tutorials/create/my-sql/new.png)
 
@@ -73,13 +66,13 @@ Vous pouvez connecter votre base de données [!DNL MySQL] à Experience Platform
 
 >[!TAB Authentification de la clé de compte]
 
-Pour utiliser l’authentification par clé de compte, sélectionnez **[!UICONTROL Account key authentication]**, fournissez votre [chaîne de connexion](../../../../connectors/databases/mysql.md#azure), puis sélectionnez **[!UICONTROL Connect to source]**.
+Pour utiliser l’authentification par clé de compte, sélectionnez **[!UICONTROL Authentification par clé de compte]**, fournissez votre [chaîne de connexion](../../../../connectors/databases/mysql.md#azure), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Nouvelle interface de compte dans le workflow des sources avec « Authentification par clé de compte » sélectionné.](../../../../images/tutorials/create/my-sql/account-key.png)
 
 >[!TAB  Authentification de base ]
 
-Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Basic authentication]**, saisissez les valeurs de vos [&#x200B; informations d’authentification &#x200B;](../../../../connectors/databases/mysql.md#azure), puis sélectionnez **[!UICONTROL Connect to source]**.
+Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Authentification de base]**, indiquez les valeurs de vos [informations d’authentification](../../../../connectors/databases/mysql.md#azure), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Nouvelle interface de compte dans le workflow des sources avec « Authentification de base » sélectionnée.](../../../../images/tutorials/create/my-sql/basic-auth.png)
 

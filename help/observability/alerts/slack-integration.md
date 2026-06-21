@@ -1,9 +1,10 @@
 ---
 title: Intégration de Slack pour les alertes destinées aux clients
 description: Découvrez comment connecter Adobe I/O Events à Slack à l’aide d’Adobe App Builder.
-source-git-commit: c0fa0320b32e1bfe286d47a2e1af5ea1dcf74cb9
+exl-id: 09ce5391-3932-4f51-b330-42d7a7acbe10
+source-git-commit: a6852f957834650ad45f4aa6b91821200d321c5c
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '1018'
 ht-degree: 0%
 
 ---
@@ -23,15 +24,15 @@ Avant de commencer, vérifiez que vous disposez des éléments suivants :
 
 ## Configuration d’un projet modélisé {#templated-project}
 
-Pour configurer un projet modélisé, connectez-vous à Adobe Developer Console, puis sélectionnez **[!UICONTROL Create project from template]** dans l’onglet **[!UICONTROL Home]** .
+Pour configurer un projet modélisé, connectez-vous à Adobe Developer Console, puis sélectionnez **[!UICONTROL Créer un projet à partir d’un modèle]** dans l’onglet **[!UICONTROL Accueil]**.
 
-![Developer Console mettant en surbrillance l’onglet Accueil et Créer un projet à partir d’un modèle.](../images/alerts/slack-integration/developer-console-home.png)
+Developer Console mettant en surbrillance l’onglet Accueil et Créer un projet à partir d’un modèle.](../images/alerts/slack-integration/developer-console-home.png)![
 
-Sélectionnez le modèle de **[!UICONTROL App Builder]**, puis saisissez un **[!UICONTROL Project Title]** et sélectionnez **[!UICONTROL Add workspace]**. Enfin, sélectionnez **[!UICONTROL Save]**.
+Sélectionnez le modèle ****, puis saisissez un **[!UICONTROL Titre du projet]** et sélectionnez **[!UICONTROL Ajouter un espace de travail]**. Enfin, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Developer Console mettant en surbrillance le titre du projet, Ajouter un Workspace et Enregistrer.](../images/alerts/slack-integration/developer-console-save.png)
+Developer Console mettant en surbrillance le titre du projet, Ajouter un Workspace et Enregistrer.](../images/alerts/slack-integration/developer-console-save.png)![
 
-Vous recevrez une confirmation indiquant que votre projet a été créé et serez redirigé vers l’onglet **[!UICONTROL Project overview]** . À partir de là, vous pouvez ajouter un **[!UICONTROL Project description]**.
+Vous recevrez une confirmation indiquant que votre projet a été créé et serez redirigé vers l’onglet **[!UICONTROL Présentation du projet]**. À partir de là, vous pouvez ajouter une **[!UICONTROL Description du projet]**.
 
 ![Onglet Aperçu du projet affichant les détails du projet.](../images/alerts/slack-integration/developer-console-project.png)
 
@@ -288,32 +289,32 @@ Une confirmation s’affiche indiquant que le déploiement a réussi.
 
 Une fois votre action déployée, enregistrez-la en tant que destination de Adobe I/O Events.
 
-Dans le Developer Console, ouvrez votre projet App Builder, puis sélectionnez votre **[!UICONTROL Workspace]**.
+Dans Developer Console, ouvrez votre projet App Builder, puis sélectionnez votre **[!UICONTROL Workspace]**.
 
-Sur la page d’aperçu de Workspace, sélectionnez **[!UICONTROL Add service]** et **[!UICONTROL Event]**.
+Sur la page d’aperçu de Workspace, sélectionnez **[!UICONTROL Ajouter un service]** et **[!UICONTROL Événement]**.
 
 ![Page d’aperçu Workspace mettant en surbrillance Ajouter un service et un événement.](../images/alerts/slack-integration/workspace-service-event.png)
 
-Sur la page Ajouter des événements , sélectionnez **[!UICONTROL Experience Platform]** et **[!UICONTROL Platform notifications]**, puis **[!UICONTROL Next]**.
+Sur la page Ajouter des événements , sélectionnez **[!UICONTROL Notifications]** et **[!UICONTROL Notifications Platform]**, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Page Ajouter des événements affichant les notifications Experience Platform et Platform sélectionnées.](../images/alerts/slack-integration/add-events.png)
 
-Sélectionnez les événements pour lesquels vous souhaitez recevoir des notifications, puis sélectionnez **[!UICONTROL Next]**.
+Sélectionnez les événements pour lesquels vous souhaitez recevoir des notifications, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Page Ajouter des événements affichant la liste des événements auxquels s’abonner.](../images/alerts/slack-integration/select-events.png)
 
-Sélectionnez vos informations d’authentification serveur à serveur, puis sélectionnez **[!UICONTROL Next]**.
+Sélectionnez vos informations d’authentification serveur à serveur, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Page Ajouter des événements affichant la sélection des informations d’authentification de serveur à serveur.](../images/alerts/slack-integration/add-events-credentials.png)
 
-Saisissez un **[!UICONTROL Event registration name]** et un **[!UICONTROL Event registration description]** clair pour l’enregistrement, puis sélectionnez **[!UICONTROL Next]**.
+Saisissez un **[!UICONTROL Nom d’enregistrement de l’événement]** et une **[!UICONTROL Description de l’enregistrement de l’événement]** pour l’enregistrement, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Page Ajouter des événements affichant les champs Nom d’enregistrement de l’événement et Description de l’enregistrement de l’événement.](../images/alerts/slack-integration/add-events-registration.png)
 
-Sélectionnez **[!UICONTROL Runtime Action]** comme méthode de diffusion et l’action `slack-webhook-proxy/runtime-proxy` que vous avez créée, puis sélectionnez **[!UICONTROL Save configured events]**.
+Sélectionnez **[!UICONTROL Action d’exécution]** comme méthode de diffusion et action de `slack-webhook-proxy/runtime-proxy` que vous avez créées, puis sélectionnez **[!UICONTROL Enregistrer les événements configurés]**.
 
 ![Page Ajouter des événements affichant la méthode de diffusion Action d’exécution et Enregistrer les événements configurés.](../images/alerts/slack-integration/add-events-runtime.png)
 
-Votre proxy webhook est maintenant configuré. Vous revenez sur la page du proxy Webhook. Vous pouvez tester l’ensemble du flux de bout en bout en sélectionnant l’icône **[!UICONTROL Send sample event]** en regard de n’importe quel événement configuré.
+Votre proxy webhook est maintenant configuré. Vous revenez sur la page du proxy Webhook. Vous pouvez tester l’ensemble du flux de bout en bout en sélectionnant l’icône **[!UICONTROL Envoyer un exemple d’événement]** en regard de tout événement configuré.
 
 ![Page du proxy webhook affichant les événements configurés et l’icône Envoyer un exemple d’événement.](../images/alerts/slack-integration/send-sample.png)

@@ -3,31 +3,15 @@ title: Notes de mise à jour d’Adobe Experience Platform - Août 2024
 description: Les notes de mise à jour d’août 2024 pour Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 TQID: https://experienceleague.adobe.com/Qi9mZw8vxGUcViO0BPp8tSA9drhvWkzmKUpoSXRgKDM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1596
-ht-degree: 90%
+source-wordcount: 1605
+ht-degree: 89%
 
 ---
 
@@ -86,7 +70,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gère un certain nombre d’instances différentes pour leur tableau de bord et leurs points d’entrée REST. [!UICONTROL Braze] clients doivent utiliser le point d’entrée REST approprié en fonction de l’instance pour laquelle vous disposez des privilèges d’accès. Cette version ajoute un nouveau point d’entrée US-07 que vous pouvez sélectionner lors de la connexion à [!UICONTROL Braze]. |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gère un certain nombre d’instances différentes pour leur tableau de bord et leurs points d’entrée REST. [!UICONTROL Braze] les clients doivent utiliser le point d’entrée REST approprié en fonction de l’instance pour laquelle vous disposez des privilèges d’accès. Cette version ajoute un nouveau point d’entrée US-07 que vous pouvez sélectionner lors de la connexion à [!UICONTROL Braze]. |
 
 {style="table-layout:auto"}
 
@@ -97,9 +81,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | L’export de fichiers à la demande vers des destinations par lot est désormais disponible de façon générale. | L’option permettant d’exporter des fichiers à la demande vers des destinations par lots est désormais disponible pour l’ensemble de la clientèle. Pour plus d’informations, consultez la [documentation appropriée](../../destinations/ui/export-file-now.md). |
 | Modifier les plannings d’export pour plusieurs audiences exportées à l’[étape de planification](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’option permettant de modifier les plannings d’export pour plusieurs audiences exportées directement à partir de l’étape de planification du workflow d’activation des audiences est désormais disponible pour l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform qui illustre l’option Modifier le planning de l’étape de planification.](assets/august/edit-schedule.png "Option Modifier le planning à l’étape de planification."){width="250" align="center" zoomable="yes"} |
 | Modifier les noms de fichiers pour plusieurs audiences exportées à l’[étape de planification](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’option permettant de modifier les noms de plusieurs fichiers exportés directement à partir de l’étape de planification du workflow d’activation de l’audience est désormais disponible pour l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Modifier le nom de fichier de l’étape de planification.](assets/august/edit-file-name.png "Option Modifier le nom de fichier à l’étape de planification."){width="250" align="center" zoomable="yes"} |
-| Supprimer plusieurs audiences d’un flux de données de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-remove). | L’option permettant de supprimer plusieurs audiences des flux de données existants de la page **[!UICONTROL Destination Details]** est désormais disponible pour tous les clients. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Supprimer les audiences de la page Détails de la destination.](assets/august/bulk-remove-audiences.png "Option Supprimer des audiences de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
-| Exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-export). | L’option permettant d’exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page **[!UICONTROL Destination Details]** est désormais disponible pour tous les clients. ![Image de l’interface d’utilisation d’Experience Platform mettant en surbrillance l’option Exporter le fichier maintenant de la page Détails de la destination.](assets/august/bulk-export-file-now.png "Option Exporter le fichier maintenant de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
-| Modifier les noms de fichiers de plusieurs audiences exportées à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Vous pouvez désormais modifier les noms de plusieurs fichiers exportés directement à partir de la page **[!UICONTROL Destination Details]**. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Modifier le nom de fichier de la page Détails de la destination.](assets/august/edit-file-name-destination-details.png "Option Modifier le nom de fichier de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
+| Supprimer plusieurs audiences d’un flux de données de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-remove). | L’option permettant de supprimer plusieurs audiences des flux de données existants de la page **[!UICONTROL Détails de la destination]** est désormais disponible pour tous les clients. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Supprimer les audiences de la page Détails de la destination.](assets/august/bulk-remove-audiences.png "Option Supprimer des audiences de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
+| Exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-export). | L’option permettant d’exporter plusieurs fichiers à la demande vers des destinations par lots à partir de la page **[!UICONTROL Détails de la destination]** est désormais disponible pour tous les clients. ![Image de l’interface d’utilisation d’Experience Platform mettant en surbrillance l’option Exporter le fichier maintenant de la page Détails de la destination.](assets/august/bulk-export-file-now.png "Option Exporter le fichier maintenant de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
+| Modifier les noms de fichiers de plusieurs audiences exportées à partir de la page [Détails de la destination](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Vous pouvez désormais modifier les noms de plusieurs fichiers exportés directement à partir de la page **[!UICONTROL Détails de la destination]**. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Modifier le nom de fichier de la page Détails de la destination.](assets/august/edit-file-name-destination-details.png "Option Modifier le nom de fichier de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
 | Supprimer plusieurs jeux de données d’un flux de données de la page [Détails de la destination](../../destinations/ui/export-datasets.md#remove-dataset). | L’option de suppression de plusieurs jeux de données d’un flux de données est désormais disponible pour toutes l’ensemble de la clientèle. ![Image de l’interface d’utilisation d’Experience Platform qui met en surbrillance l’option Supprimer les jeux de données de la page Détails de la destination.](assets/august/bulk-remove-datasets.png "Option Supprimer les jeux de données de la page Détails de la destination."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -168,4 +152,4 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).

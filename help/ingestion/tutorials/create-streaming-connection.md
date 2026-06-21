@@ -6,10 +6,8 @@ type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion en flux continu, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
 TQID: https://experienceleague.adobe.com/nMFLuUObC0T5dDGbpsKduZ8xDmDOEk-0kigZFld0vyc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 129

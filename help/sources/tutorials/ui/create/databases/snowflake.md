@@ -5,20 +5,14 @@ description: Découvrez comment créer une connexion source Snowflake à l’aid
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 TQID: https://experienceleague.adobe.com/BbnMUO7mCISuO-BJKczFtk-dh737zyQYOGxgpSrGPts
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1079
+source-wordcount: 1110
 ht-degree: 6%
 
 ---
@@ -50,11 +44,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sélectionnez **[!DNL Snowflake]** sous la catégorie *[!UICONTROL Databases]*, puis sélectionnez **[!UICONTROL Set up]**.
+Sélectionnez **[!DNL Snowflake]** sous la catégorie *[!UICONTROL Bases de données]*, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte Snowflake sélectionnée..](../../../../images/tutorials/create/snowflake/catalog.png)
 
@@ -62,7 +56,7 @@ Sélectionnez **[!DNL Snowflake]** sous la catégorie *[!UICONTROL Databases]*, 
 
 Ensuite, vous passez à l’étape d’authentification du workflow des sources. Ici, vous pouvez utiliser un compte existant ou en créer un nouveau.
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL Snowflake] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL Snowflake] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Interface du compte existant dans le workflow des sources.](../../../../images/tutorials/create/snowflake/existing.png)
 
@@ -70,13 +64,13 @@ Pour utiliser un compte existant, sélectionnez le compte [!DNL Snowflake] auque
 
 Si vous ne disposez pas d’un compte existant, vous devez créer un compte en fournissant les informations d’authentification nécessaires qui correspondent à votre source.
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et éventuellement une description pour votre compte.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement ajoutez une description pour votre compte.
 
 ### Connexion à Experience Platform sur Azure {#azure}
 
 Vous pouvez connecter votre compte [!DNL Snowflake] à Experience Platform sur Azure avec l’authentification par paire de clés.
 
-Pour utiliser l’authentification par paire de clés, sélectionnez **[!UICONTROL KeyPair authentication]**, indiquez les valeurs de votre compte, nom d’utilisateur, clé privée, phrase secrète de clé privée, base de données et entrepôt de données, puis sélectionnez **[!UICONTROL Connect to source]**.
+Pour utiliser l’authentification par paire de clés, sélectionnez **[!UICONTROL Authentification par paire de clés]**, indiquez les valeurs de votre compte, nom d’utilisateur, clé privée, phrase secrète de clé privée, base de données et entrepôt de données, puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Interface d’authentification par paire de clés de compte.](../../../../images/tutorials/create/snowflake/new.png)
 
@@ -105,7 +99,7 @@ Pour créer un compte [!DNL Snowflake] et vous connecter à Experience Platform 
 
 >[!TAB Authentification par paire de clés]
 
-Pour vous connecter à l’aide de paires de clés, sélectionnez **[!UICONTROL KeyPair Authentication]**, fournissez vos informations d’authentification, puis sélectionnez **[!UICONTROL Connect to source]**. Pour plus d’informations sur ces informations d’identification, consultez la [[!DNL Snowflake] présentation des lots](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+Pour vous connecter à l’aide de paires de clés, sélectionnez **[!UICONTROL Authentification par paire de clés]**, fournissez vos informations d’authentification, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Pour plus d’informations sur ces informations d’identification, consultez la [[!DNL Snowflake] présentation des lots](../../../../connectors/databases/snowflake.md#gather-required-credentials).
 
 ![L’étape de création d’un compte pour l’authentification par paire de clés.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
 
@@ -115,7 +109,7 @@ Pour vous connecter à l’aide de paires de clés, sélectionnez **[!UICONTROL 
 >
 >L’authentification de base (ou authentification par clé de compte) de la source [!DNL Snowflake] sera abandonnée en novembre 2025. Vous devez passer à l’authentification par paire de clés pour continuer à utiliser la source et à ingérer des données de votre base de données vers Experience Platform. Pour plus d’informations sur l’obsolescence, consultez le [[!DNL Snowflake] guide des bonnes pratiques sur la réduction des risques liés à la compromission des informations d’identification](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
-Pour vous connecter à l’aide d’une combinaison de nom d’utilisateur et de mot de passe, sélectionnez **[!UICONTROL Basic authentication]**, fournissez vos informations d’authentification, puis sélectionnez **[!UICONTROL Connect to source]**. Pour plus d’informations sur ces informations d’identification, consultez la [[!DNL Snowflake] présentation des lots](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+Pour vous connecter à l’aide d’une combinaison de nom d’utilisateur et de mot de passe, sélectionnez **[!UICONTROL Authentification de base]**, indiquez vos informations d’authentification, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Pour plus d’informations sur ces informations d’identification, consultez la [[!DNL Snowflake] présentation des lots](../../../../connectors/databases/snowflake.md#gather-required-credentials).
 
 ![L’étape Nouveau compte du workflow des sources où vous pouvez connecter Snowflake à Experience Platform sur AWS.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
@@ -123,7 +117,7 @@ Pour vous connecter à l’aide d’une combinaison de nom d’utilisateur et de
 
 ### Ignorer la prévisualisation des exemples de données {#skip-preview-of-sample-data}
 
-Lors de l’étape de sélection des données, vous pouvez rencontrer un délai d’expiration lors de l’ingestion de tables ou de fichiers de données volumineux. Vous pouvez ignorer la prévisualisation des données pour contourner le délai d’expiration et continuer à afficher votre schéma, même s’il ne contient pas de données d’exemple. Pour ignorer l’aperçu des données, activez le bouton (bascule) **[!UICONTROL Skip previewing sample data]**.
+Lors de l’étape de sélection des données, vous pouvez rencontrer un délai d’expiration lors de l’ingestion de tables ou de fichiers de données volumineux. Vous pouvez ignorer la prévisualisation des données pour contourner le délai d’expiration et continuer à afficher votre schéma, même s’il ne contient pas de données d’exemple. Pour ignorer la prévisualisation des données, activez le bouton (bascule) **[!UICONTROL Ignorer la prévisualisation des données d’exemple]**.
 
 Le reste du workflow reste le même. Seul bémol : l’omission de l’aperçu des données peut empêcher la validation automatique des champs calculés et obligatoires lors de l’étape de mappage. Vous devrez ensuite valider manuellement ces champs pendant le mappage.
 

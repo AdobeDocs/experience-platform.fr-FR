@@ -5,15 +5,12 @@ title: Surveillance des flux de données pour les profils dans l’interface uti
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 TQID: https://experienceleague.adobe.com/VPQrgKS3Czue8XlGIdGM0hZ1yTfAww5xCx00GUDYk1E
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 1305
+source-wordcount: 1426
 ht-degree: 12%
 
 ---
@@ -46,33 +43,33 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 >title="Détails de l’exécution du flux de données"
 >abstract="La page Détails de l&#39;exécution du flux de données affiche plus d&#39;informations sur votre exécution du flux de données de Profil, y compris son identifiant d&#39;organisation et son identifiant d&#39;exécution du flux de données."
 
-Pour accéder au tableau de bord **[!UICONTROL Profiles]**, sélectionnez **[!UICONTROL Monitoring]** dans le volet de navigation de gauche. Une fois sur la page **[!UICONTROL Monitoring]**, sélectionnez la carte **[!UICONTROL Profiles]** .
+Pour accéder au tableau de bord **[!UICONTROL Profils]**, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Une fois sur la page **[!UICONTROL Surveillance]**, sélectionnez la vignette **[!UICONTROL Profils]**.
 
 ![Carte Profils . Des informations sur le nombre d’enregistrements reçus, le nombre de fragments de profil créés et mis à jour, ainsi que le taux de succès s’affichent.](../assets/ui/monitor-profiles/focus-card.png)
 
-Dans le tableau de bord de **[!UICONTROL Profiles]** principal, la carte de **[!UICONTROL Profiles]** affiche des informations sur le nombre total d’enregistrements reçus, le nombre de fragments de profil créés et mis à jour, ainsi que le taux de succès des fragments de profil créés et mis à jour.
+Dans le tableau de bord principal **[!UICONTROL Profils]**, la carte **[!UICONTROL Profils]** affiche des informations sur le nombre total d’enregistrements reçus, le nombre de fragments de profil créés et mis à jour, ainsi que le taux de succès des fragments de profil créés et mis à jour.
 
 Le tableau de bord lui-même contient des mesures sur le traitement des profils. Par défaut, le tableau de bord affiche les détails du traitement des profils pour les sources de votre organisation au cours des dernières 24 heures.
 
 ![Le tableau de bord Profils . Des informations sur le nombre d’enregistrements de profil reçus par source s’affichent.](../assets/ui/monitor-profiles/sources.png)
 
-La page [!UICONTROL Profile processing] contient des informations sur les enregistrements ingérés dans [!DNL Profile], notamment le nombre de fragments de profil créés, mis à jour et le nombre total de fragments de profil.
+La page [!UICONTROL Traitement des profils] contient des informations sur les enregistrements ingérés dans [!DNL Profile], notamment le nombre de fragments de profil créés, mis à jour et le nombre total de fragments de profil.
 
 Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 | Mesure | Description |
 | -------| ----------- |
-| **[!UICONTROL Source name]** | Nom de la source. |
-| **[!UICONTROL Records received]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Records failed]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
-| **[!UICONTROL Profile fragments created]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
-| **[!UICONTROL Profile fragments updated]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
-| **[!UICONTROL Total Profile fragments]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
-| **[!UICONTROL Total failed dataflows]** | Nombre d’exécutions de flux de données ayant échoué. |
+| **[!UICONTROL Nom du]** | Nom de la source. |
+| **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Fragments de profil créés]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
+| **[!UICONTROL Fragments de profil mis à jour]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
+| **[!UICONTROL Nombre total de fragments de profil]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
+| **[!UICONTROL Nombre total de flux de données ayant échoué]** | Nombre d’exécutions de flux de données ayant échoué. |
 
 Vous pouvez sélectionner l’icône de filtre ![icône de filtre](/help/images/icons/filter.png) à côté du nom de la source pour afficher les informations de traitement du profil pour les flux de données de cette source sélectionnée.
 
-Vous pouvez également sélectionner **[!UICONTROL Dataflows]** sur le bouton (bascule) pour afficher les détails du traitement du profil pour les flux de données de votre entreprise au cours des dernières 24 heures.
+Vous pouvez également sélectionner **[!UICONTROL Flux de données]** sur le bouton (bascule) pour afficher les détails du traitement du profil pour les flux de données de votre entreprise au cours des dernières 24 heures.
 
 ![Le tableau de bord Profils . Des informations sur le nombre d’enregistrements de profil reçus par flux de données s’affichent.](../assets/ui/monitor-profiles/dataflows.png)
 
@@ -80,17 +77,17 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 | Mesure | Description |
 | -------| ----------- |
-| **[!UICONTROL Dataflow]** | Nom du flux de données. |
-| **[!UICONTROL Dataset]** | Nom du jeu de données vers lequel le flux de données est inséré. |
-| **[!UICONTROL Source name]** | Nom de la source à laquelle appartient le flux de données. |
-| **[!UICONTROL Data type]** | Type de données reçu du jeu de données. |
-| **[!UICONTROL Records received**] | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Records failed]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
-| **[!UICONTROL Profile fragments created]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
-| **[!UICONTROL Profile fragments updated]** | Nombre de fragments de [!DNL Profile] existants mis à jour |
-| **[!UICONTROL Total Profile fragments]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
-| **[!UICONTROL Total failed flow runs]** | Nombre d’exécutions de flux de données ayant échoué. |
-| **[!UICONTROL Last active]** | Date et heure de la dernière exécution du flux de données. |
+| **[!UICONTROL Flux de données]** | Nom du flux de données. |
+| **[!UICONTROL Jeu de données]** | Nom du jeu de données vers lequel le flux de données est inséré. |
+| **[!UICONTROL Nom du]** | Nom de la source à laquelle appartient le flux de données. |
+| **[!UICONTROL Type de données]** | Type de données reçu du jeu de données. |
+| **[!UICONTROL Enregistrements reçus**] | Nombre d’enregistrements reçus du lac de données. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Fragments de profil créés]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
+| **[!UICONTROL Fragments de profil mis à jour]** | Nombre de fragments de [!DNL Profile] existants mis à jour |
+| **[!UICONTROL Nombre total de fragments de profil]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
+| **[!UICONTROL Nombre total d’exécutions de flux ayant échoué]** | Nombre d’exécutions de flux de données ayant échoué. |
+| **[!UICONTROL Dernière active]** | Date et heure de la dernière exécution du flux de données. |
 
 Sélectionnez l’icône de filtre ![filtre](/help/images/icons/filter.png) à côté de l’heure de début de l’exécution du flux de données pour afficher plus d’informations sur votre exécution de flux de données [!DNL Profile].
 
@@ -102,27 +99,27 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 >[!NOTE]
 >
->Lorsque l’exécution du flux de données est à l’état **[!UICONTROL Processing]**, vous pouvez consulter des informations sur la préparation en consultant les statuts des points de contrôle dans le processus d’ingestion.
+>Lorsque l’exécution du flux de données est à l’état **[!UICONTROL Traitement]**, vous pouvez consulter des informations sur la préparation en consultant les statuts des points de contrôle dans le processus d’ingestion.
 >
 >![La bulle de préparation à l’ingestion du profil est mise en surbrillance dans le tableau de bord de surveillance.](../assets/ui/monitor-profiles/profile-ingestion-readiness-monitoring.png){zoomable="yes" width="800"}
 >
->Si le flux de données présente l’état **[!UICONTROL Success]** pour l’un des points de contrôle, vous pouvez procéder à l’utilisation des données dans le service correspondant.
+>Si le flux de données présente l’état **[!UICONTROL Succès]** pour l’un des points de contrôle, vous pouvez procéder à l’utilisation des données dans le service correspondant.
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Dataflow run start]** | Heure à laquelle l’exécution du flux de données a démarré en UTC. |
-| **[!UICONTROL Data type]** | Type de données reçu par le flux de données. |
-| **[!UICONTROL Records received]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Records failed]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
-| **[!UICONTROL Profile fragments created]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
-| **[!UICONTROL Profile fragments updated]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
-| **[!UICONTROL Total profile fragments]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
-| **[!UICONTROL Processing time]** | Temps nécessaire à l’exécution du flux de données pour le traitement. |
-| **[!UICONTROL Status]** | Statut de l’exécution du flux de données. Valeurs possibles :<ul><li>[!UICONTROL Success] : le flux de données s’est exécuté correctement.</li><li>[!UICONTROL Failed] : le flux de données a échoué.</li><li>[!UICONTROL Queued] : le flux de données a été lancé et attend d’être traité.</li><li>[!UICONTROL Processing] : le flux de données est en cours de traitement. </li></ul> |
-| **[!UICONTROL Ready for customer segmentation]** | Un statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la segmentation client. Les valeurs possibles sont [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la segmentation de la clientèle. |
-| **[!UICONTROL Ready for lookup]** | Statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la recherche de profil.  Les valeurs possibles sont [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la recherche de profils. |
+| **[!UICONTROL Démarrage de l’exécution du flux de données]** | Heure à laquelle l’exécution du flux de données a démarré en UTC. |
+| **[!UICONTROL Type de données]** | Type de données reçu par le flux de données. |
+| **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Fragments de profil créés]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
+| **[!UICONTROL Fragments de profil mis à jour]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
+| **[!UICONTROL Nombre total de fragments de profil]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
+| **[!UICONTROL Temps de traitement]** | Temps nécessaire à l’exécution du flux de données pour le traitement. |
+| **[!UICONTROL Statut]** | Statut de l’exécution du flux de données. Valeurs possibles :<ul><li>[!UICONTROL Succès] : le flux de données s’est exécuté correctement.</li><li>[!UICONTROL Échec] : le flux de données a échoué.</li><li>[!UICONTROL En file d’attente] : le flux de données a été lancé et est en attente de traitement.</li><li>[!UICONTROL Traitement] : le flux de données est en cours de traitement. </li></ul> |
+| **[!UICONTROL Prêt pour la segmentation client]** | Un statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la segmentation client. Les valeurs possibles sont les suivantes : [!UICONTROL Oui], [!UICONTROL Échec], [!UICONTROL En file d’attente] et [!UICONTROL Traitement]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la segmentation de la clientèle. |
+| **[!UICONTROL Prêt pour la recherche]** | Statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la recherche de profil.  Les valeurs possibles sont les suivantes : [!UICONTROL Oui], [!UICONTROL Échec], [!UICONTROL En file d’attente] et [!UICONTROL Traitement]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la recherche de profils. |
 
-La page [!UICONTROL Dataflow run details] affiche plus d’informations sur votre exécution de flux de données [!DNL Profile], y compris son identifiant d’organisation et son identifiant d’exécution de flux de données. Cette page affiche également le code d’erreur et le message d’erreur correspondants fournis par [!DNL Profile] en cas d’erreur dans le processus d’ingestion.
+La page [!UICONTROL Détails de l’exécution du flux de données] affiche plus d’informations sur votre exécution de flux de données [!DNL Profile], y compris son identifiant d’organisation et son identifiant d’exécution de flux de données. Cette page affiche également le code d’erreur et le message d’erreur correspondants fournis par [!DNL Profile] en cas d’erreur dans le processus d’ingestion.
 
 ![Un tableau de bord présentant des informations détaillées sur le flux de données sélectionné s’affiche.](../assets/ui/monitor-profiles/dataflow-run-details.png)
 
@@ -130,15 +127,15 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 | Mesure | Description |
 | -------| ----------- |
-| **[!UICONTROL Records received]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Records failed]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
-| **[!UICONTROL Profile fragments created]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
-| **[!UICONTROL Profile fragments updated]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
-| **[!UICONTROL Status]** | Définit le statut global d’un flux de données. Les valeurs de statut possibles sont les suivantes : <ul><li>`Success` : indique qu’un flux de données est actif et ingère des données en fonction du planning qui lui a été fourni.</li><li>`Failed` : indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing` : indique que le flux de données n’est pas encore actif. Ce statut se rencontre souvent immédiatement après la création d’un nouveau flux de données.</li><li>`Queued` : indique que le flux de données n’est pas encore actif et qu’il est en attente de traitement.</li></ul> |
-| **[!UICONTROL Dataflow run start]** | Date et heure auxquelles le flux de données a commencé à s’exécuter. |
-| **[!UICONTROL Last updated]** | Date et heure de la dernière mise à jour du flux de données. |
-| **[!UICONTROL Error summary]** | Si l’exécution du flux de données a échoué, un code d’erreur et un résumé des raisons de l’échec de l’exécution du flux de données s’affichent. |
-| **[!UICONTROL Dataflow run ID]** | Identifiant de l’exécution du flux de données. |
-| **[!UICONTROL IMS org ID]** | Identifiant d’organisation auquel appartient l’exécution du flux de données. |
+| **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
+| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Fragments de profil créés]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
+| **[!UICONTROL Fragments de profil mis à jour]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
+| **[!UICONTROL Statut]** | Définit le statut global d’un flux de données. Les valeurs de statut possibles sont les suivantes : <ul><li>`Success` : indique qu’un flux de données est actif et ingère des données en fonction du planning qui lui a été fourni.</li><li>`Failed` : indique que le processus d’activation d’un flux de données a été interrompu en raison d’erreurs. </li><li>`Processing` : indique que le flux de données n’est pas encore actif. Ce statut se rencontre souvent immédiatement après la création d’un nouveau flux de données.</li><li>`Queued` : indique que le flux de données n’est pas encore actif et qu’il est en attente de traitement.</li></ul> |
+| **[!UICONTROL Démarrage de l’exécution du flux de données]** | Date et heure auxquelles le flux de données a commencé à s’exécuter. |
+| **[!UICONTROL Dernière mise à jour]** | Date et heure de la dernière mise à jour du flux de données. |
+| **[!UICONTROL Résumé des erreurs]** | Si l’exécution du flux de données a échoué, un code d’erreur et un résumé des raisons de l’échec de l’exécution du flux de données s’affichent. |
+| **[!UICONTROL ID d’exécution du flux de données]** | Identifiant de l’exécution du flux de données. |
+| **[!UICONTROL ID d’organisation IMS]** | Identifiant d’organisation auquel appartient l’exécution du flux de données. |
 
 De plus, vous pouvez sélectionner le bouton (bascule) pour afficher les enregistrements ayant échoué ou les enregistrements ayant été ignorés. La section Erreurs comprend des détails sur le code d’erreur et le nombre d’enregistrements ayant échoué ou exclus.

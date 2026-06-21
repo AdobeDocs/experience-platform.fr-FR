@@ -4,10 +4,8 @@ description: Découvrez comment diffuser des données de Braze Currents vers Exp
 badge: Beta
 exl-id: dd304e10-26e5-4586-ab39-8fe3294b19c9
 TQID: https://experienceleague.adobe.com/eHgj1J2Q5SlB6w7GuOu35AJ00fo6341zMRCmU2yW9u8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 389
@@ -31,7 +29,7 @@ Experience Platform prend en charge l’ingestion de données à partir d’appl
 
 Pour suivre les étapes de ce guide, vous devez :
 
-* Une connexion à [&#128279;](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
+* Une connexion à [](https://platform.adobe.com) et l’autorisation de créer une connexion source en continu.
 * Une connexion à votre [[!DNL Braze] tableau de bord](https://dashboard.braze.com/sign_in), une [licence actuelle du connecteur](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents) inutilisée et des autorisations pour créer un connecteur. Pour plus d’informations, consultez la [configuration requise [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ### Collecter les informations d’identification requises

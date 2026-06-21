@@ -6,19 +6,14 @@ seo-title: Configure Experience Platform Debugger
 title: Configurer Experience Platform Debugger
 exl-id: ddc90b52-56d4-4efc-aad7-5a2c430e7dfe
 TQID: https://experienceleague.adobe.com/QZ-uOsZzlt-Z99n1ipolPoORg3XAqohft3g53br8G0Y
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 156
-ht-degree: 64%
+source-wordcount: 163
+ht-degree: 47%
 
 ---
 
@@ -30,15 +25,15 @@ Vous pouvez configurer certains aspects de l’apparence et du fonctionnement d�
 
 ## Mode clair ou foncé
 
-Une fois Experience Platform Debugger ouvert, vous pouvez sélectionner l’apparence souhaitée en accédant à **[!UICONTROL Settings]** et en sélectionnant **Mode sombre** (par défaut) ou **Mode clair**.
+Une fois Experience Platform Debugger ouvert, vous pouvez sélectionner l’apparence souhaitée en accédant à **[!UICONTROL Paramètres]** et en sélectionnant **Mode sombre** (par défaut) ou **Mode clair**.
 
 ## Réinitialiser
 
-Sélectionnez **[!UICONTROL Reset all Data and Settings]** pour revenir à effacer toutes les données et revenir aux paramètres par défaut.
+Sélectionnez **[!UICONTROL Réinitialiser toutes les données et tous les paramètres]** pour revenir à l’effacement de toutes les données et aux paramètres par défaut.
 
 ## Verrouiller Experience Platform Debugger sur une page
 
-Lorsque vous modifiez une page de votre site, la fenêtre d&#39;Experience Platform Debugger se met à jour pour afficher les informations relatives à cette page. Le nom de la page à laquelle vous êtes connecté s’affiche au bas de l’écran. Pour qu’Experience Platform Debugger reste verrouillé sur une page, sélectionnez **[!UICONTROL Lock]** dans le coin inférieur droit de la fenêtre Experience Platform Debugger .
+Lorsque vous modifiez une page de votre site, la fenêtre d&#39;Experience Platform Debugger se met à jour pour afficher les informations relatives à cette page. Le nom de la page à laquelle vous êtes connecté s’affiche au bas de l’écran. Pour conserver Experience Platform Debugger verrouillé sur une page, sélectionnez **[!UICONTROL Verrouiller]** dans le coin inférieur droit de la fenêtre Experience Platform Debugger.
 
 ![](images/lock.jpg)
 

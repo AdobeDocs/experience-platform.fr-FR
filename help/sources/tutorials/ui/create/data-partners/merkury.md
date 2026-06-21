@@ -3,18 +3,14 @@ title: Créer une connexion Source et un flux de données de résolution d’ide
 description: Découvrez comment créer une connexion source Merkury Enterprise Identity Resolution à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
 TQID: https://experienceleague.adobe.com/WD8iO3EfT1bFZlM2oCXcNVYa-z34rdRgBFu-0Eitvf4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2078
-ht-degree: 16%
+source-wordcount: 2149
+ht-degree: 18%
 
 ---
 
@@ -45,25 +41,25 @@ Pour plus d’informations sur la configuration d’[!DNL Merkury] et d’autres
 
 ## Connecter votre compte Merkury
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie **[!UICONTROL Data partners]** , sélectionnez **[!UICONTROL Merkury]** puis **[!UICONTROL Set up]**.
+Dans la catégorie **[!UICONTROL Partenaires de données]**, sélectionnez **[!UICONTROL Merkury]** puis **[!UICONTROL Configurer]**.
 
 ![Le catalogue des sources avec la source Merkury sélectionnée.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/catalog.png)
 
-La page **[!UICONTROL Connect to Merkury]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connexion à Merkury]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Créer un nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL New account]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Merkury]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Merkury]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![La nouvelle interface de compte pour Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-account.png)
 
 ### Utiliser un compte existant
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte [!DNL Merkury] que vous souhaitez utiliser. Sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL Merkury] que vous souhaitez utiliser. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Interface de compte existante pour Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-account.png)
 
@@ -82,7 +78,7 @@ Vous pouvez ingérer les formats de fichiers suivants avec la source [!DNL Merku
 
 ## Ajouter des données
 
-Une fois votre compte [!DNL Merkury] créé, l’étape **[!UICONTROL Add data]** s’affiche, vous permettant d’explorer la hiérarchie de vos fichiers [!DNL Merkury] et de sélectionner le dossier ou le fichier spécifique à importer dans Experience Platform.
+Une fois votre compte [!DNL Merkury] créé, l’étape **[!UICONTROL Ajouter des données]** s’affiche, vous permettant d’explorer la hiérarchie de vos fichiers [!DNL Merkury] et de sélectionner le dossier ou le fichier spécifique à importer dans Experience Platform.
 
 * La partie gauche de l’interface est un navigateur de répertoires qui affiche la hiérarchie de vos fichiers [!DNL Merkury].
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un dossier ou d’un fichier compatible.
@@ -96,23 +92,23 @@ Une fois que vous avez sélectionné un dossier, l’interface de droite se met 
 ![Les données sélectionnées pour l’ingestion et l’interface de prévisualisation de fichier.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/selected-data.png)
 
 
-Au cours de cette étape, vous pouvez effectuer plusieurs configurations sur vos données, avant de continuer. Tout d’abord, sélectionnez **[!UICONTROL Data format]**, puis sélectionnez le format de données approprié pour votre fichier dans le panneau déroulant qui s’affiche.
+Au cours de cette étape, vous pouvez effectuer plusieurs configurations sur vos données, avant de continuer. Sélectionnez tout d’abord **[!UICONTROL Format des données]**, puis sélectionnez le format de données approprié pour votre fichier dans le panneau déroulant qui s’affiche.
 
 Le tableau suivant affiche les formats de données appropriés pour les types de fichiers pris en charge :
 
 | Type de fichier | Format des données |
 | --- | --- |
-| CSV | [!UICONTROL Delimited] |
-| JSON | [!UICONTROL JSON] |
-| Parquet | [!UICONTROL XDM Parquet] |
+| CSV | [!UICONTROL Délimité] |
+| JSON | [!UICONTROL  JSON ] |
+| Parquet | [!UICONTROL Parquet XDM ] |
 
 ### Sélectionner un délimiteur de colonne
 
 +++Sélectionner pour afficher les étapes de définition d’un délimiteur
 
-Après avoir configuré le format des données, vous pouvez définir un délimiteur de colonne lors de l’ingestion de fichiers délimités. Sélectionnez l’option **[!UICONTROL Delimiter]** , puis sélectionnez un délimiteur dans le menu déroulant. Le menu affiche les options les plus utilisées pour les délimiteurs, y compris une virgule (`,`), un onglet (`\t`) et une barre verticale (`|`).
+Après avoir configuré le format des données, vous pouvez définir un délimiteur de colonne lors de l’ingestion de fichiers délimités. Sélectionnez l’option **[!UICONTROL Délimiteur]** puis sélectionnez un délimiteur dans le menu déroulant. Le menu affiche les options les plus utilisées pour les délimiteurs, y compris une virgule (`,`), un onglet (`\t`) et une barre verticale (`|`).
 
-Si vous préférez utiliser un délimiteur personnalisé, sélectionnez **[!UICONTROL Custom]** et saisissez un délimiteur à un seul caractère de votre choix dans la barre de saisie contextuelle.
+Si vous préférez utiliser un délimiteur personnalisé, sélectionnez **[!UICONTROL Personnalisé]** et saisissez un délimiteur à un seul caractère de votre choix dans la barre de saisie contextuelle.
 
 +++
 
@@ -122,27 +118,27 @@ Si vous préférez utiliser un délimiteur personnalisé, sélectionnez **[!UICO
 
 Vous pouvez également ingérer des fichiers délimités ou JSON compressés en spécifiant leur type de compression.
 
-À l’étape [!UICONTROL Select data], sélectionnez un fichier compressé à ingérer, puis sélectionnez son type de fichier approprié et indiquez s’il est compatible ou non avec XDM. Sélectionnez ensuite **[!UICONTROL Compression type]**, puis sélectionnez le type de fichier compressé approprié pour vos données source.
+À l’étape [!UICONTROL Sélectionner des données], sélectionnez un fichier compressé à ingérer, puis sélectionnez son type de fichier approprié et s’il est compatible ou non avec XDM. Sélectionnez ensuite **[!UICONTROL Type de compression]** puis sélectionnez le type de fichier compressé approprié pour vos données source.
 
 Pour importer un fichier spécifique dans Experience Platform, sélectionnez un dossier, puis sélectionnez le fichier à ingérer. Au cours de cette étape, vous pouvez également prévisualiser le contenu d’autres fichiers dans un dossier donné à l’aide de l’icône d’aperçu à côté d’un nom de fichier.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 +++
 
 ## Fournir des détails sur le flux de données
 
-La page [!UICONTROL Dataflow detail] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer vos données à ingérer dans le profil et activer des paramètres tels que [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion] et [!UICONTROL Alerts].
+La page [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer vos données à ingérer dans le profil et activer des paramètres tels que [!UICONTROL Diagnostics d’erreur], [!UICONTROL Ingestion partielle] et [!UICONTROL Alertes].
 
 ### Utiliser un jeu de données existant
 
-Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Existing dataset]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option [!UICONTROL Advanced search] , soit faire défiler la liste des jeux de données existants dans le menu déroulant. Une fois que vous avez sélectionné un jeu de données, indiquez un nom et une description pour votre flux de données.
+Pour ingérer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option [!UICONTROL Recherche avancée], soit faire défiler la liste des jeux de données existants dans le menu déroulant. Une fois que vous avez sélectionné un jeu de données, indiquez un nom et une description pour votre flux de données.
 
 ![Interface du jeu de données existant.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-dataset.png)
 
 ### Utiliser un nouveau jeu de données
 
-Pour effectuer une ingestion dans un nouveau jeu de données, sélectionnez **[!UICONTROL New dataset]**, puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Advanced search] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
+Pour effectuer une ingestion dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL  Recherche avancée ] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
 
 ![Nouvelle interface du jeu de données.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-dataset.png)
 
@@ -150,9 +146,9 @@ Pour effectuer une ingestion dans un nouveau jeu de données, sélectionnez **[!
 
 +++Sélectionner pour afficher les étapes permettant d’activer les diagnostics d’erreur et l’ingestion de profil
 
-Sélectionnez ensuite le bouton (bascule) **[!UICONTROL Profile dataset]** pour activer votre jeu de données pour le profil client en temps réel. Cela vous permet de créer une vue holistique des attributs et des comportements d’une entité. Les données de tous les jeux de données activés pour Profil seront incluses dans le profil et les modifications sont appliquées lorsque vous enregistrez votre flux de données.
+Sélectionnez ensuite le bouton (bascule) **[!UICONTROL Jeu de données de profil]** pour activer votre jeu de données pour le profil client en temps réel. Cela vous permet de créer une vue holistique des attributs et des comportements d’une entité. Les données de tous les jeux de données activés pour Profil seront incluses dans le profil et les modifications sont appliquées lorsque vous enregistrez votre flux de données.
 
-[!UICONTROL Error diagnostics] permet la génération de messages d’erreur détaillés pour tout enregistrement erroné survenant dans votre flux de données, tandis que [!UICONTROL Partial ingestion] vous permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous définissez manuellement. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partiels](../../../../../ingestion/batch-ingestion/partial.md).
+Le [!UICONTROL diagnostic d’erreur] permet de générer un message d’erreur détaillé pour tout enregistrement erroné survenant dans votre flux de données, tandis que le [!UICONTROL ingestion partielle] vous permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous définissez manuellement. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partiels](../../../../../ingestion/batch-ingestion/partial.md).
 
 +++
 
@@ -162,23 +158,23 @@ Sélectionnez ensuite le bouton (bascule) **[!UICONTROL Profile dataset]** pour 
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des sources dans l’interface utilisateur](../../alerts.md).
 
-Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
 
 +++
 
 ## Mappage des champs de données à un schéma XDM
 
-L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
+L’étape [!UICONTROL Mappage] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
-Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
+Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
 ![L’interface de mappage.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/mapping.png)
 
 ## Planifier des exécutions d’ingestion
 
-L’étape [!UICONTROL Scheduling] s’affiche, vous permettant de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour ajuster la fréquence d’ingestion, sélectionnez **[!UICONTROL Frequency]** puis une option dans le menu déroulant.
+L’étape [!UICONTROL Planification] s’affiche et vous permet de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour ajuster la fréquence d’ingestion, sélectionnez **[!UICONTROL Fréquence]** puis sélectionnez une option dans le menu déroulant.
 
 >[!TIP]
 >
@@ -203,17 +199,17 @@ Pour plus d’informations sur les configurations de planification, consultez le
 >
 >Pour l’ingestion par lots, chaque flux de données qui s’ensuit sélectionne les fichiers à ingérer à partir de votre source en fonction de la date et heure de leur **dernière modification**. Cela signifie que les flux de données par lot sélectionnent des fichiers de la source qui sont nouveaux ou qui ont été modifiés depuis la dernière exécution du flux. En outre, vous devez vous assurer qu’il existe un délai suffisant entre le chargement des fichiers et une exécution de flux planifiée, car les fichiers qui ne sont pas entièrement chargés sur votre compte d’espace de stockage cloud avant l’heure d’exécution de flux planifiée peuvent ne pas être sélectionnés pour l’ingestion.
 
-Une fois la configuration du planning d’ingestion terminée, sélectionnez **[!UICONTROL Next]**.
+Une fois la configuration du planning d’ingestion terminée, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Vérifier le flux de données
 
-L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connection]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
-* **[!UICONTROL Assign dataset & map fields]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
-* **[!UICONTROL Scheduling]** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
+* **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Planification]** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
 
-Une fois que vous avez révisé votre flux de données, cliquez sur **[!UICONTROL Finish]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez révisé votre flux de données, cliquez sur **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![Page de révision.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
 
@@ -231,4 +227,4 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ### Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]** disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).

@@ -3,32 +3,14 @@ title: Guide De Mise En Œuvre Des Règles De Liaison Des Graphiques D’Identit
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations des règles de liaison de graphique d’identités.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 TQID: https://experienceleague.adobe.com/5cfUeZAbB5do--V0Iz75Wj4NbAWVpNV-k1rA4Ve2zRQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1a87129-ba05-4f15-98b1-233618f1774aid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1953
+source-wordcount: 1965
 ht-degree: 6%
 
 ---
@@ -79,7 +61,7 @@ Avec un espace de noms unique (dans ce cas, un CRMID au lieu de deux espaces de 
 
 ### Configuration de la priorité des espaces de noms
 
-Si vous utilisez le [connecteur source &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
+Si vous utilisez le [connecteur source ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
 
 ### Événement d’expérience XDM {#xdm-experience-events}
 
@@ -118,7 +100,7 @@ Pendant votre processus de pré-implémentation, vous devez vous assurer que les
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/fr/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -157,7 +139,7 @@ Vous ne devez **pas** envoyer une payload comme ci-dessous :
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/fr/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -193,7 +175,7 @@ Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoy
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/fr/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -206,8 +188,8 @@ Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoy
 
 La première étape du processus de mise en œuvre d’Identity Service consiste à ajouter votre compte Experience Platform à un rôle doté des autorisations nécessaires. Votre administrateur peut configurer les autorisations de votre compte en accédant à l’interface utilisateur Autorisations dans Adobe Experience Cloud. À partir de là, votre compte doit être ajouté à un rôle avec les autorisations suivantes :
 
-* [!UICONTROL View Identity Settings] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
-* [!UICONTROL Edit Identity Settings] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
+* [!UICONTROL Afficher les paramètres d’identité] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
+* [!UICONTROL Modifier les paramètres d’identité] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
 
 Pour plus d’informations sur les autorisations, consultez le [guide des autorisations](../../access-control/abac/ui/permissions.md).
 
@@ -223,7 +205,7 @@ En créant différentes configurations, vous pouvez utiliser l’outil de simula
 
 ## Configurer les paramètres d’identité {#identity-settings}
 
-Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Settings]**.
+Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Paramètres]**.
 
 ![Page de navigation des identités avec le bouton des paramètres en surbrillance.](../images/implementation/settings.png "Page de navigation des identités avec le bouton des paramètres en surbrillance."){zoomable="yes"}
 
@@ -269,15 +251,15 @@ Une fois que vous disposez de tous les éléments répertoriés ci-dessus, vous 
 >
 >Une fois vos données ingérées, la payload de données brutes XDM ne change pas. Il se peut que vos configurations d’identité principale s’affichent toujours dans l’interface utilisateur. Toutefois, ces configurations seront remplacées par les paramètres d’identité.
 
-Pour tout commentaire, utilisez l’option **[!UICONTROL Beta feedback]** dans l’espace de travail de l’interface utilisateur d’Identity Service.
+Pour tout commentaire, utilisez l’option **[!UICONTROL Commentaires]** dans l’espace de travail de l’interface utilisateur d’Identity Service.
 
 ## Validation des graphiques {#validate}
 
 Utilisez le tableau de bord des identités pour obtenir des informations sur l’état de vos graphiques d’identités, tels que le nombre d’identités global et les tendances de nombre de graphiques, le nombre d’identités par espace de noms et le nombre de graphiques par taille de graphique. Vous pouvez également utiliser le tableau de bord des identités pour afficher les tendances sur les graphiques comportant plusieurs identités, organisées par espace de noms.
 
-Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL View more]** pour obtenir des informations supplémentaires et vérifier qu’il n’existe aucun graphique réduit.
+Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL Afficher plus]** pour obtenir plus d’informations et vérifier qu’il n’existe aucun graphique réduit.
 
-![&#x200B; Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
+![ Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
 
 Utilisez la fenêtre qui s’affiche pour afficher des informations sur les graphiques réduits. Dans cet exemple, e-mail et téléphone sont marqués comme espace de noms unique. Par conséquent, votre sandbox ne contient aucun graphique réduit.
 

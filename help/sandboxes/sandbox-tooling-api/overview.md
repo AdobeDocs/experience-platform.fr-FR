@@ -3,13 +3,8 @@ title: Guide de l’API pour l’outil Sandbox
 description: L’outil Sandbox de Adobe Experience Platform vous permet d’exporter et d’importer un instantané des configurations de sandbox entre des sandbox.
 exl-id: 4bcc095b-5db1-4824-8b7c-c2ea5a393b98
 TQID: https://experienceleague.adobe.com/8d-cc04rk3OD9MKJwPb6LZomp5oI13jEVkV9-E7VfkA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 250
@@ -25,11 +20,11 @@ Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque po
 
 ## Packages {#packages}
 
-Le point d’entrée des packages d’outils Sandbox vous permet de gérer les packages. Le package d’outils Sandbox est une collection de définitions d’artefact comprenant l’ID de package, le nom, la description, l’ID d’organisation et l’ID de créateur. Pour plus d’informations sur l’utilisation de packages dans l’API[&#128279;](./packages.md) consultez le  guide des points d’entrée de packages .
+Le point d’entrée des packages d’outils Sandbox vous permet de gérer les packages. Le package d’outils Sandbox est une collection de définitions d’artefact comprenant l’ID de package, le nom, la description, l’ID d’organisation et l’ID de créateur. Pour plus d’informations sur l’utilisation de packages dans l’API](./packages.md) consultez le [ guide des points d’entrée de packages .
 
 ## Outils {#tools}
 
-Le point d’entrée des outils de sandbox vous permet de récupérer indépendamment les données JSON de la tâche. Pour plus d’informations sur la récupération des données JSON de tâche dans l’API[&#128279;](./tools.md) consultez le  guide des points d’entrée des outils .
+Le point d’entrée des outils de sandbox vous permet de récupérer indépendamment les données JSON de la tâche. Pour plus d’informations sur la récupération des données JSON de tâche dans l’API](./tools.md) consultez le [ guide des points d’entrée des outils .
 
 ## Étapes suivantes {#next-steps}
 

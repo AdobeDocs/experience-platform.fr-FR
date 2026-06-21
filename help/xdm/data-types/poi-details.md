@@ -5,27 +5,25 @@ title: Type de données des détails du point ciblé
 description: Découvrez le type de données XDM des détails du point ciblé.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 TQID: https://experienceleague.adobe.com/lSWaSXrzoBhrytInM7ZP-geqfFuJAF9EKzIE-8ui9PY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 190
-ht-degree: 20%
+source-wordcount: 202
+ht-degree: 18%
 
 ---
 
-# Type de données [!UICONTROL Point of interest details]
+# [!UICONTROL Détails du point ciblé] type de données
 
-[!UICONTROL Point of interest details] est un type de données XDM standard qui décrit les données géographiques où un événement a été observé.
+[!UICONTROL Détails du point ciblé] est un type de données XDM standard qui décrit les données géographiques où un événement a été observé.
 
 ![](../images/data-types/poi-details.png){width=550}
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Décrit les détails de balise actifs pour l’interaction avec le point d’intérêt. |
-| `geoInteractionDetails` | [[!UICONTROL Geo interaction details]](./geo-interaction-details.md) | Décrit les détails géographiques actifs pour l’interaction avec le point d’intérêt. |
+| `beaconInteractionDetails` | [[!UICONTROL Balise]](./beacon.md) | Décrit les détails de balise actifs pour l’interaction avec le point d’intérêt. |
+| `geoInteractionDetails` | [[!UICONTROL Détails de l’interaction géographique]](./geo-interaction-details.md) | Décrit les détails géographiques actifs pour l’interaction avec le point d’intérêt. |
 | `category` | Chaîne | Catégorie générale affectée à l’organisation des points d’intérêt par l’administrateur des définitions de points d’intérêt. |
 | `distanceToPOICenter` | Double | Distance estimée par rapport au centre du point d’intérêt, en mètres. |
 | `locatingType` | Chaîne | Mécanisme utilisé pour déterminer l’emplacement. Les valeurs acceptées sont les suivantes : <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |

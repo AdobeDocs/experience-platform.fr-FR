@@ -3,20 +3,12 @@ title: Récupérer des enregistrements similaires avec des fonctions d’ordre s
 description: Découvrez comment identifier et récupérer des enregistrements similaires ou associés à partir d’un ou de plusieurs jeux de données en fonction d’une mesure de similarité et d’un seuil de similarité. Ce workflow peut mettre en évidence des relations significatives ou des chevauchements entre des jeux de données disparates.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
 TQID: https://experienceleague.adobe.com/cYKXvBTZc1S6QFhn6WKtogk-mNiDUQ8oxIjt6masJgw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 4361
+source-wordcount: 4285
 ht-degree: 3%
 
 ---
@@ -38,7 +30,7 @@ Avant de poursuivre avec ce document, vous devez connaître les concepts suivant
    - **Seuil** : un seuil de similarité est utilisé pour déterminer à quel moment les deux enregistrements sont considérés comme suffisamment similaires pour être inclus dans le résultat de la jointure. Les enregistrements avec un score de similarité supérieur au seuil sont considérés comme des correspondances.
 - L’index **similarité de Jaccard**, ou mesure de similarité de Jaccard, est une statistique utilisée pour évaluer la similarité et la diversité des ensembles d’échantillons. Il est défini comme la taille de l’intersection divisée par la taille de l’union des ensembles d’échantillons. La mesure de similarité de Jaccard va de zéro à un. Une similarité Jaccard égale à zéro indique qu’il n’y a aucune similarité entre les visionneuses, et une similarité Jaccard égale à un indique que les visionneuses sont identiques.
   ![Diagramme de Venn illustrant la mesure de similarité de Jaccard.](../images/use-cases/jaccard-similarity.png)
-- **Les fonctions d’ordre supérieur** dans la Distiller de données sont des outils dynamiques intégrés qui traitent et transforment les données directement dans les instructions SQL. Ces fonctions polyvalentes éliminent la nécessité de plusieurs étapes dans la manipulation des données, en particulier lorsque [&#x200B; traitez des types complexes tels que les tableaux et les mappages](../sql/higher-order-functions.md). En améliorant l’efficacité des requêtes et en simplifiant les transformations, les fonctions d’ordre supérieur contribuent à des analyses plus agiles et à une meilleure prise de décision dans divers scénarios commerciaux.
+- **Les fonctions d’ordre supérieur** dans la Distiller de données sont des outils dynamiques intégrés qui traitent et transforment les données directement dans les instructions SQL. Ces fonctions polyvalentes éliminent la nécessité de plusieurs étapes dans la manipulation des données, en particulier lorsque [ traitez des types complexes tels que les tableaux et les mappages](../sql/higher-order-functions.md). En améliorant l’efficacité des requêtes et en simplifiant les transformations, les fonctions d’ordre supérieur contribuent à des analyses plus agiles et à une meilleure prise de décision dans divers scénarios commerciaux.
 
 ## Prise en main
 
@@ -435,7 +427,7 @@ La sortie est une liste de sous-chaînes de trois caractères de longueur, extra
 
 ## Filtrer les résultats {#filter-results}
 
-La fonction `filter`, avec les transformations de données [&#x200B; suivantes](#data-transformation), permet une extraction plus affinée et plus précise des informations pertinentes des données de texte. Vous pouvez ainsi obtenir des informations, améliorer la qualité des données et faciliter de meilleurs processus de prise de décision.
+La fonction `filter`, avec les transformations de données [ suivantes](#data-transformation), permet une extraction plus affinée et plus précise des informations pertinentes des données de texte. Vous pouvez ainsi obtenir des informations, améliorer la qualité des données et faciliter de meilleurs processus de prise de décision.
 
 La fonction `filter` de l’instruction SQL suivante permet d’affiner et de limiter la séquence de positions dans la chaîne à partir de laquelle les sous-chaînes sont extraites à l’aide de la fonction de transformation suivante.
 

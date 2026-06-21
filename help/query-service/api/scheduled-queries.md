@@ -6,10 +6,8 @@ description: Les sections suivantes décrivent les différents appels API que vo
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 TQID: https://experienceleague.adobe.com/h2IwzihCHWZhZ9I78SbmBoZ3Se72-aXzHWqhlDZkJ18
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 1501
@@ -40,7 +38,7 @@ Les requêtes créées avec un compte d’utilisateur personnel échouent si l�
 >- Les requêtes planifiées échouent si le compte utilisé pour créer le planning perd l’accès ou les autorisations.
 >- Vous devez désactiver une requête planifiée avant de la supprimer via l’API ou l’interface utilisateur.
 
-Pour obtenir des conseils détaillés sur les exigences du compte, la configuration des autorisations et la gestion des requêtes planifiées, consultez la documentation [Plannings de requête](../ui/query-schedules.md#technical-account-user-requirements). Pour obtenir des instructions détaillées sur la création et la configuration d’un compte technique, reportez-vous aux sections [Configuration de &#x200B;](https://experienceleague.adobe.com/fr/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) et [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Pour obtenir des conseils détaillés sur les exigences du compte, la configuration des autorisations et la gestion des requêtes planifiées, consultez la documentation [Plannings de requête](../ui/query-schedules.md#technical-account-user-requirements). Pour obtenir des instructions détaillées sur la création et la configuration d’un compte technique, reportez-vous aux sections [Configuration de ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) et [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Exemples d’appels API
 

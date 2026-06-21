@@ -4,22 +4,14 @@ type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 TQID: https://experienceleague.adobe.com/myJdR28L35Jy-ovdkeg1j-wHZJ40FvGGyjsw0-GGcVU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 822
+source-wordcount: 866
 ht-degree: 11%
 
 ---
@@ -28,9 +20,9 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-## Vue d’ensemble d’[!UICONTROL Export file now] {#overview}
+## Vue d&#39;ensemble de l’[!UICONTROL export de fichier maintenant] {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
@@ -39,7 +31,7 @@ ht-degree: 11%
 
 Cet article explique comment utiliser l’interface utilisateur d’Experience Platform pour exporter des fichiers à la demande vers des destinations par lots telles que [espace de stockage dans le cloud](/help/destinations/catalog/cloud-storage/overview.md) et [marketing par e-mail](/help/destinations/catalog/email-marketing/overview.md).
 
-Utilisez le contrôle **[!UICONTROL Export file now]** pour exporter un fichier complet sans interrompre le planning d’exportation actuel d’une audience précédemment planifiée. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation de l’audience.
+Utilisez le contrôle **[!UICONTROL Exporter le fichier maintenant]** pour exporter un fichier complet sans interrompre le planning d’exportation actuel d’une audience précédemment planifiée. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation de l’audience.
 
 L’exportation du fichier est déclenchée immédiatement et utilise uniquement les données de l’instantané d’évaluation d’audience le plus récent. Elle n’inclut pas les modifications de profil ou d’identité qui se produisent après la création d’instantanés. En revanche, les exportations planifiées incluent à la fois les données d’instantané et les modifications incrémentielles qui se produisent entre la création de l’instantané et l’heure d’exportation.
 
@@ -66,7 +58,7 @@ Pour exporter des fichiers à la demande vers des destinations par lots, vous de
 
 ## Exporter des fichiers à la demande {#how-to-export-files-on-demand}
 
-1. Dans **[!UICONTROL Connections > Destinations]**, sélectionnez l’onglet **[!UICONTROL Browse]** et le symbole de filtre pour afficher les connexions existantes aux destinations par lots de votre choix.
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, sélectionnez l’onglet **[!UICONTROL Parcourir]** et le symbole de filtre pour afficher les connexions existantes aux destinations par lots de votre choix.
 
    ![Image mettant en surbrillance comment accéder à l’onglet de navigation et filtrer les flux de données existants.](../assets/ui/activate-on-demand/browse-tab.png)
 
@@ -74,11 +66,11 @@ Pour exporter des fichiers à la demande vers des destinations par lots, vous de
 
    ![Image mettant en surbrillance un flux de données filtré.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Sélectionnez l’onglet **[!UICONTROL Activation data]** , sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande, puis sélectionnez le contrôle **[!UICONTROL Export file now]** pour déclencher une exportation unique qui diffusera un fichier pour chaque audience sélectionnée vers votre destination par lots.
+3. Sélectionnez l’onglet **[!UICONTROL Données d’activation]**, sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande et sélectionnez le contrôle **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier pour chaque audience sélectionnée vers votre destination par lots.
 
    ![Image mettant en surbrillance le bouton Exporter le fichier maintenant.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
-4. Sélectionnez **[!UICONTROL Yes]** pour confirmer et déclencher l’exportation du fichier.
+4. Sélectionnez **[!UICONTROL Oui]** pour confirmer et déclencher l’exportation du fichier.
 
    ![Image illustrant la boîte de dialogue de confirmation Exporter le fichier maintenant.](../assets/ui/activate-on-demand/confirm-activation.png)
 
@@ -86,20 +78,20 @@ Pour exporter des fichiers à la demande vers des destinations par lots, vous de
 
    ![Image montrant la confirmation de la réussite de l’activation ad hoc.](../assets/ui/activate-on-demand/ad-hoc-success.png)
 
-6. Vous pouvez également passer à l’onglet **[!UICONTROL Dataflow runs]** pour confirmer que l’exportation du fichier a démarré.
+6. Vous pouvez également passer à l’onglet **[!UICONTROL Exécutions de flux de données]** pour confirmer que l’exportation du fichier a démarré.
 
 ## Considérations {#considerations}
 
-Gardez à l’esprit les points suivants lors de l’utilisation du contrôle **[!UICONTROL Export file now]** :
+Gardez à l’esprit les points suivants lors de l’utilisation du contrôle **[!UICONTROL Exporter le fichier maintenant]** :
 
-* **[!UICONTROL Export file now]** fonctionne uniquement pour les audiences dont le planning du flux de données d’activation par lots chevauche la date actuelle. Cela inclut les audiences avec des plannings qui n’ont pas de date de fin (fréquence d’exportation de **[!UICONTROL Once]**) ou pour lesquelles la date de fin n’est pas encore passée.
-* Lors de l’ajout d’une audience à un flux de données existant, attendez au moins **une heure** avant d’utiliser le contrôle **[!UICONTROL Export file now]**.
-* Si vous modifiez la politique de fusion d’une audience ou si vous créez une audience qui utilise une nouvelle politique de fusion, attendez 24 heures avant d’utiliser le contrôle de **[!UICONTROL Export file now]**.
-* **[!UICONTROL Export file now]** utilise uniquement les données des exportations d’instantanés planifiées. Il ne récupère pas les données des traitements d’exportation déclenchés par l’API. Pour exporter les dernières données après une tâche d’exportation déclenchée par une API, attendez que la prochaine exportation planifiée s’exécute.
+* Le **[!UICONTROL Exporter le fichier maintenant]** fonctionne uniquement pour les audiences dont le planning du flux de données d’activation par lots chevauche la date actuelle. Cela inclut les audiences avec des plannings qui n’ont pas de date de fin (fréquence d’exportation de **[!UICONTROL Une fois]**) ou pour lesquelles la date de fin n’est pas encore passée.
+* Lors de l’ajout d’une audience à un flux de données existant, attendez au moins **une heure** avant d’utiliser le contrôle **[!UICONTROL Exporter le fichier maintenant]**.
+* Si vous modifiez la politique de fusion d’une audience ou si vous créez une audience qui utilise une nouvelle politique de fusion, attendez 24 heures avant d’utiliser le contrôle **[!UICONTROL Exporter le fichier maintenant]**.
+* **[!UICONTROL Exporter le fichier maintenant]** utilise uniquement les données des exportations d’instantanés planifiées. Il ne récupère pas les données des traitements d’exportation déclenchés par l’API. Pour exporter les dernières données après une tâche d’exportation déclenchée par une API, attendez que la prochaine exportation planifiée s’exécute.
 
 ## Messages d’erreur de l’interface utilisateur {#ui-error-messages}
 
-Lors de l’utilisation du contrôle **[!UICONTROL Export file now]**, vous pouvez rencontrer l’un des messages d’erreur répertoriés ci-dessous. Consultez le tableau pour comprendre comment y remédier lorsqu’ils apparaissent.
+Lors de l’utilisation du contrôle **[!UICONTROL Exporter le fichier maintenant]**, vous pouvez rencontrer l’un des messages d’erreur répertoriés ci-dessous. Consultez le tableau pour comprendre comment y remédier lorsqu’ils apparaissent.
 
 | Message d’erreur | Résolution |
 |---------|----------|

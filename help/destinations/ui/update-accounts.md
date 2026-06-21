@@ -5,14 +5,11 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les comptes de destination dans l’interface utilisateur de Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 TQID: https://experienceleague.adobe.com/B-bSqB84ntetfYZlODDhcf8yDTKK5zeeYKV1HFzu98g
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 486
+source-wordcount: 500
 ht-degree: 8%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 8%
 
 ## Vue d’ensemble {#overview}
 
-L’onglet **[!UICONTROL Accounts]** affiche des détails sur les connexions que vous avez établies avec diverses destinations. Consultez la [&#x200B; Présentation des comptes &#x200B;](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles pour chaque compte de destination.
+L’onglet **[!UICONTROL Comptes]** affiche des détails sur les connexions que vous avez établies avec diverses destinations. Consultez la [ Présentation des comptes ](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles pour chaque compte de destination.
 
 Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails du compte de destination à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -35,7 +32,7 @@ Pour les destinations par lots, vous pouvez mettre à jour l’accès ou la clé
 
 Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers des destinations existantes.
 
-1. Accédez à l’[interface utilisateur d’](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Accounts]** dans l’en-tête supérieur pour afficher vos comptes existants.
+1. Accédez à l’[interface utilisateur d’](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher vos comptes existants.
 
    ![Onglet Comptes](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -43,13 +40,13 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
    ![Filtrer les comptes de destination](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous prévoyez de mettre à jour. Un panneau pop-up s’affiche, fournissant des options pour **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** et **[!UICONTROL Delete]** le compte. Sélectionnez le bouton ![Modifier les détails](/help/images/icons/edit.png) **[!UICONTROL Edit details]** pour modifier les informations du compte.
+3. Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous prévoyez de mettre à jour. Un panneau pop-up s’affiche, fournissant des options pour **[!UICONTROL Activer les audiences]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]** le compte. Sélectionnez le bouton ![Modifier les détails](/help/images/icons/edit.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
 
    ![Modifier le compte](../assets/ui/update-accounts/accounts-edit.png)
 
 4. Saisissez les informations d’identification de votre compte mis à jour.
 
-   * Pour les comptes qui utilisent un type de connexion `OAuth1` ou `OAuth2`, sélectionnez **[!UICONTROL Reconnect OAuth]** pour renouveler les informations d’identification de votre compte. Vous pouvez également mettre à jour le nom et la description de votre compte .
+   * Pour les comptes qui utilisent un type de connexion `OAuth1` ou `OAuth2`, sélectionnez **[!UICONTROL Reconnecter OAuth]** pour renouveler les informations d’identification de votre compte. Vous pouvez également mettre à jour le nom et la description de votre compte .
 
    ![Modifier les détails OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
 
@@ -65,7 +62,7 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
    ![Modifier les détails de serveur à serveur](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. Sélectionnez **[!UICONTROL Save]** pour terminer la mise à jour des détails du compte.
+5. Sélectionnez **[!UICONTROL Enregistrer]** pour terminer la mise à jour des détails du compte.
 
 ## Étapes suivantes {#next-steps}
 

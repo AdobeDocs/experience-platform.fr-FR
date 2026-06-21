@@ -7,21 +7,14 @@ topic-legacy: Getting started
 description: Apprenez-en plus sur les événements, les entrées et les sorties requis utilisés par l’IA dédiée aux clientes et clients.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 TQID: https://experienceleague.adobe.com/xgMO3T3fcu7ff-46cYQW3zmV9ZMmTiW9fSGnksvudLY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2581
-ht-degree: 91%
+source-wordcount: 2594
+ht-degree: 90%
 
 ---
 
@@ -102,29 +95,29 @@ Les événements d’expérience sont utilisés pour déterminer divers comporte
 
 L’IA dédiée aux clientes et clients utilise par défaut les événements de ces quatre groupes de champs standards : Commerce, Web, Application et Recherche. Il n’est pas nécessaire d’avoir des données pour chaque événement dans les groupes de champs standards répertoriés ci-dessous, mais certains événements sont requis pour certains scénarios. Si des événements sont disponibles dans les groupes de champs standards, il est recommandé de les inclure dans votre schéma. Par exemple, si vous souhaitez créer un modèle d’IA dédiée aux clientes et clients pour prédire les événements d’achat, il est utile de disposer de données provenant des groupes de champs des détails des pages Commerce et Web.
 
-Pour afficher un groupe de champs dans l’interface utilisateur d’Experience Platform, sélectionnez l’onglet **[!UICONTROL Schemas]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Field groups]** .
+Pour afficher un groupe de champs dans l’interface utilisateur d’Experience Platform, sélectionnez l’onglet **[!UICONTROL Schémas]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Groupes de champs]**.
 
 | Groupe de champs | Type d’événement | Chemin d’accès au champ XDM |
 | --- | --- | --- |
-| [!UICONTROL Commerce Details] | commande | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Détails Commerce] | order | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | checkouts | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | purchases | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Détails Web] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
-| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+| [!UICONTROL Détails de l’application] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashes | <li> `application.crashes.value` </li> <li> `application.name` </li> |
 |  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
 |  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Search Details] | search | `search.keywords` |
+| [!UICONTROL Rechercher détails] | search | `search.keywords` |
 
-En outre, l’IA dédiée aux clientes et clients peut utiliser les données d’abonnement pour créer de meilleurs modèles d’attrition. Les données d’abonnement sont nécessaires pour chaque profil utilisant le format de type de données [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md). La plupart des champs sont facultatifs, cependant, pour un modèle d’attrition optimal, il est vivement recommandé de fournir des données pour autant de champs que possible, par exemple, `startDate`, `endDate`, ainsi que tout autre détail pertinent. Contactez l’équipe de votre compte pour obtenir une prise en charge supplémentaire de cette fonctionnalité.
+En outre, l’IA dédiée aux clientes et clients peut utiliser les données d’abonnement pour créer de meilleurs modèles d’attrition. Les données d’abonnement sont nécessaires pour chaque profil utilisant le format de type de données [[!UICONTROL Abonnement]](../../xdm/data-types/subscription.md). La plupart des champs sont facultatifs, cependant, pour un modèle d’attrition optimal, il est vivement recommandé de fournir des données pour autant de champs que possible, par exemple, `startDate`, `endDate`, ainsi que tout autre détail pertinent. Contactez l’équipe de votre compte pour obtenir une prise en charge supplémentaire de cette fonctionnalité.
 
 ### Ajouter des événements personnalisés et des attributs de profil {#add-custom-events}
 

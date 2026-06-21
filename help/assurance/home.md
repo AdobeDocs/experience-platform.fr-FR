@@ -3,24 +3,11 @@ title: Vue d’ensemble d’Adobe Experience Platform Assurance
 description: Adobe Experience Platform permet de contrôler, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont accomplies dans vos applications mobiles.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
 TQID: https://experienceleague.adobe.com/bxwsI4VYuDMsRRG8jEYcZyB-nvl5qYxVm0CbHgBis3o
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: e0c8953a-a203-4291-bef3-3560160d3041
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: e0c8953a-a203-4291-bef3-3560160d3041
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 858
@@ -30,11 +17,11 @@ ht-degree: 6%
 
 # Assurance d’Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) qui vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont diffusées dans votre application mobile.
+Adobe Experience Platform Assurance est un produit d’[Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) qui vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont diffusées dans votre application mobile.
 
 >[!IMPORTANT]
 >
-> Le projet Griffon est désormais connu sous le nom d’**&#x200B;** !
+> Le projet Griffon est désormais connu sous le nom d’**** !
 >
 > Le projet Griffon est désormais disponible pour **tous** les clients Adobe Experience Cloud sous la forme d’Assurance. Pour en savoir plus sur cette transition, veuillez lire le [guide d’accès utilisateur](./user-access.md).
 
@@ -46,7 +33,7 @@ Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](h
 
 ## Disponibilité générale
 
-À compter du 15 octobre 2022, Assurance sera généralement disponible pour tous les Adobe Experience Cloud.
+À compter du 15 octobre 2022, Assurance sera disponible pour tous les utilisateurs d’Adobe Experience Cloud.
 
 ### Qu&#39;est-ce qui change ?
 
@@ -101,7 +88,7 @@ La vue Location Services est une vue sur l’appareil qui affiche les événemen
 Assurance a mis en place les mesures de sécurité suivantes :
 
 * Assurance et l’interface utilisateur web d’Assurance disposent toutes deux d’une liaison sécurisée basée sur le code confidentiel pour une connexion. L’utilisateur doit explicitement créer une liaison, ce qui empêche la création « accidentelle » de connexions Assurance par un utilisateur final.
-* Seules les connexions entre Assurance et l’interface utilisateur web d’Assurance appartenant au même ID d’organisation Adobe Experience Cloud sont prises en charge.
+* Seules les connexions entre Assurance et l’interface utilisateur web d’Assurance appartenant au même identifiant d’organisation Adobe Experience Cloud sont prises en charge.
 * Les événements des SDK mobiles Adobe Experience Platform sont transmis par HTTPS.
 * Les SDK Assurance et Adobe Experience Platform Mobile utilisent TLS 1.2
 * Les sessions Assurance sont supprimées après 30 jours.
@@ -111,4 +98,4 @@ Assurance a mis en place les mesures de sécurité suivantes :
 
 Pour configurer Assurance, vous devez d’abord installer l’extension Assurance dans votre application. Pour savoir comment procéder, consultez le tutoriel sur [l’implémentation de l’extension Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-Après avoir ajouté Assurance à votre application, vous pouvez créer une session Assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, consultez le guide [&#x200B; sur l’utilisation d’Assurance](./tutorials/using-assurance.md).
+Après avoir ajouté Assurance à votre application, vous pouvez créer une session Assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, consultez le guide [ sur l’utilisation d’Assurance](./tutorials/using-assurance.md).

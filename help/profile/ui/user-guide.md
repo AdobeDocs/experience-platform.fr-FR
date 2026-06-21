@@ -4,25 +4,15 @@ title: Guide de l’interface utilisateur du profil client en temps réel
 description: Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec le profil client en temps réel dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 TQID: https://experienceleague.adobe.com/b9odWss-7RSBhizpqXf5OmoId9XZhVdml2Rau3yO8Ic
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2196
-ht-degree: 5%
+source-wordcount: 2286
+ht-degree: 4%
 
 ---
 
@@ -34,17 +24,17 @@ ht-degree: 5%
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différents services de [!DNL Experience Platform] impliqués dans la gestion des [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-Time Customer Profile] présentation &#x200B;](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Real-Time Customer Profile] présentation ](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Identity Service]](../../identity-service/home.md) : permet l’[!DNL Real-Time Customer Profile] en établissant un lien entre les identités de sources de données disparates lors de leur ingestion dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
-## [!UICONTROL Overview]
+## [!UICONTROL Vue d’ensemble]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profiles]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Overview]** affichant le tableau de bord des profils.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Présentation]** qui affiche le tableau de bord des profils.
 
 >[!NOTE]
 >
->Si votre organisation débute avec Experience Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Profiles] n’est pas visible. À la place, l’onglet [!UICONTROL Overview] affiche des liens et de la documentation pour vous aider à prendre en main le profil client en temps réel.
+>Si votre organisation débute avec Experience Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Profils] n’est pas visible. À la place, l’onglet [!UICONTROL Aperçu] affiche des liens et de la documentation pour vous aider à prendre en main le profil client en temps réel.
 
 ### Tableau de bord du profil {#profile-dashboard}
 
@@ -54,9 +44,9 @@ Pour en savoir plus, consultez le [guide du tableau de bord des profils](../../d
 
 ![Le tableau de bord du profil s’affiche.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## onglet [!UICONTROL Browse]
+## Onglet [!UICONTROL  Parcourir ]
 
-Dans l’onglet **[!UICONTROL Browse]** , vous pouvez afficher vos profils dans une vue **carte** ou **tableau** en cliquant sur le bouton (bascule).
+Sur l’onglet **[!UICONTROL Parcourir]**, vous pouvez afficher vos profils dans une vue **carte** ou **tableau** en cliquant sur le bouton (bascule).
 
 ![Le bouton (bascule) Afficher les cartes et les tableaux est mis en surbrillance.](../images/user-guide/change-browse-view.png)
 
@@ -64,45 +54,45 @@ De plus, vous pouvez parcourir vos profils à l’aide d’une politique de fusi
 
 ![Les profils appartenant à l’organisation s’affichent.](../images/user-guide/profile-browse.png)
 
-### Parcourir par [!UICONTROL Merge policy]
+### Parcourir par [!UICONTROL politique de fusion]
 
-L’onglet **[!UICONTROL Browse]** est défini sur la politique de fusion par défaut de votre organisation. Pour choisir une autre politique de fusion, sélectionnez la `X` à côté du nom de la politique de fusion, puis utilisez le sélecteur pour ouvrir la boîte de dialogue de **[!UICONTROL Select merge policy]**.
+L’onglet **[!UICONTROL Parcourir]** est défini sur la politique de fusion par défaut de votre organisation. Pour choisir une autre politique de fusion, sélectionnez la `X` à côté du nom de la politique de fusion, puis utilisez le sélecteur pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner la politique de fusion]**.
 
 >[!NOTE]
 >
->Si aucune politique de fusion n’est sélectionnée, utilisez le bouton de sélection situé en regard du champ **[!UICONTROL Merge policy]** pour ouvrir la boîte de dialogue de sélection.
+>Si aucune politique de fusion n’est sélectionnée, utilisez le bouton de sélection situé en regard du champ **[!UICONTROL Politique de fusion]** pour ouvrir la boîte de dialogue de sélection.
 
 ![Le sélecteur de politique de fusion est mis en surbrillance.](../images/user-guide/browse-by-merge-policy.png)
 
-Pour choisir une politique de fusion dans la boîte de dialogue **[!UICONTROL Select merge policy]**, sélectionnez le bouton radio à côté du nom de la politique, puis utilisez **[!UICONTROL Select]** pour revenir à l’onglet [!UICONTROL Browse] . Vous pouvez ensuite sélectionner **[!UICONTROL View]** pour actualiser les exemples de profils et afficher un échantillon de profils avec la nouvelle politique de fusion appliquée.
+Pour choisir une politique de fusion dans la boîte de dialogue **[!UICONTROL Sélectionner la politique de fusion]**, sélectionnez le bouton radio en regard du nom de la politique, puis utilisez **[!UICONTROL Sélectionner]** pour revenir à l’onglet [!UICONTROL Parcourir]. Vous pouvez ensuite sélectionner **[!UICONTROL Affichage]** pour actualiser les exemples de profils et afficher un échantillon de profils avec la nouvelle politique de fusion appliquée.
 
 ![Une boîte de dialogue s’affiche, dans laquelle vous pouvez sélectionner la politique de fusion à utiliser comme filtre.](../images/user-guide/select-merge-policy.png)
 
 Les profils affichés représentent un échantillon de 20 profils maximum provenant de la banque de profils de votre organisation, après l’application de la politique de fusion sélectionnée. Les exemples de profils pour la politique de fusion sélectionnée sont actualisés lorsque de nouvelles données sont ajoutées au magasin de profils de votre organisation.
 
-Pour afficher les détails de l’un des profils types, sélectionnez l’**[!UICONTROL Profile ID]**. Pour plus d’informations, reportez-vous à la section suivante de ce guide sur l’[affichage des détails du profil](#profile-detail).
+Pour afficher les détails de l’un des profils types, sélectionnez l’**[!UICONTROL Identifiant de profil]**. Pour plus d’informations, reportez-vous à la section suivante de ce guide sur l’[affichage des détails du profil](#profile-detail).
 
 ![Des exemples de profils correspondant à la politique de fusion s’affichent.](../images/user-guide/profile-browse-table.png)
 
-Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [&#x200B; présentation des politiques de fusion &#x200B;](../merge-policies/overview.md).
+Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [ présentation des politiques de fusion ](../merge-policies/overview.md).
 
-### Parcourir par [!UICONTROL Identity] {#browse-identity}
+### Parcourir par [!UICONTROL identité] {#browse-identity}
 
-Sur l’onglet **[!UICONTROL Browse]** , vous pouvez utiliser un espace de noms d’identité pour rechercher un profil spécifique par une valeur d’identité. Pour naviguer en fonction d’une identité, vous devez fournir une politique de fusion, un espace de noms d’identité et une valeur d’identité.
+Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez utiliser un espace de noms d’identité pour rechercher un profil spécifique par une valeur d’identité. Pour naviguer en fonction d’une identité, vous devez fournir une politique de fusion, un espace de noms d’identité et une valeur d’identité.
 
 ![Le sélecteur de politique de fusion est mis en surbrillance.](../images/user-guide/browse-by-merge-policy.png)
 
-Si nécessaire, utilisez le sélecteur de **[!UICONTROL Merge policy]** pour ouvrir la boîte de dialogue **[!UICONTROL Select merge policy]** et sélectionnez la politique de fusion à utiliser.
+Si nécessaire, utilisez le sélecteur **[!UICONTROL Politique de fusion]** pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner la politique de fusion]** et sélectionnez la politique de fusion à utiliser.
 
 ![Une boîte de dialogue s’affiche, dans laquelle vous pouvez sélectionner la politique de fusion à utiliser comme filtre.](../images/user-guide/select-merge-policy.png)
 
-Utilisez ensuite le sélecteur de **[!UICONTROL Identity namespace]** pour ouvrir la boîte de dialogue **[!UICONTROL Select identity namespace]** et choisissez l’espace de noms selon lequel vous souhaitez effectuer une recherche. Si votre organisation dispose de nombreux espaces de noms, vous pouvez utiliser la barre de recherche de la boîte de dialogue pour commencer à saisir le nom d’un espace de noms.
+Utilisez ensuite le sélecteur **[!UICONTROL Espace de noms d’identité]** pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner un espace de noms d’identité]** et choisissez l’espace de noms selon lequel vous souhaitez effectuer une recherche. Si votre organisation dispose de nombreux espaces de noms, vous pouvez utiliser la barre de recherche de la boîte de dialogue pour commencer à saisir le nom d’un espace de noms.
 
-Vous pouvez sélectionner un espace de noms pour afficher des détails supplémentaires ou sélectionner le bouton radio pour choisir un espace de noms. Vous pouvez ensuite utiliser **[!UICONTROL Select]** pour continuer.
+Vous pouvez sélectionner un espace de noms pour afficher des détails supplémentaires ou sélectionner le bouton radio pour choisir un espace de noms. Vous pouvez ensuite utiliser **[!UICONTROL Sélectionner]** pour continuer.
 
 ![Une boîte de dialogue s’affiche, dans laquelle vous pouvez sélectionner l’espace de noms d’identité à utiliser comme filtre.](../images/user-guide/select-identity-namespace.png)
 
-Après avoir sélectionné un [!UICONTROL Identity namespace] et renvoyé à l’onglet [!UICONTROL Browse] , vous pouvez saisir un **[!UICONTROL Identity value]** associé à l’espace de noms que vous avez sélectionné.
+Après avoir sélectionné un [!UICONTROL Espace de noms d’identité] et renvoyé à l’onglet [!UICONTROL Parcourir], vous pouvez saisir une **[!UICONTROL valeur d’identité]** liée à l’espace de noms que vous avez sélectionné.
 
 >[!NOTE]
 >
@@ -110,7 +100,7 @@ Après avoir sélectionné un [!UICONTROL Identity namespace] et renvoyé à l�
 
 ![La valeur d’identité sur laquelle vous souhaitez appliquer un filtre est mise en surbrillance.](../images/user-guide/browse-identity.png)
 
-Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL View]** et un seul profil correspondant à la valeur est renvoyé. Sélectionnez la **[!UICONTROL Profile ID]** pour afficher un profil.
+Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher]** et un seul profil correspondant à la valeur est renvoyé. Sélectionnez l’**[!UICONTROL Identifiant de profil]** pour afficher un profil.
 
 ![Le profil correspondant à la valeur d’identité est mis en surbrillance.](../images/user-guide/filtered-identity-value.png)
 
@@ -121,13 +111,13 @@ Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL View]** et 
 >title="Entité introuvable"
 >abstract="Cela signifie qu’Experience Platform n’a pas pu trouver l’entité demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Assurez-vous que l’identifiant de profil correct est répertorié dans l’URL de l’entité à laquelle vous essayez d’accéder.</li><li>Assurez-vous que vous disposez de la combinaison deorganisation et de sandbox correcte pour l’entité à laquelle vous essayez d’accéder.</li></ul>"
 
-Après avoir sélectionné un **[!UICONTROL Profile ID]**, l’onglet **[!UICONTROL Detail]** s’ouvre. Les informations de profil affichées dans l’onglet **[!UICONTROL Detail]** ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique de chaque client. Cela inclut les détails du client tels que les attributs de base, les identités liées et les préférences de canal.
+Après avoir sélectionné un **[!UICONTROL Identifiant de profil]**, l’onglet **[!UICONTROL Détail]** s’ouvre. Les informations de profil affichées dans l’onglet **[!UICONTROL Détail]** ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique du client individuel. Cela inclut les détails du client tels que les attributs de base, les identités liées et les préférences de canal.
 
 En outre, vous pouvez afficher d’autres détails sur les profils, tels que ses [attributs](#attributes), [événements](#events) et [appartenance à l’audience](#audience-membership).
 
 ### Onglet Détails {#profile-detail}
 
-L’onglet **[!UICONTROL Details]** fournit des informations plus détaillées sur le profil sélectionné. L’onglet Détails est divisé en différentes sections, selon que vous êtes en mode Carte ou Graphique. En mode Carte, les informations sur le profil client, les widgets AI insight, les widgets personnalisables et les widgets classés automatiquement s’affichent, tandis qu’en mode Graphique, les sections Attributs de profil et Événements d’expérience s’affichent.
+L’onglet **[!UICONTROL Détails]** fournit des informations plus détaillées sur le profil sélectionné. L’onglet Détails est divisé en différentes sections, selon que vous êtes en mode Carte ou Graphique. En mode Carte, les informations sur le profil client, les widgets AI insight, les widgets personnalisables et les widgets classés automatiquement s’affichent, tandis qu’en mode Graphique, les sections Attributs de profil et Événements d’expérience s’affichent.
 
 ![La page de détails du profil s’affiche.](../images/user-guide/profile-details.png)
 
@@ -137,7 +127,7 @@ De plus, vous pouvez activer/désactiver l’affichage des informations génér�
 
 #### Informations du profil client {#customer-profile-insights}
 
-La section **[!UICONTROL Customer profile insights]** présente brièvement les attributs du profil. Cela inclut l’identifiant du profil, l’adresse e-mail, le numéro de téléphone, le sexe, la date de naissance, ainsi que les identités et les appartenances à l’audience du profil.
+La section **[!UICONTROL Informations sur le profil client]** présente brièvement les attributs du profil. Cela inclut l’identifiant du profil, l’adresse e-mail, le numéro de téléphone, le sexe, la date de naissance, ainsi que les identités et les appartenances à l’audience du profil.
 
 ![La section Informations sur le profil client s’affiche.](../images/user-guide/customer-profile-insights.png)
 
@@ -147,27 +137,27 @@ La section **[!UICONTROL Customer profile insights]** présente brièvement les 
 >
 >Si vous êtes un client de Healthcare Shield, vous ne pourrez **pas** utiliser les widgets AI insight.
 
-La section **[!UICONTROL AI insight widgets]** affiche les widgets générés par l’IA. Ces widgets fournissent des informations rapides sur le profil, en fonction des données du profil, y compris les données démographiques (telles que l’âge, le sexe ou le lieu), les comportements d’utilisateur (tels que l’historique des achats, l’activité du site web ou l’engagement sur les médias sociaux), ainsi que les données psychographiques (tels que les intérêts, les préférences ou les choix de style de vie). Tous les widgets d’IA utilisent des données qui **existent déjà** dans le profil.
+La section **[!UICONTROL Widgets AI insight]** affiche les widgets générés par l’IA. Ces widgets fournissent des informations rapides sur le profil, en fonction des données du profil, y compris les données démographiques (telles que l’âge, le sexe ou le lieu), les comportements d’utilisateur (tels que l’historique des achats, l’activité du site web ou l’engagement sur les médias sociaux), ainsi que les données psychographiques (tels que les intérêts, les préférences ou les choix de style de vie). Tous les widgets d’IA utilisent des données qui **existent déjà** dans le profil.
 
 ![La section Widgets AI insight s’affiche.](../images/user-guide/ai-insight-widgets.png)
 
 #### Widgets personnalisables {#customizable-widgets}
 
-La section **[!UICONTROL Customizable widgets]** affiche des widgets que vous pouvez personnaliser en fonction des besoins de votre entreprise. Vous pouvez regrouper les attributs dans des widgets distincts, supprimer les widgets indésirables ou ajuster la disposition des widgets.
+La section **[!UICONTROL Widgets personnalisables]** affiche les widgets que vous pouvez personnaliser en fonction des besoins de votre entreprise. Vous pouvez regrouper les attributs dans des widgets distincts, supprimer les widgets indésirables ou ajuster la disposition des widgets.
 
 Les champs par défaut affichés peuvent également être modifiés au niveau de l’organisation afin d’afficher les attributs de profil préférés. Pour en savoir plus sur la personnalisation de ces champs, y compris les instructions détaillées sur l’ajout et la suppression d’attributs et le redimensionnement des panneaux du tableau de bord, consultez le [guide de personnalisation des détails du profil](profile-customization.md).
 
 ![La section widgets personnalisables s’affiche.](../images/user-guide/customizable-widgets.png)
 
-Vous pouvez également choisir d’afficher ou non les noms des attributs sous forme de noms d’affichage et de chemins d’accès aux champs. Pour basculer entre ces deux affichages, sélectionnez le bouton (bascule) **[!UICONTROL Show display names]**.
+Vous pouvez également choisir d’afficher ou non les noms des attributs sous forme de noms d’affichage et de chemins d’accès aux champs. Pour basculer entre ces deux affichages, activez le bouton (bascule) **[!UICONTROL Afficher les noms d’affichage]**.
 
 ![Le bouton (bascule) Afficher les noms d’affichage est mis en surbrillance.](../images/user-guide/show-display-names.png)
 
 #### Widgets classés automatiquement {#auto-classified-widgets}
 
-La section **[!UICONTROL Auto-classified widgets]** affiche des widgets qui exploitent le schéma d’union pour déterminer les groupes de champs sources auxquels appartient un attribut, fournissant ainsi un contexte plus clair sur l’origine des données. Vous pouvez utiliser la barre de recherche pour rechercher plus facilement des mots-clés dans vos widgets.
+La section **[!UICONTROL Widgets auto-classés]** affiche les widgets qui exploitent le schéma d’union pour déterminer les groupes de champs sources auxquels appartient un attribut, fournissant ainsi un contexte plus clair sur l’origine des données. Vous pouvez utiliser la barre de recherche pour rechercher plus facilement des mots-clés dans vos widgets.
 
-Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [&#x200B; widgets personnalisables &#x200B;](#customizable-widgets).
+Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [ widgets personnalisables ](#customizable-widgets).
 
 >[!NOTE]
 >
@@ -177,7 +167,7 @@ Ces widgets combinent les données d’événement (avec le widget Événements 
 
 #### Attributs de profil {#profile-attributes}
 
-La section **[!UICONTROL Profile attributes]** affiche une représentation graphique hiérarchique des données de profil. Dans cette vue, le nœud central représente le profil lui-même, les nœuds secondaires représentent les groupes de champs et les nœuds restants représentent les propriétés au sein de chaque groupe de champs.
+La section **[!UICONTROL Attributs de profil]** affiche une représentation graphique hiérarchique des données de profil. Dans cette vue, le nœud central représente le profil lui-même, les nœuds secondaires représentent les groupes de champs et les nœuds restants représentent les propriétés au sein de chaque groupe de champs.
 
 Dans la vue graphique, vous pouvez faire glisser et déposer les nœuds pour réorganiser l’ordre des nœuds, réduire et développer les nœuds pour afficher plus de détails sur les attributs, rechercher et filtrer par attribut, ainsi que zoomer en avant et en arrière pour mieux afficher les détails des attributs.
 
@@ -185,19 +175,19 @@ Dans la vue graphique, vous pouvez faire glisser et déposer les nœuds pour ré
 
 #### Événements d’expérience {#experience-events}
 
-La section **[!UICONTROL Experience events]** affiche une chronologie des événements d’expérience contenant le profil. Par défaut, cette section affiche les événements d’expérience au cours des dernières 48 heures. Cependant, vous pouvez définir la période sur une période allant jusqu’à 30 jours.
+La section **[!UICONTROL Événements d’expérience]** affiche une chronologie des événements d’expérience contenant le profil. Par défaut, cette section affiche les événements d’expérience au cours des dernières 48 heures. Cependant, vous pouvez définir la période sur une période allant jusqu’à 30 jours.
 
 ![La section Événements d’expérience s’affiche, présentant une chronologie des événements d’expérience contenant le profil.](/help/profile/images/user-guide/experience-event-graph.png)
 
-Si vous sélectionnez **[!UICONTROL View event]**, vous pouvez voir les attributs d’événement liés à l’événement sélectionné. Ces détails incluent le chemin d’accès, l’attribut, le nom d’affichage et la valeur.
+Si vous sélectionnez **[!UICONTROL Afficher l’événement]**, vous pouvez voir les attributs d’événement liés à l’événement sélectionné. Ces détails incluent le chemin d’accès, l’attribut, le nom d’affichage et la valeur.
 
 ![La fenêtre contextuelle Attributs d’événement s’affiche, affichant des détails supplémentaires liés à l’événement.](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### Onglet Attributs {#attributes}
 
-L’onglet **[!UICONTROL Attributes]** fournit une vue Liste résumant tous les attributs liés à un seul profil, après l’application de la politique de fusion spécifiée.
+L’onglet **[!UICONTROL Attributs]** fournit une vue de liste résumant tous les attributs liés à un seul profil, après l’application de la politique de fusion spécifiée.
 
-Ces attributs peuvent également être affichés en tant qu’objet JSON en sélectionnant pour **[!UICONTROL View JSON]**. Cela s’avère utile pour les utilisateurs et utilisatrices qui souhaitent mieux comprendre comment les attributs de profil sont ingérés dans Experience Platform.
+Ces attributs peuvent également être affichés en tant qu’objet JSON en sélectionnant **[!UICONTROL Afficher JSON]**. Cela s’avère utile pour les utilisateurs et utilisatrices qui souhaitent mieux comprendre comment les attributs de profil sont ingérés dans Experience Platform.
 
 ![L’onglet Attributs est mis en surbrillance. Les attributs de profil s’affichent.](../images/user-guide/attributes.png)
 
@@ -213,15 +203,15 @@ Pour plus d’informations sur les profils Edge, veuillez lire la [documentation
 >
 >L’affichage des événements peut être retardé de 15 minutes au maximum.
 
-Par défaut, **[!UICONTROL Events]** onglet contient les données des 48 dernières heures avec les 100 ExperienceEvent les plus récents associés au client. Ces données peuvent inclure les ouvertures d’e-mail, les activités de panier et les pages vues. Vous pouvez également définir la période sur une durée maximale de 30 jours. La sélection de **[!UICONTROL View all]** pour un événement individuel fournit des champs supplémentaires et des valeurs capturées dans le cadre de l’événement.
+Par défaut, l’onglet **[!UICONTROL Événements]** contient les données des 48 dernières heures avec les 100 ExperienceEvent les plus récents associés au client. Ces données peuvent inclure les ouvertures d’e-mail, les activités de panier et les pages vues. Vous pouvez également définir la période sur une durée maximale de 30 jours. La sélection de l’option **[!UICONTROL Afficher tout]** pour un événement individuel fournit des champs supplémentaires et des valeurs capturées dans le cadre de l’événement.
 
-Les événements peuvent également être affichés en tant qu’objet JSON en sélectionnant pour **[!UICONTROL View JSON]**. Cela permet de comprendre comment les événements sont capturés dans Experience Platform.
+Les événements peuvent également être affichés en tant qu’objet JSON en sélectionnant **[!UICONTROL Afficher JSON]**. Cela permet de comprendre comment les événements sont capturés dans Experience Platform.
 
 ![L’onglet Événements est mis en surbrillance. Les événements de profil s’affichent.](../images/user-guide/events.png)
 
 ### Onglet Appartenance à une audience {#audience-membership}
 
-L’onglet **[!UICONTROL Audience membership]** affiche une liste avec le nom et la description des audiences auxquelles le profil client individuel appartient actuellement. Cette liste est automatiquement mise à jour lorsque le profil est admissible pour les audiences ou arrive à expiration. Le nombre total d’audiences pour lesquelles le profil est actuellement qualifié s’affiche sur le côté droit de l’onglet.
+L’onglet **[!UICONTROL Appartenance à une audience]** affiche une liste avec le nom et la description des audiences auxquelles le profil client individuel appartient actuellement. Cette liste est automatiquement mise à jour lorsque le profil est admissible pour les audiences ou arrive à expiration. Le nombre total d’audiences pour lesquelles le profil est actuellement qualifié s’affiche sur le côté droit de l’onglet.
 
 Pour plus d’informations sur la segmentation dans Experience Platform, reportez-vous à la [documentation du service de segmentation d’Adobe Experience Platform](../../segmentation/home.md).
 
@@ -233,7 +223,7 @@ Pour afficher l’appartenance à l’audience des profils disponibles sur Edge,
 
 ## Politiques de fusion
 
-Dans le menu **[!UICONTROL Profiles]** principal, sélectionnez l’onglet **[!UICONTROL Merge Policies]** pour afficher la liste des politiques de fusion appartenant à votre organisation. Chaque politique répertoriée affiche son nom, qu’il s’agisse de la politique de fusion par défaut ou non, ainsi que la classe de schéma à laquelle elle s’applique.
+Dans le menu principal **[!UICONTROL Profils]**, sélectionnez l’onglet **[!UICONTROL Politiques de fusion]** pour afficher une liste des politiques de fusion appartenant à votre organisation. Chaque politique répertoriée affiche son nom, qu’il s’agisse de la politique de fusion par défaut ou non, ainsi que la classe de schéma à laquelle elle s’applique.
 
 Pour plus d’informations sur les politiques de fusion, consultez [Présentation des politiques de fusion](../merge-policies/overview.md).
 
@@ -241,7 +231,7 @@ Pour plus d’informations sur les politiques de fusion, consultez [Présentatio
 
 ## Schéma d’union {#union-schema}
 
-Dans le menu **[!UICONTROL Profiles]** principal, sélectionnez l’onglet **[!UICONTROL Union Schema]** pour afficher les schémas d’union disponibles pour vos données ingérées. Un schéma d’union est une fusion de tous les champs [!DNL Experience Data Model] (XDM) sous la même classe, dont les schémas ont été activés pour une utilisation dans [!DNL Real-Time Customer Profile].
+Dans le menu principal **[!UICONTROL Profils]**, sélectionnez l’onglet **[!UICONTROL Schéma d’union]** pour afficher les schémas d’union disponibles pour vos données ingérées. Un schéma d’union est une fusion de tous les champs [!DNL Experience Data Model] (XDM) sous la même classe, dont les schémas ont été activés pour une utilisation dans [!DNL Real-Time Customer Profile].
 
 Pour plus d’informations sur les schémas d’union, consultez le [guide de l’interface utilisateur des schémas d’union](union-schema.md).
 
@@ -249,11 +239,11 @@ Pour plus d’informations sur les schémas d’union, consultez le [guide de l�
 
 ## Attributs calculés {#computed-attributes}
 
-Dans le menu **[!UICONTROL Profiles]** principal, sélectionnez l’onglet **[!UICONTROL Computed attributes]** pour afficher la liste des attributs calculés appartenant à votre organisation.
+Dans le menu principal **[!UICONTROL Profils]**, sélectionnez l’onglet **[!UICONTROL Attributs calculés]** pour afficher une liste des attributs calculés appartenant à votre organisation.
 
 ![L’onglet Attributs calculés est mis en surbrillance.](../images/user-guide/computed-attributes.png)
 
-Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [&#x200B; guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
+Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [ guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
 
 ## Étapes suivantes
 

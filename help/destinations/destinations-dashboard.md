@@ -5,8 +5,8 @@ description: L’interface utilisateur de Adobe Experience Platform fournit un t
 type: Documentation
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 24%
+source-wordcount: '63'
+ht-degree: 22%
 
 ---
 

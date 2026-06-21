@@ -6,13 +6,8 @@ last-update: February 14, 2019
 author: ens71067
 exl-id: 96db25ca-d857-489b-9a9d-625e86b1bf3e
 TQID: https://experienceleague.adobe.com/g-dQVuG4n4csdOEm-adwGrGsdcArYbFhKbUDXa5y74U
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 204
@@ -46,6 +41,6 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).

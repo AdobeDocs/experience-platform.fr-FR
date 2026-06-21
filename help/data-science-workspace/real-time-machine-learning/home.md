@@ -6,8 +6,8 @@ description: Le machine learning en temps réel peut considérablement améliore
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 89%
+source-wordcount: '602'
+ht-degree: 83%
 
 ---
 
@@ -49,9 +49,9 @@ Créez entièrement un modèle de machine learning en temps réel ou incorporez-
 
 ### Déploiement
 
-Déployez votre modèle sur le [!DNL Edge Network] pour créer un service de machine learning en temps réel dans le [!UICONTROL Service Gallery] à l’aide du point d’entrée de l’API Prediction.
+Déployez votre modèle sur le [!DNL Edge Network] pour créer un service de machine learning en temps réel dans la [!UICONTROL  Galerie de services ] à l’aide du point d’entrée de l’API Prediction.
 
-### Inférence   
+### Inférence
 
 Utilisez le point d’entrée de l’API REST Prediction pour générer des informations de machine learning en temps réel.
 
@@ -77,7 +77,7 @@ Le machine learning en temps réel est actuellement en version alpha. Les foncti
 
 | | Version alpha (mai) |
 | --- | --- |
-| **Fonctionnalités** | - En utilisant le modèle de notebook RTML, créez, testez et déployez un modèle de machine learning personnalisé. <br> - Prise en charge de l’importation de modèles de machine learning préentraînés. <br> - SDK Real-time Machine Learning. <br> - Ensemble de démarrage de nœuds de création. <br> - Déployé sur le hub Adobe Experience Platform. |
+| **Fonctionnalités** | - En utilisant le modèle de notebook RTML, créez, testez et déployez un modèle de machine learning personnalisé. <br> - Prise en charge de l’importation de modèles de machine learning préentraînés. <br> - SDK de machine learning en temps réel. <br> - Ensemble de démarrage de nœuds de création. <br> - Déployé sur le hub Adobe Experience Platform. |
 | **Disponibilité** | Amérique du Nord |
 | **Nœuds de création** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Temps d’exécution de la notation** | ONNX |

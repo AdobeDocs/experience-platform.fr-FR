@@ -4,8 +4,8 @@ title: Format des messages
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2558'
-ht-degree: 76%
+source-wordcount: '2520'
+ht-degree: 75%
 
 ---
 
@@ -265,8 +265,8 @@ Profil 2 :
 
 ### Appartenance à une audience {#audience-membership}
 
-L’attribut XDM [segmentMembership](../../../../xdm/schema/field-dictionary.md) indique les audiences dont un profil est membre.
-Pour découvrir les trois différentes valeurs du champ `status`, consultez la documentation relative au [groupe de champs du schéma Détails sur l’appartenance à une audience](../../../../xdm/field-groups/profile/segmentation.md).
+L’attribut XDM [segmentMembership](../../../../xdm/schema/field-dictionary.md) indique les audiences auxquelles un profil est membre.
+Pour découvrir les trois différentes valeurs du champ `status` , consultez la documentation sur le [groupe de champs de schéma Détails sur l’appartenance à l’audience](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Entrée**
 
@@ -493,7 +493,7 @@ Profil 2 :
 ### Créer un modèle qui envoie des audiences et des identités {#segments-and-identities}
 
 Cette section fournit un exemple de transformation couramment utilisée entre le schéma XDM d’Adobe et le schéma de destination du partenaire.
-L’exemple ci-dessous montre comment transformer l’appartenance à une audience et le format des identités et les générer vers la destination.
+L’exemple ci-dessous montre comment transformer le format d’appartenance et d’identité d’audience et les générer vers la destination.
 
 **Entrée**
 

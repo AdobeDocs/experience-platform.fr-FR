@@ -4,19 +4,13 @@ title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur le service de catalogue Adobe Experience Platform et les jeux de données.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
 TQID: https://experienceleague.adobe.com/-i6RsPnqixtyC2sdzhoXw-MLbnnmqqGUMMHTmq3XJvE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 489
+source-wordcount: 491
 ht-degree: 2%
 
 ---
@@ -77,7 +71,7 @@ Par exemple, si vous appliquez une politique d’expiration de 30 jours le 15 ma
 
 +++Réponse
 
-Vous pouvez afficher la dernière taille de stockage au niveau du jeu de données dans le lac de données et le profil sous la forme de mesures distinctes sur la page d’inventaire des [!UICONTROL Datasets]. Vous pouvez également trier les colonnes pour identifier les jeux de données les plus volumineux et vous assurer que les politiques de conservation sont appliquées. L’utilisation au niveau du sandbox est disponible dans le tableau de bord Utilisation des licences . Reportez-vous à la [documentation relative à l’utilisation des licences](../dashboards/guides/license-usage.md) pour plus d’informations.
+Vous pouvez afficher la dernière taille de stockage au niveau du jeu de données dans le lac de données et le profil sous la forme de mesures distinctes sur la page d’inventaire [!UICONTROL Jeux de données]. Vous pouvez également trier les colonnes pour identifier les jeux de données les plus volumineux et vous assurer que les politiques de conservation sont appliquées. L’utilisation au niveau du sandbox est disponible dans le tableau de bord Utilisation des licences . Reportez-vous à la [documentation relative à l’utilisation des licences](../dashboards/guides/license-usage.md) pour plus d’informations.
 
 +++
 
@@ -85,7 +79,7 @@ Vous pouvez afficher la dernière taille de stockage au niveau du jeu de donnée
 
 +++Réponse
 
-Vous pouvez vérifier la date et l’heure de la dernière tâche de conservation des données dans l’[interface utilisateur de configuration de la conservation des jeux de données](./datasets/user-guide.md#data-retention-policy) et sur la page d’inventaire des [!UICONTROL Datasets]. Les rapports concernant l’utilisation des jeux de données historiques ne sont actuellement pas disponibles, mais sont prévus pour les prochaines versions.
+Vous pouvez vérifier la date et l’heure de la dernière tâche de conservation des données dans l’[interface utilisateur de configuration de la conservation des jeux de données](./datasets/user-guide.md#data-retention-policy) et sur la page d’inventaire [!UICONTROL Jeux de données]. Les rapports concernant l’utilisation des jeux de données historiques ne sont actuellement pas disponibles, mais sont prévus pour les prochaines versions.
 
 +++
 

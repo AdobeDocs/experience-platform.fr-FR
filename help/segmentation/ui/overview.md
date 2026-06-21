@@ -4,28 +4,15 @@ title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 TQID: https://experienceleague.adobe.com/9UIs4eth4eqdsrG3sMhUSau9l59ZihFpv6M5meXQYF8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1040
-ht-degree: 64%
+source-wordcount: 1058
+ht-degree: 63%
 
 ---
 
@@ -50,11 +37,11 @@ Vous devriez également comprendre les termes clés suivants utilisés dans ce d
 
 ## Vue d’ensemble
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Overview]** affichant le tableau de bord [!UICONTROL Audiences].
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Présentation]** affichant le tableau de bord [!UICONTROL Audiences].
 
 >[!NOTE]
 >
->Si votre organisation débute avec Experience Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Audiences] n’est pas visible. À la place, l’onglet [!UICONTROL Overview] affiche des liens et de la documentation pour vous aider à prendre en main les audiences.
+>Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Audiences] n’est pas visible. À la place, l’onglet [!UICONTROL Aperçu] affiche des liens et de la documentation pour vous aider à prendre en main les audiences.
 
 ### Tableau de bord [!UICONTROL Audiences] {#segments-dashboard}
 
@@ -66,7 +53,7 @@ Pour en savoir plus, consultez le [guide du tableau de bord Audiences](../../das
 
 ## Parcourir {#browse}
 
-Sélectionnez l’onglet **[!UICONTROL Browse]** pour afficher Audience Portal. Le portail Audience fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre sandbox. Il inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
+Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher Audience Portal. Le portail Audience fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre sandbox. Il inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
 
 En outre, Audience Portal vous permet de créer de nouvelles audiences à l’aide du créateur de segments ou de la composition d’audiences, ainsi que d’importer des audiences générées en externe dans Experience Platform.
 
@@ -98,14 +85,14 @@ Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant êt
 
 | Champ | Description |
 | ----- | ----------- |
-| [!UICONTROL Name] | Nom de l’audience. |
-| [!UICONTROL Status] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive` et `Published`. |
-| [!UICONTROL Created] | Heure et date de création de l’audience. |
-| [!UICONTROL Created by] | Nom de la personne qui a créé l’audience. |
-| [!UICONTROL Updated] | Heure et date de la dernière mise à jour de l’audience. |
-| [!UICONTROL Updated by] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
+| [!UICONTROL Nom] | Nom de l’audience. |
+| [!UICONTROL Statut] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive` et `Published`. |
+| [!UICONTROL Créé] | Heure et date de création de l’audience. |
+| [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
+| [!UICONTROL Mis à jour] | Heure et date de la dernière mise à jour de l’audience. |
+| [!UICONTROL Mis à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 
-Pour voir comment l’audience est composée, sélectionnez le nom d’une audience dans l’onglet [!UICONTROL Audiences] .
+Pour voir comment l’audience est composée, sélectionnez le nom d’une audience dans l’onglet [!UICONTROL Audiences].
 
 La page Composition d’audiences s’affiche avec les blocs de création qui composent votre audience. Pour plus d’informations sur l’utilisation de la Composition d’audiences, consultez le [guide de l’interface utilisateur de la Composition d’audiences](./audience-composition.md).
 

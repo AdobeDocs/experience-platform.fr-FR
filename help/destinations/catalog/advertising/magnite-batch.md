@@ -4,23 +4,14 @@ description: Utilisez cette destination pour diffuser des audiences Adobe CDP ve
 last-substantial-update: 2024-11-18T00:00:00.000Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 TQID: https://experienceleague.adobe.com/P6fNpC1cTwoQImY7TqxqMulwr-A2qAbPs3SgIYIesvU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1787
+source-wordcount: 1771
 ht-degree: 12%
 
 ---
@@ -100,7 +91,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -125,7 +116,7 @@ Recherchez la destination Magnite : Batch dans le catalogue d’expériences Ado
 
 Si vous disposez déjà d’un compte , vous pouvez le localiser en remplaçant l’option Type de compte par « Compte existant ». Sinon, vous allez créer un compte ci-dessous :
 
-Pour créer un compte et l’authentifier pour la première fois auprès de la destination, renseignez les champs « Clé d’accès S3 » et « Clé secrète S3 » requis (qui vous sont fournis via votre gestionnaire de compte), puis sélectionnez **[!UICONTROL Connect to destination]**
+Pour créer un compte et l’authentifier pour la première fois auprès de la destination, renseignez les champs « Clé d’accès S3 » et « Clé secrète S3 » obligatoires (fournis par l’intermédiaire de votre gestionnaire de compte), puis sélectionnez **[!UICONTROL Se connecter à la destination]**
 
 ![champs d’authentification de la configuration de destination vides](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
@@ -137,11 +128,11 @@ Pour créer un compte et l’authentifier pour la première fois auprès de la d
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette connexion/instance de destination dans le
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette connexion/instance de destination dans le
 future.
-* **[!UICONTROL Description]** : description qui vous aidera à l’identifier
+* **[!UICONTROL Description]** : description qui vous aidera à identifier ce problème.
 connexion/instance de destination à l’avenir.
-* **[!UICONTROL Your company name]** : nom de votre client/société. Seuls les clients [!DNL Magnite Streaming] pris en charge peuvent être sélectionnés.
+* **[!UICONTROL Nom de votre société]** : nom de votre client/société. Seuls les clients [!DNL Magnite Streaming] pris en charge peuvent être sélectionnés.
 
 >[!NOTE]
 >
@@ -153,37 +144,37 @@ connexion/instance de destination à l’avenir.
 >
 >Si vous envisagez d’envoyer plusieurs types d’ID (GAID, IDFA, etc.) En utilisant la destination par lots, une nouvelle connexion/instance de destination est requise pour chaque . Contactez votre représentant de compte Magnite pour plus d’informations.
 
-Vous pouvez ensuite procéder en sélectionnant **[!UICONTROL Next]**
+Vous pouvez ensuite continuer en sélectionnant **[!UICONTROL Suivant]**
 
 Dans l’écran suivant, intitulé « Politique de gouvernance et actions d’application (facultatives) », vous pouvez éventuellement sélectionner n’importe quelle politique de gouvernance des données appropriée. « Exportation de données » est généralement sélectionné pour la destination Magnite : lot .
 
 ![Politique de gouvernance facultative et mesures d’application](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
-Une fois sélectionné, ou si vous souhaitez ignorer cet écran facultatif, sélectionnez **[!UICONTROL Create]**
+Une fois sélectionné ou si vous souhaitez ignorer cet écran facultatif, sélectionnez **[!UICONTROL Créer]**
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ### Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
-Dans le **[!UICONTROL Source field]**, vous pouvez sélectionner n’importe quel attribut ou identité pour vos appareils. Dans cet exemple, nous avons sélectionné une carte des identités personnalisée appelée « DeviceId »
+Dans le champ **** vous pouvez sélectionner n’importe quel attribut ou identité pour vos appareils. Dans cet exemple, nous avons sélectionné une carte des identités personnalisée appelée « DeviceId »
 ![mapper les champs de données souhaités au champ device_id](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-Dans le **[!UICONTROL Target field]** :
+Dans le champ **[!UICONTROL Cible]** :
 ![sélectionnez l’identité cible du type d’appareil approprié](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Consultez [Identités prises en charge](#supported-identities) pour plus d’informations.
-Dans cet exemple, nous avons sélectionné le **[!UICONTROL Target field]** : magnite_deviceId_CUSTOM, car notre **[!UICONTROL Source field]** a été défini comme un IdentityMap personnalisé : DeviceID.
+Dans cet exemple, nous avons sélectionné le **[!UICONTROL champ cible]** : magnite_deviceId_CUSTOM, car notre champ **[!UICONTROL Source]** a été défini comme un IdentityMap personnalisé : DeviceID.
 
 >[!NOTE]
 >

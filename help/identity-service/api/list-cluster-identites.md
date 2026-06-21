@@ -6,10 +6,8 @@ description: Les identités qui sont liées dans un graphique d’identités, et
 role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 TQID: https://experienceleague.adobe.com/3KLwxoUg2eJ3A44UJkkBmVBHcIvw3MnEtkc6tjCyKew
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 365

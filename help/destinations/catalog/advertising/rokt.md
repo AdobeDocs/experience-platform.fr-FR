@@ -4,7 +4,7 @@ description: Découvrez comment connecter les audiences Adobe Experience Platfor
 exl-id: 50eaefeb-d394-49b1-9748-5d68f11b79a0
 source-git-commit: 52d78fef0e08e9bc8bd606339e685d743ebb90dc
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1271'
 ht-degree: 25%
 
 ---
@@ -35,8 +35,8 @@ Prévenez les dépenses inutiles et les expériences non pertinentes en supprima
 
 Avant de configurer la destination [!DNL Rokt] dans [!DNL Adobe Experience Platform], vous devez obtenir les informations d’identification suivantes auprès de votre gestionnaire de compte **[!DNL Rokt]** :
 
-* **Clé API** : utilisez-la comme **[!UICONTROL Username]** lors de l’[authentification de la connexion de destination](#authenticate).
-* **Secret API** : utilisez-le comme **[!UICONTROL Password]** lors de l’[authentification de la connexion de destination](#authenticate).
+* **Clé API** : utilisez-la comme **[!UICONTROL Nom d’utilisateur]** lors de [’authentification de la connexion de destination](#authenticate).
+* **Secret API** : utilisez-le comme **[!UICONTROL Mot de passe]** lors de [’authentification de la connexion de destination](#authenticate).
 
 Votre gestionnaire de compte [!DNL Rokt] fournira ces informations d’identification sur la plateforme [!DNL Rokt] avant votre configuration. Contactez votre gestionnaire de compte si vous ne l’avez pas encore reçu.
 
@@ -47,9 +47,9 @@ Votre gestionnaire de compte [!DNL Rokt] fournira ces informations d’identific
 | Identité cible | Description | Considérations |
 |---|---|---|
 | E-mail | Adresse e-mail en clair | Recommandé. Utilisé pour la correspondance de profils dans [!DNL Rokt]. |
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge. Lorsque votre champ source contient des attributs non hachés, sélectionnez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge. Lorsque votre champ source contient des attributs non hachés, sélectionnez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | phone | Numéro de téléphone en clair | Utilisé pour la correspondance de profils dans [!DNL Rokt]. |
-| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge. Lorsque votre champ source contient des attributs non hachés, sélectionnez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge. Lorsque votre champ source contient des attributs non hachés, sélectionnez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | GAID | [!DNL Google] ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | ID de [!DNL Apple] pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
 | aepProfileId | ID de profil [!DNL Adobe Experience Platform] | Mappe l’identifiant de profil (`xdm:_id`) en tant qu’identifiant de secours. |
@@ -73,7 +73,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client. Utilisez-les pour cibler des groupes spécifiques de personnes dans le cadre de campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -84,8 +84,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail, téléphone, identifiant d’annonce mobile ou autres) utilisés dans la destination [!DNL Rokt]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans [!DNL Experience Platform] en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval à [!DNL Rokt]. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail, téléphone, identifiant d’annonce mobile ou autres) utilisés dans la destination [!DNL Rokt]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans [!DNL Experience Platform] en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval à [!DNL Rokt]. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,16 +93,16 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](/help/destinations/ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL Username]** : votre clé API, fournie par votre gestionnaire de compte [!DNL Rokt].
-* **[!UICONTROL Password]** : votre secret API, fourni par votre gestionnaire de compte [!DNL Rokt].
+* **[!UICONTROL Nom d’utilisateur]** : votre clé API, fournie par votre gestionnaire de compte [!DNL Rokt].
+* **[!UICONTROL Mot de passe]** : votre secret API, fourni par votre gestionnaire de compte [!DNL Rokt].
 
   ![Écran de configuration de la destination [!DNL Rokt] dans [!DNL Experience Platform], avec les détails du compte, les champs d’authentification et les détails de destination renseignés.](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
 
@@ -110,21 +110,21 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir (par exemple, « [!DNL Rokt] - Reciblage des audiences »).
+* **[!UICONTROL Nom]** : nom par lequel vous reconnaîtrez cette destination à l’avenir (par exemple, « [!DNL Rokt] - Reciblage des audiences »).
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](/help/destinations/ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -154,7 +154,7 @@ Voici un exemple de mappage complet :
 
 ### Configurer le planning d’audience {#audience-schedule}
 
-Une fois l’étape de mappage terminée, configurez un planning d’audience pour chaque audience sélectionnée. Fournissez une **[!UICONTROL Start date]** pour le moment où l’audience doit commencer à se synchroniser, ainsi qu’un **[!UICONTROL Mapping ID]** (un libellé utilisé pour identifier cette audience dans [!DNL Rokt]). Vous pouvez utiliser le nom de l’audience [!DNL Experience Platform] ou toute chaîne descriptive qui vous aide, vous et votre gestionnaire de compte [!DNL Rokt], à identifier l’audience.
+Une fois l’étape de mappage terminée, configurez un planning d’audience pour chaque audience sélectionnée. Fournissez une **[!UICONTROL Date de début]** pour laquelle l’audience doit commencer à se synchroniser, ainsi qu’un **[!UICONTROL Identifiant de mappage]** (libellé utilisé pour identifier cette audience dans [!DNL Rokt]). Vous pouvez utiliser le nom de l’audience [!DNL Experience Platform] ou toute chaîne descriptive qui vous aide, vous et votre gestionnaire de compte [!DNL Rokt], à identifier l’audience.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

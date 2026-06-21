@@ -4,10 +4,8 @@ description: Découvrez comment connecter MariaDB à Adobe Experience Platform �
 last-substantial-update: 2025-04-29T00:00:00.000Z
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
 TQID: https://experienceleague.adobe.com/cgQAa-boyziU0EYaaAFJkNCpEXiZGmdQAbIHPoaF1Ps
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 437
@@ -27,7 +25,7 @@ Lisez les sections suivantes pour terminer la configuration requise avant de con
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ### S’authentifier auprès d’Experience Platform
 

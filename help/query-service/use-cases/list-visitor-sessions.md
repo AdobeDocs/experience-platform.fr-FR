@@ -4,11 +4,8 @@ title: Liste des pages vues d’un utilisateur
 description: Découvrez comment écrire des requêtes qui utilisent des événements d’expérience pour créer une liste des 100 dernières pages utilisées par un utilisateur spécifié.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
 TQID: https://experienceleague.adobe.com/xH-DPI0rRWclRAgkKl2KxAO-Tz7rXhY8hd10dNQaigs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 271

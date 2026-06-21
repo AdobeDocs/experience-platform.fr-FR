@@ -5,21 +5,11 @@ title: FAQ sur les réglementations de confidentialité
 description: Ce document répond aux questions fréquentes sur les réglementations légales prises en charge en matière de confidentialité et leur mise en œuvre dans Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 TQID: https://experienceleague.adobe.com/8VLNtjZPdsv3HnY46jLLCw84M2EpUSBw32CS-Y66U9c
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1609
@@ -41,7 +31,7 @@ Les questions suivantes se rapportent à toutes les réglementations de confiden
 
 ### Sur qui les réglementations de confidentialité prises en charge s’appliquent-elles ?
 
-Les [&#x200B; réglementations relatives à la confidentialité prises en charge par Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les limites des juridictions respectives des réglementations, quelle que soit la localisation géographique de l’organisation.
+Les [ réglementations de confidentialité prises en charge par Experience Cloud ](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des réglementations, quel que soit l’emplacement géographique de l’organisation.
 
 ### Que signifie la notion de données personnelles ?
 
@@ -123,7 +113,7 @@ Si les opérations de données de votre organisation relèvent de la compétence
 
 ### Comment puis-je prendre en charge les demandes d’accès à des informations personnelles des consommateurs si je conserve des données couvertes par les réglementations de confidentialité ?
 
-Une fois que vous avez pris les mesures nécessaires pour authentifier les consommateurs et consommatrices qui relèvent des juridictions légales appropriées, Adobe Experience Platform Privacy Service vous permet d’envoyer les demandes d’accès à des informations personnelles des consommateurs et consommatrices vers des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
+Une fois que vous avez pris les mesures nécessaires pour authentifier les consommateurs et consommatrices qui relèvent des juridictions légales appropriées, Adobe Experience Platform Privacy Service vous permet d’envoyer les demandes d’accès à des informations personnelles de consommateurs et consommatrices vers des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >

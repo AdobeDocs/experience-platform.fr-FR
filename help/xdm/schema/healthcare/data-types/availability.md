@@ -5,27 +5,25 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 18c0b767-adf0-480e-9cf2-63e21d05b362
 TQID: https://experienceleague.adobe.com/aHs-Mo3XsuKuVc2ZiNjptfN816tQQkd8YyGEF6Rdpbo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 271
-ht-degree: 9%
+source-wordcount: 292
+ht-degree: 8%
 
 ---
 
-# Type de données [!UICONTROL Availability]
+# [!UICONTROL Disponibilité] type de données
 
-[!UICONTROL Availability] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les données de disponibilité d’un élément. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Disponibilité] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les données de disponibilité d’un élément. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure du type de données de disponibilité](../../../images/healthcare/data-types/availability/availability.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Available Time] | `availableTime` | Tableau d’objets | Nombre de fois que l’élément est disponible. Pour plus d’informations, consultez la [section ci-dessous](#available-time). |
-| [!UICONTROL Not Available Time] | `notAvailableTime` | Chaîne | Nombre de fois où l’élément n’est pas disponible, avec une raison fournie. Pour plus d’informations, consultez la [section ci-dessous](#not-available-time). |
+| [!UICONTROL Temps disponible] | `availableTime` | Tableau d’objets | Nombre de fois que l’élément est disponible. Pour plus d’informations, consultez la [section ci-dessous](#available-time). |
+| [!UICONTROL Temps non disponible] | `notAvailableTime` | Chaîne | Nombre de fois où l’élément n’est pas disponible, avec une raison fournie. Pour plus d’informations, consultez la [section ci-dessous](#not-available-time). |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 
@@ -40,10 +38,10 @@ Pour plus d’informations sur ce type de données, reportez-vous au référenti
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL All Day] | `allDay` | Booléen | Valeur booléenne indiquant si l’élément est toujours disponible. |
-| [!UICONTROL Available End Time] | `availableEndTime` | Chaîne | Heure à laquelle l’élément cesse d’être disponible. Ceci est ignoré si `allDay` est `true`. |
-| [!UICONTROL Available Start Time] | `availableStartTime` | Chaîne | Heure à laquelle l’élément commence à être disponible. Ceci est ignoré si `allDay` est `true`. |
-| [!UICONTROL Days Of Week] | `daysOfWeek` | Tableau de chaînes | Tableau de chaînes détaillant les jours disponibles. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
+| [!UICONTROL Toute La Journée] | `allDay` | Booléen | Valeur booléenne indiquant si l’élément est toujours disponible. |
+| [!UICONTROL Heure de fin disponible] | `availableEndTime` | Chaîne | Heure à laquelle l’élément cesse d’être disponible. Ceci est ignoré si `allDay` est `true`. |
+| [!UICONTROL Heure de début disponible] | `availableStartTime` | Chaîne | Heure à laquelle l’élément commence à être disponible. Ceci est ignoré si `allDay` est `true`. |
+| [!UICONTROL  Jours De La Semaine ] | `daysOfWeek` | Tableau de chaînes | Tableau de chaînes détaillant les jours disponibles. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
 
 ## `notAvailableTime` {#not-available-time}
 
@@ -53,5 +51,5 @@ Pour plus d’informations sur ce type de données, reportez-vous au référenti
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL During] | `during` | [[!UICONTROL Period]](../data-types/period.md) | Durée pendant laquelle l’élément cesse d’être disponible. |
+| [!UICONTROL Pendant] | `during` | [[!UICONTROL Période]](../data-types/period.md) | Durée pendant laquelle l’élément cesse d’être disponible. |
 | [!UICONTROL Description] | `description` | Chaîne | Raison pour laquelle l’élément n’est pas disponible. |

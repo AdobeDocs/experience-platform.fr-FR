@@ -4,8 +4,8 @@ description: Les notes de mise à jour de septembre 2023 pour Adobe Experience
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2302'
-ht-degree: 83%
+source-wordcount: '2328'
+ht-degree: 82%
 
 ---
 
@@ -37,13 +37,13 @@ Les attributs calculés permettent de résumer facilement les données d’évé
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Onglet Historique des alertes | L’onglet [!UICONTROL History] des alertes inclut désormais tous les événements, y compris les retards, les démarrages, les succès et les échecs. Lisez la [documentation de l’interface utilisateur des alertes](../../observability/alerts/ui.md) pour plus d’informations sur l’onglet Historique. |
+| Onglet Historique des alertes | L’onglet Alertes [!UICONTROL Historique] comprend désormais tous les événements, y compris les retards, les démarrages, les succès et les échecs. Lisez la [documentation de l’interface utilisateur des alertes](../../observability/alerts/ui.md) pour plus d’informations sur l’onglet Historique. |
 
 {style="table-layout:auto"}
 
@@ -92,18 +92,18 @@ Pour en savoir plus sur la gouvernance des données, veuillez consulter la [vue 
 
 ## Hygiène des données {#hygiene}
 
-Experience Platform offre toute une gamme de fonctionnalités d’hygiène des données. Celles-ci vous permettent de gérer vos données stockées par le biais de suppressions programmées d’enregistrements de consommateurs et de jeux de données. En utilisant l’espace de travail [!UICONTROL Data Lifecycle] dans l’interface utilisateur ou par le biais d’appels à l’API Data Hygiene, vous pouvez gérer efficacement vos entrepôts de données. Utilisez ces fonctionnalités pour vous assurer que les informations sont utilisées comme prévu, qu’elles sont mises à jour lorsque des données incorrectes doivent être corrigées et qu’elles sont supprimées lorsque les politiques d’entreprise le jugent nécessaire.
+Experience Platform offre toute une gamme de fonctionnalités d’hygiène des données. Celles-ci vous permettent de gérer vos données stockées par le biais de suppressions programmées d’enregistrements de consommateurs et de jeux de données. En utilisant l’espace de travail [!UICONTROL cycle de vie des données] dans l’interface utilisateur ou par le biais d’appels à l’API Data Hygiene, vous pouvez gérer efficacement vos entrepôts de données. Utilisez ces fonctionnalités pour vous assurer que les informations sont utilisées comme prévu, qu’elles sont mises à jour lorsque des données incorrectes doivent être corrigées et qu’elles sont supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| {type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans toutes les banques de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de Data Lifecycle Management dans Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour la suppression du jeu de données.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
+| [!BADGE ]{type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans toutes les banques de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de Data Lifecycle Management dans Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour la suppression du jeu de données.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
 | Expirations de jeux de données | Limitez vos données et gardez le contrôle de vos contrats de licence avec l’expiration automatisée du jeu de données. Réduisez les volumes de données en supprimant des jeux de données entiers et en définissant une date et une heure pour le jeu de données à supprimer. Pour plus d’informations, consultez la [documentation sur l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md). |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [&#x200B; présentation de l’hygiène des données &#x200B;](../../hygiene/home.md).
+Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [ présentation de l’hygiène des données ](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -115,7 +115,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- |----------------|----------- |
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nouveau | Activez les audiences précédemment intégrées pour [!DNL LiveRamp] aux éditeurs premium sur les supports mobiles, web, d’affichage et de télévision connectée. <br> Après l’intégration des audiences à votre compte [!DNL LiveRamp] via la connexion [LiveRamp - Intégration](../../destinations/catalog/advertising/liveramp-onboarding.md), utilisez la nouvelle connexion [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) pour activer les audiences vers les destinations en aval. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nouveau | [[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM proposant l’ensemble des logiciels, intégrations et ressources dont vous avez besoin pour connecter les services marketing, ventes, gestion de contenu et clientèle. Elle vous permet de connecter vos données, vos équipes et votre clientèle sur une seule et même plateforme CRM. |
-| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Mis à jour | Ajout de la prise en charge de préfixes de champ personnalisés [!DNL Dynamics 365] pour les champs personnalisés qui n’ont pas été créés dans la solution par défaut dans [!DNL Dynamics 365]. Un nouveau champ d’entrée, **[!UICONTROL Customization Prefix]**, a été ajouté à l’étape [Renseigner les détails de la destination](#destination-details). |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Mis à jour | Ajout de la prise en charge de préfixes de champ personnalisés [!DNL Dynamics 365] pour les champs personnalisés qui n’ont pas été créés dans la solution par défaut dans [!DNL Dynamics 365]. Un nouveau champ d’entrée, **[!UICONTROL Préfixe de personnalisation]**, a été ajouté à l’étape [Renseigner les détails de la destination](#destination-details). |
 | [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Mis à jour | La destination Audiences Experience Cloud est désormais disponible. Utilisez cette destination pour activer les audiences de Real-Time CDP vers Audience Manager et Adobe Analytics. Vous avez besoin d’une licence Audience Manager pour envoyer des audiences à Adobe Analytics. |
 
 {style="table-layout:auto"}
@@ -165,8 +165,8 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Type de données | [[!UICONTROL Return]](https://github.com/adobe/xdm/pull/1773/files) | La RMA (autorisation de renvoi de marchandises) a été émise. |
-| Type de données | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) | Informations sur l’article renvoyé s’affichant dans la RAM (autorisation de renvoi de marchandises). |
+| Type de données | [[!UICONTROL Retour]](https://github.com/adobe/xdm/pull/1773/files) | La RMA (autorisation de renvoi de marchandises) a été émise. |
+| Type de données | [[!UICONTROL Retour d&#39;article]](https://github.com/adobe/xdm/pull/1773/files) | Informations sur l’article renvoyé s’affichant dans la RAM (autorisation de renvoi de marchandises). |
 
 {style="table-layout:auto"}
 
@@ -174,13 +174,13 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description de la mise à jour |
 | --- | --- | --- |
-| Extension | [!UICONTROL AJO Entity Fields] | La [[!UICONTROL flag for multi-variant]](https://github.com/adobe/xdm/pull/1774/files) a été ajoutée à [!UICONTROL AJO Entity Fields] pour identifier si la variante est une variante multiple ou non. |
-| Type de données | [!UICONTROL Product list item] | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure les informations d&#39;autorisation de retour de marchandises. |
-| Type de données | Commande | [[!UICONTROL Return Info]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure le RMA (autorisation de retour de marchandises) émis. |
+| Extension | [!UICONTROL Champs D’Entité ] | L’indicateur [[!UICONTROL pour variante multiple]](https://github.com/adobe/xdm/pull/1774/files) a été ajouté aux [!UICONTROL champs d’entité AJO] pour identifier si la variante est une variante multiple ou non. |
+| Type de données | [!UICONTROL Élément de liste de produits] | [[!UICONTROL Retour d&#39;article]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure les informations d&#39;autorisation de retour de marchandises. |
+| Type de données | Commande | [[!UICONTROL Return Info]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure le RMA (Return Merchandise Authorization) émis. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md)
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md)
 
 ## Service d’identités {#identity-service}
 
@@ -195,7 +195,7 @@ Le service d’identités d’Adobe Experience Platform vous offre la possibil
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur le service d’identités, consultez la [vue d’ensemble du service d’identités](../../identity-service/home.md).
+Pour en savoir plus sur le Service d’identités, consultez la [vue d’ensemble du Service d’identités](../../identity-service/home.md).
 
 ## Service de requête {#query-service}
 

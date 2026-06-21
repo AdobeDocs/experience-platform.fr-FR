@@ -5,14 +5,10 @@ title: Guide de l’API Data Access
 description: L’API Data Access prend en charge Adobe Experience Platform en fournissant aux développeurs une interface RESTful axée sur la capacité de découverte et l’accessibilité des jeux de données ingérés dans Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 TQID: https://experienceleague.adobe.com/cAIx1TSiuG4V6dXUUTxP2iD-ia8FLY0lPI05Ri6Pmzw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 577
@@ -252,4 +248,4 @@ Pour obtenir des exemples supplémentaires, reportez-vous au [tutoriel sur l’a
 
 ## Abonnement aux événements d’ingestion de données {#subscribe-to-data-ingestion-events}
 
-Vous pouvez vous abonner à des événements spécifiques à forte valeur ajoutée via [&#128279;](https://developer.adobe.com/console/). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d’informations, consultez le tutoriel sur [l’abonnement aux notifications d’événement d’Adobe](../observability/alerts/subscribe.md).
+Vous pouvez vous abonner à des événements spécifiques à forte valeur ajoutée via [](https://developer.adobe.com/console/). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d’informations, consultez le tutoriel sur [l’abonnement aux notifications d’événement d’Adobe](../observability/alerts/subscribe.md).

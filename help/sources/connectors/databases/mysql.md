@@ -4,14 +4,10 @@ description: Découvrez comment connecter MySQL à Adobe Experience Platform à 
 last-substantial-update: 2025-05-20T00:00:00.000Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
 TQID: https://experienceleague.adobe.com/X-O3gLjBhTMue8yWLdLOey-oqI-RGxwCdvkLT8imXEk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 633

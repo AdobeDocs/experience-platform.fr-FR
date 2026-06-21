@@ -5,20 +5,18 @@ title: Type de données d’environnement
 description: En savoir plus sur le type de données XDM de l’environnement.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 TQID: https://experienceleague.adobe.com/AlwvNpNwNIZpqI3R-nwfCo-jwtl-3Gosecl85o6MBN8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 467
+source-wordcount: 470
 ht-degree: 14%
 
 ---
 
 # Type de données [!UICONTROL Environment]
 
-[!UICONTROL Environment] est un type de données XDM standard qui décrit l’environnement d’un événement observé, en détaillant spécifiquement les informations éphémères telles que les versions logicielles et réseau.
+[!UICONTROL Environnement] est un type de données XDM standard qui décrit l’environnement d’un événement observé, en détaillant spécifiquement les informations éphémères telles que les versions logicielles et réseau.
 
 >[!IMPORTANT]
 >
@@ -53,7 +51,7 @@ Pour plus d’informations sur ce type de données, reportez-vous au référenti
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Device].
+La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Appareil].
 
 ## Valeurs acceptées pour le type {#type}
 

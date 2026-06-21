@@ -5,12 +5,9 @@ title: Créer une spécification de connexion à l’aide de l’API Flow Servic
 description: Le document suivant décrit la procédure à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source via des sources en libre-service.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 TQID: https://experienceleague.adobe.com/VPuDpFnbt40Dfq0HlcykCbkR39CghqeDCT-65twzPA4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 779

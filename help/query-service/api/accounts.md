@@ -7,7 +7,7 @@ role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '499'
 ht-degree: 5%
 
 ---
@@ -135,7 +135,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec des informations sur votre
 
 ## Liste de tous les comptes
 
-Vous pouvez récupérer une liste de tous les comptes d’intégration de Query Service en effectuant une requête GET au point d’entrée `/accounts`.
+Vous pouvez récupérer une liste de tous les comptes d’intégration de Query Service en envoyant une requête GET au point d’entrée `/accounts`.
 
 **Format d’API**
 

@@ -3,21 +3,11 @@ title: Package Query Service
 description: Le document suivant décrit l’emballage des fonctionnalités et des produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et par lots.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 TQID: https://experienceleague.adobe.com/Dkf2YtZHdS1SeSDppV3ipXRyBiZrpGROD-HLtdSBVkw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1010
@@ -100,5 +90,5 @@ Les sandbox sont des partitions virtuelles au sein d’une instance unique d’E
 
 ## Étapes suivantes
 
-En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [&#x200B; documentation sur les cas d’utilisation &#x200B;](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
+En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [ documentation sur les cas d’utilisation ](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
 

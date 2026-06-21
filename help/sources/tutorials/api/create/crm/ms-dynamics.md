@@ -3,12 +3,9 @@ title: Créer une connexion de base Microsoft Dynamics à l’aide de l’API Fl
 description: Découvrez comment connecter Experience Platform à un compte Microsoft Dynamics à l’aide de l’API Flow Service.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 TQID: https://experienceleague.adobe.com/Wt1pOhIgdrq2Tq05ysdVfeI1QP1RrmQsfJ2hiKlfVmU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1361
@@ -700,4 +697,4 @@ Une réponse réussie renvoie l’identifiant de connexion source nouvellement g
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Microsoft Dynamics] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créer un flux de données pour importer des données CRM dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/crm.md)
+* [Créer un flux de données pour importer des données CRM dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/crm.md)

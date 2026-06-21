@@ -6,16 +6,12 @@ type: Tutorial
 description: Ce tutoriel se concentre sur l’utilisation des notebooks Jupyter, créés dans le Workspace de science des données, pour accéder à vos données, les explorer et les visualiser.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
 TQID: https://experienceleague.adobe.com/oCUMHnv1K-ZOhOISXMKNaDCkZH4olV1PRT5gBKr6O1k
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1776
+source-wordcount: 1779
 ht-degree: 72%
 
 ---
@@ -52,7 +48,7 @@ Par défaut, la recette Tensorflow fonctionne dans un cluster GPU et Python s’
 
 ### Création d’un nouveau filtre
 
-Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez [!UICONTROL Data Science] dans le menu supérieur pour accéder au Workspace de science des données. Sur cette page, sélectionnez [!DNL JupyterLab] pour ouvrir le lanceur [!DNL JupyterLab]. Vous devriez voir une page similaire à celle-ci.
+Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez [!UICONTROL Science des données] dans le menu supérieur pour accéder au Workspace Science des données. Sur cette page, sélectionnez [!DNL JupyterLab] pour ouvrir le lanceur [!DNL JupyterLab]. Vous devriez voir une page similaire à celle-ci.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
@@ -92,7 +88,7 @@ Nous allons maintenant passer en revue l’accès aux données [!DNL Experience 
 
 Pour cette section, nous utilisons le jeu de données Ventes au détail, le même que celui utilisé dans le notebook d’exemple Ventes au détail.
 
-Dans le notebook Jupyter, vous pouvez accéder à vos données à partir de l’onglet **Données** ![onglet Données](../images/jupyterlab/analyze-data/dataset-tab.png) sur la gauche. Lorsque vous sélectionnez l’onglet , deux dossiers sont fournis. Sélectionnez le dossier **[!UICONTROL Datasets]**.
+Dans le notebook Jupyter, vous pouvez accéder à vos données à partir de l’onglet **Données** ![onglet Données](../images/jupyterlab/analyze-data/dataset-tab.png) sur la gauche. Lorsque vous sélectionnez l’onglet , deux dossiers sont fournis. Sélectionnez le dossier **[!UICONTROL Jeux de données]**.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 

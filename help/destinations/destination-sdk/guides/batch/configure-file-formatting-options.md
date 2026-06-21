@@ -3,16 +3,12 @@ description: Configurer des options de formatage de fichier pour les destination
 title: Découvrez comment utiliser Destination SDK pour configurer des options de formatage de fichier pour les destinations basées sur des fichiers.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 TQID: https://experienceleague.adobe.com/7kG5Slg0-FP68gZzYwHvALutSlsn3eVe0DjBABn-B5I
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 902
+source-wordcount: 903
 ht-degree: 22%
 
 ---
@@ -27,7 +23,7 @@ Cette page décrit comment utiliser Destination SDK pour configurer les options 
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [&#128279;](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
 Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de continuer :
 
@@ -124,7 +120,7 @@ Au cours de cette étape, vous pouvez regrouper les options affichées dans l’
 
 ### Classer les options de formatage des fichiers {#ordering}
 
-L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, avec les options affichées dans l’ordre **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
+L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur : les options s’affichent dans l’ordre **[!UICONTROL Délimiteur]**, **[!UICONTROL Caractère guillemet]**, **[!UICONTROL Caractère d’échappement]**, **[!UICONTROL Valeur vide]**, **[!UICONTROL Valeur nulle]**.
 
 ![Image indiquant l’ordre des options de formatage de fichier dans l’interface utilisateur d’Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -249,7 +245,7 @@ L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant q
 
 Vous pouvez regrouper plusieurs options de formatage de fichier dans une seule section. Pendant la configuration de la connexion à la destination dans l’interface utilisateur, l’utilisateur peut voir et bénéficier d’un regroupement visuel par champs similaires.
 
-Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les options de formatage de fichier de votre choix dans un paramètre de `properties`, comme illustré dans l’exemple ci-dessous, où le **[!UICONTROL CSV Options]** de regroupement est mis en surbrillance.
+Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les options de formatage de fichier de votre choix dans un paramètre de `properties`, comme illustré dans l’exemple ci-dessous, où le regroupement **[!UICONTROL Options CSV]** est mis en surbrillance.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[

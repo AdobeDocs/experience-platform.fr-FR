@@ -5,14 +5,10 @@ last-substantial-update: 2023-07-26T00:00:00.000Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
 TQID: https://experienceleague.adobe.com/flOPoNcH3QyR9rnoyulz4leapTNlfRI2Y8jdDRLrQKA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 381
@@ -33,11 +29,11 @@ La source [!DNL SAP Commerce] vous permet d’ingérer des informations sur les 
 * [Clientes et clients](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
 * [Contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
 
-En outre, si [!DNL SAP Commerce] est exécuté pour récupérer les données client, l’API [&#x200B; Relations client-contact &#x200B;](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) est également appelée pour récupérer les informations de contact du client.
+En outre, si [!DNL SAP Commerce] est exécuté pour récupérer les données client, l’API [ Relations client-contact ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) est également appelée pour récupérer les informations de contact du client.
 
 ## Liste autorisée d’adresses IP {#ip-allow-list}
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ## Conditions préalables {#prerequisites}
 

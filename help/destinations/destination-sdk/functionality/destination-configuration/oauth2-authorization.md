@@ -3,20 +3,14 @@ description: Cette page décrit les différents flux d’autorisation OAuth 2 pr
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 TQID: https://experienceleague.adobe.com/MjZiP0ebeGYG2Vg-2BBWkJQfm3OKXdFDMkaMTukiBz0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2258
-ht-degree: 64%
+source-wordcount: 2222
+ht-degree: 63%
 
 ---
 
@@ -145,8 +139,8 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 
 ## OAuth 2 avec octroi de mot de passe {#oauth2-password-grant}
 
-Pour octroyer le mot de passe OAuth 2 (lisez la section [Spécifications des normes RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform demande le nom d’utilisateur et le mot de passe de l’utilisateur. Dans le flux d’autorisation, Experience Platform échange ces informations d’identification contre un jeton d’accès et, éventuellement, un jeton d’actualisation.
-Adobe utilise les entrées standard ci-dessous pour simplifier la configuration de destination, avec la possibilité de remplacer des valeurs :
+Pour octroyer le mot de passe OAuth 2 (lisez la section [Spécifications des normes RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform requiert le nom d’utilisateur et le mot de passe de l’utilisateur. Dans le flux d’autorisation, Experience Platform échange ces informations d’identification contre un jeton d’accès et, éventuellement, un jeton d’actualisation.
+Adobe utilise les entrées standard ci-dessous pour simplifier la configuration de destination, avec la possibilité de remplacer des valeurs :
 
 | Octroi OAuth 2 | Entrées | Sorties |
 |---------|----------|---------|

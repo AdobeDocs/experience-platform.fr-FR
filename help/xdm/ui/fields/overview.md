@@ -5,21 +5,15 @@ title: Définir des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 TQID: https://experienceleague.adobe.com/syA6AOVPFb5DmmDsj76bsefVxMU6BXzHaMrcmQwpoEk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 1691
-ht-degree: 2%
+source-wordcount: 1794
+ht-degree: 3%
 
 ---
 
@@ -56,18 +50,18 @@ Selon que vous ajoutez directement un champ à un schéma ou à sa classe et à 
 
 ## Définition des propriétés d’un champ {#define}
 
-Après avoir sélectionné l’icône **plus (+)** un espace réservé **[!UICONTROL Untitled field]** apparaît dans la zone de travail.
+Après avoir sélectionné l’icône **plus (+)** un espace réservé **[!UICONTROL Champ sans titre]** s’affiche dans la zone de travail.
 
 ![L’éditeur de schémas avec un nouveau champ sans titre mis en surbrillance.](../../images/ui/fields/overview/new-field.png)
 
-Dans le rail de droite sous **[!UICONTROL Field properties]**, vous pouvez configurer les détails du nouveau champ. Les informations suivantes sont requises pour chaque champ :
+Dans le rail de droite sous **[!UICONTROL Propriétés du champ]**, vous pouvez configurer les détails du nouveau champ. Les informations suivantes sont requises pour chaque champ :
 
 | Propriété du champ | Description |
 | --- | --- |
-| [!UICONTROL Field name] | Nom unique et descriptif pour le champ. Notez que le nom du champ ne peut pas être modifié une fois le schéma enregistré. Cette valeur est utilisée pour identifier et référencer le champ dans le code et dans d’autres applications en aval<br><br>Le nom doit idéalement être écrit en CamelCase. Il peut contenir des caractères alphanumériques ou des traits de soulignement, mais il **peut pas** commencer par un trait de soulignement.<ul><li>**Correct** : `fieldName`</li><li>**Acceptable :** `field_name2`, `fieldName_3`</li><li>**Incorrect** : `_fieldName`</li></ul> |
-| [!UICONTROL Display name] | Nom d’affichage du champ. Il s’agit du nom qui sera utilisé pour représenter le champ dans la zone de travail de l’éditeur de schémas. Le nom du champ peut être remplacé par le nom d’affichage à l’aide du bouton [bascule du nom d’affichage](../resources/schemas.md#display-name-toggle). |
-| [!UICONTROL Type] | Type de données que le champ contiendra. Dans ce menu déroulant, vous pouvez sélectionner l’un des [types scalaires standard](../../schema/field-constraints.md) pris en charge par XDM, ou l’un des [types de données](../resources/data-types.md) à champs multiples précédemment définis dans le [!DNL Schema Registry].<br>Remarque : si vous sélectionnez le type de données Mappage , [!UICONTROL Map value type] propriété s’affiche.<br><br>Vous pouvez également sélectionner **[!UICONTROL Advanced type search]** pour rechercher et filtrer des types de données existants et localiser plus facilement le type souhaité. |
-| [!UICONTROL Map value type] | Cette valeur est obligatoire si vous sélectionnez [!UICONTROL Map] comme type de données pour le champ. Les valeurs disponibles pour la carte sont [!UICONTROL String] et [!UICONTROL Integer]. Sélectionnez une valeur dans la liste déroulante des options disponibles.<br>Pour en savoir plus sur les [propriétés de champ spécifiques à un type](#type-specific-properties), consultez la présentation de la définition des champs . |
+| [!UICONTROL Nom du champ] | Nom unique et descriptif pour le champ. Notez que le nom du champ ne peut pas être modifié une fois le schéma enregistré. Cette valeur est utilisée pour identifier et référencer le champ dans le code et dans d’autres applications en aval<br><br>Le nom doit idéalement être écrit en CamelCase. Il peut contenir des caractères alphanumériques ou des traits de soulignement, mais il **peut pas** commencer par un trait de soulignement.<ul><li>**Correct** : `fieldName`</li><li>**Acceptable :** `field_name2`, `fieldName_3`</li><li>**Incorrect** : `_fieldName`</li></ul> |
+| [!UICONTROL Nom d’affichage] | Nom d’affichage du champ. Il s’agit du nom qui sera utilisé pour représenter le champ dans la zone de travail de l’éditeur de schémas. Le nom du champ peut être remplacé par le nom d’affichage à l’aide du bouton [bascule du nom d’affichage](../resources/schemas.md#display-name-toggle). |
+| [!UICONTROL Type] | Type de données que le champ contiendra. Dans ce menu déroulant, vous pouvez sélectionner l’un des [types scalaires standard](../../schema/field-constraints.md) pris en charge par XDM, ou l’un des [types de données](../resources/data-types.md) à champs multiples précédemment définis dans le [!DNL Schema Registry].<br>Remarque : si vous sélectionnez le type de données Mappage , la propriété [!UICONTROL Type de valeur de mappage] s’affiche.<br><br>Vous pouvez également sélectionner **[!UICONTROL Recherche avancée de type]** pour rechercher et filtrer les types de données existants et localiser plus facilement le type souhaité. |
+| [!UICONTROL Mapper le type de valeur] | Cette valeur est requise si vous sélectionnez [!UICONTROL Mapper] comme type de données pour le champ. Les valeurs disponibles pour le mappage sont [!UICONTROL Chaîne] et [!UICONTROL Entier]. Sélectionnez une valeur dans la liste déroulante des options disponibles.<br>Pour en savoir plus sur les [propriétés de champ spécifiques à un type](#type-specific-properties), consultez la présentation de la définition des champs . |
 
 {style="table-layout:auto"}
 
@@ -76,17 +70,17 @@ Vous pouvez également choisir de fournir une description et des notes pour chaq
 
 >[!NOTE]
 >
->Selon le **[!UICONTROL Type]** que vous avez sélectionné pour le champ, d’autres commandes de configuration peuvent s’afficher dans le rail de droite. Pour plus d’informations sur ces commandes, consultez la section sur les [propriétés de champ spécifiques à un type](#type-specific-properties).
+>Selon le **[!UICONTROL Type]** que vous avez sélectionné pour le champ, des commandes de configuration supplémentaires peuvent apparaître dans le rail de droite. Pour plus d’informations sur ces commandes, consultez la section sur les [propriétés de champ spécifiques à un type](#type-specific-properties).
 >
 >Le rail de droite fournit également des cases à cocher pour désigner des types de champs spéciaux. Pour plus d’informations, consultez la section sur les [types de champs spéciaux](#special).
 
-Une fois le champ configuré, sélectionnez **[!UICONTROL Apply]**.
+Une fois le champ configuré, sélectionnez **[!UICONTROL Appliquer]**.
 
-![La section [!UICONTROL Field properties] de l’éditeur de schémas est mise en surbrillance.](../../images/ui/fields/overview/field-details.png)
+![La section [!UICONTROL Propriétés du champ] de l’éditeur de schémas est mise en surbrillance.](../../images/ui/fields/overview/field-details.png)
 
 La zone de travail se met à jour pour afficher le champ nouvellement ajouté, situé dans un objet dont l’espace de noms est associé à votre identifiant de client unique (illustré comme `_tenantId` dans l’exemple ci-dessous). Tous les champs personnalisés ajoutés à un schéma sont automatiquement placés dans cet espace de noms afin d’éviter tout conflit avec d’autres champs des classes et groupes de champs fournis par Adobe. Le rail de droite répertorie désormais le chemin d’accès au champ en plus de ses autres propriétés.
 
-![Un nouveau champ dans le diagramme de schéma et son chemin correspondant dans la section [!UICONTROL Field properties] sont mis en surbrillance.](../../images/ui/fields/overview/field-added.png)
+![Un nouveau champ dans le diagramme de schéma et son chemin d’accès correspondant dans la section [!UICONTROL Propriétés du champ] sont mis en surbrillance.](../../images/ui/fields/overview/field-added.png)
 
 Vous pouvez continuer à suivre les étapes ci-dessus pour ajouter d’autres champs au schéma. Une fois le schéma enregistré, sa classe de base et ses groupes de champs sont également enregistrés si des modifications y ont été apportées.
 
@@ -101,22 +95,22 @@ Vous pouvez continuer à suivre les étapes ci-dessus pour ajouter d’autres ch
 >title="Valeur par défaut"
 >abstract="Définit une valeur de référence pour le champ du schéma. Cette valeur n’est pas automatiquement renseignée lors de l’ingestion de données."
 
-Lors de la définition d’un nouveau champ, des options de configuration supplémentaires peuvent apparaître dans le rail de droite en fonction du **[!UICONTROL Type]** que vous choisissez pour le champ. Le tableau suivant décrit ces propriétés de champ supplémentaires, ainsi que leurs types compatibles.
+Lors de la définition d’un nouveau champ, des options de configuration supplémentaires peuvent apparaître dans le rail de droite selon le **[!UICONTROL Type]** que vous choisissez pour le champ. Le tableau suivant décrit ces propriétés de champ supplémentaires, ainsi que leurs types compatibles.
 
-Les propriétés telles que la **[!UICONTROL Pattern]**, la **[!UICONTROL Format]** et la longueur ou les limites numériques sont appliquées lors de l’ingestion lors de la configuration. **[!UICONTROL Default value]** est différent : il enregistre les métadonnées du schéma d’information et ne valide ni ne renseigne les données ingérées. Reportez-vous à la ligne **[!UICONTROL Default value]** ci-dessous et à la remarque qui suit le tableau.
+Les propriétés telles que **[!UICONTROL Motif]**, **[!UICONTROL Format]** et la longueur ou les limites numériques sont appliquées lors de l’ingestion lors de la configuration. La **[!UICONTROL valeur par défaut]** est différente : elle enregistre les métadonnées du schéma d’information et ne valide ni ne renseigne les données ingérées. Consultez la ligne **[!UICONTROL Valeur par défaut]** ci-dessous et la note qui suit le tableau.
 
 | Propriété du champ | Types compatibles | Description |
 | --- | --- | --- |
-| [!UICONTROL Map value type] | [!UICONTROL Map] | La propriété [!UICONTROL Map value type] n’apparaît dans l’interface utilisateur que si vous sélectionnez la valeur Mapper dans les options de la liste déroulante [!UICONTROL Type] . Vous pouvez choisir entre les types de valeur Chaîne et Entier pour le mappage.<br>![L’éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance.](../../images/ui/fields/overview/map-type.png "L’éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance."){width="100" zoomable="yes"}<br>Remarque : tous les types de données de mappage créés via l’API qui ne sont pas de type String ou Integer s’affichent sous la forme d’un type de données « [!UICONTROL Complex] ». Vous ne pouvez pas créer de types de données « [!UICONTROL Complex] » via l’interface utilisateur. |
-| [!UICONTROL Pattern] | [!UICONTROL String] | Une [expression régulière](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) à laquelle la valeur de ce champ doit se conformer pour être acceptée lors de l’ingestion. |
-| [!UICONTROL Format] | [!UICONTROL String] | Effectuez une sélection dans une liste de formats prédéfinis pour les chaînes auxquelles la valeur doit se conformer. Les formats disponibles sont les suivants : <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
-| [!UICONTROL Minimum length] | [!UICONTROL String] | Nombre minimum de caractères que la chaîne doit contenir pour que la valeur soit acceptée lors de l’ingestion. |
-| [!UICONTROL Maximum length] | [!UICONTROL String] | Nombre maximal de caractères que la chaîne doit contenir pour que la valeur soit acceptée lors de l’ingestion. |
-| [!UICONTROL Minimum value] | [!UICONTROL Double] | Valeur minimale pour que le doublon soit accepté lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, la valeur est acceptée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Exclusive minimum value] » doit rester vide. |
-| [!UICONTROL Maximum value] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, la valeur est acceptée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Exclusive maximum value] » doit rester vide. |
-| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, elle est rejetée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Minimum value] » (non exclusive) doit rester vide. |
-| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, elle est rejetée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Maximum value] » (non exclusive) doit rester vide. |
-| [!UICONTROL Default value] | Types scalaires dans l’éditeur de schémas qui prennent en charge les `default` de schéma JSON ([!UICONTROL String] et [!UICONTROL Boolean], par exemple) | Métadonnées d’information alignées sur la sémantique [Schéma JSON](https://json-schema.org/understanding-json-schema/reference/generic.html#annotations) `default` et stockées dans la définition du schéma. La valeur configurée n’est pas automatiquement appliquée lors de l’ingestion ou des flux de préparation des données. Les champs omis restent absents, sauf s’ils sont explicitement mappés ou transformés dans votre flux de données. Voir [définition des champs obligatoires](./required.md). |
+| [!UICONTROL Mapper le type de valeur] | [!UICONTROL Carte] | La propriété [!UICONTROL Type de valeur de mappage] n’apparaît dans l’interface utilisateur que si vous sélectionnez la valeur de mappage dans les options déroulantes [!UICONTROL Type]. Vous pouvez choisir entre les types de valeur Chaîne et Entier pour le mappage.<br>![L’éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance.](../../images/ui/fields/overview/map-type.png "L’éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance."){width="100" zoomable="yes"}<br>Remarque : tous les types de données de mappage créés via l’API qui ne sont pas de type String ou Integer s’affichent sous la forme d’un type de données « [!UICONTROL Complexe] ». Vous ne pouvez pas créer de types de données « [!UICONTROL Complexes] » via l’interface utilisateur. |
+| [!UICONTROL Motif] | [!UICONTROL Chaîne] | Une [expression régulière](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) à laquelle la valeur de ce champ doit se conformer pour être acceptée lors de l’ingestion. |
+| [!UICONTROL Format] | [!UICONTROL Chaîne] | Effectuez une sélection dans une liste de formats prédéfinis pour les chaînes auxquelles la valeur doit se conformer. Les formats disponibles sont les suivants : <ul><li>[[!UICONTROL date-heure]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL nom d’hôte]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL modèle-url]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL pointeur-json]](https://tools.ietf.org/html/rfc6901)</li></ul> |
+| [!UICONTROL Longueur minimale] | [!UICONTROL Chaîne] | Nombre minimum de caractères que la chaîne doit contenir pour que la valeur soit acceptée lors de l’ingestion. |
+| [!UICONTROL Longueur maximale] | [!UICONTROL Chaîne] | Nombre maximal de caractères que la chaîne doit contenir pour que la valeur soit acceptée lors de l’ingestion. |
+| [!UICONTROL Valeur minimale] | [!UICONTROL Double] | Valeur minimale pour que le doublon soit accepté lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, la valeur est acceptée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Valeur minimale exclusive] » doit rester vide. |
+| [!UICONTROL Valeur maximale] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, la valeur est acceptée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Valeur maximale exclusive] » doit rester vide. |
+| [!UICONTROL Valeur minimale exclusive] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, elle est rejetée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Valeur minimale] » (non exclusive) doit rester vide. |
+| [!UICONTROL Valeur maximale exclusive] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, elle est rejetée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Valeur maximale] » (non exclusive) doit rester vide. |
+| [!UICONTROL  Valeur par défaut ] | Types scalaires dans l’éditeur de schémas qui prennent en charge les `default` de schéma JSON ([!UICONTROL String] et [!UICONTROL Boolean], par exemple) | Métadonnées d’information alignées sur la sémantique [Schéma JSON](https://json-schema.org/understanding-json-schema/reference/generic.html#annotations) `default` et stockées dans la définition du schéma. La valeur configurée n’est pas automatiquement appliquée lors de l’ingestion ou des flux de préparation des données. Les champs omis restent absents, sauf s’ils sont explicitement mappés ou transformés dans votre flux de données. Voir [définition des champs obligatoires](./required.md). |
 
 {style="table-layout:auto"}
 
@@ -127,11 +121,11 @@ Le rail de droite propose plusieurs cases à cocher pour désigner des rôles sp
 Pour en savoir plus sur ces types spéciaux, consultez la documentation suivante :
 
 * [Carte](./map.md)
-* [[!UICONTROL Required]](./required.md)
-* [[!UICONTROL Array]](./array.md)
+* [[!UICONTROL Obligatoire]](./required.md)
+* [[!UICONTROL Tableau]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
-* [[!UICONTROL Identity]](./identity.md) (disponible uniquement pour les champs de chaîne)
-* [[!UICONTROL Relationship]](./relationship.md) (disponible uniquement pour les champs de chaîne)
+* [[!UICONTROL Identité]](./identity.md) (disponible uniquement pour les champs de chaîne)
+* [[!UICONTROL Relation]](./relationship.md) (disponible uniquement pour les champs de chaîne)
 
 Bien que techniquement il ne s’agisse pas d’un type de champ spécial, il est également recommandé de consulter le guide sur la [définition de champs de type objet](./object.md) pour en savoir plus sur la définition de sous-champs imbriqués dans vos structures de schéma.
 
@@ -139,4 +133,4 @@ Bien que techniquement il ne s’agisse pas d’un type de champ spécial, il es
 
 Ce guide présente un aperçu de la définition des champs XDM dans l’interface utilisateur. N’oubliez pas que les champs ne peuvent être ajoutés aux schémas que par le biais de classes et de groupes de champs. Pour en savoir plus sur la gestion de ces ressources dans l’interface utilisateur, consultez les guides sur la création et la modification de [classes](../resources/classes.md) et de [groupes de champs](../resources/field-groups.md).
 
-Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schemas], consultez la présentation de l’espace de travail [[!UICONTROL Schemas]](../overview.md).
+Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](../overview.md).

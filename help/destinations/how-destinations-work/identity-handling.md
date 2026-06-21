@@ -3,25 +3,15 @@ title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identités est gérée dans le workflow d’activation, en fonction du type de destination.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
 TQID: https://experienceleague.adobe.com/zSP6vyySfsJz7SoVfUGSKAiJSGsQuV5n7UuXeb4u9Q8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: ee602049-8a18-43df-9299-a689a025a371
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: beb7a3c1-66ab-4786-b879-7621375b3c40id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1187
-ht-degree: 81%
+source-wordcount: 1216
+ht-degree: 79%
 
 ---
 
@@ -93,23 +83,23 @@ Notez toutefois que vous avez la possibilité d’utiliser les données de [grap
 
 >[!TIP]
 >
->Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour qu’Experience Platform hache automatiquement les données lors de l’activation. En savoir plus sur l’option **[!UICONTROL Apply transformation]** dans le [tutoriel sur l’activation des destinations de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
+>Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour qu’Experience Platform hache automatiquement les données lors de l’activation. En savoir plus sur l’option **[!UICONTROL Appliquer la transformation]** dans le tutoriel sur l’activation des destinations de [streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
 ![Exemple d’attribut d’adresse e-mail mappé à un champ d’identité pour la destination Pinterest.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
 ### Destinations publicitaires reposant sur des intégrations de cookies tiers {#third-party-cookie-destinations}
 
-Les clientes et clients n’ont pas besoin de sélectionner des identifiants dans le workflow d’activation pour les destinations publicitaires reposant sur des cookies tiers (par exemple : [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]). Pour ces destinations, lors de la configuration d’un workflow d’activation, Experience Platform recherche automatiquement la table de correspondance d’identité créée par le [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr) et exporte toutes les identités disponibles pour un profil et prises en charge par la destination.
+Les clientes et clients n’ont pas besoin de sélectionner des identifiants dans le workflow d’activation pour les destinations publicitaires reposant sur des cookies tiers (par exemple : [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]). Pour ces destinations, lors de la configuration d’un workflow d’activation, Experience Platform recherche automatiquement la table de correspondance d’identité créée par le [[!UICONTROL service Experience Cloud ID]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr) et exporte toutes les identités disponibles pour un profil et prises en charge par la destination.
 
-Ces destinations nécessitent qu’une synchronisation des identifiants se produise via [!UICONTROL Experience Cloud ID service] ou [!UICONTROL Experience Platform Web SDK].
+Ces destinations nécessitent qu’une synchronisation des identifiants se produise via le [!UICONTROL service Experience Cloud ID] ou via [!UICONTROL Experience Platform Web SDK].
 
-Si vous utilisez [!UICONTROL Experience Platform Web SDK] et que le [!UICONTROL Experience Cloud ID service] hérité n’est pas implémenté sur la page, vous devez vous assurer que le flux de données du site web en question est activé pour permettre la synchronisation des identifiants tiers, comme indiqué dans la documentation sur la [configuration des flux de données](/help/datastreams/configure.md#create).
+Si vous utilisez [!UICONTROL Experience Platform Web SDK] et que l’ancien [!UICONTROL service Experience Cloud ID] n’est pas implémenté sur la page, vous devez vous assurer que le flux de données du site web en question est activé pour permettre la synchronisation des identifiants tiers, comme indiqué dans la documentation [configurer le flux de données](/help/datastreams/configure.md#create).
 
-Lors de la configuration d’un flux de données comme décrit dans la documentation ci-dessus, vous devez vous assurer que le curseur **[!UICONTROL Third Party ID Sync]** est activé. La plupart des clientes et clients laissent le champ `container_id` vide (0 par défaut). Vous ne devez modifier cette valeur que si l’ancienne implémentation de votre Audience Manager utilisait un ID de conteneur spécifique (notez toutefois qu’il s’agit de la vaste minorité de clientes et clients).
+Lors de la configuration d’un flux de données comme décrit dans la documentation ci-dessus, vous devez vous assurer que le curseur **[!UICONTROL Synchronisation des identifiants tiers]** est activé. La plupart des clientes et clients laissent le champ `container_id` vide (0 par défaut). Vous ne devez modifier cette valeur que si l’ancienne implémentation de votre Audience Manager utilisait un ID de conteneur spécifique (notez toutefois qu’il s’agit de la vaste minorité de clientes et clients).
 
 >[!NOTE]
 >
->La plupart de ces destinations publicitaires sont prises en charge dans Audience Manager (ces types de destinations sont connus dans Audience Manager en tant que destinations basées sur des appareils. Voir une [liste de toutes les destinations basées sur des appareils prises en charge dans Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=fr)). Seules quelques-unes sont répertoriées dans Experience Platform. Pour plus d’informations sur le partage de données entre Experience Platform et Audience Manager, consultez la section sur l’[activation du partage de données entre Experience Platform et Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#enable-aep-to-aam-data). Actuellement, il n’est pas prévu de prendre en charge d’autres destinations de cookie tiers.
+>La plupart de ces destinations publicitaires sont prises en charge dans Audience Manager (ces types de destinations sont connus dans Audience Manager en tant que destinations basées sur des appareils. Voir une [liste de toutes les destinations basées sur des appareils prises en charge dans Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Seules quelques-unes sont répertoriées dans Experience Platform. Pour plus d’informations sur le partage de données entre Experience Platform et Audience Manager, consultez la section sur l’[activation du partage de données entre Experience Platform et Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Actuellement, il n’est pas prévu de prendre en charge d’autres destinations de cookie tiers.
 
 ## Destinations d’entreprise {#enterprise-destinations}
 
@@ -117,7 +107,7 @@ Lors de la configuration d’un flux de données comme décrit dans la documenta
 
 ## Destinations de personnalisation {#personalization-destinations}
 
-Les destinations [Personalization (ou edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (par exemple : [!DNL Adobe Target], [!DNL Custom Personalization]) ne nécessitent aucune sélection d’identité dans le workflow d’activation, car l’intégration est une recherche de profil. Le client ou la cliente ([!DNL Target], [!DNL Web SDK] ou autres) interroge le [[!UICONTROL Edge]](/help/collection/home.md) et extrait les informations de profil dont il a besoin pour la personnalisation sur site.
+Les destinations [Personalization (ou edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (par exemple : [!DNL Adobe Target], [!DNL Custom Personalization]) ne nécessitent aucune sélection d’identité dans le workflow d’activation, car l’intégration est une recherche de profil. Le client ([!DNL Target], [!DNL Web SDK] ou autres) interroge l’[[!UICONTROL Edge]](/help/collection/home.md) et extrait les informations de profil nécessaires pour la personnalisation sur site.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

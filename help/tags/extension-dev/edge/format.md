@@ -4,7 +4,7 @@ description: Mise en forme des modules de bibliothèque pour les extensions de b
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '270'
 ht-degree: 100%
 
 ---

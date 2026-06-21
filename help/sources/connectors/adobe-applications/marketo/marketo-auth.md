@@ -5,10 +5,8 @@ title: Authentification de votre connecteur source Marketo
 description: Ce document fournit des informations sur la génération de vos informations d’authentification Marketo.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
 TQID: https://experienceleague.adobe.com/c-AxjTz5POknRHzCnT58-GxY-rZfRoTNX4eX0ULbw2s
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 613

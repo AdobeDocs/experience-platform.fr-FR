@@ -5,17 +5,12 @@ description: Découvrez comment commencer à utiliser les restrictions d’autor
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
 TQID: https://experienceleague.adobe.com/QeyJ3SRH-PLtzaMN4jqu2z-Bl1AhahQz3IkpUXF-t2w
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 528
+source-wordcount: 534
 ht-degree: 8%
 
 ---
@@ -36,17 +31,17 @@ Les sections suivantes fournissent des informations sur la préparation des vale
 
 ### Autorisations nécessaires {#required-permissions}
 
-Pour activer les restrictions d’accès aux données sécurisées dans Query Service, vous avez besoin de l’autorisation **[!UICONTROL Manage Allowed List]** . Cette autorisation permet aux organisations de définir des plages d’adresses IP spécifiques (au format IPv4 ou IPv6) qui sont autorisées à accéder aux données dans Experience Platform via l’interface SQL. L’accès est géré au niveau du sandbox, où les utilisateurs peuvent configurer une liste d’adresses IP approuvées ou de blocs CIDR qui limitent l’accès aux réseaux autorisés uniquement.
+Pour activer les restrictions d’accès aux données sécurisées dans Query Service, vous devez disposer de l’autorisation **[!UICONTROL Gérer la Liste autorisée]**. Cette autorisation permet aux organisations de définir des plages d’adresses IP spécifiques (au format IPv4 ou IPv6) qui sont autorisées à accéder aux données dans Experience Platform via l’interface SQL. L’accès est géré au niveau du sandbox, où les utilisateurs peuvent configurer une liste d’adresses IP approuvées ou de blocs CIDR qui limitent l’accès aux réseaux autorisés uniquement.
 
 >[!NOTE]
 >
->Les administrateurs système peuvent configurer des autorisations d’utilisateur à partir de l’[&#128279;](https://adminconsole.adobe.com/) Adobe. Pour plus d’informations, consultez le [guide d’utilisation d’Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
+>Les administrateurs système peuvent configurer des autorisations d’utilisateur à partir de l’[](https://adminconsole.adobe.com/) Adobe. Pour plus d’informations, consultez le [guide d’utilisation d’Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
 
-Les fonctionnalités suivantes sont disponibles avec l’autorisation **[!UICONTROL Manage Allowed List]** :
+Les fonctionnalités suivantes sont disponibles avec l’autorisation **[!UICONTROL Gérer la Liste autorisée]** :
 
 - **Définir des plages d’adresses IP autorisées** : seules les adresses IP ou les blocs CIDR provenant de ces plages définies peuvent accéder aux données dans Experience Platform à l’aide de SQL via Query Service.
 - **Appliquer les vérifications de plage d’adresses IP** : les connexions provenant d’adresses IP en dehors des plages autorisées sont refusées.
-- **Fonctionnalités d’audit et d’alerte** : toutes les tentatives d’accès, y compris les connexions refusées, sont consignées comme événements d’audit. Ces événements sont disponibles dans les [journaux d’audit &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md), ce qui permet de surveiller les violations de sécurité potentielles.
+- **Fonctionnalités d’audit et d’alerte** : toutes les tentatives d’accès, y compris les connexions refusées, sont consignées comme événements d’audit. Ces événements sont disponibles dans les [journaux d’audit ](../../landing/governance-privacy-security/audit-logs/overview.md), ce qui permet de surveiller les violations de sécurité potentielles.
 
 ### Collecte des valeurs des en-têtes requis {#gather-values-for-required-headers}
 

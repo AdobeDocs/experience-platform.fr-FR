@@ -6,38 +6,15 @@ last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
 TQID: https://experienceleague.adobe.com/Hhytl4tWcAYu9LuT2VCzK4m-S8lBzFlhx7o3PWCrLUk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
-  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a7150a74-b8a9-4042-b066-147c5f0ca505id: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5520579-b31f-4df7-9281-f0d9f91e2edcid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2192
-ht-degree: 23%
+source-wordcount: 2215
+ht-degree: 22%
 
 ---
 
@@ -65,7 +42,7 @@ Mises à jour des fonctionnalités existantes :
 
 Lorsqu’Adobe migre le lac de données de la génération 1 vers la génération 2, les utilisateurs pourront lire depuis le lac de données, mais toutes les fonctionnalités qui écrivent dans le lac de données seront affectées. Adobe contactera les administrateurs système pour discuter en détail de l’impact de la migration et confirmer les dates et heures de migration pour des organisations spécifiques.
 
-Pour plus d’informations, consultez le [&#x200B; Guide de migration du lac de données &#x200B;](../../landing/adls2-gen2-migration.md).
+Pour plus d’informations, consultez le [ Guide de migration du lac de données ](../../landing/adls2-gen2-migration.md).
 
 ## [!DNL Access control] {#access-control}
 
@@ -75,8 +52,8 @@ Pour plus d’informations, consultez le [&#x200B; Guide de migration du lac de 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Autorisations | Dans l’[!DNL Admin Console], l’onglet d’un profil de produit [!DNL Experience Platform] vous permet de personnaliser les fonctionnalités de [!DNL Experience Platform] disponibles pour les utilisateurs associés à ce profil. Les catégories d’autorisations disponibles sont les suivantes : **[!UICONTROL Data Modeling]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profile Management]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Data Monitoring]**, **[!UICONTROL Sandbox Administration]**, **[!UICONTROL Destinations]**, **[!UICONTROL Data Ingestion]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** et **[!UICONTROL Data Governance]**. |
-| Accès aux sandbox | L’onglet **[!UICONTROL Permissions]** d’un profil de produit [!DNL Experience Platform] peut accorder aux utilisateurs l’accès à des sandbox spécifiques. Consultez la section sur les [sandbox](#sandboxes) ci-dessous pour plus d’informations. |
+| Autorisations | Dans l’[!DNL Admin Console], l’onglet d’un profil de produit [!DNL Experience Platform] vous permet de personnaliser les fonctionnalités de [!DNL Experience Platform] disponibles pour les utilisateurs associés à ce profil. Les catégories d’autorisations disponibles sont les suivantes : **[!UICONTROL Modélisation des données]**, **[!UICONTROL Gestion des données]**, **[!UICONTROL Gestion des profils]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Surveillance des données]**, **[!UICONTROL Administration des sandbox]**, **[!UICONTROL Destinations]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** et **[!UICONTROL Gouvernance des données]** ****. |
+| Accès aux sandbox | L’onglet **[!UICONTROL Autorisations]** au sein d’un profil de produit [!DNL Experience Platform] peut accorder aux utilisateurs l’accès à des sandbox spécifiques. Consultez la section sur les [sandbox](#sandboxes) ci-dessous pour plus d’informations. |
 
 Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 
@@ -135,7 +112,7 @@ Pour plus d’informations, consultez le document sur la [création d’une rece
 
 ## Service [!DNL Destinations] {#destinations}
 
-Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+Dans [](../../rtcdp/overview.md), les destinations sont des intégrations préconfigurées à des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 
@@ -219,7 +196,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Workflow des politiques de fusion mises à jour | Experience Platform a mis à niveau la configuration de la politique de fusion vers un nouveau workflow par étapes. Ce workflow permet aux utilisateurs de rassembler des fragments de données provenant de plusieurs jeux de données de profil et de définir la priorité de fusion des données entre ces jeux afin de créer une vue d’ensemble complète de chaque individu. Les utilisateurs peuvent fusionner les jeux de données XDM Individual Profile sélectionnés en sélectionnant la méthode de fusion appropriée (Horodatage ordonné ou Priorité du jeu de données) et en ajoutant les jeux de données ExperienceEvent aux jeux de données de profil. |
 | Vue du schéma d’union | Dans l’interface utilisateur d’Experience Platform, les utilisateurs peuvent plus facilement trouver des informations concernant tous les schémas et jeux de données qui contribuent au schéma d’union, ainsi que les attributs clés de surface tels que les champs d’identité et de relation. Ces mises à jour améliorent la capacité à résoudre les problèmes et à vérifier que les profils sont correctement configurés, que les identités sont correctement assemblées et que les données ont bien été ingérées. |
 
-Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [&#x200B; présentation du profil client en temps réel](../../profile/home.md).
+Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [ présentation du profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

@@ -5,25 +5,14 @@ title: Guide de dépannage de l’ingestion en flux continu
 description: Ce document répond aux questions les plus fréquentes sur l’ingestion en flux continu sur Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 TQID: https://experienceleague.adobe.com/bXr1gvqmuq91QiDmOw--Bxt260SWGz5yVZSepzDWN4k
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: d1a87129-ba05-4f15-98b1-233618f1774aid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1027
+source-wordcount: 1035
 ht-degree: 94%
 
 ---
@@ -74,7 +63,7 @@ Vous pouvez regrouper plusieurs messages dans une payload de requête unique et 
 
 Toutes les données envoyées vers [!DNL Experience Platform] (avec succès ou pas) sont stockées sous forme de fichiers par lot avant d’être conservées dans des jeux de données. L’état du traitement des lots s’affiche dans le jeu de données dans lequel ils ont été envoyés.
 
-Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour afficher une liste des jeux de données. Sélectionnez le jeu de données vers lequel vous diffusez en continu dans la liste affichée pour ouvrir sa page **[!UICONTROL Dataset activity]**, qui affiche tous les lots envoyés au cours d’une période sélectionnée. Pour plus d’informations sur l’utilisation d’[!DNL Experience Platform] pour surveiller les flux de données, consultez le guide sur la [surveillance des flux de données en flux continu](../quality/monitor-data-ingestion.md).
+Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour afficher une liste des jeux de données. Sélectionnez le jeu de données vers lequel vous diffusez en continu dans la liste affichée afin d’ouvrir sa page **[!UICONTROL Activité du jeu de données]**, qui affiche tous les lots envoyés au cours d’une période sélectionnée. Pour plus d’informations sur l’utilisation d’[!DNL Experience Platform] pour surveiller les flux de données, consultez le guide sur la [surveillance des flux de données en flux continu](../quality/monitor-data-ingestion.md).
 
 Si vos données n’ont pas été ingérées et que vous souhaitez les récupérer dans [!DNL Experience Platform], vous pouvez récupérer les lots en échec en envoyant leurs identifiants à [!DNL Data Access API]. Pour plus d’informations, consultez le guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
 
@@ -116,4 +105,4 @@ Si [!DNL Real-Time Customer Profile] rejette un message, cela est probablement d
 
 Il existe deux types d’espace de noms d’identité : par défaut et personnalisé. Lors de l’utilisation d’espaces de noms personnalisés, assurez-vous que l’espace de noms a été enregistré dans [!DNL Identity Service]. Pour plus d’informations sur l’utilisation des espaces de noms par défaut et personnalisés, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).
 
-Vous pouvez utiliser l’[[!DNL Experience Platform UI]](https://platform.adobe.com) pour afficher plus d’informations sur les raisons pour lesquelles un message a échoué lors de l’ingestion. Cliquez sur **[!UICONTROL Monitoring]** dans le volet de navigation de gauche, puis consultez l’onglet **[!UICONTROL Streaming end-to-end]** pour voir les lots de messages diffusés au cours d’une période sélectionnée.
+Vous pouvez utiliser l’[[!DNL Experience Platform UI]](https://platform.adobe.com) pour afficher plus d’informations sur les raisons pour lesquelles un message a échoué lors de l’ingestion. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet **[!UICONTROL Diffusion en continu de bout en bout]** pour voir les lots de messages diffusés au cours d’une période sélectionnée.

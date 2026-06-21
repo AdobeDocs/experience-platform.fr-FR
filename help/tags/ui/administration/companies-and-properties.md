@@ -3,40 +3,15 @@ title: Propriétés
 description: Découvrez comment vos extensions, environnements et bibliothèques sont organisés et regroupés pour votre organisation dans Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
 TQID: https://experienceleague.adobe.com/B9AzoGNIjWkivmmBiN800fYXL99LDlRsjG2mA-VsNpo
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
-  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-  - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
-subfeature_v2:
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: b3f03848-ae12-48b2-8aab-cad18567eb32id: c93393a4-e558-47e1-992e-c91ed4d480ceid: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85eid: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
+subfeature_v2: id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1115
-ht-degree: 90%
+source-wordcount: 1138
+ht-degree: 84%
 
 ---
 
@@ -124,7 +99,7 @@ Cette section fournit des conseils sur la création ou la configuration d’une 
 
 Avant de commencer, consultez les [Bonnes pratiques pour la planification des propriétés](companies-and-properties.md#best-practices-for-planning-properties).
 
-Accédez à la page de votre société, puis cliquez sur **[!UICONTROL Add Property]** ou sélectionnez une propriété existante dans la liste et cliquez sur **[!UICONTROL Configure]**.
+Accédez à la page de votre entreprise, puis sélectionnez **[!UICONTROL Ajouter une propriété]** ou sélectionnez une propriété existante dans la liste et sélectionnez **[!UICONTROL Configurer]**.
 
 ![](../../images/property-settings.png)
 
@@ -138,10 +113,10 @@ Suivez les instructions pour créer une propriété web.
 
    **Domaines :** URL de base de tous les sites sur lesquels vous prévoyez de déployer cette propriété.
 
-1. (Avancé) :**[!UICONTROL Run rule components in sequence]** Cochez cette case pour que les conditions et actions attendent que la précédente soit achevée avant de s’exécuter.
-1. (Avancé) **[!UICONTROL Return an empty string for missing data elements:]** Si vous référencez un élément de données qui n’existe pas dans une bibliothèque, cela renvoie normalement `undefined`. Cochez cette case si vous souhaitez que ce scénario renvoie une chaîne vide à la place.
-1. (Avancé) **[!UICONTROL Configure for extension development:]** Activez cette case à cocher si vous prévoyez d’installer des extensions de développement sur lesquelles votre société travaille activement
-1. Sélectionner **[!UICONTROL Save]**.
+1. (Avancé) **[!UICONTROL Exécution des composants de règle en séquence]** Cochez cette case pour que les conditions et actions attendent que la précédente soit achevée avant de s’exécuter.
+1. (Avancé) **[!UICONTROL Renvoyer une chaîne vide pour les éléments de données manquants :]** si vous référencez un élément de données qui n’existe pas dans une bibliothèque, cela renvoie normalement `undefined`. Cochez cette case si vous souhaitez que ce scénario renvoie une chaîne vide à la place.
+1. (Avancé) **[!UICONTROL Configuration pour le développement d’extensions :]** cochez cette case si vous prévoyez d’installer des extensions de développement sur lesquelles votre société travaille activement.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 ### Pour les propriétés mobiles
 
@@ -158,7 +133,7 @@ Suivez les instructions pour créer une propriété mobile.
 
    * **Use HTTPS :** sélectionnez ce paramètre selon que toutes les communications de données doivent être envoyées via HTTP ou via HTTPS.
 
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Une fois votre propriété créée, Experience Platform ajoute automatiquement un hôte par défaut, un ensemble d’environnements (Développement, Évaluation et Production) et les extensions par défaut.
 
@@ -174,4 +149,4 @@ Suivez les étapes ci-dessous pour supprimer une propriété de balise.
 
    Vous pouvez sélectionner et supprimer plusieurs propriétés.
 
-1. Cliquez sur **[!UICONTROL Delete]**, puis confirmez la suppression de la propriété.
+1. Sélectionnez **[!UICONTROL Supprimer]**, puis confirmez la suppression de la propriété.

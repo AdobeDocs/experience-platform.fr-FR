@@ -5,17 +5,13 @@ description: Découvrez comment parcourir une galerie de playbooks et commencer 
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
 TQID: https://experienceleague.adobe.com/XcrelsauHLgOt29zk-d-c5yY0OWtU2EC-f902RlAo0E
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 751
+source-wordcount: 763
 ht-degree: 5%
 
 ---
@@ -28,7 +24,7 @@ Les playbooks de cas d’utilisation sont disponibles gratuitement pour tous les
 
 ![Accès direct aux playbooks de cas d’utilisation dans la barre de navigation de gauche.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-Sélectionnez un playbook pour accéder à la page de détails, puis sélectionnez **[!UICONTROL Go to an inspirational sandbox]**. Une boîte de dialogue modale de confirmation s’affiche. Sélectionnez **Confirmer** pour accéder au sandbox source d’inspiration où vous pouvez explorer et expérimenter les différents cas d’utilisation.
+Sélectionnez un playbook pour accéder à la page de détails, puis sélectionnez **[!UICONTROL Accéder à un sandbox source d’inspiration]**. Une boîte de dialogue modale de confirmation s’affiche. Sélectionnez **Confirmer** pour accéder au sandbox source d’inspiration où vous pouvez explorer et expérimenter les différents cas d’utilisation.
 
 Si vous n’êtes pas autorisé à créer des sandbox, contactez votre administrateur pour obtenir de l’aide sur la création d’un sandbox source d’inspiration.
 
@@ -38,13 +34,13 @@ Si vous n’êtes pas autorisé à créer des sandbox, contactez votre administr
 
 ![Accédez à la sandbox source d’inspiration.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-Si vous n’avez pas encore configuré de sandbox sources d’inspiration, sélectionnez **[!UICONTROL Create an inspirational Sandbox]**. Une boîte de dialogue modale s’affiche. Saisissez les **Nom** et **Titre** dans les champs obligatoires et sélectionnez **Créer**. Une fois que vous avez créé le sandbox d’inspiration, veillez à [définir des autorisations](/help/access-control/home.md) avant de revenir à la page des détails des playbooks de cas d’utilisation pour créer une instance.
+Si vous n’avez pas encore configuré de sandbox d’inspiration, sélectionnez **[!UICONTROL Créer un sandbox d’inspiration]**. Une boîte de dialogue modale s’affiche. Saisissez les **Nom** et **Titre** dans les champs obligatoires et sélectionnez **Créer**. Une fois que vous avez créé le sandbox d’inspiration, veillez à [définir des autorisations](/help/access-control/home.md) avant de revenir à la page des détails des playbooks de cas d’utilisation pour créer une instance.
 
 ![Créez un sandbox inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
 ![Saisissez un nom et un titre pour créer un sandbox inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-Si vous sélectionnez un playbook de cas d’utilisation en dehors d’un sandbox source d’inspiration, vous ne pourrez pas créer d’instance. Sur la page de détails, sélectionnez **Accéder au sandbox d’inspiration** pour accéder à un sandbox d’inspiration existant, puis sélectionnez **[!UICONTROL Create instance]**.
+Si vous sélectionnez un playbook de cas d’utilisation en dehors d’un sandbox source d’inspiration, vous ne pourrez pas créer d’instance. Sur la page de détails, sélectionnez **Accéder au sandbox d’inspiration** pour accéder à un sandbox d’inspiration existant, puis sélectionnez **[!UICONTROL Créer une instance]**.
 
 Si vous n’êtes pas autorisé à créer des sandbox, contactez votre administrateur pour obtenir de l’aide sur la création d’un sandbox source d’inspiration.
 
@@ -60,13 +56,13 @@ Notez que lorsque vous créez un sandbox source d’inspiration, les surfaces de
 
 ## Configuration des surfaces de canal et de sandbox dans Journey Optimizer {#configure-channel-surfaces}
 
-Si votre organisation dispose d’une licence pour [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, vous devez configurer les préréglages de canal dans votre sandbox, qui définissent les paramètres techniques requis pour vos messages. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=fr).
+Si votre organisation dispose d’une licence pour [](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, vous devez configurer les préréglages de canal dans votre sandbox, qui définissent les paramètres techniques requis pour vos messages. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=fr).
 
 Pour créer des instances de playbooks dans Journey Optimizer, vous devez configurer les surfaces des canaux pour les notifications par e-mail, push et SMS.
 
 ### Surface du canal e-mail
 
-Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=fr).
+Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
 ### Surface du canal SMS
 

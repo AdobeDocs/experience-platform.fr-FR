@@ -5,35 +5,32 @@ title: Type de données d'abonnement aux télécommunications
 description: Découvrez le type de données Modèle de données d’expérience d’abonnement aux télécommunications (XDM).
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 TQID: https://experienceleague.adobe.com/Uq0AcydyH9L8YhSGcJ4ymUajAg3-Fp5ocevOGNVg31g
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 615
+source-wordcount: 623
 ht-degree: 17%
 
 ---
 
-# Type de données [!UICONTROL Telecom Subscription]
+# Type de données [!UICONTROL Abonnement aux télécommunications]
 
-[!UICONTROL Telecom Subscription] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails pour des types d’abonnement de télécommunications spécifiques, tels qu’Internet, mobile, média ou fixe.
+[!UICONTROL Abonnement aux télécommunications] est un type de données standard des modèles de données d’expérience (XDM) qui décrit les détails de types d’abonnement aux télécommunications spécifiques, tels qu’Internet, les appareils mobiles, les médias ou les lignes fixes.
 
 >[!NOTE]
 >
->Ce document décrit le type de données. Pour le groupe de champs du même nom, reportez-vous au guide de référence du groupe de champs [[!UICONTROL Telecom Subscription] &#x200B;](../field-groups/profile/telecom-subscription.md).
+>Ce document décrit le type de données. Pour le groupe de champs du même nom, reportez-vous au guide de référence du groupe de champs [[!UICONTROL Abonnement aux télécommunications]](../field-groups/profile/telecom-subscription.md).
 >
->Si vous décrivez un type d’abonnement sans rapport avec le secteur des télécommunications, utilisez plutôt le type de données [[!UICONTROL Subscription] générique](./subscription.md).
+>Si vous décrivez un type d’abonnement sans rapport avec le secteur des télécommunications, utilisez plutôt le type de données générique [[!UICONTROL Abonnement]](./subscription.md).
 
 ![Structure d’abonnement aux télécommunications](../images/data-types/telecom-subscription/structure.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `devices` | Tableau d’objets | Décrit une liste d’appareils et/ou d’accessoires associés à la formule. Voir la [section ci-dessous](#devices) pour plus d’informations sur la structure attendue de chaque élément de tableau. |
-| `subscriber` | [[!UICONTROL Person]](./person.md) | Décrit le propriétaire de l’abonnement. |
+| `subscriber` | [[!UICONTROL  Personne ]](./person.md) | Décrit le propriétaire de l’abonnement. |
 | `ID` | Chaîne | Identifiant unique de l’instance d’abonnement. |
 | `billingPeriod` | Chaîne | Durée entre deux facturations. |
 | `billingStartDate` | Date | Date de début de la période de facturation. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |

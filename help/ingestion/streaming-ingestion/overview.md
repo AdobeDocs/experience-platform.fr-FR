@@ -5,26 +5,11 @@ title: Vue d’ensemble de l’ingestion en flux continu
 description: Découvrez l’ingestion par flux dans Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 TQID: https://experienceleague.adobe.com/htRFdI6kObtLCuiaLwexpBLQVRe5-TfcxLgeRLrHZTw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-  - id: f5efb499-54f9-432b-ac5c-599dbac103af
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74id: f5efb499-54f9-432b-ac5c-599dbac103af
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 437
@@ -42,7 +27,7 @@ Adobe Experience Platform vous permet de générer des expériences coordonnées
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
->[!VIDEO](https://video.tv.adobe.com/v/31636?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Diffusion d’enregistrements de profil et de [!DNL ExperienceEvents]
 

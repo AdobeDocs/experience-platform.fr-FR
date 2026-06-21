@@ -3,24 +3,14 @@ title: Types d’éléments de données dans l’extension Adobe Experience Plat
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balises Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 TQID: https://experienceleague.adobe.com/F-1A-l6ypALptCKCtZiYp1yPwgQxUPUusGPxhsebVgM
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 617
+source-wordcount: 644
 ht-degree: 5%
 
 ---
@@ -33,11 +23,11 @@ Après avoir défini vos [types d’action](actions/actions-overview.md) dans l�
 
 Un mappage d’identités vous permet d’établir des identités pour le visiteur de votre page web. Un mappage d’identités se compose d’espaces de noms, tels que `CRMID`, `Phone` ou `Email`, chaque espace de noms contenant un ou plusieurs identifiants. Par exemple, si la personne sur votre site web a fourni deux numéros de téléphone, votre espace de noms de téléphone doit contenir deux identifiants.
 
-Dans l’élément de données [!UICONTROL Identity map], vous fournissez les informations suivantes pour chaque identifiant :
+Dans l’élément de données [!UICONTROL Mappage d’identités], vous fournissez les informations suivantes pour chaque identifiant :
 
-* **[!UICONTROL ID]** : valeur identifiant le visiteur. Par exemple, si l’identifiant appartient à l’espace de noms _phone_, le [!UICONTROL ID] peut être _555-555-5555_. Cette valeur est généralement dérivée d’une variable JavaScript ou d’un autre élément de données sur votre page. Il est donc préférable de créer un élément de données qui référence les données de la page, puis de référencer l’élément de données dans le champ [!UICONTROL ID] de l’élément de données [!UICONTROL Identity map]. Si, lors de l’exécution sur votre page, la valeur de l’identifiant est autre chose qu’une chaîne renseignée, l’identifiant sera automatiquement supprimé du mappage d’identité.
-* **[!UICONTROL Authenticated state]** : sélection indiquant si le visiteur est authentifié.
-* **[!UICONTROL Primary]** : sélection indiquant si l’identifiant doit être utilisé comme identifiant principal pour l’individu. Si aucun identifiant n’est marqué comme principal, l’ECID est utilisé comme identifiant principal.
+* **[!UICONTROL ID]** : valeur identifiant le visiteur. Par exemple, si l’identifiant appartient à l’espace de noms _phone_, le [!UICONTROL ID] peut être _555-555-5555_. Cette valeur est généralement dérivée d’une variable JavaScript ou d’un autre élément de données sur votre page. Il est donc préférable de créer un élément de données qui référence les données de la page, puis de référencer l’élément de données dans le champ [!UICONTROL ID] de l’élément de données [!UICONTROL Mappage d’identités]. Si, lors de l’exécution sur votre page, la valeur de l’identifiant est autre chose qu’une chaîne renseignée, l’identifiant sera automatiquement supprimé du mappage d’identité.
+* **[!UICONTROL État authentifié]** : sélection indiquant si le visiteur est authentifié.
+* **[!UICONTROL Principal]** : sélection indiquant si l&#39;identifiant doit être utilisé comme identifiant principal pour l&#39;individu. Si aucun identifiant n’est marqué comme principal, l’ECID est utilisé comme identifiant principal.
 
 ![Image de l’interface utilisateur affichant l’écran Modifier l’élément de données.](assets/identity-map-data-element.png)
 
@@ -49,9 +39,9 @@ Dans l’élément de données [!UICONTROL Identity map], vous fournissez les in
 
 Vous ne devez pas fournir de [!DNL ECID] lors de la création d’un mappage d’identités. Lors de l’utilisation du SDK, un [!DNL ECID] est automatiquement généré sur le serveur et inclus dans le mappage d’identité.
 
-L’élément de données de mappage d’identités est souvent utilisé avec l’élément de données [[!UICONTROL Variable]](#variable) et l’action [[!UICONTROL Set consent]](actions/set-consent.md).
+L’élément de données de mappage d’identités est souvent utilisé avec l’élément de données [[!UICONTROL Variable]](#variable) et l’action [[!UICONTROL Définir le consentement]](actions/set-consent.md).
 
-En savoir plus sur le service Adobe Experience Platform Identity [&#128279;](/help/identity-service/home.md).
+En savoir plus sur le service Adobe Experience Platform Identity [](/help/identity-service/home.md).
 
 ## Objet XDM {#xdm-object}
 
@@ -69,8 +59,8 @@ Notez que lorsque vous ouvrez certains champs de votre schéma, tels que `web.we
 
 Vous pouvez créer des objets de payload à l’aide de l’élément de données **[!UICONTROL Variable]**. Les objets [!UICONTROL XDM] et [!UICONTROL Data] sont pris en charge.
 
-* Lorsque vous sélectionnez [!UICONTROL XDM], sélectionnez les [!UICONTROL Sandbox] et [!UICONTROL Schema] de votre choix.
-* Lorsque vous sélectionnez [!UICONTROL Data], sélectionnez les solutions de votre choix. Les solutions disponibles comprennent le [!UICONTROL Adobe Analytics] et le [!UICONTROL Adobe Target].
+* Lorsque vous sélectionnez [!UICONTROL XDM], sélectionnez les [!UICONTROL Sandbox] et [!UICONTROL Schéma] de votre choix.
+* Lorsque vous sélectionnez [!UICONTROL Données], sélectionnez les solutions de votre choix. Les solutions disponibles comprennent  et [!UICONTROL Adobe Target].
 
 ![Image de l’interface utilisateur des balises affichant les options de l’élément de données.](assets/variable-data-element.png)
 
@@ -78,9 +68,9 @@ Après avoir créé cet élément de données, vous pouvez utiliser l’action [
 
 ## Média : qualité de l’expérience {#quality-experience}
 
-Un élément de données **[!UICONTROL Quality of Experience]** est utile lors de l’envoi d’événements de streaming multimédia à Adobe Experience Platform. Vous pouvez ajouter cet élément lors de la création d’une session multimédia et les événements multimédia suivants contiendront des données de qualité d’expérience mises à jour.
+Un élément de données **[!UICONTROL Qualité d’expérience]** est utile lors de l’envoi d’événements de médias en flux continu à Adobe Experience Platform. Vous pouvez ajouter cet élément lors de la création d’une session multimédia et les événements multimédia suivants contiendront des données de qualité d’expérience mises à jour.
 
-![Image de l’interface utilisateur affichant l’écran Créer une qualité d’élément de données d’expérience &#x200B;](assets/qoe-data-element.png).
+![Image de l’interface utilisateur affichant l’écran Créer une qualité d’élément de données d’expérience ](assets/qoe-data-element.png).
 
 ## Étapes suivantes {#next-steps}
 

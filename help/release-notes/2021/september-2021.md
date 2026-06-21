@@ -3,15 +3,9 @@ title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2021
 description: Les notes de mise à jour de septembre 2021 pour Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
 TQID: https://experienceleague.adobe.com/XEpj9uUhknD00cIaP-JSSwTZQXtNLicI1q3aj1ByHqs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 392
@@ -51,7 +45,7 @@ Pour en savoir plus sur l’ingestion de données dans Experience Platform, cons
 | --- | --- |
 | Prise en charge des flux de données en continu | Vous pouvez désormais utiliser les fonctions de préparation de données lors de la création d’un flux de données en continu pour [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] et [!DNL Google PubSub]. Pour plus d’informations, consultez le tutoriel sur la [création d’un flux de données en continu pour des sources de stockage cloud](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md). |
 
-Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] &#x200B;](../../data-prep/home.md).
+Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
 
 ## Sources {#sources}
 
@@ -61,8 +55,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!DNL Data Landing Zone] | Vous pouvez désormais créer une connexion source [!DNL Data Landing Zone] à l’aide de l’API [[!DNL Flow Service] &#x200B;](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) ou de l’[interface utilisateur](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] est une interface de stockage [!DNL Azure Blob] fournie par Experience Platform. Elle vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Experience Platform. Pour plus d’informations, consultez la [[!DNL Data Landing Zone] présentation](../../sources/connectors/cloud-storage/data-landing-zone.md). |
-| [!DNL Snowflake] | Vous pouvez désormais créer une connexion source [!DNL Snowflake] à l’aide de l’API [&#128279;](../../sources/tutorials/api/create/databases/snowflake.md) [!DNL Flow Service]  ou de l’interface utilisateur [&#128279;](../../sources/tutorials/ui/create/databases/snowflake.md) &#x200B; pour importer les données de votre base de données [!DNL Snowflake] vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Snowflake] présentation](../../sources/connectors/databases/snowflake.md). |
+| [!DNL Data Landing Zone] | Vous pouvez désormais créer une connexion source [!DNL Data Landing Zone] à l’aide de l’API [[!DNL Flow Service] ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) ou de l’[interface utilisateur](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] est une interface de stockage [!DNL Azure Blob] fournie par Experience Platform. Elle vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Experience Platform. Pour plus d’informations, consultez la [[!DNL Data Landing Zone] présentation](../../sources/connectors/cloud-storage/data-landing-zone.md). |
+| [!DNL Snowflake] | Vous pouvez désormais créer une connexion source [!DNL Snowflake] à l’aide de l’API [[!DNL Flow Service]  ou de l’interface utilisateur [](../../sources/tutorials/ui/create/databases/snowflake.md) ](../../sources/tutorials/api/create/databases/snowflake.md) pour importer les données de votre base de données [!DNL Snowflake] vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Snowflake] présentation](../../sources/connectors/databases/snowflake.md). |
 | Améliorations de la source [!DNL SFTP] | Vous pouvez définir manuellement un numéro de port personnalisé lors de la création d’une connexion source [!DNL SFTP]. Pour plus d’informations, consultez la [[!DNL SFTP] présentation](../../sources/connectors/cloud-storage/sftp.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

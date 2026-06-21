@@ -5,29 +5,15 @@ title: Présentation du service de requête
 description: Découvrez le rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 TQID: https://experienceleague.adobe.com/kGBrOsjS5OqVinAX4KlYspSDZ9kOXb1TCwqz-t4J3Wg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 878
-ht-degree: 15%
+source-wordcount: 820
+ht-degree: 16%
 
 ---
 
@@ -37,14 +23,14 @@ Adobe Experience Platform ingère des données à partir de sources diverses. 
 
 Vous pouvez utiliser Query Service pour connecter le parcours client en ligne à hors ligne et comprendre l’attribution omnicanale pour votre marque. La vidéo suivante montre comment une entreprise d’expérience peut utiliser Query Service pour résoudre des cas d’utilisation clés et explique le fonctionnement de Query Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/33589?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
 
 ## Utilisation du service de requête {#usage}
 
 Pour analyser vos données, créez et exécutez des requêtes SQL avec l’interface utilisateur de Query Service ou l’API RESTful.
 Grâce à l’interface utilisateur de Query Service, vous pouvez écrire, exécuter et planifier des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs de votre organisation. Vous pouvez également tester vos requêtes avant de les exécuter sur votre jeu de données plus large à l’aide de Query Editor. Consultez le [Guide de l’interface utilisateur de Query Service] (ui/overview.md) pour une présentation de la fonctionnalité de l’interface utilisateur.
 
-L’API RESTful offre une expérience similaire. Vous pouvez utiliser l’API Query Service pour écrire et exécuter des requêtes par programmation, créer et enregistrer des modèles pour les requêtes que vous souhaitez adapter, ou planifier des requêtes pour une exécution automatisée. Pour plus d’informations sur l’utilisation de l’API Query Service[&#128279;](api/getting-started.md) consultez le guide de développement de Query Service.
+L’API RESTful offre une expérience similaire. Vous pouvez utiliser l’API Query Service pour écrire et exécuter des requêtes par programmation, créer et enregistrer des modèles pour les requêtes que vous souhaitez adapter, ou planifier des requêtes pour une exécution automatisée. Pour plus d’informations sur l’utilisation de l’API Query Service](api/getting-started.md) consultez le [guide de développement de Query Service.
 
 Pour commencer rapidement à utiliser les fonctionnalités de Query Service, nous vous recommandons de lire les documents suivants :
 
@@ -54,11 +40,11 @@ Pour commencer rapidement à utiliser les fonctionnalités de Query Service, nou
 
 ## Service de requête et services Experience Platform {#experience-platform-services}
 
-Query Service interagit et peut être utilisé avec plusieurs services Experience Platform. Pour tirer le meilleur parti des fonctionnalités de Query Service, vous devez vous familiariser avec ces services et leur interaction avec Query Service. La [page de destination de la documentation ] (https://experienceleague.adobe.com/docs/experience-platform.html?lang=fr) fournit des résumés et des liens vers les fonctionnalités de la plateforme.
+Query Service interagit et peut être utilisé avec plusieurs services Experience Platform. Pour tirer le meilleur parti des fonctionnalités de Query Service, vous devez vous familiariser avec ces services et leur interaction avec Query Service. La [page de destination de la documentation ] (https://experienceleague.adobe.com/docs/experience-platform.html) fournit des résumés et des liens vers les fonctionnalités de la plateforme.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Les spécialistes des données peuvent utiliser le Workspace de science des données IDNL&rbrack; pour créer des recettes basées sur des données d’enregistrement et de série temporelle concernant les clients et leurs activités. &lbrack;Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser. Vous pouvez utiliser SQL dans [!DNL Data Science Workspace] en intégrant Query Service à [!DNL JupyterLab] pour explorer, transformer et analyser les données d’Adobe Analytics. Lisez la [[!DNL Data Science Workspace] présentation](../data-science-workspace/home.md) et le [guide de connexion du notebook Jupyter](./clients/jupyter-notebook.md) pour plus d’informations sur la manière dont [!DNL Data Science Workspace] interagit avec Query Service.
+Adobe Experience Platform [!DNL Data Science Workspace] utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Les spécialistes des données peuvent utiliser le Workspace de science des données IDNL] pour créer des recettes basées sur des données d’enregistrement et de série temporelle concernant les clients et leurs activités. [Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser. Vous pouvez utiliser SQL dans [!DNL Data Science Workspace] en intégrant Query Service à [!DNL JupyterLab] pour explorer, transformer et analyser les données d’Adobe Analytics. Lisez la [[!DNL Data Science Workspace] présentation](../data-science-workspace/home.md) et le [guide de connexion du notebook Jupyter](./clients/jupyter-notebook.md) pour plus d’informations sur la manière dont [!DNL Data Science Workspace] interagit avec Query Service.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
@@ -86,4 +72,4 @@ Ce document vous a initié au service de requête et à son fonctionnement dans 
 
 Pour mieux vous préparer à exécuter des requêtes, regardez la vidéo suivante. Cette vidéo présente des conseils et des bonnes pratiques pour lʼexécution de requêtes dans lʼinterface du requêteur, les clients PSQL, les solutions Business Intelligence (BI) et lʼAPI HTTP.
 
->[!VIDEO](https://video.tv.adobe.com/v/33587?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)

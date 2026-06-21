@@ -3,24 +3,14 @@ title: Destination Marketo Engage
 description: Marketo Engage est la seule solution de gestion de l’expérience client (CXM) de bout en bout pour le marketing, la publicité, l’analyse et le commerce. Utilisez-le pour automatiser et gérer les activités, de la gestion des prospects CRM à l’engagement des clients, en passant par le marketing basé sur les comptes et l’attribution des recettes.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 TQID: https://experienceleague.adobe.com/DEKJUAkJx4w5Cwehy5zaSu-n26-ZRZwy0BTQdJOMndQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1015
+source-wordcount: 1042
 ht-degree: 19%
 
 ---
@@ -45,8 +35,8 @@ ht-degree: 19%
 
 Améliorations de la destination Marketo V2 :
 
-* À l’étape **[!UICONTROL Schedule segment]** du workflow d’activation, dans Marketo V1, vous deviez ajouter manuellement un **ID de mappage** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
-* Dans Marketo V1, à l’étape **[!UICONTROL Mapping]** du workflow d’activation, vous ne pouviez mapper les champs XDM qu’à trois champs cibles dans Marketo : `firstName`, `lastName` et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, reportez-vous à la section [attributs pris en charge](#supported-attributes) ci-dessous.
+* À l’étape **[!UICONTROL Planifier le segment]** du workflow d’activation, dans Marketo V1, vous deviez ajouter manuellement un **ID de mappage** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
+* Dans Marketo V1, à l’étape **[!UICONTROL Mappage]** du processus d’activation, vous ne pouviez mapper les champs XDM qu’à trois champs cibles dans Marketo : `firstName`, `lastName` et `companyName`. Avec la version Marketo V2, vous pouvez désormais mapper des champs XDM à de nombreux autres champs dans Marketo. Pour plus d’informations, reportez-vous à la section [attributs pris en charge](#supported-attributes) ci-dessous.
 
 ## Vue d’ensemble {#overview}
 
@@ -92,7 +82,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -104,8 +94,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail, ECID) utilisés dans la destination [!DNL Marketo Engage]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail, ECID) utilisés dans la destination [!DNL Marketo Engage]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -113,8 +103,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions).
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour obtenir des instructions détaillées sur la configuration de la destination et l’activation des audiences, lisez [Envoi d’une audience Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) dans la documentation de Marketo.
 
@@ -124,12 +114,12 @@ La vidéo ci-dessous montre également les étapes de configuration d’une dest
 >
 >La vidéo ne reflète pas entièrement les fonctionnalités actuelles. Pour obtenir les informations les plus récentes, reportez-vous au guide ci-dessus. Les parties suivantes de la vidéo sont obsolètes :
 > 
->* La carte de destination que vous devez utiliser dans l’interface utilisateur d’Experience Platform est **[!UICONTROL Marketo V2]**.
->* La vidéo n’affiche pas le nouveau champ de sélecteur de **[!UICONTROL Person creation]** dans le workflow Se connecter à la destination . Pour utiliser ce champ, vous devez mapper le prénom et le nom lors de l’étape de mappage des attributs.
+>* La carte de destination à utiliser dans l’interface utilisateur d’Experience Platform est **[!UICONTROL Marketo V2]**.
+>* La vidéo n’affiche pas le nouveau champ de sélecteur **[!UICONTROL Création de personne]** dans le workflow Se connecter à la destination. Pour utiliser ce champ, vous devez mapper le prénom et le nom lors de l’étape de mappage des attributs.
 >* Les deux limites mentionnées dans la vidéo ne s’appliquent plus. Vous pouvez désormais mapper de nombreux autres champs d’attribut de profil en plus des informations d’appartenance à l’audience prises en charge au moment de l’enregistrement de la vidéo. Vous pouvez également exporter vers Marketo des membres de l’audience qui n’existent pas encore dans vos listes statiques Marketo, et ils seront ajoutés aux listes.
->* Dans la **[!UICONTROL Schedule audience step]** du workflow d’activation, dans Marketo V1, vous deviez ajouter manuellement un **[!UICONTROL Mapping ID]** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
+>* À l’étape **[!UICONTROL Planifier l’audience]** du workflow d’activation, dans Marketo V1, vous deviez ajouter manuellement un **[!UICONTROL ID de mappage]** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440160?captions=fre_fr&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Surveiller la destination {#monitor-destination}
 

@@ -5,20 +5,11 @@ title: Présentation des réglementations de confidentialité
 description: Ce document présente un aperçu des différents règlements en matière de confidentialité pris en charge par Adobe Experience Cloud.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 TQID: https://experienceleague.adobe.com/26CQJvd74dLBVtlaB9xbBTIoYHIctKdv2UxQUuU47Ec
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2296
@@ -30,13 +21,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 **&#x200B;**.
+>Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 ****.
 >
 >Mettez à jour vos intégrations avant cette date limite pour éviter les échecs de requête.
 
 Ce document présente un aperçu des différents règlements en matière de confidentialité pris en charge par Adobe Experience Cloud.
 
-Grâce à l’utilisation de [&#128279;](../home.md), Experience Cloud prend en charge les demandes d’accès et de suppression en fonction des réglementations suivantes :
+Grâce à l’utilisation de [](../home.md), Experience Cloud prend en charge les demandes d’accès et de suppression en fonction des réglementations suivantes :
 
 | Règlement | `regulation_type` | Description |
 |-----------|-------------------|-------------|

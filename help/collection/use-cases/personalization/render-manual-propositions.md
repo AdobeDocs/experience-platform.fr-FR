@@ -2,10 +2,11 @@
 title: Effectuer le rendu manuel des propositions
 description: Effectuez le rendu du contenu de proposition à l’aide de votre propre logique d’interface utilisateur (HTML, JSON ou schémas personnalisés), puis enregistrez les événements d’affichage.
 keywords: personnalisation;propositions;rendu manuel;sendEvent;decisionScopes;afficher les événements;
-source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
+exl-id: 9ea82c47-c272-4fa3-a067-4119d325aef5
+source-git-commit: 03ec34ec44be4e906ceaf58bd5d6bc6d62002ff1
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 0%
+source-wordcount: '214'
+ht-degree: 1%
 
 ---
 
@@ -93,6 +94,6 @@ alloy("sendEvent", {
 
 Voir [Gérer les événements d’affichage](display-events.md) pour plus d’informations.
 
-## &#x200B;4. Rendu
+## &#x200B;4. Rendu en cours
 
 Lorsque les modifications de l’interface utilisateur nécessitent un nouveau rendu, réexécutez votre logique de rendu manuel par rapport aux données de proposition que vous avez mises en cache (ou récupérez à nouveau, si nécessaire). Si vous devez enregistrer un affichage pour les scénarios de nouveau rendu, voir [Gérer les événements d’affichage](display-events.md).

@@ -5,10 +5,8 @@ title: Présentation du connecteur FTP Source
 description: Découvrez comment connecter un serveur FTP à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 TQID: https://experienceleague.adobe.com/bPAvGDHZWR8JwMmXa6dFCJ32BRffKbMxDNa6fCYvetc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 450
@@ -20,7 +18,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Le connecteur FTP est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur FTP est en version bêta. Consultez la [ Présentation des sources ](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs de services cloud comme AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
 
@@ -32,7 +30,7 @@ Les sources de stockage dans le cloud peuvent introduire vos propres données da
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

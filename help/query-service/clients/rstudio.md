@@ -5,15 +5,12 @@ title: Connexion de RStudio à Query Service
 description: Ce document décrit les étapes à suivre pour connecter RStudio au service de requête Adobe Experience Platform.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 TQID: https://experienceleague.adobe.com/bWzAleGJ-a76H1AEJFhowIsUMPKnuSyvdmzwlvKpzgk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 451
-ht-degree: 15%
+source-wordcount: 456
+ht-degree: 14%
 
 ---
 
@@ -33,7 +30,7 @@ Ce document décrit les étapes à suivre pour connecter [!DNL RStudio] à Adobe
 
 Après avoir installé [!DNL RStudio], vous devez installer le package RJDBC . Les instructions sur la [connexion d’une base de données via la ligne de commande](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) se trouvent dans la documentation officielle de Posit.
 
-Si vous utilisez un système d’exploitation Mac, vous pouvez sélectionner **[!UICONTROL Tools]** dans la barre de menus, puis **[!UICONTROL Install Packages]** dans le menu déroulant. Vous pouvez également sélectionner l’onglet **[!DNL Packages]** dans l’interface utilisateur de RStudio, puis sélectionner **[!DNL Install]**.
+Si vous utilisez un système d’exploitation Mac, vous pouvez sélectionner **[!UICONTROL Outils]** dans la barre de menus, puis **[!UICONTROL Installer des packages]** dans le menu déroulant. Vous pouvez également sélectionner l’onglet **[!DNL Packages]** dans l’interface utilisateur de RStudio, puis sélectionner **[!DNL Install]**.
 
 Une fenêtre contextuelle s’affiche, affichant l’écran **[!DNL Install Packages]**. Assurez-vous que **[!DNL Repository (CRAN)]** est sélectionné pour la section **[!DNL Install from]** . La valeur de **[!DNL Packages]** doit être `RJDBC`. Assurez-vous que **[!DNL Install dependencies]** est sélectionné. Après avoir confirmé que toutes les valeurs sont correctes, sélectionnez **[!DNL Install]** pour installer les packages. Maintenant que le package RJDBC a été installé, redémarrez [!DNL RStudio] pour terminer le processus d’installation.
 
@@ -55,7 +52,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 >
 >Consultez la [[!DNL Query Service] documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge SSL pour les connexions tierces à Adobe Experience Platform Query Service et comment se connecter à l’aide `verify-full` mode SSL.
 
-Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Experience Platform], puis sélectionnez **[!UICONTROL Queries]** et **[!UICONTROL Credentials]**.
+Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Experience Platform], puis sélectionnez **[!UICONTROL Requêtes]**, **[!UICONTROL Informations d’identification]**.
 
 Un message dans la sortie de la console confirme la connexion à Query Service.
 

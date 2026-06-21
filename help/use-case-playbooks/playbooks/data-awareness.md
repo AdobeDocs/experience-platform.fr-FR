@@ -5,19 +5,13 @@ description: Découvrez comment accélérer le délai de valorisation en copiant
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
 TQID: https://experienceleague.adobe.com/1YhhTYyxgj-PKTqU3NDs0BWg4OHRLAmqWiOpc0R5T4E
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 899
+source-wordcount: 915
 ht-degree: 0%
 
 ---
@@ -40,11 +34,11 @@ La création d’une instance génère un ensemble de ressources telles que des 
 >
 > Vous ne pouvez importer des packages que dans d’autres sandbox de développement. Une fois toutes les modifications ou mises à jour nécessaires effectuées, vous pouvez importer les ressources ou les packages de ces sandbox de développement en production. Vous ne pouvez pas importer directement des sandbox des playbooks de cas d’utilisation vers la production.
 
-1. Pour importer des objets du sandbox source d’inspiration dans un autre sandbox, accédez à l’instance souhaitée d’un playbook de cas d’utilisation, puis sélectionnez **[!UICONTROL Publish to a different sandbox]** pour exporter les artefacts sous la forme d’un package.
+1. Pour importer des objets du sandbox source d’inspiration dans un autre sandbox, accédez à l’instance souhaitée d’un playbook de cas d’utilisation, puis sélectionnez **[!UICONTROL Publier dans un autre sandbox]** pour exporter les artefacts en tant que package.
 
    ![GIF présentant les différentes instances de cas d’utilisation](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Une fois que vous avez sélectionné le bouton **[!UICONTROL Publish to a different sandbox]** , une boîte de dialogue modale s’affiche. Renseignez le nom et la description facultative, puis sélectionnez **[!UICONTROL Create]**. Cette étape regroupe les ressources générées dans un package qui peut être importé dans un autre sandbox.
+2. Une fois que vous avez sélectionné le bouton **[!UICONTROL Publier dans un autre sandbox]**, une boîte de dialogue modale s’affiche. Renseignez le nom et la description facultative, puis sélectionnez **[!UICONTROL Créer]**. Cette étape regroupe les ressources générées dans un package qui peut être importé dans un autre sandbox.
 
    ![Boîte de dialogue modale pour la création d’un package](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
@@ -52,21 +46,21 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
    ![Package à l’état de brouillon ou dépublié](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
-   ![&#x200B; Publication du package &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
+   ![ Publication du package ](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png)
 
 4. Une fois la publication réussie, sur la page de navigation des packages, un bouton **+** doit s’afficher en regard du nom.
 
-   ![&#x200B; Onglet Packages de la page Sandbox &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![ Onglet Packages de la page Sandbox ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
    >[!NOTE]
    >
    > Le package ne peut pas être importé s’il est toujours en mode brouillon. Par conséquent, ouvrez la page des détails du package et publiez-le.
 
-5. Sélectionnez le contrôle **+** et lancez le workflow pour importer dans le **[!UICONTROL Target sandbox]** les ressources générées par le playbook du cas d’utilisation. Sélectionnez un sandbox cible et confirmez le nom du package que vous souhaitez importer à l’aide de la liste déroulante. Ajoutez les détails de la tâche, tels que son nom et sa description, avant de passer à l’étape suivante.
+5. Sélectionnez le contrôle **+** et lancez le workflow pour importer les ressources générées par le playbook de cas d’utilisation dans le **[!UICONTROL sandbox cible]**. Sélectionnez un sandbox cible et confirmez le nom du package que vous souhaitez importer à l’aide de la liste déroulante. Ajoutez les détails de la tâche, tels que son nom et sa description, avant de passer à l’étape suivante.
 
    ![Lancer le workflow d’importation, sélectionner la cible, confirmer le package et ajouter les détails de la tâche.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
-6. L’étape **[!UICONTROL View dependencies]** vous permet de mapper des schémas et de copier d’autres ressources du sandbox source d’inspiration vers le sandbox cible. Le bouton **[!UICONTROL Finish]** est désactivé jusqu’à ce que vous mappez chaque schéma.
+6. Dans l’étape **[!UICONTROL Afficher les dépendances]**, vous pouvez mapper des schémas et copier d’autres ressources du sandbox source d’inspiration vers le sandbox cible. Le bouton **[!UICONTROL Terminer]** est désactivé jusqu’à ce que vous mappez chaque schéma.
 
    ![Mappez les schémas à l’étape « Afficher les dépendances » en activant le bouton Terminer.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
 
@@ -86,11 +80,11 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
 4. Terminez le mappage et sélectionnez **Enregistrer**.
 
-   ![&#x200B; Enregistrer le mappage &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
+   ![ Enregistrer le mappage ](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
 
 5. Une fois que vous avez terminé de mapper tous les champs des schémas, sélectionnez **Terminer** pour terminer le workflow d’importation.
 
-   ![&#x200B; Terminer le flux &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
+   ![ Terminer le flux ](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
 
    >[!NOTE]
    >
@@ -104,8 +98,8 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
 2. Pendant l’importation du package, les ressources du package sont créées dans le sandbox cible. Une fois terminés, ils référencent les champs que vous avez mappés pendant le processus d’importation. Le processus est maintenant terminé et les ressources du sandbox source d’inspiration sont désormais également présentes dans votre sandbox cible pour que vous puissiez les tester.
 
-   ![&#x200B; Ressources générées dans le sandbox cible &#x200B;](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
+   ![ Ressources générées dans le sandbox cible ](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment tirer parti des playbooks de cas d’utilisation avec l’[outil Sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les cas d’utilisation courants de [&#128279;](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment tirer parti des playbooks de cas d’utilisation avec l’[outil Sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les cas d’utilisation courants de [](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).

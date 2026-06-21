@@ -5,30 +5,14 @@ title: Questions fréquentes sur Query Service et Data Distiller
 description: Ce document contient les questions les plus fréquentes et les réponses associées relatives à Query Service et à Data Distiller. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 TQID: https://experienceleague.adobe.com/stm9X3x6ZCk7ZRj3ghtDdqbG-2UBWLlfJ5-IyLllcyI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 5536
+source-wordcount: 5533
 ht-degree: 59%
 
 ---
@@ -62,8 +46,8 @@ La liste suivante de réponses aux questions fréquentes est divisée en plusieu
 - [Interface utilisateur des requêtes](#queries-ui)
 - [Échantillon de jeux de données](#dataset-samples)
 - [Exportation des données](#exporting-data)
-- [&#x200B; Syntaxe SQL &#x200B;](#sql-syntax) 
-- [Requêtes ITAS &#x200B;](#itas-queries)
+- [ Syntaxe SQL ](#sql-syntax) 
+- [Requêtes ITAS ](#itas-queries)
 - [Outils tiers](#third-party-tools)
 - [Erreurs de l’API PostgreSQL](#postgresql-api-errors)
 - [Erreurs de l’API REST](#rest-api-errors)
@@ -87,7 +71,7 @@ La fonction de saisie automatique peut être l’une des causes. La fonction tra
 ### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
 +++Réponse
-Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/31635?captions=fre_fr) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] &#x200B;](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il un nombre maximal de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -137,12 +121,12 @@ Certains mots-clés réservés ne peuvent pas être utilisés comme nom de colon
 +++Réponse
 Les étapes suivantes décrivent comment afficher une vue tabulaire d’un jeu de données via l’interface utilisateur, y compris tous les champs et colonnes imbriqués dans un formulaire aplati.
 
-- Après vous être connecté à Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche de l’interface utilisateur pour accéder à [!UICONTROL Datasets] tableau de bord.
-- L’onglet [!UICONTROL Browse] des jeux de données s’ouvre. Vous pouvez utiliser la barre de recherche pour affiner les options disponibles. Sélectionnez un jeu de données dans la liste.
+- Après vous être connecté à Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche de l’interface utilisateur pour accéder au tableau de bord [!UICONTROL Jeux de données].
+- L’onglet Jeux de données [!UICONTROL Parcourir] s’ouvre. Vous pouvez utiliser la barre de recherche pour affiner les options disponibles. Sélectionnez un jeu de données dans la liste.
 
 ![Tableau de bord Jeux de données dans l’interface utilisateur d’Experience Platform avec la barre de recherche et un jeu de données en surbrillance.](./images/troubleshooting/dataset-selection.png)
 
-- L’écran [!UICONTROL Datasets activity] s’affiche. Sélectionnez **[!UICONTROL Preview dataset]** pour ouvrir une boîte de dialogue du schéma XDM et une vue tabulaire des données aplaties du jeu de données sélectionné. Vous trouverez plus de détails dans la [documentation sur la prévisualisation d’un jeu de données](../catalog/datasets/user-guide.md#preview-a-dataset).
+- L’écran [!UICONTROL Activité des jeux de données] s’affiche. Sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour ouvrir une boîte de dialogue du schéma XDM et une vue tabulaire des données aplaties du jeu de données sélectionné. Vous trouverez plus de détails dans la [documentation sur la prévisualisation d’un jeu de données](../catalog/datasets/user-guide.md#preview-a-dataset).
 
 ![Onglet Activité du jeu de données du tableau de bord Jeux de données avec l’option Prévisualiser le jeu de données mise en surbrillance.](./images/troubleshooting/dataset-preview.png)
 
@@ -173,16 +157,16 @@ Une requête peut être bloquée pendant le traitement pour plusieurs raisons. P
 [une liste complète des numéros de téléphone du service clientèle d’Adobe](https://helpx.adobe.com/fr/contact/phone.html) est disponible sur la page d’aide d’Adobe. Vous pouvez également trouver de l’aide en ligne en procédant comme suit :
 
 - Accédez à [https://www.adobe.com/](https://www.adobe.com/) dans votre navigateur web.
-- Sur le côté droit de la barre de navigation supérieure, sélectionnez **[!UICONTROL Sign In]**.
+- Sur le côté droit de la barre de navigation supérieure, sélectionnez **[!UICONTROL Se connecter]**.
 
 ![Site web d’Adobe avec Se connecter en surbrillance.](./images/troubleshooting/adobe-sign-in.png)
 
 - Utilisez l’Adobe ID et le mot de passe associés à votre licence Adobe.
-- Sélectionnez **[!UICONTROL Help & Support]** dans la barre de navigation supérieure.
+- Sélectionnez **[!UICONTROL Aide et assistance]** dans la barre de navigation supérieure.
 
 ![Menu déroulant de la barre de navigation supérieure avec Aide et assistance, Assistance aux entreprises et Nous contacter en surbrillance.](./images/troubleshooting/help-and-support.png)
 
-Une bannière déroulante s’affiche avec une section [!UICONTROL Help and support]. Sélectionnez **[!UICONTROL Contact us]** pour ouvrir l’assistant virtuel de l’assistance clientèle d’Adobe ou sélectionnez **[!UICONTROL Enterprise support]** pour obtenir une aide dédiée aux grandes organisations.
+Une bannière déroulante s’affiche avec une section [!UICONTROL  Aide et assistance ]. Sélectionnez **[!UICONTROL Nous contacter]** pour ouvrir l’assistant virtuel de l’assistance clientèle d’Adobe, ou sélectionnez **[!UICONTROL Assistance aux entreprises]** pour obtenir une aide dédiée aux grandes organisations.
 +++
 
 ### Comment mettre en œuvre une série séquentielle de tâches sans exécuter les tâches suivantes si la tâche précédente ne se termine pas correctement ?
@@ -670,7 +654,7 @@ Oui. TLS est appliqué sur le port 80 et les connexions non chiffrées ne sont p
 ### Comment l’utilisation de la licence de Distiller de données est-elle suivie et où puis-je voir ces informations ?
 
 +++Réponse  
-La principale mesure utilisée pour suivre l’utilisation des requêtes par lots est l’heure de calcul. Vous avez accès à ces informations et à votre consommation actuelle via le tableau de bord [&#x200B; Utilisation des licences &#x200B;](../dashboards/guides/license-usage.md).
+La principale mesure utilisée pour suivre l’utilisation des requêtes par lots est l’heure de calcul. Vous avez accès à ces informations et à votre consommation actuelle via le tableau de bord [ Utilisation des licences ](../dashboards/guides/license-usage.md).
 +++
 
 ### Qu’est-ce qu’une heure de calcul ?
@@ -702,7 +686,7 @@ L’infrastructure principale est constamment améliorée afin d’optimiser l�
 +++Réponse
 Vous pouvez vous attendre à des performances similaires lorsque vous exécutez des requêtes dans les sandbox de développement et de production. Les deux environnements sont conçus pour fournir le même niveau de capacité de traitement. Cependant, des différences peuvent apparaître au niveau des heures de calcul, en fonction de la quantité de données que vous traitez et de l’activité globale du système au moment de l’exécution de votre requête.
 
-Suivez l’utilisation de vos heures de calcul dans le tableau de bord [&#x200B; Utilisation des licences &#x200B;](../dashboards/guides/license-usage.md) de l’interface utilisateur d’Experience Platform.
+Suivez l’utilisation de vos heures de calcul dans le tableau de bord [ Utilisation des licences ](../dashboards/guides/license-usage.md) de l’interface utilisateur d’Experience Platform.
 +++
 
 ## Interface utilisateur des requêtes
@@ -808,7 +792,7 @@ Oui, les clients de bureau tiers peuvent être connectés à Query Service par l
 ### Pourquoi mes informations d’identification non expirantes ne fonctionnent-elles pas ?
 
 +++Réponse
-La valeur des informations d’identification non expirantes sont les arguments concaténés du `technicalAccountID` et les `credential` extraits du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
+La valeur des informations d’identification non expirantes sont les arguments concaténés du `technicalAccountID` et les `credential` extraits du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
 Pour plus d’informations sur la [connexion à des clients externes à l’aide d’informations d’identification](./ui/credentials.md#using-credentials-to-connect-to-external-clients), consultez la documentation.
 +++
 

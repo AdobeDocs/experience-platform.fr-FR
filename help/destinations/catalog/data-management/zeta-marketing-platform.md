@@ -5,8 +5,8 @@ hide: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
 source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 18%
+source-wordcount: '1495'
+ht-degree: 17%
 
 ---
 
@@ -40,7 +40,7 @@ Un annonceur vise à cibler les utilisateurs et utilisatrices avec des audiences
 * Bien que le [!DNL Adobe Experience Platform] permette l’activation de plusieurs audiences vers une instance de destination ZMP spécifique, il est obligatoire que chaque instance de destination ZMP ne reçoive qu’une seule audience Experience Platform. Pour gérer plusieurs audiences à partir d’Experience Platform, créez des instances de destination ZMP supplémentaires pour chaque audience et sélectionnez une liste de clients différente dans la liste déroulante. Cette approche permet de s’assurer que les audiences ZMP cibles ne sont pas remplacées. Voir [Renseigner les détails de la destination](#destination-details) pour plus d’informations.
 * Utilisez les informations d’identification suivantes pour configurer la destination :
    * Nom d’utilisateur : **api**
-   * Mot de passe : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[&#128279;](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la  documentation ZMP .
+   * Mot de passe : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la [ documentation ZMP .
 
 ## Identités prises en charge {#supported-identities}
 
@@ -78,7 +78,7 @@ Consultez le tableau ci-dessous pour plus d’informations sur le type et la fr�
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -100,16 +100,16 @@ Audiences prises en charge par type de données d’audience :
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Manage Destinations]** [Access Control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL Username]** : `api`
-* **[!UICONTROL Password]** : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[&#128279;](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la  documentation ZMP .
+* **[!UICONTROL Nom d’utilisateur]** : `api`
+* **[!UICONTROL Password]** : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations](https://knowledgebase.zetaglobal.com/kb/integrations) consultez la [ documentation ZMP .
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -117,23 +117,23 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Image illustrant la configuration ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL ZMP Account Site Id]** : votre ZMP **Identifiant du site** où vous souhaitez envoyer vos audiences. Vous pouvez afficher votre ID de site en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Vous trouverez plus d’informations [ici](https://knowledgebase.zetaglobal.com/kb/integrations).
-* **[!UICONTROL ZMP Segment]** : segment de liste de clients dans votre compte d’ID de site ZMP que vous souhaitez mettre à jour avec l’audience Experience Platform.
+* **[!UICONTROL Identifiant de site du compte ZMP]** : l’identifiant du site **identifiant du site** ZMP vers lequel vous souhaitez envoyer vos audiences. Vous pouvez afficher votre ID de site en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Vous trouverez plus d’informations [ici](https://knowledgebase.zetaglobal.com/kb/integrations).
+* **[!UICONTROL Segment ZMP]** : segment de liste de clients dans votre compte d’identifiant de site ZMP que vous souhaitez mettre à jour avec l’audience Experience Platform.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer des audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

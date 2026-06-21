@@ -5,14 +5,12 @@ title: Création et modification de groupes de champs de schéma dans l’interf
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 TQID: https://experienceleague.adobe.com/68ipWr1cvhjhlcBQRcODN-ZwnoWQK1MFLNMlGqFBCWk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1004
-ht-degree: 9%
+source-wordcount: 1036
+ht-degree: 8%
 
 ---
 
@@ -33,7 +31,7 @@ Pour parcourir les groupes de champs dans la bibliothèque de schémas et compre
 
 >[!NOTE]
 >
->Les actions XDM sont disponibles à partir du tableau d’inventaire et de la vue des détails de la ressource (**[!UICONTROL More]**). Les actions complètes s’appliquent uniquement aux ressources personnalisées (définies par le client) ; les ressources standard ont des options limitées. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](../explore.md#xdm-resource-actions).
+>Les actions XDM sont disponibles à partir du tableau d’inventaire et de la vue des détails de la ressource (**[!UICONTROL Plus]**). Les actions complètes s’appliquent uniquement aux ressources personnalisées (définies par le client) ; les ressources standard ont des options limitées. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](../explore.md#xdm-resource-actions).
 
 ## Conditions préalables {#prerequisites}
 
@@ -45,11 +43,11 @@ Bien que cela ne soit pas obligatoire pour ce guide, il est recommandé de suivr
 
 Pour créer un groupe de champs, vous devez d’abord sélectionner un schéma auquel le groupe de champs sera ajouté. Vous pouvez choisir de [créer un schéma](./schemas.md#create) ou [sélectionner un schéma existant à modifier](./schemas.md#edit).
 
-Une fois le schéma ouvert dans le [!DNL Schema Editor], sélectionnez **[!UICONTROL Add]** en regard de la section [!UICONTROL Field groups] dans le rail de gauche.
+Une fois le schéma ouvert dans le [!DNL Schema Editor], sélectionnez **[!UICONTROL Ajouter]** en regard de la section [!UICONTROL Groupes de champs] dans le rail de gauche.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Dans la boîte de dialogue qui s’affiche, sélectionnez **[!UICONTROL Create new field group]**. Vous pouvez fournir un **[!UICONTROL Display name]** et un **[!UICONTROL Description]** pour le groupe de champs . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Add field groups]**.
+Dans la boîte de dialogue qui s’affiche, sélectionnez **[!UICONTROL Créer un groupe de champs]**. Vous pouvez indiquer ici un **[!UICONTROL Nom d’affichage]** et un **[!UICONTROL Description]** pour le groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -59,9 +57,9 @@ Le [!DNL Schema Editor] réapparaît, avec le nouveau groupe de champs répertor
 
 ## Filtrer les groupes de champs {#filter}
 
-La liste des groupes de champs disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Le paramètre par défaut affiche les groupes de champs définis par Adobe. Cependant, vous pouvez également filtrer la liste pour afficher celles créées par votre organisation. Sélectionnez le bouton radio pour choisir entre les options [!UICONTROL Standard] et [!UICONTROL Custom]. L’option [!UICONTROL Standard] affiche les entités créées par Adobe et l’option [!UICONTROL Custom] affiche les entités créées au sein de votre organisation.
+La liste des groupes de champs disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Le paramètre par défaut affiche les groupes de champs définis par Adobe. Cependant, vous pouvez également filtrer la liste pour afficher celles créées par votre organisation. Sélectionnez le bouton radio pour choisir entre les options [!UICONTROL Standard] et [!UICONTROL Personnalisé]. L’option [!UICONTROL Standard] affiche les entités créées par Adobe et l’option [!UICONTROL Personnalisé] affiche les entités créées au sein de votre organisation.
 
-![Onglet [!UICONTROL Field groups] de l’espace de travail [!UICONTROL Schemas] avec [!UICONTROL Standard] et [!UICONTROL Custom] en surbrillance.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![Onglet [!UICONTROL Groupes de champs] de l’espace de travail [!UICONTROL Schémas] avec [!UICONTROL Standard] et [!UICONTROL Personnalisé] en surbrillance.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Modifier un groupe de champs existant {#edit}
 
@@ -85,13 +83,13 @@ Pour ajouter des champs à un groupe de champs personnalisé, commencez par sél
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Un espace réservé **[!UICONTROL Untitled Field]** apparaît dans la zone de travail, et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition de champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration de différents types de champs.
+Un espace réservé **[!UICONTROL Champ sans titre]** s’affiche dans la zone de travail, et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Consultez le guide sur la [définition de champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration de différents types de champs.
 
-Sous **[!UICONTROL Assign to]**, sélectionnez l’option **[!UICONTROL Field Group]** , puis utilisez la liste déroulante pour sélectionner le groupe de champs de votre choix dans la liste. Vous pouvez commencer à saisir le nom du groupe de champs pour affiner les résultats.
+Sous **[!UICONTROL Affecter à]**, sélectionnez l’option **[!UICONTROL Groupe de champs]**, puis utilisez la liste déroulante pour sélectionner le groupe de champs de votre choix dans la liste. Vous pouvez commencer à saisir le nom du groupe de champs pour affiner les résultats.
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-Une fois le champ ajouté au schéma, il est affecté au groupe de champs sélectionné. Continuez à ajouter autant de champs que nécessaire au groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]** pour enregistrer le schéma et le groupe de champs.
+Une fois le champ ajouté au schéma, il est affecté au groupe de champs sélectionné. Continuez à ajouter autant de champs que nécessaire au groupe de champs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma et le groupe de champs.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -99,6 +97,6 @@ Si le même groupe de champs est déjà utilisé dans d’autres schémas, les n
 
 ## Étapes suivantes {#next-steps}
 
-Ce guide explique comment créer et modifier des groupes de champs à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schemas], consultez la présentation de l’espace de travail [[!UICONTROL Schemas]](../overview.md).
+Ce guide explique comment créer et modifier des groupes de champs à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](../overview.md).
 
 Pour savoir comment gérer les groupes de champs à l’aide de l’API [!DNL Schema Registry], consultez le guide [point d’entrée des groupes de champs](../../api/field-groups.md).

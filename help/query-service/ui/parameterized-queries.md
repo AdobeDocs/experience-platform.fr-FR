@@ -3,16 +3,12 @@ title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 TQID: https://experienceleague.adobe.com/cdcCnCiSjfjxf2Tp2deahQbgevGLJDAhGFLMxd0S3z8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 682
+source-wordcount: 692
 ht-degree: 13%
 
 ---
@@ -28,7 +24,7 @@ Query Service prend en charge l’utilisation de requêtes paramétrées dans Qu
 
 ## Conditions préalables
 
-Avant de poursuivre avec ce guide, lisez le [&#x200B; Guide de l’interface utilisateur de Query Editor &#x200B;](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
+Avant de poursuivre avec ce guide, lisez le [ Guide de l’interface utilisateur de Query Editor ](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
 
 >[!NOTE]
 >
@@ -55,7 +51,7 @@ SELECT
 
 Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Pour plus d’instructions, consultez la section relative à [accès à Query Editor](./user-guide.md#accessing-query-editor).
 
-Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite l’onglet **[!UICONTROL Query parameters]** en regard de la [!UICONTROL Console] ajouter la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous omettez d’ajouter une valeur à l’une des clés requises. Une icône d’alerte (![une icône d’alerte.](/help/images/icons/alert.png)) apparaît dans la section Paramètres de requête en regard de tout champ d’entrée de [!UICONTROL Value] vide.
+Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite l’onglet **[!UICONTROL Paramètres de requête]** à côté de la [!UICONTROL Console] et ajoutez la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous omettez d’ajouter une valeur à l’une des clés requises. Une icône d’alerte (![une icône d’alerte.](/help/images/icons/alert.png)) apparaît dans la section Paramètres de requête en regard de tout champ d’entrée [!UICONTROL Valeur] vide.
 
 >[!NOTE]
 >
@@ -65,11 +61,11 @@ Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’édite
 
 >[!TIP]
 >
->Remplacez les onglets [!UICONTROL Query parameters] par [!UICONTROL Console] pour afficher la sortie console de la requête.
+>Remplacez les onglets [!UICONTROL Paramètres de requête] par [!UICONTROL Console] pour afficher la sortie console de la requête.
 
 ## Utiliser les détails des journaux de requête pour vérifier les valeurs de paramètre {#check-parameter-values}
 
-Vous ne pouvez pas enregistrer de paramètres dans les modèles, car les valeurs utilisées ne sont pas persistantes. Cependant, vous pouvez vérifier la page [!UICONTROL Query log details] pour trouver les valeurs de paramètre utilisées dans une exécution de requête. Dans ce cas, les journaux n’indiquent pas que la requête était une requête paramétrée. Consultez la [documentation sur les journaux de requêtes](./query-logs.md) pour obtenir des instructions sur la manière de trouver les valeurs utilisées.
+Vous ne pouvez pas enregistrer de paramètres dans les modèles, car les valeurs utilisées ne sont pas persistantes. Cependant, vous pouvez consulter la page [!UICONTROL Détails du journal de requête] pour trouver les valeurs de paramètre utilisées dans une exécution de requête. Dans ce cas, les journaux n’indiquent pas que la requête était une requête paramétrée. Consultez la [documentation sur les journaux de requêtes](./query-logs.md) pour obtenir des instructions sur la manière de trouver les valeurs utilisées.
 
 ![La vue des logs de requête avec le SQL d’une requête paramétrée mise en surbrillance dans la section détails.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 
@@ -81,7 +77,7 @@ Les valeurs de paramètre sont enregistrées lorsque vous planifiez une requête
 
 >[!TIP]
 >
->Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée[&#128279;](../sql/prepared-statements.md) consultez le  guide de syntaxe des instructions préparées .
+>Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée](../sql/prepared-statements.md) consultez le [ guide de syntaxe des instructions préparées .
 
 ## Étapes suivantes
 

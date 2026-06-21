@@ -6,8 +6,8 @@ description: Le guide suivant décrit les étapes nécessaires à la création d
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 98%
+source-wordcount: '1736'
+ht-degree: 90%
 
 ---
 
@@ -15,19 +15,19 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 >[!IMPORTANT]
 >
 >Le machine learning en temps réel n’est pas encore disponible pour tous les utilisateurs et utilisatrices. Cette fonctionnalité est en version alpha et est encore en cours de test. Ce document est sujet à modification.
 
-Le guide suivant décrit les étapes nécessaires à la création d’une application de machine learning en temps réel. En utilisant le modèle de notebook Python de **[!UICONTROL ML en temps réel]** fourni par Adobe, ce guide couvre l’apprentissage d’un modèle, la création d’un DSL, la publication d’un DSL sur Edge et la notation de la requête. Au fur et à mesure que vous passez à la mise en oeuvre de votre modèle de machine learning en temps réel, vous devez modifier le modèle en fonction des besoins de votre jeu de données.
+Le guide suivant décrit les étapes nécessaires à la création d’une application de machine learning en temps réel. En utilisant le modèle de notebook Python **[!UICONTROL ML en temps réel]** fourni par Adobe, ce guide couvre l’entraînement d’un modèle, la création d’un DSL, la publication d’un DSL sur Edge et la notation de la requête. Au fur et à mesure que vous passez à la mise en oeuvre de votre modèle de machine learning en temps réel, vous devez modifier le modèle en fonction des besoins de votre jeu de données.
 
 ## Créer un notebook de machine learning en temps réel
 
-Dans l’interface utilisateur d’Adobe Experience Platform, sélectionnez **[!UICONTROL Notebooks]** depuis **Science des données**. Ensuite, sélectionnez **[!UICONTROL JupyterLab]** et patientez le temps que l’environnement se charge.
+Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Notebooks]** depuis **Science des données**. Sélectionnez ensuite **[!UICONTROL JupyterLab]** et patientez le temps que l’environnement se charge.
 
 ![Ouvrez JupyterLab.](../images/rtml/open-jupyterlab.png)
 
@@ -96,7 +96,7 @@ Si vous souhaitez utiliser un jeu de données dans Adobe Experience Platform, su
 
 ![jeu de données rtml](../images/rtml/rtml-dataset.png)
 
-Pour accéder à un jeu de données dans votre notebook [!DNL JupyterLab], sélectionnez l’onglet **Données** dans le volet de navigation de gauche de [!DNL JupyterLab]. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Exploration des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche en bas du notebook. Cette cellule a votre `dataset_id`.
+Pour accéder à un jeu de données dans votre notebook [!DNL JupyterLab], sélectionnez l’onglet **Données** dans le volet de navigation de gauche de [!DNL JupyterLab]. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Explorer les données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche en bas du notebook. Cette cellule a votre `dataset_id`.
 
 ![accès aux jeux de données](../images/rtml/access-dataset.png)
 
@@ -121,7 +121,7 @@ En utilisant le modèle **[!UICONTROL ML en temps réel]**, vous devez analyser,
 
 **Transformations de données**
 
-La cellule de **[!UICONTROL transformation des données]** des modèles de **ML en temps réel** doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement le renommage des colonnes, l’agrégation des données et la préparation des données/l’ingénierie des fonctionnalités.
+La cellule **[!UICONTROL ML en temps réel]** modèles **Transformations de données** doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement le renommage des colonnes, l’agrégation des données et la préparation des données/l’ingénierie des fonctionnalités.
 
 >[!NOTE]
 >
@@ -414,7 +414,7 @@ Le DSL mis à jour vous est retourné.
 
 ## Notation {#scoring}
 
-Après la publication sur [!DNL Edge], la notation est effectuée par une requête POST d’un client. En règle générale, cela peut être effectué à partir d’une application cliente qui a besoin de scores ML. Vous pouvez également le faire à partir de Postman. Le modèle de **[!UICONTROL ML en temps réel]** utilise EdgeUtils pour démontrer ce processus.
+Après la publication sur [!DNL Edge], la notation est effectuée par une requête POST d’un client. En règle générale, cela peut être effectué à partir d’une application cliente qui a besoin de scores ML. Vous pouvez également le faire à partir de Postman. Le modèle **[!UICONTROL ML en temps réel]** utilise EdgeUtils pour démontrer ce processus.
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ keywords: cycle de vie des données
 solution: Experience Platform
 source-git-commit: d715686601e700492cabfc2bfabcc3951eb9a958
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Pour les niveaux de quota, les limites mensuelles et les limites basées sur les
 
 ## Surveillance du statut des demandes {#monitoring-request-status}
 
-Pour vérifier le statut d’une demande de suppression d’enregistrement envoyée, accédez à l’espace de travail **[!UICONTROL Data Lifecycle]** dans l’interface utilisateur d’Experience Platform et sélectionnez l’onglet **[!UICONTROL Record]** . Une liste des demandes de suppression d’enregistrements envoyées et leur statut actuel s’affiche. Pour les vérifications d’état par programmation, utilisez l’API [work order](./api/workorder.md).
+Pour vérifier le statut d’une demande de suppression d’enregistrement envoyée, accédez à l’espace de travail **[!UICONTROL Cycle de vie des données]** dans l’interface utilisateur d’Experience Platform et sélectionnez l’onglet **[!UICONTROL Enregistrement]**. Une liste des demandes de suppression d’enregistrements envoyées et leur statut actuel s’affiche. Pour les vérifications d’état par programmation, utilisez l’API [work order](./api/workorder.md).
 
 Pour obtenir des instructions détaillées, voir [Parcourir les ordres de travail relatifs au cycle de vie des données](./ui/browse.md) ou le [Guide de point d’entrée des ordres de travail](./api/workorder.md).
 

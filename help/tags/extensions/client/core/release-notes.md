@@ -3,25 +3,11 @@ title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 TQID: https://experienceleague.adobe.com/0xlK-pC8-F9CtKAeu2uVNPpaGkOo-W8ZN9bzPxLjpsI
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2:
-  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: bef6f891-2e8a-425e-8f99-7ddf22070daaid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1769
@@ -156,7 +142,7 @@ v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps passé sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Dépassement de délai du lien marqué sur l’événement de clic comme « n’est plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=fr) pour Adobe Experience Platform.
+* **Dépassement de délai du lien marqué sur l’événement de clic comme « n’est plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## jeudi 6 janvier 2021
 

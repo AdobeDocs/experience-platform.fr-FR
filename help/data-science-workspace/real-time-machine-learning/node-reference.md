@@ -5,17 +5,10 @@ title: Référence des nœuds de machine learning en temps réel
 description: Un nœud est l’unité fondamentale à partir de laquelle des graphiques sont formés. Chaque nœud effectue une tâche spécifique et ces nœuds peuvent être liés ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un nœud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence de machine learning. Le nœud sort la valeur transformée ou déduite pour le ou les nœuds suivants.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 TQID: https://experienceleague.adobe.com/sNpKUdNsLfRvOapjsFEfn2RfGU5Bk0knXtI0WnGWR6s
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 704

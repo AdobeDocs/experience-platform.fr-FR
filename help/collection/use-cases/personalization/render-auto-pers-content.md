@@ -2,10 +2,11 @@
 title: Rendre automatiquement les propositions d’action DOM
 description: Utilisez Web SDK pour effectuer automatiquement le rendu des propositions d’action DOM éligibles et gérer les scénarios de rendu de SPA courants.
 keywords: personnalisation;renderDecisions;dom-action;sendEvent;applyPropositions;application sur une seule page;
-source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
+exl-id: 61729fb6-f449-4521-b073-7678939d1426
+source-git-commit: 03ec34ec44be4e906ceaf58bd5d6bc6d62002ff1
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 0%
+source-wordcount: '253'
+ht-degree: 1%
 
 ---
 
@@ -109,4 +110,4 @@ Voir [`applyPropositions`](/help/collection/js/commands/applypropositions.md) po
 
 >[!NOTE]
 >
->La commande `applyPropositions` n’envoie pas automatiquement d’événements d’affichage. Si vous devez enregistrer « display » pour des scénarios de nouveau rendu, reportez-vous à la section [&#x200B; Gérer les événements d’affichage &#x200B;](display-events.md).
+>La commande `applyPropositions` n’envoie pas automatiquement d’événements d’affichage. Si vous devez enregistrer « display » pour des scénarios de nouveau rendu, reportez-vous à la section [ Gérer les événements d’affichage ](display-events.md).

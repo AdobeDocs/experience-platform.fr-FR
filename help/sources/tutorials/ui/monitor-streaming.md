@@ -4,22 +4,19 @@ description: Les connecteurs Source de Adobe Experience Platform permettent d’
 title: Surveillance des flux de données pour les sources de diffusion en continu dans l’interface utilisateur
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 TQID: https://experienceleague.adobe.com/HAuaPKWlY2uLn8xo8lptRQt6N-SUX08R4X84O4XoNj4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1000
-ht-degree: 16%
+source-wordcount: 1051
+ht-degree: 15%
 
 ---
 
 # Surveillance des flux de données pour les sources de diffusion en continu dans l’interface utilisateur
 
-Ce tutoriel décrit les étapes à suivre pour surveiller les flux de données des sources en flux continu à l’aide de l’espace de travail [!UICONTROL Sources].
+Ce tutoriel décrit les étapes de surveillance des flux de données pour les sources en flux continu à l’aide de l’espace de travail [!UICONTROL Sources].
 
 ## Prise en main
 
@@ -32,17 +29,17 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Surveillance des flux de données pour les sources de diffusion en continu
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
-Pour afficher les flux de données existants pour les sources en flux continu, sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur.
+Pour afficher les flux de données existants pour les sources en flux continu, sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur.
 
 ![catalogue](../../images/tutorials/monitor-streaming/catalog.png)
 
-La page [!UICONTROL Dataflows] contient une liste de tous les flux de données existants de votre organisation, y compris des informations sur leurs données sources, le nom du compte et le statut d’exécution du flux de données.
+La page [!UICONTROL Flux de données] contient une liste de tous les flux de données existants de votre organisation, y compris des informations sur leurs données sources, le nom du compte et le statut d’exécution du flux de données.
 
 Sélectionnez le nom du flux de données à afficher.
 
-![&#x200B; flux de données &#x200B;](../../images/tutorials/monitor-streaming/dataflows.png)
+![ flux de données ](../../images/tutorials/monitor-streaming/dataflows.png)
 
 Le tableau suivant contient des informations supplémentaires sur les statuts d’exécution des flux de données :
 
@@ -54,13 +51,13 @@ Le tableau suivant contient des informations supplémentaires sur les statuts d�
 | Erreur | Le statut `Error` indique que le processus d’activation d’un flux de données a été interrompu. |
 | Aucune exécution | Le statut `No runs` indique que le flux de données a été créé, mais qu’aucune exécution de flux de données n’a été démarrée. |
 
-La page [!UICONTROL Dataflow Activity] affiche des informations spécifiques sur votre flux de données de diffusion en continu. La bannière supérieure contient le nombre cumulé d’enregistrements ingérés et d’enregistrements ayant échoué pour toutes les exécutions de flux de données de diffusion en continu dans la période sélectionnée.
+La page [!UICONTROL Activité du flux de données] affiche des informations spécifiques sur votre flux de données en flux continu. La bannière supérieure contient le nombre cumulé d’enregistrements ingérés et d’enregistrements ayant échoué pour toutes les exécutions de flux de données de diffusion en continu dans la période sélectionnée.
 
 ![dataflow-activity](../../images/tutorials/monitor-streaming/dataflow-activity.png)
 
-Par défaut, les données affichées contiennent les taux d’ingestion des sept derniers jours. Sélectionnez **[!UICONTROL Last 7 days]** pour ajuster la période des enregistrements affichés.
+Par défaut, les données affichées contiennent les taux d’ingestion des sept derniers jours. Sélectionnez **[!UICONTROL 7 derniers jours]** pour ajuster la période des enregistrements affichés.
 
-Une fenêtre pop-up de calendrier s’affiche, vous offrant des options pour d’autres périodes d’ingestion. Vous pouvez configurer la période d’exécution du flux de données pour afficher les exécutions de flux des sept jours précédents ou des 30 derniers jours. Vous pouvez également configurer le calendrier interactif pour définir une période personnalisée de votre choix. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]**.
+Une fenêtre pop-up de calendrier s’affiche, vous offrant des options pour d’autres périodes d’ingestion. Vous pouvez configurer la période d’exécution du flux de données pour afficher les exécutions de flux des sept jours précédents ou des 30 derniers jours. Vous pouvez également configurer le calendrier interactif pour définir une période personnalisée de votre choix. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
 
 ![calendar](../../images/tutorials/monitor-streaming/calendar.png)
 
@@ -96,24 +93,24 @@ La moitié inférieure de la page affiche des informations sur le nombre d’enr
 
 Chaque exécution de flux de données affiche les détails suivants :
 
-* **[!UICONTROL Dataflow run start]** : heure à laquelle l’exécution du flux de données a démarré.
-* **[!UICONTROL Processing time]** : durée de traitement du flux de données.
-* **[!UICONTROL Records Received]** : nombre total d’enregistrements reçus dans le flux de données d’un connecteur source.
-* **[!UICONTROL Records Ingested]** : nombre total d’enregistrements ingérés dans [!DNL Data Lake].
-* **[!UICONTROL Records with Warnings]** : nombre total d’enregistrements avec avertissements ingérés. Toutes les erreurs de transformation du mappeur sont signalées comme avertissements et les lignes partiellement ingérées sont étiquetées comme `success` avec un avertissement. **Remarque** : la prise en charge de l’ingestion d’enregistrements avec des avertissements n’est disponible que pour les sources en flux continu.
-* **[!UICONTROL Records Failed]** : nombre d’enregistrements qui n’ont pas été ingérés dans [!DNL Data Lake] en raison d’erreurs dans les données.
-* **[!UICONTROL Ingestion Rate]** : taux de succès des enregistrements ingérés dans [!DNL Data Lake]. Cette mesure s’applique lorsque [!UICONTROL Partial Ingestion] est activé.
-* **[!UICONTROL Status]** : représente le statut du flux de données : [!UICONTROL Completed] ou [!UICONTROL Processing]. [!UICONTROL Completed] signifie que tous les enregistrements pour l’exécution du flux de données correspondant ont été traités dans la période d’une heure. [!UICONTROL Processing] signifie que l’exécution du flux de données n’est pas encore terminée.
+* **[!UICONTROL Début d’exécution du flux de données]** : heure à laquelle l’exécution du flux de données a démarré.
+* **[!UICONTROL Temps de traitement]** : temps nécessaire au traitement du flux de données.
+* **[!UICONTROL Enregistrements reçus]** : nombre total d’enregistrements reçus dans le flux de données d’un connecteur source.
+* **[!UICONTROL Enregistrements ingérés]** : nombre total d’enregistrements ingérés dans [!DNL Data Lake].
+* **[!UICONTROL Enregistrements avec avertissements]** : nombre total d’enregistrements avec avertissements qui ont été ingérés. Toutes les erreurs de transformation du mappeur sont signalées comme avertissements et les lignes partiellement ingérées sont étiquetées comme `success` avec un avertissement. **Remarque** : la prise en charge de l’ingestion d’enregistrements avec des avertissements n’est disponible que pour les sources en flux continu.
+* **[!UICONTROL Enregistrements en échec]** : nombre d’enregistrements qui n’ont pas été ingérés dans [!DNL Data Lake] en raison d’erreurs dans les données.
+* **[!UICONTROL Taux d’ingestion]** : taux de succès des enregistrements ingérés dans [!DNL Data Lake]. Cette mesure s’applique lorsque l’option [!UICONTROL  Ingestion partielle ] est activée.
+* **[!UICONTROL Statut]** : représente le statut du flux de données : [!UICONTROL Terminé] ou [!UICONTROL Traitement]. [!UICONTROL Terminé] signifie que tous les enregistrements pour l’exécution du flux de données correspondant ont été traités dans la période d’une heure. [!UICONTROL Traitement] signifie que l’exécution du flux de données n’est pas encore terminée.
 
-La page [!UICONTROL Dataflow run overview] contient des informations supplémentaires sur votre flux de données, telles que l’identifiant d’exécution du flux de données correspondant, le jeu de données cible et l’identifiant d’organisation.
+La page [!UICONTROL Présentation de l’exécution du flux de données] contient des informations supplémentaires sur votre flux de données, telles que l’identifiant d’exécution du flux de données correspondant, le jeu de données cible et l’identifiant d’organisation.
 
-Une exécution de flux avec des erreurs contient également le panneau [!UICONTROL Dataflow run errors], qui affiche l’erreur particulière qui a conduit à l’échec de l’exécution, ainsi que le nombre total d’enregistrements qui ont échoué.
+Une exécution de flux avec des erreurs contient également le panneau [!UICONTROL Erreurs d’exécution du flux de données] qui affiche l’erreur particulière qui a conduit à l’échec de l’exécution, ainsi que le nombre total d’enregistrements qui ont échoué.
 
 ![dataflow-run-overview](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
 
 ### Afficher les enregistrements avec des avertissements {#warnings}
 
-[!UICONTROL Records with warnings] affiche une liste des avertissements de transformation du mappeur qui se sont produits lors de l’exécution de votre flux. Les lignes partiellement ingérées sont considérées comme réussies et sont accompagnées d’avertissements si des erreurs de transformation du mappeur sont détectées.
+[!UICONTROL Enregistrements avec avertissements] affiche une liste des avertissements de transformation du mappeur qui se sont produits lors de l’exécution de votre flux. Les lignes partiellement ingérées sont considérées comme réussies et sont accompagnées d’avertissements si des erreurs de transformation du mappeur sont détectées.
 
 Par défaut, toutes les erreurs de transformation du mappeur sont considérées comme des avertissements, sauf si elles sont l’une des suivantes :
 
@@ -121,17 +118,17 @@ Par défaut, toutes les erreurs de transformation du mappeur sont considérées 
 * Références à des attributs qui n’existent pas
 * Incompatibilité des types de données XDM
 
-Pour afficher les diagnostics d’erreur, sélectionnez **[!UICONTROL Preview error diagnostics]**.
+Pour afficher les diagnostics d’erreur, sélectionnez **[!UICONTROL Aperçu des diagnostics d’erreur]**.
 
 ![enregistrements avec avertissements](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
-La fenêtre [!UICONTROL Error diagnostics preview] vous permet de prévisualiser jusqu’à 100 erreurs et/ou avertissements concernant l’exécution du flux de données. À partir de là, vous pouvez également télécharger le manifeste d’échec d’ingestion pour plus d’informations, à l’aide de l’API [!DNL Data Access].
+La fenêtre [!UICONTROL Aperçu des diagnostics d’erreur] vous permet de prévisualiser jusqu’à 100 erreurs et/ou avertissements concernant l’exécution de votre flux de données. À partir de là, vous pouvez également télécharger le manifeste d’échec d’ingestion pour plus d’informations, à l’aide de l’API [!DNL Data Access].
 
 ![diagnostics](../../images/tutorials/monitor-streaming/diagnostics.png)
 
 ## Étapes suivantes
 
-En suivant attentivement ce tutoriel, vous avez utilisé l’espace de travail [!UICONTROL Sources] pour surveiller vos flux de données de diffusion en continu et identifier les erreurs qui ont conduit à des flux de données en échec. Pour plus d’informations, consultez les documents suivants :
+En suivant ce tutoriel, vous avez utilisé avec succès l’espace de travail [!UICONTROL Sources] pour surveiller vos flux de données de diffusion en continu et identifier les erreurs qui ont conduit à l’échec des flux de données. Pour plus d’informations, consultez les documents suivants :
 
 * [Présentation des sources](../../home.md)
 * [Présentation des flux de données](../../../dataflows/home.md)

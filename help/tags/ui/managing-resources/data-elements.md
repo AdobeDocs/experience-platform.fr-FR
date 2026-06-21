@@ -3,29 +3,15 @@ title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
 TQID: https://experienceleague.adobe.com/rnMfEE1d-VhHZw8MrDsiNCPYGXmbgkAVlcd0HRTeB2A
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1560
-ht-degree: 88%
+source-wordcount: 1581
+ht-degree: 84%
 
 ---
 
@@ -72,7 +58,7 @@ Vous pouvez utiliser des éléments de données dans des scripts personnalisés 
 
 Les éléments de données constituent les blocs de construction des règles. Ils vous permettent de créer un dictionnaire de données (ou mappage de données) des éléments utilisés couramment sur une page, indépendamment de leur origine (chaînes de requête, URL ou valeurs de cookie), pour n’importe quel objet contenu sur le site.
 
-1. Dans une page Propriété, ouvrez l’onglet [!UICONTROL Data Elements], puis cliquez sur **[!UICONTROL Create New Data Element]**.
+1. Sur la page Propriété , ouvrez l’onglet [!UICONTROL Éléments de données] puis sélectionnez **[!UICONTROL Créer un élément de données]**.
 1. Nommez l’élément de données.
 1. Sélectionnez une extension et un type.
 
@@ -88,7 +74,7 @@ Les éléments de données constituent les blocs de construction des règles. Il
 
    Les choix disponibles sont les suivants :
 
-   * Aucun
+   * None
       * The value is not stored.
    * Page view
       * La valeur est maintenue dans une variable JavaScript jusqu’à ce que la page soit actualisée ou qu’une nouvelle page soit chargée.
@@ -101,9 +87,9 @@ Les éléments de données constituent les blocs de construction des règles. Il
    * Visitor
       * La valeur est stockée indéfiniment dans le stockage local du navigateur.
 
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL Active Library] .
+Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL  Bibliothèque active ].
 
 ## Types d’éléments de données {#types-of-data-elements}
 
@@ -123,7 +109,7 @@ Tout cookie de domaine disponible peut être référencé dans le champ du nom d
 
 ### Custom code
 
-Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur [!UICONTROL Open Editor] et en insérant le code dans la fenêtre de l’éditeur.
+Vous pouvez saisir du code JavaScript personnalisé dans l’interface utilisateur en sélectionnant [!UICONTROL Ouvrir l’éditeur] et en insérant le code dans la fenêtre de l’éditeur.
 
 Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être définie en tant que valeur de l’élément de données. Si aucune instruction de retour n’est incluse, l’élément de données est résolu sur `undefined`.  Cela déclenche une recherche de secours pour une valeur stockée, puis pour une valeur par défaut si aucune valeur stockée n’est présente.
 
@@ -200,7 +186,7 @@ Si vous utilisez un objet collecteur de données dans votre couche de données, 
 
 ### Stockage local
 
-Indiquez le nom de votre élément de stockage local dans le champ [!UICONTROL Local Storage Item Name].
+Indiquez le nom de votre élément de stockage local dans le champ [!UICONTROL  Nom de l’élément de stockage local ].
 
 Le stockage local permet aux navigateurs de stocker des informations d’une page à l’autre ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Le stockage local est très similaire aux cookies, mais est beaucoup plus volumineux et plus souple.
 
@@ -221,7 +207,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 
 ### Paramètre de chaîne de requête
 
-Spécifiez un paramètre d’URL unique dans le champ [!UICONTROL URL Parameter].
+Spécifiez un seul paramètre d’URL dans le champ [!UICONTROL Paramètre d’URL].
 
 Seule la section de nom est nécessaire. Les indicateurs spéciaux tels que « ? » ou « = » doivent être omis.
 

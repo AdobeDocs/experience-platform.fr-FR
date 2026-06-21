@@ -1,9 +1,10 @@
 ---
 title: Partage d’identité entre des applications mobiles et des vues web/web mobiles
 description: Transmettez l’identité d’une application mobile dans du contenu web mobile ou un WebView afin que la création de rapports et la personnalisation puissent continuer dans le contexte web.
-source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
+exl-id: 08441a5d-3d6f-41d4-aa4e-061bddc5df6f
+source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 Lorsqu’un visiteur passe d’une application mobile à une page WebView ou web mobile, l’application et les contextes web conservent chacun leur propre identité. Sans transfert explicite, l’expérience web traite le visiteur comme une nouvelle personne inconnue, ce qui fragmente le reporting et redémarre la personnalisation.
 
-Le partage d’identités mobile à web résout ce problème en transmettant l’[Experience Cloud ID (ECID)](./overview.md) du visiteur de l’application mobile à la destination web via un paramètre de chaîne de requête `adobe_mc`. Le paramètre est associé à l’ECID, à l’ID d’organisation Experience Cloud et à une date et heure. Lorsque la destination web se charge avec un paramètre de `adobe_mc` valide, le SDK Web le lit automatiquement et applique l’identité transmise à sa première requête Edge Network, de sorte que les deux contextes partagent le même visiteur.
+Le partage d’identités d’un appareil mobile à un site web résout ce problème en transmettant l’[Experience Cloud ID (ECID)](./overview.md) du visiteur de l’application mobile à la destination web via un paramètre de chaîne de requête `adobe_mc`. Le paramètre est associé à l’ECID, à votre ID d’organisation Experience Cloud et à une date et heure. Lorsque la destination web se charge avec un paramètre de `adobe_mc` valide, le SDK Web le lit automatiquement et applique l’identité transmise à sa première requête Edge Network, de sorte que les deux contextes partagent le même visiteur.
 
 Utilisez ce modèle lorsque votre application mobile ouvre une page WebView ou web mobile contrôlée par votre organisation et que vous souhaitez que l’activité de l’application et l’activité web restent liées au même visiteur. Si votre objectif est la continuité d’identité entre les sites web de différents domaines, utilisez plutôt le [partage inter-domaines](cross-domain-sharing.md).
 
@@ -34,7 +35,7 @@ La chaîne renvoyée contient les paramètres codés en URL suivants :
 | Paramètre | Description |
 | --- | --- |
 | `MCID` | Experience Cloud ID (ECID). |
-| `MCORGID` | L’identifiant de votre organisation Experience Cloud. Ce paramètre doit correspondre à l’organisation configurée dans le SDK Web sur la page de destination. |
+| `MCORGID` | Votre identifiant d’organisation Experience Cloud. Ce paramètre doit correspondre à l’organisation configurée dans le SDK Web sur la page de destination. |
 | `TS` | Date et heure. La destination doit recevoir cette valeur dans les **cinq minutes** ou la remise est refusée. |
 
 Les exemples de code suivants montrent à quoi pourrait ressembler une remise dans votre application mobile :

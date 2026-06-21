@@ -5,27 +5,14 @@ title: Entrée et sortie dans Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans l’IA dédiée à l’attribution.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 TQID: https://experienceleague.adobe.com/k2ShJpMN58cZFMDDXlyklyTzI6UY2lyus3iQxkaHDB0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2498
+source-wordcount: 2505
 ht-degree: 13%
 
 ---
@@ -156,7 +143,7 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie de s
 | commerce_order_purchaseCity (chaîne) | True | Colonne de jeu de données de score supplémentaire. <br> **Exemple :** ville : San Jose |
 | customerProfile (objet) | False | Détails d’identité de l’utilisateur ou de l’utilisatrice utilisés pour créer le modèle. |
 | identity (objet) | False | Contient les détails de l’utilisateur ou de l’utilisatrice utilisé(e) pour créer le modèle, tels que `id` et `namespace`. |
-| id (chaîne) | True | ID d’identité de l’utilisateur tel que l’ID de cookie, l’ID Adobe Analytics (AAID) ou l’ID Experience Cloud (ECID, également appelé MCID ou en tant qu’ID de visiteur), etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
+| id (chaîne) | True | ID d’identité de l’utilisateur tel que l’ID de cookie, l’ID Adobe Analytics (AAID) ou l’ID Experience Cloud (ECID, également appelé MCID ou identifiant visiteur), etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Espace de noms d’identité utilisé pour créer les chemins d’accès et donc le modèle. <br> **Exemple :** aaid |
 | touchpointsDetail (Tableau d’objets) | True | Liste des détails du point de contact menant à la conversion, triés par occurrence ou horodatage du point de contact. |
 | touchpointName (chaîne) | True | Nom du point de contact qui a été configuré lors de la configuration. <br> **Exemple :** PAID_SEARCH_CLICK |
@@ -165,11 +152,11 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie de s
 
 ### Affichage des chemins de score brut (interface utilisateur) {#raw-score-path}
 
-Vous pouvez afficher le chemin d’accès à vos scores bruts dans l’interface utilisateur. Commencez par sélectionner **[!UICONTROL Schemas]** dans l’interface utilisateur d’Experience Platform, puis recherchez et sélectionnez votre schéma de scores de l’IA dédiée à l’attribution depuis l’onglet **[!UICONTROL Browse]** .
+Vous pouvez afficher le chemin d’accès à vos scores bruts dans l’interface utilisateur. Commencez par sélectionner **[!UICONTROL Schémas]** dans l’interface utilisateur d’Experience Platform, puis recherchez et sélectionnez votre schéma de scores de l’IA dédiée à l’attribution dans l’onglet **[!UICONTROL Parcourir]**.
 
 ![Choisissez votre schéma](./images/input-output/schemas_browse.png)
 
-Sélectionnez ensuite un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet **[!UICONTROL Field properties]** s’ouvre. Dans **[!UICONTROL Field properties]** se trouve le champ de chemin qui correspond à vos scores bruts.
+Sélectionnez ensuite un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet **[!UICONTROL Propriétés du champ]** s’ouvre. Dans **[!UICONTROL Propriétés du champ]** se trouve le champ de chemin qui correspond à vos scores bruts.
 
 ![Choisir un schéma](./images/input-output/field_properties.png)
 
@@ -257,7 +244,7 @@ Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souha
 >
 > - L’IA dédiée à l’attribution utilise uniquement des données mises à jour pour la formation et la notation. De même, lorsque vous demandez la suppression de données, l’IA dédiée aux clients s’abstient d’utiliser les données supprimées.
 > - L’IA dédiée à l’attribution utilise les jeux de données Experience Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Experience Platform Privacy Service pour envoyer les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, le service d’identités et le profil client en temps réel.
-> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives d’Experience Platform. Le chiffrement des données d’Experience Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [&#x200B; chiffrement des données &#x200B;](../../../help/landing/governance-privacy-security/encryption.md)
+> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives d’Experience Platform. Le chiffrement des données d’Experience Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [ chiffrement des données ](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Étapes suivantes {#next-steps}
 

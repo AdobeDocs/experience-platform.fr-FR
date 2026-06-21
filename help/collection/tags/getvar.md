@@ -1,9 +1,10 @@
 ---
 title: getVar()
 description: Renvoie la valeur d’un élément de données ou une valeur définie à l’aide de setVar().
-source-git-commit: 434d6913ea391b127b4b52c8494730c496bbcfe2
+exl-id: 8a496964-284a-4719-ac68-10368568db4f
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '220'
 ht-degree: 2%
 
 ---

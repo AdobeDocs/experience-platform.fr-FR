@@ -5,25 +5,15 @@ description: Utilisez la destination API HTTP dans Adobe Experience Platform pou
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 TQID: https://experienceleague.adobe.com/adO-naS0tMmJDJ-C8SIGYQ02GXNKeUhDVYQfkOmW7Zk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2941
-ht-degree: 39%
+source-wordcount: 3056
+ht-degree: 37%
 
 ---
 
@@ -62,7 +52,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client. Utilisez-les pour cibler des groupes spécifiques de personnes dans le cadre de campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -74,8 +64,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 | ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Profile-based]** | Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom), tels qu’ils ont été choisis dans l’écran de mappage du [workflow d’activation de la destination](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom), tels qu’ils ont été choisis dans l’écran de mappage du [workflow d’activation de la destination](../../ui/activate-segment-streaming-destinations.md#mapping). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -101,11 +91,11 @@ mTLS est un protocole d’authentification mutuelle qui garantit que les deux pa
 
 ### Considérations relatives au protocole mTLS {#mtls-considerations}
 
-La prise en charge mTLS des destinations d’API HTTP s’applique **uniquement au point d’entrée de réception des données** où les exportations de profil sont envoyées (champ **[!UICONTROL HTTP Endpoint]** dans [détails de la destination](#destination-details)).
+La prise en charge mTLS des destinations d’API HTTP s’applique **uniquement au point d’entrée de réception des données** où les exportations de profil sont envoyées (champ **[!UICONTROL Point d’entrée HTTP]** dans [détails de la destination](#destination-details)).
 
 ### Configuration de mTLS pour l’exportation de données {#configuring-mtls}
 
-Pour utiliser le protocole mTLS avec des destinations d’API HTTP, le **[!UICONTROL HTTP Endpoint]** (point d’entrée de réception de données) que vous configurez dans la page [détails de la destination](#destination-details) doit comporter les protocoles TLS désactivés et seul le protocole mTLS activé. Si le protocole TLS 1.2 est toujours activé sur le point d’entrée, aucun certificat n’est envoyé pour l’authentification du client. Cela signifie que pour utiliser mTLS avec votre destination d’API HTTP, le point d’entrée du serveur de réception de données doit être un point d’entrée de connexion mTLS uniquement.
+Pour utiliser le protocole mTLS avec des destinations d’API HTTP, le point d’entrée **[!UICONTROL HTTP]** (point d’entrée de réception de données) que vous configurez dans la page [détails de la destination](#destination-details) doit avoir les protocoles TLS désactivés et seul le protocole mTLS activé. Si le protocole TLS 1.2 est toujours activé sur le point d’entrée, aucun certificat n’est envoyé pour l’authentification du client. Cela signifie que pour utiliser mTLS avec votre destination d’API HTTP, le point d’entrée du serveur de réception de données doit être un point d’entrée de connexion mTLS uniquement.
 
 ### Récupération et inspection des détails du certificat {#certificate}
 
@@ -115,7 +105,7 @@ Pour plus d’informations, consultez la [documentation sur les points d’entr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu[&#128279;](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.[
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -148,7 +138,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
 
@@ -161,48 +151,48 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 #### Authentification par jeton porteur {#bearer-token-authentication}
 
-Si vous sélectionnez le type d’authentification **[!UICONTROL Bearer token]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Connect to destination]** :
+Si vous sélectionnez le type d’authentification **[!UICONTROL Jeton porteur]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![Écran d’authentification de l’API HTTP avec le champ [!UICONTROL Bearer token].](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Écran d’authentification de l’API HTTP avec le champ [!UICONTROL Jeton porteur].](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL Bearer token]** : saisissez le jeton du porteur pour l’authentification à votre emplacement HTTP.
+* **[!UICONTROL Jeton porteur]** : saisissez le jeton porteur pour l’authentification à votre emplacement HTTP.
 
 #### Aucune authentification {#no-authentication}
 
-Si vous sélectionnez le type d’authentification **[!UICONTROL None]** pour vous connecter à votre point d’entrée HTTP :
+Si vous sélectionnez le type d’authentification **[!UICONTROL Aucune]** pour vous connecter à votre point d’entrée HTTP :
 
-![Écran d’authentification de l’API HTTP avec le type d’authentification [!UICONTROL None] sélectionné.](../../assets/catalog/http/http-api-authentication-none.png)
+![Écran d’authentification de l’API HTTP avec le type d’authentification [!UICONTROL Aucune] sélectionné.](../../assets/catalog/http/http-api-authentication-none.png)
 
-Lorsque vous sélectionnez cette option d’authentification, il vous suffit de sélectionner **[!UICONTROL Connect to destination]** et la connexion à votre point d’entrée est établie.
+Lorsque vous sélectionnez cette option d’authentification, il vous suffit de sélectionner **[!UICONTROL Se connecter à la destination]** et la connexion à votre point d’entrée est établie.
 
 #### Authentification par mot de passe OAuth 2 {#oauth-2-password-authentication}
 
-Si vous sélectionnez le type d’authentification **[!UICONTROL OAuth 2 Password]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Connect to destination]** :
+Si vous sélectionnez le type d’authentification **[!UICONTROL Mot de passe OAuth 2]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![L’écran d’authentification de l’API HTTP avec les champs [!UICONTROL OAuth 2 Password].](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Écran d’authentification de l’API HTTP avec les champs [!UICONTROL  Mot de passe OAuth 2 ].](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL Access Token URL]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
-* **[!UICONTROL Client ID]** : `client ID` que votre système attribue à Adobe Experience Platform.
-* **[!UICONTROL Client Secret]** : `client secret` que votre système attribue à Adobe Experience Platform.
-* **[!UICONTROL Username]** : nom d’utilisateur pour accéder à votre point d’entrée HTTP.
-* **[!UICONTROL Password]** : mot de passe pour accéder à votre point d’entrée HTTP.
+* **[!UICONTROL URL du jeton d’accès]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
+* **[!UICONTROL ID client]** : `client ID` que votre système attribue à Adobe Experience Platform.
+* **[!UICONTROL Secret client]** : `client secret` que votre système attribue à Adobe Experience Platform.
+* **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur pour accéder à votre point d’entrée HTTP.
+* **[!UICONTROL Mot de passe]** : mot de passe pour accéder à votre point d’entrée HTTP.
 
 #### Authentification avec informations d’identification du client OAuth 2 {#oauth-2-client-credentials-authentication}
 
-Si vous sélectionnez le type d’authentification **[!UICONTROL OAuth 2 Client Credentials]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Connect to destination]** :
+Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d’identification du client OAuth 2]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![L’écran d’authentification de l’API HTTP avec les champs [!UICONTROL OAuth 2 Client Credentials].](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Écran d’authentification de l’API HTTP avec les champs [!UICONTROL  Informations d’identification du client OAuth 2 ].](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 >
->Lors de l’utilisation de l’authentification [!UICONTROL OAuth 2 Client Credentials], la [!UICONTROL Access Token URL] peut avoir un paramètre de requête au maximum. L’ajout d’un [!UICONTROL Access Token URL] avec plus de paramètres de requête peut entraîner des problèmes lors de la connexion à votre point d’entrée.
+>Lors de l’utilisation de l’authentification [!UICONTROL Informations d’identification du client OAuth 2], l’URL [!UICONTROL URL du jeton d’accès] peut avoir un paramètre de requête au maximum. L’ajout d’une [!UICONTROL URL de jeton d’accès] avec d’autres paramètres de requête peut entraîner des problèmes lors de la connexion à votre point d’entrée.
 
-* **[!UICONTROL Access Token URL]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
-* **[!UICONTROL Client ID]** : `client ID` que votre système attribue à Adobe Experience Platform.
-* **[!UICONTROL Client Secret]** : `client secret` que votre système attribue à Adobe Experience Platform.
-* **[!UICONTROL Client Credentials Type]** : sélectionnez le type d’octroi des informations d’identification du client OAuth 2 pris en charge par votre point d’entrée :
-   * **[!UICONTROL Body Form Encoded]** : dans ce cas, le `client ID` et le `client secret` sont inclus *dans le corps de la requête* envoyés à votre destination. Pour un exemple, consultez la section [Types d’authentification pris en charge](#supported-authentication-types).
-   * **[!UICONTROL Basic Authorization]** : dans ce cas, les `client ID` et `client secret` sont inclus *dans un en-tête `Authorization`* après avoir été codés en base64 et envoyés à votre destination. Pour un exemple, consultez la section [Types d’authentification pris en charge](#supported-authentication-types).
+* **[!UICONTROL URL du jeton d’accès]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
+* **[!UICONTROL ID client]** : `client ID` que votre système attribue à Adobe Experience Platform.
+* **[!UICONTROL Secret client]** : `client secret` que votre système attribue à Adobe Experience Platform.
+* **[!UICONTROL Type d’informations d’identification client]** : sélectionnez le type d’octroi des informations d’identification client OAuth 2 pris en charge par votre point d’entrée :
+   * **[!UICONTROL Formulaire de corps encodé]** : dans ce cas, le `client ID` et le `client secret` sont inclus *dans le corps de la requête* envoyé à votre destination. Pour un exemple, consultez la section [Types d’authentification pris en charge](#supported-authentication-types).
+   * **[!UICONTROL Autorisation de base]** : dans ce cas, les `client ID` et `client secret` sont inclus *dans un en-tête `Authorization`* après avoir été codés en base64 et envoyés à votre destination. Pour un exemple, consultez la section [Types d’authentification pris en charge](#supported-authentication-types).
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -235,32 +225,32 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Écran de détails de la destination API HTTP avec les champs remplis.](../../assets/catalog/http/http-api-destination-details.png)
 
-* **[!UICONTROL Name]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : saisissez une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Headers]** : saisissez tous les en-têtes personnalisés que vous souhaitez inclure dans les appels de destination, en suivant ce format : `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]** : URL du point d’entrée HTTP vers lequel vous souhaitez envoyer les données de profil. Il s’agit de votre point d’entrée de réception de données. Si vous utilisez mTLS, le protocole TLS doit être désactivé pour ce point d’entrée et seul le protocole mTLS doit être activé.
-* **[!UICONTROL Query parameters]** : vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point d’entrée HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]** : activez ce bouton si vous souhaitez que l’exportation de données inclue les noms des audiences que vous exportez. **Remarque** : les noms d’audience ne sont inclus que pour les audiences mappées à la destination. Les audiences non mappées qui apparaissent dans l’exportation n’incluent pas le champ `name` . Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
-* **[!UICONTROL Include Segment Timestamps]** : activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL En-têtes]** : saisissez tous les en-têtes personnalisés que vous souhaitez inclure dans les appels de destination, en suivant ce format : `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL Point d’entrée HTTP]** : URL du point d’entrée HTTP vers lequel vous souhaitez envoyer les données de profil. Il s’agit de votre point d’entrée de réception de données. Si vous utilisez mTLS, le protocole TLS doit être désactivé pour ce point d’entrée et seul le protocole mTLS doit être activé.
+* **[!UICONTROL Paramètres de requête]** : vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point d’entrée HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`.
+* **[!UICONTROL Inclure les noms de segment]** : activez ce bouton si vous souhaitez que l’exportation des données inclue les noms des audiences que vous exportez. **Remarque** : les noms d’audience ne sont inclus que pour les audiences mappées à la destination. Les audiences non mappées qui apparaissent dans l’exportation n’incluent pas le champ `name` . Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Inclure la date et l’heure de segment]** : activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur [l’abonnement aux alertes de destination dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination API HTTP. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#attributes}
 
-Lors de la [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) étape, Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
+Lors de l’étape [[!UICONTROL Sélectionner des attributs]](../../ui/activate-streaming-profile-destinations.md#select-attributes), Adobe vous recommande de sélectionner un identifiant unique dans votre [schéma d’union](../../../profile/home.md#profile-fragments-and-union-schemas). Sélectionnez l’identifiant unique et tout autre champ XDM que vous souhaitez exporter vers la destination.
 
 ## Comportement d’exportation de profils {#profile-export-behavior}
 
@@ -282,7 +272,7 @@ Concernant les données exportées pour un profil donné, il est important de co
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et les audiences mappés servent de repère pour une exportation de destination. Cela signifie que si le statut de `segmentMembership` d’un profil passe à `realized` ou `exiting` ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’API HTTP, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle le statut du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que d’autres audiences non mappées pour lesquelles le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que l’audience mappée dans le flux de données d’activation. <br> **Important** : lorsque l’option **[!UICONTROL Include Segment Names]** est activée, les noms de segment ne sont inclus que pour les audiences mappées à la destination. Les audiences non mappées qui apparaissent dans l’exportation n’incluent pas le champ `name`, même si l’option est activée. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (actuellement Experience Platform ne prend pas en charge le mappage d’identité dans la destination de l’API HTTP).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et les audiences mappés servent de repère pour une exportation de destination. Cela signifie que si le statut de `segmentMembership` d’un profil passe à `realized` ou `exiting` ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>Comme les identités ne peuvent actuellement pas être mappées aux destinations d’API HTTP, les modifications d’identité sur un profil donné déterminent également les exportations de destination.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li></ul> | <ul><li>L’objet `segmentMembership` inclut l’audience mappée dans le flux de données d’activation, pour laquelle le statut du profil a changé suite à un événement de qualification ou de sortie d’audience. Notez que d’autres audiences non mappées pour lesquelles le profil s’est qualifié peuvent faire partie de l’exportation de destination, si ces audiences appartiennent à la même [politique de fusion](/help/profile/merge-policies/overview.md) que l’audience mappée dans le flux de données d’activation. <br> **Important** : lorsque l’option **[!UICONTROL Inclure les noms de segment]** est activée, les noms de segment ne sont inclus que pour les audiences mappées à la destination. Les audiences non mappées qui apparaissent dans l’exportation n’incluent pas le champ `name`, même si l’option est activée. </li><li>Toutes les identités dans l’objet `identityMap` sont également incluses (actuellement Experience Platform ne prend pas en charge le mappage d’identité dans la destination de l’API HTTP).</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -355,7 +345,7 @@ Les données Experience Platform exportées arrivent dans votre destination HTTP
 }
 ```
 
-Vous trouverez ci-dessous d’autres exemples de données exportées, en fonction des paramètres de l’interface utilisateur que vous sélectionnez dans le flux de connexion à la destination pour les options **[!UICONTROL Include Segment Names]** et **[!UICONTROL Include Segment Timestamps]** :
+Vous trouverez ci-dessous d’autres exemples de données exportées, en fonction des paramètres de l’interface utilisateur que vous sélectionnez dans le flux de connexion à la destination pour les options **[!UICONTROL Inclure les noms de segment]** et **[!UICONTROL Inclure la date et l’heure de segment]** :
 
 +++ L’exemple d’exportation de données ci-dessous inclut des noms d’audience dans la section `segmentMembership`
 
@@ -381,7 +371,7 @@ Vous trouverez ci-dessous d’autres exemples de données exportées, en fonctio
 
 >[!NOTE]
 >
->Dans cet exemple, la première audience (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) est mappée à la destination et inclut le champ `name` . La seconde audience (`354e086f-2e11-49a2-9e39-e5d9a76be683`) n’est pas mappée à la destination et n’inclut pas le champ `name`, même si l’option **[!UICONTROL Include Segment Names]** est activée.
+>Dans cet exemple, la première audience (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) est mappée à la destination et inclut le champ `name` . La seconde audience (`354e086f-2e11-49a2-9e39-e5d9a76be683`) n’est pas mappée à la destination et n’inclut pas le champ `name`, même si l’option **[!UICONTROL Inclure les noms de segment]** est activée.
 
 +++
 

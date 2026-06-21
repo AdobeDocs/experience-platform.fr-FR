@@ -3,15 +3,10 @@ title: Fonctionnalités d’ingénierie pour le machine learning
 description: Découvrez comment transformer les données de Adobe Experience Platform en fonctionnalités ou variables qui peuvent être utilisées par un modèle de machine learning. Utilisez Data Distiller pour calculer les fonctionnalités ML à grande échelle et partager ces fonctionnalités avec votre environnement de machine learning.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 TQID: https://experienceleague.adobe.com/kZ5CVFECnR2pAX--WNVskQrt2qk33VFhnwtXeWa-AOU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1146
@@ -158,11 +153,11 @@ df_features.head()
 
 |   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionRejetée | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
-| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN |
-| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN |
-| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | Aucune | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | Aucune | NaN |
+| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
+| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
+| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | None | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | None | NaN |
 
 {style="table-layout:auto"}
 
@@ -241,11 +236,11 @@ df_training_set.head()
 
 |  | userId | eventType | date et heure | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionRejetée | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Aucune | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1.0 | NaN | NaN | Aucune | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucune | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | None | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1.0 | NaN | NaN | None | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
 
 {style="table-layout:auto"}
 

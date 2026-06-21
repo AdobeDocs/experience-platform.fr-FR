@@ -3,46 +3,15 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
 TQID: https://experienceleague.adobe.com/JIfj1VqOK4AsYkzeS2YofnCEoWxKM2M7MotY2SWjyyM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: a230274e-7e6e-49eb-b817-514495a710ac
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: a230274e-7e6e-49eb-b817-514495a710acid: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: d1a87129-ba05-4f15-98b1-233618f1774aid: d2a6cbf4-df32-480f-909e-b42f66dcb9f0id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2135
-ht-degree: 94%
+source-wordcount: 2150
+ht-degree: 93%
 
 ---
 
@@ -77,7 +46,7 @@ Experience League est une plateforme d’apprentissage complète conçue pour v
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et modifiez-la sur [Experience League](https://experienceleague.adobe.com/fr/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Bookmarks] pour enregistrer et collecter vos ressources préférées à un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Récemment consultés** : utilisez la section [!UICONTROL Recently viewed] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL All learning resources] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL What's new] pour obtenir un flux du contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les projecteurs de produit, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Watch past events on-demand].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
+| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et modifiez-la sur [Experience League](https://experienceleague.adobe.com/fr/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Signets] pour enregistrer et collecter vos ressources préférées à un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Récemment consultés** : utilisez la section [!UICONTROL Récemment consultés] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL Toutes les ressources d’apprentissage] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL Nouveautés] pour obtenir un flux de contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les projecteurs de produit, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Regarder des événements passés à la demande].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -164,7 +133,7 @@ Interrogez des données dans le lac de données Adobe Experience Platform à l
 | Amélioration de la sélection des colonnes dans la prédiction de modèle | Sélectionnez des colonnes spécifiques et appliquez des alias à l’aide de la syntaxe `model_predict` étendue. Récupérez les résultats de prédiction intermédiaires tels que les vecteurs de caractéristiques et les scores de probabilité. La sélection améliorée nécessite l’activation d’un indicateur de fonctionnalité. Consultez la [documentation du cycle de vie du modèle](../../query-service/advanced-statistics/models.md#select-specific-output-fields) pour obtenir des exemples de syntaxe et des informations sur les indicateurs de fonctionnalité. |
 | Enregistrer les sorties de prédiction de modèle à l’aide de CRÉER UN TABLEAU et INSÉRER DANS | [Enregistrez les sorties de prédiction sélectionnées dans de nouveaux tableaux à l’aide de CRÉER UN TABLEAU EN FONCTION DE LA SÉLECTION ou insérez-les dans les tableaux existants à l’aide d’INSÉRER DANS LA SÉLECTION](../../query-service/advanced-statistics/models.md#predict). Si la sélection de colonnes améliorée est activée, des résultats intermédiaires tels que des vecteurs de caractéristiques et des probabilités peuvent également être conservés avec les prédictions finales. Pour consulter des exemples d’utilisation, consultez la [documentation sur la syntaxe SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
-Pour plus d’informations sur [!DNL Query Service], consultez la vue d’ensemble [[!DNL Query Service] &#x200B;](../../query-service/home.md).
+Pour plus d’informations sur [!DNL Query Service], consultez la vue d’ensemble [[!DNL Query Service] ](../../query-service/home.md).
 
 ## Sandbox {#sandboxes}
 
@@ -205,7 +174,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).
 
 ## Playbooks de cas d’utilisation {#use-case-playbooks}
 

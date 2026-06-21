@@ -3,13 +3,9 @@ title: Créer une connexion Source Salesforce Service Cloud à l’aide de l’A
 description: Découvrez comment connecter Adobe Experience Platform à Salesforce Service Cloud à l’aide de l’API Flow Service.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 TQID: https://experienceleague.adobe.com/wQObLlPjITd2k-cm6CzSmFX-IQDxhfG0q5I1OmffcQo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 404
@@ -21,7 +17,7 @@ ht-degree: 35%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -34,7 +30,7 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 ### Collecter les informations d’identification requises
 
-Lisez le [&#x200B; guide d’authentification &#x200B;](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials) pour plus d’informations sur la récupération de vos informations d’identification.
+Lisez le [ guide d’authentification ](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials) pour plus d’informations sur la récupération de vos informations d’identification.
 
 ### Utilisation des API Experience Platform
 
@@ -107,4 +103,4 @@ Une réponse réussie renvoie votre nouvelle connexion de base ainsi que son ide
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de succès client dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/customer-success.md)
+* [Créez un flux de données pour importer des données de succès client dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/customer-success.md)

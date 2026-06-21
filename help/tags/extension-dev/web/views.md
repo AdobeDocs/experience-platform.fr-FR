@@ -3,26 +3,11 @@ title: Vues dans les extensions web
 description: Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 TQID: https://experienceleague.adobe.com/Vx3huRlBr6dfUapFD7Axam-l7RpCKAgLb6Q3xK-5qY8
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2:
-  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: bef6f891-2e8a-425e-8f99-7ddf22070daaid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2145
@@ -90,10 +75,10 @@ La méthode `init` sera appelée par les balises dès que la vue aura été char
 | `extensionSettings` | Paramètres enregistrés dans la vue de configuration de l’extension. Cela peut s’avérer utile pour accéder aux paramètres d’extension dans les vues qui ne sont pas la vue de configuration de l’extension. Si la vue actuelle est la vue de configuration de l’extension, utilisez `settings`. |
 | `propertySettings` | Objet contenant les paramètres de la propriété. Consultez le [guide d’objet Turbine](../turbine.md#property-settings) pour plus d’informations sur le contenu de cet objet. |
 | `tokens` | Objet contenant des jetons API. Pour accéder aux API d’Adobe depuis la vue, vous devez généralement utiliser un jeton IMS sous `tokens.imsAccess`. Ce jeton ne sera disponible que pour les extensions développées par Adobe. Si vous êtes un employé dʼAdobe représentant une extension créée par Adobe, veuillez [envoyer un e-mail à lʼéquipe dʼingénieurs en charge de la collecte de données](mailto:reactor@adobe.com) et indiquer le nom de lʼextension afin que nous puissions lʼajouter à la liste autorisée. |
-| `company` | Objet contenant les `orgId` (votre identifiant Adobe Experience Cloud de 24 caractères), `id` (l’identifiant unique de votre société dans l’API Reactor) et `tenantId` (l’identifiant unique d’une organisation dans le système Identity Management d’Adobe). |
+| `company` | Objet contenant les `orgId` (votre Adobe Experience Cloud ID de 24 caractères), `id` (l’identifiant unique de votre société dans l’API Reactor) et `tenantId` (l’identifiant unique d’une organisation dans le système Identity Management d’Adobe). |
 | `schema` | Objet au format [Schéma JSON](https://json-schema.org/). Cet objet provient du [manifeste d’extension](../manifest.md) et peut s’avérer utile pour valider votre formulaire. |
 | `apiEndpoints` | Un objet contenant `reactor` qui contient une référence à l’adresse Web de l’API Reactor. |
-| `userConsentPermissions` | Objet contenant les indicateurs de consentement d’Adobe [Données d’utilisation du produit](https://experienceleague.adobe.com/fr/docs/core-services/interface/features/account-preferences#product-usage-data). Utilisez l’indicateur stocké dans `globalDataCollectionAndUsage` pour comprendre si votre extension est autorisée à collecter des données client *n’importe lesquelles*. |
+| `userConsentPermissions` | Objet contenant les indicateurs de consentement d’Adobe [Données d’utilisation du produit](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data). Utilisez l’indicateur stocké dans `globalDataCollectionAndUsage` pour comprendre si votre extension est autorisée à collecter des données client *n’importe lesquelles*. |
 | `preferredLanguages` | Tableau de chaînes de langue. |
 
 Votre vue doit utiliser ces informations pour générer et gérer son formulaire. Il est probable que vous n’aurez affaire qu’à `info.settings`, mais d’autres informations sont fournies en cas de besoin.

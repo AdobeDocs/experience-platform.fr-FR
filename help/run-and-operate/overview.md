@@ -7,8 +7,8 @@ role: Admin, User
 exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
 source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 2%
+source-wordcount: '659'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Lorsque les traitements par lots échouent ou envoient des données incomplètes, vous devez rapidement comprendre ce qui a provoqué le problème. La cause principale peut être des problèmes de disponibilité des données, un timing incorrect, des problèmes de configuration ou des contraintes de capacité du système. Sans visibilité claire, vous pouvez passer des heures à enquêter sur plusieurs systèmes avant de trouver la réponse.
 
-Avec [!UICONTROL Run and Operate] outils, vous pouvez :
+Grâce aux outils [!UICONTROL Exécuter et exploiter], vous pouvez :
 
 * **Inspecter vos opérations de données** : obtenez une vue complète du statut et de l’intégrité de l’exécution des tâches dans tous vos workflows.
 * **Dépannage plus rapide** : accédez à des informations de diagnostic détaillées et à l’historique d’exécution pour identifier rapidement les causes premières et réduire votre délai moyen de résolution des problèmes.
@@ -24,7 +24,7 @@ Avec [!UICONTROL Run and Operate] outils, vous pouvez :
 
 ## Audiences cibles {#target-audiences}
 
-[!UICONTROL Run and Operate] outils sont conçus pour servir plusieurs audiences dans l’ensemble de votre organisation :
+Les outils [!UICONTROL Exécuter et exploiter] sont conçus pour servir plusieurs audiences dans l’ensemble de votre organisation :
 
 * **Équipes de données et informatiques** : administrateurs système et ingénieurs de données qui gèrent des pipelines de données fiables et résolvent les problèmes techniques.
 * **Opérations marketing** : technologues marketing qui inspectent la diffusion des données vers les plateformes marketing et résolvent les problèmes d’activation.
@@ -32,13 +32,13 @@ Avec [!UICONTROL Run and Operate] outils, vous pouvez :
 
 ## Conditions préalables {#prerequisites}
 
-Pour accéder aux outils d’exécution et d’exploitation, vous avez besoin des **[!UICONTROL View Job Schedules]** et **[!UICONTROL View Profile Management]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Contactez votre administrateur système pour vous assurer que vous disposez des autorisations appropriées.
+Pour accéder aux outils d’exécution et d’opération, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les planifications de tâches]** et **[!UICONTROL Afficher la gestion des profils]** [](/help/access-control/home.md#permissions). Contactez votre administrateur système pour vous assurer que vous disposez des autorisations appropriées.
 
 ## Prise en main {#getting-started}
 
 Pour accéder aux outils Exécuter et utiliser à partir de l’interface utilisateur d’Experience Platform :
 
-1. Connectez-vous à votre compte Experience Platform et sélectionnez **[!UICONTROL Run and Operate]** dans le volet de navigation de gauche.
+1. Connectez-vous à votre compte Experience Platform et sélectionnez **[!UICONTROL Exécuter et exploiter]** dans le volet de navigation de gauche.
 2. Sélectionnez l&#39;outil qui correspond à vos besoins d&#39;inspection ou de dépannage.
 
 ![Interface utilisateur d’Experience Platform affichant le volet de navigation de gauche Exécuter et utiliser.](assets/overview/run-and-operate.png)
@@ -51,7 +51,7 @@ Les outils suivants vous aident à inspecter et optimiser vos opérations de don
 
 >[!IMPORTANT]
 >
->Actuellement, les [!UICONTROL Job schedules] ne sont disponibles que pour les tâches Real-Time CDP suivantes :
+>Actuellement] les [!UICONTROL  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
@@ -84,9 +84,9 @@ Les contrôles de l’intégrité évaluent actuellement cinq domaines fondament
 
 ## Étapes suivantes {#next-steps}
 
-Maintenant que vous comprenez l’objectif et les fonctionnalités de [!UICONTROL Run and Operate] outils, explorez les ressources suivantes pour approfondir vos connaissances :
+Maintenant que vous comprenez l’objectif et les fonctionnalités des outils [!UICONTROL Exécuter et exploiter], explorez les ressources suivantes pour approfondir vos connaissances :
 
-* Découvrez comment utiliser les [&#x200B; contrôles d’intégrité &#x200B;](health-checks.md) pour détecter les problèmes de configuration des schémas et des identités
+* Découvrez comment utiliser les [ contrôles d’intégrité ](health-checks.md) pour détecter les problèmes de configuration des schémas et des identités
 * Découvrez comment [inspecter les planifications de tâches](job-schedules.md) pour l’ingestion et les activations par lots
 * Découvrez [ingestion par lots](../ingestion/batch-ingestion/overview.md) pour comprendre comment les données sont ingérées dans Experience Platform
 * Découvrez comment [configurer des activations planifiées](../destinations/ui/activate-batch-profile-destinations.md) pour les destinations par lots

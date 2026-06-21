@@ -4,7 +4,7 @@ description: Découvrez comment filtrer les résultats lorsque les ressources so
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '558'
 ht-degree: 100%
 
 ---
@@ -17,7 +17,7 @@ Lors de l’utilisation de points d’entrée de liste (GET) dans l’API Reacto
 
 L’exemple suivant décrit les méthodes d’implémentation de filtres pour vos requêtes GET.
 
-**Format d&#39;API**
+**Format d’API**
 
 Pour filtrer la réponse pour un point d’entrée de liste donné, vous devez fournir un paramètre de requête `filter` dans le chemin d’accès de la requête.
 

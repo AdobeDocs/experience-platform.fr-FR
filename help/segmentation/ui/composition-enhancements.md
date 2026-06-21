@@ -4,20 +4,13 @@ description: Découvrez les améliorations apportées à la composition de l’a
 hide: true
 exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
 TQID: https://experienceleague.adobe.com/CFx-1ILZzkvy91XX8ohinUcnwg4y3YQ52pz2h-BG1Lo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: f7d3a21309c855f2eb7e3c7e550e759ccbd73132
 workflow-type: tm+mt
-source-wordcount: 480
+source-wordcount: 492
 ht-degree: 0%
 
 ---
@@ -33,21 +26,21 @@ Vous avez désormais accès à **deux** améliorations de la composition de l’
 
 L’enrichissement d’audience vous permet de générer le tableau de valeurs qui permettent à vos profils de se qualifier pour l’audience que vous avez créée.
 
-Pour ajouter des enrichissements d’audience à votre composition, sélectionnez le bloc de **[!UICONTROL Audience]** le plus haut dans la zone de travail. Après avoir donné un nom à l’audience, sélectionnez **[!UICONTROL Build rule]** pour ouvrir la zone de travail du créateur de règles.
+Pour ajouter des enrichissements d’audience à votre composition, sélectionnez le bloc **[!UICONTROL Audience]** le plus haut dans la zone de travail. Après avoir donné un nom à l’audience, sélectionnez **[!UICONTROL Créer une règle]** pour ouvrir la zone de travail du créateur de règles.
 
 ![Le bloc Audience est mis en surbrillance, ainsi que le bouton Créer une règle.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-La zone de travail du créateur de règles s’affiche. Vous pouvez maintenant créer un critère de filtre pour l’enrichissement de votre audience. Ce critère de filtre **doit** inclut un attribut qui se trouve dans un tableau. L’attribut étant un tableau dépend de la structure de schéma de votre organisation. Après avoir créé vos critères de filtre, sélectionnez **[!UICONTROL View enrichment]** dans le panneau de droite.
+La zone de travail du créateur de règles s’affiche. Vous pouvez maintenant créer un critère de filtre pour l’enrichissement de votre audience. Ce critère de filtre **doit** inclut un attribut qui se trouve dans un tableau. L’attribut étant un tableau dépend de la structure de schéma de votre organisation. Après avoir créé vos critères de filtre, sélectionnez **[!UICONTROL Afficher l’enrichissement]** dans le panneau de droite.
 
 ![La zone de travail du créateur de règles présente un exemple d’audience pouvant avoir des enrichissements. Le bouton Diffusion est également mis en surbrillance.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-Sélectionnez le tableau d’objets, ainsi que les champs que vous souhaitez utiliser dans l’enrichissement, dans la liste du panneau de gauche. S’il n’y a qu’un seul tableau sur le profil, le tableau est automatiquement sélectionné pour vous. Sélectionnez **[!UICONTROL Save]** pour revenir à la composition de l’audience.
+Sélectionnez le tableau d’objets, ainsi que les champs que vous souhaitez utiliser dans l’enrichissement, dans la liste du panneau de gauche. S’il n’y a qu’un seul tableau sur le profil, le tableau est automatiquement sélectionné pour vous. Sélectionnez **[!UICONTROL Enregistrer]** pour revenir à la composition de l’audience.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
 ![L’arborescence du schéma pour l’arborescence d’enrichissement s’affiche.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
-Dans la composition de l’audience, votre bloc de [!UICONTROL Audience] est désormais de type « [!UICONTROL Rule builder with enhancement] ». Sélectionnez **[!UICONTROL Publish]** pour activer votre audience avec le lot quotidien suivant.
+Dans la composition de l’audience, votre bloc [!UICONTROL Audience] est désormais de type « [!UICONTROL  Créateur de règles avec amélioration ] ». Sélectionnez **[!UICONTROL Publier]** pour activer votre audience avec le lot quotidien suivant.
 
 ![Le bloc Audience est mis en surbrillance, ce qui indique qu’une audience avec enrichissement est ajoutée.](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
 

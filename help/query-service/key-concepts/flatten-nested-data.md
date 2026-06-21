@@ -4,18 +4,13 @@ title: Aplatir les structures de données imbriquées à utiliser avec les outil
 description: Ce document explique comment aplatir les schémas XDM pour toutes les tables et vues au cours d’une session lors de l’utilisation d’outils BI tiers avec le service de requête.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
 TQID: https://experienceleague.adobe.com/-J5p2xg4fdim1Fbr6iacguvIF3zvsLYol0GiijgEzjM
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 866
 ht-degree: 93%
 
 ---
@@ -64,7 +59,7 @@ prod:all?FLATTEN
 
 ## Exemple {#example}
 
-L’exemple de schéma utilisé dans ce guide utilise le groupe de champs standard [!UICONTROL Commerce Details], qui utilise la structure d’objet `commerce` et le tableau `productListItems` . Consultez la documentation XDM pour [plus d’informations sur le groupe de champs [!UICONTROL Commerce Details]](../../xdm/field-groups/event/commerce-details.md). Une représentation de la structure du schéma est visible dans l’image ci-dessous.
+L’exemple de schéma utilisé dans ce guide utilise le groupe de champs standard [!UICONTROL Détails du ], qui utilise la structure de l’objet `commerce` et le tableau `productListItems`. Consultez la documentation XDM pour [plus d’informations sur le groupe de champs [!UICONTROL Détails Commerce]](../../xdm/field-groups/event/commerce-details.md). Une représentation de la structure du schéma est visible dans l’image ci-dessous.
 
 ![Schéma du groupe de champs Détails du commerce comprenant les structures `commerce` et `productListItems`.](../images/key-concepts/commerce-details.png)
 

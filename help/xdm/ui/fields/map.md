@@ -3,18 +3,13 @@ title: Définir des champs de mappage dans l’interface utilisateur
 description: Découvrez comment définir un champ de mappage dans l’interface utilisateur d’Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
 TQID: https://experienceleague.adobe.com/-zzCEOyqCnuDKOiijQNpWcs744jnXb7niAK1gIh97z0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 475
+source-wordcount: 493
 ht-degree: 0%
 
 ---
@@ -25,15 +20,15 @@ Adobe Experience Platform vous permet de personnaliser entièrement la structure
 
 Vous pouvez également définir des champs de mappage dans l’éditeur de schémas pour stocker une collection de paires clé-valeur avec des clés dynamiques flexibles.
 
-Lors de la définition d’un nouveau champ dans l’interface utilisateur (IU) d’Experience Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez « **[!UICONTROL Map]** » dans la liste.
+Lors de la définition d’un nouveau champ dans l’interface utilisateur (IU) d’Experience Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez « **[!UICONTROL Mapper]** » dans la liste.
 
 ![Éditeur de schémas avec la liste déroulante Type et la valeur Mapper mises en surbrillance.](../../images/ui/fields/special/map.png)
 
-Une propriété [!UICONTROL Map value type] s’affiche. Cette valeur est requise pour les types de données [!UICONTROL Map]. Les valeurs disponibles pour la carte sont [!UICONTROL String] et [!UICONTROL Integer]. Sélectionnez une valeur dans la liste déroulante des options disponibles.
+Une propriété [!UICONTROL Type de valeur map] s’affiche. Cette valeur est requise pour les types de données [!UICONTROL Map]. Les valeurs disponibles pour le mappage sont [!UICONTROL Chaîne] et [!UICONTROL Entier]. Sélectionnez une valeur dans la liste déroulante des options disponibles.
 
-![Éditeur de schémas avec la liste déroulante [!UICONTROL Map value type] mise en surbrillance.](../../images/ui/fields/special/map-value-type.png)
+![Éditeur de schémas avec la liste déroulante [!UICONTROL Type de valeur de mappage] mise en surbrillance.](../../images/ui/fields/special/map-value-type.png)
 
-Une fois le sous-champ configuré, vous devez l’affecter à un groupe de champs. Utilisez le menu déroulant **[!UICONTROL Field Group]** ou le champ de recherche, puis sélectionnez **[!UICONTROL Apply]**. Vous pouvez continuer à ajouter des champs à l’objet en utilisant le même processus ou sélectionner **[!UICONTROL Save]** pour confirmer vos paramètres.
+Une fois le sous-champ configuré, vous devez l’affecter à un groupe de champs. Utilisez le menu déroulant **[!UICONTROL Groupe de champs]** ou le champ de recherche, puis sélectionnez **[!UICONTROL Appliquer]**. Vous pouvez continuer à ajouter des champs à l’objet en utilisant le même processus ou sélectionner **[!UICONTROL Enregistrer]** pour confirmer vos paramètres.
 
 ![Enregistrement de la sélection du groupe de champs et des paramètres appliqués.](../../images/ui/fields/special/assign-to-field-group.gif)
 
@@ -56,10 +51,10 @@ Assurez-vous d’utiliser uniquement des champs de type carte lorsqu’ils sont 
 
 >[!NOTE]
 >
->L’interface utilisateur d’Experience Platform présente des limites dans la façon dont elle peut extraire les clés des champs de type carte. Alors que les champs de type objet peuvent être développés, les mappages s’affichent sous la forme d’un seul champ à la place. Les champs de mappage créés via l’API Schema Registry qui ne sont pas de type chaîne ou entier s’affichent sous la forme de types de données « [!UICONTROL Complex] ».
+>L’interface utilisateur d’Experience Platform présente des limites dans la façon dont elle peut extraire les clés des champs de type carte. Alors que les champs de type objet peuvent être développés, les mappages s’affichent sous la forme d’un seul champ à la place. Les champs de mappage créés via l’API Schema Registry qui ne sont pas de type chaîne ou entier s’affichent sous la forme de types de données « [!UICONTROL Complexes] ».
 
 ## Étapes suivantes
 
 Après lecture de ce document, vous êtes désormais en mesure de définir des champs de mappage dans l’interface utilisateur d’Experience Platform. N’oubliez pas que vous ne pouvez utiliser que des classes et des groupes de champs pour ajouter des champs aux schémas. Pour en savoir plus sur la gestion de ces ressources dans l’interface utilisateur, consultez les guides sur la création et la modification de [classes](../resources/classes.md) et de [groupes de champs](../resources/field-groups.md).
 
-Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schemas], consultez la présentation de l’espace de travail [[!UICONTROL Schemas]](../overview.md).
+Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](../overview.md).

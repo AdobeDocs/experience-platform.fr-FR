@@ -1,9 +1,10 @@
 ---
 title: entreprise
 description: Obtenez des informations sur l’organisation IMS propriétaire de la propriété de balise implémentée.
-source-git-commit: 434d6913ea391b127b4b52c8494730c496bbcfe2
+exl-id: 172b3b1c-8b35-478d-97b8-603d16e3fb2f
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '97'
 ht-degree: 3%
 
 ---

@@ -20,13 +20,13 @@ ht-degree: 12%
 >title="Brand Concierge"
 >abstract="Paramètres de configuration lors de l’utilisation de Brand Concierge sur votre propriété."
 
-La section **&#x200B;**&#x200B;vous permet de contrôler le comportement des sessions de conversation Brand Concierge dans l’extension de balise Web SDK.
+La section **** vous permet de contrôler le comportement des sessions de conversation Brand Concierge dans l’extension de balise Web SDK.
 
 1. Connectez-vous à [CX Enterprise](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
-1. Faites défiler l’écran jusqu’à la section **&#x200B;**.
+1. Faites défiler l’écran jusqu’à la section ****.
 
 Les options suivantes sont disponibles. Pour obtenir des paramètres de bibliothèque JavaScript équivalents, consultez [`conversation`](/help/collection/js/commands/configure/conversation.md) dans la documentation de Web SDK.
 

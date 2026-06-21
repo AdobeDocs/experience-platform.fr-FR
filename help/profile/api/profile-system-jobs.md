@@ -6,16 +6,10 @@ description: Adobe Experience Platform vous permet de supprimer un jeu de donné
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 TQID: https://experienceleague.adobe.com/-x1wYB0ISg-uOuBi9VvGIIN-UnE0-7VzabSBTMB0LCo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2048
@@ -27,7 +21,7 @@ ht-degree: 38%
 
 >[!IMPORTANT]
 >
->Les points d’entrée suivants peuvent différer entre les implémentations de Adobe Experience Platform s’exécutant sur Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/landing/multi-cloud).
+>Les points d’entrée suivants peuvent différer entre les implémentations de Adobe Experience Platform s’exécutant sur Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Les données ingérées dans [!DNL Experience Platform] sont stockées dans le [!DNL Data Lake]. Si les jeux de données ont été activés pour Profile, ces données sont également stockées dans le magasin de données [!DNL Real-Time Customer Profile]. Il peut parfois être nécessaire de supprimer les données de profil associées à un jeu de données de la banque de profils afin de supprimer des données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API [!DNL Real-Time Customer Profile] pour créer une tâche système [!DNL Profile], ou « requête de suppression ».
 
@@ -368,7 +362,7 @@ Pour supprimer un lot, l’identifiant du lot doit être inclus dans le corps de
 >
 > La raison pour laquelle vous ne pouvez pas supprimer les lots des jeux de données basés sur des schémas d’enregistrement est que les lots de jeux de données de type enregistrement remplacent les enregistrements précédents et ne peuvent donc pas être « défaits » ni supprimés. La seule façon de supprimer l’impact des lots erronés pour les jeux de données basés sur des schémas d’enregistrement consiste à réingérer le lot avec les données correctes afin de remplacer les enregistrements incorrects.
 
-Pour plus d’informations sur le comportement des enregistrements et des séries temporelles, consultez la [&#x200B; section sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans la présentation de la [!DNL XDM System].
+Pour plus d’informations sur le comportement des enregistrements et des séries temporelles, consultez la [ section sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans la présentation de la [!DNL XDM System].
 
 **Format d’API**
 

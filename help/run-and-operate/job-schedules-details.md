@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
 source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1873'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Actuellement, les [!UICONTROL Job schedules] ne sont disponibles que pour les tâches Real-Time CDP suivantes :
+>Actuellement] les [!UICONTROL  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
@@ -36,7 +36,7 @@ Utilisez cette vue détaillée pour :
 
 Avant d’afficher les détails de la tâche, vous devez :
 
-* Disposer d’un accès à **[!UICONTROL Job Schedules]** avec les **[!UICONTROL View Job Schedules]** et **[!UICONTROL View Profile Management]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+* Accédez à **[!UICONTROL Horaires des tâches]** avec les **[!UICONTROL Afficher les horaires de tâches]** et **[!UICONTROL Afficher la gestion des profils]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 * Familiarisez-vous avec l’[interface des planifications de tâches](job-schedules.md#understanding-interface) et la vue chronologique.
 * comprendre les différents [types de tâche](job-schedules.md#job-schedules-details) (ingestion de lac, ingestion de profil, segmentation, activation) ;
 
@@ -84,7 +84,7 @@ Utilisez le tableau ci-dessous pour choisir la vue qui convient à votre tâche.
 
 Pour afficher les détails d’un jeu de données spécifique :
 
-1. Dans la vue chronologique **[!UICONTROL Job Schedules]**, recherchez le jeu de données que vous souhaitez étudier.
+1. Dans la vue chronologique **[!UICONTROL Planifications de tâches]**, recherchez le jeu de données sur lequel vous souhaitez en savoir plus.
 2. Sélectionnez le nom du jeu de données dans la colonne de gauche.
 
 La vue des détails du jeu de données s’ouvre dans un panneau de droite, affichant des informations sur toutes les tâches associées à ce jeu de données.
@@ -101,12 +101,12 @@ Pour les jeux de données avec des tâches d’ingestion de lac de données, le 
 
 | Mesure | Description | Utiliser pour |
 |--------|-------------|---------|
-| **[!UICONTROL Total runs]** | Nombre total de traitements d’ingestion de lac de données terminés pour ce jeu de données | Suivi des activités |
-| **[!UICONTROL Runs in progress]** | Nombre de traitements d’ingestion de lac en cours d’exécution | Détection des goulets d’étranglement |
-| **[!UICONTROL Total records added]** | Nombre cumulé de nouveaux enregistrements ajoutés au lac de données lors de toutes les exécutions de tâche | Surveillance du volume |
-| **[!UICONTROL Total ingestion time]** | Durée combinée de toutes les tâches d’ingestion du lac de données | Évaluation du temps de traitement |
-| **[!UICONTROL Total records updated]** | Le nombre cumulé d’enregistrements existants qui ont été mis à jour lors de l’ingestion | Actualiser l’analyse des motifs |
-| **[!UICONTROL Avg. ingestion speed (records/second)]** | Taux de débit moyen des tâches d’ingestion du lac de données | Comparaison des performances |
+| **[!UICONTROL Nombre total d’exécutions]** | Nombre total de traitements d’ingestion de lac de données terminés pour ce jeu de données | Suivi des activités |
+| **[!UICONTROL Exécutions en cours]** | Nombre de traitements d’ingestion de lac en cours d’exécution | Détection des goulets d’étranglement |
+| **[!UICONTROL Total des enregistrements ajoutés]** | Nombre cumulé de nouveaux enregistrements ajoutés au lac de données lors de toutes les exécutions de tâche | Surveillance du volume |
+| **[!UICONTROL Durée totale d’ingestion]** | Durée combinée de toutes les tâches d’ingestion du lac de données | Évaluation du temps de traitement |
+| **[!UICONTROL Nombre total d’enregistrements mis à jour]** | Le nombre cumulé d’enregistrements existants qui ont été mis à jour lors de l’ingestion | Actualiser l’analyse des motifs |
+| **[!UICONTROL Moy. vitesse d’ingestion (enregistrements/seconde)]** | Taux de débit moyen des tâches d’ingestion du lac de données | Comparaison des performances |
 
 ### Mesures d’ingestion de profil {#profile-ingestion-metrics}
 
@@ -114,12 +114,12 @@ Pour les jeux de données avec des tâches d’ingestion de profil, le panneau a
 
 | Mesure | Description | Utiliser pour |
 |--------|-------------|---------|
-| **[!UICONTROL Total runs]** | Nombre total de traitements d’ingestion de profil terminés pour ce jeu de données | Suivi des activités |
-| **[!UICONTROL Runs in progress]** | Nombre de traitements d’ingestion de profil en cours d’exécution | Détection de délai |
-| **[!UICONTROL Total profiles created]** | Nombre cumulé de nouveaux profils créés à partir de ce jeu de données lors de toutes les exécutions de tâche | Suivi de la croissance des profils |
-| **[!UICONTROL Total profile ingestion time]** | Durée combinée de toutes les tâches d’ingestion de profil | Identification du problème de minutage |
-| **[!UICONTROL Total profiles updated]** | Le nombre cumulé de profils existants qui ont été mis à jour avec des données de ce jeu de données | Mise à jour du suivi de la fréquence |
-| **[!UICONTROL Avg. profile ingestion speed (profiles/second)]** | Taux de débit moyen des tâches d’ingestion de profil | Suivi des performances |
+| **[!UICONTROL Nombre total d’exécutions]** | Nombre total de traitements d’ingestion de profil terminés pour ce jeu de données | Suivi des activités |
+| **[!UICONTROL Exécutions en cours]** | Nombre de traitements d’ingestion de profil en cours d’exécution | Détection de délai |
+| **[!UICONTROL Nombre total de profils créés]** | Nombre cumulé de nouveaux profils créés à partir de ce jeu de données lors de toutes les exécutions de tâche | Suivi de la croissance des profils |
+| **[!UICONTROL Temps total d’ingestion du profil]** | Durée combinée de toutes les tâches d’ingestion de profil | Identification du problème de minutage |
+| **[!UICONTROL Nombre total de profils mis à jour]** | Le nombre cumulé de profils existants qui ont été mis à jour avec des données de ce jeu de données | Mise à jour du suivi de la fréquence |
+| **[!UICONTROL Moy. vitesse d’ingestion des profils (profils/seconde)]** | Taux de débit moyen des tâches d’ingestion de profil | Suivi des performances |
 
 >[!NOTE]
 >
@@ -156,10 +156,10 @@ Lorsque vous devez enquêter sur une exécution de tâche spécifique, sélectio
 
 Pour afficher les détails d’une exécution de tâche spécifique :
 
-1. Dans la vue chronologique [!UICONTROL Job Schedules], recherchez l’exécution de tâche spécifique que vous souhaitez étudier.
+1. Dans la vue chronologique [!UICONTROL Planifications de tâches] recherchez l’exécution de tâche spécifique à étudier.
 2. Sélectionnez l’indicateur de tâche dans le journal (la barre colorée représentant la tâche).
 
-Le panneau **[!UICONTROL Dataflow run details]** s’ouvre et affiche des informations sur cette exécution de tâche spécifique.
+Le panneau **[!UICONTROL Détails de l’exécution du flux de données]** s’ouvre et affiche des informations sur cette exécution de tâche spécifique.
 
 ![Panneau Détails de l’exécution du flux de données affichant les informations d’exécution pour une exécution de tâche spécifique.](assets/job-schedules/job-details.png)
 
@@ -171,23 +171,23 @@ Le panneau Détails de l’exécution du flux de données affiche des informatio
 
 | Champ | Description |
 |-------|-------------|
-| **[!UICONTROL Dataflow run ID]** | Identifiant unique de cette exécution de tâche d’ingestion de lac spécifique. Sélectionnez l’ID pour afficher les détails complets de la surveillance du flux de données. |
-| **[!UICONTROL Run status]** | Résultat de la tâche (Succès, Échec, En cours, En file d’attente). Un indicateur vert indique la réussite de l’opération. |
-| **[!UICONTROL Started at]** | Date et heure auxquelles la tâche d’ingestion du lac a commencé à s’exécuter. |
-| **[!UICONTROL Completed at]** | Date et heure auxquelles la tâche d’ingestion du lac a terminé son exécution. |
-| **[!UICONTROL Records added]** | Nombre de nouveaux enregistrements ajoutés au lac de données pendant cette exécution de tâche. |
-| **[!UICONTROL Records updated]** | Nombre d’enregistrements existants qui ont été mis à jour dans le lac de données au cours de cette exécution de tâche. |
+| **[!UICONTROL ID d’exécution du flux de données]** | Identifiant unique de cette exécution de tâche d’ingestion de lac spécifique. Sélectionnez l’ID pour afficher les détails complets de la surveillance du flux de données. |
+| **[!UICONTROL Statut d’exécution]** | Résultat de la tâche (Succès, Échec, En cours, En file d’attente). Un indicateur vert indique la réussite de l’opération. |
+| **[!UICONTROL Commencé le]** | Date et heure auxquelles la tâche d’ingestion du lac a commencé à s’exécuter. |
+| **[!UICONTROL Terminé le]** | Date et heure auxquelles la tâche d’ingestion du lac a terminé son exécution. |
+| **[!UICONTROL Enregistrements ajoutés]** | Nombre de nouveaux enregistrements ajoutés au lac de données pendant cette exécution de tâche. |
+| **[!UICONTROL Enregistrements mis à jour]** | Nombre d’enregistrements existants qui ont été mis à jour dans le lac de données au cours de cette exécution de tâche. |
 
 #### Détails de la tâche d’ingestion de profil {#profile-ingestion-job-details}
 
 | Champ | Description |
 |-------|-------------|
-| **[!UICONTROL Dataflow run ID]** | Identifiant unique de cette exécution de tâche d’ingestion de profil spécifique. Sélectionnez l’ID pour afficher les détails complets de la surveillance du flux de données. |
-| **[!UICONTROL Run status]** | Résultat de la tâche (Succès, Échec, En cours, En file d’attente). Un indicateur vert indique la réussite de l’opération. |
-| **[!UICONTROL Started at]** | Date et heure auxquelles la tâche d’ingestion de profil a commencé à s’exécuter. |
-| **[!UICONTROL Completed at]** | Date et heure auxquelles la tâche d’ingestion de profil a terminé son exécution. |
-| **[!UICONTROL Records added]** | Nombre de nouveaux profils créés pendant l’exécution de cette tâche. |
-| **[!UICONTROL Records updated]** | Nombre de profils existants qui ont été mis à jour pendant cette exécution de tâche. |
+| **[!UICONTROL ID d’exécution du flux de données]** | Identifiant unique de cette exécution de tâche d’ingestion de profil spécifique. Sélectionnez l’ID pour afficher les détails complets de la surveillance du flux de données. |
+| **[!UICONTROL Statut d’exécution]** | Résultat de la tâche (Succès, Échec, En cours, En file d’attente). Un indicateur vert indique la réussite de l’opération. |
+| **[!UICONTROL Commencé le]** | Date et heure auxquelles la tâche d’ingestion de profil a commencé à s’exécuter. |
+| **[!UICONTROL Terminé le]** | Date et heure auxquelles la tâche d’ingestion de profil a terminé son exécution. |
+| **[!UICONTROL Enregistrements ajoutés]** | Nombre de nouveaux profils créés pendant l’exécution de cette tâche. |
+| **[!UICONTROL Enregistrements mis à jour]** | Nombre de profils existants qui ont été mis à jour pendant cette exécution de tâche. |
 
 ### Comprendre le flux d’exécution de tâche {#job-execution-flow}
 

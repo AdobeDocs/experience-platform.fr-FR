@@ -3,22 +3,13 @@ title: Connecter Oracle Eloqua (V2) à Experience Platform dans l’interface ut
 description: Découvrez comment connecter votre compte Oracle Eloqua à Experience Platform dans l’interface utilisateur.
 exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
 TQID: https://experienceleague.adobe.com/d3-xkZdW2T2Jm7eYW7EobC89rej-8lP1OUj9u4Oei3Y
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1192
+source-wordcount: 1223
 ht-degree: 7%
 
 ---
@@ -50,23 +41,23 @@ Lisez la [[!DNL Eloqua] présentation](../../../../connectors/marketing-automati
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Pour vous connecter à [!DNL Eloqua], accédez à la catégorie *[!UICONTROL Marketing Automation]* , sélectionnez la carte source **[!UICONTROL (V2) Oracle Eloqua]**, puis sélectionnez **[!UICONTROL Set up]**.
+Pour vous connecter à [!DNL Eloqua], accédez à la catégorie *[!UICONTROL Automatisation du marketing]*, sélectionnez la carte source **[!UICONTROL (V2) Oracle Eloqua]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![La carte source Eloqua dans le catalogue des sources avec le bouton Configurer en surbrillance.](../../../../images/tutorials/create/eloqua/catalog.png)
 
 ## Utiliser un compte existant {#existing}
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte [!DNL Eloqua] à utiliser.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL Eloqua] à utiliser.
 
 ![L’option Compte existant sélectionnée dans l’interface de création de compte.](../../../../images/tutorials/create/eloqua/existing.png)
 
 ## Créer un nouveau compte {#new}
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom et une description sous votre [!UICONTROL Source connection details]. Ensuite, sous [!UICONTROL Account authentication], indiquez les valeurs de vos **ID client**, **Secret client**, **Nom d’utilisateur**, **Mot de passe** et **Point d’entrée de base**. Vous pouvez lire le [guide d’authentification](../../../../connectors/marketing-automation/eloqua.md) pour plus d’informations sur ces informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques secondes le temps que votre connexion s’établisse.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description sous les [!UICONTROL détails de connexion Source]. Ensuite, sous [!UICONTROL Authentification du compte], indiquez les valeurs de vos **ID client**, **Secret client**, **Nom d’utilisateur**, **Mot de passe** et **** Point d’entrée de base. Vous pouvez lire le [guide d’authentification](../../../../connectors/marketing-automation/eloqua.md) pour plus d’informations sur ces informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques secondes le temps que votre connexion s’établisse.
 
 ![Nouvelle interface de compte avec des champs pour les détails de connexion source et les informations d’authentification.](../../../../images/tutorials/create/eloqua/new.png)
 
@@ -112,13 +103,13 @@ Pour utiliser l’éditeur de champ calculé, sélectionnez le champ source à m
 
 >[!BEGINTABS]
 
->[!TAB Tab]
+>[!TAB ]
 
 Pour les utilisateurs [!DNL Salesforce], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
 ![Champ calculé pour Salesforce.](../../../../images/tutorials/create/eloqua/sf-field.png)
 
->[!TAB Tab&#x200B;]
+>[!TAB ]
 
 Pour les utilisateurs [!DNL Microsoft], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
@@ -126,7 +117,7 @@ Pour les utilisateurs [!DNL Microsoft], utilisez l’éditeur de champ calculé 
 
 >[!ENDTABS]
 
-Une fois la mise à jour des champs calculés terminée, sélectionnez **[!UICONTROL Next]** pour continuer.
+Une fois la mise à jour des champs calculés terminée, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![L’interface de mappage affichant les mappages de champs pour les entités de données Eloqua.](../../../../images/tutorials/create/eloqua/mapping.png)
 
@@ -141,7 +132,7 @@ Une fois la mise à jour des champs calculés terminée, sélectionnez **[!UICON
 >* **Activité:** `CreatedAt`
 >* **Campaign:** `updatedAt`
 
-Une fois le mappage terminé, vous pouvez configurer un planning d’ingestion pour votre flux de données. Définissez votre [!UICONTROL Frequency] sur `Once` pour configurer une exécution d’ingestion unique. Pour une ingestion incrémentielle, vous pouvez définir votre [!UICONTROL Frequency] sur `Hour`, `Day` ou `Week`. Lors de l’utilisation de l’ingestion incrémentielle, vous devez également configurer le [!UICONTROL Interval] pour définir le temps écoulé entre les exécutions d’ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
+Une fois le mappage terminé, vous pouvez configurer un planning d’ingestion pour votre flux de données. Définissez votre [!UICONTROL Fréquence] sur `Once` pour configurer une exécution d’ingestion unique. Pour une ingestion incrémentielle, vous pouvez définir votre [!UICONTROL Fréquence] sur `Hour`, `Day` ou `Week`. Lors de l’utilisation de l’ingestion incrémentielle, vous devez également configurer l’[!UICONTROL  Intervalle ] pour définir le temps écoulé entre les exécutions d’ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
 
 La fréquence d’ingestion par minute n’est pas disponible pour la source de [!DNL Eloqua]. La planification la plus fréquente que vous pouvez choisir est horaire. Sélectionnez une planification qui correspond à vos besoins en matière de fraîcheur des données. Gardez à l’esprit que le choix d’une planification plus fréquente augmentera les coûts de calcul.
 
@@ -149,7 +140,7 @@ La fréquence d’ingestion par minute n’est pas disponible pour la source de 
 
 ## Réviser
 
-Une fois le planning d’ingestion configuré, utilisez l’interface [!UICONTROL Review] pour confirmer les détails de votre flux de données. Sélectionnez **[!UICONTROL Finish]** pour terminer la configuration et patientez quelques instants le temps que votre flux de données se lance.
+Une fois le planning d’ingestion configuré, utilisez l’interface [!UICONTROL Révision] pour confirmer les détails de votre flux de données. Sélectionnez **[!UICONTROL Terminer]** pour terminer la configuration et patienter quelques instants le temps que votre flux de données se lance.
 
 ![L’interface de révision affichant un résumé de la configuration du flux de données avant la fin.](../../../../images/tutorials/create/eloqua/review.png)
 

@@ -4,12 +4,9 @@ description: Découvrez comment créer une connexion source et un flux de donné
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 TQID: https://experienceleague.adobe.com/GatQp2TAQn7ymXkepBPY69wsyum4L5hLGFCcsUbja3s
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1567
@@ -41,7 +38,7 @@ La section suivante décrit les étapes préalables à suivre avant de pouvoir d
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Amazon Redshift] à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
@@ -86,7 +83,7 @@ Pour authentifier votre instance [!DNL Snowflake] avec Experience Platform, vous
 
 Pour trouver l’identifiant de votre compte, procédez comme suit :
 
-* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [&#128279;](https://app.snowflake.com/).[!DNL Snowflake] 
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application ](https://app.snowflake.com/).[[!DNL Snowflake] 
 * Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
 * Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
 

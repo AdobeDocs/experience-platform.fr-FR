@@ -4,33 +4,15 @@ description: Utilisez la conversion Snapchat pour envoyer des données d’évé
 last-substantial-update: 2025-01-20T00:00:00.000Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
 TQID: https://experienceleague.adobe.com/SbZbjD4PtmqMTLZfAFTB1FgNd1o90Xudfjc3EdETWvE
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1056
-ht-degree: 4%
+source-wordcount: 1102
+ht-degree: 3%
 
 ---
 
@@ -49,27 +31,27 @@ Créez un [flux de données](/help/tags/ui/event-forwarding/getting-started.md) 
 
 Un compte **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) est requis pour utiliser l’API Conversions. Business Manager aide les annonceurs à intégrer les efforts marketing de **[!DNL Snapchat]** dans leur entreprise et avec des partenaires externes. Consultez l’article **[!DNL Snapchat]** [centre d’aide](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sur la création d’un compte Business Manager si vous n’en avez pas.
 
-Un [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section [[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
+Un [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section [!UICONTROL [Gestionnaire d’événements]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 Vous avez besoin d’un jeton API statique de longue durée. Pour obtenir ce jeton, consultez la [[!DNL Snapchat] documentation de l’API de conversion](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token).
 
 ## Installer et configurer l’extension d’API d’événements web [!DNL Snapchat] {#install}
 
-Pour installer l’extension, accédez à **[!UICONTROL Data Collection]**>**[!UICONTROL Event Forwarding]**. Sélectionnez la propriété où vous souhaitez installer l’extension.
+Pour installer l’extension, accédez à **[!UICONTROL Collecte de données]**>**[!UICONTROL Transfert d’événement]**. Sélectionnez la propriété où vous souhaitez installer l’extension.
 
 Une fois la propriété souhaitée sélectionnée, procédez comme suit :
 
 1. Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Extensions]**.
-2. Recherchez le **[!UICONTROL Snap Conversion API Extension]** et sélectionnez **[!UICONTROL Install]**.
+2. Recherchez l’extension **[!UICONTROL Snap Conversion API Extension]** et sélectionnez **[!UICONTROL Installer]**.
 
    ![Image illustrant le bouton d’installation](../../../images/extensions/server/snap/install.png)
 
 3. Dans l’écran de configuration, saisissez les valeurs suivantes :
 
 * **[!UICONTROL Pixel Id]**
-* **[!UICONTROL API Token]**
+* **[!UICONTROL Jeton API]**
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Image illustrant l’ID de pixel et le bouton de jeton API](../../../images/extensions/server/snap/configure.png)
 
@@ -79,9 +61,9 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
 ## Création d’éléments de données {#create-data-elements}
 
-Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, créez [éléments de données](https://experienceleague.adobe.com/fr/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque paramètre de données. Procédez comme suit :
+Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, créez [éléments de données](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque paramètre de données. Procédez comme suit :
 
-1. Accédez à **[!UICONTROL Authoring]**>**[!UICONTROL Data Elements]** dans l’écran **[!UICONTROL Property Info]** de votre propriété, puis sélectionnez **[!UICONTROL Add Data Element]**.
+1. Accédez à **[!UICONTROL Création]**>**[!UICONTROL Éléments de données]** dans l’écran **[!UICONTROL Informations sur la propriété]** de votre propriété, puis sélectionnez **[!UICONTROL Ajouter un élément de données]**.
 
    ![Image illustrant le bouton Ajouter un élément de données](../../../images/extensions/server/snap/add_data_element.png)
 
@@ -89,9 +71,9 @@ Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, 
 
 3. Sélectionnez **[!UICONTROL Core]** comme extension et **[!UICONTROL Path]** comme type d’élément de données.
 
-4. Dans le menu déroulant, sélectionnez l’élément approprié, puis remplissez le champ [!UICONTROL Path] dans le panneau de droite pour référencer les données souhaitées dans votre schéma.
+4. Dans le menu déroulant, sélectionnez l’élément approprié, puis renseignez le champ [!UICONTROL Chemin] dans le panneau de droite pour référencer les données de votre choix dans le schéma.
 
-   ![Image illustrant l’écran Créer un élément de données &#x200B;](../../../images/extensions/server/snap/create_data_element.png)
+   ![Image illustrant l’écran Créer un élément de données ](../../../images/extensions/server/snap/create_data_element.png)
 
 Par exemple, si vous créez un élément de données qui fait référence à `snapClickId` dans le schéma illustré ci-dessous :
 
@@ -105,11 +87,11 @@ Consultez la [documentation des propriétés de transfert d’événement](/help
 
 ## Créer des règles pour envoyer des événements de conversion à Snap {#create-snap-rules}
 
-Les [règles](https://experienceleague.adobe.com/fr/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Experience Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
+Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Experience Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
 
 ### Créer une règle
 
-1. Accédez à votre propriété de transfert d’événement et sélectionnez **[!UICONTROL Rules]** dans le menu Création . Cliquez ensuite sur **[!UICONTROL Create New Rule]**.
+1. Accédez à votre propriété de transfert d’événement et sélectionnez **[!UICONTROL Règles]** dans le menu Création. Cliquez ensuite sur **[!UICONTROL Créer une règle]**.
 
    ![Image illustrant les règles dans le volet de navigation de gauche](../../../images/extensions/server/snap/create_new_rule.png)
 
@@ -119,15 +101,15 @@ Les [règles](https://experienceleague.adobe.com/fr/docs/platform-learn/implemen
 
 3. Après avoir enregistré la condition, ajoutez une action pour déclencher l’API de conversion Snap. Dans le panneau de gauche :
 
-   * Définissez le menu déroulant [!UICONTROL Extension] sur [!UICONTROL Snap Conversions API Extension].
+   * Définissez le menu déroulant [!UICONTROL Extension] sur [!UICONTROL Extension de l’API Snap Conversions].
 
-   * Définissez le menu déroulant [!UICONTROL Action Type] sur [!UICONTROL Report Web Conversions].
+   * Définissez le menu déroulant [!UICONTROL Type d’action] sur [!UICONTROL Signaler les conversions web].
 
    * Nommez la règle en conséquence.
 
    ![Image illustrant l’écran de configuration de l’action](../../../images/extensions/server/snap/action_configuration.png)
 
-4. Configurez les [valeurs de paramètre CAPI](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) que vous souhaitez envoyer pour l’événement dans la section **[!UICONTROL Data Bindings]** du panneau de droite. Les champs de l’extension sont mappés aux paramètres CAPI comme illustré ci-dessous. Pour plus d’informations sur chaque paramètre, consultez la [documentation de l’API de conversions Snapchat](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters).
+4. Configurez les [valeurs de paramètre CAPI](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) à envoyer pour l’événement dans la section **[!UICONTROL Liaisons de données]** du panneau de droite. Les champs de l’extension sont mappés aux paramètres CAPI comme illustré ci-dessous. Pour plus d’informations sur chaque paramètre, consultez la [documentation de l’API de conversions Snapchat](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters).
 
 | Champ de liaison de données | Paramètre Snap CAPI |
 | --- | --- |
@@ -142,7 +124,7 @@ Les [règles](https://experienceleague.adobe.com/fr/docs/platform-learn/implemen
 | Nom | `ln` |
 | Genre | `ge` |
 | Ville | `ph` |
-| État | `st` |
+| State (État) | `st` |
 | Zip (Code postal) | `zp` |
 | Pays | `country` |
 | ID externe | `external_id` |
@@ -180,7 +162,7 @@ Chaque événement nécessite une `event_source`, toujours définie sur `WEB.`. 
 
 * Pour les événements `Purchase`, les champs `Currency` et `Price` sont obligatoires.
 
-* L’activation de la case à cocher **[!UICONTROL Test Mode]** envoie les événements sous la forme d’événements de test, qui apparaissent dans l’outil d’événement de test au lieu des rapports standard. Voir cet article [centre d’aide aux entreprises](https://businesshelp.snapchat.com/s/article/capi-event-testing?language=en_US#:~:text=Snap's%20Conversions%20API%20(CAPI)%20Test,being%20processed%20as%20production%20results.) pour plus d’informations.
+* L’activation de la case à cocher **[!UICONTROL Mode test]** envoie les événements sous la forme d’événements de test, qui apparaissent dans l’outil d’événement de test au lieu du compte rendu des performances standard. Voir cet article [centre d’aide aux entreprises](https://businesshelp.snapchat.com/s/article/capi-event-testing?language=en_US#:~:text=Snap's%20Conversions%20API%20(CAPI)%20Test,being%20processed%20as%20production%20results.) pour plus d’informations.
 
 * Le paramètre `contents` doit être une chaîne JSON contenant au moins l’un des champs suivants :
 

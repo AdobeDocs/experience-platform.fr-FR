@@ -6,7 +6,7 @@ hide: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
 source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '1943'
+source-wordcount: '1911'
 ht-degree: 17%
 
 ---
@@ -23,7 +23,7 @@ Cette destination utilise le [[!DNL Salesforce Import API v5]](https://developer
 >[!IMPORTANT]
 >
 > Il s’agit de la version V2 de la destination [Engagement du compte Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Cette version remplace la destination précédente et se trouve actuellement dans la version Alpha.
-> <br>> Si vous utilisez actuellement la version précédente de la destination [Engagement du compte Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), vous devez migrer vers cette version V2 avant **janvier 2026**. Après janvier 2026, Adobe désactivera la version précédente et elle ne sera plus disponible.
+> <br>> Si vous utilisez actuellement la version précédente de la destination [Engagement du compte Marketing Cloud Salesforce](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), vous devez migrer vers cette version V2 avant **janvier 2026**. Après janvier 2026, Adobe désactivera la version précédente et elle ne sera plus disponible.
 
 
 ## Cas d’utilisation {#use-cases}
@@ -64,7 +64,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination [!D
 
 | Informations d’identification | Description |
 | --- | --- |
-| **[!UICONTROL Account Engagement Business Unit ID]** | Identifiant de l’unité opérationnelle de l’engagement du compte [!DNL Salesforce]. Reportez-vous à la [documentation](https://help.salesforce.com/s/articleView?id=000381973&type=1) de Salesforce pour savoir comment trouver l’identifiant. |
+| **[!UICONTROL ID d’unité opérationnelle de l’engagement de compte]** | Identifiant de l’unité opérationnelle de l’engagement du compte [!DNL Salesforce]. Reportez-vous à la [documentation](https://help.salesforce.com/s/articleView?id=000381973&type=1) de Salesforce pour savoir comment trouver l’identifiant. |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -113,8 +113,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Profile-based]** | <ul><li>Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li>Cette destination prend en charge l’exportation par lots des données de profil à l’aide de l’API d’importation Salesforce v5.</li></ul> |
-| Fréquence des exportations | **[!UICONTROL Batch]** | <ul><li>**Exportation initiale** : exportation complète immédiatement après le mappage</li><li>**Exportations suivantes** : exportations incrémentielles toutes les 3 heures</li><li>Cette planification est fixe et ne peut pas être personnalisée dans Alpha</li></ul> |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li>Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li>Cette destination prend en charge l’exportation par lots des données de profil à l’aide de l’API d’importation Salesforce v5.</li></ul> |
+| Fréquence des exportations | **[!UICONTROL Lot]** | <ul><li>**Exportation initiale** : exportation complète immédiatement après le mappage</li><li>**Exportations suivantes** : exportations incrémentielles toutes les 3 heures</li><li>Cette planification est fixe et ne peut pas être personnalisée dans Alpha</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -122,48 +122,48 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 ![Workflow de connexion de destination d’engagement du compte Salesforce Marketing Cloud V2](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/connect-to-destination.png "Workflow de connexion de destination d’engagement du compte Salesforce Marketing Cloud V2")
 
-Vous serez redirigé vers la page de connexion de [!DNL Salesforce]. Saisissez les informations d’identification de votre compte [!DNL Marketing Cloud Account Engagement] et sélectionnez **[!UICONTROL Log In]**.
+Vous serez redirigé vers la page de connexion de [!DNL Salesforce]. Saisissez les informations d’identification de votre compte [!DNL Marketing Cloud Account Engagement] et sélectionnez **[!UICONTROL Connexion]**.
 
 ![Page de connexion à Salesforce](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Page de connexion à Salesforce.")
 
-Sélectionnez ensuite **[!UICONTROL Allow]** pour donner des autorisations à l’application **[!DNL Adobe Experience Platform]** afin d’accéder à votre compte [!DNL Salesforce Marketing Cloud Account Engagement]. *Vous ne devez effectuer cette opération qu’une seule fois*.
+Sélectionnez ensuite **[!UICONTROL Autoriser]** pour accorder des autorisations à l’application **[!DNL Adobe Experience Platform]** afin d’accéder à votre compte [!DNL Salesforce Marketing Cloud Account Engagement]. *Vous ne devez effectuer cette opération qu’une seule fois*.
 
 Fenêtre contextuelle de confirmation de capture d’écran de l’application Salesforce ![pour autoriser l’accès de l’application Experience Platform à l’engagement du compte Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
-Si les détails fournis sont valides, l’interface utilisateur affiche un message : *Vous vous êtes connecté avec succès au compte d’engagement de compte Marketing Cloud de Salesforce (V2)* et un statut de **[!UICONTROL Connected]** avec une coche verte.
+Si les détails fournis sont valides, l’interface utilisateur affiche un message : *Vous vous êtes connecté avec succès au compte d’engagement de compte Marketing Cloud de Salesforce (V2)* et un statut **[!UICONTROL Connecté]** avec une coche verte.
 
 ### Renseigner les détails de la destination {#destination-details}
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Account Engagement Business Unit ID]** : votre `Account Engagement Business Unit ID` [!DNL Salesforce].
-* **[!UICONTROL Account Engagement API]** : indiquez si vous souhaitez utiliser les points d’entrée de production (`https://pi.pardot.com`) ou de démonstration (`https://pi.demo.pardot.com`) de l’API d’engagement de compte.
-* **[!UICONTROL Account Engagement Campaign ID]** : chaque prospect [!DNL Account Engagement] doit être associé à une campagne. Si vous ne définissez pas d’identifiant de campagne, l’engagement du compte tentera d’en attribuer automatiquement un, si un identifiant par défaut existe dans votre compte Salesforce.
+* **[!UICONTROL ID d’unité opérationnelle de l’engagement du compte]** : votre `Account Engagement Business Unit ID` [!DNL Salesforce].
+* **[!UICONTROL API d’engagement de compte]** : indiquez si vous souhaitez utiliser les points d’entrée de production (`https://pi.pardot.com`) ou de démonstration (`https://pi.demo.pardot.com`) de l’API d’engagement de compte.
+* **[!UICONTROL ID de campagne d’engagement du compte]** : chaque prospect [!DNL Account Engagement] doit être associé à une campagne. Si vous ne définissez pas d’identifiant de campagne, l’engagement du compte tentera d’en attribuer automatiquement un, si un identifiant par défaut existe dans votre compte Salesforce.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -204,9 +204,9 @@ Avant de commencer à mapper vos données, passez en revue les mappages de champ
 
 Suivez les étapes ci-dessous pour mapper les champs corrects.
 
-1. À l’étape **[!UICONTROL Mapping]**, sélectionnez **[!UICONTROL Add new mapping]**. Une nouvelle ligne de mappage s’affichera à l’écran.
-1. Dans la fenêtre **[!UICONTROL Select source field]** , choisissez la catégorie **[!UICONTROL Select attributes]** et sélectionnez l’attribut XDM ou choisissez le **[!UICONTROL Select identity namespace]** et sélectionnez une identité.
-1. Dans la fenêtre **[!UICONTROL Select target field]** , choisissez le **[!UICONTROL Select identity namespace]** et sélectionnez une identité ou choisissez **[!UICONTROL Select custom attributes]** catégorie et indiquez dans la liste des champs de prospects standard Engagement du compte .
+1. À l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affichera à l’écran.
+1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez la catégorie **[!UICONTROL Sélectionner les attributs]** et sélectionnez l’attribut XDM ou choisissez l’espace de noms d’identité **[!UICONTROL Sélectionner]** et sélectionnez une identité.
+1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]**, choisissez la catégorie **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité ou choisissez **[!UICONTROL Sélectionner des attributs personnalisés]** et spécifiez dans la liste des champs de prospects standard Engagement du compte.
 
 ![Mappage des champs et des identités XDM aux champs d’engagement de compte Salesforce Marketing Cloud V2](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png "Exemple de mappage des champs et des identités XDM aux champs d’engagement de compte Salesforce Marketing Cloud V2")
 
@@ -214,7 +214,7 @@ Suivez les étapes ci-dessous pour mapper les champs corrects.
 
 Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
-1. Accédez à l’une des audiences que vous avez sélectionnées. Sélectionnez l’onglet **[!DNL Activation data]** . La colonne **[!UICONTROL Mapping ID]** affiche le nom du champ personnalisé généré dans la page [!DNL Marketing Cloud Account Engagement Prospects].
+1. Accédez à l’une des audiences que vous avez sélectionnées. Sélectionnez l’onglet **[!DNL Activation data]** . La colonne **[!UICONTROL ID de mappage]** affiche le nom du champ personnalisé généré dans la page [!DNL Marketing Cloud Account Engagement Prospects].
    ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform montrant l’identifiant de mappage pour un segment sélectionné.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
 1. Accédez au site web [[!DNL Salesforce]](https://login.salesforce.com/) . Accédez ensuite à la page **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** et vérifiez si les prospects de l’audience ont été ajoutés/mis à jour. Vous pouvez également accéder à [[!DNL Account Engagement]](https://pi.pardot.com/) et à la page **[!DNL Prospects]**.

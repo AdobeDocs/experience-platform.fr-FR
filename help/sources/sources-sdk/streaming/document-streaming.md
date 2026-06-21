@@ -4,10 +4,8 @@ description: La dernière étape avant que votre nouvelle source puisse être mi
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
 badge: Beta
 TQID: https://experienceleague.adobe.com/QDV7MtYYingzJzNtbHA1rhSB81yl9-OZqxESSi88Nng
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 439
@@ -27,8 +25,8 @@ Ce guide de documentation comprend :
 
 * Tutoriel que vous pouvez suivre pour créer une page de documentation pour votre nouvelle source ;
 * Un modèle de documentation à remplir pour votre nouvelle source ;
-* [Instructions sur la façon d’utiliser Markdown pour rédiger la documentation technique](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr)
-* [Instructions pour comprendre la version Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr#custom-markdown-extensions).
+* [Instructions sur la façon d’utiliser Markdown pour rédiger la documentation technique](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)
+* [Instructions pour comprendre la version Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Conditions préalables
 

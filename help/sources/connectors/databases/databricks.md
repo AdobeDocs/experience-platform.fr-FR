@@ -5,13 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2026-03-14T00:00:00.000Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
 TQID: https://experienceleague.adobe.com/VptaHDuBe-Nrreb-kb73ajDcAzEPmV-eERjCpCsyRI0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 608
@@ -161,7 +157,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Propriété | Description |
 | --- | --- |
 | Nom du conteneur | Nom de votre conteneur. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
-| Compte d’enregistrement | Nom de votre compte de stockage. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
+| Compte de stockage | Nom de votre compte de stockage. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
 | Jeton SAS | Jeton de signature d’accès partagé pour votre [!DNL Azure Blob Storage]. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
 
 ![Interface utilisateur des briques de données dans Azure.](../../images/tutorials/create/databricks/databricks-ui.png)

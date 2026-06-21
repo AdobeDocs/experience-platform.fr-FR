@@ -7,32 +7,24 @@ description: Trouvez des réponses aux erreurs courantes de l’IA dédiée aux 
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
 TQID: https://experienceleague.adobe.com/n-K-k-zwoIZ-x96onn4hIoH27T8iAMaMuZgjfo8thG4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1795
+source-wordcount: 1830
 ht-degree: 25%
 
 ---
 
 # Dépannage des erreurs de l’IA dédiée aux clients
 
-L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Service instances]**, une colonne pour **[!UICONTROL LAST RUN STATUS]** affiche l’un des messages suivants : **[!UICONTROL Success]**, **[!UICONTROL Training issue]** et **[!UICONTROL Failed]**.
+L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Instances de service]**, une colonne pour **[!UICONTROL STATUT DE LA DERNIÈRE EXÉCUTION]** affiche l’un des messages suivants : **[!UICONTROL Succès]**, **[!UICONTROL Problème de formation]** et **[!UICONTROL Échec]**.
 
 ![Statut de la dernière exécution indiquant la réussite, un problème de formation ou un échec.](./images/errors/last-run-status.png)
 
-Dans le cas où **[!UICONTROL Failed]** ou **[!UICONTROL Training issue]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient vos **[!UICONTROL Last run status]** et **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contient des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
+Dans le cas où **[!UICONTROL Échec]** ou **[!UICONTROL Problème d’entraînement]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient votre **[!UICONTROL statut de la dernière exécution]** et **[!UICONTROL détails de la dernière exécution]**. **[!UICONTROL Détails de la dernière exécution]** contient des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
 
 ![](./images/errors/last-run-details.png){width=300}
 
@@ -50,7 +42,7 @@ Pour contourner ce problème, vous devez ajouter experience.adobe.com en tant qu
 
 ## La qualité du modèle est médiocre.
 
-Si vous recevez l’erreur « [!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration] ». Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
+Si vous recevez l’erreur « [!UICONTROL La qualité du modèle est médiocre. Nous vous recommandons de créer une application avec la configuration modifiée] ». Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
 
 ![](./images/errors/model-quality.png){width=300}
 

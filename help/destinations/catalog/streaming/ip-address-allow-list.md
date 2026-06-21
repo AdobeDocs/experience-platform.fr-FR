@@ -5,16 +5,10 @@ type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre place sur la liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST ou votre instance Amazon Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 TQID: https://experienceleague.adobe.com/SXNhATifMFb3FVH3nc3mT-Kbu4KpuxKMD68NucHFhzs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 430
@@ -51,7 +45,7 @@ Vous pouvez définir des contrôles d’accès réseau via votre pare-feu résea
 
 Si votre politique d’organisation exige que vous ajoutiez des adresses IP pour le trafic entrant, vous devez ajouter les plages d’adresses IP des catégories suivantes à votre place sur la liste autorisée avant d’utiliser les destinations mentionnées ci-dessus sur cette page :
 
-1. Toutes les [&#x200B; adresses IP globales &#x200B;](#global)
+1. Toutes les [ adresses IP globales ](#global)
 2. Outre les adresses IP globales, ajoutez les adresses IP correspondant à la région dans laquelle vous avez reçu les privilèges d’accès, à partir de la liste située plus bas sur la page. Si vous n’ajoutez pas votre plage d’adresses IP spécifique à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en streaming.
 
 ## Adresses IP globales {#global}

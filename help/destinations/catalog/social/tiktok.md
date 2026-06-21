@@ -4,24 +4,15 @@ description: Créez des audiences personnalisées sur TikTok avec vos données p
 last-substantial-update: 2023-03-20T00:00:00.000Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 TQID: https://experienceleague.adobe.com/kGMY6Qbf2dDKV4L6DwFfGmq-vqjEicAECoqNb4hR4-g
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1243
-ht-degree: 29%
+source-wordcount: 1276
+ht-degree: 28%
 
 ---
 
@@ -29,11 +20,11 @@ ht-degree: 29%
 
 ## Vue d’ensemble {#overview}
 
-Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Ces audiences peuvent correspondre à des personnes qui ont visité votre site web ou interagi avec votre contenu. Envoyez rapidement et en toute sécurité l’audience souhaitée de [!DNL Adobe Experience Platform] vers TikTok à l’aide de l’intégration en temps réel d’Adobe au gestionnaire de publicités TikTok. Visitez le centre d’aide aux entreprises de [&#128279;](https://ads.tiktok.com/help/article/audiences) pour plus d’informations.
+Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Ces audiences peuvent correspondre à des personnes qui ont visité votre site web ou interagi avec votre contenu. Envoyez rapidement et en toute sécurité l’audience souhaitée de [!DNL Adobe Experience Platform] vers TikTok à l’aide de l’intégration en temps réel d’Adobe au gestionnaire de publicités TikTok. Visitez le centre d’aide aux entreprises de [](https://ads.tiktok.com/help/article/audiences) pour plus d’informations.
 
 >[!IMPORTANT]
 >
->Ce connecteur de destination et cette page de documentation sont créés et conservés par l’équipe TikTok. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [&#128279;](https://ads.tiktok.com/help/).
+>Ce connecteur de destination et cette page de documentation sont créés et conservés par l’équipe TikTok. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [](https://ads.tiktok.com/help/).
 
 ## Cas d’utilisation {#use-cases}
 
@@ -45,7 +36,7 @@ Une marque de vêtements de sport souhaite atteindre des clients existants par l
 
 ## Conditions préalables {#prerequisites}
 
-Vous devez disposer d’un accès [!DNL Admin] ou [!DNL Operator] au compte TikTok Ads Manager auquel vous souhaitez envoyer des audiences. Vous trouverez plus d&#39;informations dans le Centre d&#39;aide de [&#128279;](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
+Vous devez disposer d’un accès [!DNL Admin] ou [!DNL Operator] au compte TikTok Ads Manager auquel vous souhaitez envoyer des audiences. Vous trouverez plus d&#39;informations dans le Centre d&#39;aide de [](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Avant d’envoyer des données à votre compte TikTok Ads Manager, vous devez accorder à [!DNL Adobe Experience Platform] l’autorisation d’accéder à votre compte publicitaire pour `Audience Management`. Cette autorisation peut être fournie en [saisissant votre ID Ads Manager](#authenticate) dans l’interface utilisateur d’Experience Platform et en accordant l’autorisation après avoir été redirigé vers votre compte TikTok Ads Manager.
 
@@ -55,10 +46,10 @@ TikTok prend en charge l’activation des identités décrites dans le tableau c
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. Les valeurs GAID hachées SHA256 et en texte brut sont prises en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. Les valeurs IDFA en texte brut et hachées SHA256 sont prises en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| Numéro de téléphone | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge par [!DNL Adobe Experience Platform] et doivent être au format E.164. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| E-mail | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. Les valeurs GAID hachées SHA256 et en texte brut sont prises en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. Les valeurs IDFA en texte brut et hachées SHA256 sont prises en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| Numéro de téléphone | Numéros de téléphone hachés avec l’algorithme SHA256 | Le texte brut et les numéros de téléphone hachés SHA256 sont pris en charge par [!DNL Adobe Experience Platform] et doivent être au format E.164. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| E-mail | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 
 {style="table-layout:auto"}
 
@@ -82,7 +73,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -94,8 +85,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination TikTok. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination TikTok. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -103,7 +94,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -111,7 +102,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, on vous redirigera vers votre compte [!DNL TikTok Ads Manager] et on vous autorisera à autoriser Adobe à gérer les audiences en votre nom.
 
-![Sélection des autorisations &#x200B;](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "image de l’interface utilisateur de TikTok pour la sélection des autorisations")
+![Sélection des autorisations ](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "image de l’interface utilisateur de TikTok pour la sélection des autorisations")
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -119,9 +110,9 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Détails de la connexion de destination](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "image de l’interface utilisateur d’Experience Platform affichant les détails de la connexion de destination à renseigner")
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL TikTok Ads Manager ID]** : Votre [!DNL TikTok Ads Manager ID]. Vous pouvez le trouver dans votre compte [!DNL TikTok Ads manager].
+* **[!UICONTROL TikTok Ads Manager ID]** : votre [!DNL TikTok Ads Manager ID]. Vous pouvez le trouver dans votre compte [!DNL TikTok Ads manager].
 
 ![Identifiant TikTok Ads Manager](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "image de l’interface utilisateur TikTok Ads Manager, montrant comment obtenir l’identifiant TikTok Ads Manager")
 
@@ -129,14 +120,14 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -164,4 +155,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Reportez-vous à la page Centre d&#39;aide de TikTok [&#128279;](https://ads.tiktok.com/help/article/audiences) pour plus d&#39;informations.
+Reportez-vous à la page Centre d&#39;aide de TikTok [](https://ads.tiktok.com/help/article/audiences) pour plus d&#39;informations.

@@ -6,7 +6,7 @@ feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1327'
 ht-degree: 2%
 
 ---
@@ -38,31 +38,31 @@ Les étapes d’installation de ce guide nécessitent une compréhension pratiqu
 
 ## Configurer un flux de données
 
-Pour que le SDK envoie des données à Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de collecte de données ou d’Experience Platform, sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
+Pour que le SDK envoie des données à Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de collecte de données ou d’Experience Platform, sélectionnez **[!UICONTROL Flux de données]** dans le volet de navigation de gauche.
 
-Après avoir créé un flux de données ou sélectionné un flux de données existant à modifier, cliquez sur le bouton de basculement en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
+Après avoir créé un flux de données ou sélectionné un flux de données existant à modifier, cliquez sur le bouton de basculement en regard de ****. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
 | Champ du flux de données | Valeur |
 | --- | --- |
 | [!UICONTROL Sandbox] | Nom de l’Experience Platform [sandbox](/help/sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
-| [!UICONTROL Event Dataset] | Jeu de données [!DNL XDM ExperienceEvent] que vous prévoyez d’envoyer à à l’aide de SDK. Bien que vous deviez fournir un jeu de données d’événement pour créer un flux de données Experience Platform, les données de consentement envoyées par le biais d’événements ne sont pas respectées dans les workflows d’application en aval. |
-| [!UICONTROL Profile Dataset] | Le jeu de données [!DNL Profile] avec les champs de consentement client que vous avez créé [précédemment](#prerequisites). |
+| [!UICONTROL Jeu de données d’événement] | Jeu de données [!DNL XDM ExperienceEvent] que vous prévoyez d’envoyer à à l’aide de SDK. Bien que vous deviez fournir un jeu de données d’événement pour créer un flux de données Experience Platform, les données de consentement envoyées par le biais d’événements ne sont pas respectées dans les workflows d’application en aval. |
+| [!UICONTROL Jeu de données de profil] | Le jeu de données [!DNL Profile] avec les champs de consentement client que vous avez créé [précédemment](#prerequisites). |
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
 
 ## Installation et configuration d’Experience Platform Web SDK
 
-Une fois que vous avez créé un flux de données comme décrit dans la section précédente, vous devez configurer l’extension Experience Platform Web SDK que vous déploierez finalement sur votre site. Si l’extension SDK n’est pas installée sur votre propriété de balise, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalog]** . Sélectionnez ensuite **[!UICONTROL Install]** sous l’extension Experience Platform SDK dans la liste des extensions disponibles.
+Une fois que vous avez créé un flux de données comme décrit dans la section précédente, vous devez configurer l’extension Experience Platform Web SDK que vous déploierez finalement sur votre site. Si l’extension SDK n’est pas installée sur votre propriété de balise, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalogue]**. Sélectionnez ensuite **[!UICONTROL Installer]** sous l’extension Experience Platform SDK dans la liste des extensions disponibles.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Lors de la configuration du SDK, sous **[!UICONTROL Edge Configurations]**, sélectionnez le flux de données que vous avez créé à l’étape précédente.
+Lors de la configuration du SDK, sous **[!UICONTROL Configurations d’Edge]**, sélectionnez le flux de données que vous avez créé à l’étape précédente.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-Sélectionnez **[!UICONTROL Save]** pour installer l’extension.
+Sélectionnez **[!UICONTROL Enregistrer]** pour installer l’extension.
 
 ### Créer un élément de données pour définir le consentement par défaut
 
@@ -80,19 +80,19 @@ Si la région de l’utilisateur est déterminée par une CMP, vous pouvez suivr
 1. Dans le gestionnaire d’événements , définissez une variable `adobeDefaultConsent` en fonction de la région de l’utilisateur, puis chargez le script de la bibliothèque de balises à l’aide de JavaScript.
 1. Configurez un élément de données qui utilise la variable JavaScript `adobeDefaultConsent` et utilisez cet élément de données comme valeur de consentement par défaut pour l’utilisateur.
 
-Pour créer un élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Data Elements]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Add Data Element]** pour accéder à la boîte de dialogue de création d’élément de données.
+Pour créer un élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Ajouter un élément de données]** pour accéder à la boîte de dialogue de création d’élément de données.
 
-À partir de là, vous devez créer un élément de données [!UICONTROL JavaScript Variable] basé sur `adobeDefaultConsent`. Sélectionnez **[!UICONTROL Save]** (Enregistrer) une fois terminé.
+À partir de là, vous devez créer un élément de données Variable JavaScript  basé sur `adobeDefaultConsent`. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Une fois l’élément de données créé, revenez à la page de configuration de l’extension Web SDK. Sous la section [!UICONTROL Privacy] , sélectionnez **[!UICONTROL Provided by data element]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
+Une fois l’élément de données créé, revenez à la page de configuration de l’extension Web SDK. Dans la section [!UICONTROL Confidentialité], sélectionnez **[!UICONTROL Fourni par l’élément de données]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
 ### Déployez l’extension sur votre site web
 
-Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour[&#x200B; consultez le &#x200B;](/help/tags/ui/publishing/overview.md) guide de publication dans la documentation sur les balises.
+Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour](/help/tags/ui/publishing/overview.md) consultez le [ guide de publication dans la documentation sur les balises.
 
 ## Exécution de commandes de modification du consentement {#commands}
 

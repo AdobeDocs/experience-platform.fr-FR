@@ -5,17 +5,13 @@ title: Guide de l’interface utilisateur d’Attribution AI
 description: Ce document sert de guide pour interagir avec l’IA dédiée à l’attribution dans l’interface utilisateur des services intelligents.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 TQID: https://experienceleague.adobe.com/HUpxGf8n7OOx0YkwHlKZ16WHrNiGiXS0e6DDuK6EV6w
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2413
+source-wordcount: 2471
 ht-degree: 26%
 
 ---
@@ -28,33 +24,33 @@ Ce document sert de guide pour interagir avec l’IA dédiée à l’attribution
 
 ## Créer modèle
 
-Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** s’affiche et affiche les services intelligents Adobe disponibles. Dans le conteneur d’IA dédiée à l’attribution, sélectionnez **[!UICONTROL Open]**.
+Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’IA dédiée à l’attribution, sélectionnez **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre modèle](./images/user-guide/open_Attribution_ai.png)
 
 La page de service d’Attribution AI s’affiche. Cette page répertorie les modèles de service de l’IA dédiée à l’attribution et affiche des informations à leur sujet, notamment le nom du modèle, les événements de conversion, la fréquence d’exécution du modèle et le statut de la dernière mise à jour.
 
-La mesure **[!UICONTROL Total conversion events scored]** se trouve dans le coin inférieur droit du conteneur de **[!UICONTROL Create model]**. Cette mesure effectue le suivi du nombre total d’événements de conversion notés par l’IA dédiée à l’attribution pour l’année civile en cours, y compris tous les environnements de sandbox et tous les modèles de service supprimés.
+La mesure **[!UICONTROL Nombre total d’événements de conversion notés]** se trouve dans le coin inférieur droit du conteneur **[!UICONTROL Créer un modèle]**. Cette mesure effectue le suivi du nombre total d’événements de conversion notés par l’IA dédiée à l’attribution pour l’année civile en cours, y compris tous les environnements de sandbox et tous les modèles de service supprimés.
 
 ![nombre total de conversions](./images/user-guide/total_conversions.png)
 
-Les modèles de service peuvent être modifiés, clonés et supprimés à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez un modèle dans votre **[!UICONTROL Service models]** existant. Les contrôles contiennent les informations suivantes :
+Les modèles de service peuvent être modifiés, clonés et supprimés à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez un modèle parmi vos **[!UICONTROL modèles de service]** existants. Les contrôles contiennent les informations suivantes :
 
-- **[!UICONTROL Edit]** : la sélection de **[!UICONTROL Edit]** vous permet de modifier un modèle de service existant. Vous pouvez modifier le nom, la description, le statut, la fréquence de notation du modèle et les colonnes de jeux de données de notation supplémentaires.
-- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie le modèle de service sélectionné. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouveau modèle.
-- **[!UICONTROL Delete]** : vous pouvez supprimer un modèle de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé d’Experience Platform. Toutefois, les scores synchronisés avec le profil client en temps réel ne sont pas supprimés.
-- **[!UICONTROL Data source]** : lien vers le jeu de données utilisé. Si plusieurs jeux de données sont utilisés par l’IA dédiée à l’attribution, « Multiple » suivi du nombre de jeux de données s’affiche. Lorsque vous sélectionnez le lien hypertexte, la fenêtre contextuelle d’aperçu des jeux de données s’affiche.
-- **[!UICONTROL Last run details]** : elle s’affiche uniquement en cas d’échec de l’exécution. Des informations sur les raisons de l’échec de l’exécution, telles que des codes d’erreur, sont affichées ici.
+- **[!UICONTROL Modifier]** : la sélection de **[!UICONTROL Modifier]** permet de modifier un modèle de service existant. Vous pouvez modifier le nom, la description, le statut, la fréquence de notation du modèle et les colonnes de jeux de données de notation supplémentaires.
+- **[!UICONTROL Cloner]** : la sélection de l’option **[!UICONTROL Cloner]** permet de copier le modèle de service sélectionné. Vous pouvez ensuite modifier le workflow pour apporter des ajustements mineurs et le renommer en tant que nouveau modèle.
+- **[!UICONTROL Supprimer]** : vous pouvez supprimer un modèle de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé d’Experience Platform. Toutefois, les scores synchronisés avec le profil client en temps réel ne sont pas supprimés.
+- **[!UICONTROL Source de données]** : lien vers le jeu de données utilisé. Si plusieurs jeux de données sont utilisés par l’IA dédiée à l’attribution, « Multiple » suivi du nombre de jeux de données s’affiche. Lorsque vous sélectionnez le lien hypertexte, la fenêtre contextuelle d’aperçu des jeux de données s’affiche.
+- **[!UICONTROL Détails de la dernière exécution]** : ils s’affichent uniquement lorsqu’une exécution échoue. Des informations sur les raisons de l’échec de l’exécution, telles que des codes d’erreur, sont affichées ici.
 
 ![Volet latéral](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Conversion events]** : aperçu rapide des événements de conversion configurés pour ce modèle.
-- **[!UICONTROL Lookback window]** : période que vous avez définie, indiquant le nombre de jours avant l’inclusion des points de contact de l’événement de conversion.
-- **[!UICONTROL Touchpoints]** : liste de tous les points de contact que vous avez définis lors de la création de ce modèle.
+- **[!UICONTROL Événements de conversion]** : aperçu rapide des événements de conversion configurés pour ce modèle.
+- **[!UICONTROL Intervalle de recherche en amont]** : période que vous avez définie, indiquant le nombre de jours précédant l’inclusion des points de contact de l’événement de conversion.
+- **[!UICONTROL Points de contact]** : liste de tous les points de contact que vous avez définis lors de la création de ce modèle.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Sélectionnez **[!UICONTROL Create model]** pour commencer.
+Sélectionnez **[!UICONTROL Créer un modèle]** pour commencer.
 
 ![Créer un modèle](./images/user-guide/landing_page.png)
 
@@ -68,7 +64,7 @@ Ensuite, la page de configuration d’Attribution AI s’affiche et vous permet 
 
 Par défaut, l’IA dédiée à l’attribution peut utiliser les données Adobe Analytics, d’événement d’expérience et d’événement d’expérience client pour calculer les scores d’attribution. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec l’IA dédiée à l’attribution sont répertoriés. Pour sélectionner un jeu de données, sélectionnez le symbole (**+**) en regard du nom du jeu de données ou cochez la case pour ajouter plusieurs jeux de données à la fois. Vous pouvez également utiliser l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
 
-Après avoir sélectionné les jeux de données que vous souhaitez utiliser, cliquez sur le bouton **[!UICONTROL Add]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
+Après avoir sélectionné les jeux de données que vous souhaitez utiliser, cliquez sur le bouton **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
 
 ![Sélectionner des jeux de données](./images/user-guide/select-datasets.png)
 
@@ -78,7 +74,7 @@ Si vous sélectionnez l’icône d’informations ![icône d’informations](/he
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
 
-Sélectionnez **[!UICONTROL Save]** pour enregistrer vos brouillons tout au long du workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisez **[!UICONTROL Save and continue]** pour créer et enregistrer des brouillons lors des configurations de modèle. La fonction vous permet de créer et d&#39;enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le processus de configuration.
+Sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer les brouillons tout au long du workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisez **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. La fonction vous permet de créer et d&#39;enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le processus de configuration.
 
 ![Le workflow Créer de l’onglet IA dédiée à l’attribution des services de science des données avec Enregistrer et Enregistrer et continuer en surbrillance.](./images/user-guide/aai-save-save-&-exit.png)
 
@@ -92,7 +88,7 @@ Dans l’aperçu du jeu de données se trouve une valeur de pourcentage d’exha
 >
 >L’exhaustivité des jeux de données est calculée à l’aide de la fenêtre d’entraînement maximale pour Attribution AI (un an). Cela signifie que les données de plus d’un an ne sont pas prises en compte lors de l’affichage de la valeur d’exhaustivité de votre jeu de données.
 
-![&#x200B; Exhaustivité du jeu de données &#x200B;](./images/user-guide/dataset-completeness.png)
+![ Exhaustivité du jeu de données ](./images/user-guide/dataset-completeness.png)
 
 ### Sélectionner une identité {#identity}
 
@@ -112,7 +108,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [&#x200B; Espaces de noms du service d’identités &#x200B;](../../identity-service/features/namespaces.md).
+> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [ Espaces de noms du service d’identités ](../../identity-service/features/namespaces.md).
 
 ## Mappage des champs de canal média et de campagne {#aai-mapping}
 
@@ -148,15 +144,15 @@ Une fois qu’un événement est sélectionné, un nouveau menu déroulant s’a
 
 Vous pouvez ensuite sélectionner un jeu de données combiné qui est généré en combinant tous les jeux de données d’entrée de l’étape précédente. Vous pouvez également sélectionner une colonne en fonction de jeux de données individuels dans le menu déroulant **Sélectionner un jeu de données et un champ**.
 
-Les boutons **[!UICONTROL Add event]** et **[!UICONTROL Add Group]** permettent de définir plus précisément votre conversion. Selon la conversion que vous définissez, vous devrez peut-être utiliser les boutons **[!UICONTROL Add event]** et **[!UICONTROL Add group]** pour fournir plus de contexte.
+Les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** permettent de définir plus précisément votre conversion. Selon la conversion que vous définissez, vous devrez peut-être utiliser les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** pour fournir un contexte plus détaillé.
 
 ![ajouter un événement](./images/user-guide/add_event.png)
 
-La sélection de **[!UICONTROL Add event]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction AND à la définition de chaîne sous le nom de la conversion. Sélectionnez la **x** pour supprimer un événement qui a été ajouté.
+Sélectionnez **[!UICONTROL Ajouter un événement]** pour créer des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction AND à la définition de chaîne sous le nom de la conversion. Sélectionnez la **x** pour supprimer un événement qui a été ajouté.
 
 ![menu ajouter un événement](./images/user-guide/add_event_result.png)
 
-La sélection de **[!UICONTROL Add Group]** donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Si vous sélectionnez **Et**, vous avez la possibilité de modifier le paramètre pour qu’il contienne « Ou ». « Ou » est utilisé pour définir plusieurs chemins de conversion performants. « Et » prolonge le chemin de conversion pour inclure des conditions supplémentaires.
+Sélectionner **[!UICONTROL Ajouter un groupe]** permet de créer des champs supplémentaires distincts du champ d’origine. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Si vous sélectionnez **Et**, vous avez la possibilité de modifier le paramètre pour qu’il contienne « Ou ». « Ou » est utilisé pour définir plusieurs chemins de conversion performants. « Et » prolonge le chemin de conversion pour inclure des conditions supplémentaires.
 
 ![utilisation de et/ou](./images/user-guide/and_or.png)
 
@@ -214,7 +210,7 @@ Une fois que vous avez terminé de définir tous les points de contact nécessai
 
 ## Configuration de la formation et de la notation avancées
 
-La dernière page de l’IA dédiée à l’attribution est la page **[!UICONTROL Advanced]** utilisée pour configurer la formation et la notation.
+La dernière page de l’IA dédiée à l’attribution est la page **[!UICONTROL Avancée]** utilisée pour configurer la formation et la notation.
 
 ![nouvelles options d’ensemble de pages](./images/user-guide/advanced_settings_set_options.png)
 
@@ -244,7 +240,7 @@ Par défaut, un jeu de données de note est créé pour chaque modèle de servic
 
 Le comportement de vos clients peut varier considérablement selon le pays et la région géographique. Pour les entreprises mondiales, l’utilisation de modèles basés sur les pays ou les régions peut accroître la précision de l’attribution. Chaque région ajoutée crée un nouveau modèle avec les données de cette région.
 
-Pour définir une nouvelle région, commencez par sélectionner **[!UICONTROL Add region]**. Dans le conteneur qui s’affiche, attribuez un nom à la région. Une seule valeur (« placeContext.geo.countryCode ») est renseignée dans la liste déroulante **[!UICONTROL Enter Field Name]**. Sélectionnez cette valeur.
+Pour définir une nouvelle région, commencez par sélectionner **[!UICONTROL Ajouter une région]**. Dans le conteneur qui s’affiche, attribuez un nom à la région. Une seule valeur (« placeContext.geo.countryCode ») est renseignée à partir de la liste déroulante **[!UICONTROL Saisir le nom du champ]**. Sélectionnez cette valeur.
 
 ![Sélectionner l’attribution de la région](./images/user-guide/select_region_att.png)
 
@@ -252,7 +248,7 @@ Sélectionnez ensuite un opérateur.
 
 ![opérateur de région](./images/user-guide/region_operators.png)
 
-Enfin, saisissez le code de pays dans le menu déroulant **[!UICONTROL Enter Field Value]**.
+Enfin, saisissez le code de pays dans le menu déroulant **[!UICONTROL Saisir la valeur du champ]**.
 
 >[!NOTE]
 >
@@ -270,7 +266,7 @@ Pour vous assurer d’obtenir le modèle le plus précis possible, il est import
 
 ![période de formation](./images/user-guide/training_window.png)
 
-Une fois la fenêtre de formation sélectionnée, sélectionnez **[!UICONTROL Finish]** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Sélectionnez **[!UICONTROL Ok]** pour être redirigé vers la page **[!UICONTROL Service instances]** où vous pouvez voir votre instance de service.
+Une fois la fenêtre de formation sélectionnée, cliquez sur **[!UICONTROL Terminer]** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Sélectionnez **[!UICONTROL Ok]** pour être redirigé vers la page **[!UICONTROL Instances de service]** où vous pouvez voir votre instance de service.
 
 ![configuration terminée](./images/user-guide/instance_setup_complete.png)
 
@@ -282,4 +278,4 @@ En suivant ce tutoriel, vous avez réussi à créer une instance de service dans
 
 La vidéo suivante décrit un workflow de bout en bout pour la création d’une instance dans Attribution AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/36546?captions=fre_fr&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

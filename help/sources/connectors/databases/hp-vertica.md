@@ -5,10 +5,8 @@ title: Présentation du connecteur Source HP Vertica
 description: Découvrez comment connecter HP Vertica à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
 TQID: https://experienceleague.adobe.com/P-AcWNRtwZ3t2krqHr3olNTsdYbCB9EdwWEj1C9gZLo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 204
@@ -20,7 +18,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->Le connecteur [!DNL HP Vertica] est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur [!DNL HP Vertica] est en version bêta. Consultez la [ Présentation des sources ](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Experience Platform].
 
@@ -28,7 +26,7 @@ Différents types de bases de données tierces sont pris en charge, notamment le
 
 ## Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL HP Vertica] à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
 

@@ -3,13 +3,11 @@ description: Découvrez comment mettre à jour un flux de données de sources ex
 title: Mettre à jour un flux de données de connexion Source dans l’interface utilisateur
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 TQID: https://experienceleague.adobe.com/VxOL3-TPnHKm6-l9KyhLjmuxyVMTtHZjzvaQR-hVhI0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 893
+source-wordcount: 910
 ht-degree: 9%
 
 ---
@@ -32,7 +30,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >title="Expiration du jeu de données"
 >abstract="Cette colonne indique le nombre de jours restants au jeu de données cible avant son expiration automatique.<br>Un flux de données échoue si le jeu de données cible expire. Pour éviter l’échec d’un flux de données, assurez-vous qu’un jeu de données cible est défini pour expirer à la date correcte. Consultez la documentation pour savoir comment mettre à jour les dates d’expiration."
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur.
 
 ![Le catalogue des sources avec l’onglet en-tête des flux de données sélectionné.](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -40,13 +38,13 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 >
 >Vous pouvez trier et filtrer vos flux de données à l’aide des fonctionnalités de filtrage . Lisez le guide sur le [filtrage des objets sources dans l’interface utilisateur](./filter.md) pour plus d’informations.
 
-La page [!UICONTROL Dataflows] affiche une liste de tous les flux de données existants de votre organisation. Recherchez le flux de données à mettre à jour, puis sélectionnez les points de suspension (`...`) en regard. Un menu déroulant s’affiche, affichant une liste d’options parmi lesquelles vous pouvez choisir, afin d’effectuer des configurations supplémentaires dans votre flux de données existant.
+La page [!UICONTROL Flux de données] affiche une liste de tous les flux de données existants de votre organisation. Recherchez le flux de données à mettre à jour, puis sélectionnez les points de suspension (`...`) en regard. Un menu déroulant s’affiche, affichant une liste d’options parmi lesquelles vous pouvez choisir, afin d’effectuer des configurations supplémentaires dans votre flux de données existant.
 
-Pour mettre à jour votre flux de données, sélectionnez **[!UICONTROL Update dataflow]**.
+Pour mettre à jour votre flux de données, sélectionnez **[!UICONTROL Mettre à jour le flux de données]**.
 
 ![Menu déroulant dans lequel les options de mise à jour des flux de données sont répertoriées.](../../images/tutorials/update-dataflows/dropdown_update.png)
 
-Vous accédez au workflow des sources où vous pouvez procéder à la mise à jour d’aspects de votre flux de données, y compris ses détails dans l’étape [!UICONTROL Provide dataflow details].
+Vous accédez au workflow des sources où vous pouvez procéder à la mise à jour d’aspects de votre flux de données, y compris ses détails dans l’étape [!UICONTROL Fournir des détails du flux de données].
 
 ### Mettre à jour le mappage {#update-mapping}
 
@@ -66,11 +64,11 @@ Une fois que vous avez mis à jour les mappages de votre flux de données, vous 
 
 Vous pouvez également mettre à jour le planning de l’ingestion de votre flux de données à l’aide de l’option de mise à jour en ligne fournie dans la page flux de données .
 
-Sur la page flux de données , sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Edit schedule]** dans le menu déroulant qui s’affiche.
+Sur la page Flux de données , sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Modifier le planning]** dans le menu déroulant qui s’affiche.
 
 ![Étape de planification du workflow des sources. Utilisez cette étape pour mettre à jour le planning de votre flux de données.](../../images/tutorials/update-dataflows/dropdown_edit.png)
 
-La boîte de dialogue **[!UICONTROL Edit schedule]** vous propose des options pour mettre à jour la fréquence d’ingestion et le taux d’intervalle de votre flux de données. Une fois que vous avez défini les valeurs de fréquence et d’intervalle mises à jour, sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Modifier le planning]** vous propose des options pour mettre à jour la fréquence d’ingestion et le taux d’intervalle de votre flux de données. Une fois que vous avez défini les valeurs de fréquence et d’intervalle mises à jour, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Fenêtre pop-up que vous pouvez utiliser pour modifier le planning d’ingestion de votre flux de données.](../../images/tutorials/update-dataflows/edit_schedule.png)
 
@@ -85,11 +83,11 @@ Lorsque vous choisissez de définir votre flux de données pour qu’il s’exé
 
 ### Désactiver le flux de données
 
-Vous pouvez désactiver votre flux de données à l’aide du même menu déroulant. Pour désactiver votre flux de données, sélectionnez **[!UICONTROL Disable dataflow]**.
+Vous pouvez désactiver votre flux de données à l’aide du même menu déroulant. Pour désactiver votre flux de données, sélectionnez **[!UICONTROL Désactiver le flux de données]**.
 
 ![Le menu déroulant avec l’option permettant de désactiver le flux de données.](../../images/tutorials/update-dataflows/dropdown_disable.png)
 
-Sélectionnez ensuite [!UICONTROL Disable] dans la fenêtre pop-up qui s’affiche.
+Sélectionnez ensuite [!UICONTROL Désactiver] dans la fenêtre pop-up qui s’affiche.
 
 ![Fenêtre pop-up dans laquelle vous devez confirmer que vous souhaitez désactiver votre flux de données.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 

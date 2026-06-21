@@ -3,25 +3,13 @@ title: Assistant AI dans Adobe Experience Platform
 description: Découvrez comment utiliser l’assistant d’IA pour parcourir et comprendre les concepts d’Experience Platform et de Real-Time Customer Data Platform, ainsi que des informations d’utilisation sur vos objets.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
 TQID: https://experienceleague.adobe.com/r9yOpAOFZ65A7GgG77kuNlZzU1jIBU384s6zO07J7yE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2024
+source-wordcount: 2066
 ht-degree: 1%
 
 ---
@@ -30,7 +18,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Ce document s’applique à l’assistant d’IA (hérité). Pour plus d’informations sur l’assistant AI (Next-Gen), consultez le guide de l’interface utilisateur de l’assistant [AI](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) dans la documentation [AI dans Experience Cloud](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/home).
+>Ce document s’applique à l’assistant d’IA (hérité). Pour plus d’informations sur l’assistant AI (Next-Gen), consultez le guide de l’interface utilisateur de l’assistant [AI](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) dans la documentation [AI dans Experience Cloud](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 Reportez-vous au tableau suivant pour une comparaison de l’assistant AI (hérité) et de l’assistant AI (nouvelle génération) :
 
@@ -38,23 +26,23 @@ Reportez-vous au tableau suivant pour une comparaison de l’assistant AI (héri
 | --- | --- | --- |
 | Expérience utilisateur | L’assistant d’IA (hérité) est disponible dans un panneau du rail de droite uniquement. | L’assistant d’IA (version suivante) est disponible dans le panneau du rail droit et dans une expérience immersive en plein écran. |
 | Portée des fonctionnalités | Vous pouvez utiliser l’assistant d’IA (hérité) pour obtenir des connaissances sur les produits et des informations opérationnelles. | Vous pouvez utiliser l’assistant d’IA (nouvelle génération) pour acquérir des connaissances sur les produits, obtenir des informations opérationnelles, ainsi que des compétences avancées en matière d’agentisme et exécuter des tâches en plusieurs étapes. |
-| Architecture de Platform | L’assistant AI (hérité) n’est pas créé sur la pile Agent Orchestrator. | L’assistant d’IA (nouvelle génération) est optimisé par [&#128279;](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), ce qui permet l’extensibilité et une coordination avancée entre les fonctionnalités. |
+| Architecture de Platform | L’assistant AI (hérité) n’est pas créé sur la pile Agent Orchestrator. | L’assistant d’IA (nouvelle génération) est optimisé par [](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), ce qui permet l’extensibilité et une coordination avancée entre les fonctionnalités. |
 | Couverture de l’application | L’assistant d’IA (hérité) est une implémentation spécifique à l’application. | Vous pouvez utiliser l’assistant d’IA (version suivante) pour une expérience d’assistant d’IA unifiée dans toutes les applications Adobe Experience Cloud. |
-| Modèle d’accès et d’autorisation | Modèle d’accès au niveau de l’application aligné sur les limites de chaque produit. | Tous les utilisateurs ont accès à l’assistant AI (version suivante) et aux agents Experience Platform associés. **Remarque** : <ul><li>**Adobe Experience Manager** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI (Next-Gen) via [Adobe Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI par le biais du contrôle d’accès de [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/technotes/access-control?lang=en). Cela vous permet de poser des questions sur la connaissance des produits et les informations sur les données. |
+| Modèle d’accès et d’autorisation | Modèle d’accès au niveau de l’application aligné sur les limites de chaque produit. | Tous les utilisateurs ont accès à l’assistant AI (version suivante) et aux agents Experience Platform associés. **Remarque** : <ul><li>**Adobe Experience Manager** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI (Next-Gen) via [Adobe Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics** : votre administrateur doit vous accorder l’autorisation d’accéder à l’assistant AI par le biais du contrôle d’accès de [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en). Cela vous permet de poser des questions sur la connaissance des produits et les informations sur les données. |
 
 Lisez ce guide pour savoir comment utiliser l’assistant AI dans l’interface utilisateur de Adobe Experience Platform.
 
 ## Accéder à l’assistant AI dans l’interface utilisateur d’Experience Platform
 
-Pour lancer l’assistant d’IA, sélectionnez le **[!UICONTROL AI Assistant icon]** dans l’en-tête supérieur de l’interface utilisateur d’Experience Platform.
+Pour lancer l’assistant AI, sélectionnez l’icône **[!UICONTROL Assistant AI]** dans l’en-tête supérieur de l’interface utilisateur d’Experience Platform.
 
 ![Page d’accueil d’Experience Platform, avec l’icône Assistant AI sélectionnée et l’interface de l’Assistant AI ouverte.](./images/ai-assistant-full-icon.png)
 
-L’interface de l’assistant d’IA s’affiche et vous fournit immédiatement des informations pour commencer. Vous pouvez utiliser les options fournies sous [!UICONTROL Ideas to get started] pour répondre aux questions et aux commandes, telles que :
+L’interface de l’assistant d’IA s’affiche et vous fournit immédiatement des informations pour commencer. Vous pouvez utiliser les options fournies sous [!UICONTROL Idées pour commencer] afin de répondre à des questions et à des commandes telles que :
 
-* [!UICONTROL Which of my audiences are activated?]
-* [!UICONTROL What is a schema?]
-* [!UICONTROL Tell me some common use cases for Real-Time CDP]
+* [!UICONTROL Laquelle de mes audiences est activée ?]
+* [!UICONTROL Qu’est-ce qu’un schéma ?]
+* [!UICONTROL Dites-moi quelques cas pratiques courants pour Real-Time CDP]
 
 ## Guide de l’interface utilisateur de l’assistant AI
 
@@ -80,7 +68,7 @@ Cette section décrit les différentes fonctionnalités de l’assistant AI que 
 
 ### Affichage des objets de données opérationnelles {#view-operational-data-objects}
 
-Selon votre requête, l’assistant AI fournit des informations supplémentaires relatives aux données de votre sandbox. Pour voir comment la réponse à votre requête s’applique à votre sandbox spécifique, sélectionnez **[!UICONTROL In your sandbox].**
+Selon votre requête, l’assistant AI fournit des informations supplémentaires relatives aux données de votre sandbox. Pour voir comment la réponse à votre requête s’applique à votre sandbox spécifique, sélectionnez **[!UICONTROL Dans votre sandbox].**
 
 Lors de l’affichage des données relatives à votre sandbox, l’assistant AI peut fournir des liens directs vers des pages d’interface utilisateur spécifiques qui affichent les données interrogées.
 
@@ -98,7 +86,7 @@ Vous pouvez vérifier les réponses qui vous sont renvoyées par l’assistant A
 
 +++Sélectionner pour afficher un exemple d’affichage des sources
 
-Pour afficher les citations et valider la réponse de l’assistant AI, sélectionnez **[!UICONTROL Show sources]**.
+Pour afficher les citations et valider la réponse de l’assistant AI, sélectionnez **[!UICONTROL Afficher les sources]**.
 
 ![La réponse de l’assistant AI avec « Afficher les sources » sélectionné.](./images/show-sources.png)
 
@@ -140,7 +128,7 @@ Vous pouvez vérifier chaque réponse liée aux questions d’informations opér
 
 +++Sélectionner pour afficher un exemple de vérification des réponses des informations opérationnelles
 
-Après réception d’une réponse à une question sur les informations opérationnelles, sélectionnez **[!UICONTROL Show sources]** puis **[!UICONTROL View source query]**.
+Après avoir reçu une réponse à une question sur les informations opérationnelles, sélectionnez **[!UICONTROL Afficher les sources]** puis sélectionnez **[!UICONTROL Afficher la requête source]**.
 
 ![afficher la requête source](./images/view-source-query.png)
 
@@ -180,7 +168,7 @@ Vous pouvez changer de sujet avec l’assistant AI en réinitialisant et en dém
 
 +++Sélectionnez pour afficher un exemple de réinitialisation de votre conversation
 
-Pour réinitialiser, sélectionnez les points de suspension (**`...`**) dans l’interface de l’assistant d’IA, puis sélectionnez **[!UICONTROL Start new conversation]**. Cela indique à l’assistant AI que vous avez l’intention de changer de rubrique et peut s’avérer particulièrement utile lors de la résolution de problèmes liés à des requêtes qui échouent ou qui référencent des informations incorrectes.
+Pour réinitialiser, sélectionnez les points de suspension (**`...`**) dans l’interface de l’assistant d’IA, puis sélectionnez **[!UICONTROL Démarrer une nouvelle conversation]**. Cela indique à l’assistant AI que vous avez l’intention de changer de rubrique et peut s’avérer particulièrement utile lors de la résolution de problèmes liés à des requêtes qui échouent ou qui référencent des informations incorrectes.
 
 ![Les points de suspension sélectionnés et l’option Démarrer une nouvelle conversation sont sélectionnées.](./images/reset.png)
 
@@ -218,7 +206,7 @@ Vous devrez peut-être mettre à jour les espaces réservés dans certains cas o
 
 Les espaces réservés sont surlignés en bleu. Sélectionnez l’espace réservé pour commencer à mettre à jour sa valeur. Pour de meilleurs résultats sur les espaces réservés numériques, veillez à utiliser des chiffres au lieu du texte. Vous pouvez également utiliser la fonction de saisie automatique des entités pour mettre à jour les valeurs des espaces réservés. Vous ne pouvez pas envoyer une question qui contient des espaces réservés vides.
 
-**REMARQUE** : les suggestions sont activées par défaut. Sélectionnez le bouton (bascule) **[!UICONTROL Suggest ideas]** pour désactiver la fonction.
+**REMARQUE** : les suggestions sont activées par défaut. Sélectionnez le bouton (bascule) **[!UICONTROL Suggérer des idées]** pour désactiver la fonctionnalité.
 
 ![Une suggestion de l’assistant AI avec des espaces réservés mis à jour.](./images/updated_placeholder.png)
 

@@ -3,24 +3,15 @@ title: Versions
 description: Découvrez le concept des builds et leur fonctionnement dans Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 TQID: https://experienceleague.adobe.com/-VNR0edaytLc0bPW-eZH17537-819HIeT9yyBUf0x-Q
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1080
-ht-degree: 60%
+source-wordcount: 1093
+ht-degree: 59%
 
 ---
 
@@ -101,18 +92,18 @@ Vous pouvez accéder aux versions et aux détails de version à partir d’une *
 
 ### Affichage des détails de version à partir d’une bibliothèque
 
-Dans la propriété des balises, ouvrez le **[!UICONTROL Publishing Flow]** et sélectionnez une bibliothèque.
+Dans la propriété des balises, ouvrez le **[!UICONTROL flux de publication]** et sélectionnez une bibliothèque.
 
 ![Flux de publication dans l’interface utilisateur des collections de données mettant en surbrillance une bibliothèque.](../publishing/images/builds/library.png)
 
 Dans le panneau des détails, vous pouvez vérifier les éléments suivants :
 
-* **[!UICONTROL Last Build Environment]** — Lien vers l&#39;environnement qui a reçu la dernière build. Indique si cette bibliothèque est la version actuelle de cet environnement (**actuelle** ou **non actuelle**).
-* **[!UICONTROL Current Builds]** — Versions actuellement actives sur leur environnement. Pour les bibliothèques publiées, la version de production en direct est indiquée par l’icône en forme d’éclair dans cette section.
+* **[!UICONTROL Dernier environnement de build]** — Lien vers l’environnement qui a reçu la dernière build. Indique si cette bibliothèque est la version actuelle de cet environnement (**actuelle** ou **non actuelle**).
+* **[!UICONTROL Versions actuelles]** — Versions actuellement actives sur leur environnement. Pour les bibliothèques publiées, la version de production en direct est indiquée par l’icône en forme d’éclair dans cette section.
 * Pour chaque version répertoriée, vous pouvez afficher :
    * **[!UICONTROL Status]** - Date de création de la version.
-   * **[!UICONTROL Environment]** - Environnement dans lequel la version a été déployée.
-   * **[!UICONTROL User]** - Utilisateur qui a créé la version.
+   * **[!UICONTROL Environnement]** - Environnement dans lequel la version a été déployée.
+   * **[!UICONTROL Utilisateur]** - Utilisateur qui a créé la version.
 
 ![Détails de la bibliothèque affichés dans le panneau de droite](../publishing/images/builds/library-details.png)
 
@@ -120,7 +111,7 @@ Dans le panneau des détails, vous pouvez vérifier les éléments suivants :
 
 Une version est associée à un environnement et à la bibliothèque qui a été créée dans cet environnement. C’est la version qui contient réellement les ressources compilées.
 
-Sélectionnez le **[!UICONTROL Environment]** dans le panneau des détails. Le panneau Détails de l’environnement affiche une liste des versions récentes, la version active actuelle et les bibliothèques associées.
+Sélectionnez l’**[!UICONTROL Environnement]** dans le panneau des détails. Le panneau Détails de l’environnement affiche une liste des versions récentes, la version active actuelle et les bibliothèques associées.
 
 ![Panneau Détails de l’environnement mettant en surbrillance les versions actuelles.](../publishing/images/builds/environment.png)
 
@@ -132,4 +123,4 @@ Sélectionnez ensuite une version pour en ouvrir les détails. Les détails de l
 >
 >Une version peut inclure plus que les ressources répertoriées sur la seule bibliothèque. Les **Extensions**, **Éléments de données** et **Règles** inclus dans la version incluent le contenu de la bibliothèque ainsi que le contenu en amont. Il s’agit de l’instantané complet qui est publié sur le site ou dans l’application.
 
-Utilisez le panneau des détails pour revenir à la **[!UICONTROL Environment]** ou à la **[!UICONTROL Library]**.
+Utilisez le panneau des détails pour revenir à l’**[!UICONTROL Environnement]** ou à la **[!UICONTROL Bibliothèque]**.

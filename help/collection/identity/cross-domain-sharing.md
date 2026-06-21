@@ -1,9 +1,10 @@
 ---
 title: Partage d’identité entre domaines
 description: Maintenez la continuité des identités entre les domaines dont votre organisation est propriétaire afin d’améliorer la personnalisation et les rapports.
-source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
+exl-id: 5856eef0-81a6-4f16-ac93-1057ba05c3e6
+source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -54,11 +55,11 @@ document.addEventListener("click", event => {
 
 >[!TAB Extension de balise Web SDK]
 
-Utilisez l’action [**[!UICONTROL Redirect with identity]**](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) pour ajouter le paramètre `adobe_mc` aux liens sortants. Vous pouvez créer une règle avec les conditions suivantes pour obtenir le comportement souhaité :
+Utilisez l’action [**[!UICONTROL Rediriger avec une identité]**](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) pour ajouter le paramètre `adobe_mc` aux liens sortants. Vous pouvez créer une règle avec les conditions suivantes pour obtenir le comportement souhaité :
 
-1. **Event** : définissez l’extension sur **[!UICONTROL Core]** et le type d’événement sur **[!UICONTROL Click]**. Sous **[!UICONTROL Elements matching the CSS selector]**, saisissez `a[href]`.
-2. **Condition** : définissez l’extension sur **[!UICONTROL Core]** et le type de condition sur **[!UICONTROL Value Comparison]**. Définissez **[!UICONTROL Left Operand]** sur `%this.hostname%`, **[!UICONTROL Operator]** sur **[!UICONTROL Matches Regex]** et **[!UICONTROL Right Operand]** sur une expression régulière correspondant à vos domaines de destination (par exemple, `example\.com$|example\.org$`).
-3. **Action** : définissez l’extension sur **[!UICONTROL Adobe Experience Platform Web SDK]** et le type d’action sur **[!UICONTROL Redirect with identity]**.
+1. **Event** : définissez l’extension sur **[!UICONTROL Core]** et le type d’événement sur **[!UICONTROL Click]**. Sous **[!UICONTROL Éléments correspondant au sélecteur CSS]**, saisissez `a[href]`.
+2. **Condition** : définissez l’extension sur **[!UICONTROL Core]** et le type de condition sur **[!UICONTROL Comparaison de valeurs]**. Définissez **[!UICONTROL Opérande gauche]** sur `%this.hostname%`, **[!UICONTROL Opérateur]** sur **[!UICONTROL Correspond à l’expression régulière]** et **[!UICONTROL Opérande droit]** sur une expression régulière qui correspond à vos domaines de destination (par exemple, `example\.com$|example\.org$`).
+3. **Action** : définissez l’extension sur **[!UICONTROL Adobe Experience Platform Web SDK]** et le type d’action sur **[!UICONTROL Rediriger avec une identité]**.
 
 >[!ENDTABS]
 

@@ -3,38 +3,15 @@ title: Téléchargement et implémentation de tests de bout en bout pour une ext
 description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 TQID: https://experienceleague.adobe.com/zR0HplGerZuIqqwI0ibvyAkvgx3euPIraBBHsGoea-M
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-  - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
-  - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
-subfeature_v2:
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
-  - id: fef08361-6ac5-460c-93fe-d063e40b6a49
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4bid: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
+subfeature_v2: id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83id: fef08361-6ac5-460c-93fe-d063e40b6a49
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2350
-ht-degree: 80%
+source-wordcount: 2328
+ht-degree: 81%
 
 ---
 
@@ -68,7 +45,7 @@ Pour plus d’informations sur la création d’un compte technique à utiliser 
 
 >[!IMPORTANT]
 >
->Pour créer une intégration dans Adobe I/O, vous devez être un administrateur d’organisation Experience Cloud ou un développeur d’organisation Experience Cloud.
+>Pour créer une intégration dans Adobe I/O, vous devez être administrateur d’organisation Experience Cloud ou développeur d’organisation Experience Cloud.
 
 Si vous ne pouvez pas créer d’intégration, il est probable que vous ne disposiez pas des autorisations appropriées. Un administrateur de l’organisation doit alors terminer les étapes pour vous ou vous devez être affecté en tant que développeur.
 
@@ -87,9 +64,9 @@ npx @adobe/reactor-uploader
 `npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s’agit de la manière la plus simple d’exécuter le téléchargeur.
 
 >[!NOTE]
-> Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Les informations d> identification de `jwt-auth` héritées peuvent être utilisées en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à leur obsolescence le 1er janvier 2025. Les paramètres requis >  exécuter la version `jwt-auth` sont disponibles [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée et sélectionnez **[!UICONTROL View]**.
+Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée, puis sélectionnez **[!UICONTROL Affichage]**.
 
 - Quel est votre `clientId` ? Copiez et collez-le à partir de la console I/O.
 - Quel est votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.
@@ -109,7 +86,7 @@ Si vous souhaitez gérer le chargement direct de votre extension à l’aide de 
 
 ## Créer une propriété de développement {#property}
 
-Une fois que vous êtes connecté à l’interface utilisateur et que vous sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche, l’écran de [!UICONTROL Properties] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
+Une fois que vous êtes connecté à l’interface utilisateur et que vous avez sélectionné **[!UICONTROL Balises]** dans le volet de navigation de gauche, l’écran [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
 
 ![](../images/getting-started/properties-screen.png)
 

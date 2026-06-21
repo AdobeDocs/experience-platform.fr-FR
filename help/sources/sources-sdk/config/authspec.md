@@ -4,10 +4,8 @@ title: Configurer les spécifications d’authentification pour les sources en l
 description: Ce document présente un aperçu des configurations que vous devez préparer pour utiliser des sources en libre-service (SDK par lots).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 TQID: https://experienceleague.adobe.com/MiQsU-CMA68oPDh814DN5Gb1NWN-NRxMa5vY7SSzdF4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 776
@@ -199,8 +197,8 @@ Les paramètres suivants sont généralement requis lors de l’utilisation de l
 
 | Paramètre | Type | Obligatoire | Description |
 | --- | --- | --- | --- |
-| `host` | string | Non | URL de la ressource. |
-| `authKey1` | string | Oui | Première clé d’authentification requise pour l’accès à l’API. Elle est généralement envoyée dans l’en-tête de requête ou les paramètres de requête. |
+| `host` | chaîne | Non | URL de la ressource. |
+| `authKey1` | chaîne | Oui | Première clé d’authentification requise pour l’accès à l’API. Elle est généralement envoyée dans l’en-tête de requête ou les paramètres de requête. |
 | `authKey2` | chaîne | Facultatif | Une deuxième clé d’authentification. Si nécessaire, cette clé est souvent utilisée pour valider davantage les requêtes. |
 | `authKeyN` | chaîne | Facultatif | Variable d’authentification supplémentaire qui peut être utilisée si nécessaire, à l’exception de l’API . |
 

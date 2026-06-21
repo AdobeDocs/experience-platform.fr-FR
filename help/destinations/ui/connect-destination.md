@@ -4,19 +4,14 @@ type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 TQID: https://experienceleague.adobe.com/NbcgU4Ozh6CMWqCkAKn7hWMF-r6MGv0vih-mrwNWAvs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1222
-ht-degree: 56%
+source-wordcount: 1266
+ht-degree: 55%
 
 ---
 
@@ -24,8 +19,8 @@ ht-degree: 56%
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à une destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour vous connecter à une destination qui prend en charge les exportations de jeux de données, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour vous connecter à une destination qui prend en charge les exportations de jeux de données, vous avez besoin des **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeux de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Vue d’ensemble {#overview}
 
@@ -33,29 +28,29 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 
 ## Rechercher la destination souhaitée dans le catalogue {#setup}
 
-1. Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** .
+1. Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page de catalogue des destinations.](../assets/ui/connect-destinations/catalog.png)
 
 2. Les cartes de destination du catalogue peuvent comporter différentes commandes d’action, selon que vous disposez d’une connexion existante à la destination et que les destinations prennent en charge l’activation d’audiences, l’exportation de jeux de données ou les deux. Vous pouvez voir une ou plusieurs des options suivantes pour les cartes de destination :
 
-   * **[!UICONTROL Set up]**. Une connexion doit d’abord être configurée vers cette destination avant de pouvoir activer des audiences ou exporter des jeux de données.
-   * **[!UICONTROL Activate]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend en charge l’activation des audiences et les exportations de jeux de données.
-   * **[!UICONTROL Activate audiences]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend uniquement en charge l’activation des audiences.
+   * **[!UICONTROL Configurer]**. Une connexion doit d’abord être configurée vers cette destination avant de pouvoir activer des audiences ou exporter des jeux de données.
+   * **[!UICONTROL Activer]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend en charge l’activation des audiences et les exportations de jeux de données.
+   * **[!UICONTROL Activer les audiences]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend uniquement en charge l’activation des audiences.
 
    Pour plus d’informations sur la différence entre ces commandes, consultez la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
 
-   Sélectionnez **[!UICONTROL Set up]**, **[!UICONTROL Activate]** ou **[!UICONTROL Activate audiences]**, selon le contrôle disponible.
+   Sélectionnez **[!UICONTROL Configurer]**, **[!UICONTROL Activer]** ou **[!UICONTROL Activer les audiences]**, selon le contrôle qui est disponible pour vous.
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Configurer mise en surbrillance.](../assets/ui/connect-destinations/set-up.png)
 
-   ![&#x200B; Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
+   ![ Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. Si vous avez sélectionné **[!UICONTROL Set up]**, passez à l’étape suivante, pour [s’authentifier](#authenticate) à la destination.
+3. Si vous avez sélectionné **[!UICONTROL Configurer]**, passez à l’étape suivante, pour [authentifier](#authenticate) à la destination.
 
-   Si vous avez sélectionné **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** ou **[!UICONTROL Export datasets]**, vous pouvez désormais voir une liste des connexions de destination existantes.
+   Si vous avez sélectionné **[!UICONTROL Activer]**, **[!UICONTROL Activer des audiences]** ou **[!UICONTROL Exporter des jeux de données]**, vous pouvez désormais voir une liste des connexions de destination existantes.
 
-   Sélectionnez **[!UICONTROL Configure new destination]** pour établir une nouvelle connexion à la destination.
+   Sélectionnez **[!UICONTROL Configurer une nouvelle destination]** pour établir une nouvelle connexion à la destination.
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform, présentant une liste des destinations disponibles et l’option Configurer une nouvelle destination mise en surbrillance.](../assets/ui/connect-destinations/configure-new-destination.png)
 
@@ -70,9 +65,9 @@ La première étape de la connexion à une destination consiste à s’authentif
 
 Selon la destination à laquelle vous vous connectez, il se peut que vous soyez redirigé(e) vers la page du partenaire de destination pour vous authentifier ou que vous soyez invité(e) à saisir les informations d’authentification directement dans le workflow Experience Platform.
 
-Lors de la configuration d’une nouvelle connexion de destination, vous devez fournir un **[!UICONTROL Account name]** et, éventuellement, un **[!UICONTROL Description]**. Ces champs sont disponibles pour toutes les destinations.
+Lors de la configuration d’une nouvelle connexion de destination, vous devez fournir un **[!UICONTROL Nom du compte]** et, éventuellement, une **[!UICONTROL Description]**. Ces champs sont disponibles pour toutes les destinations.
 
-* **[!UICONTROL Account name]** : saisissez un nom qui vous aidera à identifier facilement ce compte de destination à l’avenir. Cela s’avère particulièrement utile si vous disposez de plusieurs connexions à la même destination.
+* **[!UICONTROL Nom du compte]** : saisissez un nom qui vous aidera à identifier facilement ce compte de destination à l’avenir. Cela s’avère particulièrement utile si vous disposez de plusieurs connexions à la même destination.
 * **[!UICONTROL Description]** (facultatif) : ajoutez des détails supplémentaires qui vous aideront, vous ou votre équipe, à faire la distinction entre les comptes, tels que l’objectif de la connexion ou le contexte commercial approprié.
 
 Fournir des informations claires et descriptives dans ces champs facilite la gestion et la sélection du compte de destination approprié lors de l’activation des audiences.
@@ -123,7 +118,7 @@ Certaines destinations basées sur des fichiers prennent en charge l’activatio
 
    ![La boîte de dialogue Configurer une nouvelle destination avec les options d’abonnement aux alertes de destination contextuelles mises en surbrillance.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
-2. Sélectionnez **[!UICONTROL Next]**.
+2. Sélectionnez **[!UICONTROL Suivant]**.
 
    ![La boîte de dialogue Configurer une nouvelle destination avec le contrôle Suivant en surbrillance, permettant à l’utilisateur de passer à l’étape suivante du workflow.](../assets/ui/connect-destinations/next.png)
 
@@ -133,7 +128,7 @@ Certaines destinations basées sur des fichiers prennent en charge l’activatio
 
    ![La boîte de dialogue Configurer une nouvelle destination avec les actions marketing disponibles en surbrillance. Les contrôles disponibles pour terminer le workflow Se connecter à la destination sont également mis en surbrillance.](../assets/ui/connect-destinations/governance.png)
 
-2. Sélectionnez **[!UICONTROL Save & Exit]** pour enregistrer la configuration de destination ou sélectionnez **[!UICONTROL Next]** pour passer aux données d’audience [flux d’activation](activation-overview.md).
+2. Sélectionnez **[!UICONTROL Enregistrer et quitter]** pour enregistrer la configuration de destination, ou sélectionnez **[!UICONTROL Suivant]** pour passer aux données d’audience [flux d’activation](activation-overview.md).
 
 ## Étapes suivantes {#next-steps}
 

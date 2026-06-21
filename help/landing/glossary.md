@@ -5,43 +5,14 @@ title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 TQID: https://experienceleague.adobe.com/BamtoDSzzhu0E1flZK7kaWvPXgD-xq9Qv2iQfBdaTt4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: addf009e-030a-4310-8534-776a3e62ed48
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: addf009e-030a-4310-8534-776a3e62ed48id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080bid: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: 8438
+source-wordcount: 8444
 ht-degree: 12%
 
 ---
@@ -62,7 +33,7 @@ ht-degree: 12%
 
 **Administrateur** : au moins une personne de votre organisation peut configurer et personnaliser les autorisations pour Experience Platform dans Adobe Admin Console.
 
-**&#x200B;**&#x200B;: Adobe Admin Console fournit un emplacement central pour la gestion des droits et des accès aux produits Adobe pour votre organisation. Par le biais de la console, les administrateurs et administratrices peuvent accorder des autorisations d’accès à des groupes d’utilisateurs et d’utilisatrices pour diverses fonctionnalités d’Experience Platform, telles que « Gérer les jeux de données », « Afficher les jeux de données » ou « Gérer les profils ».
+**** : Adobe Admin Console fournit un emplacement central pour la gestion des droits et des accès aux produits Adobe pour votre organisation. Par le biais de la console, les administrateurs et administratrices peuvent accorder des autorisations d’accès à des groupes d’utilisateurs et d’utilisatrices pour diverses fonctionnalités d’Experience Platform, telles que « Gérer les jeux de données », « Afficher les jeux de données » ou « Gérer les profils ».
 
 **Adobe Experience Platform** : Adobe Experience Platform normalise les données et le contenu dans l’ensemble de l’entreprise, alimentant les profils consommateurs en temps réel, permettant l’utilisation de la science des données et accélérant la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience sur le parcours client.
 
@@ -72,9 +43,9 @@ ht-degree: 12%
 
 **Adobe Intelligent Services** : les services intelligents tels que l’IA dédiée à l’attribution et l’IA dédiée aux clients sont des modèles d’apprentissage automatique basés sur l’intelligence artificielle qui sont conçus spécifiquement et qui nécessitent l’exécution et le fonctionnement d’Experience Platform.
 
-**&#x200B;**&#x200B;: Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Experience Platform, y compris aux API, aux événements, à la console de développement et aux outils utiles.
+**** : Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Experience Platform, y compris aux API, aux événements, à la console de développement et aux outils utiles.
 
-**&#x200B;**&#x200B;: Adobe AI est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**** : Adobe AI est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
 **Compartiment Amazon S3** : les compartiments [!DNL Amazon S3] sont les conteneurs de base pour les données stockées dans l’écosystème [!DNL Amazon]. Les compartiments contiennent des objets, chaque objet est stocké et récupéré à l’aide d’une clé unique attribuée par le développeur.
 
@@ -90,7 +61,7 @@ ht-degree: 12%
 
 **Attributs** : les attributs sont des caractéristiques spécifiées qui représentent un profil.
 
-**Fusion d’attributs** : lors de la définition d’une politique de fusion à l’aide de l’API Real-Time Customer Profile, l’objet `attributeMerge` indique la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. Cela revient à sélectionner un [!UICONTROL Merge method] lors de la définition d’une politique de fusion dans l’interface utilisateur d’Experience Platform.
+**Fusion d’attributs** : lors de la définition d’une politique de fusion à l’aide de l’API Real-Time Customer Profile, l’objet `attributeMerge` indique la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. Cela revient à sélectionner une [!UICONTROL méthode de fusion] lors de la définition d’une politique de fusion dans l’interface utilisateur d’Experience Platform.
 
 **IA dédiée à l’attribution** : [!DNL Attribution AI] est un service intelligent optimisé par Adobe AI qui offre des fonctionnalités d’attribution algorithmique multicanal tout au long du cycle de vie du client.
 
@@ -148,7 +119,7 @@ ht-degree: 12%
 
 **CPRA** : la [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) élargit et modifie certaines parties de la [!DNL California Consumer Privacy Act (CCPA)]. La [!DNL CPRA] établit une nouvelle base de référence pour la confidentialité des données des consommateurs en Californie en renforçant les droits des consommateurs et en élargissant le type de données couvertes par une définition plus large des informations personnelles sensibles. En outre, le [!DNL CPRA] a créé la California Privacy Protection Agency, une nouvelle agence dédiée à la mise en œuvre et à l’application des règles de confidentialité des données.
 
-**Libellé de contrat C1** : un libellé d’utilisation des données de contrat `C1` spécifie que les données peuvent uniquement être exportées à partir de Adobe Experience Cloud dans un formulaire agrégé sans inclure d’identifiants d’appareils ou d’individus. Par exemple, les données provenant des réseaux sociaux.
+**Libellé de contrat C1** : un libellé d’utilisation des données de contrat `C1` spécifie que les données peuvent uniquement être exportées à partir d’Adobe Experience Cloud dans un formulaire agrégé sans inclure d’identifiants d’appareils ou d’individus. Par exemple, les données provenant des réseaux sociaux.
 
 **Libellé de contrat C2** : un libellé d’utilisation des données de contrat `C2` spécifie les données qui ne peuvent pas être exportées vers un tiers. Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine. Par exemple, les contrats des réseaux sociaux limitent souvent le transfert des données que vous recevez d’eux. L’étiquette C2 est plus restrictive que la C1, qui ne nécessite que l’agrégation et des données anonymes.
 
@@ -264,7 +235,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Événements** : les événements sont les données de comportement associées à un profil.
 
-**Modèle de données d’expérience (XDM)** [!DNL Experience Data Model] (XDM) est un framework open source qui utilise des schémas standard pour unifier les données en vue de les utiliser avec des applications Experience Platform et Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’informations à partir d’énormes quantités de données.
+**Modèle de données d’expérience (XDM)** [!DNL Experience Data Model] (XDM) est un framework open source qui utilise des schémas standard pour unifier les données en vue de les utiliser avec Experience Platform et les applications Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’informations à partir d’énormes quantités de données.
 
 **Expérience** : une expérience est le processus de création d’un modèle formé en formant l’instance avec une partie d’exemple de données de production actives. Ceci est différent d’un modèle formé testé par rapport à un jeu de données de test d’exclusion. Cela diffère également du concept d’expérience dans certains frameworks de machine learning, où il s’agit en fait d’un exemple de projet de modélisation.
 
@@ -318,7 +289,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Libellés d’identité (« I »)** : les libellés d’utilisation des données d’identité (« I ») sont utilisés pour classer les données permettant d’identifier ou de contacter une personne spécifique.
 
-**Graphique d’identités** : un graphique d’identités est une carte des relations entre les identités assemblées et liées qui existent pour un client individuel. Chaque graphique d’identité est mis à jour en temps quasi réel avec l’activité du client. La structure commune des relations d’identité dans vos données est représentée par le [!UICONTROL Private Graph], qui sert de plan directeur structurel pour chaque graphique d’identité individuel.
+**Graphique d’identités** : un graphique d’identités est une carte des relations entre les identités assemblées et liées qui existent pour un client individuel. Chaque graphique d’identité est mis à jour en temps quasi réel avec l’activité du client. La structure commune des relations d’identité dans vos données est représentée par le [!UICONTROL graphique privé], qui sert de plan directeur structurel pour chaque graphique d’identité individuel.
 
 **Espace de noms d’identité** : un espace de noms d’identité définit le contexte d’un identifiant, tel qu’une adresse e-mail ou un identifiant CRM.
 
@@ -364,7 +335,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Bibliothèque** : dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [&#x200B; relation de schéma &#x200B;](../xdm/tutorials/relationship-ui.md).
+**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [ relation de schéma ](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
@@ -416,7 +387,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 ## P
 
-**Ingestion partielle** : l’ingestion partielle permet d’ingérer des enregistrements valides de données de lots au sein d’un seuil d’erreur spécifié. Les diagnostics d’erreur pour les enregistrements ayant échoué peuvent être téléchargés ou accessibles dans la présentation de l’exécution du flux de données [!UICONTROL Monitoring] ou [!UICONTROL Sources].
+**Ingestion partielle** : l’ingestion partielle permet d’ingérer des enregistrements valides de données de lots au sein d’un seuil d’erreur spécifié. Les diagnostics d’erreur pour les enregistrements ayant échoué peuvent être téléchargés ou accessibles dans la présentation de l’exécution du flux de données [!UICONTROL Surveillance] ou [!UICONTROL Sources].
 
 **Fichiers Parquet** : un fichier Parquet est un format de fichier de stockage en colonnes avec des structures de données imbriquées complexes. Des fichiers parquet sont nécessaires pour ajouter des données à un jeu de données de schéma.
 
@@ -470,7 +441,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 ## R
 
-**&#x200B;**&#x200B;: Adobe Real-Time Customer Data Platform (Real-Time CDP) rassemble des données client connues et inconnues pour créer des profils client de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
+**** : Adobe Real-Time Customer Data Platform (Real-Time CDP) rassemble des données client connues et inconnues pour créer des profils client de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
 
 **Real-Time Customer Profile** : le profil client en temps réel (parfois appelé Profil) fournit une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos données client en profils individuels offrant des comptes horodatés et exploitables de chaque interaction client.
 
@@ -548,7 +519,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 Libellé d’utilisation des données **S2** : un libellé d’utilisation des données `S2` est utilisé pour classer les données qui peuvent être utilisées pour déterminer une zone de limite géographique plus large.
 
-**&#x200B;**&#x200B;: source est un terme général pour tout connecteur d’entrée dans Experience Platform. Voir aussi : Connecteur Source
+**** : source est un terme général pour tout connecteur d’entrée dans Experience Platform. Voir aussi : Connecteur Source
 
 **Attribut Source** : un attribut source est un champ dans le jeu de données source. Les attributs sources sont mappés aux champs de schémas sources.
 

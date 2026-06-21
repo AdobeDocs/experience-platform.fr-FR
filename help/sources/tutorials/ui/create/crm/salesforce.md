@@ -3,19 +3,14 @@ title: Connexion de votre compte Salesforce à l’aide de l’interface utilisa
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 TQID: https://experienceleague.adobe.com/WAzj5-ww-k4xmFa2uOMHyQ0xCZdrhniOP7elENeahy8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 724
-ht-degree: 18%
+source-wordcount: 751
+ht-degree: 17%
 
 ---
 
@@ -52,27 +47,27 @@ Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce],
 
 Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Sources]** dans le menu de gauche pour ouvrir l’espace de travail [!UICONTROL Sources]. Utilisez le catalogue sur la gauche pour parcourir les catégories, ou utilisez la barre de recherche pour trouver rapidement la source à connecter.
 
-Sélectionnez **[!DNL Salesforce]** sous la catégorie *[!UICONTROL CRM]*, puis sélectionnez **[!UICONTROL Add data]**.
+Sélectionnez **[!DNL Salesforce]** sous la catégorie *[!UICONTROL CRM]*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
->Dans le catalogue des sources, vous verrez **[!UICONTROL Set up]** si aucun compte n’est connecté ou **[!UICONTROL Add data]** si un compte est déjà authentifié.
+>Dans le catalogue des sources, vous verrez **[!UICONTROL Configurer]** si aucun compte n’est connecté ou **[!UICONTROL Ajouter des données]** si un compte est déjà authentifié.
 
 ![Le catalogue des sources dans l’interface utilisateur d’Experience Platform avec la carte source Salesforce sélectionnée.](../../../../images/tutorials/create/salesforce/catalog.png)
 
-La page **[!UICONTROL Connect to Salesforce]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connexion à Salesforce]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Utiliser un compte existant
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte à utiliser dans la liste qui s’affiche. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans la liste qui s’affiche. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Liste des comptes Salesforce authentifiés qui existent déjà dans votre organisation.](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### Créer un nouveau compte
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom et une description pour votre nouveau compte [!DNL Salesforce].
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description pour votre nouveau compte [!DNL Salesforce].
 
-Pour les informations d’identification du client OAuth 2, sélectionnez **[!UICONTROL OAuth2 Client Credential]**, puis fournissez des valeurs pour les informations d’identification suivantes :
+Pour les informations d’identification du client OAuth 2, sélectionnez **[!UICONTROL Informations d’identification du client OAuth 2]** puis fournissez des valeurs pour les informations d’identification suivantes :
 
 * URL de l’environnement
 * Identifiant client
@@ -80,14 +75,14 @@ Pour les informations d’identification du client OAuth 2, sélectionnez **[!UI
 * Version de l’API
 * Inclure les objets supprimés
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 
 ![Interface dans laquelle vous pouvez créer un compte Salesforce en fournissant les informations d’authentification appropriées.](../../../../images/tutorials/create/salesforce/new.png)
 
 ### Ignorer la prévisualisation des exemples de données {#skip-preview-of-sample-data}
 
-Lors de l’étape de sélection des données, vous pouvez rencontrer un délai d’expiration lors de l’ingestion de tables ou de fichiers de données volumineux. Vous pouvez ignorer la prévisualisation des données pour contourner le délai d’expiration et continuer à afficher votre schéma, même s’il ne contient pas de données d’exemple. Pour ignorer l’aperçu des données, activez le bouton (bascule) **[!UICONTROL Skip previewing sample data]**.
+Lors de l’étape de sélection des données, vous pouvez rencontrer un délai d’expiration lors de l’ingestion de tables ou de fichiers de données volumineux. Vous pouvez ignorer la prévisualisation des données pour contourner le délai d’expiration et continuer à afficher votre schéma, même s’il ne contient pas de données d’exemple. Pour ignorer la prévisualisation des données, activez le bouton (bascule) **[!UICONTROL Ignorer la prévisualisation des données d’exemple]**.
 
 Le reste du workflow reste le même. Seul bémol : l’omission de l’aperçu des données peut empêcher la validation automatique des champs calculés et obligatoires lors de l’étape de mappage. Vous devrez ensuite valider manuellement ces champs pendant le mappage.
 
