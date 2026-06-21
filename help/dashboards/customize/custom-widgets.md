@@ -4,10 +4,16 @@ title: Création de widgets personnalisés pour les tableaux de bord
 description: Ce guide fournit des instructions détaillées sur la création de widgets personnalisés à utiliser dans les tableaux de bord Adobe Experience Platform.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
 TQID: https://experienceleague.adobe.com/yyJ31lzM10-q9Vko--fh5ckwz3Y7HQzcBMjEUjWvJi8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: eec185bd-7d60-4193-ba3f-da427569936a
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 984

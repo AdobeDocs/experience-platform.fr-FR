@@ -5,10 +5,15 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 376716bd-f79f-421d-b163-0f0e50876b48
 TQID: https://experienceleague.adobe.com/mkgLk7-wG6mWyhvNtri04SIKXz06Y0cEEXLY-YU4GP0
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 961
@@ -80,11 +85,11 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Condition] | `condition` | [[!UICONTROL Référence codable]](../data-types/codeable-reference.md) | Diagnostic pertinent pour le compte. |
-| [!UICONTROL  Code du package ] | `packageCode` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Le code de package peut être utilisé pour regrouper des diagnostics qui peuvent être tarifés ou fournis sous la forme d’un produit unique (comme des médicaments). |
+| [!UICONTROL &#x200B; Code du package &#x200B;] | `packageCode` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Le code de package peut être utilisé pour regrouper des diagnostics qui peuvent être tarifés ou fournis sous la forme d’un produit unique (comme des médicaments). |
 | [!UICONTROL Type] | `type` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Type que ce diagnostic présente pour le compte (par exemple, admission, facturation, décharge...). |
-| [!UICONTROL  Date Du Diagnostic ] | `dateOfDiagnosis` | DateTime | Date du diagnostic (diagnostic codé). |
+| [!UICONTROL &#x200B; Date Du Diagnostic &#x200B;] | `dateOfDiagnosis` | DateTime | Date du diagnostic (diagnostic codé). |
 | [!UICONTROL À l&#39;entrée] | `onAdmission` | Booléen | Si le diagnostic était présent à l’admission. |
-| [!UICONTROL Séquence ] | `sequence` | Entier | Classement du diagnostic (pour chaque type), avec une valeur minimale de `0`. |
+| [!UICONTROL Séquence &#x200B;] | `sequence` | Entier | Classement du diagnostic (pour chaque type), avec une valeur minimale de `0`. |
 
 ## `guarantor` {#guarantor}
 
@@ -109,7 +114,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 | [!UICONTROL Code] | `code` | [[!UICONTROL Référence codable]](../data-types/codeable-reference.md) | Procédure relative au compte. |
 | [!UICONTROL Appareil] | `device` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Tous les appareils associés à la procédure relative au compte. |
 | [!UICONTROL Type] | `type` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Comment la valeur de procédure doit être utilisée pour imputer le compte. |
-| [!UICONTROL  Code du package ] | `packageCode` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Le code de package peut être utilisé pour regrouper des procédures qui peuvent être tarifées ou livrées sous la forme d&#39;un produit unique (comme des DRG). |
+| [!UICONTROL &#x200B; Code du package &#x200B;] | `packageCode` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Le code de package peut être utilisé pour regrouper des procédures qui peuvent être tarifées ou livrées sous la forme d&#39;un produit unique (comme des DRG). |
 | [!UICONTROL Date Du Service] | `dateOfService` | DateTime | Date d&#39;utilisation d&#39;une procédure codée. Si vous faites référence à une procédure, la date de la procédure doit être utilisée. |
 | [!UICONTROL Séquence] | `sequence` | Entier | Classement de la procédure (pour chaque type), avec une valeur minimale de `0`. |
 

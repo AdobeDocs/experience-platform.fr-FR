@@ -3,9 +3,14 @@ title: Présentation du connecteur Source d’intégration OneTrust
 description: Découvrez comment connecter l’intégration OneTrust à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
 TQID: https://experienceleague.adobe.com/zfabZWFAfpWKcRj5-zRiVSvuFUZaD5qibCnp22Hp1lc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 168

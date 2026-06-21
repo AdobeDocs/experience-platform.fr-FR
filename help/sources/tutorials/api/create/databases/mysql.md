@@ -3,10 +3,14 @@ title: Connecter MySQL à Experience Platform à l’aide de l’API Flow Servic
 description: Découvrez comment connecter votre base de données MySQL à Experience Platform à l’aide d’API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 TQID: https://experienceleague.adobe.com/AXw6xQUbbX-RXhiu9tQ5UfrMldShQ4A4rV-6pkzmTVI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 615

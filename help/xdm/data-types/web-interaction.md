@@ -5,9 +5,12 @@ title: Type de données d'interaction web
 description: Découvrez le type de données du modèle de données d’expérience (XDM) d’interaction web.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 TQID: https://experienceleague.adobe.com/PRnfkE6zrOaGl0JFexMIpCMoWM-OIcx7lQcBLUEQq9g
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 189

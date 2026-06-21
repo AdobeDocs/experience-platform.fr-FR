@@ -5,10 +5,17 @@ title: Analyse Des Scores D’Attribution À L’Aide De Query Service
 description: Découvrez comment utiliser Adobe Experience Platform Query Service pour analyser les scores de l’IA dédiée à l’attribution.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 TQID: https://experienceleague.adobe.com/chtJSOaZiut-VnoqCdVTqoNNbYnwPHWufCTnTy027Do
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 594

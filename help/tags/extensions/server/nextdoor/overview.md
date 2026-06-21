@@ -94,13 +94,13 @@ Utilisez ces paramètres pour garantir la conformité en matière de confidentia
 | [!UICONTROL Numéro de téléphone] | Numéro de téléphone du client pour la correspondance d’identité. | Chaîne | Au moins un champ client obligatoire | Format E.164 (haché avec SHA-256) | `+15551234567` |
 | [!UICONTROL Prénom] | Prénom du client pour une correspondance améliorée. | Chaîne | Au moins un champ client obligatoire | Texte brut ou hachage SHA-256 | `John` |
 | [!UICONTROL Nom] | Nom du client pour une correspondance améliorée. | Chaîne | Au moins un champ client obligatoire | Texte brut ou hachage SHA-256 | `Smith` |
-| [!UICONTROL  Date de naissance ] | Date de naissance du client pour l’appariement démographique. | Chaîne | Facultatif | AAAAMMJJ (SHA-256 haché) | `19900115` |
+| [!UICONTROL &#x200B; Date de naissance &#x200B;] | Date de naissance du client pour l’appariement démographique. | Chaîne | Facultatif | AAAAMMJJ (SHA-256 haché) | `19900115` |
 | [!UICONTROL Genre] | Sexe du client pour le ciblage démographique. | Chaîne | Facultatif | M/F/O (SHA-256 haché) | `M` |
 | [!UICONTROL ID externe] | Votre identifiant client interne. | Chaîne | Facultatif | Toute chaîne unique | `customer_12345` |
 | [!UICONTROL Adresse postale] | Adresse postale du client. | Chaîne | Facultatif | SHA-256 haché | `123 Main Street` (haché) |
 | [!UICONTROL Ville] | Ville du client. | Chaîne | Facultatif | SHA-256 haché | `San Francisco` (haché) |
 | [!UICONTROL État] | Département/province du client. | Chaîne | Facultatif | Code à deux lettres (SHA-256 haché) | `CA` (haché) |
-| [!UICONTROL  Code postal ] | Code postal du client. | Chaîne | Facultatif | 5 premiers chiffres (États-Unis) (SHA-256 haché) | `94102` (haché) |
+| [!UICONTROL &#x200B; Code postal &#x200B;] | Code postal du client. | Chaîne | Facultatif | 5 premiers chiffres (États-Unis) (SHA-256 haché) | `94102` (haché) |
 | [!UICONTROL Pays] | Pays du client. | Chaîne | Facultatif | ISO-3166-1 alpha-2 (SHA-256 haché) | `US` (haché) |
 | [!UICONTROL Cliquez sur ID] | Identifiant de clic suivant pour l’attribution. | Chaîne | Facultatif | Capturé à partir `ndclid` paramètre d’URL | `nd_click_12345abcdef` |
 | [!UICONTROL Adresse IP du client] | Adresse IP de l’appareil de l’utilisateur. | Chaîne | Facultatif | Adresse IPv4 ou IPv6 | `192.168.1.1` |
@@ -139,7 +139,7 @@ Les types d’événements suivants sont pris en charge pour différents scénar
 | [!UICONTROL S’inscrire] | Standard | Enregistrement des utilisateurs ou création de comptes. | Inscription à la newsletter, enregistrement au compte | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Suivi des conversions Top-funnel |
 | [!UICONTROL Ajouter au panier] | Standard | Produit ajouté au panier. | Suivi des funnel e-commerce | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Signal d’engagement Mid-funnel |
 | [!UICONTROL Lancer le passage en caisse] | Standard | Processus de passage en caisse démarré. | Suivi des intentions d’achat | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Indicateur d’intention d’achat fort |
-| [!UICONTROL  Page vue ] | Standard | Page importante visitée. | Engagement du contenu, pages de destination | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Utiliser uniquement pour les pages à valeur élevée |
+| [!UICONTROL &#x200B; Page vue &#x200B;] | Standard | Page importante visitée. | Engagement du contenu, pages de destination | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Utiliser uniquement pour les pages à valeur élevée |
 | [!UICONTROL Rechercher] | Standard | Recherche effectuée sur le site. | Découverte de produits/contenus | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Indique l’interaction client active. |
 | [!UICONTROL Afficher le contenu] | Standard | Contenu ou produit consulté. | Pages vues du produit, engagement du contenu | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Utile pour les audiences de remarketing |
 | [!UICONTROL Ajouter à la liste de souhaits] | Standard | Produit ajouté à la liste de souhaits. | Intention d’achat future | <ul><li>Nom de l’événement</li><li>Informations sur le client</li></ul> | Indique un fort intérêt pour le produit |

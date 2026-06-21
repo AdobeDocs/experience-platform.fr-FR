@@ -3,11 +3,46 @@ title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
 TQID: https://experienceleague.adobe.com/TPbd-dtid8pIohhm6QXBdCgVQ8M7Bm0LCohmsOT0Hh0
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: d1a87129-ba05-4f15-98b1-233618f1774aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d00e9f03-e50b-4162-b143-0c0817c937c2id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2492
@@ -98,7 +133,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [Connexion à Adobe Experience Cloud Audiences (Beta)](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Utilisez la connexion [!UICONTROL  (Beta) Audiences Adobe Experience Cloud ] pour partager des segments d’Experience Platform vers différentes solutions Experience Platform, telles qu’Audience Manager, Analytics, Advertising, Campaign, Target ou Marketo. |
+| [Connexion à Adobe Experience Cloud Audiences (Beta)](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Utilisez la connexion [!UICONTROL &#x200B; (Beta) Audiences Adobe Experience Cloud &#x200B;] pour partager des segments d’Experience Platform vers différentes solutions Experience Platform, telles qu’Audience Manager, Analytics, Advertising, Campaign, Target ou Marketo. |
 | [Connexion à un profil Pega](../../destinations/catalog/personalization/pega-profile.md) | Utilisez le [!DNL Pega Profile Connector] dans Adobe Experience Platform pour créer une connexion sortante active à votre stockage S3 [!DNL Amazon] afin d’exporter périodiquement des données de profil vers des fichiers CSV à partir d’Adobe Experience Platform dans vos propres compartiments S3. Dans [!DNL Pega Customer Decision Hub], vous pouvez planifier des tâches de données pour importer ces données de profil à partir du stockage S3 afin de mettre à jour le profil [!DNL Pega Customer Decision Hub]. |
 | [Connexion UE à The Trade Desk CRM (Beta)](../../destinations/catalog/advertising/tradedesk-emails.md) | Avec la publication de l’EUID (European Unified ID), deux destinations [!DNL The Trade Desk - CRM] dans le [catalogue de destinations](/help/destinations/catalog/overview.md) sont maintenant affichées. <ul><li> Si vos données proviennent de l’UE, utilisez la destination **[!DNL The Trade Desk - CRM (EU)]**.</li><li> Si vos données proviennent des régions APAC ou NAMER, utilisez la destination **[!DNL The Trade Desk - CRM (NAMER & APAC)]**. </li></ul> |
 
@@ -143,7 +178,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL  Conversion ]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Une classe permettant d’effectuer le suivi des données de conversion telles que les conversions de devise. |
+| Classe | [[!UICONTROL &#x200B; Conversion &#x200B;]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | Une classe permettant d’effectuer le suivi des données de conversion telles que les conversions de devise. |
 | Groupe de champs | [[!UICONTROL Détails sur le taux de conversion de devise]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | Un groupe de champs pour la classe [!UICONTROL Conversion], capturant des détails supplémentaires liés à la conversion de devise. |
 | Groupe de champs | [[!UICONTROL Mappage des résultats d’évaluation des politiques de consentement avec métadonnées]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | Capture les détails du résultat de l’évaluation de plusieurs politiques de consentement, y compris les informations de métadonnées sur les entrées et sorties des politiques de consentement. |
 
@@ -151,21 +186,21 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Type de données | [[!UICONTROL Informations détaillées sur ]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Le champ `ID` a été renommé `name` et le champ `name` précédent est maintenant `friendlyName`. |
+| Type de données | [[!UICONTROL Informations détaillées sur &#x200B;]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Le champ `ID` a été renommé `name` et le champ `name` précédent est maintenant `friendlyName`. |
 | Type de données | [[!UICONTROL Détails de la proposition de décision]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Ajout d’un champ `selectionStrategy` qui capture les détails d’une stratégie de sélection. |
-| Groupe de champs | [[!UICONTROL Événement d’expérience - Interactions de propositions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | Le groupe de champs est désormais compatible avec la classe [!UICONTROL Événement d’étape de Parcours ]. |
+| Groupe de champs | [[!UICONTROL Événement d’expérience - Interactions de propositions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | Le groupe de champs est désormais compatible avec la classe [!UICONTROL Événement d’étape de Parcours &#x200B;]. |
 | Type de données | [[!UICONTROL Informations détaillées sur les erreurs]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Le champ `ID` a été renommé `name`. |
 | Type de données | [[!UICONTROL Informations sur les médias]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | Annulation d’une modification du modèle de la propriété de segment vidéo. |
 | Type de données | [[!UICONTROL Informations détaillées sur les données Qoe]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Le champ `droppedFrameCount` a été supprimé. |
 | Type de données | [[!UICONTROL Informations détaillées sur la session]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Le champ `isAuthorized` a été renommé `authorized`, et son `type`  a été mis à jour en tant que chaîne plutôt qu’en tant que booléen. |
 | Type de données | [[!UICONTROL Expédition]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Plusieurs nouveaux champs ajoutés : `shipDate`, `trackingNumber`, et `trackingURL`. |
-| Groupe de champs | [[!UICONTROL Champs D’Entité ]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | Plusieurs nouveaux champs ajoutés : `journeyNodeID`, `journeyNodeName`, et `journeyModeType`. |
-| Groupe de champs | [[!UICONTROL  Événement d’expérience client ]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | Le groupe de champs est désormais également compatible avec la classe [!UICONTROL Mesures récapitulatives]. |
+| Groupe de champs | [[!UICONTROL Champs D’Entité &#x200B;]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | Plusieurs nouveaux champs ajoutés : `journeyNodeID`, `journeyNodeName`, et `journeyModeType`. |
+| Groupe de champs | [[!UICONTROL &#x200B; Événement d’expérience client &#x200B;]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | Le groupe de champs est désormais également compatible avec la classe [!UICONTROL Mesures récapitulatives]. |
 | Groupe de champs | [[!UICONTROL Déclencheurs de produit]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | Le champ `productTriggers` est maintenant imbriqué sous un objet `weather`. |
 | Groupe de champs | [[!UICONTROL Déclencheurs relatifs]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | Le champ `relativeTriggers` est maintenant imbriqué sous un objet `weather`. |
 | Groupe de champs | [[!UICONTROL Déclencheurs graves]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Le champ `severeTriggers` est maintenant imbriqué sous un objet `weather`. |
 | Groupe de champs | [[!UICONTROL Déclencheurs météo]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Le champ `weatherTriggers` est maintenant imbriqué sous un objet `weather`. |
-| Groupe de champs | [[!UICONTROL  Comptes professionnels associés à XDM ]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | Le groupe de champs est maintenant stable. |
+| Groupe de champs | [[!UICONTROL &#x200B; Comptes professionnels associés à XDM &#x200B;]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | Le groupe de champs est maintenant stable. |
 
 {style="table-layout:auto"}
 

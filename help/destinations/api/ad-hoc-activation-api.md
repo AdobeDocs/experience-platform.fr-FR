@@ -6,11 +6,22 @@ description: Cet article illustre le workflow de bout en bout pour activer des a
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 TQID: https://experienceleague.adobe.com/qsC2rkW9zkzewzUls3FVlivqVHQyXUpkOoEA0T-OU8Q
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1782
@@ -24,7 +35,7 @@ ht-degree: 9%
 >
 >Une fois la phase Beta terminée, la [!DNL ad-hoc activation API] est désormais disponible pour tous les clients Experience Platform. Dans la version mise à disposition générale, l’API a été mise à niveau vers la version 2. L’étape 4 ([Obtention du dernier identifiant de tâche d’exportation d’audience](#segment-export-id)) n’est plus nécessaire, car l’API ne nécessite plus l’identifiant d’exportation.
 >
->Pour plus d’informations](#activation-job) consultez la section [Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
+>Pour plus d’informations[&#128279;](#activation-job) consultez la section Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
 
 ## Vue d’ensemble {#overview}
 
@@ -55,7 +66,7 @@ Les responsables informatiques peuvent utiliser l’API d’activation ad hoc d�
 Gardez à l’esprit les mécanismes de sécurisation suivants lors de l’utilisation de l’API d’activation ad hoc .
 
 * Actuellement, chaque traitement d’activation ad hoc peut activer jusqu’à 80 audiences. Si vous tentez d’activer plus de 80 audiences par traitement, celui-ci échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions.
-* Les traitements d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les traitements d’exportation d’audiences [ planifiés](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de l’audience planifiée est terminée. Consultez [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la surveillance du statut des flux d’activation. Par exemple, si votre flux de données d’activation affiche un statut **[!UICONTROL Traitement]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
+* Les traitements d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les traitements d’exportation d’audiences [&#x200B; planifiés](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de l’audience planifiée est terminée. Consultez [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la surveillance du statut des flux d’activation. Par exemple, si votre flux de données d’activation affiche un statut **[!UICONTROL Traitement]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
 * N’exécutez pas plusieurs traitements d’activation ad hoc simultanés par audience.
 
 ## Considérations relatives à la segmentation {#segmentation-considerations}
@@ -67,7 +78,7 @@ Gardez à l’esprit les mécanismes de sécurisation suivants lors de l’utili
 Avant d’effectuer des appels vers les API [!DNL Adobe Experience Platform], veillez à respecter les conditions préalables suivantes :
 
 * Vous disposez d’un compte d’organisation avec un accès à [!DNL Adobe Experience Platform].
-* Les rôles `developer` et `user` sont activés pour le profil de produit API [!DNL Adobe Experience Platform] de votre compte Experience Platform. Contactez votre administrateur [](../../access-control/home.md) pour activer ces rôles pour votre compte.
+* Les rôles `developer` et `user` sont activés pour le profil de produit API [!DNL Adobe Experience Platform] de votre compte Experience Platform. Contactez votre administrateur [&#128279;](../../access-control/home.md) pour activer ces rôles pour votre compte.
 * Vous disposez d’une Adobe ID. Si vous ne disposez pas d’un Adobe ID, accédez au [Adobe Developer Console](https://developer.adobe.com/console) et créez un compte.
 
 ## Étape 2 : collecter les informations d’identification {#credentials}
@@ -92,7 +103,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation de référence sur les API {#api-reference-documentation}
 
-Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Voir [ Référence de l’API d’activation ad hoc ](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation).
+Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Voir [&#x200B; Référence de l’API d’activation ad hoc &#x200B;](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation).
 
 ## Étape 3 : créer un flux d’activation dans l’interface utilisateur d’Experience Platform {#activation-flow}
 

@@ -5,9 +5,12 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
 TQID: https://experienceleague.adobe.com/N6v3Rl-yiECDFpD-Vuns3b-GP1cUoAefqHQtX4A54AY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 557
@@ -43,7 +46,7 @@ Le tableau suivant décrit les types de données créés conformément aux spéc
 | [[!UICONTROL Concept codable]](./data-types/codeable-concept.md) | Référence d’une ressource à une autre. |
 | [[!UICONTROL Référence codable]](./data-types/codeable-reference.md) | Référence à une ressource ou à un concept. |
 | [[!UICONTROL Codage]](./data-types/coding.md) | Référence à un code défini par un système terminologique. |
-| [[!UICONTROL  Point de contact ]](./data-types/contact-point.md) | Coordonnées d’une personne. |
+| [[!UICONTROL &#x200B; Point de contact &#x200B;]](./data-types/contact-point.md) | Coordonnées d’une personne. |
 | [[!UICONTROL Posologie]](./data-types/dosage.md) | Comment le médicament est/a été pris ou doit être pris. |
 | [[!UICONTROL Durée]](./data-types/duration.md) | Une durée. |
 | [[!UICONTROL Détails de contact étendus]](./data-types/extended-contact-detail.md) | Informations sur le contact étendu. |
@@ -51,7 +54,7 @@ Le tableau suivant décrit les types de données créés conformément aux spéc
 | [[!UICONTROL Identifiant]](./data-types/identifier.md) | Identifiant destiné au calcul. |
 | [[!UICONTROL Argent]](./data-types/money.md) | Une quantité d&#39;utilité économique dans une monnaie reconnue. |
 | [[!UICONTROL Période]](./data-types/period.md) | Période définie par une date/heure de début et de fin. |
-| [[!UICONTROL  Personne ]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
+| [[!UICONTROL &#x200B; Personne &#x200B;]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
 | [[!UICONTROL Quantité]](./data-types/quantity.md) | Une quantité mesurée ou mesurable. |
 | [[!UICONTROL Plage]](./data-types/range.md) | Ensemble de valeurs liées par des valeurs faibles et élevées. |
 | [[!UICONTROL Rapport]](./data-types/ratio.md) | Rapport de deux valeurs [[!UICONTROL Quantité]](./data-types/quantity.md) via un numérateur et un dénominateur. |

@@ -5,9 +5,12 @@ title: Gestion des détails et des services supplémentaires pour un profil de p
 description: Ce document reprend les étapes nécessaires à la gestion des détails et des services supplémentaires pour un profil de produit dans Adobe Admin Console. Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu Paramètres du profil.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 TQID: https://experienceleague.adobe.com/cd5Su-Bo-e4yNu4mhX-8MrD2Jw0dFLm-HYHJGb01MR4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 298
@@ -40,7 +43,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![enable-services](../images/enable-services.png)
 
-Les clients éligibles à l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être fournie aux utilisateurs par le biais du menu [!UICONTROL  Activer les services ]. Sélectionnez le bouton bascule à côté de [!UICONTROL IU B2B] pour activer le service pour un profil de produit spécifique, puis sélectionnez **[!UICONTROL Enregistrer]**.
+Les clients éligibles à l’édition B2B ou B2P ont accès à l’interface utilisateur B2B. L’interface utilisateur B2B peut être fournie aux utilisateurs par le biais du menu [!UICONTROL &#x200B; Activer les services &#x200B;]. Sélectionnez le bouton bascule à côté de [!UICONTROL IU B2B] pour activer le service pour un profil de produit spécifique, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 L’option Activer/Désactiver de l’interface utilisateur B2B permet d’afficher les workflows B2B relatifs à la gestion des comptes et des opportunités, ainsi que de créer des segments liés au B2B. Pour plus d’informations, consultez la documentation sur [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 

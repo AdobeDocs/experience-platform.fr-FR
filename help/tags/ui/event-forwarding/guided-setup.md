@@ -44,7 +44,7 @@ Dans la section Configurer les propriétés , sélectionnez **[!UICONTROL Nouvea
 
 Sélectionnez **[!UICONTROL Ajouter]** pour le [!DNL Meta Conversion API] dans la section Ajouter des extensions . Sur la page Configurer les informations de [!DNL Meta], vous avez la possibilité de saisir manuellement votre **[!UICONTROL ID de pixel Meta]**, votre **[!UICONTROL Jeton d’accès utilisateur système Meta]** et votre **[!UICONTROL Chemin d’accès à la couche de données]** ou d’utiliser l’option **[!UICONTROL Se connecter à Meta]**.
 
-![Page Configurer les informations de Meta présentant l’option Se connecter à Meta ](../../images/ui/guided-setup/connect-to-meta.png)
+![Page Configurer les informations de Meta présentant l’option Se connecter à Meta &#x200B;](../../images/ui/guided-setup/connect-to-meta.png)
 
 #### Connexion à [!DNL Meta] à l’aide de vos informations d’identification {#meta-credentials}
 
@@ -82,7 +82,7 @@ Sélectionnez **[!UICONTROL Envoyer un événement PageView]** pour envoyer un �
 
 >[!NOTE]
 >
->Si des échecs se produisent au cours du processus de validation, cliquez sur le lien **** pour passer en revue les événements qui ont peut-être échoué.
+>Si des échecs se produisent au cours du processus de validation, cliquez sur le lien **&#x200B;**&#x200B;pour passer en revue les événements qui ont peut-être échoué.
 
 ![Page Validation affichant les résultats de la validation](../../images/ui/guided-setup/finished-validation.png)
 
@@ -116,7 +116,7 @@ Sélectionnez **[!UICONTROL Envoyer un événement PageView]** pour envoyer un �
 
 >[!NOTE]
 >
->Si des échecs se produisent au cours du processus de validation, cliquez sur le lien **** pour passer en revue les événements qui ont peut-être échoué.
+>Si des échecs se produisent au cours du processus de validation, cliquez sur le lien **&#x200B;**&#x200B;pour passer en revue les événements qui ont peut-être échoué.
 
 ![Page Validation affichant les résultats de la validation](../../images/ui/guided-setup/finished-validation.png)
 
@@ -124,4 +124,4 @@ Sélectionnez **[!UICONTROL Envoyer un événement PageView]** pour envoyer un �
 
 Ce guide explique comment utiliser l’outil de configuration guidé pour créer et configurer des propriétés pour le [!DNL Meta Conversions API].
 
-Pour plus d’informations sur la mise en œuvre efficace de votre intégration [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965) consultez la documentation [!DNL Meta] sur [les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../home.md).
+Pour plus d’informations sur la mise en œuvre efficace de votre intégration [!DNL Conversions API][&#128279;](https://www.facebook.com/business/help/308855623839366?id=818859032317965) consultez la documentation [!DNL Meta] sur les bonnes pratiques relatives à . Pour des informations plus générales sur les balises et le transfert d’événement dans Adobe Experience Cloud, reportez-vous à la [présentation des balises](../../home.md).

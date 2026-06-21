@@ -4,9 +4,13 @@ description: Découvrez comment créer des schémas dans l’interface utilisate
 badgeBeta: label="Beta" type="Informative"
 exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
 TQID: https://experienceleague.adobe.com/ggeVBgjnSkWxOoI-K1Ntr-RpmcXnB6T6c7Wdwv-2o9w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1039
@@ -28,7 +32,7 @@ Avec la génération de schéma ML, vous pouvez rapidement intégrer de nouvelle
 
 Ce tutoriel nécessite une bonne compréhension des exigences relatives à la création de schémas. Avant de poursuivre avec ce guide, vous devez lire le guide [UI guide to create and editing schemas](./resources/schemas.md).
 
-Ce guide explique comment créer des schémas à l’aide d’algorithmes de machine learning (ML) pour générer un schéma à partir de données d’exemple. Consultez le [guide des workflows de création manuelle de schéma](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) pour plus d’informations sur la création de schémas ou le document sur les workflows basés sur des champs [ dans l’éditeur de schémas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) afin de mieux comprendre le processus de création de schémas.
+Ce guide explique comment créer des schémas à l’aide d’algorithmes de machine learning (ML) pour générer un schéma à partir de données d’exemple. Consultez le [guide des workflows de création manuelle de schéma](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) pour plus d’informations sur la création de schémas ou le document sur les workflows basés sur des champs [&#x200B; dans l’éditeur de schémas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) afin de mieux comprendre le processus de création de schémas.
 
 >[!NOTE]
 >
@@ -44,7 +48,7 @@ Dans le volet de navigation de gauche de l’interface utilisateur d’Experienc
 
 La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Sélectionnez l’option de création de schéma **[assistée par ML]**, puis **[!UICONTROL Sélectionner]** pour confirmer votre choix.
 
-![ La boîte de dialogue [!UICONTROL Créer un schéma] avec l’[!UICONTROL Assistant ML] mise en surbrillance.](../images/ui/ml-schema-creation/use-sample-csv.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Créer un schéma] avec l’[!UICONTROL Assistant ML] mise en surbrillance.](../images/ui/ml-schema-creation/use-sample-csv.png)
 
 ### Sélectionner une classe de base {#select-base-class}
 
@@ -71,8 +75,8 @@ L’étape **[!UICONTROL Révision et modification]** du workflow de création s
 | Nom du champ | Description |
 |------------------|---------------------------------------------------------|
 | [!UICONTROL Tableau de données] | Jeu de données ou base de données d’où provient le champ. |
-| [!UICONTROL Champ ] | Nom du champ d’origine du système source. |
-| [!UICONTROL  Champ cible ] | Nom du champ dans le système cible où les données seront mappées. |
+| [!UICONTROL Champ &#x200B;] | Nom du champ d’origine du système source. |
+| [!UICONTROL &#x200B; Champ cible &#x200B;] | Nom du champ dans le système cible où les données seront mappées. |
 | [!UICONTROL Nom d’affichage] | Nom utilisé pour afficher le champ dans l’interface utilisateur. Ce nom doit être plus convivial ou descriptif. |
 | [!UICONTROL Type de données] | Type de données stocké dans le champ (par exemple, `String`, `Date`). |
 | [!UICONTROL Groupe de champs] | Catégorisation du champ en fonction de son utilisation ou de son contexte (par exemple, [!UICONTROL Détails démographiques], [!UICONTROL Détails Commerce]). |
@@ -129,4 +133,4 @@ L’éditeur de schémas s’affiche avec le schéma que vous venez de créer da
 
 Après avoir créé votre schéma, vous pouvez utiliser l’éditeur de schémas pour apporter d’autres modifications, si nécessaire. Votre nouveau schéma est maintenant prêt à être intégré à vos sources de données et utilisé pour l’analyse des données.
 
-Pour plus d’informations sur l’utilisation de l’éditeur de schémas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) consultez le guide [Modifier un schéma existant ».
+Pour plus d’informations sur l’utilisation de l’éditeur de schémas[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) consultez le guide Modifier un schéma existant ».

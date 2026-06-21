@@ -3,11 +3,27 @@ title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2024
 description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
 TQID: https://experienceleague.adobe.com/46Y4ksUAZdPrco4XeBKQu5hZ6JB4pavuVge0nVu0v2Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1709
@@ -187,8 +203,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE ]{type=Informative} sources [!DNL Oracle NetSuite] | Utilisez les intégrations [!DNL Oracle NetSuite] dans le catalogue de sources pour importer des données depuis vos comptes [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) et [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) dans Experience Platform. |
-| [!BADGE Beta ]{type=Informative} source [!DNL Braze Currents] | Utilisez l’intégration [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) dans le catalogue de sources pour importer des données depuis votre compte [!DNL Braze] dans Experience Platform. |
+| {type=Informative} sources [!DNL Oracle NetSuite] | Utilisez les intégrations [!DNL Oracle NetSuite] dans le catalogue de sources pour importer des données depuis vos comptes [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) et [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) dans Experience Platform. |
+| [!BADGE Beta &#x200B;]{type=Informative} source [!DNL Braze Currents] | Utilisez l’intégration [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) dans le catalogue de sources pour importer des données depuis votre compte [!DNL Braze] dans Experience Platform. |
 | Prise en charge de l’authentification par paire de clés pour la source de lots [!DNL Snowflake] | Vous pouvez désormais utiliser l’authentification par paire de clés lors de la création d’un nouveau compte [!DNL Snowflake] pour les données de lots. Pour plus d’informations, consultez le guide sur la [création d’un compte  [!DNL Snowflake]  à l’aide de l’API](../../sources/tutorials/api/create/databases/snowflake.md) ou le guide sur la [création d’un compte  [!DNL Snowflake]  à l’aide de l’interface utilisateur](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}

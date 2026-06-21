@@ -3,11 +3,26 @@ title: Manifeste d’extensions
 description: Découvrez comment configurer un fichier de manifeste JSON informant Adobe Experience Platform quant à la manière correcte de consommer votre extension.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 TQID: https://experienceleague.adobe.com/iJ8gwJaJa37G0hIvisujbf93Ez9deE7r5Shrirden-0
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2: id: bef6f891-2e8a-425e-8f99-7ddf22070daaid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2499
@@ -77,20 +92,20 @@ L’objet de configuration doit être structuré comme suit :
       <td><code>schema</code></td>
       <td>Objet <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet valide enregistré à partir de la vue de configuration de l’extension. Étant donné que vous êtes le développeur de la vue de configuration, il est de votre responsabilité de vous assurer que tout objet settings enregistré correspond à ce schéma. Ce schéma sera également utilisé à des fins de validation lorsque les utilisateurs tentent d’enregistrer des données à l’aide des services Experience Platform.<br><br>Voici un exemple d’objet de schéma :
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="https://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
     </tr>
@@ -137,20 +152,20 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
       <td><code>schema</code></td>
       <td>Objet <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet de paramètres valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à l’aide de l’interface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. D’un autre côté, certains utilisateurs choisissent d’utiliser directement les API de balises sans l’aide d’aucune interface utilisateur. Ce schéma permet à Experience Platform de vérifier correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet de schéma <br>
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="https://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
     </tr>

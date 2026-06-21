@@ -5,9 +5,12 @@ title: Détection de texte et reconnaissance optique de caractères
 description: Dans l’API de balisage de contenu, le service de reconnaissance optique de caractères (OCR)/présence de texte peut indiquer si du texte est présent dans une image donnée. Si du texte est présent, la reconnaissance optique des caractères peut renvoyer le texte.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 TQID: https://experienceleague.adobe.com/lz0Dfck2IrmPigJ-EhtvPOIMF9ct9DU9wfiW2CESlsA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 694

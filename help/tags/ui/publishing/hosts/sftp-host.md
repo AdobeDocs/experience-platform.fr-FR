@@ -3,11 +3,24 @@ title: Hôtes SFTP
 description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 TQID: https://experienceleague.adobe.com/LuOvuKXGmvtLAiugzwc2rM9rHxjx9l4ZupUUbhtR4Kw
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996cid: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 809
@@ -21,9 +34,9 @@ Experience Platform vous permet de diffuser les versions de bibliothèque de bal
 
 >[!NOTE]
 >
->Vous pouvez également choisir d’utiliser un hôte géré par Adobe à la place. Pour plus d’informations, consultez le guide sur les [hôtes gérés par ](./managed-by-adobe-host.md).
+>Vous pouvez également choisir d’utiliser un hôte géré par Adobe à la place. Pour plus d’informations, consultez le guide sur les [hôtes gérés par &#x200B;](./managed-by-adobe-host.md).
 >
->Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, consultez le [ guide d’auto-hébergement ](./self-hosting-libraries.md).
+>Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, consultez le [&#x200B; guide d’auto-hébergement &#x200B;](./self-hosting-libraries.md).
 
 ## Configurer une clé d’accès pour votre serveur {#access-key}
 
@@ -70,7 +83,7 @@ La boîte de dialogue se développe pour inclure des options de configuration su
 | Champ de configuration | Description |
 | --- | --- |
 | [!UICONTROL Ne pas utiliser de liens symboliques] | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (symlinks) pour référencer la bibliothèque [versions](../builds.md) qui sont enregistrés sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cette option est sélectionnée, l’hôte utilise une opération de copie pour mettre à jour directement les ressources de build au lieu d’utiliser des liens symboliques. |
-| [!UICONTROL  URL du serveur SFTP ] | Chemin d’accès de base de l’URL de votre serveur . |
+| [!UICONTROL &#x200B; URL du serveur SFTP &#x200B;] | Chemin d’accès de base de l’URL de votre serveur . |
 | [!UICONTROL Chemin] | Chemin d’accès à ajouter à l’URL du serveur de base pour cet hôte. |
 | [!UICONTROL Port] | Le port doit être l’un des ports suivants :<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>En règle générale, Adobe limite le nombre de ports pouvant être utilisés pour le trafic sortant. Les ports sélectionnés sont généralement autorisés à passer par les pare-feu d’entreprise et incluent certaines plages pour plus de flexibilité. |
 | [!UICONTROL Nom d’utilisateur] | Nom d’utilisateur à utiliser lors de l’accès au serveur. |

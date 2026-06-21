@@ -4,9 +4,14 @@ title: Modification des tableaux de bord Experience Platform dans l’interface 
 description: Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données Adobe Experience Platform de votre organisation dans les tableaux de bord.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 TQID: https://experienceleague.adobe.com/LbACNJ1xta5bNE9tzi6uQ1jf-db3D3nnKMmUA6-idGI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: eec185bd-7d60-4193-ba3f-da427569936a
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 505

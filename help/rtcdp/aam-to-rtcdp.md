@@ -3,9 +3,13 @@ title: Évolution d’Audience Manager à Real-Time CDP
 description: Tenez compte des points à prendre en compte avant de planifier la migration d’Audience Manager vers Adobe Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
 TQID: https://experienceleague.adobe.com/Y4lLCzBp3q-WnWQ44n61hOSCzWPQ9LvU7ptUhz7mNls
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 584
@@ -49,7 +53,7 @@ Adobe recommande vivement que les segments activés dans Audience Manager vers d
 
 Toutes les destinations basées sur les personnes disponibles dans Audience Manager ([Facebook](/help/destinations/catalog/social/facebook.md), [[!UICONTROL le ciblage par liste de clients de Google]](/help/destinations/catalog/advertising/google-customer-match.md) [LinkedIn](/help/destinations/catalog/social/linkedin.md)) sont également disponibles dans Real-Time CDP.
 
-D’autres partenaires de stratégie des médias et des données propriétaires, tels que [](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) et [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) sont disponibles.
+D’autres partenaires de stratégie des médias et des données propriétaires, tels que [&#128279;](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) et [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) sont disponibles.
 
 Real-Time CDP prend actuellement en charge plus de 60 destinations en mode natif dans le [catalogue](/help/destinations/catalog/overview.md), dont plus de 20 sont des destinations publicitaires ou de réseaux sociaux prenant en charge la correspondance d’audience propriétaire.
 

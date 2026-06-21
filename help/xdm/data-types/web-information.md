@@ -5,8 +5,10 @@ title: Type de données d'informations Web
 description: Découvrez le type de données des modèles de données d’expérience (XDM) d’informations web.
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 TQID: https://experienceleague.adobe.com/8VirJ2uuFLnH0-JFMtcqXs7mkhSTcD1Skr1L3VM5QsM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 186

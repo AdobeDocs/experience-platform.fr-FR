@@ -4,11 +4,21 @@ description: Cette extension de transfert d’événement Adobe Experience Platf
 last-substantial-update: 2023-06-21T00:00:00.000Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
 TQID: https://experienceleague.adobe.com/Tm68ab1d8YeSkWwB2a6-pKVDXfDPilQ3Gy-fubQ-qAM
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 578
@@ -54,7 +64,7 @@ Une fois l’extension installée, créez une nouvelle [règle](../../../ui/mana
 | --- | --- |
 | [!UICONTROL Sujet] | Rubrique qui recevra les événements du transfert d’événement. Le format de la valeur doit être `projects/{projectName}/topics/{topicName}`. |
 | [!UICONTROL Data] (Données) | Ce champ contient les données à transférer à la rubrique [!DNL Cloud Pub/Sub] au format JSON.<br><br>Sous l’option **[!UICONTROL Raw]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![icône de jeu de données](/help/images/icons/database.png)) à sélectionner dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
-| [!UICONTROL  Attributs ] | Ce champ contient l’objet JSON avec des attributs supplémentaires à envoyer avec le message.<br><br>Sous l’option **[!UICONTROL Raw]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![icône de jeu de données](/help/images/icons/database.png)) à sélectionner dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
+| [!UICONTROL &#x200B; Attributs &#x200B;] | Ce champ contient l’objet JSON avec des attributs supplémentaires à envoyer avec le message.<br><br>Sous l’option **[!UICONTROL Raw]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![icône de jeu de données](/help/images/icons/database.png)) à sélectionner dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
 
 {style="table-layout:auto"}
 

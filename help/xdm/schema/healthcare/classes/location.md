@@ -5,8 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 1d100981-49fb-4f02-b2c6-324f9c541f76
 TQID: https://experienceleague.adobe.com/UoWyJvA7DYVPxUbw67ycqmaCyNZap99gqtNB-XyoL9w
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 150
@@ -26,4 +28,4 @@ Dans le modèle de données d’expérience (XDM), la classe [!UICONTROL Locatio
 | [!UICONTROL Identifiant d’emplacement] | `locationID` | [!UICONTROL Chaîne] | Identifiant unique de l’emplacement. |
 | [!UICONTROL Nom du lieu] | `locationName` | [!UICONTROL Chaîne] | Nom de l’emplacement. |
 
-La classe peut être étendue avec le groupe de champs [[!UICONTROL Location] ](../field-groups/location.md) pour décrire d’autres détails sur un emplacement.
+La classe peut être étendue avec le groupe de champs [[!UICONTROL Location] &#x200B;](../field-groups/location.md) pour décrire d’autres détails sur un emplacement.

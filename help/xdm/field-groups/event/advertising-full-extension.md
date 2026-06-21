@@ -4,11 +4,18 @@ description: Découvrez le groupe de champs de schéma d’extension complète A
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
 TQID: https://experienceleague.adobe.com/2AiVFNU2M6zDkiRJWx1qNwj6YcqnTNHLgvHpZBgexOw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1621
@@ -16,7 +23,7 @@ ht-degree: 12%
 
 ---
 
-# [!UICONTROL Extension complète Adobe Advertising ExperienceEvent ] groupe de champs de schéma
+# [!UICONTROL Extension complète Adobe Advertising ExperienceEvent &#x200B;] groupe de champs de schéma
 
 >[!AVAILABILITY]
 >
@@ -38,14 +45,14 @@ Le groupe de champs fournit un seul objet `_experience` à un schéma, qui conti
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `adDeliveryDetails` | Objet | Ajoutez les détails de diffusion. Pour plus d’informations sur le contenu de cet objet](#adDeliveryDetails) reportez-vous à la [sous-section ci-dessous de l’objet `adDeliveryDetails` . |
-| `advertisement` | Objet | Détails de la publicité numérique. Pour plus d’informations sur le contenu de cet objet](#advertisement) consultez la [sous-section ci-dessous sur l’objet de publicité . |
-| `campaign` | Objet | Détails de la hiérarchie de la campagne. Pour plus d’informations sur le contenu de cet objet](#campaign-campaign) reportez-vous à la [sous-section ci-dessous sur l’objet Campaign . |
+| `adDeliveryDetails` | Objet | Ajoutez les détails de diffusion. Pour plus d’informations sur le contenu de cet objet[&#128279;](#adDeliveryDetails) reportez-vous à la sous-section ci-dessous de l’objet `adDeliveryDetails` . |
+| `advertisement` | Objet | Détails de la publicité numérique. Pour plus d’informations sur le contenu de cet objet[&#128279;](#advertisement) consultez la sous-section ci-dessous sur l’objet de publicité . |
+| `campaign` | Objet | Détails de la hiérarchie de la campagne. Pour plus d’informations sur le contenu de cet objet[&#128279;](#campaign-campaign) reportez-vous à la sous-section ci-dessous sur l’objet Campaign . |
 | `conversionDetails` | Objet | Détails de conversion d’une publicité. Pour plus d’informations sur le contenu de cet objet, consultez la [sous-section ci-dessous](#conversionDetails). |
 | `eventType` | Chaîne | Type d’événement Adobe Advertising. |
-| `fees` | Objet | Détails des frais Advertising. Pour plus d’informations sur le contenu de cet objet](#fees) consultez la [sous-section ci-dessous sur l’objet des frais. |
+| `fees` | Objet | Détails des frais Advertising. Pour plus d’informations sur le contenu de cet objet[&#128279;](#fees) consultez la sous-section ci-dessous sur l’objet des frais. |
 | `inventory` | Objet | Détails de l’inventaire. Pour plus d’informations sur le contenu de cet objet, consultez la [sous-section ci-dessous](#inventory). |
-| `productDetails` | Objet | Détails de l’annonce du produit. Pour plus d’informations sur le contenu de cet objet](#productDetails) reportez-vous à la [sous-section ci-dessous de l’objet productDetails. |
+| `productDetails` | Objet | Détails de l’annonce du produit. Pour plus d’informations sur le contenu de cet objet[&#128279;](#productDetails) reportez-vous à la sous-section ci-dessous de l’objet productDetails. |
 | `stitchId` | Chaîne | Identifiant des serveurs de publicités d’Adobe Advertising pour effectuer le suivi des conversions par clic sur les navigateurs qui bloquent les cookies tiers. |
 
 ## `adDeliveryDetails` {#adDeliveryDetails}

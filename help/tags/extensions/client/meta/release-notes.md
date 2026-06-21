@@ -20,5 +20,5 @@ v1.3.1
 
 v1.3.0
 
-* Ajoutez des actions pour tous les événements standard répertoriés ici : [](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+* Ajoutez des actions pour tous les événements standard répertoriés ici : [&#128279;](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 * Sortez l’identifiant d’événement de la vue de configuration de l’extension et ajoutez des champs d’identifiant d’événement à toutes les actions.

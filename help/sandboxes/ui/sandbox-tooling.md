@@ -3,11 +3,30 @@ title: Outil Sandbox
 description: Exportez et importez facilement des configurations de sandbox entre des sandbox de manière transparente.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 TQID: https://experienceleague.adobe.com/owHoDUAwNAvbIkMHFb2OOuz3OwaJgBKji6d6Uv4rI-8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3893
@@ -64,7 +83,7 @@ Les objets suivants sont importés mais ont le statut brouillon ou désactivé :
 
 ### Objets Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] objets actuellement pris en charge pour les limites et les outils Sandbox. Pour obtenir la liste complète des bonnes pratiques, reportez-vous au guide des bonnes pratiques générales de [](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
+Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] objets actuellement pris en charge pour les limites et les outils Sandbox. Pour obtenir la liste complète des bonnes pratiques, reportez-vous au guide des bonnes pratiques générales de [&#128279;](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
 
 | Platform | Objet | Objets dépendants pris en charge | Détails |
 | --- | --- | --- | --- |
@@ -114,7 +133,7 @@ Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, p
 
 Dans la boîte de dialogue **[!UICONTROL Ajouter au package]**, sélectionnez l’option **[!UICONTROL Créer un package]**. Indiquez un [!UICONTROL Nom] pour votre package et un [!UICONTROL Description] facultatif, puis sélectionnez **[!UICONTROL Ajouter]**.
 
-![ La boîte de dialogue [!UICONTROL Ajouter au package] avec [!UICONTROL Créer un package] sélectionnée et mise en surbrillance [!UICONTROL Ajouter].](../images/ui/sandbox-tooling/create-new-package.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter au package] avec [!UICONTROL Créer un package] sélectionnée et mise en surbrillance [!UICONTROL Ajouter].](../images/ui/sandbox-tooling/create-new-package.png)
 
 Vous revenez alors à l’environnement **[!UICONTROL Schémas]**. Vous pouvez maintenant ajouter des objets supplémentaires au package que vous avez créé en suivant les étapes suivantes répertoriées ci-dessous.
 
@@ -170,7 +189,7 @@ La page [!UICONTROL Objet et dépendances du package] fournit une liste de toute
 
 Pour utiliser un objet existant, sélectionnez l’icône en forme de crayon en regard de l’objet dépendant.
 
-La page ![Objet et dépendances du package] [!UICONTROL  affiche la liste des ressources incluses dans le package](../images/ui/sandbox-tooling/package-objects-and-dependencies.png).
+La page [Objet et dépendances du package] ![[!UICONTROL &#x200B; affiche la liste des ressources incluses dans le package]](../images/ui/sandbox-tooling/package-objects-and-dependencies.png).
 
 Les options permettant d’en créer de nouvelles ou d’utiliser des existantes s’affichent. Sélectionnez **[!UICONTROL Utiliser existant]**.
 
@@ -203,7 +222,7 @@ Pour exporter un sandbox entier, accédez à l’onglet [!UICONTROL Sandbox] **[
 
 Sélectionnez **[!UICONTROL Sandbox entier]** pour le [!UICONTROL Type de package] dans la boîte de dialogue [!UICONTROL Créer un package]. Indiquez un [!UICONTROL Nom du package] pour votre nouveau package et sélectionnez le **[!UICONTROL Sandbox]** dans la liste déroulante. Enfin, sélectionnez **[!UICONTROL Créer]** pour confirmer vos entrées.
 
-![ Boîte de dialogue [!UICONTROL Créer un package] qui affiche les champs remplis et met en surbrillance [!UICONTROL Créer].](../images/ui/sandbox-tooling/create-package-dialog.png)
+![&#x200B; Boîte de dialogue [!UICONTROL Créer un package] qui affiche les champs remplis et met en surbrillance [!UICONTROL Créer].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
 Le package a été créé avec succès. Sélectionnez **[!UICONTROL Publier]** pour publier le package.
 
@@ -231,7 +250,7 @@ Dans le menu déroulant, sélectionnez le sandbox complet à l’aide du menu d�
 
 Vous accédez à la page [!UICONTROL Objets et dépendances de package] qui indique le nombre d’objets et de dépendances importés et exclus. À partir de là, sélectionnez **[!UICONTROL Importer]** pour terminer l’importation du package.
 
-La page [!UICONTROL Objet et dépendances du package] affiche le message intégré des types d’objet non pris en charge, en mettant en surbrillance [!UICONTROL Importer].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)![
+La page [!UICONTROL Objet et dépendances du package] affiche le message intégré des types d’objet non pris en charge, en mettant en surbrillance [!UICONTROL Importer].![&#128279;](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
 Patientez quelques instants le temps que l’importation se termine. Le délai d’exécution peut varier en fonction du nombre d’objets dans le package. Vous pouvez surveiller la tâche d’importation à partir de l’onglet [!UICONTROL Sandbox] **[!UICONTROL Tâches]**.
 

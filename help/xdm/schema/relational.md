@@ -6,11 +6,20 @@ description: Découvrez les schémas relationnels dans Adobe Experience Platform
 badge: Disponibilité limitée
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
 TQID: https://experienceleague.adobe.com/J6ZL1z5vBIfoYehWeu0JaB4MyhQCuUkjpolBDiYhn54
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1336
@@ -42,7 +51,7 @@ Utilisez des schémas relationnels pour :
 
 Les schémas XDM standard d’Experience Platform adoptent l’un des trois comportements de données suivants : enregistrement, série temporelle ou ad hoc. Pour obtenir des définitions et des détails, voir [Comportements des données XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
-Dans le modèle traditionnel, les schémas d’enregistrement et de série temporelle participent aux [schémas d’union](../api/unions.md) (consultez également le guide de l’interface utilisateur du schéma d’union [](../../profile/ui/union-schema.md)). Ces schémas évoluent automatiquement à mesure que les [groupes de champs](./composition.md#field-group) partagés sont mis à jour et que les champs personnalisés doivent être imbriqués sous un espace de noms client. Bien que puissant, ce modèle peut ralentir l’intégration, produire des schémas trop complexes avec des champs inutilisés et nécessiter un mappage ou une transformation des données supplémentaires. Ces facteurs augmentent la courbe d’apprentissage et l’effort de maintenance continu.
+Dans le modèle traditionnel, les schémas d’enregistrement et de série temporelle participent aux [schémas d’union](../api/unions.md) (consultez également le guide de l’interface utilisateur du schéma d’union [&#128279;](../../profile/ui/union-schema.md)). Ces schémas évoluent automatiquement à mesure que les [groupes de champs](./composition.md#field-group) partagés sont mis à jour et que les champs personnalisés doivent être imbriqués sous un espace de noms client. Bien que puissant, ce modèle peut ralentir l’intégration, produire des schémas trop complexes avec des champs inutilisés et nécessiter un mappage ou une transformation des données supplémentaires. Ces facteurs augmentent la courbe d’apprentissage et l’effort de maintenance continu.
 
 Les schémas relationnels suppriment les dépendances de schéma d’union, ce qui élimine les mises à jour automatiques des groupes de champs partagés et permet de définir directement des champs sans restriction d’espace de noms client. Vous avez un contrôle explicite sur les clés primaires, les relations et la conception initiale du schéma, ce qui facilite la modélisation des données en fonction de vos besoins au moment de la création.
 
@@ -191,7 +200,7 @@ Toutes les applications qui utilisent des schémas relationnels doivent tenir co
 * **Cohérence des données** : les jeux de données associés doivent maintenir la cohérence pendant les opérations de suppression
 * **Planification des suppressions** : tenez compte des impacts en aval sur tous les jeux de données et applications connectés pendant la phase de conception
 
-Pour obtenir des conseils d’implémentation, voir [ Suppression d’enregistrements des jeux de données en fonction de schémas relationnels ](../../hygiene/ui/record-delete.md#relational-record-delete).
+Pour obtenir des conseils d’implémentation, voir [&#x200B; Suppression d’enregistrements des jeux de données en fonction de schémas relationnels &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete).
 
 ## Limitations et considérations {#limitations}
 

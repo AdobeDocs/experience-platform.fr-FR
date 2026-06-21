@@ -4,11 +4,19 @@ title: Guide de segmentation en flux continu
 description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 TQID: https://experienceleague.adobe.com/of-qU6LP476uHZ4KzAZW0bLB65wiXiRncZcKO1Q4SSU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2148
@@ -364,7 +372,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation en f
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL  Diffusion en continu ]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
+Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL &#x200B; Diffusion en continu &#x200B;]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
 
 ![La fréquence de mise à jour en flux continu est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation en flux continu.](../images/methods/streaming/filter-streaming.png)
 

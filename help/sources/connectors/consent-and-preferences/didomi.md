@@ -5,10 +5,14 @@ last-substantial-update: 2025-07-29T00:00:00.000Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
 TQID: https://experienceleague.adobe.com/kNG516Ux3USmcbDNuhvRZUhzuBjss8wsPAabgG16KTM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 919
@@ -36,11 +40,11 @@ Suivez les étapes préalables décrites ci-dessous pour connecter votre compte 
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Didomi] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Pour connecter votre compte [!DNL Didomi] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Collecter des informations d’identification d’API Adobe
 

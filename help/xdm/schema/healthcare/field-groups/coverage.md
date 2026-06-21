@@ -5,8 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 7b84c0cf-3bd4-4ba8-a8cc-85e6b3f2b59e
 TQID: https://experienceleague.adobe.com/VErK3GE5VWp11FPYJiGQU3qlRmK2TlIyVoCMMsbW3P4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 793
@@ -24,9 +26,9 @@ ht-degree: 6%
 | --- | --- | --- | --- |
 | [!UICONTROL Bénéficiaire du plan] | `beneficiary` | [[!UICONTROL Référence]](../data-types/reference.md) | La partie qui bénéficie de la couverture d&#39;assurance et le patient lorsque les produits ou services sont fournis. |
 | [!UICONTROL Classe] | `class` | Tableau d’objets | Une suite de classificateurs spécifiques au souscripteur. Pour plus d’informations, consultez la [section ci-dessous](#class). |
-| [!UICONTROL  Contact ] | `contract` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Police(s) qui constituent cette couverture d’assurance. |
+| [!UICONTROL &#x200B; Contact &#x200B;] | `contract` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Police(s) qui constituent cette couverture d’assurance. |
 | [!UICONTROL Coût Pour Le Bénéficiaire] | `costToBeneficiary` | Tableau d’objets | Une suite de codes indiquant le poste de coût et le montant associé qui ont été détaillés dans la police et qui peuvent avoir été inclus sur la carte santé. Pour plus d’informations, consultez la [section ci-dessous](#cost-to-beneficiary). |
-| [!UICONTROL Exception ] | `exception` | Tableau d’objets | Une suite de codes indiquant les exceptions ou les réductions des coûts pour les patients et leurs périodes d&#39;effet. Pour plus d’informations, consultez la [section ci-dessous](#exception). |
+| [!UICONTROL Exception &#x200B;] | `exception` | Tableau d’objets | Une suite de codes indiquant les exceptions ou les réductions des coûts pour les patients et leurs périodes d&#39;effet. Pour plus d’informations, consultez la [section ci-dessous](#exception). |
 | [!UICONTROL Identifiant] | `identifier` | Tableau d’[[!UICONTROL identifiant]](../data-types/identifier.md) | Identifiant de la couverture telle qu’elle est émise par l’assureur. |
 | [!UICONTROL Régime d&#39;assurance] | `insurancePlan` | [[!UICONTROL Référence]](../data-types/reference.md) | Le plan d’assurance détaille, les avantages et les coûts qui constituent cette couverture d’assurance. |
 | [!UICONTROL Assureur] | `insurer` | [[!UICONTROL Référence]](../data-types/reference.md) | Souscripteur, payeur ou compagnie d’assurance du programme ou du plan. |

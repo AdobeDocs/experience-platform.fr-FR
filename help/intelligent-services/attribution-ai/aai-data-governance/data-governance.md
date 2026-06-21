@@ -6,9 +6,14 @@ title: Gouvernance des données dans Attribution AI
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 TQID: https://experienceleague.adobe.com/S4HUe6ss-hEuuh3qqXmQFoHE4-Zj9D1-bZWkyBO-x6A
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 236

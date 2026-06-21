@@ -3,10 +3,15 @@ title: Guide de dépannage d’Adobe Experience Platform Assurance
 description: Ce document présente les solutions aux problèmes courants rencontrés lors de l’utilisation d’Adobe Experience Platform Assurance.
 exl-id: 8078e6f6-ca18-4939-a417-40ebf5a52e24
 TQID: https://experienceleague.adobe.com/aePE9uZ-W7DVgPw-g-Wg7oLpOoDhaQEYcIX0RKgxXak
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 521
@@ -46,7 +51,7 @@ Vous pouvez modifier les niveaux de journal SDK à l’aide de l’API [`setLogL
 
 * Assurez la connectivité Internet de l’appareil via le navigateur web de l’appareil.
 * Si l’application ne s’est jamais connectée correctement au service Assurance, assurez-vous qu’elle est correctement configurée pour Assurance. Voir les instructions d’installation de la bibliothèque SDK [Adobe Experience Platform Assurance](./tutorials/implement-assurance.md).
-* Vérifiez que la session correspond au lien et qu’elle est saisie correctement pour la session prévue. Voir [ Message du journal « Les informations d’ID d’organisation ne sont pas disponibles »](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) (cela est rare et pertinent uniquement si vous avez accès à plusieurs instances d’organisation).
+* Vérifiez que la session correspond au lien et qu’elle est saisie correctement pour la session prévue. Voir [&#x200B; Message du journal « Les informations d’ID d’organisation ne sont pas disponibles »](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) (cela est rare et pertinent uniquement si vous avez accès à plusieurs instances d’organisation).
 
 ### Débogage d’Adobe Analytics
 

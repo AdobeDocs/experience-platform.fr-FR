@@ -4,8 +4,11 @@ type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre place sur la liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers des destinations d’espace de stockage.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 TQID: https://experienceleague.adobe.com/6U6Qcw4zLJxWsD3mdocqmd7fRVTNfeWClhCaqCn4qIA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 311

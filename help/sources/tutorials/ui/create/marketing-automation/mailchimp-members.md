@@ -5,8 +5,10 @@ title: Créer une connexion source aux membres MailChimp à l’aide de l’inte
 description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’interface utilisateur Experience Platform.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
 TQID: https://experienceleague.adobe.com/LhBcihJL78de6uHAOhCU-thDIHWOAGS1evzFvrydP28
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 709

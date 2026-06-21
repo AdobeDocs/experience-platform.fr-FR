@@ -3,8 +3,11 @@ title: Connecter le notebook Jupyter à Query Service
 description: Découvrez comment connecter le notebook Jupyter à Adobe Experience Platform Query Service.
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
 TQID: https://experienceleague.adobe.com/F--2ep1FKEss-Y9KIKrpMy5FdqVeqxijk3VZheId-eM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 532
@@ -29,7 +32,7 @@ Pour acquérir les informations d’identification nécessaires à la connexion 
 >Dans l&#39;écran d&#39;accueil du navigateur Anaconda, sélectionnez **[!DNL Jupyter Notebook]** dans la liste des applications prises en charge pour lancer le programme.
 >Vous trouverez plus d’informations dans la [documentation officielle d’Anaconda](https://docs.anaconda.com/anaconda/navigator/).
 
-La documentation officielle de Jupyter fournit des instructions pour [ exécuter le notebook à partir de l’interface de ligne de commande ](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
+La documentation officielle de Jupyter fournit des instructions pour [&#x200B; exécuter le notebook à partir de l’interface de ligne de commande &#x200B;](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
 
 ## Launch [!DNL Jupyter Notebook]
 

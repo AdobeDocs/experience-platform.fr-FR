@@ -3,11 +3,42 @@ title: Notes de mise à jour d’Adobe Experience Platform - Mars 2023
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
 TQID: https://experienceleague.adobe.com/lgw-FN7AjdL-SexaGuBblYcQSnpMP0QejYoyFGtLmbw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: a230274e-7e6e-49eb-b817-514495a710acid: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: aff8c1fa-1be7-48bd-92b8-4b12a668ca13id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: d1a87129-ba05-4f15-98b1-233618f1774aid: d2a6cbf4-df32-480f-909e-b42f66dcb9f0id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: f6ac78a3-5b59-40f5-a37d-45df5303d3a3id: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: fe06da76-5b92-43de-9bda-c5c9c01b55e8
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: d2a6cbf4-df32-480f-909e-b42f66dcb9f0
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2263
@@ -82,11 +113,11 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| Connexion GA [[!DNL Adobe Commerce] ](../../destinations/catalog/personalization/adobe-commerce.md) | Le connecteur de destination [!DNL Adobe Commerce] (désormais généralement disponible) vous permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce], pour offrir une expérience personnalisée dynamique à vos clientes et clients. |
-| Connexion GA [[!DNL Snap Inc] ](../../destinations/catalog/advertising/snap-inc.md) | Le connecteur de destination [!DNL Snap Inc] (à présent généralement disponible) permet aux personnes spécialisées dans le marketing d’importer des segments d’utilisateurs et d’utilisatrices créés dans Experience Platform vers [!DNL Snapchat Ads] et de les utiliser pour cibler leurs annonces. |
+| Connexion GA [[!DNL Adobe Commerce] &#x200B;](../../destinations/catalog/personalization/adobe-commerce.md) | Le connecteur de destination [!DNL Adobe Commerce] (désormais généralement disponible) vous permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce], pour offrir une expérience personnalisée dynamique à vos clientes et clients. |
+| Connexion GA [[!DNL Snap Inc] &#x200B;](../../destinations/catalog/advertising/snap-inc.md) | Le connecteur de destination [!DNL Snap Inc] (à présent généralement disponible) permet aux personnes spécialisées dans le marketing d’importer des segments d’utilisateurs et d’utilisatrices créés dans Experience Platform vers [!DNL Snapchat Ads] et de les utiliser pour cibler leurs annonces. |
 | [Connexion Oracle Eloqua (API)](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Utilisez la connexion basée sur l’API vers [!DNL Oracle Eloqua] pour planifier et exécuter des campagnes tout en offrant une expérience personnalisée à vos clientes et clients pour leurs prospects dans [!DNL Oracle Eloqua]. |
 | [Connexion à  [!DNL Amazon Ads]  (Beta)](../../destinations/catalog/advertising/amazon-ads.md) | L’intégration d’[!DNL Amazon Ads] à Adobe Experience Platform permet une intégration clé en main aux produits d’[!DNL Amazon Ads], y compris à [!DNL Amazon DSP (ADSP)]. En utilisant la destination [!DNL Amazon Ads] dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir les audiences de l’annonceur pour le ciblage et l’activation sur l’[!DNL Amazon DSP]. |
-| Connexion [[!DNL Marketo Measure Ultimate] ](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anciennement Bizible) donne aux personnes spécialisées dans le marketing un aperçu des actions marketing les plus efficaces pour générer du chiffre d’affaires et optimiser le retour sur investissement de leur entreprise. La destination active les flux de données B2B (business-to-business) d’Adobe Experience Platform vers [!DNL Marketo Measure]. La carte n’est disponible que pour les clientes et clients de [!DNL Marketo Measure Ultimate]. |
+| Connexion [[!DNL Marketo Measure Ultimate] &#x200B;](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anciennement Bizible) donne aux personnes spécialisées dans le marketing un aperçu des actions marketing les plus efficaces pour générer du chiffre d’affaires et optimiser le retour sur investissement de leur entreprise. La destination active les flux de données B2B (business-to-business) d’Adobe Experience Platform vers [!DNL Marketo Measure]. La carte n’est disponible que pour les clientes et clients de [!DNL Marketo Measure Ultimate]. |
 | [Connexion à TikTok](../../destinations/catalog/social/tiktok.md) | Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. |
 | [Connexion à Zendesk](../../destinations/catalog/crm/zendesk.md) | Utilisez cette destination pour créer et mettre à jour des identités dans un segment en tant que contacts dans [!DNL Zendesk]. |
 
@@ -131,7 +162,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Groupe de champs | [[!UICONTROL Attributs calculés du profil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés des services Adobe internes aux données client entrantes. Elle ne doit pas être utilisée par les clients pour ingérer des données. |
 | Type de données | [[!UICONTROL Objet remboursé]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
 | Type de données | [[!UICONTROL Données de catégorie]](https://github.com/adobe/xdm/pull/1677/files) | Ce nouveau type de données représente la catégorie d’un produit. |
-| Schéma | [[!UICONTROL Champs De Classification ]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification Target. Il contient un ensemble de champs de métadonnées qui classent les activités et expériences Target. |
+| Schéma | [[!UICONTROL Champs De Classification &#x200B;]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification Target. Il contient un ensemble de champs de métadonnées qui classent les activités et expériences Target. |
 
 {style="table-layout:auto"}
 
@@ -139,21 +170,21 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [[!UICONTROL  Détails du composant de contenu ]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL  Détails du composant de contenu ] |
-| Groupe de champs | [[!UICONTROL Balises d’entité ]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO aux [!UICONTROL champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
-| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour les [[!UICONTROL champs communs des événements d’étape ]](https://github.com/adobe/xdm/pull/1671/files) |
+| Groupe de champs | [[!UICONTROL &#x200B; Détails du composant de contenu &#x200B;]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL &#x200B; Détails du composant de contenu &#x200B;] |
+| Groupe de champs | [[!UICONTROL Balises d’entité &#x200B;]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO aux [!UICONTROL champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
+| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour les [[!UICONTROL champs communs des événements d’étape &#x200B;]](https://github.com/adobe/xdm/pull/1671/files) |
 | Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour [!UICONTROL Rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
-| Groupe de champs | [!UICONTROL Événement de modification ] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
-| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL  Montant du remboursement ] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
-| Type de données | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
-| Type de données | ]](https://github.com/adobe/xdm/pull/1677/files) d’élément de liste de produits[[!UICONTROL  | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
+| Groupe de champs | [!UICONTROL Événement de modification &#x200B;] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
+| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL &#x200B; Montant du remboursement &#x200B;] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
+| Type de données | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
+| Type de données | [&#128279;](https://github.com/adobe/xdm/pull/1677/files) d’élément de liste de produits | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
 | Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout du champ de chaîne `pev3` qui [indique le type de flux de médias utilisé pour la création de rapports](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la propriété `pccr` qui indique si une redirection s’est produite. |
 | Type de données | [!UICONTROL Liste des demandes internes] | Fournit les [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Ils comprennent le nom, l’ID et la description. |
 | Type de données |  | Le type de données [Commerce a été mis à jour](https://github.com/adobe/xdm/pull/1675/files) afin d&#39;inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md).
 
 ## Service de requête {#query-service}
 

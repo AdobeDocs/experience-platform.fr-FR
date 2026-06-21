@@ -4,9 +4,12 @@ description: Découvrez comment parcourir vos objets sources tels que les compte
 hide: true
 exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
 TQID: https://experienceleague.adobe.com/3FiBm2yGXVE6xK8BI2RSTZeI-O62yIK5LyZdXHETQik
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1489
@@ -46,18 +49,18 @@ Vous pouvez filtrer vos flux de données sources à l’aide des paramètres sui
 
 | Filtre | Description |
 | --- | --- |
-| [plateforme ](#filter-dataflows-by-source-platform) | Filtrez vos flux de données en fonction de la source avec laquelle ils ont été créés. |
+| [plateforme &#x200B;](#filter-dataflows-by-source-platform) | Filtrez vos flux de données en fonction de la source avec laquelle ils ont été créés. |
 | [Balises](#filter-dataflows-by-tags) | Filtrez vos flux de données en fonction des balises qui leur sont appliquées. |
 | [Statut](#filter-dataflows-by-status) | Filtrez vos flux de données en fonction de leur statut actuel. |
-| [ Jeu de données cible ](#filter-dataflows-by-target-dataset) | Filtrez vos flux de données en fonction du jeu de données cible avec lequel ils ont été créés. |
-| [ Nom du compte ](#filter-dataflows-by-account-name) | Filtrez vos flux de données en fonction du nom du compte auquel ils correspondent. |
+| [&#x200B; Jeu de données cible &#x200B;](#filter-dataflows-by-target-dataset) | Filtrez vos flux de données en fonction du jeu de données cible avec lequel ils ont été créés. |
+| [&#x200B; Nom du compte &#x200B;](#filter-dataflows-by-account-name) | Filtrez vos flux de données en fonction du nom du compte auquel ils correspondent. |
 | [Créé par](#filter-dataflows-by-user) | Filtrez vos flux de données en fonction de la personne qui les a créés. |
 | [Date de création](#filter-dataflows-by-creation-date) | Filtrez vos flux de données en fonction de la date de leur création. |
 | [Date de modification](#filter-dataflows-by-modification-date) | Filtrez vos flux de données en fonction de la date de leur dernière mise à jour. |
 
 ### Filtrer les flux de données par plateforme source {#filter-dataflows-by-source-platform}
 
-Utilisez le panneau [!UICONTROL Plateforme ] pour filtrer vos flux de données par type de source. Vous pouvez saisir une source particulière ou utiliser le menu déroulant pour afficher une liste de sources dans le catalogue. Vous pouvez également filtrer plusieurs sources différentes pour une requête donnée. Par exemple, vous pouvez sélectionner [!DNL Amazon S3], [!DNL Azure Data Lake Storage Gen2] et [!DNL Google Cloud Storage] pour mettre à jour le catalogue et afficher uniquement les flux de données créés avec les sources sélectionnées.
+Utilisez le panneau [!UICONTROL Plateforme &#x200B;] pour filtrer vos flux de données par type de source. Vous pouvez saisir une source particulière ou utiliser le menu déroulant pour afficher une liste de sources dans le catalogue. Vous pouvez également filtrer plusieurs sources différentes pour une requête donnée. Par exemple, vous pouvez sélectionner [!DNL Amazon S3], [!DNL Azure Data Lake Storage Gen2] et [!DNL Google Cloud Storage] pour mettre à jour le catalogue et afficher uniquement les flux de données créés avec les sources sélectionnées.
 
 ### Filtrer les flux de données par balises {#filter-dataflows-by-tags}
 
@@ -161,7 +164,7 @@ Sélectionnez les points de suspension (`...`) à côté du nom du flux de donn�
 | [!UICONTROL Supprimer] | Sélectionnez **[!UICONTROL Supprimer]** pour supprimer le flux de données. |
 | [!UICONTROL Exécuter à la demande] | Sélectionnez **[!UICONTROL Exécuter à la demande]** pour déclencher une seule itération d’exécution de flux de données. Pour plus d’informations, consultez le guide sur la [création d’une exécution de flux de données à la demande](../ui/on-demand-ingestion.md). |
 | [!UICONTROL S’abonner aux alertes] | Sélectionnez **[!UICONTROL S’abonner aux alertes]** pour afficher une fenêtre pop-up d’alertes à laquelle vous pouvez vous abonner : <ul><li>Démarrage de l’exécution du flux de données des sources : sélectionnez cette alerte pour recevoir une notification lorsque votre exécution de flux de données à la demande commence.</li><li>Succès de l’exécution du flux de données des sources : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution de votre flux de données à la demande se termine avec succès.</li><li>Échec de l’exécution du flux de données des sources : sélectionnez cette alerte lorsque votre exécution de flux de données à la demande échoue en raison d’erreurs.</li></ul> Pour plus d’informations, consultez le guide sur [l’abonnement aux alertes pour les flux de données des sources](../ui/alerts.md). |
-| [!UICONTROL Ajouter au package ] | Sélectionnez **[!UICONTROL Ajouter au package]** pour ajouter votre flux de données à un package et l’exporter pour l’utiliser dans un autre sandbox. Au cours de cette étape, vous pouvez créer un package ou ajouter votre flux de données à un package existant. Pour plus d’informations, consultez le guide sur [l’outil sandbox](../../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Ajouter au package &#x200B;] | Sélectionnez **[!UICONTROL Ajouter au package]** pour ajouter votre flux de données à un package et l’exporter pour l’utiliser dans un autre sandbox. Au cours de cette étape, vous pouvez créer un package ou ajouter votre flux de données à un package existant. Pour plus d’informations, consultez le guide sur [l’outil sandbox](../../../sandboxes/ui/sandbox-tooling.md). |
 | [!UICONTROL Gérer les balises] | Sélectionnez **[!UICONTROL Gérer les balises]** pour ajouter ou supprimer des balises de votre flux de données. Utilisez les balises pour gérer les taxonomies des métadonnées et classer les objets d’entreprise afin de faciliter la découverte et la catégorisation. Pour plus d’informations, consultez le guide sur la [gestion des balises](../../../administrative-tags/ui/managing-tags.md). |
 
 ## Étapes suivantes

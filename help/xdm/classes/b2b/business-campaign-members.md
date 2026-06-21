@@ -17,14 +17,14 @@ ht-degree: 2%
 
 [!UICONTROL Membres de XDM Business Campaign] est une classe XDM (modèle de données d’expérience) standard qui décrit un contact ou un prospect associé à une campagne commerciale.
 
-![ Structure de la classe Membres de XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign-members.png)
+![&#x200B; Structure de la classe Membres de XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign-members.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `campaignKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite de la campagne associée. |
-| `campaignMemberKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite de l’entité d’appartenance à la campagne. |
+| `campaignKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de la campagne associée. |
+| `campaignMemberKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de l’entité d’appartenance à la campagne. |
 | `extSourceSystemAudit` | [[!UICONTROL Attributs d’audit du système Source externe]](../../data-types/external-source-system-audit-attributes.md) | Si l’appartenance à la campagne provient d’un système source externe, cet objet capture les attributs d’audit de ce système. |
-| `personKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite de la personne qui est membre de la campagne associée. |
+| `personKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de la personne qui est membre de la campagne associée. |
 | `_id` | Chaîne | Identifiant unique de l’enregistrement. Il s’agit d’une valeur générée par le système et distincte de la `campaignMemberID`. |
 
 {style="table-layout:auto"}

@@ -5,11 +5,26 @@ type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profils, d’audiences et de destinations dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
 TQID: https://experienceleague.adobe.com/K3OyZlBF2FKa8P74e-cbztUx-nKZXRO3v9S-Ix2kr0k
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377id: eec185bd-7d60-4193-ba3f-da427569936a
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 958

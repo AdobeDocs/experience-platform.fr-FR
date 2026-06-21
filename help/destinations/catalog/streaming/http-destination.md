@@ -5,11 +5,21 @@ description: Utilisez la destination API HTTP dans Adobe Experience Platform pou
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 TQID: https://experienceleague.adobe.com/adO-naS0tMmJDJ-C8SIGYQ02GXNKeUhDVYQfkOmW7Zk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3056
@@ -52,7 +62,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client. Utilisez-les pour cibler des groupes spécifiques de personnes dans le cadre de campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -105,7 +115,7 @@ Pour plus d’informations, consultez la [documentation sur les points d’entr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.[
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu[&#128279;](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -138,7 +148,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
 
@@ -169,7 +179,7 @@ Lorsque vous sélectionnez cette option d’authentification, il vous suffit de 
 
 Si vous sélectionnez le type d’authentification **[!UICONTROL Mot de passe OAuth 2]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![Écran d’authentification de l’API HTTP avec les champs [!UICONTROL  Mot de passe OAuth 2 ].](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Écran d’authentification de l’API HTTP avec les champs [!UICONTROL &#x200B; Mot de passe OAuth 2 &#x200B;].](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL URL du jeton d’accès]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
 * **[!UICONTROL ID client]** : `client ID` que votre système attribue à Adobe Experience Platform.
@@ -181,7 +191,7 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Mot de passe OA
 
 Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d’identification du client OAuth 2]** pour vous connecter à votre point d’entrée HTTP, saisissez les informations ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![Écran d’authentification de l’API HTTP avec les champs [!UICONTROL  Informations d’identification du client OAuth 2 ].](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Écran d’authentification de l’API HTTP avec les champs [!UICONTROL &#x200B; Informations d’identification du client OAuth 2 &#x200B;].](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 >
@@ -243,10 +253,10 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination API HTTP. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#attributes}
 

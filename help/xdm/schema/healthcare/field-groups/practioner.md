@@ -5,9 +5,12 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 71210303-a3dd-458c-9c8a-ac8b546c2b1d
 TQID: https://experienceleague.adobe.com/1HRnOGZmXuWKZRAvrSfvexxGvq9gZuUrn0WDHZmdZFA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 404
@@ -24,10 +27,10 @@ ht-degree: 7%
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Adresse] | `address` | Tableau d’[[!UICONTROL adresses]](../data-types/address.md) | Adresse(s) du praticien qui se trouve(nt) hors de son lieu de travail, telle(s) qu&#39;une adresse personnelle. |
-| [!UICONTROL  Communication ] | `communication` | Tableau d’objets | Langue pouvant être utilisée pour communiquer avec le praticien. Voir la [section ci-dessous](#communication) pour plus d’informations |
+| [!UICONTROL &#x200B; Communication &#x200B;] | `communication` | Tableau d’objets | Langue pouvant être utilisée pour communiquer avec le praticien. Voir la [section ci-dessous](#communication) pour plus d’informations |
 | [!UICONTROL Identifiant] | `identifier` | Tableau d’[[!UICONTROL identifiant]](../data-types/identifier.md) | Identifiant qui s’applique à cette personne dans ce rôle. |
 | [!UICONTROL Nom] | `name` | Tableau de [[!UICONTROL nom humain]](../data-types/human-name.md) | Nom(s) associé(s) au praticien. |
-| [!UICONTROL Qualification ] | `qualification` | Tableau d’objets | Les qualifications officielles, les certifications, les accréditations, la formation, les licences ou autres documents similaires qui autorisent ou concernent autrement la prestation de soins par le praticien. Pour plus d’informations, consultez la [section ci-dessous](#qualification). |
+| [!UICONTROL Qualification &#x200B;] | `qualification` | Tableau d’objets | Les qualifications officielles, les certifications, les accréditations, la formation, les licences ou autres documents similaires qui autorisent ou concernent autrement la prestation de soins par le praticien. Pour plus d’informations, consultez la [section ci-dessous](#qualification). |
 | [!UICONTROL Coordonnées] | `telecom` | Tableau de [[!UICONTROL points de contact]](../data-types/contact-point.md) | Coordonnées du praticien. |
 | [!UICONTROL Actif] | `active` | Booléen | Indique si l’enregistrement des praticiens est en cours d’utilisation. |
 | [!UICONTROL Date de naissance] | `birthDate` | Date | Date de naissance du praticien. |
@@ -44,7 +47,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 `communication` est fourni sous la forme d’un tableau d’objets . La structure de chaque objet est décrite ci-dessous.
 
-![ structure de communication ](../../../images/healthcare/field-groups/practitioner/communication.png)
+![&#x200B; structure de communication &#x200B;](../../../images/healthcare/field-groups/practitioner/communication.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |

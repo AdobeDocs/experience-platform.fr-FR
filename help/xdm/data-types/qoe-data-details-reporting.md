@@ -3,10 +3,17 @@ title: Type de données de rapport sur les détails des données de qualité de 
 description: Découvrez le type de données Modèle de données d’expérience (XDM) des rapports sur les détails des données de qualité de l’expérience.
 exl-id: 608baa9b-12ca-466c-a962-1401abc0344e
 TQID: https://experienceleague.adobe.com/PjP7J9X7NTxgltIBhKgxNVJgwVGYR76PgUe6wWOw8kA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
 source-wordcount: 769
@@ -16,7 +23,7 @@ ht-degree: 4%
 
 # Détails des données QoE (qualité de l’expérience) Type de données de rapport
 
-[!UICONTROL Détails des données QoE ] la création de rapports est un type de données XDM (Modèle de données d’expérience) standard qui fournit des mesures détaillées liées à la qualité de l’expérience (QoE) pendant la lecture de médias. Utilisez le type de données de rapport [!UICONTROL Détails des données QoE] pour capturer des informations telles que les informations de débit, les débits d’images, les événements de mise en mémoire tampon, les images perdues, etc. Ce type de données permet d’analyser la qualité de la lecture, ce qui permet d’obtenir des informations sur les performances de diffusion en continu, l’expérience utilisateur et les problèmes potentiels rencontrés lors des sessions de lecture.
+[!UICONTROL Détails des données QoE &#x200B;] la création de rapports est un type de données XDM (Modèle de données d’expérience) standard qui fournit des mesures détaillées liées à la qualité de l’expérience (QoE) pendant la lecture de médias. Utilisez le type de données de rapport [!UICONTROL Détails des données QoE] pour capturer des informations telles que les informations de débit, les débits d’images, les événements de mise en mémoire tampon, les images perdues, etc. Ce type de données permet d’analyser la qualité de la lecture, ce qui permet d’obtenir des informations sur les performances de diffusion en continu, l’expérience utilisateur et les problèmes potentiels rencontrés lors des sessions de lecture.
 
 +++Sélectionnez cette option pour afficher le type de données Rapports sur les détails des données QoE .
 ![Diagramme du type de données de rapport Détails des données QoE (qualité de l’expérience).](../images/data-types/qoe-data-details-reporting.png)
@@ -41,7 +48,7 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 | [[!UICONTROL Images perdues]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/dropped-frames) | `droppedFrames` | entier | Nombre total d’images perdues lors de la lecture. |
 | [[!UICONTROL Pertes avant démarrages]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/drops-before-start) | `isDroppedBeforeStart` | booléen | Indique si les utilisateurs quittent la vidéo avant son démarrage, quelles que soient les publicités. |
 | [[!UICONTROL Flux impactés par l’erreur]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/error-impacted-streams) | `hasErrorImpactedStreams` | booléen | Indique si des flux ont rencontré des erreurs lors de la lecture. |
-| [[!UICONTROL  Erreurs ]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/error-events) | `errorCount` | entier | Nombre total d’erreurs qui se sont produites lors de la lecture. |
+| [[!UICONTROL &#x200B; Erreurs &#x200B;]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/error-events) | `errorCount` | entier | Nombre total d’erreurs qui se sont produites lors de la lecture. |
 | [[!UICONTROL ID d’erreur externe]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/external-error-ids) | `externalErrors` | tableau de chaînes | ID d’erreur uniques provenant de sources externes, par exemple, erreurs CDN. |
 | [[!UICONTROL Images Par Seconde]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/frames-per-second) | `framesPerSecond` | entier | Débit d&#39;images du flux actuel (en images par seconde). |
 | [!UICONTROL ID d’erreur Media SDK] | `mediaSdkErrors` | tableau de chaînes | ID d’erreur uniques générés en interne par l’ancien Heartbeat SDK (Media SDK 1.x-2.x) lors de la lecture. Elles ne sont plus collectées par les implémentations actuelles. |

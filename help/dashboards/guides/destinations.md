@@ -5,11 +5,23 @@ description: Adobe Experience Platform fournit un tableau de bord grâce auque
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
 TQID: https://experienceleague.adobe.com/r7XVjb-mk-tGQit8gk0jvKeqYUblCU13STI155Wp0MM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: eec185bd-7d60-4193-ba3f-da427569936a
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3217
@@ -98,13 +110,13 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 * [[!UICONTROL Audiences non mappées par identité]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Audiences mappées par identité]](#mapped-audiences-by-identity)
 * [[!UICONTROL Audiences courantes]](#common-audiences)
-* [[!UICONTROL  Audiences mappées ]](#mapped-audiences)
+* [[!UICONTROL &#x200B; Audiences mappées &#x200B;]](#mapped-audiences)
 * [[!UICONTROL État de l’audience mappée]](#mapped-audience-health)
 * [[!UICONTROL Nombre de destinations]](#destinations-count)
-* [[!UICONTROL  Statut de destination ]](#destination-status)
+* [[!UICONTROL &#x200B; Statut de destination &#x200B;]](#destination-status)
 * [[!UICONTROL Destinations actives par plateforme de destination]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Audiences activées sur toutes les destinations]](#activated-audiences-across-all-destinations)
-* [[!UICONTROL  Audiences activées ]](#activated-audiences)
+* [[!UICONTROL &#x200B; Audiences activées &#x200B;]](#activated-audiences)
 
 ### [!UICONTROL Destinations les plus utilisées] {#most-used-destinations}
 
@@ -117,7 +129,7 @@ Le widget **[!UICONTROL Destinations les plus utilisées]** affiche les principa
 
 Par exemple, si hier vous avez configuré une destination mais que vous ne lui avez mappé aucune audience, vous pourrez constater que la destination est actuellement sous-utilisée.
 
-Le nombre d’audiences mappées affichées dans la colonne [!UICONTROL Nombre de profils des audiences ] est précis à partir du dernier instantané quotidien. Le mappage d’une nouvelle audience à la destination ne met pas à jour le décompte tant que l’instantané suivant n’a pas été pris.
+Le nombre d’audiences mappées affichées dans la colonne [!UICONTROL Nombre de profils des audiences &#x200B;] est précis à partir du dernier instantané quotidien. Le mappage d’une nouvelle audience à la destination ne met pas à jour le décompte tant que l’instantané suivant n’a pas été pris.
 
 Sélectionnez le nom d’une destination dans la liste affichée sur le widget pour accéder aux détails de la destination pour cette destination spécifique. Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder à l’onglet **[!UICONTROL Parcourir]**, puis sélectionner le nom d’une destination pour en afficher les détails.
 
@@ -153,7 +165,7 @@ La date [!UICONTROL Mise à jour] affichée indique la dernière fois que l’au
 
 Sélectionner le nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder à l’onglet [!UICONTROL Audiences] [!UICONTROL Parcourir], puis sélectionner le nom d’une audience pour afficher ses détails.
 
-Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [ présentation de Segmentation Service ](../../segmentation/home.md).
+Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md).
 
 ![Onglet Aperçu du tableau de bord Destinations avec le widget Audiences récemment activées en surbrillance.](../images/destinations/recently-activated-audiences.png)
 
@@ -164,7 +176,7 @@ Pour plus d’informations sur l’utilisation des audiences dans Experience Pla
 >title="Audiences récemment activées par destination"
 >abstract="Ce widget affiche les cinq audiences les plus récemment activées par ordre décroissant en fonction de la destination choisie dans le menu déroulant de la vue d’ensemble."
 
-Le widget **[!UICONTROL Audiences récemment activées par destination]** affiche les cinq audiences activées les plus récemment dans l’ordre décroissant en fonction de la destination choisie dans le menu déroulant de l’aperçu. Elle est similaire au widget [!UICONTROL  Audiences récemment activées ], mais les données affichées **uniquement** s’appliquent à la destination sélectionnée.
+Le widget **[!UICONTROL Audiences récemment activées par destination]** affiche les cinq audiences activées les plus récemment dans l’ordre décroissant en fonction de la destination choisie dans le menu déroulant de l’aperçu. Elle est similaire au widget [!UICONTROL &#x200B; Audiences récemment activées &#x200B;], mais les données affichées **uniquement** s’appliquent à la destination sélectionnée.
 
 Ce widget contient deux mesures : le nom des audiences et la date de la dernière activation des audiences vers la destination. Les données affichées sont correctes selon le dernier instantané quotidien.
 
@@ -189,7 +201,7 @@ Le deuxième menu déroulant répertorie toutes les audiences disponibles qui pe
 
 ![Le widget Tendance de la taille d’audience.](../images/destinations/audience-size-trend.png)
 
-Le widget **[!UICONTROL Tendance de la taille d’audience]** contient un bouton [!UICONTROL  Légendes ] en haut à droite du widget. Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue automatique des légendes. Un modèle de machine learning génère automatiquement des légendes pour décrire les tendances clés et les événements importants en analysant le graphique et les données d’audience.
+Le widget **[!UICONTROL Tendance de la taille d’audience]** contient un bouton [!UICONTROL &#x200B; Légendes &#x200B;] en haut à droite du widget. Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue automatique des légendes. Un modèle de machine learning génère automatiquement des légendes pour décrire les tendances clés et les événements importants en analysant le graphique et les données d’audience.
 
 ![La boîte de dialogue de légendes automatique pour le widget Tendance de la taille d’audience.](../images/destinations/audience-size-trend-captions.png)
 
@@ -240,7 +252,7 @@ La colonne [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profil
 
 Le widget [!UICONTROL Audiences mappées] affiche le nombre total d’audiences mappées qui peuvent être activées vers la destination sélectionnée en haut de la page.
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet Parcourir] du tableau de bord [!UICONTROL  Audiences. Cet espace de travail affiche une liste de toutes les définitions de segment pour votre organisation.
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet Parcourir du tableau de bord  Audiences. Cet espace de travail affiche une liste de toutes les définitions de segment pour votre organisation.
 
 ![Le widget Audiences mappées.](../images/destinations/mapped-audiences.png)
 
@@ -280,7 +292,7 @@ Sous le nombre total, sélectionnez **[!UICONTROL Destinations]** pour accéder 
 
 ![Le widget Nombre de destinations.](../images/destinations/destinations-count.png)
 
-### [!UICONTROL  Statut de destination ] {#destination-status}
+### [!UICONTROL &#x200B; Statut de destination &#x200B;] {#destination-status}
 
 Le widget [!UICONTROL Statut de destination] affiche le nombre total de destinations activées sous la forme d’une mesure unique et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les destinations activées et désactivées.
 
@@ -296,15 +308,15 @@ Ce widget utilise un tableau à deux colonnes pour afficher la liste des platefo
 
 ### [!UICONTROL Audiences activées sur toutes les destinations] {#activated-audiences-across-all-destinations}
 
-Le widget [!UICONTROL  Audiences activées sur toutes les destinations ] fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. Ce nombre correspond à l’instantané le plus récent.
+Le widget [!UICONTROL &#x200B; Audiences activées sur toutes les destinations &#x200B;] fournit le nombre total d’audiences activées sur toutes les destinations dans une seule mesure. Ce nombre correspond à l’instantané le plus récent.
 
 ![Le widget Audiences activées dans toutes les destinations.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Parcourir], consultez la documentation ](../../destinations/ui/destinations-workspace.md#browse).
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Parcourir], consultez la documentation &#x200B;](../../destinations/ui/destinations-workspace.md#browse).
 
 Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 
-### [!UICONTROL  Audiences activées ] {#activated-audiences}
+### [!UICONTROL &#x200B; Audiences activées &#x200B;] {#activated-audiences}
 
 Ce widget fournit une mesure unique pour le nombre total d’audiences activées vers une destination.
 

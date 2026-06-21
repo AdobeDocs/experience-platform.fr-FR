@@ -5,8 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 9d40bc1d-33d1-4c33-a143-13fdcf8dc255
 TQID: https://experienceleague.adobe.com/hL2smAVf4o-qCbpsVkO9LT7xwxJlVGg---7OQ-G7ISc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 357
@@ -27,7 +29,7 @@ ht-degree: 7%
 | [!UICONTROL Durée liée] | `boundsDuration` | [[!UICONTROL Durée]](../data-types/duration.md) | La limite de durée. |
 | [!UICONTROL Count] | `count` | Entier | Nombre de répétitions avec une valeur minimale de `0`. |
 | [!UICONTROL Nombre maximal] | `countMax` | Entier | Nombre maximal de répétitions, avec une valeur minimale de `0`. |
-| [!UICONTROL  Jour De La Semaine ] | `dayOfWeek` | Tableau de chaînes | Tableau de chaînes détaillant les jours disponibles. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
+| [!UICONTROL &#x200B; Jour De La Semaine &#x200B;] | `dayOfWeek` | Tableau de chaînes | Tableau de chaînes détaillant les jours disponibles. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
 | [!UICONTROL Durée] | `duration` | Double | La durée. |
 | [!UICONTROL Durée maximale] | `durationMax` | Double | Durée maximale. |
 | [!UICONTROL Unité de durée] | `durationUnit` | Chaîne | Unité de durée. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `s` (secondes) </li> <li> `min` (minutes) </li> <li> `h` (par heure) </li> <li> `d` (quotidien) </li>  <li> `wk` (hebdomadaire) </li> <li> `mo` (mensuel) </li> <li> `a` (annuel)</li> |

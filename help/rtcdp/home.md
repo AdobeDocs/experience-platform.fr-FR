@@ -5,11 +5,27 @@ solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
 TQID: https://experienceleague.adobe.com/LM9hXugkKFhq5zCdMmhHtXDS0xobtu8IUHFMnIRcpYo
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: a3f1e846-82a6-4574-9832-7d46ef69f306id: ba929a52-9339-4154-9487-317dc875a3c7
-subfeature_v2: id: c14504d0-ed2f-4120-8361-02a1874e245a
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: a3f1e846-82a6-4574-9832-7d46ef69f306
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+subfeature_v2:
+  - id: c14504d0-ed2f-4120-8361-02a1874e245a
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1116
@@ -19,11 +35,11 @@ ht-degree: 25%
 
 # Documentation Adobe [!DNL Real-Time CDP] {#rtcdp-documentation}
 
-Utilisez Adobe Real-Time Customer Data Platform (Real-Time CDP) pour rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils clients qui peuvent être utilisés pour offrir des expériences personnalisées aux clients sur tous les canaux et appareils en temps réel. Lisez la présentation de [](/help/rtcdp/overview.md) pour plus d&#39;informations.
+Utilisez Adobe Real-Time Customer Data Platform (Real-Time CDP) pour rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils clients qui peuvent être utilisés pour offrir des expériences personnalisées aux clients sur tous les canaux et appareils en temps réel. Lisez la présentation de [&#128279;](/help/rtcdp/overview.md) pour plus d&#39;informations.
 
 ## Nouveautés {#whats-new}
 
-Obtenez un aperçu des dernières améliorations apportées au produit et à la documentation Real-Time CDP. Pour obtenir une liste complète des fonctionnalités, des améliorations et des correctifs, consultez les [Notes de mise à jour](/help/release-notes/latest/latest.md). Tenez-vous informé des dernières modifications apportées à notre documentation en consultant la section [ Mises à jour de la documentation des notes de mise à jour mensuelles](/help/release-notes/latest/latest.md#documentation-updates).
+Obtenez un aperçu des dernières améliorations apportées au produit et à la documentation Real-Time CDP. Pour obtenir une liste complète des fonctionnalités, des améliorations et des correctifs, consultez les [Notes de mise à jour](/help/release-notes/latest/latest.md). Tenez-vous informé des dernières modifications apportées à notre documentation en consultant la section [&#x200B; Mises à jour de la documentation des notes de mise à jour mensuelles](/help/release-notes/latest/latest.md#documentation-updates).
 
 >[!BEGINTABS]
 

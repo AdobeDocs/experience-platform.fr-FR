@@ -3,9 +3,12 @@ title: Présentation du connecteur source SFTP
 description: Découvrez comment connecter un serveur SFTP à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 TQID: https://experienceleague.adobe.com/t2GzTNYjViYzDAd4NA8SNIyD8UV-7jcHhhrvvi625Gk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1223
@@ -29,7 +32,7 @@ Lisez cette section pour connaître les étapes préalables à suivre pour conne
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à &#x200B;](../../ip-address-allow-list.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 
@@ -102,7 +105,7 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content "C:\Users\lucy\.ssh\id_rsa
 
 La commande ci-dessus enregistre la clé privée encodée [!DNL Base64] dans le chemin d’accès au fichier que vous avez désigné. Vous pouvez ensuite utiliser cette clé privée pour vous authentifier auprès de [!DNL SFTP] et vous connecter à Experience Platform.
 
->[!TAB ]
+>[!TAB Tab]
 
 ### utilisateurs [!DNL Mac]
 

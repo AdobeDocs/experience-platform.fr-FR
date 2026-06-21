@@ -40,7 +40,7 @@ Les étapes d’installation de ce guide nécessitent une compréhension pratiqu
 
 Pour que le SDK envoie des données à Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de collecte de données ou d’Experience Platform, sélectionnez **[!UICONTROL Flux de données]** dans le volet de navigation de gauche.
 
-Après avoir créé un flux de données ou sélectionné un flux de données existant à modifier, cliquez sur le bouton de basculement en regard de ****. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
+Après avoir créé un flux de données ou sélectionné un flux de données existant à modifier, cliquez sur le bouton de basculement en regard de **&#x200B;**. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
@@ -92,7 +92,7 @@ Une fois l’élément de données créé, revenez à la page de configuration d
 
 ### Déployez l’extension sur votre site web
 
-Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour](/help/tags/ui/publishing/overview.md) consultez le [ guide de publication dans la documentation sur les balises.
+Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour[&#128279;](/help/tags/ui/publishing/overview.md) consultez le  guide de publication dans la documentation sur les balises.
 
 ## Exécution de commandes de modification du consentement {#commands}
 

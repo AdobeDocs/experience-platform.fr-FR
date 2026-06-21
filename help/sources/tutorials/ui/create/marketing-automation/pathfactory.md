@@ -3,10 +3,14 @@ title: Connectez votre compte PathFactory à Experience Platform via l’interfa
 description: Découvrez comment connecter votre compte PathFactory à Experience Platform via l’interface utilisateur.
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
 TQID: https://experienceleague.adobe.com/VZZcmtNtWuQKfjdbnsXqkjbFSLYr0MCsZSe1LxX6hu8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 576

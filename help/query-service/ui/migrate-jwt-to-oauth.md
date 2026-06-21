@@ -3,9 +3,13 @@ title: Migration des informations d’identification de serveur à serveur JWT v
 description: Découvrez comment migrer les informations d’identification JWT non expirantes vers les informations d’identification de serveur à serveur OAuth dans Adobe Experience Platform afin de conserver un accès sécurisé et ininterrompu à Query Service avant la fin de la prise en charge de JWT le 30 juin 2025. Ce guide fournit des instructions détaillées, explique le comportement post-migration et répond aux questions courantes.
 exl-id: a8bab296-becf-4255-b0df-cd41a1d432c2
 TQID: https://experienceleague.adobe.com/4tKftU5VxmGNhoVKJu-gz-8k4xUEItP3j0tTVg72EQY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 764
@@ -100,4 +104,4 @@ Oui, mais seulement si vous êtes un administrateur. Seuls les administrateurs d
 
 ## Étapes suivantes {#next-steps}
 
-Passez en revue chaque information d’identification non expirante dans l’onglet [!UICONTROL  Informations d’identification ] et migrez-la individuellement avant le 30 juin 2025. Pour toute question ou assistance, contactez votre représentant de compte Adobe.
+Passez en revue chaque information d’identification non expirante dans l’onglet [!UICONTROL &#x200B; Informations d’identification &#x200B;] et migrez-la individuellement avant le 30 juin 2025. Pour toute question ou assistance, contactez votre représentant de compte Adobe.

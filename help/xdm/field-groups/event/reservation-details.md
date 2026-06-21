@@ -4,8 +4,10 @@ title: Groupe de champs de schéma des détails de la réservation
 description: Découvrez le groupe de champs de schéma Détails de la réservation.
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 TQID: https://experienceleague.adobe.com/N1FtdebvPbxQaTHOLf5h2zWt2AAMr2X2GAUjZKqQCrY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 350
@@ -24,7 +26,7 @@ Le groupe de champs fournit un seul champ de type objet, `reservations`. Les pro
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `nonRefundableAmount` | [Devise](../../data-types/currency.md) | Montant du prix de la réservation marqué comme non remboursable. |
-| `transaction` | [ Transaction ](../../data-types/transaction.md) | Décrit la transaction de devise pour la réservation. |
+| `transaction` | [&#x200B; Transaction &#x200B;](../../data-types/transaction.md) | Décrit la transaction de devise pour la réservation. |
 | `id` | Chaîne | Identifiant unique de la réservation. |
 | `cancellation` | Entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
 | `confirmationNumber` | Chaîne | Numéro ou identifiant de confirmation de la réservation. |
@@ -49,7 +51,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 ## Groupes de champs de réservation spécifiques au secteur
 
-Il existe plusieurs autres groupes de champs standard qui étendent le schéma [!UICONTROL  Détails de la réservation ] pour des cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
+Il existe plusieurs autres groupes de champs standard qui étendent le schéma [!UICONTROL &#x200B; Détails de la réservation &#x200B;] pour des cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
 
 * [[!UICONTROL Réservation de restaurant]](./dining-reservation.md)
 * [[!UICONTROL Réservation de vol]](./flight-reservation.md)

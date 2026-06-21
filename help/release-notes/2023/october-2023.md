@@ -3,11 +3,31 @@ title: Notes de mise à jour d’octobre 2023 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2023 pour Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
 TQID: https://experienceleague.adobe.com/WlwXNBaDHtMMZGV5TFsCxFY3liTSLz4H8L-5ithnIZU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: d1a87129-ba05-4f15-98b1-233618f1774aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: e8c2a8db-c24b-44d9-ab8e-a8bc03acf6b1
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: e8c2a8db-c24b-44d9-ab8e-a8bc03acf6b1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1090
@@ -53,7 +73,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Extensions | Amélioration de l’API de conversions [!DNL Meta] | Trois améliorations ont été apportées à l&#39;extension [API de conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) : crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API de conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) : vous permet de diffuser des annonces publicitaires aux personnes qui sont plus susceptibles de terminer une action souhaitée et de relier l’action aux annonces diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) : vous permet de transmettre le RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d&#39;identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
 | Extensions | API de conversions [!DNL LinkedIn] | L’extension [[!DNL LinkedIn] API de conversions](../../tags/extensions/server/linkedin/overview.md) vous permet d’évaluer l’efficacité de vos campagnes marketing LinkedIn en transférant des données d’événement Experience Platform à LinkedIn. |
 | Secret | Secret OAuth 2 [!DNL LinkedIn] | Le [[!DNL LinkedIn] secret OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) vous permet d’envoyer des interactions serveur à serveur à [!DNL LinkedIn] dans le transfert d’événement. |
-| Transfert dʼévénement | Mise à jour des balises et du transfert d’événement | Pour préserver les performances [ Balises ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=fr) et [ Transfert d’événement ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr) dans Experience Platform, seules les versions de développement et d’évaluation les plus récentes, réussies et non réussies, seront conservées. Toutes les versions qui ne sont plus utilisées seront supprimées. En outre, le ralentissement et la limitation de débit ont été implémentés afin de s’assurer que quelques utilisations intensives de l’API ne dégradent pas les performances de l’API pour les autres. |
+| Transfert dʼévénement | Mise à jour des balises et du transfert d’événement | Pour préserver les performances [&#x200B; Balises &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=fr) et [&#x200B; Transfert d’événement &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr) dans Experience Platform, seules les versions de développement et d’évaluation les plus récentes, réussies et non réussies, seront conservées. Toutes les versions qui ne sont plus utilisées seront supprimées. En outre, le ralentissement et la limitation de débit ont été implémentés afin de s’assurer que quelques utilisations intensives de l’API ne dégradent pas les performances de l’API pour les autres. |
 | Extensions | Éléments, règles et extensions | Les [éléments, règles et extensions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=fr) sont désormais triés dans la sortie de bibliothèque afin d’assurer une plus grande cohérence entre plusieurs versions et déploiements d’une même bibliothèque. |
 
 Pour plus d’informations sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).

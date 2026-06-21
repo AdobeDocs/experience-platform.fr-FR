@@ -3,9 +3,13 @@ description: Découvrez comment configurer les options de formatage de fichier p
 title: Configuration du formatage des fichiers
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 TQID: https://experienceleague.adobe.com/VJ-jI3-0aBbZ96AvHuGMHsS6VuvrZmniwefj9gplnoI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1108

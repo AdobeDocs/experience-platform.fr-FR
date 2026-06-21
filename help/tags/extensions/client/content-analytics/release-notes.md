@@ -3,11 +3,21 @@ title: Notes de mise à jour de l’extension Adobe Content Analytics
 description: Dernières notes de mise à jour pour l’extension de balise Content Analytics dans Adobe Experience Platform.
 exl-id: 37b34915-655b-40de-b17b-43028c579e37
 TQID: https://experienceleague.adobe.com/9zJHsVFEb-RMqCQ6GmR6LH-bzIfkir-M1i5dOwaF6do
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 575

@@ -3,9 +3,12 @@ title: Messages d’erreur liés aux sources
 description: Prenez connaissance des messages d’erreur que vous pouvez rencontrer lors de l’utilisation du service de flux pour les sources.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
 TQID: https://experienceleague.adobe.com/n7Y8J1opPVemC1crv4Q3ZcHjT-b9eS08yzPUKzFmCa4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3085

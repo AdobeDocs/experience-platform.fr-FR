@@ -4,9 +4,12 @@ description: Découvrez le groupe de champs de schéma Composants professionnels
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 TQID: https://experienceleague.adobe.com/tRefVc6pfCLYZ9D9nraib63Squ4q5kDa5nNWQlGOOmA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 499
@@ -39,10 +42,10 @@ Le groupe de champs fournit un champ de `personComponents` au niveau racine, qui
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `sourceAccountKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite du compte associé à la personne. |
-| `sourceConvertedContactKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite du contact associé si ce prospect a été converti. |
-| `sourceExternalKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite du système source d’où proviennent les données de la personne. |
-| `sourcePersonKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite de la personne. |
+| `sourceAccountKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite du compte associé à la personne. |
+| `sourceConvertedContactKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite du contact associé si ce prospect a été converti. |
+| `sourceExternalKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite du système source d’où proviennent les données de la personne. |
+| `sourcePersonKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de la personne. |
 | `workEmail` | [[!UICONTROL Adresse électronique]](../../data-types/b2b-source.md) | ID d’e-mail professionnel de la personne. |
 | `personGroupID` | Chaîne | Identifiant de groupe de la personne. |
 | `personScore` | Chaîne | Score généré pour la personne par un système CRM. |

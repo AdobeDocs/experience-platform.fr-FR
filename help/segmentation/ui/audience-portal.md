@@ -3,11 +3,22 @@ title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 TQID: https://experienceleague.adobe.com/AdgwAOdeq25AQrvZhbI7dgmYKG-BYBl5IWL3CAzn49Q
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f0c9f224-75f2-4864-8de6-859ae7856690
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: f0c9f224-75f2-4864-8de6-859ae7856690
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 4792
@@ -65,7 +76,7 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 
 | Action | Origines | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL  Modifier ] | Service de segmentation | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée via l’API, vous ne pourrez **pas** la modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
+| [!UICONTROL &#x200B; Modifier &#x200B;] | Service de segmentation | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée via l’API, vous ne pourrez **pas** la modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
 | [!UICONTROL Ouvrir la composition] | Composition d’audiences | Ouvre la composition Audience pour afficher votre audience. Pour plus d’informations sur la composition d’audiences, consultez le [Guide de l’interface utilisateur de la composition d’audiences](./audience-composition.md). |
 | [!UICONTROL Activer vers la destination] | Service de segmentation | Active l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Partager avec des partenaires] | Composition d’audiences, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs Experience Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
@@ -74,9 +85,9 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | [!UICONTROL Copier] | Service de segmentation | Duplique l’audience sélectionnée. Vous trouverez plus d’informations sur cette fonction dans la [FAQ sur la segmentation](../faq.md#copy). |
 | [!UICONTROL Appliquer les libellés d’accès] | Composition d’audiences, chargement personnalisé, Segmentation Service | Gère les libellés d’accès appartenant à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Désactiver ] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Notez que pour désactiver une audience, celle-ci **ne peut pas** être activée dans **n’importe quelle** destination (y compris les destinations hors Experience Platform) ou faire partie de **n’importe quelle** autre audience. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| [!UICONTROL Désactiver &#x200B;] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Notez que pour désactiver une audience, celle-ci **ne peut pas** être activée dans **n’importe quelle** destination (y compris les destinations hors Experience Platform) ou faire partie de **n’importe quelle** autre audience. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Supprimer] | Composition d’audiences, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Les audiences utilisées dans des destinations en aval ou qui sont des dépendances dans d’autres audiences **ne peuvent pas** peuvent pas être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Ajouter au package ] | Composition d’audiences, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Ajouter au package &#x200B;] | Composition d’audiences, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
@@ -120,12 +131,12 @@ Vous pouvez ajouter des champs supplémentaires à Audience Portal en sélection
 | [!UICONTROL Libellés d’accès] | Libellés d’accès pour l’audience. Les libellés d’accès vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Répartition] | Répartition du statut du profil pour l’audience. Vous trouverez ci-dessous une description plus détaillée de cette répartition du statut du profil. |
 
-Si la répartition est sélectionnée, l’affichage présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts suivants : [!UICONTROL  Réalisé ], [!UICONTROL Existant] et [!UICONTROL Sortant]. De plus, la répartition affichée dans l’onglet [!UICONTROL  Parcourir ] est la répartition la plus précise du statut de définition du segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Présentation], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Présentation] ne sont mis à jour qu’une seule fois par jour.
+Si la répartition est sélectionnée, l’affichage présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des statuts suivants : [!UICONTROL &#x200B; Réalisé &#x200B;], [!UICONTROL Existant] et [!UICONTROL Sortant]. De plus, la répartition affichée dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] est la répartition la plus précise du statut de définition du segment. Si ce nombre diffère de ce qui est indiqué dans l’onglet [!UICONTROL Présentation], vous devez utiliser les nombres de l’onglet [!UICONTROL Parcourir] comme source d’informations correcte, puisque les nombres de l’onglet [!UICONTROL Présentation] ne sont mis à jour qu’une seule fois par jour.
 
 | État | Description |
 | ------ | ----------- |
 | [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** pour l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet [`segmentMembership`. ](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet [`segmentMembership`. &#x200B;](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Sortant] | Nombre de profils qui **ont quitté** l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
 Après avoir sélectionné les champs à afficher, vous pouvez également redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez la ![icône de flèche](/help/images/icons/chevron-down.png) de la colonne à redimensionner, suivie de **[!UICONTROL Redimensionner la colonne]**.
@@ -159,9 +170,9 @@ La fenêtre contextuelle **[!UICONTROL Gérer les balises]** s’affiche. Elle v
 | Type de balise | Description |
 | -------- | ----------- |
 | Classée | Il s’agit d’une balise créée et gérée par les administrateurs et administratrices de votre organisation. |
-| Non classée | Balise créée dans la fenêtre contextuelle [!UICONTROL  Gérer les balises ]. Tout le monde peut créer ou gérer ces types de balises. |
+| Non classée | Balise créée dans la fenêtre contextuelle [!UICONTROL &#x200B; Gérer les balises &#x200B;]. Tout le monde peut créer ou gérer ces types de balises. |
 
-![ La fenêtre contextuelle [!UICONTROL Gérer les balises] s’affiche. Les options de sélection d’une balise classée ou non classée sont mises en surbrillance.](../images/ui/audience-portal/create-tag.png)
+![&#x200B; La fenêtre contextuelle [!UICONTROL Gérer les balises] s’affiche. Les options de sélection d’une balise classée ou non classée sont mises en surbrillance.](../images/ui/audience-portal/create-tag.png)
 
 Après avoir ajouté toutes les balises à joindre à l’audience, sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -210,7 +221,7 @@ La liste des filtres disponibles s’affiche.
 | Filtre | Description |
 | ------ | ----------- |
 | [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
-| [!UICONTROL A une balise ] | Permet de filtrer par balise. Vous pouvez choisir entre **[!UICONTROL A n’importe quelle balise]** et **[!UICONTROL A toutes les balises]**. Lorsque l’option **[!UICONTROL Comporte une balise]** est sélectionnée, les audiences filtrées incluent **l’une** des balises que vous avez ajoutées. Lorsque l’option **[!UICONTROL Contient toutes les balises]** est sélectionnée, les audiences filtrées doivent inclure **toutes** les balises que vous avez ajoutées. |
+| [!UICONTROL A une balise &#x200B;] | Permet de filtrer par balise. Vous pouvez choisir entre **[!UICONTROL A n’importe quelle balise]** et **[!UICONTROL A toutes les balises]**. Lorsque l’option **[!UICONTROL Comporte une balise]** est sélectionnée, les audiences filtrées incluent **l’une** des balises que vous avez ajoutées. Lorsque l’option **[!UICONTROL Contient toutes les balises]** est sélectionnée, les audiences filtrées doivent inclure **toutes** les balises que vous avez ajoutées. |
 | [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles sont les suivantes : [!UICONTROL Supprimé], [!UICONTROL Brouillon], [!UICONTROL Inactif] et [!UICONTROL Publié]. |
 | [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience (méthode d’évaluation). Les options disponibles sont les suivantes : [!UICONTROL lot], [!UICONTROL streaming] et [!UICONTROL Edge] |
 | [!UICONTROL Créé par] | Permet de filtrer en fonction de la personne qui a créé l’audience. |
@@ -491,7 +502,7 @@ Une fois que vous avez confirmé que les détails sont corrects, sélectionnez *
 >
 >En outre, si votre audience générée en externe contient des informations sensibles et/ou liées aux soins de santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers une destination. Étant donné que les variables des audiences générées en externe sont stockées dans le lac de données plutôt que dans le profil client en temps réel, vous ne devez **pas** inclure les données de consentement dans votre fichier CSV.
 >
->Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données dans Experience Platform en général, consultez la [ présentation des libellés d’utilisation des données ](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
+>Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données dans Experience Platform en général, consultez la [&#x200B; présentation des libellés d’utilisation des données &#x200B;](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
 
 ## Étapes suivantes
 

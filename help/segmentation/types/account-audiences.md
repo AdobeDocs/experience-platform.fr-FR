@@ -3,11 +3,19 @@ title: Audiences de compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler les profils de compte dans les destinations en aval.
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 TQID: https://experienceleague.adobe.com/1hdtXQ--sfJExWY845DVQ-FrEXtjHHrd40tE2XGeyZE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1499
@@ -27,7 +35,7 @@ Les audiences de compte peuvent être utilisées comme entrée pour les destinat
 
 >[!NOTE]
 >
->Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [](../../rtcdp/b2b-architecture-upgrade.md).
+>Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [&#128279;](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologie {#terminology}
 
@@ -114,7 +122,7 @@ Après avoir créé l’audience de votre compte, vous pouvez activer l’audien
 
 Sélectionnez l’audience à activer, puis **[!UICONTROL Activer vers la destination]**.
 
-![Le bouton [!UICONTROL  Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
+![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
 
 La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
 

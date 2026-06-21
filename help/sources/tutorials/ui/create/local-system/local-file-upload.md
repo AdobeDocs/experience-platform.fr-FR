@@ -6,10 +6,14 @@ type: Tutorial
 description: Découvrez comment créer une connexion source pour votre système local afin d’importer des fichiers locaux dans Experience Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
 TQID: https://experienceleague.adobe.com/TAlFVanoKDPsy4OayXdw2wsG9XiB9pxQWg1hJuo8ijw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 785
@@ -54,7 +58,7 @@ Au cours de ce processus, vous pouvez également activer les [!UICONTROL diagnos
 
 ### Utiliser un nouveau jeu de données
 
-Pour ingérer vos données CSV dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL  Recherche avancée ] ou en faisant défiler la liste des schémas existants dans le menu déroulant.
+Pour ingérer vos données CSV dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL &#x200B; Recherche avancée &#x200B;] ou en faisant défiler la liste des schémas existants dans le menu déroulant.
 
 Une fois le schéma sélectionné, donnez un nom à votre flux de données et une description facultative, puis appliquez les paramètres [!UICONTROL Diagnostics d’erreur] et [!UICONTROL Ingestion partielle] de votre flux de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 

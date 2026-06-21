@@ -6,10 +6,15 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
 TQID: https://experienceleague.adobe.com/GJ106bgXNxjDGVMjuraphQyBOtHDzZ0V74ml-tGbhiQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 770
@@ -207,4 +212,4 @@ Une réponse réussie renvoie des informations concernant votre exécution de fl
 
 En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur la surveillance des flux de données pour les sources, consultez le tutoriel [surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md). Pour plus d’informations sur la surveillance des flux de données pour les destinations, consultez le tutoriel [surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md).
 
-Pour envoyer plusieurs entités XDM à un flux de données, utilisez un tableau `messages` dans votre requête HTTP ou chargez un fichier (CSV, JSON ou Parquet) contenant plusieurs enregistrements. Pour obtenir des conseils détaillés et connaître les bonnes pratiques, lisez [ Comment envoyer plusieurs entités XDM à un flux de données ](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
+Pour envoyer plusieurs entités XDM à un flux de données, utilisez un tableau `messages` dans votre requête HTTP ou chargez un fichier (CSV, JSON ou Parquet) contenant plusieurs enregistrements. Pour obtenir des conseils détaillés et connaître les bonnes pratiques, lisez [&#x200B; Comment envoyer plusieurs entités XDM à un flux de données &#x200B;](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).

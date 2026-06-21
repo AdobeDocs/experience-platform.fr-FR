@@ -5,8 +5,10 @@ title: Créer une connexion source de campagnes Mailchimp à l’aide de l’int
 description: Découvrez comment connecter Adobe Experience Platform à des campagnes Mailchimp à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
 TQID: https://experienceleague.adobe.com/0LnGSDHJ1KBgPXn-7as0mQfUxlel5y1Zpx4j0Kyngv4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 709

@@ -4,11 +4,24 @@ title: Comparaison entre Edge Network et un hub
 description: Découvrez les différents chemins de traitement disponibles sur Adobe Experience Platform.
 exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
 TQID: https://experienceleague.adobe.com/wkBilzxWropja9A0TBo1oNY8rdVax8rmlDbTQjE-jlE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: a230274e-7e6e-49eb-b817-514495a710acid: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 716
@@ -67,7 +80,7 @@ La section suivante répertorie les emplacements de hub et d’Edge Network.
 - GBR9 (Royaume-Uni)
 - IND1 (Inde)
 
-****
+**&#x200B;**
 
 - OR2 (Oregon, États-Unis)
 - VA6 (Virginie, États-Unis)

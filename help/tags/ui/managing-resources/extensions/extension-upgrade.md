@@ -51,7 +51,7 @@ Une fois l’extension mise à niveau installée sur votre propriété, vous dev
 
 En outre, l’ajout de l’extension mise à niveau à votre bibliothèque est identique à [l’ajout de toute autre modification](../../publishing/libraries.md) à une bibliothèque.
 
-Dans l’écran [!UICONTROL  Modifier la bibliothèque ], vous pouvez utiliser le bouton « [!UICONTROL  Ajouter toutes les ressources modifiées ] » ou le bouton « [!UICONTROL  Ajouter une ressource ] » et sélectionner uniquement l’extension mise à niveau.
+Dans l’écran [!UICONTROL &#x200B; Modifier la bibliothèque &#x200B;], vous pouvez utiliser le bouton « [!UICONTROL &#x200B; Ajouter toutes les ressources modifiées &#x200B;] » ou le bouton « [!UICONTROL &#x200B; Ajouter une ressource &#x200B;] » et sélectionner uniquement l’extension mise à niveau.
 
 >[!TIP]
 >

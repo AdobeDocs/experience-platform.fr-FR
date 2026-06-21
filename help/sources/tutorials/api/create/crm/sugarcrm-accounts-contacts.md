@@ -3,11 +3,16 @@ title: Créer une connexion source et un flux de données pour les comptes et co
 description: Découvrez comment connecter Adobe Experience Platform aux comptes et contacts SugarCRM à l’aide de l’API Flow Service.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
 TQID: https://experienceleague.adobe.com/-D0P7MMZ7qsoJBLyxTgIGXe5t4UoeujGUDB7YHFRTao
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2189

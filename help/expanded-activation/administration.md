@@ -3,11 +3,19 @@ title: Administration du compte d’activation développée
 description: Découvrez comment effectuer des tâches administratives sur votre compte d’activation étendue, comme surveiller l’utilisation des licences et attribuer les autorisations appropriées.
 exl-id: ee0ec4b9-a083-447b-b7a7-e1307e90c646
 TQID: https://experienceleague.adobe.com/UdI5T0riJi695ZM3d3ymVEDTSFFmPgx46q6Dgjy4PJQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-subfeature_v2: id: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+subfeature_v2:
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 408
@@ -61,7 +69,7 @@ Sur cette page, vous trouverez les informations suivantes :
 
   >[!TIP]
   >
-  >Vous ingérez des e-mails hachés via le connecteur source [](../sources/connectors/adobe-applications/audience-manager.md). Pour plus d’informations, consultez la documentation sur [comment activer des audiences](activate-audiences.md).
+  >Vous ingérez des e-mails hachés via le connecteur source [&#128279;](../sources/connectors/adobe-applications/audience-manager.md). Pour plus d’informations, consultez la documentation sur [comment activer des audiences](activate-audiences.md).
 
 * **[!UICONTROL Utilisation]** : nombre d’e-mails hachés que vous avez ingérés.
 * **[!UICONTROL Utilisation %]** : pourcentage du montant de votre licence que vous avez utilisé.

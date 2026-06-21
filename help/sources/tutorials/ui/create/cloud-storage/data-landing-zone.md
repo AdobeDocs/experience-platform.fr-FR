@@ -3,8 +3,10 @@ title: Connecter Data Landing Zone à Experience Platform à l’aide de l’int
 description: Découvrez comment créer un connecteur source Data Landing Zone à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 TQID: https://experienceleague.adobe.com/DHic7EnABj-yy4JDFkcpNZX7q2et-47R-FW6On4wgIE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 788

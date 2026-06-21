@@ -6,11 +6,29 @@ description: Adobe Experience Platform fournit plusieurs services et outils qu
 feature: Data Governance,Privacy
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 TQID: https://experienceleague.adobe.com/P-JKPcACwNXqqRfF2RgOnzlY73BqbYKJzstCMw9Iu6M
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 871
@@ -46,7 +64,7 @@ Le service de catalogue constitue le système d’enregistrement de l’emplacem
 
 Le catalogue organise les données ingérées en jeux de données, chaque jeu de données contenant des métadonnées qui peuvent être utilisées pour étiqueter et catégoriser les données qu’il contient.
 
-Pour plus d’informations sur le service, consultez la présentation du service de catalogue [Catalog](../../catalog/home.md). Pour savoir comment gérer les jeux de données dans Experience Platform, consultez la [ présentation des jeux de données ](../../catalog/datasets/overview.md).
+Pour plus d’informations sur le service, consultez la présentation du service de catalogue [Catalog](../../catalog/home.md). Pour savoir comment gérer les jeux de données dans Experience Platform, consultez la [&#x200B; présentation des jeux de données &#x200B;](../../catalog/datasets/overview.md).
 
 ## Confidentialité {#privacy}
 
@@ -58,7 +76,7 @@ Les réglementations légales relatives à la confidentialité, telles que le R�
 
 Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur pour faciliter la gestion de ces requêtes. Avec Privacy Service, vous pouvez envoyer des demandes d’accès ou de suppression de données clients privées ou personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la conformité aux réglementations légales et organisationnelles en matière de confidentialité.
 
-Voir la présentation de [](../../privacy-service/home.md) pour plus d’informations.
+Voir la présentation de [&#128279;](../../privacy-service/home.md) pour plus d’informations.
 
 ### Traitement du consentement {#consent}
 

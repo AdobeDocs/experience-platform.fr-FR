@@ -3,10 +3,15 @@ title: Fonctionnalités d’ingénierie pour le machine learning
 description: Découvrez comment transformer les données de Adobe Experience Platform en fonctionnalités ou variables qui peuvent être utilisées par un modèle de machine learning. Utilisez Data Distiller pour calculer les fonctionnalités ML à grande échelle et partager ces fonctionnalités avec votre environnement de machine learning.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 TQID: https://experienceleague.adobe.com/kZ5CVFECnR2pAX--WNVskQrt2qk33VFhnwtXeWa-AOU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1146

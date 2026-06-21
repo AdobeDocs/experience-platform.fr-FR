@@ -5,9 +5,12 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: b0698d36-ebc3-4b76-adcc-1deb2cbb1564
 TQID: https://experienceleague.adobe.com/WyjzX-g7evDUGuEtTfGM57rO7n5YYQUhGdNgNHrx3vo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 340
@@ -27,7 +30,7 @@ ht-degree: 6%
 | [!UICONTROL Point de terminaison] | `endpoint` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Points d’entrée techniques permettant d’accéder aux services exploités pour l’organisation. |
 | [!UICONTROL Identifiant] | `indentifier` | Tableau d’[[!UICONTROL identifiant]](../data-types/identifier.md) | Identifiant utilisé pour identifier l’organisation sur plusieurs systèmes disparates. |
 | [!UICONTROL Partie De L&#39;Organisation] | `partOf` | [[!UICONTROL Référence]](../data-types/reference.md) | L’organisation dont cette organisation fait partie. |
-| [!UICONTROL Qualification ] | `qualification` | Tableau d’objets | Les certifications, accréditations, formations, désignations et licences officielles qui autorisent et/ou approuvent la prestation de soins par l’organisation. Pour plus d’informations, consultez la [section ci-dessous](#qualification). |
+| [!UICONTROL Qualification &#x200B;] | `qualification` | Tableau d’objets | Les certifications, accréditations, formations, désignations et licences officielles qui autorisent et/ou approuvent la prestation de soins par l’organisation. Pour plus d’informations, consultez la [section ci-dessous](#qualification). |
 | [!UICONTROL Type] | `type` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Le genre d&#39;organisation que c&#39;est. |
 | [!UICONTROL Actif] | `active` | Booléen | Indique si l&#39;enregistrement de l&#39;organisation est toujours en cours d&#39;utilisation. |
 | [!UICONTROL Alias] | `alias` | Tableau de chaînes | Liste d’autres noms sous lesquels l’organisation est connue ou était connue par le passé. |

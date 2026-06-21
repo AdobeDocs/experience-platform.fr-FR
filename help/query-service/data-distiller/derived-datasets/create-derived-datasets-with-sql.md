@@ -3,10 +3,17 @@ title: Créer des jeux de données dérivés avec SQL
 description: Découvrez comment utiliser SQL pour créer un jeu de données dérivé activé pour le profil et comment utiliser le jeu de données pour le profil client en temps réel et le service de segmentation.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
 TQID: https://experienceleague.adobe.com/-BVUnQ20U9qPywL4Wws--owKoR9qHO2JPrrwMq0pItA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1237
@@ -204,7 +211,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 L’exécution réussie de cette instruction renvoie l’identifiant du groupe de champs créé. Par exemple `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Pour plus d’informations sur les autres méthodes](../../../xdm/ui/resources/field-groups.md#create) consultez la documentation sur la [création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
+Pour plus d’informations sur les autres méthodes[&#128279;](../../../xdm/ui/resources/field-groups.md#create) consultez la documentation sur la création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
 
 ### Déposer un groupe de champs
 

@@ -3,9 +3,13 @@ title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 TQID: https://experienceleague.adobe.com/cdcCnCiSjfjxf2Tp2deahQbgevGLJDAhGFLMxd0S3z8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 692
@@ -24,7 +28,7 @@ Query Service prend en charge l’utilisation de requêtes paramétrées dans Qu
 
 ## Conditions préalables
 
-Avant de poursuivre avec ce guide, lisez le [ Guide de l’interface utilisateur de Query Editor ](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
+Avant de poursuivre avec ce guide, lisez le [&#x200B; Guide de l’interface utilisateur de Query Editor &#x200B;](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
 
 >[!NOTE]
 >
@@ -77,7 +81,7 @@ Les valeurs de paramètre sont enregistrées lorsque vous planifiez une requête
 
 >[!TIP]
 >
->Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée](../sql/prepared-statements.md) consultez le [ guide de syntaxe des instructions préparées .
+>Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée[&#128279;](../sql/prepared-statements.md) consultez le  guide de syntaxe des instructions préparées .
 
 ## Étapes suivantes
 

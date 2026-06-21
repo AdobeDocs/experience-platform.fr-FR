@@ -4,8 +4,11 @@ description: Pinterest rend obsolète l’API de l’annonceur v4 actuellement u
 hide: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
 TQID: https://experienceleague.adobe.com/-otaVgeZStISEbgUvXNhBcCmmDs--CODjjSPHn4coSc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 539
@@ -39,7 +42,7 @@ Oui, avant le 18 janvier 2024, vous devez vous authentifier auprès de la nouvel
 
 1. Accédez à **[!UICONTROL Destinations > Comptes]** et utilisez le filtre à l’écran pour filtrer uniquement la destination Pinterest.
    ![Filtrer les comptes Pinterest uniquement](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. Sur la destination ****, sélectionnez le symbole des trois points ... et sélectionnez **[!UICONTROL Modifier les détails]**.
+2. Sur la destination **&#x200B;**, sélectionnez le symbole des trois points ... et sélectionnez **[!UICONTROL Modifier les détails]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. Sélectionnez **[!UICONTROL Reconnecter OAuth]** et connectez-vous à votre compte Pinterest.
    ![Sélectionnez Reconnecter OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
@@ -47,11 +50,11 @@ Oui, avant le 18 janvier 2024, vous devez vous authentifier auprès de la nouvel
 
 ### Activer les flux vers une nouvelle destination {#disable-old-enable-new-flows}
 
-Ensuite, vous devez activer les flux de données pour la nouvelle carte ****.
+Ensuite, vous devez activer les flux de données pour la nouvelle carte **&#x200B;**.
 
 1. Accédez à **[!UICONTROL Destinations > Parcourir]** et utilisez le filtre à l’écran pour filtrer la destination **[!UICONTROL Pinterest]** uniquement.
    ![Filtrer les flux de données Pinterest uniquement dans l’onglet Parcourir](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Sélectionnez le nom de la connexion avec lien hypertexte (campagne de fidélité dans l’exemple de capture d’écran ci-dessus) vers la destination **** et activez le bouton bascule **[!UICONTROL Activer]** sur **activé**.
+2. Sélectionnez le nom de la connexion avec lien hypertexte (campagne de fidélité dans l’exemple de capture d’écran ci-dessus) vers la destination **&#x200B;**&#x200B;et activez le bouton bascule **[!UICONTROL Activer]** sur **activé**.
    ![Activer/désactiver pour les nouvelles connexions et désactiver pour les anciennes](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--

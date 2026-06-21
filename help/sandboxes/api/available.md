@@ -6,11 +6,17 @@ description: Vous pouvez répertorier les sandbox disponibles pour l’utilisate
 role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 TQID: https://experienceleague.adobe.com/ijchlEdB6CyniZi9O9OC0elSbKK1IeyYlS5EjljU2fc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-subfeature_v2: id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+subfeature_v2:
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 256

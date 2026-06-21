@@ -3,10 +3,17 @@ title: Type De Données De Collecte Des Détails Advertising
 description: Découvrez le type de données du modèle de données d’expérience (XDM) de la collecte de détails Advertising.
 exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
 TQID: https://experienceleague.adobe.com/47Vp-vkRvsQVbD9E2-0vZhNgGt8D1dEI-wvIpsDQPnQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
 source-wordcount: 499
@@ -14,9 +21,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Détails Advertising ] type de données de collection
+# [!UICONTROL Détails Advertising &#x200B;] type de données de collection
 
-[!UICONTROL Détails Advertising ] la collecte est un type de données standard du modèle de données d’expérience (XDM) qui capture les attributs clés liés aux publicités. Elle contient des informations telles que l’ID de l’annonce, les ID de l’annonceur et de la campagne, la longueur, la position dans une séquence, les détails sur le lecteur qui effectue le rendu de l’annonce, etc. Vous pouvez utiliser ce type de données pour suivre et analyser divers aspects des performances et de l’engagement des publicités, et fournir des informations sur la manière dont les audiences interagissent avec différentes publicités et y répondent.
+[!UICONTROL Détails Advertising &#x200B;] la collecte est un type de données standard du modèle de données d’expérience (XDM) qui capture les attributs clés liés aux publicités. Elle contient des informations telles que l’ID de l’annonce, les ID de l’annonceur et de la campagne, la longueur, la position dans une séquence, les détails sur le lecteur qui effectue le rendu de l’annonce, etc. Vous pouvez utiliser ce type de données pour suivre et analyser divers aspects des performances et de l’engagement des publicités, et fournir des informations sur la manière dont les audiences interagissent avec différentes publicités et y répondent.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données Collecte des détails Advertising .
 ![Diagramme du type de données de collecte de détails Advertising.](../images/data-types/advertising-details-collection.png)

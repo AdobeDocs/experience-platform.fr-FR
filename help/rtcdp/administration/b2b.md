@@ -16,7 +16,7 @@ Le contrôle d’accès de Real-Time CDP B2B edition est administré via [Adobe 
 
 Pour en savoir plus sur le contrôle d’accès, consultez la [présentation du contrôle d’accès](../../access-control/home.md) dans la documentation [!DNL Experience Platform].
 
-Consultez les documents suivants pour obtenir des instructions détaillées sur l’utilisation de [](https://adminconsole.adobe.com) afin d’activer l’accès à l’interface utilisateur B2B pour un profil de produit :
+Consultez les documents suivants pour obtenir des instructions détaillées sur l’utilisation de [&#128279;](https://adminconsole.adobe.com) afin d’activer l’accès à l’interface utilisateur B2B pour un profil de produit :
 
 * [Activer l’interface utilisateur B2B pour un nouveau profil de produit](../../access-control/ui/create-profile.md)
 * [Activer l’interface utilisateur B2B pour un profil de produit existant](../../access-control/ui/details-and-services.md)

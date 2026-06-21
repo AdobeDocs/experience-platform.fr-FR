@@ -3,11 +3,22 @@ title: Gérer les autorisations pour Privacy Service
 description: Découvrez comment gérer les autorisations utilisateur pour Adobe Experience Platform Privacy Service à l’aide d’Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 TQID: https://experienceleague.adobe.com/9E3jCyD6CRzcfcL8keFyXjTyyat7kXy2VIaiJzckoNQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d175cb4c-5781-454e-a826-bf6dff786265
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1516
@@ -41,9 +52,9 @@ Le tableau suivant décrit les autorisations disponibles pour Privacy Service a
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
-| [!UICONTROL Autorisations ] | [!UICONTROL  Autorisation de lecture des informations personnelles ] | Détermine si l’utilisateur ou l’utilisatrice peut afficher les requêtes d’accès et de suppression existantes, ainsi que leurs détails. |
-| [!UICONTROL Autorisations ] | [!UICONTROL  Autorisation d’écriture sur des informations personnelles ] | Détermine si un utilisateur ou une utilisatrice peut créer de nouvelles requêtes d’accès et de suppression. |
-| [!UICONTROL Autorisations ] | [!UICONTROL Autorisation de diffusion de contenu en lecture (accès)] | Lorsqu’une requête d’accès est traitée par Privacy Service, un fichier ZIP contenant les données du client ou de la cliente lui est envoyé. Lorsque vous recherchez les détails d’une requête d’accès, cette autorisation détermine si l’utilisateur ou l’utilisatrice peut accéder au lien de téléchargement pour le fichier ZIP de la requête. |
+| [!UICONTROL Autorisations &#x200B;] | [!UICONTROL &#x200B; Autorisation de lecture des informations personnelles &#x200B;] | Détermine si l’utilisateur ou l’utilisatrice peut afficher les requêtes d’accès et de suppression existantes, ainsi que leurs détails. |
+| [!UICONTROL Autorisations &#x200B;] | [!UICONTROL &#x200B; Autorisation d’écriture sur des informations personnelles &#x200B;] | Détermine si un utilisateur ou une utilisatrice peut créer de nouvelles requêtes d’accès et de suppression. |
+| [!UICONTROL Autorisations &#x200B;] | [!UICONTROL Autorisation de diffusion de contenu en lecture (accès)] | Lorsqu’une requête d’accès est traitée par Privacy Service, un fichier ZIP contenant les données du client ou de la cliente lui est envoyé. Lorsque vous recherchez les détails d’une requête d’accès, cette autorisation détermine si l’utilisateur ou l’utilisatrice peut accéder au lien de téléchargement pour le fichier ZIP de la requête. |
 | [!UICONTROL Autorisations de désinscription de la vente] | [!UICONTROL Autorisation de lecture - Désinscription de la vente] | Détermine si l’utilisateur ou l’utilisatrice peut afficher les requêtes de désinscription à la vente existantes, ainsi que leurs détails. |
 | [!UICONTROL Autorisations de désinscription de la vente] | [!UICONTROL Autorisation d’écriture - Désinscription de la vente] | Détermine si un utilisateur ou une utilisatrice peut créer de nouvelles requêtes de désinscription de la vente. |
 
@@ -51,7 +62,7 @@ Le tableau suivant décrit les autorisations disponibles pour Privacy Service a
 
 ## Gérer les autorisations {#manage}
 
-Pour gérer les autorisations de Privacy Service, connectez-vous à [Admin Console](https://adminconsole.adobe.com/) et sélectionnez **[!UICONTROL Produits]** dans la barre de navigation supérieure. À partir de là, sélectionnez ****.
+Pour gérer les autorisations de Privacy Service, connectez-vous à [Admin Console](https://adminconsole.adobe.com/) et sélectionnez **[!UICONTROL Produits]** dans la barre de navigation supérieure. À partir de là, sélectionnez **&#x200B;**.
 
 ![L’Admin Console avec la fiche produit Privacy Service mise en surbrillance.](./images/permissions/privacy-service-card.png)
 

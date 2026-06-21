@@ -4,10 +4,15 @@ description: Découvrez comment vous authentifier auprès de l’API Privacy Ser
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 TQID: https://experienceleague.adobe.com/qDlbSic6BGkU-guPQirXmVXlandmsoq5LIY48Rlk7g4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 880
@@ -21,7 +26,7 @@ Ce guide présente les concepts de base que vous devez connaître avant d’effe
 
 ## Conditions préalables {#prerequisites}
 
-Ce guide nécessite une compréhension pratique de [](../home.md) et de la manière dont il permet de gérer l’accès et de supprimer les requêtes de vos titulaires de données (clients) dans les applications Adobe Experience Cloud.
+Ce guide nécessite une compréhension pratique de [&#128279;](../home.md) et de la manière dont il permet de gérer l’accès et de supprimer les requêtes de vos titulaires de données (clients) dans les applications Adobe Experience Cloud.
 
 Pour créer des informations d’accès pour l’API, un administrateur de votre organisation doit avoir configuré au préalable des profils de produit pour Privacy Service dans Adobe Admin Console. Le profil de produit que vous attribuez à une intégration d’API détermine les autorisations dont dispose cette intégration lors de l’accès aux fonctionnalités de Privacy Service. Pour plus d’informations, consultez le guide sur la [gestion des autorisations Privacy Service](../permissions.md).
 
@@ -33,7 +38,7 @@ Pour lancer des appels à l’API Privacy Service, vous devez d’abord rassembl
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Ces valeurs sont générées à l’aide de [](https://developer.adobe.com/console). Vos `{ORG_ID}` et `{API_KEY}` ne doivent être générés qu’une seule fois et peuvent être réutilisés dans les appels d’API futurs. Cependant, votre `{ACCESS_TOKEN}` est temporaire et doit être régénéré toutes les 24 heures.
+Ces valeurs sont générées à l’aide de [&#128279;](https://developer.adobe.com/console). Vos `{ORG_ID}` et `{API_KEY}` ne doivent être générés qu’une seule fois et peuvent être réutilisés dans les appels d’API futurs. Cependant, votre `{ACCESS_TOKEN}` est temporaire et doit être régénéré toutes les 24 heures.
 
 Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
@@ -53,7 +58,7 @@ L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez **[!UICON
 
 >[!TIP]
 >
->Sélectionnez l’option **[!UICONTROL Afficher les documents]** pour accéder à la documentation de référence de l’API Privacy Service dans une fenêtre de navigateur distincte](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).[
+>Sélectionnez l’option **[!UICONTROL Afficher les documents]** pour accéder à la documentation de référence de l’API Privacy Service dans une fenêtre de navigateur distincte[&#128279;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 Sélectionnez ensuite le type d’authentification pour générer des jetons d’accès et accéder à l’API Privacy Service.
 
@@ -69,7 +74,7 @@ La dernière étape de configuration consiste à sélectionner les profils de pr
 
 >[!NOTE]
 >
->Les profils de produit et les autorisations granulaires qu’ils fournissent sont créés et gérés par les administrateurs via Adobe Admin Console. Pour plus d’informations](../permissions.md) consultez le guide sur les autorisations [Privacy Service .
+>Les profils de produit et les autorisations granulaires qu’ils fournissent sont créés et gérés par les administrateurs via Adobe Admin Console. Pour plus d’informations[&#128279;](../permissions.md) consultez le guide sur les autorisations Privacy Service .
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer l’API configurée]**.
 

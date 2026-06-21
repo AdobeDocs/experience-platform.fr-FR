@@ -3,9 +3,13 @@ title: Analytics Insights pour les interactions web et mobiles
 description: Ce document explique comment utiliser Query Service pour créer des informations exploitables à partir de données Adobe Analytics ingérées.
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 TQID: https://experienceleague.adobe.com/L5JMf3Vj14Pr5aDyjjEUVctLN89LvFZ-esMKwxqGDUs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 237
@@ -19,7 +23,7 @@ Adobe Experience Platform vous permet d’ingérer des données à partir de sui
 
 Ce document fournit divers exemples de requêtes SQL qui montrent des cas d’utilisation courants lors de la création d’informations à partir de données Analytics web et mobiles.
 
-Pour plus d’informations sur l’ingestion et le mappage de données d’analyse](../../sources/connectors/adobe-applications/mapping/analytics.md) consultez la [ Documentation sur les mappages de champs Analytics .
+Pour plus d’informations sur l’ingestion et le mappage de données d’analyse[&#128279;](../../sources/connectors/adobe-applications/mapping/analytics.md) consultez la  Documentation sur les mappages de champs Analytics .
 
 ## Prise en main
 

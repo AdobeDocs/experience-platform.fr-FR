@@ -3,10 +3,17 @@ description: Cette page répertorie et décrit les étapes de configuration d’
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 TQID: https://experienceleague.adobe.com/Dy3LryNaOeT1RsoLeBT-X7eZokLrN2dkrMQCkJMXajw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 884
@@ -22,7 +29,7 @@ Cette page décrit comment utiliser les informations dans la section [Options de
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes illustrées ci-dessous, lisez la page de prise en main de Destination SDK [](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK. Cela suppose que vous ayez rempli les conditions préalables de partenariat et d’autorisation et que vous soyez prêt à commencer à développer votre destination.
+Avant de passer aux étapes illustrées ci-dessous, lisez la page de prise en main de Destination SDK [&#128279;](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK. Cela suppose que vous ayez rempli les conditions préalables de partenariat et d’autorisation et que vous soyez prêt à commencer à développer votre destination.
 
 ## Étapes à suivre pour utiliser les options de configuration de Destination SDK afin de configurer votre destination. {#steps}
 
@@ -157,7 +164,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Étape 3 : créer un modèle de transformation de message : utilisez un langage de modèle pour spécifier le format de sortie du message {#create-transformation-template}
 
-En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Consultez les exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](../functionality/destination-server/message-format.md#using-templating) et utilisez l’outil de création de modèles [ fourni par Adobe](../testing-api/streaming-destinations/create-template.md).
+En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Consultez les exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](../functionality/destination-server/message-format.md#using-templating) et utilisez l’outil de création de modèles [&#x200B; fourni par Adobe](../testing-api/streaming-destinations/create-template.md).
 
 Une fois que vous avez conçu un modèle de transformation de messages qui vous convient, ajoutez-le à la configuration de serveur et de modèle que vous avez créée à l’étape 1.
 
@@ -183,7 +190,7 @@ Une fois que vous avez conçu un modèle de transformation de messages qui vous 
 
 ## Étape 4 : créer une configuration de métadonnées d’audience {#create-audience-metadata-configuration}
 
-Pour certaines destinations, Destination SDK exige que vous configuriez des métadonnées d’audience afin de créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Pour plus d’informations sur le moment et la manière d’effectuer cette configuration](../functionality/audience-metadata-management.md) consultez la section [ Gestion des métadonnées d’audience .
+Pour certaines destinations, Destination SDK exige que vous configuriez des métadonnées d’audience afin de créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Pour plus d’informations sur le moment et la manière d’effectuer cette configuration[&#128279;](../functionality/audience-metadata-management.md) consultez la section  Gestion des métadonnées d’audience .
 
 Si vous utilisez une configuration de métadonnées d’audience, vous devez la connecter à la configuration de destination créée à l’étape 2. Ajoutez l’ID d’instance de votre configuration de métadonnées d’audience à votre configuration de destination en tant que `audienceTemplateId`.
 

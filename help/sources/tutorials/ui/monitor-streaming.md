@@ -4,9 +4,12 @@ description: Les connecteurs Source de Adobe Experience Platform permettent d’
 title: Surveillance des flux de données pour les sources de diffusion en continu dans l’interface utilisateur
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 TQID: https://experienceleague.adobe.com/HAuaPKWlY2uLn8xo8lptRQt6N-SUX08R4X84O4XoNj4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1051
@@ -39,7 +42,7 @@ La page [!UICONTROL Flux de données] contient une liste de tous les flux de don
 
 Sélectionnez le nom du flux de données à afficher.
 
-![ flux de données ](../../images/tutorials/monitor-streaming/dataflows.png)
+![&#x200B; flux de données &#x200B;](../../images/tutorials/monitor-streaming/dataflows.png)
 
 Le tableau suivant contient des informations supplémentaires sur les statuts d’exécution des flux de données :
 
@@ -99,7 +102,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 * **[!UICONTROL Enregistrements ingérés]** : nombre total d’enregistrements ingérés dans [!DNL Data Lake].
 * **[!UICONTROL Enregistrements avec avertissements]** : nombre total d’enregistrements avec avertissements qui ont été ingérés. Toutes les erreurs de transformation du mappeur sont signalées comme avertissements et les lignes partiellement ingérées sont étiquetées comme `success` avec un avertissement. **Remarque** : la prise en charge de l’ingestion d’enregistrements avec des avertissements n’est disponible que pour les sources en flux continu.
 * **[!UICONTROL Enregistrements en échec]** : nombre d’enregistrements qui n’ont pas été ingérés dans [!DNL Data Lake] en raison d’erreurs dans les données.
-* **[!UICONTROL Taux d’ingestion]** : taux de succès des enregistrements ingérés dans [!DNL Data Lake]. Cette mesure s’applique lorsque l’option [!UICONTROL  Ingestion partielle ] est activée.
+* **[!UICONTROL Taux d’ingestion]** : taux de succès des enregistrements ingérés dans [!DNL Data Lake]. Cette mesure s’applique lorsque l’option [!UICONTROL &#x200B; Ingestion partielle &#x200B;] est activée.
 * **[!UICONTROL Statut]** : représente le statut du flux de données : [!UICONTROL Terminé] ou [!UICONTROL Traitement]. [!UICONTROL Terminé] signifie que tous les enregistrements pour l’exécution du flux de données correspondant ont été traités dans la période d’une heure. [!UICONTROL Traitement] signifie que l’exécution du flux de données n’est pas encore terminée.
 
 La page [!UICONTROL Présentation de l’exécution du flux de données] contient des informations supplémentaires sur votre flux de données, telles que l’identifiant d’exécution du flux de données correspondant, le jeu de données cible et l’identifiant d’organisation.

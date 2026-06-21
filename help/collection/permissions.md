@@ -3,11 +3,42 @@ title: Gestion des autorisations pour la collecte de données dans Experience P
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 TQID: https://experienceleague.adobe.com/-4BLSt2CBGLjnxeAOCp2ZQEKy4UEOZCoScVdKxAZ5mc
-product_v2: id: cb954087-f4fc-4456-afb9-e939cabcdc79id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: bb359667-ec7d-4d4b-8663-5850fc219d32id: c132d929-fa62-4271-803e-b823be07b914id: d556b755-390a-43f0-be32-a08cf6236126id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
-subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9b953c0-98db-499b-97f5-a0dc3290bda3id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: b856530c-d60b-42d8-a19d-df2dfd7fe62aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: d118ce48-260e-496e-9e49-1de731540ca6id: d175cb4c-5781-454e-a826-bf6dff786265id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0id: d2e8a157-b3b0-4143-9ff3-809bf400be56id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: fdac7813-bd56-47ae-9f6d-fa94ad1c5deeid: fef08361-6ac5-460c-93fe-d063e40b6a49
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: d3cdead0-685a-4489-9250-4bb709942f66id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: bb359667-ec7d-4d4b-8663-5850fc219d32
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: d556b755-390a-43f0-be32-a08cf6236126
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fdbb8fc9-ffa3-4b86-88fe-aa4c5a3e1bc6
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: b856530c-d60b-42d8-a19d-df2dfd7fe62a
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: d118ce48-260e-496e-9e49-1de731540ca6
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+  - id: d2e8a157-b3b0-4143-9ff3-809bf400be56
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: fdac7813-bd56-47ae-9f6d-fa94ad1c5dee
+  - id: fef08361-6ac5-460c-93fe-d063e40b6a49
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1379
@@ -62,12 +93,12 @@ Les autorisations sous Collecte de données Adobe Experience Platform contrôlen
 | Plateformes | Mobile | Accorde l’accès aux [propriétés mobiles](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées à d’autres droits de propriété. |
 | Plateformes | Edge | Accorde l’accès aux [propriétés Edge de transfert d’événement](../tags/ui/event-forwarding/getting-started.md) lorsqu’elles sont combinées à d’autres droits de propriété. |
 | Propriétés | (S/O) | Selon les propriétés qui ont été créées dans votre organisation, vous pouvez contrôler l’accès à chacune d’elles par le biais de cette catégorie d’autorisations dans Admin Console.<br><br>Les droits de propriété attribués à un utilisateur s’appliquent uniquement aux propriétés auxquelles il a accès par le biais de cette catégorie d’autorisations. |
-| Droits de propriété | Approuver | Permet d’approuver une version de bibliothèque dans le cadre du [ flux de publication ](../tags/ui/publishing/publishing-flow.md). |
-| Droits de propriété | Développer | Permet de développer une version de bibliothèque dans le cadre du [ flux de publication ](../tags/ui/publishing/publishing-flow.md). |
+| Droits de propriété | Approuver | Permet d’approuver une version de bibliothèque dans le cadre du [&#x200B; flux de publication &#x200B;](../tags/ui/publishing/publishing-flow.md). |
+| Droits de propriété | Développer | Permet de développer une version de bibliothèque dans le cadre du [&#x200B; flux de publication &#x200B;](../tags/ui/publishing/publishing-flow.md). |
 | Droits de propriété | Modifier la propriété | Permet de modifier la configuration de base des propriétés auxquelles un utilisateur a accès. |
 | Droits de propriété | Gérer les environnements | Permet de gérer les [environnements](../tags/ui/publishing/environments.md) pour les propriétés auxquelles un utilisateur a accès. |
-| Droits de propriété | Gérer les extensions | Permet de gérer les [ extensions ](../tags/ui/managing-resources/extensions/overview.md) pour les propriétés auxquelles un utilisateur a accès. |
-| Droits de propriété | Publier | Permet de publier une version de bibliothèque dans le cadre du [ flux de publication ](../tags/ui/publishing/publishing-flow.md). |
+| Droits de propriété | Gérer les extensions | Permet de gérer les [&#x200B; extensions &#x200B;](../tags/ui/managing-resources/extensions/overview.md) pour les propriétés auxquelles un utilisateur a accès. |
+| Droits de propriété | Publier | Permet de publier une version de bibliothèque dans le cadre du [&#x200B; flux de publication &#x200B;](../tags/ui/publishing/publishing-flow.md). |
 | Droits d’entreprise | Développement dʼextensions | Permet de créer et de modifier des packages d’extension qui appartiennent à votre organisation, y compris les versions privées et les demandes de publication publique. |
 | Droits d’entreprise | Gérer les configurations d’application | Cette autorisation ne s’applique que si vous disposez d’une licence pour Adobe Journey Optimizer ou une autre solution qui accorde l’accès aux messages in-app et aux notifications push. Cela vous permet de gérer les applications dont Adobe Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 | Droits d’entreprise | Gérer les propriétés | Permet de créer et de gérer des balises (propriété web), un transfert d’événement (propriété Edge) et des propriétés mobiles. |
@@ -80,7 +111,7 @@ Les autorisations sous Collecte de données Adobe Experience Platform contrôlen
 
 ## Gérer les autorisations {#manage}
 
-Les autorisations pour la collecte de données sont gérées par le biais de deux désignations de produit : **** et **Collecte de données Adobe Experience Platform**.
+Les autorisations pour la collecte de données sont gérées par le biais de deux désignations de produit : **&#x200B;**&#x200B;et **Collecte de données Adobe Experience Platform**.
 
 Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autorisations appropriées sous chaque produit dans Admin Console :
 

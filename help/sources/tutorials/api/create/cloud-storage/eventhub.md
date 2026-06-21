@@ -4,8 +4,10 @@ description: Découvrez comment connecter Adobe Experience Platform à un compte
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 TQID: https://experienceleague.adobe.com/6hv2rQBlyGPHwoqolRyWoZN5pn1tXhxAlJqPf3cHKDw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1597
@@ -52,7 +54,7 @@ Pour que [!DNL Flow Service] puissiez vous connecter à votre compte [!DNL Event
 | `sasKeyName` | Nom de la règle d’autorisation, également appelé nom de la clé SAS. |
 | `sasKey` | Clé primaire de l’espace de noms [!DNL Event Hubs]. La `sasPolicy` à laquelle correspond le `sasKey` doit disposer de droits `manage` configurés pour que la liste [!DNL Event Hubs] soit renseignée. |
 | `namespace` | Espace de noms du [!DNL Event Hub] auquel vous accédez. Un espace de noms [!DNL Event Hub] fournit un conteneur de définition de portée unique dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
-| `eventHubName` | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
+| `eventHubName` | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion [!DNL Event Hubs] est : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 Pour plus d’informations sur l’authentification des signatures d’accès partagé (SAS) pour [!DNL Event Hubs], consultez le guide [[!DNL Azure]  sur l’utilisation de SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -76,7 +78,7 @@ Pour plus d’informations sur [!DNL Azure Active Directory], consultez le guide
 | `clientId` | Identifiant d’application attribué à votre application. Vous pouvez récupérer cet identifiant à partir du portail [!DNL Microsoft Entra ID] où vous avez enregistré votre [!DNL Azure Active Directory]. |
 | `clientSecretValue` | Secret client utilisé avec l’identifiant client pour authentifier votre application . Vous pouvez récupérer votre secret client à partir du portail [!DNL Microsoft Entra ID] où vous avez enregistré votre [!DNL Azure Active Directory]. |
 | `namespace` | Espace de noms du [!DNL Event Hub] auquel vous accédez. Un espace de noms [!DNL Event Hub] fournit un conteneur de définition de portée unique dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
-| `eventHubName` | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
+| `eventHubName` | Renseignez votre nom de [!DNL Azure Event Hub]. Lisez la documentation de [&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) pour plus d&#39;informations sur les noms de [!DNL Event Hub]. |
 
 >[!ENDTABS]
 
@@ -394,4 +396,4 @@ curl -X POST \
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion source [!DNL Event Hubs] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] ](../../collect/streaming.md).
+Ce tutoriel vous a permis de créer une connexion source [!DNL Event Hubs] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/streaming.md).

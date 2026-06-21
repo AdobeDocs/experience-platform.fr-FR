@@ -3,11 +3,19 @@ description: Découvrez comment configurer les schémas du partenaire pour les d
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
 TQID: https://experienceleague.adobe.com/HGTfvHmF7wMm5BFb33T-T0u2NQNkM9HNaNAkz1GCEJA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1927
@@ -210,7 +218,7 @@ L’exemple ci-dessous montre les mappages source et de destination obligatoires
 
 {style="table-layout:auto"}
 
-]**Par conséquent, les sections Champ**[!UICONTROL  Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
+**Par conséquent, les sections Champ** Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 

@@ -3,8 +3,10 @@ title: Classe De Médicaments
 description: Découvrez la classe Médicaments dans le modèle de données d’expérience (XDM).
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
 TQID: https://experienceleague.adobe.com/y2hLHq-H5on3MVCADj4Yj9A5Qd29LJ6zwXQx2AMuNy8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 147
@@ -26,4 +28,4 @@ Dans le modèle de données d’expérience (XDM), la classe [!UICONTROL Médica
 
 {style="table-layout:auto"}
 
-La classe peut être étendue avec le groupe de champs [[!UICONTROL Médicaments pour les soins de santé] ](../field-groups/medication/healthcare-medication.md) pour décrire plus de détails sur le médicament ou le médicament.
+La classe peut être étendue avec le groupe de champs [[!UICONTROL Médicaments pour les soins de santé] &#x200B;](../field-groups/medication/healthcare-medication.md) pour décrire plus de détails sur le médicament ou le médicament.

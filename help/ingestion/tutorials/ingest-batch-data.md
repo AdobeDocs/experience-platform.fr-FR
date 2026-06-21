@@ -6,10 +6,15 @@ type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous la forme de fichiers de lots, sous la forme de fichiers parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 TQID: https://experienceleague.adobe.com/PDftlpFl4BsPvOinOjBjdXF5hKRpRrXwh9TywjLzCcc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1329

@@ -3,9 +3,14 @@ title: Guide complet sur la gouvernance des données
 description: Suivez la procédure complète permettant d’appliquer des contraintes d’utilisation des données aux champs et jeux de données dans Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 TQID: https://experienceleague.adobe.com/1MTKJuyrdltX7iDluo2im9AdFjSv885Rk-J1WrxYAVY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1875
@@ -121,7 +126,7 @@ Chaque libellé principal est associé à une politique de base qui, lorsqu’el
 
 Si les politiques de base disponibles ne couvrent pas tous vos cas d’utilisation (par exemple lorsque vous utilisez des libellés personnalisés que vous avez définis sous votre organisation), vous pouvez définir une politique personnalisée à la place. Dans l’espace de travail **[!UICONTROL Politiques]**, sélectionnez **[!UICONTROL Créer une politique]**.
 
-![Image illustrant le bouton [!UICONTROL  Créer une politique ] sélectionné dans l’interface utilisateur](./images/e2e/create-policy.png)
+![Image illustrant le bouton [!UICONTROL &#x200B; Créer une politique &#x200B;] sélectionné dans l’interface utilisateur](./images/e2e/create-policy.png)
 
 Une fenêtre contextuelle s’affiche, vous invitant à sélectionner le type de politique que vous souhaitez créer. Sélectionnez **[!UICONTROL Politique de gouvernance des données]**, puis sélectionnez **[!UICONTROL Continuer]**.
 
@@ -141,7 +146,7 @@ Le dernier écran affiche un résumé avec les détails de la politique et les a
 
 ![Image montrant la confirmation de configuration de la politique dans l’interface utilisateur.](./images/e2e/confirm-policy.png)
 
-La politique est créée, mais est définie sur [!UICONTROL  Désactivée ] par défaut. Sélectionnez la politique dans la liste et définissez le bouton bascule **[!UICONTROL Statut de la politique]** sur **[!UICONTROL Activé]** pour activer la politique.
+La politique est créée, mais est définie sur [!UICONTROL &#x200B; Désactivée &#x200B;] par défaut. Sélectionnez la politique dans la liste et définissez le bouton bascule **[!UICONTROL Statut de la politique]** sur **[!UICONTROL Activé]** pour activer la politique.
 
 ![Image montrant la nouvelle politique activée dans l’interface utilisateur.](./images/e2e/enable-created-policy.png)
 
@@ -151,7 +156,7 @@ Continuez à suivre les étapes ci-dessus pour créer et activer les politiques 
 
 Pour que vos politiques activées déterminent avec précision les données qui peuvent être activées vers une destination, vous devez affecter des actions marketing spécifiques à cette destination.
 
-Prenons l’exemple d’une politique activée qui empêche toute donnée contenant un libellé `C2` d’être utilisée pour l’action marketing « [!UICONTROL  Exporter vers un tiers »]. Lors de l’activation de données vers une destination, la politique identifie quelles actions marketing sont présentes sur la destination. Si l’action « [!UICONTROL Exporter vers un tiers] » est présente, une tentative d’activation de données avec un libellé `C2` se traduit par une violation de la politique. Si l’action « [!UICONTROL Exporter vers un tiers] » n’est pas présente, la politique n’est pas appliquée pour la destination et les données avec les libellés `C2` peuvent être librement activées.
+Prenons l’exemple d’une politique activée qui empêche toute donnée contenant un libellé `C2` d’être utilisée pour l’action marketing « [!UICONTROL &#x200B; Exporter vers un tiers »]. Lors de l’activation de données vers une destination, la politique identifie quelles actions marketing sont présentes sur la destination. Si l’action « [!UICONTROL Exporter vers un tiers] » est présente, une tentative d’activation de données avec un libellé `C2` se traduit par une violation de la politique. Si l’action « [!UICONTROL Exporter vers un tiers] » n’est pas présente, la politique n’est pas appliquée pour la destination et les données avec les libellés `C2` peuvent être librement activées.
 
 Lors de la [connexion d’une destination dans l’interface utilisateur](../destinations/ui/connect-destination.md), l’étape **[!UICONTROL Gouvernance]** du workflow vous permet de sélectionner les actions marketing qui s’appliquent à cette destination, ce qui détermine en fin de compte les politiques de gouvernance des données appliquées à la destination.
 

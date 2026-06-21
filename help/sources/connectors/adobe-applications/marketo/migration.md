@@ -3,8 +3,10 @@ title: Migrer le mappage ECID d’une personne vers une activité à l’aide de
 description: Découvrez comment migrer votre mappage ECID du jeu de données de personne vers le jeu de données d’activité à l’aide de la source Marketo Engage.
 exl-id: bcc91c53-aeca-4d7c-89b5-cf025d0357a0
 TQID: https://experienceleague.adobe.com/SoKZ0Cg-VzZ-ooMrTYiun62RQnglkhMM-DonNSjc6Ac
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 552
@@ -18,8 +20,8 @@ Vous pouvez migrer votre mappage ECID de votre jeu de données [!DNL Marketo Eng
 
 | Problème | Solution |
 | --- | --- |
-| Lorsque votre jeu de données [!DNL Marketo Person] comporte des liens vers plusieurs ECID, l’ingestion des données échoue lorsque le [ nombre total d’identités dans un enregistrement de modèle de données d’expérience (XDM) dépasse 20 ](../../../../identity-service/guardrails.md). | En migrant le mappage des champs ECID vers [!DNL Activity], vous pouvez vous assurer que le nombre d’identités du flux de données [!DNL Marketo Person] reste dans la limite et permettre ainsi à l’ingestion des données de réussir. |
-| Chaque fois que le jeu de données [!DNL Marketo Person] est ingéré avec des ECID, l’horodatage de tous les ECID du jeu de données [!DNL Marketo Person] est mis à jour avec l’horodatage de la dernière mise à jour de l’enregistrement Personne. Cela peut entraîner la suppression [ incorrecte des identités plus récentes du graphique d’identités](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). | En migrant les mappages de champs ECID vers [!DNL Activity], Identity Service peut refléter correctement la date et l’heure des ECID et le mécanisme de « premier entré, premier sorti » d’Identity Service offrira un comportement plus stable. |
+| Lorsque votre jeu de données [!DNL Marketo Person] comporte des liens vers plusieurs ECID, l’ingestion des données échoue lorsque le [&#x200B; nombre total d’identités dans un enregistrement de modèle de données d’expérience (XDM) dépasse 20 &#x200B;](../../../../identity-service/guardrails.md). | En migrant le mappage des champs ECID vers [!DNL Activity], vous pouvez vous assurer que le nombre d’identités du flux de données [!DNL Marketo Person] reste dans la limite et permettre ainsi à l’ingestion des données de réussir. |
+| Chaque fois que le jeu de données [!DNL Marketo Person] est ingéré avec des ECID, l’horodatage de tous les ECID du jeu de données [!DNL Marketo Person] est mis à jour avec l’horodatage de la dernière mise à jour de l’enregistrement Personne. Cela peut entraîner la suppression [&#x200B; incorrecte des identités plus récentes du graphique d’identités](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). | En migrant les mappages de champs ECID vers [!DNL Activity], Identity Service peut refléter correctement la date et l’heure des ECID et le mécanisme de « premier entré, premier sorti » d’Identity Service offrira un comportement plus stable. |
 | Lorsque des ECID sont ingérés par le biais d’[!DNL Marketo Person] flux de données, les ECID nouvellement ajoutés ne sont pas ingérés dans Experience Platform, sauf si l’enregistrement [!DNL Person] est mis à jour dans [!DNL Marketo]. | Lorsqu’un nouvel ECID est lié à l’enregistrement [!DNL Person] dans [!DNL Marketo], vous pouvez ingérer ces données ECID par le biais d’un flux de données [!DNL Marketo Activity] et demander immédiatement une mise à jour du graphique d’identité dans Experience Platform. |
 
 En substance, vous devez :

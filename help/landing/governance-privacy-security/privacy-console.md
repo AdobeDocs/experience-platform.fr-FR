@@ -37,7 +37,7 @@ La fonction de chaque widget est expliquée ci-dessous :
 | Ordres de travail d’hygiène des données récents | Affiche les derniers ordres de travail [Hygiène des données](../../hygiene/home.md) traités par le système. Utilisez la liste déroulante pour basculer entre les ordres de travail récemment créés et les ordres de travail récemment mis à jour. |
 | Actions les plus fréquentes | Affiche les actions les plus fréquentes sur Experience Platform, telles qu’elles sont capturées par [journaux d’audit](./audit-logs/overview.md) pour la période sélectionnée. Utilisez le menu déroulant pour modifier la période entre les 7, 14 et 30 derniers jours. |
 | Utilisateurs les plus actifs | Affiche les utilisateurs Experience Platform les plus actifs au sein de votre organisation, tels qu’ils sont capturés par [journaux d’audit](./audit-logs/overview.md) pour la période sélectionnée. Utilisez le menu déroulant pour modifier la période entre les 7, 14 et 30 derniers jours. |
-| Requêtes des titulaires de données | Affiche le nombre de demandes des titulaires de données envoyées et traitées par [](../../privacy-service/home.md) pour un jour donné. |
+| Requêtes des titulaires de données | Affiche le nombre de demandes des titulaires de données envoyées et traitées par [&#128279;](../../privacy-service/home.md) pour un jour donné. |
 
 {style="table-layout:auto"}
 

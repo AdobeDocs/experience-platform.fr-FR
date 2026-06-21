@@ -101,4 +101,4 @@ ingot("configure", {
 
 ## Plusieurs instances SDK
 
-Vous pouvez éventuellement utiliser le code de base pour configurer plusieurs instances SDK sur une page. Pour plus d’informations](../../use-cases/multiple-instances.md) voir [ Utilisation de plusieurs instances Web SDK .
+Vous pouvez éventuellement utiliser le code de base pour configurer plusieurs instances SDK sur une page. Pour plus d’informations[&#128279;](../../use-cases/multiple-instances.md) voir  Utilisation de plusieurs instances Web SDK .

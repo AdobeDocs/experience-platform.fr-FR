@@ -32,7 +32,7 @@ Les outils [!UICONTROL Exécuter et exploiter] sont conçus pour servir plusieur
 
 ## Conditions préalables {#prerequisites}
 
-Pour accéder aux outils d’exécution et d’opération, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les planifications de tâches]** et **[!UICONTROL Afficher la gestion des profils]** [](/help/access-control/home.md#permissions). Contactez votre administrateur système pour vous assurer que vous disposez des autorisations appropriées.
+Pour accéder aux outils d’exécution et d’opération, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les planifications de tâches]** et **[!UICONTROL Afficher la gestion des profils]** [&#128279;](/help/access-control/home.md#permissions). Contactez votre administrateur système pour vous assurer que vous disposez des autorisations appropriées.
 
 ## Prise en main {#getting-started}
 
@@ -51,7 +51,7 @@ Les outils suivants vous aident à inspecter et optimiser vos opérations de don
 
 >[!IMPORTANT]
 >
->Actuellement] les [!UICONTROL  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
+>Actuellement les  planifications de tâches ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
@@ -86,7 +86,7 @@ Les contrôles de l’intégrité évaluent actuellement cinq domaines fondament
 
 Maintenant que vous comprenez l’objectif et les fonctionnalités des outils [!UICONTROL Exécuter et exploiter], explorez les ressources suivantes pour approfondir vos connaissances :
 
-* Découvrez comment utiliser les [ contrôles d’intégrité ](health-checks.md) pour détecter les problèmes de configuration des schémas et des identités
+* Découvrez comment utiliser les [&#x200B; contrôles d’intégrité &#x200B;](health-checks.md) pour détecter les problèmes de configuration des schémas et des identités
 * Découvrez comment [inspecter les planifications de tâches](job-schedules.md) pour l’ingestion et les activations par lots
 * Découvrez [ingestion par lots](../ingestion/batch-ingestion/overview.md) pour comprendre comment les données sont ingérées dans Experience Platform
 * Découvrez comment [configurer des activations planifiées](../destinations/ui/activate-batch-profile-destinations.md) pour les destinations par lots

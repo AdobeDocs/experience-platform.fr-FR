@@ -5,8 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 99831093-89da-4329-be29-c130c1d48f63
 TQID: https://experienceleague.adobe.com/Qn4L1lvNPbzC-YMfprA5fs0YXQlHGUrHLc5x9EFxuPw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 341
@@ -24,7 +26,7 @@ ht-degree: 6%
 | --- | --- | --- | --- |
 | [!UICONTROL Adresse] | `address` | [[!UICONTROL Adresse]](../data-types/address.md) | Adresse de l’emplacement physique. |
 | [!UICONTROL Caractéristique] | `characteristic` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Ensemble des caractéristiques de l’emplacement. |
-| [!UICONTROL  Contact ] | `contact` | Tableau de [[!UICONTROL détails de contact étendus]](../data-types/extended-contact-detail.md) | Coordonnées du lieu. |
+| [!UICONTROL &#x200B; Contact &#x200B;] | `contact` | Tableau de [[!UICONTROL détails de contact étendus]](../data-types/extended-contact-detail.md) | Coordonnées du lieu. |
 | [!UICONTROL Point d’entrée] | `endpoint` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Points d’entrée techniques permettant d’accéder aux services d’exploitation pour l’emplacement. |
 | [!UICONTROL Formulaire] | `form` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Forme physique de l’emplacement. |
 | [!UICONTROL Heures d’ouverture] | `hoursOfOperation` | Tableau de [[!UICONTROL disponibilité]](../data-types/availability.md) | Les jours et heures d’ouverture standard de cet emplacement (y compris les exceptions). |

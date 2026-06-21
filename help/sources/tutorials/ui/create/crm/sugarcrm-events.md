@@ -3,11 +3,16 @@ title: Créer une connexion source SugarCRM Events dans l’interface utilisateu
 description: Découvrez comment créer une connexion source SugarCRM Events à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
 TQID: https://experienceleague.adobe.com/Cu8F3Ys1PODio-rmYnBtHRYKR8iGkS0slXoktRQix5Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 662
@@ -42,7 +47,7 @@ Pour connecter [!DNL SugarCRM Events] à Experience Platform, vous devez fournir
 
 ### Création d’un schéma Experience Platform pour [!DNL SugarCRM]
 
-Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant un exemple de schéma pour les événements SugarCRM](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 

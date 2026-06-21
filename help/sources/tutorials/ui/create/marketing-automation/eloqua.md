@@ -3,10 +3,19 @@ title: Connecter Oracle Eloqua (V2) à Experience Platform dans l’interface ut
 description: Découvrez comment connecter votre compte Oracle Eloqua à Experience Platform dans l’interface utilisateur.
 exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
 TQID: https://experienceleague.adobe.com/d3-xkZdW2T2Jm7eYW7EobC89rej-8lP1OUj9u4Oei3Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1223
@@ -57,7 +66,7 @@ Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]**
 
 ## Créer un nouveau compte {#new}
 
-Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description sous les [!UICONTROL détails de connexion Source]. Ensuite, sous [!UICONTROL Authentification du compte], indiquez les valeurs de vos **ID client**, **Secret client**, **Nom d’utilisateur**, **Mot de passe** et **** Point d’entrée de base. Vous pouvez lire le [guide d’authentification](../../../../connectors/marketing-automation/eloqua.md) pour plus d’informations sur ces informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques secondes le temps que votre connexion s’établisse.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description sous les [!UICONTROL détails de connexion Source]. Ensuite, sous [!UICONTROL Authentification du compte], indiquez les valeurs de vos **ID client**, **Secret client**, **Nom d’utilisateur**, **Mot de passe** et **&#x200B;**&#x200B;Point d’entrée de base. Vous pouvez lire le [guide d’authentification](../../../../connectors/marketing-automation/eloqua.md) pour plus d’informations sur ces informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques secondes le temps que votre connexion s’établisse.
 
 ![Nouvelle interface de compte avec des champs pour les détails de connexion source et les informations d’authentification.](../../../../images/tutorials/create/eloqua/new.png)
 
@@ -103,13 +112,13 @@ Pour utiliser l’éditeur de champ calculé, sélectionnez le champ source à m
 
 >[!BEGINTABS]
 
->[!TAB ]
+>[!TAB Tab]
 
 Pour les utilisateurs [!DNL Salesforce], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
 ![Champ calculé pour Salesforce.](../../../../images/tutorials/create/eloqua/sf-field.png)
 
->[!TAB ]
+>[!TAB Tab&#x200B;]
 
 Pour les utilisateurs [!DNL Microsoft], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
@@ -132,7 +141,7 @@ Une fois la mise à jour des champs calculés terminée, sélectionnez **[!UICON
 >* **Activité:** `CreatedAt`
 >* **Campaign:** `updatedAt`
 
-Une fois le mappage terminé, vous pouvez configurer un planning d’ingestion pour votre flux de données. Définissez votre [!UICONTROL Fréquence] sur `Once` pour configurer une exécution d’ingestion unique. Pour une ingestion incrémentielle, vous pouvez définir votre [!UICONTROL Fréquence] sur `Hour`, `Day` ou `Week`. Lors de l’utilisation de l’ingestion incrémentielle, vous devez également configurer l’[!UICONTROL  Intervalle ] pour définir le temps écoulé entre les exécutions d’ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
+Une fois le mappage terminé, vous pouvez configurer un planning d’ingestion pour votre flux de données. Définissez votre [!UICONTROL Fréquence] sur `Once` pour configurer une exécution d’ingestion unique. Pour une ingestion incrémentielle, vous pouvez définir votre [!UICONTROL Fréquence] sur `Hour`, `Day` ou `Week`. Lors de l’utilisation de l’ingestion incrémentielle, vous devez également configurer l’[!UICONTROL &#x200B; Intervalle &#x200B;] pour définir le temps écoulé entre les exécutions d’ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
 
 La fréquence d’ingestion par minute n’est pas disponible pour la source de [!DNL Eloqua]. La planification la plus fréquente que vous pouvez choisir est horaire. Sélectionnez une planification qui correspond à vos besoins en matière de fraîcheur des données. Gardez à l’esprit que le choix d’une planification plus fréquente augmentera les coûts de calcul.
 

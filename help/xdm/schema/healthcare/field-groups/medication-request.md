@@ -5,10 +5,15 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 8502380f-9557-4ca6-84bc-65010dfc6066
 TQID: https://experienceleague.adobe.com/0xtGKHslJtX3XKceir3eBtCu4gmjSya701PTh0pBDFM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1026
@@ -35,7 +40,7 @@ ht-degree: 3%
 | [!UICONTROL Historique des événements] | `eventHistory` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Créez un lien vers les enregistrements des événements liés à la demande de médicament, tels que le respect de la demande, les moments de transitions d’état clés ou les mises à jour pertinentes. |
 | [!UICONTROL Identifiant du groupe] | `groupIdentifier` | [[!UICONTROL Identifiant]](../data-types/identifier.md) | Identifiant partagé sur plusieurs instances de requête indépendantes qui ont été activées par un seul auteur. |
 | [!UICONTROL Identifiant] | `identifier` | Tableau d’[[!UICONTROL identifiant]](../data-types/identifier.md) | Identifiants associés à la demande de médicament, définis par des processus d’entreprise et/ou utilisés pour s’y référer lorsqu’une référence URL directe à la ressource elle-même n’est pas appropriée. |
-| Source d’informations][!UICONTROL  | `informationSource` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Personne ou organisation qui a fourni les informations pour la demande si la source n’est pas la `requester`. |
+| Source d’informations | `informationSource` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Personne ou organisation qui a fourni les informations pour la demande si la source n’est pas la `requester`. |
 | [!UICONTROL Assurance] | `insurance` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Les régimes d&#39;assurance, les extensions de couverture, les autorisations préalables et/ou les prédéterminations qui peuvent être nécessaires pour fournir le service demandé. |
 | [!UICONTROL Médicaments] | `medication` | [[!UICONTROL Référence codable]](../data-types/codeable-reference.md) | Permet d’identifier le médicament demandé. Il doit s’agir d’un lien vers une ressource qui représente les détails du médicament ou d’un code qui identifie le médicament. |
 | [!UICONTROL Remarque] | `note` | Tableau d’[[!UICONTROL annotation]](../data-types/annotation.md) | Informations supplémentaires sur la prescription qui n’ont pas pu être transmises par les autres attributs. |
@@ -47,7 +52,7 @@ ht-degree: 3%
 | [!UICONTROL demandeur] | `requester` | [[!UICONTROL Référence]](../data-types/reference.md) | Personne, organisation ou appareil qui a initié la demande et qui est responsable de son activation. |
 | [!UICONTROL Motif du statut] | `statusReason` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Raison du statut actuel de la requête. |
 | [!UICONTROL Objet] | `subject` | [[!UICONTROL Référence]](../data-types/reference.md) | Personne ou groupe pour lequel le médicament a été demandé. |
-| [!UICONTROL Substitution ] | `substitution` | Objet | Indique si une substitution peut ou doit faire partie de la distribution. Contient trois propriétés : <li>`allowedBoolean` : valeur booléenne qui est vraie si le prescripteur autorise une substitution.</li> <li>`allowedCodeableConcept` : valeur [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) qui fournit un code si le prescripteur autorise une substitution.</li> <li>`reason` : valeur [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) qui indique une raison de la substitution.</li> |
+| [!UICONTROL Substitution &#x200B;] | `substitution` | Objet | Indique si une substitution peut ou doit faire partie de la distribution. Contient trois propriétés : <li>`allowedBoolean` : valeur booléenne qui est vraie si le prescripteur autorise une substitution.</li> <li>`allowedCodeableConcept` : valeur [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) qui fournit un code si le prescripteur autorise une substitution.</li> <li>`reason` : valeur [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) qui indique une raison de la substitution.</li> |
 | [!UICONTROL Informations annexes] | `supportingInformation` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Informations destinées à aider le patient à prendre son médicament, telles que sa taille et son poids. |
 | [!UICONTROL Créé le] | `authoredOn` | DateTime | Date (et éventuellement heure) à laquelle la prescription a été rédigée. |
 | [!UICONTROL Ne Pas Effectuer] | `doNotPerform` | Booléen | Un indicateur booléen qui est vrai est que le patient doit arrêter (ou ne pas commencer) la prise du médicament. |
@@ -76,7 +81,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 | [!UICONTROL Instructions relatives au distributeur] | `dispenserInstruction` | Tableau d’[[!UICONTROL annotation]](../data-types/annotation.md) | Informations supplémentaires pour le dispensateur, telles que des conseils à fournir au patient |
 | [!UICONTROL Aide À L’Administration Des Doses] | `doseAdministrationAid` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Informations sur le type d’emballage d’observance à fournir pour la délivrance du médicament. |
 | [!UICONTROL Durée prévue de l&#39;approvisionnement] | `expectedSupplyDuration` | [[!UICONTROL Durée]](../data-types/duration.md) | La période pendant laquelle le produit fourni est censé être utilisé, ou la durée prévue de la distribution. |
-| [!UICONTROL Remplissage initial] | `initialFill` | Objet | Informations pour le remplissage initial. Contient deux propriétés : <li>`quantity` : Valeur [[!UICONTROL  Quantité simple]](../data-types/simple-quantity.md) qui fournit le montant à fournir lors de la première distribution.</li> <li>`duration` : une valeur [[!UICONTROL Durée]](../data-types/duration.md) qui fournit la durée prévue de la première distribution.</li> |
+| [!UICONTROL Remplissage initial] | `initialFill` | Objet | Informations pour le remplissage initial. Contient deux propriétés : <li>`quantity` : Valeur [[!UICONTROL &#x200B; Quantité simple]](../data-types/simple-quantity.md) qui fournit le montant à fournir lors de la première distribution.</li> <li>`duration` : une valeur [[!UICONTROL Durée]](../data-types/duration.md) qui fournit la durée prévue de la première distribution.</li> |
 | [!UICONTROL Quantité] | `quantity` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | Quantité à distribuer pour un remplissage. |
 | [!UICONTROL Période de validité] | `validityPeriod` | [[!UICONTROL Période]](../data-types/period.md) | Durée de validité de la prescription. |
 | [!UICONTROL Nombre De Répétitions Autorisé] | `numberOfRepeatsAllowed` | Entier | Nombre de rechargements autorisés, avec une valeur minimale de 0. |

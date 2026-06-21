@@ -3,11 +3,26 @@ title: Notes de mise à jour d’Adobe Experience Platform de novembre 2024
 description: Notes de mise à jour de novembre 2024 pour Adobe Experience Platform.
 exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
 TQID: https://experienceleague.adobe.com/KK6YGMilj3y6UwuFQwxGtGo67gfbv79g4Oo0-1pZOlA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: ed0d8d0e-04b9-4326-be72-a0fbca265377id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 878
@@ -42,8 +57,8 @@ L’Assistant IA dans Adobe Experience Platform est une expérience conversat
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE ]{type=Informative} Surveillez les modifications importantes et la croissance prévue de l’audience. | Utilisez l’Assistant IA pour surveiller les changements significatifs et fournir des prévisions de croissance de votre audience et de la taille des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données. Pour plus d’informations, consultez le guide sur la [surveillance des changements significatifs et la prévision de la croissance de l’audience](../../ai-assistant/new-features/audience-forecasting.md). |
-| [!BADGE Alpha ]{type=Informative} Estimation en langage naturel | Utilisez les fonctionnalités d’estimation du langage naturel d’Assistant IA pour estimer la taille des audiences et prédire la propension des audiences sur la base de questions simples et conversationnelles. Pour plus d’informations, consultez le guide sur l’[utilisation de l’estimation du langage naturel avec l’Assistant IA](../../ai-assistant/new-features/natural-language.md). |
+| {type=Informative} Surveillez les modifications importantes et la croissance prévue de l’audience. | Utilisez l’Assistant IA pour surveiller les changements significatifs et fournir des prévisions de croissance de votre audience et de la taille des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données. Pour plus d’informations, consultez le guide sur la [surveillance des changements significatifs et la prévision de la croissance de l’audience](../../ai-assistant/new-features/audience-forecasting.md). |
+| [!BADGE Alpha &#x200B;]{type=Informative} Estimation en langage naturel | Utilisez les fonctionnalités d’estimation du langage naturel d’Assistant IA pour estimer la taille des audiences et prédire la propension des audiences sur la base de questions simples et conversationnelles. Pour plus d’informations, consultez le guide sur l’[utilisation de l’estimation du langage naturel avec l’Assistant IA](../../ai-assistant/new-features/natural-language.md). |
 
 {style="table-layout:auto"}
 

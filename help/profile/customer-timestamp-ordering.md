@@ -5,9 +5,13 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 1cd9f0b5-6334-4815-860a-78596a9cea1a
 TQID: https://experienceleague.adobe.com/aLG9NXX2dnBkavqylpkVSWLNtvGht37lD5AmdzjdC7Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 433
@@ -19,7 +23,7 @@ ht-degree: 2%
 
 Dans Adobe Experience Platform, l’ordre des données n’est pas garanti par défaut lors de l’ingestion de données par le biais de l’ingestion en flux continu vers la banque de profils. Grâce à l’ordre des horodatages client, vous pouvez garantir que le dernier message, conformément à l’horodatage client fourni, sera conservé dans la banque de profils. Tous les messages obsolètes seront alors ignorés et ne seront **pas** disponibles pour une utilisation dans les services en aval qui utilisent les données de profil comme la segmentation et les destinations. Par conséquent, cela permet à vos données de profil d’être cohérentes et de rester synchronisées avec vos systèmes sources.
 
-Pour activer la commande d’horodatage client, utilisez le champ `extSourceSystemAudit.lastUpdatedDate` dans le groupe de champs [ Attributs d’audit du système Source externe ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) et contactez votre gestionnaire de compte technique Adobe ou l’assistance clientèle Adobe avec votre sandbox et vos informations sur le jeu de données.
+Pour activer la commande d’horodatage client, utilisez le champ `extSourceSystemAudit.lastUpdatedDate` dans le groupe de champs [&#x200B; Attributs d’audit du système Source externe &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) et contactez votre gestionnaire de compte technique Adobe ou l’assistance clientèle Adobe avec votre sandbox et vos informations sur le jeu de données.
 
 ## Contraintes
 

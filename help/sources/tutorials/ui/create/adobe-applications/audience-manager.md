@@ -4,11 +4,18 @@ title: Création d’une connexion Adobe Audience Manager Source dans l’interf
 description: Ce tutoriel vous guide tout au long des étapes de création d’une connexion source pour Adobe Audience Manager afin d’importer des données d’événement d’expérience client dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
 TQID: https://experienceleague.adobe.com/WKbUVJMGh4JUEuUhluR7BCZWlAFNJjgUM7-aOJ2XAiQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 597
@@ -26,7 +33,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
 
-Sous [!UICONTROL Application ], sélectionnez **[!UICONTROL Adobe Audience Manager]** puis **[!UICONTROL Configurer]**.
+Sous [!UICONTROL Application &#x200B;], sélectionnez **[!UICONTROL Adobe Audience Manager]** puis **[!UICONTROL Configurer]**.
 
 ![catalogue](../../../../images/tutorials/create/aam/catalog.png)
 

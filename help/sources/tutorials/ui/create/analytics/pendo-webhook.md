@@ -4,10 +4,15 @@ description: Découvrez comment créer une connexion source Pendo à l’aide de
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
 TQID: https://experienceleague.adobe.com/gFL7p-MHd8GMYuCpucyLKTR8Osi0osI5nfBiQ3EboCI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: f3ebbec0f5000c05bb5c40654b010073ef0f9658
 workflow-type: tm+mt
 source-wordcount: 1245
@@ -58,7 +63,7 @@ Pour plus d’informations, consultez le [[!DNL Pendo] guide sur les Webhooks](h
 
 ### Création d’un schéma Experience Platform pour [!DNL Pendo] {#create-platform-schema}
 
-Vous devez également vous assurer d’abord de créer un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Vous devez également vous assurer d’abord de créer un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 ![Interface utilisateur d’Experience Platform montrant un exemple de schéma pour Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
@@ -101,7 +106,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 L’étape [!UICONTROL Mappage] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à l’étape [!UICONTROL Révision].
 
@@ -177,6 +182,6 @@ Lors de la vérification d’une exécution de flux de données, vous pouvez ren
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform affichant une erreur.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
-Pour corriger cette erreur, vous devez vérifier que le mappage *uniqueID* a été configuré. Pour plus d’informations, consultez la section [ Mappage ](#mapping).
+Pour corriger cette erreur, vous devez vérifier que le mappage *uniqueID* a été configuré. Pour plus d’informations, consultez la section [&#x200B; Mappage &#x200B;](#mapping).
 
 Pour plus d&#39;informations, consultez le [[!DNL Pendo] Centre d&#39;aide](https://www.pendo.io/help-center/).

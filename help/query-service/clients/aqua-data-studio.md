@@ -5,8 +5,11 @@ title: Connecter Aqua Data Studio à Query Service
 description: Ce document décrit les étapes à suivre pour connecter Aqua Data Studio au service de requête Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 TQID: https://experienceleague.adobe.com/kHT-1T-Qheq-C4onQHUii-4LBLzzgUGBGtc8PckjdF8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 575
@@ -42,7 +45,7 @@ Une fois que la boîte de dialogue **[!DNL Register Server]** s’affiche pour u
 
 ### [!DNL Query Service] des informations d’identification
 
-Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de [!DNL Experience Platform] et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes afin de trouver vos informations de connexion, hôte, port et nom de base de données, veuillez lire le [ guide des informations d’identification ](../ui/credentials.md).
+Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de [!DNL Experience Platform] et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes afin de trouver vos informations de connexion, hôte, port et nom de base de données, veuillez lire le [&#x200B; guide des informations d’identification &#x200B;](../ui/credentials.md).
 
 [!DNL Query Service] propose également des informations d’identification non expirantes pour permettre une configuration unique avec des clients tiers. Consultez la documentation pour obtenir des [instructions complètes sur la génération et l’utilisation d’informations d’identification non expirantes](../ui/credentials.md#non-expiring-credentials).
 

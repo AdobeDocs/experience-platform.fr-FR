@@ -5,8 +5,11 @@ title: Connexion de Power BI au service de requête
 description: Ce document décrit les étapes à suivre pour connecter Power BI au service de requête Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 TQID: https://experienceleague.adobe.com/ilqxjUpWl3bViHW9BRIHeo-tS0FotZoTDYG6iy0MUIY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1084
@@ -20,7 +23,7 @@ Ce document décrit les étapes à suivre pour connecter [!DNL Power BI] Desktop
 
 ## Prise en main
 
-Ce guide nécessite que vous ayez déjà accès à l’application [!DNL Power BI] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger [!DNL Power BI] Desktop ou pour plus d’informations, consultez la [documentation officielle de  [!DNL Power BI] ](https://docs.microsoft.com/fr-FR/power-bi/).
+Ce guide nécessite que vous ayez déjà accès à l’application [!DNL Power BI] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger [!DNL Power BI] Desktop ou pour plus d’informations, consultez la [documentation officielle de  [!DNL Power BI] &#x200B;](https://docs.microsoft.com/fr-FR/power-bi/).
 
 >[!IMPORTANT]
 >
@@ -72,7 +75,7 @@ En sélectionnant le **[!DNL Import]** [!DNL Data Connectivity mode], le jeu de 
 >
 >Pour afficher les modifications de données qui se sont produites depuis l’importation initiale, vous devez actualiser les données dans [!DNL Power BI] en important à nouveau le jeu de données complet.
 
-Pour importer une table, saisissez les détails du serveur et de la base de données [comme décrit ci-dessus](#connect-power-bi) et sélectionnez le **[!DNL Import]**[!DNL Data Connectivity mode], puis **[!DNL OK]**. La boîte de dialogue [!DNL Navigator] apparaît, affichant une liste de tous les tableaux disponibles. Sélectionnez le tableau à prévisualiser, puis choisissez **[!DNL Load]** pour mettre le jeu de données dans Power BI. Le tableau est maintenant importé dans [!DNL Power BI].
+Pour importer une table, saisissez les détails du serveur et de la base de données [comme décrit ci-dessus](#connect-power-bi) et sélectionnez le **[!DNL Import]**&#x200B;[!DNL Data Connectivity mode], puis **[!DNL OK]**. La boîte de dialogue [!DNL Navigator] apparaît, affichant une liste de tous les tableaux disponibles. Sélectionnez le tableau à prévisualiser, puis choisissez **[!DNL Load]** pour mettre le jeu de données dans Power BI. Le tableau est maintenant importé dans [!DNL Power BI].
 
 L’application [Informations générales sur la connexion aux données dans PowerBi Desktop](https://learn.microsoft.com/fr-fr/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) est disponible dans la documentation officielle.
 

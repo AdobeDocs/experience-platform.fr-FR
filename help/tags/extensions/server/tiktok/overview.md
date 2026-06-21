@@ -4,11 +4,32 @@ description: Cette API d’événements web Adobe Experience Platform vous perme
 last-substantial-update: 2023-09-26T00:00:00.000Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
 TQID: https://experienceleague.adobe.com/X5swX7MnFvVXFQ8AYGKWZpSOAZppvknnXPldZMOs83c
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1140
@@ -28,7 +49,7 @@ Vous devez disposer d’un [!DNL TikTok] valide pour le compte professionnel afi
 
 Vous devez être connecté à votre compte professionnel pour configurer [!DNL TikTok] Pixel à l’aide de la configuration du partenaire. Pour ce faire, procédez comme suit :
 
-1. Accédez à l’onglet **** et sélectionnez **[!UICONTROL Événement]**.
+1. Accédez à l’onglet **&#x200B;**&#x200B;et sélectionnez **[!UICONTROL Événement]**.
 2. Sous Événements web, sélectionnez **[!UICONTROL Gérer]**.
 3. Sélectionnez **[!UICONTROL Configurer Des Événements Web]**.
 4. Sélectionnez **[!UICONTROL Configuration du partenaire]** comme méthode de connexion.
@@ -37,11 +58,11 @@ Consultez le guide [Prise en main du pixel](https://ads.tiktok.com/help/article/
 
 Vous pouvez générer un jeton d’accès une fois le pixel créé. Pour ce faire, accédez au pixel et sélectionnez l’onglet **[!UICONTROL Paramètres]**. Sous API d’événements, sélectionnez **[!UICONTROL Générer un jeton d’accès]**.
 
-Pour plus d’informations sur la configuration du code de pixel et du jeton d’accès](https://business-api.tiktok.com/portal/docs?id=1739584855420929) consultez le [[!DNL TikTok]  guide de prise en main .
+Pour plus d’informations sur la configuration du code de pixel et du jeton d’accès[&#128279;](https://business-api.tiktok.com/portal/docs?id=1739584855420929) consultez le [!DNL TikTok]  guide de prise en main .
 
 ## Installer et configurer l’extension d’API d’événements web [!DNL TikTok] {#install}
 
-Pour installer l’extension, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez l’extension d’API d’événements web TikTok **** puis sélectionnez **[!UICONTROL Installer]**.
+Pour installer l’extension, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez l’extension d’API d’événements web TikTok **&#x200B;**&#x200B;puis sélectionnez **[!UICONTROL Installer]**.
 
 ![Catalogue d’extensions affichant la carte d’extension [!DNL TikTok] mettant en surbrillance install.](../../../images/extensions/server/tiktok/install-extension.png)
 

@@ -3,11 +3,22 @@ title: Présentation de l’extension Adobe Content Analytics
 description: Découvrez l’extension de balise Adobe Content Analytics dans Adobe Experience Platform.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
 TQID: https://experienceleague.adobe.com/eLhCUjeJrOFPTS7rWLqRPPYUFYTgYvj-nGlpUusHuOA
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: e98b7246-966c-4318-9e95-cad2f7a17dc7id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: e98b7246-966c-4318-9e95-cad2f7a17dc7
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 561
@@ -56,7 +67,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Configurer les flux de données
 
-L’assistant de configuration guidée de [](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) sélectionne automatiquement la valeur appropriée pour le **[!UICONTROL Sandbox]** et le **[!UICONTROL Flux de données de production]**. Vous pouvez éventuellement configurer un **[!UICONTROL Flux de données d’évaluation]** et un **[!UICONTROL Flux de données de développement]** supplémentaires.
+L’assistant de configuration guidée de [&#128279;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) sélectionne automatiquement la valeur appropriée pour le **[!UICONTROL Sandbox]** et le **[!UICONTROL Flux de données de production]**. Vous pouvez éventuellement configurer un **[!UICONTROL Flux de données d’évaluation]** et un **[!UICONTROL Flux de données de développement]** supplémentaires.
 
 ![Image illustrant la configuration des flux de données de l’extension de balise Adobe Content Analytics dans l’interface utilisateur des balises](assets/aca-tag-datastreams.png)
 
@@ -87,7 +98,7 @@ Utilisez ![Fermer](./assets/CrossSize300.svg) pour supprimer des paramètres ind
 
 ## Configuration du filtrage des événements
 
-Dans la section **[!UICONTROL Filtrage des événements]** , vous pouvez modifier les expressions régulières pour filtrer **[!UICONTROL URL de page]** et **[!UICONTROL URL d’Assets]** lors de la collecte de données pour Content Analytics. Les expressions régulières que vous avez définies dans l&#39;assistant de configuration guidée de [](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) sont automatiquement renseignées.
+Dans la section **[!UICONTROL Filtrage des événements]** , vous pouvez modifier les expressions régulières pour filtrer **[!UICONTROL URL de page]** et **[!UICONTROL URL d’Assets]** lors de la collecte de données pour Content Analytics. Les expressions régulières que vous avez définies dans l&#39;assistant de configuration guidée de [&#128279;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) sont automatiquement renseignées.
 
 ![Image montrant les paramètres de filtrage d’événement de l’extension de balise Adobe Content Analytics dans l’interface utilisateur des balises](assets/aca-tag-eventfiltering.png)
 

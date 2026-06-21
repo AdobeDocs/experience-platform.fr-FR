@@ -3,8 +3,13 @@ title: Partage De Packages Dans L’Ensemble De L’Organisation À L’Aide De 
 description: Découvrez comment utiliser les outils Sandbox dans Adobe Experience Platform pour partager des packages entre différentes organisations.
 exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
 TQID: https://experienceleague.adobe.com/nZzjkxdIgT-6Nt2mi1-K-SoE4fvAyNHajM-OAyWCqpE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1057
@@ -52,7 +57,7 @@ La demande de partage a été envoyée avec succès à l’organisation partenai
 
 ### Autoriser une demande de partenariat {#authorize-request}
 
-Pour autoriser une demande de partenariat d’organisation, accédez à l’onglet [!UICONTROL  Sandbox ] **[!UICONTROL Organisations partenaires]**. Sélectionnez ensuite **[!UICONTROL Requête entrante]**.
+Pour autoriser une demande de partenariat d’organisation, accédez à l’onglet [!UICONTROL &#x200B; Sandbox &#x200B;] **[!UICONTROL Organisations partenaires]**. Sélectionnez ensuite **[!UICONTROL Requête entrante]**.
 
 ![Interface utilisateur des sandbox avec l’onglet Organisations partenaires et la requête entrante en surbrillance.](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 

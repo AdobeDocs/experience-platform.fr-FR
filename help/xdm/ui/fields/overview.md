@@ -5,11 +5,17 @@ title: Définir des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 TQID: https://experienceleague.adobe.com/syA6AOVPFb5DmmDsj76bsefVxMU6BXzHaMrcmQwpoEk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 1794
@@ -110,7 +116,7 @@ Les propriétés telles que **[!UICONTROL Motif]**, **[!UICONTROL Format]** et l
 | [!UICONTROL Valeur maximale] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, la valeur est acceptée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Valeur maximale exclusive] » doit rester vide. |
 | [!UICONTROL Valeur minimale exclusive] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, elle est rejetée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Valeur minimale] » (non exclusive) doit rester vide. |
 | [!UICONTROL Valeur maximale exclusive] | [!UICONTROL Double] | Valeur maximale de Double à accepter lors de l’ingestion. Si la valeur ingérée correspond exactement à celle saisie ici, elle est rejetée. Lors de l’utilisation de cette contrainte, la contrainte « [!UICONTROL Valeur maximale] » (non exclusive) doit rester vide. |
-| [!UICONTROL  Valeur par défaut ] | Types scalaires dans l’éditeur de schémas qui prennent en charge les `default` de schéma JSON ([!UICONTROL String] et [!UICONTROL Boolean], par exemple) | Métadonnées d’information alignées sur la sémantique [Schéma JSON](https://json-schema.org/understanding-json-schema/reference/generic.html#annotations) `default` et stockées dans la définition du schéma. La valeur configurée n’est pas automatiquement appliquée lors de l’ingestion ou des flux de préparation des données. Les champs omis restent absents, sauf s’ils sont explicitement mappés ou transformés dans votre flux de données. Voir [définition des champs obligatoires](./required.md). |
+| [!UICONTROL &#x200B; Valeur par défaut &#x200B;] | Types scalaires dans l’éditeur de schémas qui prennent en charge les `default` de schéma JSON ([!UICONTROL String] et [!UICONTROL Boolean], par exemple) | Métadonnées d’information alignées sur la sémantique [Schéma JSON](https://json-schema.org/understanding-json-schema/reference/generic.html#annotations) `default` et stockées dans la définition du schéma. La valeur configurée n’est pas automatiquement appliquée lors de l’ingestion ou des flux de préparation des données. Les champs omis restent absents, sauf s’ils sont explicitement mappés ou transformés dans votre flux de données. Voir [définition des champs obligatoires](./required.md). |
 
 {style="table-layout:auto"}
 

@@ -3,10 +3,16 @@ title: Type de données Détails de la collecte de médias
 description: Découvrez le type de données Modèle de données d’expérience (XDM) des détails de collecte de médias.
 exl-id: 1faf60f7-6afb-4ce2-b50d-967776a57715
 TQID: https://experienceleague.adobe.com/q-4VpUsYBDB8i-RmaDywDWCB1BMSsSO78O8qUwK-SbI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
 source-wordcount: 583
@@ -16,7 +22,7 @@ ht-degree: 2%
 
 # [!UICONTROL Détails de la collecte de médias] type de données
 
-[!UICONTROL  Détails de la collecte de médias ] est un type de données standard du modèle de données d’expérience (XDM) qui capture les détails essentiels sur les événements de lecture de médias. Utilisez le type de données [!UICONTROL Détails de la collecte de médias] pour capturer des informations telles que la position de la tête de lecture dans le contenu, les identifiants de session uniques et diverses propriétés imbriquées liées à la session, entre autres. Ce type de données fournit une vue d’ensemble complète de l’expérience de lecture qui permet le suivi et l’analyse des modèles de consommation multimédia et des événements associés pendant les sessions de lecture.
+[!UICONTROL &#x200B; Détails de la collecte de médias &#x200B;] est un type de données standard du modèle de données d’expérience (XDM) qui capture les détails essentiels sur les événements de lecture de médias. Utilisez le type de données [!UICONTROL Détails de la collecte de médias] pour capturer des informations telles que la position de la tête de lecture dans le contenu, les identifiants de session uniques et diverses propriétés imbriquées liées à la session, entre autres. Ce type de données fournit une vue d’ensemble complète de l’expérience de lecture qui permet le suivi et l’analyse des modèles de consommation multimédia et des événements associés pendant les sessions de lecture.
 
 >[!NOTE]
 >
@@ -28,8 +34,8 @@ ht-degree: 2%
 
 | Nom d’affichage | Propriété | Événements requis pour | Type de données | Description |
 |---|---|---|---|---|
-| [!UICONTROL Détails ] | `advertisingDetails` | `adStart` | [[!UICONTROL advertisingDetails] - Collection](./advertising-details-collection.md) | Les détails d’Advertising font référence à des informations spécifiques relatives aux activités publicitaires au cours de l’événement d’expérience. Cela inclut les métadonnées de publicité, les caractéristiques de ciblage et les mesures de performances. |
-| [!UICONTROL Détails du pod ] | `advertisingPodDetails` | `adBreakStart` | [[!UICONTROL advertisingPodDetails] - Collection](./advertising-pod-details-collection.md) | Les détails des pods Advertising contiennent des informations sur les pods publicitaires au sein de l’événement d’expérience. Il fournit des informations sur la séquence publicitaire, le contenu et les mesures d’engagement. |
+| [!UICONTROL Détails &#x200B;] | `advertisingDetails` | `adStart` | [[!UICONTROL advertisingDetails] - Collection](./advertising-details-collection.md) | Les détails d’Advertising font référence à des informations spécifiques relatives aux activités publicitaires au cours de l’événement d’expérience. Cela inclut les métadonnées de publicité, les caractéristiques de ciblage et les mesures de performances. |
+| [!UICONTROL Détails du pod &#x200B;] | `advertisingPodDetails` | `adBreakStart` | [[!UICONTROL advertisingPodDetails] - Collection](./advertising-pod-details-collection.md) | Les détails des pods Advertising contiennent des informations sur les pods publicitaires au sein de l’événement d’expérience. Il fournit des informations sur la séquence publicitaire, le contenu et les mesures d’engagement. |
 | [!UICONTROL Détails du chapitre] | `chapterDetails` | `chapterStart` | [[!UICONTROL chapterDetails] - Collection](./chapter-details-collection.md) | Détails du chapitre capture les données relatives aux chapitres ou aux parties segmentées du contenu. Il fournit des informations sur les marqueurs de chapitre, les chronologies et les métadonnées associées. |
 | [!UICONTROL Détails de l’erreur] | `errorDetails` | `error` | [[!UICONTROL errorDetails] - Collection](./error-details-collection.md) | Les Détails de l’erreur contiennent des informations relatives aux erreurs rencontrées lors de l’événement d’expérience. Cela inclut les codes d’erreur, les descriptions, les horodatages et les données contextuelles pertinentes. |
 | [!UICONTROL Fin De La Liste Des États] | `statesEnd` | Utilisé dans `statesUpdate` | [[!UICONTROL statesEnd] - Collection](./list-of-states-end-collection.md) | La fin des états fournit un tableau pour répertorier les états à la fin de l’événement d’expérience. Il contient des détails sur les états de lecture finaux ou le statut du contenu. |

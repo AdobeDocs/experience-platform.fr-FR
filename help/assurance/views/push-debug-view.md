@@ -3,11 +3,19 @@ title: Affichage du débogage des notifications push
 description: Ce guide détaille les informations sur la vue Débogage push dans Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
 TQID: https://experienceleague.adobe.com/Vd4iHQWA7WsBeBbqvgpIM5-vsQEvEWo2GkRCZK4A2Mk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: b64298cc-90cc-46b7-8917-ee391f1c7516id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 919
@@ -87,7 +95,7 @@ Dans le volet **[!UICONTROL Comportement de clic]**, vous pouvez choisir le comp
 
 Si vous choisissez d’utiliser un lien profond, le développeur ou la développeuse de l’application doit en créer un pour vous.
 
-![ Volet Comportement ](./images/push-debug-view/click-behavior.png)
+![&#x200B; Volet Comportement &#x200B;](./images/push-debug-view/click-behavior.png)
 
 ### Média enrichi
 

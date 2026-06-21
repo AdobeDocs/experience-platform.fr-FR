@@ -22,7 +22,7 @@ Cette section de configuration vous permet de déterminer comment masquer certai
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez **[!UICONTROL Configurer]** sur la vignette [!UICONTROL Adobe Experience Platform Web SDK].
-1. Faites défiler l’écran jusqu’à la section ****.
+1. Faites défiler l’écran jusqu’à la section **&#x200B;**.
 
 ![Image montrant les paramètres de personnalisation de l’extension de balise Web SDK dans l’interface utilisateur des balises](../assets/web-sdk-ext-personalization.png)
 

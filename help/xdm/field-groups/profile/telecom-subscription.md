@@ -5,9 +5,12 @@ title: Groupe De Champs De Schéma D’Abonnement Aux Télécommunications
 description: Découvrez le groupe de champs Schéma d’abonnement aux télécommunications .
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 TQID: https://experienceleague.adobe.com/DmMb7XO36y-qlUsLs3icFn1Um2C7BnR-7IxWJa81Chg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 719
@@ -33,7 +36,7 @@ Le groupe de champs fournit un champ de type objet unique, `telecomSubscription`
 | `landlineSubscription` | Tableau d’objets | Décrit les détails de la formule d’abonnement de téléphonie fixe, y compris les fonctions, minutes et formules de numérotation sélectionnées. Pour plus d’informations, consultez la [section ci-dessous](#landlineSubscription). |
 | `mediaSubscription` | Tableau d’objets | Décrit les détails de la formule d’abonnement au média, y compris le nombre de canaux et les services de streaming inclus. Pour plus d’informations, consultez la [section ci-dessous](#mediaSubscription). |
 | `mobileSubscription` | Tableau d’objets | Décrit les détails de la formule d’abonnement mobile, notamment le nombre de lignes, les tarifs de données, le coût, etc. Pour plus d’informations, consultez la [section ci-dessous](#mobileSubscription). |
-| `primarySubscriber` | [[!UICONTROL  Personne ]](../../data-types/person.md) | Décrit le propriétaire de l’abonnement. |
+| `primarySubscriber` | [[!UICONTROL &#x200B; Personne &#x200B;]](../../data-types/person.md) | Décrit le propriétaire de l’abonnement. |
 | `bundleName` | Chaîne | Capture le nom du type de la formule d’abonnement à laquelle le client est inscrit (`Internet + Media`, par exemple). |
 | `primaryPartyID` | Chaîne | Identifiant de la personne principale responsable de l’abonnement. Il peut s’agir, par exemple, du numéro de téléphone de cette personne. |
 

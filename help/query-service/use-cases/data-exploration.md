@@ -3,9 +3,14 @@ title: Explorer, dépanner et vérifier l’ingestion par lots avec SQL
 description: Découvrez comment comprendre et gérer le processus d’ingestion des données dans Adobe Experience Platform. Ce document explique comment vérifier les lots et interroger les données ingérées.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
 TQID: https://experienceleague.adobe.com/AUqT3UL99Y69g6fxVInVJ-gLovfWid6DX4MoYtAlRt8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1177
@@ -31,7 +36,7 @@ Pour faciliter votre compréhension des concepts abordés dans ce document, vous
 - **Ingestion des données** : consultez la [présentation de l’ingestion des données](../../ingestion/home.md) pour découvrir les principes de base de l’ingestion des données dans Experience Platform, y compris les différentes méthodes et processus impliqués.
 - **Ingestion par lots** : consultez la présentation de l’API [ingestion par lots](../../ingestion/batch-ingestion/overview.md) pour découvrir les concepts de base de l’ingestion par lots. Plus précisément, ce qu’est un « lot » et comment il fonctionne dans le processus d’ingestion de données d’Experience Platform.
 - **Métadonnées système dans les jeux de données** : consultez la [présentation du service de catalogue](../../catalog/home.md) pour savoir comment les champs de métadonnées système sont utilisés pour effectuer le suivi et l’interrogation des données ingérées.
-- **Modèle de données d’expérience (XDM)** : consultez la [présentation de l’interface utilisateur des schémas](../../xdm/ui/overview.md) et les [ des principes de base de la composition des schémas](../../xdm/schema/composition.md) pour en savoir plus sur les schémas XDM et sur la manière dont ils représentent et valident la structure et le format des données ingérées dans Experience Platform.
+- **Modèle de données d’expérience (XDM)** : consultez la [présentation de l’interface utilisateur des schémas](../../xdm/ui/overview.md) et les [&#x200B; des principes de base de la composition des schémas](../../xdm/schema/composition.md) pour en savoir plus sur les schémas XDM et sur la manière dont ils représentent et valident la structure et le format des données ingérées dans Experience Platform.
 
 ## Accéder aux métadonnées du lot de jeux de données {#access-dataset-batch-metadata}
 

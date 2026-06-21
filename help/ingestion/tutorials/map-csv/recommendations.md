@@ -3,10 +3,15 @@ title: Mapper un fichier CSV à un schéma XDM à l’aide de recommandations g�
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de recommandations générées par l’IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 TQID: https://experienceleague.adobe.com/LrWtcEQT-v7l83D4AEIIq-3brvdx9RBRQqKCb5mPeq0
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1194
@@ -39,7 +44,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 Le workflow **[!UICONTROL Mapper le schéma XDM CSV]** apparaît, en commençant par l’étape **[!UICONTROL Détails du flux de données]**.
 
-Sélectionnez **[!UICONTROL Créer un schéma à l’aide de recommandations ML]** pour afficher de nouvelles commandes. Sélectionnez la classe appropriée pour les données CSV que vous souhaitez mapper ([!UICONTROL Profil] ou [!UICONTROL ExperienceEvent]). Vous pouvez éventuellement utiliser le menu déroulant pour sélectionner le secteur d’activité approprié à votre entreprise ou laisser ce champ vide si les catégories fournies ne vous concernent pas. Si votre organisation fonctionne sous un modèle [ business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md), cochez la case **[!UICONTROL Données B2B]**.
+Sélectionnez **[!UICONTROL Créer un schéma à l’aide de recommandations ML]** pour afficher de nouvelles commandes. Sélectionnez la classe appropriée pour les données CSV que vous souhaitez mapper ([!UICONTROL Profil] ou [!UICONTROL ExperienceEvent]). Vous pouvez éventuellement utiliser le menu déroulant pour sélectionner le secteur d’activité approprié à votre entreprise ou laisser ce champ vide si les catégories fournies ne vous concernent pas. Si votre organisation fonctionne sous un modèle [&#x200B; business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md), cochez la case **[!UICONTROL Données B2B]**.
 
 ![L’étape [!UICONTROL Détails du flux de données] avec l’option de recommandation ML sélectionnée. [!UICONTROL Profil] est sélectionné pour la classe et [!UICONTROL Télécommunications] est sélectionné pour le secteur](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
@@ -51,9 +56,9 @@ Vous pouvez éventuellement configurer les fonctionnalités supplémentaires sui
 | --- | --- |
 | [!UICONTROL Description] | Une description pour le flux de données. |
 | [!UICONTROL Diagnostics d’erreur] | Lorsque cette option est activée, des messages d’erreur sont générés pour les lots nouvellement ingérés, qui peuvent être affichés lors de la récupération du lot correspondant dans l’[API](../../batch-ingestion/api-overview.md). |
-| [!UICONTROL  Ingestion partielle ] | Lorsque cette option est activée, les enregistrements valides pour les données du nouveau lot sont ingérés avec un seuil d’erreur spécifié. Ce seuil vous permet de configurer le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. |
-| [!UICONTROL  Détails du flux de données ] | Attribuez un nom et une description facultative au flux de données qui amènera les données CSV dans Experience Platform. Un nom par défaut est automatiquement attribué au flux de données lors du démarrage de ce workflow. La modification du nom est facultative. |
-| [!UICONTROL Alertes ] | Dans une liste d’[alertes produits](../../../observability/alerts/overview.md), sélectionnez les alertes que vous souhaitez recevoir concernant le statut du flux de données une fois qu’il a été lancé. |
+| [!UICONTROL &#x200B; Ingestion partielle &#x200B;] | Lorsque cette option est activée, les enregistrements valides pour les données du nouveau lot sont ingérés avec un seuil d’erreur spécifié. Ce seuil vous permet de configurer le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. |
+| [!UICONTROL &#x200B; Détails du flux de données &#x200B;] | Attribuez un nom et une description facultative au flux de données qui amènera les données CSV dans Experience Platform. Un nom par défaut est automatiquement attribué au flux de données lors du démarrage de ce workflow. La modification du nom est facultative. |
+| [!UICONTROL Alertes &#x200B;] | Dans une liste d’[alertes produits](../../../observability/alerts/overview.md), sélectionnez les alertes que vous souhaitez recevoir concernant le statut du flux de données une fois qu’il a été lancé. |
 
 {style="table-layout:auto"}
 
@@ -107,4 +112,4 @@ Ce guide explique comment mapper un fichier CSV à un schéma XDM à l’aide de
 
 Pour savoir comment mapper un fichier CSV à un schéma existant, reportez-vous à la section [workflow de mappage de schéma existant](./existing-schema.md). Pour plus d’informations sur la diffusion en continu de données vers Experience Platform en temps réel par le biais de connexions source préconfigurées, reportez-vous à la section [présentation des sources](../../../sources/home.md).
 
-Vous pouvez également utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow crée automatiquement un schéma en fonction de la structure et du contenu de votre fichier CSV. Ce schéma nouvellement créé correspond au format de vos données afin de vous faire gagner du temps et d’accroître la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes et volumineux. Pour plus d’informations sur ce workflow](../../../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
+Vous pouvez également utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow crée automatiquement un schéma en fonction de la structure et du contenu de votre fichier CSV. Ce schéma nouvellement créé correspond au format de vos données afin de vous faire gagner du temps et d’accroître la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes et volumineux. Pour plus d’informations sur ce workflow[&#128279;](../../../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning .

@@ -3,9 +3,12 @@ title: Groupe De Champs Détails Du Prospect Partenaire (Exemple)
 description: Découvrez le groupe de champs de schéma (XDM) des Détails du prospect partenaire (exemple).
 exl-id: 2de1eb7a-2e44-4417-9bdd-7a8a4b2d3a7f
 TQID: https://experienceleague.adobe.com/8lScs-QTKmjm6qmrBkEw3URhc8OgpQtpaa-lipYBibk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 369

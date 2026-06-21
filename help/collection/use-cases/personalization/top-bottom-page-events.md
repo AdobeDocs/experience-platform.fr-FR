@@ -3,11 +3,22 @@ title: Configurer les événements haut et bas de page dans Web SDK
 description: Cet article explique comment utiliser les événements de haut et de bas de page dans Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
 TQID: https://experienceleague.adobe.com/eKp-6NGGcWLlW1ZwCQfjnU9ZpIDpcgrW-jNXdxtNBqI
-product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: e98b7246-966c-4318-9e95-cad2f7a17dc7id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: b3f03848-ae12-48b2-8aab-cad18567eb32id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: e98b7246-966c-4318-9e95-cad2f7a17dc7
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1294
@@ -54,7 +65,7 @@ alloy("sendEvent", {
 
 >[!TAB Extension de balise Web SDK]
 
-Configurez une action [[!UICONTROL  Envoyer l’événement ]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche en haut de la page. Activez **[!UICONTROL Utiliser des événements guidés]**, puis sélectionnez **[!UICONTROL Demander la personnalisation]**. Cette option verrouille &#39;[!UICONTROL Type]&#39; sur &#39;[!UICONTROL Récupération de proposition de prise de décision]&#39;, &#39;[!UICONTROL Rendre les décisions de personnalisation visuelle]&#39; sur activé, et &#39;[!UICONTROL Envoyer automatiquement un événement d’affichage]&#39; sur désactivé.
+Configurez une action [[!UICONTROL &#x200B; Envoyer l’événement &#x200B;]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche en haut de la page. Activez **[!UICONTROL Utiliser des événements guidés]**, puis sélectionnez **[!UICONTROL Demander la personnalisation]**. Cette option verrouille &#39;[!UICONTROL Type]&#39; sur &#39;[!UICONTROL Récupération de proposition de prise de décision]&#39;, &#39;[!UICONTROL Rendre les décisions de personnalisation visuelle]&#39; sur activé, et &#39;[!UICONTROL Envoyer automatiquement un événement d’affichage]&#39; sur désactivé.
 
 Pour définir ces champs manuellement à la place, laissez l’option **[!UICONTROL Utiliser des événements guidés]** désactivée et configurez vous-même chaque champ.
 
@@ -86,7 +97,7 @@ alloy("sendEvent", {
 
 >[!TAB Extension de balise Web SDK]
 
-Configurez une action [[!UICONTROL  Envoyer l’événement ]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche au bas de la page. Activez **[!UICONTROL Utiliser des événements guidés]**, puis sélectionnez **[!UICONTROL Collecter des analyses]**. Cette option verrouille l’activation de « [!UICONTROL Inclure les propositions rendues] ».
+Configurez une action [[!UICONTROL &#x200B; Envoyer l’événement &#x200B;]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche au bas de la page. Activez **[!UICONTROL Utiliser des événements guidés]**, puis sélectionnez **[!UICONTROL Collecter des analyses]**. Cette option verrouille l’activation de « [!UICONTROL Inclure les propositions rendues] ».
 
 Pour définir ce champ manuellement à la place, laissez **[!UICONTROL Utiliser des événements guidés]** désactivé et activez **[!UICONTROL Inclure les propositions rendues]** directement. Vous pouvez éventuellement renseigner le champ **[!UICONTROL XDM]** avec un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) qui transporte les données de votre page.
 
@@ -134,7 +145,7 @@ alloy("sendEvent", {
 
 >[!TAB Extension de balise Web SDK]
 
-L’option « [!UICONTROL  Utiliser des événements guidés ] » ne couvre pas ce scénario, configurez donc l’action manuellement :
+L’option « [!UICONTROL &#x200B; Utiliser des événements guidés &#x200B;] » ne couvre pas ce scénario, configurez donc l’action manuellement :
 
 1. Créez un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) (ou [Variable](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)) qui renseigne les `_experience.decisioning.propositions` avec les `id`, `scope` et `scopeDetails` de chaque proposition rendue et définit le `_experience.decisioning.propositionEventType.display` sur `1`. Voir [Gérer les événements d’affichage](display-events.md) pour plus d’informations.
 1. Dans l’action [[!UICONTROL Envoyer l’événement]](/help/tags/extensions/client/web-sdk/actions/send-event.md) pour la règle de bas de page, laissez **[!UICONTROL Utiliser des événements guidés]** désactivé et référencez l’élément de données à partir du champ **[!UICONTROL XDM]**.

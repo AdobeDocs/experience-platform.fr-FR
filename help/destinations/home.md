@@ -3,11 +3,21 @@ title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 TQID: https://experienceleague.adobe.com/8SrY16bMqdWbGh1KDivFWche2Ldi8SgakawwbZABhB4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1451
@@ -67,12 +77,12 @@ Le tableau suivant décrit les autorisations et combinaisons d’autorisations r
 
 | Niveau d’autorisation | Description |
 | ---- | ---- |
-| **[!UICONTROL Afficher les destinations]** | Pour accéder à l’onglet Destinations dans l’interface utilisateur d’Experience Platform, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** [](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Affichage Des Destinations]**, **[!UICONTROL Gestion Des Destinations]** | Pour vous connecter aux destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Afficher les destinations]** | Pour accéder à l’onglet Destinations dans l’interface utilisateur d’Experience Platform, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** [&#128279;](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Affichage Des Destinations]**, **[!UICONTROL Gestion Des Destinations]** | Pour vous connecter aux destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation de segments sans mappage]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer des segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Gestion et activation des destinations de jeu de données]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Afficher le graphique d’identités]** | Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
+| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation de segments sans mappage]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer des segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Gestion et activation des destinations de jeu de données]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [&#128279;](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Afficher le graphique d’identités]** | Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

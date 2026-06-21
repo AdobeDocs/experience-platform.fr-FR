@@ -4,10 +4,15 @@ title: Créer des jeux de données dérivés basés sur des déciles
 description: Découvrez comment créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données de profil client en temps réel basées sur un schéma de fidélité à une compagnie aérienne.
 exl-id: 7431fe19-222b-459c-9dd5-3509416591cd
 TQID: https://experienceleague.adobe.com/DZx2G9J8TzTg5r2pVV4OFApSKEE-aLPqNeBG3Z0Ppvc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 144

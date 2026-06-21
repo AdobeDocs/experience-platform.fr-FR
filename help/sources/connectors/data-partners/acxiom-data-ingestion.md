@@ -3,10 +3,14 @@ title: Ingestion de données Acxiom
 description: Découvrez comment ingérer  [!DNL Acxiom]  données dans Real-Time Customer Data Platform, enrichir les profils propriétaires, améliorer les audiences et les activer sur l’ensemble des canaux marketing.
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
 TQID: https://experienceleague.adobe.com/CXUiuxopsjGdNQSG32MqwoJrYWkaGJw9XNPBb0FRxyE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 475
@@ -39,7 +43,7 @@ Avant de pouvoir utiliser les connecteurs source, vous devez ajouter à votre pl
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Acxiom Data Ingestion] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Pour connecter votre compte [!DNL Acxiom Data Ingestion] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 

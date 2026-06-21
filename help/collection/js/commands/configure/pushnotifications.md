@@ -3,10 +3,20 @@ title: notifications push
 description: Configurez les notifications push pour le Web SDK afin d’activer la messagerie push basée sur le navigateur.
 exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
 TQID: https://experienceleague.adobe.com/9rbMQjUORLLES-KeaX1laWGFmilU3Triq6yGGgDiCzg
-product_v2: id: cb954087-f4fc-4456-afb9-e939cabcdc79id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: d556b755-390a-43f0-be32-a08cf6236126id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: d556b755-390a-43f0-be32-a08cf6236126
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 301d9785acd28811f1c6fbf9efdc5378e81d4c2c
 workflow-type: tm+mt
 source-wordcount: 418

@@ -5,10 +5,15 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
 TQID: https://experienceleague.adobe.com/pLPhKO4qpgL9qKL0fquHH3LqG9MhOuWSy-KsmPl1MkI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1253
@@ -32,12 +37,12 @@ ht-degree: 5%
 | [!UICONTROL Identifiant] | `identifier` | Tableau d’[[!UICONTROL identifiant]](../data-types/identifier.md) | Liste d’identifiants uniques liés au rendez-vous. Ces identifiants sont attribués en fonction des règles métier ou lorsqu’un lien URL direct vers le rendez-vous ne convient pas. |
 | [!UICONTROL Remarque] | `note` | Tableau d’[[!UICONTROL annotation]](../data-types/annotation.md) | Notes ou commentaires supplémentaires sur le rendez-vous. |
 | [!UICONTROL Rendez-vous initial] | `originatingAppointment` | [[!UICONTROL Référence]](../data-types/reference.md) | Rendez-vous d&#39;origine dans un ensemble récurrent de rendez-vous associés. |
-| [!UICONTROL Participant ] | `participant` | Tableau d’objets | Liste des participants impliqués dans la nomination. Pour plus d’informations, consultez la [section ci-dessous](#participant). |
+| [!UICONTROL Participant &#x200B;] | `participant` | Tableau d’objets | Liste des participants impliqués dans la nomination. Pour plus d’informations, consultez la [section ci-dessous](#participant). |
 | [!UICONTROL Instructions patient] | `patientInstruction` | Tableau de [[!UICONTROL référence codable]](../data-types/reference.md) | Diagnostic pertinent pour le rendez-vous. |
 | [!UICONTROL Rendez-vous précédent] | `previousAppointment` | [[!UICONTROL Référence]](../data-types/reference.md) | La nomination précédente dans une série de nominations connexes. |
 | [!UICONTROL Priorité] | `priority` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | La priorité de la nomination qui peut être utilisée pour prendre des décisions éclairées si vous avez besoin de redéfinir les priorités des nominations. iCal Standard spécifie `0` comme non défini, `1` comme priorité la plus élevée et `9` comme priorité la plus faible. |
 | [!UICONTROL Raison] | `reason` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Motif pour lequel le rendez-vous est planifié, qui correspond généralement à une condition ou à une procédure. |
-| [!UICONTROL  Modèle de périodicité ] | `recurrenceTemplate` | Tableau d’objets | Contient les détails de la périodicité ou du modèle utilisé pour créer des rendez-vous périodiques.  Pour plus d’informations, consultez la [section ci-dessous](#recurrence). |
+| [!UICONTROL &#x200B; Modèle de périodicité &#x200B;] | `recurrenceTemplate` | Tableau d’objets | Contient les détails de la périodicité ou du modèle utilisé pour créer des rendez-vous périodiques.  Pour plus d’informations, consultez la [section ci-dessous](#recurrence). |
 | [!UICONTROL Remplace] | `replaces` | Tableau de [[!UICONTROL référence]](../data-types/reference.md) | Le rendez-vous étant remplacé par ce rendez-vous. Dans les cas d’annulation, les détails de l’annulation se trouvent dans la propriété `cancellationReason` de la ressource référencée. |
 | [!UICONTROL Période demandée] | `requestedPeriod` | Tableau de [[!UICONTROL Période]](../data-types/period.md) | Ensemble de périodes (comprenant éventuellement des heures) au cours desquelles il est préférable de planifier le rendez-vous. |
 | [!UICONTROL Catégorie de services] | `serviceCategory` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Une catégorisation large du service qui doit être effectué pendant la nomination. |
@@ -51,7 +56,7 @@ ht-degree: 5%
 | [!UICONTROL Créé] | `created` | DateTime | Date et heure de création du rendez-vous. |
 | [!UICONTROL Description] | `description` | Chaîne | Brève description du rendez-vous. Des informations détaillées ou étendues doivent être insérées dans le champ `note`. |
 | [!UICONTROL Fin] | `end` | DateTime | Date et heure de fin du rendez-vous. |
-| [!UICONTROL  Durée en minutes ] | `minutesDuration` | Entier | Nombre de minutes que dure le rendez-vous. Il peut s’agir d’une durée inférieure à la durée entre les heures de début et de fin. La valeur minimale acceptée est `0`. |
+| [!UICONTROL &#x200B; Durée en minutes &#x200B;] | `minutesDuration` | Entier | Nombre de minutes que dure le rendez-vous. Il peut s’agir d’une durée inférieure à la durée entre les heures de début et de fin. La valeur minimale acceptée est `0`. |
 | [!UICONTROL Occurrence modifiée] | `occurenceChanged` | Booléen | Indicateur qui signale si ce rendez-vous diffère du modèle récurrent. |
 | [!UICONTROL RecurrenceId] | `RecurrenceId` | Entier | Numéro de séquence qui identifie un rendez-vous spécifique selon un modèle récurrent. La valeur minimale est `0`. |
 | [!UICONTROL Début] | `start` | DateTime | Date et heure auxquelles le rendez-vous aura lieu. |
@@ -71,7 +76,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Acteur ] | `actor` | [[!UICONTROL Référence]](../data-types/reference.md) | Personne, appareil, lieu ou service participant au rendez-vous. |
+| [!UICONTROL Acteur &#x200B;] | `actor` | [[!UICONTROL Référence]](../data-types/reference.md) | Personne, appareil, lieu ou service participant au rendez-vous. |
 | [!UICONTROL Période] | `period` | [[!UICONTROL Période]](../data-types/period.md) | Période pendant laquelle le participant (l’acteur) est impliqué dans la nomination. |
 | [!UICONTROL Type] | `type` | Tableau de [[!UICONTROL concept codable]](../data-types/codeable-concept.md) | Le rôle du participant (acteur) dans la nomination. |
 | [!UICONTROL Obligatoire] | `required` | Booléen | Indique si ce participant doit être présent. |
@@ -85,10 +90,10 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL  Modèle mensuel ] | `monthlyTemplate` | Tableau d’objets | Informations sur les rendez-vous mensuels récurrents. Pour plus d’informations, consultez la [section ci-dessous](#monthly-template). |
+| [!UICONTROL &#x200B; Modèle mensuel &#x200B;] | `monthlyTemplate` | Tableau d’objets | Informations sur les rendez-vous mensuels récurrents. Pour plus d’informations, consultez la [section ci-dessous](#monthly-template). |
 | [!UICONTROL Type de récurrence] | `recurrenceType` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Fréquence à laquelle la série de rendez-vous doit se reproduire, par exemple hebdomadaire, mensuelle ou annuelle. |
 | [!UICONTROL Fuseau horaire] | `timezone` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Fuseau horaire du rendez-vous récurrent. |
-| [!UICONTROL  Modèle hebdomadaire ] | `weeklyTemplate` | Tableau d’objets | Informations sur les rendez-vous périodiques hebdomadaires. Pour plus d’informations, consultez la [section ci-dessous](#weekly-template). |
+| [!UICONTROL &#x200B; Modèle hebdomadaire &#x200B;] | `weeklyTemplate` | Tableau d’objets | Informations sur les rendez-vous périodiques hebdomadaires. Pour plus d’informations, consultez la [section ci-dessous](#weekly-template). |
 | [!UICONTROL Modèle annuel] | `yearlyTemplate` | Objet | Informations sur les rendez-vous périodiques annuels. Contient une propriété, `yearInterval`, qui contient une valeur entière indiquant chaque année où le rendez-vous se répète. |
 | [!UICONTROL Date d’exclusion] | `excludingDate` | Tableau de dates | Toutes les dates, telles que les jours fériés, qui doivent être exclues de la périodicité. |
 | [!UICONTROL Exclusion De L’Id De Périodicité] | `excludingRecurrenceId` | Tableau d’entiers | Tous les identifiants de périodicité qui doivent être exclus de la périodicité. Il s’agit d’une alternative à `excludingDate` lorsque vous indiquez le `reccurenceID` de la nomination à exclure. |
@@ -121,8 +126,8 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL  Jour De La Semaine ] | `dayOfWeek` | [[!UICONTROL Codage]] | Indique que les rendez-vous doivent avoir lieu ce jour spécifique de la semaine. |
+| [!UICONTROL &#x200B; Jour De La Semaine &#x200B;] | `dayOfWeek` | [[!UICONTROL Codage]] | Indique que les rendez-vous doivent avoir lieu ce jour spécifique de la semaine. |
 | [!UICONTROL énième semaine du mois] | `nthWeekOfMonth` | [[!UICONTROL Codage]](../data-types/coding.md) | Indique la nième semaine du mois au cours de laquelle le rendez-vous doit avoir lieu. |
-| [!UICONTROL  Jour Du Mois ] | `dayOfMonth` | Entier | Indique que les rendez-vous doivent avoir lieu ce jour spécifique du mois. |
+| [!UICONTROL &#x200B; Jour Du Mois &#x200B;] | `dayOfMonth` | Entier | Indique que les rendez-vous doivent avoir lieu ce jour spécifique du mois. |
 | [!UICONTROL Intervalle mensuel] | `monthInterval` | Entier | Indique que les rendez-vous récurrents doivent avoir lieu tous les mois. |
 

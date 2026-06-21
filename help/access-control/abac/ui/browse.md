@@ -4,9 +4,12 @@ title: Parcourir le contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur l’utilisation de l’interface Autorisations dans Adobe Experience Platform
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 TQID: https://experienceleague.adobe.com/s5YfDGUiyf7oM2GV0XtrnPV0G4kYNT1JfOzRNEurN2Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 366
@@ -31,7 +34,7 @@ Pour accéder aux autorisations de contrôle d’accès basé sur les attributs 
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-Une fois que vous disposez des privilèges d&#39;administrateur, accédez à [](https://experience.adobe.com/) et connectez-vous à l&#39;aide de vos informations d&#39;identification [!DNL Adobe]. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail du contrôle d’accès basé sur les attributs en vue de votre intégration Experience Platform.
+Une fois que vous disposez des privilèges d&#39;administrateur, accédez à [&#128279;](https://experience.adobe.com/) et connectez-vous à l&#39;aide de vos informations d&#39;identification [!DNL Adobe]. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail du contrôle d’accès basé sur les attributs en vue de votre intégration Experience Platform.
 
 ![flac-select-product](../../images/flac-ui/flac-select-product.png)
 

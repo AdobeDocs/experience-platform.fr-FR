@@ -5,9 +5,12 @@ title: Découvrez des informations dans Attribution AI
 description: Ce document sert de guide pour interagir avec les informations des instances de service dans l’interface utilisateur Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
 TQID: https://experienceleague.adobe.com/RIr-16FceplVeprcE8kGwQvmy0-qmIlG8M1E3Fx7Uk8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1668
@@ -104,7 +107,7 @@ Ce filtre vous permet de sélectionner les régions que vous avez configurées a
 
 Vous pouvez ajouter des filtres supplémentaires en sélectionnant l’icône **filtre** pour ouvrir la fenêtre contextuelle **[!UICONTROL Ajouter des filtres]**. La fenêtre contextuelle **[!UICONTROL Ajouter des filtres]** vous permet de filtrer par canal, géographie, type de média et produit. Seuls les filtres applicables pour une instance de service sont renseignés par la fenêtre contextuelle. Par exemple, si vous n’avez pas fourni de données géographiques ou de type de média, ces attributs de filtre ne seront pas disponibles pour votre instance.
 
-![ filtres supplémentaires ](./images/insights/additional-filters.png)
+![&#x200B; filtres supplémentaires &#x200B;](./images/insights/additional-filters.png)
 
 ![fenêtre contextuelle de filtre](./images/insights/filter-popover.png)
 

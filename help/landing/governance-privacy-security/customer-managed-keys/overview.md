@@ -5,10 +5,18 @@ role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
 TQID: https://experienceleague.adobe.com/f-m7FO8k4zvhdHEE44YdDDrW8jim6WJ-4iZE3QD1Vys
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1221
@@ -114,7 +122,7 @@ Par exemple, le tableau de bord du profil continuera à afficher les données de
 
 >[!TIP]
 >
->Il existe deux exceptions spécifiques aux cas d’utilisation à l’expiration de sept jours du jeu de données sur les données non principales (mises en cache/transitoires). Pour plus d’informations sur ces fonctionnalités, consultez leurs documentations respectives.<ul><li>[Raccourcisseur d’URL ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms)</li><li>[Projections ](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Il existe deux exceptions spécifiques aux cas d’utilisation à l’expiration de sept jours du jeu de données sur les données non principales (mises en cache/transitoires). Pour plus d’informations sur ces fonctionnalités, consultez leurs documentations respectives.<ul><li>[Raccourcisseur d’URL &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms)</li><li>[Projections &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Étapes suivantes
 

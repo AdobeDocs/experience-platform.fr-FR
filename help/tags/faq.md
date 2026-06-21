@@ -3,11 +3,39 @@ title: Guide de dépannage des balises
 description: Obtenez des réponses aux questions les plus fréquentes à propos des balises dans Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 TQID: https://experienceleague.adobe.com/5PhBDR6zjR3mT3YLb1XNueEXReEzrpJHCnsCJV-Ehx8
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: eb9732ab-8232-4b21-bc4c-89de86dbe4d7id: ed0d8d0e-04b9-4326-be72-a0fbca265377id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4bid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: c77ba355-6681-41fe-b719-563d3f507fdbid: c8add8f2-4250-4fd9-9cde-9707036c567did: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: df312454-73c4-43f6-a90e-18f5043f074cid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+  - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: fc7979f3-56c3-43ca-9784-f1ea3dc69c4b
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+  - id: c77ba355-6681-41fe-b719-563d3f507fdb
+  - id: c8add8f2-4250-4fd9-9cde-9707036c567d
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: df312454-73c4-43f6-a90e-18f5043f074c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1014
@@ -95,4 +123,4 @@ Consultez le guide sur la [gestion des autorisations](../collection/permissions.
 
 ## Et si j’ai d’autres questions ?
 
-Si vous avez d’autres questions, vous pouvez consulter la page de la communauté Collecte de données Adobe Experience Platform [](https://adobe.com/go/launchme) sur Experience League, ou rejoindre la [communauté de l’espace de travail Slack](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les rubriques destinées aux développeurs et à l’implémentation technique.
+Si vous avez d’autres questions, vous pouvez consulter la page de la communauté Collecte de données Adobe Experience Platform [&#128279;](https://adobe.com/go/launchme) sur Experience League, ou rejoindre la [communauté de l’espace de travail Slack](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les rubriques destinées aux développeurs et à l’implémentation technique.

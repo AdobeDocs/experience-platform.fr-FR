@@ -5,8 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 5dd6fda4-c076-4c34-bdd9-259203b6ea73
 TQID: https://experienceleague.adobe.com/MbkrIZ-lNUCvhqUg44kttkEykroqKJXcAEJMICo1oFE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 207
@@ -23,7 +25,7 @@ ht-degree: 5%
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Période] | `period` | [[!UICONTROL Période]](../data-types/period.md) | Période au cours de laquelle le nom est ou était utilisé. |
-| [!UICONTROL  Famille ] | `family` | Chaîne | Le nom de famille ou de famille. |
+| [!UICONTROL &#x200B; Famille &#x200B;] | `family` | Chaîne | Le nom de famille ou de famille. |
 | [!UICONTROL Donné] | `given` | Tableau de chaînes | Le prénom, y compris le ou les deuxième prénom(s). |
 | [!UICONTROL Préfixe] | `prefix` | Tableau de chaînes | Toute partie du nom précédant le prénom ou le prénom. |
 | [!UICONTROL Suffixe] | `suffix` | Tableau de chaînes | Toute partie du nom postérieure au nom de famille ou de famille. |

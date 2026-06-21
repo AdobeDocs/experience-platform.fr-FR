@@ -7,11 +7,29 @@ role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 TQID: https://experienceleague.adobe.com/P38CR-Nc-Brm7ndSc4xryELzb6Oekm7jVPPxPYWr4gU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2622
@@ -46,10 +64,10 @@ Pour suivre ce guide, vous devez utiliser un CMP, commercial ou personnel, qui e
 Ce guide nécessite également une compréhension pratique des services Experience Platform suivants :
 
 * [Modèle de données d’expérience (XDM)](/help/xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Adobe Experience Platform Identity Service ](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [Adobe Experience Platform Identity Service &#x200B;](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Real-Time Customer Profile](/help/profile/home.md) : utilise des [!DNL Identity Service] pour créer des profils clients détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) : bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Experience Platform à votre site web destiné aux clients.
-   * [Commandes de consentement SDK ](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
+   * [Commandes de consentement SDK &#x200B;](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md) : permet de diviser les données [!DNL Real-Time Customer Profile] en groupes d’individus qui partagent des caractéristiques similaires et qui réagissent de la même manière aux stratégies marketing.
 
 Outre les services Experience Platform répertoriés ci-dessus, vous devez également connaître [destinations](/help/data-governance/home.md) ainsi que leur rôle dans l’écosystème Experience Platform.
@@ -110,7 +128,7 @@ Les données de consentement du client doivent être envoyées aux jeux de donn�
 
 Une fois que vous avez créé un jeu de données compatible avec [!DNL Profile] pour la collecte des données de consentement, vous devez vous assurer que vos politiques de fusion ont été configurées pour toujours inclure les champs de consentement TCF dans vos profils de clients. Cela implique de définir la priorité du jeu de données afin que votre jeu de données de consentement soit prioritaire sur les autres jeux de données potentiellement conflictuels.
 
-Pour plus d’informations sur l’utilisation des politiques de fusion, reportez-vous à la [ présentation des politiques de fusion ](/help/profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos segments incluent tous les attributs de consentement requis fournis par le [groupe de champs de schéma de confidentialité XDM](./dataset.md#privacy-field-group), comme indiqué dans le guide sur la préparation des jeux de données.
+Pour plus d’informations sur l’utilisation des politiques de fusion, reportez-vous à la [&#x200B; présentation des politiques de fusion &#x200B;](/help/profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos segments incluent tous les attributs de consentement requis fournis par le [groupe de champs de schéma de confidentialité XDM](./dataset.md#privacy-field-group), comme indiqué dans le guide sur la préparation des jeux de données.
 
 ## Intégrer Experience Platform Web SDK pour collecter les données de consentement des clients {#sdk}
 
@@ -118,7 +136,7 @@ Pour plus d’informations sur l’utilisation des politiques de fusion, reporte
 >
 >L’utilisation d’Experience Platform Web SDK est nécessaire pour traiter les données de consentement directement dans Adobe Experience Platform. [!DNL Experience Cloud Identity Service] n’est pas pris en charge.
 >
->Cependant, [!DNL Experience Cloud Identity Service] est toujours pris en charge pour le traitement du consentement dans Adobe Audience Manager et la conformité à TCF 2.0 nécessite uniquement que la bibliothèque soit mise à jour vers [ version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>Cependant, [!DNL Experience Cloud Identity Service] est toujours pris en charge pour le traitement du consentement dans Adobe Audience Manager et la conformité à TCF 2.0 nécessite uniquement que la bibliothèque soit mise à jour vers [&#x200B; version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Une fois que vous avez configuré votre CMP pour générer des chaînes de consentement, vous devez intégrer Experience Platform Web SDK pour collecter ces chaînes et les envoyer à Experience Platform. Experience Platform SDK fournit deux commandes qui peuvent être utilisées pour envoyer des données de consentement TCF à Experience Platform (expliquées dans les sous-sections ci-dessous). Ces commandes doivent être utilisées lorsqu’un client ou une cliente fournit des informations de consentement pour la première fois, et chaque fois que le consentement change par la suite.
 
@@ -126,9 +144,9 @@ Une fois que vous avez configuré votre CMP pour générer des chaînes de conse
 
 ### Création dʼun flux de données
 
-Pour que le SDK envoie des données à Experience Platform, vous devez d’abord créer un flux de données pour Experience Platform. Les étapes spécifiques de création d’un flux de données sont fournies dans la documentation de [](/help/datastreams/overview.md).
+Pour que le SDK envoie des données à Experience Platform, vous devez d’abord créer un flux de données pour Experience Platform. Les étapes spécifiques de création d’un flux de données sont fournies dans la documentation de [&#128279;](/help/datastreams/overview.md).
 
-Après avoir fourni un nom unique pour le flux de données, sélectionnez le bouton de basculement en regard de ****. Ensuite, utilisez les valeurs suivantes pour compléter le reste du formulaire :
+Après avoir fourni un nom unique pour le flux de données, sélectionnez le bouton de basculement en regard de **&#x200B;**. Ensuite, utilisez les valeurs suivantes pour compléter le reste du formulaire :
 
 | Champ du flux de données | Valeur |
 | --- | --- |

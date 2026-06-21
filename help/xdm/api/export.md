@@ -3,8 +3,10 @@ title: Point d’entrée de l’API d’exportation
 description: Le point d’entrée /export dans l’API Schema Registry vous permet de partager des ressources XDM entre les sandbox.
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
 TQID: https://experienceleague.adobe.com/ctz7CjWQdaNJbTjxOCxpYS6KCO2vJJCV9Qz3AKI9cFI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 415
@@ -200,4 +202,4 @@ Notez que toutes les instances de l’ID du client de la ressource sont remplac�
 
 Après avoir généré la payload d’exportation à partir du fichier CSV, vous pouvez envoyer cette payload au point d’entrée `/rpc/import` pour générer le schéma.
 
-Pour plus d’informations sur la génération de schémas à partir de payloads d’exportation](./import.md) consultez le [ guide de point d’entrée d’importation .
+Pour plus d’informations sur la génération de schémas à partir de payloads d’exportation[&#128279;](./import.md) consultez le  guide de point d’entrée d’importation .

@@ -6,11 +6,20 @@ description: Découvrez comment gérer les tâches de confidentialité pour les 
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 TQID: https://experienceleague.adobe.com/BKO-vCxXCw-Hfcz6ew37BdcwwTGgjpJ1pENArJ-ztTc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1876
@@ -22,11 +31,11 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 ****.
+>Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 **&#x200B;**.
 >
 >Mettez à jour vos intégrations avant cette date limite pour éviter les échecs de requête.
 
-Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation du point d’entrée `/job` dans l’API [!DNL Privacy Service]. Avant de lire ce guide, reportez-vous au [ guide de prise en main ](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la manière de lire des exemples d’appels API.
+Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation du point d’entrée `/job` dans l’API [!DNL Privacy Service]. Avant de lire ce guide, reportez-vous au [&#x200B; guide de prise en main &#x200B;](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
 >[!NOTE]
 >
@@ -96,7 +105,7 @@ Avant de créer une nouvelle demande de tâche, vous devez collecter des informa
 
 >[!NOTE]
 >
->Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications](../experience-cloud-apps.md) consultez le guide sur les [applications Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications[&#128279;](../experience-cloud-apps.md) consultez le guide sur les applications Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
 
 L’API [!DNL Privacy Service] prend en charge deux types de requêtes de tâche pour les données personnelles :
 

@@ -3,11 +3,21 @@ title: Adobe Analytics pour la vue Streaming Media dans Assurance
 description: Ce guide explique comment utiliser Adobe Analytics for Streaming Media avec Adobe Experience Platform Assurance.
 exl-id: 9a9c2c64-e9ed-4d58-b936-d802f1c3b7d3
 TQID: https://experienceleague.adobe.com/y1T1W254laRHjDK8HVuIBzg45Y42HySj0ZcMBKKoUf8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: b64298cc-90cc-46b7-8917-ee391f1c7516id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 420
@@ -31,10 +41,10 @@ Une fois les données traitées dans Analytics, l’état et les données post-t
 
 Avant de poursuivre, vérifiez que vous disposez des services suivants :
 
-- Interface utilisateur de la collecte de données de Adobe Experience Platform [](https://experience.adobe.com/#/data-collection/)
+- Interface utilisateur de la collecte de données de Adobe Experience Platform [&#128279;](https://experience.adobe.com/#/data-collection/)
 - [Assurance d’Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
-Pour savoir comment installer Assurance dans votre application, veuillez lire le [ guide d’implémentation d’Assurance ](../tutorials/implement-assurance.md).
+Pour savoir comment installer Assurance dans votre application, veuillez lire le [&#x200B; guide d’implémentation d’Assurance &#x200B;](../tutorials/implement-assurance.md).
 
 ## Utilisation d’Assurance avec Adobe Analytics for Streaming Media
 
@@ -44,11 +54,11 @@ Une fois que vous êtes connecté et que vous avez configuré votre application 
 
 Une fois l’ajout effectué, sélectionnez la vue **[!UICONTROL Événements Media Analytics]** dans la section **[!UICONTROL Adobe Analytics]** pour valider le suivi de votre session.
 
-![ Sélectionner ](./images/adobe-analytics-streaming-media/select.png)
+![&#x200B; Sélectionner &#x200B;](./images/adobe-analytics-streaming-media/select.png)
 
 Dans la vue **[!UICONTROL Événements Media Analytics]**, vous pouvez rechercher et filtrer par ID de session (VSID) pour afficher une session multimédia spécifique. Pour afficher des détails supplémentaires sur l’événement, sélectionnez un événement spécifique.
 
-![ Événements multimédia ](./images/adobe-analytics-streaming-media/media-events.png)
+![&#x200B; Événements multimédia &#x200B;](./images/adobe-analytics-streaming-media/media-events.png)
 
 Pour une vue plus succincte des appels d’API, vous pouvez également masquer les événements de mise à jour de la tête de lecture en sélectionnant le filtre **[!UICONTROL Masquer les événements de mise à jour de la tête de lecture]**.
 

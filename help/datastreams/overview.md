@@ -3,11 +3,31 @@ title: Présentation des trains de données
 description: Découvrez comment les flux de données vous aident à connecter votre intégration Experience Platform SDK côté client aux produits Adobe et aux destinations tierces.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 TQID: https://experienceleague.adobe.com/RKMXa4lwEGzns3NPt8k-Sac-y3lCmorR7v-v2cglNHc
-product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: baaa0dd2-d27e-4921-aae3-7888623a5fa5id: c814092e-2730-45e8-a12d-e084529f52cbid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13id: b64298cc-90cc-46b7-8917-ee391f1c7516id: ca3d6bf4-a4af-4944-936b-8de1eb09f149id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: de9975b2-c43a-4287-9698-4f4cad92b83fid: e8a4c7eb-7254-4984-ac46-e651a57c7e39
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: baaa0dd2-d27e-4921-aae3-7888623a5fa5
+  - id: c814092e-2730-45e8-a12d-e084529f52cb
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+  - id: e8a4c7eb-7254-4984-ac46-e651a57c7e39
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 713

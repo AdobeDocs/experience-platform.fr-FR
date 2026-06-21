@@ -132,7 +132,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Afficher les configurations des modèles Adobe Mix Modeler] | Accès en lecture seule aux configurations de modèles. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Gérer les configurations des plans de modèles Adobe Mix Modeler] | La possibilité d’afficher et de modifier les configurations des plans. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Afficher les configurations des plans des modèles Adobe Mix Modeler] | Accès en lecture seule aux configurations des plans. |
-| [!DNL AI Assistant] | [!UICONTROL Activer l’assistant AI] | Possibilité de poser les questions [!DNL [AI assistant]](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Activer l’assistant AI] | Possibilité de poser les questions [[!DNL [AI assistant]]](../ai-assistant/access.md). |
 | [!DNL AI Assistant] | [!UICONTROL Afficher des informations opérationnelles] | Accès à pour obtenir des réponses aux requêtes [informations opérationnelles](../ai-assistant/home.md##operational-insights). |
 | [!DNL AI Assistant] | [!UICONTROL Générer le contenu] | Permet aux utilisateurs de générer du contenu à l’aide de l’[!DNL AI Assistant]. |
 | [!DNL AI Assistant] | [!UICONTROL Gérer le kit de marque] | Permettre aux utilisateurs de créer des directives de marque à l’aide du [!DNL AI Assistant]. |
@@ -142,13 +142,13 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Alerts] | [!UICONTROL Gérer les alertes] | Accès à la lecture, la création, la modification et la suppression des alertes. |
 | [!DNL B2B Account Lists] | [!UICONTROL Gérer Les Listes De Comptes B2B] | Possibilité d’afficher les **[!UICONTROL listes de comptes]** et d’y accéder dans le volet de navigation de gauche. Les utilisateurs ayant accès à **[!UICONTROL Listes de comptes]** doivent avoir accès à toutes les fonctions CRUD des listes de comptes : `/accounts-list`. |
 | [!DNL B2B Admin Configurations] | [!UICONTROL Gérer les configurations d’administration B2B] | Possibilité d’afficher et d’accéder aux **[!UICONTROL configurations d’administration B2B]** dans le volet de navigation de gauche. Les utilisateurs ayant accès aux **[!UICONTROL configurations d’administration B2B]** doivent avoir accès à toutes les fonctions CRUD d’informations d’identification d’API SMS : `/admin-configs`. |
-| [!DNL B2B Assets] | [!UICONTROL Gestion d’Assets B2B] | Possibilité d’afficher **** et d’y accéder dans le volet de navigation de gauche. Les utilisateurs ayant accès à **** doivent avoir accès à toutes les fonctions CRUD Assets : `/assets-listing`. |
+| [!DNL B2B Assets] | [!UICONTROL Gestion d’Assets B2B] | Possibilité d’afficher **&#x200B;**&#x200B;et d’y accéder dans le volet de navigation de gauche. Les utilisateurs ayant accès à **&#x200B;**&#x200B;doivent avoir accès à toutes les fonctions CRUD Assets : `/assets-listing`. |
 | [!DNL B2B Assets] | [!UICONTROL Gestion des modèles B2B] | Possibilité d’afficher et d’accéder à **[!UICONTROL Modèles]** dans le volet de navigation de gauche. Les utilisateurs ayant accès à **[!UICONTROL Templates]** doivent avoir accès à toutes les fonctions CRUD de modèles : `/b2b-content-templates`. |
 | [!DNL B2B Assets] | [!UICONTROL Gestion des fragments B2B] | Possibilité d’afficher et d’accéder à **[!UICONTROL Fragments]** dans le volet de navigation de gauche. Les utilisateurs ayant accès à **[!UICONTROL Fragments]** doivent avoir accès à toutes les fonctions CRUD de fragments : `/fragments`. |
 | [!DNL B2B Buying Groups] | [!UICONTROL Gérer Les Groupes D’Achats B2B] | Possibilité d&#39;afficher les **[!UICONTROL groupes d&#39;achat]** et d&#39;y accéder dans le volet de navigation de gauche. Les utilisateurs ayant accès à **[!UICONTROL Groupes d&#39;achat]** doivent avoir accès à toutes les fonctions CRUD des groupes d&#39;achat : `/buying-groups`. |
 | [!DNL B2B Dashboards] | [!UICONTROL Gérer les tableaux de bord d’engagement B2B] | Possibilité d’afficher et d’accéder au **[!UICONTROL Tableau de bord]** dans le volet de navigation de gauche. Les utilisateurs ayant accès à **[!UICONTROL Tableaux de bord]** doivent avoir accès à toutes les fonctions CRUD des tableaux de bord : `/insights-dashboard`. |
 | [!DNL B2B Channel Configurations] | [!UICONTROL Gérer les configurations des canaux B2B] | Possibilité d’afficher et d’accéder à **[!UICONTROL Canaux]** dans le volet de navigation de gauche. Les utilisateurs ayant accès à **[!UICONTROL Canaux]** doivent avoir accès à toutes les fonctions CRUD de canaux : `/channels-config`. |
-| [!DNL B2B Journeys] | [!UICONTROL Gérer les Parcours de compte B2B] | Possibilité d’afficher les Parcours de compte ]**et d’y accéder dans le volet de navigation de gauche.**[!UICONTROL  Les utilisateurs ayant accès à Parcours de compte ]**doivent avoir accès à toutes les fonctions CRUD des Parcours de compte : `/account-journeys`.**[!UICONTROL  |
+| [!DNL B2B Journeys] | [!UICONTROL Gérer les Parcours de compte B2B] | Possibilité d’afficher les Parcours de compte **et d’y accéder dans le volet de navigation de gauche.**&#x200B;[!UICONTROL &#x200B; Les utilisateurs ayant accès à Parcours de compte &#x200B;]&#x200B;**doivent avoir accès à toutes les fonctions CRUD des Parcours de compte : `/account-journeys`.** |
 | [!DNL Campaigns] | [!UICONTROL Gérer les campagnes] | Accès à la lecture, la création, la modification et la suppression des campagnes. |
 | [!DNL Campaigns] | [!UICONTROL Approuver et publier des campagnes] | La possibilité de valider et de publier des campagnes. |
 | [!DNL Campaigns] | [!UICONTROL Publier des campagnes] | Possibilité de publier des campagnes. |
@@ -245,16 +245,16 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL IP Warmup Configurations] | [!UICONTROL Afficher les plans de préchauffage d’adresses IP] | Accès en lecture seule aux plans de préchauffage des adresses IP. |
 | [!DNL IP Warmup Configurations] | [!UICONTROL Gérer les plans de préchauffage d’adresses IP] | La possibilité de gérer les plans de préchauffage des adresses IP. |
 | [!DNL IP Warmup Configurations] | [!UICONTROL Afficher les rapports de préchauffage d’adresses IP] | Accès en lecture seule aux rapports de préchauffage d’adresses IP. |
-| [!DNL Journeys] | [!UICONTROL Gérer les Parcours ] | Accès à la lecture, la création, la modification et la suppression des parcours. |
-| [!DNL Journeys] | [!UICONTROL Afficher les Parcours ] | Accès en lecture seule aux parcours. |
-| [!DNL Journeys] | [!UICONTROL Afficher le rapport des Parcours ] | Accès en lecture seule au rapport parcours. |
+| [!DNL Journeys] | [!UICONTROL Gérer les Parcours &#x200B;] | Accès à la lecture, la création, la modification et la suppression des parcours. |
+| [!DNL Journeys] | [!UICONTROL Afficher les Parcours &#x200B;] | Accès en lecture seule aux parcours. |
+| [!DNL Journeys] | [!UICONTROL Afficher le rapport des Parcours &#x200B;] | Accès en lecture seule au rapport parcours. |
 | [!DNL Journeys] | [!UICONTROL Gérer les événements Parcours, les sources de données et les actions] | Accès à la lecture, la création, la modification et la suppression des événements, des sources de données ou des actions. |
 | [!DNL Journeys] | [!UICONTROL Afficher les événements de Parcours, les sources de données et les actions] | Accès en lecture seule aux événements, aux sources de données ou aux actions. |
-| [!DNL Journeys] | [!UICONTROL Approuver et publier des Parcours ] | Possibilité d’approuver et de publier des parcours lorsqu’une politique est appliquée. |
-| [!DNL Journeys] | [!UICONTROL Publication de Parcours ] | Possibilité de publier des parcours. |
+| [!DNL Journeys] | [!UICONTROL Approuver et publier des Parcours &#x200B;] | Possibilité d’approuver et de publier des parcours lorsqu’une politique est appliquée. |
+| [!DNL Journeys] | [!UICONTROL Publication de Parcours &#x200B;] | Possibilité de publier des parcours. |
 | [!DNL Journey Optimizer Library] | [!UICONTROL Gérer les éléments de bibliothèque] | La possibilité d’ajouter et de supprimer des expressions enregistrées. |
 | [!DNL Journey Optimizer Library] | [!UICONTROL Publication de fragments] | La possibilité de publier des fragments de contenu. |
-| [!DNL Journey Optimizer Library] | [!UICONTROL  Simuler du contenu ] | Accédez à l’option Simuler du contenu pour la prévisualisation et la relecture. |
+| [!DNL Journey Optimizer Library] | [!UICONTROL &#x200B; Simuler du contenu &#x200B;] | Accédez à l’option Simuler du contenu pour la prévisualisation et la relecture. |
 | [!DNL Journey Optimizer Rules] | [!UICONTROL Afficher les règles de fréquence] | Accès en lecture seule aux règles de fréquence. |
 | [!DNL Journey Optimizer Rules] | [!UICONTROL Gérer les règles de fréquence] | Accès à la lecture, la création, la modification ou la suppression des règles de fréquence. |
 | [!DNL Messages] | [!UICONTROL Gérer les messages] | Accès à la lecture, la création, la modification et la suppression des messages. |
@@ -286,7 +286,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Query Service] | [!UICONTROL Gérer les requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Experience Platform. |
 | [!DNL Query Service] | [!UICONTROL Gérer l’intégration de Query Service] | Accès à la création, la mise à jour et la suppression des informations dʼidentification sans date dʼexpiration pour lʼaccès au service de requête. |
 | [!DNL Query Service] | [!UICONTROL Gérer les sessions de requête] | Capacité à supprimer des sessions existantes. |
-| [!DNL Query Service] | [!UICONTROL Gérer la Liste autorisée ] | Capacité à gérer les restrictions IP pour votre organisation. |
+| [!DNL Query Service] | [!UICONTROL Gérer la Liste autorisée &#x200B;] | Capacité à gérer les restrictions IP pour votre organisation. |
 | [!DNL Reports] | [!UICONTROL Afficher les rapports de canal] | La possibilité d’afficher et de modifier les rapports de canal. |
 | [!DNL Run and Operate] | [!UICONTROL Afficher les contrôles d’intégrité] | Accès en lecture seule aux contrôles d’intégrité. |
 | [!DNL Run and Operate] | [!UICONTROL Afficher planifications de tâches] | Accès en lecture seule aux plannings de tâches. |

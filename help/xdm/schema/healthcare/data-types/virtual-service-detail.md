@@ -5,8 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: bde7363c-43b7-402d-96b2-7aa0160cd2ea
 TQID: https://experienceleague.adobe.com/RNyZBglQGRj-B0-fO3PXMSSRnD05hdP-XhkaRdjH3fs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 230
@@ -22,7 +24,7 @@ ht-degree: 5%
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Point de contact de l’adresse] | `addressContactPoint` | [[!UICONTROL  Point de contact ]](../data-types/contact-point.md) | Détails d’un point de contact recourant à la technologie, tel qu’un téléphone, un fax ou un e-mail. |
+| [!UICONTROL Point de contact de l’adresse] | `addressContactPoint` | [[!UICONTROL &#x200B; Point de contact &#x200B;]](../data-types/contact-point.md) | Détails d’un point de contact recourant à la technologie, tel qu’un téléphone, un fax ou un e-mail. |
 | [!UICONTROL Détails du contact étendu de l’adresse] | `addressExtendedContactDetail` | [[!UICONTROL Détails étendus du contact]](../data-types/extended-contact-detail.md) | Coordonnées étendues. |
 | [!UICONTROL Type de canal] | `channelType` | [[!UICONTROL Codage]](../data-types/coding.md) | Type de service virtuel auquel se connecter, tel que Teams, Zoom ou WhatsApp. |
 | [!UICONTROL Informations supplémentaires] | `additionalInfo` | Tableau de chaînes | Adresse pour afficher les autres détails de connexion, représentés sous la forme d’un URI. |

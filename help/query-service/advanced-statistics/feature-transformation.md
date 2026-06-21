@@ -4,9 +4,12 @@ description: Découvrez les techniques de prétraitement essentielles telles que
 role: Developer
 exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
 TQID: https://experienceleague.adobe.com/4FfVYgpCXTwYmHb-wiFQQGLPupHQJ7JKfU-elHayugU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 3447
@@ -101,7 +104,7 @@ Lisez cette section pour plus de détails sur les transformateurs utilisés pour
 
 #### Imprimante numérique {#numeric-imputer}
 
-Le transformateur **Imprimante numérique** complète les valeurs manquantes dans un jeu de données. Cette méthode utilise la moyenne, la médiane ou le mode des colonnes dans lesquelles se trouvent les valeurs manquantes. Les colonnes d’entrée doivent être `DoubleType` ou `FloatType`. Vous trouverez plus d’informations et d’exemples dans la documentation sur l’algorithme [ Spark](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer).
+Le transformateur **Imprimante numérique** complète les valeurs manquantes dans un jeu de données. Cette méthode utilise la moyenne, la médiane ou le mode des colonnes dans lesquelles se trouvent les valeurs manquantes. Les colonnes d’entrée doivent être `DoubleType` ou `FloatType`. Vous trouverez plus d’informations et d’exemples dans la documentation sur l’algorithme [&#x200B; Spark](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer).
 
 >[!NOTE]
 >

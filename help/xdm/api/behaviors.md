@@ -5,9 +5,12 @@ title: Point d’entrée de l’API Behaviors
 description: Le point d’entrée /comportements de l’API Schema Registry vous permet de récupérer tous les comportements disponibles dans le conteneur global.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 TQID: https://experienceleague.adobe.com/be7cMDKNfX9zbZ5xi0FS085TrG7stuq82Xgu5zPiyXk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 430
@@ -32,7 +35,7 @@ Le point d’entrée `/behaviors` de l’API [!DNL Schema Registry] vous permet 
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de l’API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). [[!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). [!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de comportements {#list}
 

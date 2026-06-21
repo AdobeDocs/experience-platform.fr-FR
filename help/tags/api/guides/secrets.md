@@ -3,11 +3,28 @@ title: Secrets dans l’API Reactor
 description: Découvrez les principes de base de la configuration des secrets dans l’API Reactor en vue d’une utilisation dans le transfert d’événements.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 TQID: https://experienceleague.adobe.com/s5XY96PrhElQvidslTZ6boB5pKgLL-e1Nu16JsP2q-Y
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2: id: bef6f891-2e8a-425e-8f99-7ddf22070daaid: c975b431-530e-4c29-9216-0301b9e204c1id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: c5c5043c-63aa-4aa6-ade0-3840596e7a6bid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2:
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+  - id: c975b431-530e-4c29-9216-0301b9e204c1
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: c5c5043c-63aa-4aa6-ade0-3840596e7a6b
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1228
@@ -143,7 +160,7 @@ Pour référencer un secret, vous devez créer un élément de données de type 
 
 >[!NOTE]
 >
->Pour ajouter un élément de données secret à une bibliothèque, vous devez avoir au moins un secret `succeeded` associé à l’environnement sur lequel la bibliothèque est en cours de création. Par exemple, si une bibliothèque comporte un élément de données secret qui n’a pas de secret `succeeded` configuré pour la section [!UICONTROL  Secret d’évaluation ], si vous tentez de créer cette bibliothèque dans l’environnement d’évaluation, une erreur se produira.
+>Pour ajouter un élément de données secret à une bibliothèque, vous devez avoir au moins un secret `succeeded` associé à l’environnement sur lequel la bibliothèque est en cours de création. Par exemple, si une bibliothèque comporte un élément de données secret qui n’a pas de secret `succeeded` configuré pour la section [!UICONTROL &#x200B; Secret d’évaluation &#x200B;], si vous tentez de créer cette bibliothèque dans l’environnement d’évaluation, une erreur se produira.
 
 Au moment de l’exécution, l’élément de données secret est remplacé par l’artefact d’échange secret correspondant enregistré dans l’environnement.
 

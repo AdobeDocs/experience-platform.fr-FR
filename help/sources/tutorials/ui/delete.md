@@ -6,8 +6,10 @@ title: Supprimer des flux de données dans l’interface utilisateur
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
 TQID: https://experienceleague.adobe.com/i9Qx2Nvk2rb-gXk6rvcXnLVLgzlYZ1l3-g9A3IByeKI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 370
@@ -30,7 +32,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Supprimer des flux de données
 
-Dans l’interface utilisateur [](https://platform.adobe.com), sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources], puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur.
+Dans l’interface utilisateur [&#128279;](https://platform.adobe.com), sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources], puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur.
 
 ![catalogue](../../images/tutorials/delete/catalog.png)
 
@@ -38,7 +40,7 @@ La page **[!UICONTROL Flux de données]** s’affiche. Sur cette page, vous trou
 
 Sélectionnez l’icône de filtre (![filter-icon](/help/images/icons/filter.png)) en haut à gauche pour lancer le panneau de tri.
 
-![ flux de données ](../../images/tutorials/delete/dataflows.png)
+![&#x200B; flux de données &#x200B;](../../images/tutorials/delete/dataflows.png)
 
 Le panneau de tri fournit une liste de toutes les sources. Vous pouvez sélectionner plusieurs sources dans la liste pour accéder à une sélection filtrée de flux de données associés aux sources spécifiques que vous avez sélectionnées.
 

@@ -3,10 +3,14 @@ title: Créer une connexion en continu d’API HTTP à l’aide de l’interface
 description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 TQID: https://experienceleague.adobe.com/hJCqDpKKk85JEmO4d8OFSVCUoUHQzCZ-zr7MwumVU1Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1027
@@ -90,7 +94,7 @@ Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de do
 
 ### Mappage des champs standard
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Pour ajouter un nouveau champ source, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
@@ -145,4 +149,4 @@ Une fois la connexion créée, la page des détails des sources s’affiche. Cet
 
 Ce tutoriel vous a permis de créer une connexion HTTP en flux continu, qui vous permet d’utiliser le point d’entrée en flux continu pour accéder à diverses API [!DNL Data Ingestion]. Pour savoir comment créer une connexion en continu dans l’API, consultez le [tutoriel sur la création d’une connexion en continu](../../../api/create/streaming/http.md).
 
-Pour savoir comment diffuser des données vers Experience Platform, consultez le tutoriel sur la [ diffusion en continu de données de série temporelle ](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [ diffusion en continu de données d’enregistrement ](../../../../../ingestion/tutorials/streaming-record-data.md).
+Pour savoir comment diffuser des données vers Experience Platform, consultez le tutoriel sur la [&#x200B; diffusion en continu de données de série temporelle &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [&#x200B; diffusion en continu de données d’enregistrement &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md).

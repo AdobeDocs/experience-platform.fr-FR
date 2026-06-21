@@ -4,9 +4,13 @@ title: Présentation des modèles de données du secteur
 description: Découvrez les modèles de données normalisés pour divers secteurs d’activité verticaux qui peuvent être construits à l’aide de composants XDM (Experience Data Model) standard.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 TQID: https://experienceleague.adobe.com/ykyYzLA2A6HFdGDiv---udUnfPTwcLAC651GMkNM6Sk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 358
@@ -42,7 +46,7 @@ Les ERD sont fournis pour les secteurs verticaux suivants :
 * [[!UICONTROL Vente au détail]](./retail.md)
 * [[!UICONTROL Services financiers]](./financial.md)
 * [[!UICONTROL Santé]](./healthcare.md)
-* [[!UICONTROL  Télécommunications ]](./telecom.md)
+* [[!UICONTROL &#x200B; Télécommunications &#x200B;]](./telecom.md)
 * [[!UICONTROL Voyage et hébergement]](./travel-hospitality.md)
 
 ## Étapes suivantes

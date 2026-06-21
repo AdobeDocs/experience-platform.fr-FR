@@ -3,11 +3,19 @@ title: Tableaux de bord standard
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 TQID: https://experienceleague.adobe.com/nQr3TIHFHRIUOM8pdEea-Y8P-rwu-YO7VXw9pqwiHQI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1633
@@ -88,9 +96,9 @@ La liste de prévisualisation fournit des détails sur les tables contenues dans
 |---|---|
 | [!UICONTROL Titre] | Nom de la table. |
 | [!UICONTROL Type de table] | Type de table. Les types potentiels sont les suivants : `fact`, `dimension` et `none`. |
-| [!UICONTROL  Enregistrements ] | Le nombre d&#39;enregistrements associés à la table choisie. |
+| [!UICONTROL &#x200B; Enregistrements &#x200B;] | Le nombre d&#39;enregistrements associés à la table choisie. |
 | [!UICONTROL Recherches] | Nombre de tables jointes à la table choisie. |
-| [!UICONTROL  Attributs ] | Nombre d’attributs pour le tableau sélectionné. |
+| [!UICONTROL &#x200B; Attributs &#x200B;] | Nombre d’attributs pour le tableau sélectionné. |
 
 Sélectionnez **[!UICONTROL Suivant]** pour confirmer votre choix du modèle de données. La vue suivante affiche une liste des tableaux disponibles dans le rail de gauche. Sélectionnez une table pour afficher une répartition complète des données contenues dans la table sélectionnée.
 

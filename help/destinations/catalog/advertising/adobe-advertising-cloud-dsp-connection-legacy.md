@@ -13,7 +13,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Cette connexion était auparavant appelée connexion Adobe Advertising DSP. La nouvelle [connexion ](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md) contient la même fonctionnalité que la connexion héritée et prend en charge des types d’identité supplémentaires. La bonne pratique consiste à utiliser la nouvelle connexion Adobe Advertising DSP.
+>Cette connexion était auparavant appelée connexion Adobe Advertising DSP. La nouvelle [connexion &#x200B;](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md) contient la même fonctionnalité que la connexion héritée et prend en charge des types d’identité supplémentaires. La bonne pratique consiste à utiliser la nouvelle connexion Adobe Advertising DSP.
 
 ## Vue d’ensemble {#overview}
 
@@ -68,7 +68,7 @@ Reportez-vous au tableau suivant pour plus d’informations sur le type et la fr
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions) pour Experience Platform. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions) pour Experience Platform. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à la destination, suivez les instructions [création d’une connexion de destination](/help/destinations/ui/connect-destination.md) à l’aide de l’interface utilisateur d’Experience Platform. Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -78,7 +78,7 @@ Pour vous connecter à la destination, indiquez le paramètre suivant dans la se
 
 * **[!UICONTROL Clé du compte ou de l’annonceur]** : cette [!UICONTROL clé Source] est générée lors de la création d’une [[!DNL Real-Time CDP] source dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte DSP partagera cette clé avec vous après la création de la source.
 
-![ Champ de type de connexion ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![&#x200B; Champ de type de connexion &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -99,8 +99,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -110,7 +110,7 @@ Pour vérifier que l’audience de données a été partagée avec Adobe Adverti
 
 * Le flux de données dans la destination [!DNL Real-Time CDP] a réussi.
 
-* Dans DSP, l&#39;audience est disponible lorsque vous créez ou modifiez une audience à partir de [!UICONTROL Audiences] > [!UICONTROL Toutes les audiences] ou à partir de la section [!UICONTROL Ciblage d&#39;audience] des paramètres d&#39;emplacement. L’audience doit être visible dans l’onglet [!UICONTROL Segments ] sous le dossier [!UICONTROL Real-Time CDP].
+* Dans DSP, l&#39;audience est disponible lorsque vous créez ou modifiez une audience à partir de [!UICONTROL Audiences] > [!UICONTROL Toutes les audiences] ou à partir de la section [!UICONTROL Ciblage d&#39;audience] des paramètres d&#39;emplacement. L’audience doit être visible dans l’onglet [!UICONTROL Segments &#x200B;] sous le dossier [!UICONTROL Real-Time CDP].
 
 ![audiences Real-Time CDP dans les paramètres d’audience DSP](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 

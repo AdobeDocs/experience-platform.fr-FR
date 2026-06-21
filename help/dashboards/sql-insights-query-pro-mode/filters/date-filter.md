@@ -3,9 +3,14 @@ title: Créer un filtre de date
 description: Découvrez comment filtrer vos informations personnalisées par date.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
 TQID: https://experienceleague.adobe.com/Xj8c2b0JvHomqp3oiIUJxQyycPM7nBW-A-eIYdXF-tk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 923
@@ -19,7 +24,7 @@ Pour filtrer vos informations par date, vous devez ajouter à vos requêtes SQL 
 
 Les paramètres de requête vous permettent d’utiliser des données dynamiques car ils servent d’espaces réservés pour les valeurs que vous ajoutez au moment de l’exécution. Ces valeurs d’espace réservé peuvent être mises à jour via l’interface utilisateur et permettent aux utilisateurs moins techniques de mettre à jour les informations en fonction de périodes.
 
-Si vous ne connaissez pas les paramètres de requête, consultez la documentation pour obtenir des [ sur la manière d’implémenter des requêtes paramétrées](../../../query-service/ui/parameterized-queries.md).
+Si vous ne connaissez pas les paramètres de requête, consultez la documentation pour obtenir des [&#x200B; sur la manière d’implémenter des requêtes paramétrées](../../../query-service/ui/parameterized-queries.md).
 
 ## Application d’un filtre de date à votre tableau de bord {#apply-date-filter}
 
@@ -122,7 +127,7 @@ La capture d’écran ci-dessous met en évidence les contraintes de date intég
 
 ## Activation des paramètres de date dans chaque insight {#enable-date-parameters}
 
-Une fois que vous avez intégré les paramètres appropriés au SQL de vos informations, les variables `Start_date` et `End_date` sont désormais disponibles sous forme de bascules dans le compositeur de widgets. Pour plus d’informations sur la modification d’une insight, consultez la section [population de widgets du mode pro ](../overview.md#populate-widget) .
+Une fois que vous avez intégré les paramètres appropriés au SQL de vos informations, les variables `Start_date` et `End_date` sont désormais disponibles sous forme de bascules dans le compositeur de widgets. Pour plus d’informations sur la modification d’une insight, consultez la section [population de widgets du mode pro &#x200B;](../overview.md#populate-widget) .
 
 Dans le compositeur de widgets, sélectionnez bascules pour activer les paramètres `Start_date` et `End_date`.
 

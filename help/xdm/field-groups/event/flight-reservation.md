@@ -4,9 +4,12 @@ title: Groupe De Champs Du Schéma De Réservation De Vol
 description: Découvrez le groupe de champs du schéma Réservation de vol .
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
 TQID: https://experienceleague.adobe.com/uFbfqsOkp-tGLbUQmKp7j9IwHkd-uGG4A0mNnIMpkMA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 662
@@ -18,7 +21,7 @@ ht-degree: 4%
 
 [!UICONTROL Réservation de vol] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisé pour capturer des informations concernant une réservation de vol.
 
-Le groupe de champs est une extension du groupe de champs [!UICONTROL  Détails de la réservation ] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. Outre ces champs génériques, [!UICONTROL réservation de vol] inclut également `flightReservations` tableau . Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés uniques au transport aérien.
+Le groupe de champs est une extension du groupe de champs [!UICONTROL &#x200B; Détails de la réservation &#x200B;] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. Outre ces champs génériques, [!UICONTROL réservation de vol] inclut également `flightReservations` tableau . Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés uniques au transport aérien.
 
 >[!NOTE]
 >

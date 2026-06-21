@@ -5,10 +5,18 @@ type: Documentation
 description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
 TQID: https://experienceleague.adobe.com/e9fipPU-Ymzs-s-FXNqbUvwNynyXCOtsaKmVINrlBP8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1670
@@ -67,7 +75,7 @@ Vous pouvez également naviguer dans la boîte de dialogue de la vidéo intégr�
 | Mode muet | Touche de tabulation<br/>Barre d’espacement | Utilisez la touche de **tabulation** pour placer le focus sur l’élément de volume muet. Utilisez la **barre d’espacement** pour couper ou remettre le son de la lecture vidéo. |
 | Volume | Touche de tabulation<br/>Flèche à gauche<br/>Flèche à droite | Utilisez la touche de **tabulation** pour placer le focus sur l’élément de volume. Les **touches fléchées à gauche et à droite** augmentent ou diminuent respectivement le volume. |
 | [!UICONTROL Sous-titres] (« cc ») | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | **Tabulation** en élément [!UICONTROL Sous-titres] (« cc »). Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la langue des sous-titres. Appuyez sur **Entrée** pour confirmer votre sélection. |
-| [!UICONTROL Qualité ] | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez **Tab** pour placer le focus sur l’élément [!UICONTROL Quality]. Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la qualité de la vidéo. Appuyez sur **Entrée** pour confirmer votre sélection. |
+| [!UICONTROL Qualité &#x200B;] | Touche de tabulation<br/>Entrée<br/>Flèche vers le haut<br/>Flèche vers le bas | Utilisez **Tab** pour placer le focus sur l’élément [!UICONTROL Quality]. Utilisez la touche **Entrée** pour ouvrir le menu, puis les **touches fléchées vers le haut et vers le bas** pour sélectionner la qualité de la vidéo. Appuyez sur **Entrée** pour confirmer votre sélection. |
 | Plein écran | Touche de tabulation<br/>Barre d’espacement ou Entrée<br/>Échap | Utilisez la touche de **tabulation** pour placer le focus sur l’élément Plein écran. Utilisez la **barre d’espacement ou la touche Entrée** pour activer l’affichage plein écran. Appuyez sur **Échap** (« esc ») pour quitter le mode plein écran. |
 | Fermer | Touche de tabulation<br/>Barre d’espacement ou Entrée | Utilisez la touche de **tabulation** pour placer le focus sur le bouton Fermer. Utilisez la **barre d’espacement ou la touche Entrée** pour quitter la boîte de dialogue de la vidéo. |
 

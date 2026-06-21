@@ -5,10 +5,16 @@ title: Gestion des libellés d’utilisation des données dans l’interface uti
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 TQID: https://experienceleague.adobe.com/YVw-HONV14aOx-s-U40l3Yhs0GpnTSjGo-HUudM37yY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1567
@@ -41,7 +47,7 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 >
 >![Boîte de dialogue Non-respect des règles de gouvernance des données détecté avec le résumé des violations et le diagramme de traçabilité des données en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Pour plus d’informations sur les violations de politique](../enforcement/auto-enforcement.md#data-usage-violation) consultez la [ documentation sur les violations de politique d’utilisation des données .
+>Pour plus d’informations sur les violations de politique[&#128279;](../enforcement/auto-enforcement.md#data-usage-violation) consultez la  documentation sur les violations de politique d’utilisation des données .
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schémas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 
@@ -86,7 +92,7 @@ La boîte de dialogue **[!UICONTROL Modifier les libellés de gouvernance]** s�
 
 L’espace de travail **[!UICONTROL Gouvernance des données]** réapparaît, affichant les libellés que vous avez appliqués au niveau du jeu de données dans la ligne initiale du tableau. Vous pouvez également voir les libellés, indiqués par des cartes individuelles, hérités de chacun des champs du jeu de données.
 
-![Onglet [!UICONTROL  Gouvernance des données] de l’espace de travail [!UICONTROL Jeux de données] avec les libellés appliqués au niveau du jeu de données et les libellés hérités du champ du jeu de données mis en surbrillance.](../images/labels/applied-dataset-labels.png)
+![Onglet [!UICONTROL &#x200B; Gouvernance des données] de l’espace de travail [!UICONTROL Jeux de données] avec les libellés appliqués au niveau du jeu de données et les libellés hérités du champ du jeu de données mis en surbrillance.](../images/labels/applied-dataset-labels.png)
 
 ### Suppression des libellés dʼun jeu de données {#remove-labels-from-a-dataset}
 

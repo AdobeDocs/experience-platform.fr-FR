@@ -3,10 +3,14 @@ title: Workflows basés sur des champs dans l’éditeur de schémas
 description: Découvrez comment ajouter individuellement des champs de groupes de champs existants à vos schémas de modèle de données d’expérience (XDM).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
 TQID: https://experienceleague.adobe.com/gTzx0vC2Jkxtq58IG7xd8VGOKTPqAtJBMCfk5d-V50Y
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1309
@@ -96,7 +100,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
 
 Le nouveau champ est ajouté à la zone de travail et dispose d’un espace de noms sous votre [identifiant client](../api/getting-started.md#know-your-tenant_id) pour éviter les conflits avec les champs XDM standard. Le groupe de champs auquel vous avez associé le nouveau champ s’affiche également sous **[!UICONTROL Groupes de champs]** dans le rail de gauche.
 
-![ L’éditeur de schémas avec le nouveau champ ajouté à la zone de travail et l’espace de noms sous votre identifiant client. Le groupe de champs et le champ sont mis en surbrillance.](../images/ui/field-based-workflows/tenantId.png)
+![&#x200B; L’éditeur de schémas avec le nouveau champ ajouté à la zone de travail et l’espace de noms sous votre identifiant client. Le groupe de champs et le champ sont mis en surbrillance.](../images/ui/field-based-workflows/tenantId.png)
 
 >[!NOTE]
 >
@@ -116,4 +120,4 @@ Voir [Créer et modifier des schémas dans le guide de l’interface utilisateur
 
 ## Étapes suivantes
 
-Ce guide décrit les nouveaux workflows basés sur les champs pour l’éditeur de schémas dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur la gestion des schémas dans l’interface utilisateur, consultez la [ présentation de l’interface utilisateur](./overview.md).
+Ce guide décrit les nouveaux workflows basés sur les champs pour l’éditeur de schémas dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur la gestion des schémas dans l’interface utilisateur, consultez la [&#x200B; présentation de l’interface utilisateur](./overview.md).

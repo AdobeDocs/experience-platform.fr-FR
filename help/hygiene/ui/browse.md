@@ -3,8 +3,12 @@ title: Parcourir les ordres de travail relatifs au cycle de vie des données
 description: Découvrez comment afficher et gérer les ordres de travail de cycle de vie des données existants dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 TQID: https://experienceleague.adobe.com/e8rzCUkYUbNbxNCublKt3eAFmqTJh4uodaz38SOJU30
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 5b2c5f06f9c9b597dabf0bd68f8560a65d32da87
 workflow-type: tm+mt
 source-wordcount: 878
@@ -28,11 +32,11 @@ Ce guide explique comment afficher et gérer les ordres de travail existants dan
 
 Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONTROL Cycle de vie des données]** dans l’interface utilisateur, une liste des ordres de travail existants et les détails de base s’affichent.
 
-![Image illustrant l’espace de travail [!UICONTROL  Cycle de vie des données ] dans l’interface utilisateur d’Experience Platform](../images/ui/browse/work-order-list.png)
+![Image illustrant l’espace de travail [!UICONTROL &#x200B; Cycle de vie des données &#x200B;] dans l’interface utilisateur d’Experience Platform](../images/ui/browse/work-order-list.png)
 
 La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionnez **[!UICONTROL Consommateur]** pour afficher la liste des tâches de suppression d’enregistrements, et **[!UICONTROL Jeu de données]** pour afficher une liste des expirations de jeux de données planifiées.
 
-![Image illustrant l’onglet [!UICONTROL  Jeu de données ]](../images/ui/browse/dataset-tab.png)
+![Image illustrant l’onglet [!UICONTROL &#x200B; Jeu de données &#x200B;]](../images/ui/browse/dataset-tab.png)
 
 Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](/help/images/icons/filter.png)) pour consulter une liste de filtres pour les ordres de travail affichés.
 
@@ -56,7 +60,7 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Terminé]** : le traitement est terminé.</li><li>**[!UICONTROL En attente]** : le traitement a été créé mais n’a pas encore été exécuté. Une [demande relative à l’expiration du jeu de données](./dataset-expiration.md) suppose que ce statut est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, le statut est mis à jour vers [!UICONTROL  Exécution ], sauf si le traitement est annulé au préalable.</li><li>**[!UICONTROL Exécution]** : la demande d’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]** : le traitement a été annulé dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
+| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Terminé]** : le traitement est terminé.</li><li>**[!UICONTROL En attente]** : le traitement a été créé mais n’a pas encore été exécuté. Une [demande relative à l’expiration du jeu de données](./dataset-expiration.md) suppose que ce statut est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, le statut est mis à jour vers [!UICONTROL &#x200B; Exécution &#x200B;], sauf si le traitement est annulé au préalable.</li><li>**[!UICONTROL Exécution]** : la demande d’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]** : le traitement a été annulé dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
 | [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été effectué. |
 | [!UICONTROL Date d’expiration] | Filtrez les demandes relatives à l’expiration du jeu de données en fonction de la date de suppression planifiée pour le jeu de données en question. |
 | [!UICONTROL Date de mise à jour] | Filtrez en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et les expirations sont comptées comme des mises à jour. |

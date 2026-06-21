@@ -5,8 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 18c0b767-adf0-480e-9cf2-63e21d05b362
 TQID: https://experienceleague.adobe.com/aHs-Mo3XsuKuVc2ZiNjptfN816tQQkd8YyGEF6Rdpbo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 292
@@ -41,7 +43,7 @@ Pour plus d’informations sur ce type de données, reportez-vous au référenti
 | [!UICONTROL Toute La Journée] | `allDay` | Booléen | Valeur booléenne indiquant si l’élément est toujours disponible. |
 | [!UICONTROL Heure de fin disponible] | `availableEndTime` | Chaîne | Heure à laquelle l’élément cesse d’être disponible. Ceci est ignoré si `allDay` est `true`. |
 | [!UICONTROL Heure de début disponible] | `availableStartTime` | Chaîne | Heure à laquelle l’élément commence à être disponible. Ceci est ignoré si `allDay` est `true`. |
-| [!UICONTROL  Jours De La Semaine ] | `daysOfWeek` | Tableau de chaînes | Tableau de chaînes détaillant les jours disponibles. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
+| [!UICONTROL &#x200B; Jours De La Semaine &#x200B;] | `daysOfWeek` | Tableau de chaînes | Tableau de chaînes détaillant les jours disponibles. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `mon` </li> <li> `tues` </li> <li> `wed` </li> <li> `thurs`</li>  <li> `fri` </li> <li> `sat`</li> <li> `sun`</li> |
 
 ## `notAvailableTime` {#not-available-time}
 

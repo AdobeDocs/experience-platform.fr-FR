@@ -6,10 +6,15 @@ type: Tutorial
 description: Découvrez comment créer une connexion source dans l’interface utilisateur pour importer les données de profil des attributs du client dans Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
 TQID: https://experienceleague.adobe.com/rqJyW-NqCt0lwsrtEUUaI5ZBCvaQEOzkB-2VUDUvpcs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 634
@@ -35,7 +40,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
 
-Dans la catégorie [!UICONTROL Applications ], sélectionnez **[!UICONTROL Attributs du client]** puis **[!UICONTROL Ajouter des données]**.
+Dans la catégorie [!UICONTROL Applications &#x200B;], sélectionnez **[!UICONTROL Attributs du client]** puis **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/customer-attributes/catalog.png)
 

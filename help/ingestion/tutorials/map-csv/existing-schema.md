@@ -6,10 +6,15 @@ type: Tutorial
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM existant à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 TQID: https://experienceleague.adobe.com/o-0H2iNEqG9qFAc7gLWvds7S-5c0eDHx5UJLE0tyA8c
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1027
@@ -73,7 +78,7 @@ L’étape **[!UICONTROL Mappage]** s’affiche. Les colonnes du fichier CSV son
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-Pour accepter toutes les valeurs de mappage de génération automatique, cochez la case « [!UICONTROL  Accepter tous les champs cibles ] ».
+Pour accepter toutes les valeurs de mappage de génération automatique, cochez la case « [!UICONTROL &#x200B; Accepter tous les champs cibles &#x200B;] ».
 
 ![](../../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
@@ -129,4 +134,4 @@ En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM e
 
 >[!TIP]
 >
->Vous pouvez également utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir de données d’exemple** à partir de l’espace de travail Schéma . Ce workflow crée automatiquement un schéma en fonction de la structure et du contenu de votre fichier , en s’assurant que le schéma correspond au format de vos données. Cela vous permet de gagner du temps et d’améliorer la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes volumineux. Pour plus d’informations sur ce workflow](../../../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
+>Vous pouvez également utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir de données d’exemple** à partir de l’espace de travail Schéma . Ce workflow crée automatiquement un schéma en fonction de la structure et du contenu de votre fichier , en s’assurant que le schéma correspond au format de vos données. Cela vous permet de gagner du temps et d’améliorer la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes volumineux. Pour plus d’informations sur ce workflow[&#128279;](../../../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning .

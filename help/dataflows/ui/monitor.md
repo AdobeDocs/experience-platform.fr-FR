@@ -3,11 +3,21 @@ title: Présentation du tableau de bord de surveillance
 description: Découvrez comment utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
 TQID: https://experienceleague.adobe.com/P2kYxc4xqjDV33vMs5BnCTRFboTenGDKb8VQxrDgaqA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1007
@@ -71,7 +81,7 @@ Sélectionnez **[!UICONTROL Client et compte]** pour mettre à jour votre tablea
 
 >[!TAB Enrichissement du profil de compte]
 
-Sélectionnez **[!UICONTROL Enrichissement du profil du compte]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données d’enrichissement du profil. **Remarque** : vous ne pouvez afficher les mesures d’enrichissement du profil de compte que si vous êtes autorisé à [ des données B2B](../../rtcdp/b2b-tutorial.md).
+Sélectionnez **[!UICONTROL Enrichissement du profil du compte]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données d’enrichissement du profil. **Remarque** : vous ne pouvez afficher les mesures d’enrichissement du profil de compte que si vous êtes autorisé à [&#x200B; des données B2B](../../rtcdp/b2b-tutorial.md).
 
 ![Le type de données de surveillance est défini sur « Enrichissement du profil de compte ».](../assets/ui/monitor-overview/account-profile-enrichment.png)
 

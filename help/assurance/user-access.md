@@ -3,9 +3,12 @@ title: Accès des utilisateurs et utilisatrices à Adobe Experience Platform 
 description: Ce guide explique comment conserver l’accès des utilisateurs et utilisatrices à Adobe Experience Platform Assurance en la gérant via Admin Console.
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 TQID: https://experienceleague.adobe.com/wfk6lValhWpRY0rIBgOrBGXUvlc9UEEsUUWpsoRRZ04
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 305
@@ -19,7 +22,7 @@ Donnez aux utilisateurs l’accès à  en les ajoutant à un profil de produit d
 
 ## Ajout d’utilisateurs à Adobe Experience Platform via un profil de produit {#adding-product-profile}
 
-Pour ajouter un utilisateur à un profil de produit, connectez-vous à [](https://adminconsole.adobe.com/). Dans l’onglet **[!UICONTROL Aperçu]** de l’interface utilisateur d’Admin Console, sélectionnez **[!UICONTROL Ajouter des utilisateurs]**.
+Pour ajouter un utilisateur à un profil de produit, connectez-vous à [&#128279;](https://adminconsole.adobe.com/). Dans l’onglet **[!UICONTROL Aperçu]** de l’interface utilisateur d’Admin Console, sélectionnez **[!UICONTROL Ajouter des utilisateurs]**.
 
 ![Page Admin Console avec Ajouter des utilisateurs mis en surbrillance.](./images/user-access/admin-console.png)
 

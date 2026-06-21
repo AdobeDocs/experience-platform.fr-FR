@@ -26,11 +26,11 @@ Avant de commencer, vérifiez que vous disposez des éléments suivants :
 
 Pour configurer un projet modélisé, connectez-vous à Adobe Developer Console, puis sélectionnez **[!UICONTROL Créer un projet à partir d’un modèle]** dans l’onglet **[!UICONTROL Accueil]**.
 
-Developer Console mettant en surbrillance l’onglet Accueil et Créer un projet à partir d’un modèle.](../images/alerts/slack-integration/developer-console-home.png)![
+Developer Console mettant en surbrillance l’onglet Accueil et Créer un projet à partir d’un modèle.![&#128279;](../images/alerts/slack-integration/developer-console-home.png)
 
-Sélectionnez le modèle ****, puis saisissez un **[!UICONTROL Titre du projet]** et sélectionnez **[!UICONTROL Ajouter un espace de travail]**. Enfin, sélectionnez **[!UICONTROL Enregistrer]**.
+Sélectionnez le modèle **&#x200B;**, puis saisissez un **[!UICONTROL Titre du projet]** et sélectionnez **[!UICONTROL Ajouter un espace de travail]**. Enfin, sélectionnez **[!UICONTROL Enregistrer]**.
 
-Developer Console mettant en surbrillance le titre du projet, Ajouter un Workspace et Enregistrer.](../images/alerts/slack-integration/developer-console-save.png)![
+Developer Console mettant en surbrillance le titre du projet, Ajouter un Workspace et Enregistrer.![&#128279;](../images/alerts/slack-integration/developer-console-save.png)
 
 Vous recevrez une confirmation indiquant que votre projet a été créé et serez redirigé vers l’onglet **[!UICONTROL Présentation du projet]**. À partir de là, vous pouvez ajouter une **[!UICONTROL Description du projet]**.
 

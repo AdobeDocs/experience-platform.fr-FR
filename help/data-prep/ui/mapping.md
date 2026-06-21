@@ -4,10 +4,14 @@ title: Guide de l’interface utilisateur de la préparation des données
 description: Découvrez comment utiliser les fonctions de préparation de données dans l’interface utilisateur d’Experience Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 TQID: https://experienceleague.adobe.com/90hxaGAE4dzk3xc1KYM-O-qDLAXwOFBBivG9LI-wOac
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1519
@@ -54,10 +58,10 @@ Reportez-vous au tableau de bord en haut de l’interface pour plus d’informat
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL  Champs mappés ] | Affiche le nombre total de champs sources qui ont été mappés à un champ XDM cible, quelles que soient les erreurs. |
+| [!UICONTROL &#x200B; Champs mappés &#x200B;] | Affiche le nombre total de champs sources qui ont été mappés à un champ XDM cible, quelles que soient les erreurs. |
 | [!UICONTROL Champs obligatoires] | Affiche le nombre de champs de mappage obligatoires. |
-| [!UICONTROL  Champs d’identité ] | Affiche le nombre total de champs de mappage définis comme identité. Ces champs de mappage sont représentés par une icône d’empreinte. |
-| [!UICONTROL  Erreurs ] | Affiche le nombre de champs de mappage comportant des erreurs. |
+| [!UICONTROL &#x200B; Champs d’identité &#x200B;] | Affiche le nombre total de champs de mappage définis comme identité. Ces champs de mappage sont représentés par une icône d’empreinte. |
+| [!UICONTROL &#x200B; Erreurs &#x200B;] | Affiche le nombre de champs de mappage comportant des erreurs. |
 
 {style="table-layout:auto"}
 
@@ -67,9 +71,9 @@ Vous pouvez ensuite utiliser les options répertoriées dans l’en-tête pour m
 | --- | --- |
 | [!UICONTROL Rechercher les champs sources] | Utilisez la barre de recherche pour accéder à un champ source spécifique. |
 | [!UICONTROL Tous les champs] | Sélectionnez **[!UICONTROL Tous les champs]** pour afficher un menu déroulant des options permettant de filtrer vos mappages. Les options de filtrage disponibles sont les suivantes :<ul><li>**[!UICONTROL Champs obligatoires]** : filtre l’interface pour afficher uniquement les champs requis pour terminer le workflow.</li><li> **[!UICONTROL Champs d’identité]** : filtre l’interface pour afficher uniquement les champs marqués comme identités.</li><li>**[!UICONTROL Champs mappés]** : filtre l’interface pour afficher uniquement les champs déjà mappés.</li><li>**[!UICONTROL Champs non mappés]** : filtre l’interface pour afficher uniquement les champs qui doivent encore être mappés.</li><li>**[!UICONTROL Champs comportant des erreurs]** : filtre l’interface pour n’afficher que les champs comportant des erreurs.</li></ul> |
-| [!UICONTROL Nouveau type de champ ] | Sélectionnez **[!UICONTROL Nouveau type de champ]** pour ajouter un nouveau champ ou un champ calculé. Pour plus d’informations, consultez la section sur [l’ajout d’un nouveau type de champ](#add-a-new-field-type). |
+| [!UICONTROL Nouveau type de champ &#x200B;] | Sélectionnez **[!UICONTROL Nouveau type de champ]** pour ajouter un nouveau champ ou un champ calculé. Pour plus d’informations, consultez la section sur [l’ajout d’un nouveau type de champ](#add-a-new-field-type). |
 | [!UICONTROL Importer des mappages] | Sélectionnez **[!UICONTROL Importer des mappages]** pour importer des mappages à partir d’un fichier ou d’un flux de données existant. Pour plus d’informations, consultez la section sur l’[importation de mappages](#import-mapping). |
-| [!UICONTROL  Valider ] | Sélectionnez **[!UICONTROL Valider]** pour vérifier les erreurs dans vos mappages. |
+| [!UICONTROL &#x200B; Valider &#x200B;] | Sélectionnez **[!UICONTROL Valider]** pour vérifier les erreurs dans vos mappages. |
 | [!UICONTROL Télécharger le modèle] | Sélectionnez **[!UICONTROL Télécharger le modèle]** pour exporter et télécharger un fichier CSV de vos mappages. |
 | [!UICONTROL Prévisualiser les données] | Sélectionnez **[!UICONTROL Prévisualiser les données]** pour utiliser le panneau de prévisualisation et inspecter la structure et le contenu de votre jeu de données source. |
 | [!UICONTROL Tout effacer] | Sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les mappages dans l’interface. |

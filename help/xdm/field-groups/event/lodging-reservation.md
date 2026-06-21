@@ -4,9 +4,12 @@ title: Groupe De Champs Du Schéma De Réservation De Logement
 description: Découvrez le groupe de champs de schéma Réservation de logement .
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 TQID: https://experienceleague.adobe.com/-xXSI6LRVdQS2IDMkoGAipcjevQDkxFWBLONg7vo4NI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 696
@@ -18,7 +21,7 @@ ht-degree: 7%
 
 [!UICONTROL Réservation d’hébergement] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisé pour capturer des informations concernant une réservation d’hébergement.
 
-Le groupe de champs est une extension du groupe de champs [!UICONTROL  Détails de la réservation ] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. En plus de ces champs génériques, [!UICONTROL Réservation de logement] inclut également `lodgingReservations` tableau . Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés uniques à l’hébergement.
+Le groupe de champs est une extension du groupe de champs [!UICONTROL &#x200B; Détails de la réservation &#x200B;] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. En plus de ces champs génériques, [!UICONTROL Réservation de logement] inclut également `lodgingReservations` tableau . Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés uniques à l’hébergement.
 
 >[!NOTE]
 >

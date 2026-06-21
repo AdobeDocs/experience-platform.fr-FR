@@ -3,9 +3,12 @@ title: Classe XDM Business Campaign
 description: Découvrez la classe XDM Business Campaign dans le modèle de données d’expérience (XDM).
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 TQID: https://experienceleague.adobe.com/xukk4fewrrItSYPYtu4CKc03EQnQ9fDpdoNnrWchJAU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 233
@@ -13,7 +16,7 @@ ht-degree: 3%
 
 ---
 
-# Classe [!UICONTROL  XDM Business Campaign ]
+# Classe [!UICONTROL &#x200B; XDM Business Campaign &#x200B;]
 
 >[!IMPORTANT]
 >
@@ -21,11 +24,11 @@ ht-degree: 3%
 
 [!UICONTROL XDM Business Campaign] est une classe de modèle de données d’expérience (XDM) standard qui capture les propriétés minimales requises d’une campagne commerciale.
 
-![ Structure de la classe XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign.png)
+![&#x200B; Structure de la classe XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `campaignKey` | Source B2B]](../../data-types/b2b-source.md)[[!UICONTROL  | Identifiant composite de l’entité de campagne. |
+| `campaignKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de l’entité de campagne. |
 | `extSourceSystemAudit` | [[!UICONTROL Attributs d’audit du système Source externe]](../../data-types/external-source-system-audit-attributes.md) | Si la campagne provient d’un système source externe, cet objet capture les attributs d’audit de ce système. |
 | `_id` | Chaîne | Identifiant unique de l’enregistrement. Il s’agit d’une valeur générée par le système et distincte de la `campaignID`. |
 | `campaignDescription` | Chaîne | Description de la campagne. |

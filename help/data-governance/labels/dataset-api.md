@@ -5,9 +5,15 @@ title: Gestion des libellés dʼutilisation des données pour les jeux de donné
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des libellés dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 TQID: https://experienceleague.adobe.com/KY2QKiJVoCcdoeKcjCyshXfIES2MWxtw6d8u7sozjU8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: dc73fd9f2c4d1cef8b38e6a0fb0b627ff29d1f19
 workflow-type: tm+mt
 source-wordcount: 1280

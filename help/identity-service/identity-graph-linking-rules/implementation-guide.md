@@ -3,11 +3,29 @@ title: Guide De Mise En Œuvre Des Règles De Liaison Des Graphiques D’Identit
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations des règles de liaison de graphique d’identités.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 TQID: https://experienceleague.adobe.com/5cfUeZAbB5do--V0Iz75Wj4NbAWVpNV-k1rA4Ve2zRQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1a87129-ba05-4f15-98b1-233618f1774aid: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1965
@@ -61,7 +79,7 @@ Avec un espace de noms unique (dans ce cas, un CRMID au lieu de deux espaces de 
 
 ### Configuration de la priorité des espaces de noms
 
-Si vous utilisez le [connecteur source ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
+Si vous utilisez le [connecteur source &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
 
 ### Événement d’expérience XDM {#xdm-experience-events}
 
@@ -259,7 +277,7 @@ Utilisez le tableau de bord des identités pour obtenir des informations sur l�
 
 Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL Afficher plus]** pour obtenir plus d’informations et vérifier qu’il n’existe aucun graphique réduit.
 
-![ Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
+![&#x200B; Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
 
 Utilisez la fenêtre qui s’affiche pour afficher des informations sur les graphiques réduits. Dans cet exemple, e-mail et téléphone sont marqués comme espace de noms unique. Par conséquent, votre sandbox ne contient aucun graphique réduit.
 

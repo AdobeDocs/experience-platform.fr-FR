@@ -49,7 +49,7 @@ Créez entièrement un modèle de machine learning en temps réel ou incorporez-
 
 ### Déploiement
 
-Déployez votre modèle sur le [!DNL Edge Network] pour créer un service de machine learning en temps réel dans la [!UICONTROL  Galerie de services ] à l’aide du point d’entrée de l’API Prediction.
+Déployez votre modèle sur le [!DNL Edge Network] pour créer un service de machine learning en temps réel dans la [!UICONTROL &#x200B; Galerie de services &#x200B;] à l’aide du point d’entrée de l’API Prediction.
 
 ### Inférence
 

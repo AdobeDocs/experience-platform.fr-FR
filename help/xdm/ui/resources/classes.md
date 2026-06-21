@@ -5,10 +5,14 @@ title: Créer et modifier des classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 TQID: https://experienceleague.adobe.com/E2xWaqsTJYoYPW-M3os1PMCKDNfZ5i73Ju-Bt8j2UxQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1698
@@ -150,7 +154,7 @@ Apportez les modifications souhaitées au champ, en faisant défiler le rail de 
 
 >[!IMPORTANT]
 >
-> Toutes les mises à jour que vous apportez aux champs seront appliquées dans tous les schémas qui utilisent cette classe, conformément aux [ règles d’évolution des schémas ](../../schema/composition.md#evolution).
+> Toutes les mises à jour que vous apportez aux champs seront appliquées dans tous les schémas qui utilisent cette classe, conformément aux [&#x200B; règles d’évolution des schémas &#x200B;](../../schema/composition.md#evolution).
 
 ![Éditeur de schémas avec un champ sélectionné et le rail de droite exposé, avec la mention [!UICONTROL Appliquer].](../../images/ui/resources/classes/save-changes.png)
 

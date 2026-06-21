@@ -5,10 +5,15 @@ type: Tutorial
 description: Les fournisseurs de service de messagerie (ESP) vous permettent de gérer vos activités de marketing par e-mail, par exemple pour l’envoi de campagnes promotionnelles par e-mail. Découvrez les fournisseurs de service de messagerie pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 TQID: https://experienceleague.adobe.com/WsJhY8--XG2DWKr8oN4Wy2Yp64P826XZ8VfGW8VfSfI
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 371

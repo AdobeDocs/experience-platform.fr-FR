@@ -3,9 +3,13 @@ title: Exporter des données vers des environnements ML externes
 description: Découvrez comment partager un jeu de données de formation préparé, créé avec Data Distiller, vers un emplacement d’espace de stockage que votre environnement ML peut lire pour la formation et la notation de votre modèle.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 TQID: https://experienceleague.adobe.com/N8lrvHd0kcTv6tdifl81deSCG-lW8OD8mXFDPAVZUeM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 511
@@ -15,7 +19,7 @@ ht-degree: 6%
 
 # Exporter des données vers des environnements ML externes
 
-Ce document explique comment partager un jeu de données de formation préparé créé avec Data Distiller vers un emplacement d’espace de stockage que votre environnement ML peut lire pour la formation et la notation de votre modèle. L’exemple ci-dessous exporte le jeu de données d’entraînement vers la [ Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Vous pouvez modifier la destination de stockage selon vos besoins pour travailler avec votre environnement de machine learning.
+Ce document explique comment partager un jeu de données de formation préparé créé avec Data Distiller vers un emplacement d’espace de stockage que votre environnement ML peut lire pour la formation et la notation de votre modèle. L’exemple ci-dessous exporte le jeu de données d’entraînement vers la [&#x200B; Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Vous pouvez modifier la destination de stockage selon vos besoins pour travailler avec votre environnement de machine learning.
 
 Le [service de flux pour les destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) est utilisé pour terminer le pipeline de fonctionnalités en envoyant un jeu de données de fonctionnalités calculées vers un emplacement d’espace de stockage dans le cloud approprié.
 

@@ -3,11 +3,22 @@ title: Flux de publication
 description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 TQID: https://experienceleague.adobe.com/WOkzDl0pLTfgUm-pyZr88CSrtaDTxvlKWn-b-yWgr4M
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1464
@@ -65,10 +76,10 @@ Le tableau suivant décrit les actions disponibles pour une bibliothèque à l�
 
 | Action | Description |
 | --- | --- |
-| [!UICONTROL  Modifier ] | Utilisez l’écran [!UICONTROL  Modifier la bibliothèque ] pour ajouter ou supprimer des composants de la bibliothèque. |
+| [!UICONTROL &#x200B; Modifier &#x200B;] | Utilisez l’écran [!UICONTROL &#x200B; Modifier la bibliothèque &#x200B;] pour ajouter ou supprimer des composants de la bibliothèque. |
 | [!UICONTROL Créer vers le développement] | Créez une version pour la bibliothèque. La version est compilée et déployée dans l’environnement auquel la bibliothèque est attribuée. Cette étape échoue si la bibliothèque n’est pas attribuée à un environnement ou si elle contient une modification déjà définie en amont. |
 | [!UICONTROL Envoyer pour approbation] | Annulez l’affectation de la bibliothèque à partir de l’environnement de développement et déplacez la bibliothèque vers la colonne [!UICONTROL Envoyé] pour qu’un utilisateur disposant d’autorisations d’approbation puisse travailler dessus. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
-| [!UICONTROL  Envoyer et créer vers l’évaluation ] | Cela ne peut être effectué que par un utilisateur disposant des droits Développer et Approuver. Cette action annule l’affectation de la bibliothèque à partir de l’environnement de développement, déplace la bibliothèque vers l’état [!UICONTROL Envoyé] et crée la bibliothèque dans l’environnement d’évaluation. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
+| [!UICONTROL &#x200B; Envoyer et créer vers l’évaluation &#x200B;] | Cela ne peut être effectué que par un utilisateur disposant des droits Développer et Approuver. Cette action annule l’affectation de la bibliothèque à partir de l’environnement de développement, déplace la bibliothèque vers l’état [!UICONTROL Envoyé] et crée la bibliothèque dans l’environnement d’évaluation. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
 | [!UICONTROL Approuver pour publication] | Cela ne peut être effectué que par un utilisateur disposant des droits Développer et Approuver. Cette action annule l’affectation de la bibliothèque à partir de l’environnement de développement et la déplace vers l’état [!UICONTROL Approuvé], en ignorant entièrement l’environnement d’évaluation et l’état [!UICONTROL Envoyé]. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
 | [!UICONTROL Approuver et publier dans la production] | Cela ne peut être effectué que par un utilisateur disposant des droits Développer, Approuver et Publier. Cette action annule l’affectation de la bibliothèque à partir de l’environnement de développement, la déplace vers l’état [!UICONTROL Approuvé] et la publie en production. Une fois la création de l’environnement de production terminée, la bibliothèque passe à l’état [!UICONTROL Publié]. Pour que cette option soit activée, la dernière version de la bibliothèque doit avoir été installée avec succès. |
 | [!UICONTROL Supprimer] | Supprimez la bibliothèque du système. Cela ne supprime pas la version de l’environnement. |

@@ -4,11 +4,19 @@ description: Découvrez comment définir une relation multiple-à-un entre deux 
 badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 TQID: https://experienceleague.adobe.com/iXm4qKp6XcRMxy2iwTKMiJrEZMFopfZqIwq2NhEkvjU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1799
@@ -62,9 +70,9 @@ Les relations de schéma sont représentées par un champ dédié dans un **sch�
 
 Pour établir une relation, le schéma de référence doit avoir une identité principale définie. Lors de la définition d’une identité principale pour une entité B2B, gardez à l’esprit que les ID d’entité basés sur des chaînes peuvent se chevaucher si vous les collectez sur différents systèmes ou emplacements, ce qui peut entraîner des conflits de données dans Experience Platform.
 
-Pour en tenir compte, toutes les classes B2B standard contiennent des champs « clé » conformes au type de données Source B2B]](../data-types/b2b-source.md). [[!UICONTROL Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B ainsi que d’autres informations contextuelles sur la source de l’identifiant. L’un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité principale pour les schémas d’entité B2B.
+Pour en tenir compte, toutes les classes B2B standard contiennent des champs « clé » conformes au type de données Source B2B[&#128279;](../data-types/b2b-source.md). Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B ainsi que d’autres informations contextuelles sur la source de l’identifiant. L’un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité principale pour les schémas d’entité B2B.
 
-![ champ sourceKey ](../images/tutorials/relationship-b2b/sourcekey.png)
+![&#x200B; champ sourceKey &#x200B;](../images/tutorials/relationship-b2b/sourcekey.png)
 
 >[!NOTE]
 >
@@ -98,7 +106,7 @@ Le schéma de référence « [!DNL Accounts] » est basé sur la classe [!UICONT
 >title="Nom de la relation à partir du schéma de référence"
 >abstract="Libellé qui décrit la relation entre le schéma de référence et le schéma actuel (par exemple, « Opportunités liées »). Ce libellé est utilisé dans Profil et Segmentation pour donner un contexte aux données des entités B2B associées. Pour en savoir plus sur la création de relations de schémas B2B, consultez la documentation."
 
-Pour définir une relation entre deux schémas, le schéma source doit comporter un champ dédié qui indique l’identité principale du schéma de référence. Les classes B2B standard incluent des champs de clé source dédiés pour les entités commerciales fréquemment liées. Par exemple, la classe [!UICONTROL XDM Business Opportunity] contient les champs de clé source pour un compte associé (`accountKey`) et une campagne associée (`campaignKey`). Cependant, vous pouvez également ajouter d’autres champs Source B2B] au schéma à l’aide de groupes de champs personnalisés si vous avez besoin de plus que les composants par défaut.[!UICONTROL 
+Pour définir une relation entre deux schémas, le schéma source doit comporter un champ dédié qui indique l’identité principale du schéma de référence. Les classes B2B standard incluent des champs de clé source dédiés pour les entités commerciales fréquemment liées. Par exemple, la classe [!UICONTROL XDM Business Opportunity] contient les champs de clé source pour un compte associé (`accountKey`) et une campagne associée (`campaignKey`). Cependant, vous pouvez également ajouter d’autres champs Source B2B au schéma à l’aide de groupes de champs personnalisés si vous avez besoin de plus que les composants par défaut.
 
 >[!NOTE]
 >

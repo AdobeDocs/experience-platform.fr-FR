@@ -3,10 +3,20 @@ title: Journaux de requête
 description: Les journaux de requête sont générés automatiquement chaque fois qu’une requête est exécutée et sont disponibles via l’interface utilisateur pour faciliter la résolution des problèmes. Ce document explique comment utiliser et parcourir la section Journaux de Query Service de l’interface utilisateur.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
 TQID: https://experienceleague.adobe.com/gkhovNrNG6vcjU-2P9KDf5OMms--aMtnAnQDVnhF-CU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 954
@@ -18,7 +28,7 @@ ht-degree: 3%
 
 Adobe Experience Platform conserve un journal de tous les événements de requête qui se produisent via l’API et l’interface utilisateur. Ces informations sont disponibles dans l’interface utilisateur de Query Service à partir de l’onglet [!UICONTROL Journaux].
 
-Les fichiers journaux sont générés automatiquement par tout événement de requête et contiennent des informations, notamment le code SQL utilisé, l’état de la requête, sa durée et la dernière exécution. Vous pouvez utiliser les données du journal de requête comme un outil puissant pour résoudre les problèmes liés aux requêtes inefficaces ou problématiques. Des informations plus complètes sur le journal sont conservées dans le cadre de la fonctionnalité de journal d’audit et sont disponibles dans la documentation du [ journal d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
+Les fichiers journaux sont générés automatiquement par tout événement de requête et contiennent des informations, notamment le code SQL utilisé, l’état de la requête, sa durée et la dernière exécution. Vous pouvez utiliser les données du journal de requête comme un outil puissant pour résoudre les problèmes liés aux requêtes inefficaces ou problématiques. Des informations plus complètes sur le journal sont conservées dans le cadre de la fonctionnalité de journal d’audit et sont disponibles dans la documentation du [&#x200B; journal d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Vérifier les logs de requête {#check-query-logs}
 

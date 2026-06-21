@@ -3,11 +3,17 @@ title: Vue Adobe Analytics dans Assurance
 description: Ce guide explique comment utiliser Adobe Analytics avec Adobe Experience Platform Assurance.
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
 TQID: https://experienceleague.adobe.com/9HQmm0W4xSjb14YrjxNU9-vPg-hfU4u0CCHITp3dM1s
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 936
@@ -61,7 +67,7 @@ La vue de validation Analytics Edge vous permet de voir facilement les résultat
 
 ## Vue Événements Analytics
 
-Utilisez la vue Événement Analytics si vous utilisez l’extension mobile ****. Cette vue vous permet d’afficher facilement les événements Analytics envoyés à partir de votre client connecté, y compris les événements Action de suivi, État de suivi et Cycle de vie. Cette vue est active lorsque le bouton « Vue Edge Analytics » en haut à droite est désactivé.
+Utilisez la vue Événement Analytics si vous utilisez l’extension mobile **&#x200B;**. Cette vue vous permet d’afficher facilement les événements Analytics envoyés à partir de votre client connecté, y compris les événements Action de suivi, État de suivi et Cycle de vie. Cette vue est active lorsque le bouton « Vue Edge Analytics » en haut à droite est désactivé.
 
 ![Image qui affiche le bouton bascule qui est passé en mode Analytics.](./images/adobe-analytics/direct-analytics-view-toggle-button.png)
 

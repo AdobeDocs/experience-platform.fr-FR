@@ -4,9 +4,14 @@ title: Widgets de tableaux de bord standard
 description: Ce guide fournit des instructions détaillées sur l’ajout de widgets standard à vos tableaux de bord Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 TQID: https://experienceleague.adobe.com/awiK588wALHhxG0Osc4MFoelOZwYL7YRZkH2lzIYUtk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: eec185bd-7d60-4193-ba3f-da427569936a
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 444

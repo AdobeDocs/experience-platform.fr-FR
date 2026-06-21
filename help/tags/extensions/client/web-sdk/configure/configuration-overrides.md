@@ -70,10 +70,10 @@ Remplacez le routage des données par Adobe Experience Platform.
 
 * **[!UICONTROL Activé]** / **[!UICONTROL Désactivé]** : active ou désactive le routage des données vers Adobe Experience Platform.
 * **[!UICONTROL Jeu de données d’événement]** : identifiant du jeu de données d’événement de destination dans le Adobe Experience Platform. La valeur doit être un jeu de données secondaire préconfiguré de votre configuration de train de données.
-* **** : activez ou désactivez le routage des données vers le service [!DNL Offer Decisioning].
+* **&#x200B;**&#x200B;: activez ou désactivez le routage des données vers le service [!DNL Offer Decisioning].
 * **[!UICONTROL Segmentation Edge]** : activez ou désactivez le routage des données vers le service [!DNL Edge Segmentation].
 * **[!UICONTROL Destinations Personalization]** : activez ou désactivez le routage des données vers les destinations de personnalisation.
-* **** : activer ou désactiver le routage des données vers [!DNL Adobe Journey Optimizer].
+* **&#x200B;**&#x200B;: activer ou désactiver le routage des données vers [!DNL Adobe Journey Optimizer].
 
 ## Transfert d’événement côté serveur Adobe
 

@@ -5,11 +5,24 @@ title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation d’audiences vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 TQID: https://experienceleague.adobe.com/xkwhhIyDzAEnxKJKzsEdtW6E1OTX4PfnWmlpz0tcG9s
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2137
@@ -33,7 +46,7 @@ Ce document se concentre sur l’application des politiques de gouvernance des d
 
 Ce guide nécessite une compréhension pratique des services Experience Platform impliqués dans l’application automatique. Consultez la documentation suivante pour en savoir plus avant de poursuivre avec ce guide :
 
-* [Gouvernance des données de Adobe Experience Platform ](../home.md) : cadre en fonction duquel Experience Platform applique la conformité de l’utilisation des données à l’aide des libellés et des politiques.
+* [Gouvernance des données de Adobe Experience Platform &#x200B;](../home.md) : cadre en fonction duquel Experience Platform applique la conformité de l’utilisation des données à l’aide des libellés et des politiques.
 * [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Segmentation Service d’Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Experience Platform] utilisé pour créer des audiences à partir de vos profils clients en fonction du comportement et des attributs de la clientèle.
 * [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées aux applications couramment utilisées. Elles permettent l’activation transparente des données d’Experience Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée, etc.
@@ -120,15 +133,15 @@ Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données 
 
 #### Libellés appliqués avec succès {#labels-successfully-applied}
 
-Si vous créez des politiques d’utilisation des données avant d’étiqueter vos champs de schéma, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter correctement une partie de votre schéma. L’onglet [!UICONTROL  Libellés appliqués avec succès ] indique quels libellés ont été appliqués avec succès, car il n’existe aucune restriction de politique pour ce champ.
+Si vous créez des politiques d’utilisation des données avant d’étiqueter vos champs de schéma, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter correctement une partie de votre schéma. L’onglet [!UICONTROL &#x200B; Libellés appliqués avec succès &#x200B;] indique quels libellés ont été appliqués avec succès, car il n’existe aucune restriction de politique pour ce champ.
 
 Utilisez le diagramme de parenté des données pour comprendre quelles autres modifications de configuration doivent être apportées avant de pouvoir ajouter le libellé à votre champ de schéma.
 
-![Boîte de dialogue de violation de la politique avec l’onglet [!UICONTROL  Libellés appliqués avec succès] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
+![Boîte de dialogue de violation de la politique avec l’onglet [!UICONTROL &#x200B; Libellés appliqués avec succès] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [ politiques de consentement ](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [ du workflow [!UICONTROL  Activer des destinations ]](#pre-activation-evaluation).
+Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [&#x200B; politiques de consentement &#x200B;](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [&#x200B; du workflow [!UICONTROL &#x200B; Activer des destinations &#x200B;]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -166,7 +179,7 @@ Le diagramme affiche le chevauchement entre trois groupes de profils :
 
 1. Profils qui remplissent les critères de l’audience sélectionnée
 1. Profils qui remplissent les critères de la politique de consentement sélectionnée
-1. Profils qui remplissent les critères des autres politiques de consentement applicables pour l’audience (appelées « [!UICONTROL  Autres politiques ] » dans le diagramme)
+1. Profils qui remplissent les critères des autres politiques de consentement applicables pour l’audience (appelées « [!UICONTROL &#x200B; Autres politiques &#x200B;] » dans le diagramme)
 
 Les profils qui remplissent les critères pour les trois groupes ci-dessus représentent l’audience consentante, résumée dans le rail de droite.
 

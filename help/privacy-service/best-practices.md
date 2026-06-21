@@ -3,11 +3,20 @@ title: Bonnes pratiques relatives à Privacy Service
 description: Découvrez comment réduire le temps de traitement et les coûts supportés par votre organisation lors de l’exécution des demandes d’accès à des informations personnelles en suivant ces directives d’utilisation optimale.
 exl-id: 1333d6c6-5ca0-41c1-9f9e-aa2a5a8b8a9c
 TQID: https://experienceleague.adobe.com/s12W18PJYq1-PziBxK1tNe65yiaiGEUhPiDF-dQShdg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1275
@@ -23,7 +32,7 @@ Ce guide décrit les bonnes pratiques pour traiter efficacement les demandes d�
 
 ## Prise en main {#getting-started}
 
-Ce guide nécessite une compréhension pratique de [](./home.md) et de la manière dont il permet de gérer l’accès et de supprimer les requêtes de vos titulaires de données (clients) dans les applications Adobe Experience Cloud. Il est également recommandé de lire le guide sur la [création d’une requête de tâche de confidentialité dans l’interface utilisateur](./ui/user-guide.md#create-a-new-privacy-job-request) ou [l’API](./api/overview.md) et de comprendre comment effectuer ces opérations par programmation.
+Ce guide nécessite une compréhension pratique de [&#128279;](./home.md) et de la manière dont il permet de gérer l’accès et de supprimer les requêtes de vos titulaires de données (clients) dans les applications Adobe Experience Cloud. Il est également recommandé de lire le guide sur la [création d’une requête de tâche de confidentialité dans l’interface utilisateur](./ui/user-guide.md#create-a-new-privacy-job-request) ou [l’API](./api/overview.md) et de comprendre comment effectuer ces opérations par programmation.
 
 ## Conditions préalables {#prerequisites}
 
@@ -57,7 +66,7 @@ Consultez la documentation sur l’[abonnement aux événements Privacy Service]
 
 ### Récupération de toutes les tâches en fonction de filtres {#retrieve-filtered-responses-for-all-jobs}
 
-Pour récupérer toutes vos données de tâche de confidentialité en fonction de filtres spécifiés, **envoyez une requête GET au point d’entrée `/jobs`**. Cet appel d’API est utile pour fournir une vue de haut niveau de l’état actuel de la tâche pour de grands ensembles d’identifiants de tâche avec une seule requête. Il ne manque pas de réponses détaillées sur les produits, mais elles peuvent être trouvées à l’aide du point d’entrée ](#retrieve-detailed-responses-for-specific-jobs).[`/jobs/{jobID}`
+Pour récupérer toutes vos données de tâche de confidentialité en fonction de filtres spécifiés, **envoyez une requête GET au point d’entrée `/jobs`**. Cet appel d’API est utile pour fournir une vue de haut niveau de l’état actuel de la tâche pour de grands ensembles d’identifiants de tâche avec une seule requête. Il ne manque pas de réponses détaillées sur les produits, mais elles peuvent être trouvées à l’aide du point d’entrée [&#128279;](#retrieve-detailed-responses-for-specific-jobs).`/jobs/{jobID}`
 
 Une requête GET au point d’entrée `/jobs` est plus adaptée pour collecter ou comparer les données de statut d’un jeu volumineux d’identifiants de tâche. Elle n’est cependant **pas** prévue pour les activités de type interrogation standard.
 
@@ -83,7 +92,7 @@ Si une tâche spécifique est toujours en attente ou a renvoyé une erreur, vous
 
 ## Données de demande d’accès {#access-request-data}
 
-Lorsque des informations sur les titulaires de données sont demandées, chaque service renvoie des données dans un format compatible avec la manière dont ils stockent et utilisent ces données. Une fois que tous les services ont terminé la requête, une URL de fichier d’archive .ZIP est fournie dans les détails de la tâche pour permettre le téléchargement de ces données. Consultez le guide de dépannage pour plus d’informations sur [ comment télécharger les résultats des tâches de confidentialité ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
+Lorsque des informations sur les titulaires de données sont demandées, chaque service renvoie des données dans un format compatible avec la manière dont ils stockent et utilisent ces données. Une fois que tous les services ont terminé la requête, une URL de fichier d’archive .ZIP est fournie dans les détails de la tâche pour permettre le téléchargement de ces données. Consultez le guide de dépannage pour plus d’informations sur [&#x200B; comment télécharger les résultats des tâches de confidentialité &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
 
 Les principaux points à noter concernant la gestion de l&#39;archive de données sont les suivants :
 

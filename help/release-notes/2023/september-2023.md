@@ -98,12 +98,12 @@ Experience Platform offre toute une gamme de fonctionnalités d’hygiène des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE ]{type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans toutes les banques de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de Data Lifecycle Management dans Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour la suppression du jeu de données.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
+| {type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans toutes les banques de données pour respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de Data Lifecycle Management dans Adobe Experience Platform : Expiration automatisée des jeux de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour la suppression du jeu de données.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
 | Expirations de jeux de données | Limitez vos données et gardez le contrôle de vos contrats de licence avec l’expiration automatisée du jeu de données. Réduisez les volumes de données en supprimant des jeux de données entiers et en définissant une date et une heure pour le jeu de données à supprimer. Pour plus d’informations, consultez la [documentation sur l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md). |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [ présentation de l’hygiène des données ](../../hygiene/home.md).
+Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [&#x200B; présentation de l’hygiène des données &#x200B;](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -174,13 +174,13 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description de la mise à jour |
 | --- | --- | --- |
-| Extension | [!UICONTROL Champs D’Entité ] | L’indicateur [[!UICONTROL pour variante multiple]](https://github.com/adobe/xdm/pull/1774/files) a été ajouté aux [!UICONTROL champs d’entité AJO] pour identifier si la variante est une variante multiple ou non. |
+| Extension | [!UICONTROL Champs D’Entité &#x200B;] | L’indicateur [[!UICONTROL pour variante multiple]](https://github.com/adobe/xdm/pull/1774/files) a été ajouté aux [!UICONTROL champs d’entité AJO] pour identifier si la variante est une variante multiple ou non. |
 | Type de données | [!UICONTROL Élément de liste de produits] | [[!UICONTROL Retour d&#39;article]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure les informations d&#39;autorisation de retour de marchandises. |
 | Type de données | Commande | [[!UICONTROL Return Info]](https://github.com/adobe/xdm/pull/1773/files) a été ajouté pour inclure le RMA (Return Merchandise Authorization) émis. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md)
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md)
 
 ## Service d’identités {#identity-service}
 

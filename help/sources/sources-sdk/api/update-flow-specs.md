@@ -4,8 +4,10 @@ title: Mettre à jour les spécifications de flux à l’aide de l’API Flow Se
 description: Le document suivant décrit la procédure à suivre pour récupérer et mettre à jour des spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK par lots).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
 TQID: https://experienceleague.adobe.com/VkVINsHyAX4H63wz2PH5VFFg-iJ3BCEJK2XJyfjbEOk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 410

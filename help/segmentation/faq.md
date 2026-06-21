@@ -3,11 +3,24 @@ title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
 TQID: https://experienceleague.adobe.com/uIgNpBdbgynUJcsisLGwpNGOnRZ-Wkws2YlWzQIJFWY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e0eb8757-182f-49f3-94a4-1587d16f5094id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 2165b294f87139a07bec0553b380aba4699b1d40
 workflow-type: tm+mt
 source-wordcount: 4902
@@ -192,7 +205,7 @@ Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL  Désactiver ].
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL &#x200B; Désactiver &#x200B;].
 
 ### Comment republier une audience ?
 

@@ -3,10 +3,22 @@ title: edgeConfigOverrides
 description: Configurez les remplacements de train de données pour la commande sendEvent uniquement.
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
 TQID: https://experienceleague.adobe.com/bkTUWKjT3bqk90h84rGEeR2Uic8UHJwoWJaEkG-BrEg
-product_v2: id: cb954087-f4fc-4456-afb9-e939cabcdc79id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: c93393a4-e558-47e1-992e-c91ed4d480ceid: d556b755-390a-43f0-be32-a08cf6236126id: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: cb954087-f4fc-4456-afb9-e939cabcdc79
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: d556b755-390a-43f0-be32-a08cf6236126
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 229
@@ -77,4 +89,4 @@ alloy("sendEvent", {
 
 ## Remplacements de la configuration des trains de données à l’aide de l’extension de balise Web SDK
 
-L’équivalent de l’extension de balise Web SDK de cet objet est la section [ Remplacements de la configuration des flux de données ](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides) lors de la configuration de l’action « [!UICONTROL Envoyer l’événement] ».
+L’équivalent de l’extension de balise Web SDK de cet objet est la section [&#x200B; Remplacements de la configuration des flux de données &#x200B;](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides) lors de la configuration de l’action « [!UICONTROL Envoyer l’événement] ».

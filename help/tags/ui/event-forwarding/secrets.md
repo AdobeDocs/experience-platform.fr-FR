@@ -3,11 +3,35 @@ title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans lʼinterface utilisateur afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 TQID: https://experienceleague.adobe.com/P-uF-4EP8edpu0UAWUGxNPQE6b3pa5LW22Jb4x98ZPo
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: c1d6d0bd-4149-4f38-bb95-1a1a6a87cf56id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7aid: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: bef6f891-2e8a-425e-8f99-7ddf22070daaid: c132d929-fa62-4271-803e-b823be07b914id: c975b431-530e-4c29-9216-0301b9e204c1id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: b64298cc-90cc-46b7-8917-ee391f1c7516id: c5c5043c-63aa-4aa6-ade0-3840596e7a6bid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1cid: f6ff4d13-7b5c-4533-8556-95e76673d4cbid: f9a2105e-7a47-4e85-9193-31a519a2cb83
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: c1d6d0bd-4149-4f38-bb95-1a1a6a87cf56
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+  - id: f7bdf6be-dd3b-4d2d-ac52-0e62ed0d3102
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c975b431-530e-4c29-9216-0301b9e204c1
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+  - id: c5c5043c-63aa-4aa6-ade0-3840596e7a6b
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 2666
@@ -25,7 +49,7 @@ Les types de secrets suivants sont actuellement pris en charge :
 | --- | --- |
 | [!UICONTROL Amazon OAuth 2] | Permet une authentification sécurisée avec les services [!DNL Amazon]. Le système stocke le jeton en toute sécurité et gère son renouvellement à des intervalles spécifiés. |
 | [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour prendre en charge la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) pour une utilisation dans l’[API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et l’[API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
-| [!UICONTROL HTTP ] | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
+| [!UICONTROL HTTP &#x200B;] | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL OAuth 2] | Contient plusieurs attributs pour prendre en charge le [type d’octroi des informations d’identification du client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) pour la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL JWT OAuth 2] | Contient plusieurs attributs pour la prise en charge du profil JSON Web Token (JWT) pour les autorisations [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
@@ -80,7 +104,7 @@ Pour chaque environnement ajouté, vous devez attribuer un nouveau nom unique po
 À partir de là, les étapes de création du secret varient en fonction du type de secret que vous souhaitez créer. Consultez les sous-sections ci-dessous pour plus de détails :
 
 * [[!UICONTROL Jeton]](#token)
-* [[!UICONTROL HTTP ]](#http)
+* [[!UICONTROL HTTP &#x200B;]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL JWT OAuth 2]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
@@ -93,7 +117,7 @@ Pour créer un secret de jeton, sélectionnez **[!UICONTROL Jeton]** dans la lis
 
 ![Secret du jeton](../../images/ui/event-forwarding/secrets/token-secret.png)
 
-### [!UICONTROL HTTP ] {#http}
+### [!UICONTROL HTTP &#x200B;] {#http}
 
 Pour créer un secret HTTP, sélectionnez **[!UICONTROL HTTP simple]** dans la liste déroulante **[!UICONTROL Type]**. Dans les champs qui s’affichent ci-dessous, indiquez un nom d’utilisateur et un mot de passe pour les informations d’identification avant de sélectionner **[!UICONTROL Créer un secret]** pour enregistrer le secret.
 
@@ -139,7 +163,7 @@ Pour créer un secret JWT OAuth 2, sélectionnez **[!UICONTROL OAuth 2 JWT]** da
 >
 >Le seul [!UICONTROL algorithme] actuellement pris en charge pour la signature du jeton JWT est RS256.
 
-Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Revendications personnalisées], [!UICONTROL TTL], puis sélectionnez [!UICONTROL Algorithme] dans la liste déroulante. Saisissez ensuite l’[!UICONTROL ID de clé privée], ainsi que votre [[!UICONTROL URL de jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL  URL du jeton ] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de l’attribut `expires_in` de la réponse et de la valeur [!UICONTROL Actualiser le décalage]. Si aucune valeur n’est fournie, le secret transmis à Edge est le JWT. Le jeton JWT sera actualisé en fonction des valeurs [!UICONTROL TTL] et [!UICONTROL Refresh Offset].
+Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Revendications personnalisées], [!UICONTROL TTL], puis sélectionnez [!UICONTROL Algorithme] dans la liste déroulante. Saisissez ensuite l’[!UICONTROL ID de clé privée], ainsi que votre [[!UICONTROL URL de jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL &#x200B; URL du jeton &#x200B;] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de l’attribut `expires_in` de la réponse et de la valeur [!UICONTROL Actualiser le décalage]. Si aucune valeur n’est fournie, le secret transmis à Edge est le JWT. Le jeton JWT sera actualisé en fonction des valeurs [!UICONTROL TTL] et [!UICONTROL Refresh Offset].
 
 ![Onglet [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
@@ -202,7 +226,7 @@ Une fois le processus d’autorisation terminé, vous revenez à l’onglet **[!
 
 ![Onglet [!UICONTROL Secret] mettant en surbrillance le secret nouvellement créé.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Réautoriser un secret OAuth 2] [!UICONTROL [!DNL LinkedIn]
+#### Réautoriser un secret OAuth 2 [!DNL LinkedIn]
 
 >IMPORTANT
 >
@@ -255,7 +279,7 @@ Vous pouvez réessayer ou actualiser un échange secret depuis l’écran d’é
 | Type de secret | Protocole de nouvel essai |
 | --- | --- |
 | [!UICONTROL Jeton] | Sélectionnez **[!UICONTROL Échange secret]** pour réessayer l’échange secret. Cette commande n’est disponible que lorsqu’un environnement est attaché au secret. |
-| [!UICONTROL HTTP ] | Si aucun environnement n’est associé au secret, sélectionnez **[!UICONTROL Échange secret]** pour échanger les informations d’identification vers base64. Si un environnement est joint, sélectionnez **[!UICONTROL Échanger et déployer le secret]** pour passer en base64 et déployer le secret. |
+| [!UICONTROL HTTP &#x200B;] | Si aucun environnement n’est associé au secret, sélectionnez **[!UICONTROL Échange secret]** pour échanger les informations d’identification vers base64. Si un environnement est joint, sélectionnez **[!UICONTROL Échanger et déployer le secret]** pour passer en base64 et déployer le secret. |
 | [!UICONTROL OAuth 2] | Sélectionnez **[!UICONTROL Générer un jeton]** pour échanger les informations d’identification et renvoyer un jeton d’accès du fournisseur d’authentification. |
 
 ## Supprimer un secret

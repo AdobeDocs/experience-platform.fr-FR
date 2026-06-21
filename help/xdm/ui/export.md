@@ -5,9 +5,12 @@ description: Découvrez comment exporter un schéma existant vers une autre sand
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 TQID: https://experienceleague.adobe.com/fzH5LC2MViIugJMfk5rTic5n3joGGz292UnVEon9204
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 713
@@ -220,7 +223,7 @@ Cette opération copie une payload JSON dans le presse-papiers, générée en fo
 
 +++
 
-La payload peut également être copiée en sélectionnant [!UICONTROL Plus] en haut à droite de l’éditeur de schémas. Un menu déroulant fournit deux options, [!UICONTROL  Copier la structure JSON ] et [!UICONTROL  Supprimer le schéma ].
+La payload peut également être copiée en sélectionnant [!UICONTROL Plus] en haut à droite de l’éditeur de schémas. Un menu déroulant fournit deux options, [!UICONTROL &#x200B; Copier la structure JSON &#x200B;] et [!UICONTROL &#x200B; Supprimer le schéma &#x200B;].
 
 >[!NOTE]
 >
@@ -234,7 +237,7 @@ Notez que chaque instance de l’identifiant du client de votre organisation app
 
 ## Importer la ressource à l’aide de l’API {#import-resource-with-api}
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités](../api/import.md) consultez le [ guide du point d’entrée d’importation .
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[&#128279;](../api/import.md) consultez le  guide du point d’entrée d’importation .
 
 ## Étapes suivantes
 

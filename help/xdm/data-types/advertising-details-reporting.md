@@ -3,10 +3,15 @@ title: Type de données de rapports détaillés sur Advertising
 description: Découvrez le type de données du modèle de données d’expérience de création de rapports (XDM) d’Advertising Details.
 exl-id: fbca5b2a-a9bd-4f76-a494-d682cb2cbfbc
 TQID: https://experienceleague.adobe.com/wkThCeraKu7iBC4JR2d4PnxSq41BdCpnnUwTIeHnO6k
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
 source-wordcount: 570
@@ -14,9 +19,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Détails Advertising ] Type de données de rapport
+# [!UICONTROL Détails Advertising &#x200B;] Type de données de rapport
 
-[!UICONTROL Détails Advertising ] la création de rapports est un type de données standard du modèle de données d’expérience (XDM) qui capture les attributs clés liés aux publicités. Elle contient des informations telles que l’ID de l’annonce, les ID de l’annonceur et de la campagne, la longueur, la position dans une séquence, les détails sur le lecteur qui effectue le rendu de l’annonce, etc. Vous pouvez utiliser ce type de données pour suivre et analyser divers aspects des performances et de l’engagement des publicités, et fournir des informations sur la manière dont les audiences interagissent avec différentes publicités et y répondent.
+[!UICONTROL Détails Advertising &#x200B;] la création de rapports est un type de données standard du modèle de données d’expérience (XDM) qui capture les attributs clés liés aux publicités. Elle contient des informations telles que l’ID de l’annonce, les ID de l’annonceur et de la campagne, la longueur, la position dans une séquence, les détails sur le lecteur qui effectue le rendu de l’annonce, etc. Vous pouvez utiliser ce type de données pour suivre et analyser divers aspects des performances et de l’engagement des publicités, et fournir des informations sur la manière dont les audiences interagissent avec différentes publicités et y répondent.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données Rapports détaillés Advertising .
 ![Diagramme du type de données Rapports détaillés Advertising.](../images/data-types/advertising-details-information.png)

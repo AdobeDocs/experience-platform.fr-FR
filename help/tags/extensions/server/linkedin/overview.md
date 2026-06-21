@@ -4,11 +4,33 @@ description: Cette extension de transfert d’événement Adobe Experience Platf
 last-substantial-update: 2023-10-25T00:00:00.000Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
 TQID: https://experienceleague.adobe.com/0E-WrguJogQipnNsAooKdtdWnVKNoJhtX4-8UGm7Avs
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: dfc56824-e8b9-499e-85d4-21aedb507314id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a075b2c1-7748-4328-b7f6-343aa314616aid: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: d5ef99fa-df0c-4153-bf94-105ad0724167id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46id: ed0d8d0e-04b9-4326-be72-a0fbca265377id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: d5ef99fa-df0c-4153-bf94-105ad0724167
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 838
@@ -68,7 +90,7 @@ Après la sélection, des commandes supplémentaires apparaissent pour configure
 
 | Entrée | Description |
 | --- | --- |
-| [!UICONTROL  Conversion ] | Identifiant de la règle de conversion créée dans [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Sélectionnez la règle de conversion pour obtenir l’identifiant, puis copiez l’identifiant de l’URL du navigateur (par exemple, `/campaignmanager/accounts/508111232/conversions/15588877`) comme `/conversions/<id>`. |
+| [!UICONTROL &#x200B; Conversion &#x200B;] | Identifiant de la règle de conversion créée dans [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Sélectionnez la règle de conversion pour obtenir l’identifiant, puis copiez l’identifiant de l’URL du navigateur (par exemple, `/campaignmanager/accounts/508111232/conversions/15588877`) comme `/conversions/<id>`. |
 | [!UICONTROL Heure de conversion] | Chaque horodatage en millisecondes auquel l’événement de conversion s’est produit. <br><br> Remarque : si votre source enregistre la date et l&#39;heure de la conversion en secondes, insérez 000 à la fin pour la transformer en millisecondes. |
 | [!UICONTROL Devise] | Code de devise au format ISO. |
 | [!UICONTROL Montant] | Valeur de la conversion sous forme de chaîne décimale (par exemple, « 100.05 »). |
@@ -86,7 +108,7 @@ Après la sélection, des commandes supplémentaires apparaissent pour configure
 
 | Entrée | Description |
 | --- | --- |
-| [!UICONTROL  Jeton d’accès ] | Jeton d’accès [!DNL LinkedIn]. |
+| [!UICONTROL &#x200B; Jeton d’accès &#x200B;] | Jeton d’accès [!DNL LinkedIn]. |
 
 ![Section [!DNL Configuration Overrides] présentant un exemple de saisie de données dans le champ.](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
 

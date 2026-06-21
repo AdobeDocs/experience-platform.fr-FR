@@ -4,10 +4,14 @@ description: Découvrez comment créer une connexion source Azure Synapse Analyt
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
 TQID: https://experienceleague.adobe.com/HGPTo4tt6DawFkFI1WfT5Xj7QMI9FdX5W87hjIFABao
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 471
@@ -72,13 +76,13 @@ Vous pouvez connecter votre compte [!DNL Azure Synapse Analytics] à Experience 
 
 Pour utiliser l’authentification par clé de compte, sélectionnez **[!UICONTROL Authentification par clé de compte]**, fournissez votre [chaîne de connexion](../../../../connectors/databases/synapse-analytics.md#prerequisites), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
-![ L’étape « Créer un nouveau compte » dans le workflow des sources avec l’« authentification par clé de compte sélectionnée ](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png).
+![&#x200B; L’étape « Créer un nouveau compte » dans le workflow des sources avec l’« authentification par clé de compte sélectionnée &#x200B;](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png).
 
 >[!TAB Authentification principale et clé du service]
 
 Vous pouvez également sélectionner **[!UICONTROL Authentification du principal de service et de la clé]**, fournir des valeurs pour vos [informations d’authentification](../../../../connectors/databases/synapse-analytics.md#prerequisites), puis sélectionner **[!UICONTROL Se connecter à la source]**.
 
-![ L’étape « Créer un nouveau compte » dans le workflow des sources avec « Principal du service et authentification par clé » sélectionné.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+![&#x200B; L’étape « Créer un nouveau compte » dans le workflow des sources avec « Principal du service et authentification par clé » sélectionné.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
 
 >[!ENDTABS]
 

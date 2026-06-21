@@ -3,10 +3,18 @@ title: Type de données de collection des détails de session
 description: Découvrez le type de données Modèle de données d’expérience (XDM) de la collecte de détails de session .
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
 TQID: https://experienceleague.adobe.com/w2EYDZMD7deZm-pkdsNDtMSm3E3YwyNrVXBGpqTG6pc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
 source-wordcount: 1258
@@ -37,10 +45,10 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 | [[!UICONTROL Auteur]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/author) | `author` | Chaîne | Non | Nom de l’auteur du média. |
 | [[!UICONTROL Type de contenu de diffusion]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-type) | `contentType` | Chaîne | Oui | Le [!UICONTROL type de contenu de diffusion] de la diffusion en continu. Les valeurs disponibles par [!UICONTROL Type de flux] incluent :<br>Audio : « song », « podcast », « audiobook » et « radio » ; <br>Vidéo : « VoD », « Live », « Linear », « UGC » et « DVoD ».<br>Les clients peuvent fournir des valeurs personnalisées pour ce paramètre. |
 | [[!UICONTROL Réseau de diffusion]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/network) | `network` | Chaîne | Non | Nom du réseau/canal. |
-| [[!UICONTROL  Canal de contenu ]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-channel) | `channel` | Chaîne | Oui | Le [!UICONTROL canal de contenu] est le canal de distribution à partir duquel le contenu a été lu. |
+| [[!UICONTROL &#x200B; Canal de contenu &#x200B;]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-channel) | `channel` | Chaîne | Oui | Le [!UICONTROL canal de contenu] est le canal de distribution à partir duquel le contenu a été lu. |
 | [!UICONTROL Réseau de diffusion de contenu] | `cdn` | Chaîne | Non | Le [!UICONTROL réseau de diffusion de contenu] du contenu lu. |
 | [[!UICONTROL Identifiant du contenu]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-id) | `name` | string | Oui | L’[!UICONTROL ID de contenu] est un identifiant unique du contenu. Il peut être utilisé pour établir un lien vers d’autres ID de secteur ou de CMS. |
-| [[!UICONTROL Nom du contenu]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-name) | `friendlyName` | Chaîne | Non | Le [!UICONTROL  Nom du contenu ] est le nom « convivial » (lisible par l’utilisateur) du contenu. |
+| [[!UICONTROL Nom du contenu]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-name) | `friendlyName` | Chaîne | Non | Le [!UICONTROL &#x200B; Nom du contenu &#x200B;] est le nom « convivial » (lisible par l’utilisateur) du contenu. |
 | [[!UICONTROL Nom du lecteur de contenu]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-player-name) | `playerName` | Chaîne | Oui | Nom du lecteur de contenu. |
 | [[!UICONTROL Nom du créateur]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/originator) | `originator` | Chaîne | Non | Nom du créateur du contenu. |
 | [[!UICONTROL Jour]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/day-part) | `dayPart` | Chaîne | Non | Une propriété qui définit l’heure de diffusion ou de lecture du contenu. Les clients et clientes peuvent définir n’importe quelle valeur, si nécessaire. |
@@ -51,7 +59,7 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 | [[!UICONTROL Genre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/genre) | `genre` | Chaîne | Non | Type ou groupement de contenu, tel que défini par le producteur du contenu. Les valeurs doivent être délimitées par des virgules dans l’implémentation des variables. |
 | [[!UICONTROL Média autorisé]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/authorized) | `authorized` | Chaîne | Non | Confirme si l&#39;utilisateur a obtenu une autorisation via l&#39;authentification Adobe. |
 | [[!UICONTROL Longueur du contenu multimédia]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/content-length) | `length` | Entier | Oui | La [!UICONTROL Longueur du contenu multimédia] contient la longueur/l’exécution de l’élément. Il s’agit de la longueur maximale (ou durée) du contenu utilisé (en secondes). |
-| [[!UICONTROL Identifiant ]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/mvpd) | `mvpd` | Chaîne | Non | Identifiant du distributeur de programmation vidéo multicanal (MVPD) fourni via l’authentification Adobe. |
+| [[!UICONTROL Identifiant &#x200B;]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/mvpd) | `mvpd` | Chaîne | Non | Identifiant du distributeur de programmation vidéo multicanal (MVPD) fourni via l’authentification Adobe. |
 | [[!UICONTROL Éditeur]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/publisher) | `publisher` | Chaîne | Non | Nom de l’éditeur du contenu audio. |
 | [[!UICONTROL Station radio]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/station) | `station` | Chaîne | Non | Nom de la station radio sur laquelle le contenu audio est lu. |
 | [[!UICONTROL Valeur d’évaluation]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/content-rating) | `rating` | Chaîne | Non | Évaluation telle que définie par les directives parentales TV. |
@@ -62,4 +70,4 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 | [[!UICONTROL Afficher le type]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/show-type) | `showType` | Chaîne | Non | Type de contenu. Par exemple, une bande-annonce ou un épisode complet. Le type de contenu est exprimé sous la forme d’un nombre entier compris entre 0 et 3. Par exemple, « 0 » = Épisode complet ; « 1 » = Aperçu/bande-annonce ; « 2 » = Clip ; « 3 » = Autre. |
 | [[!UICONTROL Format de flux]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/standard-metadata/stream-format) | `streamFormat` | Chaîne | Non | Format du flux (HD, SD). |
 | [[!UICONTROL Type de flux]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/stream-type) | `streamType` | Chaîne | Non | Type du flux de médias. |
-| [[!UICONTROL Version ]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/app-version) | `appVersion` | Chaîne | Non | Version de l’application du lecteur multimédia. Cela peut avoir n’importe quelle valeur personnalisée adaptée à votre lecteur. |
+| [[!UICONTROL Version &#x200B;]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/core/app-version) | `appVersion` | Chaîne | Non | Version de l’application du lecteur multimédia. Cela peut avoir n’importe quelle valeur personnalisée adaptée à votre lecteur. |

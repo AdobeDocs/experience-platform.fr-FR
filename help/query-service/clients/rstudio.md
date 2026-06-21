@@ -5,8 +5,11 @@ title: Connexion de RStudio à Query Service
 description: Ce document décrit les étapes à suivre pour connecter RStudio au service de requête Adobe Experience Platform.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 TQID: https://experienceleague.adobe.com/bWzAleGJ-a76H1AEJFhowIsUMPKnuSyvdmzwlvKpzgk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 456

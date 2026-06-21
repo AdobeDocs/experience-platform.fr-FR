@@ -3,10 +3,16 @@ title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 TQID: https://experienceleague.adobe.com/sqJpd3a2M-USLYMwICnNt9pxexuC1293kZRDtYiIhgA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e0eb8757-182f-49f3-94a4-1587d16f5094id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
 source-wordcount: 1586

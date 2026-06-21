@@ -5,11 +5,25 @@ title: Applications Privacy Service et Experience Cloud
 description: Ce document fournit une référence sur la manière de configurer différentes applications Experience Cloud pour les opérations liées à la confidentialité.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 TQID: https://experienceleague.adobe.com/rsACkGRMFDuqvp3uK3Psg-8pqJDxSyPUlcQC4919FYk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2: id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d00e9f03-e50b-4162-b143-0c0817c937c2id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 1157
@@ -59,5 +73,5 @@ Voici une liste des applications [!DNL Experience Cloud] qui ne sont pas intégr
 | ------- | ----------- |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy) | Présentation de la gestion des requêtes RGPD par l’administrateur de la confidentialité client ou l’administrateur AEM. |
 | [Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview) | Assurez-vous que vos installations Adobe Commerce sont conformes aux exigences des législations spécifiques en matière de confidentialité. |
-| [ Balises dans Adobe Experience Platform ](../tags/ui/client-side/consent.md) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
+| [&#x200B; Balises dans Adobe Experience Platform &#x200B;](../tags/ui/client-side/consent.md) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
 | [Workfront](https://www.workfront.com/privacy-notice) | Découvrez comment Workfront collecte des données personnelles et comment une personne concernée peut soumettre une demande d’accès à des informations personnelles via un formulaire. |

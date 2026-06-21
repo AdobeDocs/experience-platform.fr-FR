@@ -5,9 +5,12 @@ title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 30f6d4430be88f2c3fdbc8f7c7a78c457c0efd56
 workflow-type: tm+mt
 source-wordcount: 6034
@@ -185,7 +188,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 | [!BADGE Destinations uniquement]{type=Informative} array_to_string | Rejoint les représentations sous forme de chaînes des éléments d’un tableau à l’aide du séparateur spécifié. Si le tableau est multidimensionnel, il est aplati avant d’être joint. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>SEPARATOR : **obligatoire** séparateur utilisé pour joindre les éléments du tableau.</li><li>TABLEAU : **obligatoire** tableau à joindre (après aplatissement).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | « Bonjour, le monde » |
 | [!BADGE Destinations uniquement]{type=Informative} filterArray* | Filtre le tableau donné en fonction d’un prédicat. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à filtrer</li><li>PREDICATE : **Obligatoire** prédicat à appliquer à chaque élément du tableau donné. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
 | [!BADGE Destinations uniquement]{type=Informative} transformArray* | Transforme le tableau donné en fonction d’un prédicat. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à transformer.</li><li>PREDICATE : **Obligatoire** prédicat à appliquer à chaque élément du tableau donné. | transformArray(ARRAY, PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
-| [!BADGE Destinations uniquement]{type=Informative} flattenArray* | Aplatit le tableau donné (multidimensionnel) en un tableau unidimensionnel. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à aplatir.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE Destinations uniquement]{type=Informative} flattenArray* | Aplatit le tableau donné (multidimensionnel) en un tableau unidimensionnel. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à aplatir.</li></ul> | flattenArray(ARRAY) | flattenArray(&lbrack;[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -393,11 +396,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5B |
+| &lbrack; | %5B |
 | `\|` | %5C |
-| ] | %5J |
+| &rbrack; | %5J |
 | ^ | %5E |
-| ` | %60 |
+| &grave; | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

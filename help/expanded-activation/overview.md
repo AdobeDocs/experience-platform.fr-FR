@@ -3,10 +3,15 @@ title: Activation étendue d’Audience Manager
 description: Découvrez comment activer les audiences Audience Manager vers des destinations sociales et publicitaires, via l’activation étendue d’Audience Manager.
 exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
 TQID: https://experienceleague.adobe.com/Zw5qmg-WWlap--r9-uWpNtIIcc0-m-wkyBvR-JjEg2o
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
 source-wordcount: 533
@@ -27,7 +32,7 @@ Basée sur Adobe Experience Platform, l’activation étendue d’Audience Manag
 L’activation étendue d’Audience Manager utilise des concepts et des composants de Adobe Experience Platform. Pour mieux comprendre le workflow d’activation développée et les composants que vous utiliserez, assurez-vous de posséder une compréhension de base des concepts suivants :
 
 * [Audiences](../segmentation/ui/overview.md) : les audiences sont des ensembles de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide des définitions de segment ou de la composition de l’audience (audience générée par Experience Platform) ou à partir de sources externes telles que des chargements personnalisés (audience générée en externe). Dans l’activation développée, vos segments Audience Manager (audiences) sont importés en tant que [chargements personnalisés](../segmentation/ui/audience-portal.md#import-audience).
-* [Connecteurs Source ](../sources/home.md) : les connecteurs Source (également appelés sources) aident les utilisateurs Experience Platform à ingérer facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide des services Experience Platform. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
+* [Connecteurs Source &#x200B;](../sources/home.md) : les connecteurs Source (également appelés sources) aident les utilisateurs Experience Platform à ingérer facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide des services Experience Platform. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
 * [Connecteurs de destination](../destinations/home.md) : les destinations décrivent tout point d’entrée (application Adobe, plateforme publicitaire, service de stockage dans le cloud ou service marketing, par exemple) où une audience est activée et diffusée. [!DNL Expanded Activation] prend en charge l’activation des audiences vers les connecteurs de destination [advertising](../destinations/catalog/advertising/overview.md) et [social](../destinations/catalog/social/overview.md).
 
 ## Conditions préalables {#prerequisites}
