@@ -462,7 +462,7 @@ Le scénario de navigation de produits abandonnés cible la navigation de produi
 
 +++Événements
 
-Les événements vous permettent de déclencher vos parcours de manière unitaire pour envoyer des messages, en temps réel, à l’individu progressant dans le parcours. Pour plus d’informations sur les événements, consultez le [guide général des événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Les événements vous permettent de déclencher vos parcours de manière unitaire pour envoyer des messages, en temps réel, à l’individu progressant dans le parcours. Pour plus d’informations sur les événements, consultez le [guide général des événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=fr).
 
 * Événement 1 : Consultations de produits
    * Schéma : Transactions numériques client
@@ -587,7 +587,7 @@ Le scénario de panier abandonné cible les produits qui ont été placés dans 
 
 +++Événements
 
-Les événements vous permettent de déclencher vos parcours de manière unitaire pour envoyer des messages, en temps réel, à l’individu progressant dans le parcours. Pour plus d’informations sur les événements, consultez le [guide général des événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Les événements vous permettent de déclencher vos parcours de manière unitaire pour envoyer des messages, en temps réel, à l’individu progressant dans le parcours. Pour plus d’informations sur les événements, consultez le [guide général des événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=fr).
 
 * Événement 2 : Ajouter au panier
    * Schéma : Transactions numériques client
@@ -720,7 +720,7 @@ Le scénario de confirmation de commande se concentre sur les achats de produits
 
 +++Événements
 
-Les événements vous permettent de déclencher vos parcours de manière unitaire pour envoyer des messages, en temps réel, à l’individu progressant dans le parcours. Pour plus d’informations sur les événements, consultez le [guide général des événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Les événements vous permettent de déclencher vos parcours de manière unitaire pour envoyer des messages, en temps réel, à l’individu progressant dans le parcours. Pour plus d’informations sur les événements, consultez le [guide général des événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=fr).
 
 * Événement 4 : Achats en ligne
    * Schéma : Transactions numériques client

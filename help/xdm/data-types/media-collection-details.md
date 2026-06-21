@@ -26,7 +26,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Ce type de données appartient au schéma `mediaCollection`, c’est-à-dire aux champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données de collecte et génère des champs de schéma `mediaReporting`, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations sur ce flux de données.
+>Ce type de données appartient au schéma `mediaCollection`, c’est-à-dire aux champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données de collecte et génère des champs de schéma `mediaReporting`, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations sur ce flux de données.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Détails de la collecte de médias].
 ![Diagramme du type de données [!UICONTROL Informations détaillées sur la collecte de médias].](../images/data-types/media-collection-details.png)

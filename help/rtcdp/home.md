@@ -204,11 +204,11 @@ Consultez ces trois vidéos d’introduction pour mieux comprendre Real-Time CDP
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=fr">
       <img alt="image miniature de la vidéo « Visite guidée de l’interface de Adobe Experience Platform »" src="/help/rtcdp/assets/rtcdp-ui-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=fr">
     <strong> Visite guidée de l’interface de Adobe Experience Platform </strong>
     </a>
     </div>
@@ -233,4 +233,4 @@ Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation, le
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Restez informé, contribuez à la communauté et améliorez votre expérience Adobe Real-Time CDP !</b><br/>Consultez la communauté Real-Time Customer Data Platform pour discuter des fonctionnalités avec d’autres utilisateurs et utilisatrices. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Rejoignez la communauté dès aujourd’hui !</a></td></tr></table>
+<b>Restez informé, contribuez à la communauté et améliorez votre expérience Adobe Real-Time CDP !</b><br/>Consultez la communauté Real-Time Customer Data Platform pour discuter des fonctionnalités avec d’autres utilisateurs et utilisatrices. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP?profile.language=fr">Rejoignez la communauté dès aujourd’hui !</a></td></tr></table>

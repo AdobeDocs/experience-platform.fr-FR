@@ -28,13 +28,13 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
+>Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
 Chaque nom d’affichage contient un lien vers des informations supplémentaires sur sa variable d’implémentation. Les pages liées contiennent des détails sur les données collectées par Adobe, les valeurs d’implémentation, les paramètres réseau et des considérations importantes.
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [[!UICONTROL Longueur Ou Durée Du Chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-length) | `length` | Entier | Oui | Durée du chapitre, en secondes. |
-| [[!UICONTROL Nom du chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-name) | `friendlyName` | string | Non | Nom du chapitre et/ou du segment. |
-| [[!UICONTROL décalage de chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-offset) | `offset` | Entier | Oui | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
-| [[!UICONTROL Position du chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-position) | `index` | Entier | Oui | Position (index, entier) du chapitre à l’intérieur du contenu. |
+| [[!UICONTROL Longueur Ou Durée Du Chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-length) | `length` | Entier | Oui | Durée du chapitre, en secondes. |
+| [[!UICONTROL Nom du chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-name) | `friendlyName` | string | Non | Nom du chapitre et/ou du segment. |
+| [[!UICONTROL décalage de chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-offset) | `offset` | Entier | Oui | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
+| [[!UICONTROL Position du chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/chapters/chapter-position) | `index` | Entier | Oui | Position (index, entier) du chapitre à l’intérieur du contenu. |

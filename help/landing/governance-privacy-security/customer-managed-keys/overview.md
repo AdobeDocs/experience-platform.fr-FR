@@ -30,7 +30,7 @@ Les données stockées sur Adobe Experience Platform sont chiffrées au repos 
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform prend en charge les clés gérées par le client (CMK) pour Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Si votre mise en œuvre s’exécute sur AWS, vous avez la possibilité d’utiliser le service de gestion des clés (KMS) pour le chiffrement des données Experience Platform. Pour plus d’informations sur l’infrastructure prise en charge, consultez la [présentation d’Experience Platform multi-cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform prend en charge les clés gérées par le client (CMK) pour Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Si votre mise en œuvre s’exécute sur AWS, vous avez la possibilité d’utiliser le service de gestion des clés (KMS) pour le chiffrement des données Experience Platform. Pour plus d’informations sur l’infrastructure prise en charge, consultez la [présentation d’Experience Platform multi-cloud](https://experienceleague.adobe.com/fr/docs/experience-platform/landing/multi-cloud).
 >
 >Pour en savoir plus sur la création et la gestion des clés de chiffrement dans AWS KMS, consultez le [guide sur le chiffrement des données AWS KMS](./aws/configure-kms.md). Pour les implémentations Azure, consultez le [guide de configuration du coffre de clés Azure](./azure/azure-key-vault-config.md).
 

@@ -40,7 +40,7 @@ Pour utiliser cette connexion de destination, vérifiez que vous avez accès aux
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [&#128279;](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de l’extension dans Adobe Commerce.
-- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/products/commerce.html)
+- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/fr/products/commerce.html)
 
 Dans Experience Platform, créez les éléments suivants :
 

@@ -61,7 +61,7 @@ Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche.
 
 Dans l’écran suivant, saisissez le [!UICONTROL ID publicitaire] et éventuellement un [!UICONTROL ID commerçant]. Vous pouvez coller les identifiants directement dans ces entrées ou utiliser un élément de données à la place. Ils serviront de valeurs par défaut utilisées lors de l’appel d’un événement à [!DNL The Trade Desk]’API Real-Time Conversions. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
-Pour découvrir comment créer des éléments de données et les rendre disponibles pour les extensions dans votre propriété de balise, suivez le tutoriel [Créer des éléments de données](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements).
+Pour découvrir comment créer des éléments de données et les rendre disponibles pour les extensions dans votre propriété de balise, suivez le tutoriel [Créer des éléments de données](https://experienceleague.adobe.com/fr/docs/platform-learn/data-collection/tags/create-data-elements).
 
 ![Page de configuration de l’extension [!DNL The Trade Desk] avec les champs [!UICONTROL ID publicitaire] et [!UICONTROL ID de commerçant] en surbrillance.](../../../images/extensions/server/tradedesk/configure-extension.png)
 

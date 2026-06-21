@@ -32,7 +32,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
+>Ce type de données appartient au schéma `mediaCollection`, à savoir les champs que votre implémentation envoie au serveur principal des médias en flux continu. Adobe traite ces données et génère les champs de `mediaReporting` correspondants, qui sont ingérés dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [[!UICONTROL Débit]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/bitrate) | `bitrate` | Entier | Non | Valeur du débit (en Kbits/s). |
-| [[!UICONTROL Images perdues]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/dropped-frames) | `droppedFrames` | Entier | Non | Nombre total d’images perdues lors de la lecture. |
-| [[!UICONTROL Images Par Seconde]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/frames-per-second) | `framesPerSecond` | Entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
-| [[!UICONTROL Heure De Commencer]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/quality/time-to-start) | `timeToStart` | Entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |
+| [[!UICONTROL Débit]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/bitrate) | `bitrate` | Entier | Non | Valeur du débit (en Kbits/s). |
+| [[!UICONTROL Images perdues]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/dropped-frames) | `droppedFrames` | Entier | Non | Nombre total d’images perdues lors de la lecture. |
+| [[!UICONTROL Images Par Seconde]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/frames-per-second) | `framesPerSecond` | Entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
+| [[!UICONTROL Heure De Commencer]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/time-to-start) | `timeToStart` | Entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |

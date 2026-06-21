@@ -89,7 +89,7 @@ Une fois que vous avez [créé un nouveau rôle](/help/access-control/abac/ui/pe
 
 ## Configuration des surfaces de canal et de sandbox dans Journey Optimizer {#configure-channel-surfaces}
 
-Si votre organisation dispose d’une licence pour [&#128279;](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, configurez les surfaces de canal dans votre sandbox. Les surfaces de canal définissent tous les paramètres techniques requis pour vos messages, tels que le type d’e-mail, le nom et l’adresse e-mail de l’expéditeur, les applications mobiles, la configuration des SMS, etc. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
+Si votre organisation dispose d’une licence pour [&#128279;](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, configurez les surfaces de canal dans votre sandbox. Les surfaces de canal définissent tous les paramètres techniques requis pour vos messages, tels que le type d’e-mail, le nom et l’adresse e-mail de l’expéditeur, les applications mobiles, la configuration des SMS, etc. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Pour créer des instances de playbooks dans Journey Optimizer, vous devez configurer les surfaces des canaux pour les notifications par e-mail, push et SMS.
 

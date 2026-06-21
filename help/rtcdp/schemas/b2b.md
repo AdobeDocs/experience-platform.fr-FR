@@ -27,7 +27,7 @@ Adobe Real-Time Customer Data Platform B2B edition fournit plusieurs classes [mo
 
 >[!IMPORTANT]
 >
->Les schémas B2B peuvent être utilisés dans les applications Experience Platform (par exemple, dans [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition)). <br/>Cependant, vous devez avoir accès à Real-Time CDP B2B edition pour que les schémas B2B (de profils dans) participent au [profil client en temps réel](../../profile/home.md).
+>Les schémas B2B peuvent être utilisés dans les applications Experience Platform (par exemple, dans [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition)). <br/>Cependant, vous devez avoir accès à Real-Time CDP B2B edition pour que les schémas B2B (de profils dans) participent au [profil client en temps réel](../../profile/home.md).
 
 Les classes standard suivantes sont fournies dans Real-Time CDP B2B edition :
 

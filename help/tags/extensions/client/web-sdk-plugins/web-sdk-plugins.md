@@ -130,7 +130,7 @@ L’élément de données renvoie une chaîne contenant une version formatée co
 >
 >Cet élément de données définit les cookies et permet de stocker les valeurs générées par l’utilisateur dans les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getPreviousValue` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html). L’élément de données `getPreviousValue` définit une variable sur une valeur définie sur un accès précédent.
+Permet d’installer et de configurer le plug-in [`getPreviousValue` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html?lang=fr). L’élément de données `getPreviousValue` définit une variable sur une valeur définie sur un accès précédent.
 
 L’élément de données `getPreviousValue` utilise les arguments suivants :
 

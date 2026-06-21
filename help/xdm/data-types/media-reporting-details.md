@@ -26,7 +26,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Ce type de données appartient au schéma `mediaReporting` : les champs qu’Adobe calcule à partir des données `mediaCollection` envoyées par votre implémentation et ingérées dans les jeux de données Platform. Ces champs ne sont pas envoyés directement à partir de votre implémentation. Bien que votre implémentation transmette de nombreux types d’événements, Platform ingère des enregistrements pour cinq événements clés : `media.sessionStart`, `media.adStart`, `media.adComplete`, `media.chapterComplete` et `media.sessionComplete`. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
+>Ce type de données appartient au schéma `mediaReporting` : les champs qu’Adobe calcule à partir des données `mediaCollection` envoyées par votre implémentation et ingérées dans les jeux de données Platform. Ces champs ne sont pas envoyés directement à partir de votre implémentation. Bien que votre implémentation transmette de nombreux types d’événements, Platform ingère des enregistrements pour cinq événements clés : `media.sessionStart`, `media.adStart`, `media.adComplete`, `media.chapterComplete` et `media.sessionComplete`. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Détails des rapports multimédia].
 ![Diagramme du type de données [!UICONTROL Détails des rapports multimédia].](../images/data-types/media-reporting-details.png)

@@ -28,19 +28,19 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Ce type de données appartient au schéma `mediaReporting` : champs calculés par le serveur principal des médias en flux continu à partir des données `mediaCollection` envoyées par votre implémentation. Il s’agit des champs qu’Adobe ingère dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
+>Ce type de données appartient au schéma `mediaReporting` : champs calculés par le serveur principal des médias en flux continu à partir des données `mediaCollection` envoyées par votre implémentation. Il s’agit des champs qu’Adobe ingère dans les jeux de données Platform. Voir [Schéma de reporting XDM des médias en flux continu](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/edge/reporting-schema) pour plus d’informations.
 
 Chaque nom d’affichage contient un lien vers des informations supplémentaires sur sa dimension ou sa mesure de reporting. Les pages liées contiennent des détails sur la manière dont Adobe calcule et signale ces données, y compris les répartitions par système de rapports.
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |---|---|---|---|
-| [[!UICONTROL Chapitre terminé]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/chapter-completes) | `isCompleted` | booléen | Indique si le chapitre est terminé. |
-| [[!UICONTROL Identifiant du chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter) | `ID` | chaîne | Identifiant généré automatiquement pour le chapitre. |
-| [[!UICONTROL Longueur Ou Durée Du Chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-length) | `length` | entier | Durée du chapitre, en secondes. |
-| [[!UICONTROL Nom du chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-name) | `friendlyName` | chaîne | Nom du chapitre et/ou du segment. |
-| [[!UICONTROL décalage de chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-offset) | `offset` | entier | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
-| [[!UICONTROL Position du chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/chapter-position) | `index` | entier | Position (index, entier) du chapitre à l’intérieur du contenu. |
-| [[!UICONTROL Chapitre démarré]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/chapter-starts) | `isStarted` | booléen | Indique si le chapitre a commencé ou non. |
-| [[!UICONTROL Temps de lecture du chapitre]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/chapter-time-spent) | `timePlayed` | entier | Temps passé sur le chapitre, en secondes. |
+| [[!UICONTROL Chapitre terminé]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/chapter-completes) | `isCompleted` | booléen | Indique si le chapitre est terminé. |
+| [[!UICONTROL Identifiant du chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter) | `ID` | chaîne | Identifiant généré automatiquement pour le chapitre. |
+| [[!UICONTROL Longueur Ou Durée Du Chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-length) | `length` | entier | Durée du chapitre, en secondes. |
+| [[!UICONTROL Nom du chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-name) | `friendlyName` | chaîne | Nom du chapitre et/ou du segment. |
+| [[!UICONTROL décalage de chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-offset) | `offset` | entier | Décalage du chapitre à l’intérieur du contenu (en secondes) depuis le début. |
+| [[!UICONTROL Position du chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/chapter-position) | `index` | entier | Position (index, entier) du chapitre à l’intérieur du contenu. |
+| [[!UICONTROL Chapitre démarré]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/chapter-starts) | `isStarted` | booléen | Indique si le chapitre a commencé ou non. |
+| [[!UICONTROL Temps de lecture du chapitre]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/chapter-time-spent) | `timePlayed` | entier | Temps passé sur le chapitre, en secondes. |
 
 Voir [chapterdetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

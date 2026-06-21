@@ -177,11 +177,11 @@ Si vous utilisez nos SDK et envoyez XDM à Edge Network, ces nouvelles fonctionn
 
 ## Qu’est-ce qu’un CNAME ou un domaine propriétaire et pourquoi est-ce important ?
 
-Voir le [programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) dans le guide des services principaux.
+Voir le [programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/adobe-managed-cert) dans le guide des services principaux.
 
 ## Le Adobe Experience Platform Web SDK utilise-t-il des cookies ? Dans l&#39;affirmative, quels cookies utilise-t-elle ?
 
-Voir [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) dans le guide des services principaux.
+Voir [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk) dans le guide des services principaux.
 
 ## Quels navigateurs Adobe Experience Platform Web SDK prend-il en charge ?
 

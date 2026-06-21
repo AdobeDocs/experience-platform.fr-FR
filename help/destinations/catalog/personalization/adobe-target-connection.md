@@ -215,7 +215,7 @@ Lisez [Activer des audiences vers des destinations de personnalisation Edge](../
 
 ## Supprimer des audiences d’une destination Target {#remove}
 
-Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion [!DNL Adobe Target] existante lorsque cette audience est déjà utilisée dans une [!DNL Adobe Target] [activité](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion [!DNL Adobe Target] entraîne une erreur si l’audience est utilisée par une activité [!DNL Adobe Target].
+Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion [!DNL Adobe Target] existante lorsque cette audience est déjà utilisée dans une [!DNL Adobe Target] [activité](https://experienceleague.adobe.com/fr/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion [!DNL Adobe Target] entraîne une erreur si l’audience est utilisée par une activité [!DNL Adobe Target].
 
 ![Image de l’interface utilisateur d’Experience Platform montrant une erreur causée par une tentative de suppression d’une audience utilisée par une activité Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 

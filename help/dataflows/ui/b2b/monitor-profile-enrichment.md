@@ -3,7 +3,7 @@ description: Utilisez le tableau de bord [!UICONTROL Enrichissement du profil] p
 solution: Experience Platform
 title: Surveillance des tâches d’enrichissement des profils
 type: Tutorial
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 TQID: https://experienceleague.adobe.com/BMvTDEb9-sCWP4F1acHaorBKJyW6ISW4COsGzjN8XKU
 product_v2:

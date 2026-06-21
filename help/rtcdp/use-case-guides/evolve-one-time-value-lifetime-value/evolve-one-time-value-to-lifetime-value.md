@@ -285,7 +285,7 @@ Pour plus d’informations sur la création d’un [jeu de données](/help/catal
 
 >[!IMPORTANT]
 >
->La possibilité pour les clients de se désabonner de la réception des communications d’une marque, ainsi que le respect de ce choix, sont des exigences légales. Pour en savoir plus sur la législation applicable, consultez la [présentation des réglementations relatives à la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>La possibilité pour les clients de se désabonner de la réception des communications d’une marque, ainsi que le respect de ce choix, sont des exigences légales. Pour en savoir plus sur la législation applicable, consultez la [présentation des réglementations relatives à la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=fr).
 
 Pensez à mettre en œuvre les [politiques de consentement](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) suivantes et à demander le consentement de vos visiteurs avant de communiquer avec eux :
 
