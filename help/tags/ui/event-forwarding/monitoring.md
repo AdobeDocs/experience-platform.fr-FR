@@ -28,7 +28,7 @@ Ce guide suppose que vous avez acheté le transfert d’événement et que vous 
 
 Regardez la vidéo suivante pour une présentation détaillée de la fonctionnalité de surveillance :
 
->[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411267?captions=fre_fr&quality=12&learn=on)
 
 ## Sélection des propriétés et des environnements
 

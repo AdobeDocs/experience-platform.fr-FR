@@ -29,12 +29,12 @@ Découvrez comment Adobe a adapté le cas d’utilisation Réengagement intellig
 
 ## Mise en œuvre
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454266/?captions=fre_fr&quality=12&learn=on)
 
 ## Configuration de parcours
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453963/?captions=fre_fr&quality=12&learn=on)
 
 ## Configuration des audiences et des destinations
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452906/?captions=fre_fr&quality=12&learn=on)

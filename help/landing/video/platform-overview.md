@@ -35,4 +35,4 @@ Cette vidéo présente rapidement Experience Platform et décrit certains des d�
 
 Pour en savoir plus, commencez par lire la présentation d’Experience Platform [&#128279;](../home.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428494?captions=fre_fr&quality=12&learn=on)

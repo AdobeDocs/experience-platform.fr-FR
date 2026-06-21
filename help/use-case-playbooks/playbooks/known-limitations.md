@@ -35,4 +35,4 @@ Après avoir inclus ces champs dans le schéma dans le sandbox de développement
 
 Pour plus d’informations, regardez la vidéo ci-dessous pour créer des groupes de champs de schéma.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413606/?captions=fre_fr&learn=on)

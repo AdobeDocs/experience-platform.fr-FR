@@ -42,4 +42,4 @@ Si vous souhaitez créer un segment à l’aide de l’API Segmentation, veuille
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au guide [Créateur de segments](../ui/segment-builder.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31638?captions=fre_fr&quality=12&learn=on)
