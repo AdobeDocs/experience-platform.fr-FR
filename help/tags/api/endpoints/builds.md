@@ -62,7 +62,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->À l’aide des paramètres de requête, les versions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Pour plus d’informations, consultez le guide sur le [filtrage des réponses](../guides/filtering.md).
+>À l’aide des paramètres de requête, les versions répertoriées peuvent être filtrées en fonction des attributs suivants :<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Consultez le guide sur le [filtrage des réponses](../guides/filtering.md) pour plus d&#39;informations.
 
 **Requête**
 

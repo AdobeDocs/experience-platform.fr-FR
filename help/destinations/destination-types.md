@@ -32,7 +32,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 836
+source-wordcount: 841
 ht-degree: 48%
 
 ---
@@ -55,7 +55,7 @@ Diagramme ![Types de destinations).](./assets/destination-types/types-of-destina
 
 ## Connexions {#connections}
 
-Les destinations **[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** et **[!DNL Edge Personalization]** d’[!DNL Adobe Experience Platform] capturent des données d’événement, les combinent avec d’autres sources de données pour former le [profil client en temps réel](../profile/home.md), appliquent une segmentation et exportent des audiences et des profils qualifiés vers des destinations.
+**[!UICONTROL Exportation de profils]**, **[!UICONTROL Exportation d’audiences en flux continu]** et **[!DNL Edge Personalization]** destinations dans [!DNL Adobe Experience Platform] capturent des données d’événement, les combinent avec d’autres sources de données pour former le [Profil client en temps réel](../profile/home.md), appliquent une segmentation et exportent des audiences et des profils qualifiés vers des destinations.
 
 ## Destinations d’exportation de profils {#profile-export}
 

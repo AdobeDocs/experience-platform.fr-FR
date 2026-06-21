@@ -15,7 +15,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1637
+source-wordcount: 1700
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Dans le cadre des mises à niveau de l’architecture Real-Time CDP B2B edition,
 
 >[!ENDSHADEBOX]
 
-## Conditions préalables requises {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Avant de pouvoir utiliser les attributs de segmentation pour les classes B2B, vous devez effectuer les étapes suivantes :
 
@@ -83,7 +83,7 @@ Les cas d’utilisation ci-dessous fournissent des informations sur les classes 
 
 ## Exemples de différents cas d’utilisation de segmentation {#use-cases}
 
-Les cas d’utilisation suivants sont disponibles pour la segmentation avec B2B edition. Chaque exemple fournit une description de ce que fait l’audience et une description des classes utilisées pour les créer. Les images fournies mettent en surbrillance le chemin d’accès au fichier dans le rail latéral [!UICONTROL Attributes] qui reflète la structure du schéma. La section [!UICONTROL Segment properties] à droite de l’affichage contient une répartition écrite des attributs de l’audience.
+Les cas d’utilisation suivants sont disponibles pour la segmentation avec B2B edition. Chaque exemple fournit une description de ce que fait l’audience et une description des classes utilisées pour les créer. Les images fournies mettent en surbrillance le chemin d’accès au fichier dans le rail latéral [!UICONTROL Attributs] qui reflète la structure du schéma. La section [!UICONTROL Propriétés du segment] à droite de l’affichage contient une répartition écrite des attributs de l’audience.
 
 ### Exemple 1 : trouver des « décideurs » pour les opportunités B2B {#find-decision-maker}
 

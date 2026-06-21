@@ -9,22 +9,22 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 118
+source-wordcount: 127
 ht-degree: 7%
 
 ---
 
-# Type de données [!UICONTROL Return]
+# Type de données [!UICONTROL Retour]
 
-[!UICONTROL Return] est un type de données XDM (modèle de données d’expérience) standard qui capture les informations essentielles liées à une autorisation de retour de marchandise (RMA).
+[!UICONTROL Retour] est un type de données standard du modèle de données d’expérience (XDM) qui capture les informations essentielles liées à une autorisation de retour de marchandise (RMA).
 
 ![Diagramme du type de données Retour.](../images/data-types/return.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|
-| [!UICONTROL Return ID] | `returnID` | chaîne | Identifiant unique de ce RMA. |
-| [!UICONTROL Return Status] | `returnStatus` | chaîne | Statut actuel du RMA (par exemple En attente ou Fermé). |
-| [!UICONTROL Order Purchase ID] | `purchaseID` | chaîne | Identifiant unique de la commande/de l&#39;achat auquel la RMA se rapporte. |
+| [!UICONTROL ID de retour] | `returnID` | chaîne | Identifiant unique de ce RMA. |
+| [!UICONTROL Statut de retour] | `returnStatus` | chaîne | Statut actuel du RMA (par exemple En attente ou Fermé). |
+| [!UICONTROL ID achat de commande] | `purchaseID` | chaîne | Identifiant unique de la commande/de l&#39;achat auquel la RMA se rapporte. |
 
 {style="table-layout:auto"}
 

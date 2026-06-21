@@ -24,7 +24,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: 2356
+source-wordcount: 2361
 ht-degree: 60%
 
 ---
@@ -253,7 +253,7 @@ Comme Sarah a ajouté un article qui semble être un cadeau dans le panier et l�
 
 Lorsque vous avez ajouté l’audience « Abandonnés d’un panier de cadeaux », vous pouvez voir à peu près combien de personnes font partie de cette audience. Vous pouvez prendre des mesures et proposer une personnalisation par le biais de différents canaux.
 
-Sélectionnez **[!UICONTROL Send to destinations]**.
+Sélectionnez **[!UICONTROL Envoyer aux destinations]**.
 
 Dans Real-Time CDP, Luma peut agir de manière transparente sur ses audiences pour la personnalisation.\
 Nous voyons ici toutes les destinations disponibles auxquelles Luma peut envoyer cette destination, qu’il s’agisse de solutions Adobe ou de solutions autres qu’Adobe.
@@ -278,7 +278,7 @@ Vous pouvez également planifier l’exportation de l’audience pour qu’elle 
 >
 >Si vous sélectionnez le champ de date, la planification est automatique pour les 90 jours suivants.
 
-Sélectionnez **[!UICONTROL Save]** pour accéder à la page suivante.
+Sélectionnez **[!UICONTROL Enregistrer]** pour accéder à la page suivante.
 
 Lorsqu’un client ou une cliente de cette audience effectue un achat, son adhésion à cette audience est supprimée en temps réel. Ils ne sont plus admissibles parce que leur statut a changé.
 

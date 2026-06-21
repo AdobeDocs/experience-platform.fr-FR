@@ -25,8 +25,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1106
-ht-degree: 37%
+source-wordcount: 1136
+ht-degree: 36%
 
 ---
 
@@ -36,7 +36,7 @@ Ce document fournit la procédure à suivre pour réaliser différentes opérati
 
 ## Affichage des sandbox
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sandboxes]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Browse]** pour ouvrir le tableau de bord [!UICONTROL Sandboxes]. Le tableau de bord répertorie tous les sandbox disponibles pour votre organisation, y compris leurs types respectifs (production ou développement).
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]** pour ouvrir le tableau de bord [!UICONTROL Sandbox]. Le tableau de bord répertorie tous les sandbox disponibles pour votre organisation, y compris leurs types respectifs (production ou développement).
 
 ![Tableau de bord des sandbox avec l’onglet Parcourir sélectionné qui affiche une liste des sandbox disponibles.](../images/ui/view-sandboxes.png)
 
@@ -68,27 +68,27 @@ Une fois qu’un sandbox est sélectionné, l’écran actualise le sandbox que 
 
 >[!WARNING]
 >
->La création d’un nouveau sandbox nécessite que vous l’ajoutiez à un rôle dans [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) avant de pouvoir commencer à l’utiliser. Pour savoir comment configurer un sandbox pour un rôle, reportez-vous à la documentation [gestion des sandbox pour un rôle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role).
+>La création d’un nouveau sandbox nécessite de l’ajouter à un rôle dans [[!UICONTROL Autorisations]](../../access-control/abac/ui/permissions.md) avant de pouvoir commencer à l’utiliser. Pour savoir comment configurer un sandbox pour un rôle, reportez-vous à la documentation [gestion des sandbox pour un rôle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role).
 
 La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3430301/?captions=fre_fr&quality=12&learn=on)
 
-Pour créer un nouveau sandbox, sélectionnez **[!UICONTROL Create sandbox]** dans le coin supérieur droit de l’écran.
+Pour créer un nouveau sandbox, sélectionnez **[!UICONTROL Créer un sandbox]** dans le coin supérieur droit de l’écran.
 
 ![créer-sandbox](../images/ui/create-sandbox.png)
 
-La boîte de dialogue **[!UICONTROL Create sandbox]** s’affiche. Sélectionnez la liste déroulante **[!UICONTROL Type]** et choisissez le type de sandbox [!UICONTROL Development] ou [!UICONTROL Production].
+La boîte de dialogue **[!UICONTROL Créer un sandbox]** s’affiche. Sélectionnez la liste déroulante **[!UICONTROL Type]** et choisissez le type de sandbox [!UICONTROL Développement] ou [!UICONTROL Production].
 
 ![Boîte de dialogue Créer un sandbox avec le sélecteur de type de sandbox mis en surbrillance.](../images/ui/sandbox-type.png)
 
-Après avoir sélectionné le type, indiquez un nom pour votre sandbox dans le champ **[!UICONTROL Name]** . Le nom du sandbox est un identifiant entièrement en minuscules à utiliser dans les appels API qui se doit donc d’être unique et concis. Le nom du sandbox doit commencer par une lettre, comporter au maximum 256 caractères et se composer uniquement de caractères alphanumériques et de tirets (-). Indiquez ensuite un titre pour votre sandbox dans le champ **[!UICONTROL Title]** . Le titre est destiné à être lu par un utilisateur ou une utilisatrice et doit être suffisamment descriptif pour être facilement identifiable.
+Après avoir sélectionné le type, attribuez un nom à votre sandbox dans le champ **[!UICONTROL Nom]**. Le nom du sandbox est un identifiant entièrement en minuscules à utiliser dans les appels API qui se doit donc d’être unique et concis. Le nom du sandbox doit commencer par une lettre, comporter au maximum 256 caractères et se composer uniquement de caractères alphanumériques et de tirets (-). Indiquez ensuite un titre pour votre sandbox dans le champ **[!UICONTROL Titre]**. Le titre est destiné à être lu par un utilisateur ou une utilisatrice et doit être suffisamment descriptif pour être facilement identifiable.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Create]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
 
 ![La boîte de dialogue Créer un sandbox avec le champ Nom et Titre et l’option Créer mise en surbrillance.](../images/ui/sandbox-info.png)
 
-Une fois la création du sandbox terminée, actualisez la page pour que le nouveau sandbox apparaisse dans le tableau de bord **[!UICONTROL Sandboxes]** avec le statut « [!UICONTROL Creating] ». Il faut environ 30 secondes pour que le système approvisionne les nouveaux sandbox, auquel cas leur statut passera à « [!UICONTROL Active] ».
+Une fois la création du sandbox terminée, actualisez la page pour que le nouveau sandbox apparaisse dans le tableau de bord **[!UICONTROL Sandbox]** avec le statut « [!UICONTROL En cours de création] ». Il faut environ 30 secondes pour que le système approvisionne les nouveaux sandbox, après quoi leur statut passera à « [!UICONTROL &#x200B; Actif &#x200B;] ».
 
 ![Tableau de bord des sandbox avec le nouveau sandbox mis en surbrillance.](../images/ui/new-sandbox.png)
 
@@ -107,15 +107,15 @@ Une fois la création du sandbox terminée, actualisez la page pour que le nouve
 
 La composition de l’audience n’est actuellement pas intégrée à la fonctionnalité de réinitialisation du sandbox. Par conséquent, les audiences devront être supprimées manuellement avant d’effectuer la réinitialisation du sandbox.
 
-Sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Customers]** du volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Compositions]** .
+Sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Clients]** du volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Compositions]**.
 
 ![Tableau de bord Audiences avec l’onglet Compositions sélectionné et mis en surbrillance.](../images/ui/audiences.png)
 
-Sélectionnez ensuite les points de suspension (`...`) à côté de la première audience, puis sélectionnez **[!UICONTROL Delete]**.
+Sélectionnez ensuite les points de suspension (`...`) à côté de la première audience, puis sélectionnez **[!UICONTROL Supprimer]**.
 
-![Menu Audience mettant en surbrillance l’option [!UICONTROL Delete].](../images/ui/delete-composition.png)
+![Menu Audience mettant en surbrillance l’option [!UICONTROL Supprimer].](../images/ui/delete-composition.png)
 
-Une confirmation de suppression réussie s’affiche et vous revenez sur l’onglet **[!UICONTROL Compositions]** .
+Une confirmation de suppression réussie s’affiche et vous revenez sur l’onglet **[!UICONTROL Compositions]**.
 
 Répétez les étapes ci-dessus avec toutes vos compositions. Toutes les audiences de l’inventaire des audiences seront supprimées. Une fois toutes les audiences supprimées, vous pouvez continuer à réinitialiser le sandbox.
 
@@ -123,15 +123,15 @@ Répétez les étapes ci-dessus avec toutes vos compositions. Toutes les audienc
 
 La réinitialisation d’un sandbox de production ou de développement supprime toutes les ressources associées à ce sandbox (schémas, jeux de données, etc.) tout en conservant le nom et les autorisations associées du sandbox. Ce sandbox « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
-Sélectionnez le sandbox à réinitialiser dans la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Sandbox reset]**.
+Sélectionnez le sandbox à réinitialiser dans la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Réinitialisation du sandbox]**.
 
 ![Tableau de bord du sandbox avec le sandbox sélectionné et l’option Réinitialisation du sandbox mise en surbrillance.](../images/ui/reset.png)
 
-Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continue]** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continuer]** pour continuer.
 
 ![La boîte de dialogue de réinitialisation s’affiche avec l’option Continuer en surbrillance.](../images/ui/reset-warning.png)
 
-Dans la fenêtre de confirmation finale, saisissez le nom du sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Reset]**.
+Dans la fenêtre de confirmation finale, saisissez le nom du sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Réinitialiser]**.
 
 ![La boîte de dialogue de réinitialisation avec le champ Confirmer le nom et l’option de réinitialisation en surbrillance.](../images/ui/reset-confirm.png)
 
@@ -143,15 +143,15 @@ Dans la fenêtre de confirmation finale, saisissez le nom du sandbox dans la bo�
 
 La suppression d’un sandbox de production ou de développement supprime définitivement toutes les ressources associées à ce sandbox, y compris les autorisations.
 
-Sélectionnez le sandbox à supprimer dans la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Delete]**.
+Sélectionnez le sandbox à supprimer dans la liste des sandbox. Dans le panneau de navigation de droite qui s’affiche, sélectionnez **[!UICONTROL Supprimer]**.
 
 ![Tableau de bord du sandbox avec le sandbox sélectionné et l’option Supprimer mise en surbrillance.](../images/ui/delete.png)
 
-Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continue]** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Sélectionnez **[!UICONTROL Continuer]** pour continuer.
 
 ![La boîte de dialogue de suppression s’affiche avec l’option Continuer en surbrillance.](../images/ui/delete-warning.png)
 
-Dans la fenêtre de confirmation finale, saisissez le nom du sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Continue]**.
+Dans la fenêtre de confirmation finale, saisissez le nom du sandbox dans la boîte de dialogue et sélectionnez **[!UICONTROL Continuer]**.
 
 ![La boîte de dialogue de suppression avec le champ Confirmer le nom et l’option Continuer en surbrillance.](../images/ui/delete-confirm.png)
 

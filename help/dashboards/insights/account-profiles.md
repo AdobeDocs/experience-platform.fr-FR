@@ -15,7 +15,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 765
+source-wordcount: 781
 ht-degree: 0%
 
 ---
@@ -294,7 +294,7 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->Le graphique [!UICONTROL Customers per Account Overview] comprend trois informations d’exploration amont : [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] et [!UICONTROL Opportunities per Account Detail]. Ces analyses détaillées fournissent des informations plus granulaires, en répartissant le nombre de clients et d’opportunités par catégories (par exemple, clients directs et indirects) et par plages (comme les tranches de nombre de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
+>Le graphique [!UICONTROL Présentation des clients par compte] comprend trois informations détaillées : [!UICONTROL Clients par détail de compte], [!UICONTROL Présentation des opportunités par compte] et [!UICONTROL Opportunités par détail de compte]. Ces analyses détaillées fournissent des informations plus granulaires, en répartissant le nombre de clients et d’opportunités par catégories (par exemple, clients directs et indirects) et par plages (comme les tranches de nombre de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
 
 Questions traitées par cette insight :
 

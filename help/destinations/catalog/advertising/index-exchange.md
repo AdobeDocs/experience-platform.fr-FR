@@ -19,8 +19,8 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1210
-ht-degree: 16%
+source-wordcount: 1193
+ht-degree: 17%
 
 ---
 
@@ -104,8 +104,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 | --------- | ---------- | --------- |
-| Type d’exportation | **[!UICONTROL Segment export]** | Exporte tous les membres d’un segment (audience) ainsi que les identifiants (IDFA, GAID ou autres) utilisés dans la destination [!DNL Index Exchange]. |
-| Fréquence des exportations | **[!UICONTROL Batch]** | Exporte des fichiers vers des plateformes en aval à intervalles de 3, 6, 8, 12 ou 24 heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
+| Type d’exportation | **[!UICONTROL Exportation des segments]** | Exporte tous les membres d’un segment (audience) ainsi que les identifiants (IDFA, GAID ou autres) utilisés dans la destination [!DNL Index Exchange]. |
+| Fréquence des exportations | **[!UICONTROL Lot]** | Exporte des fichiers vers des plateformes en aval à intervalles de 3, 6, 8, 12 ou 24 heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -113,7 +113,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des autorisations **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -123,10 +123,10 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 ![Détails de la destination](../../assets/catalog/advertising/index-exchange/destination-details.png)
 
-* [!UICONTROL Name] : saisissez un nom pour vous aider à reconnaître cette destination ultérieurement.
+* [!UICONTROL Nom] : saisissez un nom pour vous aider à reconnaître cette destination ultérieurement.
 * [!UICONTROL Description] : saisissez une description pour vous aider à identifier cette destination ultérieurement.
-* [!UICONTROL Identifier Type] : sélectionnez le type d’identifiant fourni par l’index qui correspond à l’identifiant que vous envoyez à [!DNL Index]. Consultez le tableau des types d’identifiants pris en charge ci-dessous. Si vous ne savez pas quel type d’identifiant utiliser, contactez votre représentant [!DNL Index]. Pour envoyer plusieurs types d’identifiants, créez des instances distinctes de cette destination.
-* [!UICONTROL Account ID] : saisissez votre ID de compte [!DNL Index]. Il ne s’agit pas du même que votre ID d’éditeur. Si vous n’êtes pas sûr de l’ID à utiliser, contactez votre représentant [!DNL Index].
+* [!UICONTROL Type d’identifiant] : sélectionnez le type d’identifiant fourni par l’index qui correspond à l’identifiant que vous envoyez à [!DNL Index]. Consultez le tableau des types d’identifiants pris en charge ci-dessous. Si vous ne savez pas quel type d’identifiant utiliser, contactez votre représentant [!DNL Index]. Pour envoyer plusieurs types d’identifiants, créez des instances distinctes de cette destination.
+* [!UICONTROL Identifiant de compte] : saisissez votre identifiant de compte [!DNL Index]. Il ne s’agit pas du même que votre ID d’éditeur. Si vous n’êtes pas sûr de l’ID à utiliser, contactez votre représentant [!DNL Index].
 
 #### Types d’identifiants pris en charge {#supported-identifier-types}
 
@@ -145,14 +145,14 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers cette destination. Sélectionnez une ou plusieurs alertes dans la liste pour vous abonner aux notifications de statut de votre flux de données. Pour plus d’informations, consultez le guide sur [l’abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 

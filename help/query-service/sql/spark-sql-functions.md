@@ -296,7 +296,7 @@ Pour plus d’informations sur ces fonctions, notamment leur syntaxe, leur utili
 | [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | Renvoie une chaîne avec [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) des espaces |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | Fractionner la chaîne |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | Renvoyer l’index de la sous-chaîne |
-| [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Fenêtre |
+| [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Période |
 | [`xpath`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath) | Analyser les nœuds XML |
 | [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | Analyser les nœuds XML pour rechercher un doublon |
 | [`xpath_float`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_float) | Analyser les nœuds XML pour rechercher une virgule flottante |

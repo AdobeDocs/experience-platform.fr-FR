@@ -33,7 +33,7 @@ ht-degree: 14%
 
 # [!DNL Privacy Service] et [!DNL Experience Cloud] des applications
 
-Adobe Experience Platform [!DNL Privacy Service] est conçu pour prendre en charge les demandes d’accès à des informations personnelles pour plusieurs applications Adobe Experience Cloud. Chaque application est compatible avec différentes valeurs et différents identifiants de produit pour l’identification des titulaires de données.
+Adobe Experience Platform [!DNL Privacy Service] prend en charge les demandes d’accès à des informations personnelles pour plusieurs applications Adobe Experience Cloud. Chaque application est compatible avec différentes valeurs et différents identifiants de produit pour l’identification des titulaires de données.
 
 Ce document sert de référence pour [!DNL Experience Cloud] documentation de l’application qui décrit comment configurer cette application pour les opérations liées à la confidentialité. Cela inclut les formats et les libellés de vos données. Deux catégories d’applications sont traitées :
 

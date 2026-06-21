@@ -15,7 +15,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 924
+source-wordcount: 942
 ht-degree: 15%
 
 ---
@@ -48,11 +48,11 @@ Ce document nécessite une compréhension du fonctionnement des composants suiva
 >
 >Vous devez activer les notifications instantanées des e-mails pour que votre compte Experience Platform reçoive des notifications d’alerte par e-mail pour vos flux de données.
 
-Vous pouvez activer les alertes pour vos flux de données au cours de l’étape de [!UICONTROL Configure new destination] du workflow [connexion à la destination](connect-destination.md).
+Vous pouvez activer les alertes pour vos flux de données au cours de l’étape [!UICONTROL Configurer une nouvelle destination] du workflow [connexion à la destination](connect-destination.md).
 
 ![Image de l’interface utilisateur affichant la section des alertes de destination.](../assets/ui/alerts/destination-alerts.png)
 
-Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Next]** pour vérifier et terminer votre flux de données.
+Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis cliquez sur **[!UICONTROL Suivant]** pour vérifier et terminer votre flux de données.
 
 Les alertes disponibles pour les flux de données de destination sont décrites dans le tableau ci-dessous.
 
@@ -91,11 +91,11 @@ Sélectionnez le message d’alerte pour afficher des informations spécifiques 
 
 ![Image de l’interface utilisateur montrant comment sélectionner une notification](../assets/ui/alerts/select-alert-message.png)
 
-La page [!UICONTROL Dataflow run details] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et le résumé des erreurs de haut niveau.
+La page [!UICONTROL Détails de l’exécution du flux de données] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et le résumé des erreurs de haut niveau.
 
 ![Image de l’interface utilisateur affichant la page des détails de l’exécution du flux de données.](../assets/ui/alerts/dataflow-overview.png)
 
-La moitié inférieure de la page affiche les [!UICONTROL Dataflow run errors] qui se sont produites pendant l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
+La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
 
 ![Image de l’interface utilisateur affichant la page de détails de l’exécution du flux de données, avec une mise en surbrillance sur la section Erreurs.](../assets/ui/alerts/dataflow-run-error.png)
 
@@ -107,21 +107,21 @@ Des alertes pour vos flux de données vous sont également diffusées par e-mail
 
 ![Capture d’écran d’un e-mail d’alerte](../assets/ui/alerts/email.png)
 
-Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Dataflow run overview] s’affiche, vous fournissant une interface pour enquêter sur les erreurs associées à votre flux de données.
+Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Aperçu de l’exécution du flux de données] s’affiche, vous fournissant une interface pour enquêter sur les erreurs associées à votre flux de données.
 
 ![dataflow-overview](../assets/ui/alerts/dataflow-overview.png)
 
 ## Abonnement et désabonnement aux alertes {#subscribe-and-unsubscribe}
 
-Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données de destination existant dans la page de [!UICONTROL Browse] des destinations.
+Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données de destination existant dans la page [!UICONTROL Parcourir] des destinations.
 
 ![Image de l’interface utilisateur montrant la page de navigation des destinations](../assets/ui/alerts/destination-list.png)
 
-Recherchez la connexion de destination pour laquelle vous souhaitez recevoir des alertes et sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL Subscribe to alerts]** pour modifier les paramètres d’alerte de votre flux de données de destination.
+Recherchez la connexion de destination pour laquelle vous souhaitez recevoir des alertes et sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL S’abonner aux alertes]** pour modifier les paramètres d’alerte de votre flux de données de destination.
 
 ![Image de l’interface utilisateur affichant les options de destination](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de destination. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de destination. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Image de l’interface utilisateur affichant la page d’abonnement aux alertes de destination](../assets/ui/alerts/destination-alerts-list.png)
 

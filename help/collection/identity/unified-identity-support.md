@@ -6,7 +6,7 @@ badge: Beta
 exl-id: 8a755b61-6280-47f9-87a1-2d1da331a1c6
 source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1097'
 ht-degree: 3%
 
 ---
@@ -64,9 +64,9 @@ La prise en charge des identités unifiées requiert tous les éléments suivant
 
 ## Configuration
 
-1. **Activer les cookies tiers dans Web SDK** : activez le paramètre **Utiliser des cookies tiers** dans votre implémentation de Web SDK. Si vous utilisez l’extension de balise, activez la **[!UICONTROL Use third-party cookies]** dans [Paramètres de configuration des identités](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies). Si vous utilisez la bibliothèque JavaScript, définissez [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md) sur `true`.
+1. **Activer les cookies tiers dans Web SDK** : activez le paramètre **Utiliser des cookies tiers** dans votre implémentation de Web SDK. Si vous utilisez l’extension de balise, activez **[!UICONTROL Utiliser des cookies tiers]** dans [Paramètres de configuration des identités](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies). Si vous utilisez la bibliothèque JavaScript, définissez [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md) sur `true`.
 
-1. **Activer la synchronisation des identifiants tiers dans le flux de données** : activez l’option **[!UICONTROL Third-Party ID Sync]** dans les paramètres avancés de votre flux de données. Voir [Création et configuration des flux de données](/help/datastreams/configure.md#advanced-options).
+1. **Activer la synchronisation des identifiants tiers dans le flux de données** : activez l’option **[!UICONTROL Synchronisation des identifiants tiers]** dans les paramètres avancés de votre flux de données. Voir [Création et configuration des flux de données](/help/datastreams/configure.md#advanced-options).
 
 1. **Assurez-vous que la persistance propriétaire est en place** : vérifiez que votre stratégie de persistance propriétaire (telle que les FPID) est déjà déployée sur votre domaine. Voir [Identifiants d’appareils propriétaires dans la collecte de données](fpid.md).
 

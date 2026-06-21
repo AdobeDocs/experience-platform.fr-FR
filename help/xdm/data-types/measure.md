@@ -17,14 +17,14 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 227
+source-wordcount: 229
 ht-degree: 5%
 
 ---
 
-# Type de données [!UICONTROL Measure]
+# [!UICONTROL Mesure] type de données
 
-[!UICONTROL Measure] est un type de données standard du modèle de données d’expérience (XDM) qui contient un point de données quantifiable concret d’une mesure particulière. Une mesure est composée d’un identifiant unique et d’une valeur.
+[!UICONTROL Mesure] est un type de données standard du modèle de données d’expérience (XDM) qui contient un point de données quantifiable concret d’une mesure particulière. Une mesure est composée d’un identifiant unique et d’une valeur.
 
 ![mesurer l’image](../images/data-types/measure.PNG){width=500}
 

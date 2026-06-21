@@ -1,9 +1,10 @@
 ---
 title: setDebug()
 description: Activez le débogage sur votre site via la console du navigateur.
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+exl-id: c042d521-46b4-441b-a91f-685e0428e4dd
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---

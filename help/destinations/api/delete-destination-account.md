@@ -17,8 +17,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 760
-ht-degree: 35%
+source-wordcount: 754
+ht-degree: 36%
 
 ---
 
@@ -74,7 +74,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 La première étape de la suppression d’un compte de destination consiste à découvrir l’identifiant de connexion correspondant au compte de destination que vous souhaitez supprimer.
 
-Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** et sélectionnez le compte à supprimer en sélectionnant le nombre dans la colonne **[!UICONTROL Destinations]** .
+Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]** et sélectionnez le compte à supprimer en sélectionnant le nombre dans la colonne **[!UICONTROL Destinations]**.
 
 ![Sélectionner le compte de destination à supprimer](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 

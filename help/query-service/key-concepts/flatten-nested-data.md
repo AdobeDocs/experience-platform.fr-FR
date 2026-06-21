@@ -15,7 +15,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 866
 ht-degree: 93%
 
 ---
@@ -64,7 +64,7 @@ prod:all?FLATTEN
 
 ## Exemple {#example}
 
-L’exemple de schéma utilisé dans ce guide utilise le groupe de champs standard [!UICONTROL Commerce Details], qui utilise la structure d’objet `commerce` et le tableau `productListItems` . Consultez la documentation XDM pour [plus d’informations sur le groupe de champs [!UICONTROL Commerce Details]](../../xdm/field-groups/event/commerce-details.md). Une représentation de la structure du schéma est visible dans l’image ci-dessous.
+L’exemple de schéma utilisé dans ce guide utilise le groupe de champs standard [!UICONTROL Détails du &#x200B;], qui utilise la structure de l’objet `commerce` et le tableau `productListItems`. Consultez la documentation XDM pour [plus d’informations sur le groupe de champs [!UICONTROL Détails Commerce]](../../xdm/field-groups/event/commerce-details.md). Une représentation de la structure du schéma est visible dans l’image ci-dessous.
 
 ![Schéma du groupe de champs Détails du commerce comprenant les structures `commerce` et `productListItems`.](../images/key-concepts/commerce-details.png)
 

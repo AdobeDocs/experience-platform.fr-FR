@@ -36,8 +36,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2192
-ht-degree: 23%
+source-wordcount: 2215
+ht-degree: 22%
 
 ---
 
@@ -75,8 +75,8 @@ Pour plus d’informations, consultez le [&#x200B; Guide de migration du lac de 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Autorisations | Dans l’[!DNL Admin Console], l’onglet d’un profil de produit [!DNL Experience Platform] vous permet de personnaliser les fonctionnalités de [!DNL Experience Platform] disponibles pour les utilisateurs associés à ce profil. Les catégories d’autorisations disponibles sont les suivantes : **[!UICONTROL Data Modeling]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profile Management]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Data Monitoring]**, **[!UICONTROL Sandbox Administration]**, **[!UICONTROL Destinations]**, **[!UICONTROL Data Ingestion]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** et **[!UICONTROL Data Governance]**. |
-| Accès aux sandbox | L’onglet **[!UICONTROL Permissions]** d’un profil de produit [!DNL Experience Platform] peut accorder aux utilisateurs l’accès à des sandbox spécifiques. Consultez la section sur les [sandbox](#sandboxes) ci-dessous pour plus d’informations. |
+| Autorisations | Dans l’[!DNL Admin Console], l’onglet d’un profil de produit [!DNL Experience Platform] vous permet de personnaliser les fonctionnalités de [!DNL Experience Platform] disponibles pour les utilisateurs associés à ce profil. Les catégories d’autorisations disponibles sont les suivantes : **[!UICONTROL Modélisation des données]**, **[!UICONTROL Gestion des données]**, **[!UICONTROL Gestion des profils]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Surveillance des données]**, **[!UICONTROL Administration des sandbox]**, **[!UICONTROL Destinations]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** et **[!UICONTROL Gouvernance des données]** **&#x200B;**. |
+| Accès aux sandbox | L’onglet **[!UICONTROL Autorisations]** au sein d’un profil de produit [!DNL Experience Platform] peut accorder aux utilisateurs l’accès à des sandbox spécifiques. Consultez la section sur les [sandbox](#sandboxes) ci-dessous pour plus d’informations. |
 
 Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 

@@ -32,7 +32,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 969
+source-wordcount: 973
 ht-degree: 3%
 
 ---
@@ -114,7 +114,7 @@ Le tableau ci-dessous décrit les propriétés clés requises pour configurer et
 | `countryCode` | Cette valeur est basée sur la norme ISO 3166-1 alpha-2, codes pays à deux lettres définis dans la norme ISO 3166-1, qui fait partie de la norme ISO 3166 publiée par l’Organisation internationale de normalisation (ISO), pour représenter les pays, les territoires dépendants et les zones géographiques spéciales d’intérêt. | Oui | --- |
 | `dataProcessingOptions` | Indique le consentement de l’utilisateur pour l’utilisation des données publicitaires. | Facultatif | LIMITED_DATA_USE |
 
-- Sélectionnez **[!UICONTROL Keep Changes]** pour enregistrer la règle.
+- Sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la règle.
 
 ![Interface de configuration des paramètres d’événement avec le bouton Conserver les modifications en surbrillance.](../../../images/extensions/server/amazon/event-parameters.png)
 

@@ -27,8 +27,8 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 948
-ht-degree: 38%
+source-wordcount: 958
+ht-degree: 37%
 
 ---
 
@@ -52,13 +52,13 @@ Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données b
 
 >[!IMPORTANT]
 >
->Les jeux de données générés par le système sont masqués par défaut. Par défaut, l’onglet [!UICONTROL Browse] n’affiche que les jeux de données dans lesquels vous avez ingéré des données.
+>Les jeux de données générés par le système sont masqués par défaut. Par défaut, l’onglet [!UICONTROL Parcourir] n’affiche que les jeux de données dans lesquels vous avez ingéré des données.
 
 Pour afficher les jeux de données générés par le système, sélectionnez l’icône de filtre (![Icône Filtrer.](/help/images/icons/filter.png)) situé à gauche de la barre de recherche.
 
 ![Onglet Parcourir les jeux de données avec l’icône de filtre mise en surbrillance.](./images/query/filter-datasets.png)
 
-Une barre latérale s’affiche avec deux boutons (bascule), [!UICONTROL Included in Profile] et [!UICONTROL Show system datasets]. Sélectionnez le bouton (bascule) pour [!UICONTROL Show system datasets] afin d’inclure les jeux de données générés par le système dans la liste des jeux de données consultable.
+Une barre latérale s’affiche avec deux boutons (bascule), [!UICONTROL Inclus dans le profil] et [!UICONTROL Afficher les jeux de données système]. Sélectionnez le bouton (bascule) [!UICONTROL Afficher les jeux de données système] pour inclure les jeux de données générés par le système dans la liste navigable des jeux de données.
 
 ![Onglet Parcourir les jeux de données avec le bouton bascule Afficher les jeux de données système en surbrillance.](./images/query/show-system-datasets.png)
 

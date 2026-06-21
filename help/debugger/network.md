@@ -19,8 +19,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 215
-ht-degree: 60%
+source-wordcount: 219
+ht-degree: 59%
 
 ---
 
@@ -40,7 +40,7 @@ Pour modifier les informations par solution, sélectionnez la solution que vous 
 
 ![](images/network-analytics.jpg)
 
-Pour revenir à l’affichage de toutes les solutions, sélectionnez **[!UICONTROL Network]**
+Pour revenir à l’affichage de toutes les solutions, sélectionnez **[!UICONTROL Réseau]**
 
 Sélectionnez un élément dans la vue Réseau pour afficher une vue développée. Vous pouvez copier les informations affichées dans le Presse-papiers à partir de la fenêtre d’affichage agrandie.
 
@@ -52,6 +52,6 @@ Use the icon at the top of each column to copy the server call URL to your clipb
 ![](images/copy.jpg)
 -->
 
-Pour effacer la liste, sélectionnez **[!UICONTROL Remove Events]**.
+Pour effacer la liste, sélectionnez **[!UICONTROL Supprimer les événements]**.
 
-Pour télécharger un fichier Excel contenant les informations affichées sur cet écran, sélectionnez **[!UICONTROL Download]**.
+Pour télécharger un fichier Excel contenant les informations affichées sur cet écran, sélectionnez **[!UICONTROL Télécharger]**.

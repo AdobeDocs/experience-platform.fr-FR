@@ -4,7 +4,7 @@ description: Effectuez le rendu du contenu personnalisé éligible au rendu auto
 exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
 source-git-commit: c6a2b9700f0a688f65fec9febf5622c6c7b6aafa
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -38,4 +38,4 @@ Vous pouvez éviter ce problème en effectuant l’une des opérations suivantes
 
 ## Rendre des décisions à l’aide de l’extension de balise Web SDK
 
-L’extension de balise Web SDK équivalente à cette propriété est la case à cocher [**Rendre les décisions de personnalisation visuelle**](/help/tags/extensions/client/web-sdk/actions/send-event.md#personalization-fields) dans l’action « [!UICONTROL Send event] ».
+L’équivalent de l’extension de balise Web SDK de cette propriété est la case à cocher [**Rendre les décisions de personnalisation visuelle**](/help/tags/extensions/client/web-sdk/actions/send-event.md#personalization-fields) dans l’action « [!UICONTROL Envoyer l’événement] ».

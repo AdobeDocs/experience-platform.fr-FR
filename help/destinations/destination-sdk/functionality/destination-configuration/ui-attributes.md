@@ -16,8 +16,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 791
-ht-degree: 76%
+source-wordcount: 797
+ht-degree: 75%
 
 ---
 
@@ -80,7 +80,7 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 
 Utilisez le format suivant : `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, où `YOURDESTINATION` est le nom de la destination. Par exemple, pour une destination appelée Moviestar, procédez comme suit : `http://www.adobe.com/go/destinations-moviestar-en`.
 
-Les utilisateurs peuvent voir et consulter votre lien vers votre documentation à partir de la page de catalogue des destinations de l’interface utilisateur. Ils doivent accéder à votre carte de destination, sélectionner **[!UICONTROL More actions]**, puis **[!UICONTROL View documentation]**, comme illustré dans l’image ci-dessous.
+Les utilisateurs peuvent voir et consulter votre lien vers votre documentation à partir de la page de catalogue des destinations de l’interface utilisateur. Ils doivent accéder à votre carte de destination, sélectionner **[!UICONTROL Autres actions]**, puis **[!UICONTROL Afficher la documentation]**, comme illustré dans l’image ci-dessous.
 
 ![Image de l’interface utilisateur de montrant l’emplacement du lien vers la documentation.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -108,7 +108,7 @@ Les utilisateurs peuvent voir le type de connexion de destination dans l’ongle
 
 `frequency` est un paramètre de chaîne qui fait référence au type d’exportation de données pris en charge par la destination. Définissez-le sur `Streaming` quand les intégrations sont basées sur des API, ou sur `Batch` lorsque vous exportez des fichiers vers les destinations.
 
-Les utilisateurs peuvent voir le type de fréquence sur la page **[!UICONTROL Dataflow runs]** de chaque connexion à la destination.
+Les utilisateurs peuvent voir le type de fréquence sur la page **[!UICONTROL Exécutions de flux de données]** de chaque connexion à la destination.
 
 ![Image de l’interface utilisateur indiquant l’emplacement du type de fréquence dans l’interface utilisateur.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 

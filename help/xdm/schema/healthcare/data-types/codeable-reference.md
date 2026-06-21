@@ -11,21 +11,21 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 117
+source-wordcount: 126
 ht-degree: 6%
 
 ---
 
-# Type de données [!UICONTROL Codeable Reference]
+# [!UICONTROL Référence codable] type de données
 
-[!UICONTROL Codeable Reference] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une référence à une ressource ou à un concept. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Référence codable] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une référence à une ressource ou à un concept. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure de type de données de référence codable](../../../images/healthcare/data-types/codeable-reference.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Concept] | `concept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Référence à un concept (par classe). |
-| [!UICONTROL Reference] | `reference` | [[!UICONTROL Reference]](../data-types/reference.md) | Référence à une ressource. |
+| [!UICONTROL Concept] | `concept` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Référence à un concept (par classe). |
+| [!UICONTROL Référence] | `reference` | [[!UICONTROL Référence]](../data-types/reference.md) | Référence à une ressource. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

@@ -5,8 +5,8 @@ description: Découvrez comment générer des exemples de données JSON en fonct
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
 source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 13%
+source-wordcount: '458'
+ht-degree: 12%
 
 ---
 
@@ -23,9 +23,9 @@ Pour tout schéma que vous définissez dans l’interface utilisateur d’Experi
 
 >[!NOTE]
 >
->Si vous ne trouvez pas d’actions telles que **Supprimer** ou **Copier la structure JSON**, assurez-vous que vous utilisez une ressource personnalisée (définie par le client) et y accédez à partir du menu de ligne du tableau ou de la vue détaillée (**[!UICONTROL More]**). La disponibilité des actions dépend également des autorisations et des contraintes d’utilisation. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](./explore.md#xdm-resource-actions).
+>Si vous ne trouvez pas d’actions telles que **Supprimer** ou **Copier la structure JSON**, assurez-vous que vous utilisez une ressource personnalisée (définie par le client) et y accédez à partir du menu de ligne du tableau ou de la vue détaillée (**[!UICONTROL Plus]**). La disponibilité des actions dépend également des autorisations et des contraintes d’utilisation. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](./explore.md#xdm-resource-actions).
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche. Sous l’onglet **[!UICONTROL Browse]** , recherchez le schéma pour lequel vous souhaitez générer des données d’exemple. Sélectionnez-le dans la liste, et le rail de droite se met à jour pour afficher les détails du schéma. À partir de là, sélectionnez **[!UICONTROL Download sample file]**.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Sous l’onglet **[!UICONTROL Parcourir]**, recherchez le schéma pour lequel vous souhaitez générer des données d’exemple. Sélectionnez-le dans la liste, et le rail de droite se met à jour pour afficher les détails du schéma. À partir de là, sélectionnez **[!UICONTROL Télécharger l’exemple de fichier]**.
 
 ![Onglet Parcourir de l’espace de travail Schémas avec un schéma sélectionné et un exemple de fichier de téléchargement en surbrillance.](../images/ui/sample/sample-data.png)
 
@@ -37,4 +37,4 @@ Ce guide explique comment générer un exemple de fichier JSON à partir d’un 
 
 Une fois que vous êtes prêt à commencer à ingérer des données, consultez le tutoriel sur [le mappage d’un fichier CSV à XDM](../../ingestion/tutorials/map-csv/overview.md) pour savoir comment mapper un fichier de données plat (un fichier CSV, par exemple) à un schéma XDM et l’ingérer dans Experience Platform. Vous pouvez également établir une [connexion source](../../sources/home.md) pour importer vos données d’une source externe et les mapper à XDM.
 
-Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schemas] dans l’interface utilisateur, reportez-vous à la présentation de l’espace de travail [[!UICONTROL Schemas]](./overview.md).
+Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas] dans l’interface utilisateur, consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](./overview.md).

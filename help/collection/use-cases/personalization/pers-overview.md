@@ -5,7 +5,7 @@ keywords: personnalisation;sendEvent;renderDecisions;applyPropositions;decisionS
 exl-id: 6beccbfd-fddb-4e19-8a56-caba276e1643
 source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '348'
 ht-degree: 1%
 
 ---

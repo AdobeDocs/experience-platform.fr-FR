@@ -11,18 +11,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 218
+source-wordcount: 226
 ht-degree: 14%
 
 ---
 
-# [!UICONTROL End User ID Details] groupe de champs de schéma
+# [!UICONTROL Détails de l’ID de l’utilisateur final] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL End User ID Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire les informations d’identité d’un individu dans plusieurs applications Adobe. Le groupe de champs fournit un objet `endUserIDs` de niveau racine, qui contient lui-même un champ de `_experience` en lecture seule dont les valeurs sont automatiquement mises à jour lors de l’ingestion des données.
+[!UICONTROL Détails de l’ID de l’utilisateur final] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire les informations d’identité d’un individu dans plusieurs applications Adobe. Le groupe de champs fournit un objet `endUserIDs` de niveau racine, qui contient lui-même un champ de `_experience` en lecture seule dont les valeurs sont automatiquement mises à jour lors de l’ingestion des données.
 
 ![](../../images/field-groups/enduserids.png){width=700}
 

@@ -1,7 +1,7 @@
 ---
 title: B2B edition du modèle de données d’informations Real-Time Customer Data Platform
 description: Découvrez comment utiliser des requêtes SQL avec les modèles de données Real-Time Customer Data Platform Insights (B2B edition) pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et de KPI.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
 TQID: https://experienceleague.adobe.com/5zA8YXF364wlpGwZsTXqu99TOhFsSWGboM3KPEzt3qg
 product_v2:
@@ -19,7 +19,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 497
 ht-degree: 4%
 
 ---
@@ -65,13 +65,13 @@ Le diagramme ci-dessous affiche les champs de données pertinents dans chaque je
 
 #### Cas pratique des nouveaux comptes par secteur {#accounts-by-industry}
 
-La logique utilisée pour le [!UICONTROL New accounts by industry] insight renvoie les cinq principaux secteurs d’activité en fonction de leur nombre de profils de compte et de leur taille relative les uns par rapport aux autres. Pour plus d’informations[&#128279;](../guides/account-profiles.md#accounts-by-industry) consultez la documentation sur le widget [!UICONTROL New accounts By Industry] .
+La logique utilisée pour l’[!UICONTROL Nouveaux comptes par secteur d’activité] insight renvoie les cinq premiers secteurs d’activité en fonction de leur nombre de profils de compte et de leur taille relative les uns par rapport aux autres. Pour plus d’informations[&#128279;](../guides/account-profiles.md#accounts-by-industry) consultez la documentation du widget [!UICONTROL Nouveaux comptes par secteur] .
 
 >[!TIP]
 >
 >Vous pouvez personnaliser cette requête SQL pour qu’elle renvoie plus ou moins de valeurs que pour les cinq principaux secteurs d’activité.
 
-Le code SQL qui génère le [!UICONTROL New accounts by industry] insight est visible dans la section réductible ci-dessous.
+Le code SQL qui génère le [!UICONTROL Nouveaux comptes par secteur] insight est visible dans la section réductible ci-dessous.
 
 +++Requête SQL
 
@@ -110,9 +110,9 @@ LIMIT 5000;
 
 #### Cas d’utilisation des nouveaux comptes par type {#accounts-by-type}
 
-La logique utilisée par [!UICONTROL New accounts by type] insight renvoie la répartition numérique des comptes par type. Cette insight peut vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Pour plus d’informations[&#128279;](../guides/account-profiles.md#accounts-by-type) consultez la documentation sur le widget [!UICONTROL New accounts by type] .
+La logique utilisée pour la [!UICONTROL Nouveaux comptes par type] insight renvoie la répartition numérique des comptes par type. Cette insight peut vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Pour plus d’informations&rbrack; consultez la documentation du widget &lbrack;[[!UICONTROL Nouveaux comptes par type]](../guides/account-profiles.md#accounts-by-type) .
 
-Le code SQL qui génère le [!UICONTROL New accounts by type] insight est visible dans la section réductible ci-dessous.
+Le code SQL qui génère le [!UICONTROL Nouveaux comptes par type] insight est visible dans la section réductible ci-dessous.
 
 +++Requête SQL
 

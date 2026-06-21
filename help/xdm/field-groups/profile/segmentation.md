@@ -16,18 +16,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 420
+source-wordcount: 426
 ht-degree: 19%
 
 ---
 
-# [!UICONTROL Segment Membership Details] groupe de champs de schéma
+# [!UICONTROL Détails sur l’appartenance à un segment] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Segment Membership Details] groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique qui recueille des informations sur l’appartenance au segment, notamment les segments auxquels appartient la personne, l’heure de la dernière qualification et la date de validité de l’abonnement.
+[!UICONTROL Détails de l’appartenance à un segment] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique qui recueille des informations sur l’appartenance au segment, notamment les segments auxquels appartient la personne, l’heure de la dernière qualification et la date de validité de l’abonnement.
 
 >[!WARNING]
 >

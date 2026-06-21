@@ -16,14 +16,14 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 322
+source-wordcount: 325
 ht-degree: 18%
 
 ---
 
 # Type de données [!UICONTROL Device]
 
-[!UICONTROL Device] est un type de données XDM standard qui décrit un appareil identifié. Un appareil est une instance de navigateur ou d’application pouvant être suivie entre les sessions, généralement par des cookies.
+[!UICONTROL Appareil] est un type de données XDM standard qui décrit un appareil identifié. Un appareil est une instance de navigateur ou d’application pouvant être suivie entre les sessions, généralement par des cookies.
 
 ![](../images/data-types/device.png){width=450}
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Device].
+La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Appareil].
 
 ## Valeurs acceptées pour typeIDService {#typeIDService}
 

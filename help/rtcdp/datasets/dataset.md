@@ -14,13 +14,13 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 113
+source-wordcount: 115
 ht-degree: 0%
 
 ---
 
 # Jeux de données dans Real-Time Customer Data Platform
 
-Dans l’interface utilisateur de Real-Time Customer Data Platform, vous pouvez afficher et gérer tous les jeux de données créés par votre organisation ainsi qu’en créer. Pour parcourir les jeux de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche. L’onglet **[!UICONTROL Browse]** contient une liste de jeux de données, y compris des colonnes indiquant le nom, la date et l’heure de création, la source, le schéma et le statut du dernier lot, ainsi que la date et l’heure de la dernière mise à jour du jeu de données.
+Dans l’interface utilisateur de Real-Time Customer Data Platform, vous pouvez afficher et gérer tous les jeux de données créés par votre organisation ainsi qu’en créer. Pour parcourir les jeux de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L’onglet **[!UICONTROL Parcourir]** contient une liste de jeux de données, y compris des colonnes indiquant le nom, le nom créé (date et heure), la source, le schéma et le statut du dernier lot, ainsi que la date et l’heure de la dernière mise à jour du jeu de données.
 
 Pour plus d’informations sur les jeux de données dans [!DNL Experience Platform], commencez par lire la [&#x200B; Présentation des jeux de données &#x200B;](../../catalog/datasets/overview.md).

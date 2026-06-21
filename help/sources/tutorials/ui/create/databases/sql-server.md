@@ -14,8 +14,8 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 458
-ht-degree: 38%
+source-wordcount: 479
+ht-degree: 37%
 
 ---
 
@@ -48,31 +48,31 @@ Pour plus d’informations sur la prise en main, consultez [ce [!DNL SQL Server]
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie *Bases de données*, sélectionnez **[!DNL Microsoft SQL Server]**, puis **[!UICONTROL Set up]**.
+Dans la catégorie *Bases de données*, sélectionnez **[!DNL Microsoft SQL Server]**, puis **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la source SQL Server Microsoft sélectionnée.](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-La page **[!UICONTROL Connect to Microsoft SQL Server]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connexion à Microsoft SQL Server]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 >[!BEGINTABS]
 
 >[!TAB Créer un compte]
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom, une description facultative et vos informations d’identification.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom, une description facultative et vos informations d’identification.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvelle interface de compte avec les détails de connexion source saisis et mis en surbrillance.](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 >[!TAB Utiliser un compte existant]
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte à utiliser dans le catalogue des comptes existants.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans le catalogue des comptes existants.
 
-Sélectionnez **[!UICONTROL Next]** pour continuer.
+Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Interface du compte existant qui affiche une liste des comptes existants.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 

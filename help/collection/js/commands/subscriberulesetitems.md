@@ -4,7 +4,7 @@ description: Abonnez-vous aux cartes de contenu pour une surface spécifique à 
 exl-id: bc932ba5-a810-4fa6-82cc-998af39fdd34
 source-git-commit: 3ecfc2258e63a34a739ab8b296437c357d1dd9d1
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '439'
 ht-degree: 3%
 
 ---

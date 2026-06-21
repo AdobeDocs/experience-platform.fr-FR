@@ -21,8 +21,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 537
-ht-degree: 2%
+source-wordcount: 578
+ht-degree: 3%
 
 ---
 
@@ -46,25 +46,25 @@ Ensuite, [créez un élément de données](../../../ui/managing-resources/data-e
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou choisissez plutôt une propriété existante à modifier.
 
-Sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez **[!UICONTROL Install]** sur la carte de l’extension [!DNL Google Cloud Platform].
+Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez **[!UICONTROL Installer]** sur la carte de l’extension [!DNL Google Cloud Platform].
 
 ![Extension de [!DNL Google Cloud Platform] de catalogue mettant en surbrillance install.](../../../images/extensions/server/google-cloud-platform/install-extension.png)
 
-Dans l’écran de configuration, saisissez le secret de l’élément de données que vous avez créé précédemment dans le champ **[!UICONTROL Access Token]** . Le secret de l’élément de données contiendra votre jeton OAuth 2 [!DNL Google Cloud Platform]. Sélectionnez **[!UICONTROL Save]** (Enregistrer) une fois terminé.
+Dans l’écran de configuration, saisissez le secret de l’élément de données que vous avez créé précédemment dans le champ **[!UICONTROL Jeton d’accès]**. Le secret de l’élément de données contiendra votre jeton OAuth 2 [!DNL Google Cloud Platform]. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
 ![Page de configuration de l’extension [!DNL Google Cloud Platform].](../../../images/extensions/server/google-cloud-platform/configure-extension.png)
 
 ## Créer une règle de [!DNL Send Data to Cloud Pub/Sub] {#tracking-rule}
 
-Une fois l’extension installée, créez une nouvelle [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la configuration des actions pour la règle, cliquez sur l’extension **[!UICONTROL Google Cloud Platform]**, puis sélectionnez **[!UICONTROL Send Data to Cloud Pub/Sub]** pour le type d’action.
+Une fois l’extension installée, créez une nouvelle [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la configuration des actions pour la règle, sélectionnez l’extension **[!UICONTROL Google Cloud Platform]**, puis sélectionnez **[!UICONTROL Envoyer les données à Cloud Pub/Sub]** pour le type d’action.
 
-![Vue de configuration des actions pour [!UICONTROL Google Cloud Platform], avec l’action mise en surbrillance et [!UICONTROL Send Data to Cloud Pub/Sub].](../../../images/extensions/server/google-cloud-platform/event-action.png)
+![Vue de configuration de l’action pour [!UICONTROL Google Cloud Platform], avec l’action mise en surbrillance et [!UICONTROL Envoyer les données à Cloud Pub/Sub].](../../../images/extensions/server/google-cloud-platform/event-action.png)
 
 | Entrée | Description |
 | --- | --- |
-| [!UICONTROL Topic] | Rubrique qui recevra les événements du transfert d’événement. Le format de la valeur doit être `projects/{projectName}/topics/{topicName}`. |
-| [!UICONTROL Data] | Ce champ contient les données à transférer à la rubrique [!DNL Cloud Pub/Sub] au format JSON.<br><br>Sous l’option **[!UICONTROL Raw]** , vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![icône de jeu de données](/help/images/icons/database.png)) à sélectionner dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL JSON Key-Value Pairs Editor]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
-| [!UICONTROL Attributes] | Ce champ contient l’objet JSON avec des attributs supplémentaires à envoyer avec le message.<br><br>Sous l’option **[!UICONTROL Raw]** , vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![icône de jeu de données](/help/images/icons/database.png)) à sélectionner dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL JSON Key-Value Pairs Editor]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
+| [!UICONTROL Sujet] | Rubrique qui recevra les événements du transfert d’événement. Le format de la valeur doit être `projects/{projectName}/topics/{topicName}`. |
+| [!UICONTROL Data] (Données) | Ce champ contient les données à transférer à la rubrique [!DNL Cloud Pub/Sub] au format JSON.<br><br>Sous l’option **[!UICONTROL Raw]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![icône de jeu de données](/help/images/icons/database.png)) à sélectionner dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
+| [!UICONTROL &#x200B; Attributs &#x200B;] | Ce champ contient l’objet JSON avec des attributs supplémentaires à envoyer avec le message.<br><br>Sous l’option **[!UICONTROL Raw]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni ou sélectionner l’icône d’élément de données (![icône de jeu de données](/help/images/icons/database.png)) à sélectionner dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur par le biais d’un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
 
 {style="table-layout:auto"}
 

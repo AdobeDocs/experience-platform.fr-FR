@@ -20,7 +20,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 3182
+source-wordcount: 3193
 ht-degree: 3%
 
 ---
@@ -69,7 +69,7 @@ Pour exécuter des requêtes dans Query Service, un rôle doit être attribué �
 
 | Autorisation | Description |
 |---|---|
-| [!UICONTROL Manage Queries] | Cette autorisation permet aux utilisateurs et utilisatrices d’exécuter des requêtes d’exploration des données et par lots, qui peuvent lire un jeu de données existant ou écrire des données sur des jeux de données. Cela inclut les requêtes `CREATE TABLE AS SELECT` (`CTAS`) et `INSERT INTO AS SELECT` (`ITAS`). |
+| [!UICONTROL Gérer les requêtes] | Cette autorisation permet aux utilisateurs et utilisatrices d’exécuter des requêtes d’exploration des données et par lots, qui peuvent lire un jeu de données existant ou écrire des données sur des jeux de données. Cela inclut les requêtes `CREATE TABLE AS SELECT` (`CTAS`) et `INSERT INTO AS SELECT` (`ITAS`). |
 
 **Autorisations des jeux de données**
 
@@ -79,8 +79,8 @@ Grâce à l’interface Autorisations , vous pouvez définir un contrôle d’ac
 
 | Autorisation | Description |
 |---|---|
-| [!UICONTROL Manage Datasets] | Cette autorisation fournit un accès en lecture seule aux schémas et permet d’accéder à la lecture, la création, la modification et la suppression des jeux de données à utiliser avec Query Service. |
-| [!UICONTROL View Datasets] | Cette autorisation permet un accès en lecture seule aux jeux de données et aux schémas à utiliser avec Query Service. |
+| [!UICONTROL Gestion des jeux de données] | Cette autorisation fournit un accès en lecture seule aux schémas et permet d’accéder à la lecture, la création, la modification et la suppression des jeux de données à utiliser avec Query Service. |
+| [!UICONTROL Affichage des jeux de données] | Cette autorisation permet un accès en lecture seule aux jeux de données et aux schémas à utiliser avec Query Service. |
 
 #### Contrôle d’accès pour les colonnes/champs
 
@@ -111,9 +111,9 @@ Le mot-clé `CREATE VIEW` définit une vue d&#39;une requête, mais la vue n&#39
 
 Grâce à la fonctionnalité de contrôle d’accès basé sur les attributs [attribute-based access control](../../access-control/abac/overview.md) vous pouvez définir des portées d’utilisation des données ou de l’organisation sur les jeux de données de faits et de dimensions dans la [boutique accélérée](../data-distiller/sql-insights/send-accelerated-queries.md). Cela permet aux administrateurs et administratrices de gérer l’accès à des segments spécifiques et de mieux gérer l’accès accordé aux utilisateurs et utilisatrices ou groupes d’utilisateurs et d’utilisatrices.
 
-Pour créer des restrictions d’accès basées sur les champs sur des jeux de données accélérés, vous pouvez utiliser les requêtes CTAS de Query Service pour créer des jeux de données accélérés et structurer ces jeux de données en fonction des schémas XDM ou des schémas ad hoc existants. Les administrateurs peuvent ensuite [ajouter et modifier des libellés d’utilisation des données pour le schéma](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [schéma ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Vous pouvez appliquer, créer et modifier des libellés à vos schémas à partir de l’espace de travail [!UICONTROL Labels] dans l’interface utilisateur de [!UICONTROL Schemas].
+Pour créer des restrictions d’accès basées sur les champs sur des jeux de données accélérés, vous pouvez utiliser les requêtes CTAS de Query Service pour créer des jeux de données accélérés et structurer ces jeux de données en fonction des schémas XDM ou des schémas ad hoc existants. Les administrateurs peuvent ensuite [ajouter et modifier des libellés d’utilisation des données pour le schéma](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [schéma ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Vous pouvez appliquer, créer et modifier des libellés à vos schémas à partir de l’espace de travail [!UICONTROL Libellés] de l’interface utilisateur [!UICONTROL Schémas].
 
-Les libellés d’utilisation des données peuvent également être [appliqués ou modifiés directement sur le jeu de données](../../data-governance/labels/user-guide.md#add-labels) via l’interface utilisateur des jeux de données, ou créés à partir de l’espace de travail [!UICONTROL Labels] du contrôle d’accès . Pour plus d’informations, consultez le guide sur la façon de [créer un libellé](../../access-control/abac/ui/labels.md).
+Les libellés d’utilisation des données peuvent également être [appliqués ou modifiés directement sur le jeu de données](../../data-governance/labels/user-guide.md#add-labels) via l’interface utilisateur des jeux de données, ou créés à partir de l’espace de travail Contrôle d’accès [!UICONTROL Libellés]. Pour plus d’informations, consultez le guide sur la façon de [créer un libellé](../../access-control/abac/ui/labels.md).
 
 L’accès des utilisateurs et utilisatrices à des colonnes individuelles peut ensuite être contrôlé par les libellés d’utilisation des données joints et les jeux d’autorisations appliqués aux rôles affectés aux utilisateurs et utilisatrices.
 
@@ -166,7 +166,7 @@ Toutes les catégories de journal peuvent être demandées par un utilisateur d�
 
 L’interface utilisateur des journaux de requête vous permet de surveiller et de consulter les détails d’exécution de toutes les requêtes qui ont été exécutées via Query Editor ou l’API Query Service. Cela apporte de la transparence aux activités de Query Service, ce qui vous permet de vérifier les métadonnées de **toutes** les requêtes qui ont été exécutées dans Query Service. Il inclut tous les types de requêtes, qu’il s’agisse d’une requête exploratoire, par lots ou planifiée.
 
-Les journaux de requête sont accessibles via l’interface utilisateur d’Experience Platform dans l’onglet [!UICONTROL Logs] de l’espace de travail [!UICONTROL Queries].
+Les journaux de requête sont accessibles via l’interface utilisateur d’Experience Platform dans l’onglet [!UICONTROL &#x200B; Journaux &#x200B;] de l’espace de travail [!UICONTROL Requêtes].
 
 ![Onglet Journal des requêtes avec le panneau des détails mis en surbrillance.](../images/data-governance/overview/queries-log.png)
 
@@ -194,7 +194,7 @@ Pour plus d’informations sur la manière dont les journaux d’audit peuvent a
 
 ## Utilisation des données {#data-usage}
 
-Le cadre de gouvernance des données dans Experience Platform offre un moyen uniforme d’utiliser les données de manière responsable sur l’ensemble des solutions, services et plateformes Adobe. Il coordonne l’approche systémique de la capture, de la communication et de l’utilisation des métadonnées dans l’ensemble de Adobe Experience Cloud. Cela permet aux contrôleurs de données d’étiqueter les données en fonction des actions marketing nécessaires et des restrictions placées sur ces données à partir de ces actions marketing prévues. Consultez la présentation des [libellés d’utilisation des données](../../data-governance/labels/overview.md) pour plus d’informations sur la manière dont la gouvernance des données vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs.
+Le cadre de gouvernance des données dans Experience Platform offre un moyen uniforme d’utiliser les données de manière responsable sur l’ensemble des solutions, services et plateformes Adobe. Il coordonne l’approche systémique de la capture, de la communication et de l’utilisation des métadonnées dans l’ensemble d’Adobe Experience Cloud. Cela permet aux contrôleurs de données d’étiqueter les données en fonction des actions marketing nécessaires et des restrictions placées sur ces données à partir de ces actions marketing prévues. Consultez la présentation des [libellés d’utilisation des données](../../data-governance/labels/overview.md) pour plus d’informations sur la manière dont la gouvernance des données vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs.
 
 Il est recommandé d’œuvrer à la conformité des données à chaque étape du parcours des données. À cette fin, les jeux de données dérivés qui utilisent des schémas ad hoc doivent être étiquetés de manière appropriée dans le cadre de la gouvernance des données. Il existe deux types de jeux de données dérivés formés par Query Service : les jeux de données qui utilisent un schéma standard et les jeux de données qui utilisent un schéma ad hoc.
 

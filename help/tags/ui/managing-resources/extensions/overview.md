@@ -20,8 +20,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 474
-ht-degree: 94%
+source-wordcount: 481
+ht-degree: 83%
 
 ---
 
@@ -39,13 +39,13 @@ Les extensions déterminent les éléments disponibles lors de la création de p
 
 Utilisez les liens situés en haut de la liste Extensions pour afficher les extensions installées, le catalogue des extensions ou les mises à jour.
 
-Sélectionnez une extension, puis cliquez sur [!UICONTROL Configure] pour afficher et modifier les paramètres de l’extension. Pour plus dʼinformations sur les options des extensions, voir la section sur lʼ[ajout dʼune nouvelle extension](#add-a-new-extension).
+Sélectionnez une extension, puis cliquez sur [!UICONTROL Configurer] pour afficher et modifier les paramètres de l’extension. Pour plus dʼinformations sur les options des extensions, voir la section sur lʼ[ajout dʼune nouvelle extension](#add-a-new-extension).
 
 >[!IMPORTANT]
 >
 >Les modifications ne prennent effet que lorsqu’elles sont [publiées](../../publishing/overview.md).
 
-Par défaut, Adobe fournit des extensions qui prennent en charge les intégrations courantes. Les extensions peuvent être modifiées par des configurations personnalisées. Les configurations sont fournies par le biais des extensions. Pour créer une configuration, cliquez sur la carte d’extension, puis cliquez sur **[!UICONTROL Add New Configuration]**.
+Par défaut, Adobe fournit des extensions qui prennent en charge les intégrations courantes. Les extensions peuvent être modifiées par des configurations personnalisées. Les configurations sont fournies par le biais des extensions. Pour créer une configuration, sélectionnez la carte d’extension, puis sélectionnez **[!UICONTROL Ajouter une nouvelle configuration]**.
 
 ## Catalogue d’extensions
 
@@ -63,7 +63,7 @@ La page Extensions propose trois options d’affichage :
 
   Affiche les mises à jour des extensions installées.
 
-Cliquez sur **[!UICONTROL Extensions]** pour afficher toutes les extensions installées. Vous pouvez également utiliser le catalogue pour afficher la liste de toutes les extensions disponibles et les extensions pour lesquelles des mises à jour sont disponibles.
+Sélectionnez **[!UICONTROL Extensions]** pour afficher toutes les extensions installées. Vous pouvez également utiliser le catalogue pour afficher la liste de toutes les extensions disponibles et les extensions pour lesquelles des mises à jour sont disponibles.
 
 Pour plus dʼinformations sur les extensions développées par Adobe, voir [Référence des extensions](../../../extensions/client/overview.md).
 
@@ -75,7 +75,7 @@ Nombre de fonctionnalités peuvent être ajoutées aux balises. Les extensions a
 >
 >Utilisez l’aide du produit dans le panneau de droite pour en savoir plus sur les extensions et afficher les ressources supplémentaires disponibles.
 
-1. Ouvrez l’onglet **[!UICONTROL Extensions]** à partir de la page overview (aperçu) de la propriété.
+1. Ouvrez l’onglet **[!UICONTROL Extensions]** à partir de la page d’aperçu de la propriété.
 1. Sélectionnez l’extension.
 
    ![Onglet Catalogue affichant les extensions principales dans l’onglet Extensions.](../../../images/extensions.png)
@@ -96,7 +96,7 @@ Lors de la création ou de la modification d’éléments, vous pouvez enregistr
 
 ## Configuration d’une extension
 
-Placez le pointeur de la souris sur une extension installée et cliquez sur **[!UICONTROL Configure]**.
+Placez le pointeur de la souris sur une extension installée et sélectionnez **[!UICONTROL Configurer]**.
 
 >[!NOTE]
 >

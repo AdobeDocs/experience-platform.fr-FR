@@ -12,7 +12,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 902
+source-wordcount: 903
 ht-degree: 22%
 
 ---
@@ -124,7 +124,7 @@ Au cours de cette étape, vous pouvez regrouper les options affichées dans l’
 
 ### Classer les options de formatage des fichiers {#ordering}
 
-L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, avec les options affichées dans l’ordre **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
+L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur : les options s’affichent dans l’ordre **[!UICONTROL Délimiteur]**, **[!UICONTROL Caractère guillemet]**, **[!UICONTROL Caractère d’échappement]**, **[!UICONTROL Valeur vide]**, **[!UICONTROL Valeur nulle]**.
 
 ![Image indiquant l’ordre des options de formatage de fichier dans l’interface utilisateur d’Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -249,7 +249,7 @@ L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant q
 
 Vous pouvez regrouper plusieurs options de formatage de fichier dans une seule section. Pendant la configuration de la connexion à la destination dans l’interface utilisateur, l’utilisateur peut voir et bénéficier d’un regroupement visuel par champs similaires.
 
-Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les options de formatage de fichier de votre choix dans un paramètre de `properties`, comme illustré dans l’exemple ci-dessous, où le **[!UICONTROL CSV Options]** de regroupement est mis en surbrillance.
+Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les options de formatage de fichier de votre choix dans un paramètre de `properties`, comme illustré dans l’exemple ci-dessous, où le regroupement **[!UICONTROL Options CSV]** est mis en surbrillance.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[

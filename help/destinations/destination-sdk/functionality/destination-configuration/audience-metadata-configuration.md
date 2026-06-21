@@ -15,8 +15,8 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 402
-ht-degree: 75%
+source-wordcount: 408
+ht-degree: 74%
 
 ---
 
@@ -67,9 +67,9 @@ Pendant la création de la configuration des métadonnées d’audience, vous po
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booléen | Indique si la valeur [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre au nom de l’audience Experience Platform. |
-| `mapExperiencePlatformSegmentId` | Booléen | Indique si la valeur [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre à l’ID d’audience Experience Platform. |
-| `mapUserInput` | Booléen | Active ou désactive l’entrée utilisateur pour la valeur [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination. S’il est défini sur `true`, `audienceTemplateId` ne peut pas être présent. |
+| `mapExperiencePlatformSegmentName` | Booléen | Indique si la valeur [[!UICONTROL ID de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre au nom de l’audience Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booléen | Indique si la valeur [[!UICONTROL ID de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre à l’ID d’audience Experience Platform. |
+| `mapUserInput` | Booléen | Active ou désactive l’entrée utilisateur pour la valeur [[!UICONTROL ID de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination. S’il est défini sur `true`, `audienceTemplateId` ne peut pas être présent. |
 | `audienceTemplateId` | Chaîne | `instanceId` du [modèle de métadonnées d’audience](../../metadata-api/create-audience-template.md) utilisé pour votre destination. |
 
 {style="table-layout:auto"}

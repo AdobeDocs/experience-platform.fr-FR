@@ -4,8 +4,8 @@ description: Découvrez l’objet Contexte ainsi que son rôle dans l’interact
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 100%
+source-wordcount: '713'
+ht-degree: 96%
 
 ---
 
@@ -38,7 +38,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-L’objet `request` présente deux propriétés de niveau supérieur : `body` et `head`. La propriété `body` contient des informations sur le modèle de données d’expérience (XDM) et peut être inspectée dans le débogueur Adobe Experience Platform lorsque vous accédez à **[!UICONTROL Launch]** et sélectionnez l’onglet **[!UICONTROL Edge Trace]**.
+L’objet `request` présente deux propriétés de niveau supérieur : `body` et `head`. La propriété `body` contient des informations sur le modèle de données d’expérience (XDM) et peut être inspectée dans Adobe Experience Platform Debugger lorsque vous accédez à **[!UICONTROL Launch]** et sélectionnez l’onglet **[!UICONTROL Edge Trace]**.
 
 ### [!DNL ruleStash] {#rulestash}
 

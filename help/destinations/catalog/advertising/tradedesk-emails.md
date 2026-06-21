@@ -15,8 +15,8 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1861
-ht-degree: 9%
+source-wordcount: 1818
+ht-degree: 10%
 
 ---
 
@@ -136,8 +136,8 @@ Voici ce que vous devez savoir sur les exigences de normalisation des numéros d
 
       * États-Unis : 1 (234) 567-8901 est normalisé à +12345678901.
      * Singapour : 65 1243 5678 est normalisé à +6512345678.
-     * Australie : le numéro de téléphone mobile 0491 570 006 est normalisé pour ajouter le code de pays et supprimer le zéro en début : +61491570006.
-     * Royaume-Uni : le numéro de téléphone mobile 07812 est normalisé pour ajouter le code de pays et supprimer le zéro en début : +345678.447812345678 
+     * Australie : le numéro de téléphone mobile 0491 570 006 est normalisé pour ajouter le code de pays et déposer le zéro de début : +61491570006.
+     * Royaume-Uni : le numéro de téléphone mobile 07812 345678 est normalisé pour ajouter le code de pays et déposer le zéro de début : +447812345678.
   
 Assurez-vous que le numéro de téléphone normalisé est UTF-8, et non un autre système d’encodage tel que UTF-16.
 
@@ -161,8 +161,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
-| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [&#x200B; exportations par lots &#x200B;](/help/destinations/destination-types.md#file-based). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
+| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [&#x200B; exportations par lots &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -180,10 +180,10 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de pouvoir envoyer ou activer des données d’audience vers une destination, vous devez configurer une connexion à votre propre plateforme de destination. Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) de cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Account Type]** : Merci de choisir l&#39;option **[!UICONTROL Existing Account]**.
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Type de compte]** : veuillez choisir l’option **[!UICONTROL Compte existant]**.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Advertiser ID]** : votre [!DNL Trade Desk Advertiser ID], qui peut être partagée par votre gestionnaire de compte [!DNL Trade Desk] ou qui se trouve sous [!DNL Advertiser Preferences] dans l’interface utilisateur de [!DNL Trade Desk].
+* **[!UICONTROL ID publicitaire]** : votre [!DNL Trade Desk Advertiser ID], qui peut être partagé par votre gestionnaire de compte [!DNL Trade Desk] ou qui se trouve sous [!DNL Advertiser Preferences] dans l’interface utilisateur de [!DNL Trade Desk].
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment remplir les détails de destination.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
@@ -193,12 +193,12 @@ Lors de la connexion à la destination , la définition d’une politique de gou
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers une destination.
 
-Dans la page **[!UICONTROL Scheduling]** , vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
+Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
@@ -208,7 +208,7 @@ Dans la page **[!UICONTROL Scheduling]** , vous pouvez configurer le planning et
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-Dans la page **[!UICONTROL Mapping]**, vous devez sélectionner des attributs ou des espaces de noms d’identité dans la colonne source et les mapper à la colonne cible.
+Sur la page **[!UICONTROL Mappage]**, vous devez sélectionner des attributs ou des espaces de noms d’identité dans la colonne source et les mapper à la colonne cible.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour mapper l’activation des audiences.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
@@ -240,8 +240,8 @@ Sélection des champs source et cible :
 
 Pour vérifier que les données sont correctement exportées depuis Experience Platform et vers [!DNL The Trade Desk], recherchez les audiences sous l’onglet Adobe 1PD dans [!DNL The Trade Desk] bibliothèque « Données et identité de l’annonceur ». Pour trouver l’identifiant correspondant dans l’interface utilisateur de [!DNL Trade Desk], procédez comme suit :
 
-1. Sélectionnez tout d’abord l’onglet **[!UICONTROL Libraries]** , puis passez en revue la section **[!UICONTROL Advertiser data and identity]** .
-2. Sélectionnez le **[!UICONTROL Adobe 1PD]** pour qu’il répertorie toutes les audiences activées à [!DNL The Trade Desk].
+1. Sélectionnez tout d’abord l’onglet **[!UICONTROL Bibliothèques]**, puis consultez la section **[!UICONTROL Données et identité de l’annonceur]**.
+2. Sélectionnez **[!UICONTROL Adobe 1PD]** pour répertorier toutes les audiences activées à [!DNL The Trade Desk].
 3. Le nom de segment ou l’identifiant de segment d’Experience Platform s’affiche en tant que nom de segment dans l’interface utilisateur de [!DNL Trade Desk].
 
 ## Utilisation et gouvernance des données {#data-usage-governance}

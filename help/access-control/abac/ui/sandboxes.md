@@ -12,8 +12,8 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 317
-ht-degree: 28%
+source-wordcount: 336
+ht-degree: 27%
 
 ---
 
@@ -29,21 +29,21 @@ Les sandbox sont des partitions virtuelles au sein d’une seule instance de Ado
 
 ## Explorer les sandbox {#explore-sandboxes}
 
-Pour afficher les détails d’un sandbox et les rôles associés, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Sandboxes]** dans la section **[!UICONTROL Resources]** du panneau de gauche.
+Pour afficher les détails d’un sandbox et les rôles associés, accédez à **[!UICONTROL Autorisations]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Sandbox]** dans la section **[!UICONTROL Ressources]** du panneau de gauche.
 
-Une liste des sandbox de votre organisation s’affiche. Sélectionnez le sandbox à afficher dans la liste. Vous pouvez également rechercher un sandbox en saisissant son nom dans la barre de recherche ou le filtrer par type en sélectionnant l’icône de filtre (![icône de filtre](../../../images/icons/filter.png)) et en utilisant le menu déroulant **[!UICONTROL Sandbox Type]**.
+Une liste des sandbox de votre organisation s’affiche. Sélectionnez le sandbox à afficher dans la liste. Vous pouvez également rechercher un sandbox en saisissant son nom dans la barre de recherche ou le filtrer par type en sélectionnant l’icône de filtre (![icône de filtre](../../../images/icons/filter.png)) et en utilisant le menu déroulant **[!UICONTROL Type de sandbox]**.
 
 ![Espaces de travail Sandbox dans Autorisations.](../../images/ui/sandboxes/sandboxes-overview.png){zoomable="yes"}
 
 >[!NOTE]
 >
->L’espace de travail Sandbox dans Autorisations n’autorise aucune action de gestion des sandbox. Pour gérer les sandbox, sélectionnez l’option **[!UICONTROL Open sandbox manager]** dans le coin supérieur droit de l’espace de travail.
+>L’espace de travail Sandbox dans Autorisations n’autorise aucune action de gestion des sandbox. Pour gérer les sandbox, sélectionnez l’option **[!UICONTROL Ouvrir le gestionnaire de sandbox]** dans le coin supérieur droit de l’espace de travail.
 
-L’onglet **[!UICONTROL Details]** donne un aperçu du sandbox. La vue d’ensemble affiche les **[!UICONTROL Title]**, **[!UICONTROL Sandbox Name]**, **[!UICONTROL Type]**, **[!UICONTROL Region]**, **[!UICONTROL Modified]** date, **[!UICONTROL Modified by]** et les **[!UICONTROL Status]** du sandbox.
+L’onglet **[!UICONTROL Détails]** donne un aperçu du sandbox. La présentation affiche les **[!UICONTROL Titre]**, **[!UICONTROL Nom du sandbox]**, **[!UICONTROL Type]**, **[!UICONTROL Région]**, **[!UICONTROL Modifié]** date, **[!UICONTROL Modifié par]** et **[!UICONTROL Status]** du sandbox.
 
 ![Espace de travail Détails du sandbox.](../../images/ui/sandboxes/sandbox-details.png){zoomable="yes"}
 
-Sélectionnez l’onglet **[!UICONTROL Roles]** pour afficher les rôles affectés au sandbox. Sélectionner un rôle vous amènera à l’espace de travail du rôle.
+Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher les rôles auxquels le sandbox est affecté. Sélectionner un rôle vous amènera à l’espace de travail du rôle.
 
 <!-- To manage the role's sandboxes, follow the [](./roles.md) guide. -->
 

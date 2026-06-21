@@ -17,16 +17,16 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 126
-ht-degree: 50%
+source-wordcount: 129
+ht-degree: 48%
 
 ---
 
-# Tableau de bord [!UICONTROL Profiles] {#profile-dashboard}
+# Tableau de bord [!UICONTROL Profils] {#profile-dashboard}
 
 L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données [!DNL Real-Time Customer Profile], présentées ainsi lors d’un instantané quotidien.
 
-Pour obtenir des instructions détaillées sur l’accès au tableau de bord de l’[!UICONTROL Profiles] et les interactions avec celui-ci dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le guide du tableau de bord de l’[[!UICONTROL Profiles] &#x200B;](../../dashboards/guides/profiles.md).
+Pour obtenir des instructions détaillées sur l’accès au tableau de bord [!UICONTROL Profils] et les interactions avec celui-ci dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le guide du tableau de bord [[!UICONTROL Profils]](../../dashboards/guides/profiles.md).
 
 Pour découvrir toutes les fonctionnalités des tableaux de bord dans l’interface utilisateur d’Experience Platform, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
 

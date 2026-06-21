@@ -161,7 +161,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Propriété | Description |
 | --- | --- |
 | Nom du conteneur | Nom de votre conteneur. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
-| Compte d’enregistrement | Nom de votre compte de stockage. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
+| Compte de stockage | Nom de votre compte de stockage. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
 | Jeton SAS | Jeton de signature d’accès partagé pour votre [!DNL Azure Blob Storage]. Vous pouvez obtenir cette valeur en récupérant vos informations d’identification [!DNL Azure Blob Storage]. |
 
 ![Interface utilisateur des briques de données dans Azure.](../../images/tutorials/create/databricks/databricks-ui.png)

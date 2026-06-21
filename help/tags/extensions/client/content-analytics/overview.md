@@ -21,7 +21,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 529
+source-wordcount: 561
 ht-degree: 0%
 
 ---
@@ -67,11 +67,11 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Configurer les flux de données
 
-L&#39;assistant de configuration guidé [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided) sélectionne automatiquement la valeur appropriée pour le **[!UICONTROL Sandbox]** et le **[!UICONTROL Production Datastream]**. Vous pouvez éventuellement configurer un **[!UICONTROL Staging Datastream]** et un **[!UICONTROL Development Datastream]** supplémentaires.
+L’assistant de configuration guidée de [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided) sélectionne automatiquement la valeur appropriée pour le **[!UICONTROL Sandbox]** et le **[!UICONTROL Flux de données de production]**. Vous pouvez éventuellement configurer un **[!UICONTROL Flux de données d’évaluation]** et un **[!UICONTROL Flux de données de développement]** supplémentaires.
 
 ![Image illustrant la configuration des flux de données de l’extension de balise Adobe Content Analytics dans l’interface utilisateur des balises](assets/aca-tag-datastreams.png)
 
-Vous pouvez remplacer les valeurs sélectionnées automatiquement pour **[!UICONTROL Sandbox]** et **[!UICONTROL Production Datastream]** si vous souhaitez utiliser Content Analytics sur un autre sandbox et avec différents flux de données. Ce faisant, vous pouvez sélectionner un sandbox et des flux de données à partir des menus déroulants disponibles, ou sélectionner **[!UICONTROL Enter values]** et saisir un identifiant de flux de données personnalisé pour chaque environnement.
+Vous pouvez remplacer les valeurs automatiques sélectionnées pour **[!UICONTROL Sandbox]** et **[!UICONTROL Flux de données de production]** si vous souhaitez utiliser Content Analytics sur un autre sandbox et avec différents flux de données. Ce faisant, vous pouvez sélectionner un sandbox et des flux de données à partir des menus déroulants disponibles, ou sélectionner **[!UICONTROL Saisir des valeurs]** et saisir un identifiant de flux de données personnalisé pour chaque environnement.
 
 >[!IMPORTANT]
 >
@@ -84,21 +84,21 @@ Consultez le guide sur [les flux de données](../../../../datastreams/overview.m
 
 ## Configurer la capture et la définition de l’expérience
 
-Dans la section **[!UICONTROL Experience Capture & Definition]** , vous pouvez **[!UICONTROL Include Experiences]** à inclure des expériences lors de la collecte de données pour Content Analytics.
+Dans la section **[!UICONTROL Capture et définition d’expérience]**, vous pouvez activer l’option **[!UICONTROL Inclure des expériences]** pour inclure des expériences lors de la collecte de données pour Content Analytics.
 
 ![Image illustrant la section Capture et définition d’expérience dans l’extension](assets/aca-tag-experiencecapture.png)
 
-1. Activez **[!UICONTROL Include experiences]**.
-1. Facultatif. spécifiez les paramètres de rendu du contenu sur votre site web. Les paramètres sont zéro ou plusieurs combinaisons d’un **[!UICONTROL Domain regular expression]** et d’un **[!UICONTROL Query parameters]**.
-   1. Saisissez un **[!UICONTROL Domain regular expression]**, par exemple `^(?!.*\b(store|help|admin)\b)`.
-   1. Spécifiez une liste de **[!UICONTROL Query parameters]** séparés par des virgules, par exemple `outdoors, patio, kitchen`.
-Utilisez ![Fermer](./assets/CrossSize300.svg) pour supprimer des paramètres individuels ou **[!UICONTROL Clear all]** pour supprimer tous les paramètres.
-1. Sélectionnez **[!UICONTROL Remove]** si vous souhaitez supprimer une combinaison d’expressions régulières du domaine et de paramètres de requête.
-1. Sélectionnez **[!UICONTROL Add Regex]** si vous souhaitez ajouter une autre combinaison d’une expression régulière et de paramètres de requête.
+1. Activez **[!UICONTROL Inclure des expériences]**.
+1. Facultatif. spécifiez les paramètres de rendu du contenu sur votre site web. Les paramètres consistent en zéro ou plusieurs combinaisons d’une **[!UICONTROL Expression régulière du domaine]** et **[!UICONTROL Paramètres de requête]**.
+   1. Saisissez une **[!UICONTROL Expression régulière du domaine]** par exemple `^(?!.*\b(store|help|admin)\b)`.
+   1. Spécifiez une liste de **[!UICONTROL paramètres de requête]** séparés par des virgules, par exemple `outdoors, patio, kitchen`.
+Utilisez ![Fermer](./assets/CrossSize300.svg) pour supprimer des paramètres individuels, ou **[!UICONTROL Effacer tout]** pour supprimer tous les paramètres.
+1. Sélectionnez **[!UICONTROL Supprimer]** si vous souhaitez supprimer une combinaison de paramètres d’expression régulière de domaine et de requête.
+1. Sélectionnez **[!UICONTROL Ajouter une expression régulière]** si vous souhaitez ajouter une autre combinaison d’une expression régulière et de paramètres de requête.
 
 ## Configuration du filtrage des événements
 
-Dans la section **[!UICONTROL Event Filtering]** , vous pouvez modifier les expressions régulières pour filtrer les **[!UICONTROL Page URLs]** et les **[!UICONTROL Assets URLs]** lors de la collecte de données pour Content Analytics. Les expressions régulières que vous avez définies dans l&#39;assistant de configuration guidée de [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided) sont automatiquement renseignées.
+Dans la section **[!UICONTROL Filtrage des événements]** , vous pouvez modifier les expressions régulières pour filtrer **[!UICONTROL URL de page]** et **[!UICONTROL URL d’Assets]** lors de la collecte de données pour Content Analytics. Les expressions régulières que vous avez définies dans l&#39;assistant de configuration guidée de [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided) sont automatiquement renseignées.
 
 ![Image montrant les paramètres de filtrage d’événement de l’extension de balise Adobe Content Analytics dans l’interface utilisateur des balises](assets/aca-tag-eventfiltering.png)
 
@@ -108,7 +108,7 @@ Dans la section **[!UICONTROL Event Filtering]** , vous pouvez modifier les expr
 * Vous souhaitez exclure toutes les pages de documentation de Content Analytics.<br/>Utilisez l’expression régulière suivante : `^(?!.*documentation).*`
 * Vous souhaitez exclure toutes les images JPEG de logo de Content Analytics.<br/>Utilisez l’expression régulière suivante : `^(?!.*(logo\.jpg|)).*$`
 
-Vous pouvez utiliser **[!UICONTROL Test Regex]** pour tester votre expression régulière dans le **[!UICONTROL Regular Expression Tester]**.
+Vous pouvez utiliser **[!UICONTROL Tester l’expression régulière]** pour tester votre expression régulière dans le **[!UICONTROL Testeur d’expression régulière]**.
 
 ![Image montrant le testeur d’expression régulière de l’extension de balise Adobe Content Analytics dans l’interface utilisateur des balises](assets/aca-tag-regextester.png)
 

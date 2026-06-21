@@ -24,8 +24,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 922
-ht-degree: 54%
+source-wordcount: 944
+ht-degree: 53%
 
 ---
 
@@ -73,7 +73,7 @@ Sélectionnez ensuite le type d’authentification pour générer les jetons d�
 
 >[!IMPORTANT]
 >
->Sélectionnez la méthode **[!UICONTROL OAuth Server-to-Server]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Service Account (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative} [Générer un jeton JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) dans le tutoriel sur l’authentification des API Experience Platform.
+>Sélectionnez la méthode **[!UICONTROL OAuth de serveur à serveur]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative} [Générer un jeton JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) dans le tutoriel sur l’authentification des API Experience Platform.
 
 Sélectionnez **Suivant** pour continuer.
 
@@ -91,10 +91,10 @@ Sélectionnez les profils de produit souhaités dans la liste, puis sélectionne
 
 ### Collecter les informations d’identification {#gather-credentials}
 
-Une fois que l’API a été ajoutée au projet, la page **[!UICONTROL Experience Platform API]** du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
+Une fois l’API ajoutée au projet, la page **[!UICONTROL API]** du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
 
-* `{API_KEY}` ([!UICONTROL Client ID])
-* `{ORG_ID}` ([!UICONTROL Organization ID])
+* `{API_KEY}` ([!UICONTROL ID client])
+* `{ORG_ID}` ([!UICONTROL Identifiant de l’organisation])
 
 ![Informations d’intégration après l’ajout d’une API dans Developer Console.](/help/tags/images/api/getting-started/api-integration-information.png)
 
@@ -113,7 +113,7 @@ Selon votre cas d’utilisation, vous disposez de deux options pour générer vo
 
 #### Génération manuelle des jetons d’accès {#manual}
 
-Pour générer manuellement une nouvelle `{ACCESS_TOKEN}`, accédez à **[!UICONTROL Credentials]** > **[!UICONTROL OAuth Server-to-Server]** et sélectionnez **[!UICONTROL Generate access token]**, comme illustré ci-dessous.
+Pour générer manuellement un nouveau `{ACCESS_TOKEN}`, accédez à **[!UICONTROL Informations d’identification]** > **[!UICONTROL OAuth de serveur à serveur]** et sélectionnez **[!UICONTROL Générer le jeton d’accès]**, comme illustré ci-dessous.
 
 ![Enregistrement de l’écran de génération du jeton d’accès et dans l’interface utilisateur de Developer Console.](/help/tags/images/api/getting-started/generate-access-token.gif)
 

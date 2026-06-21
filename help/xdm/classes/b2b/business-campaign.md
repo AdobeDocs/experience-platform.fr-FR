@@ -11,25 +11,25 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 216
-ht-degree: 4%
+source-wordcount: 233
+ht-degree: 3%
 
 ---
 
-# Classe [!UICONTROL XDM Business Campaign]
+# Classe [!UICONTROL &#x200B; XDM Business Campaign &#x200B;]
 
 >[!IMPORTANT]
 >
 >Cette classe est destinée aux organisations ayant accès à [Adobe Real-Time Customer Data Platform B2B edition](../../../rtcdp/b2b-overview.md). Vous devez avoir accès à Real-Time CDP B2B edition pour que cette classe puisse participer au [profil client en temps réel](../../../profile/home.md).
 
-[!UICONTROL XDM Business Campaign] est une classe XDM (modèle de données d’expérience) standard qui capture les propriétés minimales requises d’une campagne commerciale.
+[!UICONTROL XDM Business Campaign] est une classe de modèle de données d’expérience (XDM) standard qui capture les propriétés minimales requises d’une campagne commerciale.
 
 ![&#x200B; Structure de la classe XDM Business Campaign telle qu’elle apparaît dans l’interface utilisateur](../../images/classes/b2b/business-campaign.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `campaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite de l’entité de campagne. |
-| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Si la campagne provient d’un système source externe, cet objet capture les attributs d’audit de ce système. |
+| `campaignKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de l’entité de campagne. |
+| `extSourceSystemAudit` | [[!UICONTROL Attributs d’audit du système Source externe]](../../data-types/external-source-system-audit-attributes.md) | Si la campagne provient d’un système source externe, cet objet capture les attributs d’audit de ce système. |
 | `_id` | Chaîne | Identifiant unique de l’enregistrement. Il s’agit d’une valeur générée par le système et distincte de la `campaignID`. |
 | `campaignDescription` | Chaîne | Description de la campagne. |
 | `campaignID` | Chaîne | Identifiant unique de l’entité de campagne. |
@@ -40,4 +40,4 @@ ht-degree: 4%
 
 Pour découvrir comment cette classe est conceptuellement liée aux autres classes B2B et comment vous pouvez établir ces relations dans l’interface utilisateur de Adobe Experience Platform, consultez le guide sur les [relations de schéma dans Real-Time CDP B2B edition](../../tutorials/relationship-b2b.md)
 
-Pour les champs supplémentaires compatibles avec cette classe, reportez-vous à la référence du groupe de champs pour [[!UICONTROL XDM Business Campaign Details]](../../field-groups/b2b-campaign/details.md).
+Pour des champs supplémentaires compatibles avec cette classe, consultez la référence du groupe de champs pour [[!UICONTROL Détails de XDM Business Campaign]](../../field-groups/b2b-campaign/details.md).

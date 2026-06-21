@@ -32,8 +32,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1115
-ht-degree: 98%
+source-wordcount: 1132
+ht-degree: 93%
 
 ---
 
@@ -56,19 +56,19 @@ Il existe également deux mesures :
 * Impressions de ressources
 * Clics sur les ressources.
 
-Ces rapports doivent être activés à l’aide de l’Analytics Administrator (cliquez sur **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Edit Settings] > [!UICONTROL AEM] > [!UICONTROL AEM Assets Reporting]**) avant que ces champs puissent être renseignés à l’aide de cette extension.
+Ces rapports doivent être activés à l’aide de l’administrateur Analytics (sélectionnez **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Suites de rapports] > `<report suite>` > [!UICONTROL Modifier les paramètres] > [!UICONTROL AEM] > [!UICONTROL Rapports AEM Assets]**) avant de pouvoir être renseignés à l’aide de cette extension.
 
 L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Platform doit être installée dans la même propriété Web.
 
 ### Adobe Experience Manager (AEM)
 
-1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, cliquez sur **[!UICONTROL Tools > Assets]**, puis ouvrez le panneau **[!UICONTROL Insights Configuration]**.
+1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, sélectionnez **[!UICONTROL Outils > Assets]**, puis ouvrez le panneau **[!UICONTROL Configuration d’Insights]**.
 
 1. Désactivez le suivi UUID.
 
    >[!IMPORTANT]
    >
-   >Cette extension *ne fonctionnera pas* si le paramètre de configuration des ressources AEM **[!UICONTROL Disable UUID Tracking]** est coché. Ce paramètre est désélectionné par défaut.
+   >Cette extension ne fonctionne *pas* si le paramètre de configuration des ressources AEM **[!UICONTROL Désactiver le suivi d’UUID]** est coché. Ce paramètre est désélectionné par défaut.
 
    ![Désactiver le suivi UUID](images/disableassets.jpg)
 

@@ -27,7 +27,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1224
+source-wordcount: 1228
 ht-degree: 84%
 
 ---
@@ -154,13 +154,13 @@ Une fois l’artefact d’échange enregistré dans l’environnement, l’attri
 
 ## Référencer des secrets {#referencing-secrets}
 
-Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/client/core/overview.md)) sur une propriété de transfert d’événement. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
+Pour référencer un secret, vous devez créer un élément de données de type « [!UICONTROL Secret] » (fourni par l’extension [[!UICONTROL Core]](../../extensions/client/core/overview.md)) sur une propriété de transfert d’événements. Lors de la configuration de cet élément de données, vous êtes invité à indiquer le secret à utiliser pour chaque environnement. Vous pouvez ensuite créer des règles qui référencent un élément de données secret, comme dans l’en-tête d’un appel HTTP.
 
 ![Élément de données secret](../../images/api/guides/secrets/data-element.png)
 
 >[!NOTE]
 >
->Pour ajouter un élément de données secret à une bibliothèque, vous devez avoir au moins un secret `succeeded` associé à l’environnement sur lequel la bibliothèque est en cours de création. Par exemple, si une bibliothèque comporte un élément de données secret qui n’a pas de secret `succeeded` configuré pour la section [!UICONTROL Staging Secret] , si vous tentez de créer cette bibliothèque dans l’environnement d’évaluation, une erreur se produira.
+>Pour ajouter un élément de données secret à une bibliothèque, vous devez avoir au moins un secret `succeeded` associé à l’environnement sur lequel la bibliothèque est en cours de création. Par exemple, si une bibliothèque comporte un élément de données secret qui n’a pas de secret `succeeded` configuré pour la section [!UICONTROL &#x200B; Secret d’évaluation &#x200B;], si vous tentez de créer cette bibliothèque dans l’environnement d’évaluation, une erreur se produira.
 
 Au moment de l’exécution, l’élément de données secret est remplacé par l’artefact d’échange secret correspondant enregistré dans l’environnement.
 

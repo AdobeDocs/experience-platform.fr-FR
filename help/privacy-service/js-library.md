@@ -58,7 +58,7 @@ Puisque les trois fonctions représentent des processus asynchrones, toutes les 
 Pour commencer à utiliser le [!DNL Privacy JS Library], vous devez l’installer sur votre ordinateur en utilisant l’une des méthodes suivantes :
 
 * Installez-la à l’aide de npm en exécutant la commande suivante : `npm install @adobe/adobe-privacy`
-* Télécharger à partir du référentiel GitHub [&#128279;](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* Télécharger à partir du [référentiel GitHub Experience Cloud](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 Vous pouvez également installer la bibliothèque par le biais d’une extension de balise. Pour plus d’informations, consultez la présentation de l’extension de balise d’accès à des informations personnelles [&#128279;](../tags/extensions/client/privacy/overview.md).
 
@@ -216,7 +216,7 @@ Voici une liste des paramètres de configuration acceptés pour les solutions Ad
 | --- | --- |
 | `aamUUIDCookieName` | Nom du cookie propriétaire contenant l’ID d’utilisateur unique renvoyé par Adobe Audience Manager. |
 
-**Adobe Experience Cloud Identity Service (ECID)**
+**Service d’identités Adobe Experience Cloud (ECID)**
 
 | Paramètre | Description |
 | --- | --- |

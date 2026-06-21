@@ -28,8 +28,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1271
-ht-degree: 87%
+source-wordcount: 1286
+ht-degree: 85%
 
 ---
 
@@ -72,7 +72,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | --- | --- |
 | [Connexion Demandbase People](/help/destinations/catalog/advertising/demandbase-people.md) | Utilisez la connexion [!DNL Demandbase People] pour activer des profils pour vos campagnes Demandbase pour le ciblage, la personnalisation et la suppression des audiences. |
 | [Connexion au compte Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilisez la connexion [!DNL Bombora] pour activer des profils pour vos campagnes Bombora pour le ciblage, la personnalisation et la suppression des audiences, en fonction des [audiences de comptes](/help/segmentation/types/account-audiences.md). |
-| Mise à niveau d’[Attributs Airship](/help/destinations/catalog/mobile-engagement/airship-attributes.md) | À compter du mercredi 25 mars 2025, vous pourrez voir deux cartes **[!UICONTROL Airship Attributes]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. Le connecteur de destination **[!UICONTROL Airship Attributes]** existant a été renommé **[!UICONTROL (Deprecated) Airship Attributes]** et une nouvelle carte portant le nom **[!UICONTROL Airship Attributes]** est désormais disponible. <br> Utilisez la connexion **[!UICONTROL Airship Attributes]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous avez des flux de données actifs vers la destination [!DNL (Deprecated) Airship Attributes], ils seront automatiquement mis à jour. Aucune action n’est donc requise de votre part. <br> Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] aux valeurs suivantes : <ul><li> ID de spécification de flux : `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> ID de spécification de connexion : `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
+| Mise à niveau d’[Attributs Airship](/help/destinations/catalog/mobile-engagement/airship-attributes.md) | À compter du 25 mars 2025, vous pourrez voir deux cartes **[!UICONTROL Attributs Airship]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. Le connecteur de destination **[!UICONTROL Attributs Airship]** existant a été renommé **[!UICONTROL (obsolète) Attributs Airship]** et une nouvelle carte portant le nom **[!UICONTROL Attributs Airship]** est désormais disponible. <br> Utilisez la connexion **[!UICONTROL Attributs Airship]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous avez des flux de données actifs vers la destination [!DNL (Deprecated) Airship Attributes], ils seront automatiquement mis à jour. Aucune action n’est donc requise de votre part. <br> Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] aux valeurs suivantes : <ul><li> ID de spécification de flux : `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> ID de spécification de connexion : `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [Améliorations de la précision des rapports pour les destinations de streaming](../../dataflows/ui/monitor-destinations.md) | Depuis mars 2025, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration assure un meilleur alignement entre les rapports dans Experience Platform et les plateformes de destination. <br> Avant cette mise à jour, **[!UICONTROL Identities failed]** incluait toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total. <br> Cette amélioration s’applique à toutes les destinations de diffusion en continu. <br> Suite à cette amélioration, les utilisateurs et utilisatrices de destinations de diffusion en continu peuvent voir une baisse attendue de leur nombre de **[!UICONTROL Identities failed]**. |
+| [Améliorations de la précision des rapports pour les destinations de streaming](../../dataflows/ui/monitor-destinations.md) | Depuis mars 2025, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration assure un meilleur alignement entre les rapports dans Experience Platform et les plateformes de destination. <br> Avant cette mise à jour, **[!UICONTROL Identités en échec]** incluait toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total. <br> Cette amélioration s’applique à toutes les destinations de diffusion en continu. <br> Suite à cette amélioration, les utilisateurs des destinations de diffusion en continu peuvent voir une baisse attendue de leur nombre d’**[!UICONTROL identités en échec]**. |
 | [Prise en charge de l’export de champs de type mappage pour les destinations d’entreprise et edge](/help/destinations/ui/export-arrays-maps-objects.md) | Lors de l’exportation de données vers les destinations [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md) et [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), vous pouvez désormais sélectionner des champs de type map pour l’exportation à l’étape de mappage du workflow d’activation. <br> ![Exportez le champ de type map vers la destination d’entreprise.](../2025/assets/march/export-map.png "Exporter un champ de type map vers une destination d’entreprise."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -128,4 +128,4 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).

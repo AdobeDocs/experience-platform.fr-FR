@@ -24,8 +24,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1163
-ht-degree: 82%
+source-wordcount: 1170
+ht-degree: 79%
 
 ---
 
@@ -112,8 +112,8 @@ Lorsque vous créez une propriété pour la première fois dans l’interface ut
 >
 >Si l’affectation de l’hôte géré par Adobe par défaut est supprimée de tous les environnements, l’hôte peut être supprimé. Si vous souhaitez revenir à un hôte géré par Adobe après cette opération, vous pouvez créer un nouvel hôte en procédant comme suit :
 >
->1. Sélectionnez l’onglet **[!UICONTROL Hosts]** de votre propriété, puis sélectionnez **[!UICONTROL Add Host]**.
->1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Managed by Adobe]** comme type d’hôte, puis sélectionnez **[!UICONTROL Save]**.
+>1. Sélectionnez l’onglet **[!UICONTROL Hôtes]** sur votre propriété, puis sélectionnez **[!UICONTROL Ajouter l’hôte]**.
+>1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Géré par Adobe]** comme type d’hôte, puis sélectionnez **[!UICONTROL Enregistrer]**.
 >
 >Vous pouvez ensuite réaffecter vos environnements à l’hôte géré par Adobe selon vos besoins.
 

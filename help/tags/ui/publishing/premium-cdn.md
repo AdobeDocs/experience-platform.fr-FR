@@ -24,7 +24,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 535
+source-wordcount: 538
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Une fois que vous avez activé les balises en Chine et reconstruit les biblioth�
 >
 >Le code incorporé de bibliothèque répertorié sous la région d’hébergement [!UICONTROL Standard] continuera à fonctionner en l’état, ainsi que tout code incorporé de haut ou de bas de page figurant déjà sur vos sites web.
 
-Rendez-vous sur la page **[!UICONTROL Environments]** ou consultez les instructions d’installation de l’environnement dans l’écran de modification de la bibliothèque pour trouver les nouveaux codes incorporés. Chaque nouvelle région d’hébergement prise en charge apparaît après la région d’hébergement [!UICONTROL Standard] (utilisée pour les zones du monde qui sont prises en charge sans Experience Platform Tags (Chine)). La capture d’écran ci-dessous montre un code incorporé pour la région Chine, qui utilise `.cn` comme domaine de niveau supérieur (TLD).
+Accédez à la page **[!UICONTROL Environnements]** ou consultez les instructions d’installation de l’environnement à partir de l’écran de modification de la bibliothèque pour trouver les nouveaux codes incorporés. Chaque nouvelle région d’hébergement prise en charge s’affiche après la région d’hébergement [!UICONTROL Standard] (utilisée pour les zones du monde qui sont prises en charge sans Experience Platform Tags (Chine)). La capture d’écran ci-dessous montre un code incorporé pour la région Chine, qui utilise `.cn` comme domaine de niveau supérieur (TLD).
 
 ![Code incorporé pour la région Chine](../../images/ui/publishing/premium-cdn/embed-codes.png)
 

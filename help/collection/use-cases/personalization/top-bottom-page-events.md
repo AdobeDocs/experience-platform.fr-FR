@@ -21,7 +21,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1198
+source-wordcount: 1294
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Les événements en haut et en bas de la page décrivent une méthode de chargem
 
 Adobe Analytics ignore les événements du haut de la page, ce qui permet d’enregistrer des mesures plus précises, car un seul accès à la page est enregistré (événement du bas de la page).
 
-Vous pouvez configurer les événements de haut et de bas de page de deux manières : en appelant directement la bibliothèque JavaScript Web SDK (`alloy()`) ou en utilisant l’extension de balise Web SDK dans l’interface utilisateur des balises Adobe Experience Platform. L’action [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) de l’extension de balise comprend une option « [!UICONTROL Use guided events] » qui préconfigure les valeurs de champ pour les scénarios « [!UICONTROL Request personalization] » (haut de la page) et « [!UICONTROL Collect analytics] » (bas de page). Chaque exemple ci-dessous montre les deux implémentations.
+Vous pouvez configurer les événements de haut et de bas de page de deux manières : en appelant directement la bibliothèque JavaScript Web SDK (`alloy()`) ou en utilisant l’extension de balise Web SDK dans l’interface utilisateur des balises Adobe Experience Platform. L’action [[!UICONTROL Envoyer l’événement]](/help/tags/extensions/client/web-sdk/actions/send-event.md) de l’extension de balise comprend une option « [!UICONTROL Utiliser des événements guidés] » qui préconfigure les valeurs de champ pour les scénarios « [!UICONTROL Demander une personnalisation] » (haut de la page) et « [!UICONTROL Collecter des analyses] » (bas de page). Chaque exemple ci-dessous montre les deux implémentations.
 
 ## Événement haut de page {#top-of-page}
 
@@ -65,9 +65,9 @@ alloy("sendEvent", {
 
 >[!TAB Extension de balise Web SDK]
 
-Configurez une action [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche en haut de la page. Activez **[!UICONTROL Use guided events]**, puis sélectionnez **[!UICONTROL Request personalization]**. Cette option verrouille &#39;[!UICONTROL Type]&#39; sur &#39;[!UICONTROL Decisioning Proposition Fetch]&#39;, &#39;[!UICONTROL Render visual personalization decisions]&#39; sur activé et &#39;[!UICONTROL Automatically send a display event]&#39; sur désactivé.
+Configurez une action [[!UICONTROL &#x200B; Envoyer l’événement &#x200B;]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche en haut de la page. Activez **[!UICONTROL Utiliser des événements guidés]**, puis sélectionnez **[!UICONTROL Demander la personnalisation]**. Cette option verrouille &#39;[!UICONTROL Type]&#39; sur &#39;[!UICONTROL Récupération de proposition de prise de décision]&#39;, &#39;[!UICONTROL Rendre les décisions de personnalisation visuelle]&#39; sur activé, et &#39;[!UICONTROL Envoyer automatiquement un événement d’affichage]&#39; sur désactivé.
 
-Pour définir ces champs manuellement à la place, laissez **[!UICONTROL Use guided events]** désactivé et configurez chaque champ vous-même.
+Pour définir ces champs manuellement à la place, laissez l’option **[!UICONTROL Utiliser des événements guidés]** désactivée et configurez vous-même chaque champ.
 
 >[!ENDTABS]
 
@@ -97,9 +97,9 @@ alloy("sendEvent", {
 
 >[!TAB Extension de balise Web SDK]
 
-Configurez une action [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche au bas de la page. Activez **[!UICONTROL Use guided events]**, puis sélectionnez **[!UICONTROL Collect analytics]**. Cette option verrouille &#39;[!UICONTROL Include rendered propositions]&#39; sur activé.
+Configurez une action [[!UICONTROL &#x200B; Envoyer l’événement &#x200B;]](/help/tags/extensions/client/web-sdk/actions/send-event.md) dans la règle qui se déclenche au bas de la page. Activez **[!UICONTROL Utiliser des événements guidés]**, puis sélectionnez **[!UICONTROL Collecter des analyses]**. Cette option verrouille l’activation de « [!UICONTROL Inclure les propositions rendues] ».
 
-Pour définir ce champ manuellement à la place, laissez **[!UICONTROL Use guided events]** désactivé et activez-**[!UICONTROL Include rendered propositions]** directement. Vous pouvez éventuellement renseigner le champ **[!UICONTROL XDM]** avec un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) qui transporte les données de votre page.
+Pour définir ce champ manuellement à la place, laissez **[!UICONTROL Utiliser des événements guidés]** désactivé et activez **[!UICONTROL Inclure les propositions rendues]** directement. Vous pouvez éventuellement renseigner le champ **[!UICONTROL XDM]** avec un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) qui transporte les données de votre page.
 
 >[!ENDTABS]
 
@@ -145,10 +145,10 @@ alloy("sendEvent", {
 
 >[!TAB Extension de balise Web SDK]
 
-L&#39;option &#39;[!UICONTROL Use guided events]&#39; ne couvre pas ce scénario, configurez donc l&#39;action manuellement :
+L’option « [!UICONTROL &#x200B; Utiliser des événements guidés &#x200B;] » ne couvre pas ce scénario, configurez donc l’action manuellement :
 
 1. Créez un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) (ou [Variable](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)) qui renseigne les `_experience.decisioning.propositions` avec les `id`, `scope` et `scopeDetails` de chaque proposition rendue et définit le `_experience.decisioning.propositionEventType.display` sur `1`. Voir [Gérer les événements d’affichage](display-events.md) pour plus d’informations.
-1. Dans l’action [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) pour la règle de bas de page, laissez **[!UICONTROL Use guided events]** désactivé et référencez l’élément de données à partir du champ **[!UICONTROL XDM]** .
+1. Dans l’action [[!UICONTROL Envoyer l’événement]](/help/tags/extensions/client/web-sdk/actions/send-event.md) pour la règle de bas de page, laissez **[!UICONTROL Utiliser des événements guidés]** désactivé et référencez l’élément de données à partir du champ **[!UICONTROL XDM]**.
 
 >[!ENDTABS]
 
@@ -202,8 +202,8 @@ alloy("sendEvent", {
 >[!TAB Extension de balise Web SDK]
 
 1. Créez un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) qui `web.webPageDetails.viewName` au nom de la vue (par exemple, `home`).
-1. Configurez une action de [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) en haut de la page : activez **[!UICONTROL Use guided events]**, sélectionnez **[!UICONTROL Request personalization]** et référencez l’élément de données dans le champ **[!UICONTROL XDM]** .
-1. Configurez une action de **[!UICONTROL Send event]** en bas de page : activez **[!UICONTROL Use guided events]**, sélectionnez **[!UICONTROL Collect analytics]** et référencez le même élément de données dans le champ **[!UICONTROL XDM]** afin que le `viewName` corresponde dans les deux événements.
+1. Configurez une action [[!UICONTROL Envoyer l’événement]](/help/tags/extensions/client/web-sdk/actions/send-event.md) en haut de la page : activez **[!UICONTROL Utiliser des événements guidés]**, sélectionnez **[!UICONTROL Demander la personnalisation]** et référencez l’élément de données dans le champ **[!UICONTROL XDM]**.
+1. Configurez une action en bas de page **[!UICONTROL Envoyer l’événement]** : activez **[!UICONTROL Utiliser des événements guidés]**, sélectionnez **[!UICONTROL Collecter des analyses]** et référencez le même élément de données dans le champ **[!UICONTROL XDM]** afin que le `viewName` corresponde dans les deux événements.
 
 >[!ENDTABS]
 
@@ -232,7 +232,7 @@ alloy("sendEvent", {
 >[!TAB Extension de balise Web SDK]
 
 1. Créez un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) qui `web.webPageDetails.viewName` au nom de la nouvelle vue (par exemple, `cart`).
-1. Lors de la modification de l’affichage, configurez une seule action [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) : laissez **[!UICONTROL Use guided events]** désactivé, activez l’**[!UICONTROL Render visual personalization decisions]** et référencez l’élément de données dans le champ **[!UICONTROL XDM]** .
+1. Lors du changement d’affichage, configurez une seule action [[!UICONTROL Envoyer l’événement]](/help/tags/extensions/client/web-sdk/actions/send-event.md) : laissez **[!UICONTROL Utiliser des événements guidés]** désactivé, activez **[!UICONTROL Rendre les décisions de personnalisation visuelle]** et référencez l’élément de données dans le champ **[!UICONTROL XDM]**.
 
 >[!ENDTABS]
 
@@ -276,8 +276,8 @@ alloy("sendEvent", {
 >[!TAB Extension de balise Web SDK]
 
 1. Créez un élément de données [objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) qui `web.webPageDetails.viewName` au nom de la nouvelle vue (par exemple, `cart`).
-1. Pour l’événement en haut de la page, configurez une action [[!UICONTROL Apply propositions]](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) et définissez le champ **[!UICONTROL View name]** sur le nom de la vue (par exemple, `cart`). Cette action effectue le rendu des propositions déjà récupérées sans contacter l’Edge Network.
-1. Pour l’événement de bas de page, configurez une action de [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) : activez **[!UICONTROL Use guided events]**, sélectionnez **[!UICONTROL Collect analytics]** et référencez l’élément de données dans le champ **[!UICONTROL XDM]** .
+1. Pour l’événement de haut de page, configurez une action [[!UICONTROL Appliquer les propositions]](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) et définissez le champ **[!UICONTROL Afficher le nom]** sur le nom de la vue (par exemple, `cart`). Cette action effectue le rendu des propositions déjà récupérées sans contacter l’Edge Network.
+1. Pour l’événement de bas de page, configurez une action [[!UICONTROL Envoyer l’événement]](/help/tags/extensions/client/web-sdk/actions/send-event.md) : activez **[!UICONTROL Utiliser des événements guidés]**, sélectionnez **[!UICONTROL Collecter des analyses]** et référencez l’élément de données dans le champ **[!UICONTROL XDM]**.
 
 >[!ENDTABS]
 

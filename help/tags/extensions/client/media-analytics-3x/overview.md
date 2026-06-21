@@ -20,8 +20,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 722
-ht-degree: 95%
+source-wordcount: 738
+ht-degree: 85%
 
 ---
 
@@ -45,9 +45,9 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 
 ## Installation et configuration de l’extension MA
 
-* **Installer :** Pour installer l’extension MA, ouvrez la propriété d’extension, cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** avec votre souris et cliquez sur **[!UICONTROL Install]**.
+* **Installation :** pour installer l’extension MA, ouvrez la propriété de votre extension, puis sélectionnez **[!UICONTROL Extensions > Catalogue]** et placez le curseur sur l’extension **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** et sélectionnez **[!UICONTROL Installer]**.
 
-* **Configurer :** Pour configurer l’extension MA, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension avec votre souris, puis cliquez sur **[!UICONTROL Configure]** :
+* **Configurer :** pour configurer l’extension MA, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]** :
 
 ![Configuration de l’extension MA](../../../images/ext-ma-config.png)
 
@@ -70,7 +70,7 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 
 ### Utilisation depuis une page web/application JavaScript
 
-L’extension MA exporte les API Media dans l’objet global window en activant le paramètre « Export APIs to Window Object » dans la page [!UICONTROL Configuration]. Il exporte les API sous le nom de variable configuré. Par exemple, si le nom de variable est configuré pour être `ADB`, vous pouvez alors accéder aux API Media via `window.ADB.Media`.
+L’extension MA exporte les API Media dans l’objet fenêtre global en activant le paramètre « Exporter les API vers l’objet fenêtre » de la page [!UICONTROL Configuration]. Il exporte les API sous le nom de variable configuré. Par exemple, si le nom de variable est configuré pour être `ADB`, vous pouvez alors accéder aux API Media via `window.ADB.Media`.
 
 >[!IMPORTANT]
 >

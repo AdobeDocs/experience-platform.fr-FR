@@ -9,14 +9,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 92
+source-wordcount: 97
 ht-degree: 8%
 
 ---
 
-# [!UICONTROL Product Category] groupe de champs de schéma
+# [!UICONTROL Catégorie de produits] groupe de champs de schéma
 
-[!UICONTROL Product Category] est un groupe de champs de schéma standard pour la classe [[!UICONTROL Product]](../../classes/product.md) qui capture les propriétés liées à la catégorie d’un produit.
+[!UICONTROL Catégorie de produits] est un groupe de champs de schéma standard pour la classe [[!UICONTROL Product]](../../classes/product.md) qui capture les propriétés liées à la catégorie d’un produit.
 
 ![](../../images/field-groups/product/product-category.png)
 

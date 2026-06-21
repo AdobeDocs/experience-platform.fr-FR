@@ -15,7 +15,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 308
+source-wordcount: 311
 ht-degree: 88%
 
 ---
@@ -42,7 +42,7 @@ L’environnement [!DNL Data Science Workspace JupyterLab] est un environnement 
 
 Commencez par lancer [!DNL Adobe Experience Platform] et par accéder à l’environnement [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab).
 
-Dans [!DNL JupyterLab], sélectionnez **[!UICONTROL File]** puis pointez sur **[!UICONTROL New]**. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
+Dans [!DNL JupyterLab], sélectionnez **[!UICONTROL Fichier]** puis pointez sur **[!UICONTROL Nouveau]**. Dans la liste déroulante qui s’affiche, sélectionnez **[!UICONTROL Terminal]**.
 
 ![Navigation dans JupyterLab](../images/jupyterlab/tutorials/open-terminal.png)
 

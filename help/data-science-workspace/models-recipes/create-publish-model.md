@@ -22,7 +22,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1098
+source-wordcount: 1103
 ht-degree: 10%
 
 ---
@@ -47,15 +47,15 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 ### Exploration des données et compréhension des schémas
 
-Connectez-vous à [&#128279;](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Datasets]** pour répertorier tous les jeux de données existants et sélectionnez le jeu de données à explorer. Dans ce cas, vous devez sélectionner le jeu de données **Données web Luma**.
+Connectez-vous à [&#128279;](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Jeux de données]** pour répertorier tous les jeux de données existants et sélectionnez le jeu de données à explorer. Dans ce cas, vous devez sélectionner le jeu de données **Données web Luma**.
 
 ![sélectionnez Jeu de données web Luma](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
-La page d’activité du jeu de données s’ouvre, répertoriant les informations relatives à votre jeu de données. Vous pouvez sélectionner **[!UICONTROL Preview Dataset]** en haut à droite pour examiner les exemples d’enregistrements. Vous pouvez également afficher le schéma du jeu de données sélectionné.
+La page d’activité du jeu de données s’ouvre, répertoriant les informations relatives à votre jeu de données. Vous pouvez sélectionner **[!UICONTROL Prévisualiser le jeu de données]** en haut à droite pour examiner des exemples d’enregistrements. Vous pouvez également afficher le schéma du jeu de données sélectionné.
 
 ![aperçu des données web Luma](../images/models-recipes/model-walkthrough/preview-dataset.png)
 
-Sélectionnez le lien du schéma dans le rail de droite. Une fenêtre contextuelle s’affiche. Si vous sélectionnez le lien sous **[!UICONTROL schema name]**, le schéma s’ouvre dans un nouvel onglet.
+Sélectionnez le lien du schéma dans le rail de droite. Une fenêtre contextuelle s’affiche. Si vous sélectionnez le lien sous **[!UICONTROL nom du schéma]**, le schéma s’ouvre dans un nouvel onglet.
 
 ![prévisualiser le schéma de données web luma](../images/models-recipes/model-walkthrough/preview-schema.png)
 

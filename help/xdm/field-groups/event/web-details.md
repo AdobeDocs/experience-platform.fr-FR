@@ -11,18 +11,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 138
-ht-degree: 17%
+source-wordcount: 142
+ht-degree: 16%
 
 ---
 
-# [!UICONTROL Web Details] groupe de champs de schéma
+# [!UICONTROL Détails web] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Web Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire des informations concernant les événements de détails web tels que l’interaction, les détails de page et le référent.
+[!UICONTROL Détails web] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire des informations concernant les événements de détails web tels que les interactions, les détails de page et le référent.
 
 ![](../../images/field-groups/web-details.png)
 

@@ -4,7 +4,7 @@ description: Découvrez les règles de liaison du graphique d’identités dans 
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '1712'
+source-wordcount: '1709'
 ht-degree: 16%
 
 ---

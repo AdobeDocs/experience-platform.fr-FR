@@ -4,7 +4,7 @@ description: Référencez la bibliothèque Web SDK à l’aide d’un fichier CD
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
 source-git-commit: 010192e91185c11d5454d4153913c06b90fe2122
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---

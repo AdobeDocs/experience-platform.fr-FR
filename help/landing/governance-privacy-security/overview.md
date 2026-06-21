@@ -74,7 +74,7 @@ La protection des renseignements personnels est un enjeu crucial pour votre entr
 
 Les réglementations légales relatives à la confidentialité, telles que le Règlement général sur la protection des données (RGPD) de l’Union européenne et le California Consumer Privacy Act (CCPA) accordent aux citoyens de leur juridiction le droit d’accéder aux données personnelles que vous collectez et stockez auprès d’eux, et de les supprimer.
 
-Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur pour faciliter la gestion de ces requêtes. Avec Privacy Service, vous pouvez envoyer des demandes d’accès ou de suppression de données clients privées ou personnelles depuis les applications Adobe Experience Cloud, ce qui facilite l’automatisation de la conformité aux réglementations légales et organisationnelles en matière de confidentialité.
+Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur pour faciliter la gestion de ces requêtes. Avec Privacy Service, vous pouvez envoyer des demandes d’accès ou de suppression de données clients privées ou personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la conformité aux réglementations légales et organisationnelles en matière de confidentialité.
 
 Voir la présentation de [&#128279;](../../privacy-service/home.md) pour plus d’informations.
 

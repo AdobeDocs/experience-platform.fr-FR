@@ -4,7 +4,7 @@ description: Les notes de mise à jour de février 2026 pour Adobe Experience Pl
 exl-id: a677026f-e07e-4e69-bd6c-5ddcb13e8e38
 source-git-commit: da84f77bbe328747ad7befd92d0bc4a12d8477fb
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '791'
 ht-degree: 49%
 
 ---
@@ -33,7 +33,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités nouvelles ou mises à jour**
 

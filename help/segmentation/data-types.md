@@ -71,7 +71,7 @@ Actuellement, seul Adobe Audience Manager est pris en charge en tant qu’audien
 
 ### Partage de la définition de segment
 
-Les définitions de segment créées dans Experience Platform peuvent être utilisées dans d’autres [services principaux de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
+Les définitions de segment créées dans Experience Platform peuvent être utilisées dans d’autres [services principaux Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 

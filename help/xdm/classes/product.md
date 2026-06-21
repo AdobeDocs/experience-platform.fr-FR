@@ -9,8 +9,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 203
-ht-degree: 18%
+source-wordcount: 210
+ht-degree: 13%
 
 ---
 
@@ -37,5 +37,5 @@ Dans le modèle de données d’expérience (XDM), la classe [!UICONTROL Product
 
 Adobe fournit plusieurs groupes de champs standard à utiliser avec la classe [!UICONTROL Product]. Voici une liste de groupes de champs couramment utilisés pour la classe :
 
-* [[!UICONTROL Product catalog]](../field-groups/product/product-catalog.md)
-* [[!UICONTROL Product category]](../field-groups/product/product-category.md)
+* [[!UICONTROL Catalogue des produits]](../field-groups/product/product-catalog.md)
+* [[!UICONTROL Catégorie de produits]](../field-groups/product/product-category.md)

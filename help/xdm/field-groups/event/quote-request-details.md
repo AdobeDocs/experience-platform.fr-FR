@@ -9,24 +9,24 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 137
-ht-degree: 2%
+source-wordcount: 148
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Quote Request Details] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Détails de la demande de devis]
 
-[!UICONTROL Quote Request Details] groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `quotes` à un schéma, qui capture les détails du processus de demande pour divers types de devis, y compris les polices d&#39;assurance, les soins de santé, les ordres de fabrication et les commandes high-tech.
+[!UICONTROL &#x200B; Détails de la demande de devis &#x200B;] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `quotes` à un schéma, qui capture les détails du processus de demande pour divers types de devis, y compris les polices d&#39;assurance, les soins de santé, les ordres de fabrication et les commandes high-tech.
 
 ![](../../images/field-groups/quote-request-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `discount` | [[!UICONTROL Currency]](../../data-types/currency.md) | Montant de la remise pour un devis présenté à un visiteur ou une visiteuse. |
-| `premium` | [[!UICONTROL Currency]](../../data-types/currency.md) | Montant de la prime d’un devis présenté à un visiteur ou une visiteuse. |
-| `location` | [!UICONTROL String] | Code postal utilisé pour rechercher des revendeurs à proximité de la position du visiteur. |
-| `requestID` | [!UICONTROL String] | Identifiant unique de la demande de devis. |
-| `selectedRetailer` | [!UICONTROL String] | Retailer sélectionnée pour la demande de devis, le cas échéant. |
+| `discount` | [[!UICONTROL Devise]](../../data-types/currency.md) | Montant de la remise pour un devis présenté à un visiteur ou une visiteuse. |
+| `premium` | [[!UICONTROL Devise]](../../data-types/currency.md) | Montant de la prime d’un devis présenté à un visiteur ou une visiteuse. |
+| `location` | [!UICONTROL Chaîne] | Code postal utilisé pour rechercher des revendeurs à proximité de la position du visiteur. |
+| `requestID` | [!UICONTROL Chaîne] | Identifiant unique de la demande de devis. |
+| `selectedRetailer` | [!UICONTROL Chaîne] | Retailer sélectionnée pour la demande de devis, le cas échéant. |
 
 {style="table-layout:auto"}
 

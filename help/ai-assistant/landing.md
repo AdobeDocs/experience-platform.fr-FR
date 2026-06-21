@@ -21,8 +21,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1346
-ht-degree: 4%
+source-wordcount: 1314
+ht-degree: 3%
 
 ---
 
@@ -474,13 +474,13 @@ Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’ut
 Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation de l’assistant d’IA (hérité), ses fonctionnalités, etc.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong>Real-Time CDP</strong><br/>
+<td><strong></strong><br/>
 <a href="./home.md" target="_blank">Documentation</a> - <a href="./ui-guide.md" target="_blank">Guide de l’interface utilisateur</a> - <a href="./access.md" target="_blank">Accéder à l’assistant d’IA</a> - <a href="./privacy.md" target="_blank">Confidentialité, sécurité et gouvernance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
-<td><strong>Adobe Journey Optimizer</strong><br/>
-<a href="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">Documentation</a>
+<td><strong></strong><br/>
+<a href="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentation </a>
 </td>
-<td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant" target="_blank">Documentation</a>
+<td><strong></strong><br/>
+<a href="https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentation </a>
 </td>
 </tr></table>

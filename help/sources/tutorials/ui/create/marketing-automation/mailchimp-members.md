@@ -11,8 +11,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 675
-ht-degree: 48%
+source-wordcount: 709
+ht-degree: 46%
 
 ---
 
@@ -53,38 +53,38 @@ Pour plus d’informations sur l’utilisation d’OAuth 2 pour authentifier le 
 
 ## Connexion de votre compte [!DNL Mailchimp Members] à Experience Platform
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie [!UICONTROL Marketing automation] , sélectionnez **[!UICONTROL Mailchimp Campaign]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie [!UICONTROL Automatisation marketing], sélectionnez **[!UICONTROL Campagne Mailchimp]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/mailchimp-members/catalog.png)
 
-La page **[!UICONTROL Connect Mailchimp Campaigns account]** s’affiche. Sur cette page, vous pouvez indiquer si vous accédez à un compte existant ou si vous choisissez de créer un compte.
+La page **[!UICONTROL Connecter le compte de campagnes Mailchimp]** s’affiche. Sur cette page, vous pouvez indiquer si vous accédez à un compte existant ou si vous choisissez de créer un compte.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL Mailchimp Members] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL Mailchimp Members] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/mailchimp-members/existing.png)
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et une description pour les détails de votre connexion source [!DNL Mailchimp Members].
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description pour les détails de votre connexion source [!DNL Mailchimp Members].
 
 ![nouveau](../../../../images/tutorials/create/mailchimp-members/new.png)
 
 
 #### S’authentifier à l’aide d’OAuth 2
 
-Pour utiliser OAuth 2, sélectionnez [!UICONTROL OAuth 2 Refresh Code], saisissez les valeurs de votre domaine, l’URL du test d’autorisation et le jeton d’accès, puis sélectionnez **[!UICONTROL Connect to source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser OAuth 2, sélectionnez [!UICONTROL Code d’actualisation OAuth 2], indiquez les valeurs de votre domaine, de l’URL du test d’autorisation et du jeton d’accès, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-members/oauth.png)
 
 #### S’authentifier à l’aide de l’authentification de base
 
-Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Basic authentication], indiquez les valeurs de votre domaine, de votre nom d’utilisateur et de votre mot de passe, puis sélectionnez **[!UICONTROL Connect to source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Authentification de base], indiquez les valeurs de votre domaine, de votre nom d’utilisateur et de votre mot de passe, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![De base](../../../../images/tutorials/create/mailchimp-members/basic.png)
 
@@ -92,11 +92,11 @@ Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Basic auth
 
 Une fois votre source authentifiée, vous devez fournir la valeur `listId` qui correspond à votre compte [!DNL Mailchimp Members].
 
-Sur la page [!UICONTROL Select data], saisissez votre `listId`, puis sélectionnez **[!UICONTROL Explore]**.
+Sur la page [!UICONTROL Sélectionner les données], saisissez votre `listId`, puis sélectionnez **[!UICONTROL Explorer]**.
 
 ![erkunden](../../../../images/tutorials/create/mailchimp-members/explore.png)
 
-La page se met à jour dans une arborescence de schéma interactif qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Next]** pour continuer.
+La page se met à jour dans une arborescence de schéma interactif qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![select-data](../../../../images/tutorials/create/mailchimp-members/select-data.png)
 

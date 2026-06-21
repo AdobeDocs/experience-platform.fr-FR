@@ -4,7 +4,7 @@ description: Découvrez les différents types d’autorisations relatives aux ba
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1272'
 ht-degree: 91%
 
 ---
@@ -58,7 +58,7 @@ Le tableau suivant décrit les droits de propriété disponibles et les fonction
 
 ### Droits d’entreprise
 
-Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à plusieurs propriétés. Ces informations sont présentées dans le tableau ci-dessous :
+Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à plusieurs propriétés.  Ces informations sont présentées dans le tableau ci-dessous :
 
 | Droit de la société | Description |
 | --- | --- |

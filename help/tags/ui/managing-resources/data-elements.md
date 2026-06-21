@@ -24,8 +24,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1560
-ht-degree: 88%
+source-wordcount: 1581
+ht-degree: 84%
 
 ---
 
@@ -72,7 +72,7 @@ Vous pouvez utiliser des éléments de données dans des scripts personnalisés 
 
 Les éléments de données constituent les blocs de construction des règles. Ils vous permettent de créer un dictionnaire de données (ou mappage de données) des éléments utilisés couramment sur une page, indépendamment de leur origine (chaînes de requête, URL ou valeurs de cookie), pour n’importe quel objet contenu sur le site.
 
-1. Dans une page Propriété, ouvrez l’onglet [!UICONTROL Data Elements], puis cliquez sur **[!UICONTROL Create New Data Element]**.
+1. Sur la page Propriété , ouvrez l’onglet [!UICONTROL Éléments de données] puis sélectionnez **[!UICONTROL Créer un élément de données]**.
 1. Nommez l’élément de données.
 1. Sélectionnez une extension et un type.
 
@@ -88,7 +88,7 @@ Les éléments de données constituent les blocs de construction des règles. Il
 
    Les choix disponibles sont les suivants :
 
-   * Aucun
+   * None
       * The value is not stored.
    * Page view
       * La valeur est maintenue dans une variable JavaScript jusqu’à ce que la page soit actualisée ou qu’une nouvelle page soit chargée.
@@ -101,9 +101,9 @@ Les éléments de données constituent les blocs de construction des règles. Il
    * Visitor
       * La valeur est stockée indéfiniment dans le stockage local du navigateur.
 
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL Active Library] .
+Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL &#x200B; Bibliothèque active &#x200B;].
 
 ## Types d’éléments de données {#types-of-data-elements}
 
@@ -123,7 +123,7 @@ Tout cookie de domaine disponible peut être référencé dans le champ du nom d
 
 ### Custom code
 
-Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur [!UICONTROL Open Editor] et en insérant le code dans la fenêtre de l’éditeur.
+Vous pouvez saisir du code JavaScript personnalisé dans l’interface utilisateur en sélectionnant [!UICONTROL Ouvrir l’éditeur] et en insérant le code dans la fenêtre de l’éditeur.
 
 Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être définie en tant que valeur de l’élément de données. Si aucune instruction de retour n’est incluse, l’élément de données est résolu sur `undefined`.  Cela déclenche une recherche de secours pour une valeur stockée, puis pour une valeur par défaut si aucune valeur stockée n’est présente.
 
@@ -200,7 +200,7 @@ Si vous utilisez un objet collecteur de données dans votre couche de données, 
 
 ### Stockage local
 
-Indiquez le nom de votre élément de stockage local dans le champ [!UICONTROL Local Storage Item Name].
+Indiquez le nom de votre élément de stockage local dans le champ [!UICONTROL &#x200B; Nom de l’élément de stockage local &#x200B;].
 
 Le stockage local permet aux navigateurs de stocker des informations d’une page à l’autre ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Le stockage local est très similaire aux cookies, mais est beaucoup plus volumineux et plus souple.
 
@@ -221,7 +221,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 
 ### Paramètre de chaîne de requête
 
-Spécifiez un paramètre d’URL unique dans le champ [!UICONTROL URL Parameter].
+Spécifiez un seul paramètre d’URL dans le champ [!UICONTROL Paramètre d’URL].
 
 Seule la section de nom est nécessaire. Les indicateurs spéciaux tels que « ? » ou « = » doivent être omis.
 

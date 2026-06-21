@@ -18,7 +18,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1386
+source-wordcount: 1489
 ht-degree: 2%
 
 ---
@@ -66,11 +66,11 @@ Après avoir importé les identifiants fournis par le partenaire dans un jeu de 
 
 Les attributs calculés vous permettent de convertir rapidement les données comportementales de profil en valeurs agrégées au niveau du profil. Par conséquent, vous pouvez utiliser ces expressions, telles que « total des achats sur la durée de vie » pour le profil, ce qui vous permet d’utiliser facilement l’attribut calculé au sein de vos audiences. Vous trouverez plus d’informations sur les attributs calculés dans la [présentation des attributs calculés](/help/profile/computed-attributes/overview.md).
 
-Pour accéder aux attributs calculés, sélectionnez **[!UICONTROL Profiles]**, puis **[!UICONTROL Computed attributes]** et **[!UICONTROL Create computed attribute]**.
+Pour accéder aux attributs calculés, sélectionnez **[!UICONTROL Profils]**, **[!UICONTROL Attributs calculés]** et **[!UICONTROL Créer un attribut calculé]**.
 
-![Le bouton [!UICONTROL Create computed attributes] est mis en surbrillance en plus de l’onglet [!UICONTROL Computed attributes] dans l’espace de travail [!UICONTROL Profiles].](../assets/offsite-retargeting/create-ca.png)
+![Le bouton [!UICONTROL Créer des attributs calculés] est mis en surbrillance en plus de l’onglet [!UICONTROL Attributs calculés] dans l’espace de travail [!UICONTROL Profils].](../assets/offsite-retargeting/create-ca.png)
 
-La page **[!UICONTROL Create computed attribute]** s’affiche. Sur cette page, vous pouvez utiliser les composants pour créer votre attribut calculé.
+La page **[!UICONTROL Créer un attribut calculé]** s’affiche. Sur cette page, vous pouvez utiliser les composants pour créer votre attribut calculé.
 
 ![L’espace de travail Créer un attribut calculé s’affiche.](../assets/offsite-retargeting/ca-page.png)
 
@@ -82,13 +82,13 @@ Pour ce cas d’utilisation, vous pouvez créer un attribut calculé qui, si l�
 
 À l’aide de la barre de recherche, vous pouvez localiser et ajouter l’événement « Identifiant du partenaire » que [vous avez créé lors du cas d’utilisation de la personnalisation sur site](#get-data-in) à la zone de travail des attributs calculés.
 
-![L’onglet [!UICONTROL Events] et la barre de recherche sont mis en surbrillance.](../assets/offsite-retargeting/ca-add-partner-id.png)
+![L’onglet [!UICONTROL Événements] et la barre de recherche sont mis en surbrillance.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
-Après avoir ajouté l’événement « ID de partenaire » à la définition, définissez la condition de filtrage d’événement sur **[!UICONTROL Exists]**, définissez la condition de filtrage d’événement sur la valeur **[!UICONTROL Most Recent]** de l’ID de partenaire ajouté, et avec une période de recherche en amont de 24 heures.
+Après avoir ajouté l’événement « ID de partenaire » à la définition, définissez la condition de filtrage d’événement sur **[!UICONTROL Existe]**, définissez la condition de filtrage d’événement sur la valeur **[!UICONTROL Le dernier]** de l’ID de partenaire ajouté, et avec une période de recherche en amont de 24 heures.
 
 ![La définition de l’attribut calculé que vous souhaitez créer est mise en surbrillance.](../assets/offsite-retargeting/ca-add-definition.png)
 
-Attribuez un nom approprié (par exemple, « ID de partenaire ») et une description à l’attribut calculé, puis sélectionnez **[!UICONTROL Publish]** pour terminer le processus de création de l’attribut calculé.
+Attribuez un nom approprié (par exemple, « ID de partenaire ») et une description à l’attribut calculé, puis sélectionnez **[!UICONTROL Publier]** pour terminer le processus de création de l’attribut calculé.
 
 ![Les informations de base de l’attribut calculé que vous souhaitez créer sont mises en surbrillance.](../assets/offsite-retargeting/ca-publish.png)
 
@@ -96,13 +96,13 @@ Attribuez un nom approprié (par exemple, « ID de partenaire ») et une descrip
 
 Maintenant que vous avez créé l’attribut calculé, vous pouvez utiliser cet attribut calculé pour créer une audience. Dans cet exemple, vous allez créer une audience composée de visiteurs qui ont visité votre site web plus de 5 fois ce mois-ci, mais qui ne se sont pas encore inscrits.
 
-Pour créer une audience, sélectionnez **[!UICONTROL Audiences]**, puis **[!UICONTROL Create audience]**.
+Pour créer une audience, sélectionnez **[!UICONTROL Audiences]**, puis **[!UICONTROL Créer une audience]**.
 
-![Le bouton [!UICONTROL Create audience] est mis en surbrillance.](../assets/offsite-retargeting/create-audience.png)
+![Le bouton [!UICONTROL Créer une audience] est mis en surbrillance.](../assets/offsite-retargeting/create-audience.png)
 
-Une boîte de dialogue s’affiche, vous demandant de choisir entre [!UICONTROL Compose audience] et [!UICONTROL Build rule]. Sélectionnez **[!UICONTROL Build rule]** suivi de **[!UICONTROL Create]**.
+Une boîte de dialogue s’affiche, vous demandant de choisir entre [!UICONTROL Composer l’audience] et [!UICONTROL Créer une règle]. Sélectionnez **[!UICONTROL Créer une règle]** puis **[!UICONTROL Créer]**.
 
-![Le bouton [!UICONTROL Build rule] est mis en surbrillance.](../assets/offsite-retargeting/select-build-rule.png)
+![Le bouton [!UICONTROL Créer une règle] est mis en surbrillance.](../assets/offsite-retargeting/select-build-rule.png)
 
 La page du Créateur de segments s’affiche. Sur cette page, vous pouvez utiliser les composants pour créer votre audience.
 
@@ -112,37 +112,37 @@ La page du Créateur de segments s’affiche. Sur cette page, vous pouvez utilis
 >
 >Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [guide de l’interface utilisateur du créateur de segments](/help/segmentation/ui/segment-builder.md).
 
-Pour atteindre l’objectif de trouver ces visiteurs, vous devez d’abord ajouter un événement **[!UICONTROL Page View]** à votre audience. Sélectionnez l’onglet **[!UICONTROL Events]** sous **[!UICONTROL Fields]**, puis effectuez un glisser-déposer de l’événement **[!UICONTROL Page View]** et ajoutez-le à la zone de travail de la section Événements.
+Pour atteindre l’objectif de trouver ces visiteurs, vous devez d’abord ajouter un événement **[!UICONTROL Page vue]** à votre audience. Sélectionnez l’onglet **[!UICONTROL Événements]** sous **[!UICONTROL Champs]**, puis faites un glisser-déposer de l’événement **[!UICONTROL Page vue]** et ajoutez-le à la zone de travail de la section Événements.
 
-![L’onglet [!UICONTROL Events] de la section [!UICONTROL Fields] est mis en surbrillance lors de l’affichage du [!UICONTROL Page View]événement.](../assets/offsite-retargeting/add-page-view.png)
+![L’onglet [!UICONTROL Événements] de la section [!UICONTROL Champs] est mis en surbrillance, tout en affichant le [!UICONTROL Page vue]événement.](../assets/offsite-retargeting/add-page-view.png)
 
-Sélectionnez l’événement **[!UICONTROL Page View]** nouvellement ajouté. Remplacez la période de recherche en amont de **[!UICONTROL Any time]** par **[!UICONTROL This month]**, puis modifiez la règle d’événement pour inclure **Au moins 5**.
+Sélectionnez l’événement **[!UICONTROL Page vue]** nouvellement ajouté. Remplacez la période de recherche en amont **[!UICONTROL À tout moment]** par **[!UICONTROL Ce mois-ci]**, puis modifiez la règle d’événement pour inclure **Au moins 5**.
 
-![Les détails de l’événement [!UICONTROL Page View] ajouté s’affichent.](../assets/offsite-retargeting/edit-event.png)
+![Les détails de l’événement [!UICONTROL Page vue] ajouté s’affichent.](../assets/offsite-retargeting/edit-event.png)
 
 Après avoir ajouté votre événement, vous devez ajouter un attribut. Puisque vous travaillez avec des visiteurs non authentifiés, vous pouvez ajouter l’attribut calculé que vous venez de créer. Cet attribut calculé nouvellement créé vous permet de lier les identifiants de partenaire à une audience.
 
-Pour ajouter l’attribut calculé, sous **[!UICONTROL Attributes]**, sélectionnez **[!UICONTROL XDM Individual Profile]**, suivi de **[identifiant client de votre organisation](/help/xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]** et **[!UICONTROL PartnerID]**. Ajoutez maintenant la **[!UICONTROL Value]** de l’attribut calculé à la section des attributs de la zone de travail.
+Pour ajouter l’attribut calculé, sous **[!UICONTROL Attributs]**, sélectionnez **[!UICONTROL Profil individuel XDM]**, suivi de **[Identifiant du client de votre organisation](/help/xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]** et **[!UICONTROL PartnerID]**. Ajoutez maintenant la **[!UICONTROL Valeur]** de l’attribut calculé à la section des attributs de la zone de travail.
 
 ![Le chemin d’accès au dossier pour accéder à l’attribut calculé s’affiche.](../assets/offsite-retargeting/access-computed-attribute.png)
 
-En outre, recherchez **[!UICONTROL Personal Email]** et ajoutez l’attribut **[!UICONTROL Address]** ci-dessous **[!UICONTROL PartnerID]** la section Attributs de la zone de travail.
+En outre, recherchez **[!UICONTROL E-mail personnel]** et ajoutez l’attribut **[!UICONTROL Adresse]** sous **[!UICONTROL PartnerID]** dans la section Attributs de la zone de travail.
 
-![L’attribut calculé [!UICONTROL PartnerID] et l’attribut [!UICONTROL Personal Email Address] sont mis en surbrillance dans la zone de travail du créateur de segments.](../assets/offsite-retargeting/added-attributes.png)
+![L’attribut calculé [!UICONTROL PartnerID] et l’attribut [!UICONTROL Adresse e-mail personnelle] sont mis en surbrillance sur la zone de travail du créateur de segments.](../assets/offsite-retargeting/added-attributes.png)
 
-Maintenant que vous avez ajouté vos attributs, vous devez définir leurs critères d’évaluation. Par **[!UICONTROL PartnerID]**, définissez le critère sur **[!UICONTROL exists]** et, par **[!UICONTROL Address]**, définissez le critère sur **[!UICONTROL does not exist]**.
+Maintenant que vous avez ajouté vos attributs, vous devez définir leurs critères d’évaluation. Pour **[!UICONTROL PartnerID]**, définissez le critère sur **[!UICONTROL existe]** et pour **[!UICONTROL Adresse]**, définissez le critère sur **[!UICONTROL n’existe pas]**.
 
 ![Les valeurs correctes des attributs sont mises en surbrillance.](../assets/offsite-retargeting/set-attribute-values.png)
 
-Vous avez maintenant créé une audience qui recherche les visiteurs à forte intensité qui disposent d’un identifiant fourni par un partenaire, mais qui ne se sont pas encore inscrits à votre site. Nommez votre audience « Reciblage des utilisateurs non authentifiés » et sélectionnez **[!UICONTROL Save]** pour terminer la création de votre audience.
+Vous avez maintenant créé une audience qui recherche les visiteurs à forte intensité qui disposent d’un identifiant fourni par un partenaire, mais qui ne se sont pas encore inscrits à votre site. Nommez votre audience « Reciblage des utilisateurs non authentifiés » et sélectionnez **[!UICONTROL Enregistrer]** pour terminer la création de votre audience.
 
 ![Les propriétés de l’audience sont mises en surbrillance.](../assets/offsite-retargeting/save-audience-properties.png)
 
 ## Activer votre audience {#activate-audience}
 
-Après avoir créé votre audience, vous pouvez maintenant l’activer vers des destinations en aval. Sélectionnez **[!UICONTROL Audiences]** sur le rail de navigation de gauche, recherchez l’audience que vous venez de créer, sélectionnez l’icône représentant des points de suspension, puis sélectionnez **[!UICONTROL Activate to destination]**.
+Après avoir créé votre audience, vous pouvez maintenant l’activer vers des destinations en aval. Sélectionnez **[!UICONTROL Audiences]** sur le rail de navigation de gauche, recherchez l’audience que vous venez de créer, sélectionnez l’icône représentant des points de suspension, puis sélectionnez **[!UICONTROL Activer vers la destination]**.
 
-![Le bouton [!UICONTROL Activate to destination] est mis en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
+![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
@@ -150,29 +150,29 @@ Après avoir créé votre audience, vous pouvez maintenant l’activer vers des 
 >
 >Pour plus d’informations sur l’activation des audiences vers une destination, veuillez lire la [présentation de l’activation](/help/destinations/ui/activation-overview.md).
 
-La page **[!UICONTROL Activate destination]** s’affiche. Sur cette page, vous pouvez sélectionner la destination vers laquelle activer la destination. Après avoir sélectionné la destination de votre choix, sélectionnez **[!UICONTROL Next]**.
+La page **[!UICONTROL Activer la destination]** s’affiche. Sur cette page, vous pouvez sélectionner la destination vers laquelle activer la destination. Après avoir sélectionné la destination de votre choix, sélectionnez **[!UICONTROL Suivant]**.
 
 ![La destination vers laquelle vous souhaitez activer l’audience est mise en surbrillance.](../assets/offsite-retargeting/select-destination.png)
 
-La page **[!UICONTROL Scheduling]** s’affiche. Sur cette page, vous pouvez créer une planification qui détermine la fréquence d’activation de l’audience. Sélectionnez **[!UICONTROL Create schedule]** pour créer un planning d’activation de l’audience.
+La page **[!UICONTROL Planification]** s’affiche. Sur cette page, vous pouvez créer une planification qui détermine la fréquence d’activation de l’audience. Sélectionnez **[!UICONTROL Créer un planning]** pour créer un planning pour l’activation de l’audience.
 
-![Le bouton [!UICONTROL Create schedule] est mis en surbrillance.](../assets/offsite-retargeting/select-create-schedule.png)
+![Le bouton [!UICONTROL Créer un planning] est mis en surbrillance.](../assets/offsite-retargeting/select-create-schedule.png)
 
-La fenêtre contextuelle [!UICONTROL Scheduling] s’affiche. Sur cette page, vous pouvez créer le planning d’activation de votre audience. Après avoir configuré le planning, sélectionnez **[!UICONTROL Create]** pour continuer.
+La fenêtre contextuelle [!UICONTROL Planification] s’affiche. Sur cette page, vous pouvez créer le planning d’activation de votre audience. Après avoir configuré le planning, sélectionnez **[!UICONTROL Créer]** pour continuer.
 
 ![La fenêtre contextuelle de configuration du planning s’affiche.](../assets/offsite-retargeting/configure-schedule.png)
 
-Après avoir confirmé les détails de la planification, sélectionnez **[!UICONTROL Next]**.
+Après avoir confirmé les détails de la planification, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Les détails du planning s’affichent.](../assets/offsite-retargeting/created-schedule.png)
 
-La page **[!UICONTROL Select attributes]** s’affiche. Sur cette page, vous pouvez sélectionner les attributs à exporter avec l’audience activée. Au minimum, vous souhaiterez inclure l’ID de partenaire, car cela vous permettra d’identifier les visiteurs que vous prévoyez de recibler. Sélectionnez **[!UICONTROL Add new mapping]** et recherchez l’attribut calculé. Après avoir ajouté les attributs nécessaires, sélectionnez **[!UICONTROL Next]**.
+La page **[!UICONTROL Sélectionner des attributs]** s’affiche. Sur cette page, vous pouvez sélectionner les attributs à exporter avec l’audience activée. Au minimum, vous souhaiterez inclure l’ID de partenaire, car cela vous permettra d’identifier les visiteurs que vous prévoyez de recibler. Sélectionnez **[!UICONTROL Ajouter un nouveau mappage]** et recherchez l’attribut calculé. Après avoir ajouté les attributs nécessaires, sélectionnez **[!UICONTROL Suivant]**.
 
-![Le bouton [!UICONTROL Add new mapping] et l’attribut calculé sont mis en surbrillance.](../assets/offsite-retargeting/add-new-mapping.png)
+![Le bouton [!UICONTROL Ajouter un nouveau mappage] et l’attribut calculé sont mis en surbrillance.](../assets/offsite-retargeting/add-new-mapping.png)
 
-La page **[!UICONTROL Review]** s’affiche. Sur cette page, vous pouvez consulter les détails de l’activation de votre audience. Si les détails fournis vous conviennent, sélectionnez **[!UICONTROL Finish]**.
+La page **[!UICONTROL Réviser]** s’affiche. Sur cette page, vous pouvez consulter les détails de l’activation de votre audience. Si les détails fournis vous conviennent, sélectionnez **[!UICONTROL Terminer]**.
 
-![La page [!UICONTROL Review] s’affiche, affichant les détails de l’activation de l’audience.](../assets/offsite-retargeting/review-destination-activation.png)
+![La page [!UICONTROL Réviser] s’affiche, affichant les détails de l’activation de l’audience.](../assets/offsite-retargeting/review-destination-activation.png)
 
 Vous avez maintenant activé une audience d’utilisateurs non authentifiés vers une destination en aval pour un reciblage plus poussé.
 

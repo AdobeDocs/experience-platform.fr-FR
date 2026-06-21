@@ -20,7 +20,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 984
+source-wordcount: 988
 ht-degree: 86%
 
 ---
@@ -65,9 +65,9 @@ Vous pouvez également utiliser l’API Segmentation Service d’Adobe Experie
 
 #### Utilisation de l’interface utilisateur
 
-Dans l’interface utilisateur d’Experience Platform, l’onglet **[!UICONTROL Browse]** de l’espace de travail **[!UICONTROL Profiles]** vous permet d’afficher le nombre total de profils et de rechercher des profils individuels en fonction de leur valeur d’identité. Pour plus d’informations, consultez le [guide d’utilisation de Profile](./ui/user-guide.md).
+Dans l’interface utilisateur d’Experience Platform, l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **[!UICONTROL Profils]** vous permet d’afficher le nombre total de profils et de rechercher des profils individuels en fonction de leur valeur d’identité. Pour plus d’informations, consultez le [guide d’utilisation de Profile](./ui/user-guide.md).
 
-Vous pouvez également afficher la liste de vos audiences sous l’onglet **[!UICONTROL Browse]** dans l’espace de travail **[!UICONTROL Audiences]** . Après avoir sélectionné une audience, un échantillon de profils éligibles à cette audience s’affiche. Vous pouvez ensuite sélectionner l’un des profils répertoriés pour en afficher les détails. Pour plus d’informations, consultez la [Présentation de l’interface utilisateur Segmentation](../segmentation/ui/overview.md),
+Vous pouvez également afficher la liste de vos audiences sous l’onglet **[!UICONTROL Parcourir]** dans l’espace de travail **[!UICONTROL Audiences]**. Après avoir sélectionné une audience, un échantillon de profils éligibles à cette audience s’affiche. Vous pouvez ensuite sélectionner l’un des profils répertoriés pour en afficher les détails. Pour plus d’informations, consultez la [Présentation de l’interface utilisateur Segmentation](../segmentation/ui/overview.md),
 
 ## Codes d’erreur
 

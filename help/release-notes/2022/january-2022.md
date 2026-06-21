@@ -35,8 +35,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1397
-ht-degree: 77%
+source-wordcount: 1398
+ht-degree: 76%
 
 ---
 
@@ -57,7 +57,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités mises à jour**
 
@@ -103,7 +103,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Personnalisation de la même page et de la page suivante | La [fonctionnalité de personnalisation de la même page et de la page suivante](../../destinations/ui/activate-edge-personalization-destinations.md) fournit une vue partagée et ciblée des utilisateurs pour les applications sur Edge Network, afin d’assurer la cohérence entre les canaux marketing et client. Cette personnalisation est possible grâce à la [connexion Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et à la [connexion de personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour configurer vos campagnes de personnalisation de la même page ou de la page suivante, reportez-vous au [tutoriel dédié](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Surveillance des destinations par lots et mesures au niveau du segment | La fonctionnalité de surveillance des destinations est désormais étendue à partir des destinations de diffusion en continu pour inclure également les destinations par lots et les mesures au niveau du segment pour vos flux de données d’activation. Pour plus d’informations, lisez les sections [Tableau de bord de surveillance des destinations](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [Tableau de bord de surveillance des tâches de segment](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard) et [Affichage au niveau du segment](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Modification du planning dans l’interface utilisateur pour les flux de données d’activation par lots existants | Cette version introduit l’option permettant de modifier le planning de vos flux de données d’activation existants vers des destinations par lots. Pour plus d’informations, lisez [Activation des données de profils vers les destinations de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md). |
-| Améliorations des destinations Marketo | Les clients Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo grâce à la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le connecteur de destination [Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Lors de l’envoi de segments d’audience d’Experience Platform vers Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, lisez [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=fr) (l’étape 9 du tutoriel indique comment envoyer les enregistrements de nouvelles personnes dans Marketo). |
+| Améliorations des destinations Marketo | Les clients Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo grâce à la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le connecteur de destination [Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Lors de l’envoi de segments d’audience d’Experience Platform vers Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, lisez [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html) (l’étape 9 du tutoriel indique comment envoyer les enregistrements de nouvelles personnes dans Marketo). |
 
 **Nouvelles destinations**
 

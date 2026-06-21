@@ -14,7 +14,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 914
+source-wordcount: 915
 ht-degree: 8%
 
 ---
@@ -91,7 +91,7 @@ L’outil Sandbox vous permet de partager des packages que vous avez créés dan
 
 ### Surveiller les importations et les exportations au moyen de journaux d’audit
 
-Lorsque vous importez ou exportez votre package, vous pouvez surveiller le statut des tâches à l’aide du tableau de bord **[!UICONTROL Jobs]** dans Experience Platform. Pour en savoir plus sur la surveillance des tâches, consultez le guide sur la [surveillance des détails d’importation](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Lorsque vous importez ou exportez votre package, vous pouvez surveiller le statut des tâches à l’aide du tableau de bord **[!UICONTROL Tâches]** dans Experience Platform. Pour en savoir plus sur la surveillance des tâches, consultez le guide sur la [surveillance des détails d’importation](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### Mettez régulièrement à jour le sandbox doré
 

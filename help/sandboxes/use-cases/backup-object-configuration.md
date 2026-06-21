@@ -14,7 +14,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1178
+source-wordcount: 1193
 ht-degree: 4%
 
 ---
@@ -95,19 +95,19 @@ Vous pouvez sauvegarder des objets individuels dans un package de l’une des ma
 
 ##### Création d’un package multi-objet
 
-Dans Experience Platform, sélectionnez **[!UICONTROL Sandboxes]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Packages]**. Pour commencer à créer un package, sélectionnez **[!UICONTROL Create package]** dans le coin supérieur droit.
+Dans Experience Platform, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Packages]**. Pour commencer à créer un package, sélectionnez **[!UICONTROL Créer un package]** dans le coin supérieur droit.
 
 ![L’onglet Packages dans le tableau de bord des sandbox avec l’option Créer un package mise en surbrillance.](../images/use-cases/create-package.png)
 
-La boîte de dialogue **[!UICONTROL Create package]** s’affiche. Choisissez **[!UICONTROL Select objects]**, puis sélectionnez **[!UICONTROL Select]**.
+La boîte de dialogue **[!UICONTROL Créer un package]** s’affiche. Choisissez **[!UICONTROL Sélectionner des objets]** puis sélectionnez **[!UICONTROL Sélectionner]**.
 
 ![Boîte de dialogue Créer un package avec Sélection d’objets et l’option Sélectionner mise en surbrillance.](../images/use-cases/create-package-select-objects.png)
 
-Sélectionnez l’option **[!UICONTROL Multi-object]** . Vous devez maintenant fournir un nom pour votre nouveau package. Saisissez le nom de votre choix dans le champ de texte **[!UICONTROL Package name]**. Une fois l’opération terminée, sélectionnez **[!UICONTROL Create]**.
+Sélectionnez l’option **[!UICONTROL Plusieurs objets]**. Vous devez maintenant fournir un nom pour votre nouveau package. Saisissez le nom de votre choix dans le champ de texte **[!UICONTROL Nom du package]**. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
 
 ![La boîte de dialogue Créer un package avec l’option Plusieurs objets sélectionnée et le nom du package « Sauvegarder » renseigné.](../images/use-cases/name-multi-object.png)
 
-Votre nouveau package multi-objets est créé et disponible dans le tableau de bord [!UICONTROL Packages]. Sélectionnez le package dans la liste.
+Votre nouveau package multi-objet est créé et disponible dans le tableau de bord [!UICONTROL Packages]. Sélectionnez le package dans la liste.
 
 ![Tableau de bord des packages avec le package nommé Sauvegarde mis en surbrillance.](../images/use-cases/package-created.png)
 

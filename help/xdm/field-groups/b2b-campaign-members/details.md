@@ -11,35 +11,35 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 331
-ht-degree: 1%
+source-wordcount: 362
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL XDM Business Campaign Member Details] groupe de champs de schéma
+# [!UICONTROL Détails des membres de XDM Business Campaign] groupe de champs de schéma
 
-[!UICONTROL XDM Business Campaign Member Details] est un groupe de champs de schéma standard pour la classe [[!UICONTROL XDM Business Campaign Members]](../../classes/b2b/business-campaign-members.md) qui recueille des informations détaillées sur une campagne commerciale.
+[!UICONTROL Détails des membres de XDM Business Campaign] est un groupe de champs de schéma standard pour la classe [[!UICONTROL Membres de XDM Business Campaign]](../../classes/b2b/business-campaign-members.md), qui capture des informations détaillées sur une campagne commerciale.
 
 ![&#x200B; Structure du groupe de champs Détails des membres de XDM Business Campaign, tel qu’il apparaît dans l’interface utilisateur](../../images/field-groups/b2b/business-campaign-member-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `acquiredByCampaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite de la campagne qui a acquis ce membre de campagne. |
-| `acquiredByCampaignID` | [!UICONTROL String] | Identifiant de chaîne de la campagne qui a acquis ce membre de campagne. |
-| `firstRespondedDate` | [!UICONTROL DateTime] | Date et heure ISO 8601 de la première réponse de la personne à la campagne. |
-| `hasReachedSuccess` | [!UICONTROL Boolean] | Indique si ce membre de la campagne a abouti à une conversion. |
-| `hasResponded` | [!UICONTROL Boolean] | Indique si ce membre de la campagne a répondu à la campagne. |
-| `isDeleted` | [!UICONTROL Boolean] | Indique si ce membre de la campagne a été supprimé dans Marketo Engage.<br><br>Lors de l’utilisation du connecteur source [Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans le profil client en temps réel. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` sur `true`, vous pouvez utiliser le champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
-| `isExhausted` | [!UICONTROL Boolean] | Indique si ce membre de campagne a épuisé toutes les interactions de campagne. |
-| `lastStatus` | [!UICONTROL String] | Dernier statut du membre de la campagne. |
-| `memberStatus` | [!UICONTROL String] | Statut actuel du membre de la campagne. |
-| `memberStatusReason` | [!UICONTROL String] | Raison du statut actuel du membre de la campagne. |
-| `membershipDate` | [!UICONTROL DateTime] | Raison du statut actuel du membre de la campagne. |
-| `nurtureCadence` | [!UICONTROL String] | Cadence temporelle selon laquelle les informations relatives à la campagne doivent être présentées au membre de la campagne. |
-| `nurtureTrackName` | [!UICONTROL String] | Nom du programme d’éducation auquel ce membre de la campagne est soumis. |
-| `reachedSuccessDate` | [!UICONTROL DateTime] | Horodatage ISO 8601 indiquant le moment où une conversion réussie a été effectuée pour le membre de la campagne. |
-| `webinarConfirmationUrl` | [!UICONTROL String] | URL de confirmation du webinaire pour le membre de la campagne. |
-| `webinarRegistrationID` | [!UICONTROL String] | ID d’enregistrement du webinaire pour le membre de la campagne. |
+| `acquiredByCampaignKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de la campagne qui a acquis ce membre de campagne. |
+| `acquiredByCampaignID` | [!UICONTROL Chaîne] | Identifiant de chaîne de la campagne qui a acquis ce membre de campagne. |
+| `firstRespondedDate` | [!UICONTROL DateHeure] | Date et heure ISO 8601 de la première réponse de la personne à la campagne. |
+| `hasReachedSuccess` | [!UICONTROL booléen] | Indique si ce membre de la campagne a abouti à une conversion. |
+| `hasResponded` | [!UICONTROL booléen] | Indique si ce membre de la campagne a répondu à la campagne. |
+| `isDeleted` | [!UICONTROL booléen] | Indique si ce membre de la campagne a été supprimé dans Marketo Engage.<br><br>Lors de l’utilisation du connecteur source [Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans le profil client en temps réel. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` sur `true`, vous pouvez utiliser le champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `isExhausted` | [!UICONTROL booléen] | Indique si ce membre de campagne a épuisé toutes les interactions de campagne. |
+| `lastStatus` | [!UICONTROL Chaîne] | Dernier statut du membre de la campagne. |
+| `memberStatus` | [!UICONTROL Chaîne] | Statut actuel du membre de la campagne. |
+| `memberStatusReason` | [!UICONTROL Chaîne] | Raison du statut actuel du membre de la campagne. |
+| `membershipDate` | [!UICONTROL DateHeure] | Raison du statut actuel du membre de la campagne. |
+| `nurtureCadence` | [!UICONTROL Chaîne] | Cadence temporelle selon laquelle les informations relatives à la campagne doivent être présentées au membre de la campagne. |
+| `nurtureTrackName` | [!UICONTROL Chaîne] | Nom du programme d’éducation auquel ce membre de la campagne est soumis. |
+| `reachedSuccessDate` | [!UICONTROL DateHeure] | Horodatage ISO 8601 indiquant le moment où une conversion réussie a été effectuée pour le membre de la campagne. |
+| `webinarConfirmationUrl` | [!UICONTROL Chaîne] | URL de confirmation du webinaire pour le membre de la campagne. |
+| `webinarRegistrationID` | [!UICONTROL Chaîne] | ID d’enregistrement du webinaire pour le membre de la campagne. |
 
 {style="table-layout:auto"}
 

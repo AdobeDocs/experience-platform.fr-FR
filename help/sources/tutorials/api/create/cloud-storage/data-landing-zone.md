@@ -9,7 +9,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1426
+source-wordcount: 1428
 ht-degree: 13%
 
 ---
@@ -39,7 +39,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 >[!IMPORTANT]
 >
->Vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Manage Sources]** pour utiliser les API [!DNL Data Landing Zone] et récupérer des `type=user_drop_zone`. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
+>Vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Gérer les sources]** pour utiliser les API [!DNL Data Landing Zone] et récupérer des `type=user_drop_zone`. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
 
 La première étape de l’utilisation des API pour accéder aux [!DNL Data Landing Zone] consiste à envoyer une requête GET au point d’entrée `/landingzone` de l’API [!DNL Connectors] tout en fournissant des `type=user_drop_zone` dans l’en-tête de votre requête.
 

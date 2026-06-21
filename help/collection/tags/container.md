@@ -4,7 +4,7 @@ description: Voir l’intégralité du conteneur de balises dans un seul objet .
 exl-id: aa3561e4-b39a-4a00-a770-c192b5bc1282
 source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '407'
 ht-degree: 3%
 
 ---
@@ -170,8 +170,8 @@ readonly _satellite._container.property: {
 | Nom du paramètre | Type | Description |
 |---|---|---|
 | **`domains`** | `string[]` | Domaines configurés pour la propriété , tels que définis lors de la [configuration d’une propriété de balise](/help/tags/ui/administration/companies-and-properties.md). |
-| **`ruleComponentSequencingEnabled`** | `boolean` | Détermine si la case à cocher **[!UICONTROL Run rule components in sequence]** est activée lors de la configuration de la propriété de balise. |
-| **`undefinedVarsReturnEmpty`** | `boolean` | Détermine si la case à cocher **[!UICONTROL Return an empty string for undefined data elements]** est activée lors de la configuration de la propriété de balise. |
+| **`ruleComponentSequencingEnabled`** | `boolean` | Détermine si la case **[!UICONTROL Exécuter les composants de règle en séquence]** est activée lors de la configuration de la propriété de balise. |
+| **`undefinedVarsReturnEmpty`** | `boolean` | Détermine si la case **[!UICONTROL Renvoyer une chaîne vide pour les éléments de données non définis]** est activée lors de la configuration de la propriété de balise. |
 
 ## `_container.rules`
 

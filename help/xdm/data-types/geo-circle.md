@@ -13,20 +13,20 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 127
-ht-degree: 21%
+source-wordcount: 133
+ht-degree: 20%
 
 ---
 
-# Type de données [!UICONTROL Geo Circle]
+# Type de données [!UICONTROL Cercle géographique]
 
-[!UICONTROL Geo Circle] est un type de données XDM standard qui décrit une région géographique circulaire, selon un rayon particulier centré sur un ensemble spécifique de coordonnées. Ce type de données est basé sur la spécification publique documentée sur [schema.org](https://schema.org/GeoCircle).
+[!UICONTROL Cercle géographique] est un type de données XDM standard qui décrit une région géographique circulaire, selon un rayon particulier centré sur un ensemble spécifique de coordonnées. Ce type de données est basé sur la spécification publique documentée sur [schema.org](https://schema.org/GeoCircle).
 
 ![](../images/data-types/geo-circle.png){width=400}
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `_schema.coordinates` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Décrit les coordonnées géographiques du centre du cercle. |
+| `_schema.coordinates` | [[!UICONTROL Coordonnées géographiques]](./geo-coordinates.md) | Décrit les coordonnées géographiques du centre du cercle. |
 | `_schema.description` | Chaîne | Description du contenu du cercle. |
 | `_schema.radius` | Double | Longueur du rayon du cercle. Cette valeur est conforme à la référence [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) et elle est mesurée en mètres. |
 | `_id` | Chaîne | Identifiant unique généré par le système pour le cercle. |

@@ -9,14 +9,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 103
+source-wordcount: 107
 ht-degree: 6%
 
 ---
 
-# Type de données [!UICONTROL Ad break]
+# Type de données [!UICONTROL coupure publicitaire]
 
-[!UICONTROL Ad break] est un type de données standard du modèle de données d’expérience (XDM) qui décrit comment une annonce publicitaire horodatée est insérée dans un média horodaté.
+[!UICONTROL coupure publicitaire] est un type de données standard du modèle de données d’expérience (XDM) qui décrit comment une annonce publicitaire horodatée est insérée dans un média horodaté.
 
 ![Structure du type de données](../images/data-types/ad-break.png)
 

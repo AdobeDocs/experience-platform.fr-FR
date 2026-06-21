@@ -17,8 +17,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1147
-ht-degree: 12%
+source-wordcount: 1192
+ht-degree: 11%
 
 ---
 
@@ -52,19 +52,19 @@ Avant de poursuivre, assurez-vous de lire et d’effectuer les étapes préalabl
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Pour vous connecter à [!DNL Didomi], accédez à la catégorie *[!UICONTROL Databases]* , sélectionnez la carte source **[!UICONTROL Didomi]**, puis sélectionnez **[!UICONTROL Set up]**.
+Pour vous connecter à [!DNL Didomi], accédez à la catégorie *[!UICONTROL Bases de données]*, sélectionnez la vignette source **[!UICONTROL Didomi]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![liste-de-connecteurs-source](../../../../images/tutorials/create/didomi/source-connector-list.png)
 
 ## Ajouter votre schéma de données source
 
-Ensuite, utilisez l’interface *[!UICONTROL Select data]* pour charger le fichier JSON qui a été [téléchargé dans les étapes préalables](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file).
+Ensuite, utilisez l’interface *[!UICONTROL Sélectionner des données]* pour charger le fichier JSON qui a été [téléchargé dans les étapes préalables](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file).
 
-Vous pouvez utiliser l’interface de prévisualisation pour afficher la structure de fichiers de la payload. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Vous pouvez utiliser l’interface de prévisualisation pour afficher la structure de fichiers de la payload. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![add-data-schema](../../../../images/tutorials/create/didomi/add-data-schema.png)
 
@@ -84,10 +84,10 @@ Au cours de cette étape, vous pouvez utiliser un jeu de données existant ou en
 
 +++Sélectionnez pour connaître les étapes d’activation de l’ingestion de profil, des diagnostics d’erreur et de l’ingestion partielle.
 
-Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer **[!UICONTROL Profile dataset]** données pour l’ingestion de profil. Vous pouvez également utiliser cette étape pour activer **[!UICONTROL Error diagnostics]** et **[!UICONTROL Partial ingestion]**.
+Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer/désactiver le **[!UICONTROL jeu de données de profil]** pour activer vos données pour l’ingestion de profil. Vous pouvez également utiliser cette étape pour activer les **[!UICONTROL diagnostics d’erreur]** et **[!UICONTROL ingestion partielle]**.
 
-* **[!UICONTROL Error diagnostics]** : sélectionnez **[!UICONTROL Error diagnostics]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
-* **[!UICONTROL Partial ingestion]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
+* **[!UICONTROL Diagnostics d’erreur]** : sélectionnez **[!UICONTROL Diagnostics d’erreur]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
+* **[!UICONTROL Ingestion partielle]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
 
 +++
 
@@ -113,18 +113,18 @@ Le mappage est utilisé spécifiquement pour transférer des données **d’obje
 
 Utilisez l’[exemple de payload webhook téléchargé](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) dans les paramètres webhook [!DNL Didomi] pour mapper chaque objectif [!DNL Didomi] aux champs appropriés dans votre jeu de données Adobe.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![mapping-details](../../../../images/tutorials/create/didomi/mapping-details.png)
 
 ## Réviser
 
-L’étape *[!UICONTROL Review]* s’affiche, vous permettant de consulter les détails de votre flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape *[!UICONTROL Révision]* s’affiche et vous permet de consulter les détails de votre flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connection]** : affiche le nom du compte, la plateforme source et le nom de la source.
-* **[!UICONTROL Assign dataset and map fields]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Connexion]** : affiche le nom du compte, la plateforme source et le nom de la source.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
 
-Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Finish]**.
+Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**.
 
 ## Récupérer l’URL du point d’entrée de diffusion en continu
 
@@ -132,10 +132,10 @@ Une fois la connexion créée, la page des détails des sources s’affiche. Cet
 
 ## Terminer la configuration sur Adobe
 
-Une fois votre flux de données créé, accédez au catalogue *[!UICONTROL Sources]*, puis sélectionnez **[!UICONTROL Dataflows]**. Utilisez le répertoire des flux de données pour localiser votre flux de données [!DNL Didomi] et accéder à l’interface *[!UICONTROL Dataflow activity]*. Ensuite, utilisez le panneau *[!UICONTROL Properties]* dans le rail de droite et récupérez les valeurs des éléments suivants :
+Une fois votre flux de données créé, accédez au catalogue *[!UICONTROL Sources]*, puis sélectionnez **[!UICONTROL Flux de données]**. Utilisez le répertoire des flux de données pour localiser votre flux de données [!DNL Didomi] et accéder à l’interface *[!UICONTROL Activité du flux de données]*. Utilisez ensuite le panneau *[!UICONTROL Propriétés]* dans le rail de droite et récupérez les valeurs des éléments suivants :
 
-* [!UICONTROL Streaming endpoint]
-* [!UICONTROL Dataflow ID]
+* [!UICONTROL Point d’entrée de diffusion en continu]
+* [!UICONTROL Identifiant du flux de données]
 
 Dans l’interface utilisateur d’Experience Platform :
 
@@ -164,4 +164,4 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ### Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]** disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).

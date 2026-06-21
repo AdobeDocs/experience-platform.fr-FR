@@ -14,8 +14,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1603
-ht-degree: 13%
+source-wordcount: 1650
+ht-degree: 14%
 
 ---
 
@@ -40,23 +40,23 @@ Lisez la [[!DNL Stripe] présentation](../../../../connectors/payments/stripe.md
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie *Paiements*, sélectionnez **[!DNL Stripe]**, puis **[!UICONTROL Set up]**.
+Sous la catégorie *Paiements*, sélectionnez **[!DNL Stripe]**, puis **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources dans l’interface utilisateur d’Experience Platform, avec la carte source Stripe sélectionnée.](../../../../images/tutorials/create/stripe/catalog.png)
 
-La page **[!UICONTROL Connect Stripe account]** s’affiche. Sur cette page, vous pouvez utiliser des informations d’identification nouvelles ou existantes.
+La page **[!UICONTROL Connecter le compte Stripe]** s’affiche. Sur cette page, vous pouvez utiliser des informations d’identification nouvelles ou existantes.
 
 >[!BEGINTABS]
 
 >[!TAB Créer un compte]
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom, une description facultative et vos informations d’identification.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom, une description facultative et vos informations d’identification.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvelle interface de création de compte du workflow des sources.](../../../../images/tutorials/create/stripe/new.png)
 
@@ -66,9 +66,9 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** pui
 
 >[!TAB Utiliser un compte existant]
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte à utiliser dans le catalogue des comptes existants.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans le catalogue des comptes existants.
 
-Sélectionnez **[!UICONTROL Next]** pour continuer.
+Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Page de sélection du compte existant du catalogue de sources.](../../../../images/tutorials/create/stripe/existing.png)
 
@@ -76,7 +76,7 @@ Sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ## Sélectionner les données {#select-data}
 
-Maintenant que vous avez accès à votre compte , vous devez identifier le chemin d’accès approprié aux données [!DNL Stripe] que vous souhaitez ingérer. Sélectionnez **[!UICONTROL Resource path]** puis sélectionnez le point d’entrée à partir duquel vous souhaitez ingérer des données. Les points d’entrée [!DNL Stripe] disponibles sont les suivants :
+Maintenant que vous avez accès à votre compte , vous devez identifier le chemin d’accès approprié aux données [!DNL Stripe] que vous souhaitez ingérer. Sélectionnez **[!UICONTROL Chemin d’accès à la ressource]** puis sélectionnez le point d’entrée à partir duquel vous souhaitez ingérer des données. Les points d’entrée [!DNL Stripe] disponibles sont les suivants :
 
 * Frais
 * Abonnements
@@ -87,7 +87,7 @@ Maintenant que vous avez accès à votre compte , vous devez identifier le chemi
 
 ![Fenêtre déroulante du chemin de la ressource.](../../../../images/tutorials/create/stripe/select-resource-path.png)
 
-Une fois votre point d’entrée sélectionné, l’interface se met à jour dans un écran d’aperçu, affichant la structure de données du point d’entrée [!DNL Stripe] que vous avez sélectionné. Sélectionnez **[!UICONTROL Next]** pour continuer.
+Une fois votre point d’entrée sélectionné, l’interface se met à jour dans un écran d’aperçu, affichant la structure de données du point d’entrée [!DNL Stripe] que vous avez sélectionné. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![La fenêtre de prévisualisation de vos données Stripe.](../../../../images/tutorials/create/stripe/preview.png)
 
@@ -103,7 +103,7 @@ Un jeu de données est une structure de stockage et de gestion pour une collecti
 
 >[!TAB Utiliser un nouveau jeu de données]
 
-Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL New dataset]**, puis fournissez un nom et une description facultative pour votre jeu de données. Vous devez également sélectionner un schéma de modèle de données d’expérience (XDM) auquel votre jeu de données adhère.
+Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis indiquez un nom et une description facultative pour votre jeu de données. Vous devez également sélectionner un schéma de modèle de données d’expérience (XDM) auquel votre jeu de données adhère.
 
 ![Nouvelle interface de sélection de jeu de données.](../../../../images/tutorials/create/stripe/new-dataset.png)
 
@@ -115,7 +115,7 @@ Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL New datase
 
 >[!TAB Utiliser un jeu de données existant]
 
-Si vous disposez déjà d’un jeu de données, sélectionnez **[!UICONTROL Existing dataset]**, puis utilisez l’option **[!UICONTROL Advanced search]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel ou non.
+Si vous disposez déjà d’un jeu de données, sélectionnez **[!UICONTROL Jeu de données existant]** puis utilisez l’option **[!UICONTROL Recherche avancée]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel ou non.
 
 ![Interface de sélection de jeu de données existante.](../../../../images/tutorials/create/stripe/existing-dataset.png)
 
@@ -123,10 +123,10 @@ Si vous disposez déjà d’un jeu de données, sélectionnez **[!UICONTROL Exis
 
 +++Sélectionnez pour connaître les étapes d’activation de l’ingestion de profil, des diagnostics d’erreur et de l’ingestion partielle.
 
-Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer **[!UICONTROL Profile dataset]** données pour l’ingestion de profil. Vous pouvez également utiliser cette étape pour activer **[!UICONTROL Error diagnostics]** et **[!UICONTROL Partial ingestion]**.
+Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer/désactiver le **[!UICONTROL jeu de données de profil]** pour activer vos données pour l’ingestion de profil. Vous pouvez également utiliser cette étape pour activer les **[!UICONTROL diagnostics d’erreur]** et **[!UICONTROL ingestion partielle]**.
 
-* **[!UICONTROL Error diagnostics]** : sélectionnez **[!UICONTROL Error diagnostics]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
-* **[!UICONTROL Partial ingestion]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
+* **[!UICONTROL Diagnostics d’erreur]** : sélectionnez **[!UICONTROL Diagnostics d’erreur]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
+* **[!UICONTROL Ingestion partielle]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
 
 +++
 
@@ -142,11 +142,11 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 | Description | (Facultatif) Brève description de votre flux de données. |
 | Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs peuvent s’abonner. Ces options nécessitent toutes un flux de données en cours d’exécution pour les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]** pour continuer.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ## Mappage de champs à un schéma XDM {#mapping}
 
-L’étape **[!UICONTROL Mapping]** s’affiche. Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer ces données dans Experience Platform. Pour obtenir un guide complet sur l’utilisation de l’interface de mappage, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md) pour plus d’informations.
+L’étape **[!UICONTROL Mappage]** s’affiche. Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer ces données dans Experience Platform. Pour obtenir un guide complet sur l’utilisation de l’interface de mappage, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md) pour plus d’informations.
 
 ![Interface de mappage du workflow des sources.](../../../../images/tutorials/create/stripe/mapping.png)
 
@@ -169,19 +169,19 @@ Vous pouvez également sélectionner l’icône de calendrier et utiliser un cal
 | Heure de début | Date et heure de l’exécution projetée, présentées dans le fuseau horaire UTC. |
 | Renvoyer | Le renvoi détermine les données initialement ingérées. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début sont ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés. |
 
-Une fois que vous avez configuré le planning d’ingestion du flux de données, sélectionnez **[!UICONTROL Next]**.
+Une fois que vous avez configuré le planning d’ingestion de votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Interface de planification du workflow des sources.](../../../../images/tutorials/create/stripe/scheduling.png)
 
 ## Vérifier le flux de données
 
-La dernière étape du processus de création de flux de données consiste à vérifier votre flux de données avant de l’exécuter. Utilisez l’étape **[!UICONTROL Review]** pour passer en revue les détails de votre nouveau flux de données avant son exécution. Les détails sont regroupés dans les catégories suivantes :
+La dernière étape du processus de création de flux de données consiste à vérifier votre flux de données avant de l’exécuter. Utilisez l’étape **[!UICONTROL Réviser]** pour passer en revue les détails de votre nouveau flux de données avant son exécution. Les détails sont regroupés dans les catégories suivantes :
 
 * **Connexion** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **Attribuer des champs de jeu de données et de mappage** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 * **Planification** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
 
-Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Finish]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![l’étape Révision du workflow des sources.](../../../../images/tutorials/create/stripe/review.png)
 
@@ -199,4 +199,4 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ### Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]** disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).

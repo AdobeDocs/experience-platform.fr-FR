@@ -9,7 +9,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 585
+source-wordcount: 609
 ht-degree: 2%
 
 ---
@@ -30,19 +30,19 @@ Lisez ce guide pour savoir comment utiliser le [!DNL Relay Connector] dans l’e
 
 ## Connecter votre source de [!DNL Relay Connector]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran ou utiliser l’option de recherche pour trouver une source spécifique.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran ou utiliser l’option de recherche pour trouver une source spécifique.
 
-Sous la catégorie *[!UICONTROL Marketing automation]* , sélectionnez la carte source [!DNL Relay Connector] et sélectionnez **[!UICONTROL Add data]**.
+Sous la catégorie *[!UICONTROL Automatisation marketing]*, sélectionnez la carte source [!DNL Relay Connector] et sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
->Les sources du catalogue de sources affichent l’option **[!UICONTROL Set up]** lorsqu’il n’existe aucun compte authentifié. Une fois qu’un compte est authentifié, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue de sources affichent l’option **[!UICONTROL Configurer]** lorsqu’il n’existe aucun compte authentifié. Une fois qu’un compte est authentifié, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Page de catalogue de l’espace de travail des sources.](../../../../images/tutorials/create/relay-connector/relay-source.jpg)
 
 ### Sélectionner les données
 
-L’interface **[!UICONTROL Connect Relay Connector source]** s’affiche. Utilisez l’interface *[!UICONTROL Select data]* pour parcourir ou spécifier le schéma de données source. Vous pouvez également charger un exemple de fichier JSON pour définir le schéma source.
+L&#39;interface **[!UICONTROL Connect Relay Connector source]** s&#39;affiche. Utilisez l’interface *[!UICONTROL Sélectionner des données]* pour parcourir ou spécifier le schéma de données source. Vous pouvez également charger un exemple de fichier JSON pour définir le schéma source.
 
 >[!NOTE]
 >
@@ -50,13 +50,13 @@ L’interface **[!UICONTROL Connect Relay Connector source]** s’affiche. Utili
 
 ![Interface de sélection des données](../../../../images/tutorials/create/relay-connector/upload-data.jpg)
 
-Une fois les données chargées, vous pouvez utiliser la section [!UICONTROL Preview sample data] pour prévisualiser les données.
+Une fois les données chargées, vous pouvez utiliser la section [!UICONTROL Prévisualiser les données d’exemple] pour prévisualiser les données.
 
 ![Les données chargées.](../../../../images/tutorials/create/relay-connector/uploaded-data.jpg)
 
 ### Détails du flux de données
 
-Ensuite, utilisez l’interface *[!UICONTROL Dataflow details]* pour fournir un **nom** et une **description facultative** pour votre flux de données. Sélectionnez également le **[!UICONTROL Target dataset]** que vous souhaitez utiliser. Vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
+Utilisez ensuite l’interface *[!UICONTROL Détails du flux de données]* pour fournir un **nom** et une **description facultative** pour votre flux de données. En outre, sélectionnez le **[!UICONTROL jeu de données cible]** que vous souhaitez utiliser. Vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
 
 ![Interface des détails du flux de données.](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 

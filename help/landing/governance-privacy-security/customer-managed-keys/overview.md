@@ -19,7 +19,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1212
+source-wordcount: 1221
 ht-degree: 9%
 
 ---
@@ -50,9 +50,9 @@ Pour activer la fonction CMK, l’environnement d’hébergement de votre platef
 
 ### Conditions préalables générales
 
-Pour afficher la section [!UICONTROL Encryption] dans Adobe Experience Platform et y accéder, vous devez avoir créé un rôle et attribué l’autorisation [!UICONTROL Manage Customer Managed Key] à ce rôle.  Tout utilisateur disposant de l’autorisation [!UICONTROL Manage Customer Managed Key] peut activer la fonction CMK pour son organisation.
+Pour afficher la section [!UICONTROL Chiffrement] dans Adobe Experience Platform et y accéder, vous devez avoir créé un rôle et attribué l’autorisation [!UICONTROL Gérer les clés gérées par le client] à ce rôle.  Tout utilisateur disposant de l’autorisation [!UICONTROL Gérer les clés gérées par le client] peut activer la fonction CMK pour son organisation.
 
-Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr).
+Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 ### Conditions préalables spécifiques à Azure
 
@@ -122,7 +122,7 @@ Par exemple, le tableau de bord du profil continuera à afficher les données de
 
 >[!TIP]
 >
->Il existe deux exceptions spécifiques aux cas d’utilisation à l’expiration de sept jours du jeu de données sur les données non principales (mises en cache/transitoires). Pour plus d’informations sur ces fonctionnalités, consultez leurs documentations respectives.<ul><li>[Raccourcisseur d’URL &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms)</li><li>[Projections &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=fr#edge-projections)</li></ul>
+>Il existe deux exceptions spécifiques aux cas d’utilisation à l’expiration de sept jours du jeu de données sur les données non principales (mises en cache/transitoires). Pour plus d’informations sur ces fonctionnalités, consultez leurs documentations respectives.<ul><li>[Raccourcisseur d’URL &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms)</li><li>[Projections &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Étapes suivantes
 

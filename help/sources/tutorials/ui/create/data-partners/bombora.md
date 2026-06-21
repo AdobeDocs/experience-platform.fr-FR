@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 941
+source-wordcount: 965
 ht-degree: 7%
 
 ---
@@ -34,13 +34,13 @@ Lisez la [[!DNL Bombora Intent] présentation](../../../../connectors/data-partn
 
 ## Parcourir le catalogue des sources
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Vous pouvez sélectionner la catégorie appropriée dans le panneau *[!UICONTROL Categories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Vous pouvez sélectionner la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour utiliser [!DNL Bombora], sélectionnez la carte source **[!UICONTROL Bombora Intent]** sous *[!UICONTROL Data & Identity Partners]*, puis sélectionnez **[!UICONTROL Add data]**.
+Pour utiliser [!DNL Bombora], sélectionnez la carte source **[!UICONTROL Intention Bombora]** sous *[!UICONTROL Partenaires de données et d’identité]*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la vignette « Intention de Bombora » sélectionnée.](../../../../images/tutorials/create/bombora/catalog.png)
 
@@ -48,9 +48,9 @@ Pour utiliser [!DNL Bombora], sélectionnez la carte source **[!UICONTROL Bombor
 
 ### Utiliser un compte existant {#existing}
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte à utiliser dans la liste des comptes de l’interface.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans la liste des comptes de l’interface.
 
-Une fois votre compte sélectionné, sélectionnez **[!UICONTROL Next]** pour passer à l’étape suivante.
+Une fois votre compte sélectionné, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape suivante.
 
 ![Interface du compte existant dans le workflow des sources.](../../../../images/tutorials/create/bombora/existing.png)
 
@@ -58,7 +58,7 @@ Une fois votre compte sélectionné, sélectionnez **[!UICONTROL Next]** pour pa
 
 Si vous ne disposez pas d’un compte existant, vous devez créer un compte en fournissant les informations d’authentification nécessaires qui correspondent à votre source.
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom de compte et, éventuellement, une description pour les détails de votre compte. Indiquez ensuite les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform. Pour connecter votre compte [!DNL Bombora], vous devez disposer des informations d’identification suivantes :
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom de compte et éventuellement une description pour les détails de votre compte. Indiquez ensuite les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform. Pour connecter votre compte [!DNL Bombora], vous devez disposer des informations d’identification suivantes :
 
 * **ID de la clé d’accès** : votre ID de clé d’accès [!DNL Bombora]. Il s’agit d’une chaîne alphanumérique de 61 caractères requise pour authentifier votre compte auprès d’Experience Platform.
 * **Clé d’accès secrète** : votre clé d’accès secrète [!DNL Bombora]. Il s’agit d’une chaîne codée en base 64 de 40 caractères requise pour authentifier votre compte auprès d’Experience Platform.
@@ -84,18 +84,18 @@ Ensuite, utilisez l’interface de planification pour configurer un planning d�
 * **Intervalle** : l’intervalle représente la durée écoulée entre chaque cycle d’ingestion. Le seul intervalle pris en charge pour un flux de données [!DNL Bombora] est 1. Cela signifie que votre flux de données ingérera des données une fois par semaine, toutes les semaines.
 * **Heure de début** : l’heure de début détermine à quel moment la première itération d’exécution de votre flux de données se produira. [!DNL Bombora] envoie les données à Adobe une fois par semaine, le lundi, à 12 :00 UTC. Par conséquent, vous devez définir l’heure de début de l’ingestion après 12 :00 UTC. En outre, vous devez confirmer l’heure d’ingestion avec [!DNL Bombora], car ils peuvent modifier leur planning lors de l’envoi de fichiers vers Adobe.
 
-Une fois que vous avez configuré le planning d’ingestion du flux de données, sélectionnez **[!UICONTROL Next]**.
+Une fois que vous avez configuré le planning d’ingestion de votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Interface de planification du workflow des sources.](../../../../images/tutorials/create/bombora/scheduling.png)
 
 ## Vérifier le flux de données {#review-dataflow}
 
-La dernière étape du processus de création de flux de données consiste à vérifier votre flux de données avant de l’exécuter. Utilisez l’étape *[!UICONTROL Review]* pour passer en revue les détails de votre nouveau flux de données avant son exécution. Les détails sont regroupés dans les catégories suivantes :
+La dernière étape du processus de création de flux de données consiste à vérifier votre flux de données avant de l’exécuter. Utilisez l’étape *[!UICONTROL Réviser]* pour passer en revue les détails de votre nouveau flux de données avant son exécution. Les détails sont regroupés dans les catégories suivantes :
 
 * **Connexion** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **Planification** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
 
-Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Finish]**.
+Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Terminer]**.
 
 ![Interface de révision du workflow des sources.](../../../../images/tutorials/create/bombora/review.png)
 
@@ -113,4 +113,4 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ### Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]** disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).

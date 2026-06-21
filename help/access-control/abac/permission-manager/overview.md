@@ -20,8 +20,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 286
-ht-degree: 8%
+source-wordcount: 301
+ht-degree: 7%
 
 ---
 
@@ -29,29 +29,29 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Pour accéder à [!UICONTROL Permission Manager], vous devez être un administrateur de produit. Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
+>Pour accéder au [!UICONTROL Gestionnaire d’autorisations], vous devez être administrateur de produit. Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-La fonctionnalité [!UICONTROL Permission Manager] fournit des rapports et vous permet d’afficher l’environnement de contrôle d’accès complet. Grâce aux requêtes simples, vous pouvez générer des rapports clairs qui vous aideront à comprendre la gestion des accès et à passer moins de temps à vérifier les autorisations d’accès sur de nombreux workflows et niveaux de granularité.
+La fonctionnalité [!UICONTROL Gestionnaire d’autorisations] fournit des rapports et vous permet d’afficher l’environnement de contrôle d’accès complet. Grâce aux requêtes simples, vous pouvez générer des rapports clairs qui vous aideront à comprendre la gestion des accès et à passer moins de temps à vérifier les autorisations d’accès sur de nombreux workflows et niveaux de granularité.
 
-Avec [!UICONTROL Permission Manager], vous pouvez effectuer une recherche en fonction des éléments suivants :
+Avec [!UICONTROL Gestionnaire d’autorisations], vous pouvez effectuer une recherche en fonction des éléments suivants :
 
 * [Utilisateurs et groupe d’utilisateurs](./permissions.md)
 * [Rôles et libellés](./permissions.md)
 
 Vous pouvez affiner votre recherche en sélectionnant des ressources, des actions et des sandbox spécifiques.
 
-Pour accéder à [!UICONTROL Permission Manager] for [!DNL Experience Platform], vous devez être administrateur d’une organisation ayant accès à Experience Platform. Bien qu’Adobe permette des hiérarchies d’administrateurs personnalisables au sein de votre organisation, vous devez être un administrateur de produit pour l’[!DNL Adobe Experience Platform]. Pour plus d’informations, reportez-vous à l’article du Centre d’aide Adobe sur les [&#x200B; rôles d’administration &#x200B;](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Pour accéder au [!UICONTROL Gestionnaire d’autorisations] par [!DNL Experience Platform], vous devez être administrateur d’une organisation ayant accès à Experience Platform. Bien qu’Adobe permette des hiérarchies d’administrateurs personnalisables au sein de votre organisation, vous devez être un administrateur de produit pour l’[!DNL Adobe Experience Platform]. Pour plus d’informations, reportez-vous à l’article du Centre d’aide Adobe sur les [&#x200B; rôles d’administration &#x200B;](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
-Connectez-vous à [&#128279;](https://experience.adobe.com/) à l&#39;aide de vos informations d&#39;identification [!DNL Adobe].  Une fois connecté, la page **[!UICONTROL Overview]** de votre organisation s’affiche. Cette page affiche les produits auxquels votre organisation est abonnée. Pour lancer l’espace de travail du contrôle d’accès basé sur les attributs pour l’intégration de Platform, sélectionnez **[!UICONTROL Permissions]**.
+Connectez-vous à [&#128279;](https://experience.adobe.com/) à l&#39;aide de vos informations d&#39;identification [!DNL Adobe].  Une fois connecté, la page **[!UICONTROL Aperçu]** s’affiche pour votre organisation. Cette page affiche les produits auxquels votre organisation est abonnée. Pour lancer l’espace de travail du contrôle d’accès basé sur les attributs pour l’intégration de Platform, sélectionnez **[!UICONTROL Autorisations]**.
 
 Présentation de ![Adobe Experience Platform mettant en surbrillance les autorisations.](../../images/flac-ui/flac-select-product.png)
 
-L’espace de travail du contrôle d’accès basé sur les attributs pour Experience Platform s’affiche, s’ouvrant sur la page **[!UICONTROL Overview]**. Cette page vous permet d’afficher tous les rôles et de gérer divers paramètres comme indiqué dans ce document.
+L’espace de travail du contrôle d’accès basé sur les attributs pour Experience Platform s’affiche, s’ouvrant sur la page **[!UICONTROL Aperçu]**. Cette page vous permet d’afficher tous les rôles et de gérer divers paramètres comme indiqué dans ce document.
 
-Sélectionnez **[!UICONTROL Permission Manager]** dans le volet de navigation de gauche.
+Sélectionnez **[!UICONTROL Gestionnaire d’autorisations]** dans le volet de navigation de gauche.
 
 ![Écran de recherche du Gestionnaire d’autorisations affichant les filtres disponibles.](../../images/permission-manager/permission-manager.png)
 
 ## Étapes suivantes
 
-Une fois que vous avez accédé à l’espace de travail [!UICONTROL Permission Manager], passez à l’étape suivante pour en savoir plus sur la manière dont vous pouvez [rechercher des utilisateurs et des rôles](./permissions.md).
+Une fois que vous avez accédé à l’espace de travail [!UICONTROL Gestionnaire d’autorisations], passez à l’étape suivante pour en savoir plus sur la manière dont vous pouvez [rechercher des utilisateurs et des rôles](./permissions.md).

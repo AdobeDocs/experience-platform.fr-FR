@@ -5,7 +5,7 @@ last-substantial-update: 2025-05-1
 exl-id: 550f7b62-84d7-49d4-8551-b8785cdedd0f
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1128'
 ht-degree: 2%
 
 ---
@@ -44,11 +44,11 @@ Pour connecter Experience Platform à [!DNL Reddit], les entrées suivantes sont
 Pour installer et configurer l’extension d’API [!DNL Reddit] Conversions, procédez comme suit :
 
 1. Dans l’interface utilisateur de la collecte de données Experience Platform, sélectionnez [!UICONTROL Extensions] dans le volet de navigation de gauche pour accéder au catalogue [!UICONTROL Extensions]. Créez ensuite [une propriété de transfert d’événement](https://experienceleague.adobe.com/fr/docs/experience-platform/tags/event-forwarding/overview#properties) ou sélectionnez une propriété existante.
-2. Accédez à **[!UICONTROL Extensions]** dans le panneau de navigation de gauche. Sélectionnez **[!UICONTROL Catalog]** puis l’extension **[!DNL Reddit]**.
+2. Accédez à **[!UICONTROL Extensions]** dans le panneau de navigation de gauche. Sélectionnez **[!UICONTROL Catalogue]** puis l’extension **[!DNL Reddit]**.
    ![Le catalogue des extensions de Adobe Experience Platform avec l’extension Reddit mise en surbrillance.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Fournissez les détails de configuration suivants :
    - **Pixel ID** : saisissez votre [!DNL Reddit Ads] Pixel ID.
-   - **Jeton d’accès de conversion** : saisissez le jeton généré dans votre compte [!DNL Reddit Ads] et sélectionnez **[!UICONTROL Save]** lorsque vous avez terminé.
+   - **Jeton d’accès de conversion** : saisissez le jeton généré dans votre compte [!DNL Reddit Ads] et sélectionnez **[!UICONTROL Enregistrer]** lorsque vous avez terminé.
      ![Détails de configuration de l’extension API Reddit Conversions, y compris les champs pour l’ID de pixel et le jeton d’accès de conversion.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Configurer une règle de transfert d’événement {#config-rule}

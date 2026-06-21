@@ -16,8 +16,8 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 406
-ht-degree: 96%
+source-wordcount: 411
+ht-degree: 95%
 
 ---
 
@@ -35,7 +35,7 @@ Si vous n’êtes pas un administrateur, vous pouvez tout de même consulter vos
 
 ## Certaines fonctionnalités de lʼinterface utilisateur de [!DNL Experience Platform] ne sont pas disponibles. Comment les autorisations contrôlent-elles l’accès à ces fonctionnalités ?
 
-Si vous ne disposez pas des autorisations dʼaccès pour une fonctionnalité de [!DNL Experience Platform] spécifique, cette fonctionnalité sera masquée ou grisée dans lʼinterface utilisateur dʼ[!DNL Experience Platform]. Par exemple, pour afficher l&#39;onglet « [!UICONTROL Profiles] », vous devez disposer des autorisations « [!UICONTROL View Profiles] » ou « [!UICONTROL Manage Profiles] ». Contactez votre administrateur si vous avez besoin dʼautorisations supplémentaires pour les fonctionnalités dʼ[!DNL Experience Platform].
+Si vous ne disposez pas des autorisations dʼaccès pour une fonctionnalité de [!DNL Experience Platform] spécifique, cette fonctionnalité sera masquée ou grisée dans lʼinterface utilisateur dʼ[!DNL Experience Platform]. Par exemple, pour afficher l&#39;onglet « [!UICONTROL Profils] », vous devez disposer des autorisations « [!UICONTROL Afficher les profils] » ou « [!UICONTROL Gérer les profils] ». Contactez votre administrateur si vous avez besoin dʼautorisations supplémentaires pour les fonctionnalités dʼ[!DNL Experience Platform].
 
 ## Comment les autorisations sont-elles regroupées et quel groupe contient l’autorisation que je souhaite utiliser ?
 

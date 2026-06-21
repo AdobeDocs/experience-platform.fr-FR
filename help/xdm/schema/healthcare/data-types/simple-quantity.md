@@ -11,23 +11,23 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 131
-ht-degree: 9%
+source-wordcount: 139
+ht-degree: 10%
 
 ---
 
-# Type de données [!UICONTROL Simple Quantity]
+# Type de données [!UICONTROL Quantité simple]
 
-[!UICONTROL Simple Quantity] est un type de données standard du modèle de données d’expérience (XDM) qui fournit une quantité mesurée ou mesurable. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL &#x200B; Quantité simple &#x200B;] est un type de données standard du modèle de données d’expérience (XDM) qui fournit une quantité mesurée ou mesurable. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure de type de données Quantité simple](../../../images/healthcare/data-types/simple-quantity.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Code] | `code` | Chaîne | Forme codée de l’unité. |
-| [!UICONTROL System] | `system` | Chaîne | Système qui définit le formulaire unitaire codé, représenté sous la forme d’un URI. |
-| [!UICONTROL Unit] | `unit` | Chaîne | Représentation de l’unité. |
-| [!UICONTROL Value] | `value` | Double | Valeur numérique. |
+| [!UICONTROL Système] | `system` | Chaîne | Système qui définit le formulaire unitaire codé, représenté sous la forme d’un URI. |
+| [!UICONTROL Unité] | `unit` | Chaîne | Représentation de l’unité. |
+| [!UICONTROL Valeur] | `value` | Double | Valeur numérique. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

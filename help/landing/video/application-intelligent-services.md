@@ -1,6 +1,6 @@
 ---
 title: Application et services intelligents basés sur Experience Platform
-description: Cette vidéo présente les applications et les services intelligents reposant sur Adobe Experience Platform, qui complètent Experience Cloud Applications&mdash;Real-Time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI et Customer AI.
+description: Cette vidéo donne un aperçu des applications et des services intelligents reposant sur Adobe Experience Platform, qui complètent les applications Experience Cloud&mdash;Real-Time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI et Customer AI.
 kt: 4333
 audience: all
 doc-type: video
@@ -45,7 +45,7 @@ Cette vidéo présente un aperçu de l’application et des services intelligent
 Pour en savoir plus, utilisez les liens pour consulter la documentation de chaque application :
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=fr)
-* [Services intelligents](https://experienceleague.adobe.com/docs/intelligent-services.html?lang=fr)
+* [Services intelligents](https://experienceleague.adobe.com/docs/intelligent-services.html)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=fr)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=fr)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](../../rtcdp/overview.md)

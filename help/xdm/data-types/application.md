@@ -15,7 +15,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 431
+source-wordcount: 440
 ht-degree: 1%
 
 ---
@@ -28,13 +28,13 @@ ht-degree: 1%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `applicationCloses` | [[!UICONTROL Measure]](./measure.md) | Décrit en détail la fin d’une application. |
-| `crashes` | [[!UICONTROL Measure]](./measure.md) | Cette propriété se déclenche lorsque l’application ne se ferme pas comme prévu. |
-| `featureUsages` | [[!UICONTROL Measure]](./measure.md) | Décrit toutes les données provenant de l’activation d’une fonctionnalité d’application qui sont mesurées. |
-| `firstLaunches` | [[!UICONTROL Measure]](./measure.md) | Contient des données sur le premier lancement. Cette propriété est déclenchée lors du premier lancement qui suit une installation. |
-| `installs` | [[!UICONTROL Measure]](./measure.md) | Enregistre l’installation d’une application sur un appareil lorsqu’un événement d’installation spécifique est disponible. |
-| `launches` | [[!UICONTROL Measure]](./measure.md) | Décrit une valeur associée au lancement d’une application. Cela est déclenché à chaque exécution, y compris les blocages, les installations et la reprise à partir de l’arrière-plan lorsque le délai d’expiration de la session a été dépassé. |
-| `upgrades` | [[!UICONTROL Measure]](./measure.md) | Contient des données sur la mise à niveau d’une application installée précédemment. Elle est déclenchée lors du premier lancement qui suit une mise à niveau. |
+| `applicationCloses` | [[!UICONTROL Mesure]](./measure.md) | Décrit en détail la fin d’une application. |
+| `crashes` | [[!UICONTROL Mesure]](./measure.md) | Cette propriété se déclenche lorsque l’application ne se ferme pas comme prévu. |
+| `featureUsages` | [[!UICONTROL Mesure]](./measure.md) | Décrit toutes les données provenant de l’activation d’une fonctionnalité d’application qui sont mesurées. |
+| `firstLaunches` | [[!UICONTROL Mesure]](./measure.md) | Contient des données sur le premier lancement. Cette propriété est déclenchée lors du premier lancement qui suit une installation. |
+| `installs` | [[!UICONTROL Mesure]](./measure.md) | Enregistre l’installation d’une application sur un appareil lorsqu’un événement d’installation spécifique est disponible. |
+| `launches` | [[!UICONTROL Mesure]](./measure.md) | Décrit une valeur associée au lancement d’une application. Cela est déclenché à chaque exécution, y compris les blocages, les installations et la reprise à partir de l’arrière-plan lorsque le délai d’expiration de la session a été dépassé. |
+| `upgrades` | [[!UICONTROL Mesure]](./measure.md) | Contient des données sur la mise à niveau d’une application installée précédemment. Elle est déclenchée lors du premier lancement qui suit une mise à niveau. |
 | `id` | Chaîne | Identifiant unique de l’application. |
 | `name` | Chaîne | Nom de l’application. |
 | `userPerspective` | Chaîne | Perspective ou relation physique entre l’utilisateur ou l’utilisatrice et l’application ou la marque au moment où un événement s’est produit. Comprendre le point de vue de l’utilisateur ou de l’utilisatrice par rapport à l’application permet de générer avec précision des sessions, car la plupart du temps, vous ne souhaitez pas inclure d’événements `background` et `detached` dans le cadre d’une session « active ». La valeur de cette propriété doit être égale à l’une des valeurs d’énumération répertoriées ci-dessous. <li> `foreground` : l’utilisateur et l’application interagissent directement entre eux. </li> <li> `background` : l’application et l’utilisateur interagissent indirectement entre eux. Par exemple, l’application peut mesurer une valeur et l’actualiser lorsque l’écran est verrouillé ou qu’une autre application est utilisée au premier plan.  </li> <li> `detached` : détaché signifie que l’événement était associé à l’application, mais ne provenait pas directement de l’application, comme l’envoi d’un e-mail ou d’une notification push depuis un système externe. |

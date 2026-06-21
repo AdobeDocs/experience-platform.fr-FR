@@ -13,8 +13,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 609
-ht-degree: 35%
+source-wordcount: 630
+ht-degree: 33%
 
 ---
 
@@ -58,27 +58,27 @@ Une fois les informations d’identification requises collectées, vous pouvez s
 
 ## Connecter votre compte [!DNL Google Cloud Storage]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie [!UICONTROL Cloud storage] , sélectionnez **[!UICONTROL Google Cloud Storage]** puis **[!UICONTROL Add data]**.
+Dans la catégorie [!UICONTROL Espace de stockage], sélectionnez **[!UICONTROL Espace de stockage Google]** puis **[!UICONTROL Ajouter des données]**.
 
 ![Écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des sources.](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-La page **[!UICONTROL Connect to Google Cloud Storage]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à Google Cloud Storage]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte [!DNL Google Cloud Storage] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL Google Cloud Storage] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Écran de l’interface utilisateur d’Experience Platform affichant la page du compte existant pour une source Google Cloud Storage](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL New account]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Google Cloud Storage]. Au cours de cette étape, vous pouvez également désigner les sous-dossiers auxquels votre compte aura accès en définissant le nom du chemin d’accès au sous-dossier.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Google Cloud Storage]. Au cours de cette étape, vous pouvez également désigner les sous-dossiers auxquels votre compte aura accès en définissant le nom du chemin d’accès au sous-dossier.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Écran de l’interface utilisateur d’Experience Platform affichant la nouvelle page de compte pour une source Google Cloud Storage.](../../../../images/tutorials/create/google-cloud-storage/new.png)
 

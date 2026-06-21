@@ -15,7 +15,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 825
+source-wordcount: 861
 ht-degree: 13%
 
 ---
@@ -28,13 +28,13 @@ Dans Adobe Experience Platform, vous pouvez afficher l’historique des alertes 
 >
 >Pour démarrer avec les alertes dans Experience Platform, consultez la [Présentation des alertes](./overview.md).
 
-Pour commencer, sélectionnez **[!UICONTROL Alerts]** dans le volet de navigation de gauche.
+Pour commencer, sélectionnez **[!UICONTROL Alertes]** dans le volet de navigation de gauche.
 
-![Page des alertes mettant en surbrillance les [!UICONTROL Alerts] dans le volet de navigation de gauche.](../images/alerts/ui/workspace.png)
+![Page des alertes mettant en surbrillance [!UICONTROL Alertes] dans le volet de navigation de gauche.](../images/alerts/ui/workspace.png)
 
 ## Gestion des règles dʼalerte {#manage-rules}
 
-L’onglet **[!UICONTROL Browse]** répertorie les règles disponibles susceptibles de déclencher une alerte. Sélectionnez une règle dans la liste pour afficher sa description et ses paramètres de configuration dans le panneau de droite, y compris le seuil et la gravité.
+L’onglet **[!UICONTROL Parcourir]** répertorie les règles disponibles susceptibles de déclencher une alerte. Sélectionnez une règle dans la liste pour afficher sa description et ses paramètres de configuration dans le panneau de droite, y compris le seuil et la gravité.
 
 ![Une règle d’alerte mise en surbrillance, affichant les détails dans le panneau de droite.](../images/alerts/ui/rule-details.png)
 
@@ -48,11 +48,11 @@ Sélectionnez les points de suspension (**...**) à côté du nom d’une règle
 >
 > Pour attribuer une alerte à un ID utilisateur Adobe, à une adresse e-mail externe ou à une liste de groupes d’e-mails, vous devez être administrateur.
 
-Dans l’onglet **[!UICONTROL Browse]** , sélectionnez les points de suspension (**...**) en regard de la règle à gérer, sélectionnez **[!UICONTROL Manage alert subscribers]**.
+Dans l’onglet **[!UICONTROL Parcourir]**, sélectionnez les points de suspension (**...**) en regard de la règle à gérer, sélectionnez **[!UICONTROL Gérer les abonnés aux alertes]**.
 
 ![L’option Gérer les abonnés aux alertes est mise en surbrillance.](../images/alerts/ui/manage-alert-subscribers.png)
 
-La page **[!UICONTROL Manage alert subscribers]** s’ouvre. Pour ajouter des abonnés, saisissez un identifiant utilisateur Adobe, une adresse e-mail externe ou une liste de groupes d’adresses e-mail, puis appuyez sur **Entrée**.
+La page **[!UICONTROL Gérer les abonnés aux alertes]** s’ouvre. Pour ajouter des abonnés, saisissez un identifiant utilisateur Adobe, une adresse e-mail externe ou une liste de groupes d’adresses e-mail, puis appuyez sur **Entrée**.
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ La page **[!UICONTROL Manage alert subscribers]** s’ouvre. Pour ajouter des ab
 
 ![Page Gérer les abonnés aux alertes affichant les adresses e-mail saisies.](../images/alerts/ui/manage-alert-add-email.png)
 
-Les adresses ajoutées apparaissent dans la liste des abonnés. Sélectionnez **[!UICONTROL Update]**.
+Les adresses ajoutées apparaissent dans la liste des abonnés. Sélectionnez **[!UICONTROL Mettre à jour]**.
 
 ![Page Gérer les abonnés aux alertes mettant en surbrillance les abonnés et Mettre à jour.](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
@@ -74,7 +74,7 @@ Pour envoyer des notifications d’alerte dans votre boîte de réception, séle
 
 ![Panneau Notifications avec l’icône représentant une cloche et l’icône des paramètres en surbrillance.](../images/alerts/ui/edit-preferences.png)
 
-La page **[!UICONTROL Profile]** s’ouvre. Sélectionnez **[!UICONTROL Notifications]** dans le volet de navigation de gauche pour ouvrir les préférences d’e-mail. Faites défiler la page jusqu’à la section **E-mails**, en bas de la page, puis sélectionnez **[!UICONTROL Instant notifications]**.
+La page **[!UICONTROL Profil]** s’ouvre. Sélectionnez **[!UICONTROL Notifications]** dans le volet de navigation de gauche pour ouvrir les préférences d’e-mail. Faites défiler la page jusqu’à la section **E-mails** en bas de la page, puis sélectionnez **[!UICONTROL Notifications instantanées]**.
 
 ![La section E-mails mise en surbrillance sur la page du profil.](../images/alerts/ui/notifications.png)
 
@@ -98,23 +98,23 @@ Les seuils d’alerte peuvent être personnalisés pour les types d’alerte sui
 | Retard d’exécution de requête | Seuil de retard |
 | Taux d’activations ignorées dépassé | Seuil d’erreur |
 
-Sélectionnez les points de suspension (**...**) en regard du nom d’une règle, puis sélectionnez **[!UICONTROL Edit]**.
+Sélectionnez les points de suspension (**...**) en regard du nom d’une règle, puis sélectionnez **[!UICONTROL Modifier]**.
 
-![L’option [!UICONTROL Edit] est mise en surbrillance pour la règle sélectionnée.](../images/alerts/ui/threshold-edit.png)
+![L’option [!UICONTROL Modifier] est mise en surbrillance pour la règle sélectionnée.](../images/alerts/ui/threshold-edit.png)
 
-Sur la page **[!UICONTROL Customize alert]**, définissez le seuil de cette règle sur l’heure souhaitée (en minutes), puis sélectionnez **[!UICONTROL Confirm]**.
+Sur la page **[!UICONTROL Personnaliser l’alerte]**, définissez le seuil de cette règle sur l’heure souhaitée (en minutes), puis sélectionnez **[!UICONTROL Confirmer]**.
 
-![Page Personnaliser une alerte mettant en surbrillance les options [!UICONTROL Threshold] et [!UICONTROL Confirm].](../images/alerts/ui/threshold-update.png)
+![Page Personnaliser l’alerte mettant en surbrillance les options [!UICONTROL Seuil] et [!UICONTROL Confirmer].](../images/alerts/ui/threshold-update.png)
 
-Vous revenez à la page **[!UICONTROL Alerts]**. Pour vérifier le seuil, sélectionnez la règle dans la liste. Le panneau de droite affiche le seuil, le statut, la gravité et d’autres détails.
+Vous revenez à la page **[!UICONTROL Alertes]**. Pour vérifier le seuil, sélectionnez la règle dans la liste. Le panneau de droite affiche le seuil, le statut, la gravité et d’autres détails.
 
 ![Une alerte sélectionnée avec des détails dans le panneau de droite, y compris le seuil.](../images/alerts/ui/threshold-view.png)
 
 ## Affichage de lʼhistorique des alertes {#alert-history}
 
-L’onglet **[!UICONTROL History]** répertorie les alertes reçues par votre organisation, y compris la règle qui a déclenché l’alerte, le nom de l’objet associé, la date de déclenchement de l’alerte et la date de résolution de l’alerte (le cas échéant).
+L’onglet **[!UICONTROL Historique]** répertorie les alertes reçues par votre organisation, y compris la règle qui a déclenché l’alerte, le nom de l’objet associé, la date de déclenchement de l’alerte et la date de résolution de l’alerte (le cas échéant).
 
-![Alertes reçues répertoriées dans l’onglet [!UICONTROL History].](../images/alerts/ui/history.png)
+![Alertes reçues répertoriées dans l’onglet [!UICONTROL Historique].](../images/alerts/ui/history.png)
 
 Sélectionnez une alerte dans la liste pour afficher plus de détails dans le panneau de droite, y compris un court résumé de ce qui l’a déclenchée. Utilisez la recherche globale pour rechercher et ouvrir l’objet associé.
 
@@ -138,11 +138,11 @@ Sélectionnez l’icône de calendrier (![icône de calendrier](/help/images/ico
 
 ![Icône de calendrier mise en surbrillance.](../images/alerts/ui/date-range.png)
 
-Sélectionnez un paramètre prédéfini (**[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]** ou **[!UICONTROL Last 30 days]**) ou définissez une plage personnalisée dans le calendrier, puis sélectionnez **[!UICONTROL Apply]**.
+Sélectionnez un paramètre prédéfini (**[!UICONTROL 24 dernières heures]**, **[!UICONTROL 7 derniers jours]** ou **[!UICONTROL 30 derniers jours]**) ou définissez une plage personnalisée dans le calendrier, puis sélectionnez **[!UICONTROL Appliquer]**.
 
 ![Page du sélecteur de période affichée.](../images/alerts/ui/date-range-filter.png)
 
-Vous revenez à l’onglet **[!UICONTROL History]** qui affiche les résultats filtrés.
+Vous revenez à l’onglet **[!UICONTROL Historique]** qui affiche les résultats filtrés.
 
 ## Étapes suivantes
 

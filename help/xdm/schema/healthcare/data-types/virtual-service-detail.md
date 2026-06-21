@@ -11,27 +11,27 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 199
-ht-degree: 6%
+source-wordcount: 230
+ht-degree: 5%
 
 ---
 
-# Type de données [!UICONTROL Virtual Service Detail]
+# [!UICONTROL Détails du service virtuel] type de données
 
-[!UICONTROL Virtual Service Detail] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails de contact du service virtuel. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Détails du service virtuel] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails de contact du service virtuel. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure de type de données Détails du service virtuel](../../../images/healthcare/data-types/virtual-service-detail.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Address Contact Point] | `addressContactPoint` | [[!UICONTROL Contact Point]](../data-types/contact-point.md) | Détails d’un point de contact recourant à la technologie, tel qu’un téléphone, un fax ou un e-mail. |
-| [!UICONTROL Address Extended Contact Detail] | `addressExtendedContactDetail` | [[!UICONTROL Extended Contact Detail]](../data-types/extended-contact-detail.md) | Coordonnées étendues. |
-| [!UICONTROL Channel Type] | `channelType` | [[!UICONTROL Coding]](../data-types/coding.md) | Type de service virtuel auquel se connecter, tel que Teams, Zoom ou WhatsApp. |
-| [!UICONTROL Additional Info] | `additionalInfo` | Tableau de chaînes | Adresse pour afficher les autres détails de connexion, représentés sous la forme d’un URI. |
-| [!UICONTROL Address String] | `addressString` | Chaîne | Adresse à utiliser pour la connexion au service virtuel. |
-| [!UICONTROL Address Url] | `addressUrl` | Chaîne | URL à utiliser pour la connexion au service virtuel, représentée sous la forme d’un URI. |
-| [!UICONTROL Max Participants] | `maxParticipants` | Entier | Nombre maximal de participants pris en charge, avec une valeur minimale de `0`. |
-| [!UICONTROL Session Key] | `sessionKey` | Chaîne | Clé de session requise par le service virtuel. |
+| [!UICONTROL Point de contact de l’adresse] | `addressContactPoint` | [[!UICONTROL &#x200B; Point de contact &#x200B;]](../data-types/contact-point.md) | Détails d’un point de contact recourant à la technologie, tel qu’un téléphone, un fax ou un e-mail. |
+| [!UICONTROL Détails du contact étendu de l’adresse] | `addressExtendedContactDetail` | [[!UICONTROL Détails étendus du contact]](../data-types/extended-contact-detail.md) | Coordonnées étendues. |
+| [!UICONTROL Type de canal] | `channelType` | [[!UICONTROL Codage]](../data-types/coding.md) | Type de service virtuel auquel se connecter, tel que Teams, Zoom ou WhatsApp. |
+| [!UICONTROL Informations supplémentaires] | `additionalInfo` | Tableau de chaînes | Adresse pour afficher les autres détails de connexion, représentés sous la forme d’un URI. |
+| [!UICONTROL Chaîne d’adresse] | `addressString` | Chaîne | Adresse à utiliser pour la connexion au service virtuel. |
+| [!UICONTROL Adresse Url] | `addressUrl` | Chaîne | URL à utiliser pour la connexion au service virtuel, représentée sous la forme d’un URI. |
+| [!UICONTROL Nombre max. de participants] | `maxParticipants` | Entier | Nombre maximal de participants pris en charge, avec une valeur minimale de `0`. |
+| [!UICONTROL Clé de session] | `sessionKey` | Chaîne | Clé de session requise par le service virtuel. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

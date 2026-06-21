@@ -17,22 +17,22 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 248
+source-wordcount: 260
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL IAB TCF 2.0 Consent] le groupe de champs pour les schémas d’événement
+# Groupe de champs [!UICONTROL Consentement IAB TCF 2.0] pour les schémas d’événement
 
 >[!IMPORTANT]
 >
->Ce document couvre le groupe de champs de schéma [!UICONTROL IAB TCF 2.0 Consent] pour la classe XDM ExperienceEvent . Ce groupe de champs ne doit être utilisé que si vous avez l’intention de suivre les événements de changement de consentement au fil du temps.
+>Ce document couvre le groupe de champs de schéma [!UICONTROL Consentement IAB TCF 2.0] pour la classe XDM ExperienceEvent. Ce groupe de champs ne doit être utilisé que si vous avez l’intention de suivre les événements de changement de consentement au fil du temps.
 >
 >Notez que les valeurs de consentement enregistrées dans les données d’événement ne sont pas respectées dans les workflows d’application automatiques. Pour que l’application automatique ait lieu, les valeurs de consentement doivent être ingérées dans la classe XDM Individual Profile et activées pour le profil client en temps réel.
 >
 >Pour le groupe de champs destiné à la classe XDM Individual Profile, reportez-vous plutôt au [document](../profile/iab.md) suivant.
 
-[!UICONTROL IAB TCF 2.0 Consent] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisé pour capturer une série horodatée de chaînes de consentement IAB, afin de suivre les modèles de changement de consentement au fil du temps.
+[!UICONTROL Consentement IAB TCF 2.0] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisé pour capturer une série horodatée de chaînes de consentement IAB, afin de suivre les modèles de changement de consentement au fil du temps.
 
 ![](../../images/field-groups/iab-event.png)
 

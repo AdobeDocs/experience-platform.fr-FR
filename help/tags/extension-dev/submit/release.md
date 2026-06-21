@@ -22,8 +22,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 455
-ht-degree: 59%
+source-wordcount: 407
+ht-degree: 66%
 
 ---
 
@@ -51,9 +51,9 @@ npx @adobe/reactor-releaser
 `npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s&#39;agit de la méthode la plus simple pour exécuter l&#39;outil de libération.
 
 >[!NOTE]
-> Par défaut, l’outil de libération attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées> peut être utilisé en exécutant `npx @adobe/reactor-releaser@v3.1.3` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> Par défaut, l’outil de libération attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Les informations d> identification de `jwt-auth` héritées peuvent être utilisées en exécutant `npx @adobe/reactor-releaser@v3.1.3` jusqu’à leur obsolescence le 1er janvier 2025. Les paramètres requis >  exécuter la version `jwt-auth` sont disponibles [ici](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
-L&#39;outil de libération nécessite que vous ne saisissiez que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée et sélectionnez **[!UICONTROL View]**.
+L&#39;outil de libération nécessite que vous ne saisissiez que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée, puis sélectionnez **[!UICONTROL Affichage]**.
 
 - Quel est votre `clientId` ? Copiez et collez-le à partir de la console I/O.
 - Quel est votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.

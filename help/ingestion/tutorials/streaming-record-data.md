@@ -267,7 +267,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | La valeur `inletId` de la connexion en continu que vous avez créée précédemment. |
-| `syncValidation` | Paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Veuillez noter que si vous définissez ce paramètre de requête sur `true` que le débit de la requête sera limité à 60 fois par minute par `CONNECTION_ID`. |
+| `syncValidation` | Un paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Veuillez noter que si vous définissez ce paramètre de requête sur `true` que le débit de la requête sera limité à 60 fois par minute par `CONNECTION_ID`. |
 
 **Requête**
 

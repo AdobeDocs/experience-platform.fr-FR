@@ -25,8 +25,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2115
-ht-degree: 66%
+source-wordcount: 2137
+ht-degree: 65%
 
 ---
 
@@ -109,7 +109,7 @@ Les sections ci-dessous décrivent les différents messages d’application de p
 
 ### Violation de la politique d’utilisation des données {#data-usage-violation}
 
-Si une violation de politique se produit lors de la tentative d’activation d’une audience (ou de la [modification d’une audience déjà activée](#policy-enforcement-for-activated-audiences)), l’action est bloquée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Une fois qu’une violation a été déclenchée, le bouton **[!UICONTROL Save]** est désactivé pour l’entité à modifier jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux politiques d’utilisation des données.
+Si une violation de politique se produit lors de la tentative d’activation d’une audience (ou de la [modification d’une audience déjà activée](#policy-enforcement-for-activated-audiences)), l’action est bloquée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Une fois qu’une violation a été déclenchée, le bouton **[!UICONTROL Enregistrer]** est désactivé pour l’entité à modifier jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux politiques d’utilisation des données.
 
 Sélectionnez un nom de politique pour afficher les détails de cette violation.
 
@@ -123,25 +123,25 @@ Un graphique relatif à la parenté des données s’affiche sous le résumé de
 
 ![Boîte de dialogue de violation de la politique avec le graphique de parenté des données mis en surbrillance.](../images/enforcement/data-lineage.png)
 
-Vous pouvez également utiliser l’icône **[!UICONTROL Filter]** (![Icône Filtrer.](/help/images/icons/filter.png)). pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
+Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![Icône Filtrer.](/help/images/icons/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
 
 ![Boîte de dialogue de violation de la politique avec le filtre de parenté des données et le menu déroulant en surbrillance.](../images/enforcement/lineage-filter.png)
 
-Sélectionnez **[!UICONTROL List view]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Path view]**.
+Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Vue du chemin]**.
 
 ![Boîte de dialogue de violation de la politique avec la vue de chemin de parenté des données mise en surbrillance.](../images/enforcement/list-view.png)
 
 #### Libellés appliqués avec succès {#labels-successfully-applied}
 
-Si vous créez des politiques d’utilisation des données avant d’étiqueter vos champs de schéma, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter correctement une partie de votre schéma. L’onglet [!UICONTROL Labels successfully applied] indique les libellés appliqués avec succès, car il n’existe aucune restriction de politique pour ce champ.
+Si vous créez des politiques d’utilisation des données avant d’étiqueter vos champs de schéma, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter correctement une partie de votre schéma. L’onglet [!UICONTROL &#x200B; Libellés appliqués avec succès &#x200B;] indique quels libellés ont été appliqués avec succès, car il n’existe aucune restriction de politique pour ce champ.
 
 Utilisez le diagramme de parenté des données pour comprendre quelles autres modifications de configuration doivent être apportées avant de pouvoir ajouter le libellé à votre champ de schéma.
 
-![Boîte de dialogue de violation de la politique avec l’onglet [!UICONTROL Labels successfully applied] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
+![Boîte de dialogue de violation de la politique avec l’onglet [!UICONTROL &#x200B; Libellés appliqués avec succès] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [politiques de consentement](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape [révision du workflow de [!UICONTROL Activate Destinations]](#pre-activation-evaluation).
+Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [&#x200B; politiques de consentement &#x200B;](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [&#x200B; du workflow [!UICONTROL &#x200B; Activer des destinations &#x200B;]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ Ces améliorations permettent une plus grande confiance dans votre stratégie ma
 
 #### Évaluation préalable à l’activation {#pre-activation-evaluation}
 
-Une fois que vous avez atteint l’étape **[!UICONTROL Review]** lors de l’[activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL View applied policies]**.
+Une fois que vous avez atteint l’étape **[!UICONTROL Réviser]** lors de l’[activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL Afficher les politiques appliquées]**.
 
 ![Bouton Afficher les politiques appliquées dans le workflow d’activation de la destination](../images/enforcement/view-applied-policies.png)
 
@@ -171,7 +171,7 @@ La boîte de dialogue affiche l’audience consentante pour une audience à la f
 
 ![Sélecteur d’audience dans la boîte de dialogue de vérification des politiques.](../images/enforcement/audience-switcher.png)
 
-Utilisez le rail de gauche pour basculer entre les politiques de consentement applicables pour l’audience sélectionnée. Les politiques qui ne sont pas sélectionnées sont représentées dans la section « [!UICONTROL Other policies] » du diagramme.
+Utilisez le rail de gauche pour basculer entre les politiques de consentement applicables pour l’audience sélectionnée. Les politiques qui ne sont pas sélectionnées sont représentées dans la section « [!UICONTROL Autres politiques] » du diagramme.
 
 ![Sélecteur de politique dans la boîte de dialogue de vérification des politiques](../images/enforcement/policy-switcher.png)
 
@@ -179,7 +179,7 @@ Le diagramme affiche le chevauchement entre trois groupes de profils :
 
 1. Profils qui remplissent les critères de l’audience sélectionnée
 1. Profils qui remplissent les critères de la politique de consentement sélectionnée
-1. Profils qui remplissent les critères des autres politiques de consentement applicables pour l’audience (appelées « [!UICONTROL Other policies] » dans le diagramme)
+1. Profils qui remplissent les critères des autres politiques de consentement applicables pour l’audience (appelées « [!UICONTROL &#x200B; Autres politiques &#x200B;] » dans le diagramme)
 
 Les profils qui remplissent les critères pour les trois groupes ci-dessus représentent l’audience consentante, résumée dans le rail de droite.
 

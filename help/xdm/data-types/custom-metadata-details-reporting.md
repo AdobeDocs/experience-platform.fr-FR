@@ -14,16 +14,16 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 170
-ht-degree: 8%
+source-wordcount: 190
+ht-degree: 7%
 
 ---
 
-# Type de données [!UICONTROL Custom Metadata Details] Reporting
+# [!UICONTROL Détails des métadonnées personnalisées] Type de données de rapport
 
-[!UICONTROL Custom Metadata Details] Reporting est un type de données standard des modèles de données d’expérience (XDM) qui définit une structure de stockage des métadonnées personnalisées. Le type de données Rapports [!UICONTROL Custom Metadata Details] capture des détails tels que le nom et la valeur des métadonnées personnalisées associées au contenu ou aux interactions.
+[!UICONTROL Détails des métadonnées personnalisées] La création de rapports est un type de données standard du modèle de données d’expérience (XDM) qui définit une structure de stockage des métadonnées personnalisées. Le type de données de rapport [!UICONTROL Détails des métadonnées personnalisées] capture des informations telles que le nom et la valeur des métadonnées personnalisées associées au contenu ou aux interactions.
 
-+++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Custom Metadata Details] Reporting .
++++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Détails des métadonnées personnalisées] Rapports.
 ![Diagramme du type de données Rapports sur les détails des métadonnées personnalisées.](../images/data-types/the-custom-metadata-reporting.png)
 +++
 
@@ -33,7 +33,7 @@ ht-degree: 8%
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |---|---|---|---|
-| [!UICONTROL Custom Metadata Field Name] | `name` | chaîne | Nom du champ personnalisé. |
-| [!UICONTROL Custom Metadata Field Value] | `value` | chaîne | Valeur du champ personnalisé. |
+| [!UICONTROL Nom de champ de métadonnées personnalisé] | `name` | chaîne | Nom du champ personnalisé. |
+| [!UICONTROL Valeur de champ de métadonnées personnalisé] | `value` | chaîne | Valeur du champ personnalisé. |
 
 Voir [custommetadatadetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/custommetadatadetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

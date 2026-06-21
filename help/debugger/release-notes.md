@@ -24,7 +24,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
 workflow-type: tm+mt
-source-wordcount: 925
+source-wordcount: 928
 ht-degree: 90%
 
 ---
@@ -33,11 +33,11 @@ ht-degree: 90%
 
 ## Version 1.7.0 - 27 Mai 2026
 
-* Amélioration des fonctionnalités de recherche de l’outil [!UICONTROL Logs], notamment :
+* Amélioration des fonctionnalités de recherche de l’outil [!UICONTROL Journaux], notamment :
    * Amélioration du filtrage des recherches, en veillant à ce que seuls les journaux pertinents s’affichent.
    * Correspondance des expressions mise en surbrillance.
    * Développement des objets de journal imbriqués pour afficher les correspondances de recherche.
-   * Bouton **[!UICONTROL Download CSV]** permettant d’exporter les données du journal pour les afficher dans Microsoft Excel ou les partager avec un agent d’IA.
+   * Un bouton **[!UICONTROL Télécharger CSV]** pour exporter les données du journal à afficher dans Microsoft Excel ou à partager avec un agent d’IA.
 
 ## Version 1.6.5 - 24 Mars 2026
 

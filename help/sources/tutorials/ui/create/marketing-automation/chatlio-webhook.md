@@ -14,8 +14,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: f3ebbec0f5000c05bb5c40654b010073ef0f9658
 workflow-type: tm+mt
-source-wordcount: 1136
-ht-degree: 13%
+source-wordcount: 1183
+ht-degree: 19%
 
 ---
 
@@ -65,28 +65,28 @@ Vous devez également vous assurer de créer un schéma Experience Platform à u
 
 ## Connecter votre compte [!DNL Chatlio] {#connect-account}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et consulter le catalogue des sources disponibles dans Experience Platform.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et consulter un catalogue de sources disponibles dans Experience Platform.
 
-Utilisez le menu *[!UICONTROL Categories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique à partir du catalogue.
+Utilisez le menu *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique à partir du catalogue.
 
-Accédez à la catégorie [!UICONTROL Marketing automation] pour afficher la carte source [!DNL Chatlio]. Pour commencer, sélectionnez **[!UICONTROL Add data]**.
+Accédez à la catégorie [!UICONTROL Automatisation du marketing] pour afficher la carte source du [!DNL Chatlio]. Pour commencer, sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue de l’interface utilisateur d’Experience Platform avec la carte Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Sélectionner les données {#select-data}
 
-L’étape **[!UICONTROL Select data]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous souhaitez importer dans Experience Platform.
+L’étape **[!UICONTROL Sélectionner les données]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous souhaitez importer dans Experience Platform.
 
 * La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
 
-Sélectionnez **[!UICONTROL Upload files]** pour charger un fichier JSON à partir de votre système local. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le panneau [!UICONTROL Drag and drop files].
+Sélectionnez **[!UICONTROL Télécharger des fichiers]** pour télécharger un fichier JSON à partir de votre système local. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le panneau [!UICONTROL Glisser-déposer des fichiers].
 
 ![Étape d’ajout de données du workflow des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/add-data.png)
 
-Une fois votre fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface de prévisualisation vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser l’utilitaire [!UICONTROL Search field] pour accéder à des éléments spécifiques depuis votre schéma.
+Une fois votre fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface de prévisualisation vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser l’utilitaire [!UICONTROL Champ de recherche] pour accéder à des éléments spécifiques à partir de votre schéma.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape de prévisualisation du workflow des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/preview.png)
 
@@ -94,34 +94,34 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 L’étape **Détails du flux de données** s’affiche, vous offrant des options pour utiliser un jeu de données existant ou établir un nouveau jeu de données pour votre flux de données, ainsi que la possibilité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer les paramètres d’ingestion de profil, de diagnostics d’erreur, d’ingestion partielle et d’alertes.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape du flux de données-détail du workflow des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/dataflow-detail.png)
 
 ## Mappage {#mapping}
 
-L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
+L’étape [!UICONTROL Mappage] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
 Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
-Les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à l’étape [!UICONTROL Review].
+Les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à l’étape [!UICONTROL Révision].
 
 | Champ cible | Description |
 | --- | --- |
 | `UUID` | Identifiant [!DNL Chatlio] de l’événement. |
 
-Une fois les données sources mappées, sélectionnez **[!UICONTROL Next]**.
+Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape de mappage du workflow des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/mapping.png)
 
 ## Réviser {#review}
 
-L’étape **[!UICONTROL Review]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connection]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
-* **[!UICONTROL Assign dataset & map fields]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
 
-Une fois que vous avez révisé votre flux de données, sélectionnez **[!UICONTROL Finish]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![Étape de révision du workflow des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 
@@ -131,10 +131,10 @@ Une fois votre flux de données en continu créé, vous pouvez récupérer votre
 
 Pour construire l’URL utilisée pour configurer le webhook sur [!DNL Chatlio], vous devez récupérer les éléments suivants :
 
-* **[!UICONTROL Dataflow ID]**
-* **[!UICONTROL Streaming endpoint]**
+* **[!UICONTROL Identifiant du flux de données]**
+* **[!UICONTROL Point d’entrée de diffusion en continu]**
 
-Pour récupérer vos **[!UICONTROL Dataflow ID]** et **[!UICONTROL Streaming endpoint]**, accédez à la page [!UICONTROL Dataflow activity] du flux de données que vous venez de créer et copiez les détails depuis le bas du panneau [!UICONTROL Properties].
+Pour récupérer vos **[!UICONTROL ID de flux de données]** et **[!UICONTROL Point d’entrée de diffusion en continu]**, accédez à la page [!UICONTROL Activité de flux de données] du flux de données que vous venez de créer et copiez les détails au bas du panneau [!UICONTROL Propriétés].
 
 ![Point d’entrée de flux continu dans l’activité de flux de données.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
 
@@ -170,11 +170,11 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 Pour vérifier que vous avez correctement configuré la source et [!DNL Chatlio] messages sont ingérés, procédez comme suit :
 
-* Vous pouvez vérifier la page [!DNL Chatlio] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** pour identifier les événements capturés par [!DNL Chatlio].
+* Vous pouvez vérifier la page [!DNL Chatlio] **[!UICONTROL Rapports]** > **[!UICONTROL Historique de conversation]** pour identifier les événements capturés par [!DNL Chatlio].
 
 ![Capture d’écran de l’interface utilisateur de Chatlio montrant l’historique des conversations](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL View Dataflows]** à côté du menu de carte [!DNL Chatlio] dans le catalogue de sources. Sélectionnez ensuite **[!UICONTROL Preview dataset]** pour vérifier les données ingérées pour les Webhooks que vous avez configurés dans [!DNL Chatlio].
+* Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** à côté du menu de carte [!DNL Chatlio] dans le catalogue de sources. Sélectionnez ensuite **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées pour les Webhooks que vous avez configurés dans [!DNL Chatlio].
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant les événements ingérés](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 

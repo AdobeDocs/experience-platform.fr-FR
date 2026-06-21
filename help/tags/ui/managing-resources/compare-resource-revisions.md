@@ -20,8 +20,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 860
-ht-degree: 100%
+source-wordcount: 794
+ht-degree: 88%
 
 ---
 
@@ -31,11 +31,11 @@ Comparez des révisions des ressources pour afficher l’historique d’une ress
 
 ## Lancer une comparaison
 
-Le lancement d’une comparaison est le même pour tous les types de ressources.  Ouvrez la vue Edit (Modifier) d’une ressource individuelle, puis recherchez l’icône de trois points située en regard du bouton **[!UICONTROL Save]** pour afficher les actions disponibles pour cette ressource.  Sélectionnez **[!UICONTROL Compare Revisions]** dans la liste.
+Le lancement d’une comparaison est le même pour tous les types de ressources.  Ouvrez la vue Modifier d’une ressource individuelle, puis recherchez l’icône des trois points située en regard du bouton **[!UICONTROL Enregistrer]** pour afficher les actions disponibles pour cette ressource.  Sélectionnez **[!UICONTROL Comparer les révisions]** dans la liste.
 
 ![Lancer une comparaison pour une extension](../../images/compare-initiate-extension.png)
 
-Pour les extensions, accédez à la vue détaillée en cliquant sur le bouton **[!UICONTROL Configure]** lors de l’affichage de votre liste d’extensions installées.  Pour les éléments de données et les règles, sélectionnez-en un dans la liste.
+Pour les extensions, accédez à la vue détaillée en cliquant sur le bouton **[!UICONTROL Configurer]** lors de l’affichage de votre liste d’extensions installées.  Pour les éléments de données et les règles, sélectionnez-en un dans la liste.
 
 ## Utilisation de la vue Compare (Comparer)
 
@@ -45,11 +45,11 @@ Sur la gauche, vous pouvez sélectionner l’une des révisions existantes pour 
 
 ![Comparaison des versions de l’extension Analytics](../../images/compare-interpret-extension.png)
 
-Cliquez sur **[!UICONTROL Use These Changes]** pour copier les paramètres de votre révision sélectionnée (à gauche) à la version la plus récente (à droite).  Cette opération copie les paramètres de l’ancienne révision vers les modifications non enregistrées les plus récentes.  Si vous souhaitez que ces modifications soient conservées, veillez à **[!UICONTROL Save]** après avoir quitté la vue Compare (Comparer).
+Sélectionnez **[!UICONTROL Utiliser ces modifications]** pour copier les paramètres de votre révision sélectionnée (à gauche) vers la dernière version (à droite).  Cette opération copie les paramètres de l’ancienne révision vers les modifications non enregistrées les plus récentes.  Si vous souhaitez que ces modifications soient conservées, veillez à **[!UICONTROL Enregistrer]** après avoir quitté la vue Comparer.
 
 >[!TIP]
->Les ressources individuelles peuvent avoir à la fois des attributs et des paramètres.  Ces paramètres sont stockés sous la forme de bloc JSON, qui est une méthode structurée de stockage des données, mais suffisamment flexible pour que les développeurs d’extensions puissent y placer ce dont ils ont besoin pour que leurs extensions effectuent les opérations souhaitées.
->La version initiale de la vue Compare (Comparer) affiche les paramètres sous leur forme brute, comme JSON. Les futures améliorations vous permettront d’afficher les versions de différentes manières, notamment des comparaisons de code détaillées et en utilisant des vues d’extension fournies par les développeurs d’extensions.
+>Les ressources individuelles peuvent avoir à la fois des attributs et des paramètres.  Ces paramètres sont stockés sous la forme d’un bloc JSON, qui est un moyen structuré de stocker les données, mais suffisamment flexible pour que les développeurs d’extensions puissent placer tout ce dont ils ont besoin pour que leurs extensions fassent ce qu’ils veulent.
+>La version initiale de la vue Comparer affiche les paramètres sous leur forme brute au format JSON. Les améliorations futures vous permettront d’afficher les versions de différentes manières, notamment par des comparaisons de code détaillées et en utilisant les vues d’extension fournies par les développeurs d’extensions.
 
 ## Comparaison d’extensions
 

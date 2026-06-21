@@ -24,8 +24,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1973
-ht-degree: 93%
+source-wordcount: 1994
+ht-degree: 90%
 
 ---
 
@@ -71,12 +71,12 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 >
 >Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![à propos](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
-1. Ouvrez l’onglet [!UICONTROL Rules], puis cliquez sur **[!UICONTROL Create New Rule]**.
+1. Ouvrez l’onglet [!UICONTROL Règles], puis sélectionnez **[!UICONTROL Créer une règle]**.
 
    ![Onglet Règles mettant en surbrillance le champ Nom.](../../images/launch-rule-builder.png)
 
 1. Attribuez un nom à la règle.
-1. Cliquez sur l’icône **[!UICONTROL Add]** pour les événements.
+1. Sélectionnez l’icône Événements **[!UICONTROL Ajouter]**.
 1. Sélectionnez votre extension et l’un des types d’événements disponibles pour cette extension, puis configurez les paramètres de l’événement.
 
    ![Page de configuration de l’événement de règles.](../../images/rule-event-config.png)
@@ -97,7 +97,7 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
    >
    >Si ce chemin d’accès n’est pas spécifié correctement, les données ne sont pas collectées.
 
-1. Définissez le paramètre Ordre, puis cliquez sur **[!UICONTROL Keep Changes]**.
+1. Définissez le paramètre Ordre, puis sélectionnez **[!UICONTROL Conserver les modifications]**.
 
    L’ordre par défaut pour tous les composants de règle est 50. Si vous souhaitez l’exécuter plus tôt, attribuez-lui un nombre inférieur à 50.
 
@@ -107,7 +107,7 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
      Si vous souhaitez qu’elle s’exécute plus tard, attribuez-lui un nombre supérieur à 50. Pour plus d’informations sur l’ordre, reportez-vous à [Ordre des règles](rules.md#rule-ordering).
 
-1. Sélectionnez l’icône **[!UICONTROL Add]** des conditions , puis sélectionnez un type de logique, une extension et un type de condition et configurez les paramètres de votre condition. Ensuite, sélectionnez **[!UICONTROL Keep Changes]**.
+1. Sélectionnez l’icône Conditions **[!UICONTROL Ajouter]**, puis sélectionnez un type de logique, une extension et un type de condition et configurez les paramètres de votre condition. Sélectionnez ensuite **[!UICONTROL Conserver les modifications]**.
 
    ![Page de configuration de la condition des règles.](../../images/condition-settings.png)
 
@@ -122,18 +122,18 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
    Vous pouvez ajouter autant de conditions que vous le souhaitez. Plusieurs conditions dans la même règle sont jointes avec AND.
 
-1. Sélectionnez l’icône **[!UICONTROL Add]** Actions , puis sélectionnez votre extension et l’un des types d’actions disponibles pour cette extension, configurez les paramètres de l’action, puis sélectionnez **[!UICONTROL Keep Changes]**.
+1. Sélectionnez l’icône Actions **[!UICONTROL Ajouter]**, puis sélectionnez votre extension et l’un des types d’actions disponibles pour cette extension, configurez les paramètres de l’action, puis sélectionnez **[!UICONTROL Conserver les modifications]**.
 
    ![Page de configuration de l’action de règles.](../../images/action-settings.png)
 
    Les types d’action disponibles dépendent de l’extension que vous avez sélectionnée. Les paramètres d’action diffèrent selon le type d’action.
 
-   (Avancé) Attendre avant d’exécuter l’action suivante : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Lorsque cette option est cochée, les balises n’appellent pas l’action suivante tant que celle-ci n’est pas terminée. Lorsque cette option est désactivée, l’action suivante commence à s’exécuter immédiatement. La valeur par défaut est de **[!UICONTROL Checked]**.
+   (Avancé) Attendre avant d’exécuter l’action suivante : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Lorsque cette option est cochée, les balises n’appellent pas l’action suivante tant que celle-ci n’est pas terminée. Lorsque cette option est désactivée, l’action suivante commence à s’exécuter immédiatement. La valeur par défaut est **[!UICONTROL Activé]**.
 
    (Avancé) Délai d’expiration : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Il définit la durée maximale autorisée pour l’achèvement de l’action. Si le délai d’expiration est atteint, l’action échoue et toutes les actions suivantes de cette règle sont supprimées de la file d’attente de traitement. La valeur par défaut est de 2 000 ms.
 
 
-1. Vérifiez votre règle, puis cliquez sur **[!UICONTROL Save Rule]**.
+1. Vérifiez votre règle, puis sélectionnez **[!UICONTROL Enregistrer la règle]**.
 
    Ultérieurement, lorsque vous [publierez](../publishing/overview.md), vous ajouterez cette règle à une bibliothèque et vous la déploierez.
 
@@ -183,7 +183,7 @@ Adobe ne peut garantir qu’aucune autre règle sera réellement déclenchée et
 
 ## Séquencement des composants de règle {#sequencing}
 
-Le comportement de l’environnement d’exécution dépend de l’activation ou de la désactivation de **[!UICONTROL Run rule components in sequence]** pour votre propriété. Ce paramètre détermine si les composants d’une règle peuvent être évalués en parallèle (de manière asynchrone) ou s’ils doivent l’être en séquence.
+Le comportement de l’environnement d’exécution dépend de l’activation ou de la désactivation de la propriété **[!UICONTROL Exécuter les composants de règle en séquence]**. Ce paramètre détermine si les composants d’une règle peuvent être évalués en parallèle (de manière asynchrone) ou s’ils doivent l’être en séquence.
 
 >[!IMPORTANT]
 >

@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 311
+source-wordcount: 316
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes de modèle de données d’expérience (XDM), groupes de champs de schéma et types de données personnalisés. Pour organiser et imbriquer des champs associés dans des ressources XDM personnalisées, vous pouvez définir des champs de type objet pouvant contenir des sous-champs supplémentaires.
 
-Lors de la [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez « [!UICONTROL Object] » dans la liste.
+Lors de la [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez « [!UICONTROL Objet] » dans la liste.
 
 ![](../../images/ui/fields/special/object.png)
 
-Sélectionnez **[!UICONTROL Apply]** pour ajouter l’objet au schéma. La zone de travail se met à jour pour afficher le nouveau champ avec le type de données [!UICONTROL Object] appliqué, y compris les commandes permettant de modifier et d’ajouter des sous-champs à l’objet .
+Sélectionnez **[!UICONTROL Appliquer]** pour ajouter l’objet au schéma. La zone de travail se met à jour pour afficher le nouveau champ avec le type de données [!UICONTROL Objet] appliqué, y compris les commandes permettant de modifier et d’ajouter des sous-champs à l’objet.
 
 ![](../../images/ui/fields/special/object-applied.png)
 
@@ -32,7 +32,7 @@ Pour ajouter un sous-champ, sélectionnez l’icône **plus (+)** en regard du c
 
 ![](../../images/ui/fields/special/object-add-field.png)
 
-Une fois le sous-champ configuré et le **[!UICONTROL Apply]** sélectionné, vous pouvez continuer à ajouter des champs à l’objet en utilisant le même processus. Vous pouvez également ajouter des sous-champs qui sont eux-mêmes des objets, ce qui vous permet d’imbriquer les champs aussi profondément que vous le souhaitez.
+Une fois que vous avez configuré le sous-champ et sélectionné **[!UICONTROL Appliquer]**, vous pouvez continuer à ajouter des champs à l’objet en utilisant le même processus. Vous pouvez également ajouter des sous-champs qui sont eux-mêmes des objets, ce qui vous permet d’imbriquer les champs aussi profondément que vous le souhaitez.
 
 Une fois la création de l’objet terminée, vous pouvez réutiliser sa structure dans différentes classes et différents groupes de champs. Dans ce cas, vous pouvez choisir de convertir l’objet en un type de données. Pour plus d’informations, consultez la section sur la [conversion d’objets en types de données](../resources/data-types.md#convert) dans le guide de l’interface utilisateur des types de données.
 

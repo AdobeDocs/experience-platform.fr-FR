@@ -11,7 +11,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 493
+source-wordcount: 508
 ht-degree: 3%
 
 ---
@@ -41,17 +41,17 @@ Avant d’utiliser des libellés de contrôle d’accès, familiarisez-vous d’
 >
 >* Si vous ne disposez pas d’un accès en lecture seule à un flux de données, vous ne pourrez pas non plus afficher ses exécutions de flux correspondantes.
 
-Pour appliquer des libellés d’accès à vos flux de données sources, accédez à **[!UICONTROL Sources]** > **[!UICONTROL Dataflows]**, puis localisez le flux de données à mettre à jour et limitez l’accès des utilisateurs.
+Pour appliquer des libellés d’accès à vos flux de données sources, accédez à **[!UICONTROL Sources]** > **[!UICONTROL Flux de données]** puis localisez le flux de données à mettre à jour et limitez l’accès des utilisateurs et utilisatrices.
 
-Sélectionnez ensuite les points de suspension (`...`) dans la colonne [!UICONTROL Name], puis sélectionnez **[!UICONTROL Apply access labels]** pour ajouter et gérer des libellés pour le flux de données sélectionné.
+Sélectionnez ensuite les points de suspension (`...`) dans la colonne [!UICONTROL Nom], puis sélectionnez **[!UICONTROL Appliquer les libellés d’accès]** pour ajouter et gérer des libellés pour le flux de données sélectionné.
 
 ![Page flux de données dans les sources avec l’option Appliquer les libellés d’accès sélectionnée.](../../images/tutorials/labels/apply_access_labels.png)
 
-La fenêtre [!UICONTROL Apply access and data governance labels] s’affiche. Utilisez cette fenêtre pour sélectionner les libellés à appliquer à votre flux de données. Vous pouvez également filtrer les libellés par type. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+La fenêtre [!UICONTROL Appliquer l’accès et les libellés de gouvernance des données] s’affiche. Utilisez cette fenêtre pour sélectionner les libellés à appliquer à votre flux de données. Vous pouvez également filtrer les libellés par type. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Fenêtre des libellés de gouvernance des données avec le libellé C2 sélectionné.](../../images/tutorials/labels/labels_window.png)
 
-Une fois que vous avez correctement configuré les libellés d’accès à votre flux de données, tout utilisateur n’ayant pas accès à ce libellé ne peut plus récupérer le flux de données. Vous pouvez également utiliser la colonne [!UICONTROL Access Labels] pour afficher les libellés appliqués à un flux de données donné.
+Une fois que vous avez correctement configuré les libellés d’accès à votre flux de données, tout utilisateur n’ayant pas accès à ce libellé ne peut plus récupérer le flux de données. Vous pouvez également utiliser la colonne [!UICONTROL Libellés d’accès] pour afficher les libellés appliqués à un flux de données donné.
 
 ## Étapes suivantes
 

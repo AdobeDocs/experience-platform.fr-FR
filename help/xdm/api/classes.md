@@ -15,8 +15,8 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1524
-ht-degree: 21%
+source-wordcount: 1532
+ht-degree: 22%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 21%
 
 Tous les schémas de modèle de données d’expérience (XDM) doivent être basés sur une classe . Une classe détermine la structure de base des propriétés communes que tous les schémas basés sur cette classe doivent contenir, ainsi que les groupes de champs de schéma éligibles à l’utilisation dans ces schémas. En outre, la classe d’un schéma détermine les aspects comportementaux des données qu’un schéma contiendra, qui peuvent être de deux types :
 
-* **[!UICONTROL Record]** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
-* **[!UICONTROL Time-series]** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
+* **[!UICONTROL Enregistrement]** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
+* **[!UICONTROL Série temporelle]** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 
 >[!NOTE]
 >

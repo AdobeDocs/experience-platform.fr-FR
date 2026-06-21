@@ -16,7 +16,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1018
+source-wordcount: 1000
 ht-degree: 16%
 
 ---
@@ -57,11 +57,11 @@ Si vous disposez déjà d’une connexion [!DNL Braze], vous pouvez ignorer le r
 >
 >Vous devez créer un schéma de modèle de données d’expérience (XDM) si c’est la première fois que vous créez une connexion [!DNL Braze Currents]. Si vous avez déjà créé un schéma pour [!DNL Braze Currents], vous pouvez ignorer cette étape et passer à la [connexion de votre compte à Experience Platform](#connect).
 
-Dans l’interface utilisateur d’Experience Platform, utilisez le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schemas]** pour accéder à l’espace de travail [!UICONTROL Schemas]. Sélectionnez ensuite **[!UICONTROL Create schema]**, puis sélectionnez **[!UICONTROL Experience Event]**. Pour continuer, sélectionnez **[!UICONTROL Next]**.
+Dans l’interface utilisateur d’Experience Platform, utilisez le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schémas]** pour accéder à l’espace de travail [!UICONTROL Schémas]. Sélectionnez ensuite **[!UICONTROL Créer un schéma]**, puis **[!UICONTROL Événement d’expérience]**. Pour continuer, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Schéma terminé.](../../../../images/tutorials/create/braze/schema.png)
 
-Attribuez un nom et une description à votre schéma. Utilisez ensuite le panneau [!UICONTROL Composition] pour configurer les attributs de schéma. Sous [!UICONTROL Field groups], sélectionnez **[!UICONTROL Add]** et ajoutez le groupe de champs [!UICONTROL Braze Currents User Event]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Attribuez un nom et une description à votre schéma. Utilisez ensuite le panneau [!UICONTROL Composition] pour configurer les attributs de schéma. Sous [!UICONTROL Groupes de champs], sélectionnez **[!UICONTROL Ajouter]** et ajoutez le groupe de champs [!UICONTROL Événement utilisateur Braze Current]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 Pour plus d’informations sur les schémas, consultez le guide [création de schémas dans l’interface utilisateur](../../../../../xdm/tutorials/create-schema-ui.md).
 
@@ -69,7 +69,7 @@ Pour plus d’informations sur les schémas, consultez le guide [création de sc
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *Automatisation du marketing*, sélectionnez **[!UICONTROL Braze Currents]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie *Automatisation du marketing*, sélectionnez **[!UICONTROL Courants brasés]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources sur l’interface utilisateur d’Experience Platform avec la source Courants de brasage sélectionnée.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -88,9 +88,9 @@ Le mappage présente les problèmes suivants qui doivent être résolus.
 
 Dans les données sources, *id* sera incorrectement mappé à *_braze.appID*. Vous devez remplacer le champ de mapping de ciblage par *_id* au niveau racine du schéma. Ensuite, assurez-vous que *properties.is_amp* est mappé à *_braze.messaging.email.isAMP*.
 
-Ensuite, supprimez le mappage *heure* à *horodatage*, puis sélectionnez l’icône d’ajout (`+`) et **[!UICONTROL Add calculated field]**. Dans la zone fournie, saisissez *heure \* 1 000* et sélectionnez **[!UICONTROL Save]**.
+Supprimez ensuite le mappage *heure* à *horodatage*, puis sélectionnez l’icône d’ajout (`+`) et enfin **[!UICONTROL Ajouter un champ calculé]**. Dans la zone fournie, saisissez *heure \* 1 000* et sélectionnez **[!UICONTROL Enregistrer]**.
 
-Une fois le nouveau champ calculé ajouté, sélectionnez **[!UICONTROL Map target field]** en regard du nouveau champ source et mappez-le à *horodatage* au niveau racine du schéma. Vous devez ensuite sélectionner **[!UICONTROL Validate]** pour vous assurer qu’il n’y a plus d’erreurs.
+Une fois le nouveau champ calculé ajouté, sélectionnez **[!UICONTROL Mapper le champ cible]** en regard du nouveau champ source et mappez-le à *horodatage* au niveau racine du schéma. Vous devez ensuite sélectionner **[!UICONTROL Valider]** pour vous assurer qu’il n’y a plus d’erreurs.
 
 >[!IMPORTANT]
 >
@@ -100,7 +100,7 @@ Une fois le nouveau champ calculé ajouté, sélectionnez **[!UICONTROL Map targ
 
 ![Mappage sans erreur.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**. Utilisez la page de révision pour confirmer les détails de votre flux de données, puis sélectionnez **[!UICONTROL Finish]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**. Utilisez la page de révision pour confirmer les détails de votre flux de données, puis sélectionnez **[!UICONTROL Terminer]**.
 
 ### Collecter les informations d’identification requises
 

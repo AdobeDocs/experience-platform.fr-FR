@@ -11,8 +11,8 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 296
-ht-degree: 4%
+source-wordcount: 311
+ht-degree: 5%
 
 ---
 
@@ -27,13 +27,13 @@ ht-degree: 4%
 
 Les informations sur la plage d’adresses IP de cette page s’appliquent aux connecteurs de stockage dans le cloud basés sur des fichiers suivants du catalogue des destinations :
 
-* [[!UICONTROL Amazon S3]](./amazon-s3.md)
+* [[!UICONTROL Amazon S3]](./amazon-s3.md)
 * [[!UICONTROL Google Cloud Storage]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]
 >
->Les plages d’adresses IP documentées sur cette page ne sont *pas* prises en charge pour les destinations de stockage dans le cloud basées sur des fichiers : [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] et serveurs SFTP hébergés sur Microsoft Azure.
+>Les plages d’adresses IP documentées sur cette page ne sont *pas* prises en charge pour les destinations de stockage dans le cloud basées sur des fichiers suivantes : [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] et serveurs SFTP hébergés sur Microsoft Azure.
 
 ## Vue d’ensemble {#overview}
 

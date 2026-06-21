@@ -18,7 +18,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 177
+source-wordcount: 179
 ht-degree: 0%
 
 ---
@@ -51,4 +51,4 @@ Si vous décidez de [gérer les réponses](../command-responses.md) avec cette c
 
 ## Envoi d’un événement à l’aide de l’extension de balise Web SDK
 
-L’extension de balise Web SDK équivalente à cette commande est l’action [**[!UICONTROL Send event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#data-fields).
+L’extension de balise Web SDK équivalente à cette commande est l’action [**[!UICONTROL Envoyer l’événement]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#data-fields).

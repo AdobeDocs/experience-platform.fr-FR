@@ -14,7 +14,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1274
+source-wordcount: 1280
 ht-degree: 25%
 
 ---
@@ -49,7 +49,7 @@ Assurez-vous que le type de données de chaque champ correspond au type défini 
 
 Les données ingérées doivent être conformes au schéma du modèle de données d’expérience (XDM) défini dans Experience Platform. Si l’attribut ne correspond pas au type ou au format attendu spécifié dans le schéma, l’ingestion échoue.
 
-Si les fonctions de préparation de données sont utilisées, assurez-vous que la transformation génère les attributs appropriés. Vous pouvez vérifier les attributs pendant le processus de configuration du workflow des sources. Au cours de l’étape de mappage, sélectionnez **[!UICONTROL New field type]** puis **[!UICONTROL Add calculated field]**. Ensuite, utilisez l’interface des champs calculés pour prévisualiser chaque fonction.
+Si les fonctions de préparation de données sont utilisées, assurez-vous que la transformation génère les attributs appropriés. Vous pouvez vérifier les attributs pendant le processus de configuration du workflow des sources. Lors de l’étape de mappage, sélectionnez **[!UICONTROL Nouveau type de champ]** puis **[!UICONTROL Ajouter un champ calculé]**. Ensuite, utilisez l’interface des champs calculés pour prévisualiser chaque fonction.
 
 ### Comment puis-je supprimer les valeurs de données incorrectes des enregistrements d’ingestion par lots ou en flux continu ?
 

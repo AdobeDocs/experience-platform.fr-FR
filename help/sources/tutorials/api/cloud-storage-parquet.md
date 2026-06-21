@@ -352,7 +352,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `baseConnectionId` | Identifiant de la connexion de base au jeu de données. |
-| `data.schema.id` | `$id` du schéma XDM cible. |
+| `data.schema.id` | Lʼ`$id` du schéma XDM cible. |
 | `params.dataSetId` | L’identifiant du jeu de données cible. |
 | `connectionSpec.id` | Identifiant de spécification de connexion pour votre espace de stockage dans le cloud. |
 

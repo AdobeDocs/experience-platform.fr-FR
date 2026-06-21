@@ -13,8 +13,8 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 312
-ht-degree: 49%
+source-wordcount: 318
+ht-degree: 48%
 
 ---
 
@@ -24,11 +24,11 @@ Pour configurer le contrôle d’accès de [!DNL Experience Platform] via Adobe 
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Overview]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation. Sélectionnez **[!UICONTROL Adobe Experience Platform]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Experience Platform.
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation. Sélectionnez **&#x200B;**&#x200B;pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Experience Platform.
 
 ![select-product](../images/select-product.png)
 
-L’espace de travail du contrôle d’accès de Adobe Experience Platform s’affiche, s’ouvrant sur l’onglet **[!UICONTROL Product Profiles]** . Cet onglet vous permet d’afficher tous les profils de produits et de gérer divers paramètres comme indiqué dans le présent document.
+L’espace de travail du contrôle d’accès de Adobe Experience Platform s’affiche, s’ouvrant sur l’onglet **[!UICONTROL Profils de produit]**. Cet onglet vous permet d’afficher tous les profils de produits et de gérer divers paramètres comme indiqué dans le présent document.
 
 ![select-product-profile](../images/select-product-profile.png)
 

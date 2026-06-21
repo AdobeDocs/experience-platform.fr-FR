@@ -25,8 +25,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1975
-ht-degree: 79%
+source-wordcount: 2010
+ht-degree: 75%
 
 ---
 
@@ -42,7 +42,7 @@ Cette section décrit le type d’action Envoyer les données disponible dans l�
 
 ### Type de requête
 
-Pour sélectionner le type de requête requis par le point d’entrée, sélectionnez le type approprié dans la liste déroulante [!UICONTROL Request Type].
+Pour sélectionner le type de requête requis par le point d’entrée, sélectionnez le type approprié dans le menu déroulant [!UICONTROL Type de requête].
 
 | Méthode | Description |
 |---|---|
@@ -64,13 +64,13 @@ Utilisez chacun de ces onglets (Paramètres de requête, En-têtes et Éléments
 
 Définissez une clé et une valeur pour chaque paire clé-valeur à envoyer en tant que paramètre de chaîne de requête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « siteSection » en tant que clé ou valeur, saisissez `{{siteSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
-Pour ajouter d’autres paramètres de requête, sélectionnez **[!UICONTROL Add Another]**.
+Pour ajouter d’autres paramètres de requête, sélectionnez **[!UICONTROL Ajouter autre]**.
 
 #### En-têtes
 
 Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer en tant qu’en-tête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « pageName » en tant que clé ou valeur, saisissez `{{pageName}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
-Pour ajouter d’autres en-têtes, sélectionnez **[!UICONTROL Add Another]**.
+Pour ajouter d’autres en-têtes, sélectionnez **[!UICONTROL Ajouter autre]**.
 
 Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas limité à ces en-têtes et vous pouvez ajouter vos propres en-têtes personnalisés si nécessaire, mais ils sont mis à votre disposition pour votre commodité.
 
@@ -123,7 +123,7 @@ Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas li
 
 Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez envoyer dans le corps de la requête. Pour entrer manuellement un élément de données, utilisez la segmentation en unités lexicales de l’élément de données pour le transfert d&#39;événement. Pour référencer la valeur d’un élément de données nommé « appSection » en tant que clé ou valeur, saisissez `{{appSection}}`. Vous pouvez également sélectionner l’élément de données créé précédemment en le sélectionnant dans le menu déroulant.
 
-Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Add Another]**.
+Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter autre]**.
 
 #### Corps comme brut
 
@@ -133,7 +133,7 @@ Définissez une clé et une valeur pour chaque paire clé-valeur que vous voulez
 
 Les actions dans les règles du transfert d’événement s’exécutent de manière séquentielle. Dans certaines situations, vous pourriez souhaiter récupérer des données provenant d’une source externe non présente sur l’événement entrant du client, puis prendre cette réponse et transformer ou envoyer ces données vers une destination finale lors d’une action ultérieure au sein d’une seule règle. L’option « Enregistrer la réponse à la requête » de la section avancée l’active.
 
-Pour enregistrer le corps de la réponse à partir d’un point d’entrée, cochez la case **[!UICONTROL Save the request response]** et définissez une clé de réponse dans le champ de texte.
+Pour enregistrer le corps de la réponse à partir d’un point d’entrée, cochez la case **[!UICONTROL Enregistrer la réponse de la requête]** et définissez une clé de réponse dans le champ de texte.
 
 Si vous avez défini la clé de réponse comme `productDetails`, référencez ces données dans un élément de données, puis référencez cet élément de données dans une action ultérieure au sein de la même règle. Pour créer un élément de données qui référence `productDetail`, créez un élément de données de type `path` et saisissez le chemin suivant :
 
@@ -151,7 +151,7 @@ Le certificat [!DNL mTLS] est une information d’identification numérique qui 
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou sélectionnez une propriété existante à modifier à la place.
 
-Sélectionnez **[!UICONTROL Extensions]** dans le panneau de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez la vignette **[!UICONTROL Adobe Cloud Connector]** , puis **[!UICONTROL Install]**.
+Sélectionnez **[!UICONTROL Extensions]** dans le panneau de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez la vignette **[!UICONTROL Adobe Cloud Connector]** puis sélectionnez **[!UICONTROL Installer]**.
 
 ![Catalogue d’extensions affichant la carte d’extension [!DNL Adobe Cloud Connector] mettant en surbrillance install.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -163,15 +163,15 @@ Sélectionnez **[!UICONTROL Extensions]** dans le panneau de gauche. Dans l’on
 
 Après avoir installé l’extension, vous pouvez créer une règle de transfert d’événement qui utilise [!DNL mTLS] et l’ajouter à votre bibliothèque.
 
-Créez une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement dans votre propriété de transfert d’événement. Attribuez un nom à votre règle, puis, sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Adobe Cloud Connector]**. Sélectionnez ensuite **[!UICONTROL Make Fetch Call]** pour le **[!UICONTROL Action Type]**.
+Créez une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement dans votre propriété de transfert d’événement. Attribuez un nom à votre règle, puis sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Adobe Cloud Connector]**. Sélectionnez ensuite **[!UICONTROL Effectuer un appel de récupération]** pour le **[!UICONTROL Type d’action]**.
 
 ![Vue des règles de propriété de transfert d’événement, avec les champs requis pour ajouter une configuration d’action de règle de transfert d’événement en surbrillance.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Une fois votre sélection effectuée, des commandes supplémentaires s’affichent pour configurer la méthode et la destination de la requête [!DNL mTLS]. Pour activer l’utilisation de certificats actifs dans les environnements, sélectionnez **[!UICONTROL Enable in [!DNL mTLS]]**, puis **[!UICONTROL Keep Changes]** pour enregistrer la règle.
+Une fois votre sélection effectuée, des commandes supplémentaires s’affichent pour configurer la méthode et la destination de la requête [!DNL mTLS]. Pour activer l’utilisation de certificats actifs dans les environnements, sélectionnez **[!UICONTROL Activer dans[!DNL mTLS]]**, puis sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la règle.
 
 ![Vue des règles de propriété Transfert d’événement, avec les champs de contrôle supplémentaires et conserver les modifications en surbrillance.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
-Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Save to Library]**, puis **[!UICONTROL Build]** pour le déployer. La requête [!DNL mTLS] est maintenant active et disponible dans votre bibliothèque.
+Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**, puis sélectionnez **[!UICONTROL Créer]** pour la déployer. La requête [!DNL mTLS] est maintenant active et disponible dans votre bibliothèque.
 
 ![Règle de transfert d’événement avec l’option Enregistrer dans la bibliothèque et créer mise en surbrillance.](../../../images/extensions/server/cloud-connector/save-build.png)
 

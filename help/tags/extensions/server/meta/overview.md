@@ -46,8 +46,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2366
-ht-degree: 1%
+source-wordcount: 2478
+ht-degree: 0%
 
 ---
 
@@ -79,17 +79,17 @@ Pour utiliser l’extension [!DNL Conversions API], vous devez avoir accès au t
 
 ## Installation l’extension
 
-Pour installer l’extension [!DNL Meta Conversions API], accédez à l’interface utilisateur de la collecte de données ou d’Experience Platform et sélectionnez **[!UICONTROL Event Forwarding]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
+Pour installer l’extension [!DNL Meta Conversions API], accédez à l’interface utilisateur de la collecte de données ou d’Experience Platform et sélectionnez **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
 
-Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalog]** . Recherchez la carte [!UICONTROL Meta Conversions API], puis sélectionnez **[!UICONTROL Install]**.
+Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Recherchez la vignette [!UICONTROL API de conversions &#x200B;] puis sélectionnez **[!UICONTROL Installer]**.
 
-![L’option [!UICONTROL Install] sélectionnée pour l’extension [!UICONTROL Meta Conversions API] dans l’interface utilisateur de collecte de données.](../../../images/extensions/server/meta/install.png)
+![L’option [!UICONTROL Installer] sélectionnée pour l’extension [!UICONTROL API de conversions Meta] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/meta/install.png)
 
 Dans la vue de configuration qui s’affiche, vous devez fournir l’identifiant [!DNL Pixel] que vous avez copié précédemment pour lier l’extension à votre compte. Vous pouvez coller l’identifiant directement dans l’entrée ou utiliser un élément de données à la place.
 
 Vous devez également fournir un jeton d’accès pour utiliser le [!DNL Conversions API] spécifiquement. Reportez-vous à la documentation [!DNL Conversions API] sur la [génération d’un jeton d’accès](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) pour savoir comment obtenir cette valeur.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 
 ![Identifiant [!DNL Pixel] fourni en tant qu’élément de données dans la vue de configuration de l’extension.](../../../images/extensions/server/meta/configure.png)
 
@@ -97,27 +97,27 @@ L’extension est installée et vous pouvez désormais utiliser ses fonctionnali
 
 ## Intégration avec l’extension Facebook et Instagram {#facebook}
 
-L’intégration à l’aide de l’extension Facebook et Instagram vous permet de vous authentifier rapidement dans votre compte professionnel Meta. Cela renseigne ensuite automatiquement votre [!UICONTROL Pixel ID] et l’[!UICONTROL Access Token] de l’API Meta Conversions, ce qui facilite l’installation et la configuration de l’API Meta Conversions.
+L’intégration à l’aide de l’extension Facebook et Instagram vous permet de vous authentifier rapidement dans votre compte professionnel Meta. Cela renseigne ensuite automatiquement votre [!UICONTROL Pixel ID] et l’API de conversions Meta [!UICONTROL Jeton d’accès], ce qui facilite l’installation et la configuration de l’API de conversions Meta.
 
-Une boîte de dialogue vous invitant à vous authentifier dans Facebook et Instagram s’affiche lors de l’installation de l’extension [!UICONTROL Meta Conversions API].
+Une boîte de dialogue vous invitant à vous authentifier dans Facebook et Instagram s’affiche lors de l’installation de l’extension [!UICONTROL API de conversions &#x200B;].
 
-![Page d’installation de [!UICONTROL Meta Conversions API Extension] mettant en surbrillance [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+![La page d’installation de l’extension [!UICONTROL API de conversions Meta] mettant en surbrillance [!UICONTROL Connexion à Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
 Une invite de boîte de dialogue pour l’authentification sur Facebook et Instagram apparaît également dans l’interface utilisateur du workflow de démarrage rapide dans le transfert d’événement.
 
-![Interface utilisateur du workflow de démarrage rapide mettant en surbrillance [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+![Mise en surbrillance de l’interface utilisateur du workflow de démarrage rapide [!UICONTROL Connexion à Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
 ## Intégration au score de correspondance de qualité de l’événement (EMQ) {#emq}
 
-L’intégration au score de correspondance de qualité de l’événement (EMQ) vous permet d’afficher facilement l’efficacité de votre implémentation en affichant les scores EMQ. Cette intégration réduit le changement de contexte et vous permet d’améliorer le succès de vos implémentations d’API de conversions Meta. Ces scores d’événement s’affichent dans l’écran de configuration [!UICONTROL Meta Conversions API extension].
+L’intégration au score de correspondance de qualité de l’événement (EMQ) vous permet d’afficher facilement l’efficacité de votre implémentation en affichant les scores EMQ. Cette intégration réduit le changement de contexte et vous permet d’améliorer le succès de vos implémentations d’API de conversions Meta. Ces scores d’événement apparaissent dans l’écran de configuration de l’extension [!UICONTROL API Conversions Meta &#x200B;].
 
-![Page de configuration [!UICONTROL Meta Conversions API Extension] mettant en surbrillance [!UICONTROL View EMQ Score].](../../../images/extensions/server/meta/emq-score.png)
+![L’extension [!UICONTROL API de conversions Meta] page de configuration mettant en surbrillance [!UICONTROL Afficher le score EMQ].](../../../images/extensions/server/meta/emq-score.png)
 
 ## Intégration à LiveRamp (Alpha) {#alpha}
 
 Les clients [!DNL LiveRamp] qui ont déployé la solution ATS (Authenticated Traffic Solution) d’[!DNL LiveRamp] sur leurs sites peuvent choisir de partager des RampID en tant que paramètre d’informations client. Veuillez travailler avec l’équipe de votre compte [!DNL Meta] pour rejoindre le programme Alpha relatif à cette fonctionnalité.
 
-![Page de configuration de l’[!UICONTROL Rule] de transfert d’événement Meta mettant en surbrillance [!UICONTROL Partner Name (alpha)] et [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![La page de configuration du transfert d’événement Meta [!UICONTROL Règle] mettant en surbrillance [!UICONTROL Nom du partenaire (alpha)] et [!UICONTROL Identifiant du partenaire (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configurer une règle de transfert d’événement {#rule}
 
@@ -127,26 +127,26 @@ Cette section explique comment utiliser l’extension [!DNL Conversions API] dan
 >
 >Les événements doivent être [envoyés en temps réel](https://www.facebook.com/business/help/379226453470947?id=818859032317965) ou aussi proches que possible du temps réel pour une meilleure optimisation des campagnes publicitaires.
 
-Commencez à créer une règle de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez **[!UICONTROL Meta Conversions API Extension]** pour l’extension, puis sélectionnez **[!UICONTROL Send Conversions API Event]** pour le type d’action.
+Commencez à créer une règle de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez **[!UICONTROL Extension de l’API de conversions]** pour l’extension, puis sélectionnez **[!UICONTROL Envoyer l’événement d’API de conversions]** pour le type d’action.
 
-![Type d’action [!UICONTROL Send Page View] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](../../../images/extensions/server/meta/select-action.png)
+![Type d’action [!UICONTROL &#x200B; Envoyer la page vue &#x200B;] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](../../../images/extensions/server/meta/select-action.png)
 
 Des commandes s’affichent pour vous permettre de configurer les données d’événement qui seront envoyées à [!DNL Meta] via le [!DNL Conversions API]. Ces options peuvent être saisies directement dans les entrées fournies ou vous pouvez sélectionner des éléments de données existants pour représenter les valeurs à la place. Les options de configuration sont divisées en quatre sections principales, comme indiqué ci-dessous.
 
 | Section de configuration | Description |
 | --- | --- |
-| [!UICONTROL Server Event Parameters] | Informations générales sur l’événement, y compris l’heure à laquelle il s’est produit et l’action source qui l’a déclenché. Reportez-vous à la documentation du développeur [!DNL Meta] pour plus d’informations sur les [paramètres d’événement standard](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) acceptés par le [!DNL Conversions API].<br><br>Si vous utilisez à la fois [!DNL Meta Pixel] et [!DNL Conversions API] pour envoyer des événements, veillez à inclure à la fois un **[!UICONTROL Event Name]** (`event_name`) et **[!UICONTROL Event ID]** (`event_id`) avec chaque événement, car ces valeurs sont utilisées pour [event deduplication](#deduplication).<br><br>Vous avez également la possibilité de **[!UICONTROL Enable Limited Data Use]** pour vous conformer aux désinscriptions des clients. Consultez la documentation [!DNL Conversions API] sur les [options de traitement des données](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) pour plus d’informations sur cette fonctionnalité. |
-| [!UICONTROL Customer Information Parameters] | Données d’identité utilisateur utilisées pour attribuer l’événement à un client. Certaines de ces valeurs doivent être hachées avant de pouvoir être envoyées à l’API. <br><br>Pour garantir une bonne connexion d’API commune et une qualité de correspondance d’événement (EMQ) élevée, il est recommandé d’envoyer tous les [&#x200B; paramètres d’informations client acceptés](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) ainsi que les événements de serveur. Ces paramètres doivent également être [classés par ordre de priorité en fonction de leur importance et de leur impact sur l’EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
-| [!UICONTROL Custom Data] | Données supplémentaires à utiliser pour l’optimisation de la diffusion des publicités, fournies sous la forme d’un objet JSON. Reportez-vous à la [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) pour plus d’informations sur les propriétés acceptées pour cet objet.<br><br>Si vous envoyez un événement d’achat, vous devez utiliser cette section pour fournir les attributs requis `currency` et `value`. |
-| [!UICONTROL Test Event] | Cette option est utilisée pour vérifier si votre configuration entraîne la réception des événements du serveur par [!DNL Meta] comme prévu. Pour utiliser cette fonctionnalité, cochez la case **[!UICONTROL Send as Test Event]**, puis fournissez un code d’événement de test de votre choix dans l’entrée ci-dessous. Une fois la règle de transfert d’événement déployée, si vous avez correctement configuré l’extension et l’action, vous devriez voir les activités apparaître dans la vue **[!DNL Test Events]** dans [!DNL Meta Events Manager]. |
+| [!UICONTROL Paramètres d’événement du serveur] | Informations générales sur l’événement, y compris l’heure à laquelle il s’est produit et l’action source qui l’a déclenché. Reportez-vous à la documentation du développeur [!DNL Meta] pour plus d’informations sur les [paramètres d’événement standard](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) acceptés par le [!DNL Conversions API].<br><br>Si vous utilisez à la fois [!DNL Meta Pixel] et [!DNL Conversions API] pour envoyer des événements, veillez à inclure un **[!UICONTROL nom de l’événement]** (`event_name`) et un **[!UICONTROL identifiant de l’événement (]**) avec chaque événement, car ces valeurs sont utilisées pour `event_id`déduplication des événements[&#x200B; &#x200B;](#deduplication).<br><br>Vous avez également la possibilité d’**[!UICONTROL Activer l’utilisation limitée des données]** pour vous conformer aux désinscriptions des clients. Consultez la documentation [!DNL Conversions API] sur les [options de traitement des données](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) pour plus d’informations sur cette fonctionnalité. |
+| [!UICONTROL Paramètres des informations client] | Données d’identité utilisateur utilisées pour attribuer l’événement à un client. Certaines de ces valeurs doivent être hachées avant de pouvoir être envoyées à l’API. <br><br>Pour garantir une bonne connexion d’API commune et une qualité de correspondance d’événement (EMQ) élevée, il est recommandé d’envoyer tous les [&#x200B; paramètres d’informations client acceptés](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) ainsi que les événements de serveur. Ces paramètres doivent également être [classés par ordre de priorité en fonction de leur importance et de leur impact sur l’EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
+| [!UICONTROL Données personnalisées] | Données supplémentaires à utiliser pour l’optimisation de la diffusion des publicités, fournies sous la forme d’un objet JSON. Reportez-vous à la [[!DNL Conversions API] documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) pour plus d’informations sur les propriétés acceptées pour cet objet.<br><br>Si vous envoyez un événement d’achat, vous devez utiliser cette section pour fournir les attributs requis `currency` et `value`. |
+| [!UICONTROL Événement de test] | Cette option est utilisée pour vérifier si votre configuration entraîne la réception des événements du serveur par [!DNL Meta] comme prévu. Pour utiliser cette fonctionnalité, cochez la case **[!UICONTROL Envoyer en tant qu’événement de test]**, puis fournissez un code d’événement de test de votre choix dans l’entrée ci-dessous. Une fois la règle de transfert d’événement déployée, si vous avez correctement configuré l’extension et l’action, vous devriez voir les activités apparaître dans la vue **[!DNL Test Events]** dans [!DNL Meta Events Manager]. |
 
 {style="table-layout:auto"}
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Keep Changes]** pour ajouter l’action à la configuration de la règle.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’action à la configuration de la règle.
 
-![[!UICONTROL Keep Changes] sélectionné pour la configuration de l’action.](../../../images/extensions/server/meta/keep-changes.png)
+![[!UICONTROL Conserver les modifications] en cours de sélection pour la configuration de l’action.](../../../images/extensions/server/meta/keep-changes.png)
 
-Lorsque la règle vous convient, sélectionnez **[!UICONTROL Save to Library]**. Enfin, publiez un nouveau transfert d’événement [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
+Lorsque la règle vous convient, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**. Enfin, publiez un nouveau transfert d’événement [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
 
 ## Déduplication des événements {#deduplication}
 
@@ -188,7 +188,7 @@ Pour commencer la configuration guidée, suivez les instructions de la section [
 
 #### Ajouter des événements supplémentaires
 
-Pour ajouter de nouveaux événements, sélectionnez **[!UICONTROL Edit Your Tags Web Property]**.
+Pour ajouter de nouveaux événements, sélectionnez **[!UICONTROL Modifier la propriété Web des balises]**.
 
 ![Boîte de dialogue Étapes suivantes affichant la modification de la propriété web des balises](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
 
@@ -198,19 +198,19 @@ Sélectionnez la règle qui correspond au méta-événement que vous souhaitez m
 >
 >S’il n’existe aucun événement, cette règle ne s’exécute pas. C’est le cas pour toutes les règles, la règle **MetaConversion_PageView** étant l’exception.
 
-Pour ajouter un événement, sélectionnez **[!UICONTROL Add]** sous l’en-tête [!UICONTROL Events] .
+Pour ajouter un événement, sélectionnez **[!UICONTROL Ajouter]** sous l’en-tête [!UICONTROL Événements].
 
 ![Page des propriétés de balise n’affichant aucun événement](../../../images/extensions/server/meta/edit-rule.png)
 
-Sélectionnez le [!UICONTROL Event Type]. Dans cet exemple, nous avons sélectionné l’événement [!UICONTROL Click] et l’avons configuré pour qu’il se déclenche lorsque le bouton **.add-to-cart** est sélectionné. Sélectionnez **[!UICONTROL Keep Changes]**.
+Sélectionnez le [!UICONTROL type d’événement]. Dans cet exemple, nous avons sélectionné l’événement [!UICONTROL Click] et l’avons configuré pour se déclencher lorsque le bouton **.add-to-cart** est sélectionné. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 ![Écran de configuration des événements affichant l’événement de clic](../../../images/extensions/server/meta/event-configuration.png)
 
-Le nouvel événement a été enregistré. Sélectionnez **[!UICONTROL Select a working library]** et sélectionnez la bibliothèque dans laquelle vous souhaitez créer la bibliothèque.
+Le nouvel événement a été enregistré. Sélectionnez **[!UICONTROL Sélectionner une bibliothèque de travail]** puis sélectionnez la bibliothèque dans laquelle vous souhaitez créer la bibliothèque.
 
 ![Sélectionnez une liste déroulante de bibliothèque de travail](../../../images/extensions/server/meta/working-library.png)
 
-Sélectionnez ensuite la liste déroulante à côté de **[!UICONTROL Save to Library]** et sélectionnez **[!UICONTROL Save to Library and Build]**. La modification sera publiée dans la bibliothèque.
+Sélectionnez ensuite la liste déroulante en regard de **[!UICONTROL Enregistrer dans la bibliothèque]** et sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque et créer]**. La modification sera publiée dans la bibliothèque.
 
 ![Sélectionnez Enregistrer dans la bibliothèque et créer](../../../images/extensions/server/meta/save-and-build.png)
 

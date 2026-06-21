@@ -21,8 +21,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 264
-ht-degree: 99%
+source-wordcount: 267
+ht-degree: 85%
 
 ---
 
@@ -52,7 +52,7 @@ Les notes sont des commentaires qui n’ont aucun impact sur le comportement des
 
 Les ressources qui peuvent être annotées ont un rail fin sur le côté droit de l’écran.  Ce rail comprend une icône pour l’annotation.  Cette icône indique le nombre actuel de notes jointes à la ressource.
 
-Cliquez sur l’icône **[!UICONTROL Notes]** pour développer le rail de droite et afficher les notes. Les notes les plus récentes sont affichées en haut.  Pour ajouter une nouvelle note, saisissez votre texte dans la zone située en haut et cliquez sur **[!UICONTROL Add Note]**.
+Sélectionnez **[!UICONTROL Notes]** pour développer le rail de droite et afficher les notes. Les notes les plus récentes sont affichées en haut.  Pour ajouter une nouvelle note, saisissez votre texte dans la zone située en haut et sélectionnez **[!UICONTROL Ajouter une note]**.
 
 ## Autre
 

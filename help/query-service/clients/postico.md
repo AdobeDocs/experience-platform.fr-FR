@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 418
+source-wordcount: 422
 ht-degree: 8%
 
 ---
@@ -34,10 +34,10 @@ Pour connecter [!DNL Postico] à Query Service, ouvrez [!DNL Postico] et sélect
 | **[!DNL Host]:** | Nom d’hôte du serveur PostgreSQL. |
 | **[!DNL Port]:** | Port de [!DNL Query Service]. Vous devez utiliser le port **80** ou **5432** pour vous connecter à [!DNL Query Service]. |
 | **[!DNL User]** | Créez un nom pour votre connexion spécifique. Laissez le champ vide pour utiliser votre nom d’utilisateur Mac. |
-| **[!DNL Password]** | Cette chaîne alphanumérique correspond à vos informations d’identification Experience Platform **[!UICONTROL Password]**. Si vous souhaitez utiliser des informations d’identification non expirantes, cette valeur correspond aux arguments concaténés des `technicalAccountID` et `credential` téléchargés dans le fichier de configuration JSON. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier JSON de configuration pour les informations d’identification non expirantes est un téléchargement unique pendant leur initialisation dont Adobe ne conserve pas de copie. |
-| **[!DNL Database]** | Utilisez la valeur de vos informations d’identification Experience Platform **[!UICONTROL Database]** : `prod:all`. |
+| **[!DNL Password]** | Cette chaîne alphanumérique correspond à vos informations d’identification Experience Platform **[!UICONTROL mot de passe]**. Si vous souhaitez utiliser des informations d’identification non expirantes, cette valeur correspond aux arguments concaténés des `technicalAccountID` et `credential` téléchargés dans le fichier de configuration JSON. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier JSON de configuration pour les informations d’identification non expirantes est un téléchargement unique pendant leur initialisation dont Adobe ne conserve pas de copie. |
+| **[!DNL Database]** | Utilisez votre valeur d’informations d’identification Experience Platform **[!UICONTROL Base de données]** : `prod:all`. |
 
-Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Experience Platform], puis sélectionnez **[!UICONTROL Queries]** et **[!UICONTROL Credentials]**.
+Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Experience Platform], puis sélectionnez **[!UICONTROL Requêtes]**, **[!UICONTROL Informations d’identification]**.
 
 Après avoir inséré vos informations d’identification, sélectionnez **[!DNL Connect]** pour vous connecter à Query Service.
 

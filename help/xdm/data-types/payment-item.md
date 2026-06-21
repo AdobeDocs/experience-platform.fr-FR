@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 159
+source-wordcount: 163
 ht-degree: 23%
 
 ---
 
-# Type de données [!UICONTROL Payment Item]
+# Type de données [!UICONTROL Élément de paiement]
 
-[!UICONTROL Payment Item] est un type de données XDM (modèle de données d’expérience) standard qui décrit un paiement associé à une commande qui définit le type de paiement, le montant et la devise associée.
+[!UICONTROL Élément de paiement] est un type de données standard du modèle de données d’expérience (XDM) qui décrit un paiement associé à une commande qui définit le type de paiement, le montant et la devise associée.
 
 ![image de l’élément de paiement](../images/data-types/payment-item.PNG){width=400}
 

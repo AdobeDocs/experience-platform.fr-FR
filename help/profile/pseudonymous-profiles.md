@@ -17,7 +17,7 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1272
+source-wordcount: 1276
 ht-degree: 55%
 
 ---
@@ -60,15 +60,15 @@ Un profil est pris en compte pour l’expiration des données pseudonymes s’il
 >
 >Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [présentation du contrôle d’accès](../access-control/home.md#permissions).
 
-Pour ajouter l’expiration des données de profils pseudonymes à votre organisation, accédez au tableau de bord Profil et sélectionnez **[!UICONTROL Settings]**.
+Pour ajouter l’expiration des données de profils pseudonymes à votre organisation, accédez au tableau de bord Profil et sélectionnez **[!UICONTROL Paramètres]**.
 
 ![Le bouton Paramètres du tableau de bord du profil est mis en surbrillance.](./images/pseudonymous-profiles/profile-settings.png)
 
-La fenêtre contextuelle [!UICONTROL Profile settings] s’affiche. Sur cette fenêtre contextuelle, vous pouvez définir le nombre de jours d’expiration des données de profils pseudonymes, ainsi que l’espace de noms d’identité utilisé pour l’expiration des données.
+La fenêtre contextuelle [!UICONTROL Paramètres du profil] s’affiche. Sur cette fenêtre contextuelle, vous pouvez définir le nombre de jours d’expiration des données de profils pseudonymes, ainsi que l’espace de noms d’identité utilisé pour l’expiration des données.
 
 Pour les sandbox de production, l’expiration par défaut des données de profil pseudonymes est de 14 jours, avec une durée minimale de 1 jour et une durée maximale de 365 jours. Pour les sandbox de développement, l’expiration par défaut des données de profil pseudonymes est de 3 jours, avec un minimum de 1 jour et un maximum de 365 jours.
 
-Sélectionnez **[!UICONTROL Apply]** pour enregistrer vos paramètres d’expiration des données.
+Sélectionnez **[!UICONTROL Appliquer]** pour enregistrer vos paramètres d’expiration des données.
 
 ![Fenêtre contextuelle permettant d’ajouter l’expiration des données de profils pseudonymes aux profils de votre organisation. Le bouton Appliquer est mis en surbrillance.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 

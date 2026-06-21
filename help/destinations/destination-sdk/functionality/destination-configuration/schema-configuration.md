@@ -18,8 +18,8 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1915
-ht-degree: 78%
+source-wordcount: 1927
+ht-degree: 77%
 
 ---
 
@@ -218,7 +218,7 @@ L’exemple ci-dessous montre les mappages source et de destination obligatoires
 
 {style="table-layout:auto"}
 
-Par conséquent, les sections **[!UICONTROL Source field]** et **[!UICONTROL Target field]** de l’interface utilisateur d’Experience Platform sont grisées.
+**Par conséquent, les sections Champ** Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -248,7 +248,7 @@ L’exemple ci-dessous montre un mappage de destination obligatoire. Si seul le 
 
 {style="table-layout:auto"}
 
-Ainsi, la section **[!UICONTROL Target field]** de l’interface utilisateur d’Experience Platform est grisée, tandis que la section **[!UICONTROL Source field]** est active et les utilisateurs peuvent interagir avec celle-ci. Les options **[!UICONTROL Mandatory key]** et **[!UICONTROL Deduplication key]** sont actives et les utilisateurs ne peuvent pas les modifier.
+Ainsi, la section **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform est grisée, tandis que la section **[!UICONTROL Champ Source]** est active et les utilisateurs peuvent interagir avec celle-ci. Les options **[!UICONTROL clé obligatoire]** et **[!UICONTROL clé de déduplication]** sont actives et les utilisateurs ne peuvent pas les modifier.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

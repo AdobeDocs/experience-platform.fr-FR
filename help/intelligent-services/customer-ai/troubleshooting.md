@@ -21,18 +21,18 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1795
+source-wordcount: 1830
 ht-degree: 25%
 
 ---
 
 # Dépannage des erreurs de l’IA dédiée aux clients
 
-L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Service instances]**, une colonne pour **[!UICONTROL LAST RUN STATUS]** affiche l’un des messages suivants : **[!UICONTROL Success]**, **[!UICONTROL Training issue]** et **[!UICONTROL Failed]**.
+L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Instances de service]**, une colonne pour **[!UICONTROL STATUT DE LA DERNIÈRE EXÉCUTION]** affiche l’un des messages suivants : **[!UICONTROL Succès]**, **[!UICONTROL Problème de formation]** et **[!UICONTROL Échec]**.
 
 ![Statut de la dernière exécution indiquant la réussite, un problème de formation ou un échec.](./images/errors/last-run-status.png)
 
-Dans le cas où **[!UICONTROL Failed]** ou **[!UICONTROL Training issue]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient vos **[!UICONTROL Last run status]** et **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contient des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
+Dans le cas où **[!UICONTROL Échec]** ou **[!UICONTROL Problème d’entraînement]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient votre **[!UICONTROL statut de la dernière exécution]** et **[!UICONTROL détails de la dernière exécution]**. **[!UICONTROL Détails de la dernière exécution]** contient des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
 
 ![](./images/errors/last-run-details.png){width=300}
 
@@ -50,7 +50,7 @@ Pour contourner ce problème, vous devez ajouter experience.adobe.com en tant qu
 
 ## La qualité du modèle est médiocre.
 
-Si vous recevez l’erreur « [!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration] ». Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
+Si vous recevez l’erreur « [!UICONTROL La qualité du modèle est médiocre. Nous vous recommandons de créer une application avec la configuration modifiée] ». Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
 
 ![](./images/errors/model-quality.png){width=300}
 

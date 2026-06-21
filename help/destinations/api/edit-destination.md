@@ -17,8 +17,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1614
-ht-degree: 25%
+source-wordcount: 1622
+ht-degree: 24%
 
 ---
 
@@ -75,7 +75,7 @@ La première étape de la modification de votre connexion de destination consist
 
 >[!TIP]
 >
->Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour obtenir l’identifiant de flux de données souhaité d’une destination. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, sélectionnez le flux de données de destination souhaité et recherchez l’identifiant de destination dans le rail de droite. L’identifiant de destination est la valeur que vous utiliserez comme identifiant de flux à l’étape suivante.
+>Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour obtenir l’identifiant de flux de données souhaité d’une destination. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**, sélectionnez le flux de données de destination souhaité et recherchez l’identifiant de destination dans le rail de droite. L’identifiant de destination est la valeur que vous utiliserez comme identifiant de flux à l’étape suivante.
 >
 > ![Obtenir l’identifiant de destination à l’aide de l’interface utilisateur d’Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -263,7 +263,7 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une Etag m
 
 **Requête**
 
-La requête suivante met à jour les paramètres d’une connexion [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) pour ajouter le nouveau champ [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations).
+La requête suivante met à jour les paramètres d’une connexion [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) pour ajouter le nouveau champ [**[!UICONTROL Ajouter l’ID d’audience au nom de l’audience]**](/help/release-notes/2023/april-2023.md#destinations).
 
 ```shell
 curl -X PATCH \

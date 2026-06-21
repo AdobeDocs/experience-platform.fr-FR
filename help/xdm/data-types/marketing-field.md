@@ -15,18 +15,18 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 667
+source-wordcount: 678
 ht-degree: 1%
 
 ---
 
-# Type de données [!UICONTROL Generic Marketing Preference Field]
+# [!UICONTROL Champ générique de préférences marketing] type de données
 
-[!UICONTROL Generic Marketing Preference Field] est un type de données XDM standard qui décrit la sélection d’un client pour une préférence marketing particulière.
+Le [!UICONTROL champ générique de préférences marketing] est un type de données XDM standard qui décrit la sélection d’une préférence marketing particulière par un client ou une cliente.
 
 >[!NOTE]
 >
->Ce type de données est conçu pour être utilisé afin de personnaliser la structure des schémas de consentement de votre organisation à l’aide du groupe de champs [[!UICONTROL Consents and Preferences] comme ligne de base](../field-groups/profile/consents.md)
+>Ce type de données est destiné à être utilisé pour personnaliser la structure des schémas de consentement de votre organisation à l’aide du groupe de champs [[!UICONTROL Consentements et préférences] comme ligne de base](../field-groups/profile/consents.md).
 >
 >Si vous avez besoin d’un mappage `subscriptions` pour un champ de préférence marketing spécifique, vous devez utiliser le champ [marketing avec le type de données d’abonnement](./marketing-field-subscriptions.md) à la place.
 

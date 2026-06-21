@@ -11,21 +11,21 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 133
-ht-degree: 6%
+source-wordcount: 141
+ht-degree: 5%
 
 ---
 
 # Type de données [!UICONTROL Ratio]
 
-[!UICONTROL Ratio] est un type de données standard du modèle de données d’expérience (XDM) qui fournit un rapport de deux valeurs [[!UICONTROL Quantity]](../data-types/quantity.md) par le biais d’un numérateur et d’un dénominateur. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Rapport] est un type de données standard du modèle de données d’expérience (XDM) qui fournit un rapport de deux valeurs [[!UICONTROL Quantité]](../data-types/quantity.md) via un numérateur et un dénominateur. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure du type de données de rapport](../../../images/healthcare/data-types/ratio.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Denominator] | `denominator` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | Valeur du dénominateur. |
-| [!UICONTROL Numerator] | `numerator` | [[!UICONTROL Quantity]](../data-types/quantity.md) | Valeur du numérateur. |
+| [!UICONTROL Dénominateur] | `denominator` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | Valeur du dénominateur. |
+| [!UICONTROL Numérateur] | `numerator` | [[!UICONTROL Quantité]](../data-types/quantity.md) | Valeur du numérateur. |
 
 >[!NOTE]
 >

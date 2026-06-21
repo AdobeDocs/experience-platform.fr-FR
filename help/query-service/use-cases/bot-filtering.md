@@ -40,7 +40,7 @@ Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développemen
 
 Les deux attributs utilisés pour extraire des données pour la détection des robots sont les suivants :
 
-* Identifiant visiteur Experience Cloud (ECID, également appelé MCID) : il s’agit d’un identifiant universel et persistant qui identifie vos visiteurs dans toutes les solutions Adobe.
+* Identifiant visiteur Experience Cloud (ECID, également appelé MCID) : il fournit un identifiant universel et persistant qui identifie vos visiteurs dans toutes les solutions Adobe.
 * Horodatage : fournit l’heure et la date au format UTC auxquelles une activité s’est produite sur le site web.
 
 >[!NOTE]

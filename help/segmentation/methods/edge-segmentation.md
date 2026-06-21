@@ -20,7 +20,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1202
+source-wordcount: 1217
 ht-degree: 19%
 
 ---
@@ -169,15 +169,15 @@ Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée
 
 >[!TAB Audience Portal]
 
-Dans Audience Portal, sélectionnez **[!UICONTROL Create audience]**.
+Dans Audience Portal, sélectionnez **[!UICONTROL Créer une audience]**.
 
 ![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Build rules]** pour accéder au créateur de segments.
+Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Créer des règles]** pour accéder au créateur de segments.
 
 ![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [types de requête éligibles](#eligible-query-types). Si la définition de segment est admissible pour la segmentation Edge, vous pourrez sélectionner **[!UICONTROL Edge]** comme **[!UICONTROL Evaluation method]**.
+Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [types de requête éligibles](#eligible-query-types). Si la définition de segment est admissible pour la segmentation Edge, vous pourrez sélectionner **&#x200B;**&#x200B;comme méthode **[!UICONTROL Évaluation]**.
 
 ![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation Edge.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -333,11 +333,11 @@ Après avoir sélectionné une audience sur Audience Portal, la page des détail
 
 ![La page Détails de l’audience s’affiche pour une audience évaluée à l’aide de la segmentation Edge.](../images/methods/edge/audience-details.png)
 
-Pour les audiences activées pour Edge, la carte **[!UICONTROL Profiles over time]** s’affiche, qui indique le total des mesures qualifiées et la nouvelle audience mise à jour.
+Pour les audiences activées pour Edge, la carte **[!UICONTROL Profils au fil du temps]** s’affiche, qui indique le nombre total de mesures qualifiées et la nouvelle audience mise à jour.
 
-La mesure **[!UICONTROL Total qualified]** représente le nombre total d’audiences qualifiées, en fonction des évaluations Edge de cette audience.
+La mesure **[!UICONTROL Total qualifié]** représente le nombre total d’audiences qualifiées, en fonction des évaluations Edge de cette audience.
 
-La mesure **[!UICONTROL New audience updated]** est représentée par un graphique linéaire qui indique le changement de taille d’audience par le biais de la segmentation Edge. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
+La mesure **[!UICONTROL Nouvelle audience mise à jour]** est représentée par un graphique linéaire qui indique le changement de taille de l’audience par le biais de la segmentation Edge. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
 
 ![La carte Profils au fil du temps est mise en surbrillance.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 

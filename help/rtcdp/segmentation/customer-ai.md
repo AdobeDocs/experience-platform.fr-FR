@@ -21,8 +21,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 307
-ht-degree: 64%
+source-wordcount: 310
+ht-degree: 63%
 
 ---
 
@@ -39,7 +39,7 @@ L’IA dédiée aux clients, une fonctionnalité d’IA intégrée à Adobe Real
 * améliorer les profils client avec des facteurs d’influence pour les scores de propension ;
 * Création d’audiences de clients en fonction de facteurs d’influence et de scores de propension.
 
-L’IA dédiée aux clients se trouve dans l’onglet **[!UICONTROL Services]** sous **[!UICONTROL Adobe services]**.
+L’IA dédiée aux clients se trouve dans l’onglet **[!UICONTROL Services]** sous **[!UICONTROL Services Adobe]**.
 
 ![Emplacement de l’IA dédiée aux clients](../assets/overview/rtcdp-customer-ai.png)
 

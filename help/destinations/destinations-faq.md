@@ -34,7 +34,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1710
+source-wordcount: 1713
 ht-degree: 5%
 
 ---
@@ -201,7 +201,7 @@ Non. Comme il ne s’agit pas d’une intégration basée sur les pixels, il n�
 ### Que dois-je faire avant de pouvoir activer des audiences dans [!DNL LinkedIn Matched Audiences] ? {#linkedin-activate-prerequisites}
 
 +++Réponse
-Avant de pouvoir utiliser la destination [!UICONTROL LinkedIn Matched Audience], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] dispose du niveau d’autorisation [!DNL Creative Manager] ou supérieur.
+Avant de pouvoir utiliser la destination [!UICONTROL Audience appariée LinkedIn], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] dispose du niveau d’autorisation [!DNL Creative Manager] ou supérieur.
 
 Pour savoir comment modifier vos autorisations d’utilisateur [!DNL LinkedIn Campaign Manager], voir [Ajouter, modifier et supprimer des autorisations d’utilisateur sur les comptes Advertising](https://www.linkedin.com/help/lms/answer/5753) dans la documentation LinkedIn.
 +++
@@ -260,7 +260,7 @@ Les définitions d’audience sont propagées à Edge Network en une heure maxim
 ### Où puis-je voir les attributs activés dans [!DNL Adobe Target] ? {#target-activated-attributes-location}
 
 +++Réponse
-Les attributs pourront être utilisés dans Target dans les offres [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=fr) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=fr).
+Les attributs pourront être utilisés dans Target dans les offres [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 +++
 
 ### Puis-je créer une destination sans flux de données, puis ajouter un flux de données à la même destination à un moment ultérieur ? {#destination-without-datastream}

@@ -15,7 +15,7 @@ ht-degree: 86%
 
 # [!DNL Real-Time Customer Profile] {#profile}
 
-* [Présentation de [!DNL Profile]](home.md)
+* [Présentation du [!DNL Profile]](home.md)
 * [Présentation du profil (vidéo)](video/profile-overview.md)
 * [[!DNL Profile] et mécanismes de sécurisation de la segmentation](guardrails.md)
 * [Tableau de bord [!DNL Profile]](ui/profile-dashboard.md)

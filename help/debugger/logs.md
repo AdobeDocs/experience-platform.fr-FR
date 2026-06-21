@@ -18,8 +18,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 131
-ht-degree: 51%
+source-wordcount: 142
+ht-degree: 28%
 
 ---
 
@@ -31,19 +31,19 @@ L’onglet **Logs** fournit des informations spécifiques aux balises et aux imp
 
 L’onglet Journaux affiche des informations dans quatre colonnes :
 
-**[!UICONTROL Solutions] :** affiche les icônes de la solution Experience Cloud affectée par l’élément journalisé. Placez le pointeur sur l’icône pour obtenir une description textuelle.
+**[!UICONTROL Solutions] :** affiche les icônes de la solution Experience Cloud affectée par l’élément journalisé. Placez le pointeur sur l’icône pour obtenir une description textuelle.
 
-**[!UICONTROL Occurred at] :** indique le moment où le problème journalisé s’est produit pendant la session.
+**[!UICONTROL Survenu à] :** indique à quel moment le problème consigné s’est produit au cours de la session.
 
-**[!UICONTROL Log level] :** affiche la gravité du problème. La gravité est l’un des niveaux suivants :
+**[!UICONTROL Niveau de journal] :** indique la gravité du problème. La gravité est l’un des niveaux suivants :
 
 * Journal
 * Infos
 * Avertissements
 * Erreurs
 
-**[!UICONTROL Log message] :** décrit le problème.
+**[!UICONTROL Message du journal] :** décrit le problème.
 
-Certains messages du journal disposent d’une option Afficher le code. Sélectionnez **[!UICONTROL Show Code]** pour afficher le code conditionnel qui détermine si une règle doit se déclencher.
+Certains messages du journal disposent d’une option Afficher le code. Sélectionnez **[!UICONTROL Afficher le code]** pour afficher le code conditionnel qui détermine si une règle doit se déclencher.
 
-Pour effacer le journal, sélectionnez **[!UICONTROL Remove Logs]**.
+Pour effacer le journal, sélectionnez **[!UICONTROL Supprimer les journaux]**.

@@ -9,7 +9,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 886
+source-wordcount: 889
 ht-degree: 3%
 
 ---
@@ -200,9 +200,9 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 
 {style="table-layout:auto"}
 
-## Cas pratiques {#use-cases}
+## Cas d’utilisation {#use-cases}
 
-Lisez cette section pour obtenir des exemples spécifiques d’utilisation du filtrage et du tri pour renvoyer des informations sur certains connecteurs ou pour vous aider à déboguer les problèmes. Si vous souhaitez qu’Adobe ajoute d’autres cas d’utilisation, utilisez le **[!UICONTROL Detailed feedback options]** de la page pour envoyer une requête.
+Lisez cette section pour obtenir des exemples spécifiques d’utilisation du filtrage et du tri pour renvoyer des informations sur certains connecteurs ou pour vous aider à déboguer les problèmes. Si vous souhaitez qu’Adobe ajoute d’autres cas d’utilisation, utilisez les **[!UICONTROL options de commentaires détaillés]** de la page pour envoyer une demande.
 
 **Filtrer pour renvoyer les connexions vers une certaine destination uniquement**
 

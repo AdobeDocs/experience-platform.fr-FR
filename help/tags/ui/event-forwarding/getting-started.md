@@ -23,8 +23,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 828
-ht-degree: 68%
+source-wordcount: 854
+ht-degree: 57%
 
 ---
 
@@ -56,11 +56,11 @@ Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des 
 
 Créez votre schéma dans Adobe Experience Platform.
 
-1. Créez un schéma en sélectionnant **[!UICONTROL Schemas]** > **[!UICONTROL Create Schema]**, puis lʼoption **[!UICONTROL XDM ExperienceEvent]**.
+1. Créez un schéma en sélectionnant **[!UICONTROL Schémas]**>**[!UICONTROL Créer un schéma]** et en choisissant l’option **[!UICONTROL XDM ExperienceEvent]**.
 
 1. Donnez un nom et une brève description au schéma.
 
-1. Vous pouvez ajouter le groupe de champs « Détails web ExperienceEvent » en sélectionnant **[!UICONTROL Add]** en regard de **[!UICONTROL Field Groups]**.
+1. Vous pouvez ajouter le groupe de champs « Détails web ExperienceEvent » en sélectionnant **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]**.
 
    >[!NOTE]
    >
@@ -72,39 +72,39 @@ Pour plus d’informations sur les schémas, voir [Aide du système XDM (Modèle
 
 ## Création dʼune propriété de transfert dʼévénements
 
-Dans l’espace de travail **[!UICONTROL Tags]**, créez une propriété de type **[!UICONTROL Edge]**.
+Dans l’espace de travail **[!UICONTROL Balises]**, créez une propriété de type **[!UICONTROL Edge]**.
 
-1. Sélectionner **[!UICONTROL New Property]**.
+1. Sélectionnez **[!UICONTROL Nouvelle propriété]**.
 
 1. Attribuez un nom à la propriété.
 
 1. Choisissez le type de plateforme « Edge ».
 
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Après avoir créé la propriété, accédez à l’onglet **[!UICONTROL Environments]** de la nouvelle propriété et effectuez les opérations suivantes :
-note des identifiants d’environnement. Si l’organisation Adobe utilisée dans le flux de données diffère de celle utilisée dans le transfert d’événement, vous pouvez copier l’identifiant d’environnement de l’onglet **[!UICONTROL Environments]** et le coller lors de la création d’un flux de données. Sinon, vous pouvez sélectionner l’environnement dans un menu déroulant.
+Après avoir créé la propriété, accédez à l’onglet **[!UICONTROL Environnements]** pour la nouvelle propriété et effectuez les opérations suivantes :
+note des identifiants d’environnement. Si l’organisation Adobe utilisée dans la file d’attente des données diffère de celle utilisée dans le transfert d’événement, vous pouvez copier l’identifiant d’environnement de l’onglet **[!UICONTROL Environnements]** et le coller lors de la création d’un flux de données. Sinon, vous pouvez sélectionner l’environnement dans un menu déroulant.
 
 ## Création dʼun flux de données
 
 Pour créer votre flux de données dans Adobe Experience Platform, utilisez l’identifiant d’environnement généré lors de la création de la propriété de transfert d’événement.
 
-1. Sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
+1. Sélectionnez **[!UICONTROL Flux de données]** dans le volet de navigation de gauche.
 
-1. Nommez la configuration et donnez une description facultative.
-La description permet d’identifier les configurations dans une liste de plusieurs configurations.
+1. Nommez la configuration et fournissez une description facultative.
+La description permet d’identifier des configurations dans une liste de plusieurs configurations.
 
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 ## Activation du transfert dʼévénements {#enable-event-forwarding}
 
 Ensuite, configurez Edge Network pour envoyer des données au transfert dʼévénements et à dʼautres produits Adobe.
 
-1. Dans l’espace de travail **[!UICONTROL Datastreams]**, sélectionnez la propriété que vous avez créée.
+1. Dans l’espace de travail **[!UICONTROL Flux de données]**, sélectionnez la propriété que vous avez créée.
 
 1. Sélectionnez l’environnement de développement, de production ou d’évaluation.
 
-   Ou, pour envoyer des données à un environnement de transfert d’événement en dehors de l’organisation Adobe, sélectionnez **[!UICONTROL Switch to Advanced Mode]** et collez un identifiant. Lʼidentifiant est fourni lorsque vous créez une propriété de transfert dʼévénements.
+   Ou, pour envoyer des données à un environnement de transfert d’événement en dehors de l’organisation Adobe, sélectionnez **[!UICONTROL Basculer en mode avancé]** et collez un identifiant. Lʼidentifiant est fourni lorsque vous créez une propriété de transfert dʼévénements.
 
 1. Activez les outils nécessaires et configurez-les selon les besoins.
 
@@ -116,7 +116,7 @@ Après la configuration, prenez note des identifiants d’environnement pour la 
 
 ## Configurez l’extension Experience Platform Web SDK pour envoyer des données au flux de données créé précédemment
 
-Créez votre propriété dans l’espace de travail **[!UICONTROL Tags]**, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension Experience Platform Web SDK dans le catalogue pour la configurer et l’installer.
+Créez votre propriété dans l’espace de travail **[!UICONTROL Balises]**, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension Experience Platform Web SDK dans le catalogue pour la configurer et l’installer.
 
 Consultez la [documentation de l’extension Web SDK](../../extensions/client/web-sdk/overview.md) pour plus d’informations sur les options de configuration.
 
@@ -126,17 +126,17 @@ Quand les éléments ci-dessus sont en place, créez les définitions des donné
 
 Créez une règle de chargement de page à l’aide de l’extension Experience Platform Web SDK et du type d’action « Envoyer l’événement » :
 
-1. Ouvrez l’onglet **[!UICONTROL Rules]**, puis cliquez sur **[!UICONTROL Create New Rule]**.
+1. Ouvrez l’onglet **[!UICONTROL Règles]**, puis sélectionnez **[!UICONTROL Créer une règle]**.
 
 1. Attribuez un nom à la règle.
 
-1. Sélectionner **[!UICONTROL Events Add]**.
+1. Sélectionnez **[!UICONTROL Ajouter des événements]**.
 
-1. Ajoutez un événement en choisissant une extension et l’un des types d’événements disponibles pour cette extension, puis configurez les paramètres de l’événement. Par exemple, sélectionnez **[!UICONTROL Core - Window Loaded]**.
+1. Ajoutez un événement en choisissant une extension et l’un des types d’événements disponibles pour cette extension, puis configurez les paramètres de l’événement. Par exemple, sélectionnez **[!UICONTROL Core - Fenêtre chargée]**.
 
-1. Ajoutez une action à l’aide de l’extension Experience Platform Web SDK. Sélectionnez **[!UICONTROL Send Event]** dans la liste **[!UICONTROL Action Type]**, sélectionnez l’instance de votre choix (instance Alloy configurée précédemment), puis sélectionnez un élément de données à ajouter au bloc de données XDM dans l’accès Alloy.
+1. Ajoutez une action à l’aide de l’extension Experience Platform Web SDK. Sélectionnez **[!UICONTROL Envoyer l’événement]** dans la liste **[!UICONTROL Type d’action]**, sélectionnez l’instance souhaitée (instance d’alliance configurée précédemment), puis sélectionnez un élément de données à ajouter au bloc de données XDM dans l’accès d’alliance.
 
-1. Laissez le reste des paramètres par défaut pour cet exemple, puis sélectionnez **[!UICONTROL Save]**.
+1. Laissez le reste des paramètres par défaut pour cet exemple, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 Autre exemple : vous pouvez créer une règle qui envoie la couche de données à Edge si l’utilisateur passe la souris sur un bouton spécifié.
 

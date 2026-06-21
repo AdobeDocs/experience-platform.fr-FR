@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 133
+source-wordcount: 135
 ht-degree: 5%
 
 ---
 
 # Type de données [!UICONTROL Marketing]
 
-[!UICONTROL Marketing] est un type de données XDM standard qui décrit les activités marketing qui sont actives avec un point de contact particulier.
+[!UICONTROL Marketing] est un type de données XDM standard qui décrit les activités marketing actives avec un point de contact particulier.
 
 ![](../images/data-types/marketing.png)
 

@@ -14,8 +14,8 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1018
-ht-degree: 8%
+source-wordcount: 1030
+ht-degree: 7%
 
 ---
 
@@ -44,7 +44,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Une fois votre requête exécutée et les résultats générés, un schéma ad hoc est automatiquement généré et ajouté à l’inventaire des schémas.
 
-Pour ajouter un libellé de données, accédez à [!UICONTROL Schemas]’onglet parcourir du tableau de bord en sélectionnant [!UICONTROL Schemas] dans le rail gauche de l’interface utilisateur d’Experience Platform. L’inventaire des schémas s’affiche.
+Pour ajouter un libellé de données, accédez à l’onglet de navigation du tableau de bord [!UICONTROL Schémas] en sélectionnant [!UICONTROL Schémas] dans le rail gauche de l’interface utilisateur d’Experience Platform. L’inventaire des schémas s’affiche.
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ Pour ajouter un libellé de données, accédez à [!UICONTROL Schemas]’onglet 
 
 ## Découvrir les schémas ad hoc dans l’inventaire des schémas de l’interface utilisateur d’Experience Platform {#discover-ad-hoc-schemas}
 
-Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur d’Experience Platform, sélectionnez l’icône de filtre (![Icône Filtrer.](/help/images/icons/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Show adhoc schemas] dans le rail de gauche qui s’affiche.
+Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur d’Experience Platform, sélectionnez l’icône de filtre (![Icône Filtrer.](/help/images/icons/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Afficher les schémas ad hoc] dans le rail de gauche qui s’affiche.
 
 ![Le rail de gauche des options de filtre du tableau de bord de schéma avec le bouton « Afficher le schéma ad hoc » activé.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -62,21 +62,21 @@ Sélectionnez le nom du schéma ad hoc récemment créé dans la liste disponibl
 
 ## Modifier les libellés de gouvernance
 
-Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez l’onglet [!UICONTROL Labels] . L’espace de travail des libellés vous permet d’appliquer, de créer et de modifier des libellés à vos champs de schéma ad hoc et de contrôler les autorisations d’accès via l’interface utilisateur. Tous les champs du schéma ad hoc sont représentés ici.
+Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez l’onglet [!UICONTROL Libellés]. L’espace de travail des libellés vous permet d’appliquer, de créer et de modifier des libellés à vos champs de schéma ad hoc et de contrôler les autorisations d’accès via l’interface utilisateur. Tous les champs du schéma ad hoc sont représentés ici.
 
 ## Modifier les libellés du schéma ou du champ
 
-Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône en forme de crayon (![Icône en forme de crayon.](/help/images/icons/edit.png)) sur le côté du nom du schéma sous l’onglet [!UICONTROL Labels] .
+Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône en forme de crayon (![Icône en forme de crayon.](/help/images/icons/edit.png)) sur le côté du nom du schéma sous l’onglet [!UICONTROL Libellés] .
 
 ![Vue Libellés de l’espace de travail des schémas avec l’icône en forme de crayon en surbrillance.](../images/data-governance/edit-entire-schema-labels.png)
 
-Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs champs dans la liste, puis [!UICONTROL Edit governance labels] dans la barre latérale droite.
+Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs champs dans la liste, puis [!UICONTROL Modifier les libellés de gouvernance] dans la barre latérale droite.
 
 ![Vue des libellés dans l’espace de travail des schémas avec l’option « Modifier les libellés de gouvernance » mise en surbrillance dans la barre latérale droite.](../images/data-governance/edit-governance-labels.png)
 
 ## Fenêtre contextuelle Modifier les libellés
 
-La fenêtre contextuelle [!UICONTROL Edit labels] s’affiche. De ce point de vue, vous pouvez créer ou modifier des libellés de gouvernance existants par le biais de l’interface utilisateur.
+La fenêtre contextuelle [!UICONTROL &#x200B; Modifier les libellés &#x200B;] s’affiche. De ce point de vue, vous pouvez créer ou modifier des libellés de gouvernance existants par le biais de l’interface utilisateur.
 
 ![Fenêtre contextuelle Modifier les libellés.](../images/data-governance/edit-labels-popover.png)
 

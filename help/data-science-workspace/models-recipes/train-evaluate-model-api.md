@@ -17,8 +17,8 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1254
-ht-degree: 79%
+source-wordcount: 1248
+ht-degree: 78%
 
 ---
 
@@ -226,8 +226,8 @@ La réponse de la création de l’expérience ressemble à ceci.
 }
 ```
 
-`{EXPERIMENT_ID}` : identifiant qui représente l’expérience que vous venez de créer.
-`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience que vous venez de créer.
+`{INSTANCE_ID}` : ID qui représente l’instance MLI.
 
 ### Création d’une expérience planifiée pour la formation
 

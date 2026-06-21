@@ -15,7 +15,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2120
+source-wordcount: 2124
 ht-degree: 16%
 
 ---
@@ -311,7 +311,7 @@ Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les des
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICONTROL Version identifier] » et « [!UICONTROL Timestamp identifier] ».
+>Dans l’éditeur de schéma d’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICONTROL Identifiant de version] » et « [!UICONTROL Identifiant d’horodatage] ».
 
 >[!CAUTION]
 >

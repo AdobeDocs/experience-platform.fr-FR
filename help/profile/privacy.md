@@ -18,8 +18,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1753
-ht-degree: 21%
+source-wordcount: 1632
+ht-degree: 22%
 
 ---
 
@@ -179,7 +179,7 @@ Pour le service de profil, une fois la tâche de confidentialité terminée, une
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL AEP Data Lake]** et/ou **[!UICONTROL Profile]** sous **[!UICONTROL Products]** afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou le [!DNL Real-Time Customer Profile].
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données]** et/ou **[!UICONTROL Profil]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou le [!DNL Real-Time Customer Profile].
 
 ![Une demande d’accès à la tâche en cours de création dans l’interface utilisateur, avec l’option Profil sélectionnée sous Produits](./images/privacy/product-value.png)
 
@@ -228,7 +228,7 @@ Pour supprimer le profil et toutes les associations d’identités pour un clien
 
 ### Limites des politiques de fusion {#merge-policy-limitations}
 
-Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type de [!UICONTROL ID stitching] est **[!DNL None]**. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion où [!UICONTROL ID stitching] est défini sur [!UICONTROL Private graph].
+Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type [!UICONTROL assemblage des identifiants] est **[!DNL None]**. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion dans laquelle [!UICONTROL l’assemblage des identifiants] est défini sur [!UICONTROL graphique privé].
 
 >![L’assemblage des identifiants de la politique de fusion est défini sur Aucun](./images/privacy/no-id-stitch.png)
 

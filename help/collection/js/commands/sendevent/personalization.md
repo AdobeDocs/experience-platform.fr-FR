@@ -32,7 +32,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1282
+source-wordcount: 1285
 ht-degree: 0%
 
 ---
@@ -166,4 +166,4 @@ Cette propriété utilise la logique suivante en fonction de la manière dont el
 
 ## Composants Personalization utilisant l’extension de balise Web SDK
 
-L’équivalent de l’extension de balise Web SDK de cette propriété est la section [**[!UICONTROL Personalization]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#personalization-fields) lors de la configuration d’une action « [!UICONTROL Send event] ».
+L’extension de balise Web SDK équivalente à cette propriété est la section [**[!UICONTROL Personalization]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#personalization-fields) lors de la configuration d’une action « [!UICONTROL Envoyer l’événement] ».

@@ -28,7 +28,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 661
+source-wordcount: 667
 ht-degree: 64%
 
 ---
@@ -54,12 +54,12 @@ Adobe Experience Platform Segmentation Service propose une interface utilisa
 
 | Fonctionnalité | Description |
 |--- | ---|
-| Onglet Audiences fusionnées dans [!DNL Segment Builder] | Les onglets [!UICONTROL Segments] et [!UICONTROL Audiences] du [!DNL Segment Builder] ont été combinés en un seul onglet [!UICONTROL Audiences]. Cet onglet vous permet de parcourir et de rechercher les audiences existantes, que vous pouvez ensuite faire glisser dans la zone de travail du créateur de règles pour créer une nouvelle définition de segment. En référençant une audience, il est possible d’ajouter l’un des jeux de logiques de règles suivants à la nouvelle définition de segment : l’appartenance à l’audience en tant que règle, le jeu complet de la logique de règle qui a défini l’audience référencée. |
-| Nouvel emplacement du sélecteur de politique de fusion | L’emplacement du sélecteur de politique de fusion dans le [!DNL Segment Builder] a été modifié. Pour sélectionner une politique de fusion pour une définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Fields]** , puis utilisez le menu déroulant **[!UICONTROL Merge Policy]** pour sélectionner la politique de fusion à utiliser. |
+| Onglet Audiences fusionnées dans [!DNL Segment Builder] | Les onglets [!UICONTROL Segments] et [!UICONTROL Audiences] de la [!DNL Segment Builder] ont été combinés en un seul onglet [!UICONTROL Audiences]. Cet onglet vous permet de parcourir et de rechercher les audiences existantes, que vous pouvez ensuite faire glisser dans la zone de travail du créateur de règles pour créer une nouvelle définition de segment. En référençant une audience, il est possible d’ajouter l’un des jeux de logiques de règles suivants à la nouvelle définition de segment : l’appartenance à l’audience en tant que règle, le jeu complet de la logique de règle qui a défini l’audience référencée. |
+| Nouvel emplacement du sélecteur de politique de fusion | L’emplacement du sélecteur de politique de fusion dans le [!DNL Segment Builder] a été modifié. Pour sélectionner une politique de fusion pour une définition de segment, cliquez sur l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Politique de fusion]** pour sélectionner la politique de fusion à utiliser. |
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations, reportez-vous à la [présentation de Segmentation Service](../../segmentation/home.md).
 
@@ -115,6 +115,6 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 **Problèmes connus**
 
-* Aucune
+* None
 
 Pour en savoir plus sur l’utilisation de XDM à l’aide de l’API [!DNL Schema Registry] et de [!DNL Schema Editor]’interface utilisateur, consultez la [documentation du système XDM](../../xdm/home.md).

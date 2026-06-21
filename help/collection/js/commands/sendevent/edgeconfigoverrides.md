@@ -21,7 +21,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 227
+source-wordcount: 229
 ht-degree: 0%
 
 ---
@@ -89,4 +89,4 @@ alloy("sendEvent", {
 
 ## Remplacements de la configuration des trains de données à l’aide de l’extension de balise Web SDK
 
-L’équivalent de l’extension de balise Web SDK de cet objet est la section [&#x200B; Remplacements de la configuration du flux de données &#x200B;](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides) lors de la configuration de l’action « [!UICONTROL Send event] ».
+L’équivalent de l’extension de balise Web SDK de cet objet est la section [&#x200B; Remplacements de la configuration des flux de données &#x200B;](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides) lors de la configuration de l’action « [!UICONTROL Envoyer l’événement] ».

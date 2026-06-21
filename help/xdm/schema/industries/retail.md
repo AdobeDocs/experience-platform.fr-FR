@@ -15,12 +15,12 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 464
+source-wordcount: 466
 ht-degree: 8%
 
 ---
 
-# modèle de données du secteur [!UICONTROL Retail]
+# [!UICONTROL Vente au détail] modèle de données du secteur
 
 Le diagramme de relation d’entité suivant représente un modèle de données normalisé pour le secteur du commerce de détail. L’ERD est délibérément présenté de manière dénormalisée et en tenant compte de la manière dont les données sont stockées dans Adobe Experience Platform.
 
@@ -42,7 +42,7 @@ Utilisez la légende suivante pour interpréter cet ERD :
 >
 >L’entité Événement d’expérience comprend un champ « _ID », qui représente l’attribut d’identifiant unique (`_id`) fourni par la classe XDM ExperienceEvent. Consultez le document de référence sur [XDM ExperienceEvent](../../classes/experienceevent.md) pour plus d’informations sur ce qui est attendu pour cette valeur.
 
-## Cas d’utilisation [!UICONTROL Retail]
+## Cas pratiques [!UICONTROL vente au détail]
 
 Le tableau suivant décrit les classes et groupes de champs de schéma recommandés pour plusieurs cas d’utilisation courants de la vente au détail.
 
@@ -50,9 +50,9 @@ Le tableau suivant décrit les classes et groupes de champs de schéma recommand
 | --- | --- |
 | Combinez les sources de données en ligne et hors ligne et résolvez les problèmes d’identité entre appareils et en ligne/hors ligne afin de fournir un rapport holistique d’attribution entre canaux et entre appareils. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 | Proposez des expériences ciblées et personnalisées pour divers segments afin d’augmenter les recettes et d’améliorer la plateforme dans l’orchestration omnicanal. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails de la campagne marketing](../../field-groups/event/campaign-marketing-details.md)</li><li>[Informations sur le canal](../../field-groups/event/channel-details.md)</li><li>[Informations commerciales](../../field-groups/event/commerce-details.md)</li><li>[Détails de l’environnement](../../field-groups/event/environment-details.md)</li><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li><li>[Coordonnées personnelles](../../field-groups/profile/personal-contact-details.md)</li><li>[Détails du contact professionnel](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |
-| Analysez l’attribution multipoint pour améliorer l’efficacité marketing. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails de la campagne marketing](../../field-groups/event/campaign-marketing-details.md)</li><li>[Informations sur le canal](../../field-groups/event/channel-details.md)</li><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li></ul></li></ul> |
+| Analysez l’attribution multipoint pour améliorer l’efficacité marketing. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails de la campagne marketing](../../field-groups/event/campaign-marketing-details.md)</li><li>[Informations sur le canal](../../field-groups/event/channel-details.md)</li><li>[Informations commerciales](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li></ul></li></ul> |
 | Améliorez la pertinence des e-mails grâce à une segmentation améliorée pour les hommes et les femmes. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 | Ingérez des données de fidélité (partenaires) pour augmenter les informations pertinentes sur les produits sur les canaux web, e-mail et marketing numérique. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Détails démographiques](../../field-groups/profile/demographic-details.md)</li><li>[Détails de fidélité](../../field-groups/profile/loyalty-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
-| Recibler les abandons de panier par le biais d’e-mails automatisés et personnalisés. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Informations commerciales](../../field-groups/event/commerce-details.md)</li><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
+| Recibler les abandons de panier par le biais d’e-mails automatisés et personnalisés. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Détails Commerce](../../field-groups/event/commerce-details.md)</li><li>[Détails Web](../../field-groups/event/web-details.md)</li></ul></li><li>**[Produit](../../classes/product.md)** :<ul><li>[Catalogue des produits](../../field-groups/product/product-catalog.md)</li><li>[Catégorie de produits](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}

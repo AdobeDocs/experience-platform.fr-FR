@@ -28,7 +28,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 3522
+source-wordcount: 3542
 ht-degree: 49%
 
 ---
@@ -239,9 +239,9 @@ Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à
 * Adobe Campaign
 * Adobe Target
 
-Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Adobe Analytics ExperienceEvent Template] pour mapper &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) schémas XDM des champs spécifiques à [!DNL Analytics]. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
+Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Modèle Adobe Analytics ExperienceEvent] &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) pour mapper les champs spécifiques à [!DNL Analytics] à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
 
-![Schéma du [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
+![Schéma du [!UICONTROL modèle Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
 
 Les groupes de champs d’application Adobe attribuent automatiquement une identité principale par défaut grâce à l’utilisation du champ `identityMap`, qui est un objet généré par le système et en lecture seule qui mappe les valeurs d’identité standard pour un client individuel.
 
@@ -259,13 +259,13 @@ Lorsque vous ingérez des données dans le lac de données, la validation des do
 >
 >La validation ne s’applique pas aux colonnes imbriquées. Si le format du champ se trouve dans une colonne de tableau, les données ne sont pas validées.
 
-Pour définir des contraintes sur un champ, sélectionnez le champ dans l’éditeur de schémas afin d’ouvrir la barre latérale **[!UICONTROL Field properties]**. Consultez la documentation sur les [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
+Pour définir des contraintes sur un champ, sélectionnez le champ dans l’éditeur de schémas afin d’ouvrir la barre latérale **[!UICONTROL Propriétés du champ]**. Consultez la documentation sur les [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
 
 >[!NOTE]
 >
->Tous les contrôles dans **[!UICONTROL Field properties]** n’appliquent pas la validation de l’ingestion. Contrairement aux contrôles de validation tels que les **[!UICONTROL Pattern]**, les **[!UICONTROL Format]**, les limites de longueur, les valeurs numériques minimales et maximales, et les **[!UICONTROL Required]**, **[!UICONTROL Default value]** est une métadonnée de schéma d’information définie par la spécification de schéma JSON et qui n’est pas appliquée automatiquement lors de l’ingestion ou des flux de préparation de données. Voir [propriétés de champ spécifiques au type](../ui/fields/overview.md#type-specific-properties).
+>Tous les contrôles dans **[!UICONTROL Propriétés du champ]** n’appliquent pas la validation de l’ingestion. Contrairement aux contrôles de validation tels que **[!UICONTROL Modèle]**, **[!UICONTROL Format]**, limites de longueur, valeurs numériques minimales et maximales et **[!UICONTROL Obligatoire]**, **[!UICONTROL Valeur par défaut]** sont des métadonnées de schéma d’information définies par la spécification de schéma JSON et ne sont pas automatiquement appliquées lors de l’ingestion ou des flux de préparation de données. Voir [propriétés de champ spécifiques au type](../ui/fields/overview.md#type-specific-properties).
 
-![Éditeur de schémas avec les champs de contrainte mis en surbrillance dans la barre latérale [!UICONTROL Field properties].](../images/best-practices/data-validation-fields.png)
+![Éditeur de schémas avec les champs de contrainte mis en surbrillance dans la barre latérale [!UICONTROL Propriétés du champ].](../images/best-practices/data-validation-fields.png)
 
 ### Conseils pour maintenir l’intégrité des données {#data-integrity-tips}
 
@@ -274,7 +274,7 @@ Les suggestions suivantes vous aident à maintenir l’intégrité des données 
 * **Tenez compte des identités principales** : pour les produits Adobe tels que SDK web, Mobile SDK, Adobe Analytics et Adobe Journey Optimizer, le champ `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires en tant qu’identités principales pour ce schéma.
 * **Assurez-vous que `_id` n’est pas utilisé comme identité** : le champ `_id` dans les schémas Événement d’expérience ne peut pas être utilisé comme identité, car il est destiné à l’unicité des enregistrements.
 * **Définir des contraintes de longueur** : il est recommandé de définir des longueurs minimale et maximale sur les champs marqués comme identités. Un avertissement se déclenche si vous essayez d’attribuer un espace de noms personnalisé à un champ d’identité sans respecter les contraintes de longueur minimale et maximale. Ces limitations permettent de maintenir la cohérence et la qualité des données.
-* **Appliquer des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, utilisez le paramètre **[!UICONTROL Pattern]** pour appliquer des contraintes. Ce paramètre peut inclure des règles telles que les chiffres uniquement, les majuscules ou les minuscules, ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
+* **Appliquer des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, utilisez le paramètre **[!UICONTROL Modèle]** pour appliquer des contraintes. Ce paramètre peut inclure des règles telles que les chiffres uniquement, les majuscules ou les minuscules, ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
 * **Limiter les eVars dans les schémas Analytics** : en règle générale, un schéma Analytics ne doit comporter qu’une seule eVar désignée comme identité. Si vous envisagez d’utiliser plusieurs eVar en tant qu’identité, vous devez vérifier si la structure des données peut être optimisée.
 * **Garantir l’unicité d’un champ sélectionné** : le champ sélectionné doit être unique par rapport à l’identité principale dans le schéma. Si ce n’est pas le cas, ne le marquez pas comme identité. Par exemple, si plusieurs clients peuvent fournir la même adresse e-mail, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également aux autres espaces de noms d’identité tels que les numéros de téléphone. Le marquage d’un champ non unique en tant qu’identité peut entraîner une réduction indésirable du profil.
 * **Vérifier les longueurs de chaîne minimales** : tous les champs de chaîne doivent comporter au moins un caractère, car les valeurs de chaîne ne doivent jamais être vides. Les valeurs nulles pour les champs non obligatoires sont toutefois acceptables. Par défaut, les nouveaux champs de chaîne ont une longueur minimale de 1.

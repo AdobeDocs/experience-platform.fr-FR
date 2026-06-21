@@ -21,7 +21,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 988
+source-wordcount: 990
 ht-degree: 68%
 
 ---
@@ -43,7 +43,7 @@ Actuellement, il existe deux manières de télécharger les scores Customer AI 
 
 ## Recherche de votre identifiant de jeu de données {#dataset-id}
 
-Dans votre instance de service pour les insights de l’IA dédiée aux clients, cliquez sur le menu déroulant *Plus d’actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
+Dans votre instance de service pour les insights de l’IA dédiée aux clients, cliquez sur le menu déroulant *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
 
 ![Menu déroulant Autres actions affichant l’option « Accéder aux scores ».](../images/insights/more-actions.png)
 

@@ -16,7 +16,7 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 685
+source-wordcount: 698
 ht-degree: 1%
 
 ---
@@ -38,11 +38,11 @@ Consultez [Authentification et accès aux API Experience Platform](../../../land
 Les autorisations recommandées pour la science des données sont les suivantes :
 
 - Sandbox(s) qui seront utilisés pour la science des données (généralement `prod`)
-- Modélisation des données : [!UICONTROL Manage Schemas]
-- Gestion des données : [!UICONTROL Manage Datasets]
-- Ingestion des données : [!UICONTROL View Sources]
-- Destinations : [!UICONTROL Manage and Activate Dataset Destinations]
-- Query Service : [!UICONTROL Manage Queries]
+- Modélisation des données : [!UICONTROL Gérer les schémas]
+- Gestion des données : [!UICONTROL &#x200B; Gérer les jeux de données &#x200B;]
+- Ingestion des données : [!UICONTROL Afficher les sources]
+- Destinations : [!UICONTROL Gérer et activer des destinations de jeu de données]
+- Query Service : [!UICONTROL Gérer les requêtes]
 
 Par défaut, un rôle (et les informations d’identification d’API affectées à ce rôle) ne peut accéder à aucune donnée libellée. Sous réserve des politiques de gouvernance des données de l’organisation, un administrateur système peut accorder au rôle l’accès à certaines données libellées jugées appropriées à l’utilisation de la science des données. Il est de la responsabilité des clients d’Experience Platform de gérer les politiques et l’accès aux libellés de manière appropriée afin de se conformer aux réglementations et aux politiques organisationnelles pertinentes.
 

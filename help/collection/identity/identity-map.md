@@ -4,7 +4,7 @@ description: Découvrez comment créer et envoyer des payloads identityMap pour 
 exl-id: 33b409cb-48f5-4e77-ba2f-7dfe0b2cb2a9
 source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -157,10 +157,10 @@ alloy("sendEvent", {
 
 Utilisez le type d’élément de données [Mappage d’identités](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) pour créer la payload d’identité dans l’interface utilisateur des balises :
 
-1. Créez un élément de données avec l’extension **[!UICONTROL Adobe Experience Platform Web SDK]** et le type d’élément de données **[!UICONTROL Identity map]**.
+1. Créez un élément de données avec l’extension **[!UICONTROL Adobe Experience Platform Web SDK]** et le type d’élément de données **[!UICONTROL Mappage d’identités]**.
 2. Ajoutez des identités en spécifiant l’espace de noms, l’élément de données ou la valeur qui est résolu sur l’identifiant et l’état authentifié.
 3. Marquez une identité comme principale.
-4. Référencez cet élément de données dans votre action **[!UICONTROL Send event]** sous **[!UICONTROL Identity map]**.
+4. Référencez cet élément de données dans votre action **[!UICONTROL Envoyer l’événement]** sous **[!UICONTROL Mappage d’identité]**.
 
 >[!ENDTABS]
 

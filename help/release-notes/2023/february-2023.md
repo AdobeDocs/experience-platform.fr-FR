@@ -35,8 +35,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1291
-ht-degree: 88%
+source-wordcount: 1332
+ht-degree: 85%
 
 ---
 
@@ -48,7 +48,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [Collecte de données](#data-collection)
 - [[!DNL Destinations]](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
+- [Modèle de données d’expérience (XDM)](#xdm)
 - [Service de requête](#query-service)
 - [Édition B2B de Real-Time Customer Data Platform](#b2b)
 - [Sources](#sources)
@@ -79,7 +79,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| [Amélioration de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) pour les intégrations avec les [destinations basées sur des fichiers (par lots)](/help/destinations/destination-types.md#file-based) | <p> Lorsque les profils ne sont plus qualifiés pour une politique de consentement, Experience Platform communique désormais de manière proactive sa sortie de politique aux destinations basées sur des fichiers. Cela suit la [version de février 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la même fonctionnalité pour les destinations de diffusion en continu. </p> <p> <b>Remarque </b> : cette fonctionnalité est disponible uniquement pour les clients d’**[!UICONTROL Privacy and Security Shield]** et ceux d’**[!UICONTROL Healthcare Shield]**. </p> |
+| [Amélioration de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) pour les intégrations avec les [destinations basées sur des fichiers (par lots)](/help/destinations/destination-types.md#file-based) | <p> Lorsque les profils ne sont plus qualifiés pour une politique de consentement, Experience Platform communique désormais de manière proactive sa sortie de politique aux destinations basées sur des fichiers. Cela suit la [version de février 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) de la même fonctionnalité pour les destinations de diffusion en continu. </p> <p> <b>Remarque </b> : cette fonctionnalité est disponible uniquement pour les clients et clientes de **[!UICONTROL Privacy and Security Shield]** et celles et ceux de **[!UICONTROL Healthcare Shield]**. </p> |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | La classe XDM Individual Prospect Profile inclut des identifiants fournis par les partenaires. |
+| Classe | [[!UICONTROL Profil de prospect individuel XDM]](https://github.com/adobe/xdm/pull/1669/files) | La classe XDM Individual Prospect Profile inclut des identifiants fournis par les partenaires. |
 
 {style="table-layout:auto"}
 
@@ -115,11 +115,11 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [!UICONTROL Frequency Capping Constraints] | Le groupe de champs [!UICONTROL Frequency Capping Constraints] a été [mis à jour pour prendre en charge les événements personnalisés et de répétition](https://github.com/adobe/xdm/pull/1641/files). |
-| Type de données | [!UICONTROL Web referrer] | Les propriétés du référent web ont été [mises à jour pour inclure `xdm:linkName` et `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivement, il s’agit du nom et de la région de l’élément HTML sélectionné sur la page précédente. |
-| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction details] | [Le champ [!UICONTROL Tracker URL] a été ajouté](https://github.com/adobe/xdm/pull/1665/files) à la [!UICONTROL Adobe CJM ExperienceEvent]. Ce dispositif de suivi fournit l’URL sélectionnée par l’utilisateur ou l’utilisatrice. |
-| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [La propriété `meta:enum` vide a été supprimée](https://github.com/adobe/xdm/pull/1668/files) du champ [!UICONTROL Tracking Type] de l’URL. |
-| Type de données | [!UICONTROL Media information] | [Le modèle RegEx de la propriété `videoSegment` dans [!UICONTROL Media information] type de données a été supprimé](https://github.com/adobe/xdm/pull/1667/files). |
+| Groupe de champs | [!UICONTROL Contraintes de limitation de la fréquence] | Le groupe de champs [!UICONTROL &#x200B; Contraintes de limitation de la fréquence &#x200B;] a été [mis à jour pour prendre en charge les événements personnalisés et de répétition](https://github.com/adobe/xdm/pull/1641/files). |
+| Type de données | [!UICONTROL Référent web] | Les propriétés du référent web ont été [mises à jour pour inclure `xdm:linkName` et `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Respectivement, il s’agit du nom et de la région de l’élément HTML sélectionné sur la page précédente. |
+| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Détails de l’interaction du message] | [Le champ [!UICONTROL URL du dispositif de suivi] a été ajouté](https://github.com/adobe/xdm/pull/1665/files) à [!UICONTROL Adobe CJM ExperienceEvent]. Ce dispositif de suivi fournit l’URL sélectionnée par l’utilisateur ou l’utilisatrice. |
+| Groupe de champs | [!UICONTROL Adobe CJM ExperienceEvent - Informations sur l’interaction des messages] | [La propriété `meta:enum` vide a été supprimée](https://github.com/adobe/xdm/pull/1668/files) du champ URL [!UICONTROL Type de tracking]. |
+| Type de données | [!UICONTROL Informations sur les médias] | [Le modèle RegEx de la propriété `videoSegment` dans le type de données [!UICONTROL Informations sur les médias] a été supprimé](https://github.com/adobe/xdm/pull/1667/files). |
 
 {style="table-layout:auto"}
 

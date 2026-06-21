@@ -14,7 +14,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 436
+source-wordcount: 441
 ht-degree: 8%
 
 ---
@@ -49,7 +49,7 @@ Suivez le tutoriel sur [l’abonnement aux notifications [!DNL I/O Event]](../ob
 
 ## Recevoir des notifications [!DNL Privacy Service Event]
 
-Une fois que vous avez correctement enregistré votre webhook et que les tâches de confidentialité ont été exécutées, vous pouvez commencer à recevoir des notifications d’événement. Vous pouvez afficher ces événements à l’aide du webhook lui-même ou en sélectionnant l’onglet **[!UICONTROL Debug Tracing]** dans la présentation de l’enregistrement des événements de votre projet dans Adobe Developer Console.
+Une fois que vous avez correctement enregistré votre webhook et que les tâches de confidentialité ont été exécutées, vous pouvez commencer à recevoir des notifications d’événement. Ces événements peuvent être affichés à l’aide du webhook lui-même ou en sélectionnant l’onglet **[!UICONTROL Debug Tracing]** dans la présentation de l’enregistrement des événements de votre projet dans Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 

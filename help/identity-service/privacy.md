@@ -17,7 +17,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1008
+source-wordcount: 1010
 ht-degree: 51%
 
 ---
@@ -110,7 +110,7 @@ curl -X POST \
 >
 >Lors de la suppression d’identités à l’aide de la suppression conforme au RGPD, vous devez spécifier le symbole d’identité comme espace de noms et non comme nom d’affichage.
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Identity]** sous **[!UICONTROL Products]** afin de traiter les tâches pour les données stockées dans [!DNL Identity Service].
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Identité]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans [!DNL Identity Service].
 
 ![identity-gdpr](./images/identity-gdpr.png)
 

@@ -26,7 +26,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1066
+source-wordcount: 1071
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Exécutez la commande `setConsent` lors de l’appel de votre instance configur�
 
 ### Objet `consent` standard Adobe 2.0
 
-Si vous envoyez des données à Adobe Experience Platform, vous souhaiterez inclure un groupe de champs de schéma de confidentialité dans votre schéma de profil. Voir [Gouvernance, confidentialité et sécurité dans Adobe Experience Platform](/help/landing/governance-privacy-security/overview.md) pour plus d’informations sur la norme Adobe 2.0. Vous pouvez ajouter des données à l’intérieur de l’objet de valeur sous correspondant au schéma du champ de `consents` du groupe de champs de profil de [!UICONTROL Consents and Preferences].
+Si vous envoyez des données à Adobe Experience Platform, vous souhaiterez inclure un groupe de champs de schéma de confidentialité dans votre schéma de profil. Voir [Gouvernance, confidentialité et sécurité dans Adobe Experience Platform](/help/landing/governance-privacy-security/overview.md) pour plus d’informations sur la norme Adobe 2.0. Vous pouvez ajouter des données à l’intérieur de l’objet de valeur sous correspondant au schéma du champ de `consents` du groupe de champs de profil [!UICONTROL Consentements et préférences].
 
 * **`standard`** : norme de consentement choisie. Définissez cette propriété sur `"Adobe"` pour la norme Adobe 2.0.
 * **`version`** : chaîne représentant la version de la norme de consentement. Définissez cette propriété sur `"2.0"` pour la norme Adobe 2.0.
@@ -204,4 +204,4 @@ Stockez les préférences de l’utilisateur indépendamment afin de pouvoir aff
 
 ## Définir le consentement à l’aide de l’extension de balise Web SDK
 
-L’extension de balise Web SDK équivalente à cette commande est l’action [**[!UICONTROL Set consent]**](/help/tags/extensions/client/web-sdk/actions/set-consent.md).
+L’extension de balise Web SDK équivalente à cette commande est l’action [**[!UICONTROL Définir le consentement]**](/help/tags/extensions/client/web-sdk/actions/set-consent.md).

@@ -28,8 +28,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 957
-ht-degree: 94%
+source-wordcount: 970
+ht-degree: 87%
 
 ---
 
@@ -53,9 +53,9 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 
 ## Installation et configuration de l’extension MA
 
-* **Installer -** Pour installer l’extension MA, ouvrez la propriété d’extension, cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension **[!UICONTROL Adobe Media Analytics for Audio and Video]** avec votre souris et cliquez sur **[!UICONTROL Install]**.
+* **Installation -** Pour installer l’extension MA, ouvrez la propriété de votre extension, puis sélectionnez **[!UICONTROL Extensions > Catalogue]** et placez le curseur sur l’extension **[!UICONTROL Adobe Media Analytics for Audio and Video]** et sélectionnez **[!UICONTROL Installer]**.
 
-* **Configuration -** Pour configurer l’extension MA, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension avec votre souris, puis cliquez sur **[!UICONTROL Configure]**.
+* **Configurer -** Pour configurer l’extension MA, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]** :
 
 ![Configuration de l’extension MA](../../../images/ext-va-config.jpg)
 
@@ -79,7 +79,7 @@ Après avoir inclus les trois extensions mentionnées ci-dessus dans votre proje
 
 ### Utilisation depuis une page web/application JavaScript
 
-L’extension MA exporte les API MediaHeartbeat dans l’objet global window en activant le paramètre « Export APIs to Window Object » dans la page [!UICONTROL Configuration]. Il exporte les API sous le nom de variable configuré. Par exemple, si le nom de variable est configuré pour être `ADB`, vous pouvez alors accéder à MediaHeartbeat via `window.ADB.MediaHeartbeat`.
+L’extension MA exporte les API MediaHeartbeat dans l’objet fenêtre global en activant le paramètre « Exporter les API vers l’objet fenêtre » de la page [!UICONTROL Configuration]. Il exporte les API sous le nom de variable configuré. Par exemple, si le nom de variable est configuré pour être `ADB`, vous pouvez alors accéder à MediaHeartbeat via `window.ADB.MediaHeartbeat`.
 
 >[!IMPORTANT]
 >
@@ -194,7 +194,7 @@ L’extension MA expose les modules partagés `get-instance` et `media-heartbeat
    ...
    ```
 
-1. À l’aide de l’instance Pulsations multimédia, consultez la [documentation JS du SDK multimédia](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=fr) et la [documentation de l’API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) pour mettre en œuvre le suivi multimédia.
+1. À l’aide de l’instance Pulsations multimédia, consultez la [documentation JS du SDK multimédia](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) et la [documentation de l’API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) pour mettre en œuvre le suivi multimédia.
 
 >[!NOTE]
 >

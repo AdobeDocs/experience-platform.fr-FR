@@ -17,7 +17,7 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 373
+source-wordcount: 375
 ht-degree: 27%
 
 ---
@@ -49,6 +49,6 @@ Lors de l’application d’une contrainte de temps au niveau de la zone de trav
 
 ![La contrainte de temps au niveau de la zone de travail est mise en surbrillance.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-Pour appliquer une contrainte de temps au niveau de la carte, sélectionnez la carte spécifique à laquelle vous souhaitez appliquer la contrainte de temps. Le conteneur **[!UICONTROL Event Rules]** s’affiche. Vous pouvez maintenant sélectionner la contrainte de temps que vous souhaitez appliquer à la carte.
+Pour appliquer une contrainte de temps au niveau de la carte, sélectionnez la carte spécifique à laquelle vous souhaitez appliquer la contrainte de temps. Le conteneur **[!UICONTROL Règles d’événement]** s’affiche. Vous pouvez maintenant sélectionner la contrainte de temps que vous souhaitez appliquer à la carte.
 
 ![La contrainte de temps au niveau de la carte est mise en surbrillance.](../images/ui/segment-refactoring/card-time-constraint.png)

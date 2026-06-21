@@ -18,7 +18,7 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 482
+source-wordcount: 486
 ht-degree: 22%
 
 ---
@@ -34,7 +34,7 @@ Pour une présentation des balises, reportez-vous aux ressources ci-dessous :
 
 ## Comment trouver des extensions de balises dans l’interface d’Experience Platform {#how-to-find-extensions-in-interface}
 
-Pour rechercher les extensions dans l’interface d’Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** et sélectionnez **[!UICONTROL Extensions]** dans le filtre **[!UICONTROL Types]**.
+Pour trouver les extensions dans l’interface d’Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]** et sélectionnez **[!UICONTROL Extensions]** dans le filtre **[!UICONTROL Types]**.
 
 ![Filtre des extensions dans l’interface](../../assets/catalog/launch-extensions/filter.png)
 
@@ -58,7 +58,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Avantages de l’utilisation des extensions de balises {#extensions-benefits}
 
-Les fonctionnalités de balises Experience Platform sont gratuites pour les clients Experience Cloud existants. Le système simplifie le déploiement des balises sur votre site web au moyen d’extensions conviviales que vous pouvez installer, configurer, mettre à jour et supprimer. Les balises laissent une petite empreinte sur votre site web et permettent à vos pages de se charger rapidement.
+Les fonctionnalités de balises d’Experience Platform sont gratuites pour les clients Experience Cloud existants. Le système simplifie le déploiement des balises sur votre site web au moyen d’extensions conviviales que vous pouvez installer, configurer, mettre à jour et supprimer. Les balises laissent une petite empreinte sur votre site web et permettent à vos pages de se charger rapidement.
 
 Bien que vous ne puissiez pas activer les audiences pour les extensions de balises, vous pouvez configurer des règles pour ne transférer les données d’événement que dans certains cas. Cette puissante fonctionnalité vous permet de transférer les données d’événement uniquement dans certaines situations, plutôt que d’envoyer les données d’événement à chaque interaction. Pour plus d’informations, consultez la section consacrée aux règles dans la [documentation sur les balises](../../../tags/ui/managing-resources/rules.md).
 

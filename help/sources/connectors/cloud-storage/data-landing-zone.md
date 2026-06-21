@@ -14,7 +14,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1426
+source-wordcount: 1430
 ht-degree: 19%
 
 ---
@@ -315,7 +315,7 @@ Enfin, accédez à l’URL générée pour vous connecter directement à la cons
 
 >[!IMPORTANT]
 >
->- Pour vous connecter à la source, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]**. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
+>- Pour vous connecter à la source, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les sources]** et **[!UICONTROL Gérer les sources]**. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
 >
 >- Les liens privés ne sont actuellement pas pris en charge lors de la connexion à Experience Platform à l’aide de l’[!DNL Data Landing Zone] . Les seules méthodes d’accès prises en charge sont les méthodes répertoriées [ici](#manage-the-contents-of-your-data-landing-zone).
 

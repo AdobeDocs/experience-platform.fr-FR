@@ -10,20 +10,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 457
-ht-degree: 6%
+source-wordcount: 467
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Dining Reservation] groupe de champs de schéma
+# [!UICONTROL Réservation de restaurant] groupe de champs de schéma
 
-[!UICONTROL Dining Reservation] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisé pour capturer des informations concernant une réservation au restaurant.
+[!UICONTROL Réservation au restaurant] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisé pour capturer des informations concernant une réservation au restaurant.
 
-Le groupe de champs est une extension du groupe de champs [!UICONTROL Reservation Details] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. En plus de ces champs génériques, [!UICONTROL Dining Reservation] inclut également `diningReservations` tableau . Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés spécifiques au restaurant.
+Le groupe de champs est une extension du groupe de champs [!UICONTROL &#x200B; Détails de la réservation &#x200B;] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. En plus de ces champs génériques, [!UICONTROL Réservation au restaurant] inclut également `diningReservations` tableau . Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés spécifiques au restaurant.
 
 >[!NOTE]
 >
->Ce document couvre les détails du tableau de `diningReservations`. Pour plus d’informations sur les autres champs fournis sous l’objet `reservations` , reportez-vous à la référence du groupe de champs [[!UICONTROL Reservation Details] &#x200B;](./reservation-details.md).
+>Ce document couvre les détails du tableau de `diningReservations`. Pour plus d&#39;informations sur les autres champs fournis sous l&#39;objet `reservations`, reportez-vous à la référence du groupe de champs [[!UICONTROL Détails de la réservation]](./reservation-details.md).
 
 ![Structure de réservation de restaurant](../../images/field-groups/dining-reservation/structure.png)
 

@@ -15,7 +15,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 837
+source-wordcount: 849
 ht-degree: 44%
 
 ---
@@ -48,15 +48,15 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 ## [!DNL JupyterLab] d’accès et [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Dans [[!DNL Experience Platform]](https://platform.adobe.com), accédez à **[!UICONTROL Notebooks]** à partir de la colonne de navigation de gauche. Laissez charger JupyterLab.
+1. Dans [[!DNL Experience Platform]](https://platform.adobe.com), accédez à **[!UICONTROL Notebooks]** dans la colonne de navigation de gauche. Laissez charger JupyterLab.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >Si un nouvel onglet de lanceur ne s’affichait pas automatiquement, ouvrez-le en cliquant sur **[!UICONTROL File]**, puis sélectionnez **[!UICONTROL New Launcher]**.
+   >Si un nouvel onglet de lanceur ne s’affichait pas automatiquement, ouvrez-le en cliquant sur **[!UICONTROL Fichier]** puis sélectionnez **[!UICONTROL Nouveau lanceur]**.
 
-2. Dans l’onglet Lanceur , cliquez sur l’icône **[!UICONTROL Blank]** dans un environnement Python 3 pour ouvrir un notebook vide.
+2. Dans l&#39;onglet Lanceur , cliquez sur l&#39;icône **[!UICONTROL Vide]** dans un environnement Python 3 pour ouvrir un notebook vide.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -64,11 +64,11 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    >
    >Python 3 est actuellement le seul environnement pris en charge pour Query Service dans les notebooks.
 
-3. Sur le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Data]** et double-cliquez sur le répertoire **[!UICONTROL Datasets]** pour répertorier tous les jeux de données.
+3. Sur le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Données]**, puis double-cliquez sur le répertoire **[!UICONTROL Jeux de données]** pour répertorier tous les jeux de données.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Recherchez un jeu de données [!DNL Adobe Analytics] à explorer et cliquez avec le bouton droit sur la liste, puis cliquez sur **[!UICONTROL Query Data in Notebook]** pour générer des requêtes SQL dans le notebook vide.
+4. Recherchez un jeu de données [!DNL Adobe Analytics] à explorer et cliquez avec le bouton droit sur la liste. Cliquez ensuite sur **[!UICONTROL Query Data in Notebook]** pour générer des requêtes SQL dans le notebook vide.
 
 5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de notebook et le [!DNL Query Service].
 
@@ -110,7 +110,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 ## Interrogation de vos données {#query-your-data}
 
-Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en sélectionnant dans sa cellule, puis en sélectionnant le bouton **[!UICONTROL play]** . Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
+Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en sélectionnant dans sa cellule, puis en cliquant sur le bouton **[!UICONTROL lecture]**. Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
 Lorsqu’un notebook est inactif pendant une période prolongée, la connexion entre le notebook et [!DNL Query Service] peut être rompue. Dans ce cas, redémarrez [!DNL JupyterLab] en sélectionnant le bouton **Redémarrer** ![bouton de redémarrage](/help/images/icons/restart.png) situé dans le coin supérieur droit à côté du bouton d’alimentation.
 

@@ -21,14 +21,14 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 352
+source-wordcount: 367
 ht-degree: 4%
 
 ---
 
 # Type de données de collecte des détails de données QoE (qualité de l’expérience)
 
-La collecte de [!UICONTROL QoE Data Details] est un type de données standard du modèle de données d’expérience (XDM) qui fournit des mesures détaillées liées à la qualité de l’expérience (QoE) pendant la lecture de médias. Utilisez le type de données [!UICONTROL QoE Data Details] Collection pour capturer des informations telles que les informations sur le débit binaire, les débits d’images, les événements de mise en mémoire tampon, les images perdues, etc. Ce type de données permet d’analyser la qualité de la lecture, ce qui permet d’obtenir des informations sur les performances de diffusion en continu, l’expérience utilisateur et les problèmes potentiels rencontrés lors des sessions de lecture.
+[!UICONTROL Détails des données QoE] la collecte est un type de données XDM (Modèle de données d’expérience) standard qui fournit des mesures détaillées liées à la qualité de l’expérience (QoE) pendant la lecture de médias. Utilisez le type de données de collecte [!UICONTROL Détails des données QoE] pour capturer des informations telles que les informations de débit, les débits d’images, les événements de mise en mémoire tampon, les images perdues, etc. Ce type de données permet d’analyser la qualité de la lecture, ce qui permet d’obtenir des informations sur les performances de diffusion en continu, l’expérience utilisateur et les problèmes potentiels rencontrés lors des sessions de lecture.
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/bitrate) | `bitrate` | entier | Non | Valeur du débit (en Kbits/s). |
-| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/dropped-frames) | `droppedFrames` | entier | Non | Nombre total d’images perdues lors de la lecture. |
-| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/frames-per-second) | `framesPerSecond` | entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
-| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/time-to-start) | `timeToStart` | entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |
+| [[!UICONTROL Débit]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/bitrate) | `bitrate` | Entier | Non | Valeur du débit (en Kbits/s). |
+| [[!UICONTROL Images perdues]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/dropped-frames) | `droppedFrames` | Entier | Non | Nombre total d’images perdues lors de la lecture. |
+| [[!UICONTROL Images Par Seconde]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/frames-per-second) | `framesPerSecond` | Entier | Non | Débit d&#39;images du flux actuel (en images par seconde). |
+| [[!UICONTROL Heure De Commencer]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/quality/time-to-start) | `timeToStart` | Entier | Non | Durée (en secondes) entre le chargement et le démarrage de la vidéo. |

@@ -17,8 +17,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 329
-ht-degree: 48%
+source-wordcount: 341
+ht-degree: 46%
 
 ---
 
@@ -30,21 +30,21 @@ Lorsqu’une opération de prédiction se termine, les scores de propension pré
 >
 >Pour utiliser cette méthode, le profil client en temps réel doit être activé pour le jeu de données.
 
-Dans l’interface utilisateur d’Experience Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Create segment]**.
+Dans l’interface utilisateur d’Experience Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Créer un segment]**.
 
 ![Copie d’écran de la page Segments dans l’interface utilisateur d’Experience Platform, présentant l’option de création d’un segment.](../images/user-guide/segments_new.png)
 
-Le **créateur de segments** s’affiche. Dans la colonne de **[!UICONTROL Fields]** de gauche et sous l’onglet **[!UICONTROL Attributes]** , cliquez sur le dossier nommé **[!UICONTROL XDM Individual Profile]**, puis cliquez sur le dossier avec l’espace de noms de votre organisation. Le dossier nommé **[!UICONTROL Customer AI]** contient les résultats des exécutions de prédiction et est nommé en fonction de l’instance à laquelle les scores appartiennent. Cliquez sur un dossier d’instance pour accéder à ses résultats pour l’instance souhaitée.
+Le **créateur de segments** s’affiche. Dans la colonne de gauche **[!UICONTROL Champs]** et sous l’onglet **[!UICONTROL Attributs]**, cliquez sur le dossier nommé **[!UICONTROL Profil individuel XDM]** puis cliquez sur le dossier avec l’espace de noms de votre organisation. Le dossier nommé **[!UICONTROL IA dédiée aux clients]** contient les résultats des exécutions de prédiction et sont nommés en fonction de l’instance à laquelle les scores appartiennent. Cliquez sur un dossier d’instance pour accéder à ses résultats pour l’instance souhaitée.
 
 ![](../images/user-guide/results_new.png)
 
-Situé au centre du créateur de segments, faites glisser et déposez l’attribut **[!UICONTROL Score]** sur la zone de travail du *créateur de règles* pour définir une règle.
+Situé au centre du créateur de segments, faites glisser et déposez l’attribut **[!UICONTROL Score]** sur la zone de travail du créateur de règles *rule* pour définir une règle.
 
 Sous la colonne de droite *Propriétés du segment*, indiquez un nom pour le segment.
 
 ![](../images/user-guide/properties_new.png)
 
-Au-dessus de la colonne de gauche *Champs*, cliquez sur l’icône **engrenage** et sélectionnez une *Politique de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Save]** pour créer le segment.
+Au-dessus de la colonne de gauche *Champs*, cliquez sur l’icône **engrenage** et sélectionnez une *Politique de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
 
 ![](../images/user-guide/merge_policy_new.png)
 

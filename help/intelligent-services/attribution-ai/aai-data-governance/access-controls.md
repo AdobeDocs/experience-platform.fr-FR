@@ -25,8 +25,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 467
-ht-degree: 80%
+source-wordcount: 502
+ht-degree: 74%
 
 ---
 
@@ -54,15 +54,15 @@ En haut de la **page Insights** dans l’espace de travail d’Attribution AI, 
 
 ![L’espace de travail d’Attribution AI avec les champs de schéma restreints mis en surbrillance.](../images/user-guide/access-restricted.png)
 
-Si vous sélectionnez des jeux de données avec des schémas restreints sur la page **[!UICONTROL Create model workflow]**, un signe d’avertissement s’affiche à côté du nom du jeu de données avec le message : [!UICONTROL Restricted information is excluded].
+Si vous sélectionnez des jeux de données avec des schémas restreints sur la page **[!UICONTROL Créer un workflow de modèle]**, un signe d’avertissement s’affiche à côté du nom du jeu de données avec le message : [!UICONTROL Les informations restreintes sont exclues].
 
 ![L’espace de travail d’Attribution AI avec les champs de jeu de données restreints mis en surbrillance.](../images/user-guide/restricted-info-excluded.png)
 
-Lorsque vous prévisualisez des jeux de données avec un schéma limité sur la page **[!UICONTROL Create model workflow]**, un avertissement s’affiche pour vous informer que [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+Lorsque vous prévisualisez des jeux de données avec un schéma limité sur la page **[!UICONTROL Créer un workflow de modèle]**, un avertissement s’affiche pour vous informer qu’[!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
 
 ![L’espace de travail d’Attribution AI avec les résultats des champs de schéma prévisualisés restreints mis en surbrillance.](../images/user-guide/restricted-dataset-preview.png)
 
-Après avoir créé un modèle avec des informations restreintes et procédé à l’étape de **[!UICONTROL Define goal]**, un avertissement s’affiche en haut : [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+Après avoir créé un modèle contenant des informations restreintes, passez à l’étape **[!UICONTROL Définir un objectif]**, un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
 
 ![L’espace de travail d’Attribution AI avec les champs restreints des résultats du modèle mis en surbrillance.](../images/user-guide/information-not-displayed-save-and-exit.png)
 

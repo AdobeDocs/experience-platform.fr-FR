@@ -18,7 +18,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1856
+source-wordcount: 1858
 ht-degree: 3%
 
 ---
@@ -308,7 +308,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Enregistrement et disponibilité automatiques des audiences {#registration-and-availability}
 
-Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous le [!UICONTROL Origin] Distiller de données dans l’espace de travail Audience . Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans les destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui simplifie la gestion des audiences. Pour plus d’informations sur l’affichage, la gestion et la création d’audiences dans l’interface utilisateur d’Experience Platform, consultez la présentation d’[Audience Portal](../../segmentation/ui/audience-portal.md).
+Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous la Distiller de données [!UICONTROL Origine] dans l’espace de travail Audience . Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans les destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui simplifie la gestion des audiences. Pour plus d’informations sur l’affichage, la gestion et la création d’audiences dans l’interface utilisateur d’Experience Platform, consultez la présentation d’[Audience Portal](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 

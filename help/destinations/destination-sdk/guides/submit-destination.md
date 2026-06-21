@@ -20,7 +20,7 @@ ht-degree: 31%
 
 # Envoyer une destination personnalisée pour révision
 
-## Vue d&#39;ensemble {#overview}
+## Vue d’ensemble {#overview}
 
 >[!IMPORTANT]
 >

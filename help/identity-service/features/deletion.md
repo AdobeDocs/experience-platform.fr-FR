@@ -15,8 +15,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1206
-ht-degree: 89%
+source-wordcount: 1210
+ht-degree: 88%
 
 ---
 
@@ -71,7 +71,7 @@ Vous pouvez utiliser Catalog Service pour envoyer des demandes de suppression de
 
 ### Expiration des jeux de données dans l’hygiène des données
 
-L’espace de travail [&#128279;](../../hygiene/ui/overview.md) dans l’interface utilisateur de Adobe Experience Platform, vous permet de planifier l’expiration des jeux de données. [!UICONTROL Data Hygiene]Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Pour plus d’informations, consultez le guide sur la [gestion des expirations de jeux de données à l’aide de l’espace de travail [!UICONTROL Data Hygiene]](../../hygiene/ui/dataset-expiration.md).
+L’espace de travail [[!UICONTROL Hygiène des données] &#x200B;](../../hygiene/ui/overview.md) de l’interface utilisateur de Adobe Experience Platform vous permet de planifier l’expiration des jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Pour plus d’informations, consultez le guide sur la [gestion des expirations de jeux de données à l’aide de l’espace de travail [!UICONTROL Hygiène des données]](../../hygiene/ui/dataset-expiration.md).
 
 Le tableau ci-dessous présente les différences entre la suppression de jeux de données dans Catalog Service et dans l’hygiène des données :
 

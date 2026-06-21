@@ -35,7 +35,7 @@ ht-degree: 0%
 
 # Présentation de l’extension de balise Adobe Experience Platform Web SDK
 
-L’extension de balise Adobe Experience Platform Web SDK envoie des données au Adobe Experience Cloud à partir des propriétés web, via Adobe Experience Platform Edge Network. L’extension Experience Platform Web SDK permet la diffusion en continu de données dans la plateforme, la synchronisation d’identités, l’accord préalable et la collecte automatique de données contextuelles.
+L’extension de balise Adobe Experience Platform Web SDK envoie des données à Adobe Experience Cloud à partir de propriétés web, via Adobe Experience Platform Edge Network. L’extension Experience Platform Web SDK permet la diffusion en continu de données dans la plateforme, la synchronisation d’identités, l’accord préalable et la collecte automatique de données contextuelles.
 
 Consultez [Prise en main](getting-started.md) pour savoir comment configurer et déployer cette extension de balise pour commencer à collecter des données.
 

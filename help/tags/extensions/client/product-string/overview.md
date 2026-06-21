@@ -20,8 +20,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 486
-ht-degree: 100%
+source-wordcount: 487
+ht-degree: 98%
 
 ---
 
@@ -93,7 +93,7 @@ Le paramètre `price` de la chaîne de produit [!DNL Adobe Analytics] doit corre
 
 Si votre mise en œuvre utilise des événements personnalisés ou des eVars de marchandisage, procédez comme suit :
 
-1. Cliquez sur le bouton **[!UICONTROL Add]** associé.
+1. Sélectionnez le bouton **[!UICONTROL Ajouter]** associé.
 1. Sélectionnez l’événement ou l’eVar que vous devez définir dans la liste déroulante.
 1. Saisissez le chemin d’accès à la variable de couche de données appropriée en utilisant la même syntaxe que celle décrite ci-dessus.
 

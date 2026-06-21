@@ -9,22 +9,22 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 106
-ht-degree: 8%
+source-wordcount: 116
+ht-degree: 7%
 
 ---
 
-# Type de données [!UICONTROL Category data]
+# [!UICONTROL Données de catégorie] type de données
 
-[!UICONTROL Category data] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les informations liées à la catégorie d’un produit.
+[!UICONTROL Données de catégorie] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les informations liées à la catégorie d’un produit.
 
 ![Diagramme du type de données Catégorie.](../images/data-types/category-data.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |-----------------|--------------------|-----------|------------------------------------------|
-| [!UICONTROL Category identifier] | `categoryID` | chaîne | Identifiant de la catégorie du produit. |
-| [!UICONTROL Category name] | `categoryName` | chaîne | Nom de la catégorie du produit. |
-| [!UICONTROL Category path] | `categoryPath` | chaîne | Chemin d’accès de la catégorie du produit. |
+| [!UICONTROL &#x200B; Identifiant de la catégorie &#x200B;] | `categoryID` | chaîne | Identifiant de la catégorie du produit. |
+| [!UICONTROL Nom de la catégorie] | `categoryName` | chaîne | Nom de la catégorie du produit. |
+| [!UICONTROL Chemin de la catégorie] | `categoryPath` | chaîne | Chemin d’accès de la catégorie du produit. |
 
 {style="table-layout:auto"}
 

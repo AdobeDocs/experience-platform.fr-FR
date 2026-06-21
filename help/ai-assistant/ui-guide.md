@@ -21,7 +21,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2024
+source-wordcount: 2066
 ht-degree: 1%
 
 ---
@@ -46,15 +46,15 @@ Lisez ce guide pour savoir comment utiliser l’assistant AI dans l’interface 
 
 ## Accéder à l’assistant AI dans l’interface utilisateur d’Experience Platform
 
-Pour lancer l’assistant d’IA, sélectionnez le **[!UICONTROL AI Assistant icon]** dans l’en-tête supérieur de l’interface utilisateur d’Experience Platform.
+Pour lancer l’assistant AI, sélectionnez l’icône **[!UICONTROL Assistant AI]** dans l’en-tête supérieur de l’interface utilisateur d’Experience Platform.
 
 ![Page d’accueil d’Experience Platform, avec l’icône Assistant AI sélectionnée et l’interface de l’Assistant AI ouverte.](./images/ai-assistant-full-icon.png)
 
-L’interface de l’assistant d’IA s’affiche et vous fournit immédiatement des informations pour commencer. Vous pouvez utiliser les options fournies sous [!UICONTROL Ideas to get started] pour répondre aux questions et aux commandes, telles que :
+L’interface de l’assistant d’IA s’affiche et vous fournit immédiatement des informations pour commencer. Vous pouvez utiliser les options fournies sous [!UICONTROL Idées pour commencer] afin de répondre à des questions et à des commandes telles que :
 
-* [!UICONTROL Which of my audiences are activated?]
-* [!UICONTROL What is a schema?]
-* [!UICONTROL Tell me some common use cases for Real-Time CDP]
+* [!UICONTROL Laquelle de mes audiences est activée ?]
+* [!UICONTROL Qu’est-ce qu’un schéma ?]
+* [!UICONTROL Dites-moi quelques cas pratiques courants pour Real-Time CDP]
 
 ## Guide de l’interface utilisateur de l’assistant AI
 
@@ -80,7 +80,7 @@ Cette section décrit les différentes fonctionnalités de l’assistant AI que 
 
 ### Affichage des objets de données opérationnelles {#view-operational-data-objects}
 
-Selon votre requête, l’assistant AI fournit des informations supplémentaires relatives aux données de votre sandbox. Pour voir comment la réponse à votre requête s’applique à votre sandbox spécifique, sélectionnez **[!UICONTROL In your sandbox].**
+Selon votre requête, l’assistant AI fournit des informations supplémentaires relatives aux données de votre sandbox. Pour voir comment la réponse à votre requête s’applique à votre sandbox spécifique, sélectionnez **[!UICONTROL Dans votre sandbox].**
 
 Lors de l’affichage des données relatives à votre sandbox, l’assistant AI peut fournir des liens directs vers des pages d’interface utilisateur spécifiques qui affichent les données interrogées.
 
@@ -98,7 +98,7 @@ Vous pouvez vérifier les réponses qui vous sont renvoyées par l’assistant A
 
 +++Sélectionner pour afficher un exemple d’affichage des sources
 
-Pour afficher les citations et valider la réponse de l’assistant AI, sélectionnez **[!UICONTROL Show sources]**.
+Pour afficher les citations et valider la réponse de l’assistant AI, sélectionnez **[!UICONTROL Afficher les sources]**.
 
 ![La réponse de l’assistant AI avec « Afficher les sources » sélectionné.](./images/show-sources.png)
 
@@ -140,7 +140,7 @@ Vous pouvez vérifier chaque réponse liée aux questions d’informations opér
 
 +++Sélectionner pour afficher un exemple de vérification des réponses des informations opérationnelles
 
-Après réception d’une réponse à une question sur les informations opérationnelles, sélectionnez **[!UICONTROL Show sources]** puis **[!UICONTROL View source query]**.
+Après avoir reçu une réponse à une question sur les informations opérationnelles, sélectionnez **[!UICONTROL Afficher les sources]** puis sélectionnez **[!UICONTROL Afficher la requête source]**.
 
 ![afficher la requête source](./images/view-source-query.png)
 
@@ -180,7 +180,7 @@ Vous pouvez changer de sujet avec l’assistant AI en réinitialisant et en dém
 
 +++Sélectionnez pour afficher un exemple de réinitialisation de votre conversation
 
-Pour réinitialiser, sélectionnez les points de suspension (**`...`**) dans l’interface de l’assistant d’IA, puis sélectionnez **[!UICONTROL Start new conversation]**. Cela indique à l’assistant AI que vous avez l’intention de changer de rubrique et peut s’avérer particulièrement utile lors de la résolution de problèmes liés à des requêtes qui échouent ou qui référencent des informations incorrectes.
+Pour réinitialiser, sélectionnez les points de suspension (**`...`**) dans l’interface de l’assistant d’IA, puis sélectionnez **[!UICONTROL Démarrer une nouvelle conversation]**. Cela indique à l’assistant AI que vous avez l’intention de changer de rubrique et peut s’avérer particulièrement utile lors de la résolution de problèmes liés à des requêtes qui échouent ou qui référencent des informations incorrectes.
 
 ![Les points de suspension sélectionnés et l’option Démarrer une nouvelle conversation sont sélectionnées.](./images/reset.png)
 
@@ -218,7 +218,7 @@ Vous devrez peut-être mettre à jour les espaces réservés dans certains cas o
 
 Les espaces réservés sont surlignés en bleu. Sélectionnez l’espace réservé pour commencer à mettre à jour sa valeur. Pour de meilleurs résultats sur les espaces réservés numériques, veillez à utiliser des chiffres au lieu du texte. Vous pouvez également utiliser la fonction de saisie automatique des entités pour mettre à jour les valeurs des espaces réservés. Vous ne pouvez pas envoyer une question qui contient des espaces réservés vides.
 
-**REMARQUE** : les suggestions sont activées par défaut. Sélectionnez le bouton (bascule) **[!UICONTROL Suggest ideas]** pour désactiver la fonction.
+**REMARQUE** : les suggestions sont activées par défaut. Sélectionnez le bouton (bascule) **[!UICONTROL Suggérer des idées]** pour désactiver la fonctionnalité.
 
 ![Une suggestion de l’assistant AI avec des espaces réservés mis à jour.](./images/updated_placeholder.png)
 

@@ -16,7 +16,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 233
+source-wordcount: 240
 ht-degree: 4%
 
 ---
@@ -64,4 +64,4 @@ Le contenu de cet objet `result` dépend de la combinaison de la commande que vo
 
 ## Réponses aux commandes utilisant l’extension de balise Web SDK
 
-L’extension de balise Web SDK équivalente aux réponses de commande est une règle qui s’abonne à l’événement [**[!UICONTROL Send event complete]**](/help/tags/extensions/client/web-sdk/event-types.md#send-event-complete). Vous pouvez ensuite inclure des actions telles que des [**[!UICONTROL Apply propositions]**](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) ou des [**[!UICONTROL Apply response]**](/help/tags/extensions/client/web-sdk/actions/apply-response.md) à cette règle.
+L’extension de balise Web SDK équivalente aux réponses de commande est une règle qui s’abonne à l’événement [**[!UICONTROL Send event complete]**](/help/tags/extensions/client/web-sdk/event-types.md#send-event-complete). Vous pouvez ensuite inclure des actions telles que [**[!UICONTROL Appliquer les propositions]**](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) ou [**[!UICONTROL Appliquer la réponse]**](/help/tags/extensions/client/web-sdk/actions/apply-response.md) à cette règle.

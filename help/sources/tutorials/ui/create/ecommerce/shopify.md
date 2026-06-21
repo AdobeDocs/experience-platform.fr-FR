@@ -14,8 +14,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 466
-ht-degree: 23%
+source-wordcount: 481
+ht-degree: 22%
 
 ---
 
@@ -40,23 +40,23 @@ Vous devez disposer d’informations d’authentification [!DNL Shopify] valides
 
 ## Parcourir le catalogue des sources
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Categories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour ingérer des données à partir de [!DNL Shopify], sélectionnez la carte source **[!UICONTROL Shopify]** sous *[!UICONTROL eCommerce]*, puis sélectionnez **[!UICONTROL Set up]**.
+Pour ingérer des données à partir de [!DNL Shopify], sélectionnez la carte source **[!UICONTROL Shopify]** sous *[!UICONTROL eCommerce]*, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform du catalogue Sources affichant la carte source Shopify sous eCommerce avec la configuration](../../../../images/tutorials/create/shopify/catalog.png)
 
 ### Compte existant
 
-Si vous avez déjà configuré un compte [!DNL Shopify], sélectionnez-le dans la liste, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Si vous avez déjà configuré un compte [!DNL Shopify], sélectionnez-le dans la liste, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ### Nouveau compte
 
-Si vous ajoutez un nouveau compte, sélectionnez **[!UICONTROL New account]**. Dans le formulaire de saisie, saisissez un nom, une description facultative et vos informations d’identification [!DNL Shopify]. [!DNL Shopify] prend en charge deux méthodes d’authentification :
+Si vous ajoutez un nouveau compte, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie, saisissez un nom, une description facultative et vos informations d’identification [!DNL Shopify]. [!DNL Shopify] prend en charge deux méthodes d’authentification :
 
 **Authentification de base** : saisissez l’hôte et le jeton d’accès de votre magasin dans la section Authentification de base.
 
@@ -66,7 +66,7 @@ Si vous ajoutez un nouveau compte, sélectionnez **[!UICONTROL New account]**. D
 
 ![Capture d’écran de l’interface utilisateur Experience Platform du nouveau formulaire de compte Shopify affichant les champs d’authentification basés sur le jeton d’accès pour l’hôte et le jeton d’accès](../../../../images/tutorials/create/shopify/access-token.png)
 
-Après avoir saisi vos informations d’identification pour la méthode d’authentification appropriée, sélectionnez **[!UICONTROL Connect]** et patientez quelques instants le temps que la nouvelle connexion soit établie.
+Après avoir saisi vos informations d’identification pour la méthode d’authentification appropriée, sélectionnez **[!UICONTROL Connexion]** et patientez quelques instants le temps que la nouvelle connexion soit établie.
 
 
 ## Étapes suivantes

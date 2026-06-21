@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 651
-ht-degree: 54%
+source-wordcount: 669
+ht-degree: 53%
 
 ---
 
@@ -23,7 +23,7 @@ Ce document fournit les informations nécessaires à la création de modèles de
 
 ## Conditions préalables
 
-Vous devez avoir l’autorisation [!UICONTROL Manage queries] activée pour accéder à Query Editor et afficher le tableau de bord des requêtes dans l’interface utilisateur d’Experience Platform. L’autorisation est activée via l’[Admin Console](https://adminconsole.adobe.com/) d’Adobe. Contactez l’administrateur ou administratrice de votre organisation si vous ne disposez pas des privilèges d’administrateur pour activer cette autorisation. Consultez la documentation sur le contrôle d’accès pour des [instructions complètes sur l’ajout d’autorisations via Admin Console](../../access-control/home.md).
+Vous devez avoir l’autorisation [!UICONTROL Gérer les requêtes] activée pour accéder à Query Editor et afficher le tableau de bord des requêtes dans l’interface utilisateur d’Experience Platform. L’autorisation est activée via l’[Admin Console](https://adminconsole.adobe.com/) d’Adobe. Contactez l’administrateur ou administratrice de votre organisation si vous ne disposez pas des privilèges d’administrateur pour activer cette autorisation. Consultez la documentation sur le contrôle d’accès pour des [instructions complètes sur l’ajout d’autorisations via Admin Console](../../access-control/home.md).
 
 ## Créer un modèle de requête
 
@@ -31,13 +31,13 @@ Vous pouvez créer des modèles de requête par le biais de deux méthodes, en a
 
 ### Utiliser le requêteur pour créer et enregistrer une requête en tant que modèle
 
-Consultez la documentation pour obtenir des instructions sur l’utilisation du requêteur pour [écrire](./user-guide.md#query-authoring) et [enregistrer des requêtes](./user-guide.md#saving-queries). Une fois que vous avez nommé et enregistré votre requête, elle peut être réutilisée en tant que modèle de requête à partir de l’onglet [!UICONTROL Templates] .
+Consultez la documentation pour obtenir des instructions sur l’utilisation du requêteur pour [écrire](./user-guide.md#query-authoring) et [enregistrer des requêtes](./user-guide.md#saving-queries). Une fois que vous avez nommé et enregistré votre requête, elle peut être réutilisée en tant que modèle de requête à partir de l’onglet [!UICONTROL Modèles].
 
 ### Création d’un modèle à partir d’un accélérateur de Distiller de données {#create-from-accelerator}
 
 Les accélérateurs de Distiller de données sont en lecture seule. Pour modifier un accélérateur, créez un modèle modifiable à partir de celui-ci dans le Query Editor.
 
-Ouvrez un accélérateur, puis sélectionnez **[!UICONTROL Create custom template]** pour cloner le code SQL. Enregistrez le modèle pour l’ajouter à l’onglet **[!UICONTROL Templates]** . Le modèle cloné est entièrement modifiable et peut être exécuté, planifié ou modifié selon les besoins.
+Ouvrez un accélérateur, puis sélectionnez **[!UICONTROL Créer un modèle personnalisé]** pour cloner le code SQL. Enregistrez le modèle pour l’ajouter à l’onglet **[!UICONTROL Modèles]**. Le modèle cloné est entièrement modifiable et peut être exécuté, planifié ou modifié selon les besoins.
 
 Consultez le guide [Accélérateurs de Distiller de données](./accelerators.md#create-custom-template) pour obtenir des instructions détaillées.
 
@@ -47,7 +47,7 @@ Consultez le guide [Accélérateurs de Distiller de données](./accelerators.md#
 
 ## Parcourir les modèles de requête {#browse}
 
-Dans l’espace de travail Requêtes de l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Templates]** pour afficher la liste des requêtes enregistrées disponibles.
+Dans l’espace de travail Requêtes de l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Modèles]** pour afficher la liste des requêtes enregistrées disponibles.
 
 ![Espace de travail des requêtes avec l’onglet Modèles mis en surbrillance.](../images/ui/query-templates/query-templates.png)
 
@@ -57,10 +57,10 @@ Pour trouver les informations de modèle pertinentes, sélectionnez un modèle d
 
 Dans le panneau des détails, vous pouvez exécuter les actions suivantes :
 
-* Sélectionnez **[!UICONTROL Run as CTAS]** pour créer une table en sélectionnant les données d&#39;une ou de plusieurs tables existantes. Cette option n’est disponible que si vous disposez d’une requête SELECT.
-* Sélectionnez **[!UICONTROL Add schedule]** pour commencer à modifier le planning de votre modèle de requête.
-* Sélectionnez **[!UICONTROL View schedule]** pour accéder à l’onglet [!UICONTROL Schedules] de Query Editor. Cette vue contient toutes les informations de planification associées à la requête.
-* Sélectionnez **[!UICONTROL Delete query]** pour supprimer le modèle.
+* Sélectionnez **[!UICONTROL Exécuter en tant que CTAS]** pour créer une table en sélectionnant les données d&#39;une ou de plusieurs tables existantes. Cette option n’est disponible que si vous disposez d’une requête SELECT.
+* Sélectionnez **[!UICONTROL Ajouter un planning]** pour commencer à modifier le planning de votre modèle de requête.
+* Sélectionnez **[!UICONTROL Afficher le planning]** pour accéder à l’onglet [!UICONTROL Plannings] du Query Editor. Cette vue contient toutes les informations de planification associées à la requête.
+* Sélectionnez **[!UICONTROL Supprimer la requête]** pour supprimer le modèle.
 * Sélectionnez le nom du modèle pour accéder à Query Editor où le code SQL est prérenseigné pour modification.
 
 ### Utiliser l’API Query Service pour créer un modèle

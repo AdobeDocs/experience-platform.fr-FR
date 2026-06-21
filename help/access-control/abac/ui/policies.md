@@ -14,14 +14,14 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 641
-ht-degree: 16%
+source-wordcount: 689
+ht-degree: 14%
 
 ---
 
 # Gestion des politiques de contrôle d’accès
 
-Les politiques de contrôle d’accès sont des instructions qui rassemblent des attributs pour établir des actions admissibles et non admissibles. Adobe fournit une politique par défaut qui peut être activée immédiatement ou lorsque votre organisation est prête à commencer à contrôler l’accès à des objets spécifiques en fonction de [&#x200B; libellés &#x200B;](./labels.md){target="_blank"}. La politique par défaut, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, utilise les libellés appliqués aux ressources pour refuser l’accès à moins que les utilisateurs et utilisatrices ne soient dans un rôle avec un libellé correspondant.
+Les politiques de contrôle d’accès sont des instructions qui rassemblent des attributs pour établir des actions admissibles et non admissibles. Adobe fournit une politique par défaut qui peut être activée immédiatement ou lorsque votre organisation est prête à commencer à contrôler l’accès à des objets spécifiques en fonction de [&#x200B; libellés &#x200B;](./labels.md){target="_blank"}. La politique par défaut, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, utilise les libellés appliqués aux ressources pour refuser l’accès à moins que les utilisateurs et utilisatrices ne se trouvent dans un rôle avec un libellé correspondant.
 
 >[!IMPORTANT]
 >
@@ -33,11 +33,11 @@ Les politiques de contrôle d’accès sont des instructions qui rassemblent des
 >
 >La politique **[!UICONTROL Default-Label-Based-Access-Control-Policy]** est actuellement la seule disponible pour configuration.
 
-Pour commencer à configurer une politique, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Policies]** dans le panneau de gauche. Sélectionnez le **[!UICONTROL Default-Label-Based-Access-Control-Policy]** dans la liste.
+Pour commencer à configurer une politique, accédez à **[!UICONTROL Autorisations]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Politiques]** dans le panneau de gauche. Sélectionnez le **[!UICONTROL Default-Label-Based-Access-Control-Policy]** dans la liste.
 
 ![Espace de travail Politiques affichant une liste des politiques existantes.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
-L’espace de travail Détails de la politique s’affiche. Sélectionnez le **[!UICONTROL Sandboxes]**. Une liste des sandbox associés à la politique s’affiche.
+L’espace de travail Détails de la politique s’affiche. Sélectionnez la **[!UICONTROL Sandbox]**. Une liste des sandbox associés à la politique s’affiche.
 
 ![Espace de travail du sandbox de la politique présentant une liste des sandbox associés.](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
 
@@ -45,31 +45,31 @@ L’espace de travail Détails de la politique s’affiche. Sélectionnez le **[
 
 >[!IMPORTANT]
 >
->Par défaut, **[!UICONTROL Auto-include]** est activé, ce qui signifie que tous les sandbox actuels et futurs sont automatiquement ajoutés à la politique.
+>Par défaut, l’option **[!UICONTROL Inclusion automatique]** est activée, ce qui signifie que tous les sandbox actuels et futurs sont automatiquement ajoutés à la politique.
 
-Désactivez la fonction **[!UICONTROL Auto-include]** pour empêcher l’ajout automatique de futurs sandbox à la politique. Le fait de désactiver la fonctionnalité **ne supprime pas** les sandbox de la politique.
+Désactivez la fonction **[!UICONTROL Inclusion automatique]** pour empêcher l’ajout automatique de futurs sandbox à la politique. Le fait de désactiver la fonctionnalité **ne supprime pas** les sandbox de la politique.
 
 ![Onglet Sandbox de la politique avec le bouton (bascule) Inclusion automatique mis en surbrillance et à l’état « désactivé ».](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
 
-Si **[!UICONTROL Auto-include]** n’est pas actif dans une politique, vous pouvez réactiver à l’aide du bouton (bascule). La boîte de dialogue **[!UICONTROL Enable Auto-include]** s’affiche et vous invite à confirmer votre sélection. Sélectionnez **[!UICONTROL Enable]** pour terminer la configuration.
+Si l’option **[!UICONTROL Inclusion automatique]** n’est pas active dans une politique, vous pouvez l’activer à l’aide du bouton (bascule). La boîte de dialogue **[!UICONTROL Activer l’inclusion automatique]** s’affiche et vous invite à confirmer votre sélection. Sélectionnez **[!UICONTROL Activer]** pour terminer le paramètre de configuration.
 
 >[!NOTE]
 >
->Tous les sandbox que vous avez supprimés de la politique lors de la désactivation de **[!UICONTROL Auto-include]** seront ajoutés à nouveau.
+>Tous les sandbox que vous avez supprimés de la politique lors du basculement de l’**[!UICONTROL Inclusion automatique]** seront à nouveau ajoutés.
 
 ![Boîte de dialogue Activer l’inclusion automatique avec l’option Activer mise en surbrillance.](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
 
 ### Sélection manuelle de sandbox pour une politique {#manually-select-sandboxes}
 
-Pour ajouter ou supprimer manuellement des sandbox à une politique, le bouton (bascule) **[!UICONTROL Auto-include]** **doit** doit être désactivé.
+Pour ajouter ou supprimer manuellement des sandbox à une politique, le bouton (bascule) **[!UICONTROL Inclusion automatique]** **doit** doit être désactivé.
 
 #### Ajouter des sandbox
 
-Pour ajouter des sandbox à une politique, sélectionnez **[!UICONTROL Add Sandboxes]**.
+Pour ajouter des sandbox à une politique, sélectionnez **[!UICONTROL Ajouter des sandbox]**.
 
 ![Espace de travail de la politique avec l’option Ajouter des sandbox mise en surbrillance.](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
 
-La boîte de dialogue **[!UICONTROL Add Sandboxes]** s’affiche. Sélectionnez le ou les sandbox à ajouter à la politique, puis sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Ajouter des sandbox]** s’affiche. Sélectionnez le ou les sandbox à ajouter à la politique, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![La boîte de dialogue Ajouter des sandbox avec un sandbox sélectionné et l’option Enregistrer mise en surbrillance.](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
 
@@ -83,7 +83,7 @@ Pour supprimer des sandbox d’une politique, recherchez le sandbox à supprimer
 
 ![Liste sandbox de la politique avec un « x » en surbrillance pour supprimer un sandbox.](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
 
-Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirm]** pour terminer la suppression du sandbox de la politique.
+Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirmer]** pour terminer la suppression du sandbox de la politique.
 
 ![Boîte de dialogue de confirmation de sandbox avec l’option Confirmer mise en surbrillance.](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
 
@@ -95,15 +95,15 @@ Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL 
 >abstract="Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Chaque organisation s’accompagne d’une politique par défaut que vous devez activer pour commencer à contrôler l’accès à des objets spécifiques en fonction de libellés. Les libellés appliqués aux ressources refusent l’accès à moins qu’un rôle avec un libellé correspondant ne soient affecté aux utilisateurs et utilisatrices. Les politiques ne peuvent pas être modifiées ni supprimées, mais elles peuvent être activées ou désactivées."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gérer les libellés"
 
-Pour activer une politique existante, sélectionnez-la dans l’onglet **[!UICONTROL Policies]** de **[!UICONTROL Permissions]**. Le statut d’activation de la politique est visible sous la section **[!UICONTROL Status]** .
+Pour activer une politique existante, sélectionnez-la dans l’onglet **[!UICONTROL Politiques]** de l’**[!UICONTROL Autorisations]**. Le statut d’activation de la politique est visible sous la section **[!UICONTROL Statut]**.
 
 ![Espace de travail Politiques avec le statut d’une politique en surbrillance.](../../images/ui/policies/policy-status.png){zoomable="yes"}
 
-L’espace de travail des détails de la politique s’affiche. Sélectionnez **[!UICONTROL Activate]**.
+L’espace de travail des détails de la politique s’affiche. Sélectionnez **[!UICONTROL Activer]**.
 
 ![Espace de travail détaillé de la politique avec l’option Activer mise en surbrillance.](../../images/ui/policies/policy-activate.png){zoomable="yes"}
 
-La boîte de dialogue **[!UICONTROL Activate Policy]** s’affiche. Sélectionnez **[!UICONTROL Confirm]** pour terminer l’activation de la politique.
+La boîte de dialogue **[!UICONTROL Activer la politique]** s’affiche. Sélectionnez **[!UICONTROL Confirmer]** pour terminer l’activation de la politique.
 
 ![La boîte de dialogue Activer la politique avec l’option Confirmer mise en surbrillance.](../../images/ui/policies/policy-activate-confirm.png){zoomable="yes"}
 

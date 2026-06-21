@@ -9,23 +9,23 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 140
-ht-degree: 3%
+source-wordcount: 147
+ht-degree: 4%
 
 ---
 
-# Classe [!UICONTROL Medication]
+# Classe [!UICONTROL Médicaments]
 
-Dans le modèle de données d’expérience (XDM), la classe [!UICONTROL Medication] capture l’ensemble minimum des propriétés qui définissent une substance utilisée pour un traitement médical, en particulier un médicament ou un médicament.
+Dans le modèle de données d’expérience (XDM), la classe [!UICONTROL Médicament] capture l’ensemble minimum des propriétés qui définissent une substance utilisée pour un traitement médical, en particulier un médicament ou un médicament.
 
 ![Structure de classe](../images/classes/medication.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `_id` | [!UICONTROL String] | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de déterminer l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’ID uniques si vous le souhaitez. |
-| `medicationId` | [!UICONTROL String] | Identifiant unique du médicament. |
-| `medicationName` | [!UICONTROL String] | Le nom du médicament. |
+| `_id` | [!UICONTROL Chaîne] | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de déterminer l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’ID uniques si vous le souhaitez. |
+| `medicationId` | [!UICONTROL Chaîne] | Identifiant unique du médicament. |
+| `medicationName` | [!UICONTROL Chaîne] | Le nom du médicament. |
 
 {style="table-layout:auto"}
 
-La classe peut être étendue avec le groupe de champs [&#128279;](../field-groups/medication/healthcare-medication.md) pour décrire plus de détails sur le médicament ou le médicament.[!UICONTROL Healthcare medication]
+La classe peut être étendue avec le groupe de champs [[!UICONTROL Médicaments pour les soins de santé] &#x200B;](../field-groups/medication/healthcare-medication.md) pour décrire plus de détails sur le médicament ou le médicament.

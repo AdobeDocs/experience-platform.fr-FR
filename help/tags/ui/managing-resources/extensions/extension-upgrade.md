@@ -4,8 +4,8 @@ description: Découvrez comment les mises à niveau d’extension sont mises en 
 exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 100%
+source-wordcount: '637'
+ht-degree: 82%
 
 ---
 
@@ -21,7 +21,7 @@ Lorsque vous installez une extension sur votre propriété, la version actuellem
 
 ## Notifications de mise à niveau
 
-Lorsque vous avez installé une extension sur votre propriété et qu’une nouvelle version est disponible dans le catalogue, un bouton [!UICONTROL Upgrade] s’affiche sur la carte d’extension lorsque vous affichez la page Installed Extensions (Extensions installées).
+Lorsque vous avez installé une extension sur votre propriété et qu’une nouvelle version est disponible dans le catalogue, un bouton [!UICONTROL Mettre à niveau] s’affiche sur la carte d’extension lorsque vous affichez la page des extensions installées.
 
 Vous remarquerez également un avertissement lorsque vous modifiez des ressources fournies par cette extension.
 
@@ -37,13 +37,13 @@ Il n’existe actuellement aucune possibilité de rétrograder votre extension v
 
 L’installation d’une mise à niveau est presque identique à l’installation de l’extension pour la première fois.
 
-1. Sélectionnez **[!UICONTROL Upgrade]** pour accéder à l’écran [!UICONTROL Extension Configuration].
+1. Sélectionnez **[!UICONTROL Mettre à niveau]** pour accéder à l’écran [!UICONTROL Configuration de l’extension].
 1. Apportez les modifications de configuration souhaitées.
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-La mise à niveau n’est pas réellement effectuée tant que vous n’avez pas appuyé sur **[!UICONTROL Save]**. Avant cela, vous pouvez cliquer à tout moment sur [!UICONTROL Cancel] et conserver la version installée. Un clic sur **[!UICONTROL Save]** représente un point de non-retour.
+La mise à niveau ne s’effectue réellement que lorsque vous appuyez sur **[!UICONTROL Enregistrer]**. Avant cela, vous pouvez cliquer à tout moment sur [!UICONTROL Annuler] et conserver la version installée. Un clic sur **[!UICONTROL Enregistrer]** représente un point de non-retour.
 
-Les mises à niveau d’extension ne sont pas autorisées si vous disposez d’une bibliothèque à l’état `Approved` ou `Submitted`. Cela s’explique par le fait que le build suivant doit contenir la nouvelle version de l’extension. Dans le cas d’une bibliothèque `Approved` ou `Submitted`, le prochain build est le build d’exploitation. Ce build échouerait, car il ne contiendrait pas la dernière version. Le workflow consiste donc à publier ou à rejeter les bibliothèques à l’état `Approved` ou `Submitted`_avant_ la mise à niveau de l’extension.
+Les mises à niveau d’extension ne sont pas autorisées si vous disposez d’une bibliothèque à l’état `Approved` ou `Submitted`.  Cela s’explique par le fait que le build suivant doit contenir la nouvelle version de l’extension.  Dans le cas d’une bibliothèque `Approved` ou `Submitted`, le prochain build est le build d’exploitation.  Ce build échouerait, car il ne contiendrait pas la dernière version. Le workflow consiste donc à publier ou à rejeter les bibliothèques à l’état `Approved` ou `Submitted`_avant_ la mise à niveau de l’extension.
 
 ## Publication d’une mise à niveau
 
@@ -51,10 +51,10 @@ Une fois l’extension mise à niveau installée sur votre propriété, vous dev
 
 En outre, l’ajout de l’extension mise à niveau à votre bibliothèque est identique à [l’ajout de toute autre modification](../../publishing/libraries.md) à une bibliothèque.
 
-Dans l’écran [!UICONTROL Edit Library], vous pouvez utiliser le bouton « [!UICONTROL Add All Changed Resources] » ou « [!UICONTROL Add a Resource] » et sélectionner uniquement l’extension mise à niveau.
+Dans l’écran [!UICONTROL &#x200B; Modifier la bibliothèque &#x200B;], vous pouvez utiliser le bouton « [!UICONTROL &#x200B; Ajouter toutes les ressources modifiées &#x200B;] » ou le bouton « [!UICONTROL &#x200B; Ajouter une ressource &#x200B;] » et sélectionner uniquement l’extension mise à niveau.
 
 >[!TIP]
 >
->Les développeurs d’extensions peuvent ajouter de nouveaux éléments de configuration à leurs vues d’extension afin d’activer une nouvelle fonctionnalité.  Si vous constatez des échecs de génération après la mise à niveau vers une nouvelle version d’extension, et si vous les avez isolés pour cette extension, la première chose à faire est d’accéder à la page Configure (Configurer) de l’extension et de veiller à enregistrer (même si vous n’avez rien modifié). Ajoutez ensuite la nouvelle modification à votre bibliothèque et essayez à nouveau de procéder à la génération.
+>Les développeurs d’extensions peuvent ajouter de nouveaux éléments de configuration à leurs vues d’extension afin d’activer une nouvelle fonctionnalité.  Si vous constatez des échecs de génération après la mise à niveau vers une nouvelle version d’extension, et si vous les avez isolés pour cette extension, la première chose à faire est d’accéder à la page Configure (Configurer) de l’extension et de veiller à enregistrer (même si vous n’avez rien modifié).  Ajoutez ensuite la nouvelle modification à votre bibliothèque et essayez à nouveau de procéder à la génération.
 
 Une fois que vous avez ajouté la mise à niveau de l’extension à votre bibliothèque, vous pouvez suivre la procédure décrite dans le [flux de publication](../../publishing/publishing-flow.md) pour publier votre bibliothèque jusqu’en production.

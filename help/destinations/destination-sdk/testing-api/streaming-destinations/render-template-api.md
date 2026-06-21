@@ -14,8 +14,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 791
-ht-degree: 87%
+source-wordcount: 699
+ht-degree: 82%
 
 ---
 
@@ -135,8 +135,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Réponse**
 
 La réponse renvoie le résultat du rendu du modèle ou toute erreur rencontrée.
-Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Recherchez le profil exporté dans le paramètre `output` sous forme de chaîne placée dans une séquence dʼéchappement.
-Une réponse non réussie renvoie un état HTTP 400 avec la description des erreurs rencontrées.
+Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Recherchez le profil exporté dans le paramètre `output`, sous la forme d’une chaîne d’échappement.
+Une réponse infructueuse renvoie un état HTTP 400 avec les descriptions des erreurs rencontrées.
 
 ```json
 {
@@ -316,8 +316,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Réponse**
 
 La réponse renvoie le résultat du rendu du modèle ou toute erreur rencontrée.
-Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Notez dans la réponse la manière dont les profils sont agrégés en fonction de l’appartenance à une audience et des identités. Recherchez les profils exportés dans le paramètre `output` sous forme de chaîne placée dans une séquence dʼéchappement.
-Une réponse non réussie renvoie un état HTTP 400 avec la description des erreurs rencontrées.
+Une réponse réussie renvoie un état HTTP 200 avec les détails des données exportées. Notez dans la réponse comment les profils sont agrégés en fonction de l’appartenance et des identités de l’audience. Recherchez les profils exportés dans le paramètre `output`, sous la forme d’une chaîne d’échappement.
+Une réponse infructueuse renvoie un état HTTP 400 avec les descriptions des erreurs rencontrées.
 
 ```json
 {

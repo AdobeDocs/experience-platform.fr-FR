@@ -18,7 +18,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 583
+source-wordcount: 594
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Chaque ligne des données représente une conversion, dans laquelle les informat
 
 ## Recherche des chemins d’accès aux données
 
-Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche. La page **[!UICONTROL Datasets]** s’affiche. Sélectionnez ensuite l’onglet **[!UICONTROL Browse]** et recherchez le jeu de données de sortie pour vos scores de l’IA dédiée à l’attribution.
+Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. La page **[!UICONTROL Jeux de données]** s’affiche. Sélectionnez ensuite l’onglet **[!UICONTROL Parcourir]** et recherchez le jeu de données de sortie pour vos scores IA dédiée à l’attribution.
 
 ![Accès à votre modèle](./images/aai-query/datasets_browse.png)
 
@@ -43,7 +43,7 @@ Sélectionnez le jeu de données de sortie. La page d’activité du jeu de donn
 
 ![page activité du jeu de données](./images/aai-query/select_preview.png)
 
-Dans la page d’activité du jeu de données, sélectionnez **[!UICONTROL Preview dataset]** dans le coin supérieur droit pour prévisualiser vos données et vous assurer qu’elles ont été ingérées comme prévu.
+Dans la page d’activité du jeu de données, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** dans le coin supérieur droit pour prévisualiser vos données et vous assurer qu’elles ont été ingérées comme prévu.
 
 ![prévisualiser le jeu de données](./images/aai-query/preview_dataset.JPG)
 
@@ -51,17 +51,17 @@ Après avoir prévisualisé vos données, sélectionnez le schéma dans le rail 
 
 ![sélectionnez le schéma](./images/aai-query/select_schema.png)
 
-À l’aide du schéma de notation, vous pouvez sélectionner ou rechercher une valeur. Une fois sélectionné, le rail latéral **[!UICONTROL Field properties]** s’ouvre, vous permettant de copier le chemin d’accès à utiliser dans la création de requêtes.
+À l’aide du schéma de notation, vous pouvez sélectionner ou rechercher une valeur. Une fois sélectionné, le rail latéral **[!UICONTROL Propriétés du champ]** s’ouvre, vous permettant de copier le chemin d’accès à utiliser dans la création de requêtes.
 
 ![copier le chemin](./images/aai-query/copy_path.png)
 
 ## Accéder à Query Service
 
-Pour accéder à Query Service à partir de l’interface utilisateur d’Experience Platform, commencez par sélectionner **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Browse]** . Une liste de vos requêtes précédemment enregistrées est chargée.
+Pour accéder à Query Service à partir de l’interface utilisateur d’Experience Platform, commencez par sélectionner **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**. Une liste de vos requêtes précédemment enregistrées est chargée.
 
 ![navigation dans query service](./images/aai-query/query_tab.png)
 
-Sélectionnez ensuite **[!UICONTROL Create query]** dans le coin supérieur droit. Le Query Editor se charge. À l’aide du Query Editor, vous pouvez commencer à créer des requêtes à l’aide de vos données de notation.
+Sélectionnez ensuite **[!UICONTROL Créer une requête]** dans le coin supérieur droit. Le Query Editor se charge. À l’aide du Query Editor, vous pouvez commencer à créer des requêtes à l’aide de vos données de notation.
 
 ![éditeur de requêtes](./images/aai-query/query_example.png)
 

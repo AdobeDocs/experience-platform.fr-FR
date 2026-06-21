@@ -12,14 +12,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 192
+source-wordcount: 196
 ht-degree: 4%
 
 ---
 
-# Type de données [!UICONTROL Consent String]
+# [!UICONTROL Chaîne de consentement] type de données
 
-[!UICONTROL Consent String] est un type de données XDM standard qui décrit une valeur de chaîne représentant le consentement d’un client. Il comprend des informations contextuelles telles que la norme pour la chaîne de consentement (par exemple, le [&#x200B; IAB Transparency and Consent Framework (TCF) 2.0](../field-groups/profile/iab.md)).
+[!UICONTROL &#x200B; Chaîne de consentement &#x200B;] est un type de données XDM standard qui décrit une valeur de chaîne représentant le consentement d’un client. Il comprend des informations contextuelles telles que la norme pour la chaîne de consentement (par exemple, le [&#x200B; IAB Transparency and Consent Framework (TCF) 2.0](../field-groups/profile/iab.md)).
 
 ![](../images/data-types/consent-string.png)
 

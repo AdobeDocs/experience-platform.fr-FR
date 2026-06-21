@@ -28,8 +28,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1397
-ht-degree: 87%
+source-wordcount: 1401
+ht-degree: 84%
 
 ---
 
@@ -43,9 +43,9 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 >
 >L’extension Adobe Target requiert le fichier at.js 2.x.
 
-Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Target et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension cible avec la souris et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet Extensions, survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet Extensions , placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/targetv2config.png)
 

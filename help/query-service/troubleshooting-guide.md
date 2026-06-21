@@ -28,7 +28,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 5536
+source-wordcount: 5533
 ht-degree: 59%
 
 ---
@@ -137,12 +137,12 @@ Certains mots-clés réservés ne peuvent pas être utilisés comme nom de colon
 +++Réponse
 Les étapes suivantes décrivent comment afficher une vue tabulaire d’un jeu de données via l’interface utilisateur, y compris tous les champs et colonnes imbriqués dans un formulaire aplati.
 
-- Après vous être connecté à Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche de l’interface utilisateur pour accéder à [!UICONTROL Datasets] tableau de bord.
-- L’onglet [!UICONTROL Browse] des jeux de données s’ouvre. Vous pouvez utiliser la barre de recherche pour affiner les options disponibles. Sélectionnez un jeu de données dans la liste.
+- Après vous être connecté à Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche de l’interface utilisateur pour accéder au tableau de bord [!UICONTROL Jeux de données].
+- L’onglet Jeux de données [!UICONTROL Parcourir] s’ouvre. Vous pouvez utiliser la barre de recherche pour affiner les options disponibles. Sélectionnez un jeu de données dans la liste.
 
 ![Tableau de bord Jeux de données dans l’interface utilisateur d’Experience Platform avec la barre de recherche et un jeu de données en surbrillance.](./images/troubleshooting/dataset-selection.png)
 
-- L’écran [!UICONTROL Datasets activity] s’affiche. Sélectionnez **[!UICONTROL Preview dataset]** pour ouvrir une boîte de dialogue du schéma XDM et une vue tabulaire des données aplaties du jeu de données sélectionné. Vous trouverez plus de détails dans la [documentation sur la prévisualisation d’un jeu de données](../catalog/datasets/user-guide.md#preview-a-dataset).
+- L’écran [!UICONTROL Activité des jeux de données] s’affiche. Sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour ouvrir une boîte de dialogue du schéma XDM et une vue tabulaire des données aplaties du jeu de données sélectionné. Vous trouverez plus de détails dans la [documentation sur la prévisualisation d’un jeu de données](../catalog/datasets/user-guide.md#preview-a-dataset).
 
 ![Onglet Activité du jeu de données du tableau de bord Jeux de données avec l’option Prévisualiser le jeu de données mise en surbrillance.](./images/troubleshooting/dataset-preview.png)
 
@@ -173,16 +173,16 @@ Une requête peut être bloquée pendant le traitement pour plusieurs raisons. P
 [une liste complète des numéros de téléphone du service clientèle d’Adobe](https://helpx.adobe.com/fr/contact/phone.html) est disponible sur la page d’aide d’Adobe. Vous pouvez également trouver de l’aide en ligne en procédant comme suit :
 
 - Accédez à [https://www.adobe.com/](https://www.adobe.com/) dans votre navigateur web.
-- Sur le côté droit de la barre de navigation supérieure, sélectionnez **[!UICONTROL Sign In]**.
+- Sur le côté droit de la barre de navigation supérieure, sélectionnez **[!UICONTROL Se connecter]**.
 
 ![Site web d’Adobe avec Se connecter en surbrillance.](./images/troubleshooting/adobe-sign-in.png)
 
 - Utilisez l’Adobe ID et le mot de passe associés à votre licence Adobe.
-- Sélectionnez **[!UICONTROL Help & Support]** dans la barre de navigation supérieure.
+- Sélectionnez **[!UICONTROL Aide et assistance]** dans la barre de navigation supérieure.
 
 ![Menu déroulant de la barre de navigation supérieure avec Aide et assistance, Assistance aux entreprises et Nous contacter en surbrillance.](./images/troubleshooting/help-and-support.png)
 
-Une bannière déroulante s’affiche avec une section [!UICONTROL Help and support]. Sélectionnez **[!UICONTROL Contact us]** pour ouvrir l’assistant virtuel de l’assistance clientèle d’Adobe ou sélectionnez **[!UICONTROL Enterprise support]** pour obtenir une aide dédiée aux grandes organisations.
+Une bannière déroulante s’affiche avec une section [!UICONTROL &#x200B; Aide et assistance &#x200B;]. Sélectionnez **[!UICONTROL Nous contacter]** pour ouvrir l’assistant virtuel de l’assistance clientèle d’Adobe, ou sélectionnez **[!UICONTROL Assistance aux entreprises]** pour obtenir une aide dédiée aux grandes organisations.
 +++
 
 ### Comment mettre en œuvre une série séquentielle de tâches sans exécuter les tâches suivantes si la tâche précédente ne se termine pas correctement ?
@@ -808,7 +808,7 @@ Oui, les clients de bureau tiers peuvent être connectés à Query Service par l
 ### Pourquoi mes informations d’identification non expirantes ne fonctionnent-elles pas ?
 
 +++Réponse
-La valeur des informations d’identification non expirantes sont les arguments concaténés du `technicalAccountID` et les `credential` extraits du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
+La valeur des informations d’identification non expirantes sont les arguments concaténés du `technicalAccountID` et les `credential` extraits du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
 Pour plus d’informations sur la [connexion à des clients externes à l’aide d’informations d’identification](./ui/credentials.md#using-credentials-to-connect-to-external-clients), consultez la documentation.
 +++
 

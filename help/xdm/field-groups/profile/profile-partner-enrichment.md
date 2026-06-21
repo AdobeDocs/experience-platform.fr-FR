@@ -13,29 +13,29 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 218
-ht-degree: 15%
+source-wordcount: 258
+ht-degree: 13%
 
 ---
 
-# [!UICONTROL Profile Partner Enrichment (Sample)] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Enrichissement du partenaire de profil (exemple)]
 
-[!UICONTROL Profile Partner Enrichment (Sample)] groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Utilisez ce groupe de champs pour fournir des données supplémentaires liées aux enrichissements pilotés par les partenaires pour les profils clients.
+[!UICONTROL Enrichissement du partenaire de profil (exemple)] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Utilisez ce groupe de champs pour fournir des données supplémentaires liées aux enrichissements pilotés par les partenaires pour les profils clients.
 
-![Diagramme du groupe de champs [!UICONTROL Profile Partner Enrichment (Sample)].](../../images/field-groups/profile-partner-enrichment-sample.png)
+![Diagramme du groupe de champs [!UICONTROL &#x200B; Enrichissement du partenaire de profil (exemple)].](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |-----------------------------|------------------------|-----------|----------------------------------|
 | [!UICONTROL ageRangeInHousehold] | `ageRangeInHousehold` | chaîne | Tranche d’âge au sein du ménage. |
-| [!UICONTROL apparelAccessories] | `apparelAccessories` | chaîne | Données sur les vêtements et accessoires. |
-| [!UICONTROL bicycling] | `bicycling` | chaîne | Informations relatives au vélo. |
+| [!UICONTROL vêtementsAccessoires] | `apparelAccessories` | chaîne | Données sur les vêtements et accessoires. |
+| [!UICONTROL cyclisme] | `bicycling` | chaîne | Informations relatives au vélo. |
 | [!UICONTROL cableTv] | `cableTv` | chaîne | Informations relatives à la télévision par câble. |
-| [!UICONTROL domestics] | `domestics` | chaîne | Données nationales. |
-| [!UICONTROL electronics] | `electronics` | chaîne | Informations relatives à l’électronique. |
+| [!UICONTROL domestique] | `domestics` | chaîne | Données nationales. |
+| [!UICONTROL électronique] | `electronics` | chaîne | Informations relatives à l’électronique. |
 | [!UICONTROL foodAndBeverage] | `foodAndBeverage` | chaîne | Données sur les aliments et les boissons. |
-| [!UICONTROL footwear] | `footwear` | chaîne | Informations relatives aux chaussures. |
+| [!UICONTROL chaussures] | `footwear` | chaîne | Informations relatives aux chaussures. |
 | [!UICONTROL healthFoods] | `healthFoods` | chaîne | Données sur les aliments sains. |
-| [!UICONTROL hiking] | `hiking` | chaîne | Informations sur la randonnée. |
+| [!UICONTROL randonnée] | `hiking` | chaîne | Informations sur la randonnée. |
 | [!UICONTROL householdId] | `householdId` | chaîne | ID unique d’un foyer. |
 | [!UICONTROL individualId] | `individualId` | chaîne | ID unique d’une personne. |
 | [!UICONTROL inferredCardHolder] | `inferredCardHolder` | chaîne | Informations déduites sur le titulaire de carte. |
@@ -46,12 +46,12 @@ ht-degree: 15%
 | [!UICONTROL InvestmentRating] | `investmentRating` | chaîne | Données d’évaluation des investissements. |
 | [!UICONTROL ResponderRating] | `responderRating` | chaîne | Informations d’évaluation du répondeur. |
 | [!UICONTROL SpendingVelocity] | `spendingVelocity` | chaîne | Détails sur la vitesse de dépense. |
-| [!UICONTROL SpendingVolume] | `spendingVolume` | chaîne | Informations sur le volume de dépenses. |
+| [!UICONTROL SendingVolume] | `spendingVolume` | chaîne | Informations sur le volume de dépenses. |
 | [!UICONTROL recordId] | `recordId` | chaîne | Identifiant d’enregistrement unique. |
-| [!UICONTROL residenceId] | `residenceId` | chaîne | ID unique de la résidence. |
-| [!UICONTROL sailing] | `sailing` | chaîne | Données relatives à la navigation. |
-| [!UICONTROL seasonalHolidayProducts] | `seasonalHolidayProducts` | chaîne | Informations sur les produits de vacances saisonnières. |
-| [!UICONTROL skiing] | `skiing` | chaîne | Données relatives au ski. |
+| [!UICONTROL résidenceId] | `residenceId` | chaîne | ID unique de la résidence. |
+| [!UICONTROL voile] | `sailing` | chaîne | Données relatives à la navigation. |
+| [!UICONTROL seasonHolidayProducts] | `seasonalHolidayProducts` | chaîne | Informations sur les produits de vacances saisonnières. |
+| [!UICONTROL ski] | `skiing` | chaîne | Données relatives au ski. |
 | [!UICONTROL tennis] | `tennis` | chaîne | Informations relatives au tennis. |
 | [!UICONTROL tvShoppers] | `tvShoppers` | chaîne | Informations sur les acheteurs de télévision. |
 

@@ -59,7 +59,7 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemb
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations sur la gouvernance des données, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
 
@@ -75,7 +75,7 @@ Adobe Experience Platform fournit un ensemble riche de fonctionnalités permet
 
 **Problèmes connus**
 
-* Aucune
+* None
 
 Pour en savoir plus sur l’ingestion de données dans Experience Platform, consultez la [documentation sur l’ingestion de données](../../ingestion/home.md).
 
@@ -109,7 +109,7 @@ Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaî
 
 **Problèmes connus**
 
-* Aucune
+* None
 
 Pour plus d’informations sur [!DNL Identity Service], consultez la présentation d’Identity Service [&#128279;](../../identity-service/home.md).
 
@@ -132,6 +132,6 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

@@ -20,7 +20,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 651
+source-wordcount: 669
 ht-degree: 4%
 
 ---
@@ -54,18 +54,18 @@ Lisez les documents suivants avant de commencer à utiliser les paramètres d’
 
 Ensuite, vous devez vous assurer que votre compte dispose des autorisations suivantes :
 
-* **[!UICONTROL View Identity Settings]** : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
-* **[!UICONTROL Edit Identity Settings]** : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
+* **[!UICONTROL Afficher les paramètres d’identité]** : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
+* **[!UICONTROL Modifier les paramètres d’identité]** : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
 
 Contactez votre administrateur si vous ne disposez pas de ces autorisations. Pour plus d’informations , consultez le [guide des autorisations](../../access-control/abac/ui/permissions.md).
 
 ## Configurer vos paramètres d’identité
 
-Pour accéder aux paramètres d’identité, accédez à l’espace de travail Identity Service dans l’interface utilisateur de Adobe Experience Platform, puis sélectionnez **[!UICONTROL Settings]**.
+Pour accéder aux paramètres d’identité, accédez à l’espace de travail Identity Service dans l’interface utilisateur de Adobe Experience Platform, puis sélectionnez **[!UICONTROL Paramètres]**.
 
 ![Interface du tableau de bord des identités avec le bouton « Paramètres » sélectionné.](../images/rules/dashboard.png)
 
-La page des paramètres d’identité est divisée en deux sections : [!UICONTROL Person namespaces] et [!UICONTROL Device or cookie namespaces]. Les espaces de noms de personne sont des identifiants pour des individus uniques. Il peut s’agir d’identifiants entre appareils, d’adresses e-mail et de numéros de téléphone. Les espaces de noms d’appareil ou de cookie sont des identifiants d’appareils et de navigateurs web et ne peuvent pas recevoir une priorité supérieure aux espaces de noms de personne. Vous ne pouvez pas non plus désigner un appareil ou un espace de noms de cookie comme espace de noms unique.
+La page des paramètres d’identité est divisée en deux sections : [!UICONTROL Espaces de noms de personne] et [!UICONTROL Espaces de noms d’appareil ou de cookie]. Les espaces de noms de personne sont des identifiants pour des individus uniques. Il peut s’agir d’identifiants entre appareils, d’adresses e-mail et de numéros de téléphone. Les espaces de noms d’appareil ou de cookie sont des identifiants d’appareils et de navigateurs web et ne peuvent pas recevoir une priorité supérieure aux espaces de noms de personne. Vous ne pouvez pas non plus désigner un appareil ou un espace de noms de cookie comme espace de noms unique.
 
 ### Configurer la priorité des espaces de noms
 
@@ -75,11 +75,11 @@ Pour configurer la priorité des espaces de noms, sélectionnez un espace de nom
 
 ### Désigner votre espace de noms unique
 
-Pour désigner un espace de noms unique, cochez la case [!UICONTROL Unique per graph] correspondant à cet espace de noms. Vous pouvez sélectionner **jusqu’à trois espaces de noms uniques** pour votre configuration de paramètres d’identité.
+Pour désigner un espace de noms unique, cochez la case [!UICONTROL Unique par graphique] qui correspond à cet espace de noms. Vous pouvez sélectionner **jusqu’à trois espaces de noms uniques** pour votre configuration de paramètres d’identité.
 
 Une fois vos espaces de noms uniques établis, les graphiques ne pourront plus comporter plusieurs identités contenant un espace de noms unique. Par exemple, si vous avez désigné CRMID comme espace de noms unique, un graphique ne peut avoir qu’une seule identité avec l’espace de noms CRMID. Pour plus d’informations, consultez la présentation de l’algorithme [Identity Optimization](./identity-optimization-algorithm.md#unique-namespace).
 
-Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Next]** pour continuer.
+Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Deux espaces de noms sélectionnés et définis comme uniques.](../images/rules/unique-namespace.png)
 
@@ -97,7 +97,7 @@ Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Next]
 >
 >* La dernière étape consiste en un autre message de confirmation indiquant que les graphiques existants ne seront affectés par l’algorithme de graphique **uniquement si les graphiques sont mis à jour après l’enregistrement de vos paramètres** et que l’identité principale des fragments d’événement sur le profil client en temps réel ne sera pas mise à jour même après les modifications de la priorité de l’espace de noms.
 >
->* Cela prendra jusqu’à **24 heures** pour que vos paramètres nouveaux ou mis à jour soient pris en compte. Pour confirmer, saisissez le nom de votre sandbox, puis sélectionnez **[!UICONTROL Confirm]**.
+>* Cela prendra jusqu’à **24 heures** pour que vos paramètres nouveaux ou mis à jour soient pris en compte. Pour confirmer, saisissez le nom de votre sandbox, puis sélectionnez **[!UICONTROL Confirmer]**.
 >
 >* Vos données ne seront pas modifiées tant que vous n’aurez pas enregistré vos paramètres d’identité.
 

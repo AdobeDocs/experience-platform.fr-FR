@@ -15,7 +15,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1669
+source-wordcount: 1673
 ht-degree: 44%
 
 ---
@@ -26,7 +26,7 @@ Pour offrir de meilleures expériences client, vous devez collecter et stocker l
 
 Adobe Experience Platform Privacy Service a été développé en réponse à un changement fondamental dans la façon dont les entreprises sont tenues de gérer les données personnelles de leurs clients. Le principal objectif de Privacy Service est d’automatiser la conformité aux réglementations de confidentialité des données qui, en cas de violation, peuvent entraîner des amendes importantes et perturber les opérations de données de votre entreprise.
 
-Privacy Service fournit une API RESTful et une interface utilisateur pour vous aider à gérer les demandes de données des clients. Vous pouvez utiliser Privacy Service pour envoyer des demandes d’accès et de suppression de données clients personnelles des applications Adobe Experience Cloud, ce qui facilite l’automatisation de la conformité aux réglementations de confidentialité légales et au sein de l’organisation.
+Privacy Service fournit une API RESTful et une interface utilisateur pour vous aider à gérer les demandes de données des clients. Vous pouvez utiliser Privacy Service pour envoyer des demandes d’accès et de suppression de données clients personnelles depuis les applications Adobe Experience Cloud. Cela facilite l’automatisation de la mise en conformité avec les réglementations légales et organisationnelles liées à la confidentialité.
 
 >[!IMPORTANT]
 >
@@ -89,7 +89,7 @@ La réponse à une **requête de suppression** ne contient **aucune URL de tél�
 >
 >Les sections ci-dessous contiennent des liens menant à la documentation qui explique comment effectuer des demandes d’accès à des informations personnelles génériques dans l’API ou l’interface utilisateur. Toutefois, en fonction des applications [!DNL Experience Cloud] que vous utilisez, les champs à envoyer dans la payload de requête peuvent différer des exemples qui se trouvent dans ces guides.
 >
->Tout en suivant les instructions des guides relatifs à l’API ou à l’interface utilisateur, reportez-vous au document sur les applications [Privacy Service et Experience Cloud](./experience-cloud-apps.md) pour obtenir de plus amples informations sur la manière de formater les demandes d’accès à des informations personnelles pour vos applications [!DNL Experience Cloud] spécifiques.
+>Tout en suivant les instructions des guides relatifs à l’API ou à l’interface utilisateur, reportez-vous au document sur [les applications Privacy Service et Experience Cloud](./experience-cloud-apps.md) pour obtenir de plus amples informations sur la manière de formater les demandes d’accès à des informations personnelles pour vos applications [!DNL Experience Cloud] spécifiques.
 >
 >Il est également important de noter que les demandes d’accès à des informations personnelles sont traitées de manière asynchrone dans les applications Experience Cloud. Lorsqu’une demande est reçue par Privacy Service, quelques minutes à plusieurs semaines peuvent être nécessaires à chaque application pour répondre à la requête. Le temps nécessaire à l’exécution de chaque demande est spécifique à l’application que vous utilisez et dépend également de la quantité de données à traiter.
 
@@ -103,7 +103,7 @@ Pour approcher par programmation la conformité à la réglementation de confide
 >
 >Actuellement, l’interface utilisateur de Privacy Service ne prend en charge que les demandes d’accès et de suppression. Toutes les demandes de désinscription doivent être effectuées par le biais de l’API.
 
-Vous pouvez créer et surveiller les tâches de confidentialité à l’aide d’une interface graphique avec l’interface utilisateur de Privacy Service. L’interface utilisateur de comprend un widget **[!UICONTROL Status Report]** qui fournit une représentation visuelle du statut de toutes les requêtes actives. Vous pouvez créer des requêtes avec le **[!UICONTROL Request Builder]** intégré ou en chargeant des fichiers JSON. Pour plus d’informations sur l’utilisation de l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/overview.md).
+Vous pouvez créer et surveiller les tâches de confidentialité à l’aide d’une interface graphique avec l’interface utilisateur de Privacy Service. L’interface utilisateur comprend un widget **[!UICONTROL Rapport de statut]** qui fournit une représentation visuelle du statut de toutes les requêtes actives. Vous pouvez également créer des requêtes avec le créateur de requêtes **[!UICONTROL intégré]** ou en chargeant des fichiers JSON. Pour plus d’informations sur l’utilisation de l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/overview.md).
 
 ### Surveillance des tâches de confidentialité {#monitor}
 

@@ -18,7 +18,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 390
+source-wordcount: 395
 ht-degree: 12%
 
 ---
@@ -103,4 +103,4 @@ const sessionPromise = alloy("createMediaSession", {
 
 ## Création d’une session multimédia à l’aide de l’extension de balise Web SDK
 
-L’extension de balise Web SDK équivalente à cette commande est le type d’événement [**[!UICONTROL Session start]**](/help/tags/extensions/client/web-sdk/actions/send-media-event.md#session-start) dans l’action « [!UICONTROL Send media event] ».
+L’extension de balise Web SDK équivalente à cette commande est le type d’événement [**[!UICONTROL Début de session]**](/help/tags/extensions/client/web-sdk/actions/send-media-event.md#session-start) au sein de l’action « [!UICONTROL &#x200B; Envoyer l’événement multimédia &#x200B;] ».

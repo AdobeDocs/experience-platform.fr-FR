@@ -15,27 +15,27 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 613
+source-wordcount: 627
 ht-degree: 10%
 
 ---
 
-# [!UICONTROL XDM Business Person Details] groupe de champs de schéma
+# [!UICONTROL Détails professionnels XDM] groupe de champs de schéma
 
 >[!AVAILABILITY]
 >
 >Ce groupe de champs n’est disponible que pour les organisations ayant accès au B2B edition Real-Time CDP.
 
-[!UICONTROL XDM Business Person Details] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui recueille les informations sur une personne individuelle dans le contexte d’une entreprise B2B (business-to-business).
+[!UICONTROL Détails professionnels XDM] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui recueille les informations sur une personne individuelle dans le contexte d’une entreprise B2B (business-to-business).
 
 ![](../../images/field-groups/business-person-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `b2b` | Objet | Objet capturant les détails spécifiques B2B de la personne. |
-| `b2b.accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite du compte professionnel associé à la personne. |
-| `b2b.convertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite du contact associé si le prospect a été converti. |
-| `b2b.personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite de la personne ou du fragment de profil. |
+| `b2b.accountKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite du compte professionnel associé à la personne. |
+| `b2b.convertedContactKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite du contact associé si le prospect a été converti. |
+| `b2b.personKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de la personne ou du fragment de profil. |
 | `b2b.accountID` | Chaîne | ID unique du compte professionnel auquel cette personne est associée. |
 | `b2b.blockedCause` | Chaîne | Si la personne est bloquée, cette propriété en indique la raison. |
 | `b2b.convertedContactID` | Chaîne | ID de contact en cas de conversion réussie du prospect. |

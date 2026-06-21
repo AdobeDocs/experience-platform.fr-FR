@@ -16,12 +16,12 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 123
-ht-degree: 100%
+source-wordcount: 125
+ht-degree: 97%
 
 ---
 
-# Tableau de bord [!UICONTROL License usage] {#license-usage-dashboard}
+# [!UICONTROL Utilisation des licences] tableau de bord {#license-usage-dashboard}
 
 L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de l’entreprise. Celles-ci sont présentées telles qu’elles sont capturées lors d’aperçus quotidiens.
 

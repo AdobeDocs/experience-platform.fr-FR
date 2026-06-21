@@ -33,8 +33,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2350
-ht-degree: 80%
+source-wordcount: 2328
+ht-degree: 81%
 
 ---
 
@@ -68,7 +68,7 @@ Pour plus d’informations sur la création d’un compte technique à utiliser 
 
 >[!IMPORTANT]
 >
->Pour créer une intégration dans Adobe I/O, vous devez être un administrateur d’organisation Experience Cloud ou un développeur d’organisation Experience Cloud.
+>Pour créer une intégration dans Adobe I/O, vous devez être administrateur d’organisation Experience Cloud ou développeur d’organisation Experience Cloud.
 
 Si vous ne pouvez pas créer d’intégration, il est probable que vous ne disposiez pas des autorisations appropriées. Un administrateur de l’organisation doit alors terminer les étapes pour vous ou vous devez être affecté en tant que développeur.
 
@@ -87,9 +87,9 @@ npx @adobe/reactor-uploader
 `npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s’agit de la manière la plus simple d’exécuter le téléchargeur.
 
 >[!NOTE]
-> Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Les informations d> identification de `jwt-auth` héritées peuvent être utilisées en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à leur obsolescence le 1er janvier 2025. Les paramètres requis >  exécuter la version `jwt-auth` sont disponibles [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée et sélectionnez **[!UICONTROL View]**.
+Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée, puis sélectionnez **[!UICONTROL Affichage]**.
 
 - Quel est votre `clientId` ? Copiez et collez-le à partir de la console I/O.
 - Quel est votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.
@@ -109,7 +109,7 @@ Si vous souhaitez gérer le chargement direct de votre extension à l’aide de 
 
 ## Créer une propriété de développement {#property}
 
-Une fois que vous êtes connecté à l’interface utilisateur et que vous sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche, l’écran de [!UICONTROL Properties] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
+Une fois que vous êtes connecté à l’interface utilisateur et que vous avez sélectionné **[!UICONTROL Balises]** dans le volet de navigation de gauche, l’écran [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
 
 ![](../images/getting-started/properties-screen.png)
 

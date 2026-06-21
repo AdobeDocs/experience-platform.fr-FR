@@ -13,7 +13,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 923
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Si vous ne connaissez pas les paramètres de requête, consultez la documentatio
 
 ## Application d’un filtre de date à votre tableau de bord {#apply-date-filter}
 
-Pour appliquer un filtre de date, sélectionnez **[!UICONTROL Add filter]**, puis **[!UICONTROL Date Filter]** dans le menu déroulant de l’affichage du tableau de bord.
+Pour appliquer un filtre de date, sélectionnez **[!UICONTROL Ajouter un filtre]**, puis **[!UICONTROL Filtre de date]** dans le menu déroulant de l’affichage du tableau de bord.
 
 ![Tableau de bord personnalisé avec Ajouter un filtre et son menu déroulant mis en surbrillance.](../../images/sql-insights-query-pro-mode/add-filter.png)
 
@@ -44,7 +44,7 @@ Les options de filtrage de date suivantes s’affichent.
 
 ### Créer un filtre de date non personnalisé
 
-Pour appliquer un filtre de date prédéfini, sélectionnez **[!UICONTROL No custom date]**, puis sélectionnez les options de date prédéfinies à inclure. Enfin, utilisez la liste déroulante pour sélectionner la période par défaut, puis sélectionnez **[!UICONTROL Save]**.
+Pour appliquer un filtre de date prédéfini, sélectionnez **[!UICONTROL Aucune date personnalisée]**, puis sélectionnez les options de date prédéfinie à inclure. Enfin, utilisez la liste déroulante pour sélectionner la période par défaut, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![La boîte de dialogue Créer un filtre de date avec l’option Aucun filtre de date personnalisé et enregistrer mise en surbrillance.](../../images/sql-insights-query-pro-mode/no-custom-date-filter.png)
 
@@ -54,7 +54,7 @@ Vous revenez alors au tableau de bord, qui affiche la période par défaut que v
 
 ### Création d’un filtre de période personnalisé
 
-Pour appliquer un filtre de période personnalisé, sélectionnez **[!UICONTROL Custom date range]**, puis sélectionnez les options de date prédéfinies à inclure. Enfin, sélectionnez **[!UICONTROL Custom]** pour définir la période par défaut. Utilisez le calendrier pour spécifier une période, puis sélectionnez **[!UICONTROL Save]**.
+Pour appliquer un filtre de période personnalisé, sélectionnez **[!UICONTROL Période personnalisée]**, puis sélectionnez les options de date prédéfinies à inclure. Enfin, sélectionnez **[!UICONTROL Personnalisé]** pour définir la période par défaut. Utilisez le calendrier pour spécifier une période, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 >[!NOTE]
 >
@@ -68,7 +68,7 @@ Vous revenez alors au tableau de bord , qui affiche la plage de données personn
 
 ### Création d’un filtre de date personnalisé
 
-Pour appliquer un filtre de date personnalisé, sélectionnez **[!UICONTROL Custom date]**, puis sélectionnez les options de date prédéfinies à inclure. Enfin, sélectionnez **[!UICONTROL Custom]**, puis utilisez le calendrier pour sélectionner une date de début. Enfin, sélectionnez **[!UICONTROL Save]**.
+Pour appliquer un filtre de date personnalisé, sélectionnez **[!UICONTROL Date personnalisée]**, puis sélectionnez les options de date prédéfinies à inclure. Enfin, sélectionnez **[!UICONTROL Personnalisé]**, puis utilisez le calendrier pour sélectionner une date de début. Enfin, sélectionnez **[!UICONTROL Enregistrer]**.
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ La capture d’écran ci-dessous met en évidence les contraintes de date intég
 >
 >Lors de la composition de votre instruction en mode Query Pro, vous devez fournir des exemples de valeurs pour chaque paramètre afin d’exécuter l’instruction SQL et de créer le graphique. Les exemples de valeurs que vous fournissez lors de la composition de votre instruction sont remplacés par les valeurs réelles que vous sélectionnez pour le filtre de date (ou global) au moment de l’exécution.
 
-![Boîte de dialogue [!UICONTROL Enter SQL] avec les paramètres de date mis en surbrillance dans le fichier SQL.](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
+![Boîte de dialogue [!UICONTROL Saisir le code SQL] avec les paramètres de date mis en surbrillance dans le code SQL.](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
 
 ## Activation des paramètres de date dans chaque insight {#enable-date-parameters}
 
@@ -137,4 +137,4 @@ Sélectionnez ensuite les paramètres de requête appropriés dans les menus dé
 
 ![Le compositeur de widget avec le menu déroulant Start_date mis en surbrillance.](../../images/sql-insights-query-pro-mode/widget-composer-date-filter-dropdown.png)
 
-Enfin, sélectionnez **[!UICONTROL Save and close]** pour revenir à votre tableau de bord. Les filtres de date sont désormais activés pour toutes les informations dont les paramètres de date de début et de fin sont définis.
+Enfin, sélectionnez **[!UICONTROL Enregistrer et fermer]** pour revenir à votre tableau de bord. Les filtres de date sont désormais activés pour toutes les informations dont les paramètres de date de début et de fin sont définis.

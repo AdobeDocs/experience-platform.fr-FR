@@ -21,8 +21,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 606
-ht-degree: 80%
+source-wordcount: 608
+ht-degree: 79%
 
 ---
 
@@ -70,7 +70,7 @@ Dans l’écran Publication :
 
 1. Dans la colonne Publié, recherchez la bibliothèque que vous souhaitez republier.
 1. Sélectionnez les points de suspension (`...`) dans le coin supérieur droit de la Carte de bibliothèque.
-1. Sélectionner **[!UICONTROL Republish]**.
+1. Sélectionnez **[!UICONTROL Republier]**.
 
 ## Téléchargement
 
@@ -84,4 +84,4 @@ Dans l’écran Publication :
 
 1. Dans la colonne Publié, recherchez la bibliothèque que vous souhaitez télécharger.
 1. Sélectionnez les points de suspension (`...`) dans le coin supérieur droit de la carte Bibliothèque.
-1. Sélectionner **[!UICONTROL Download]**.
+1. Sélectionnez **[!UICONTROL Télécharger]**.

@@ -12,13 +12,13 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 73
+source-wordcount: 82
 ht-degree: 0%
 
 ---
 
 # Exporter au format CSV
 
-Pour simplifier le partage et la manipulation des données, vous pouvez exporter les données traitées de vos informations personnalisées au format CSV. Utilisez les options **[!UICONTROL Download CSV]** ou **[!UICONTROL Send as email]**, disponibles sous **[!UICONTROL View more]** dans le workflow d’exportation.
+Pour simplifier le partage et la manipulation des données, vous pouvez exporter les données traitées de vos informations personnalisées au format CSV. Utilisez les options **[!UICONTROL Télécharger CSV]** ou **[!UICONTROL Envoyer par e-mail]** disponibles sous **[!UICONTROL En savoir plus]** dans le workflow d’exportation.
 
-Pour exporter les données de graphique traitées au format CSV ou les envoyer par e-mail sous la forme d’un lien de téléchargement sécurisé, consultez la section Exportation [&#128279;](./view-more.md#export).[!UICONTROL View more]
+Pour exporter les données de graphique traitées au format CSV ou les envoyer par e-mail sous la forme d&#39;un lien de téléchargement sécurisé, consultez la section [[!UICONTROL En savoir plus] Exporter](./view-more.md#export).

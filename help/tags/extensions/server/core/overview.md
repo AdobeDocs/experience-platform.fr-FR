@@ -21,8 +21,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1680
-ht-degree: 96%
+source-wordcount: 1688
+ht-degree: 94%
 
 ---
 
@@ -40,9 +40,9 @@ Cette section décrit les types de conditions disponibles dans l’extension Cor
 
 Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert d’événement dans Adobe Experience Platform prend en charge ES13.
 
-1. Sélectionner **[!UICONTROL Open Editor]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
@@ -170,8 +170,8 @@ Cette section décrit les types d’actions disponibles dans l’extension Core.
 Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert d’événement dans Adobe Experience Platform prend en charge ES13.
 
 1. Nommez le code d’action.
-1. Sélectionner **[!UICONTROL Open Editor]**.
-1. Modifiez le code, puis cliquez sur **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
+1. Modifiez le code, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
@@ -195,7 +195,7 @@ Les sections suivantes décrivent les types d’éléments de données disponibl
 
 ### Custom code
 
-Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur **[!UICONTROL Open Editor]** et en insérant le code dans la fenêtre de l’éditeur.
+Vous pouvez saisir du code JavaScript personnalisé dans l’interface utilisateur en sélectionnant **[!UICONTROL Ouvrir l’éditeur]** et en insérant le code dans la fenêtre de l’éditeur.
 
 Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être utilisée en tant que valeur de l’élément de données. Si aucune instruction de retour n’est incluse ou si la valeur `null` ou `undefined` est renvoyée, la valeur par défaut de l’élément de données reflète `null` ou `undefined`.
 

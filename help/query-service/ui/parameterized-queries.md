@@ -12,7 +12,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 682
+source-wordcount: 692
 ht-degree: 13%
 
 ---
@@ -55,7 +55,7 @@ SELECT
 
 Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Pour plus d’instructions, consultez la section relative à [accès à Query Editor](./user-guide.md#accessing-query-editor).
 
-Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite l’onglet **[!UICONTROL Query parameters]** en regard de la [!UICONTROL Console] ajouter la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous omettez d’ajouter une valeur à l’une des clés requises. Une icône d’alerte (![une icône d’alerte.](/help/images/icons/alert.png)) apparaît dans la section Paramètres de requête en regard de tout champ d’entrée de [!UICONTROL Value] vide.
+Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite l’onglet **[!UICONTROL Paramètres de requête]** à côté de la [!UICONTROL Console] et ajoutez la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous omettez d’ajouter une valeur à l’une des clés requises. Une icône d’alerte (![une icône d’alerte.](/help/images/icons/alert.png)) apparaît dans la section Paramètres de requête en regard de tout champ d’entrée [!UICONTROL Valeur] vide.
 
 >[!NOTE]
 >
@@ -65,11 +65,11 @@ Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’édite
 
 >[!TIP]
 >
->Remplacez les onglets [!UICONTROL Query parameters] par [!UICONTROL Console] pour afficher la sortie console de la requête.
+>Remplacez les onglets [!UICONTROL Paramètres de requête] par [!UICONTROL Console] pour afficher la sortie console de la requête.
 
 ## Utiliser les détails des journaux de requête pour vérifier les valeurs de paramètre {#check-parameter-values}
 
-Vous ne pouvez pas enregistrer de paramètres dans les modèles, car les valeurs utilisées ne sont pas persistantes. Cependant, vous pouvez vérifier la page [!UICONTROL Query log details] pour trouver les valeurs de paramètre utilisées dans une exécution de requête. Dans ce cas, les journaux n’indiquent pas que la requête était une requête paramétrée. Consultez la [documentation sur les journaux de requêtes](./query-logs.md) pour obtenir des instructions sur la manière de trouver les valeurs utilisées.
+Vous ne pouvez pas enregistrer de paramètres dans les modèles, car les valeurs utilisées ne sont pas persistantes. Cependant, vous pouvez consulter la page [!UICONTROL Détails du journal de requête] pour trouver les valeurs de paramètre utilisées dans une exécution de requête. Dans ce cas, les journaux n’indiquent pas que la requête était une requête paramétrée. Consultez la [documentation sur les journaux de requêtes](./query-logs.md) pour obtenir des instructions sur la manière de trouver les valeurs utilisées.
 
 ![La vue des logs de requête avec le SQL d’une requête paramétrée mise en surbrillance dans la section détails.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 

@@ -23,8 +23,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1178
-ht-degree: 67%
+source-wordcount: 1164
+ht-degree: 65%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform comporte un catalogue unique et unifié dans lequel 
 1. **Extensions privées** : il s’agit d’extensions terminées conçues pour la production, mais qui ont été développées par d’autres utilisateurs au sein de votre société et qui ne sont disponibles que pour les utilisateurs au sein de votre société.
 1. **Extensions de développement** : ces extensions sont en développement actif et ne sont disponibles qu’au sein de votre entreprise et uniquement sur une propriété spécifiquement désignée comme propriété de développement.
 
-En dehors des extensions du catalogue de produits, les extensions publiques ont également des listes dans le [Marché des applications Experience Cloud Exchange](https://exchange.adobe.com/apps/browse/ec).
+En dehors des extensions du catalogue de produits, les extensions publiques ont également des listes dans la [marketplace d’applications Experience Cloud Exchange](https://exchange.adobe.com/apps/browse/ec).
 
 Ces listes permettent aux développeurs d’extensions de publier des descriptions de fonctionnalité, de fournir des liens vers la documentation et de commercialiser des extensions auprès des utilisateurs potentiels qui ne connaissent pas votre société ou les fonctionnalités de votre extension. Dans ce marché, votre extension comportera une liste publique qui pourra être consultée sans que l’utilisateur ne soit authentifié sur Experience Platform. Pour les extensions publiques, la création de cette liste Exchange est une étape obligatoire.
 
@@ -68,7 +68,7 @@ Si vous disposez déjà d’un compte d’entreprise ou si vous n’avez pas bes
    - **Image en vedette** - Attirez l’attention à l’aide d’une image autonome permettant de présenter votre marque et de mettre en avant votre application. L’image en vedette est celle qui s’affiche lorsqu’une personne partage un lien vers votre liste Exchange ou publie des articles à ce sujet sur les médias sociaux. Elle doit donc représenter fidèlement votre marque.
    - **Logo de l’éditeur de l’application** - Il s’agit du logo de votre entreprise. Vérifiez que l’icône a les dimensions appropriées, soit 1 280 x 720 ou 2 560 x 1 440 (16:9) au format png ou jpg.
    - **Instructions de configuration** : informez les clients sur la manière de configurer votre extension Adobe Experience Platform. Assurez-vous qu’ils comprennent les paramètres requis et les étapes suivantes lorsque votre [vue de configuration](../configuration.md) s’affiche immédiatement après l’installation de votre extension dans une propriété.
-   - **Balises** : sur la première page de la modification de votre liste, veillez à inclure le mot « Launch » dans le champ « Balises personnalisées ». Votre extension apparaîtra alors dans les résultats de recherche de balises dans le marketplace Exchange :
+   - **Balises** - Sur la première page de modification de votre liste, veillez à inclure le mot « Launch » dans le champ « Balises personnalisées ». Votre liste apparaîtra alors dans les recherches de balises sur Exchange Marketplace :
      ![](../images/getting-started/custom-tags.jpg)
    - **Sandbox** : lʼaccès aux solutions Adobe sʼeffectue via un compte Sandbox, au moyen duquel vous avez accès à une version fonctionnelle dʼAdobe Experience Platform. Ces comptes sandbox sont demandés lorsque vous créez votre liste d’applications. Dans la section **Connexions**, sélectionnez les connexions spécifiques relatives à l’application que vous avez créée (votre extension Balise) et lorsque vous appuyez sur **Enregistrer**, la demande de sandbox est générée si nécessaire.
 1. Soumettez votre liste. L’équipe Adobe Exchange examinera votre application et fournira des commentaires si des mises à jour sont requises. Si vous cochez la case **publier immédiatement** lorsque vous soumettez votre liste, elle sera publiée immédiatement après approbation. Si vous souhaitez publier votre application ultérieurement, ne cochez pas cette case. Une fois votre liste d’extensions approuvée, un bouton bleu **Publier** s’affiche en regard de celle-ci sur votre page de liste d’applications (extension).

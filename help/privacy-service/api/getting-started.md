@@ -15,8 +15,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 837
-ht-degree: 22%
+source-wordcount: 880
+ht-degree: 21%
 
 ---
 
@@ -46,25 +46,25 @@ Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
 Accédez à [Adobe Developer Console](https://developer.adobe.com/console) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le tutoriel sur la [création d’un projet vide](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) dans la documentation de Developer Console.
 
-Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Add to Project]** et choisissez **[!UICONTROL API]** dans le menu déroulant.
+Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Ajouter au projet]** et choisissez **[!UICONTROL API]** dans le menu déroulant.
 
-![L’option API sélectionnée dans la liste déroulante [!UICONTROL Add to Project] de la page des détails du projet dans Developer Console](../images/api/getting-started/add-api-button.png)
+![L’option d’API sélectionnée dans le menu déroulant [!UICONTROL Ajouter au projet] de la page des détails du projet dans Developer Console](../images/api/getting-started/add-api-button.png)
 
 #### Sélectionner l’API Privacy Service {#select-privacy-service-api}
 
-L’écran **[!UICONTROL Add an API]** s’affiche. Sélectionnez **[!UICONTROL Experience Cloud]** pour limiter la liste des API disponibles, puis sélectionnez la carte à **[!UICONTROL Privacy Service API]** avant de sélectionner **[!UICONTROL Next]**.
+L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez **[!UICONTROL Experience Cloud]** pour affiner la liste des API disponibles, puis sélectionnez la vignette de l’**[!UICONTROL API Privacy Service]** avant de sélectionner **[!UICONTROL Suivant]**.
 
 ![Carte d’API Privacy Service sélectionnée dans la liste des API disponibles](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->Sélectionnez l’option **[!UICONTROL View docs]** pour accéder à la documentation de référence API Privacy Service complète dans une fenêtre de navigateur distincte[&#128279;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+>Sélectionnez l’option **[!UICONTROL Afficher les documents]** pour accéder à la documentation de référence de l’API Privacy Service dans une fenêtre de navigateur distincte[&#128279;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 Sélectionnez ensuite le type d’authentification pour générer des jetons d’accès et accéder à l’API Privacy Service.
 
 >[!IMPORTANT]
 >
->Sélectionnez la méthode **[!UICONTROL OAuth Server-to-Server]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Service Account (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative} [Générer un jeton Web JSON (JWT)](/help/landing/api-authentication.md#jwt).
+>Sélectionnez la méthode **[!UICONTROL OAuth de serveur à serveur]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative} [Générer un jeton Web JSON (JWT)](/help/landing/api-authentication.md#jwt).
 
 ![Sélectionnez la méthode d’authentification Oauth de serveur à serveur](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png).
 
@@ -76,14 +76,14 @@ La dernière étape de configuration consiste à sélectionner les profils de pr
 >
 >Les profils de produit et les autorisations granulaires qu’ils fournissent sont créés et gérés par les administrateurs via Adobe Admin Console. Pour plus d’informations[&#128279;](../permissions.md) consultez le guide sur les autorisations Privacy Service .
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save configured API]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer l’API configurée]**.
 
 ![Un profil de produit unique sélectionné dans la liste avant d’enregistrer la configuration](../images/api/getting-started/select-product-profiles.png)
 
-Une fois que l’API a été ajoutée au projet, la page **[!UICONTROL Privacy Service API]** du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Privacy Service :
+Une fois l’API ajoutée au projet, la page **[!UICONTROL API]** du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Privacy Service :
 
-* `{API_KEY}` ([!UICONTROL Client ID])
-* `{ORG_ID}` ([!UICONTROL Organization ID])
+* `{API_KEY}` ([!UICONTROL ID client])
+* `{ORG_ID}` ([!UICONTROL Identifiant de l’organisation])
 
 ![Informations d’intégration après l’ajout d’une API dans Developer Console.](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 
@@ -98,7 +98,7 @@ En général, il existe deux méthodes pour générer un jeton d’accès :
 
 #### Génération manuelle d’un jeton {#manual-token}
 
-Pour générer manuellement une nouvelle `{ACCESS_TOKEN}`, accédez à **[!UICONTROL Credentials]** > **[!UICONTROL OAuth Server-to-Server]** et sélectionnez **[!UICONTROL Generate access token]**, comme illustré ci-dessous.
+Pour générer manuellement un nouveau `{ACCESS_TOKEN}`, accédez à **[!UICONTROL Informations d’identification]** > **[!UICONTROL OAuth de serveur à serveur]** et sélectionnez **[!UICONTROL Générer le jeton d’accès]**, comme illustré ci-dessous.
 
 ![Enregistrement d’écran de la manière dont un jeton d’accès est généré dans l’interface utilisateur de Developer Console.](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
 

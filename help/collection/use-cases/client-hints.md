@@ -63,17 +63,17 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Version complète du logiciel | `105.0.0.0` |
 | Nom du moteur de rendu | `AppleWebKit` |
 | Version du moteur de rendu | `537.36` |
-| Système d’exploitation | `Mac OS X` |
+| Operating system (Système d’exploitation) | `Mac OS X` |
 | Version du système d’exploitation | `10.15.7` |
 | Appareil | `Intel Mac OS X 10_15_7` |
 
-## Cas pratiques {#use-cases}
+## Cas d’utilisation {#use-cases}
 
 Les chaînes d’agent utilisateur ont longtemps été utilisées pour fournir aux équipes de marketing et de développement des informations importantes sur la manière dont les navigateurs, les systèmes d’exploitation et les appareils affichent le contenu du site, ainsi que sur la manière dont les utilisateurs interagissent avec les sites web.
 
 Les chaînes d’agent utilisateur sont également utilisées pour bloquer les spams et filtrer les robots qui explorent aux sites à diverses fins supplémentaires.
 
-## Chaînes de l’agent utilisateur dans Adobe Experience Cloud {#user-agent-in-adobe}
+## Chaînes d’agent utilisateur dans Adobe Experience Cloud {#user-agent-in-adobe}
 
 Les solutions Adobe Experience Cloud utilisent les chaînes de l’agent utilisateur de différentes manières.
 
@@ -153,7 +153,7 @@ La dimension [&#x200B; Système d’exploitation &#x200B;](https://experiencelea
 
 ### Caractéristiques d’Audience Manager reposant sur des indications du client à entropie élevée {#aam}
 
-[!DNL Google] a mis à jour la fonctionnalité du navigateur [!DNL Chrome] afin de minimiser les informations collectées via l’en-tête `User-Agent`. Par conséquent, les clients Audience Manager utilisant [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevront plus d’informations fiables pour les caractéristiques basées sur [clés au niveau de la plateforme](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=fr).
+[!DNL Google] a mis à jour la fonctionnalité du navigateur [!DNL Chrome] afin de minimiser les informations collectées via l’en-tête `User-Agent`. Par conséquent, les clients Audience Manager utilisant [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevront plus d’informations fiables pour les caractéristiques basées sur [clés au niveau de la plateforme](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
 Les clients Audience Manager qui utilisent des clés au niveau de la plateforme pour le ciblage doivent passer à la [collecte de données Adobe Experience Platform](/help/collection/home.md) au lieu de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) et permettre à [Client Hints à entropie élevée](#enabling-high-entropy-client-hints) de continuer à recevoir des données de caractéristiques fiables.
 

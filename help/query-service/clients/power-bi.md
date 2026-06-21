@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1081
+source-wordcount: 1084
 ht-degree: 88%
 
 ---
@@ -37,7 +37,7 @@ Pour connecter [!DNL Power BI] au service de requête, ouvrez [!DNL Power BI] et
 
 La boîte de dialogue de base de données [!DNL PostgreSQL] s’affiche, vous demandant des valeurs pour votre serveur et votre base de données. Vous pouvez consulter des instructions supplémentaires sur la manière de [se connecter à la base de données PostgreSQL à partir de Power Query Desktop](https://learn.microsoft.com/fr-fr/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) dans la documentation de [!DNL PowerBI].
 
-Ces valeurs requises proviennent de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche, puis **[!UICONTROL Credentials]**. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md).
+Ces valeurs requises proviennent de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ Ces valeurs requises proviennent de vos informations d’identification Adobe E
 
 ![L’espace de travail Requêtes Experience Platform avec l’onglet Informations d’identification et Informations d’identification arrivant à expiration en surbrillance.](../images/clients/power-bi/query-service-credentials-page.png)
 
-Dans le champ **[!DNL Server]** de la boîte de dialogue [!DNL PostgreSQL database] , saisissez la valeur de l’hôte trouvé dans la section [!UICONTROL Credentials] de Query Service. Pour la production, ajoutez le port `:80` à la fin de la chaîne hôte. Par exemple : `made-up.platform-query.adobe.io:80`.
+Dans le champ **[!DNL Server]** de la boîte de dialogue [!DNL PostgreSQL database] , saisissez la valeur de l’hôte trouvé dans la section Query Service [!UICONTROL Informations d’identification]. Pour la production, ajoutez le port `:80` à la fin de la chaîne hôte. Par exemple : `made-up.platform-query.adobe.io:80`.
 
 Le champ **[!DNL Database]** peut être « all » ou un nom de table de jeu de données. Par exemple : `prod:all`.
 

@@ -44,7 +44,7 @@ Vous trouverez ci-dessous un tableau décrivant les objets marketing pris en cha
 
 {style="table-layout:auto"}
 
-## Conditions préalables requises {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Lisez les sections ci-dessous pour connaître les conditions préalables à la configuration que vous devez remplir avant de pouvoir connecter votre source à Experience Platform.
 

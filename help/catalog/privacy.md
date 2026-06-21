@@ -17,7 +17,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1462
+source-wordcount: 1467
 ht-degree: 67%
 
 ---
@@ -72,7 +72,7 @@ Il existe deux méthodes pour ajouter un descripteur dʼidentité à un schéma 
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans l’interface utilisateur [!DNL Experience Platform], l’espace de travail **[!UICONTROL Schemas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur dʼidentité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ dʼidentité](../xdm/tutorials/create-schema-ui.md#identity-field) dans le tutoriel de [!DNL Schema Editor].
+Dans l’interface utilisateur [!DNL Experience Platform], l’espace de travail **[!UICONTROL Schémas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur dʼidentité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ dʼidentité](../xdm/tutorials/create-schema-ui.md#identity-field) dans le tutoriel de [!DNL Schema Editor].
 
 Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs dʼidentité, vous pouvez passer à la section suivante sur lʼ[envoi de demandes dʼaccès à des informations personnelles](#submit).
 
@@ -158,7 +158,7 @@ La section suivante décrit comment effectuer des demandes d’accès à des inf
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL AEP Data Lake]** sous **[!UICONTROL Products]** afin de traiter les tâches pour les données stockées dans le lac de données.
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans le lac de données.
 
 ![Image montrant le produit de lac de données sélectionné dans la boîte de dialogue de création de demande d’accès à des informations personnelles](./images/privacy/product-value.png)
 

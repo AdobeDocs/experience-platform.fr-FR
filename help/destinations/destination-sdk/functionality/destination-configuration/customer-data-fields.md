@@ -16,7 +16,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1737
+source-wordcount: 1757
 ht-degree: 65%
 
 ---
@@ -74,7 +74,7 @@ Pendant la création de vos propres champs de données client, vous pouvez utili
 | `enum` | Chaîne | Facultatif | Rend le champ personnalisé sous forme de menu déroulant et répertorie les options disponibles pour l’utilisateur. |
 | `default` | Chaîne | Facultatif | Définit la valeur par défaut d’une liste `enum`. |
 | `hidden` | Booléen | Facultatif | Indique si le champ de données client s’affiche ou non dans l’interface utilisateur. |
-| `unique` | Booléen | Facultatif | Utilisez ce paramètre quand vous devez créer un champ de données client dont la valeur doit être unique pour tous les flux de données de destination configurés par l’organisation d’un utilisateur. Par exemple, le champ **[!UICONTROL Integration alias]** dans la destination [Custom Personalization](../../../catalog/personalization/custom-personalization.md) doit être unique, ce qui signifie que deux flux de données distincts vers cette destination ne peuvent pas avoir la même valeur pour ce champ. |
+| `unique` | Booléen | Facultatif | Utilisez ce paramètre quand vous devez créer un champ de données client dont la valeur doit être unique pour tous les flux de données de destination configurés par l’organisation d’un utilisateur. Par exemple, le champ **[!UICONTROL Alias d’intégration]** dans la destination [Personalization personnalisé](../../../catalog/personalization/custom-personalization.md) doit être unique, ce qui signifie que deux flux de données distincts vers cette destination ne peuvent pas avoir la même valeur pour ce champ. |
 | `readOnly` | Booléen | Facultatif | Indique si le client peut modifier la valeur du champ ou non. |
 
 {style="table-layout:auto"}
@@ -115,17 +115,17 @@ L’expérience de l’interface utilisateur qui en résulte est affichée dans 
 
 ## Noms et descriptions des connexions de destination {#names-description}
 
-Lors de la création d’une destination, Destination SDK ajoute automatiquement les champs **[!UICONTROL Name]** et **[!UICONTROL Description]** à l’écran de connexion de la destination dans l’interface utilisateur d’Experience Platform. Comme vous pouvez le voir dans l’exemple ci-dessus, les champs **[!UICONTROL Name]** et **[!UICONTROL Description]** sont rendus dans l’interface utilisateur sans être inclus dans la configuration des champs de données client.
+Lors de la création d’une destination, Destination SDK ajoute automatiquement les champs **[!UICONTROL Nom]** et **[!UICONTROL Description]** à l’écran de connexion de la destination dans l’interface utilisateur d’Experience Platform. Comme vous pouvez le voir dans l’exemple ci-dessus, les champs **[!UICONTROL Nom]** et **[!UICONTROL Description]** sont générés dans l’interface utilisateur sans être inclus dans la configuration des champs de données client.
 
 >[!IMPORTANT]
 >
->Si vous ajoutez des champs **[!UICONTROL Name]** et **[!UICONTROL Description]** dans la configuration des champs de données client, ils seront visibles deux fois dans l’interface utilisateur.
+>Si vous ajoutez les champs **[!UICONTROL Nom]** et **[!UICONTROL Description]** dans la configuration des champs de données client, ils seront visibles deux fois dans l’interface utilisateur.
 
 ## Classement des champs de données client {#ordering}
 
 L’ordre dans lequel vous ajoutez les champs de données client dans la configuration de destination est reflété dans l’interface utilisateur d’Experience Platform.
 
-Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, avec les options affichées dans l’ordre **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
+Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur : les options s’affichent dans l’ordre **[!UICONTROL Nom]**, **[!UICONTROL Description]**, **[!UICONTROL Nom du compartiment]**, **[!UICONTROL Chemin du dossier]**, **[!UICONTROL Type de fichier]**, **[!UICONTROL Format de compression]**.
 
 ```json
 "customerDataFields":[
@@ -187,7 +187,7 @@ Par exemple, la configuration ci-dessous est reflétée en conséquence dans l�
 
 Vous pouvez regrouper plusieurs champs de données client dans une seule section. Pendant la configuration de la connexion à la destination dans l’interface utilisateur, les utilisateurs peuvent voir et bénéficier d’un regroupement visuel par champs similaires.
 
-Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les champs de données client de votre choix dans un objet `properties`, comme illustré dans l’image ci-dessous, où l’**[!UICONTROL CSV Options]** de regroupement est mise en surbrillance.
+Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les champs de données client de votre choix dans un objet `properties`, comme illustré dans l’image ci-dessous, où le regroupement **[!UICONTROL Options CSV]** est mis en surbrillance.
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[

@@ -33,8 +33,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2483
-ht-degree: 83%
+source-wordcount: 2495
+ht-degree: 80%
 
 ---
 
@@ -46,9 +46,9 @@ Cette référence vous permet d’obtenir plus d’informations sur la configura
 
 Cette section fournit des informations sur les options disponibles lors de la configuration de l’extension Adobe Analytics.
 
-Si l’extension Adobe Analytics n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Adobe Analytics et cliquez sur  **[!UICONTROL Install]**.
+Si l’extension Adobe Analytics n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe Analytics et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet Extensions, survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet Extensions , placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -136,7 +136,7 @@ Sélectionnez une option dans la section General (Général) de la page de confi
 
 Permet d’activer ou de désactiver le suivi selon le cookie de confidentialité de l’UE.
 
-Lorsque vous activez la case à cocher Conformité UE, le champ [!UICONTROL Tracking Cookie Name] s’affiche. Le cookie de suivi remplace le nom du cookie de suivi par défaut. Vous pouvez personnaliser le nom utilisé par les balises pour effectuer le suivi de votre statut dʼexclusion pour la réception dʼautres cookies.
+Lorsque vous activez la case à cocher Conformité UE, le champ [!UICONTROL Nom du cookie de suivi] s’affiche. Le cookie de suivi remplace le nom du cookie de suivi par défaut. Vous pouvez personnaliser le nom utilisé par les balises pour effectuer le suivi de votre statut dʼexclusion pour la réception dʼautres cookies.
 
 Lorsqu’une page est chargée, le système vérifie si un cookie appelé sat\_track est défini (ou le nom du cookie personnalisé spécifié dans la page Edit Property (Modifier une propriété)). Prenez en compte les points suivants :
 
@@ -159,8 +159,8 @@ _satellite.cookie.set("sat_track", "true");
 
 Détermine le mode d’encodage de la demande d’image. Si votre mise en œuvre ou votre site utilise des caractères non ASCII, il est important de définir le jeu de caractères ici. Vous pouvez sélectionner un jeu de caractères prédéfini ou spécifier un jeu de caractères personnalisé. Adobe recommande d’utiliser le même codage de caractères que sur votre site. En règle générale, cette valeur est UTF-8.
 
-Un jeu de caractères peut être défini dans un code personnalisé Analytics à l’aide de la variable `s.charSet`.
-Pour plus d’informations sur les jeux de caractères, consultez la [documentation charSet](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=fr).
+Le jeu de caractères peut être défini dans le code personnalisé Analytics à l’aide de la variable `s.charSet`.
+Pour plus d’informations sur les jeux de caractères, consultez la documentation de [charSet](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=fr).
 
 ### Currency Code (Code de devise)
 
@@ -336,7 +336,7 @@ Définissez une ou plusieurs [eVars](https://experienceleague.adobe.com/docs/ana
 1. Indiquez si vous souhaitez définir l’eVar comme valeur (Set As) ou copier une autre eVar (Duplicate From).
 1. Fournissez une valeur à définir, ou sélectionnez l’eVar à dupliquer.
 1. (Facultatif) Cliquez sur Ajouter une eVar pour définir d’autres eVars.
-1. Sélectionner **[!UICONTROL Keep Changes]**.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 #### Props
 
@@ -345,8 +345,8 @@ Définissez une ou plusieurs [props](https://experienceleague.adobe.com/docs/ana
 1. Sélectionnez une prop dans la liste déroulante.
 1. Indiquez si vous souhaitez définir la prop comme valeur (Set As) ou copier une autre eVar (Duplicate From).
 1. Fournissez une valeur à définir, ou sélectionnez l’eVar dont vous souhaitez dupliquer la prop.
-1. (Facultatif) Cliquez sur **[!UICONTROL Add prop]** pour définir d’autres props.
-1. Sélectionner **[!UICONTROL Keep Changes]**.
+1. (Facultatif) Sélectionnez **[!UICONTROL Ajouter une prop]** pour définir d’autres props.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 #### Événements
 
@@ -354,8 +354,8 @@ Définissez un ou plusieurs [événements](https://experienceleague.adobe.com/do
 
 1. Sélectionnez un événement dans la liste déroulante.
 1. (Facultatif) Sélectionnez ou spécifiez un élément de données utilisé pour la [sérialisation des événements](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=fr).
-1. (Facultatif) Cliquez sur **[!UICONTROL Add event]** pour définir d’autres événements.
-1. Sélectionner **[!UICONTROL Keep Changes]**.
+1. (Facultatif) Sélectionnez **[!UICONTROL Ajouter un événement]** pour définir d’autres événements.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 >[!TAB Vue JSON]
 
@@ -386,7 +386,7 @@ Si vous le souhaitez, configurez des hiérarchies supplémentaires.
 
 #### Nom de la page
 
-Cette valeur fait référence au nom d’une page donnée et correspond à la variable [&#128279;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=fr) dans Analytics.`pageName`
+Cette valeur fait référence au nom d’une page donnée et correspond à la variable [&#128279;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) dans Analytics.`pageName`
 
 >[!IMPORTANT]
 >
@@ -423,9 +423,9 @@ Utilisez l’éditeur pour spécifier le code personnalisé de votre page.
 
 **Settings** (Paramètres)
 
-1. Sélectionner **[!UICONTROL Open Editor]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 ### Send Beacon (Envoyer la balise) {#send-beacon}
 
@@ -451,7 +451,7 @@ Sélectionnez cette option si vous ne souhaitez pas incrémenter une page vue.
    * Custom Link (Lien personnalisé) : spécifiez le nom du lien.
    * Download Link (Lien de téléchargement) : spécifiez un nom de fichier.
    * Exit Link (Lien de sortie) : spécifiez l’URL de destination.
-1. Sélectionner **[!UICONTROL Keep Changes]**.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 ### Effacer des variables {#clear-variables}
 

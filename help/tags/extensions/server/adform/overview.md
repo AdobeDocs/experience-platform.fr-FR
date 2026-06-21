@@ -37,7 +37,7 @@ ht-degree: 3%
 
 L’extension [[!DNL Adform]](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) permet le transfert d’événement côté serveur dans Adobe Experience Platform, ce qui permet aux annonceurs, aux agences de médias et aux éditeurs de synchroniser directement les données avec le système ID Fusion d’Adform. Cette intégration permet aux entreprises d’impliquer les audiences sur plusieurs canaux, d’améliorer les performances des campagnes et de fournir des solutions personnalisées pour affiner les stratégies de publicité numérique et maximiser l’efficacité des dépenses publicitaires.
 
-Contrairement au suivi côté client traditionnel, cette extension rend inutiles les cookies tiers en utilisant des identifiants propriétaires, en particulier l’ECID (Experience Cloud ID), qui est synchronisé avec Adform. Cela permet un reciblage transparent des audiences sans avoir à déployer JavaScript côté client.
+Contrairement au suivi côté client traditionnel, cette extension rend inutiles les cookies tiers en utilisant des identifiants propriétaires, en particulier l’ECID (Experience Cloud ID), qui est synchronisé avec Adobe. Cela permet un reciblage transparent des audiences sans avoir à déployer JavaScript côté client.
 
 Ce guide explique comment installer, configurer et déployer l’extension pour transférer des événements des propriétés numériques d’une marque via Adobe Edge Network vers Adform afin de permettre un reciblage transparent des visiteurs.
 

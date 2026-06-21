@@ -15,8 +15,8 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1105
-ht-degree: 88%
+source-wordcount: 1114
+ht-degree: 87%
 
 ---
 
@@ -118,7 +118,7 @@ Pour configurer l’authentification de type porteur pour la destination, config
 
 ## Authentification OAuth 2 {#oauth2}
 
-Les utilisateurs sélectionnent **[!UICONTROL Connect to destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point d’entrée de destination, consultez la page [Authentification OAuth 2 de Destination SDK](oauth2-authorization.md).
+Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point d’entrée de destination, consultez la page [Authentification OAuth 2 de Destination SDK](oauth2-authorization.md).
 
 ![Rendu de l’interface utilisateur avec authentification OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -226,7 +226,7 @@ Pour configurer l’authentification SFTP avec la clé SSH pour la destination, 
 
 L’authentification [!DNL Google Cloud Storage] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
-Lorsque vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leurs [!UICONTROL access key ID] et [!UICONTROL secret access key] [!DNL Google Cloud Storage].
+Lorsque vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leur [!DNL Google Cloud Storage] [!UICONTROL identifiant de clé d’accès] et [!UICONTROL clé d’accès secrète].
 
 ![Rendu de l’interface utilisateur avec l’authentification Google Cloud Storage](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 

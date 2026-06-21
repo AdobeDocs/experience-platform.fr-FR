@@ -20,8 +20,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1280
-ht-degree: 56%
+source-wordcount: 1295
+ht-degree: 55%
 
 ---
 
@@ -57,25 +57,25 @@ La sélection d’une méthode de fusion vous permet de spécifier les attributs
 
 Deux méthodes de fusion sont disponibles pour les politiques de fusion. Chacune de ces méthodes est résumée ci-dessous, et des informations supplémentaires sont fournies dans les sections suivantes :
 
-* **[!UICONTROL Dataset precedence]:** En cas de conflit, donnez la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. En savoir plus sur la méthode de fusion [priorité du jeu de données](#dataset-precedence).
-* **[!UICONTROL Timestamp ordered]:** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [horodatage ordonné](#timestamp-ordered)
+* **[!UICONTROL Priorité du jeu de données] :** en cas de conflit, donnez la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. En savoir plus sur la méthode de fusion [priorité du jeu de données](#dataset-precedence).
+* **[!UICONTROL Horodatage ordonné]:** En cas de conflit, la priorité est donnée au fragment de profil qui a été mis à jour le plus récemment. En savoir plus sur la méthode de fusion [horodatage ordonné](#timestamp-ordered)
 
 ### Priorité du jeu de données {#dataset-precedence}
 
-Lorsque **[!UICONTROL Dataset precedence]** est sélectionné comme méthode de fusion pour une politique de fusion, vous pouvez donner la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Par exemple, un cas d’utilisation serait la présence d’informations de votre organisation dans un jeu de données que vous préférez ou dont les données sont davantage de confiance par rapport à un autre jeu de données.
+Lorsque **[!UICONTROL Priorité du jeu de données]** est sélectionnée comme méthode de fusion pour une politique de fusion, vous pouvez donner la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Par exemple, un cas d’utilisation serait la présence d’informations de votre organisation dans un jeu de données que vous préférez ou dont les données sont davantage de confiance par rapport à un autre jeu de données.
 
-Pour créer une politique de fusion à l’aide de **[!UICONTROL Dataset precedence]**, vous devez sélectionner les jeux de données Profile et ExperienceEvent inclus, puis classer manuellement les jeux de données Profile par priorité. Une fois les jeux de données sélectionnés et triés, le jeu de données supérieur se verra accorder la priorité la plus élevée, le deuxième jeu de données sera le deuxième plus élevé, etc.
+Pour créer une politique de fusion à l’aide de la **[!UICONTROL priorité du jeu de données]**, vous devez sélectionner les jeux de données Profile et ExperienceEvent inclus, puis classer manuellement les jeux de données Profile par priorité. Une fois les jeux de données sélectionnés et triés, le jeu de données supérieur se verra accorder la priorité la plus élevée, le deuxième jeu de données sera le deuxième plus élevé, etc.
 
 ### Horodatage ordonné {#timestamp-ordered}
 
-Lorsque des enregistrements de profil sont intégrés dans Experience Platform, un horodatage système est obtenu au moment de l’ingestion et ajouté à l’enregistrement. Lorsque **[!UICONTROL Timestamp ordered]** est sélectionné comme méthode de fusion pour une politique de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans Experience Platform.
+Lorsque des enregistrements de profil sont intégrés dans Experience Platform, un horodatage système est obtenu au moment de l’ingestion et ajouté à l’enregistrement. Lorsque l’option **[!UICONTROL Horodatage ordonné]** est sélectionnée comme méthode de fusion pour une politique de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans Experience Platform.
 
 ## Combinaison d’identités {#id-stitching}
 
-La combinaison d’identités ([!UICONTROL ID stitching]) est le processus d’identification de fragments de données et de leur combinaison afin de former un enregistrement de profil complet. Pour illustrer les différents comportements de combinaison, imaginez un seul client qui interagit avec une marque à l’aide de deux adresses électroniques différentes.
+La combinaison d’identités ([!UICONTROL combinaison d’identités]) est le processus d’identification de fragments de données et de leur combinaison afin de former un enregistrement de profil complet. Pour illustrer les différents comportements de combinaison, imaginez un seul client qui interagit avec une marque à l’aide de deux adresses électroniques différentes.
 
-* **[!UICONTROL None]:** lorsque cette option est sélectionnée, les identifiants ne sont pas regroupés. Lorsqu’il y a segmentation, les identités pouvant appartenir à la même personne ne sont pas regroupées et la segmentation ne prend en compte que les attributs associés à chaque identifiant individuel lorsque vous déterminez si un client est admissible pour l’adhésion à l’audience. Cela peut se traduire par l’existence de plusieurs profils pour un seul client et par la qualification de chaque profil pour différentes audiences, entraînant l’envoi de plusieurs messages marketing à un même client.
-* **[!UICONTROL Private graph]:** lorsque le graphique privé est sélectionné, les différentes identités liées à la même personne sont regroupées. Le client ou la cliente dispose ainsi d’un profil unique, ce qui permet à la segmentation de prendre en compte plusieurs attributs provenant de plusieurs identités associées lors de la détermination de la qualification de segment. Dans ce scénario, le client est susceptible d’avoir un seul profil, de se qualifier pour une audience en fonction de la combinaison d’attributs entre les identités et de ne recevoir qu’un seul message marketing.
+* **[!UICONTROL Aucun] :** lorsque cette option est sélectionnée, les identifiants ne sont pas regroupés. Lorsqu’il y a segmentation, les identités pouvant appartenir à la même personne ne sont pas regroupées et la segmentation ne prend en compte que les attributs associés à chaque identifiant individuel lorsque vous déterminez si un client est admissible pour l’adhésion à l’audience. Cela peut se traduire par l’existence de plusieurs profils pour un seul client et par la qualification de chaque profil pour différentes audiences, entraînant l’envoi de plusieurs messages marketing à un même client.
+* **[!UICONTROL Graphique privé] :** lorsque le graphique privé est sélectionné, les différentes identités liées à la même personne sont regroupées. Le client ou la cliente dispose ainsi d’un profil unique, ce qui permet à la segmentation de prendre en compte plusieurs attributs provenant de plusieurs identités associées lors de la détermination de la qualification de segment. Dans ce scénario, le client est susceptible d’avoir un seul profil, de se qualifier pour une audience en fonction de la combinaison d’attributs entre les identités et de ne recevoir qu’un seul message marketing.
 
 Pour en savoir plus sur les identités et leur rôle dans la génération de profils et d’audiences, commencez par lire la [présentation d’Identity Service](../../identity-service/home.md).
 

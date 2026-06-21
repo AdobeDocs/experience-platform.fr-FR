@@ -13,8 +13,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 566
-ht-degree: 36%
+source-wordcount: 577
+ht-degree: 35%
 
 ---
 
@@ -31,11 +31,11 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [[!DNL Sources]](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de réussir la connexion à une connexion **[!UICONTROL eCommerce]** à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir la connexion à une connexion **[!UICONTROL eCommerce]** à l’aide de l’API [!DNL Flow Service].
 
 ### Obtention d’un identifiant de connexion
 
-Pour explorer votre connexion **[!UICONTROL eCommerce]** à l’aide d’API [!DNL Experience Platform], vous devez posséder un identifiant de connexion valide. Si vous ne disposez pas déjà d’une connexion pour la connexion **[!UICONTROL eCommerce]** que vous souhaitez utiliser, vous pouvez en créer une à l’aide du tutoriel suivant :
+Pour explorer votre connexion **[!UICONTROL eCommerce]** à l’aide des API [!DNL Experience Platform], vous devez posséder un identifiant de connexion valide. Si vous ne disposez pas déjà d’une connexion pour la connexion **[!UICONTROL eCommerce]** que vous souhaitez utiliser, vous pouvez en créer une à l’aide du tutoriel suivant :
 
 * [Shopify](../create/ecommerce/shopify.md)
 
@@ -71,7 +71,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONNECTION_ID}` | Identifiant de connexion **[!UICONTROL eCommerce]**. |
+| `{CONNECTION_ID}` | Votre identifiant de connexion **[!UICONTROL eCommerce]**. |
 
 **Requête**
 

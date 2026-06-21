@@ -19,7 +19,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
 workflow-type: tm+mt
-source-wordcount: 1891
+source-wordcount: 1897
 ht-degree: 89%
 
 ---
@@ -125,7 +125,7 @@ L’espace de travail principal de [!DNL JupyterLab] vous permet d’organiser l
 
 ### Configuration du GPU et du serveur de mémoire en [!DNL Python]/R
 
-Dans [!DNL JupyterLab], sélectionnez l’icône d’engrenage dans le coin supérieur droit pour ouvrir la *configuration du serveur Notebook*. Vous pouvez activer le GPU et allouer la quantité de mémoire dont vous avez besoin à l’aide du curseur. La quantité de mémoire que vous pouvez allouer dépend de la quantité de mémoire configurée par votre organisation. Sélectionnez **[!UICONTROL Update configs]** à enregistrer.
+Dans [!DNL JupyterLab], sélectionnez l’icône d’engrenage dans le coin supérieur droit pour ouvrir la *configuration du serveur Notebook*. Vous pouvez activer le GPU et allouer la quantité de mémoire dont vous avez besoin à l’aide du curseur. La quantité de mémoire que vous pouvez allouer dépend de la quantité de mémoire configurée par votre organisation. Sélectionnez **[!UICONTROL Mettre à jour les configurations]** pour enregistrer.
 
 >[!NOTE]
 >
@@ -135,9 +135,9 @@ Dans [!DNL JupyterLab], sélectionnez l’icône d’engrenage dans le coin sup�
 
 ### Mettre fin à [!DNL JupyterLab] et redémarrer
 
-Dans [!DNL JupyterLab], vous pouvez mettre fin à votre session pour empêcher l’utilisation d’autres ressources. Commencez par sélectionner l’**icône d’alimentation** ![icône d’alimentation](/help/images/icons/power.png), puis sélectionnez **[!UICONTROL Shut Down]** dans la fenêtre contextuelle qui s’affiche pour mettre fin à votre session. Les sessions Notebook se terminent automatiquement après 12 heures d’absence d’activité.
+Dans [!DNL JupyterLab], vous pouvez mettre fin à votre session pour empêcher l’utilisation d’autres ressources. Commencez par sélectionner l’**icône d’alimentation** ![icône d’alimentation](/help/images/icons/power.png), puis sélectionnez **[!UICONTROL Arrêter]** dans la fenêtre contextuelle qui s’affiche pour mettre fin à votre session. Les sessions Notebook se terminent automatiquement après 12 heures d’absence d’activité.
 
-Pour redémarrer [!DNL JupyterLab], sélectionnez l’icône **redémarrage** ![icône de redémarrage](/help/images/icons/restart.png) située directement à gauche de l’icône d’alimentation, puis sélectionnez **[!UICONTROL Restart]** dans la fenêtre contextuelle qui s’affiche.
+Pour [!DNL JupyterLab] redémarrer, sélectionnez l’icône **redémarrer** ![icône de redémarrage](/help/images/icons/restart.png) située directement à gauche de l’icône d’alimentation, puis sélectionnez **[!UICONTROL Redémarrer]** dans la fenêtre contextuelle qui s’affiche.
 
 ![mettre fin à jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

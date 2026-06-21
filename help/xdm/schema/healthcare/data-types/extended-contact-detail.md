@@ -11,25 +11,25 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 148
-ht-degree: 5%
+source-wordcount: 169
+ht-degree: 7%
 
 ---
 
-# Type de données [!UICONTROL Extended Contact Detail]
+# Type de données [!UICONTROL Détails du contact étendu]
 
-[!UICONTROL Extended Contact Detail] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les informations d’un contact étendu. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Détails du contact étendu] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les informations d’un contact étendu. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure de type de données Détails du contact étendu](../../../images/healthcare/data-types/extended-contact-detail.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Address] | `address` | [[!UICONTROL Address]](../data-types/address.md) | Adresse du contact. |
-| [!UICONTROL Name] | `name` | Tableau de [[!UICONTROL Human Name]](../data-types/human-name.md) | Nom de la ou des personnes à contacter. |
-| [!UICONTROL Organization] | `organization` | [[!UICONTROL Reference]](../data-types/reference.md) | Organisation qui gère/surveille les coordonnées. |
-| [!UICONTROL Period] | `period` | [[!UICONTROL Period]](../data-types/period.md) | Période pendant laquelle le contact est ou était valide pour être utilisé. |
-| [!UICONTROL Purpose] | `purpose` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Type de contact. |
-| [!UICONTROL Telecom] | `telecom` | Tableau de [[!UICONTROL Contact Point]](../data-types/contact-point.md) | Les coordonnées. |
+| [!UICONTROL Adresse] | `address` | [[!UICONTROL Adresse]](../data-types/address.md) | Adresse du contact. |
+| [!UICONTROL Nom] | `name` | Tableau de [[!UICONTROL nom humain]](../data-types/human-name.md) | Nom de la ou des personnes à contacter. |
+| [!UICONTROL Organisation] | `organization` | [[!UICONTROL Référence]](../data-types/reference.md) | Organisation qui gère/surveille les coordonnées. |
+| [!UICONTROL Période] | `period` | [[!UICONTROL Période]](../data-types/period.md) | Période pendant laquelle le contact est ou était valide pour être utilisé. |
+| [!UICONTROL Rôle] | `purpose` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Type de contact. |
+| [!UICONTROL Télécom] | `telecom` | Tableau de [[!UICONTROL points de contact]](../data-types/contact-point.md) | Les coordonnées. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

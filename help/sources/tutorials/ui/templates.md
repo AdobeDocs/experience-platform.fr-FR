@@ -12,8 +12,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2304
-ht-degree: 35%
+source-wordcount: 2347
+ht-degree: 34%
 
 ---
 
@@ -60,11 +60,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >abstract="Sélectionnez le type d’entreprise approprié à votre cas d’utilisation. Votre accès peut varier en fonction de votre compte d’abonnement Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr" text="Présentation de Real-Time CDP"
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et consulter le catalogue des sources disponibles dans Experience Platform.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et consulter un catalogue de sources disponibles dans Experience Platform.
 
-Utilisez le menu *[!UICONTROL Categories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique à partir du catalogue.
+Utilisez le menu *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique à partir du catalogue.
 
-Accédez à la catégorie [!UICONTROL Adobe applications] pour afficher la carte source [!DNL Marketo Engage], puis sélectionnez [!UICONTROL Add data] pour commencer.
+Accédez à la catégorie [!UICONTROL Applications &#x200B;] pour afficher la carte source [!DNL Marketo Engage], puis sélectionnez [!UICONTROL Ajouter des données] pour commencer.
 
 ![Un catalogue de l’espace de travail des sources avec la source de Marketo Engage mise en surbrillance.](../../images/tutorials/templates/catalog.png)
 
@@ -79,7 +79,7 @@ Une fenêtre pop-up s’affiche, vous permettant de parcourir les modèles ou d�
 >Lors de l’utilisation de modèles avec des schémas relationnels, les ressources générées automatiquement incluent les champs clé primaire, identifiant de version et identifiant d’horodatage obligatoires.\
 >Pour plus d’informations, consultez la présentation de Data Mirror [&#128279;](../../../xdm/data-mirror/overview.md) ainsi que la [référence technique des schémas relationnels](../../../xdm/schema/relational.md).
 
-Pour utiliser des ressources générées automatiquement, sélectionnez **[!UICONTROL Browse templates]** puis **[!UICONTROL Select]**.
+Pour utiliser des ressources générées automatiquement, sélectionnez **[!UICONTROL Parcourir les modèles]** puis sélectionnez **[!UICONTROL Sélectionner]**.
 
 ![Fenêtre pop-up contenant des options permettant de parcourir les modèles ou d’utiliser des ressources existantes.](../../images/tutorials/templates/browse-templates.png)
 
@@ -91,13 +91,13 @@ L’étape d’authentification s’affiche et vous invite à créer un compte o
 
 >[!TAB Utiliser un compte existant]
 
-Pour utiliser un compte existant, sélectionnez [!UICONTROL Existing account], puis sélectionnez le compte à utiliser dans la liste qui s’affiche.
+Pour utiliser un compte existant, sélectionnez [!UICONTROL Compte existant] puis sélectionnez le compte à utiliser dans la liste qui s’affiche.
 
 ![La page de sélection d’un compte existant avec la liste des comptes existants auxquels vous pouvez accéder.](../../images/tutorials/templates/existing-account.png)
 
 >[!TAB Créer un compte]
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez les détails de connexion source et les informations d’authentification du compte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et attendez que la nouvelle connexion s’établisse.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez les détails de connexion source et les informations d’authentification du compte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps d’établir la nouvelle connexion.
 
 ![La page d’authentification d’un nouveau compte avec les détails de connexion source et les informations d’authentification du compte.](../../images/tutorials/templates/new-account.png)
 
@@ -191,11 +191,11 @@ Selon le type d’entreprise que vous avez sélectionné, une liste de modèles 
 
 ![Une liste de modèles avec l’icône d’aperçu mise en surbrillance.](../../images/tutorials/templates/templates.png)
 
-La fenêtre d’aperçu s’affiche, vous permettant d’explorer et d’examiner des données d’exemple de votre modèle. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Got it]**.
+La fenêtre d’aperçu s’affiche, vous permettant d’explorer et d’examiner des données d’exemple de votre modèle. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Compris]**.
 
 ![La fenêtre d’aperçu des données d’exemple.](../../images/tutorials/templates/preview-sample-data.png)
 
-Sélectionnez ensuite dans la liste le modèle que vous souhaitez utiliser. Vous pouvez sélectionner plusieurs modèles et créer plusieurs flux de données à la fois. Cependant, un modèle ne peut être utilisé qu’une seule fois par compte. Une fois les modèles sélectionnés, sélectionnez **[!UICONTROL Finish]** et patientez quelques instants le temps que les ressources se génèrent.
+Sélectionnez ensuite dans la liste le modèle que vous souhaitez utiliser. Vous pouvez sélectionner plusieurs modèles et créer plusieurs flux de données à la fois. Cependant, un modèle ne peut être utilisé qu’une seule fois par compte. Une fois les modèles sélectionnés, cliquez sur **[!UICONTROL Terminer]** et patientez quelques instants le temps que les ressources se génèrent.
 
 Si vous sélectionnez un ou des éléments partiels dans la liste des modèles disponibles, tous les schémas B2B et les espaces de noms d’identité seront quand même générés afin de garantir que les relations B2B entre les schémas sont correctement configurées.
 
@@ -217,7 +217,7 @@ Vous pouvez également définir la fréquence d’ingestion sur **Minute**, **He
 
 Au cours de cette étape, vous pouvez également activer le **renvoi** et définir une colonne pour l’ingestion incrémentielle des données. Le renvoi est utilisé pour ingérer des données historiques, tandis que la colonne que vous définissez pour l’ingestion incrémentielle permet de différencier les nouvelles données des données existantes.
 
-Une fois la configuration du planning d’ingestion terminée, sélectionnez **[!UICONTROL Finish]**.
+Une fois la configuration du planning d’ingestion terminée, sélectionnez **[!UICONTROL Terminer]**.
 
 ![Interface de planification pour les modèles Dynamics et Salesforce avec renvoi activé.](../../images/tutorials/templates/backfill.png)
 
@@ -228,17 +228,17 @@ Une fois la configuration du planning d’ingestion terminée, sélectionnez **[
 >title="Vérifier vos ressources générées automatiquement"
 >abstract="La génération de toutes les ressources peut prendre jusqu’à cinq minutes. Si vous choisissez de quitter la page, une notification vous sera envoyée pour revenir une fois les ressources terminées. Vous pouvez vérifier les ressources une fois qu’elles ont été générées et effectuer des configurations supplémentaires dans votre flux de données à tout moment."
 
-La page [!UICONTROL Review template assets] affiche les ressources générées automatiquement dans le cadre de votre modèle. Dans cette page, vous pouvez afficher les schémas, les jeux de données, les espaces de noms d’identité et les flux de données générés automatiquement associés à votre connexion source. La génération de toutes les ressources peut prendre jusqu’à cinq minutes. Si vous choisissez de quitter la page, une notification vous sera envoyée pour revenir une fois les ressources terminées. Vous pouvez vérifier les ressources une fois qu’elles ont été générées et effectuer des configurations supplémentaires dans votre flux de données à tout moment.
+La page [!UICONTROL &#x200B; Vérifier les ressources de modèle &#x200B;] affiche les ressources générées automatiquement dans le cadre de votre modèle. Dans cette page, vous pouvez afficher les schémas, les jeux de données, les espaces de noms d’identité et les flux de données générés automatiquement associés à votre connexion source. La génération de toutes les ressources peut prendre jusqu’à cinq minutes. Si vous choisissez de quitter la page, une notification vous sera envoyée pour revenir une fois les ressources terminées. Vous pouvez vérifier les ressources une fois qu’elles ont été générées et effectuer des configurations supplémentaires dans votre flux de données à tout moment.
 
-Par défaut, les flux de données générés automatiquement sont définis sur l’état de brouillon pour permettre une personnalisation supplémentaire des configurations, telles que les règles de mappage ou les fréquences planifiées. Sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Preview mappings]** pour afficher les jeux de mappages créés pour votre brouillon de flux de données.
+Par défaut, les flux de données générés automatiquement sont définis sur l’état de brouillon pour permettre une personnalisation supplémentaire des configurations, telles que les règles de mappage ou les fréquences planifiées. Sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Prévisualiser les mappages]** pour afficher les jeux de mappages créés pour votre brouillon de flux de données.
 
 ![Une fenêtre déroulante avec l’option Prévisualiser les mappages sélectionnée.](../../images/tutorials/templates/preview.png)
 
-Une page d’aperçu s’affiche, vous permettant d’examiner la relation de mappage entre vos champs de données sources et vos champs de schéma cibles. Une fois que vous avez consulté les mappages de votre flux de données. Sélectionner un **[!UICONTROL Got it.]**
+Une page d’aperçu s’affiche, vous permettant d’examiner la relation de mappage entre vos champs de données sources et vos champs de schéma cibles. Une fois que vous avez consulté les mappages de votre flux de données. Sélectionnez **[!UICONTROL J’ai compris.]**
 
 ![La fenêtre de prévisualisation du mappage.](../../images/tutorials/templates/preview-mappings.png)
 
-Vous pouvez mettre à jour vos flux de données à tout moment après leur exécution. Sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Update dataflow]**. Vous accédez à la page du processus des sources dans laquelle vous pouvez mettre à jour les détails de votre flux de données, y compris les paramètres d’ingestion partielle, les diagnostics d’erreur et les notifications d’alerte, ainsi que le mappage de votre flux de données.
+Vous pouvez mettre à jour vos flux de données à tout moment après leur exécution. Sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Mettre à jour le flux de données]**. Vous accédez à la page du processus des sources dans laquelle vous pouvez mettre à jour les détails de votre flux de données, y compris les paramètres d’ingestion partielle, les diagnostics d’erreur et les notifications d’alerte, ainsi que le mappage de votre flux de données.
 
 Vous pouvez utiliser la vue de l’éditeur de schémas pour mettre à jour votre schéma généré automatiquement. Consultez le guide sur l’[utilisation de l’éditeur de schéma](../../../xdm/tutorials/create-schema-ui.md) pour plus d’informations.
 
@@ -246,29 +246,29 @@ Vous pouvez utiliser la vue de l’éditeur de schémas pour mettre à jour votr
 
 >[!TIP]
 >
->Vous pouvez accéder à votre brouillon de flux de données via la page du catalogue [!UICONTROL Dataflows] dans l’espace de travail des sources. Sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur, puis sélectionnez dans la liste le flux de données à mettre à jour.
+>Vous pouvez accéder à votre brouillon de flux de données via la page de catalogue [!UICONTROL Flux de données] dans l’espace de travail des sources. Sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur, puis sélectionnez le flux de données à mettre à jour dans la liste.
 >
 >![Liste des flux de données existants dans le catalogue des flux de données de l’espace de travail des sources.](../../images/tutorials/templates/dataflows.png)
 
 ### Publier votre flux de données
 
-Démarrez le processus de publication en passant par le workflow des sources. Après avoir sélectionné [!UICONTROL Update dataflow], vous êtes dirigé(e) vers l’étape *[!UICONTROL Add data]* du workflow. Sélectionnez **[!UICONTROL Next]** pour continuer.
+Démarrez le processus de publication en passant par le workflow des sources. Après avoir sélectionné [!UICONTROL Mettre à jour le flux de données], vous passez à l’étape *[!UICONTROL Ajouter des données]* du workflow. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Étape d’ajout de données pour un brouillon de flux de données](../../images/tutorials/templates/continue-draft.png)
 
-Ensuite, confirmez les détails de votre flux de données et configurez les paramètres pour les diagnostics d’erreur, l’ingestion partielle et les notifications d’alerte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Ensuite, confirmez les détails de votre flux de données et configurez les paramètres pour les diagnostics d’erreur, l’ingestion partielle et les notifications d’alerte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Étape de détails du flux de données pour un brouillon de flux de données.](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->Vous pouvez sélectionner **[!UICONTROL Save as draft]** à tout moment pour arrêter et enregistrer les modifications que vous avez apportées à votre flux de données.
+>Vous pouvez sélectionner **[!UICONTROL Enregistrer en tant que brouillon]** à tout moment pour arrêter et enregistrer les modifications que vous avez apportées à votre flux de données.
 
 L’étape de mappage s’affiche. Au cours de cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation des données utilisées pour le mappage, consultez le [guide de l’interface utilisateur de la préparation des données](../../../data-prep/ui/mapping.md).
 
 ![Étape de mappage d’un brouillon de flux de données.](../../images/tutorials/templates/mapping.png)
 
-Enfin, passez en revue les détails de votre flux de données, puis sélectionnez **[!UICONTROL Save & ingest]** pour publier votre brouillon.
+Enfin, passez en revue les détails de votre flux de données, puis sélectionnez **[!UICONTROL Enregistrer et ingérer]** pour publier votre brouillon.
 
 ![Étape de révision d’un brouillon de flux de données.](../../images/tutorials/templates/review.png)
 

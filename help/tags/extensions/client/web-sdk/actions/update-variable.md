@@ -20,14 +20,14 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 263
+source-wordcount: 267
 ht-degree: 0%
 
 ---
 
 # Mettre à jour la variable
 
-L’action **[!UICONTROL Update variable]** vous permet d’apporter des modifications partielles ou incrémentielles à un [élément de données variable](../data-element-types.md#variable). Vous pouvez utiliser cette action pour créer un objet qui pourra ensuite être référencé dans une action [[!UICONTROL Send event]](send-event.md). Le remplissage d’éléments de données et leur affectation à des propriétés dans un objet XDM correspond à la plupart des cas d’utilisation. Cette action offre plus de flexibilité pour vous permettre de définir de manière conditionnelle des propriétés à différents éléments de données en fonction des conditions de règle.
+L’action **[!UICONTROL Mettre à jour la variable]** vous permet d’apporter des modifications partielles ou incrémentielles à un [élément de données de variable](../data-element-types.md#variable). Vous pouvez utiliser cette action pour créer un objet qui pourra ensuite être référencé dans une action [[!UICONTROL Envoyer l’événement]](send-event.md). Le remplissage d’éléments de données et leur affectation à des propriétés dans un objet XDM correspond à la plupart des cas d’utilisation. Cette action offre plus de flexibilité pour vous permettre de définir de manière conditionnelle des propriétés à différents éléments de données en fonction des conditions de règle.
 
 Avant d’utiliser cette action, vous devez déjà avoir créé un élément de données variable. Une fois que vous avez sélectionné un élément de données de variable à modifier, un éditeur s’affiche, vous permettant de définir tous les champs souhaités pour cette action.
 

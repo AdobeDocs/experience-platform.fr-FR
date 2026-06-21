@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;RGPD;rgpd;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;présentation;présentation;réglementation;réglementation;réglementations;réglementation;confidentialité;confidentialité;
 solution: Experience Platform
 title: Terminologie des règlements relatifs à la confidentialité
-description: Ce document fournit des définitions pour les termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
+description: Ce document fournit des définitions de termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 TQID: https://experienceleague.adobe.com/7Nm-1-rf4ovhgp61aYh2NoUEe5VreDU3cSmMMrG5sGU
 product_v2:
@@ -24,14 +24,14 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2823
+source-wordcount: 2790
 ht-degree: 1%
 
 ---
 
 # Terminologie des réglementations de confidentialité
 
-Ce document fournit des définitions pour les termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
+Ce document fournit des définitions de termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 
 ## A
 

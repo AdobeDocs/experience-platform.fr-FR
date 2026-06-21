@@ -20,7 +20,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Contacts {#contacts}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |  |
 | `address1_city` | `workAddress.city` |  |
@@ -104,7 +104,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Comptes {#accounts}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -141,7 +141,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Opportunités {#opportunities}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `name` | `opportunityName` |  |
 | `"Dynamics"` | `opportunityKey.sourceType` |  |
@@ -165,7 +165,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Rôles de contact d’opportunité {#opportunity-contact-roles}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -183,7 +183,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Campagnes {#campaigns}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |  |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -208,7 +208,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Liste marketing {#marketing-list}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
@@ -223,7 +223,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Personnes membres de la liste marketing {#marketing-list-members}
 
-| Champ source | Champ XDM cible | Remarques |
+| Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |

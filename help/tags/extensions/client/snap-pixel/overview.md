@@ -31,8 +31,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 634
-ht-degree: 1%
+source-wordcount: 658
+ht-degree: 0%
 
 ---
 
@@ -52,15 +52,15 @@ Il est recommandé d’utiliser [!DNL Snap Pixel] avec le [!DNL Snap Conversions
 
 ## Installation l’extension {#install}
 
-Pour installer l’extension [!DNL Snap Pixel], accédez à l’interface utilisateur de la collecte de données ou d’Experience Platform et sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
+Pour installer l’extension [!DNL Snap Pixel], accédez à l’interface utilisateur de la collecte de données ou d’Experience Platform et sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
 
-Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalog]** . Recherchez la carte [!UICONTROL Snap Pixel], puis sélectionnez **[!UICONTROL Install]**.
+Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Recherchez la carte [!UICONTROL Snap Pixel], puis sélectionnez **[!UICONTROL Installer]**.
 
-![Le bouton [!UICONTROL Install] sélectionné pour l’extension [!UICONTROL Snap Pixel] dans l’interface utilisateur de collecte de données.](./images/install.png)
+![Le bouton [!UICONTROL Installer] sélectionné pour l’extension [!UICONTROL Snap Pixel] dans l’interface utilisateur de la collecte de données.](./images/install.png)
 
 Dans la vue de configuration qui s’affiche, vous devez fournir l’identifiant de pixel que vous avez copié précédemment pour lier l’extension à votre compte. Vous pouvez coller l’identifiant directement dans l’entrée ou sélectionner un élément de données existant à la place.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Identifiant [!DNL Pixel] fourni en tant qu’élément de données dans la vue de configuration de l’extension.](./images/configure.png)
 
@@ -72,13 +72,13 @@ L’extension est installée et vous pouvez maintenant utiliser ses différentes
 
 À des fins de démonstration, cette section montre comment créer une règle qui envoie un événement d’achat à [!DNL Snap].
 
-Pour commencer, créez une règle de balise et définissez les conditions selon vos besoins. Lors de la configuration des actions de la règle, choisissez [!DNL Snap Pixel] comme extension, puis sélectionnez **[!UICONTROL Send Purchase Event]** comme type d’action.
+Pour commencer, créez une règle de balise et définissez les conditions selon vos besoins. Lors de la configuration des actions de la règle, choisissez [!DNL Snap Pixel] comme extension, puis sélectionnez **[!UICONTROL Envoyer l’événement d’achat]** comme type d’action.
 
-Une fois la configuration de l’action [!UICONTROL Send Purchase Event] terminée, sélectionnez **[!UICONTROL Keep Changes]** pour l’ajouter à la configuration de votre règle.
+Une fois la configuration de l’action [!UICONTROL Envoyer l’événement d’achat] terminée, sélectionnez **[!UICONTROL Conserver les modifications]** pour l’ajouter à la configuration des règles.
 
-![Type d’action [!UICONTROL Send Purchase Event] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](./images/action-type.png)
+![Type d’action [!UICONTROL &#x200B; Envoyer l’événement d’achat &#x200B;] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](./images/action-type.png)
 
-Lorsque vous êtes satisfait(e) de la configuration globale des règles, sélectionnez **[!UICONTROL Save to Library]**.
+Lorsque la configuration globale de la règle vous convient, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 
 Pour appliquer vos mises à jour, publiez une nouvelle balise [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
 

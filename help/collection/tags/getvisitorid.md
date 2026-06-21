@@ -1,6 +1,6 @@
 ---
 title: getVisitorId
-description: Récupérez l’instance d’extension de balise de service de l’identifiant visiteur Experience Cloud.
+description: Récupérez l’instance d’extension de balise du service d’identifiant visiteur Experience Cloud.
 exl-id: ecfd4325-1881-47a9-bc3c-abfc780ce52f
 TQID: https://experienceleague.adobe.com/QphQk2-krztWgDLMsnqrcOVsWPleioQMEDRplRDp1LY
 product_v2:
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 # `getVisitorId()`
 
-La méthode `_satellite.getVisitorId()` renvoie une instance du service d’ID [Adobe Experience Cloud](https://experienceleague.adobe.com/fr/docs/id-service/using/home) dans votre propriété de balise, **si** l’extension du service d’ID est installée et publiée. Cette méthode s’avère utile lorsque vous souhaitez un accès direct à l’instance d’identifiant visiteur pour une utilisation dans des blocs de code personnalisés, une configuration avancée d’élément de données ou la résolution de problèmes d’identité des visiteurs.
+La méthode `_satellite.getVisitorId()` renvoie une instance du [service Adobe Experience Cloud ID](https://experienceleague.adobe.com/fr/docs/id-service/using/home) dans votre propriété de balise, **si** l’extension du service d’ID est installée et publiée. Cette méthode s’avère utile lorsque vous souhaitez un accès direct à l’instance d’identifiant visiteur pour une utilisation dans des blocs de code personnalisés, une configuration avancée d’élément de données ou la résolution de problèmes d’identité des visiteurs.
 
 >[!IMPORTANT]
 >

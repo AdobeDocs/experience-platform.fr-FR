@@ -43,4 +43,4 @@ Vous pouvez en savoir plus sur cette fonctionnalité ici :
 
 [Prise en main de l’IA dédiée aux clients](../../customer-ai/getting-started.md)
 [Adobe Experience Platform et applications](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr)
-[Diagrammes d’architecture de &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=fr)
+[Diagrammes d’architecture Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=fr)

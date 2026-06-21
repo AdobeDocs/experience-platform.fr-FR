@@ -15,7 +15,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1029
+source-wordcount: 1032
 ht-degree: 86%
 
 ---
@@ -90,7 +90,7 @@ Pour récupérer le statut d’une tâche spécifique à l’aide de l’API [!D
 
 ### Utilisation de l’interface utilisateur
 
-Toutes les requêtes de tâche actives sont répertoriées dans le widget **[!UICONTROL Job Requests]** du tableau de bord de l’interface utilisateur de [!DNL Privacy Service]. Le statut de chaque demande de traitement s’affiche sous la colonne **[!UICONTROL Status]** . Pour plus d’informations sur l’affichage des requêtes de tâche dans l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md).
+Toutes les requêtes de tâche actives sont répertoriées dans le widget **[!UICONTROL Requêtes de tâche]** sur le tableau de bord de l’interface utilisateur de [!DNL Privacy Service]. Le statut de chaque demande de traitement s’affiche dans la colonne **[!UICONTROL Statut]**. Pour plus d’informations sur l’affichage des requêtes de tâche dans l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md).
 
 ## Comment télécharger les résultats de tâches de confidentialité terminées ?
 

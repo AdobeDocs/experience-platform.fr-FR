@@ -33,7 +33,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2525
+source-wordcount: 2526
 ht-degree: 1%
 
 ---
@@ -376,7 +376,7 @@ Oui, vous pouvez définir différentes politiques de conservation pour les servi
 ### Comment puis-je vérifier l’utilisation actuelle de mon jeu de données ?
 
 +++Réponse
-Vous pouvez vérifier la dernière taille de stockage du jeu de données pour le lac de données et les magasins de profils en tant que mesures distinctes dans l’espace de travail de l’inventaire des [!UICONTROL Dataset]. Triez les colonnes pour identifier les jeux de données les plus volumineux et vérifiez que les politiques de conservation sont appliquées.
+Vous pouvez vérifier la dernière taille de stockage du jeu de données pour le lac de données et les magasins de profils en tant que mesures distinctes sur l’espace de travail d’inventaire [!UICONTROL Jeu de données]. Triez les colonnes pour identifier les jeux de données les plus volumineux et vérifiez que les politiques de conservation sont appliquées.
 
 Pour plus d’informations sur l’utilisation au niveau du sandbox, consultez le tableau de bord Utilisation des licences . Pour plus d’informations, consultez la [documentation relative à l’utilisation des licences](../../dashboards/guides/license-usage.md).
 +++

@@ -1,9 +1,10 @@
 ---
 title: buildInfo
 description: Obtenez des informations sur la version de balise implémentée sur votre site.
-source-git-commit: 434d6913ea391b127b4b52c8494730c496bbcfe2
+exl-id: 1bf9918c-aeb2-4c40-a166-25d209458aec
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '143'
 ht-degree: 2%
 
 ---

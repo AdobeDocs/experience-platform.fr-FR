@@ -20,7 +20,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 409
+source-wordcount: 422
 ht-degree: 2%
 
 ---
@@ -42,15 +42,15 @@ Pour installer et implémenter l’extension Assurance, vous devez avoir accès 
 >
 >Si vous disposez déjà d’une propriété mobile, vous pouvez passer à l’étape suivante.
 
-Dans l’interface utilisateur de collecte de données, sélectionnez **[!UICONTROL Tags]**. Une liste des propriétés mobiles et web s’affiche, avec des informations sur les propriétés appartenant à votre organisation. Sélectionnez **[!UICONTROL New property]** pour créer une propriété.
+Dans l’interface utilisateur de collecte de données, sélectionnez **[!UICONTROL Balises]**. Une liste des propriétés mobiles et web s’affiche, avec des informations sur les propriétés appartenant à votre organisation. Sélectionnez **[!UICONTROL Nouvelle propriété]** pour créer une propriété.
 
 ![Le bouton Nouvelle propriété est mis en surbrillance et indique les éléments que vous sélectionnez pour créer une propriété](./images/implement-assurance/create-new-property.png)
 
-La page **[!UICONTROL Create Property]** s’affiche. Saisissez le nom de votre nouvelle propriété et sélectionnez **[!UICONTROL Mobile]** comme plateforme. Après avoir inséré vos détails, sélectionnez **[!UICONTROL Save]** pour créer la propriété mobile.
+La page **[!UICONTROL Créer une propriété]** s’affiche. Saisissez le nom de votre nouvelle propriété et sélectionnez **[!UICONTROL Mobile]** comme plateforme. Après avoir inséré vos détails, sélectionnez **[!UICONTROL Enregistrer]** pour créer la propriété mobile.
 
 >[!NOTE]
 >
->Le paramètre de **[!UICONTROL Privacy]** de la propriété mobile n’affecte **pas** la collecte de données d’Assurance.
+>Le paramètre **[!UICONTROL Confidentialité]** de la propriété mobile n’affecte **pas** la collecte de données Assurance.
 
 ![La page Créer une propriété s’affiche. Vous pouvez insérer des informations sur votre propriété mobile ici.](./images/implement-assurance/create-property.png)
 
@@ -64,7 +64,7 @@ La page **détails de la propriété mobile** s’affiche. Sélectionnez **[!UIC
 
 ![La page de détails des propriétés mobiles s’affiche. Des informations sur les activités récentes s’affichent. L’onglet Extensions est mis en surbrillance.](./images/implement-assurance/tag-properties.png)
 
-Sélectionnez **[!UICONTROL Catalog]** pour afficher la liste des extensions que vous pouvez ajouter à la propriété mobile. À l’aide du filtre, recherchez l’extension **[!UICONTROL AEP Assurance]**, puis sélectionnez **[!UICONTROL Install]**.
+Sélectionnez **[!UICONTROL Catalogue]** pour afficher la liste des extensions que vous pouvez ajouter à la propriété mobile. À l’aide du filtre, recherchez l’extension **[!UICONTROL AEP Assurance]** et sélectionnez **[!UICONTROL Installer]**.
 
 ![Le catalogue d’extensions s’affiche. L’extension Assurance est filtrée et affichée, avec le bouton d’installation en surbrillance.](./images/implement-assurance/assurance-extension.png)
 

@@ -11,20 +11,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 201
-ht-degree: 33%
+source-wordcount: 205
+ht-degree: 32%
 
 ---
 
 # Type de données [!UICONTROL Geo]
 
-[!UICONTROL Geo] est un type de données XDM standard qui décrit la zone géographique dans laquelle un événement a été observé.
+[!UICONTROL Géo] est un type de données XDM standard qui décrit la zone géographique dans laquelle un événement a été observé.
 
 ![](../images/data-types/geo.png){width=400}
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Décrit les coordonnées géographiques d’un emplacement. |
+| `_schema` | [[!UICONTROL Coordonnées géographiques]](./geo-coordinates.md) | Décrit les coordonnées géographiques d’un emplacement. |
 | `_id` | Chaîne | Identifiant unique généré par le système pour les coordonnées. |
 | `city` | Chaîne | Nom de la ville. |
 | `countryCode` | Chaîne | Code <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> à deux caractères pour le pays. |

@@ -16,7 +16,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1227
+source-wordcount: 1262
 ht-degree: 8%
 
 ---
@@ -30,27 +30,27 @@ ht-degree: 8%
 
 Dans le modèle de données d’expérience (XDM), un champ de chaîne peut recevoir un ensemble prédéfini de valeurs acceptées ou suggérées pour mieux contrôler les valeurs ingérées dans ce champ ou la manière dont il se comportera dans la segmentation.
 
-**[!UICONTROL Enums]** contraindre les valeurs qui peuvent être ingérées pour un champ de chaîne à un ensemble prédéfini. Si vous tentez d’ingérer des données dans un champ d’énumération et que la valeur ne correspond à aucun de ceux définis dans sa configuration, l’ingestion est refusée.
+**[!UICONTROL Énumérations]** limitez les valeurs qui peuvent être ingérées pour un champ de chaîne à un ensemble prédéfini. Si vous tentez d’ingérer des données dans un champ d’énumération et que la valeur ne correspond à aucun de ceux définis dans sa configuration, l’ingestion est refusée.
 
-Contrairement aux énumérations, l’option **[!UICONTROL Suggested values]** permet à d’indiquer un ensemble de valeurs recommandées pour un champ de chaîne qui ne contraignent pas les valeurs qu’il peut ingérer. Au lieu de cela, les valeurs suggérées affectent les valeurs prédéfinies disponibles dans l’[interface utilisateur de segmentation](../../../segmentation/ui/overview.md) lors de l’inclusion du champ de chaîne comme attribut.
+Contrairement aux énumérations, l’option **[!UICONTROL Valeurs suggérées]** permet à d’indiquer un ensemble de valeurs recommandées pour un champ de chaîne qui ne limite pas les valeurs qu’il peut ingérer. Au lieu de cela, les valeurs suggérées affectent les valeurs prédéfinies disponibles dans l’[interface utilisateur de segmentation](../../../segmentation/ui/overview.md) lors de l’inclusion du champ de chaîne comme attribut.
 
-Lorsque vous [définissez un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform et définissez le type sur [!UICONTROL String], vous avez la possibilité de définir une [énumération](#enum) ou [valeurs suggérées](#suggested-values) pour ce champ.
+Lorsque vous [définissez un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform et définissez le type sur [!UICONTROL Chaîne], vous avez la possibilité de définir une [énumération](#enum) ou [valeurs suggérées](#suggested-values) pour ce champ.
 
 ![Image illustrant l’option Énumération et valeurs suggérées activée pour un champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/enum-options-selected.png)
 
-Ce document explique comment définir des énumérations et les valeurs suggérées dans l’espace de travail de l’interface utilisateur de [!UICONTROL Schemas]. Pour un aperçu rapide sur les énumérations et les valeurs suggérées, y compris sur la manière de les configurer dans l’interface utilisateur et leurs effets en aval, regardez la vidéo suivante :
+Ce document explique comment définir des énumérations et les valeurs suggérées dans l’espace de travail de l’interface utilisateur [!UICONTROL Schémas]. Pour un aperçu rapide sur les énumérations et les valeurs suggérées, y compris sur la manière de les configurer dans l’interface utilisateur et leurs effets en aval, regardez la vidéo suivante :
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413677/?captions=fre_fr&quality=12&learn=on)
 
 ## Définition d’une énumération {#enum}
 
-Sélectionnez **[!UICONTROL Enums and Suggested Values]**, puis sélectionnez **[!UICONTROL Enums]**. Des commandes supplémentaires s’affichent, vous permettant de spécifier les contraintes de valeur pour l’énumération. Pour ajouter une contrainte, sélectionnez **[!UICONTROL Add row]**.
+Sélectionnez **[!UICONTROL Énumérations et valeurs suggérées]**, puis sélectionnez **[!UICONTROL Énumérations]**. Des commandes supplémentaires s’affichent, vous permettant de spécifier les contraintes de valeur pour l’énumération. Pour ajouter une contrainte, sélectionnez **[!UICONTROL Ajouter une ligne]**.
 
 ![Image illustrant l’option Énumérations sélectionnée dans l’interface utilisateur](../../images/ui/fields/enum/enum-add-row.png)
 
-Sous la colonne **[!UICONTROL Value]** , vous devez fournir la valeur exacte à laquelle vous souhaitez contraindre le champ. Vous pouvez également fournir un **[!UICONTROL Display Name]** convivial pour la contrainte, ce qui affecte la manière dont la valeur sera représentée dans la segmentation.
+Sous la colonne **[!UICONTROL Valeur]**, vous devez fournir la valeur exacte à laquelle vous souhaitez contraindre le champ. Vous pouvez également fournir un **[!UICONTROL Nom d’affichage]** convivial pour la contrainte, ce qui affecte la manière dont la valeur sera représentée dans la segmentation.
 
-Continuez à utiliser **[!UICONTROL Add row]** pour ajouter les contraintes et les libellés facultatifs de votre choix à l’énumération ou sélectionnez l’icône de suppression (![image de l’icône de suppression](/help/images/icons/remove-circle.png)) en regard d’une ligne ajoutée précédemment pour la supprimer. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]** pour appliquer les modifications au schéma.
+Continuez à utiliser **[!UICONTROL Ajouter une ligne]** pour ajouter les contraintes et les libellés facultatifs de votre choix à l’énumération, ou sélectionnez l’icône de suppression (![image de l’icône de suppression](/help/images/icons/remove-circle.png)) en regard d’une ligne ajoutée précédemment pour la supprimer. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au schéma.
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -58,13 +58,13 @@ La zone de travail se met à jour pour prendre en compte les modifications. À l
 
 ## Définir les valeurs suggérées {#suggested-values}
 
-Sélectionnez **[!UICONTROL Enums and Suggested Values]**, puis sélectionnez **[!UICONTROL Suggested Values]** pour afficher des commandes supplémentaires. Sélectionnez ensuite **[!UICONTROL Add row]** pour commencer à ajouter les valeurs suggérées.
+Sélectionnez **[!UICONTROL Énumérations et valeurs suggérées]**, puis sélectionnez **[!UICONTROL Valeurs suggérées]** pour afficher des commandes supplémentaires. À partir de là, sélectionnez **[!UICONTROL Ajouter une ligne]** pour commencer à ajouter les valeurs suggérées.
 
 ![Image illustrant l’option Valeurs suggérées sélectionnée dans l’interface utilisateur](../../images/ui/fields/enum/suggested-add-row.png)
 
-Sous la colonne **[!UICONTROL Display Name]** , indiquez un nom convivial pour la valeur telle que vous souhaitez qu’elle apparaisse dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez à nouveau **[!UICONTROL Add row]** et répétez le processus si nécessaire. Pour supprimer une ligne ajoutée précédemment, sélectionnez ![l’icône de suppression](/help/images/icons/remove-circle.png) en regard de la ligne en question.
+Sous la colonne **[!UICONTROL Nom d’affichage]**, attribuez un nom convivial à la valeur telle que vous souhaitez qu’elle apparaisse dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez à nouveau **[!UICONTROL Ajouter une ligne]** et répétez le processus si nécessaire. Pour supprimer une ligne ajoutée précédemment, sélectionnez ![l’icône de suppression](/help/images/icons/remove-circle.png) en regard de la ligne en question.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]** pour appliquer les modifications au schéma.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au schéma.
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-confirm.png)
 
@@ -78,7 +78,7 @@ Certains champs des composants XDM standard contiennent leurs propres valeurs su
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard.png)
 
-Pour ajouter de nouvelles valeurs suggérées pour un champ standard, sélectionnez **[!UICONTROL Add row]**. Pour supprimer une valeur suggérée précédemment ajoutée par votre organisation, sélectionnez ![l’icône de suppression](/help/images/icons/remove-circle.png) en regard de la ligne en question.
+Pour ajouter de nouvelles valeurs suggérées pour un champ standard, sélectionnez **[!UICONTROL Ajouter une ligne]**. Pour supprimer une valeur suggérée précédemment ajoutée par votre organisation, sélectionnez ![l’icône de suppression](/help/images/icons/remove-circle.png) en regard de la ligne en question.
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard-add.png)
 

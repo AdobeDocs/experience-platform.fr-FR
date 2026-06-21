@@ -35,8 +35,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1115
-ht-degree: 90%
+source-wordcount: 1138
+ht-degree: 84%
 
 ---
 
@@ -124,7 +124,7 @@ Cette section fournit des conseils sur la création ou la configuration d’une 
 
 Avant de commencer, consultez les [Bonnes pratiques pour la planification des propriétés](companies-and-properties.md#best-practices-for-planning-properties).
 
-Accédez à la page de votre société, puis cliquez sur **[!UICONTROL Add Property]** ou sélectionnez une propriété existante dans la liste et cliquez sur **[!UICONTROL Configure]**.
+Accédez à la page de votre entreprise, puis sélectionnez **[!UICONTROL Ajouter une propriété]** ou sélectionnez une propriété existante dans la liste et sélectionnez **[!UICONTROL Configurer]**.
 
 ![](../../images/property-settings.png)
 
@@ -138,10 +138,10 @@ Suivez les instructions pour créer une propriété web.
 
    **Domaines :** URL de base de tous les sites sur lesquels vous prévoyez de déployer cette propriété.
 
-1. (Avancé) :**[!UICONTROL Run rule components in sequence]** Cochez cette case pour que les conditions et actions attendent que la précédente soit achevée avant de s’exécuter.
-1. (Avancé) **[!UICONTROL Return an empty string for missing data elements:]** Si vous référencez un élément de données qui n’existe pas dans une bibliothèque, cela renvoie normalement `undefined`. Cochez cette case si vous souhaitez que ce scénario renvoie une chaîne vide à la place.
-1. (Avancé) **[!UICONTROL Configure for extension development:]** Activez cette case à cocher si vous prévoyez d’installer des extensions de développement sur lesquelles votre société travaille activement
-1. Sélectionner **[!UICONTROL Save]**.
+1. (Avancé) **[!UICONTROL Exécution des composants de règle en séquence]** Cochez cette case pour que les conditions et actions attendent que la précédente soit achevée avant de s’exécuter.
+1. (Avancé) **[!UICONTROL Renvoyer une chaîne vide pour les éléments de données manquants :]** si vous référencez un élément de données qui n’existe pas dans une bibliothèque, cela renvoie normalement `undefined`. Cochez cette case si vous souhaitez que ce scénario renvoie une chaîne vide à la place.
+1. (Avancé) **[!UICONTROL Configuration pour le développement d’extensions :]** cochez cette case si vous prévoyez d’installer des extensions de développement sur lesquelles votre société travaille activement.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 ### Pour les propriétés mobiles
 
@@ -158,7 +158,7 @@ Suivez les instructions pour créer une propriété mobile.
 
    * **Use HTTPS :** sélectionnez ce paramètre selon que toutes les communications de données doivent être envoyées via HTTP ou via HTTPS.
 
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Une fois votre propriété créée, Experience Platform ajoute automatiquement un hôte par défaut, un ensemble d’environnements (Développement, Évaluation et Production) et les extensions par défaut.
 
@@ -174,4 +174,4 @@ Suivez les étapes ci-dessous pour supprimer une propriété de balise.
 
    Vous pouvez sélectionner et supprimer plusieurs propriétés.
 
-1. Cliquez sur **[!UICONTROL Delete]**, puis confirmez la suppression de la propriété.
+1. Sélectionnez **[!UICONTROL Supprimer]**, puis confirmez la suppression de la propriété.

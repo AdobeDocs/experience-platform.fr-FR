@@ -13,28 +13,28 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 183
-ht-degree: 12%
+source-wordcount: 203
+ht-degree: 11%
 
 ---
 
-# Type de données [!UICONTROL Shipping]
+# Type de données [!UICONTROL Expédition]
 
-[!UICONTROL Shipping] est un type de données XDM (modèle de données d’expérience) standard qui fournit des détails liés à l’expédition d’un ou de plusieurs produits. Il comprend des détails sur la logistique et les détails concernant la livraison des articles commandés.
+[!UICONTROL Expédition] est un type de données standard des modèles de données d’expérience (XDM) qui fournit des détails liés à l’expédition d’un ou de plusieurs produits. Il comprend des détails sur la logistique et les détails concernant la livraison des articles commandés.
 
 
-![Diagramme du type de données [!UICONTROL Shipping].](../images/data-types/shipping.png)
+![Diagramme du type de données [!UICONTROL Expédition].](../images/data-types/shipping.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |----------------------|-----------------------|-----------|------------------------------------------------------|
-| [!UICONTROL Shipping Method] | `shippingMethod` | chaîne | Mode d’expédition choisi par le client. |
-| [!UICONTROL Shipping Amount] | `shippingAmount` | nombre | Montant que le client a dû payer pour l’expédition. |
-| [!UICONTROL Currency code] | `currencyCode` | chaîne | Code de devise alphabétique ISO 4217 utilisé pour la tarification du produit. |
-| [!UICONTROL Shipping Destination] | `shippingDestination` | chaîne | Destination de livraison spécifiée par l’utilisateur (par exemple, domicile, magasin, etc.). |
-| [!UICONTROL Ship Date] | `shipDate` | chaîne | Date à laquelle un ou plusieurs articles d&#39;une commande sont expédiés. |
-| [!UICONTROL Shipping Address] | `address` | [[!UICONTROL address]](./address.md) | Adresse d’expédition. |
-| [!UICONTROL Tracking Number] | `trackingNumber` | nombre | Numéro de suivi fourni par le transporteur. |
-| [!UICONTROL Tracking URL] | `trackingURL` | chaîne | URL permettant de suivre le statut d&#39;expédition d&#39;un article de commande. |
+| [!UICONTROL Mode d’expédition] | `shippingMethod` | chaîne | Mode d’expédition choisi par le client. |
+| [!UICONTROL Montant de l’expédition] | `shippingAmount` | nombre | Montant que le client a dû payer pour l’expédition. |
+| [!UICONTROL Code de devise] | `currencyCode` | chaîne | Code de devise alphabétique ISO 4217 utilisé pour la tarification du produit. |
+| [!UICONTROL Destination d’expédition] | `shippingDestination` | chaîne | Destination de livraison spécifiée par l’utilisateur (par exemple, domicile, magasin, etc.). |
+| [!UICONTROL Date d’expédition] | `shipDate` | chaîne | Date à laquelle un ou plusieurs articles d&#39;une commande sont expédiés. |
+| [!UICONTROL Adresse d’expédition] | `address` | [[!UICONTROL adresse]](./address.md) | Adresse d’expédition. |
+| [!UICONTROL Numéro de suivi] | `trackingNumber` | nombre | Numéro de suivi fourni par le transporteur. |
+| [!UICONTROL URL de tracking] | `trackingURL` | chaîne | URL permettant de suivre le statut d&#39;expédition d&#39;un article de commande. |
 
 {style="table-layout:auto"}
 

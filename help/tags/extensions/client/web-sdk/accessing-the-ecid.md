@@ -22,8 +22,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 279
-ht-degree: 5%
+source-wordcount: 283
+ht-degree: 4%
 
 ---
 
@@ -56,7 +56,7 @@ Si vous devez accéder au [!DNL ECID] côté client, utilisez l’approche des b
 1. Assurez-vous que votre propriété est configurée avec le [séquencement des composants de règle](/help/tags/ui/managing-resources/rules.md#sequencing) activé.
 1. Créez une nouvelle règle. Cette règle doit être utilisée exclusivement pour capturer le [!DNL ECID] sans autre action importante.
 1. Ajoutez un événement [!UICONTROL Library Loaded] à la règle.
-1. Ajoutez une action [!UICONTROL Custom Code] à la règle avec le code suivant (en supposant que le nom que vous avez configuré pour l’instance SDK soit `alloy` et qu’il n’existe pas déjà un élément de données du même nom) :
+1. Ajoutez une action [!UICONTROL Code personnalisé] à la règle avec le code suivant (en supposant que le nom que vous avez configuré pour l’instance SDK soit `alloy` et qu’il n’existe pas déjà un élément de données du même nom) :
 
    ```js
     return alloy("getIdentity")

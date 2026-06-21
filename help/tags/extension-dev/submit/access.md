@@ -38,4 +38,4 @@ Pour qu’un utilisateur puisse accéder aux fonctionnalités de balises, un adm
 
 ## Confirmer l’approvisionnement
 
-Une fois que votre société a accès aux balises et que vos utilisateurs sont configurés comme décrit ci-dessus, vous devez pouvoir accéder à l’interface utilisateur de la collecte de données et à l’interface utilisateur Experience Platform à partir du tableau de bord [Adobe Experience Cloud](https://experience.adobe.com/). Si vous ne parvenez toujours pas à accéder à l’une ou l’autre des interfaces après avoir suivi les étapes ci-dessus, contactez votre équipe de compte Adobe ou l’assistance clientèle.
+Une fois que votre société a accès aux balises et que vos utilisateurs sont configurés comme décrit ci-dessus, vous devez pouvoir accéder à l’interface utilisateur de la collecte de données et à l’interface utilisateur d’Experience Platform à partir du tableau de bord [Adobe Experience Cloud](https://experience.adobe.com/). Si vous ne parvenez toujours pas à accéder à l’une ou l’autre des interfaces après avoir suivi les étapes ci-dessus, contactez votre équipe de compte Adobe ou l’assistance clientèle.

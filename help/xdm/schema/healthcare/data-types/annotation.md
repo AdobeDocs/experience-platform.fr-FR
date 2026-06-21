@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 126
+source-wordcount: 134
 ht-degree: 8%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 8%
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Author Reference] | `authorReference` | [[!UICONTROL Reference]](../data-types/reference.md) | Référence à l’auteur. |
-| [!UICONTROL Author] | `authorString` | Chaîne | Personne responsable de l’annotation. |
-| [!UICONTROL Text] | `text` | Chaîne | Contenu de l’annotation. |
-| [!UICONTROL Time] | `time` | DateTime | Date à laquelle l’annotation a été créée. |
+| [!UICONTROL Référence de l’auteur] | `authorReference` | [[!UICONTROL Référence]](../data-types/reference.md) | Référence à l’auteur. |
+| [!UICONTROL Auteur] | `authorString` | Chaîne | Personne responsable de l’annotation. |
+| [!UICONTROL Texte] | `text` | Chaîne | Contenu de l’annotation. |
+| [!UICONTROL Heure] | `time` | DateTime | Date à laquelle l’annotation a été créée. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

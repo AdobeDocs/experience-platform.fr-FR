@@ -41,8 +41,8 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2202
-ht-degree: 78%
+source-wordcount: 2263
+ht-degree: 76%
 
 ---
 
@@ -156,13 +156,13 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Offer Item]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
-| Classe | [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1678/files) | Élément pouvant faire l’objet d’une prise de décision. La sortie d’un processus de prise de décision est composée d’un ou de plusieurs éléments de décision. |
-| Classe | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | Cette valeur indique le temps écoulé, en secondes, entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |
-| Groupe de champs | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés des services Adobe internes aux données client entrantes. Elle ne doit pas être utilisée par les clients pour ingérer des données. |
-| Type de données | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
-| Type de données | [[!UICONTROL Category data]](https://github.com/adobe/xdm/pull/1677/files) | Ce nouveau type de données représente la catégorie d’un produit. |
-| Schéma | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification Target. Il contient un ensemble de champs de métadonnées qui classent les activités et expériences Target. |
+| Classe | [[!UICONTROL Article de l’offre]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
+| Classe | [[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1678/files) | Élément pouvant faire l’objet d’une prise de décision. La sortie d’un processus de prise de décision est composée d’un ou de plusieurs éléments de décision. |
+| Classe | [[!UICONTROL Délai d’expiration du serveur de session multimédia]](https://github.com/adobe/xdm/pull/1676/files) | Cette valeur indique le temps écoulé, en secondes, entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |
+| Groupe de champs | [[!UICONTROL Attributs calculés du profil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés des services Adobe internes aux données client entrantes. Elle ne doit pas être utilisée par les clients pour ingérer des données. |
+| Type de données | [[!UICONTROL Objet remboursé]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
+| Type de données | [[!UICONTROL Données de catégorie]](https://github.com/adobe/xdm/pull/1677/files) | Ce nouveau type de données représente la catégorie d’un produit. |
+| Schéma | [[!UICONTROL Champs De Classification &#x200B;]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification Target. Il contient un ensemble de champs de métadonnées qui classent les activités et expériences Target. |
 
 {style="table-layout:auto"}
 
@@ -170,17 +170,17 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL Content Component Details] |
-| Groupe de champs | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO à [!UICONTROL AJO Entity Fields], qui correspondent à un Parcours ou à une campagne |
-| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) |
-| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files). |
-| Groupe de champs | [!UICONTROL Workfront Change Event] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
-| Type de données | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL Refund Amount] a été ajouté pour indiquer le montant remboursé pour l&#39;article, le cas échéant. |
-| Type de données | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] a été ajouté à la liste des remboursements pour cette commande. |
-| Type de données | [[!UICONTROL Product List Item &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
-| Type de données | [!UICONTROL Session details information] | Ajout du champ de chaîne `pev3` qui [indique le type de flux de médias utilisé pour la création de rapports](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la propriété `pccr` qui indique si une redirection s’est produite. |
-| Type de données | [!UICONTROL Requisition List] | Fournit les [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Ils comprennent le nom, l’ID et la description. |
-| Type de données | [!UICONTROL Commerce] | Le type de données [Commerce a été mis à jour](https://github.com/adobe/xdm/pull/1675/files) afin d&#39;inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |
+| Groupe de champs | [[!UICONTROL &#x200B; Détails du composant de contenu &#x200B;]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL &#x200B; Détails du composant de contenu &#x200B;] |
+| Groupe de champs | [[!UICONTROL Balises d’entité &#x200B;]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO aux [!UICONTROL champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
+| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour les [[!UICONTROL champs communs des événements d’étape &#x200B;]](https://github.com/adobe/xdm/pull/1671/files) |
+| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour [!UICONTROL Rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
+| Groupe de champs | [!UICONTROL Événement de modification &#x200B;] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
+| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL &#x200B; Montant du remboursement &#x200B;] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
+| Type de données | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
+| Type de données | [&#128279;](https://github.com/adobe/xdm/pull/1677/files) d’élément de liste de produits | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
+| Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout du champ de chaîne `pev3` qui [indique le type de flux de médias utilisé pour la création de rapports](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la propriété `pccr` qui indique si une redirection s’est produite. |
+| Type de données | [!UICONTROL Liste des demandes internes] | Fournit les [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Ils comprennent le nom, l’ID et la description. |
+| Type de données |  | Le type de données [Commerce a été mis à jour](https://github.com/adobe/xdm/pull/1675/files) afin d&#39;inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |
 
 {style="table-layout:auto"}
 

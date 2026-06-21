@@ -24,8 +24,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 1594f9b17e53ee78bb90f636bcdaaba855bd89db
 workflow-type: tm+mt
-source-wordcount: 1766
-ht-degree: 48%
+source-wordcount: 1796
+ht-degree: 47%
 
 ---
 
@@ -306,15 +306,15 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données de protoco
 
 ## Contrôle d’accès des sources dans l’ingestion des données
 
-Vous pouvez gérer les autorisations relatives aux sources dans l’ingestion des données dans Adobe Admin Console. Vous pouvez accéder aux autorisations via l’onglet **[!UICONTROL Permissions]** dans un profil de produit spécifique. Dans le panneau **[!UICONTROL Edit Permissions]**, vous pouvez accéder aux autorisations relatives aux sources via l’entrée du menu **[!UICONTROL data ingestion]**. L’autorisation **[!UICONTROL View Sources]** accorde un accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalog]** et aux sources authentifiées dans l’onglet **[!UICONTROL Browse]** , tandis que l’autorisation **[!UICONTROL Manage Sources]** accorde un accès complet à la lecture, la création, la modification et la désactivation de sources.
+Vous pouvez gérer les autorisations relatives aux sources dans l’ingestion des données dans Adobe Admin Console. Vous pouvez accéder aux autorisations via l’onglet **[!UICONTROL Autorisations]** dans un profil de produit particulier. Dans le panneau **[!UICONTROL Modifier les autorisations]**, vous pouvez accéder aux autorisations relatives aux sources via l’entrée de menu **[!UICONTROL ingestion de données]**. L’autorisation **[!UICONTROL Afficher les sources]** accorde un accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**, tandis que l’autorisation **[!UICONTROL Gérer les sources]** accorde un accès complet à la lecture, la création, la modification et la désactivation de sources.
 
 Le tableau suivant décrit le comportement de l’interface utilisateur en fonction des différentes combinaisons d’autorisations :
 
 | Niveau d’autorisation | Description |
 | ---- | ----|
-| **[!UICONTROL View Sources]** le | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue, ainsi que dans les onglets Parcourir, Comptes et Flux de données. |
-| **[!UICONTROL Manage Sources]** le | En plus des fonctions incluses dans **[!UICONTROL View Sources]**, accorde l’accès à **[!UICONTROL Connect Source]** option dans **[!UICONTROL Catalog]** et à **[!UICONTROL Select Data]** option dans **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** vous permet également d’activer ou de désactiver des **[!UICONTROL DataFlows]** et de modifier leurs planifications. |
-| **[!UICONTROL View Sources]** désactivé et **[!UICONTROL Manage Sources]** désactivé | Révoquez tous les accès aux sources. |
+| **[!UICONTROL Affichage Des Sources]** Activé | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue, ainsi que dans les onglets Parcourir, Comptes et Flux de données. |
+| **[!UICONTROL Gérer Les Sources]** Activé | Outre les fonctions incluses dans **[!UICONTROL Afficher les sources]**, accorde l’accès à l’option **[!UICONTROL Connecter Source]** dans **[!UICONTROL Catalogue]** et à l’option **[!UICONTROL Sélectionner les données]** dans **[!UICONTROL Parcourir]**. **[!UICONTROL Gérer les sources]** vous permet également d’activer ou de désactiver **[!UICONTROL DataFlows]** et de modifier leurs plannings. |
+| **[!UICONTROL Affichage des sources]** Désactivé et **[!UICONTROL Gestion des sources]** Désactivé | Révoquez tous les accès aux sources. |
 
 Pour plus d’informations sur les autorisations disponibles accordées par le biais des autorisations d’Adobe, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 

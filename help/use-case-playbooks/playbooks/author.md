@@ -17,7 +17,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1795
+source-wordcount: 1699
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Playbooks]*
 
 ![Interface utilisateur de Platform avec l’option « Playbooks » mise en surbrillance dans le panneau de navigation de gauche.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-Sélectionnez **[!UICONTROL New Playbook]**, puis sélectionnez **Générer un playbook avec l’assistant AI**.
+Sélectionnez **[!UICONTROL Nouveau playbook]**, puis sélectionnez **Générer le playbook avec l’assistant d’IA**.
 
 ![&#x200B; L’interface de création du playbook affichant l’option « Générer le playbook avec l’assistant AI » sélectionnée.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
@@ -56,15 +56,15 @@ Utilisez le champ d’invite pour décrire le cas d’utilisation. Par exemple 
 
 ![Interface de création du playbook mettant en surbrillance la zone de formulaire web dans laquelle les utilisateurs peuvent saisir une invite.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-Sélectionnez **[!UICONTROL Generate]** pour créer les métadonnées du playbook.
+Sélectionnez **[!UICONTROL Générer]** pour créer les métadonnées du playbook.
 
 ![Interface de création du playbook affichant le bouton « Générer » en surbrillance dans la zone de l’invite.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-Une fois générée, sélectionnez **[!UICONTROL Edit]** pour modifier le titre, la description et les métadonnées générés, si nécessaire.
+Une fois générée, sélectionnez **[!UICONTROL Modifier]** pour modifier le titre, la description et les métadonnées générés, si nécessaire.
 
 ![Un playbook généré avec le bouton « Modifier » mis en surbrillance, permettant aux utilisateurs et aux utilisatrices de modifier les métadonnées.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
-Pour vous assurer que les ingénieurs de données disposent de tous les détails nécessaires pour configurer le cas d’utilisation, remplissez la section **[!UICONTROL Playbook detail]** . Bien que facultatifs, ces champs permettent de capturer des informations clés, ce qui facilite la connexion des composants techniques appropriés. Sélectionnez **[!UICONTROL Edit]** pour ajouter des valeurs aux champs suivants :
+Pour vous assurer que les ingénieurs de données disposent de tous les détails nécessaires pour configurer le cas d’utilisation, renseignez la section **[!UICONTROL Détails du playbook]**. Bien que facultatifs, ces champs permettent de capturer des informations clés, ce qui facilite la connexion des composants techniques appropriés. Sélectionnez **[!UICONTROL Modifier]** pour ajouter des valeurs aux champs suivants :
 
 * **Industrie**
 * **Audience cible**
@@ -72,13 +72,13 @@ Pour vous assurer que les ingénieurs de données disposent de tous les détails
 
 ![La section des détails du playbook avec le bouton « Modifier » mis en surbrillance afin que vous puissiez ajouter ou modifier des détails tels que le secteur, l’audience cible et le canal marketing.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Une fois les métadonnées générées, sélectionnez **[!UICONTROL Edit journey map]** pour ajuster les étapes de la carte du parcours selon les besoins.
+Une fois les métadonnées générées, sélectionnez **[!UICONTROL Modifier la carte de parcours]** pour ajuster les étapes de la carte de parcours selon les besoins.
 
 ![&#x200B; Le bouton « Modifier la carte de parcours » pour modifier les étapes de la carte de parcours &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![Interface de l’éditeur de carte de parcours permettant d’ajuster les étapes après avoir capturé les métadonnées du playbook.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-Ensuite, passez à l’association du playbook avec les ressources techniques. Pour créer un playbook manuellement, sélectionnez **[!UICONTROL Create playbook manually]**.
+Ensuite, passez à l’association du playbook avec les ressources techniques. Pour créer un playbook manuellement, sélectionnez **[!UICONTROL Créer un playbook manuellement]**.
 
 ![L’option « Créer manuellement un playbook » pour démarrer un playbook à partir d’un modèle vierge.](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -86,7 +86,7 @@ Un modèle de playbook vierge s’affiche. Renseignez des détails tels que **Ti
 
 ## Associer un playbook à des ressources techniques
 
-Que vous créiez un playbook manuellement ou avec l’assistant d’IA, vous devez l’associer aux ressources techniques requises. Accédez à l’onglet **[!UICONTROL Technical Assets]** et sélectionnez le produit souhaité. Pour cet exemple, sélectionnez **[!UICONTROL Journey Optimizer]**.
+Que vous créiez un playbook manuellement ou avec l’assistant d’IA, vous devez l’associer aux ressources techniques requises. Accédez à l’onglet **[!UICONTROL Technical Assets]** et sélectionnez le produit souhaité. Pour cet exemple, sélectionnez **&#x200B;**.
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Que vous créiez un playbook manuellement ou avec l’assistant d’IA, vous dev
 
 ![Onglet « Assets technique » avec le bouton « Ajouter le produit requis » mis en surbrillance et que vous pouvez utiliser pour associer des ressources techniques au playbook.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
-Choisissez **[!UICONTROL Select an Asset]** pour associer ce playbook à un parcours, comme illustré dans l’image ci-dessous. Sélectionnez ensuite **Publier le playbook** pour finaliser le playbook.
+Sélectionnez **[!UICONTROL Sélectionner une ressource]** pour associer ce playbook à un parcours, comme illustré dans l’image ci-dessous. Sélectionnez ensuite **Publier le playbook** pour finaliser le playbook.
 
 ![Onglet « Assets technique » avec le bouton « Sélectionner les ressources » mis en surbrillance que vous pouvez utiliser pour associer un parcours au playbook.](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
@@ -134,7 +134,7 @@ Objectif : envoyer des e-mails de newsletter sur la mode aux clients ACME abonn�
 Détails promotionnels : le client reçoit des informations sur la mode dans le canal e-mail chaque semaine. L’e-mail doit être personnalisé et les variations de contenu doivent être basées sur le sexe, la langue et le marché.
 Canaux/points de contact du projet : e-mail
 Public cible : clients et clientes qui se sont abonnés aux communications de la newsletter ACME Fashion.
-KPI/mesures d’engagement/ROI cibles : 1. Augmentez le chiffre d’affaires des produits . 2. Encouragez la fidélisation de la clientèle. »
+KPI/mesures d’engagement/ROI cibles : 1. Augmentez le chiffre d’affaires des produits . 2. Stimulez la fidélisation de la clientèle. »
 
 ![Exemple d’invite organisée de type liste saisie dans la zone de saisie de texte pour générer un playbook.](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
@@ -183,18 +183,18 @@ Si des champs sont manquants dans votre schéma d’union, une boîte de dialogu
 
 Le partage de playbooks entre les organisations permet d’assurer la cohérence et l’efficacité lorsque plusieurs équipes doivent suivre les mêmes bonnes pratiques. Pour partager un playbook d’une organisation à une autre, procédez comme suit :
 
-1. **Connectez-vous à l’organisation source** : accédez à l’organisation qui contient le playbook que vous avez créé et que vous souhaitez partager à partir de l’onglet **[!UICONTROL Your playbooks]** .
+1. **Connectez-vous à l’organisation source** : accédez à l’organisation qui contient le playbook que vous avez créé et que vous souhaitez partager à partir de l’onglet **[!UICONTROL Vos playbooks]**.
 2. **Publier le playbook** : si le playbook n’est pas déjà publié, vous devez le publier avant de le partager.
 
    >[!NOTE]
    >
    >Un partenariat doit être établi entre les organisations source et cible pour permettre le partage des playbooks. Découvrez comment [créer une demande de partenariat d’organisation](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request).
 
-3. **Lancer le partage** : une fois le playbook publié et le partenariat établi, sélectionnez **[!UICONTROL Share Playbook]**.
+3. **Lancer le partage** : une fois le playbook publié et le partenariat établi, sélectionnez **[!UICONTROL Partager le playbook]**.
 4. **Sélectionnez l’organisation cible** : sélectionnez l’organisation avec laquelle vous souhaitez partager le playbook lorsque vous y êtes invité.
 5. **Confirmer et partager** : confirmez votre sélection. Vous recevrez des messages de confirmation indiquant que le partage a réussi.
 6. **Vérifier l’organisation cible** : connectez-vous à l’organisation cible pour vérifier que le playbook est disponible.
-7. **Importer le playbook** : sélectionnez **[!UICONTROL Import]** pour importer le playbook dans l’organisation cible. Vous pouvez l’afficher dans l’onglet **Playbooks**.
+7. **Importer le playbook** : sélectionnez **[!UICONTROL Importer]** pour importer le playbook dans l’organisation cible. Vous pouvez l’afficher dans l’onglet **Playbooks**.
 
 Si le playbook n’apparaît pas, assurez-vous qu’il est publié et que le partenariat d’organisation est actif.
 
@@ -226,7 +226,7 @@ Utilisez ces autorisations pour :
 * Accès à la fonctionnalité dans le sandbox
 * Gérer et partager des packages selon les besoins
 
-Ces autorisations se trouvent dans la section **[!UICONTROL Sandboxes]** de la liste des autorisations.
+Ces autorisations se trouvent dans la section **[!UICONTROL Sandbox]** de la liste des autorisations.
 
 ![La liste des autorisations avec les autorisations appropriées pour la gestion et le partage des playbooks mise en surbrillance.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 

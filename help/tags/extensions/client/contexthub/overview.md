@@ -4,8 +4,8 @@ description: Découvrez lʼextension de balise Adobe ContextHub dans Adobe Exp
 exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
 source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 100%
+source-wordcount: '177'
+ht-degree: 76%
 
 ---
 
@@ -17,9 +17,9 @@ Utilisez cette référence pour obtenir des informations sur la configuration de
 
 Cette section fournit des informations relatives aux options disponibles lors de la configuration de l’extension Adobe ContextHub.
 
-Si l’extension Adobe ContextHub n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Adobe ContextHub et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Adobe ContextHub n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe ContextHub et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/ext-contexthub-config.png)
 

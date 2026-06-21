@@ -18,8 +18,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 535
-ht-degree: 31%
+source-wordcount: 541
+ht-degree: 30%
 
 ---
 
@@ -41,7 +41,7 @@ Ce guide vous apportera la documentation suivante :
 
 ## Vue d’ensemble {#overview}
 
-[!UICONTROL Use Case Playbooks] peut vous aider à résoudre le problème lors de la prise en main de Real-Time CDP ou de Adobe Journey Optimizer, car vous ne savez pas exactement par quoi commencer ou comment créer les ressources appropriées pour atteindre les cas d’utilisation souhaités.
+[!UICONTROL Playbooks de cas d’utilisation] peuvent vous aider à surmonter le problème lors de la prise en main de Real-Time CDP ou de Adobe Journey Optimizer, lorsque vous ne savez pas exactement par quoi commencer ou comment créer les bonnes ressources afin d’atteindre les cas d’utilisation souhaités.
 
 Les playbooks de cas d’utilisation peuvent vous y aider en :
 
@@ -64,7 +64,7 @@ Regardez cette vidéo pour découvrir, créer, publier et résoudre les problèm
 
 ## Disponibilité {#availability}
 
-Certains [!UICONTROL Use Case Playbooks] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients qui utilisent Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. Découvrez-en plus sur Real-Time CDP et Journey Optimizer dans les [descriptions de produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html).
+Certains [!UICONTROL &#x200B; Playbooks de cas d’utilisation &#x200B;] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients ou clientes utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. Découvrez-en plus sur Real-Time CDP et Journey Optimizer dans les [descriptions de produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html).
 
 ## Guides d’interface utilisateur {#ui-guides}
 

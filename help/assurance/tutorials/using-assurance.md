@@ -14,7 +14,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 687
+source-wordcount: 722
 ht-degree: 3%
 
 ---
@@ -25,31 +25,31 @@ Ce tutoriel explique comment utiliser Adobe Experience Platform Assurance. Pour 
 
 ## Créer des sessions
 
-Après vous être connecté à l’interface utilisateur [&#128279;](https://experience.adobe.com/assurance), vous pouvez sélectionner **[!UICONTROL Create Session]** pour commencer à créer une session.
+Après vous être connecté à l’interface utilisateur [&#128279;](https://experience.adobe.com/assurance), vous pouvez sélectionner **[!UICONTROL Créer une session]** pour commencer à créer une session.
 
 ![Le bouton Créer une session est mis en surbrillance et indique où vous pouvez créer une session.](./images/using-assurance/create-session.png)
 
-La boîte de dialogue **[!UICONTROL Create New Session]** s’affiche avec deux options pour créer une session :
+La boîte de dialogue **[!UICONTROL Créer une session]** s’affiche avec deux options pour créer une session :
 
 ### Connexion de lien profond
 
 Sélectionnez cette option pour générer une URL de session unique, un code QR et un code PIN. Scannez le code QR ou ouvrez manuellement le lien de session dans votre application, puis saisissez le code confidentiel pour établir la connexion.
 
-Sélectionnez **[!UICONTROL Deep link connect]** et continuez en sélectionnant **[!UICONTROL Start]**.
+Sélectionnez **[!UICONTROL Connexion de lien profond]** et continuez en sélectionnant **[!UICONTROL Démarrer]**.
 
 ![La boîte de dialogue Créer une session affichant l’option de connexion de lien profond sélectionnée.](./images/using-assurance/create-new-session-deep-link.png)
 
-Vous pouvez maintenant saisir un nom pour identifier la session, puis fournir une **[!UICONTROL Base URL]** (URL de lien profond pour votre application). Après avoir fourni ces détails, sélectionnez **[!UICONTROL Next]**.
+Vous pouvez maintenant saisir un nom pour identifier la session, puis fournir une **[!UICONTROL URL de base]** (URL de lien profond pour votre application). Après avoir fourni ces détails, sélectionnez **[!UICONTROL Suivant]**.
 
 >[!INFO]
 >
->L’URL de base est la définition racine utilisée pour lancer votre application à partir d’une URL. Une URL de session est générée par laquelle vous pouvez lancer la session Assurance. Voici un exemple de valeur : `myapp://default` Dans le champ **[!UICONTROL Base URL]** , saisissez la définition du lien profond de base de votre application.
+>L’URL de base est la définition racine utilisée pour lancer votre application à partir d’une URL. Une URL de session est générée par laquelle vous pouvez lancer la session Assurance. Voici un exemple de valeur : `myapp://default` Dans le champ **[!UICONTROL URL de base]**, saisissez la définition du lien profond de base de votre application.
 
 ![Les champs Nom de session et Entrée de l’URL de base s’affichent.](./images/using-assurance/create-session-form-deep-link.png)
 
 ### Connexion rapide
 
-Déclenchez une connexion à partir de votre application pour que votre appareil apparaisse dans la liste des appareils disponibles. Sélectionnez **[!UICONTROL Quick connect]** pour créer la session Assurance.
+Déclenchez une connexion à partir de votre application pour que votre appareil apparaisse dans la liste des appareils disponibles. Sélectionnez **[!UICONTROL Connexion rapide]** pour créer la session Assurance.
 
 #### Conditions préalables
 
@@ -75,11 +75,11 @@ Votre application doit mettre en œuvre l’API [&#128279;](https://developer.ad
 
 ![La boîte de dialogue Créer une session affiche l’option Connexion rapide sélectionnée.](./images/using-assurance/create-new-session-quick-connect.png)
 
-Sélectionnez **[!UICONTROL Quick connect]** et continuez en sélectionnant **[!UICONTROL Start]**. L’interface du sélecteur d’appareil s’affiche :
+Sélectionnez **[!UICONTROL Connexion rapide]** et continuez en sélectionnant **[!UICONTROL Démarrer]**. L’interface du sélecteur d’appareil s’affiche :
 
 1. **Déclencher la connexion Assurance** - Dans votre application mobile ou implémentation, déclenchez l’action qui lance la connexion Assurance à l’aide de l’API `startSession`. Votre appareil sera ainsi détectable.
 
-2. **Sélectionner et connecter votre appareil** - Une fois que votre appareil apparaît dans la liste des appareils disponibles, sélectionnez-le et cliquez sur **[!UICONTROL Connect]**.
+2. **Sélectionner et connecter votre appareil** - Une fois que votre appareil apparaît dans la liste des appareils disponibles, sélectionnez-le et cliquez sur **[!UICONTROL Connecter]**.
 
 ![Interface du sélecteur d’appareils Quick Connect affichant les appareils disponibles.](./images/using-assurance/quick-connect-device-picker.png)
 
@@ -99,10 +99,10 @@ Pour les sessions créées avec **[!UICONTROL Deep Link Connect]** :
 
 ### Sessions de connexion rapide
 
-Pour les sessions créées avec **[!UICONTROL Quick Connect]** (identifiables par une URL de session commençant par `adobeassurance://`), la connexion se fait automatiquement via l’interface du sélecteur d’appareil :
+Pour les sessions créées avec **[!UICONTROL Connexion rapide]** (identifiable par une URL de session qui commence par `adobeassurance://`), la connexion se fait automatiquement via l’interface du sélecteur d’appareil :
 
 1. Accédez à la page des détails de la session (pour les sessions existantes) ou continuez depuis la création de la session
-2. Dans la section **[!UICONTROL Connect Device]**, vous verrez l’interface du sélecteur d’appareil
+2. Dans la section **[!UICONTROL Connecter l’appareil]**, vous verrez l’interface du sélecteur d’appareil
 3. Déclenchez l’action définie dans votre application pour rendre l’appareil détectable
 4. Sélectionnez votre appareil dans la liste et cliquez sur **[!UICONTROL Connect]**
 
@@ -114,8 +114,8 @@ Vous pouvez vérifier que votre application est connectée à Assurance lorsque 
 
 ## Exporter une session
 
-Pour exporter une session Assurance, sur la page de détails des sessions de votre application, sélectionnez **[!UICONTROL Export to JSON]** dans une session :
+Pour exporter une session Assurance, sur la page de détails des sessions de votre application, sélectionnez **[!UICONTROL Exporter au format JSON]** dans une session :
 
 ![Exporter une session](./images/using-assurance/export-session.png)
 
-L’option d’exportation respecte les résultats des filtres de recherche et exporte uniquement les événements affichés dans la vue d’événement. Par exemple, si vous avez recherché des événements de « suivi », puis sélectionné **[!UICONTROL Export to JSON]**, seuls les résultats des événements de « suivi » sont exportés.
+L’option d’exportation respecte les résultats des filtres de recherche et exporte uniquement les événements affichés dans la vue d’événement. Par exemple, si vous recherchez des événements de « suivi », puis sélectionnez **[!UICONTROL Exporter au format JSON]**, seuls les résultats de l’événement de « suivi » sont exportés.

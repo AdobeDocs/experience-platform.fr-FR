@@ -30,7 +30,7 @@ ht-degree: 6%
 
 # Assurance d’Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) qui vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont diffusées dans votre application mobile.
+Adobe Experience Platform Assurance est un produit d’[Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) qui vous permet d’inspecter, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont diffusées dans votre application mobile.
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](h
 
 ## Disponibilité générale
 
-À compter du 15 octobre 2022, Assurance sera généralement disponible pour tous les Adobe Experience Cloud.
+À compter du 15 octobre 2022, Assurance sera disponible pour tous les utilisateurs d’Adobe Experience Cloud.
 
 ### Qu&#39;est-ce qui change ?
 
@@ -101,7 +101,7 @@ La vue Location Services est une vue sur l’appareil qui affiche les événemen
 Assurance a mis en place les mesures de sécurité suivantes :
 
 * Assurance et l’interface utilisateur web d’Assurance disposent toutes deux d’une liaison sécurisée basée sur le code confidentiel pour une connexion. L’utilisateur doit explicitement créer une liaison, ce qui empêche la création « accidentelle » de connexions Assurance par un utilisateur final.
-* Seules les connexions entre Assurance et l’interface utilisateur web d’Assurance appartenant au même ID d’organisation Adobe Experience Cloud sont prises en charge.
+* Seules les connexions entre Assurance et l’interface utilisateur web d’Assurance appartenant au même identifiant d’organisation Adobe Experience Cloud sont prises en charge.
 * Les événements des SDK mobiles Adobe Experience Platform sont transmis par HTTPS.
 * Les SDK Assurance et Adobe Experience Platform Mobile utilisent TLS 1.2
 * Les sessions Assurance sont supprimées après 30 jours.

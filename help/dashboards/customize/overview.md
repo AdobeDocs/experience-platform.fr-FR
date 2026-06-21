@@ -16,8 +16,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 464
-ht-degree: 65%
+source-wordcount: 474
+ht-degree: 63%
 
 ---
 
@@ -31,15 +31,15 @@ Les tableaux de bord des profils, des segments et des destinations disponibles d
 
 ## Modifier le tableau de bord
 
-La sélection de **[!UICONTROL Modify dashboard]** dans les tableaux de bord des profils, des segments ou des destinations vous permet d’ajuster la taille, l’ordre et l’emplacement des widgets actuellement visibles dans votre tableau de bord. Pour plus dʼinformations sur la manière de modifier lʼaspect des widgets dans vos tableaux de bord, reportez-vous au [guide de modification des tableaux de bord](modify.md).
+Sélectionnez **[!UICONTROL Modifier le tableau de bord]** dans les tableaux de bord des profils, des segments ou des destinations pour ajuster la taille, l’ordre et l’emplacement des widgets actuellement visibles dans votre tableau de bord. Pour plus dʼinformations sur la manière de modifier lʼaspect des widgets dans vos tableaux de bord, reportez-vous au [guide de modification des tableaux de bord](modify.md).
 
 ## Bibliothèque de widgets
 
-Dans la bibliothèque de widgets dʼExperience Platform, vous pouvez afficher tous les widgets [standard](#standard-widgets) et [personnalisés](#custom-widgets) disponibles pour votre organisation. Dans vos tableaux de bord (par exemple, le tableau de bord des profils), vous pouvez sélectionner **[!UICONTROL Modify dashboard]** pour afficher le bouton **[!UICONTROL Widget library]** .
+Dans la bibliothèque de widgets dʼExperience Platform, vous pouvez afficher tous les widgets [standard](#standard-widgets) et [personnalisés](#custom-widgets) disponibles pour votre organisation. Dans vos tableaux de bord (par exemple, le tableau de bord des profils), vous pouvez sélectionner **[!UICONTROL Modifier le tableau de bord]** afin d’afficher le bouton **[!UICONTROL Bibliothèque de widgets]**.
 
 ![Tableau de bord Profils avec l’option Modifier le tableau de bord mise en surbrillance.](../images/customization/modify-dashboard.png)
 
-Sélectionnez **[!UICONTROL Widget library]** pour ouvrir la bibliothèque de widgets et afficher toutes les mesures standard disponibles ou commencer à créer des widgets personnalisés.
+Sélectionnez **[!UICONTROL Bibliothèque de widgets]** pour ouvrir la bibliothèque de widgets et afficher toutes les mesures standard disponibles ou commencer à créer des widgets personnalisés.
 
 ![Tableau de bord Profils avec la bibliothèque de widgets mise en surbrillance.](../images/customization/widget-library-button.png)
 
@@ -51,7 +51,7 @@ Dans la bibliothèque de widgets, l’onglet **[!UICONTROL Standard]** contient 
 
 ### Widgets personnalisés {#custom-widgets}
 
-Les widgets personnalisés sont les widgets créés et partagés par les membres de votre organisation. Ces widgets sont créés à partir de l’onglet **[!UICONTROL Custom]** de la bibliothèque de widgets et nécessitent que votre organisation spécifie les mesures disponibles à l’aide d’un [schéma](#edit-schema)
+Les widgets personnalisés sont les widgets créés et partagés par les membres de votre organisation. Ces widgets sont créés à partir de l’onglet **[!UICONTROL Personnalisé]** de la bibliothèque de widgets et nécessitent que votre organisation spécifie les mesures disponibles à l’aide d’un [schéma](#edit-schema)
 
 Pour connaître la procédure complète afin de créer vos propres widgets, reportez-vous au [guide des widgets personnalisés pour les tableaux de bord](custom-widgets.md).
 

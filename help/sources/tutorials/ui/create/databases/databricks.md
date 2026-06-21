@@ -11,7 +11,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 439
+source-wordcount: 460
 ht-degree: 8%
 
 ---
@@ -48,23 +48,23 @@ Pour plus d’informations, consultez la [[!DNL Databricks] vue d’ensemble](..
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Pour vous connecter à [!DNL Databricks], accédez à la catégorie *[!UICONTROL Databases]* , sélectionnez la carte source **[!UICONTROL Azure Databricks]**, puis sélectionnez **[!UICONTROL Set up]**.
+Pour vous connecter à [!DNL Databricks], accédez à la catégorie *[!UICONTROL Bases de données]*, sélectionnez la vignette source **[!UICONTROL Blocs de données Azure]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte source des briques de données Azure sélectionnée.](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### Utiliser un compte existant
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte [!DNL Azure Databricks] à utiliser.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL Azure Databricks] à utiliser.
 
 ![Interface des comptes existants dans le workflow des sources avec « Compte existant » sélectionné.](../../../../images/tutorials/create/databricks/existing.png)
 
 ### Créer un nouveau compte
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, donnez un nom à votre compte et ajoutez éventuellement une description. Indiquez ensuite des valeurs pour les informations d’authentification suivantes :
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement une description pour votre compte. Indiquez ensuite des valeurs pour les informations d’authentification suivantes :
 
 * Domaine
 * Identifiant du cluster
@@ -74,7 +74,7 @@ Pour créer un compte, sélectionnez **[!UICONTROL New account]**, donnez un nom
 
 ![Nouvelle interface de compte dans le workflow des sources avec un nom de compte et une description facultative fournis.](../../../../images/tutorials/create/databricks/new.png)
 
-En outre, vous devez copier et coller vos informations d’identification [!UICONTROL Staging SAS URI] dans votre environnement [!DNL Azure Databricks]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques instants le temps que la connexion s’établisse.
+En outre, vous devez copier et coller vos informations d’identification [!UICONTROL URI SAS d’évaluation] dans votre environnement de [!DNL Azure Databricks]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion s’établisse.
 
 ![Informations d’identification d’évaluation de l’URI SAS.](../../../../images/tutorials/create/databricks/sas-uri.png)
 

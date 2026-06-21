@@ -9,7 +9,7 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1264'
 ht-degree: 3%
 
 ---
@@ -81,11 +81,11 @@ Ensuite, [créez un élément de données](../../../ui/managing-resources/data-e
 
 ### Installation et configuration de l’extension
 
-Dans la même propriété de transfert d’événement, sélectionnez **[!UICONTROL Extensions],** puis **[!UICONTROL Catalog]** pour afficher les extensions disponibles à l’installation. À partir de là, recherchez l’extension Mailchimp et sélectionnez **[!UICONTROL Install]**.
+Dans la même propriété de transfert d’événement, sélectionnez **[!UICONTROL Extensions],** puis **[!UICONTROL Catalogue]** pour afficher les extensions disponibles à l’installation. À partir de là, recherchez l’extension Mailchimp et sélectionnez **[!UICONTROL Installer]**.
 
 ![Installer l’extension Mailchimp](../../../images/extensions/server/mailchimp/install.png)
 
-L’écran de configuration s’affiche. Sous **[!UICONTROL Mailchimp Server Prefix Domain Name]**, saisissez le domaine que vous avez copié précédemment à partir de votre compte Mailchimp, y compris votre préfixe de domaine unique.
+L’écran de configuration s’affiche. Sous **[!UICONTROL Nom de domaine du préfixe du serveur Mailchimp]**, saisissez le domaine que vous avez copié précédemment à partir de votre compte Mailchimp, y compris votre préfixe de domaine unique.
 
 >[!IMPORTANT]
 >
@@ -93,7 +93,7 @@ L’écran de configuration s’affiche. Sous **[!UICONTROL Mailchimp Server Pre
 
 ![Configurations d’extension](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-Sous **[!UICONTROL Mailchimp token]**, sélectionnez l’icône de l’élément de données et choisissez l’élément de données `Mailchimp Token` que vous avez créé précédemment. Sélectionnez **[!UICONTROL Save]** pour enregistrer les modifications.
+Sous **[!UICONTROL Jeton Mailchimp]**, sélectionnez l’icône de l’élément de données et choisissez l’élément de données `Mailchimp Token` que vous avez créé précédemment. Sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer les modifications.
 
 L’extension est maintenant installée et configurée pour être utilisée dans votre propriété.
 
@@ -119,7 +119,7 @@ Le tableau ci-dessous fournit plus de détails sur chaque valeur possible.
 | `listId` | `arc.event.xdm._tenant.listId`<br /> ou <br /> `arc.event.data._tenant.listid` | Chaîne | ID de l’audience | **Oui** | Doit correspondre à un ID d’audience existant |
 | `name` | `arc.event.xdm._tenant.name`<br /> ou <br /> `arc.event.data._tenant.name` | Chaîne | Nom de l’événement | **Oui** | 2-30 caractères de longueur |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> ou <br /> `arc.event.data._tenant.properties` | Objet | Liste facultative des propriétés au format JSON avec des détails sur l’événement | Non |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou <br /> `arc.event.data._tenant.isSyncing` | boolean | Les événements créés avec `is_syncing` défini sur `true` **ne déclencheront pas** d’automatisation | Non |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou <br /> `arc.event.data._tenant.isSyncing` | booléen | Les événements créés avec `is_syncing` défini sur `true` **ne déclencheront pas** d’automatisation | Non |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> ou `arc.event.data._tenant.occuredAt`. | Chaîne | Horodatage ISO 8601 du moment où l’événement s’est produit | Non |  |
 
 {style="table-layout:auto"}
@@ -128,7 +128,7 @@ Le tableau ci-dessous fournit plus de détails sur chaque valeur possible.
 >  
 >Les valeurs **Exemple de chemin** ci-dessus sont données à titre d’exemple uniquement. Les noms de champ et les [chemins](../../../ui/event-forwarding/overview.md#data-element-path) référencés dans ces éléments de données peuvent être différents dans votre propriété, selon la manière dont vous avez nommé et configuré Web SDK dans les étapes ci-dessus.
 
-Dans votre propriété de transfert d’événement , vous pouvez créer un élément de données pour chacun des champs décrits ci-dessus. Une fois créés, vous pouvez référencer les éléments de données dans l’action [!UICONTROL Add Event] de cette extension.
+Dans votre propriété de transfert d’événement , vous pouvez créer un élément de données pour chacun des champs décrits ci-dessus. Une fois créés, vous pouvez référencer les éléments de données dans l’action [!UICONTROL Ajouter un événement] de cette extension.
 
 ![Ajouter une configuration d’action d’événement](../../../images/extensions/server/mailchimp/action-configurations.png)
 

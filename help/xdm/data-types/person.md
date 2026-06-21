@@ -11,20 +11,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 343
+source-wordcount: 347
 ht-degree: 16%
 
 ---
 
-# Type de données [!UICONTROL Person]
+# Type de données [!UICONTROL Personne]
 
-[!UICONTROL Person] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une personne individuelle. Ce type de données peut représenter une personne jouant différents rôles, tels qu’un client, un contact ou un propriétaire.
+[!UICONTROL Personne] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une personne individuelle. Ce type de données peut représenter une personne jouant différents rôles, tels qu’un client, un contact ou un propriétaire.
 
 ![image de la personne](../images/data-types/person.PNG){width=500}
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `name` | [[!UICONTROL Person name]](./person-name.md) | Décrit les détails du nom complet de la personne. |
+| `name` | [[!UICONTROL &#x200B; Nom de la personne &#x200B;]](./person-name.md) | Décrit les détails du nom complet de la personne. |
 | `birthDate` | Date | Date de naissance complète d’une personne. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
 | `birthDayAndMonth` | Chaîne | Jour et mois de naissance d’une personne, au format MM-JJ. Ce champ doit être utilisé lorsque le jour et le mois de naissance d’une personne sont connus, mais pas l’année. Le format de cette propriété doit être conforme à ce `[0-1][0-9]-[0-9][0-9]` d’expression régulière. |
 | `birthYear` | Entier | Année de naissance de la personne, y compris le siècle (par exemple, `1983`). Ce champ doit être utilisé lorsque seul l’âge de la personne est connu et non sa date de naissance complète. Cette valeur doit être comprise entre 1 et 32767. |

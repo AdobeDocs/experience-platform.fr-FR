@@ -9,8 +9,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 139
-ht-degree: 3%
+source-wordcount: 147
+ht-degree: 4%
 
 ---
 
@@ -22,10 +22,10 @@ Dans le modèle de données d’expérience (XDM), la classe [!UICONTROL Plan] c
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `_id` | [!UICONTROL String] | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de déterminer l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’ID uniques si vous le souhaitez. |
-| `planId` | [!UICONTROL String] | Identifiant unique du plan. |
-| `planName` | [!UICONTROL String] | Nom du plan. |
+| `_id` | [!UICONTROL Chaîne] | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de déterminer l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’ID uniques si vous le souhaitez. |
+| `planId` | [!UICONTROL Chaîne] | Identifiant unique du plan. |
+| `planName` | [!UICONTROL Chaîne] | Nom du plan. |
 
 {style="table-layout:auto"}
 
-La classe peut être étendue avec le groupe de champs [&#128279;](../field-groups/plan/healthcare-plan-details.md) pour décrire plus de détails sur un régime d’assurance maladie.[!UICONTROL Healthcare Plan Details]
+La classe peut être étendue avec le groupe de champs [[!UICONTROL Détails du plan de soins de santé] &#x200B;](../field-groups/plan/healthcare-plan-details.md) pour décrire d’autres détails sur un plan d’assurance maladie.

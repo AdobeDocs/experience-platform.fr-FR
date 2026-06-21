@@ -22,8 +22,8 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1230
-ht-degree: 92%
+source-wordcount: 1236
+ht-degree: 91%
 
 ---
 
@@ -38,12 +38,12 @@ Des politiques d’utilisation des données doivent être mises en œuvre pour q
 
 Deux types de politiques sont disponibles :
 
-* **[!UICONTROL Data governance policy]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données associés aux données en question.
-* **[!UICONTROL Consent policy]** : filtrez les profils pouvant être activés sur [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients
+* **[!UICONTROL Politique de gouvernance des données]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données associés aux données en question.
+* **[!UICONTROL Politique de consentement]** : filtrez les profils pouvant être activés sur [destinations](../../destinations/home.md) en fonction du consentement ou des préférences de vos clients
 
 >[!NOTE]
 >
->Les politiques d’utilisation des données ne doivent pas être confondues avec les [politiques de contrôle d’accès](../../access-control/abac/end-to-end-guide.md#policy), qui déterminent si certains utilisateurs et utilisatrices d’Experience Platform dans votre organisation peuvent accéder à certains champs de données, et sont configurées via l’onglet [!UICONTROL Permissions] .
+>Les politiques d’utilisation des données ne doivent pas être confondues avec les [politiques de contrôle d’accès](../../access-control/abac/end-to-end-guide.md#policy), qui déterminent si certains utilisateurs et utilisatrices d’Experience Platform dans votre organisation peuvent accéder à certains champs de données, et sont configurées via l’onglet [!UICONTROL Autorisations].
 
 Ce document fournit une présentation de haut niveau des politiques dʼutilisation des données et fournit des liens vers la documentation supplémentaire sur lʼutilisation des politiques dans lʼinterface utilisateur ou lʼAPI.
 
@@ -74,7 +74,7 @@ Voir l’annexe du présent document pour obtenir une liste des [actions marketi
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=fr).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestion des politiques d’utilisation des données {#manage}

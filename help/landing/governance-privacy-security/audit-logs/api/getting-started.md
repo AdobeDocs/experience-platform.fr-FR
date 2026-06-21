@@ -17,8 +17,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 398
-ht-degree: 46%
+source-wordcount: 404
+ht-degree: 45%
 
 ---
 
@@ -30,7 +30,7 @@ L’API Audit Query vous permet d’auditer l’activité des utilisateurs pour 
 
 ## Conditions préalables
 
-Pour gérer les événements d’audit, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View User Activity Log]** accordée (disponible dans la catégorie [!UICONTROL Data Governance] ). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../../access-control/home.md).
+Pour gérer les événements d’audit, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le journal d’activité de l’utilisateur]** accordée (dans la catégorie [!UICONTROL Gouvernance des données]). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../../access-control/home.md).
 
 ### Lecture d&#39;exemples d&#39;appels API
 

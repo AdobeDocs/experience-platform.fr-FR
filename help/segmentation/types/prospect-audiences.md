@@ -16,8 +16,8 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 387
-ht-degree: 66%
+source-wordcount: 395
+ht-degree: 64%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform vous permet d’apporter toute la facilité et la so
 
 ## Accès {#access}
 
-Pour accéder aux audiences de prospects, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Prospects]** .
+Pour accéder aux audiences de prospects, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Prospects]**.
 
 ![Le bouton [!UICONTROL Audiences] est mis en surbrillance dans la section [!UICONTROL Prospects].](../images/types/prospect/prospect-audiences.png)
 
@@ -55,9 +55,9 @@ Pour plus d’informations sur la page des détails de l’audience, veuillez li
 
 ## Créer une audience {#create}
 
-Pour créer une audience de prospects, sélectionnez **[!UICONTROL Create audience]** sur le Portail d’audiences.
+Pour créer une audience de prospects, sélectionnez **[!UICONTROL Créer une audience]** sur le portail d’audiences.
 
-![Le bouton [!UICONTROL Create audience] est mis en surbrillance sur la page de navigation de l’audience du prospect.](../images/types/prospect/select-create-audience.png)
+![Le bouton [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l’audience du prospect.](../images/types/prospect/select-create-audience.png)
 
 Le créateur de segments s’affiche. Les attributs de profil de prospect apparaissent dans la barre de navigation de gauche.
 

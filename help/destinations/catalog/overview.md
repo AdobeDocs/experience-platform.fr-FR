@@ -15,8 +15,8 @@ topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 137
-ht-degree: 36%
+source-wordcount: 168
+ht-degree: 29%
 
 ---
 
@@ -38,14 +38,14 @@ Parcourez le catalogue pour déterminer les plateformes de destination les mieux
 Vous pouvez activer vos données dans différentes catégories de destination dans [!DNL Adobe Experience Platform]. Les liens ci-dessous fournissent des informations supplémentaires sur chaque catégorie de destination :
 
 - [Présentation d’Adobe [!UICONTROL destinations]](adobe/overview.md)
-- [Présentation de [!UICONTROL Advertising] [!UICONTROL destinations]](advertising/overview.md)
-- [Présentation de [!UICONTROL Analytics] [!UICONTROL destinations]](analytics/overview.md)
-- [Présentation de [!UICONTROL Cloud storage] [!UICONTROL destinations]](cloud-storage/overview.md)
-- [Présentation de la [!UICONTROL destinations] [!UICONTROL Data Management Platform] (DMP)](data-management/overview.md)
-- [Présentation de [!UICONTROL Email marketing] [!UICONTROL destinations]](email-marketing/overview.md)
-- [Présentation de [!UICONTROL Mobile engagement] [!UICONTROL destinations]](mobile-engagement/overview.md)
-- [Présentation de [!UICONTROL Personalization] [!UICONTROL destinations]](personalization/overview.md)
+- [Présentation d’ [!UICONTROL destinations]](advertising/overview.md)
+- [Présentation d’[!UICONTROL Analytics] [!UICONTROL destinations]](analytics/overview.md)
+- [Présentation de [!UICONTROL Espace de stockage] [!UICONTROL destinations]](cloud-storage/overview.md)
+- [Présentation de [!UICONTROL Data Management Platform] (DMP) [!UICONTROL destinations]](data-management/overview.md)
+- [Présentation de [!UICONTROL Marketing par e-mail] [!UICONTROL destinations]](email-marketing/overview.md)
+- [Présentation de [!UICONTROL Engagement mobile] [!UICONTROL destinations]](mobile-engagement/overview.md)
+- [Présentation de  [!UICONTROL destinations]](personalization/overview.md)
 - [Présentation de [!UICONTROL Social] [!UICONTROL destinations]](social/overview.md)
-- [[!UICONTROL Streaming] [!UICONTROL destinations] (liens vers la destination HTTP)](streaming/http-destination.md)
-- [Présentation de [!UICONTROL Survey] [!UICONTROL destinations]](survey/overview.md)
-- [Présentation de [!UICONTROL Voice of the Customer] [!UICONTROL destinations]](voice/overview.md)
+- [[!UICONTROL Diffusion en continu] [!UICONTROL destinations] (liens vers la destination HTTP)](streaming/http-destination.md)
+- [Présentation de [!UICONTROL Questionnaire] [!UICONTROL destinations]](survey/overview.md)
+- [Présentation de [!UICONTROL Voix du client] [!UICONTROL destinations]](voice/overview.md)

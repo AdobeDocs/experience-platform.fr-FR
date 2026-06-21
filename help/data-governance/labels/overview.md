@@ -23,7 +23,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 827
+source-wordcount: 830
 ht-degree: 88%
 
 ---
@@ -74,7 +74,7 @@ Vous pouvez gérer les libellés d’utilisation des données à l’aide des AP
 
 ### Utilisation de l’interface utilisateur
 
-L’espace de travail **[!UICONTROL Policies]** de l’interface utilisateur de [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Utilisez l’espace de travail **[!UICONTROL Schemas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md) ou découvrez comment [créer et gérer des libellés personnalisés dans l’interface utilisateur de **[!UICONTROL Policies]**](./user-guide.md) dans le guide d’utilisation des libellés d’utilisation des données .
+L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur de [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Utilisez l’espace de travail **[!UICONTROL Schémas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md) ou découvrez comment [créer et gérer des libellés personnalisés dans l’interface utilisateur **[!UICONTROL Politiques]**](./user-guide.md) dans le guide d’utilisation des libellés d’utilisation des données.
 
 >[!IMPORTANT]
 >

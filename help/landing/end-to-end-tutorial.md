@@ -26,7 +26,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1893
+source-wordcount: 1894
 ht-degree: 12%
 
 ---
@@ -115,7 +115,7 @@ Pour obtenir des instructions sur l’activation des données vers des destinati
 
 Experience Platform vous permet de suivre le traitement des données par l’utilisation des flux de données, qui sont des représentations des tâches qui déplacent les données entre les différents composants d’Experience Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, où elles sont ensuite utilisées par les [!DNL Identity Service] et les [!DNL Real-Time Customer Profile] avant d’être finalement activées vers les destinations. Le tableau de bord de surveillance vous fournit une représentation visuelle du parcours d’un flux de données. Pour découvrir comment surveiller les flux de données dans l’interface utilisateur d’Experience Platform, consultez les tutoriels sur [surveillance des flux de données pour les sources](../dataflows/ui/monitor-sources.md) et [surveillance des flux de données pour les destinations](../dataflows/ui/monitor-destinations.md).
 
-Vous pouvez également surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement [!DNL Observability Insights]. Vous pouvez vous abonner aux notifications d’alerte par le biais de l’interface utilisateur d’Experience Platform ou les envoyer à un webhook configuré. Pour plus d’informations sur l’affichage, l’activation, la désactivation et l’abonnement aux alertes disponibles à partir de l’interface utilisateur d’Experience Platform, consultez le guide de l’interface utilisateur [[!UICONTROL Alerts]](../observability/alerts/ui.md). Pour plus d’informations sur la réception d’alertes par le biais de Webhooks, consultez le guide sur [l’abonnement aux notifications d’événement d’Adobe I/O](../observability/alerts/subscribe.md).
+Vous pouvez également surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement [!DNL Observability Insights]. Vous pouvez vous abonner aux notifications d’alerte par le biais de l’interface utilisateur d’Experience Platform ou les envoyer à un webhook configuré. Pour plus d’informations sur l’affichage, l’activation, la désactivation et l’abonnement aux alertes disponibles depuis l’interface utilisateur d’Experience Platform, consultez le guide de l’interface utilisateur [[!UICONTROL Alertes]](../observability/alerts/ui.md). Pour plus d’informations sur la réception d’alertes par le biais de Webhooks, consultez le guide sur [l’abonnement aux notifications d’événement d’Adobe I/O](../observability/alerts/subscribe.md).
 
 ## Étapes suivantes
 

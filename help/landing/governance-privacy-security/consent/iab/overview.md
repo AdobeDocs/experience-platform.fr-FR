@@ -32,7 +32,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2607
+source-wordcount: 2622
 ht-degree: 2%
 
 ---
@@ -146,18 +146,18 @@ Une fois que vous avez configuré votre CMP pour générer des chaînes de conse
 
 Pour que le SDK envoie des données à Experience Platform, vous devez d’abord créer un flux de données pour Experience Platform. Les étapes spécifiques de création d’un flux de données sont fournies dans la documentation de [&#128279;](/help/datastreams/overview.md).
 
-Après avoir fourni un nom unique pour le flux de données, sélectionnez le bouton de basculement en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs suivantes pour compléter le reste du formulaire :
+Après avoir fourni un nom unique pour le flux de données, sélectionnez le bouton de basculement en regard de **&#x200B;**. Ensuite, utilisez les valeurs suivantes pour compléter le reste du formulaire :
 
 | Champ du flux de données | Valeur |
 | --- | --- |
 | [!UICONTROL Sandbox] | Nom de l’Experience Platform [sandbox](/help/sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
-| [!UICONTROL Streaming Inlet] | Une connexion en continu valide pour Experience Platform. Consultez le tutoriel sur la [création d’une connexion en continu](/help/ingestion/tutorials/create-streaming-connection-ui.md) si vous ne disposez pas d’une entrée de flux en continu existante. |
-| [!UICONTROL Event Dataset] | Sélectionnez le jeu de données [!DNL XDM ExperienceEvent] créé à l’[étape précédente](#datasets). Si vous avez inclus le groupe de champs [&#128279;](/help/xdm/field-groups/event/iab.md) dans le schéma de ce jeu de données, vous pouvez suivre les événements de changement de consentement au fil du temps à l’aide de la commande [`sendEvent`](#sendEvent) et stocker ces données dans ce jeu de données. [!UICONTROL IAB TCF 2.0 Consent]Gardez à l’esprit que les valeurs de consentement stockées dans ce jeu de données ne sont **pas** utilisées dans les workflows d’application automatiques. |
-| [!UICONTROL Profile Dataset] | Sélectionnez le jeu de données [!DNL XDM Individual Profile] créé à l’[étape précédente](#datasets). Lors de la réponse aux hooks de changement de consentement CMP à l’aide de la commande [`setConsent`](#setConsent), les données collectées sont stockées dans ce jeu de données. Comme ce jeu de données est activé pour Profil, les valeurs de consentement stockées dans ce jeu de données sont respectées lors des workflows d’application automatiques. |
+| [!UICONTROL Entrée de diffusion en continu] | Une connexion en continu valide pour Experience Platform. Consultez le tutoriel sur la [création d’une connexion en continu](/help/ingestion/tutorials/create-streaming-connection-ui.md) si vous ne disposez pas d’une entrée de flux en continu existante. |
+| [!UICONTROL Jeu de données d’événement] | Sélectionnez le jeu de données [!DNL XDM ExperienceEvent] créé à l’[étape précédente](#datasets). Si vous avez inclus le groupe de champs [[!UICONTROL Consentement IAB TCF 2.0] dans le schéma de ce jeu de données](/help/xdm/field-groups/event/iab.md) vous pouvez effectuer le suivi des événements de changement de consentement au fil du temps à l’aide de la commande [`sendEvent`](#sendEvent) et stocker ces données dans ce jeu de données. Gardez à l’esprit que les valeurs de consentement stockées dans ce jeu de données ne sont **pas** utilisées dans les workflows d’application automatiques. |
+| [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données [!DNL XDM Individual Profile] créé à l’[étape précédente](#datasets). Lors de la réponse aux hooks de changement de consentement CMP à l’aide de la commande [`setConsent`](#setConsent), les données collectées sont stockées dans ce jeu de données. Comme ce jeu de données est activé pour Profil, les valeurs de consentement stockées dans ce jeu de données sont respectées lors des workflows d’application automatiques. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
 
 ### Exécution de commandes de modification du consentement
 

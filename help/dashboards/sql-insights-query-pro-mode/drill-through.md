@@ -12,7 +12,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 417
+source-wordcount: 445
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ Le système garantit que l’analyse que vous commencez se poursuit de manière 
 
 ## Créer une exploration amont {#create-drill-through}
 
-Pour créer une exploration, commencez par sélectionner **[!UICONTROL Edit]** dans la vue de votre tableau de bord.
+Pour créer une exploration amont, sélectionnez d’abord **[!UICONTROL Modifier]** dans la vue de votre tableau de bord.
 
 ![Tableau de bord personnalisé avec l’option Modifier mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through.png)
 
-Sélectionnez les points de suspension dans le graphique que vous souhaitez analyser, puis sélectionnez **[!UICONTROL Edit]**.
+Sélectionnez les points de suspension dans le graphique que vous souhaitez analyser, puis sélectionnez **[!UICONTROL Modifier]**.
 
 ![Graphique affichant le menu représentant des points de suspension avec l’option Modifier mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
-Dans le panneau [!UICONTROL Properties], utilisez le bouton (bascule) pour activer le **[!UICONTROL Enable drill through]**, puis utilisez la liste déroulante pour sélectionner le **[!UICONTROL Target dashboard]**. Assurez-vous que le bouton (bascule) correspondant à **[!UICONTROL Filter pass-through]** est activé, puis sélectionnez **[!UICONTROL Save and close]**.
+Dans le panneau [!UICONTROL Propriétés] utilisez le bouton (bascule) pour activer **[!UICONTROL Activer l’exploration amont]**, puis utilisez la liste déroulante pour sélectionner le tableau de bord **[!UICONTROL Cible]**. Assurez-vous que le bouton (bascule) **[!UICONTROL Filtrer le passage]** est activé, puis sélectionnez **[!UICONTROL Enregistrer et fermer]**.
 
 ![Panneau des propriétés du graphique avec les options Activer l’exploration amont, Tableau de bord cible et Transmission du filtre mises en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 
@@ -43,7 +43,7 @@ Dans le panneau [!UICONTROL Properties], utilisez le bouton (bascule) pour activ
 
 ## Affichage d’une exploration {#view-drill-through}
 
-Pour afficher une exploration en amont, sélectionnez des points de suspension dans le graphique depuis la vue de votre tableau de bord, puis sélectionnez **[!UICONTROL Drill through]**.
+Pour afficher une exploration amont, sélectionnez des points de suspension dans le graphique depuis la vue de votre tableau de bord, puis sélectionnez **[!UICONTROL Explorer en amont]**.
 
 ![Graphique affichant le menu représentant des points de suspension avec l’option Exploration amont mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
 
@@ -57,17 +57,17 @@ Le tableau de bord d&#39;exploration en amont de la cible s&#39;affiche. Vous po
 
 ## Supprimer une exploration amont {#remove-drill-through}
 
-Pour supprimer une exploration en amont, sélectionnez d’abord **[!UICONTROL Edit]** dans la vue de votre tableau de bord.
+Pour supprimer une exploration en amont, sélectionnez d’abord **[!UICONTROL Modifier]** dans la vue de votre tableau de bord.
 
 ![Tableau de bord personnalisé avec l’option Modifier mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through.png)
 
-Dans le graphique, sélectionnez les points de suspension dont vous souhaitez supprimer une analyse, puis sélectionnez **[!UICONTROL Edit]**.
+Dans le graphique, sélectionnez les points de suspension dont vous souhaitez supprimer une analyse, puis sélectionnez **[!UICONTROL Modifier]**.
 
 ![Graphique affichant le menu représentant des points de suspension avec l’option Modifier mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
-Dans le panneau de [!UICONTROL Properties], sélectionnez le bouton (bascule) pour désactiver le **[!UICONTROL Enable drill through]**, puis sélectionnez **[!UICONTROL Save and close]**.
+Dans le panneau [!UICONTROL Propriétés], sélectionnez le bouton (bascule) pour désactiver **[!UICONTROL Activer l’exploration amont]**, puis sélectionnez **[!UICONTROL Enregistrer et fermer]**.
 
-![Panneau Propriétés du graphique avec le bouton (bascule) désactivé pour les [!UICONTROL Enable drill through] en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
+![Panneau Propriétés du graphique avec le bouton (bascule) désactivé pour [!UICONTROL Activer l’exploration amont] mis en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## Étapes suivantes
 

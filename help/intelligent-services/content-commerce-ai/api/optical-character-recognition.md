@@ -219,4 +219,4 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `repo:path` | chaîne | - | - | - | URL prédéfinie de l’image à partir de laquelle le texte doit être extrait. |
 | `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
 | `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez cette option lors de la transmission de l’image en tant qu’argument multipartie au lieu d’utiliser des URL présignées. |
-| `dc:format` | string | Oui | - | « image/jpg », <br>« image/jpeg », <br>« image/png », <br>« image/tiff » | Le codage de l’image est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
+| `dc:format` | chaîne | Oui | - | « image/jpg », <br>« image/jpeg », <br>« image/png », <br>« image/tiff » | Le codage de l’image est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |

@@ -11,7 +11,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 533
+source-wordcount: 541
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ L’éditeur de validation vous permet de gérer rapidement et facilement les fo
 
 ## Prise en main de l’éditeur de validation
 
-Après [configuration d’Assurance](../tutorials/implement-assurance.md), dans la vue **[!UICONTROL Home]**, sélectionnez **[!UICONTROL Validation Editor]**.
+Après avoir [configuré Assurance](../tutorials/implement-assurance.md), dans la vue **[!UICONTROL Accueil]**, sélectionnez **[!UICONTROL Éditeur de validation]**.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -30,11 +30,11 @@ Après [configuration d’Assurance](../tutorials/implement-assurance.md), dans 
 
 Cette fonctionnalité vous permet de créer, modifier ou supprimer des fonctions de validation pour vos sessions Adobe Experience Platform Assurance.
 
-1. Sélectionnez **[!UICONTROL Create a New Validation]**.
+1. Sélectionnez **[!UICONTROL Créer une validation]**.
 2. Saisissez un **nom** pour identifier la validation, puis fournissez un **catégorie** et une **description**.
 3. Modifiez le code dans l’éditeur pour valider les événements de votre session Assurance.
 
-Une fois les tests de fonction terminés, sélectionnez **[!UICONTROL Publish]** pour enregistrer votre validation.
+Une fois les tests de fonction terminés, sélectionnez **[!UICONTROL Publier]** pour enregistrer votre validation.
 
 ### Définition de l’événement
 

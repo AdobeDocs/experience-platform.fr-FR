@@ -13,7 +13,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 971
+source-wordcount: 992
 ht-degree: 23%
 
 ---
@@ -147,25 +147,25 @@ Développez la section suivante pour afficher un exemple de schéma.
 
 ## Connecter votre compte [!DNL SAP Commerce] {#connect-account}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *eCommerce*, sélectionnez **[!UICONTROL SAP Commerce]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie *eCommerce*, sélectionnez **[!UICONTROL SAP Commerce]**, puis **[!UICONTROL Ajouter des données]**.
 
 ![Capture d’écran de l’interface utilisateur Experience Platform pour le catalogue avec la carte SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
-La page **[!UICONTROL Connect SAP Commerce account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte SAP Commerce]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant {#existing-account}
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL SAP Commerce] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL SAP Commerce] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte SAP Commerce à un compte existant](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### Nouveau compte {#new-account}
 
-Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte SAP Commerce à un nouveau compte](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
@@ -182,13 +182,13 @@ Enfin, vous devez sélectionner le type d’objet à ingérer dans Experience Pl
 
 >[!TAB Clients]
 
-Pour ingérer des données client, sélectionnez **[!UICONTROL Customers]** comme type d’objet, puis sélectionnez **[!UICONTROL Next]**.
+Pour ingérer des données client, sélectionnez **[!UICONTROL Clients]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Capture d’écran de l’interface utilisateur Experience Platform pour SAP Commerce montrant la configuration avec l’option Clients sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contacts]
 
-Pour ingérer des données de contact, sélectionnez **[!UICONTROL Contacts]** comme type d’objet, puis sélectionnez **[!UICONTROL Next]**.
+Pour ingérer des données de contact, sélectionnez **[!UICONTROL Contacts]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Capture d’écran de l’interface utilisateur Experience Platform pour SAP Commerce montrant la configuration avec l’option Contacts sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 

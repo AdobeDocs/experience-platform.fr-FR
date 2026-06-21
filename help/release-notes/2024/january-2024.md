@@ -26,8 +26,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1700
-ht-degree: 91%
+source-wordcount: 1709
+ht-degree: 90%
 
 ---
 
@@ -53,9 +53,9 @@ Mises à jour des fonctionnalités existantes dans Experience Platform :
 
 ## Playbooks de cas d’utilisation {#use-case-playbooks}
 
-La fonctionnalité [!UICONTROL Use Case Playbooks] est désormais disponible pour tous les clients Real-Time CDP et Adobe Journey Optimizer. Les [!UICONTROL Use Case Playbooks] sont conçus pour aider les utilisateurs à surmonter les défis lorsqu’ils commencent à utiliser Real-Time Customer Data Platform ou Adobe Journey Optimizer. Lorsque vous ne savez pas par où commencer ou comment créer les ressources appropriées pour les cas d’utilisation souhaités, les Playbooks de cas d’utilisation sont une source d’inspiration et créent différentes ressources que vous pouvez tester et importer dans des environnements de production lorsque vous le souhaitez.
+La fonctionnalité [!UICONTROL Playbooks de cas d’utilisation] est désormais disponible pour tous les clients Real-Time CDP et Adobe Journey Optimizer. Les [!UICONTROL playbooks de cas d’utilisation] sont conçus pour aider les utilisateurs et les utilisatrices à surmonter les défis lorsqu’ils commencent avec Real-Time Customer Data Platform ou Adobe Journey Optimizer. Lorsque vous ne savez pas par où commencer ou comment créer les ressources appropriées pour les cas d’utilisation souhaités, les Playbooks de cas d’utilisation sont une source d’inspiration et créent différentes ressources que vous pouvez tester et importer dans des environnements de production lorsque vous le souhaitez.
 
-Pour commencer à utiliser [!UICONTROL Use Case Playbooks], consultez les pages de documentation suivantes :
+Pour commencer à utiliser [!UICONTROL Playbooks de cas d’utilisation], lisez les pages de documentation suivantes :
 
 - Consultez la [page de vue d’ensemble](/help/use-case-playbooks/playbooks/overview.md) pour comprendre l’objectif, les informations de disponibilité et obtenir une démonstration de bout en bout du fonctionnement des playbooks, de la découverte à la création d’instances, en passant par l’import de ressources générées dans d’autres environnements de sandbox.
 - Obtenez une liste de tous les [playbooks disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), regroupés par produit (Real-Time CDP ou Journey Optimizer).

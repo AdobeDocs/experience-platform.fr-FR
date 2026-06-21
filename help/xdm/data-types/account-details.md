@@ -11,20 +11,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 435
+source-wordcount: 440
 ht-degree: 16%
 
 ---
 
-# Type de données [!UICONTROL Account Details]
+# Type de données [!UICONTROL Détails du compte]
 
-[!UICONTROL Account Details] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails liés à une organisation commerciale.
+[!UICONTROL Détails du compte] est un type de données standard des modèles de données d’expérience (XDM) qui décrit les détails liés à une organisation commerciale.
 
 ![Structure du type de données](../images/data-types/account-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `annualRevenue` | [[!UICONTROL Currency]](./currency.md) | Montant estimé des recettes annuelles de l’organisation. |
+| `annualRevenue` | [[!UICONTROL Devise]](./currency.md) | Montant estimé des recettes annuelles de l’organisation. |
 | `DUNSNumber` | Chaîne | Numéro D-U-N-S de Dun &amp; Bradstreet de l&#39;organisation. Il s&#39;agit d&#39;un numéro non indicatif à neuf chiffres attribué à chaque emplacement d&#39;affaires de la base de données Dun &amp; Bradstreet ayant une activité unique, séparée et distincte, et géré uniquement par Dun &amp; Bradstreet. |
 | `NAICSCode` | Chaîne | Classification de l&#39;organisation dans le Système de classification des industries de l&#39;Amérique du Nord. |
 | `NAICSDescription` | Chaîne | Brève description du secteur d&#39;activité d&#39;une organisation, selon son code SCIAN. |

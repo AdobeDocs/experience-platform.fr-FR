@@ -17,7 +17,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2884
+source-wordcount: 2909
 ht-degree: 31%
 
 ---
@@ -231,7 +231,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Requête**
 
-Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Demographic Details] (`profile-person-details`)](../field-groups/profile/demographic-details.md)
+Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Détails démographiques] &#x200B;](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 En ajoutant le groupe de champs `profile-person-details` , le schéma Membres du programme de fidélité capture désormais les informations démographiques des membres du programme de fidélité, telles que leur prénom, leur nom et leur anniversaire.
 
@@ -335,8 +335,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs des groupes de champs standard suivants :
 
-* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`) : ajoute des informations de contact telles que l’adresse personnelle, l’adresse e-mail et le téléphone personnel.
-* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`) : ajoute des informations de contact telles que l’adresse personnelle, l’adresse e-mail et le téléphone personnel.
+* [[!UICONTROL Coordonnées personnelles]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`) : permet d’ajouter des informations de contact telles que l’adresse personnelle, l’adresse e-mail et le téléphone personnel.
+* [[!UICONTROL Détails de fidélité]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`) : ajoute des informations de contact telles que l’adresse personnelle, l’adresse e-mail et le téléphone personnel.
 
 ```SHELL
 curl -X PATCH \
@@ -430,7 +430,7 @@ Le schéma Membres du programme de fidélité doit maintenant contenir quatre va
 
 ### Définir un nouveau groupe de champs
 
-Bien que le groupe de champs [!UICONTROL Loyalty Details] standard fournisse des champs liés à la fidélité utiles au schéma, d’autres champs de fidélité ne sont inclus dans aucun groupe de champs standard.
+Bien que le groupe de champs standard [!UICONTROL Détails de fidélité] fournisse des champs liés à la fidélité utiles au schéma, d’autres champs de fidélité ne sont inclus dans aucun groupe de champs standard.
 
 Pour ajouter ces champs, vous pouvez définir vos propres groupes de champs personnalisés dans le conteneur `tenant`. Ces groupes de champs sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque extérieur à votre organisation.
 
@@ -1384,7 +1384,7 @@ Utilisez l’interface utilisateur d’Experience Platform pour vérifier que le
 
 ### Localisation du schéma
 
-Pour commencer, accédez à **[!UICONTROL Schemas]** > **[!UICONTROL Browse]**. Utilisez le champ de saisie de texte pour rechercher le nom du schéma (par exemple, `Campaign Member`) et sélectionnez le nom du schéma dans le tableau.
+Pour commencer, accédez à **[!UICONTROL Schémas]** > **[!UICONTROL Parcourir]**. Utilisez le champ de saisie de texte pour rechercher le nom du schéma (par exemple, `Campaign Member`) et sélectionnez le nom du schéma dans le tableau.
 
 ![Vue de navigation des schémas avec le champ de saisie de texte mis en surbrillance pour rechercher et sélectionner votre schéma.](../images/tutorials/create-schema/schemas-browse.png)
 
@@ -1399,7 +1399,7 @@ La zone de travail des schémas affiche la structure complète de votre schéma.
 
 ### Vérifier les propriétés du schéma
 
-Sélectionnez ensuite le nœud racine du schéma pour ouvrir le panneau **[!UICONTROL Schema properties]** et confirmer les métadonnées clés :
+Sélectionnez ensuite le nœud racine du schéma pour ouvrir le panneau **[!UICONTROL Propriétés du schéma]** et confirmez les métadonnées clés :
 
 * Schéma `$id`
 * Nom d’affichage
@@ -1409,13 +1409,13 @@ Le `$id` doit correspondre à la valeur renvoyée dans votre réponse API.
 
 >[!NOTE]
 >
->La classe affectée (**[!UICONTROL XDM Business Campaign Members]** dans cet exemple) s’affiche dans le panneau de **[!UICONTROL Composition]** de gauche.
+>La classe affectée (**[!UICONTROL Membres de XDM Business Campaign]** dans cet exemple) s’affiche dans le panneau de gauche **[!UICONTROL Composition]**.
 
 ![La vue Éditeur de schémas avec la racine de schéma sélectionnée et le panneau Propriétés du schéma s’ouvre pour passer en revue les métadonnées clés.](../images/tutorials/create-schema/review-schema-properties.png)
 
 ### Valider les champs d’identité
 
-Chaque champ d’identité ajouté au schéma est répertorié dans la section **[!UICONTROL Identities]** du panneau **[!UICONTROL Composition]** . Sélectionnez un champ d’identité pour afficher ses propriétés dans le panneau de droite. Pour chaque champ d’identité, confirmez :
+Chaque champ d’identité ajouté au schéma est répertorié dans la section **[!UICONTROL Identités]** du panneau **[!UICONTROL Composition]**. Sélectionnez un champ d’identité pour afficher ses propriétés dans le panneau de droite. Pour chaque champ d’identité, confirmez :
 
 * L’espace de noms d’identité est correct.
 * Le champ est marqué comme identité principale, le cas échéant.
@@ -1440,7 +1440,7 @@ Les informations suivantes complètent le tutoriel sur l’API.
 
 Dans ce tutoriel, un schéma est composé pour décrire les membres d’un programme de fidélité dans la vente au détail.
 
-Le schéma implémente la classe [!DNL XDM Individual Profile] et combine plusieurs groupes de champs. Il capture les informations sur les membres du programme de fidélité à l’aide des groupes de champs standard [!DNL Demographic Details], [!UICONTROL Personal Contact Details] et [!UICONTROL Loyalty Details], ainsi qu’au moyen d’un groupe de champs personnalisé de niveau de fidélité défini pendant le tutoriel.
+Le schéma implémente la classe [!DNL XDM Individual Profile] et combine plusieurs groupes de champs. Il capture les informations sur les membres du programme de fidélité à l’aide des groupes de champs [!DNL Demographic Details] standard, [!UICONTROL Coordonnées personnelles] et [!UICONTROL Détails de fidélité], ainsi que par le biais d’un groupe de champs Niveau de fidélité personnalisé défini pendant le tutoriel.
 
 Vous trouverez ci-dessous le schéma Loyalty Members au format JSON :
 

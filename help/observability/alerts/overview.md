@@ -21,7 +21,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 899
+source-wordcount: 904
 ht-degree: 63%
 
 ---
@@ -86,13 +86,13 @@ Pour utiliser des alertes dans l’interface utilisateur d’Experience Platform
 | Autorisation | Description |
 | --- | --- |
 | Affichage des alertes | Permet d’afficher les messages d’alerte reçus. |
-| Afficher l’historique des alertes* | Permet de visualiser l&#39;historique des alertes reçues à partir de l&#39;onglet [!UICONTROL Alerts] . |
-| Gérer les alertes* | Permet d’activer et de désactiver les règles d’alerte à partir de l’onglet [!UICONTROL Alerts] . |
-| Résoudre les alertes* | Permet de résoudre les alertes déclenchées à partir de l’onglet [!UICONTROL Alerts] . |
+| Afficher l’historique des alertes* | Permet de visualiser l&#39;historique des alertes reçues à partir de l&#39;onglet [!UICONTROL Alertes]. |
+| Gérer les alertes* | Permet d’activer et de désactiver les règles d’alerte à partir de l’onglet [!UICONTROL Alertes]. |
+| Résoudre les alertes* | Permet de résoudre les alertes déclenchées à partir de l’onglet [!UICONTROL Alertes]. |
 
 {style="table-layout:auto"}
 
-** Pour accéder à l’onglet [!UICONTROL Alerts], vous devez également disposer de l’autorisation Afficher les alertes, associée à l’une des autres autorisations.*
+** Pour accéder à l’onglet [!UICONTROL Alertes], vous devez également disposer de l’autorisation Afficher les alertes, associée à l’une des autres autorisations.*
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes re�
 >
 > Sélectionnez une alerte pour accéder à un tableau de bord associé et obtenir des informations plus détaillées sur les raisons pour lesquelles l’alerte a été déclenchée.
 
-En outre, l’onglet [!UICONTROL Alerts] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
+En outre, l’onglet [!UICONTROL Alertes] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
 
 ### Intégration de Slack {#slack-integration}
 

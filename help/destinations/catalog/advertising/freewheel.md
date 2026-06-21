@@ -6,7 +6,7 @@ badge: label="Beta" type="Informative"
 exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
 source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1581'
 ht-degree: 26%
 
 ---
@@ -71,8 +71,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Profile-based]** | Vous exportez tous les membres d’une audience, ainsi que les champs d’identité souhaités, tels que choisis à l’étape de mappage du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exportations | **[!UICONTROL Batch]** | La première exportation est un instantané complet de tous les profils qualifiés pour les audiences activées. Les exportations suivantes sont des mises à jour incrémentielles quotidiennes qui incluent de nouvelles qualifications d’audience (ajouts) et des sorties d’audience (suppressions). Un intervalle d’actualisation complet de l’audience configurable (4, 8 ou 12 semaines) est également disponible, déclenchant des exportations complètes périodiques en plus des exportations incrémentielles quotidiennes. Les exportations complètes contiennent uniquement les profils actuellement qualifiés. Les sorties d’audience ne sont pas incluses et sont diffusées exclusivement par le biais de mises à jour incrémentielles quotidiennes. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’une audience, ainsi que les champs d’identité souhaités, tels que choisis à l’étape de mappage du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exportations | **[!UICONTROL Lot]** | La première exportation est un instantané complet de tous les profils qualifiés pour les audiences activées. Les exportations suivantes sont des mises à jour incrémentielles quotidiennes qui incluent de nouvelles qualifications d’audience (ajouts) et des sorties d’audience (suppressions). Un intervalle d’actualisation complet de l’audience configurable (4, 8 ou 12 semaines) est également disponible, déclenchant des exportations complètes périodiques en plus des exportations incrémentielles quotidiennes. Les exportations complètes contiennent uniquement les profils actuellement qualifiés. Les sorties d’audience ne sont pas incluses et sont diffusées exclusivement par le biais de mises à jour incrémentielles quotidiennes. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -90,7 +90,7 @@ L’authentification vers la destination [!DNL FreeWheel] est gérée automatiqu
 
 ![Capture d’écran de l’étape d’authentification pour la destination FreeWheel.](../../assets/catalog/advertising/freewheel/connect-destination.png)
 
-Sélectionnez **[!UICONTROL Connect to destination]** pour passer à l’étape Détails de la destination .
+Sélectionnez **[!UICONTROL Se connecter à la destination]** pour passer à l’étape des détails de la destination.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -103,27 +103,27 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Exemple de capture d’écran montrant comment remplir les détails pour la destination FreeWheel.](../../assets/catalog/advertising/freewheel/destination-details.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Region]** : région [!DNL FreeWheel] où votre compte est hébergé. Sélectionnez l’une des options suivantes :
-   * **[!UICONTROL US East]**
+* **[!UICONTROL Region]** : région [!DNL FreeWheel] dans laquelle votre compte est hébergé. Sélectionnez l’une des options suivantes :
+   * **[!UICONTROL Est des États-Unis]**
    * **[!UICONTROL Europe]**
-   * **[!UICONTROL Asia Pacific]**
-* **[!UICONTROL FreeWheel network ID]** : identifiant réseau [!DNL FreeWheel]. Cette valeur est fournie par [!DNL FreeWheel] et identifie de manière unique votre organisation dans la plateforme [!DNL FreeWheel].
-* **[!UICONTROL Full audience refresh interval]** : fréquence à laquelle une exportation complète d’audience est envoyée à [!DNL FreeWheel] en plus des mises à jour incrémentielles quotidiennes. Une exportation complète d’audience empêche les membres de votre audience d’expirer en [!DNL FreeWheel], de sorte que vous ne subissiez pas de pertes de membres ciblés pendant l’exécution de vos campagnes. Sélectionnez un intervalle dans la liste déroulante.
+   * **[!UICONTROL Asie-Pacifique]**
+* **[!UICONTROL Identifiant réseau FreeWheel]** : votre identifiant réseau [!DNL FreeWheel]. Cette valeur est fournie par [!DNL FreeWheel] et identifie de manière unique votre organisation dans la plateforme [!DNL FreeWheel].
+* **[!UICONTROL Intervalle d’actualisation complet de l’audience]** : fréquence à laquelle une exportation complète de l’audience est envoyée à [!DNL FreeWheel] en plus des mises à jour incrémentielles quotidiennes. Une exportation complète d’audience empêche les membres de votre audience d’expirer en [!DNL FreeWheel], de sorte que vous ne subissiez pas de pertes de membres ciblés pendant l’exécution de vos campagnes. Sélectionnez un intervalle dans la liste déroulante.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -131,13 +131,13 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 
 ![Capture d’écran de l’étape Planification dans le workflow d’activation de FreeWheel.](../../assets/catalog/advertising/freewheel/scheduling.png)
 
-À l’étape **[!UICONTROL Scheduling]**, configurez le planning d’exportation pour chaque audience. [!DNL FreeWheel] utilise un modèle d’exportation hybride : la première exportation pour chaque audience activée est un instantané complet, suivi de mises à jour incrémentielles quotidiennes.
+À l’étape **[!UICONTROL Planification]**, configurez le planning d’exportation pour chaque audience. [!DNL FreeWheel] utilise un modèle d’exportation hybride : la première exportation pour chaque audience activée est un instantané complet, suivi de mises à jour incrémentielles quotidiennes.
 
 Configurez les champs suivants :
 
-* **[!UICONTROL File export options]** : **[!UICONTROL Export incremental files]** est présélectionnée et constitue la seule option prise en charge. La première exportation inclut automatiquement un instantané complet de tous les profils qualifiés. Les exportations suivantes ne fournissent que de nouvelles qualifications d’audience et des sorties depuis la dernière exportation.
-* **[!UICONTROL Frequency]** : sélectionnez **[!UICONTROL Daily]**. [!DNL FreeWheel] exige une diffusion incrémentielle quotidienne des fichiers.
-* **[!UICONTROL Scheduled start time]** : saisissez l’heure d’exécution de l’exportation quotidienne en UTC.
+* **[!UICONTROL Options d’exportation de fichiers]** : **[!UICONTROL Exporter des fichiers incrémentiels]** est présélectionnée et constitue la seule option prise en charge. La première exportation inclut automatiquement un instantané complet de tous les profils qualifiés. Les exportations suivantes ne fournissent que de nouvelles qualifications d’audience et des sorties depuis la dernière exportation.
+* **[!UICONTROL Fréquence]** : Sélectionnez **[!UICONTROL Quotidienne]**. [!DNL FreeWheel] exige une diffusion incrémentielle quotidienne des fichiers.
+* **[!UICONTROL Heure de début planifiée]** : saisissez l’heure en UTC à laquelle l’exportation quotidienne doit s’exécuter.
 * **[!UICONTROL Date]** : définissez les dates de début et de fin de l’activation. La date de début détermine à quel moment la première exportation d&#39;instantané complet est envoyée.
 
 >[!NOTE]

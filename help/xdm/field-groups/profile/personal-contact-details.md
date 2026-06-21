@@ -13,18 +13,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 161
+source-wordcount: 167
 ht-degree: 14%
 
 ---
 
-# [!UICONTROL Personal Contact Details] groupe de champs de schéma
+# [!UICONTROL Coordonnées personnelles] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Personal Contact Details] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui décrit les informations de contact d’une personne individuelle.
+[!UICONTROL Coordonnées personnelles] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui décrit les informations de contact d’une personne individuelle.
 
 ![](../../images/field-groups/personal-contact-details.png)
 

@@ -31,7 +31,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2132
+source-wordcount: 2143
 ht-degree: 1%
 
 ---
@@ -59,9 +59,9 @@ Pour vous connecter [!DNL Algolia] Adobe Experience Platform, vous aurez besoin 
 
 ## Installation et configuration de l’extension [!DNL Algolia] Insights {#install-configure}
 
-Pour installer l’extension [!DNL Algolia] Insights, accédez à la [!UICONTROL Data Collection UI] et sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
+Pour installer l’extension [!DNL Algolia] Insights, accédez à l’[!UICONTROL interface utilisateur de la collecte de données] et sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
 
-Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalog]** . Recherchez la carte [!DNL Algolia] Insights , puis sélectionnez **[!UICONTROL Install]**.
+Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Recherchez la carte [!DNL Algolia] Insights , puis sélectionnez **[!UICONTROL Installer]**.
 
 ![](../../../images/extensions/client/algolia/install.png)
 
@@ -69,12 +69,12 @@ Dans la vue de configuration qui s’affiche, vous devez fournir les détails su
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Application ID] | Saisissez les [!UICONTROL Application Id] que vous avez précédemment collectées dans la section [détails de la configuration](#configuration-details). |
-| [!UICONTROL Search API Key] | Saisissez les [!UICONTROL Search API Key] que vous avez précédemment collectées dans la section [détails de la configuration](#configuration-details). |
-| [!UICONTROL Index Name] | Le [!UICONTROL Index Name] contient les produits ou le contenu.  Cet index sera utilisé par défaut. |
-| [!UICONTROL User Token Data Element] | L’élément de données qui renverra le jeton d’utilisateur. |
-| [!UICONTROL Authenticated User Token Data Element] | Définissez l’élément de données qui renverra le jeton d’utilisateur authentifié. |
-| [!UICONTROL Currency Code] | Saisissez le code de devise au format ISO-4217, tel que USD ou EUR. Ce champ prend en charge les éléments de données. |
+| [!UICONTROL ID de l’application] | Saisissez l’[!UICONTROL ID de l’application] que vous avez précédemment collecté dans la section [détails de la configuration](#configuration-details). |
+| [!UICONTROL Clé API de recherche] | Saisissez la [!UICONTROL clé API de recherche] que vous avez précédemment collectée dans la section [détails de configuration](#configuration-details). |
+| [!UICONTROL Nom de l’index] | Le [!UICONTROL Nom de l’index] contient les produits ou le contenu.  Cet index sera utilisé par défaut. |
+| [!UICONTROL Élément de données Jeton d’utilisateur] | L’élément de données qui renverra le jeton d’utilisateur. |
+| [!UICONTROL Élément de données Jeton d’utilisateur authentifié] | Définissez l’élément de données qui renverra le jeton d’utilisateur authentifié. |
+| [!UICONTROL Code de devise] | Saisissez le code de devise au format ISO-4217, tel que USD ou EUR. Ce champ prend en charge les éléments de données. |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -88,26 +88,26 @@ Dans la vue de configuration qui s’affiche, vous devez fournir les détails su
 >
 >Dans la plupart des cas, il est recommandé de charger [!DNL Algolia] Insights sur chaque page de votre site.
 
-Ajoutez l’action **[!UICONTROL Load Insights]** à votre règle de balise là où elle est la plus pertinente pour charger [!DNL Algolia] Insights en fonction du contexte de votre règle. Cette action charge la bibliothèque `search-insights.js` sur la page.
+Ajoutez l’action **[!UICONTROL Charger les informations]** à votre règle de balise là où elle est la plus pertinente pour charger [!DNL Algolia] informations en fonction du contexte de votre règle. Cette action charge la bibliothèque `search-insights.js` sur la page.
 
-Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolia]** comme [!UICONTROL Extension] et **[!UICONTROL Load Insights]** comme [!UICONTROL Action Type].
+Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolie]** comme [!UICONTROL Extension] et sélectionnez **[!UICONTROL Charger les informations]** comme [!UICONTROL Type d’action].
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Insight Library Version] | Version d’[!DNL Algolia] Insights. La valeur par défaut est de `2.17.3`. |
-| [!UICONTROL User Opt Out Data Element] | L’élément de données qui capture la préférence de suivi de l’utilisateur. |
-| [!UICONTROL Use User Token Cookie] | Cochez cette case pour [!DNL Algolia] permettre de générer un cookie de jeton d’utilisateur. Par défaut, cette option est définie sur `true`. |
+| [!UICONTROL Version de la bibliothèque &#x200B;] | Version d’[!DNL Algolia] Insights. La valeur par défaut est de `2.17.3`. |
+| [!UICONTROL Élément De Données Opt-Out De L’Utilisateur] | L’élément de données qui capture la préférence de suivi de l’utilisateur. |
+| [!UICONTROL Utiliser le cookie du jeton d’utilisateur] | Cochez cette case pour [!DNL Algolia] permettre de générer un cookie de jeton d’utilisateur. Par défaut, cette option est définie sur `true`. |
 
 ![](../../../images/extensions/client/algolia/load-insights.png)
 
 ### Cliqué {#clicked}
 
-Ajoutez l’action **[!UICONTROL Click]** à votre règle de balise pour envoyer les événements sur lesquels l’utilisateur a cliqué aux [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolia]** comme [!UICONTROL Extension] et **[!UICONTROL Clicked]** comme [!UICONTROL Action Type].
+Ajoutez l’action **[!UICONTROL Clic]** à votre règle de balise pour envoyer les événements sur lesquels l’utilisateur a cliqué aux [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolie]** comme [!UICONTROL Extension] et sélectionnez **[!UICONTROL Cliqué]** comme [!UICONTROL Type d’action].
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Event Name] | Nom de l’événement qui peut être utilisé pour affiner davantage cet événement de clic. |
-| [!UICONTROL Event Details Data Element] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facultatif)</li><li>`positions` (facultatif)</li><li>`price` (facultatif)</li><li>`quantity` (facultatif)</li><li>`discount` (facultatif)</li><li>`objectData` (facultatif)</li><li>`currency` (facultatif)</li></ul> |
+| [!UICONTROL Nom de l’événement] | Nom de l’événement qui peut être utilisé pour affiner davantage cet événement de clic. |
+| [!UICONTROL Élément de données Détails de l’événement] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facultatif)</li><li>`positions` (facultatif)</li><li>`price` (facultatif)</li><li>`quantity` (facultatif)</li><li>`discount` (facultatif)</li><li>`objectData` (facultatif)</li><li>`currency` (facultatif)</li></ul> |
 
 
 >[!NOTE]
@@ -122,12 +122,12 @@ et les guides [ID d’objet cliqués](https://www.algolia.com/doc/api-reference/
 
 ### Converti {#converted}
 
-Ajoutez l’action **[!UICONTROL Converted]** à votre règle de balise pour envoyer les événements convertis à [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolia]** comme [!UICONTROL Extension] et **[!UICONTROL Converted]** comme [!UICONTROL Action Type].
+Ajoutez l’action **[!UICONTROL Converti]** à votre règle de balise pour envoyer les événements convertis aux [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolie]** comme [!UICONTROL Extension] et sélectionnez **[!UICONTROL Converti]** comme [!UICONTROL Type d’action].
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Event Name] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **convert**. |
-| [!UICONTROL Event Details Data Element] | L’élément de données renvoie les détails de l’événement, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facultatif)</li><li>`recordID` (facultatif)</li></ul> |
+| [!UICONTROL Nom de l’événement] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **convert**. |
+| [!UICONTROL Élément de données Détails de l’événement] | L’élément de données renvoie les détails de l’événement, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facultatif)</li><li>`recordID` (facultatif)</li></ul> |
 
 >[!NOTE]
 >
@@ -140,12 +140,12 @@ Pour plus d’informations sur les catégories d’événement, consultez les gu
 
 ### Ajouté au panier {#added-to-cart}
 
-Ajoutez l’action **[!UICONTROL Added to Cart]** à votre règle de balise pour envoyer les événements ajoutés au panier aux [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolia]** comme [!UICONTROL Extension] et **[!UICONTROL Added to cart]** comme [!UICONTROL Action Type].
+Ajoutez l’action **[!UICONTROL Ajouté au panier]** à votre règle de balise pour envoyer les événements ajoutés au panier aux [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolie]** comme [!UICONTROL Extension] et sélectionnez **[!UICONTROL Ajouté au panier]** comme [!UICONTROL Type d’action].
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Event Name] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **ajouter au panier**. |
-| [!UICONTROL Event Details Data Element] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (facultatif)</li><li>`queryID` (facultatif)</li><li>`currency` (facultatif)</li></ul>. |
+| [!UICONTROL Nom de l’événement] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **ajouter au panier**. |
+| [!UICONTROL Élément de données Détails de l’événement] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (facultatif)</li><li>`queryID` (facultatif)</li><li>`currency` (facultatif)</li></ul>. |
 
 >[!NOTE]
 >
@@ -159,12 +159,12 @@ Pour plus d’informations sur les catégories d’événement, consultez les gu
 
 ### Purchased {#purchased}
 
-Ajoutez l’action **[!UICONTROL Purchased]** à votre règle de balise pour envoyer les événements achetés à [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolia]** comme [!UICONTROL Extension] et **[!UICONTROL Purchased]** comme [!UICONTROL Action Type].
+Ajoutez l’action **[!UICONTROL Acheté]** à votre règle de balise pour envoyer les événements achetés à [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolie]** comme [!UICONTROL Extension] et sélectionnez **[!UICONTROL Acheté]** comme [!UICONTROL Type d’action].
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Event Name] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **achat**. |
-| [!UICONTROL Event Details Data Element] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (facultatif)</li><li>`queryID` (facultatif)</li><li>`currency` (facultatif)</li></ul>. |
+| [!UICONTROL Nom de l’événement] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **achat**. |
+| [!UICONTROL Élément de données Détails de l’événement] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (facultatif)</li><li>`queryID` (facultatif)</li><li>`currency` (facultatif)</li></ul>. |
 
 >[!NOTE]
 >
@@ -178,12 +178,12 @@ et les guides [ID des objets achetés](https://www.algolia.com/doc/api-reference
 
 ### Consulté {#viewed}
 
-Ajoutez l’action **[!UICONTROL Viewed]** à votre règle de balise pour envoyer les événements achetés à [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolia]** comme [!UICONTROL Extension] et **[!UICONTROL Viewed]** comme [!UICONTROL Action Type].
+Ajoutez l’action **[!UICONTROL Consulté]** à votre règle de balise pour envoyer les événements achetés à [!DNL Algolia]. Créez une règle de balise ou ouvrez-en une existante. Définissez les conditions en fonction de vos besoins, puis sélectionnez **[!UICONTROL Algolie]** comme [!UICONTROL Extension] et sélectionnez **[!UICONTROL Affiché]** comme [!UICONTROL Type d’action].
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Event Name] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **vue**. |
-| [!UICONTROL Event Details Data Element] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL Nom de l’événement] | Nom de l’événement qui sera utilisé pour affiner davantage cet événement **vue**. |
+| [!UICONTROL Élément de données Détails de l’événement] | L’élément de données renvoie les détails de l’événement au format JSON, notamment : <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -205,17 +205,17 @@ L’élément de données DataSet récupère les données associées aux éléme
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Hit Element Div/Class Name] | Le Nom de l’élément HTML et/ou le Nom de classe CSS contenant les attributs du jeu de données, y compris `data-insights-object-id` et éventuellement `data-insights-query-id` et `data-insights-position` sur l’élément HTML. |
-| [!UICONTROL Index Name Element Div/Class Name] | Nom de l’élément HTML et/ou Nom de classe CSS qui contient les attributs de jeu de données (`data-indexname`) sur l’élément HTML. |
+| [!UICONTROL Nom de classe/div de l’élément d’accès] | Le Nom de l’élément HTML et/ou le Nom de classe CSS contenant les attributs du jeu de données, y compris `data-insights-object-id` et éventuellement `data-insights-query-id` et `data-insights-position` sur l’élément HTML. |
+| [!UICONTROL Nom De L’Index, Élément Div/Nom De Classe] | Nom de l’élément HTML et/ou Nom de classe CSS qui contient les attributs de jeu de données (`data-indexname`) sur l’élément HTML. |
 
 **Configuration De Commerce (Facultatif) :**
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Price Data Element] | Élément de données qui renvoie le prix de l’article. Le cas échéant, elles sont incluses dans les données d’événement stockées pour les événements commerciaux. |
-| [!UICONTROL Quantity Data Element] | Élément de données qui renvoie la quantité de l’article. La valeur par défaut est 1 s’il n’est pas fourni. |
-| [!UICONTROL Discount Data Element] | Élément de données qui renvoie la valeur décimale de remise pour l’article. |
-| [!UICONTROL Currency Code] | Code de devise au format ISO-4217. Si aucun code de devise n’est spécifié, la devise par défaut de la configuration de l’extension est utilisée. |
+| [!UICONTROL Élément de données Prix] | Élément de données qui renvoie le prix de l’article. Le cas échéant, elles sont incluses dans les données d’événement stockées pour les événements commerciaux. |
+| [!UICONTROL Élément de données Quantité] | Élément de données qui renvoie la quantité de l’article. La valeur par défaut est 1 s’il n’est pas fourni. |
+| [!UICONTROL Élément de données de remise] | Élément de données qui renvoie la valeur décimale de remise pour l’article. |
+| [!UICONTROL Code de devise] | Code de devise au format ISO-4217. Si aucun code de devise n’est spécifié, la devise par défaut de la configuration de l’extension est utilisée. |
 
 **Remplacements (facultatifs) :**
 
@@ -223,11 +223,11 @@ Ces champs vous permettent de remplacer le comportement par défaut de récupér
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Record ID Data Element] | Remplacez l’approche par défaut pour utiliser l’URL de page comme ID d’enregistrement. L’ID d’enregistrement est utilisé pour stocker et rechercher les données à envoyer à [!DNL Algolia] pour ce produit/cette page. |
-| [!UICONTROL Query ID Data Element] | L’ID de requête est récupéré à partir du jeu de données sur l’élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renvoie l’ID de requête sous la forme d’une chaîne. |
-| [!UICONTROL Object IDs Data Element] | Les ID d’objet sont récupérés à partir du jeu de données sur l’élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renvoie les ID d’objet sous la forme d’un tableau. |
-| [!UICONTROL Positions Data Element] | Les positions sont récupérées à partir du jeu de données sur l&#39;élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renverra les positions sous la forme d’un tableau. |
-| [!UICONTROL Index Name Data Element] | Le Nom de l’index est récupéré à partir du jeu de données sur l’élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renverra le nom de l’index sous la forme d’une chaîne. |
+| [!UICONTROL Élément de données ID d’enregistrement] | Remplacez l’approche par défaut pour utiliser l’URL de page comme ID d’enregistrement. L’ID d’enregistrement est utilisé pour stocker et rechercher les données à envoyer à [!DNL Algolia] pour ce produit/cette page. |
+| [!UICONTROL Élément de données ID de requête] | L’ID de requête est récupéré à partir du jeu de données sur l’élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renvoie l’ID de requête sous la forme d’une chaîne. |
+| [!UICONTROL Élément de données ID d’objet] | Les ID d’objet sont récupérés à partir du jeu de données sur l’élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renvoie les ID d’objet sous la forme d’un tableau. |
+| [!UICONTROL Élément de données Positions] | Les positions sont récupérées à partir du jeu de données sur l&#39;élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renverra les positions sous la forme d’un tableau. |
+| [!UICONTROL Élément de données Nom de l’index] | Le Nom de l’index est récupéré à partir du jeu de données sur l’élément HTML. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renverra le nom de l’index sous la forme d’une chaîne. |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -265,10 +265,10 @@ L’élément de données Chaîne de requête extrait les données de la chaîne
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Object ID Param Name] | Nom du paramètre de requête contenant l’ID d’objet. |
-| [!UICONTROL Index Name Param Name] | Nom du paramètre de requête contenant le nom de l’index. |
-| [!UICONTROL Query ID Param Name] | Nom du paramètre de requête qui contient l’identifiant de requête. |
-| [!UICONTROL Position Param Name] | Nom du paramètre de requête contenant la position. |
+| [!UICONTROL Nom du paramètre d’ID d’objet] | Nom du paramètre de requête contenant l’ID d’objet. |
+| [!UICONTROL Nom du paramètre d’index] | Nom du paramètre de requête contenant le nom de l’index. |
+| [!UICONTROL Nom du paramètre d’ID de requête] | Nom du paramètre de requête qui contient l’identifiant de requête. |
+| [!UICONTROL Nom du paramètre de position] | Nom du paramètre de requête contenant la position. |
 
 ![](../../../images/extensions/client/algolia/query-string.png)
 
@@ -300,11 +300,11 @@ Cet élément de données récupère les détails de l’événement qui étaien
 
 | Propriété | Description |
 | --- | --- |
-| [!UICONTROL Record ID Data Element] | L’ID d’enregistrement est utilisé comme clé pour rechercher les données d’événement stockées dans le stockage du navigateur. L’URL de la page est l’ID d’enregistrement par défaut. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renvoie l’ID d’enregistrement sous la forme d’une chaîne. |
-| [!UICONTROL Price Data Element] | Élément de données qui renvoie le prix de l’article. Le cas échéant, les données d’événement stockées seront mises à jour avec les informations de prix. |
-| [!UICONTROL Quantity Data Element] | Élément de données qui renvoie la quantité de l’article. Le cas échéant, les données d’événement stockées sont mises à jour avec les informations de quantité. |
-| [!UICONTROL Discount Data Element] | Élément de données qui renvoie la valeur décimale de remise pour l’article. Le cas échéant, les données d’événement stockées sont mises à jour avec des informations de remise. |
-| [!UICONTROL Currency Code] | Saisissez le code de devise au format ISO-4217. Le cas échéant, les données d’événement stockées sont mises à jour avec les informations de devise. |
+| [!UICONTROL Élément de données ID d’enregistrement] | L’ID d’enregistrement est utilisé comme clé pour rechercher les données d’événement stockées dans le stockage du navigateur. L’URL de la page est l’ID d’enregistrement par défaut. Pour remplacer ce comportement, utilisez cette propriété pour fournir un élément de données qui renvoie l’ID d’enregistrement sous la forme d’une chaîne. |
+| [!UICONTROL Élément de données Prix] | Élément de données qui renvoie le prix de l’article. Le cas échéant, les données d’événement stockées seront mises à jour avec les informations de prix. |
+| [!UICONTROL Élément de données Quantité] | Élément de données qui renvoie la quantité de l’article. Le cas échéant, les données d’événement stockées sont mises à jour avec les informations de quantité. |
+| [!UICONTROL Élément de données de remise] | Élément de données qui renvoie la valeur décimale de remise pour l’article. Le cas échéant, les données d’événement stockées sont mises à jour avec des informations de remise. |
+| [!UICONTROL Code de devise] | Saisissez le code de devise au format ISO-4217. Le cas échéant, les données d’événement stockées sont mises à jour avec les informations de devise. |
 
 ![](../../../images/extensions/client/algolia/storage.png)
 

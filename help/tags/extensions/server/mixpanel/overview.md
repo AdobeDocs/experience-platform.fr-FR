@@ -34,7 +34,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 976
+source-wordcount: 1000
 ht-degree: 2%
 
 ---
@@ -96,22 +96,22 @@ Pour connecter Experience Platform à [!DNL Mixpanel], vous devez disposer des e
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou choisissez plutôt une propriété existante à modifier.
 
-Sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez **[!UICONTROL Install]** sur la carte de l’extension [!DNL Mixpanel].
+Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez **[!UICONTROL Installer]** sur la carte de l’extension [!DNL Mixpanel].
 
 ![Installation de l’extension [!DNL Mixpanel].](../../../images/extensions/server/mixpanel/install-extension.png)
 
 ## Créer une règle de [!DNL Send Event]
 
-Commencez à créer une règle dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Mixpanel]**. Définissez ensuite le type d’action sur **[!UICONTROL Track Event]** pour envoyer des événements Edge Network à [!DNL Mixpanel].
+Commencez à créer une règle dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Mixpanel]**. Définissez ensuite le type d’action sur **[!UICONTROL Suivi des événements]** pour envoyer des événements Edge Network à [!DNL Mixpanel].
 
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
-| [!UICONTROL Project Token] | Ce champ doit être mappé au jeton de projet associé à votre compte [!DNL Mixpanel]. | Oui |
-| [!UICONTROL Event Type] | Nom de l’événement. | Oui |
-| [!UICONTROL Event Time] | L’heure de l’événement. | |
-| [!UICONTROL Mixpanel Distinct ID] | Identifiant unique de l’utilisateur qui a exécuté l’événement. | |
-| [!UICONTROL Insert ID] | Identifiant unique de l’événement, utilisé pour la déduplication. | |
-| [!UICONTROL Event Properties] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | |
+| [!UICONTROL &#x200B; Jeton de projet &#x200B;] | Ce champ doit être mappé au jeton de projet associé à votre compte [!DNL Mixpanel]. | Oui |
+| [!UICONTROL Type d’événement] | Nom de l’événement. | Oui |
+| [!UICONTROL Heure de l’événement] | L’heure de l’événement. | |
+| [!UICONTROL Identifiant Mixpanel distinct] | Identifiant unique de l’utilisateur qui a exécuté l’événement. | |
+| [!UICONTROL Insérer un ID] | Identifiant unique de l’événement, utilisé pour la déduplication. | |
+| [!UICONTROL Propriétés des événements] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | |
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Commencez à créer une règle dans votre propriété de transfert d’événeme
 
 ![Ajoutez une configuration d’action de règle de transfert d’événement.](../../../images/extensions/server/mixpanel/track-event-action.png)
 
-Une fois l’action [!UICONTROL Track Event] ajoutée à la règle, vous pouvez configurer les conditions de la règle afin qu’elle ne se déclenche que pour certains événements, ou vous pouvez laisser la section Conditions vide pour que la règle se déclenche pour tous les événements.
+Une fois l’action [!UICONTROL Suivi des événements] ajoutée à la règle, vous pouvez configurer les conditions de la règle afin qu’elle ne se déclenche que pour certains événements, ou vous pouvez laisser la section Conditions vide pour que la règle se déclenche pour tous les événements.
 
 >[!IMPORTANT]
 >
@@ -129,7 +129,7 @@ Une fois l’action [!UICONTROL Track Event] ajoutée à la règle, vous pouvez 
 
 Si votre implémentation réussit et que des événements sont collectés, des événements s’affichent dans la [[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948).
 
-Vérifiez si [!DNL Mixpanel] a fusionné les événements de post-connexion renseignés avec les valeurs d’e-mail et les événements créés lors de l’utilisation de **[!UICONTROL Send Event]**. Si elle est implémentée correctement, [!DNL Mixpanel] les associera à un seul [profil utilisateur](https://help.mixpanel.com/hc/en-us/articles/115004501966).
+Vérifiez si [!DNL Mixpanel] a fusionné les événements de post-connexion renseignés avec les valeurs d’e-mail et les événements créés lors de l’utilisation de **[!UICONTROL Événement d’envoi]**. Si elle est implémentée correctement, [!DNL Mixpanel] les associera à un seul [profil utilisateur](https://help.mixpanel.com/hc/en-us/articles/115004501966).
 
 ## Étapes suivantes
 

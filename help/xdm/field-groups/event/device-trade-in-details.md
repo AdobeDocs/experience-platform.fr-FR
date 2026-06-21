@@ -11,18 +11,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 184
+source-wordcount: 192
 ht-degree: 14%
 
 ---
 
-# [!UICONTROL Device Trade-In Details] groupe de champs de schéma
+# [!UICONTROL Détails d’échange de l’appareil] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Device Trade-In Details] groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il fournit un champ unique (`deviceTradeInDetails`) qui décrit une transaction d’échange d’appareil, y compris la valeur d’échange, l’identifiant d’appareil d’origine et le nouvel identifiant d’appareil.
+[!UICONTROL Device Trade-In Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il fournit un champ unique (`deviceTradeInDetails`) qui décrit une transaction d’échange d’appareil, y compris la valeur d’échange, l’identifiant d’appareil d’origine et le nouvel identifiant d’appareil.
 
 ![Structure des détails de reprise d’appareil](../../images/field-groups/device-trade-in-details.png)
 

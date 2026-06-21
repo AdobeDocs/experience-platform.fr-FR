@@ -18,7 +18,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 701
+source-wordcount: 703
 ht-degree: 30%
 
 ---
@@ -57,7 +57,7 @@ Les actions marketing ne peuvent être sélectionnées que lors de la première 
 
 Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données dans Real-Time CDP. Pour plus d’informations, consultez la section « Politiques d’utilisation des données » dans la [!DNL Experience Platform] [présentation de la gouvernance des données](../../data-governance/home.md).
 
-Adobe Experience Platform fournit plusieurs politiques de base pour les cas d’utilisation courants de l’expérience client. Il est possible d’afficher ces politiques dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Policies]** et en sélectionnant l’onglet **[!UICONTROL Browse]** . Consultez le [guide d’utilisation des politiques](../../data-governance/policies/user-guide.md) dans la documentation [!DNL Experience Platform] pour obtenir des instructions plus détaillées sur l’utilisation des politiques dans l’interface utilisateur, notamment sur la création de vos propres politiques personnalisées.
+Adobe Experience Platform fournit plusieurs politiques de base pour les cas d’utilisation courants de l’expérience client. Il est possible d’afficher ces politiques dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Politiques]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]**. Consultez le [guide d’utilisation des politiques](../../data-governance/policies/user-guide.md) dans la documentation [!DNL Experience Platform] pour obtenir des instructions plus détaillées sur l’utilisation des politiques dans l’interface utilisateur, notamment sur la création de vos propres politiques personnalisées.
 
 ## Appliquer des stratégies d’utilisation des données {#enforce}
 

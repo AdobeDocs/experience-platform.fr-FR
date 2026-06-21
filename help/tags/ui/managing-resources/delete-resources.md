@@ -23,8 +23,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 513
-ht-degree: 93%
+source-wordcount: 514
+ht-degree: 90%
 
 ---
 
@@ -93,4 +93,4 @@ Avant de pouvoir supprimer une ressource, vous devez la supprimer des bibliothè
 
 ## Supprimer une ressource
 
-Dans la vue Liste appropriée, sélectionnez la ressource à supprimer, puis cliquez sur **[!UICONTROL Delete]**.
+Dans la vue de liste appropriée, sélectionnez la ressource à supprimer, puis sélectionnez **[!UICONTROL Supprimer]**.

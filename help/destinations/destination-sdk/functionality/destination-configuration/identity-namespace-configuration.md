@@ -15,7 +15,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 919
+source-wordcount: 898
 ht-degree: 52%
 
 ---
@@ -72,9 +72,9 @@ Pendant la définition des identités cibles prises en charge par la destination
 |---------|----------|---|------|
 | `acceptsAttributes` | Booléen | Facultatif | Indique si la clientèle peut mapper des attributs de profil standard à l’identité que vous configurez. |
 | `acceptsCustomNamespaces` | Booléen | Facultatif | Indique si la clientèle peut mapper des espaces de noms d’identité personnalisés à l’espace de noms d’identité que vous configurez. |
-| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) (par exemple, [!UICONTROL IDFA]) la clientèle peut mapper l’identité que vous configurez. |
-| `transformation` | Chaîne | Facultatif | Affiche la case à cocher [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) dans l’interface utilisateur d’Experience Platform, lorsque le champ source est un attribut XDM ou un espace de noms d’identité personnalisée. Utilisez cette option pour permettre aux utilisateurs de hacher les attributs sources au moment de l’exportation. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
-| `requiredTransformation` | Chaîne | Facultatif | Lorsque la clientèle sélectionne cet espace de noms d’identité source, la case à cocher [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) est automatiquement appliquée au mappage et il n’est pas possible de la désactiver. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
+| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) (par exemple, [!UICONTROL IDFA]) la clientèle peut mapper à l’identité que vous configurez. |
+| `transformation` | Chaîne | Facultatif | Affiche la case [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) dans l’interface utilisateur d’Experience Platform, lorsque le champ source est un attribut XDM ou un espace de noms d’identité personnalisée. Utilisez cette option pour permettre aux utilisateurs de hacher les attributs sources au moment de l’exportation. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
+| `requiredTransformation` | Chaîne | Facultatif | Lorsque la clientèle sélectionne cet espace de noms d’identité source, la case [[!UICONTROL Appliquer la transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) est automatiquement cochée pour le mappage et il n’est pas possible de la désactiver. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 

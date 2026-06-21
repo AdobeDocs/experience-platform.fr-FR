@@ -26,7 +26,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 955
+source-wordcount: 997
 ht-degree: 3%
 
 ---
@@ -55,15 +55,15 @@ Pour configurer le [[!DNL The Trade Desk Real-Time Conversions API]](https://par
 
 Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou sélectionnez une propriété existante à modifier à la place.
 
-Sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez la vignette **[!UICONTROL The Trade Desk]** de l’API Real-Time Conversions , puis sélectionnez **[!UICONTROL Install]**.
+Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez la vignette d’API **[!UICONTROL The Trade Desk]** Real-Time Conversions, puis sélectionnez **[!UICONTROL Installer]**.
 
 ![Catalogue d’extensions affichant la carte d’extension [!DNL The Trade Desk] mettant en surbrillance install.](../../../images/extensions/server/tradedesk/install-extension.png)
 
-Dans l’écran suivant, saisissez le [!UICONTROL Advertiser ID] et, éventuellement, une [!UICONTROL Merchant ID]. Vous pouvez coller les identifiants directement dans ces entrées ou utiliser un élément de données à la place. Ils serviront de valeurs par défaut utilisées lors de l’appel d’un événement à [!DNL The Trade Desk]’API Real-Time Conversions. Sélectionnez **[!UICONTROL Save]** (Enregistrer) une fois terminé.
+Dans l’écran suivant, saisissez le [!UICONTROL ID publicitaire] et éventuellement un [!UICONTROL ID commerçant]. Vous pouvez coller les identifiants directement dans ces entrées ou utiliser un élément de données à la place. Ils serviront de valeurs par défaut utilisées lors de l’appel d’un événement à [!DNL The Trade Desk]’API Real-Time Conversions. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
 Pour découvrir comment créer des éléments de données et les rendre disponibles pour les extensions dans votre propriété de balise, suivez le tutoriel [Créer des éléments de données](https://experienceleague.adobe.com/fr/docs/platform-learn/data-collection/tags/create-data-elements).
 
-![Page de configuration de l’extension [!DNL The Trade Desk] avec les champs [!UICONTROL Advertiser ID] et [!UICONTROL Merchant ID] en surbrillance.](../../../images/extensions/server/tradedesk/configure-extension.png)
+![Page de configuration de l’extension [!DNL The Trade Desk] avec les champs [!UICONTROL ID publicitaire] et [!UICONTROL ID de commerçant] en surbrillance.](../../../images/extensions/server/tradedesk/configure-extension.png)
 
 L’extension est installée et vous pouvez désormais utiliser ses fonctionnalités dans vos règles de transfert d’événement.
 
@@ -77,15 +77,15 @@ Vous devez envisager de configurer plusieurs règles afin d’envoyer toutes les
 >
 >Les événements doivent être envoyés en temps réel ou aussi près que possible du temps réel.
 
-Créez une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL The Trade Desk]**. Sélectionnez ensuite **[!UICONTROL Real Time Conversion]** pour le **[!UICONTROL Action Type]**.
+Créez une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL The Trade Desk]**. Sélectionnez ensuite **[!UICONTROL Conversion en temps réel]** pour le **[!UICONTROL Type d’action]**.
 
 ![Vue des règles de propriété de transfert d’événement, avec les champs requis pour ajouter une configuration d’action de règle de transfert d’événement en surbrillance.](../../../images/extensions/server/tradedesk/tradedesk-event-action.png)
 
-Une fois la sélection effectuée, des commandes supplémentaires apparaissent pour configurer plus en détail les données d’événement qui seront envoyées à [!DNL The Trade Desk]. Sélectionnez **[!UICONTROL Keep Changes]** pour enregistrer la règle.
+Une fois la sélection effectuée, des commandes supplémentaires apparaissent pour configurer plus en détail les données d’événement qui seront envoyées à [!DNL The Trade Desk]. Sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la règle.
 
 Les options de configuration sont divisées en trois sections principales, comme indiqué ci-dessous :
 
-**[!UICONTROL Basic Request Properties]**
+**[!UICONTROL Propriétés de requête de base]**
 
 | Entrée | Description |
 | --- | --- |
@@ -108,20 +108,20 @@ Les options de configuration sont divisées en trois sections principales, comme
 
 Reportez-vous à la documentation du développeur [!DNL The Trade Desk] pour plus d’informations sur les [propriétés de requête](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) acceptées par [!DNL The Trade Desk]’API Real-Time Conversions.
 
-**[!UICONTROL Object Request Parameters]**
+**[!UICONTROL Paramètres de demande d’objet]**
 
 Un objet JSON contenant plus d’informations. Vous avez la possibilité d’utiliser un ensemble réduit d’entrées clé-valeur ou de fournir du code JSON brut. De plus, vous pouvez récupérer les données dynamiques d’un élément de données en sélectionnant les disques (![Icône de disque](/help/images/icons/database.png)) sur la droite.
 
 
 ![Section [!DNL Object Request Parameters] présentant les champs disponibles.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-Reportez-vous à la documentation [Événement de conversion en temps réel](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) pour plus d’informations sur les [!UICONTROL Object Request Parameters] et leurs propriétés.
+Reportez-vous à la documentation [Événement de conversion en temps réel](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) pour plus d’informations sur [!UICONTROL Paramètres de requête d’objet] et leurs propriétés.
 
-**[!UICONTROL Configuration Overrides]**
+**[!UICONTROL Remplacements de configuration]**
 
 >[!NOTE]
 >
->Les champs [!UICONTROL Configuration Overrides] vous permettent de définir une [!DNL Advertiser ID] et/ou une [!DNL Merchant ID] différente pour chaque règle.
+>Les champs [!UICONTROL Remplacements de configuration] vous permettent de définir un [!DNL Advertiser ID] et/ou un [!DNL Merchant ID] différent pour chaque règle.
 
 | Entrée | Description |
 | --- | --- |
@@ -130,7 +130,7 @@ Reportez-vous à la documentation [Événement de conversion en temps réel](htt
 
 ![Section [!DNL Configuration Overrides] présentant les champs disponibles.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
-Lorsque la règle vous convient, sélectionnez **[!UICONTROL Save to Library]**. Enfin, publiez un nouveau transfert d’événement [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
+Lorsque la règle vous convient, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**. Enfin, publiez un nouveau transfert d’événement [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
 
 ## Étapes suivantes
 

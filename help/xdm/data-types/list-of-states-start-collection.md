@@ -9,16 +9,16 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 159
+source-wordcount: 177
 ht-degree: 5%
 
 ---
 
-# Type de données [!UICONTROL List of States Start]
+# [!UICONTROL Type de données Début de la liste &#x200B;] états
 
-Le type de données [!UICONTROL List of States Start] est un type de données de modèle de données d’expérience (XDM) conçu pour représenter les informations liées à l’état de départ de divers attributs du lecteur. Elle inclut la propriété [!UICONTROL Player State Name] qui indique l’état spécifique de l’attribut (par exemple, « fullscreen », « mute », « closedCaptioning »). Ce type de données est utilisé pour capturer et décrire les conditions initiales de différents états du lecteur.
+Le type de données [!UICONTROL Liste d’états Début] est un type de données de modèle de données d’expérience (XDM) conçu pour représenter les informations relatives à l’état de départ de divers attributs du lecteur. Elle inclut la propriété [!UICONTROL Nom de l’état du lecteur] qui indique l’état spécifique de l’attribut (par exemple, « fullscreen », « mute », « closedCaptioning »). Ce type de données est utilisé pour capturer et décrire les conditions initiales de différents états du lecteur.
 
-![Diagramme de [!UICONTROL List of States Start] type de données.](../images/data-types/list-of-states-start-collection.png)
+![Diagramme de type de données [!UICONTROL Début de la liste des états].](../images/data-types/list-of-states-start-collection.png)
 
 >[!NOTE]
 >
@@ -26,4 +26,4 @@ Le type de données [!UICONTROL List of States Start] est un type de données de
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [!UICONTROL Player State Name] | `name` | chaîne | Non | Nom de l’état du lecteur. Énumérées : « fullscreen », « mute », « closeCaptioning », « pictureInPicture », « inFocus » avec leurs significations respectives. |
+| [!UICONTROL Nom de l’état du lecteur] | `name` | string | Non | Nom de l’état du lecteur. Énumérées : « fullscreen », « mute », « closeCaptioning », « pictureInPicture », « inFocus » avec leurs significations respectives. |

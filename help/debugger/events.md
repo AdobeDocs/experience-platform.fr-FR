@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 167
+source-wordcount: 169
 ht-degree: 43%
 
 ---
@@ -45,10 +45,10 @@ Pour activer le suivi des modifications apportées à la couche de données dans
 
    ![](images/event-datalayer.jpg)
 
-1. Sélectionnez **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Les détails des modifications apportées à la couche de données indiquent tout élément qui a été supprimé ou ajouté. Vous pouvez sélectionner **{}** pour approfondir l’examen de la couche de données.
 
 ## Téléchargement des informations sur l’événement
 
-Sélectionnez **[!UICONTROL Download]** pour télécharger un fichier Excel affichant des informations sur vos appels de page.
+Sélectionnez **[!UICONTROL Télécharger]** pour télécharger un fichier Excel affichant les informations sur vos appels de page.

@@ -28,7 +28,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1715
+source-wordcount: 1723
 ht-degree: 94%
 
 ---
@@ -118,10 +118,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Utiliser des libellés d’accès pour gérer l’accès des utilisateurs et utilisatrices aux flux de données de destination | Dans le cadre de la fonctionnalité [[!UICONTROL attribute-based access control]](/help/access-control/abac/overview.md) de Real-Time CDP, vous pouvez désormais appliquer des libellés d’accès aux [flux de données de destination](/help/dataflows/ui/monitor-destinations.md). Ainsi, vous pouvez vous assurer que seul un sous-ensemble d’utilisateurs et d’utilisatrices de votre organisation a accès à des flux de données de destination spécifiques. <br> **Important** : lors de la recherche de flux de données de destination à l’aide de la zone de recherche située en haut de l’interface d’utilisation d’Experience Platform, les résultats peuvent inclure des flux de données de destination que vos libellés d’accès d’utilisation vous empêchent de voir. Ce comportement sera corrigé dans une mise à jour à venir. |
+| Utiliser des libellés d’accès pour gérer l’accès des utilisateurs et utilisatrices aux flux de données de destination | Dans le cadre de la fonctionnalité [[!UICONTROL contrôle d’accès basé sur les attributs]](/help/access-control/abac/overview.md) de Real-Time CDP, vous pouvez désormais appliquer des libellés d’accès aux [flux de données de destination](/help/dataflows/ui/monitor-destinations.md). Ainsi, vous pouvez vous assurer que seul un sous-ensemble d’utilisateurs et d’utilisatrices de votre organisation a accès à des flux de données de destination spécifiques. <br> **Important** : lors de la recherche de flux de données de destination à l’aide de la zone de recherche située en haut de l’interface d’utilisation d’Experience Platform, les résultats peuvent inclure des flux de données de destination que vos libellés d’accès d’utilisation vous empêchent de voir. Ce comportement sera corrigé dans une mise à jour à venir. |
 | [Rapports au niveau de l’audience](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) pour la [connexion Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Vous pouvez désormais [afficher des informations](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sur les identités activées, exclues ou en échec réparties au niveau de l’audience, pour chaque audience qui fait partie des flux de données pour cette destination. |
 | Prise en charge des audiences externes pour les connexions [TikTok](/help/destinations/catalog/social/tiktok.md) et [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Vous pouvez activer des audiences externes vers ces destinations à partir de [chargements personnalisés](../../segmentation/ui/audience-portal.md#import-audience) et de la [composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/start/audiences). |
-| Exporter des tableaux, des mappages et des objets vers des destinations d’espace de stockage dans le cloud | En utilisant le nouveau bouton **[!UICONTROL Export arrays, maps, objects]** lors de la connexion à une destination d’espace de stockage, vous pouvez exporter des objets complexes vers des destinations sélectionnées. [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md) à propos de la fonctionnalité. |
+| Exporter des tableaux, des mappages et des objets vers des destinations d’espace de stockage dans le cloud | En utilisant le nouveau bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages]** des objets lors de la connexion à une destination d’espace de stockage , vous pouvez exporter des objets complexes vers des destinations sélectionnées. [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md) à propos de la fonctionnalité. |
 
 {style="table-layout:auto"}
 
@@ -160,7 +160,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).
 
 ## Mises à jour de la documentation {#documentation-updates}
 

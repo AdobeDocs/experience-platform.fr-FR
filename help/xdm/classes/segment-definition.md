@@ -12,24 +12,24 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 364
-ht-degree: 2%
+source-wordcount: 372
+ht-degree: 1%
 
 ---
 
-# Classe [!UICONTROL Segment definition]
+# Classe [!UICONTROL Définition du segment]
 
-« [!UICONTROL Segment definition] » est une classe XDM (modèle de données d’expérience) standard qui capture les détails d’une définition de segment. La classe comprend les champs obligatoires tels que l’identifiant et le nom d’une audience, ainsi que d’autres attributs facultatifs. Cette classe doit être utilisée si vous importez des définitions de segment de systèmes externes dans Adobe Experience Platform.
+« [!UICONTROL &#x200B; Définition de segment &#x200B;] » est une classe XDM (modèle de données d’expérience) standard qui capture les détails d’une définition de segment. La classe comprend les champs obligatoires tels que l’identifiant et le nom d’une audience, ainsi que d’autres attributs facultatifs. Cette classe doit être utilisée si vous importez des définitions de segment de systèmes externes dans Adobe Experience Platform.
 
 >[!NOTE]
 >
->Cette classe ne doit être utilisée que pour capturer des informations sur les définitions de segment elles-mêmes. Pour capturer les informations d’appartenance à une audience dans vos données de profil, vous devez utiliser le groupe de champs [Détails sur l’appartenance à un segment](../field-groups/profile/segmentation.md) dans votre schéma de [!UICONTROL XDM Individual Profile].
+>Cette classe ne doit être utilisée que pour capturer des informations sur les définitions de segment elles-mêmes. Pour capturer les informations d’appartenance à une audience dans vos données de profil, vous devez utiliser le groupe de champs [Détails sur l’appartenance à un segment](../field-groups/profile/segmentation.md) dans votre schéma [!UICONTROL Profil individuel XDM].
 
 ![](../images/classes/segment-definition.png)
 
 | Propriété | Description |
 | --- | --- |
-| `_repo` | Un objet contenant les champs de [!UICONTROL DateTime] suivants : <ul><li>`createDate` : date et heure de création de la ressource dans l’entrepôt de données, par exemple la date de la première ingestion des données.</li><li>`modifyDate` : date et heure de la dernière modification de la ressource.</li></ul> |
+| `_repo` | Objet contenant les champs [!UICONTROL DateTime] suivants : <ul><li>`createDate` : date et heure de création de la ressource dans l’entrepôt de données, par exemple la date de la première ingestion des données.</li><li>`modifyDate` : date et heure de la dernière modification de la ressource.</li></ul> |
 | `_id` | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de déterminer l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’ID uniques si vous le souhaitez.<br><br>Il est important de distinguer que ce champ **ne représente pas** une identité liée à une personne individuelle, mais plutôt l’enregistrement des données lui-même. Les données d’identité relatives à une personne doivent plutôt être reléguées dans des [champs d’identité](../schema/composition.md#identity). |
 | `createdByBatchID` | L’identifiant du lot ingéré qui a provoqué la création de l’enregistrement. |
 | `description` | Description de la définition de segment. |

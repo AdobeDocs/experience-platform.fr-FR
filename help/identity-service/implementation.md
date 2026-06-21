@@ -21,8 +21,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 603
-ht-degree: 62%
+source-wordcount: 576
+ht-degree: 57%
 
 ---
 
@@ -57,7 +57,7 @@ Les schémas d’enregistrement et de série temporelle permettent d’inclure d
 Les champs de type `string` dans les schémas qui mettent en œuvre des classes XDM d’enregistrement ou de série temporelle peuvent être qualifiés de champs d’identité. Par conséquent, toutes les données ingérées dans ces champs seraient considérées comme des données d’identité.
 
 Les champs d’identité permettent également de lier des identités si elles partagent des données PII communes.
-Par exemple, en désignant les champs de numéro de téléphone comme des champs d’identité, le service d’identités crée automatiquement un graphique des relations avec les autres personnes qui utilisent le même numéro de téléphone.
+Par exemple, en étiquetant les champs de numéro de téléphone comme champs d’identité, Identity Service établit automatiquement un graphique des relations avec les autres personnes qui utilisent le même numéro de téléphone.
 
 >[!NOTE]
 >

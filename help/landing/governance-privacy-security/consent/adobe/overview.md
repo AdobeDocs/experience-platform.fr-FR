@@ -32,7 +32,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1604
+source-wordcount: 1615
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ Dans la version actuelle de la prise en charge du traitement du consentement dan
 
 >[!NOTE]
 >
->Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consents and Preferences] &#x200B;](/help/xdm/data-types/consents.md) .
+>Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consentements et préférences]](/help/xdm/data-types/consents.md).
 
 Une fois le système configuré, Experience Platform Web SDK interprète la valeur de consentement de la collecte de données pour l’utilisateur actuel afin de déterminer si les données doivent être envoyées à Adobe Experience Platform Edge Network, supprimées du client ou conservées jusqu’à ce que l’autorisation de collecte de données soit définie sur oui ou non.
 
@@ -101,7 +101,7 @@ Une fois que vous avez créé un jeu de données compatible avec [!DNL Profile] 
 >
 >Si vous ne disposez d’aucun jeu de données en conflit, vous devez définir la priorité d’horodatage pour votre politique de fusion à la place. Cela permet de s’assurer que le dernier consentement spécifié par un client correspond au paramètre de consentement utilisé.
 
-Pour plus d’informations sur l’utilisation des politiques de fusion, commencez par lire la [présentation des politiques de fusion](../../../../profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le groupe de champs de schéma [!UICONTROL Consents and Preferences], comme indiqué dans le guide sur la [préparation des jeux de données](./dataset.md).
+Pour plus d’informations sur l’utilisation des politiques de fusion, commencez par lire la [présentation des politiques de fusion](../../../../profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le groupe de champs de schéma [!UICONTROL Consentements et préférences], comme indiqué dans le guide sur la [préparation des jeux de données](./dataset.md).
 
 ## Importation de données de consentement dans Experience Platform
 
@@ -125,7 +125,7 @@ Consultez la documentation de Mobile SDK pour [configurer l’extension mobile d
 
 Vous pouvez ingérer des données de consentement conformes à XDM à partir d’un fichier CSV à l’aide de l’ingestion par lots. Cela peut s’avérer utile si vous disposez d’une liste d’attente de données de consentement précédemment collectées qui n’ont pas encore été intégrées à vos profils clients.
 
-Suivez le tutoriel sur [le mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-csv/overview.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Experience Platform. Lors de la sélection du [!UICONTROL Destination] pour le mappage, veillez à sélectionner l’option **[!UICONTROL Use existing dataset]** et à choisir le jeu de données de consentement activé pour le [!DNL Profile] que vous avez créé précédemment.
+Suivez le tutoriel sur [le mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-csv/overview.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Experience Platform. Lors de la sélection de la [!UICONTROL Destination] pour le mappage, veillez à sélectionner l’option **[!UICONTROL Utiliser un jeu de données existant]** et à choisir le jeu de données de consentement activé pour le [!DNL Profile] que vous avez créé précédemment.
 
 ## Tester votre implémentation {#test-implementation}
 
@@ -139,7 +139,7 @@ Une fois que vous avez ingéré des données de consentement client dans votre j
 
 Consultez la section sur la [navigation dans les profils par identité](../../../../profile/ui/user-guide.md#browse) dans le guide de l’interface utilisateur [!DNL Profile] pour obtenir des instructions spécifiques sur la recherche des détails d’un profil.
 
-Par défaut, les nouveaux attributs de consentement n’apparaissent pas dans le tableau de bord d’un profil. Par conséquent, vous devez accéder à l’onglet **[!UICONTROL Attributes]** dans la page de détails d’un profil afin de confirmer qu’ils ont été ingérés comme prévu. Consultez le guide sur le [tableau de bord des profils](../../../../profile/ui/profile-dashboard.md) pour savoir comment personnaliser le tableau de bord en fonction de vos besoins.
+Par défaut, les nouveaux attributs de consentement n’apparaissent pas dans le tableau de bord d’un profil. Par conséquent, vous devez accéder à l’onglet **[!UICONTROL Attributs]** sur la page de détails d’un profil afin de confirmer qu’ils ont été ingérés comme prévu. Consultez le guide sur le [tableau de bord des profils](../../../../profile/ui/profile-dashboard.md) pour savoir comment personnaliser le tableau de bord en fonction de vos besoins.
 
 <!-- 
 (To be included once CJM is GA)

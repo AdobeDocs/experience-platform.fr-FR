@@ -23,7 +23,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1598
+source-wordcount: 1588
 ht-degree: 0%
 
 ---
@@ -169,4 +169,4 @@ Sélectionnez **[!DNL Confirm]** pour terminer le processus. Vous revenez sur l�
 
 ## Étapes suivantes
 
-Une fois AWS KMS configuré, procédez à la configuration de l’intégration à l’aide de l’interface utilisateur [!UICONTROL Platform Encryption Configuration] ou de l’API Adobe Experience Platform. Pour poursuivre le processus unique de configuration de la fonctionnalité Clés gérées par le client, reportez-vous au guide de configuration de l’interface utilisateur [UI](./ui-set-up.md).
+Une fois AWS KMS configuré, commencez à configurer l’intégration à l’aide de l’interface utilisateur [!UICONTROL &#x200B; Configuration du chiffrement de plateforme &#x200B;] ou de l’API Adobe Experience Platform. Pour poursuivre le processus unique de configuration de la fonctionnalité Clés gérées par le client, reportez-vous au guide de configuration de l’interface utilisateur [UI](./ui-set-up.md).

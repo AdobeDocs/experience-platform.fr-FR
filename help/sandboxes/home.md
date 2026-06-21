@@ -27,7 +27,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 992
+source-wordcount: 993
 ht-degree: 78%
 
 ---
@@ -77,7 +77,7 @@ Pour plus d’informations sur la gestion des rôles et des autorisations pour l
 
 ## Sandbox dans l’interface utilisateur d’Experience Platform
 
-Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), les utilisateurs peuvent basculer entre les sandbox auxquels ils ont accès en utilisant le **sélecteur de sandbox** en haut à gauche de l’écran.  Les utilisateurs disposant de droits d’administration pour les sandbox ont également accès à l’onglet **[!UICONTROL Sandboxes]** dans le volet de navigation de gauche, où ils peuvent afficher et gérer des sandbox pour leur organisation. Pour plus d’informations sur l’utilisation des sandbox dans l’interface utilisateur, voir le [guide d’utilisation du sandbox](ui/overview.md).
+Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), les utilisateurs peuvent basculer entre les sandbox auxquels ils ont accès en utilisant le **sélecteur de sandbox** en haut à gauche de l’écran.  Les utilisateurs disposant de droits d’administration pour les sandbox ont également accès à l’onglet **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, où ils peuvent afficher et gérer des sandbox pour leur organisation. Pour plus d’informations sur l’utilisation des sandbox dans l’interface utilisateur, voir le [guide d’utilisation du sandbox](ui/overview.md).
 
 ## Sandbox dans les API Experience Platform
 

@@ -95,7 +95,7 @@ Pour demander le rapport de chevauchement de jeux de données à l’aide de Pos
 * Saisissez les valeurs que vous avez générées lors de l’authentification dans la colonne `VALUE`, en remplaçant les accolades (`{{ }}`) et tout le contenu entre accolades.
 * Saisissez le chemin de la requête avec ou sans le paramètre facultatif `date` :
   `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap`\
-  ou
+  or
   `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=YYYY-MM-DD`
 
 | Paramètre | Description |

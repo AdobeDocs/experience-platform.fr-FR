@@ -24,14 +24,14 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 679
-ht-degree: 76%
+source-wordcount: 671
+ht-degree: 74%
 
 ---
 
 # Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
 
-Ce document contient les notes de mise à jour de l’extension Adobe Experience Cloud Identity Service pour les balises. Pour les notes de mise à jour d’Experience Cloud Identity Service lui-même, reportez-vous à la [documentation d’Identity Service](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
+Ce document présente les notes de mise à jour de l’extension de balises du service d’identités d’Adobe Experience Cloud. Pour les notes de mise à jour du service d’identités Experience Cloud lui-même, reportez-vous à la [documentation du service d’identités](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
 
 ## 17 Oct 2022
 
@@ -74,8 +74,8 @@ Ce document contient les notes de mise à jour de l’extension Adobe Experience
 
 ### Extension 5.1.0 d’Experience Cloud ID
 
-* Ajouter la configuration `sameSiteCookie` pour spécifier l’attribut `SameSite` du cookie `AMCV`.
-Cette configuration prend en charge les valeurs suivantes pour l’attribut `SameSite` :
+* Ajout de `sameSiteCookie` configuration pour spécifier l’attribut `SameSite` du cookie `AMCV`.
+Cette configuration prend en charge les valeurs suivantes pour `SameSite` attribut :
 
    * `Strict`
    * `Lax`

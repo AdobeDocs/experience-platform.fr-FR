@@ -6,7 +6,7 @@ solution: Experience Platform
 exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
 source-git-commit: f9b5e32da94625623926102fb236ba2d17bdecea
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '741'
 ht-degree: 1%
 
 ---
@@ -25,11 +25,11 @@ Utilisez ce guide pour gérer les sessions Query Service actives à partir de l�
 >
 >Cette fonctionnalité est destinée aux administrateurs. Les utilisateurs finaux exécutant des requêtes ne peuvent pas gérer les sessions.
 
-Pour afficher et terminer des sessions, vous devez appartenir à une organisation avec un accès à Data Distiller et disposer de l’autorisation **[!UICONTROL Manage Query Session]**. Les utilisateurs ne disposant pas des autorisations requises peuvent accéder à Query Service, mais ne peuvent pas afficher ni gérer les sessions actives.
+Pour afficher et terminer des sessions, vous devez appartenir à une organisation avec un accès à Data Distiller et disposer de l’autorisation **[!UICONTROL Gérer la session de requête]**. Les utilisateurs ne disposant pas des autorisations requises peuvent accéder à Query Service, mais ne peuvent pas afficher ni gérer les sessions actives.
 
 ## Afficher les sessions actives {#view-active-sessions}
 
-Les administrateurs peuvent afficher toutes les sessions Query Service actives dans les sandbox de votre organisation. Dans Experience Platform, sélectionnez **[!UICONTROL Queries]** dans le volet de navigation de gauche pour ouvrir l’espace de travail de Query Service, puis sélectionnez l’onglet **[!UICONTROL Admin]** pour accéder à la gestion des sessions.
+Les administrateurs peuvent afficher toutes les sessions Query Service actives dans les sandbox de votre organisation. Dans Experience Platform, sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche pour ouvrir l’espace de travail de Query Service, puis sélectionnez l’onglet **[!UICONTROL Admin]** pour accéder à la gestion des sessions.
 
 ![Espace de travail de Query Service avec l’onglet Admin sélectionné. Le tableau Gestion des sessions s’affiche et répertorie les sessions actives et inactives sur plusieurs sandbox de votre organisation.](../images/ui/session-management/session-management-admin-tab.png)
 
@@ -44,13 +44,13 @@ Le tableau de session fournit des informations pour vous aider à décider si un
 | Identifiant utilisateur | Adobe ID de l’utilisateur propriétaire de la session |
 | Nom de l’utilisateur ou de l’utilisatrice | Nom associé à l’Adobe ID |
 | Sandbox | Indique le sandbox dans lequel la session est en cours d’exécution |
-| Statut de la session | Indique si la session est **[!UICONTROL Active]** ou **[!UICONTROL Inactive]** |
+| Statut de la session | Indique si la session est **[!UICONTROL active]** ou **[!UICONTROL inactive]** |
 | Durée d’inactivité | Affiche la durée d’ouverture de la session sans interaction |
 | Durée restante de la session | Indique la durée pendant laquelle la session peut rester ouverte avant expiration automatique |
 
 ### Statut de la session
 
-**[!UICONTROL Inactive]** indique que l’utilisateur n’exécute pas activement une requête ; ces sessions peuvent être terminées. **[!UICONTROL Active]** indique qu’une requête est en cours d’exécution ; le contrôle **[!UICONTROL End session]** n’est pas disponible tant que l’exécution de la requête n’est pas terminée.
+**[!UICONTROL Inactif]** indique que l’utilisateur n’exécute pas activement une requête ; ces sessions peuvent être terminées. **[!UICONTROL Actif]** indique qu&#39;une requête est en cours d&#39;exécution ; le contrôle **[!UICONTROL Fin de session]** n&#39;est pas disponible tant que l&#39;exécution de la requête n&#39;est pas terminée.
 
 ### Durée d’inactivité et durée restante de la session
 
@@ -60,11 +60,11 @@ Le Temps inactif indique la durée d’ouverture d’une session sans interactio
 
 Vous pouvez mettre fin aux sessions inactives afin de libérer de la capacité de session simultanée pour d’autres utilisateurs. Envisagez de terminer les sessions avec un temps d’inactivité élevé lorsque les utilisateurs ne travaillent plus activement.
 
-Dans le tableau Gestion des sessions , sélectionnez **[!UICONTROL End session]** pour choisir la session inactive à terminer.
+Dans le tableau Gestion des sessions , sélectionnez **[!UICONTROL Terminer la session]** pour choisir la session inactive à terminer.
 
 ![Tableau de gestion de session présentant une session inactive avec la fin de session mise en surbrillance.](../images/ui/session-management/end-session.png)
 
-Une boîte de dialogue de confirmation s’affiche pour empêcher toute interruption accidentelle. Sélectionnez **[!UICONTROL End session]** dans la boîte de dialogue pour confirmer l’action.
+Une boîte de dialogue de confirmation s’affiche pour empêcher toute interruption accidentelle. Sélectionnez **[!UICONTROL Terminer la session]** dans la boîte de dialogue pour confirmer l’action.
 
 ![La boîte de dialogue de confirmation de fin de session affiche un message d’avertissement et met fin à la session en surbrillance.](../images/ui/session-management/end-session-confirmation-dialog.png)
 
@@ -72,7 +72,7 @@ Une fois la session terminée, elle est supprimée du tableau, la capacité est 
 
 >[!NOTE]
 >
->Les sessions avec le statut **[!UICONTROL Active]** ne peuvent pas être terminées. Cette protection empêche l’interruption des charges de travail en cours.
+>Les sessions avec le statut **[!UICONTROL Actif]** ne peuvent pas être terminées. Cette protection empêche l’interruption des charges de travail en cours.
 
 ## Comportement de la session après l’arrêt {#session-behavior-after-termination}
 

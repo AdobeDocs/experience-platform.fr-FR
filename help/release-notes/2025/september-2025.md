@@ -28,8 +28,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1634
-ht-degree: 86%
+source-wordcount: 1643
+ht-degree: 85%
 
 ---
 
@@ -72,7 +72,7 @@ Pour en savoir plus, consultez la [documentation d’Agent Orchestrator](https:
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Nouvelles fonctionnalités**
 
@@ -94,14 +94,14 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | --- | --- |
 | Connecteur [[!DNL Snowflake Batch]](../../destinations/catalog/warehouses/snowflake-batch.md) [!BADGE version bêta]{type=Informative} | Un nouveau connecteur [!DNL Snowflake Batch] est désormais disponible, offrant une alternative au connecteur de streaming pour certains cas d’utilisation spécifiques. |
 | Prise en charge du chiffrement [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Vous pouvez désormais joindre des clés publiques au format RSA pour chiffrer vos fichiers exportés, vous offrant le même niveau de sécurité que celui fourni par d’autres destinations de stockage cloud pour vos informations sensibles. |
-| Détails d’expiration de l’authentification pour les destinations [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) | Les informations d’expiration de l’authentification pour les destinations [!DNL Pinterest] sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi voir à quel moment votre authentification arrivera à expiration et la renouveler avant qu’elle ne provoque des interruptions de vos flux de données. Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Account expiration date]** dans les onglets **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
+| Détails d’expiration de l’authentification pour les destinations [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) | Les informations d’expiration de l’authentification pour les destinations [!DNL Pinterest] sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi voir à quel moment votre authentification arrivera à expiration et la renouveler avant qu’elle ne provoque des interruptions de vos flux de données. Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Date d’expiration du compte]** dans les onglets **[[!UICONTROL Comptes]](../../destinations/ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Parcourir]](../../destinations/ui/destinations-workspace.md#browse)**. |
 
 **Fonctionnalité nouvelle ou mise à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Capacités améliorées de gestion des destinations dans l’interface d’utilisation d’Experience Platform | Améliorez votre workflow de gestion des destinations avec de nouvelles fonctionnalités de tri dans les onglets [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) et [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts). Vous pouvez désormais voir un indicateur visuel lorsque l’authentification de votre compte est sur le point d’expirer. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| Paramètres persistants de largeur de colonne | Les paramètres de largeur de colonne sont désormais conservés lorsque vous quittez une page et que vous y revenez. Par exemple, si vous ajustez la largeur d’une colonne dans l’onglet [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) , la largeur de votre colonne personnalisée reste la même lorsque vous quittez la page et revenez à cet onglet. |
+| Capacités améliorées de gestion des destinations dans l’interface d’utilisation d’Experience Platform | Améliorez votre workflow de gestion des destinations avec de nouvelles fonctionnalités de tri dans les onglets [[!UICONTROL Parcourir]](../../destinations/ui/destinations-workspace.md#browse) et [[!UICONTROL Comptes]](../../destinations/ui/destinations-workspace.md#accounts). Vous pouvez désormais voir un indicateur visuel lorsque l’authentification de votre compte est sur le point d’expirer. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| Paramètres persistants de largeur de colonne | Les paramètres de largeur de colonne sont désormais conservés lorsque vous quittez une page et que vous y revenez. Par exemple, si vous ajustez la largeur d’une colonne dans l’onglet [[!UICONTROL &#x200B; Parcourir &#x200B;]](../../destinations/ui/destinations-workspace.md#browse), la largeur de votre colonne personnalisée reste la même lorsque vous quittez la page et revenez à cet onglet. |
 
 Pour plus d’informations, consultez la [vue d’ensemble des destinations](../../destinations/home.md).
 

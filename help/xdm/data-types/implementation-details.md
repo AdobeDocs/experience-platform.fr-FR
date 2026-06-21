@@ -13,14 +13,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 119
-ht-degree: 15%
+source-wordcount: 123
+ht-degree: 14%
 
 ---
 
-# Type de données [!UICONTROL Implementation details]
+# [!UICONTROL Détails d’implémentation] type de données
 
-[!UICONTROL Implementation details] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une implémentation technologique, telle qu’une API ou un SDK.
+[!UICONTROL &#x200B; Détails d’implémentation &#x200B;] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une implémentation technologique, telle qu’une API ou un SDK.
 
 ![Structure du type de données](../images/data-types/implementation-details.png)
 

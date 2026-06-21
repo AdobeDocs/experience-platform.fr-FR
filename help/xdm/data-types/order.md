@@ -15,14 +15,14 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 373
+source-wordcount: 388
 ht-degree: 17%
 
 ---
 
 # Type de données [!UICONTROL Order]
 
-[!UICONTROL Order] est un type de données XDM (modèle de données d’expérience) standard qui décrit la commande passée pour une liste de produits.
+[!UICONTROL Commande] est un type de données standard du modèle de données d’expérience (XDM) qui décrit la commande passée pour une liste de produits.
 
 ![Diagramme du type de données [!UICONTROL Order].](../images/data-types/order.png)
 
@@ -30,9 +30,9 @@ ht-degree: 17%
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
 | Identifiant d’achat | `purchaseID` | Chaîne | Identifiant unique attribué par le vendeur à cet achat ou à ce contrat. Rien ne garantit que cet ID est unique, car il est défini par le vendeur. |
 | Numéro de commande | `purchaseOrderNumber` | Chaîne | Identifiant unique attribué par l’acheteur à cet achat ou à ce contrat. |
-| Liste de paiements | `payments` | Tableau de [[!UICONTROL Payment Items]](./payment-item.md) | Liste des paiements pour cette commande. Les paiements sont détaillés dans le cahier des charges [!UICONTROL Payment Items]. |
-| Liste des remboursements | `refunds` | Tableau de [[!UICONTROL Refund Items]](./refund-item.md) | Liste des remboursements pour cette commande. Les restitutions sont détaillées dans le cahier des charges [!UICONTROL Refund Items]. |
-| Informations sur le retour | `returns` | [[!UICONTROL Return Info]](./return.md) | La RMA (autorisation de renvoi de marchandises) a été émise. Les retours sont détaillés dans la spécification [!UICONTROL Return Info]. |
+| Liste de paiements | `payments` | Tableau d’[[!UICONTROL éléments de paiement]](./payment-item.md) | Liste des paiements pour cette commande. Les paiements sont détaillés dans la spécification [!UICONTROL Éléments de paiement]. |
+| Liste des remboursements | `refunds` | Tableau d’[[!UICONTROL éléments de remboursement]](./refund-item.md) | Liste des remboursements pour cette commande. Les remboursements sont détaillés dans la spécification [!UICONTROL Articles remboursés]. |
+| Informations sur le retour | `returns` | [[!UICONTROL Retour d’informations]](./return.md) | La RMA (autorisation de renvoi de marchandises) a été émise. Les retours sont détaillés dans la spécification [!UICONTROL Informations de retour]. |
 | Devise | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux des commandes. Par exemple, `USD` et `EUR`. Toutes les instances doivent correspondre au modèle `^[A-Z]{3}$`. |
 | Montant de la taxe | `taxAmount` | Nombre | Montant de la taxe payée par l&#39;acheteur dans le cadre du paiement final. |
 | Montant de la remise | `discountAmount` | Nombre | Différence entre le prix normal et le prix spécial appliqué à l’ensemble de la commande, plutôt qu’à des produits individuels. |

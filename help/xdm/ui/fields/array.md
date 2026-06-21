@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 348
+source-wordcount: 364
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 Lors de la définition d’un champ Modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez désigner ce champ sous la forme d’un tableau.
 
-Le contenu du tableau dépend du [!UICONTROL Type] sélectionné pour ce champ. Par exemple, si la [!UICONTROL Type] d’un champ est définie sur « [!UICONTROL String] », la définition de ce champ en tant que tableau désigne le champ en tant que tableau de chaînes. Si la [!UICONTROL Type] du champ est définie sur un type de données à plusieurs champs tel que « [!UICONTROL Postal address] », elle devient un tableau d’objets d’adresse postale conformes au type de données.
+Le contenu du tableau dépend du [!UICONTROL Type] sélectionné pour ce champ. Par exemple, si le [!UICONTROL Type] d’un champ est défini sur « [!UICONTROL Chaîne] », la définition de ce champ en tant que tableau désigne le champ en tant que tableau de chaînes. Si le [!UICONTROL Type] du champ est défini sur un type de données à plusieurs champs tel que « [!UICONTROL Adresse postale] », il devient un tableau d’objets d’adresse postale conformes au type de données.
 
-Après avoir [défini un nouveau champ dans l’interface utilisateur](./overview.md#define), vous pouvez le définir en tant que champ de tableau en cochant la case **[!UICONTROL Array]** dans le rail de droite.
+Après avoir [défini un nouveau champ dans l’interface utilisateur](./overview.md#define), vous pouvez le définir en tant que champ de tableau en cochant la case **[!UICONTROL Tableau]** dans le rail de droite.
 
 ![](../../images/ui/fields/special/array.png)
 
@@ -32,13 +32,13 @@ Les commandes de configuration supplémentaires pour les tableaux sont les suiva
 
 | Propriété du champ | Description |
 | --- | --- |
-| [!UICONTROL Minimum length] | Nombre minimal d’éléments que le tableau doit contenir pour que l’ingestion réussisse. |
-| [!UICONTROL Maximum length] | Nombre maximal d’éléments que le tableau doit contenir pour que l’ingestion réussisse. |
-| [!UICONTROL Unique items only] | S’il est défini sur « [!UICONTROL True] », chaque élément du tableau doit être unique pour que l’ingestion réussisse. |
+| [!UICONTROL Longueur minimale] | Nombre minimal d’éléments que le tableau doit contenir pour que l’ingestion réussisse. |
+| [!UICONTROL Longueur maximale] | Nombre maximal d’éléments que le tableau doit contenir pour que l’ingestion réussisse. |
+| [!UICONTROL Éléments uniques uniquement] | S’il est défini sur « [!UICONTROL True] », chaque élément du tableau doit être unique pour que l’ingestion réussisse. |
 
 {style="table-layout:auto"}
 
-Une fois la configuration du champ terminée, sélectionnez **[!UICONTROL Apply]** pour appliquer la modification au schéma.
+Une fois le champ configuré, sélectionnez **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
 
 ![](../../images/ui/fields/special/array-config.png)
 

@@ -13,14 +13,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 135
+source-wordcount: 137
 ht-degree: 5%
 
 ---
 
-# Type de données [!UICONTROL Impressions]
+# [!UICONTROL Impressions] type de données
 
-[!UICONTROL Impressions] est un type de données XDM standard qui décrit une impression marketing, qui est une mesure utilisée pour quantifier le nombre de vues ou d’engagements numériques pour un élément de contenu tel qu’une publicité, une publication numérique ou une page web.
+[!UICONTROL Impressions] est un type de données XDM standard qui décrit une impression marketing, qui est une mesure utilisée pour quantifier le nombre de vues numériques ou d’engagements pour un élément de contenu tel qu’une publicité, une publication numérique ou une page web.
 
 ![](../images/data-types/impressions.png)
 

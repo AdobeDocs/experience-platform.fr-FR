@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels vers le point dʼentrée /c
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '613'
 ht-degree: 97%
 
 ---
@@ -263,7 +263,7 @@ Une réponse réussie renvoie les détails du rappel que vous venez de créer.
 
 ## Mise à jour dʼun rappel
 
-Vous pouvez mettre à jour un rappel en incluant son identifiant dans le chemin d’accès d’une requête de PATCH.
+Vous pouvez mettre à jour un rappel en incluant son identifiant dans le chemin d’accès d’une requête PATCH.
 
 **Format d’API**
 

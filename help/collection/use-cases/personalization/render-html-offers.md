@@ -2,10 +2,11 @@
 title: Rendu des offres HTML sans sélecteurs
 description: Effectuez le rendu des éléments de proposition HTML qui n’incluent pas de sélecteurs en fournissant des métadonnées à applyPropositions, puis enregistrez les événements d’affichage.
 keywords: personnalisation;applyPropositions;métadonnées;actionType;decisionScopes;afficher des événements;
-source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
+exl-id: 8e155ec2-6d24-4cc9-9621-1931ebf18538
+source-git-commit: 03ec34ec44be4e906ceaf58bd5d6bc6d62002ff1
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '213'
+ht-degree: 2%
 
 ---
 
@@ -59,7 +60,7 @@ alloy("sendEvent", {
 });
 ```
 
-## &#x200B;4. Enregistrer les événements d’affichage pour les propositions rendues
+## &#x200B;4. Enregistrer les événements d’affichage des propositions rendues
 
 Les événements d’affichage ne sont pas automatiquement envoyés lors de l’appel de `applyPropositions`. Une fois le rendu terminé, utilisez un appel `sendEvent` qui référence les propositions rendues :
 
@@ -105,7 +106,7 @@ Voir [Gérer les événements d’affichage](display-events.md) pour plus d’in
 >
 >Si vous utilisez des événements [Page supérieure et page inférieure](top-bottom-page-events.md), cet appel d’« affichage des enregistrements » est généralement implémenté dans l’appel d’`sendEvent` inférieure.
 
-## &#x200B;5. Rendu
+## &#x200B;5. Rendu en cours
 
 Si votre implémentation nécessite un nouveau rendu ultérieurement (par exemple dans les applications monopages), appelez-`applyPropositions` de nouveau avec les mêmes propositions et métadonnées :
 

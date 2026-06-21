@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 408
+source-wordcount: 415
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ Avant de commencer, vérifiez que vous avez accès à PSQL et que vous connaisse
 >
 >Lors du téléchargement de PostgreSQL, veillez à sélectionner la version 14.x. Par défaut, le site web PostgreSQL propose la dernière version, qui peut ne pas être compatible avec Query Service.
 
-Une fois PSQL installé, vous pouvez le connecter à Query Service. Revenez à l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Queries]** et **[!UICONTROL Credentials]**.
+Une fois PSQL installé, vous pouvez le connecter à Query Service. Revenez à l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Requêtes]** et **[!UICONTROL Informations d’identification]**.
 
-Sous la section **[!UICONTROL PSQL Command]** , sélectionnez l’icône **[!UICONTROL Copy to clipboard]** (![Icône Copier](/help/images/icons/copy.png)) pour copier la chaîne de commande.
+Sous la section **[!UICONTROL Commande PSQL]**, sélectionnez l’icône **[!UICONTROL Copier dans le presse-papiers]** (![Icône Copier](/help/images/icons/copy.png)) pour copier la chaîne de commande.
 
 ![Onglet Informations d’identification du tableau de bord Requêtes avec l’icône de copie mise en surbrillance.](../images/clients/psql/copy-credentials.png)
 

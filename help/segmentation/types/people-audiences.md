@@ -16,7 +16,7 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 518
+source-wordcount: 525
 ht-degree: 4%
 
 ---
@@ -37,7 +37,7 @@ Avant de commencer à utiliser l’audience Personnes, passez en revue les diff�
 
 ## Accès {#access}
 
-Pour accéder aux audiences de personnes, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Customers]** .
+Pour accéder aux audiences de personnes, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Clients]**.
 
 ![L’onglet Audiences est mis en surbrillance dans la section Clients.](../images/types/people/select-audiences.png)
 
@@ -77,11 +77,11 @@ Pour plus d’informations sur la création d’audiences, consultez la [présen
 
 Après avoir créé votre audience de personnes, vous pouvez activer cette audience pour d’autres services en aval.
 
-Sélectionnez l’audience à activer, puis **[!UICONTROL Activate to destination]**.
+Sélectionnez l’audience à activer, puis **[!UICONTROL Activer vers la destination]**.
 
 ![Le bouton Activer à la destination est mis en surbrillance dans le menu des actions rapides.](../images/types/people/activate-to-destination.png)
 
-La page [!UICONTROL Activate destination] s’affiche, avec la liste des destinations disponibles en fonction de la fréquence de mise à jour de l’audience. Pour plus d’informations sur le processus d’activation, veuillez lire la [présentation de l’activation](../../destinations/ui/activation-overview.md).
+La page [!UICONTROL Activer la destination] s’affiche, avec la liste des destinations disponibles en fonction de la fréquence de mise à jour de l’audience. Pour plus d’informations sur le processus d’activation, veuillez lire la [présentation de l’activation](../../destinations/ui/activation-overview.md).
 
 ## Étapes suivantes
 

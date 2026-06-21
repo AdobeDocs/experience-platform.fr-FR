@@ -4,7 +4,7 @@ description: Créez une version de Web SDK personnalisée qui ne contient que le
 exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
 source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '515'
 ht-degree: 7%
 
 ---
@@ -37,13 +37,13 @@ Le tableau ci-dessous montre la relation entre les modules Web SDK et les comman
 
 | Dépendance du module | Paramètres de configuration | Commands | Catégorie de taille |
 |---------|----------|---------|---------|
-| Collecteur d’activités | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | S/O | Méthode |
+| Collecteur d’activités | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | S.O. | Méthode |
 | Audiences | S.O. | S.O. | Petit |
-| Contexte | [`context`](../commands/configure/context.md) | S/O | Petit |
+| Contexte | [`context`](../commands/configure/context.md) | S.O. | Petit |
 | Moteur de règles | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Méthode |
-| Fusion des événements | S/O | `createEventMergeId` | Petit |
-| Bridge Media Analytics | S/O | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Grand |
-| Personnalisation | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | S/O | Grand |
+| Fusion des événements | S.O. | `createEventMergeId` | Petit |
+| Bridge Media Analytics | S.O. | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Grand |
+| Personnalisation | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | S.O. | Grand |
 | Consentement | [`defaultConsent`](../commands/configure/defaultconsent.md) | [`setConsent`](../commands/setconsent.md) | Petit |
 | Streaming Media | [`streamingMedia`](../commands/configure/streamingmedia.md) | <ul><li>[`createMediaSession`](../commands/createmediasession.md)</li><li>[`sendMediaEvent`](../commands/sendmediaevent.md)</li></ul> | Grand |
 

@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1434
+source-wordcount: 1465
 ht-degree: 15%
 
 ---
@@ -51,13 +51,13 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >abstract="Le traitement des sources contient des informations sur l&#39;état de l&#39;activité des données et des mesures dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
-Sélectionnez **[!UICONTROL Data lake]** dans l’en-tête principal du tableau de bord de surveillance pour afficher le taux d’ingestion du lac de données.
+Sélectionnez **[!UICONTROL Lac de données]** dans l’en-tête principal du tableau de bord de surveillance pour afficher le taux d’ingestion du lac de données.
 
 ![Tableau de bord de surveillance avec la carte sources sélectionnée.](../assets/ui/monitor-sources/data-lake.png)
 
-Le graphique [!UICONTROL Ingestion rate] affiche votre taux d’ingestion de données en fonction de la période configurée. Par défaut, le tableau de bord de surveillance affiche les taux d’ingestion des dernières 24 heures. Pour savoir comment configurer votre période, consultez le guide sur la [configuration de la période de surveillance](monitor.md#configure-monitoring-time-frame).
+Le graphique [!UICONTROL Taux d’ingestion] affiche le taux d’ingestion des données en fonction de la période configurée. Par défaut, le tableau de bord de surveillance affiche les taux d’ingestion des dernières 24 heures. Pour savoir comment configurer votre période, consultez le guide sur la [configuration de la période de surveillance](monitor.md#configure-monitoring-time-frame).
 
-Le graphique peut s’afficher par défaut. Pour masquer le graphique, sélectionnez **[!UICONTROL Metrics and graphs]** pour désactiver le bouton (bascule) et masquer le graphique.
+Le graphique peut s’afficher par défaut. Pour masquer le graphique, sélectionnez **[!UICONTROL Mesures et graphiques]** pour désactiver le bouton (bascule) et masquer le graphique.
 
 ![Graphique des mesures de taux d’ingestion.](../assets/ui/monitor-sources/metrics-graph.png)
 
@@ -83,9 +83,9 @@ Vous pouvez filtrer davantage vos données à l’aide des options fournies au-d
 | --- | --- |
 | Recherche | Utilisez la barre de recherche pour filtrer votre vue en un seul type de source. |
 | Sources | Sélectionnez **[!UICONTROL Sources]** pour filtrer votre vue et afficher les données de mesure par type de source. Il s’agit de l’affichage par défaut utilisé par le tableau de bord de surveillance. |
-| Flux de données | Sélectionnez **[!UICONTROL Dataflows]** pour filtrer votre vue et afficher les données de mesure par flux de données. |
-| Afficher uniquement les échecs | Sélectionnez **[!UICONTROL Show failures only]** pour filtrer l’affichage et afficher uniquement les flux de données qui ont signalé des échecs d’ingestion. |
-| Mes sources | Vous pouvez filtrer davantage votre vue à l’aide du menu déroulant [!UICONTROL My sources] . Utilisez le menu déroulant pour filtrer votre vue par catégorie. Vous pouvez également sélectionner **[!UICONTROL All sources]** pour afficher les mesures sur toutes les sources ou ou **[!UICONTROL My sources]** pour afficher uniquement les sources avec lesquelles vous disposez d’un compte correspondant. |
+| Flux de données | Sélectionnez **[!UICONTROL Flux de données]** pour filtrer l’affichage et afficher les données de mesure par flux de données. |
+| Afficher uniquement les échecs | Sélectionnez **[!UICONTROL Afficher les échecs uniquement]** pour filtrer votre vue et afficher uniquement les flux de données qui ont signalé des échecs d’ingestion. |
+| Mes sources | Vous pouvez filtrer davantage votre vue à l’aide du menu déroulant [!UICONTROL Mes sources]. Utilisez le menu déroulant pour filtrer votre vue par catégorie. Vous pouvez également sélectionner **[!UICONTROL Toutes les sources]** pour afficher les mesures sur toutes les sources ou ou sélectionner **[!UICONTROL Mes sources]** pour afficher uniquement les sources avec lesquelles vous disposez d’un compte correspondant. |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ Pour personnaliser l’affichage des colonnes, sélectionnez l’icône des para
 
 ![Tableau de bord de surveillance avec l’icône des paramètres de colonne sélectionnée.](../assets/ui/monitor-sources/edit-columns.png)
 
-Utilisez ensuite la fenêtre *[!UICONTROL Customize table]* pour sélectionner les colonnes à afficher dans le tableau de bord. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]**.
+Utilisez ensuite la fenêtre *[!UICONTROL Personnaliser le tableau]* pour sélectionner les colonnes à afficher dans le tableau de bord. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
 
 ![Fenêtre pop-up de personnalisation de colonne dans le tableau de bord de surveillance.](../assets/ui/monitor-sources/customize-table.png)
 
@@ -142,9 +142,9 @@ Utilisez la page Détails de l’exécution du flux de données pour afficher le
 
 {style="table-layout:auto"}
 
-Si l’exécution de votre flux de données signale des erreurs, vous pouvez faire défiler la page vers le bas à l’aide de l’interface [!UICONTROL Dataflow run errors].
+Si l’exécution de votre flux de données signale des erreurs, vous pouvez faire défiler la page vers le bas et utiliser l’interface [!UICONTROL Erreurs d’exécution du flux de données].
 
-Utilisez la section [!UICONTROL Records failed] pour afficher les mesures relatives aux enregistrements qui n’ont pas été ingérés en raison d’erreurs. Pour afficher un rapport d’erreur complet, sélectionnez **[!UICONTROL Preview error diagnostics]**. Pour télécharger une copie de vos diagnostics d’erreur et du manifeste du fichier, sélectionnez **[!UICONTROL Download]**, puis copiez l’exemple d’appel API à utiliser avec l’API [!DNL Data Access].
+Utilisez la section [!UICONTROL Échec des enregistrements] pour afficher les mesures sur les enregistrements qui n’ont pas été ingérés en raison d’erreurs. Pour afficher un rapport d’erreur complet, sélectionnez **[!UICONTROL Aperçu des diagnostics d’erreur]**. Pour télécharger une copie de vos diagnostics d’erreur et du manifeste du fichier, sélectionnez **[!UICONTROL Télécharger]** puis copiez l’exemple d’appel API à utiliser avec l’API [!DNL Data Access].
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ Utilisez la section [!UICONTROL Records failed] pour afficher les mesures relati
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez appris à surveiller le taux d’ingestion du lac de données à l’aide du tableau de bord **[!UICONTROL Monitoring]**. Vous avez également appris à identifier les erreurs qui provoquent des échecs de flux de données lors de l’ingestion. Consultez les documents suivants pour plus d’informations :
+En suivant ce tutoriel, vous avez appris à surveiller le taux d’ingestion du lac de données à l’aide du tableau de bord **[!UICONTROL Surveillance]**. Vous avez également appris à identifier les erreurs qui provoquent des échecs de flux de données lors de l’ingestion. Consultez les documents suivants pour plus d’informations :
 
 * [Surveillance des données d’identité](./monitor-identities.md).
 * [Surveillance des données de profil](./monitor-profiles.md).

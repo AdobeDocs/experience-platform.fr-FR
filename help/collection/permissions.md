@@ -41,8 +41,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1356
-ht-degree: 29%
+source-wordcount: 1379
+ht-degree: 28%
 
 ---
 
@@ -124,13 +124,13 @@ Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autori
 >
 >Pour gérer les autorisations d’un rôle, vous aurez besoin de droits d’administrateur. Si vous ne disposez pas des privilèges d’administrateur, contactez votre administrateur système.
 
-La section **[!UICONTROL Permissions]** d’Experience Cloud vous permet de définir des rôles d’utilisateur et des politiques afin de gérer l’accès aux fonctionnalités et objets d’une application de produit.
+La section **[!UICONTROL Autorisations]** d’Experience Cloud vous permet de définir des rôles utilisateur et des politiques afin de gérer l’accès aux fonctionnalités et objets d’une application de produit.
 
-Grâce à [!UICONTROL Permissions], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles.
+Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles.
 
-![Adobe Experience Cloud mettant en surbrillance le produit Autorisations.](assets/permissions/permissions-product.png)
+![Mise en surbrillance du produit Autorisations par Adobe Experience Cloud.](assets/permissions/permissions-product.png)
 
-Pour accéder aux fonctionnalités de collecte de données, vous devez activer toutes les autorisations dans les catégories **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]** et **[!UICONTROL Data Collection]**.
+Pour accéder aux fonctionnalités de collecte de données, vous devez activer toutes les autorisations dans les catégories **[!UICONTROL Sandbox]**, **[!UICONTROL Modélisation des données]**, **[!UICONTROL Identity Management]** et **[!UICONTROL Collecte de données]**.
 
 ![Image illustrant la carte de produit Collecte de données dans Admin Console](assets/permissions/platform-permission-card.png)
 
@@ -142,17 +142,17 @@ Consultez le [guide de l’interface utilisateur du contrôle d’accès](../acc
 
 ### Gestion des autorisations sous Collecte de données Adobe Experience Platform {#manage-collection}
 
-Pour gérer ces autorisations, connectez-vous à Admin Console et sélectionnez **[!UICONTROL Products]** dans la barre de navigation supérieure, puis sélectionnez **[!UICONTROL Adobe Experience Platform Data Collection]**.
+Pour gérer ces autorisations, connectez-vous à Admin Console et sélectionnez **[!UICONTROL Produits]** dans la barre de navigation supérieure, puis sélectionnez **[!UICONTROL Collecte de données Adobe Experience Platform]**.
 
 ![Image illustrant la carte de produit Collecte de données dans Admin Console](assets/permissions/data-collection-card.png)
 
 #### Sélectionner ou créer un profil de produit
 
-L’écran suivant affiche une liste des profils de produit disponibles pour la collecte de données sous votre organisation, le profil par défaut étant **[!DNL Default Data Collection All Access]**. Si vous le souhaitez, vous pouvez modifier le profil de produit par défaut ou sélectionner **[!UICONTROL New Profile]** pour en créer un. Si votre organisation compte plusieurs rôles ou groupes d’utilisateurs et d’utilisatrices nécessitant différents niveaux d’accès, vous devez créer un profil de produit distinct pour chacun d’eux.
+L’écran suivant affiche une liste des profils de produit disponibles pour la collecte de données sous votre organisation, le profil par défaut étant **[!DNL Default Data Collection All Access]**. Vous pouvez choisir de modifier le profil de produit par défaut si vous le souhaitez, ou sélectionner **[!UICONTROL Nouveau profil]** pour en créer un. Si votre organisation compte plusieurs rôles ou groupes d’utilisateurs et d’utilisatrices nécessitant différents niveaux d’accès, vous devez créer un profil de produit distinct pour chacun d’eux.
 
 ![Image montrant les profils de produit pour la collecte de données dans Admin Console](assets/permissions/new-profile.png)
 
-Après avoir sélectionné ou créé un profil de produit, vous pouvez utiliser les icônes de **[!UICONTROL Edit]** pour commencer à [modifier les autorisations](#edit-permissions) pour le profil, ou sélectionner l’onglet **[!UICONTROL Users]** pour commencer à [affecter des utilisateurs](#assign-users) au profil.
+Après avoir sélectionné ou créé un profil de produit, vous pouvez utiliser les icônes **[!UICONTROL Modifier]** pour commencer à [modifier les autorisations](#edit-permissions) pour le profil, ou sélectionner l’onglet **[!UICONTROL Utilisateurs]** pour commencer à [affecter des utilisateurs](#assign-users) au profil.
 
 ![Image montrant l’onglet Autorisations d’un profil de produit dans Admin Console.](assets/permissions/edit-permission-categories.png)
 
@@ -166,7 +166,7 @@ Les autorisations sont organisées en catégories. Pour passer d’une catégori
 
 ![Image illustrant la section Droits d’entreprise sous autorisations](assets/permissions/switch-category.png)
 
-Sélectionnez **[!UICONTROL Save]** une fois la configuration des autorisations terminée.
+Sélectionnez **[!UICONTROL Enregistrer]** une fois la configuration des autorisations terminée.
 
 ![Image montrant la configuration des autorisations en cours d’enregistrement pour le profil de produit.](assets/permissions/save-permissions.png)
 
@@ -176,7 +176,7 @@ La vue Profil de produit réapparaît avec les autorisations ajoutées reflété
 
 #### Affecter des utilisateurs au profil de produits {#assign-users}
 
-Pour affecter des utilisateurs et utilisatrices au profil de produit (et leur accorder les autorisations configurées du profil), sélectionnez l’onglet **[!UICONTROL Users]** , suivi de **[!UICONTROL Add user]**.
+Pour affecter des utilisateurs au profil de produit (et leur accorder les autorisations configurées du profil), sélectionnez l’onglet **[!UICONTROL Utilisateurs]**, suivi de **[!UICONTROL Ajouter un utilisateur]**.
 
 ![Image montrant l’onglet utilisateurs d’un profil de produit dans Admin Console.](assets/permissions/manage-users.png)
 

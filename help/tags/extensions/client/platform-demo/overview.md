@@ -22,8 +22,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1016
-ht-degree: 97%
+source-wordcount: 1033
+ht-degree: 88%
 
 ---
 
@@ -51,21 +51,21 @@ Les fonctionnalités de cette extension sont transférées vers une nouvelle ext
 
 Cette section fournit une référence pour les options disponibles lors de la configuration de l’extension Adobe Experience Platform.
 
-Si l’extension Adobe Experience Platform n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Adobe Experience Platform et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Adobe Experience Platform n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe Experience Platform et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### Connexion en continu
 
-Le choix d’une connexion en continu est la première étape pour commencer à envoyer des données en continu vers Adobe Experience Platform. Vous pouvez sélectionner une connexion dans la zone de liste déroulante de connexion en continu. Connexion en continu est un champ obligatoire. Si aucune connexion en continu n’est créée, vous pouvez en créer une en cliquant sur le bouton **[!UICONTROL Create a streaming connection]**.
+Le choix d’une connexion en continu est la première étape pour commencer à envoyer des données en continu vers Adobe Experience Platform. Vous pouvez sélectionner une connexion dans la zone de liste déroulante de connexion en continu. Connexion en continu est un champ obligatoire. Si aucune connexion en continu n’est créée, vous pouvez en créer une en cliquant sur le bouton **[!UICONTROL Créer une connexion en continu]**.
 
-Si vous sélectionnez **[!UICONTROL Create a streaming connection]**, une fenêtre modale s’affiche.
+Si vous sélectionnez **[!UICONTROL Créer une connexion en continu]** une fenêtre modale s’affiche.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plusieurs connexions en continu, n’oubliez pas que le champ **[!UICONTROL Data Source]** doit être unique. Toute tentative pour créer une autre connexion en continu à l’aide d’une **[!UICONTROL Data Source]** utilisée sur une autre connexion échouera.
+Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plusieurs connexions en continu, n’oubliez pas que le champ Source de données **doit être unique.**&#x200B;[!UICONTROL &#x200B; Toute tentative visant à créer une autre connexion en continu à l’aide d’une Source de données &#x200B;]&#x200B;**déjà utilisée sur une autre connexion échouera.**
 
 Une fois que vous avez sélectionné un point d’entrée de connexion en continu, l’URL et la source du point d’entrée de connexion en continu s’affichent.
 

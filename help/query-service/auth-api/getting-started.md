@@ -15,7 +15,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 528
+source-wordcount: 534
 ht-degree: 8%
 
 ---
@@ -36,13 +36,13 @@ Les sections suivantes fournissent des informations sur la préparation des vale
 
 ### Autorisations nécessaires {#required-permissions}
 
-Pour activer les restrictions d’accès aux données sécurisées dans Query Service, vous avez besoin de l’autorisation **[!UICONTROL Manage Allowed List]** . Cette autorisation permet aux organisations de définir des plages d’adresses IP spécifiques (au format IPv4 ou IPv6) qui sont autorisées à accéder aux données dans Experience Platform via l’interface SQL. L’accès est géré au niveau du sandbox, où les utilisateurs peuvent configurer une liste d’adresses IP approuvées ou de blocs CIDR qui limitent l’accès aux réseaux autorisés uniquement.
+Pour activer les restrictions d’accès aux données sécurisées dans Query Service, vous devez disposer de l’autorisation **[!UICONTROL Gérer la Liste autorisée]**. Cette autorisation permet aux organisations de définir des plages d’adresses IP spécifiques (au format IPv4 ou IPv6) qui sont autorisées à accéder aux données dans Experience Platform via l’interface SQL. L’accès est géré au niveau du sandbox, où les utilisateurs peuvent configurer une liste d’adresses IP approuvées ou de blocs CIDR qui limitent l’accès aux réseaux autorisés uniquement.
 
 >[!NOTE]
 >
 >Les administrateurs système peuvent configurer des autorisations d’utilisateur à partir de l’[&#128279;](https://adminconsole.adobe.com/) Adobe. Pour plus d’informations, consultez le [guide d’utilisation d’Admin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
 
-Les fonctionnalités suivantes sont disponibles avec l’autorisation **[!UICONTROL Manage Allowed List]** :
+Les fonctionnalités suivantes sont disponibles avec l’autorisation **[!UICONTROL Gérer la Liste autorisée]** :
 
 - **Définir des plages d’adresses IP autorisées** : seules les adresses IP ou les blocs CIDR provenant de ces plages définies peuvent accéder aux données dans Experience Platform à l’aide de SQL via Query Service.
 - **Appliquer les vérifications de plage d’adresses IP** : les connexions provenant d’adresses IP en dehors des plages autorisées sont refusées.

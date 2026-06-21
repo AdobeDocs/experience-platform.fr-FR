@@ -28,8 +28,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 5449
-ht-degree: 94%
+source-wordcount: 5459
+ht-degree: 93%
 
 ---
 
@@ -198,8 +198,8 @@ Chacun des types d’événements de formulaire utilise les paramètres suivants
 
 #### Specific Elements \| Any Element
 
-* Si vous choisissez **[!UICONTROL Specific Elements]**, les options permettant de sélectionner les éléments et les valeurs de propriété s’affichent.
-* Si vous choisissez **[!UICONTROL Any Element]**, aucune autre option n’est nécessaire pour réduire les éléments.
+* Si vous choisissez **[!UICONTROL Éléments spécifiques]**, les options permettant de sélectionner les éléments et les valeurs de propriété s’affichent.
+* Si vous choisissez **[!UICONTROL N’importe quel élément]**, aucune autre option n’est nécessaire pour réduire les éléments.
 
 #### Elements matching the CSS selector
 
@@ -251,9 +251,9 @@ Spécifiez un code personnalisé qui doit exister comme condition de l’événe
 
 Utilisez l’éditeur de code intégré pour saisir le code personnalisé :
 
-1. Sélectionner **[!UICONTROL Open Editor]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
-1. Sélectionner **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
 Une variable nommée `event` sera automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 
@@ -577,8 +577,8 @@ Fournissez le code qui s’exécute une fois que l’événement est déclenché
    * JavaScript
    * HTML
 1. Indiquez si le code d’action doit être exécuté globalement.
-1. Sélectionner **[!UICONTROL Open Editor]**.
-1. Modifiez le code, puis cliquez sur **[!UICONTROL Save]**.
+1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
+1. Modifiez le code, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 Lorsque JavaScript est sélectionné comme langage, une variable nommée `event` est automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 

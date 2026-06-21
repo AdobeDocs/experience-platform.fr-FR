@@ -3,7 +3,7 @@ title: Objets personnalisés avec B2B CDP
 description: Découvrez comment créer un objet personnalisé de relation un-à-plusieurs pour B2B CDP.
 source-git-commit: d73800d97a2bb08b2aec3bc6e84e9c24f9bf38dc
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '957'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ B2B CDP prend en charge les objets personnalisés avec des relations un-à-plusi
 
 Pour commencer à connecter votre objet personnalisé à l’aide d’une relation un-à-plusieurs, vous devez d’abord créer un schéma relationnel pour modéliser vos données.
 
-Sous la section **[!UICONTROL Data management]** , sélectionnez **[!UICONTROL Schemas]**. Sur la page Aperçu du schéma , sélectionnez **[!UICONTROL Create schema]**, puis **[!UICONTROL Relational]**.
+Dans la section **[!UICONTROL Gestion des données]**, sélectionnez **[!UICONTROL Schémas]**. Sur la page Aperçu du schéma , sélectionnez **[!UICONTROL Créer un schéma]** suivi de **[!UICONTROL Relationnel]**.
 
 ![La section Schémas sous Gestion des données est mise en surbrillance, ainsi que le bouton Relationnel sous la zone Créer un schéma.](/help/rtcdp/assets/segmentation/custom-objects/create-relational.png)
 
-La page **[!UICONTROL Create relational schema]** s’affiche. Vous pouvez ajouter les détails du schéma, notamment le nom d’affichage, la description et le comportement du schéma.
+La page **[!UICONTROL Créer un schéma relationnel]** s’affiche. Vous pouvez ajouter les détails du schéma, notamment le nom d’affichage, la description et le comportement du schéma.
 
 ![La page Créer un schéma s’affiche.](/help/rtcdp/assets/segmentation/custom-objects/create-schema.png)
 
@@ -39,7 +39,7 @@ La page **[!UICONTROL Create relational schema]** s’affiche. Vous pouvez ajout
 
 >[!NOTE]
 >
->Si vous ajoutez un identifiant de personne dans le cadre de votre schéma relationnel, vous **devez** le baliser en tant que **[!UICONTROL Identifier]** avec un espace de noms d’identité approprié. Cela permet de s’assurer que les demandes d’accès à des informations personnelles suppriment correctement ces enregistrements des objets personnalisés pendant leur traitement.
+>Si vous ajoutez un identifiant de personne dans le cadre de votre schéma relationnel, vous **devez** le baliser en tant qu’**[!UICONTROL identifiant]** avec un espace de noms d’identité approprié. Cela permet de s’assurer que les demandes d’accès à des informations personnelles suppriment correctement ces enregistrements des objets personnalisés pendant leur traitement.
 >
 >![](/help/rtcdp/assets/segmentation/custom-objects/person-identity.png){zoomable="yes" width="50%"}
 
@@ -71,7 +71,7 @@ Une fois le jeu de données créé, vous pouvez activer le schéma pour la segme
 
 ## Ajouter vos relations {#add-relationship}
 
-Maintenant que vous avez activé votre schéma pour la segmentation, vous pouvez continuer à créer votre schéma en définissant les relations pour les champs du schéma. Pour ajouter une relation au champ, sélectionnez **[!UICONTROL Add relationship]** dans le champ auquel vous souhaitez ajouter la relation.
+Maintenant que vous avez activé votre schéma pour la segmentation, vous pouvez continuer à créer votre schéma en définissant les relations pour les champs du schéma. Pour ajouter une relation au champ, sélectionnez **[!UICONTROL Ajouter une relation]** dans le champ auquel vous souhaitez ajouter la relation.
 
 ![Le bouton Ajouter une relation est mis en surbrillance dans l’éditeur de schémas.](/help/rtcdp/assets/segmentation/custom-objects/select-add-relationship.png)
 
@@ -107,7 +107,7 @@ Les données de votre source doivent être conformes aux spécifications suivant
 >
 >Lorsque vous créez votre flux de données, gardez les éléments suivants à l’esprit :
 >
->- Vous **devez** activer **[!UICONTROL Enable change data capture]**.
+>- Vous **devez** activer **[!UICONTROL Activer la capture de données de modification]**.
 >- Vous **devez** sélectionner le jeu de données que vous avez précédemment créé.
 >- Vous n’avez **besoin** mapper le champ `_change_request_type` dans votre flux de données.
 >- La fréquence d’ingestion peut atteindre une fois toutes les 15 minutes.
@@ -118,7 +118,7 @@ Pour plus d’informations sur la création d’un flux de données, consultez l
 
 Maintenant que votre flux de données a été créé, vous pouvez utiliser les données d’objet personnalisées dans le Créateur d’audience. Ces données d’objet personnalisées peuvent être utilisées à la fois pour les audiences de personnes et les audiences de comptes.
 
-L’objet personnalisé se trouve sous **[!UICONTROL Attributes]** dans le Créateur d’audience et suit le même chemin de relation qui a été créé pour votre schéma d’objet personnalisé.
+L’objet personnalisé se trouve sous **[!UICONTROL Attributs]** dans le Créateur d’audience et suit le même chemin de relation que celui créé pour votre schéma d’objet personnalisé.
 
 ![L’objet personnalisé est mis en surbrillance dans le Créateur d’audience.](/help/rtcdp/assets/segmentation/custom-objects/audience-builder.png)
 

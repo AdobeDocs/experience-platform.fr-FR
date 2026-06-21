@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 204
+source-wordcount: 208
 ht-degree: 9%
 
 ---
 
-# Type de données [!UICONTROL Phone number]
+# [!UICONTROL Numéro de téléphone] type de données
 
-[!UICONTROL Phone number] est un type de données XDM standard qui décrit les détails d’un numéro de téléphone.
+[!UICONTROL Numéro de téléphone] est un type de données XDM standard qui décrit les détails d’un numéro de téléphone.
 
 ![](../images/data-types/phone-number.png){width=600}
 

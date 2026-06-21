@@ -11,8 +11,8 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 575
-ht-degree: 10%
+source-wordcount: 606
+ht-degree: 9%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->Pour accéder à [!UICONTROL Permission Manager], vous devez être un administrateur de produit. Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
+>Pour accéder au [!UICONTROL Gestionnaire d’autorisations], vous devez être administrateur de produit. Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-Utilisez des requêtes simples dans le [!UICONTROL Permission Manager] pour créer des rapports concis qui vous aideront à comprendre la gestion des accès et à gagner du temps lors de la validation des autorisations d’accès sur de nombreux workflows et niveaux de granularité. Vous pouvez utiliser [!UICONTROL Permission Manager] pour rechercher des utilisateurs qui appartiennent à un groupe d’utilisateurs et qui disposent de droits d’accès spécifiés, ainsi que des rôles dotés de libellés spécifiques.
+Utilisez des requêtes simples dans le [!UICONTROL Gestionnaire d’autorisations] pour créer des rapports concis qui vous aideront à comprendre la gestion des accès et à gagner du temps lors de la validation des autorisations d’accès sur de nombreux workflows et niveaux de granularité. Vous pouvez utiliser le [!UICONTROL Gestionnaire d’autorisations] pour rechercher des utilisateurs qui appartiennent à un groupe d’utilisateurs et qui disposent de droits d’accès spécifiés, ainsi que des rôles dotés de libellés spécifiques.
 
 ## Rechercher des utilisateurs et utilisatrices au sein d’un groupe de personnes spécifique {#search-users}
 
@@ -30,25 +30,25 @@ Utilisez des requêtes simples dans le [!UICONTROL Permission Manager] pour cré
 >id="platform_permission_manager"
 >title="Gestionnaire d’autorisations"
 >abstract="Utilisez les sélecteurs de liste déroulante sur la page pour obtenir des rapports de niveau d’accès de différents niveaux de granularité pour les utilisateurs et utilisatrices et les rôles."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=fr" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
-Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Users]**.
+Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Utilisateurs]**.
 
 ![Liste déroulante d’attributs mettant en surbrillance Utilisateurs.](../../images/permission-manager/users-select.png)
 
-Sélectionnez ensuite le **[!UICONTROL User Group]** à rechercher à l’aide de la liste déroulante.
+Sélectionnez ensuite le **[!UICONTROL Groupe d’utilisateurs]** que vous souhaitez rechercher à l’aide de la liste déroulante.
 
 >[!INFO]
 >
->[!UICONTROL User Group] n&#39;est pas un champ obligatoire. Vous ne pouvez sélectionner qu’un seul groupe d’utilisateurs pour chaque rapport.
+>[!UICONTROL Groupe d’utilisateurs] n’est pas un champ obligatoire. Vous ne pouvez sélectionner qu’un seul groupe d’utilisateurs pour chaque rapport.
 
 ![Le menu déroulant du groupe d’utilisateurs est mis en surbrillance.](../../images/permission-manager/user-group-select.png)
 
-Pour obtenir un rapport plus granulaire, vous pouvez spécifier la ressource avec des actions dans un sandbox spécifique. Sélectionnez les **[!UICONTROL Resource]**, **[!UICONTROL Actions]** et **[!UICONTROL Sandboxes]** à l’aide de la liste déroulante, puis sélectionnez **[!UICONTROL Show Results]**.
+Pour obtenir un rapport plus granulaire, vous pouvez spécifier la ressource avec des actions dans un sandbox spécifique. Sélectionnez les **[!UICONTROL Ressource]**, **[!UICONTROL Actions]** et **[!UICONTROL Sandbox]** dans la liste déroulante, puis sélectionnez **[!UICONTROL Afficher les résultats]**.
 
 >[!INFO]
 >
->[!UICONTROL Resource], [!UICONTROL Actions] et [!UICONTROL Sandboxes] ne sont pas des champs obligatoires. Une action ou un sandbox peut être supprimé(e) une fois ajouté(e) en sélectionnant l’**du** en regard de la sélection que vous souhaitez supprimer.
+>[!UICONTROL Ressource], [!UICONTROL Actions] et [!UICONTROL Sandbox] ne sont pas des champs obligatoires. Une action ou un sandbox peut être supprimé(e) une fois ajouté(e) en sélectionnant l’**du** en regard de la sélection que vous souhaitez supprimer.
 
 ![Les listes déroulantes Ressource, Actions, Sandbox et Afficher les résultats sont mises en surbrillance](../../images/permission-manager/users-additional-attributes-select.png)
 
@@ -58,23 +58,23 @@ Une liste d’utilisateurs et leur adresse e-mail sont signalés en fonction des
 
 ## Rechercher des rôles avec des libellés spécifiques {#search-roles}
 
-Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Roles]**.
+Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Rôles]**.
 
 >[!INFO]
 >
->[!UICONTROL Labels] n&#39;est pas un champ obligatoire. Vous pouvez sélectionner plusieurs libellés qui seront répertoriés sous cette liste déroulante une fois sélectionnés. Vous pouvez supprimer un libellé une fois qu’il a été ajouté en sélectionnant le **’x’** en regard de l’action.
+>[!UICONTROL Libellés] n’est pas un champ obligatoire. Vous pouvez sélectionner plusieurs libellés qui seront répertoriés sous cette liste déroulante une fois sélectionnés. Vous pouvez supprimer un libellé une fois qu’il a été ajouté en sélectionnant le **’x’** en regard de l’action.
 
 ![Liste déroulante d’attributs mettant en surbrillance les rôles.](../../images/permission-manager/roles-select.png)
 
-Sélectionnez ensuite le **[!UICONTROL Labels]** à rechercher à l’aide de la liste déroulante.
+Sélectionnez ensuite le **[!UICONTROL Libellés]** à rechercher à l’aide de la liste déroulante.
 
 ![Le menu déroulant Libellés est mis en surbrillance.](../../images/permission-manager/roles-labels-select.png)
 
-Pour obtenir un rapport plus granulaire, vous pouvez spécifier la ressource avec des actions dans un sandbox spécifique. Sélectionnez les **[!UICONTROL Resource]**, **[!UICONTROL Actions]** et **[!UICONTROL Sandboxes]** à l’aide de la liste déroulante, puis sélectionnez **[!UICONTROL Show Results]**.
+Pour obtenir un rapport plus granulaire, vous pouvez spécifier la ressource avec des actions dans un sandbox spécifique. Sélectionnez les **[!UICONTROL Ressource]**, **[!UICONTROL Actions]** et **[!UICONTROL Sandbox]** dans la liste déroulante, puis sélectionnez **[!UICONTROL Afficher les résultats]**.
 
 >[!INFO]
 >
->[!UICONTROL Resource], [!UICONTROL Actions] et [!UICONTROL Sandboxes] ne sont pas des champs obligatoires. Un seul [!UICONTROL Resource] peut être sélectionné pour chaque rapport. Une action ou un sandbox peut être supprimé(e) une fois ajouté(e) en sélectionnant l’**du** en regard de la sélection que vous souhaitez supprimer.
+>[!UICONTROL Ressource], [!UICONTROL Actions] et [!UICONTROL Sandbox] ne sont pas des champs obligatoires. Un seul [!UICONTROL Ressource] peut être sélectionné pour chaque rapport. Une action ou un sandbox peut être supprimé(e) une fois ajouté(e) en sélectionnant l’**du** en regard de la sélection que vous souhaitez supprimer.
 
 ![Les listes déroulantes Ressource, Actions, Sandbox et Afficher les résultats sont mises en surbrillance](../../images/permission-manager/roles-additional-attributes-select.png)
 

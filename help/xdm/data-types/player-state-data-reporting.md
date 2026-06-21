@@ -13,14 +13,14 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 258
-ht-degree: 7%
+source-wordcount: 282
+ht-degree: 6%
 
 ---
 
-# Type de données [!UICONTROL Player State Data Reporting]
+# [!UICONTROL Rapport sur les données de l’état du lecteur] type de données
 
-[!UICONTROL Player State Data Reporting] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les différents états et leurs occurrences dans un lecteur multimédia. Utilisez le type de données [!UICONTROL Player State Data Reporting] pour capturer différents états du lecteur, tels que le plein écran, le mode muet, le sous-titrage, l’image dans l’image et les états de mise au point. Pour chaque état, il enregistre si l’état est défini, le nombre d’occurrences et la durée totale pendant laquelle il reste actif pendant la lecture du média.
+[!UICONTROL Rapport sur les données d’état du lecteur] est un type de données standard des modèles de données d’expérience (XDM) qui décrit les différents états et leurs occurrences dans un lecteur multimédia. Utilisez le type de données [!UICONTROL Rapports sur les données d’état du lecteur] pour capturer différents états du lecteur, tels que le plein écran, le muet, le sous-titrage, l’image dans l’image et les états de mise au point. Pour chaque état, il enregistre si l’état est défini, le nombre d’occurrences et la durée totale pendant laquelle il reste actif pendant la lecture du média.
 
 ![Diagramme du type de données Rapport sur les données de l’état du lecteur.](../images/data-types/player-state-data-information.png)
 
@@ -30,9 +30,9 @@ ht-degree: 7%
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |---|---|---|---|
-| [!UICONTROL Player State Name] | `name` | chaîne | Nom de l’état du lecteur. Énuméré : « fullScreen » (le lecteur occupe le plein écran), « mute » (l’audio est réduit au silence), « closedCaptioning » (les sous-titres sont actifs), « pictureInPicture » (le lecteur est dans un recouvrement flottant), « inFocus » (le lecteur a l’attention active de la visionneuse, généralement parce que l’onglet ou la fenêtre du lecteur est au premier plan). |
-| [!UICONTROL Player State Set] | `isSet` | booléen | Indique si l’état du lecteur est défini sur cet état. |
-| [!UICONTROL Player State Count] | `count` | entier | Nombre de fois que l’état du lecteur a été défini sur le flux. |
-| [!UICONTROL Player State Time] | `time` | entier | Durée totale de cet état de lecteur, en secondes. |
+| [!UICONTROL Nom de l’état du lecteur] | `name` | chaîne | Nom de l’état du lecteur. Énuméré : « fullScreen » (le lecteur occupe le plein écran), « mute » (l’audio est réduit au silence), « closedCaptioning » (les sous-titres sont actifs), « pictureInPicture » (le lecteur est dans un recouvrement flottant), « inFocus » (le lecteur a l’attention active de la visionneuse, généralement parce que l’onglet ou la fenêtre du lecteur est au premier plan). |
+| [!UICONTROL État du lecteur défini] | `isSet` | booléen | Indique si l’état du lecteur est défini sur cet état. |
+| [!UICONTROL Nombre d’états du lecteur] | `count` | entier | Nombre de fois que l’état du lecteur a été défini sur le flux. |
+| [!UICONTROL Heure d’état du lecteur] | `time` | integer | Durée totale de cet état de lecteur, en secondes. |
 
 Voir [playerstatedata.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) dans le référentiel XDM public pour obtenir la définition complète du schéma.

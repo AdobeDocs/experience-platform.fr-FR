@@ -24,7 +24,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 518
 ht-degree: 5%
 
 ---
@@ -69,9 +69,9 @@ Vous pouvez utiliser des attributs de données sur les éléments pour ajouter d
 
 | Nom | Attribut de données | Description |
 | --- | --- | --- |
-| **[!UICONTROL Label]** | `data-aep-click-label` | Lorsque l’attribut de données de libellé est présent sur un élément sur lequel l’utilisateur a cliqué, il est inclus dans les détails d’interaction envoyés à Edge Network. Le SDK Web recherche un attribut de données de libellé commençant par l’élément sur lequel l’utilisateur a cliqué et remontant l’arborescence DOM. Le SDK Web utilise le premier libellé trouvé. |
-| **[!UICONTROL Token]** | `data-aep-click-token` | Utilisez ce jeton lors de l’utilisation des politiques de décision dans les campagnes basées sur le code [&#128279;](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/code-based-experience/get-started-code-based). Vous pouvez utiliser le jeton pour distinguer l’élément de politique de décision sur lequel l’utilisateur a cliqué. Lorsque l’attribut de données de jeton est présent sur un élément sur lequel l’utilisateur a cliqué, il est inclus dans les détails d’interaction envoyés à Edge Network. Le SDK Web recherche un attribut de données de jeton commençant par l’élément sur lequel l’utilisateur a cliqué et remontant l’arborescence DOM. Le SDK Web utilise le premier jeton qu’il trouve. |
-| **[!UICONTROL Interact ID]** | `data-aep-interact-id` | Le SDK Web ajoute automatiquement cet identifiant unique aux éléments de conteneur lors du rendu des propositions. Le SDK Web utilise cet identifiant pour corréler les éléments DOM aux propositions. Comme il s’agit d’un identifiant requis par le SDK Web, vous ne devez pas le modifier du tout. Vous pouvez l’ignorer en toute sécurité. |
+| **[!UICONTROL Libellé]** | `data-aep-click-label` | Lorsque l’attribut de données de libellé est présent sur un élément sur lequel l’utilisateur a cliqué, il est inclus dans les détails d’interaction envoyés à Edge Network. Le SDK Web recherche un attribut de données de libellé commençant par l’élément sur lequel l’utilisateur a cliqué et remontant l’arborescence DOM. Le SDK Web utilise le premier libellé trouvé. |
+| **[!UICONTROL Jeton]** | `data-aep-click-token` | Utilisez ce jeton lors de l’utilisation des politiques de décision dans les campagnes basées sur le code [&#128279;](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/code-based-experience/get-started-code-based). Vous pouvez utiliser le jeton pour distinguer l’élément de politique de décision sur lequel l’utilisateur a cliqué. Lorsque l’attribut de données de jeton est présent sur un élément sur lequel l’utilisateur a cliqué, il est inclus dans les détails d’interaction envoyés à Edge Network. Le SDK Web recherche un attribut de données de jeton commençant par l’élément sur lequel l’utilisateur a cliqué et remontant l’arborescence DOM. Le SDK Web utilise le premier jeton qu’il trouve. |
+| **[!UICONTROL ID d’interaction]** | `data-aep-interact-id` | Le SDK Web ajoute automatiquement cet identifiant unique aux éléments de conteneur lors du rendu des propositions. Le SDK Web utilise cet identifiant pour corréler les éléments DOM aux propositions. Comme il s’agit d’un identifiant requis par le SDK Web, vous ne devez pas le modifier du tout. Vous pouvez l’ignorer en toute sécurité. |
 
 ## Exemple
 
@@ -141,5 +141,5 @@ alloy("sendEvent", {
 
 Les deux menus déroulants suivants lors de la configuration de l’extension de balise Web SDK sont l’équivalent de balise de cet objet :
 
-* [[!UICONTROL Auto click collection for Adobe Journey Optimizer]](/help/tags/extensions/client/web-sdk/configure/personalization.md#auto-click-collection-for-adobe-journey-optimizer)
-* [[!UICONTROL Auto click collection for Adobe Target]](/help/tags/extensions/client/web-sdk/configure/personalization.md#auto-click-collection-for-adobe-target)
+* [[!UICONTROL Collecte automatique des clics pour Adobe Journey Optimizer]](/help/tags/extensions/client/web-sdk/configure/personalization.md#auto-click-collection-for-adobe-journey-optimizer)
+* [[!UICONTROL Collecte automatique des clics pour Adobe Target]](/help/tags/extensions/client/web-sdk/configure/personalization.md#auto-click-collection-for-adobe-target)

@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2086
+source-wordcount: 2089
 ht-degree: 13%
 
 ---
@@ -637,7 +637,7 @@ Créez tout d’abord un [[!DNL Marketo] flux de données](../ui/create/adobe-ap
 
 Une fois que vous disposez d’un brouillon de flux de données, vous devez récupérer son identifiant correspondant.
 
-Dans l’interface utilisateur , accédez au catalogue de sources, puis sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur. Utilisez la colonne Statut pour identifier tous les flux de données enregistrés en mode brouillon, puis sélectionnez le nom de votre flux de données. Ensuite, utilisez le panneau **[!UICONTROL Properties]** à droite pour localiser votre identifiant de flux de données.
+Dans l’interface utilisateur d’, accédez au catalogue de sources, puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur. Utilisez la colonne Statut pour identifier tous les flux de données enregistrés en mode brouillon, puis sélectionnez le nom de votre flux de données. Ensuite, utilisez le panneau **[!UICONTROL Propriétés]** sur la droite pour localiser votre identifiant de flux de données.
 
 ### Récupérer les détails de votre flux de données
 
@@ -1061,7 +1061,7 @@ Une réponse réussie renvoie l’identifiant et l’`etag` correspondant du flu
 
 +++
 
-Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour vérifier que votre brouillon de flux de données a été publié. Accédez à la page Flux de données dans le catalogue de sources et référencez le **[!UICONTROL Status]** de votre flux de données. En cas de réussite, le statut doit maintenant être défini sur **Activé**.
+Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour vérifier que votre brouillon de flux de données a été publié. Accédez à la page Flux de données dans le catalogue de sources et référencez le **[!UICONTROL Statut]** de votre flux de données. En cas de réussite, le statut doit maintenant être défini sur **Activé**.
 
 >[!TIP]
 >

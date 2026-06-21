@@ -314,7 +314,7 @@ curl -X POST \
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion source. |
 | `baseConnectionId` | Identifiant de connexion de base de [!DNL Mailchimp]. Cet identifiant a été généré lors d’une étape précédente. |
 | `connectionSpec.id` | Identifiant de spécification de connexion correspondant à votre source. |
-| `data.format` | Format des données [!DNL Mailchimp] que vous souhaitez ingérer. |
+| `data.format` | Format des données [!DNL Mailchimp] à ingérer. |
 | `params.campaignId` | L’identifiant de campagne [!DNL Mailchimp] identifie une campagne [!DNL Mailchimp] spécifique, qui vous permet ensuite d’envoyer des e-mails à vos listes/audiences. |
 
 **Réponse**
@@ -532,7 +532,7 @@ curl -X POST \
 | `flowSpec.id` | Identifiant de spécification de flux requis pour créer un flux de données. Cet ID fixe est `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | Version correspondante de l’identifiant de spécification de flux. Cette valeur est définie par défaut sur `1.0`. |
 | `sourceConnectionIds` | L’[identifiant de connexion source](#source-connection) généré lors d’une étape précédente. |
-| `targetConnectionIds` | [Identifiant de connexion cible](#target-connection) généré lors d’une étape précédente. |
+| `targetConnectionIds` | L’[identifiant de connexion cible](#target-connection) généré lors d’une étape précédente. |
 | `scheduleParams.startTime` | Heure de début désignée pour la première ingestion de données. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |

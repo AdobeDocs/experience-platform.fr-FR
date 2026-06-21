@@ -16,8 +16,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1070
-ht-degree: 14%
+source-wordcount: 1085
+ht-degree: 13%
 
 ---
 
@@ -82,11 +82,11 @@ En plus des tableaux, vous pouvez également exporter des mappages et des objets
 
 ## Conditions préalables {#prerequisites}
 
-[Connectez-vous](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée, suivez les [étapes d’activation pour les destinations d’espace de stockage](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Lors de la connexion à la destination cloud souhaitée, vous devez activer le bouton (bascule) **[!UICONTROL Export arrays, maps, objects]** . Pour plus d’informations, reportez-vous à la section ci-dessous.
+[Connectez-vous](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée, suivez les [étapes d’activation pour les destinations d’espace de stockage](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Lors de la connexion à la destination cloud souhaitée, vous devez activer le bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages]** des objets . Pour plus d’informations, reportez-vous à la section ci-dessous.
 
 >[!NOTE]
 >
->Pour les destinations de personnalisation d’entreprise et Edge, la prise en charge de l’exportation des champs de type carte est disponible sans qu’il soit nécessaire de sélectionner un bouton **[!UICONTROL Export arrays, maps, objects]**. Ce bouton (bascule) n’est pas disponible ni requis lors de la connexion à ces types de destinations.
+>Pour les destinations de personnalisation d’entreprise et Edge, la prise en charge de l’exportation des champs de type mappage est disponible sans qu’il soit nécessaire de sélectionner un bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages, des objets]** . Ce bouton (bascule) n’est pas disponible ni requis lors de la connexion à ces types de destinations.
 
 ## Bouton bascule Exporter des tableaux, mappages et objets {#export-arrays-maps-objects-toggle}
 
@@ -95,7 +95,7 @@ En plus des tableaux, vous pouvez également exporter des mappages et des objets
 >title="Exporter des tableaux, mappages et objets"
 >abstract="<p> <b>Activez</b> ce paramètre pour activer l’export de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet. Vous pouvez sélectionner ces types d’objets dans la vue du champ source de l’étape de mappage. Lorsque le bouton (bascule) est activé, vous ne pouvez pas utiliser l’option champs calculés à l’étape de mappage.</p><p>Lorsque ce bouton (bascule) est <b>désactivé</b>, vous pouvez utiliser l’option de champs calculés et appliquer diverses fonctions de transformation des données lors de l’activation des audiences. Cependant, vous <i>ne pouvez pas</i> exporter de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet et devez configurer une destination distincte à cet effet.</p>"
 
-Lors de la connexion à une destination d’espace de stockage basé sur des fichiers, vous pouvez activer ou désactiver le bouton **[!UICONTROL Export arrays, maps, objects]**.
+Lors de la connexion à une destination d’espace de stockage basé sur des fichiers, vous pouvez activer ou désactiver le bouton **[!UICONTROL Exporter des tableaux, des mappages]** des objets.
 
 ![Le bouton (bascule) Exporter des tableaux, mappages et objets est activé ou désactivé, et la fenêtre contextuelle est mise en surbrillance.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
@@ -109,7 +109,7 @@ Lorsque ce paramètre est activé, vous pouvez exporter des objets entiers (par 
 
 ![Sélectionnez des objets via le sélecteur de champ source à l’étape de mappage du workflow d’activation.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-Lorsque cette option est sélectionnée, l’interface utilisateur empêche les utilisateurs d’utiliser des champs calculés et le contrôle de **[!UICONTROL Add calculated fields]** est désactivé, comme illustré ci-dessous. Pour utiliser les champs calculés pour les transformations de données, configurez une connexion de destination en désactivant l’option .
+Lorsque cette option est sélectionnée, l’interface utilisateur empêche les utilisateurs d’utiliser des champs calculés et le contrôle **[!UICONTROL Ajouter des champs calculés]** est désactivé, comme illustré ci-dessous. Pour utiliser les champs calculés pour les transformations de données, configurez une connexion de destination en désactivant l’option .
 
 ![Contrôle des champs calculés désactivé.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 

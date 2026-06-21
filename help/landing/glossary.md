@@ -41,7 +41,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
 workflow-type: tm+mt
-source-wordcount: 8438
+source-wordcount: 8444
 ht-degree: 12%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 12%
 
 **Attributs** : les attributs sont des caractéristiques spécifiées qui représentent un profil.
 
-**Fusion d’attributs** : lors de la définition d’une politique de fusion à l’aide de l’API Real-Time Customer Profile, l’objet `attributeMerge` indique la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. Cela revient à sélectionner un [!UICONTROL Merge method] lors de la définition d’une politique de fusion dans l’interface utilisateur d’Experience Platform.
+**Fusion d’attributs** : lors de la définition d’une politique de fusion à l’aide de l’API Real-Time Customer Profile, l’objet `attributeMerge` indique la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. Cela revient à sélectionner une [!UICONTROL méthode de fusion] lors de la définition d’une politique de fusion dans l’interface utilisateur d’Experience Platform.
 
 **IA dédiée à l’attribution** : [!DNL Attribution AI] est un service intelligent optimisé par Adobe AI qui offre des fonctionnalités d’attribution algorithmique multicanal tout au long du cycle de vie du client.
 
@@ -148,7 +148,7 @@ ht-degree: 12%
 
 **CPRA** : la [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) élargit et modifie certaines parties de la [!DNL California Consumer Privacy Act (CCPA)]. La [!DNL CPRA] établit une nouvelle base de référence pour la confidentialité des données des consommateurs en Californie en renforçant les droits des consommateurs et en élargissant le type de données couvertes par une définition plus large des informations personnelles sensibles. En outre, le [!DNL CPRA] a créé la California Privacy Protection Agency, une nouvelle agence dédiée à la mise en œuvre et à l’application des règles de confidentialité des données.
 
-**Libellé de contrat C1** : un libellé d’utilisation des données de contrat `C1` spécifie que les données peuvent uniquement être exportées à partir de Adobe Experience Cloud dans un formulaire agrégé sans inclure d’identifiants d’appareils ou d’individus. Par exemple, les données provenant des réseaux sociaux.
+**Libellé de contrat C1** : un libellé d’utilisation des données de contrat `C1` spécifie que les données peuvent uniquement être exportées à partir d’Adobe Experience Cloud dans un formulaire agrégé sans inclure d’identifiants d’appareils ou d’individus. Par exemple, les données provenant des réseaux sociaux.
 
 **Libellé de contrat C2** : un libellé d’utilisation des données de contrat `C2` spécifie les données qui ne peuvent pas être exportées vers un tiers. Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine. Par exemple, les contrats des réseaux sociaux limitent souvent le transfert des données que vous recevez d’eux. L’étiquette C2 est plus restrictive que la C1, qui ne nécessite que l’agrégation et des données anonymes.
 
@@ -264,7 +264,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Événements** : les événements sont les données de comportement associées à un profil.
 
-**Modèle de données d’expérience (XDM)** [!DNL Experience Data Model] (XDM) est un framework open source qui utilise des schémas standard pour unifier les données en vue de les utiliser avec des applications Experience Platform et Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’informations à partir d’énormes quantités de données.
+**Modèle de données d’expérience (XDM)** [!DNL Experience Data Model] (XDM) est un framework open source qui utilise des schémas standard pour unifier les données en vue de les utiliser avec Experience Platform et les applications Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’informations à partir d’énormes quantités de données.
 
 **Expérience** : une expérience est le processus de création d’un modèle formé en formant l’instance avec une partie d’exemple de données de production actives. Ceci est différent d’un modèle formé testé par rapport à un jeu de données de test d’exclusion. Cela diffère également du concept d’expérience dans certains frameworks de machine learning, où il s’agit en fait d’un exemple de projet de modélisation.
 
@@ -318,7 +318,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Libellés d’identité (« I »)** : les libellés d’utilisation des données d’identité (« I ») sont utilisés pour classer les données permettant d’identifier ou de contacter une personne spécifique.
 
-**Graphique d’identités** : un graphique d’identités est une carte des relations entre les identités assemblées et liées qui existent pour un client individuel. Chaque graphique d’identité est mis à jour en temps quasi réel avec l’activité du client. La structure commune des relations d’identité dans vos données est représentée par le [!UICONTROL Private Graph], qui sert de plan directeur structurel pour chaque graphique d’identité individuel.
+**Graphique d’identités** : un graphique d’identités est une carte des relations entre les identités assemblées et liées qui existent pour un client individuel. Chaque graphique d’identité est mis à jour en temps quasi réel avec l’activité du client. La structure commune des relations d’identité dans vos données est représentée par le [!UICONTROL graphique privé], qui sert de plan directeur structurel pour chaque graphique d’identité individuel.
 
 **Espace de noms d’identité** : un espace de noms d’identité définit le contexte d’un identifiant, tel qu’une adresse e-mail ou un identifiant CRM.
 
@@ -416,7 +416,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 ## P
 
-**Ingestion partielle** : l’ingestion partielle permet d’ingérer des enregistrements valides de données de lots au sein d’un seuil d’erreur spécifié. Les diagnostics d’erreur pour les enregistrements ayant échoué peuvent être téléchargés ou accessibles dans la présentation de l’exécution du flux de données [!UICONTROL Monitoring] ou [!UICONTROL Sources].
+**Ingestion partielle** : l’ingestion partielle permet d’ingérer des enregistrements valides de données de lots au sein d’un seuil d’erreur spécifié. Les diagnostics d’erreur pour les enregistrements ayant échoué peuvent être téléchargés ou accessibles dans la présentation de l’exécution du flux de données [!UICONTROL Surveillance] ou [!UICONTROL Sources].
 
 **Fichiers Parquet** : un fichier Parquet est un format de fichier de stockage en colonnes avec des structures de données imbriquées complexes. Des fichiers parquet sont nécessaires pour ajouter des données à un jeu de données de schéma.
 

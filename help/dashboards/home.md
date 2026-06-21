@@ -6,8 +6,8 @@ description: Explorez de nombreux tableaux de bord dans Adobe Experience Platf
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 93%
+source-wordcount: '310'
+ht-degree: 71%
 
 ---
 
@@ -34,7 +34,7 @@ Les données de lʼinstantané montrent les données exactement comme elles appa
 
 ## Inventaire des tableaux de bord
 
-Pour des étapes détaillées sur la façon d’utiliser l’espace de travail **[!UICONTROL Tableaux de bord]** pour afficher tous les tableaux de bord disponibles, consultez le [guide de l’inventaire des tableaux de bord](./inventory.md).
+Pour obtenir des instructions détaillées sur la manière d’utiliser l’espace de travail **[!UICONTROL Tableaux de bord]** pour afficher tous les tableaux de bord disponibles, consultez le guide [inventaire des tableaux de bord](./inventory.md).
 
 ## Tableaux de bord disponibles
 

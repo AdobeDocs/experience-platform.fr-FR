@@ -13,7 +13,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1827
+source-wordcount: 1852
 ht-degree: 14%
 
 ---
@@ -49,25 +49,25 @@ Pour accéder à votre compartiment sur Experience Platform, vous devez fournir 
 
 >[!IMPORTANT]
 >
->Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Acxiom] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../../../access-control/ui/overview.md).
+>Pour connecter votre compte [!DNL Acxiom] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../../../access-control/ui/overview.md).
 
 ## Connecter votre compte [!DNL Acxiom]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie **[!UICONTROL Data & Identity Partners]** , sélectionnez **[!UICONTROL Acxiom Prospecting Data Import]** puis **[!UICONTROL Set up]**.
+Dans la catégorie **[!UICONTROL Partenaires de données et d’identité]**, sélectionnez **[!UICONTROL Importation de données de prospection Acxiom]** puis **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
->Une carte source qui affiche **[!UICONTROL Add data]** signifie que la source dispose déjà d’un compte authentifié. D’un autre côté, une carte source qui affiche **[!UICONTROL Set up]** signifie que vous devez fournir des informations d’identification et créer un compte pour utiliser cette source.
+>Une carte source qui affiche **[!UICONTROL Ajouter des données]** signifie que la source dispose déjà d’un compte authentifié. D’un autre côté, une carte source qui affiche **[!UICONTROL Configurer]** signifie que vous devez fournir des informations d’identification et créer un compte pour utiliser cette source.
 
 ![Le catalogue des sources avec la source Acxiom sélectionnée.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
 
 ### Créer un nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL New account]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Acxiom]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Acxiom]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvelle interface de compte du workflow des sources.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
 
@@ -85,15 +85,15 @@ Si vous utilisez de nouvelles informations d’identification, sélectionnez **[
 
 ### Utiliser un compte existant
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]**.
 
-Sélectionnez un compte dans la liste pour en afficher les détails. Une fois que vous avez sélectionné un compte, cliquez sur **[!UICONTROL Next]** pour continuer.
+Sélectionnez un compte dans la liste pour en afficher les détails. Une fois que vous avez sélectionné un compte, cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![Interface de compte existante du workflow des sources.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
 
 ## Sélectionner les données
 
-Sélectionnez le fichier à ingérer dans le compartiment et le sous-répertoire de votre choix. Un aperçu des données peut être fourni une fois le délimiteur et le type de compression définis. Une fois le fichier sélectionné, sélectionnez **[!UICONTROL Next]** pour continuer.
+Sélectionnez le fichier à ingérer dans le compartiment et le sous-répertoire de votre choix. Un aperçu des données peut être fourni une fois le délimiteur et le type de compression définis. Une fois le fichier sélectionné, cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![Interface de sélection des données et de prévisualisation des fichiers du workflow des sources.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
 
@@ -111,7 +111,7 @@ Ensuite, vous devez fournir des informations concernant votre jeu de données et
 
 >[!TAB Utiliser un nouveau jeu de données]
 
-Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont conservées sous forme de jeux de données dans le lac de données. Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL New dataset]**.
+Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont conservées sous forme de jeux de données dans le lac de données. Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]**.
 
 ![Nouvelle interface du jeu de données.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
 
@@ -123,9 +123,9 @@ Un jeu de données est une structure de stockage et de gestion pour une collecti
 
 >[!TAB Utiliser un jeu de données existant]
 
-Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Existing dataset]**.
+Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**.
 
-Vous pouvez sélectionner **[!UICONTROL Advanced search]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel.
+Vous pouvez sélectionner **[!UICONTROL Recherche avancée]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel.
 
 ![Interface du jeu de données existant.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
 
@@ -133,7 +133,7 @@ Vous pouvez sélectionner **[!UICONTROL Advanced search]** pour afficher une fen
 
 ### Détails du flux de données
 
-Au cours de cette étape, si votre jeu de données est activé pour Profil, vous pouvez sélectionner le bouton **[!UICONTROL Profile dataset]** pour activer vos données pour Ingestion de profil. Vous pouvez également activer les [!UICONTROL Error diagnostics] et les [!UICONTROL Partial ingestion].
+Au cours de cette étape, si votre jeu de données est activé pour Profil, vous pouvez sélectionner le bouton (bascule) **[!UICONTROL Jeu de données de profil]** pour activer vos données pour l’ingestion de profil. Vous pouvez également activer les [!UICONTROL diagnostics d’erreur] et [!UICONTROL ingestion partielle].
 
 * **Diagnostics d’erreur** - Sélectionnez **Diagnostics d’erreur** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement à l’aide des API. Pour plus d’informations, consultez la présentation des diagnostics d’erreur [Error Diagnostics](../../../../../ingestion/quality/error-diagnostics.md)
 * **Activer l’ingestion partielle** - L’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément, avec des détails sur les raisons de leur non-validité.  Pour plus d’informations, consultez la [&#x200B; Présentation de l’ingestion partielle &#x200B;](../../../../../ingestion/batch-ingestion/partial.md)
@@ -190,7 +190,7 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ### Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]** disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
 
 ## Ressources supplémentaires {#additional-resources}
 

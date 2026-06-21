@@ -13,16 +13,16 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 274
+source-wordcount: 295
 ht-degree: 4%
 
 ---
 
-# Type de données de la collecte de [!UICONTROL Advertising Pod Details]
+# [!UICONTROL Détails de capsule Advertising &#x200B;] type de données de collection
 
-La collecte de [!UICONTROL Advertising Pod Details] est un type de données standard du modèle de données d’expérience (XDM). Il définit une séquence ou un groupe d’annonces généralement lues successivement pendant les pauses de contenu. Utilisez le type de données [!UICONTROL Advertising Pod Details] la collecte de données pour capturer des détails tels que l’identifiant de la coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités dans la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
+[!UICONTROL Détails du pod Advertising &#x200B;] la collecte est un type de données standard du modèle de données d’expérience (XDM). Il définit une séquence ou un groupe d’annonces généralement lues successivement pendant les pauses de contenu. Utilisez le type de données de collection [!UICONTROL Détails du pod &#x200B;] pour capturer des détails tels que l’identifiant de la coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités dans la coupure et le décalage de la coupure publicitaire dans le journal du contenu en secondes.
 
-+++Sélectionnez cette option pour afficher un diagramme du type de données Collecte de [!UICONTROL Advertising Pod Details] .
++++Sélectionnez cette option pour afficher un diagramme du type de données Collection [!UICONTROL Détails de capsule &#x200B;].
 ![Diagramme du type de données de collecte de détails de capsule Advertising.](../images/data-types/advertising-pod-details-collection.png)
 +++
 
@@ -34,6 +34,6 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [[!UICONTROL Ad In Pod Position]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-in-pod-position) | `index` | entier | Oui | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
-| [[!UICONTROL Pod Friendly Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-break-name) | `friendlyName` | chaîne | Non | Nom facilement compréhensible de la coupure publicitaire. |
-| [[!UICONTROL Pod Offset]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-break-start-time) | `offset` | entier | Oui | Décalage de la coupure publicitaire dans le contenu, en secondes. |
+| [[!UICONTROL Position de la publicité dans la capsule]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-in-pod-position) | `index` | Entier | Oui | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. |
+| [[!UICONTROL Nom convivial du pod]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-break-name) | `friendlyName` | string | Non | Nom facilement compréhensible de la coupure publicitaire. |
+| [[!UICONTROL Décalage de capsule]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/implementation/variables/ads/ad-break-start-time) | `offset` | Entier | Oui | Décalage de la coupure publicitaire dans le contenu, en secondes. |

@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 585
-ht-degree: 4%
+source-wordcount: 532
+ht-degree: 5%
 
 ---
 
@@ -23,13 +23,13 @@ Ce document décrit les étapes à suivre pour connecter [!DNL Jupyter Notebook]
 
 Ce guide nécessite que vous ayez déjà accès à [!DNL Jupyter Notebook] et que vous connaissiez son interface. Pour télécharger [!DNL Jupyter Notebook] ou pour plus d’informations, consultez la [documentation  [!DNL Jupyter Notebook] officielle](https://jupyter.org/).
 
-Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL Jupyter Notebook] à Experience Platform, vous devez avoir accès à l’espace de travail [!UICONTROL Queries] dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail [!UICONTROL Queries].
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL Jupyter Notebook] à Experience Platform, vous devez avoir accès à l’espace de travail [!UICONTROL Requêtes] dans l’interface utilisateur d’Experience Platform. Veuillez contacter l’administrateur de votre organisation si vous n’avez pas actuellement accès à l’espace de travail [!UICONTROL Requêtes].
 
 >[!TIP]
 >
 >[!DNL Anaconda Navigator] est une interface utilisateur graphique (GUI) de bureau qui permet d’installer et de lancer plus facilement des programmes de [!DNL Python] courants tels que [!DNL Jupyter Notebook]. Il permet également de gérer les packages, les environnements et les canaux sans utiliser de commandes de ligne de commande.
 >Suivez le processus d’installation guidé sur leur site web pour [installer la version de l’application que vous préférez](https://docs.anaconda.com/anaconda/install/).
->Sur l&#39;écran d&#39;accueil du Navigateur Anaconda, sélectionnez **[!DNL Jupyter Notebook]** dans la liste des applications prises en charge pour lancer le programme.
+>Dans l&#39;écran d&#39;accueil du navigateur Anaconda, sélectionnez **[!DNL Jupyter Notebook]** dans la liste des applications prises en charge pour lancer le programme.
 >Vous trouverez plus d’informations dans la [documentation officielle d’Anaconda](https://docs.anaconda.com/anaconda/navigator/).
 
 La documentation officielle de Jupyter fournit des instructions pour [&#x200B; exécuter le notebook à partir de l’interface de ligne de commande &#x200B;](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
@@ -46,7 +46,7 @@ Sur la première ligne de l’éditeur de [!DNL Notebook], saisissez la valeur s
 
 Importez ensuite un adaptateur de base de données [!DNL PostgreSQL] pour [!DNL Python]. Saisissez la valeur : `import psycopg2` et sélectionnez **[!DNL Run]**. Il n’y a aucun message de réussite pour ce processus. S’il n’y a aucun message d’erreur, passez à l’étape suivante.
 
-Vous devez maintenant fournir vos identifiants Adobe Experience Platform en saisissant la valeur : `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Vos informations d’identification de connexion se trouvent dans la section [!UICONTROL Queries], sous l’onglet [!UICONTROL Credentials] de l’interface utilisateur d’Experience Platform. Consultez la documentation sur la façon de [trouver les informations d’identification de votre organisation](../ui/credentials.md) pour obtenir des instructions détaillées.
+Vous devez maintenant fournir vos identifiants Adobe Experience Platform en saisissant la valeur : `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Vos informations d’identification de connexion se trouvent dans la section [!UICONTROL Requêtes], sous l’onglet [!UICONTROL Informations d’identification] de l’interface utilisateur d’Experience Platform. Consultez la documentation sur la façon de [trouver les informations d’identification de votre organisation](../ui/credentials.md) pour obtenir des instructions détaillées.
 
 L’utilisation d’informations d’identification non expirantes est recommandée lors de l’utilisation de clients tiers afin d’éviter la saisie répétée de vos informations. Consultez la documentation pour obtenir des instructions sur [comment générer et utiliser des informations d’identification non expirantes](../ui/credentials.md#non-expiring-credentials).
 

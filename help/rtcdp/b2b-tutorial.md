@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en main de Real-Time Customer Data Platform B2B edition
 description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre implémentation d’Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 TQID: https://experienceleague.adobe.com/6vKsPUceQVxkUeHu6oiQpR-5ssgHibgHf9Y8kEcEIPQ
 product_v2:
@@ -27,7 +27,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1265
+source-wordcount: 1275
 ht-degree: 42%
 
 ---
@@ -57,7 +57,7 @@ Dans le cadre de la configuration initiale, le service informatique de Bodea doi
 
 Adobe Experience Platform vous permet de générer automatiquement les schémas et les espaces de noms requis pour les sources de données B2B. Cet outil permet de s’assurer que les schémas créés décrivent les données d’une manière structurée et réutilisable. Suivez la [documentation de l’utilitaire de génération automatique de schémas et d’espaces de noms B2B](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) pour une référence complète au processus de configuration.
 
-Dans l’interface utilisateur de Adobe Experience Platform, le marketeur Bodea sélectionne **[!UICONTROL Schemas]** dans le rail de gauche, suivi de l’onglet **[!UICONTROL Browse]** . Comme ils ont utilisé l’utilitaire de génération automatique, les nouveaux schémas vides apparaissent dans la liste et comportent tous un préfixe « B2B ».
+Dans l’interface utilisateur de Adobe Experience Platform, le marketeur Bodea sélectionne **[!UICONTROL Schémas]** dans le rail de gauche, suivi de l’onglet **[!UICONTROL Parcourir]**. Comme ils ont utilisé l’utilitaire de génération automatique, les nouveaux schémas vides apparaissent dans la liste et comportent tous un préfixe « B2B ».
 
 ![Onglet Parcourir de l’espace de travail des schémas](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
@@ -101,7 +101,7 @@ Le spécialiste marketing Bodea vérifie que tous les groupes de champs sont cor
 
 ## Création d’une audience pour évaluer vos données
 
-La tâche suivante consiste à créer une audience pour la nouvelle campagne de marketing par e-mail de Bodea en fonction d’attributs spécifiques des entités associées dans les données source. Dans l’interface utilisateur d’Experience Platform, le marketeur Bodea commence par sélectionner **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis **[!UICONTROL Create segment]**.
+La tâche suivante consiste à créer une audience pour la nouvelle campagne de marketing par e-mail de Bodea en fonction d’attributs spécifiques des entités associées dans les données source. Dans l’interface utilisateur d’Experience Platform, le marketeur Bodea commence par sélectionner **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un segment]**.
 
 Dans cet exemple, l’audience trouve toutes les personnes qui travaillent dans le service des ventes et qui sont liées à n’importe quel compte ayant au moins une opportunité ouverte. Ces audiences nécessitent un lien entre la classe XDM Individual Profile, la classe XDM Business Account et la classe XDM Business Opportunity.
 
@@ -115,9 +115,9 @@ Le créateur de segments vous permet de créer une audience vendable à partir d
 
 ## Activation de vos données évaluées vers une destination
 
-Une fois l’audience créée, un résumé est fourni dans la section [!UICONTROL Details] de l’espace de travail. Comme aucune destination n’est actuellement activée pour la définition de segment, le marketeur Bodea doit exporter l’audience vers un jeu de données où elle peut être accessible et sur lequel il peut agir.
+Une fois l’audience créée, un résumé est fourni dans la section [!UICONTROL Détails] de l’espace de travail. Comme aucune destination n’est actuellement activée pour la définition de segment, le marketeur Bodea doit exporter l’audience vers un jeu de données où elle peut être accessible et sur lequel il peut agir.
 
-Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur d’Experience Platform, le marketeur Bodea sélectionne **[!UICONTROL Activate to destination]**.
+Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur d’Experience Platform, le marketeur Bodea sélectionne **[!UICONTROL Activer vers la destination]**.
 
 ![Activer l’audience vers une destination](./assets/b2b-tutorial/activate-to-destination.png)
 

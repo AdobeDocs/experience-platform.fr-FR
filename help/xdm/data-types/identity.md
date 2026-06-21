@@ -15,14 +15,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 280
+source-wordcount: 283
 ht-degree: 11%
 
 ---
 
 # Type de données [!UICONTROL Identity]
 
-[!UICONTROL Identity] est un type de données XDM standard utilisé pour distinguer clairement les personnes qui interagissent avec des expériences digitales. L’identité est établie par un fournisseur d’identité, qui est lui-même référencé dans un attribut `namespace`. Au sein de chaque `namespace`, l’identité est unique.
+[!UICONTROL Identité] est un type de données XDM standard utilisé pour distinguer clairement les personnes qui interagissent avec des expériences digitales. L’identité est établie par un fournisseur d’identité, qui est lui-même référencé dans un attribut `namespace`. Au sein de chaque `namespace`, l’identité est unique.
 
 ![](../images/data-types/identity.png){width=550}
 

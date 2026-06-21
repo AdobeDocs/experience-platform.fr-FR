@@ -1,16 +1,17 @@
 ---
 title: Utiliser des identifiants d’appareil propriétaires dans la collecte de données
 description: Configurez des identifiants d’appareil propriétaires (FPID) pour une identité durable dans les implémentations web qui envoient des données à Edge Network.
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+exl-id: 476eacee-0ba7-45f2-8888-e80b2107b17a
+source-git-commit: 2e0c9525f19248013d9f86148a6ce6edb5291c2c
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
 
 # Utiliser des identifiants d’appareil propriétaires dans la collecte de données
 
-Experience Platform Edge Network utilise des Experience Cloud ID (ECID) pour identifier les visiteurs et visiteuses du site web. Pour améliorer la durabilité des identités sur les propriétés qui vous appartiennent, vous pouvez définir et gérer vos propres identifiants d’appareil, appelés identifiants d’appareil propriétaires (FPID). Edge Network utilise le FPID pour amorcer l’ECID utilisé par les solutions Adobe.
+Experience Platform Edge Network utilise des Experience Cloud ID (ECID) pour identifier les visiteurs du site web. Pour améliorer la durabilité des identités sur les propriétés qui vous appartiennent, vous pouvez définir et gérer vos propres identifiants d’appareil, appelés identifiants d’appareil propriétaires (FPID). Edge Network utilise le FPID pour amorcer l’ECID utilisé par les solutions Adobe.
 
 Cette page suppose que vous connaissez les ECID et les `identityMap`. Voir [Identité dans la collecte de données](./overview.md) pour plus d’informations.
 
@@ -76,7 +77,7 @@ Les cookies propriétaires sont plus efficaces lorsqu’ils sont définis à l�
 >
 >Les cookies définis à l’aide de la méthode de `document.cookie` JavaScript (y compris à l’aide de la méthode de balise [`cookie.set()`](../tags/cookie.md)) ne sont presque jamais protégés des politiques de navigateur qui limitent la durée des cookies.
 
-Notez que les enregistrements `A` ou `AAAA` ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un `CNAME` DNS. Les FPID sont définis à l’aide d’un enregistrement `A` ou `AAAA` et envoyés à Adobe à l’aide d’un `CNAME` . Le [Programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr#adobe-managed-certificate-program) vous permet de configurer un `CNAME` pour la collecte de données.
+Notez que les enregistrements `A` ou `AAAA` ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un `CNAME` DNS. Les FPID sont définis à l’aide d’un enregistrement `A` ou `AAAA` et envoyés à Adobe à l’aide d’un `CNAME` . Le [Programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) vous permet de configurer un `CNAME` pour la collecte de données.
 
 ### Quand définir le cookie {#when-to-set-cookie}
 
@@ -106,7 +107,7 @@ Vous pouvez envoyer des FPID à Edge Network de deux manières :
 Pour définir un cookie FPID à partir de votre propre domaine, vous devez configurer votre propre `CNAME` pour vos appels Web SDK, puis activer la fonctionnalité de cookie d’identifiant propriétaire dans la configuration de votre flux de données. Un enregistrement `CNAME` dans votre DNS vous permet de créer un alias d’un nom de domaine à un autre. Cet alias peut aider à faire apparaître les services tiers comme s’ils faisaient partie de votre propre domaine, ce qui fait que leurs cookies ressemblent à des cookies propriétaires. Lorsque la collecte de données propriétaire est activée à l’aide d’un `CNAME`, tous les cookies de votre domaine sont envoyés sur les requêtes effectuées au point d’entrée de la collecte de données.
 
 1. Utilisez Adobe pour créer un enregistrement `CNAME` à des fins de collecte de données dans votre organisation. Voir le [programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/adobe-managed-cert) pour le processus complet.
-1. Activez l’option **[!UICONTROL First Party ID Cookie]** dans votre flux de données. Ce paramètre indique à Edge Network de se référer au cookie spécifié lors de la recherche d’un identifiant d’appareil interne au lieu de rechercher la valeur dans le mappage d’identités. Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel le FPID doit être stocké. Voir [Créer et configurer des flux de données](/help/datastreams/configure.md#advanced-options) pour plus d’informations.
+1. Activez l’option **[!UICONTROL Cookie interne d’identifiant]** dans votre flux de données. Ce paramètre indique à Edge Network de se référer au cookie spécifié lors de la recherche d’un identifiant d’appareil interne au lieu de rechercher la valeur dans le mappage d’identités. Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel le FPID doit être stocké. Voir [Créer et configurer des flux de données](/help/datastreams/configure.md#advanced-options) pour plus d’informations.
 
    ![Image de l’interface utilisateur de Platform montrant la configuration du flux de données mettant en surbrillance le paramètre Cookie d’identifiant propriétaire](/help/collection/js/assets/first-party-id-datastreams.png)
 
@@ -198,8 +199,8 @@ Si vous migrez vers des identifiants d’appareil propriétaires à partir d’u
 
 | Visite | Description |
 | --- | --- |
-| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie FPID. L’ECID contenu dans le [cookie AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
+| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie FPID. L’ECID contenu dans le [cookie AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
 | Deuxième visite | Le déploiement de la solution FPID a commencé. L’ECID existant est toujours présent et reste l’identifiant principal pour l’identification des visiteurs. |
 | Troisième visite | Entre la deuxième et la troisième visite, il s’est écoulé suffisamment de temps pour que l’ECID ait été supprimé en raison d’une politique de navigateur. Cependant, comme le FPID a été défini à l’aide d’un enregistrement `A` DNS, le FPID persiste. Le FPID est désormais considéré comme l’ID principal et est utilisé pour amorcer l’ECID, qui est écrit sur l’appareil de l’utilisateur final. L’utilisateur est désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |
-| Quatrième visite | Entre la troisième et la quatrième visite, il s’est écoulé suffisamment de temps pour que l’ECID ait été supprimé en raison d’une politique de navigateur. Comme lors de la visite précédente, le FPID reste en raison de la manière dont il a été défini. Cette fois, le même ECID que celui de la visite précédente est généré. L’utilisateur est affiché dans toutes les solutions Adobe Experience Platform et Experience Cloud comme le même utilisateur que lors de la visite précédente. |
+| Quatrième visite | Entre la troisième et la quatrième visite, il s’est écoulé suffisamment de temps pour que l’ECID ait été supprimé en raison d’une politique de navigateur. Comme lors de la visite précédente, le FPID reste en raison de la manière dont il a été défini. Cette fois, le même ECID que celui de la visite précédente est généré. L’utilisateur est vu dans toutes les solutions Adobe Experience Platform et Experience Cloud comme le même utilisateur que la visite précédente. |
 | Cinquième visite | Entre la quatrième et la cinquième visite, l’utilisateur final a effacé tous les cookies dans le navigateur. Un nouveau FPID est généré et utilisé pour amorcer la création d’un nouvel ECID. L’utilisateur est désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |

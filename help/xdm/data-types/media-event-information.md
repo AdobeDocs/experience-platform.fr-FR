@@ -17,21 +17,21 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 113
-ht-degree: 3%
+source-wordcount: 122
+ht-degree: 4%
 
 ---
 
-# Type de données [!UICONTROL Media Event Information]
+# [!UICONTROL Informations sur l’événement multimédia] type de données
 
-[!UICONTROL Media Event Information] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails de l’événement multimédia liés à l’événement d’expérience.
+[!UICONTROL &#x200B; Informations sur l’événement multimédia &#x200B;] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails de l’événement multimédia liés à l’événement d’expérience.
 
 ![Diagramme du type de données Informations sur l’événement multimédia.](../images/data-types/media-event-information.png)
 
 | Propriété | Type de données | Description |
 |---|---|---|
 | `mediaCollection` | [!UICONTROL mediaDetails] | Détails du média liés à l’événement d’expérience. Ce type de données est utilisé pour la [collecte de données multimédia](./media-collection-details.md) et la [création de rapports sur les données multimédia](./media-reporting-details.md). |
-| `mediaEventTimestamp` | [!UICONTROL String] | Heure à laquelle un événement multimédia s’est produit, au format ISO 8601 (par exemple, `2024-09-26T15:52:24+00:00`). |
-| `mediaEventType` | [!UICONTROL String] | Type d’événement multimédia. Valeurs acceptées : `media.sessionStart`, `media.adBreakStart`, `media.adStart`, `media.adComplete`, `media.adBreakComplete`, `media.play`, `media.pauseStart`, `media.ping`, `media.bufferStart`, `media.bitrateChange`, `media.statesUpdate`, `media.error`, `media.chapterStart`, `media.chapterComplete`, `media.sessionComplete`, `media.sessionEnd`, `media.downloaded`,,. |
+| `mediaEventTimestamp` | [!UICONTROL Chaîne] | Heure à laquelle un événement multimédia s’est produit, au format ISO 8601 (par exemple, `2024-09-26T15:52:24+00:00`). |
+| `mediaEventType` | [!UICONTROL Chaîne] | Type d’événement multimédia. Valeurs acceptées : `media.sessionStart`, `media.adBreakStart`, `media.adStart`, `media.adComplete`, `media.adBreakComplete`, `media.play`, `media.pauseStart`, `media.ping`, `media.bufferStart`, `media.bitrateChange`, `media.statesUpdate`, `media.error`, `media.chapterStart`, `media.chapterComplete`, `media.sessionComplete`, `media.sessionEnd`, `media.downloaded`,,. |
 
 Voir [mediaevent.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json) dans le référentiel XDM public pour obtenir la définition complète du schéma.

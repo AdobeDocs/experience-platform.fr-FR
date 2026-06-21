@@ -34,7 +34,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1211
+source-wordcount: 1212
 ht-degree: 40%
 
 ---
@@ -63,7 +63,7 @@ Catalog Service est le système d’enregistrement pour l’emplacement et la pa
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Actions supplémentaires | Pour rendre les opérations plus flexibles et vous aider à gérer vos données, vous pouvez désormais utiliser la fonctionnalité « Plus d’actions » de la vue des détails pour effectuer des tâches supplémentaires sur un jeu de données. Vous pouvez soit supprimer le jeu de données, soit l’activer pour une utilisation avec le profil client en temps réel à partir de la page de détails d’un jeu de données choisi.<br>**Remarque :** si vous activez un jeu de données pour l’ingestion de profil, le schéma du jeu de données doit être compatible avec le profil client en temps réel.<br>![Espace de travail Jeux de données avec le menu déroulant [!UICONTROL ... More] en surbrillance.](../2024/assets/march/more-actions.png "Espace de travail Jeux de données avec le menu déroulant Plus en surbrillance."){width="100" zoomable="yes"}.<br>Pour plus d’informations, consultez la documentation du [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md) . |
+| Actions supplémentaires | Pour rendre les opérations plus flexibles et vous aider à gérer vos données, vous pouvez désormais utiliser la fonctionnalité « Plus d’actions » de la vue des détails pour effectuer des tâches supplémentaires sur un jeu de données. Vous pouvez soit supprimer le jeu de données, soit l’activer pour une utilisation avec le profil client en temps réel à partir de la page de détails d’un jeu de données choisi.<br>**Remarque :** si vous activez un jeu de données pour l’ingestion de profil, le schéma du jeu de données doit être compatible avec le profil client en temps réel.<br>![L’espace de travail Jeux de données avec le [!UICONTROL ... Plus &#x200B;] menu déroulant mis en surbrillance.](../2024/assets/march/more-actions.png "Espace de travail Jeux de données avec le menu déroulant Plus en surbrillance."){width="100" zoomable="yes"}.<br>Pour plus d’informations, consultez la documentation du [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md) . |
 
 {style="table-layout:auto"}
 

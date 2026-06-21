@@ -5,8 +5,8 @@ type: Tutorial
 description: Découvrez comment créer une connexion source d’API REST générique à l’aide de l’interface utilisateur de Adobe Experience Platform.
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 23%
+source-wordcount: '649'
+ht-degree: 21%
 
 ---
 
@@ -20,7 +20,7 @@ Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.

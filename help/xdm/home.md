@@ -29,8 +29,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2446
-ht-degree: 57%
+source-wordcount: 2487
+ht-degree: 56%
 
 ---
 
@@ -58,13 +58,13 @@ XDM fournit une solide collection de groupes de champs et de types de données s
 
 Lors de la création de schémas dans l’interface utilisateur d’Experience Platform, les groupes de champs répertoriés s’affichent avec une mesure de popularité. Cette mesure est déterminée par la fréquence à laquelle les autres utilisateurs d’Experience Platform utilisent le groupe de champs dans leurs schémas. Plus le nombre est élevé, plus le groupe de champs est populaire. Par défaut, les résultats s’affichent du plus populaire au moins populaire, vous renseignant sur les tendances de modélisation des données dans votre secteur d’activité.
 
-![Colonne de popularité de la boîte de dialogue [!UICONTROL Add field group].](./images/overview/popularity.png)
+![Colonne de popularité de la boîte de dialogue [!UICONTROL Ajouter un groupe de champs].](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
 Experience Platform fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez afficher et gérer toutes les ressources liées aux schémas de **[!DNL Schema Library]** d’Experience Platform. La [!DNL Schema Library] possède des composants XDM standard mis à votre disposition par Adobe, ainsi que des ressources de partenaires Experience Platform et de fournisseurs dont vous utilisez les applications.
 
-Vous pouvez également créer et gérer de nouveaux schémas et de nouvelles ressources propres à votre organisation à l’aide de l’[!DNL Schema Registry API] ou de l’espace de travail [!UICONTROL Schemas] dans l’interface utilisateur d’Experience Platform.
+Vous pouvez également créer et gérer de nouveaux schémas et de nouvelles ressources propres à votre organisation à l’aide de l’[!DNL Schema Registry API] ou de l’espace de travail [!UICONTROL Schémas] dans l’interface utilisateur d’Experience Platform.
 
 Pour plus d’informations sur la gestion et l’interaction avec les schémas dans Experience Platform, consultez la documentation suivante :
 
@@ -92,15 +92,15 @@ Bien que vous puissiez définir vos propres classes dans le [!DNL Schema Registr
 >
 >Il n’existe aucune classe standard basée sur le comportement ad hoc. Les schémas ad hoc sont générés automatiquement par les processus Experience Platform qui les utilisent, mais ils peuvent également être [créés manuellement à l’aide de l’API Schema Registry](./tutorials/ad-hoc.md).
 
-### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
+### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
-[!UICONTROL XDM Individual Profile] est une classe basée sur des enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés. Les profils hautement identifiés peuvent contenir des informations personnelles détaillées telles que le nom, le sexe, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses e-mail.
+[!UICONTROL Profil individuel XDM] est une classe basée sur des enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés. Les profils hautement identifiés peuvent contenir des informations personnelles détaillées telles que le nom, le sexe, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses e-mail.
 
 Les profils moins identifiés peuvent n’être constitués que de signaux comportementaux anonymes tels que les cookies de navigateur. Dans ce cas, les données de profil éparses sont utilisées pour constituer une base d’informations dans laquelle les intérêts et les préférences du profil anonyme sont rassemblés et stockés. Ces identifiants peuvent devenir plus détaillés avec le temps si l’objet s’inscrit pour recevoir des notifications, souscrit à des abonnements, effectue des achats, etc. Ce développement des attributs de profil peut permettre d’obtenir un objet identifié et un degré plus élevé d’engagement ciblé.
 
 Au fur et à mesure qu’un profil croît, il devient un solide référentiel des informations personnelles, des informations d’identification, des coordonnées et des préférences de communication d’une personne.
 
-Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[&#128279;](./classes/individual-profile.md) consultez le guide de référence des [!UICONTROL XDM Individual Profile] .
+Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[&#128279;](./classes/individual-profile.md) consultez le guide de référence [!UICONTROL XDM Individual Profile] .
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -112,7 +112,7 @@ Bien qu’il ne soit pas facile de classer tous les événements de toutes les s
 
 ![Infographie du Parcours client visualisée avec les événements d’expérience au fil du temps.](images/overview/experience-event-journey.png)
 
-Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[&#128279;](./classes/experienceevent.md) consultez le guide de référence des [!UICONTROL XDM ExperienceEvent] .
+Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[&#128279;](./classes/experienceevent.md) consultez le guide de référence [!UICONTROL XDM ExperienceEvent].
 
 ## Schémas XDM et services Experience Platform {#schemas-and-platform-services}
 
@@ -147,7 +147,7 @@ Utilisez Data Mirror lorsque vous devez :
 * Prise en charge des analyses avancées et de l’orchestration des parcours
 * Activer le suivi précis des modifications avec des upserts et des suppressions
 
-Pour créer un schéma relationnel, sélectionnez **[!UICONTROL Relational]** lors de sa création. Les schémas relationnels n’utilisent pas de classes ni de groupes de champs. Au lieu de cela, vous devez définir la structure manuellement ou charger un fichier DDL. Les schémas relationnels nécessitent une clé primaire, un identifiant de version et, le cas échéant, des champs d’identifiant d’horodatage. Vous pouvez ensuite configurer des champs supplémentaires et définir des relations avec d’autres schémas.
+Pour créer un schéma relationnel, sélectionnez **[!UICONTROL Relationnel]** lors de sa création. Les schémas relationnels n’utilisent pas de classes ni de groupes de champs. Au lieu de cela, vous devez définir la structure manuellement ou charger un fichier DDL. Les schémas relationnels nécessitent une clé primaire, un identifiant de version et, le cas échéant, des champs d’identifiant d’horodatage. Vous pouvez ensuite configurer des champs supplémentaires et définir des relations avec d’autres schémas.
 
 >[!NOTE]
 >
@@ -178,9 +178,9 @@ Le profil client en temps réel utilise des données sous forme de schémas bas�
 
 Le système conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées par un « schéma d’union »; (parfois appelé « vue d’union »;). Un schéma d’union agrège les champs de tous les schémas qui implémentent la même classe dans un seul et même schéma. Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou d’une API, vous pouvez l’activer pour une utilisation avec le profil client en temps réel et l’étiqueter pour l’inclure à l’union. Le schéma balisé participe alors à la définition de schéma transmise à Profil.
 
-Au fur et à mesure que les données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] sont ingérées dans le lac de données, le profil client en temps réel ingère toutes les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
+Alors que les données [!UICONTROL Profil individuel XDM] et [!UICONTROL XDM ExperienceEvent] sont ingérées dans le lac de données, le profil client en temps réel ingère quant à lui toutes les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
 
-Les données [!UICONTROL XDM Individual Profile] permettent de guider et d’exécuter les actions sur n’importe quel canal ou intégration de produit Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données peuvent être utilisées pour alimenter le machine learning. L’API Real-Time Customer Profile peut aussi être utilisée pour enrichir les fonctionnalités des solutions tierces, des solutions CRM et des solutions propriétaires.
+[!UICONTROL Profil individuel XDM] les données permettent de guider et d’exécuter les actions sur n’importe quel canal ou intégration de produit Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données peuvent être utilisées pour alimenter le machine learning. L’API Real-Time Customer Profile peut aussi être utilisée pour enrichir les fonctionnalités des solutions tierces, des solutions CRM et des solutions propriétaires.
 
 Pour plus d’informations, consultez la [vue d’ensemble du profil client en temps réel](../profile/home.md).
 
@@ -190,7 +190,7 @@ Pour plus d’informations, consultez la [vue d’ensemble du profil client en t
 >
 >Le Workspace de science des données ne peut plus être acheté. Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-L’espace de travail de science des données d’Adobe Experience Platform utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Le Workspace de science des données permet aux spécialistes des données de créer des recettes basées sur des données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] sur les clients et leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser.
+L’espace de travail de science des données d’Adobe Experience Platform utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Le Workspace de science des données permet aux spécialistes des données de créer des recettes basées sur des données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] concernant les clients et leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser.
 
 Avec l’espace de travail de science des données, les spécialistes des données peuvent facilement créer des API de service intelligents optimisés par le machine learning. Ces services fonctionnent avec d’autres solutions Adobe, y compris Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences digitales ciblées et personnalisées.
 

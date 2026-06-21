@@ -13,24 +13,24 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 223
-ht-degree: 48%
+source-wordcount: 230
+ht-degree: 46%
 
 ---
 
 # Gestion des utilisateurs pour un profil de produit
 
-Pour affecter ou supprimer des utilisateurs d’un profil de produit, ouvrez la page de détails du profil et accédez à l’onglet **[!UICONTROL Users]** . À partir de là, sélectionnez **[!UICONTROL Add User]**.
+Pour attribuer ou supprimer des utilisateurs d’un profil de produit, ouvrez la page de détails du profil et accédez à l’onglet **[!UICONTROL Utilisateurs]**. À partir de là, sélectionnez **[!UICONTROL Ajouter un utilisateur]**.
 
-![Page de détails du profil de produit présentant les utilisateurs répertoriés dans l’onglet [!UICONTROL Users].](../images/add-user.png)
+![Page de détails du profil de produit présentant les utilisateurs répertoriés dans l’onglet [!UICONTROL Utilisateurs].](../images/add-user.png)
 
-La boîte de dialogue **[!UICONTROL Add User]** s’affiche. Le champ de recherche vous permet de rechercher des utilisateurs à ajouter par nom ou par adresse e-mail. Lorsque vous tapez, les utilisateurs correspondants s’affichent dans une fenêtre de saisie semi-automatique sous la zone de texte.
+La boîte de dialogue **[!UICONTROL Ajouter un utilisateur]** s’affiche. Le champ de recherche vous permet de rechercher des utilisateurs à ajouter par nom ou par adresse e-mail. Lorsque vous tapez, les utilisateurs correspondants s’affichent dans une fenêtre de saisie semi-automatique sous la zone de texte.
 
 >[!NOTE]
 >
 >Si un utilisateur n’apparaît pas dans la fenêtre de saisie semi-automatique, saisissez son adresse e-mail complète dans la barre de recherche. Une invitation sera envoyée à l’adresse électronique avec des instructions sur la configuration d’un compte Adobe ID.
 
-Une fois que vous avez sélectionné un utilisateur, sélectionnez **[!UICONTROL Save]** pour l’ajouter au profil de produit.
+Une fois que vous avez sélectionné un utilisateur, cliquez sur **[!UICONTROL Enregistrer]** pour l’ajouter au profil du produit.
 
 ![Ajouter des utilisateurs à la page du profil de produit en mettant en surbrillance les détails de l’utilisateur.](../images/save-user.png)
 

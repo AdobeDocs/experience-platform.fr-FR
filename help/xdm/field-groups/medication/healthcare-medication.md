@@ -11,14 +11,14 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 203
+source-wordcount: 208
 ht-degree: 12%
 
 ---
 
-# [!UICONTROL Healthcare medication] groupe de champs de schéma
+# [!UICONTROL Médicaments pour la santé] groupe de champs de schéma
 
-[!UICONTROL Healthcare medication] est un groupe de champs de schéma standard pour la classe [[!UICONTROL Medication]](../../classes/medication.md). Il fournit un `medication` de champ de type objet unique qui recueille les informations telles que le nom de la marque, le numéro de lot et la quantité.
+[!UICONTROL Médicaments] est un groupe de champs de schéma standard pour la classe [[!UICONTROL Médicaments]](../../classes/medication.md). Il fournit un `medication` de champ de type objet unique qui recueille les informations telles que le nom de la marque, le numéro de lot et la quantité.
 
 ![](../../images/field-groups/healthcare-medication.png)
 

@@ -111,7 +111,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `repo:path` | chaîne | - | - | - | URL prédéfinie du document à partir duquel les expressions clés doivent être extraites. |
 | `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel le document est stocké. |
 | `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez ceci lors de la transmission du document en tant qu’argument multipartie au lieu d’utiliser des URL présignées. |
-| `dc:format` | string | Oui | - | « text/plain »,<br>« application/pdf »,<br>« text/pdf »,<br>« text/html »,<br>« text/rtf »,<br>« application/rtf »,<br>« application/msword »,<br>« application/vnd.openxmlformats-officedocument.wordprocessingml.document »,<br>« application/mspowerpoint »,<br>« application/vnd.ms-powerpoint »,<br>« application/vnd.openxmlformats-officedocument.presentationml.presentation » | Le codage du document est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
+| `dc:format` | chaîne | Oui | - | « text/plain »,<br>« application/pdf »,<br>« text/pdf »,<br>« text/html »,<br>« text/rtf »,<br>« application/rtf »,<br>« application/msword »,<br>« application/vnd.openxmlformats-officedocument.wordprocessingml.document »,<br>« application/mspowerpoint »,<br>« application/vnd.ms-powerpoint »,<br>« application/vnd.openxmlformats-officedocument.presentationml.presentation » | Le codage du document est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
 
 **Réponse**
 

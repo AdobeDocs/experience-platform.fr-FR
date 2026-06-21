@@ -22,7 +22,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1332
+source-wordcount: 1336
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Utilisez un descripteur de clé primaire pour vous assurer que chaque enregistre
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICONTROL Version identifier] » et « [!UICONTROL Timestamp identifier] ».
+>Dans l’éditeur de schéma d’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICONTROL Identifiant de version] » et « [!UICONTROL Identifiant d’horodatage] ».
 
 **Exemple (champ unique) :**
 

@@ -14,16 +14,16 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 156
-ht-degree: 10%
+source-wordcount: 176
+ht-degree: 9%
 
 ---
 
-# Type de données de la collecte de [!UICONTROL Custom Metadata Details]
+# [!UICONTROL Détails des métadonnées personnalisées] Type de données de collection
 
-La collecte de [!UICONTROL Custom Metadata Details] est un type de données standard du modèle de données d’expérience (XDM) qui définit une structure de stockage des métadonnées personnalisées. Utilisez le type de données Collection de [!UICONTROL Custom Metadata Details] pour capturer des informations telles que le nom et la valeur de métadonnées personnalisées associées au contenu ou aux interactions.
+[!UICONTROL Détails des métadonnées personnalisées] la collecte est un type de données standard du modèle de données d’expérience (XDM) qui définit une structure de stockage des métadonnées personnalisées. Utilisez le type de données de collection [!UICONTROL Détails de métadonnées personnalisés] pour capturer des informations telles que le nom et la valeur des métadonnées personnalisées associées au contenu ou aux interactions.
 
-+++Sélectionnez cette option pour afficher un diagramme du type de données Collecte de [!UICONTROL Custom Metadata Details] .
++++Sélectionnez cette option pour afficher un diagramme du type de données Collection [!UICONTROL Détails des métadonnées personnalisées].
 ![Diagramme du type de données Collection de détails de métadonnées personnalisées.](../images/data-types/the-custom-metadata-collection.png)
 +++
 
@@ -33,5 +33,5 @@ La collecte de [!UICONTROL Custom Metadata Details] est un type de données stan
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |---|---|---|---|---|
-| [!UICONTROL Custom Metadata Field Name] | `name` | chaîne | Non | Nom du champ personnalisé. |
-| [!UICONTROL Custom Metadata Field Value] | `value` | chaîne | Non | Valeur du champ personnalisé. |
+| [!UICONTROL Nom de champ de métadonnées personnalisé] | `name` | string | Non | Nom du champ personnalisé. |
+| [!UICONTROL Valeur de champ de métadonnées personnalisé] | `value` | string | Non | Valeur du champ personnalisé. |

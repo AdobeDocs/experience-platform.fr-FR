@@ -8,8 +8,8 @@ role: Developer
 nudge: true
 source-git-commit: 312423949f8a5d6d8ea3b835a3e575d49f444948
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 72%
+source-wordcount: '731'
+ht-degree: 71%
 
 ---
 
@@ -236,7 +236,7 @@ ht-degree: 72%
    * [Informations web](./data-types/web-information.md)
    * [Interaction web](./data-types/web-interaction.md)
    * [Détails de la page web](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] Interface utilisateur {#ui}
+* Interface utilisateur [!UICONTROL Schémas] {#ui}
    * [Vue d’ensemble](./ui/overview.md)
    * [Explorer des ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}

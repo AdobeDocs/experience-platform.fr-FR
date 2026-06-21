@@ -101,7 +101,7 @@ Les objets d’extension vidéo suivants doivent être inclus :
 
 * **Condition**
 
-   1. Aucun
+   1. None
 
 * **Actions**
 

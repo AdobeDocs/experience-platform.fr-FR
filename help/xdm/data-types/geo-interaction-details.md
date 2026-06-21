@@ -11,20 +11,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 150
-ht-degree: 4%
+source-wordcount: 158
+ht-degree: 3%
 
 ---
 
-# Type de données [!UICONTROL Geo interaction details]
+# [!UICONTROL Détails de l’interaction géographique] type de données
 
-[!UICONTROL Geo interaction details] est un type de données XDM standard qui décrit l’état actuel d’inclusion dans une zone géographiquement définie.
+[!UICONTROL Détails de l’interaction géographique] est un type de données XDM standard qui décrit l’état actuel d’inclusion dans une zone définie géographiquement.
 
 ![](../images/data-types/geo-interaction-details.png){width=400}
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `geoShape` | [[!UICONTROL Geo Shape]](./geo-shape.md) | Décrit la forme géographique de la zone avec laquelle il y a interaction. Ce champ peut décrire une boîte, un cercle ou un polygone. |
+| `geoShape` | [[!UICONTROL Forme géographique]](./geo-shape.md) | Décrit la forme géographique de la zone avec laquelle il y a interaction. Ce champ peut décrire une boîte, un cercle ou un polygone. |
 | `deviceGeoAccuracy` | Double | Précision du mécanisme ou du dispositif de mesure géographique, exprimée en mètres. |
 | `distanceToCenter` | Double | Distance par rapport au centre de la zone dans le cas d’un cercle géographique, mesurée en mètres. |
 

@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /rule_
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1159'
 ht-degree: 86%
 
 ---
@@ -21,7 +21,7 @@ Les composants de règle possèdent trois types de base :
 
 | Type de composant de règle | Description |
 | --- | --- |
-| Événements | Un événement correspond au déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. « [!UICONTROL Library Load] », « [!UICONTROL Page Top] » et « [!UICONTROL Click] » sont des exemples d’événements. |
+| Événements | Un événement correspond au déclencheur d’une règle. La règle commence lorsque l’événement se produit au moment de l’exécution sur l’appareil client. « [!UICONTROL Chargement de bibliothèque] », « [!UICONTROL Haut de page] » et « [!UICONTROL Cliquer] » sont des exemples d’événements. |
 | Conditions | Une condition correspond à une évaluation déterminant si certains critères sont satisfaits avant l’exécution d’actions. Une fois qu’un événement se produit, les conditions sont évaluées. Les actions de la règle ne s’exécutent que si toutes les conditions sont remplies. |
 | Actions | Il s’agit des actions que la règle doit effectuer, telles que l’envoi d’une balise Adobe Analytics, la récupération d’un identifiant visiteur personnalisé ou le déclenchement d’une mBox spécifique. |
 

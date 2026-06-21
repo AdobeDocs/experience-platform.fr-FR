@@ -3,7 +3,7 @@ title: Notation prédictive des prospects et des comptes dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et plus d’informations sur la fonctionnalité de notation prédictive des prospects et des comptes dans Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 TQID: https://experienceleague.adobe.com/wAdoZx66wLkOyYYD77z-gW0-huyURQfg1MB27zkYV-Y
 product_v2:
@@ -18,7 +18,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: 877
 ht-degree: 14%
 
 ---
@@ -113,13 +113,13 @@ Après l’exécution de la tâche, les résultats sont enregistrés dans un nou
 
 ### Afficher les scores du profil client
 
-Pour afficher les scores prédictifs d’un profil de personne, sélectionnez **[!UICONTROL Profiles]** sous la section client du panneau de gauche, puis saisissez l’espace de noms d’identité et la valeur d’identité. Une fois l’opération terminée, sélectionnez **[!UICONTROL View]**.
+Pour afficher les scores prédictifs d’un profil de personne, sélectionnez **[!UICONTROL Profils]** sous la section client du panneau de gauche, puis saisissez l’espace de noms d’identité et la valeur d’identité. Une fois l’opération terminée, sélectionnez **[!UICONTROL Afficher]**.
 
 Sélectionnez ensuite le profil dans la liste.
 
 ![Profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-La page **[!UICONTROL Detail]** inclut désormais les scores prédictifs. Cliquez sur l’icône de graphique en regard du score prédictif.
+La page **[!UICONTROL Détails]** inclut désormais les scores prédictifs. Cliquez sur l’icône de graphique en regard du score prédictif.
 
 ![Score prédictif du profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 

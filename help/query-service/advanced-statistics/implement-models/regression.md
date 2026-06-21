@@ -42,7 +42,7 @@ Le tableau ci-dessous présente les paramètres clés de la configuration et de 
 | `MIN_INSTANCES_PER_NODE` | Ce paramètre définit le nombre minimal d’instances que chaque nœud enfant doit avoir après une division. Si une division entraîne un nombre d’instances inférieur à cette valeur, la division est ignorée comme non valide. | 1 | (>=1) |
 | `MAX_MEMORY_IN_MB` | Ce paramètre spécifie la mémoire maximale, en mégaoctets (Mo), allouée pour l’agrégation des histogrammes. Si la mémoire est trop petite, un seul nœud sera divisé par itération, et ses agrégats peuvent dépasser cette taille. | 256 | Toute valeur entière positive |
 | `PREDICTION_COL` | Ce paramètre spécifie le nom de la colonne utilisée pour stocker les prédictions. | « prédiction » | N’importe quelle chaîne |
-| `SEED` | Ce paramètre définit la valeur de départ aléatoire utilisée dans le modèle. | Aucune | N’importe quel nombre 64 bits |
+| `SEED` | Ce paramètre définit la valeur de départ aléatoire utilisée dans le modèle. | None | N’importe quel nombre 64 bits |
 | `WEIGHT_COL` | Ce paramètre spécifie le nom de la colonne de poids. Si ce paramètre n’est pas défini ou est vide, tous les poids d’instance sont traités comme des `1.0`. | Non défini | N’importe quelle chaîne |
 
 {style="table-layout:auto"}
@@ -74,7 +74,7 @@ Le tableau ci-dessous présente les paramètres clés de configuration et d’op
 | `MAX_ITER` | Ce paramètre spécifie le nombre maximal d’itérations que l’algorithme doit exécuter. | 100 | (>= 0) |
 | `MINI_BATCH_FRACTION` | Ce paramètre définit la fraction du mini-lot, qui détermine la partie des données utilisée dans chaque lot. Il doit être dans la plage `(0, 1]`. | 1.0 | `(0, 1]` |
 | `REG_PARAM` | Ce paramètre définit le paramètre de régularisation pour éviter le surajustement. | 0,0 | (>= 0) |
-| `SEED` | Ce paramètre spécifie l&#39;origine aléatoire utilisée pour l&#39;initialisation du modèle. | Aucune | N’importe quel nombre 64 bits |
+| `SEED` | Ce paramètre spécifie l&#39;origine aléatoire utilisée pour l&#39;initialisation du modèle. | None | N’importe quel nombre 64 bits |
 | `SOLVER` | Ce paramètre spécifie l’algorithme du solveur utilisé pour l’optimisation. | « adamW » | `gd` (descente en gradient), `adamW` |
 | `STEP_SIZE` | Ce paramètre spécifie la taille d’étape initiale (ou taux d’apprentissage) de la première étape d’optimisation. | 1.0 | Toute valeur positive |
 | `PREDICTION_COL` | Ce paramètre spécifie le nom de la colonne dans laquelle les prédictions sont stockées. | « prédiction » | N’importe quelle chaîne |

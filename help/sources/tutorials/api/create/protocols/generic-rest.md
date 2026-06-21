@@ -113,7 +113,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Experience Platform. |
 | `auth.params.host` | URL racine utilisée pour la connexion à votre source [!DNL Generic REST API]. |
 | `auth.params.accessToken` | Jeton d’accès correspondant utilisé pour authentifier la source. Ceci est requis pour l’authentification basée sur OAuth. |
@@ -173,7 +173,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 | `auth.specName` | Type d’authentification que vous utilisez pour connecter votre source à Experience Platform. |
 | `auth.params.host` | URL racine utilisée pour la connexion à votre source [!DNL Generic REST API]. |
 | `auth.params.username` | Nom d’utilisateur correspondant à votre source de [!DNL Generic REST API]. Ceci est requis pour l’authentification de base. |

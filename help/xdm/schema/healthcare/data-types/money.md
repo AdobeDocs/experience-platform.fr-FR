@@ -11,21 +11,21 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 113
-ht-degree: 8%
+source-wordcount: 117
+ht-degree: 10%
 
 ---
 
 # Type de données [!UICONTROL Money]
 
-[!UICONTROL Money] est un type de données XDM (Modèle de données d’expérience) standard qui fournit une quantité d’utilité économique dans une devise reconnue. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Monnaie] est un type de données standard du modèle de données d’expérience (XDM) qui fournit une quantité d’utilité économique dans une devise reconnue. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure du type de données Money](../../../images/healthcare/data-types/money.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Currency] | `currency` | Chaîne | Code de devise ISO 4217. |
-| [!UICONTROL Value] | `value` | Double | Valeur numérique. |
+| [!UICONTROL Devise] | `currency` | Chaîne | Code de devise ISO 4217. |
+| [!UICONTROL Valeur] | `value` | Double | Valeur numérique. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

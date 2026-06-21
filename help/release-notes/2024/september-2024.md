@@ -37,7 +37,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2229
+source-wordcount: 2232
 ht-degree: 96%
 
 ---
@@ -60,7 +60,7 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -68,7 +68,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 | --- | --- |
 | Prise en charge des sandbox de développement | Vous pouvez maintenant [vous abonner aux alertes](../../observability/alerts/ui.md) dans les sandbox de production et de développement, ce qui permet une surveillance transparente de tous les environnements. |
 | Modèles d’e-mail | Les [alertes par e-mail](../../observability/alerts/ui.md) incluent désormais des informations détaillées sur les ressources, vous permettant ainsi de disposer de toutes les informations clés à portée de main. |
-| Amélioration de la personnalisation | Vous pouvez désormais configurer des [seuils d’alerte](../../observability/alerts/ui.md#alert-threshold) pour une plus grande flexibilité afin d’adapter les alertes à vos besoins spécifiques pour les types d’alertes suivants :<br><ul><li>Retard du traitement du segment</li><li>Retard d’export du segment</li><li>Retard d’exécution du flux de destination</li><li>Retard d’exécution du flux du service d’identités</li><li>Retard d’exécution du flux de profils</li><li>Retard dans l’exécution du flux de sources</li><li>Retard d’exécution de la requête</li><li>Taux d’activations ignorées dépassé</li><li>Taux d’erreurs d’ingestion de sources dépassé</ul> |
+| Amélioration de la personnalisation | Vous pouvez désormais configurer des [seuils d’alerte](../../observability/alerts/ui.md#alert-threshold) pour une plus grande flexibilité afin d’adapter les alertes à vos besoins spécifiques pour les types d’alertes suivants :<br><ul><li>Retard de la tâche relative aux segments</li><li>Retard d’export du segment</li><li>Retard d’exécution du flux de destination</li><li>Retard d’exécution du flux du service d’identités</li><li>Retard d’exécution du flux de profils</li><li>Retard dans l’exécution du flux de sources</li><li>Retard d’exécution de requête</li><li>Taux d’activations ignorées dépassé</li><li>Taux d’erreurs d’ingestion de sources dépassé</ul> |
 | Alertes étendues | Les alertes d’informations sur les événements d’audit sont désormais disponibles pour un abonnement pour les [règles d’alerte](../../observability/alerts/rules.md) suivantes :<br><ul><li>Création d’une audience</li><li>Mise à jour d’une audience</li><li>Suppression d’une audience</li><li>Création d’un jeu de données</li><li>Mise à jour d’un jeu de données</li><li>Suppression d’un jeu de données</li><li>Création d’un schéma</li><li>Mise à jour d’un schéma</li><li>Suppression d’un schéma. |
 
 {style="table-layout:auto"}
@@ -83,7 +83,7 @@ Experience Platform propose de nombreux tableaux de bord qui vous permettent d�
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Tableau des modules complémentaires d’utilisation des licences | Bénéficiez d’une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Experience Platform à l’aide de tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations[&#128279;](../../dashboards/guides/license-usage.md#overview-tab) consultez le guide du tableau de bord [!UICONTROL License Usage] . |
+| Tableau des modules complémentaires d’utilisation des licences | Bénéficiez d’une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Experience Platform à l’aide de tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations, consultez le guide du tableau de bord [[!UICONTROL Utilisation de la licence] &#x200B;](../../dashboards/guides/license-usage.md#overview-tab). |
 | Mode de requête pro - Mises à niveau des filtres globaux | Améliorez les analyses avec le nouveau filtre de date du mode de requête pro. Affinez les informations à l’aide de paramètres de date dynamiques dans vos requêtes SQL et filtrez les données par périodes spécifiques. Choisissez des périodes prédéfinies ou personnalisées dans une interface d’utilisation intuitive, en conservant les tableaux de bord pertinents pour tous les utilisateurs et toutes les utilisatrices. Simplifiez les workflows, conservez la précision et prenez des décisions opportunes. Pour plus d’informations, consultez le [guide sur la création de filtres de date](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md). |
 | Mode de requête pro - Explorations | Obtenez des informations plus précises avec la fonctionnalité d’exploration du mode de requête pro et naviguez facilement entre les graphiques généraux et les tableaux de bord détaillés. Utilisez cette fonctionnalité pour passer facilement des résumés aux analyses approfondies et explorer les tendances, les comportements de la clientèle et les KPI. Les passages de filtres automatiques et les explorations à plusieurs niveaux garantissent des données homogènes, assurant une exploration fluide. Simplifiez les workflows, conservez le contexte et accélérez les décisions. Pour plus d’informations, lisez le [guide détaillé sur la création d’explorations](../../dashboards/sql-insights-query-pro-mode/drill-through.md). |
 | Mode de requête pro - Attributs de table avancés | Utilisez les attributs de table avancés du mode de requête pro pour rationaliser la visualisation des données, améliorer l’efficacité des workflows et améliorer la clarté des données. Ajoutez un tri, un redimensionnement et une pagination automatiques à vos tableaux de bord directement depuis les tableaux de bord personnalisés. Triez les colonnes afin de hiérarchiser les données clés, redimensionnez-les pour une lisibilité optimale et parcourez facilement les jeux de données volumineux sans modifier les requêtes SQL. Pour découvrir comment intégrer ces fonctionnalités et améliorer vos informations sur les données, lisez le guide « [Afficher plus](../../dashboards/sql-insights-query-pro-mode/view-more.md) ». |
@@ -217,4 +217,4 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
+Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).

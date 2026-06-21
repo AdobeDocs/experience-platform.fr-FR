@@ -15,8 +15,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 758
-ht-degree: 25%
+source-wordcount: 781
+ht-degree: 24%
 
 ---
 
@@ -65,25 +65,25 @@ Le [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Cela signi
 
 ## Connecter votre compte [!DNL SugarCRM Accounts & Contacts]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *CRM*, sélectionnez **[!UICONTROL SugarCRM Accounts & Contacts]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie *CRM*, sélectionnez **[!UICONTROL Comptes et contacts SugarCRM]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour le catalogue avec la carte Comptes et contacts SugarCRM &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
-La page **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Contacts et comptes SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL SugarCRM Accounts & Contacts] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL SugarCRM Accounts & Contacts] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour Connecter le compte Contacts et comptes SugarCRM à un compte existant](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte Comptes et contacts SugarCRM à un nouveau compte](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
@@ -124,7 +124,7 @@ Les taux de limitation de l’API [!DNL SugarCRM] sont de 90 appels par minute o
 
 Pour vérifier que vous avez correctement configuré la source et [!DNL SugarCRM Accounts & Contacts] les données sont ingérées, procédez comme suit :
 
-* Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL View Dataflows]** à côté du menu de carte [!DNL SugarCRM Accounts & Contacts] dans le catalogue de sources. Sélectionnez ensuite **[!UICONTROL Preview dataset]** pour vérifier les données ingérées.
+* Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** à côté du menu de carte [!DNL SugarCRM Accounts & Contacts] dans le catalogue de sources. Sélectionnez ensuite **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées.
 
 * Selon le type d’objet que vous utilisez, vous pouvez vérifier les données agrégées par rapport aux nombres visibles sur les pages Comptes ou Contacts [!DNL SugarMarket] ci-dessous :
 

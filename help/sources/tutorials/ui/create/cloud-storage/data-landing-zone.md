@@ -9,8 +9,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 758
-ht-degree: 9%
+source-wordcount: 788
+ht-degree: 8%
 
 ---
 
@@ -35,17 +35,17 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 >[!IMPORTANT]
 >
-> Pour vous connecter à la source, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]**. Lisez la [présentation du contrôle d’accès](../../../../../access-control/home.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+> Pour vous connecter à la source, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les sources]** et **[!UICONTROL Gérer les sources]**. Lisez la [présentation du contrôle d’accès](../../../../../access-control/home.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
 
-Sous la catégorie [!UICONTROL cloud storage] , sélectionnez [!DNL Data Landing Zone] puis **[!UICONTROL Add data]**.
+Dans la catégorie [!UICONTROL Espace de stockage], sélectionnez [!DNL Data Landing Zone] puis **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec Data Landing Zone sélectionné.](../../../../images/tutorials/create/dlz/catalog.png)
 
-L’étape [!UICONTROL Add data] s’affiche, vous fournissant une interface pour sélectionner et prévisualiser les données que vous souhaitez importer dans Experience Platform.
+L’étape [!UICONTROL Ajouter des données] s’affiche, vous fournissant une interface pour sélectionner et prévisualiser les données que vous souhaitez importer dans Experience Platform.
 
 * La partie gauche de l’interface est un navigateur de dossiers qui vous fournit une liste des fichiers de votre conteneur que vous pouvez ensuite importer dans Experience Platform.
 * La partie droite de l’interface permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier compatible.
@@ -62,7 +62,7 @@ L’interface de prévisualisation vous permet d’examiner le contenu et la str
 
 Pour prévisualiser un autre fichier, sélectionnez l’icône d’aperçu à côté du nom du fichier à inspecter.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Page d’aperçu des données de l’espace de travail des sources.](../../../../images/tutorials/create/dlz/file-detection.png)
 
@@ -70,9 +70,9 @@ Pour obtenir un guide détaillé et détaillé sur la création d’un flux de d
 
 ## Récupération des informations d’identification [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] est une source qui est fournie avec votre licence Sources Adobe Experience Platform. [!DNL Data Landing Zone] utilise un URI SAS et une authentification basée sur les jetons SAS. Vous pouvez récupérer vos informations d’authentification à partir de la page [!UICONTROL Sources catalog] .
+[!DNL Data Landing Zone] est une source qui est fournie avec votre licence Sources Adobe Experience Platform. [!DNL Data Landing Zone] utilise un URI SAS et une authentification basée sur les jetons SAS. Vous pouvez récupérer vos informations d’authentification à partir de la page [!UICONTROL Catalogue des sources].
 
-Pour récupérer vos informations d’identification, sélectionnez la carte **[!UICONTROL Data Landing Zone]**, puis copiez vos informations d’identification depuis le rail de droite qui s’affiche.
+Pour récupérer vos informations d’identification, sélectionnez la carte **[!UICONTROL Zone d’atterrissage des données]**, puis copiez vos informations d’identification à partir du rail de droite qui s’affiche.
 
 ![Liste des options d’affichage pour Data Landing Zone.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
@@ -88,17 +88,17 @@ Il existe deux manières d’actualiser vos informations d’identification [!DN
 
 >[!TAB Utiliser la carte source]
 
-Pour actualiser vos informations d’identification à partir de la page du catalogue de sources, sélectionnez les points de suspension (**`...`**) dans la carte [!DNL Data Landing Zone], puis sélectionnez **[!UICONTROL Refresh credentials]**.
+Pour actualiser vos informations d’identification à partir de la page du catalogue de sources, sélectionnez les points de suspension (**`...`**) dans la vignette de [!DNL Data Landing Zone], puis sélectionnez **[!UICONTROL Actualiser les informations d’identification]**.
 
 ![Actualisez les informations d’identification à l’aide de la carte source.](../../../../images/tutorials/create/dlz/refresh-with-card.png)
 
-Une fenêtre pop-up s’affiche, vous invitant à confirmer l’opération avant de pouvoir continuer. Lorsque vous êtes prêt, sélectionnez **[!UICONTROL Refresh credentials]**.
+Une fenêtre pop-up s’affiche, vous invitant à confirmer l’opération avant de pouvoir continuer. Lorsque vous êtes prêt, sélectionnez **[!UICONTROL Actualiser les informations d’identification]**.
 
 ![Fenêtre de confirmation des informations d’identification de l’actualisation.](../../../../images/tutorials/create/dlz/confirm.png)
 
 >[!TAB Utiliser le rail de droite]
 
-Pour actualiser vos informations d’identification à l’aide du rail de droite, sélectionnez la carte source **[!UICONTROL Data Landing Zone]**, puis sélectionnez **[!UICONTROL More actions]**. Sélectionnez ensuite **[!UICONTROL Refresh Credentials]** et confirmez à l’aide de la fenêtre pop-up qui s’affiche.
+Pour actualiser vos informations d’identification à l’aide du rail de droite, sélectionnez la carte source **[!UICONTROL Zone d’atterrissage de données]** puis sélectionnez **[!UICONTROL Autres actions]**. Sélectionnez ensuite **[!UICONTROL Actualiser les informations d’identification]** puis confirmez à l’aide de la fenêtre pop-up qui s’affiche.
 
 ![Actualisez les informations d’identification à l’aide du rail de droite.](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
 

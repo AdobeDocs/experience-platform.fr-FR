@@ -11,18 +11,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 256
+source-wordcount: 262
 ht-degree: 3%
 
 ---
 
-# Type de données [!UICONTROL B2B Source]
+# Type de données Source B2B
 
-[!UICONTROL B2B Source] est un type de données standard du modèle de données d’expérience (XDM) qui représente un identifiant composite pour une entité B2B (telle qu’un [compte](../classes/b2b/business-account.md), une [opportunité](../classes/b2b/business-opportunity.md) ou une [campagne](../classes/b2b/business-campaign.md)).
+Source B2B est un type de données standard du modèle de données d’expérience (XDM) qui représente un identifiant composite pour une entité B2B (telle qu’un [compte](../classes/b2b/business-account.md), une [opportunité](../classes/b2b/business-opportunity.md) ou une [campagne](../classes/b2b/business-campaign.md)).
 
 Lorsque l’on se fie uniquement aux identifiants basés sur des chaînes, il peut y avoir des chevauchements entre les identifiants de plusieurs systèmes (par exemple, un identifiant de chaîne peut être attribué à une opportunité sur un système CRM, mais ce même identifiant peut renvoyer à une opportunité complètement différente). Cela peut entraîner des conflits de données lors de la fusion de données dans [Real-Time Customer Profile](../../profile/home.md).
 
-Le type de données [!UICONTROL B2B Source] vous permet d’utiliser l’identifiant de chaîne d’origine d’une entité et de le combiner avec des informations contextuelles spécifiques à la source afin de vous assurer qu’il reste entièrement unique dans le système Experience Platform, quelle que soit la source d’où il provient.
+Le type de données Source B2B vous permet d’utiliser l’identifiant de chaîne d’origine d’une entité et de le combiner avec des informations contextuelles spécifiques à la source afin de vous assurer qu’il reste entièrement unique dans le système Experience Platform, quelle que soit la source d’où il provient.
 
 ![&#x200B; Structure Source B2B &#x200B;](../images/data-types/b2b-source.png)
 

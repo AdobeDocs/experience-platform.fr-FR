@@ -25,8 +25,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 572
-ht-degree: 54%
+source-wordcount: 585
+ht-degree: 52%
 
 ---
 
@@ -46,7 +46,7 @@ Pour en savoir plus sur Adobe Experience Platform, commencez par lire la [Pré
 
 L’invite d’enquête d’auto-identification s’affiche en bas à droite de la page d’accueil de l’interface utilisateur d’Experience Platform lors de la connexion.
 
-Pour lancer l’enquête, sélectionnez **[!UICONTROL Start]**.
+Pour lancer l’enquête, sélectionnez **[!UICONTROL Démarrer]**.
 
 ![Page d’accueil de l’interface utilisateur d’Experience Platform avec un message toast vous invitant à démarrer l’enquête d’auto-identification.](./images/survey/survey-prompt.png)
 
@@ -62,9 +62,9 @@ Les options disponibles sont les suivantes :
 
 >[!NOTE]
 >
->Vous pouvez sélectionner plusieurs fonctions dans la liste des options. Si vous sélectionnez [!UICONTROL Other], vous serez invité à fournir des détails sur votre objectif.
+>Vous pouvez sélectionner plusieurs fonctions dans la liste des options. Si vous sélectionnez [!UICONTROL Autre], il vous sera demandé de fournir des détails sur votre objectif.
 
-Pour continuer, sélectionnez la ou les fonctions qui décrivent le mieux votre travail actuel, puis sélectionnez **[!UICONTROL Next]**.
+Pour continuer, sélectionnez la ou les fonctions qui décrivent le mieux votre travail actuel, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![Enquête d’auto-identification avec deux fonctions sélectionnées.](./images/survey/select-functions.png)
 
@@ -85,11 +85,11 @@ Voici la liste des objectifs disponibles :
 * Configurer des tableaux de bord pour analyser l’impact sur l’entreprise
 * Activer des données vers les destinations pour le ciblage en aval
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Submit]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Soumettre]**.
 
 ![Enquête d’auto-identification affichant la liste des objectifs que vous pouvez sélectionner.](./images/survey/select-objectives.png)
 
-Une fois votre enquête d’auto-identification terminée, sélectionnez **[!UICONTROL Done]**.
+Une fois votre enquête d’auto-identification terminée, sélectionnez **[!UICONTROL Terminé]**.
 
 ![Étape de confirmation finale de l’enquête d’auto-identification.](./images/survey/survey-complete.png)
 
@@ -99,11 +99,11 @@ Une fois votre enquête d’auto-identification terminée, sélectionnez **[!UIC
 
 ## Mettre à jour vos réponses à l’enquête
 
-Mettez à jour vos fonctions et objectifs à l’aide du menu des préférences d’Experience Cloud. Pour accéder au menu des préférences, sélectionnez l’icône de votre profil dans le volet de navigation supérieur, puis sélectionnez **[!UICONTROL Preferences]**.
+Mettez à jour vos fonctions et objectifs à l’aide du menu des préférences d’Experience Cloud. Pour accéder au menu des préférences, sélectionnez l’icône de votre profil dans le volet de navigation supérieur, puis sélectionnez **[!UICONTROL Préférences]**.
 
 ![Page d’accueil de l’interface utilisateur d’Experience Platform avec icône de profil et boutons de préférences sélectionnés.](./images/survey/preferences.png)
 
-Ensuite, dans la section [!UICONTROL General] du menu des préférences de votre profil, sélectionnez **[!UICONTROL Update your job functions and objectives]**.
+Ensuite, dans la section [!UICONTROL Général] du menu des préférences de votre profil, sélectionnez **[!UICONTROL Mettre à jour vos fonctions et objectifs]**.
 
 ![Section générale de la page Préférences de profil de l’interface utilisateur d’Experience Platform](./images/survey/update.png)
 

@@ -13,8 +13,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 665
-ht-degree: 15%
+source-wordcount: 673
+ht-degree: 14%
 
 ---
 
@@ -37,19 +37,19 @@ Les champs d’identité sont un composant essentiel dans la construction des gr
 >title="Restrictions de l&#39;identité principale"
 >abstract="Ce schéma utilise un groupe de champs destiné à être utilisé dans une connexion source spécifique. La connexion nécessite l&#39;utilisation d&#39;identityMap comme identité principale et l&#39;a défini automatiquement."
 
-Lors de la [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur, vous pouvez le définir en tant que champ d’identité en cochant la case **[!UICONTROL Identity]** dans le rail de droite.
+Lors de la [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur, vous pouvez le définir en tant que champ d’identité en cochant la case **[!UICONTROL Identité]** dans le rail de droite.
 
 ![](../../images/ui/fields/special/identity.png)
 
-Des commandes supplémentaires s’affichent après avoir coché la case. Si vous souhaitez que ce champ soit l’identité principale du schéma, cochez la case **[!UICONTROL Primary identity]** .
+Des commandes supplémentaires s’affichent après avoir coché la case. Si vous souhaitez que ce champ soit l&#39;identité principale du schéma, cochez la case **[!UICONTROL Identité du Principal]**.
 
 >[!NOTE]
 >
 >Plusieurs champs d’identité peuvent être définis pour un même schéma, mais une seule identité principale est autorisée. Tous les champs d’identité (principaux ou autres) contribuent au graphique d’identités d’un client individuel, mais le profil client en temps réel utilise uniquement l’identité principale comme source de vérité lors de la fusion de fragments de données. Si vous souhaitez activer un schéma pour l’utiliser dans Profile, une identité principale doit être définie pour ce schéma.
 
-Sous **[!UICONTROL Identity namespace]**, utilisez le menu déroulant pour sélectionner l’espace de noms approprié pour le champ d’identité. Les espaces de noms standard fournis par Adobe sont répertoriés, ainsi que les espaces de noms personnalisés définis par votre organisation.
+Sous **[!UICONTROL Espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner l’espace de noms approprié pour le champ d’identité. Les espaces de noms standard fournis par Adobe sont répertoriés, ainsi que les espaces de noms personnalisés définis par votre organisation.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]** pour appliquer la modification au schéma.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
 
 >[!IMPORTANT]
 >
@@ -59,7 +59,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Apply]** pour appliquer 
 
 La zone de travail se met à jour pour refléter les modifications, le champ sélectionné obtenant un symbole d’empreinte digitale (![](/help/images/icons/identity-service.png)) pour le désigner en tant qu’identité. Dans le rail de gauche, le champ d’identité est désormais répertorié sous le nom de la classe ou du groupe de champs de schéma qui fournit le champ au schéma.
 
-Si le champ a également été défini comme identité principale, il sera également répertorié sous **[!UICONTROL Required fields]** dans le rail de gauche. Si le champ d’identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés selon les besoins.
+Si le champ a également été défini comme identité principale, il sera également répertorié sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche. Si le champ d’identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés selon les besoins.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 

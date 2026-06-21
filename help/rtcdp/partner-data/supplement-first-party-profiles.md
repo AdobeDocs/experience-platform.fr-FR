@@ -23,8 +23,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1320
-ht-degree: 72%
+source-wordcount: 1315
+ht-degree: 71%
 
 ---
 
@@ -89,7 +89,7 @@ Cette étape est décrite dans la section [conditions préalables](#prerequisite
 
 À ce stade, vous étendez votre structure de gestion des données dans Real-Time CDP pour prendre en compte les attributs fournis par les partenaires.
 
-Vous avez la possibilité de créer un nouveau schéma de la classe **[!UICONTROL XDM Individual Profile]** ou d’étendre un schéma existant du même type afin d’inclure des attributs fournis par le partenaire. Adobe recommande vivement de créer un schéma avec un nouvel ensemble de groupes de champs qui représentent le mieux les attributs supplémentaires du fournisseur de données. Cela garantit que vos schémas de données sont propres et peuvent évoluer indépendamment les uns des autres.
+Vous avez la possibilité de créer un nouveau schéma de la classe **[!UICONTROL XDM Individual Profile]** ou d’étendre un schéma existant du même type pour inclure les attributs fournis par le partenaire. Adobe recommande vivement de créer un schéma avec un nouvel ensemble de groupes de champs qui représentent le mieux les attributs supplémentaires du fournisseur de données. Cela garantit que vos schémas de données sont propres et peuvent évoluer indépendamment les uns des autres.
 
 Pour inclure des attributs fournis par un partenaire dans un schéma, vous pouvez créer un groupe de champs avec les attributs attendus ou utiliser l’un des groupes de champs préconfigurés fournis par Adobe.
 
@@ -117,10 +117,10 @@ Au cours de cette étape, réfléchissez également à la manière dont votre mo
 
 >[!TIP]
 >
->Si vous choisissez de compléter vos profils client avec un identifiant basé sur la personne du fournisseur de données, vous pouvez créer un nouveau type d’identité de type **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**.
+>Si vous choisissez de compléter vos profils client avec un identifiant basé sur la personne du fournisseur de données, vous pouvez créer un nouveau type d’identité du type **[[!UICONTROL ID de partenaire]](/help/identity-service/features/namespaces.md)**.
 >
->En savoir plus sur l’identifiant de partenaire dans la [section Types d’identité](/help/identity-service/features/namespaces.md).
->Découvrez [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
+>Pour en savoir plus sur les identifiants de partenaire, consultez la section [types d’identité](/help/identity-service/features/namespaces.md).
+>Découvrez comment [définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
 
 ### Exportez les audiences que vous souhaitez enrichir en saisissant des informations d’identification personnelles (PII) ou hachées {#export-audiences}
 

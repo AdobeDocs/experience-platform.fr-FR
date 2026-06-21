@@ -33,7 +33,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1162
+source-wordcount: 1171
 ht-degree: 44%
 
 ---
@@ -77,7 +77,7 @@ Tandis que les balises collectent les données d’événement directement sur v
 
 ### Propriétés {#properties}
 
-Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur d’Experience Platform ou dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Event Forwarding]** dans le volet de navigation de gauche.
+Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur d’Experience Platform ou dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche.
 
 >[!TIP]
 >
@@ -85,11 +85,11 @@ Le transfert d’événement conserve sa propre banque de propriétés séparée
 
 ![Propriétés de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/properties.png)
 
-Toutes les propriétés de transfert d’événement répertorient les **[!UICONTROL Edge]** comme leur plateforme. Elles ne font pas la distinction entre web et mobile, car elles traitent uniquement les données reçues d’Experience Platform Edge Network, qui peut lui-même recevoir des données d’événement des plateformes web et mobiles.
+Toutes les propriétés de transfert d’événement répertorient **&#x200B;**&#x200B;comme leur plateforme. Elles ne font pas la distinction entre web et mobile, car elles traitent uniquement les données reçues d’Experience Platform Edge Network, qui peut lui-même recevoir des données d’événement des plateformes web et mobiles.
 
 ### Extensions {#extensions}
 
-Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalog]**.
+Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalogue]**.
 
 Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![à propos](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
@@ -103,7 +103,7 @@ Bien que les éléments de données eux-mêmes soient créés et configurés de 
 
 #### Référencer des données d’Experience Platform Edge Network {#data-element-path}
 
-Pour référencer des données à partir d’Experience Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Path]** pour le type.
+Pour référencer des données à partir d’Experience Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Chemin]** pour le type.
 
 La valeur **[!UICONTROL Path]** de l’élément de données doit suivre le modèle `arc.event.{ELEMENT}` (par exemple : `arc.event.xdm.web.webPageDetails.URL`). Ce chemin d’accès doit être spécifié correctement pour que les données soient envoyées.
 

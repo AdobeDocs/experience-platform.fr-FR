@@ -26,7 +26,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1686
+source-wordcount: 1691
 ht-degree: 62%
 
 ---
@@ -110,8 +110,8 @@ Un exemple d’action marketing peut être le souhait d’exporter un jeu de don
 
 Deux types de politiques sont disponibles :
 
-* **[!UICONTROL Data governance policy]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données associés aux données en question.
-* **[!UICONTROL Consent policy]** : filtrez les profils pouvant être activés sur [destinations](../destinations/home.md) en fonction du consentement ou des préférences de vos clients.
+* **[!UICONTROL Politique de gouvernance des données]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données associés aux données en question.
+* **[!UICONTROL Politique de consentement]** : filtrez les profils pouvant être activés sur [destinations](../destinations/home.md) en fonction du consentement ou des préférences de vos clients.
 
 Une fois les libellés d’utilisation des données appliqués, les gestionnaires de données peuvent créer des politiques à l’aide de l’API Policy Service ou de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les politiques d’utilisation des données et les actions marketing, consultez la [présentation des politiques](./policies/overview.md).
 

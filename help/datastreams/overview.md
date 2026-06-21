@@ -30,7 +30,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 710
+source-wordcount: 713
 ht-degree: 48%
 
 ---
@@ -41,7 +41,7 @@ Un flux de données représente la configuration côté serveur pour les SDK Web
 
 Lorsque vous envoyez une requête au [!DNL Edge Network], le `datastreamId` référence le flux de données où les données sont envoyées. Vous pouvez mettre à jour la configuration côté serveur sans modifier le code de votre site web.
 
-Vous pouvez créer et gérer des flux de données en sélectionnant **[!UICONTROL Datastreams]** dans le volet de navigation de gauche de l’interface utilisateur de [!DNL Adobe Experience Platform] ou de la collecte de données.
+Vous pouvez créer et gérer des flux de données en sélectionnant **[!UICONTROL Flux de données]** dans le volet de navigation de gauche de l’interface utilisateur de [!DNL Adobe Experience Platform] ou de collecte de données.
 
 ![Copie d’écran de l’onglet Flux de données dans l’interface utilisateur de Adobe Experience Platform.](assets/overview/datastreams-tab.png)
 
@@ -77,7 +77,7 @@ Dans Experience Platform, vous pouvez appliquer des [libellés d’utilisation 
 
 >[!NOTE]
 >
->Pour plus d’informations sur l’application des libellés d’utilisation des données dans l’onglet [!UICONTROL Schemas] de l’interface utilisateur d’Experience Platform ou de la collecte de données, consultez le tutoriel [étiquetage des schémas](/help/xdm/tutorials/labels.md).
+>Pour plus d’informations sur l’application des libellés d’utilisation des données dans l’onglet [!UICONTROL Schémas] de l’interface utilisateur d’Experience Platform ou de la collecte de données, consultez le tutoriel [étiquetage des schémas](/help/xdm/tutorials/labels.md).
 
 Lorsque vous créez un flux de données, si le schéma sélectionné contient des libellés d’utilisation de données sensibles, vous pouvez uniquement configurer le flux de données pour envoyer ces données vers des destinations conformes à la loi HIPAA. Actuellement, la seule destination conforme à la norme HIPAA prise en charge par les flux de données est [!DNL Adobe Experience Platform]. D’autres services de destination, notamment les destinations [!DNL Adobe Target], [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], de transfert d’événement et Edge, sont désactivés pour les flux de données contenant des libellés d’utilisation de données sensibles.
 
@@ -87,7 +87,7 @@ Si un schéma est utilisé dans un train de données existant avec des services 
 
 Dans Experience Platform, les activités du train de données peuvent être surveillées sous la forme de journaux d’audit. Les journaux d’audit indiquent **qui** a effectué **quoi** action et **quand**, ainsi que d’autres données contextuelles qui peuvent vous aider à résoudre les problèmes liés aux flux de données afin d’aider votre entreprise à se conformer aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
 
-Chaque fois qu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un train de données, un journal d’audit est créé pour enregistrer l’action. Il en va de même lorsqu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un mappage par le biais de la [Préparation de données pour la collecte de données](/help/datastreams/data-prep.md). Qu’il s’agisse d’un flux de données ou d’un mappage mis à jour, le journal d’audit obtenu est classé sous le type de ressource [!UICONTROL Datastreams].
+Chaque fois qu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un train de données, un journal d’audit est créé pour enregistrer l’action. Il en va de même lorsqu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un mappage par le biais de la [Préparation de données pour la collecte de données](/help/datastreams/data-prep.md). Qu’il s’agisse d’un flux de données ou d’un mappage mis à jour, le journal d’audit obtenu est classé sous le type de ressource [!UICONTROL Flux de données].
 
 Consultez la documentation relative aux [journaux d’audit](/help/landing/governance-privacy-security/audit-logs/overview.md) pour plus d’informations sur la manière d’interpréter les journaux des trains de données et autres services pris en charge.
 

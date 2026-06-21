@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;préparation des données;guide de l’api;schémas;
 title: Point d’entrée de l’API de fonctions
-description: Vous pouvez utiliser le point d’entrée &grave;/functions&grave; dans l’API Data Prep pour valider vos expressions de mappage et répertorier les fonctions de jeux de mappages disponibles.
+description: Vous pouvez utiliser le point d’entrée `/functions` dans l’API Data Prep pour valider vos expressions de mappage et répertorier les fonctions de jeux de mappages disponibles.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 TQID: https://experienceleague.adobe.com/ih-7v7zg75UrJyvAJ-lnp7nmCpQyWTvgRMF5CbaotZ8
 product_v2:

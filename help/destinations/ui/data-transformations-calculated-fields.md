@@ -13,7 +13,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1624
+source-wordcount: 1645
 ht-degree: 9%
 
 ---
@@ -39,7 +39,7 @@ Pour effectuer diverses transformations sur les données exportées vers des des
 
 Pour utiliser des champs calculés pour les transformations de données :
 
-1. [Connexion](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée. Lors de la connexion à la destination cloud souhaitée, activez l’option **[!UICONTROL Export arrays, maps, objects]** [désactivée](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+1. [Connexion](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée. Lors de la connexion à la destination cloud souhaitée, activez l’option **[!UICONTROL Exporter des tableaux, des mappages]** des objets [&#x200B; désactivée](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 2. Parcourez les [étapes d’activation pour les destinations de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Utiliser des champs calculés {#how-to-export-calculated-fields}
@@ -58,11 +58,11 @@ Pour utiliser des champs calculés pour les transformations de données :
 >
 >Lorsque vous utilisez des champs calculés, vous devez non seulement appliquer une fonction de transformation des données, mais également utiliser la fonction `array_to_string` pour concaténer des champs en chaîne.
 
-À l’étape de mappage du workflow d’activation pour les destinations d’espace de stockage, sélectionnez **[!UICONTROL Add calculated field]**.
+À l’étape de mappage du workflow d’activation pour les destinations d’espace de stockage, sélectionnez **[!UICONTROL Ajouter un champ calculé]**.
 
 >[!TIP]
 >
->Le contrôle **[!UICONTROL Add calculated field]** est désactivé pour les connexions de destination pour lesquelles le contrôle **[!UICONTROL Export arrays, maps, and objects]** a été désactivé. [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+>Le contrôle **[!UICONTROL Ajouter un champ calculé]** est désactivé pour les connexions de destination pour lesquelles le contrôle **[!UICONTROL Exporter des tableaux, des mappages et des objets]** a été désactivé. [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![Ajouter un champ calculé en surbrillance à l’étape de mappage du workflow d’activation par lots.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -74,17 +74,17 @@ Par exemple, utilisez la fonction `array_to_string` dans le champ `organizations
 
 ![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction tableau-chaîne sélectionnée.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
-Sélectionnez **[!UICONTROL Save]** pour conserver le champ calculé et revenir à l’étape de mappage.
+Sélectionnez **[!UICONTROL Enregistrer]** pour conserver le champ calculé et revenir à l’étape de mappage.
 
 ![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction tableau-chaîne sélectionnée et le contrôle Enregistrer mis en surbrillance.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-De retour à l’étape de mappage du workflow, remplissez le **[!UICONTROL Target field]** avec une valeur de l’en-tête de colonne que vous souhaitez pour ce champ dans les fichiers exportés.
+De retour à l’étape de mappage du workflow, remplissez le **[!UICONTROL champ cible]** avec une valeur de l’en-tête de colonne que vous souhaitez pour ce champ dans les fichiers exportés.
 
 ![Étape de mapping avec le champ cible en surbrillance.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Sélectionnez le champ cible 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-Une fois prêt, sélectionnez **[!UICONTROL Next]** pour passer à l’étape suivante du workflow d’activation.
+Une fois prêt, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape suivante du workflow d’activation.
 
 ![Étape de mappage avec le champ cible mis en surbrillance et une valeur cible renseignée.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
@@ -237,7 +237,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->Contrairement aux autres fonctions décrites sur cette page, pour exporter des éléments individuels d’un tableau, vous n’avez *pas besoin* d’utiliser le contrôle **[!UICONTROL Calculated fields]** dans l’interface utilisateur.
+>Contrairement aux autres fonctions décrites sur cette page, pour exporter des éléments individuels d’un tableau, vous n’avez *pas besoin* d’utiliser le contrôle **[!UICONTROL Champs calculés]** dans l’interface utilisateur.
 
 Vous pouvez accéder à un index d’un tableau pour exporter un seul élément du tableau . Par exemple, comme dans l’exemple ci-dessus pour la fonction `size_of` , si vous souhaitez accéder à et exporter uniquement la première fois qu’un client a acheté un certain produit, vous pouvez utiliser `purchaseTime[0]` pour exporter le premier élément de l’horodatage, `purchaseTime[1]` pour exporter le deuxième élément de l’horodatage, `purchaseTime[2]` pour exporter le troisième élément de l’horodatage, etc.
 

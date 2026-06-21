@@ -28,7 +28,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1953
+source-wordcount: 1965
 ht-degree: 6%
 
 ---
@@ -206,8 +206,8 @@ Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoy
 
 La première étape du processus de mise en œuvre d’Identity Service consiste à ajouter votre compte Experience Platform à un rôle doté des autorisations nécessaires. Votre administrateur peut configurer les autorisations de votre compte en accédant à l’interface utilisateur Autorisations dans Adobe Experience Cloud. À partir de là, votre compte doit être ajouté à un rôle avec les autorisations suivantes :
 
-* [!UICONTROL View Identity Settings] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
-* [!UICONTROL Edit Identity Settings] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
+* [!UICONTROL Afficher les paramètres d’identité] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
+* [!UICONTROL Modifier les paramètres d’identité] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
 
 Pour plus d’informations sur les autorisations, consultez le [guide des autorisations](../../access-control/abac/ui/permissions.md).
 
@@ -223,7 +223,7 @@ En créant différentes configurations, vous pouvez utiliser l’outil de simula
 
 ## Configurer les paramètres d’identité {#identity-settings}
 
-Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Settings]**.
+Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Paramètres]**.
 
 ![Page de navigation des identités avec le bouton des paramètres en surbrillance.](../images/implementation/settings.png "Page de navigation des identités avec le bouton des paramètres en surbrillance."){zoomable="yes"}
 
@@ -269,13 +269,13 @@ Une fois que vous disposez de tous les éléments répertoriés ci-dessus, vous 
 >
 >Une fois vos données ingérées, la payload de données brutes XDM ne change pas. Il se peut que vos configurations d’identité principale s’affichent toujours dans l’interface utilisateur. Toutefois, ces configurations seront remplacées par les paramètres d’identité.
 
-Pour tout commentaire, utilisez l’option **[!UICONTROL Beta feedback]** dans l’espace de travail de l’interface utilisateur d’Identity Service.
+Pour tout commentaire, utilisez l’option **[!UICONTROL Commentaires]** dans l’espace de travail de l’interface utilisateur d’Identity Service.
 
 ## Validation des graphiques {#validate}
 
 Utilisez le tableau de bord des identités pour obtenir des informations sur l’état de vos graphiques d’identités, tels que le nombre d’identités global et les tendances de nombre de graphiques, le nombre d’identités par espace de noms et le nombre de graphiques par taille de graphique. Vous pouvez également utiliser le tableau de bord des identités pour afficher les tendances sur les graphiques comportant plusieurs identités, organisées par espace de noms.
 
-Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL View more]** pour obtenir des informations supplémentaires et vérifier qu’il n’existe aucun graphique réduit.
+Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL Afficher plus]** pour obtenir plus d’informations et vérifier qu’il n’existe aucun graphique réduit.
 
 ![&#x200B; Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
 

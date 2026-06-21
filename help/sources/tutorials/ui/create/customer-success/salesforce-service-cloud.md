@@ -14,8 +14,8 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 423
-ht-degree: 36%
+source-wordcount: 449
+ht-degree: 33%
 
 ---
 
@@ -42,32 +42,32 @@ Lisez le [&#x200B; guide d’authentification &#x200B;](../../../../connectors/c
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sélectionnez **[!DNL Salesforce Service Cloud]** sous la catégorie *[!UICONTROL Customer success]*, puis sélectionnez **[!UICONTROL Add data]**.
+Sélectionnez **[!DNL Salesforce Service Cloud]** sous la catégorie *[!UICONTROL Succès client]*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue de sources sur l’interface utilisateur d’Experience Platform avec la carte source Salesforce Service Cloud sélectionnée.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
-La page **[!UICONTROL Connect to Salesforce Service Cloud]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connexion à Salesforce Service Cloud]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Utiliser un compte existant
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte de votre choix dans la liste qui s’affiche. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]** pour continuer.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]**, puis sélectionnez le compte de votre choix dans la liste qui s’affiche. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Liste des comptes Salesforce Service Cloud authentifiés qui existent déjà dans votre organisation.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
 ### Créer un nouveau compte
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]** et indiquez un nom et une description pour votre nouveau compte [!DNL Salesforce Service Cloud]. Sélectionnez ensuite **[!UICONTROL OAuth2 Client Credential]** et indiquez les valeurs des informations d’identification suivantes :
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description pour votre nouveau compte [!DNL Salesforce Service Cloud]. Sélectionnez ensuite **[!UICONTROL Informations d’identification du client OAuth2]** puis indiquez des valeurs pour les informations d’identification suivantes :
 
 * URL de l’environnement
 * Identifiant client
 * Secret client
 * Version de l’API
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Interface OAuth pour la création de compte Salesforce.](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
 

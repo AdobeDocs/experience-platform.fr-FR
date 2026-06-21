@@ -16,8 +16,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 477
-ht-degree: 20%
+source-wordcount: 493
+ht-degree: 19%
 
 ---
 
@@ -40,9 +40,9 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >
 >Avant de supprimer le compte source, vous devez d’abord supprimer les flux de données existants associés à ce compte source. Pour supprimer des flux de données existants, reportez-vous au tutoriel sur la [suppression de flux de données sources dans l’interface utilisateur](./delete.md).
 
-Connectez-vous à [&#128279;](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalog]** affiche diverses sources pour lesquelles vous pouvez créer des comptes et des flux de données. Chaque source affiche le nombre de comptes et de flux de données existants qui leur sont associés.
+Connectez-vous à [&#128279;](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer des comptes et des flux de données. Chaque source affiche le nombre de comptes et de flux de données existants qui leur sont associés.
 
-Sélectionnez **[!UICONTROL Accounts]** pour accéder à la page **[!UICONTROL Accounts]**.
+Sélectionnez **[!UICONTROL Comptes]** pour accéder à la page **[!UICONTROL Comptes]**.
 
 ![comptes-catalogue](../../images/tutorials/delete-accounts/catalog.png)
 
@@ -58,13 +58,13 @@ Sélectionnez le compte que vous souhaitez supprimer.
 
 ![dataflows-sort](../../images/tutorials/delete-accounts/sort.png)
 
-Le panneau **[!UICONTROL Properties]** s’affiche dans la partie droite de l’écran et contient des informations sur le compte sélectionné.
+Le panneau **[!UICONTROL Propriétés]** s’affiche dans la partie droite de l’écran et contient des informations sur le compte sélectionné.
 
-Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous souhaitez supprimer. Un panneau pop-up s’affiche, fournissant des options pour **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** et **[!UICONTROL Delete]**. Sélectionnez **[!UICONTROL Delete]** pour supprimer le compte.
+Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous souhaitez supprimer. Un panneau pop-up s’affiche, fournissant des options pour **[!UICONTROL Ajouter des données]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]**. Sélectionnez **[!UICONTROL Supprimer]** pour supprimer le compte.
 
 ![dataflows-sort](../../images/tutorials/delete-accounts/delete.png)
 
-Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UICONTROL Delete]** pour terminer le processus.
+Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UICONTROL Supprimer]** pour terminer le processus.
 
 ![delete](../../images/tutorials/delete-accounts/confirm.png)
 

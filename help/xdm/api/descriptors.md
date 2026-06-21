@@ -21,7 +21,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2930
+source-wordcount: 2929
 ht-degree: 25%
 
 ---
@@ -331,7 +331,7 @@ Les sections suivantes présentent les types de descripteurs disponibles, y comp
 
 #### Descripteur d’identité {#identity-descriptor}
 
-Un descripteur d’identité indique que le « [!UICONTROL sourceProperty] » du « [!UICONTROL sourceSchema] » est un champ [!DNL Identity], comme décrit par [Experience Platform Identity Service](../../identity-service/home.md).
+Un descripteur d’identité indique que la « [!UICONTROL sourceProperty] » de « [!UICONTROL sourceSchema] » est un champ de [!DNL Identity], comme décrit par [Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -540,7 +540,7 @@ Le descripteur de clé primaire (`xdm:descriptorPrimaryKey`) applique des contra
 
 >[!NOTE]
 >
->Dans l’éditeur de schémas de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [!UICONTROL Version identifier] ».
+>Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [!UICONTROL Identifiant de version] ».
 
 Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour détecter et empêcher les conflits d’événements de modification dans le désordre.
 
@@ -562,7 +562,7 @@ Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour déte
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma de l’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [!UICONTROL Timestamp identifier] ».
+>Dans l’éditeur de schéma d’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [!UICONTROL identifiant d’horodatage] ».
 
 Le descripteur d’horodatage (`xdm:descriptorTimestamp`) désigne un champ date et heure comme horodatage pour les schémas avec `"meta:behaviorType": "time-series"`.
 

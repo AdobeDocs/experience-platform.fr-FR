@@ -11,22 +11,22 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 127
-ht-degree: 6%
+source-wordcount: 135
+ht-degree: 7%
 
 ---
 
 # Type de données [!UICONTROL Timing]
 
-[!UICONTROL Timing] est un type de données standard du modèle de données d’expérience (XDM) qui décrit un planning qui fournit des informations sur un événement qui peut se produire plusieurs fois. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Minutage] est un type de données standard du modèle de données d’expérience (XDM) qui décrit un planning qui fournit des informations sur un événement qui peut se produire plusieurs fois. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure du type de données de minutage](../../../images/healthcare/data-types/timing.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Event] | `event` | Tableau de date et heure | Lorsque l’événement se produit. |
-| [!UICONTROL Repeat] | `repeat` | [[!UICONTROL Repeat]](../data-types/repeat.md) | Informations sur le moment où l’événement se produit. |
-| [!UICONTROL Code] | `code` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Le code relatif à l’événement. |
+| [!UICONTROL Événement] | `event` | Tableau de date et heure | Lorsque l’événement se produit. |
+| [!UICONTROL Répéter] | `repeat` | [[!UICONTROL Répéter]](../data-types/repeat.md) | Informations sur le moment où l’événement se produit. |
+| [!UICONTROL Code] | `code` | [[!UICONTROL Concept codable]](../data-types/codeable-concept.md) | Le code relatif à l’événement. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

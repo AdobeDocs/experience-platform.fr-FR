@@ -16,7 +16,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 554
+source-wordcount: 580
 ht-degree: 46%
 
 ---
@@ -82,16 +82,16 @@ Le tableau suivant répertorie les produits pris en charge, les noms d’afficha
 | ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
 | Adobe Analytics | [!UICONTROL Analytics] | `analytics` |
 | Adobe Audience Manager | [!UICONTROL Audience Manager] | `audienceManager` |
-| Adobe Advertising | [!UICONTROL Ad Cloud] | `adCloud` |
+| Adobe Advertising |  | `adCloud` |
 | Adobe Experience Platform (banque de profils) | [!UICONTROL Profile] | `profileService` |
-| Adobe Experience Platform (lac de données) | [!UICONTROL AEP Data Lake] | `aepDataLake` |
-| Adobe Campaign | [!UICONTROL Campaign] | `campaign` |
+| Adobe Experience Platform (lac de données) | [!UICONTROL Lac De Données &#x200B;] | `aepDataLake` |
+| Adobe Campaign | [!UICONTROL Campagne] | `campaign` |
 | Adobe Target | [!UICONTROL Target] | `target` |
-| Attributs du client | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
-| Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
-| Marketo Engage | [!UICONTROL Marketo Engage / AJO B2B] | `marketo` |
-| Service d’identités | [!UICONTROL Identity] | `identity` |
-| Marketo Measure | [!UICONTROL Marketo Measure] | `marketomeasure` |
+| Attributs du client ou de la cliente | [!UICONTROL Attributs du client (CRS)] | `CRS` |
+| Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
+| Marketo Engage | [!UICONTROL Marketo Engage/AJO B2B] | `marketo` |
+| Service d’identités | [!UICONTROL Identité] | `identity` |
+| Marketo Measure |  | `marketomeasure` |
 | Adobe Commerce | [!UICONTROL Commerce (Personalization)] | `commerceMarketingData` |
 
 {style="table-layout:auto"}

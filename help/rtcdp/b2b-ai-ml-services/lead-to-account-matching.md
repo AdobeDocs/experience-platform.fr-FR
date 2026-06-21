@@ -3,7 +3,7 @@ title: Correspondance des prospects et des comptes dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et plus d’informations sur la fonctionnalité de correspondance des prospects et des comptes dans Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 TQID: https://experienceleague.adobe.com/T0r5AmDCHdLs7QqTm2TGv4hnC0FqYa8gJkw63jwEsUQ
 product_v2:
@@ -14,7 +14,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 421
+source-wordcount: 425
 ht-degree: 3%
 
 ---
@@ -69,11 +69,11 @@ Le service de correspondance des prospects et des comptes s’exécute lorsqu’
 
 Après l’exécution de la tâche, les résultats sont enregistrés dans un nouveau jeu de données du XDM relation compte/personne existant.
 
-Pour prévisualiser le jeu de données, sélectionnez **[!UICONTROL Preview dataset]** en haut à droite.
+Pour prévisualiser le jeu de données, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** en haut à droite.
 
 ![Nouveau jeu de données](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-Le jeu de données comprend les informations de compte correspondantes ainsi que le score de correspondance pour le jeu de données sélectionné. Le champ **[!UICONTROL Relationship Source]** indique s’il provient du processus de correspondance entre le prospect et le compte.
+Le jeu de données comprend les informations de compte correspondantes ainsi que le score de correspondance pour le jeu de données sélectionné. Le champ Source de relation **indique s’il provient du processus de correspondance entre le prospect et le compte.**
 
 ![Prévisualiser les scores de confiance et la sortie du jeu de données](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 

@@ -9,7 +9,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 538
+source-wordcount: 552
 ht-degree: 1%
 
 ---
@@ -34,9 +34,9 @@ En substance, vous devez :
 Pour mettre à jour votre flux de données [!DNL Marketo Activity], procédez comme suit :
 
 * Dans l’interface utilisateur d’Experience Platform, accédez à l’espace de travail *Sources* et recherchez votre flux de données existant pour les données [!DNL Marketo Activity].
-* Étant donné que le flux de données est activé, sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Update dataflow]**.
-* Sélectionnez ensuite **[!UICONTROL Next]** jusqu’à atteindre l’interface *Mappage*.
-* Dans l’interface *Mappage*, sélectionnez **[!UICONTROL New field]** puis **[!UICONTROL Add calculated field]**. À partir de là, vous devez ajouter les éléments suivants :
+* Étant donné que le flux de données est activé, sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Mettre à jour le flux de données]**.
+* Sélectionnez ensuite **[!UICONTROL Suivant]** jusqu’à atteindre l’interface *Mappage*.
+* Dans l’interface *Mappage*, sélectionnez **[!UICONTROL Nouveau champ]** puis sélectionnez **[!UICONTROL Ajouter un champ calculé]**. À partir de là, vous devez ajouter les éléments suivants :
 
 | Jeu de données source | Champ cible XDM |
 | --- | --- |
@@ -51,9 +51,9 @@ Pour mettre à jour votre flux de données [!DNL Marketo Activity], procédez co
 Pour mettre à jour votre flux de données [!DNL Marketo Person], procédez comme suit :
 
 * Dans l’interface utilisateur d’Experience Platform, accédez à l’espace de travail *Sources* et recherchez votre flux de données existant pour les données [!DNL Marketo Person].
-* Étant donné que le flux de données est activé, sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Update dataflow]**.
-* Sélectionnez ensuite **[!UICONTROL Next]** jusqu’à atteindre l’interface *Mappage*.
-* Dans l’interface *Mappage*, supprimez le champ calculé qui mappe à `identityMap`, puis sélectionnez **[!UICONTROL Next]** et **[!UICONTROL Save & Ingest]**.
+* Étant donné que le flux de données est activé, sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Mettre à jour le flux de données]**.
+* Sélectionnez ensuite **[!UICONTROL Suivant]** jusqu’à atteindre l’interface *Mappage*.
+* Dans l’interface *Mappage*, supprimez le champ calculé qui mappe à `identityMap`, puis sélectionnez **[!UICONTROL Suivant]** et **[!UICONTROL Enregistrer et ingérer]**.
 
 >[!NOTE]
 >

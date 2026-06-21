@@ -12,7 +12,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 656
+source-wordcount: 658
 ht-degree: 77%
 
 ---
@@ -64,7 +64,7 @@ L’équipe dʼAdobe Exchange fournit votre nom de sandbox, que vous devez utili
 
 ## Contrôle d’accès en fonction du rôle (RBAC) {#rbac}
 
-Pour utiliser les points d’entrée de l’API Destination SDK décrits dans la [documentation de référence](functionality/configuration-options.md), vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Destination Authoring]**. Demandez à l’équipe dʼAdobe Exchange de vous lʼaccorder dans [Adobe Admin Console](https://adminconsole.adobe.com/).
+Pour utiliser les points d’entrée de l’API Destination SDK décrits dans la [documentation de référence](functionality/configuration-options.md), vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Création de destinations]**. Demandez à l’équipe dʼAdobe Exchange de vous lʼaccorder dans [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Autorisation de création de destinations](./assets/destination-authoring-permission.png)
 

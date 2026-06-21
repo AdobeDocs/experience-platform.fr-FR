@@ -28,8 +28,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1895
-ht-degree: 4%
+source-wordcount: 1971
+ht-degree: 6%
 
 ---
 
@@ -68,11 +68,11 @@ Les cas d’utilisation de la recherche de profil Edge sont soumis aux mécanism
 
 ## Étape 1 : créer et configurer un flux de données {#create-datastream}
 
-Suivez les étapes de la documentation [configuration du flux de données](../../datastreams/configure.md#create-a-datastream) pour créer un flux de données avec les paramètres de **[!UICONTROL Service]** suivants :
+Suivez les étapes de la documentation [configuration du flux de données](../../datastreams/configure.md#create-a-datastream) pour créer un flux de données avec les paramètres **[!UICONTROL Service]** suivants :
 
-* **[!UICONTROL Service]** : [!UICONTROL Adobe Experience Platform]
-* **[!UICONTROL Personalization Destinations]** : activé
-* **[!UICONTROL Edge Segmentation]** : si vous avez besoin d’une segmentation Edge, activez cette option. Si vous souhaitez uniquement rechercher des attributs de profil sur le serveur Edge, mais que vous ne souhaitez pas effectuer de segmentation en fonction des profils Edge, laissez cette option désactivée.
+* **[!UICONTROL Service]** : [!UICONTROL Adobe Experience Platform]
+* **[!UICONTROL Destinations Personalization]** : Activé
+* **[!UICONTROL Segmentation Edge]** : si vous avez besoin d’une segmentation Edge, activez cette option. Si vous souhaitez uniquement rechercher des attributs de profil sur le serveur Edge, mais que vous ne souhaitez pas effectuer de segmentation en fonction des profils Edge, laissez cette option désactivée.
 
 
 <!-- 
@@ -90,7 +90,7 @@ La recherche d’attributs de profil sur Edge nécessite que vos audiences soien
 
 Assurez-vous que la [Politique de fusion Active-on-Edge](../../segmentation/ui/segment-builder.md#merge-policies) est définie par défaut pour les audiences que vous prévoyez d’activer. La politique de fusion [!DNL Active-On-Edge] garantit que les audiences sont constamment évaluées [à la périphérie](../../segmentation/methods/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel.
 
-Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Active-On-Edge Merge Policy]**.
+Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton (bascule) **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
 >[!IMPORTANT]
 >
@@ -98,13 +98,13 @@ Suivez les instructions de la section [création d’une politique de fusion](..
 
 ## Étape 3 : envoi de données d’attribut de profil à Edge Network{#configure-custom-personalization-connection}
 
-Pour rechercher des profils Edge, y compris les attributs et les données d’appartenance à l’audience, en temps réel, les données doivent être disponibles sur Edge Network. À cet effet, vous devez créer une connexion à une destination **[!UICONTROL Custom Personalization With Attributes]** et activer les audiences, y compris les attributs que vous souhaitez rechercher sur les profils Edge.
+Pour rechercher des profils Edge, y compris les attributs et les données d’appartenance à l’audience, en temps réel, les données doivent être disponibles sur Edge Network. À cet effet, vous devez établir une connexion à une destination **[!UICONTROL Custom Personalization With Attributes]** et activer les audiences, y compris les attributs que vous souhaitez rechercher sur les profils Edge.
 
 +++ Configuration d’une connexion Personalization personnalisée avec les attributs
 
 Suivez le [tutoriel sur la création de connexion de destination](../ui/connect-destination.md) pour obtenir des instructions détaillées sur la création d’une connexion de destination.
 
-Pendant la configuration de la nouvelle destination, sélectionnez le flux de données que vous avez créé à l’[étape 1](#create-datastream) dans le champ **[!UICONTROL Datastream ID]** . Par **[!UICONTROL Integration alias]**, vous pouvez utiliser n’importe quelle valeur qui vous aidera à identifier cette connexion de destination à l’avenir, comme le nom de la destination.
+Pendant la configuration de la nouvelle destination, sélectionnez le flux de données que vous avez créé à l’[étape 1](#create-datastream) dans le champ **[!UICONTROL Identifiant du flux de données]**. Pour **[!UICONTROL Alias d’intégration]** vous pouvez utiliser n’importe quelle valeur qui vous aidera à identifier cette connexion de destination à l’avenir, comme le nom de la destination.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’écran de configuration Personalization personnalisé avec les attributs.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
@@ -116,45 +116,45 @@ Après avoir créé une connexion **[!UICONTROL Custom Personalization With Attr
 
 >[!IMPORTANT]
 >
-> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions).
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-1. Accédez à **[!UICONTROL Connections > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** .
+1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
    ![Onglet Catalogue de destinations mis en surbrillance dans l’interface utilisateur d’Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Recherchez la carte de destination **[!UICONTROL Custom Personalization With Attributes]**, puis sélectionnez **[!UICONTROL Activate audiences]**, comme illustré dans l’image ci-dessous.
+1. Recherchez la vignette de destination **[!UICONTROL Custom Personalization With Attributes]** puis sélectionnez **[!UICONTROL Activer les audiences]**, comme illustré dans l’image ci-dessous.
 
    ![Activer le contrôle d’audience en surbrillance sur une carte de destination dans le catalogue.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. Sélectionnez la connexion de destination que vous avez précédemment configurée, puis sélectionnez **[!UICONTROL Next]**.
+1. Sélectionnez la connexion de destination que vous avez précédemment configurée, puis sélectionnez **[!UICONTROL Suivant]**.
 
    ![Sélectionnez l’étape de destination dans le workflow d’activation.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. Sélectionnez vos audiences. Utilisez les cases à cocher situées à gauche des noms d’audience pour sélectionner les audiences à activer vers la destination, puis sélectionnez **[!UICONTROL Next]**.
+1. Sélectionnez vos audiences. Utilisez les cases à cocher situées à gauche des noms d’audience pour sélectionner les audiences à activer vers la destination, puis sélectionnez **[!UICONTROL Suivant]**.
 
    Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
-   * **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par Segmentation Service. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-   * **[!UICONTROL Custom upload]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
+   * **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par le service de segmentation. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+   * **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
    * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
      ![L’étape Sélectionner les audiences du workflow d’activation avec plusieurs audiences mises en surbrillance.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 1. Sélectionnez les attributs de profil que vous souhaitez rendre disponibles pour les profils Edge.
 
-   * **Sélectionnez les attributs sources**. Pour ajouter des attributs sources, sélectionnez la commande **[!UICONTROL Add new field]** sur la colonne **[!UICONTROL Source field]** et recherchez ou accédez au champ d’attribut XDM de votre choix, comme illustré ci-dessous.
+   * **Sélectionnez les attributs sources**. Pour ajouter des attributs sources, sélectionnez le contrôle **[!UICONTROL Ajouter un nouveau champ]** dans la colonne **[!UICONTROL Source]** et recherchez ou accédez au champ d’attribut XDM de votre choix, comme illustré ci-dessous.
 
      ![Enregistrement d’écran montrant comment sélectionner un attribut cible dans l’étape de mappage.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
-   * **Sélectionner les attributs de la cible**. Pour ajouter des attributs cibles, sélectionnez le contrôle **[!UICONTROL Add new field]** sur la colonne **[!UICONTROL Target field]** et saisissez le nom de l’attribut personnalisé auquel vous souhaitez mapper l’attribut source.
+   * **Sélectionner les attributs de la cible**. Pour ajouter des attributs cibles, sélectionnez le contrôle **[!UICONTROL Ajouter un nouveau champ]** dans la colonne **[!UICONTROL Champ cible]** et saisissez le nom de l’attribut personnalisé auquel vous souhaitez mapper l’attribut source.
 
      ![Enregistrement d’écran montrant comment sélectionner un attribut XDM dans l’étape de mappage](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-Lorsque vous avez terminé de mapper les attributs de profil, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de mapper les attributs de profil, sélectionnez **[!UICONTROL Suivant]**.
 
-Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Cancel]** pour interrompre le flux, **[!UICONTROL Back]** pour modifier vos paramètres ou **[!UICONTROL Finish]** pour confirmer votre sélection et commencer à envoyer des données de profil à Edge Network.
+Sur la page **[!UICONTROL Réviser]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données de profil à Edge Network.
 
 ![Résumé de la sélection à l’étape de révision.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
@@ -162,11 +162,11 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 +++Évaluation des politiques de consentement
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 **Vérifications des politiques d’utilisation des données**
 
-À l’étape **[!UICONTROL Review]**, Experience Platform vérifie également les violations de la politique d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de politique, consultez la section sur les violations de politique d’utilisation des données [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la documentation sur la gouvernance des données .
+À l’étape **[!UICONTROL Révision]**, Experience Platform vérifie également les violations de la politique d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de politique, consultez la section sur les violations de politique d’utilisation des données [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la documentation sur la gouvernance des données .
 
 ![Exemple de violation de politique de données.](../assets/common/data-policy-violation.png)
 
@@ -174,12 +174,12 @@ Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &
 
 +++Filtrer les audiences
 
-Dans l’étape **[!UICONTROL Review]** , vous pouvez utiliser les filtres disponibles sur la page pour afficher uniquement les audiences dont le planning ou le mappage a été mis à jour dans le cadre de ce workflow. Vous pouvez également activer/désactiver les colonnes du tableau à afficher.
+Dans l’étape **[!UICONTROL Révision]**, vous pouvez utiliser les filtres disponibles sur la page pour afficher uniquement les audiences dont le planning ou le mappage a été mis à jour dans le cadre de ce workflow. Vous pouvez également activer/désactiver les colonnes du tableau à afficher.
 
 ![Enregistrement d’écran affichant les filtres d’audience disponibles à l’étape de révision.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
 
-Si vous êtes satisfait(e) de votre sélection et qu’aucune violation de politique n’a été détectée, sélectionnez **[!UICONTROL Finish]** pour confirmer votre sélection.
+Si vous êtes satisfait(e) de votre sélection et qu’aucune violation de politique n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection.
 
 +++
 
@@ -305,7 +305,7 @@ L’objet `handle` fournit les informations décrites dans le tableau ci-dessous
 |---------|----------|
 | `payload` | Objet `payload` contenant les informations de recherche Edge. La réponse peut contenir plusieurs objets `payload` supplémentaires, sans rapport avec la recherche Edge. |
 | `type` | Les payloads sont regroupées dans la réponse par type. Le type de payload pour la recherche de profil Edge est toujours défini sur `profileLookup`. |
-| `destinationId` | Identifiant de l’instance de connexion **[!UICONTROL Custom Personalization]** que vous avez créée à l’[étape 3](#configure-custom-personalization-connection). |
+| `destinationId` | Identifiant de l’instance de connexion **[!UICONTROL Custom Personalization]** que vous avez créée à l’étape [3](#configure-custom-personalization-connection). |
 | `alias` | Alias de la connexion de destination, configuré par l’utilisateur lors de la création de la connexion de destination [Custom Personalization](../catalog/personalization/custom-personalization.md). |
 | `attributes` | Ce tableau inclut les attributs de profil Edge des audiences que vous avez activées à [étape 3](#configure-custom-personalization-connection). |
 | `segments` | Ce tableau inclut les audiences que vous avez activées à [étape 3](#configure-custom-personalization-connection). |

@@ -26,7 +26,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1232
+source-wordcount: 1265
 ht-degree: 11%
 
 ---
@@ -35,12 +35,12 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->La carte de destination **[!UICONTROL Marketo Engage Person Sync]** sera abandonnée en **octobre 2025**.
+>La carte de destination **[!UICONTROL Synchronisation des personnes]** sera abandonnée en **octobre 2025**.
 >
->Pour garantir une transition en douceur vers la nouvelle destination **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, passez en revue les points clés suivants et les actions requises :
+>Pour garantir une transition en douceur vers la nouvelle destination **[&#128279;](marketo-engage-connection.md)**, passez en revue les points clés suivants et les actions requises :
 >
 >* Tous les utilisateurs doivent **cesser d’utiliser la destination de synchronisation des personnes de Marketo Engage** et migrer vers la nouvelle destination **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** d’ici octobre 2025.
->* **Les flux de données existants ne seront pas migrés automatiquement.** Vous devez [configurer une nouvelle connexion](marketo-engage-connection.md#connect-to-the-destination) vers la nouvelle destination **[!UICONTROL Marketo Engage]** et y activer vos audiences.
+>* **Les flux de données existants ne seront pas migrés automatiquement.** Vous devez [configurer une nouvelle connexion](marketo-engage-connection.md#connect-to-the-destination) à la nouvelle destination **[!UICONTROL Marketo Engage]** et y activer vos audiences.
 
 
 ## Vue d’ensemble {#overview}
@@ -101,7 +101,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
 
 Si votre société a accès à plusieurs organisations, veillez à utiliser la même organisation dans Marketo Engage et [!DNL Real-Time CDP], où vous configurez le connecteur de destination vers Marketo.  Si vous avez déjà configuré une destination, vous pouvez sélectionner un compte Marketo existant à utiliser avec votre nouvelle configuration.  Si ce n’est pas le cas, cliquez sur l’invite Connecteur vers la destination pour définir le nom, la description et l’identifiant Marketo Munchkin de la destination souhaitée.  L’identifiant Munchkin de votre instance Marketo se trouve dans le menu Admin->Munchkin .
 
@@ -111,12 +111,12 @@ Si votre société a accès à plusieurs organisations, veillez à utiliser la m
 
 ![Se connecter à la destination](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Munchkin ID]** : l’identifiant Munchkin est l’identifiant unique d’une instance Marketo spécifique.
-* **[!UICONTROL Partition]** : concept dans Marketo Engage utilisé pour séparer les enregistrements de prospect par entreprise
-* **[!UICONTROL First searchable field]** : champ à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. La valeur par défaut est e-mail.
-* **[!UICONTROL First searchable field]** : champ secondaire à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. Facultatif
+* **[!UICONTROL Munchkin ID]** : Munchkin ID est l’identifiant unique d’une instance Marketo spécifique.
+* **[!UICONTROL Partition]** : concept dans Marketo Engage utilisé pour séparer les enregistrements de prospect par préoccupation commerciale
+* **[!UICONTROL Premier champ consultable]** : champ à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. La valeur par défaut est e-mail.
+* **[!UICONTROL Premier champ consultable]** : champ secondaire à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. Facultatif
 
 Une fois que vous avez sélectionné votre instance, vous devez également sélectionner la partition de lead à laquelle vous souhaitez que la configuration s’intègre. Dans [&#128279;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) une  partition de lead est un concept utilisé pour séparer les enregistrements de lead par entreprise (marque ou région de vente, par exemple). Si votre abonnement Marketo ne dispose pas de la fonctionnalité Espaces de travail et partitions, ou si aucune partition supplémentaire n’a été créée dans votre abonnement, seule la partition Par défaut est disponible. Une configuration unique ne peut mettre à jour que les enregistrements de prospect qui existent dans sa partition configurée.
 
@@ -140,7 +140,7 @@ Si aucun enregistrement de prospect correspondant n’est trouvé, un nouvel enr
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Lisez [Activer des audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

@@ -18,18 +18,18 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1606
+source-wordcount: 1621
 ht-degree: 12%
 
 ---
 
-# [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] groupe de champs de schéma
+# [!UICONTROL Extension complète Adobe Advertising ExperienceEvent &#x200B;] groupe de champs de schéma
 
 >[!AVAILABILITY]
 >
->Le groupe de champs [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Le groupe de champs [!UICONTROL Extension complète Adobe Advertising ExperienceEvent] est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-[!UICONTROL Adobe Advertising ExperienceEvent Full Extension] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), qui capture les mesures courantes collectées par Adobe Advertising (anciennement appelée « [!DNL Advertising Cloud] »).
+[!UICONTROL Extension complète Adobe Advertising ExperienceEvent] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), qui capture les mesures courantes collectées par Adobe Advertising (anciennement appelée « [!DNL Advertising Cloud] »).
 
 Ce document décrit la structure et le cas d’utilisation du groupe de champs de l’extension [!DNL Advertising].
 

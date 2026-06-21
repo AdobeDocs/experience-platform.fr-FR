@@ -226,7 +226,7 @@ large_correlation_df
 
 |   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totalUsers | propositionDisplay_totalUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0,026805 | 0,2779 | Aucune | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | None |
+| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0,026805 | 0,2779 | None | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | None |
 
 {style="table-layout:auto"}
 

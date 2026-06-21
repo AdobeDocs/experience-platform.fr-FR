@@ -16,7 +16,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 449
+source-wordcount: 454
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Après avoir placé sur la liste autorisée l’adresse IP statique d’Adobe, E
 
 ## Surveiller les alertes {#monitor-alerts}
 
-Les alertes de Platform vous informent des problèmes susceptibles d’interrompre l’accès aux clés, tels que **[!UICONTROL Key access failure]** ou **[!UICONTROL Key disablement]**. Ces alertes vous aident à identifier rapidement des problèmes tels qu’une adresse IP statique supprimée ou un pare-feu mal configuré. Pour restaurer l’accès, vérifiez les paramètres de votre pare-feu [!DNL Azure] et ajoutez à nouveau l’adresse IP requise.
+Les alertes de Platform vous informent des problèmes susceptibles d’interrompre l’accès aux clés, tels que **[!UICONTROL Échec de l’accès à la clé]** ou **[!UICONTROL Désactivation de la clé]**. Ces alertes vous aident à identifier rapidement des problèmes tels qu’une adresse IP statique supprimée ou un pare-feu mal configuré. Pour restaurer l’accès, vérifiez les paramètres de votre pare-feu [!DNL Azure] et ajoutez à nouveau l’adresse IP requise.
 
 <!-- For a complete list of alert types and recommended resolutions, see the [CMK alert resolution reference](../alert-resolution-reference.md). -->
 

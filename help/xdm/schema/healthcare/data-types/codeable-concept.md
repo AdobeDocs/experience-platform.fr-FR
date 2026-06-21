@@ -11,21 +11,21 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 120
+source-wordcount: 127
 ht-degree: 7%
 
 ---
 
-# Type de données [!UICONTROL Codeable Concept]
+# Type de données [!UICONTROL Concept codable]
 
-[!UICONTROL Codeable Concept] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une référence d’une ressource à une autre. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Concept codable] est un type de données standard des modèles de données d’expérience (XDM) qui décrit une référence d’une ressource à une autre. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure de type de données Concept codable](../../../images/healthcare/data-types/codeable-concept.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL Coding] | `coding` | Tableau de [[!UICONTROL Coding]](../data-types/coding.md) | Code défini par un système terminologique. |
-| [!UICONTROL Text] | `text` | Chaîne | Représentation en texte brut du concept. |
+| [!UICONTROL Codage] | `coding` | Tableau de [[!UICONTROL codage]](../data-types/coding.md) | Code défini par un système terminologique. |
+| [!UICONTROL Texte] | `text` | Chaîne | Représentation en texte brut du concept. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

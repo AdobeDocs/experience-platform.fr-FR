@@ -15,8 +15,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1547
-ht-degree: 9%
+source-wordcount: 1595
+ht-degree: 8%
 
 ---
 
@@ -45,13 +45,13 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Parcourir le catalogue des sources
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Categories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour ingérer des données à partir de [!DNL Talon.One], sélectionnez la carte source **[!UICONTROL Talon.One Batch Source Connector]** sous *[!UICONTROL Loyalty]*, puis sélectionnez **[!UICONTROL Add data]**.
+Pour ingérer des données à partir de [!DNL Talon.One], sélectionnez la carte source **[!UICONTROL Connecteur Source par lots Talon.One]** sous *[!UICONTROL Fidélité]*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue des sources avec la carte de connecteur source par lot Talon.One sélectionnée.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
@@ -61,17 +61,17 @@ Pour ingérer des données à partir de [!DNL Talon.One], sélectionnez la carte
 >
 >Avant de créer un compte, consultez les [conditions préalables](../../../../connectors/loyalty/talon-one.md#prerequisites) de la présentation des [!DNL Talon.One] pour savoir quelles informations d’authentification sont requises.
 
-Pour créer un compte pour votre source de [!DNL Talon.One], sélectionnez **[!UICONTROL New account]** et indiquez un nom et une description facultative pour votre compte. Indiquez ensuite votre domaine [!DNL Talon.One] et votre [!UICONTROL Talon.One Management API Key]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques instants le temps d’établir la connexion.
+Pour créer un compte pour votre source de [!DNL Talon.One], sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description facultative pour votre compte. Indiquez ensuite votre domaine [!DNL Talon.One] et votre clé API de gestion [!UICONTROL Talon.One]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que votre connexion s’établisse.
 
 ![L’étape Créer un compte du workflow des sources.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### Utiliser un compte existant
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]** et sélectionnez le compte [!DNL Talon.One] à utiliser dans l’interface Comptes .
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** et sélectionnez le compte [!DNL Talon.One] à utiliser dans l’interface Comptes.
 
 ## Sélectionner les données
 
-Une fois l’authentification effectuée, saisissez les valeurs pour vos **applicationId** et **sessionType**. Au cours de cette étape, vous pouvez utiliser les fonctionnalités de prévisualisation pour inspecter la structure de vos données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]** pour continuer.
+Une fois l’authentification effectuée, saisissez les valeurs pour vos **applicationId** et **sessionType**. Au cours de cette étape, vous pouvez utiliser les fonctionnalités de prévisualisation pour inspecter la structure de vos données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 >[!TIP]
 >
@@ -95,10 +95,10 @@ Au cours de cette étape, vous pouvez utiliser un jeu de données existant ou en
 
 +++Sélectionnez pour connaître les étapes d’activation de l’ingestion de profil, des diagnostics d’erreur et de l’ingestion partielle.
 
-Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer **[!UICONTROL Profile dataset]** données pour l’ingestion de profils. Vous pouvez également utiliser cette étape pour activer **[!UICONTROL Error diagnostics]** et **[!UICONTROL Partial ingestion]**.
+Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer/désactiver le **[!UICONTROL jeu de données de profil]** pour activer vos données pour l’ingestion de profils. Vous pouvez également utiliser cette étape pour activer les **[!UICONTROL diagnostics d’erreur]** et **[!UICONTROL ingestion partielle]**.
 
-* **[!UICONTROL Error diagnostics]** : sélectionnez **[!UICONTROL Error diagnostics]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
-* **[!UICONTROL Partial ingestion]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
+* **[!UICONTROL Diagnostics d’erreur]** : sélectionnez **[!UICONTROL Diagnostics d’erreur]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
+* **[!UICONTROL Ingestion partielle]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
 
 +++
 
@@ -128,7 +128,7 @@ Une fois les détails de votre jeu de données et de votre flux de données conf
 
 ## Planifier l’ingestion du flux de données
 
-L’étape [!UICONTROL Scheduling] s’affiche. Utilisez l’interface pour configurer un planning d’ingestion afin d’ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour ajuster la fréquence d’ingestion, sélectionnez **[!UICONTROL Frequency]** puis une option dans le menu déroulant.
+L’étape [!UICONTROL Planification] s’affiche. Utilisez l’interface pour configurer un planning d’ingestion afin d’ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour ajuster la fréquence d’ingestion, sélectionnez **[!UICONTROL Fréquence]** puis sélectionnez une option dans le menu déroulant.
 
 >[!TIP]
 >
@@ -151,12 +151,12 @@ Pour plus d’informations sur les configurations de planification, consultez le
 
 ## Réviser
 
-L’étape *[!UICONTROL Review]* s’affiche, vous permettant de consulter les détails de votre flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape *[!UICONTROL Révision]* s’affiche et vous permet de consulter les détails de votre flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connection]** : affiche le nom du compte, la plateforme source et le nom de la source.
-* **[!UICONTROL Assign dataset and map fields]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Connexion]** : affiche le nom du compte, la plateforme source et le nom de la source.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
 
-Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Finish]**.
+Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**.
 
 ![Étape de révision du workflow des sources.](../../../../images/tutorials/create/talon-one-batch/review.png)
 

@@ -36,8 +36,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1793
-ht-degree: 47%
+source-wordcount: 1819
+ht-degree: 46%
 
 ---
 
@@ -165,7 +165,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Cette classe permet d’importer les profils de prospect provenant des cas d’utilisation d’acquisition de clientèle au sommet de l’entonnoir des fournisseurs de données. Reportez-vous à la documentation [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) pour voir des exemples et en savoir plus. |
+| Classe | [[!UICONTROL Profil de prospect individuel XDM]](https://github.com/adobe/xdm/pull/1758/files) | Cette classe permet d’importer les profils de prospect provenant des cas d’utilisation d’acquisition de clientèle au sommet de l’entonnoir des fournisseurs de données. Reportez-vous à la documentation [[!UICONTROL Profil de prospect individuel XDM]](../../xdm/classes/prospect.md) pour voir des exemples et en savoir plus. |
 
 {style="table-layout:auto"}
 
@@ -173,8 +173,8 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description de la mise à jour |
 | --- | --- | --- |
-| Extension ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Context Data]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Context Data] objet map ajouté à [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] pour fournir des données contextuelles pour Adobe Analytics. |
-| Groupe de champs | Multiple | Plusieurs champs ont été ajoutés à [[!UICONTROL Enriched Event Segment Details]](https://github.com/adobe/xdm/pull/1760/files). |
+| Extension ([!UICONTROL Extension complète Adobe Analytics ExperienceEvent]) | [[!UICONTROL &#x200B; Données contextuelles &#x200B;]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Données contextuelles] objet map ajouté à l’[!UICONTROL extension complète Adobe Analytics ExperienceEvent] pour fournir des données contextuelles à Adobe Analytics. |
+| Groupe de champs | Multiple | Plusieurs champs ajoutés à [[!UICONTROL Détails de segment d’événement enrichi]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 

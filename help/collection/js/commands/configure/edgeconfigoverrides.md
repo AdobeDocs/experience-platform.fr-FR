@@ -1,10 +1,11 @@
 ---
 title: edgeConfigOverrides
 description: Configurez les remplacements de train de données pour votre implémentation.
-source-git-commit: f4a2778c71ad6a48621212f3ece1776d1b3ac643
+exl-id: 9c5dde06-ae73-4cad-b8b4-4cb5cd00988c
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 0%
+source-wordcount: '400'
+ht-degree: 1%
 
 ---
 

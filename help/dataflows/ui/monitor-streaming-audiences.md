@@ -17,7 +17,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 370
+source-wordcount: 376
 ht-degree: 19%
 
 ---
@@ -65,8 +65,8 @@ Le tableau suivant fournit des informations plus détaillées sur les mesures ut
 
 ## Utiliser le tableau de bord de surveillance pour les audiences en flux continu {#monitoring-dashboard}
 
-Pour accéder au tableau de bord de surveillance des audiences de diffusion en continu, accédez à l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Monitoring]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Streaming end-to-end]**.
+Pour accéder au tableau de bord de surveillance des audiences en flux continu, accédez à l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Diffusion en flux continu de bout en bout]**.
 
 IMAGE
 
-La carte de mesure **[!UICONTROL Audiences]** se trouve en haut du tableau de bord. Cette option affiche des informations sur le **Taux d’évaluation** pour les audiences.
+En haut du tableau de bord se trouve la vignette de mesure **[!UICONTROL Audiences]**. Cette option affiche des informations sur le **Taux d’évaluation** pour les audiences.

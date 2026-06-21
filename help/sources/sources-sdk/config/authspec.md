@@ -199,8 +199,8 @@ Les paramètres suivants sont généralement requis lors de l’utilisation de l
 
 | Paramètre | Type | Obligatoire | Description |
 | --- | --- | --- | --- |
-| `host` | string | Non | URL de la ressource. |
-| `authKey1` | string | Oui | Première clé d’authentification requise pour l’accès à l’API. Elle est généralement envoyée dans l’en-tête de requête ou les paramètres de requête. |
+| `host` | chaîne | Non | URL de la ressource. |
+| `authKey1` | chaîne | Oui | Première clé d’authentification requise pour l’accès à l’API. Elle est généralement envoyée dans l’en-tête de requête ou les paramètres de requête. |
 | `authKey2` | chaîne | Facultatif | Une deuxième clé d’authentification. Si nécessaire, cette clé est souvent utilisée pour valider davantage les requêtes. |
 | `authKeyN` | chaîne | Facultatif | Variable d’authentification supplémentaire qui peut être utilisée si nécessaire, à l’exception de l’API . |
 

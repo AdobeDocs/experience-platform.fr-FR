@@ -381,4 +381,4 @@ Outre les couleurs de l’image globale, vous pouvez désormais voir les couleur
 | `repo:path` | chaîne | - | - | - | URL prédéfinie du document. |
 | `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
 | `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez cette option lors de la transmission du fichier image en tant qu’argument multipartie au lieu d’utiliser des URL prédéfinies. |
-| `dc:format` | string | Oui | - | « image/jpg »,<br>« image/jpeg »,<br>« image/png »,<br>« image/tiff » | Le codage de l’image est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |
+| `dc:format` | chaîne | Oui | - | « image/jpg »,<br>« image/jpeg »,<br>« image/png »,<br>« image/tiff » | Le codage de l’image est vérifié par rapport aux types de codage d’entrée autorisés avant d’être traité. |

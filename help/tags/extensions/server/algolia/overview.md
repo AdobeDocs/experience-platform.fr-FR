@@ -39,7 +39,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1015
+source-wordcount: 1091
 ht-degree: 2%
 
 ---
@@ -57,31 +57,31 @@ Avant d’installer l’extension, vérifiez que vous disposez d’un compte [!D
 Assurez-vous également de comprendre comment utiliser le [!DNL Insights API] [!DNL Algolia]. Pour obtenir un aperçu sur l’envoi d’événements, reportez-vous à la section [Envoi d’événements avec l’API Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
 Rassemblez les valeurs suivantes à partir du tableau de bord de votre compte [!DNL Algolia] :
-- **[!UICONTROL Application ID]**
-- **[!UICONTROL Search API Key]**
-- **[!UICONTROL Index Name]**
+- **[!UICONTROL ID de l’application]**
+- Clé API **[!UICONTROL Search]**
+- **[!UICONTROL Nom de l’index]**
 
 ## Installation l’extension {#install}
 
 Pour installer l’extension [!DNL Algolia], procédez comme suit :
 
-Accédez à **[!UICONTROL Data Collection]** dans [!DNL Adobe Experience Platform]. Sélectionnez l’onglet **[!UICONTROL Extensions]** .
+Accédez à **[!UICONTROL Collecte de données]** dans [!DNL Adobe Experience Platform]. Sélectionnez l’onglet **[!UICONTROL Extensions]**.
 
-Ouvrez le **[!UICONTROL Catalog]** et localisez l’extension **[!UICONTROL Algolia Event Forwarding]**, puis sélectionnez **[!UICONTROL Install]**.
+Ouvrez le **[!UICONTROL Catalogue]** et recherchez l’extension **[!UICONTROL Transfert d’événement Algolia]**, puis sélectionnez **[!UICONTROL Installer]**.
 
 ![Processus d’installation de l’extension Transfert d’événement Algolia dans Adobe Experience Platform](../../../images/extensions/server/algolia/install-extension.png)
 
 ### Configurez l’extension {#configure-extension}
 
-Pour configurer l’extension de transfert d’événement [!DNL Algolia], accédez à l’onglet **[!UICONTROL Extensions]** , sélectionnez l’extension **[!UICONTROL Algolia]**, puis sélectionnez **[!UICONTROL Configure]**.
+Pour configurer l’extension de transfert d’événement [!DNL Algolia], accédez à l’onglet **[!UICONTROL Extensions]**, sélectionnez l’extension **[!UICONTROL Algolia]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 ![Écran de configuration de l’extension de transfert d’événement Algolia dans Adobe Experience Platform](../../../images/extensions/server/algolia/configure.png)
 
 | Propriété | Description |
 |----------|-------------|
-| **[!UICONTROL Application ID]** | Saisissez les [!UICONTROL Application ID] figurant dans le tableau de bord Algolia sous la section [Clés API](https://www.algolia.com/account/api-keys/all). |
-| **[!UICONTROL Search API Key]** | Saisissez les [!UICONTROL Search API Key] figurant dans le tableau de bord Algolia sous la section [Clés API](https://www.algolia.com/account/api-keys/all). |
-| **[!UICONTROL Index Name]** | Saisissez le [!UICONTROL Index Name] qui contient vos produits ou votre contenu. Cet index est utilisé comme valeur par défaut. |
+| **[!UICONTROL ID de l’application]** | Saisissez l’[!UICONTROL ID d’application] qui se trouve dans le tableau de bord Algolia sous la section [Clés API](https://www.algolia.com/account/api-keys/all). |
+| **[!UICONTROL Clé API de recherche]** | Saisissez la [!UICONTROL clé API de recherche] qui se trouve dans le tableau de bord Algolia sous la section [clés API](https://www.algolia.com/account/api-keys/all). |
+| **[!UICONTROL Nom de l’index]** | Saisissez le [!UICONTROL Nom de l’index] qui contient vos produits ou votre contenu. Cet index est utilisé comme valeur par défaut. |
 
 {style="table-layout:auto"}
 
@@ -91,9 +91,9 @@ L’extension de transfert d’événement [!DNL Algolia] propose un type d’ac
 
 ### Événement d’envoi {#send-event}
 
-Configurez l’action **[!UICONTROL Send event]** pour transférer les événements vers [!DNL Algolia] :
+Configurez l’action **[!UICONTROL Envoyer l’événement]** pour transférer les événements vers [!DNL Algolia] :
 
-Sélectionnez **[!UICONTROL Rules]** > **[!UICONTROL Add Rule]** ou sélectionnez une règle existante. Dans la partie **[!UICONTROL Then]** de la règle, ajoutez une action et sélectionnez **[!UICONTROL Extension]** : [!DNL Algolia] Transfert d’événement > **[!UICONTROL Action Type]** : **[!UICONTROL Send Events]**.
+Sélectionnez **[!UICONTROL Règles]** > **[!UICONTROL Ajouter une règle]** ou sélectionnez une règle existante. Dans la partie **[!UICONTROL Alors]** de la règle, ajoutez une action et sélectionnez **[!UICONTROL Extension]** : [!DNL Algolia] Transfert d’événement > **[!UICONTROL Type d’action]** : **[!UICONTROL Envoyer des événements]**.
 
 ![Configuration de l’action Envoyer l’événement dans l’extension de transfert d’événement Algolia.](../../../images/extensions/server/algolia/send-event.png)
 
@@ -103,19 +103,19 @@ Veillez à ajouter le groupe de champs d’événement [!DNL Algolia] à votre s
 
 ![Configuration du groupe de champs d’événement en Algérie](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
-### Ajouter le groupe de champs [!UICONTROL Algolia Event Details] à votre schéma {#add-algolia-field-group}
+### Ajoutez le groupe de champs [!UICONTROL &#x200B; Détails de l’événement Algolia &#x200B;] à votre schéma {#add-algolia-field-group}
 
-Pour ajouter le groupe de champs [!UICONTROL Algolia Event Details] :
+Pour ajouter le groupe de champs [!UICONTROL Détails de l’événement Algolia] :
 
-Accédez à **[!UICONTROL Schemas]** et sélectionnez **[!UICONTROL Browse]**.
+Accédez à **[!UICONTROL Schémas]** et sélectionnez **[!UICONTROL Parcourir]**.
 
-Ajoutez un nouveau schéma ou mettez à jour un schéma existant que vous utilisez pour envoyer des événements web et passez la souris sur l’icône **[!UICONTROL Add]**. Saisissez *[!DNL Algolia]* dans la zone de recherche pour affiner les résultats.
+Ajoutez un nouveau schéma ou mettez à jour un schéma existant que vous utilisez pour envoyer des événements web et passez la souris sur l’icône **[!UICONTROL Ajouter]**. Saisissez *[!DNL Algolia]* dans la zone de recherche pour affiner les résultats.
 
-Sélectionnez le groupe de champs **[!UICONTROL Algolia Event Details]** > bouton **[!UICONTROL Add field group]** > **[!UICONTROL Save]**.
+Sélectionnez le groupe de champs **[!UICONTROL Détails de l’événement en Algolie]** > **[!UICONTROL Ajouter un groupe de champs]** bouton > **[!UICONTROL Enregistrer]**.
 
 ![Configuration du groupe de champs de profil Algolia dans Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
-### Mapper et envoyer des données à l’aide de la balise [!UICONTROL Data Collection]
+### Mapper et envoyer des données à l’aide de la balise [!UICONTROL Collecte de données]
 
 L’extension de transfert d’événement [!DNL Algolia] peut être utilisée avec la **[!DNL Adobe Experience Platform Web SDK]** pour envoyer des données de votre site web à [!DNL Algolia]. Pour ce faire, créez une propriété de balise, mappez les données à l’objet [!DNL XDM] et configurez des règles pour envoyer des événements.
 
@@ -129,8 +129,8 @@ L’extension de transfert d’événement [!DNL Algolia] peut être utilisée a
 
 #### Étape 2 : créer un élément de données pour [!DNL XDM] mappage
 
-1. Créez un [!UICONTROL Data Element] à l’aide de l’**[!DNL Adobe Experience Platform Web SDK]** .
-2. Sélectionnez **[!UICONTROL XDM object]** comme type d’élément de données.
+1. Créez un [!UICONTROL élément de données] à l’aide du **[!DNL Adobe Experience Platform Web SDK]** .
+2. Sélectionnez **[!UICONTROL objet XDM]** comme type d’élément de données.
 3. Mappez vos données aux champs de [!DNL XDM] appropriés en veillant à ce que les champs spécifiques à [!DNL Algolia] soient renseignés.
 
 ![](../../../images/extensions/server/algolia/xdm-mapping.png)
@@ -140,7 +140,7 @@ L’extension de transfert d’événement [!DNL Algolia] peut être utilisée a
 1. Créez une règle dans la propriété de balise.
 2. Ajoutez les déclencheurs d’événement requis tels que le chargement de page ou les événements de clic.
 3. Ajoutez une action à l’aide de **[!DNL Adobe Experience Platform Web SDK]**.
-4. Sélectionnez **[!UICONTROL Send event]** comme type d’action.
+4. Sélectionnez **[!UICONTROL Envoyer l’événement]** comme type d’action.
 5. Configurez l’action pour utiliser l’élément de données [!DNL XDM].
 
 ![Exemple de configuration d’une action de règle dans l’extension de transfert d’événement Algolia](../../../images/extensions/server/algolia/rule-action.png)
@@ -156,7 +156,7 @@ L’extension de transfert d’événement [!DNL Algolia] peut être utilisée a
 
 Après avoir configuré l’extension de transfert d’événement [!DNL Algolia], vous pouvez vérifier que les événements sont correctement envoyés et reçus en procédant comme suit :
 
-Accédez à votre tableau de bord [!DNL Algolia] et à **[!UICONTROL Data Sources > Events > Debugger]**.
+Accédez à votre tableau de bord [!DNL Algolia] et accédez à **[!UICONTROL Sources de données > Événements > Débogueur]**.
 
 Sélectionnez l’événement correspondant à l’événement envoyé à partir de l’extension de transfert d’événement de [!DNL Algolia] et vérifiez que les données attendues sont présentes dans l’événement.
 
@@ -182,7 +182,7 @@ Si vous rencontrez des problèmes lors de l’implémentation de l’extension d
 
 Si les événements n’apparaissent pas dans [!DNL Algolia], vérifiez les points suivants :
 
-- **Vérification des informations d’identification de l’API** : assurez-vous que les **[!UICONTROL Application ID]** et **[!UICONTROL API Key]** correspondent aux valeurs de votre tableau de bord [!DNL Algolia].
+- **Vérification des informations d’identification de l’API** : assurez-vous que le **[!UICONTROL ID d’application]** et la **[!UICONTROL Clé d’API]** correspondent aux valeurs de votre tableau de bord [!DNL Algolia].
 - **Vérifier le débogueur d’événement** : utilisez le débogueur d’événement [!DNL Algolia] pour confirmer si des événements sont reçus. Dans le cas contraire, vérifiez la configuration de la règle de transfert d’événement.
 - **Inspecter le mappage XDM** : assurez-vous que tous les champs obligatoires du schéma [!DNL Algolia] sont correctement mappés dans l’objet [!DNL XDM].
 

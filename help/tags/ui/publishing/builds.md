@@ -19,8 +19,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1080
-ht-degree: 60%
+source-wordcount: 1093
+ht-degree: 59%
 
 ---
 
@@ -101,18 +101,18 @@ Vous pouvez accéder aux versions et aux détails de version à partir d’une *
 
 ### Affichage des détails de version à partir d’une bibliothèque
 
-Dans la propriété des balises, ouvrez le **[!UICONTROL Publishing Flow]** et sélectionnez une bibliothèque.
+Dans la propriété des balises, ouvrez le **[!UICONTROL flux de publication]** et sélectionnez une bibliothèque.
 
 ![Flux de publication dans l’interface utilisateur des collections de données mettant en surbrillance une bibliothèque.](../publishing/images/builds/library.png)
 
 Dans le panneau des détails, vous pouvez vérifier les éléments suivants :
 
-* **[!UICONTROL Last Build Environment]** — Lien vers l&#39;environnement qui a reçu la dernière build. Indique si cette bibliothèque est la version actuelle de cet environnement (**actuelle** ou **non actuelle**).
-* **[!UICONTROL Current Builds]** — Versions actuellement actives sur leur environnement. Pour les bibliothèques publiées, la version de production en direct est indiquée par l’icône en forme d’éclair dans cette section.
+* **[!UICONTROL Dernier environnement de build]** — Lien vers l’environnement qui a reçu la dernière build. Indique si cette bibliothèque est la version actuelle de cet environnement (**actuelle** ou **non actuelle**).
+* **[!UICONTROL Versions actuelles]** — Versions actuellement actives sur leur environnement. Pour les bibliothèques publiées, la version de production en direct est indiquée par l’icône en forme d’éclair dans cette section.
 * Pour chaque version répertoriée, vous pouvez afficher :
    * **[!UICONTROL Status]** - Date de création de la version.
-   * **[!UICONTROL Environment]** - Environnement dans lequel la version a été déployée.
-   * **[!UICONTROL User]** - Utilisateur qui a créé la version.
+   * **[!UICONTROL Environnement]** - Environnement dans lequel la version a été déployée.
+   * **[!UICONTROL Utilisateur]** - Utilisateur qui a créé la version.
 
 ![Détails de la bibliothèque affichés dans le panneau de droite](../publishing/images/builds/library-details.png)
 
@@ -120,7 +120,7 @@ Dans le panneau des détails, vous pouvez vérifier les éléments suivants :
 
 Une version est associée à un environnement et à la bibliothèque qui a été créée dans cet environnement. C’est la version qui contient réellement les ressources compilées.
 
-Sélectionnez le **[!UICONTROL Environment]** dans le panneau des détails. Le panneau Détails de l’environnement affiche une liste des versions récentes, la version active actuelle et les bibliothèques associées.
+Sélectionnez l’**[!UICONTROL Environnement]** dans le panneau des détails. Le panneau Détails de l’environnement affiche une liste des versions récentes, la version active actuelle et les bibliothèques associées.
 
 ![Panneau Détails de l’environnement mettant en surbrillance les versions actuelles.](../publishing/images/builds/environment.png)
 
@@ -132,4 +132,4 @@ Sélectionnez ensuite une version pour en ouvrir les détails. Les détails de l
 >
 >Une version peut inclure plus que les ressources répertoriées sur la seule bibliothèque. Les **Extensions**, **Éléments de données** et **Règles** inclus dans la version incluent le contenu de la bibliothèque ainsi que le contenu en amont. Il s’agit de l’instantané complet qui est publié sur le site ou dans l’application.
 
-Utilisez le panneau des détails pour revenir à la **[!UICONTROL Environment]** ou à la **[!UICONTROL Library]**.
+Utilisez le panneau des détails pour revenir à l’**[!UICONTROL Environnement]** ou à la **[!UICONTROL Bibliothèque]**.

@@ -30,8 +30,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1896
-ht-degree: 16%
+source-wordcount: 2022
+ht-degree: 15%
 
 ---
 
@@ -53,7 +53,7 @@ Pour mieux comprendre quand et comment utiliser la destination [!DNL Marketo Eng
 
 L’équipe marketing souhaite lancer une campagne de reconquête ciblant les prospects qui ne se sont pas engagés depuis plus de 90 jours mais qui existent déjà dans Marketo.
 
-Ils peuvent activer les audiences dans Marketo Engage et utiliser le type de synchronisation **[!UICONTROL Audience Only]**.
+Ils peuvent activer les audiences dans Marketo Engage et utiliser le type de synchronisation **[!UICONTROL Audience uniquement]**.
 
 ### Cas d’utilisation de la synchronisation des audiences et des profils {#audience-profile-sync-use-cases}
 
@@ -61,13 +61,13 @@ Ils peuvent activer les audiences dans Marketo Engage et utiliser le type de syn
 
 L’équipe marketing souhaite lancer une campagne de réengagement pour les contacts Marketo existants qui ont montré de l’intérêt en fonction des visites du site web. Ils souhaitent également mettre à jour les informations sur les prospects (comme les préférences, les informations démographiques), mais sans créer de nouvelles personnes dans Marketo.
 
-Ils peuvent activer les audiences dans Marketo Engage et utiliser le type de synchronisation **[!UICONTROL Audience and Profile]** associé à l’action **[!UICONTROL Update existing persons only]** pour s’assurer qu’elles ciblent uniquement les audiences qui existent déjà dans Marketo.
+Ils peuvent activer les audiences dans Marketo Engage et utiliser le type de synchronisation **[!UICONTROL Audience et Profil]** associé à l’action **[!UICONTROL Mettre à jour les personnes existantes uniquement]** pour s’assurer qu’ils ciblent uniquement les audiences qui existent déjà dans Marketo.
 
 **Réengagez et étendez la portée grâce à la synchronisation complète des profils**
 
 L’équipe marketing souhaite activer une audience d’intérêt de produit pour une nouvelle campagne. Bien que de nombreux profils existent déjà dans Marketo, certains sont nouveaux et présents uniquement dans [!DNL Real-Time CDP]. Pour les personnes existantes, ils veulent s’assurer de mettre à jour ces personnes dans Marketo, mais aussi de créer de nouveaux profils.
 
-Ils peuvent activer leurs audiences dans Marketo Engage et utiliser le type de synchronisation **[!UICONTROL Audience and Profile]** associé à l’action **[!UICONTROL Update existing and create new persons]** pour s’assurer qu’ils ciblent les prospects existants de Marketo et en créent de nouvelles pour les nouvelles audiences exportées depuis [!DNL Real-Time CDP].
+Ils peuvent activer leurs audiences dans Marketo Engage et utiliser le type de synchronisation **[!UICONTROL Audience et profil]** associé à l’action **[!UICONTROL Mettre à jour les audiences existantes et créer de nouvelles personnes]** pour s’assurer qu’ils ciblent les prospects existants de Marketo et en créent de nouvelles pour les nouvelles audiences exportées depuis [!DNL Real-Time CDP].
 
 ## Conditions préalables {#prerequisites}
 
@@ -113,31 +113,31 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail, ECID) utilisés dans la destination [!DNL Marketo Engage]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail, ECID) utilisés dans la destination [!DNL Marketo Engage]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Comportement de correspondance des leads {#lead-matching}
 
-Comprendre le fonctionnement de la correspondance des prospects Marketo vous permet de choisir la configuration appropriée à votre cas d’utilisation. Le comportement correspondant dépend des paramètres de **[!UICONTROL Sync Type]** et de **[!UICONTROL Person Action]** sélectionnés.
+Comprendre le fonctionnement de la correspondance des prospects Marketo vous permet de choisir la configuration appropriée à votre cas d’utilisation. Le comportement correspondant dépend des paramètres **[!UICONTROL Type de synchronisation]** et **[!UICONTROL Action de la personne]** que vous avez sélectionnés.
 
-Marketo utilise les **[!UICONTROL Marketo deduplication field]** que vous sélectionnez pour faire correspondre les profils Experience Platform avec les prospects Marketo existants. Le processus correspondant recherche des prospects existants dans toutes les partitions de votre instance Marketo. Reportez-vous au tableau ci-dessous pour comprendre comment les prospects sont créés et mis à jour dans votre instance Marketo en fonction de la configuration sélectionnée.
+Marketo utilise le champ de déduplication **[!UICONTROL Marketo]** que vous sélectionnez pour faire correspondre les profils Experience Platform aux prospects Marketo existants. Le processus correspondant recherche des prospects existants dans toutes les partitions de votre instance Marketo. Reportez-vous au tableau ci-dessous pour comprendre comment les prospects sont créés et mis à jour dans votre instance Marketo en fonction de la configuration sélectionnée.
 
 | Type de synchronisation | Action de personne | Comportement de correspondance |
 |-----------|---------------|-------------------|
-| **[!UICONTROL Profile only]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Crée de nouveaux prospects dans la partition sélectionnée pour les profils non correspondants</li></ul> |
-| **[!UICONTROL Profile only]** | **[!UICONTROL Update existing persons only]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Aucun nouveau prospect créé pour les profils sans correspondance</li></ul> |
-| **[!UICONTROL Audience only]** | S.O. | <ul><li>Ajoute des prospects existants aux listes d’audience</li><li>Aucun nouveau prospect créé pour les profils sans correspondance</li></ul> |
-| **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing and create new persons]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Ajoute des prospects existants aux listes d’audience</li><li>Crée de nouveaux prospects dans la partition sélectionnée pour les profils non correspondants</li><li>Ajoute de nouveaux prospects aux listes d’audience</li></ul> |
-| **[!UICONTROL Audience and profile]** | **[!UICONTROL Update existing persons only]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Ajoute des prospects existants aux listes d’audience</li><li>Aucun nouveau prospect créé pour les profils sans correspondance</li></ul> |
+| **[!UICONTROL Profil uniquement]** | **[!UICONTROL Mettre à jour les personnes existantes et en créer de nouvelles]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Crée de nouveaux prospects dans la partition sélectionnée pour les profils non correspondants</li></ul> |
+| **[!UICONTROL Profil uniquement]** | **[!UICONTROL Mettre à jour les personnes existantes uniquement]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Aucun nouveau prospect créé pour les profils sans correspondance</li></ul> |
+| **[!UICONTROL Audience uniquement]** | S.O. | <ul><li>Ajoute des prospects existants aux listes d’audience</li><li>Aucun nouveau prospect créé pour les profils sans correspondance</li></ul> |
+| **[!UICONTROL Audience et profil]** | **[!UICONTROL Mettre à jour les personnes existantes et en créer de nouvelles]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Ajoute des prospects existants aux listes d’audience</li><li>Crée de nouveaux prospects dans la partition sélectionnée pour les profils non correspondants</li><li>Ajoute de nouveaux prospects aux listes d’audience</li></ul> |
+| **[!UICONTROL Audience et profil]** | **[!UICONTROL Mettre à jour les personnes existantes uniquement]** | <ul><li>Met à jour les leads existants avec de nouvelles données de profil</li><li>Ajoute des prospects existants aux listes d’audience</li><li>Aucun nouveau prospect créé pour les profils sans correspondance</li></ul> |
 
 {style="table-layout:auto"}
 
 ### Considérations importantes {#important-considerations}
 
 * **Sélection de champ de déduplication** : sélectionnez un champ qui est disponible de manière cohérente et unique pour tous vos profils client (par exemple : adresse e-mail, ID de client)
-* **Gestion des partitions** : lorsque vous créez de nouveaux prospects, ils sont placés dans la partition sélectionnée (ou **[!UICONTROL Default]** partition si vous n&#39;avez pas sélectionné de partition)
+* **Gestion des partitions** : lorsque vous créez de nouveaux prospects, ils sont placés dans la partition sélectionnée (ou **[!UICONTROL par défaut]** si vous n’avez pas sélectionné de partition)
 * **Gestion des doublons** : si plusieurs leads Marketo correspondent au même profil, seul le lead le plus récemment mis à jour sera mis à jour
 * **Correspondance entre partitions** : le système effectue une recherche dans toutes les partitions pour trouver les prospects existants, quelle que soit la partition que vous avez sélectionnée pour les nouveaux prospects
 
@@ -145,15 +145,15 @@ Marketo utilise les **[!UICONTROL Marketo deduplication field]** que vous sélec
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 ![Capture d’écran montrant comment s’authentifier à la destination](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png)
 
@@ -163,37 +163,37 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Exemple de capture d’écran montrant comment remplir les détails pour votre destination](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png)
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Munchkin ID]** : sélectionnez le [!DNL Marketo Munchkin ID] que vous souhaitez utiliser pour cette destination.
-* **[!UICONTROL Workspace ID]** : sélectionnez votre identifiant d’espace de travail Marketo.
-* **[!UICONTROL Sync type]** : sélectionnez le type de synchronisation à utiliser pour cette destination :
-   * **[!UICONTROL Audience and profile]** : sélectionnez cette option lorsque vous souhaitez à la fois ajouter des membres de l’audience aux listes Marketo et tenir à jour leurs informations de profil.
-   * **[!UICONTROL Profile only]** : sélectionnez cette option lorsque vous souhaitez que les profils de prospect Marketo soient à jour avec les dernières informations d’Experience Platform.
-   * **[!UICONTROL Audience only]** : sélectionnez cette option lorsque vous souhaitez ajouter des membres de l’audience aux listes Marketo sans mettre à jour leurs informations de profil.
-* **[!UICONTROL Partition]** : *la sélection de partition est disponible uniquement lors du choix des types de synchronisation **[!UICONTROL Profile only]**&#x200B;ou **[!UICONTROL Audience and profile]***. Sélectionnez un ID de partition Marketo associé à l’espace de travail de votre choix. Ceci permet de spécifier la partition de lead dans Marketo qui recevra les données exportées. Si vous ne choisissez pas de partition spécifique, vos données seront envoyées à la partition **[!UICONTROL Default]** dans Marketo.
-* **[!UICONTROL Marketo deduplication field]** : sélectionnez le champ Déduplication Marketo à utiliser lors de la mise à jour des prospects Marketo existants. Ce sélecteur affiche les champs que vous avez marqués comme champs de déduplication dans Marketo. Si vous souhaitez qu’un champ spécifique de Marketo s’affiche en tant que champ de déduplication, vous devez le marquer comme un [champ consultable](https://experienceleague.adobe.com/fr/docs/marketo-developer/marketo/rest/lead-database/lead-database) dans Marketo.
+* **[!UICONTROL Workspace ID]** : sélectionnez votre ID d’espace de travail Marketo.
+* **[!UICONTROL Type de synchronisation]** : sélectionnez le type de synchronisation à utiliser pour cette destination :
+   * **[!UICONTROL Audience et profil]** : sélectionnez cette option lorsque vous souhaitez à la fois ajouter des membres de l’audience aux listes Marketo et tenir à jour leurs informations de profil.
+   * **[!UICONTROL Profil uniquement]** : sélectionnez cette option lorsque vous souhaitez tenir les profils de prospect Marketo à jour avec les dernières informations d’Experience Platform.
+   * **[!UICONTROL Audience uniquement]** : sélectionnez cette option lorsque vous souhaitez ajouter des membres de l’audience aux listes Marketo sans mettre à jour leurs informations de profil.
+* **[!UICONTROL Partition]** : *la sélection de la partition est disponible uniquement lors du choix des types de synchronisation **[!UICONTROL Profil uniquement]**&#x200B;ou **[!UICONTROL Audience et profil]***. Sélectionnez un ID de partition Marketo associé à l’espace de travail de votre choix. Ceci permet de spécifier la partition de lead dans Marketo qui recevra les données exportées. Si vous ne choisissez pas de partition spécifique, vos données sont envoyées vers la partition **[!UICONTROL Par défaut]** dans Marketo.
+* **[!UICONTROL Champ de déduplication Marketo]** : sélectionnez le champ de déduplication Marketo que vous souhaitez utiliser lors de la mise à jour des prospects Marketo existants. Ce sélecteur affiche les champs que vous avez marqués comme champs de déduplication dans Marketo. Si vous souhaitez qu’un champ spécifique de Marketo s’affiche en tant que champ de déduplication, vous devez le marquer comme un [champ consultable](https://experienceleague.adobe.com/fr/docs/marketo-developer/marketo/rest/lead-database/lead-database) dans Marketo.
 
   >[!NOTE]
   >
   >Les `Lead ID` Marketo et les identifiants Experience Cloud (`ECID`) ne sont pas pris en charge pour la déduplication.
 
-* **[!UICONTROL Person Action]** : sélectionnez l’action Marketo à exécuter lors de l’exportation de données.
-   * **[!UICONTROL Update existing and create new persons]** : sélectionnez cette option pour mettre à jour les prospects Marketo existants et créer de nouveaux prospects pour les membres de l’audience qui ne sont pas déjà dans Marketo. De nouveaux prospects seront créés dans la partition sélectionnée. Si vous n’avez pas sélectionné de partition, de nouveaux prospects sont créés dans la partition **[!UICONTROL Default]**.
-   * **[!UICONTROL Update existing persons only]** : sélectionnez cette option lorsque vous souhaitez uniquement mettre à jour les prospects Marketo existants sans en créer de nouveaux. Si plusieurs prospects correspondent au même profil, seul le prospect Marketo le plus récemment mis à jour sera mis à jour avec vos données Experience Platform.
+* **[!UICONTROL Action de personne]** : sélectionnez l’action Marketo à exécuter lors de l’exportation de données.
+   * **[!UICONTROL Mettre à jour les prospects existants et créer de nouvelles personnes]** : sélectionnez cette option pour mettre à jour les prospects Marketo existants et créer de nouveaux prospects pour les membres de l’audience qui ne sont pas déjà dans Marketo. De nouveaux prospects seront créés dans la partition sélectionnée. Si vous n’avez pas sélectionné de partition, de nouveaux prospects sont créés dans la partition **[!UICONTROL Par défaut]**.
+   * **[!UICONTROL Mettre à jour les personnes existantes uniquement]** : sélectionnez cette option lorsque vous souhaitez uniquement mettre à jour les prospects Marketo existants sans en créer de nouveaux. Si plusieurs prospects correspondent au même profil, seul le prospect Marketo le plus récemment mis à jour sera mis à jour avec vos données Experience Platform.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

@@ -25,7 +25,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
 workflow-type: tm+mt
-source-wordcount: 1416
+source-wordcount: 1499
 ht-degree: 12%
 
 ---
@@ -98,8 +98,8 @@ Le tableau suivant décrit le type et la fréquence d’exportation des destinat
 
 | Élément | Type | Notes |
 | ---- | ---- | ----- |
-| Type d’exportation | **[!UICONTROL Audience export]** | Exporte tous les membres d’une audience avec les identifiants utilisés dans la destination [!DNL Acxiom Real ID Audience Connection]. |
-| Fréquence des exportations | **[!UICONTROL Batch]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Exporte tous les membres d’une audience avec les identifiants utilisés dans la destination [!DNL Acxiom Real ID Audience Connection]. |
+| Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -130,7 +130,7 @@ Activez les audiences vers les plateformes suivantes via la destination [!DNL Ac
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Paramètres spécifiques à la destination {#destination-settings}
 
@@ -140,7 +140,7 @@ Certaines destinations [!DNL Acxiom Real ID Audience Connection] nécessitent de
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Publisher Account ID]** : saisissez l’ID du compte d’éditeur associé à cette destination.
+* **[!UICONTROL ID du compte d’éditeur]** : saisissez l’ID du compte d’éditeur associé à cette destination.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Amazon] affichant le champ ID du compte d’éditeur.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_amazon_destination_details.png){zoomable="yes"}
 
@@ -148,7 +148,7 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Destination Account ID]** : saisissez l’identifiant du compte de destination pour cette destination.
+* **[!UICONTROL Identifiant du compte de destination]** : saisissez l’identifiant du compte de destination pour cette destination.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Facebook] affichant le champ Identifiant du compte de destination.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_facebook_destination_details.png){zoomable="yes"}
 
@@ -156,7 +156,7 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Segment Category]** : catégorie cible ou verticale de votre audience. Exemple : services financiers, automobile ou santé.
+* **[!UICONTROL Catégorie de segments]** : catégorie cible ou verticale dans laquelle votre audience se trouve. Exemple : services financiers, automobile ou santé.
 
   ![Copie d’écran du panneau Détails de la destination [!DNL LG Ads] affichant le champ Catégorie de segments.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_lg_ads_destination_details.png){zoomable="yes"}
 
@@ -164,7 +164,7 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Destination Account ID]** : saisissez l’identifiant du compte de destination pour cette destination.
+* **[!UICONTROL Identifiant du compte de destination]** : saisissez l’identifiant du compte de destination pour cette destination.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Pinterest] affichant le champ Identifiant du compte de destination.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_pinterest_destination_details.png){zoomable="yes"}
 
@@ -172,8 +172,8 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
-* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+* **[!UICONTROL ID publicitaire]** : saisissez l’ID publicitaire pour cette destination.
+* **[!UICONTROL Durée de la campagne en jours]** : saisissez la durée d’exécution de la campagne en nombre de jours.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Roku] affichant l’ID publicitaire et la durée de la campagne en jours.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/roku_destination_details.png){zoomable="yes"}
 
@@ -181,8 +181,8 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Advertiser Name]** : saisissez le nom de l’annonceur pour cette destination.
-* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
+* **[!UICONTROL Nom de l’annonceur]** : saisissez le nom de l’annonceur pour cette destination.
+* **[!UICONTROL ID publicitaire]** : saisissez l’ID publicitaire pour cette destination.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Samsung Ads] affichant les champs Nom de l’annonceur et ID de l’annonceur.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/samsung_ads_destination_details.png){zoomable="yes"}
 
@@ -190,9 +190,9 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Advertiser ID]** : saisissez l’ID publicitaire pour cette destination.
-* **[!UICONTROL Advertiser Secret Key on The Trade Desk platform]** : saisissez la clé secrète de l’annonceur pour cet ID d’annonceur. Si vous laissez ce champ vide, la distribution échoue.
-* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+* **[!UICONTROL ID publicitaire]** : saisissez l’ID publicitaire pour cette destination.
+* **[!UICONTROL Clé secrète de l’annonceur sur la plateforme The Trade Desk]** : saisissez la clé secrète de l’annonceur pour cet ID d’annonceur. Si vous laissez ce champ vide, la distribution échoue.
+* **[!UICONTROL Durée de la campagne en jours]** : saisissez la durée d’exécution de la campagne en nombre de jours.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL The Trade Desk] affichant l’ID publicitaire, la clé secrète publicitaire et la durée de la campagne dans les champs jours.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/the_trade_desk_destination_details.png){zoomable="yes"}
 
@@ -200,7 +200,7 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Advertiser Name]** : saisissez le nom de l’annonceur pour cette destination.
+* **[!UICONTROL Nom de l’annonceur]** : saisissez le nom de l’annonceur pour cette destination.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Vizio] affichant le champ Nom de l’annonceur.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_vizio_destination_details.png){zoomable="yes"}
 
@@ -208,7 +208,7 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Client name for Open AP]** : saisissez le nom du client pour [!DNL Warner Bros. Discovery] via [!DNL Open AP]. Votre représentant [!DNL Warner Bros. Discovery] active votre audience en votre nom par le biais d’une coordination avec [!DNL Open AP].
+* **[!UICONTROL Nom du client pour Open AP]** : saisissez le nom du client pour [!DNL Warner Bros. Discovery] via [!DNL Open AP]. Votre représentant [!DNL Warner Bros. Discovery] active votre audience en votre nom par le biais d’une coordination avec [!DNL Open AP].
 
   ![Copie d’écran du panneau Détails de la destination [!DNL Warner Bros. Discovery] affichant le nom du client pour [!DNL Open AP] champ.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/warner_bros_discovery_destination_details.png){zoomable="yes"}
 
@@ -216,8 +216,8 @@ Pour configurer les détails de la destination, renseignez les champs suivants.
 
 Pour configurer les détails de la destination, renseignez les champs suivants.
 
-* **[!UICONTROL Destination Account ID]** : saisissez l’identifiant du compte de destination pour cette destination.
-* **[!UICONTROL Campaign duration in days]** : saisissez la durée d’exécution de la campagne en nombre de jours.
+* **[!UICONTROL Identifiant du compte de destination]** : saisissez l’identifiant du compte de destination pour cette destination.
+* **[!UICONTROL Durée de la campagne en jours]** : saisissez la durée d’exécution de la campagne en nombre de jours.
 
   ![Copie d’écran du panneau des détails de la destination [!DNL Yahoo] affichant les champs ID du compte de destination et Durée de la campagne en jours.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/yahoo_destination_details.png){zoomable="yes"}
 
@@ -227,8 +227,8 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 
 Pour que la destination [!DNL Acxiom Real ID Audience Connection] reçoive correctement les données d’audience, mappez le champ source de [!DNL Experience Platform] au champ cible [!DNL Acxiom Real ID Audience Connection] correct.
 
-Le champ cible **[!UICONTROL Real ID]** est prérempli automatiquement à l’étape de mappage. Mappez-y votre champ source : un espace de noms d’identifiant personnalisé ou un [!DNL Acxiom] réel [!DNL Real ID] stocké dans votre schéma de profil.
+Le champ cible **[!UICONTROL ID réel]** est prérempli automatiquement à l’étape de mappage. Mappez-y votre champ source : un espace de noms d’identifiant personnalisé ou un [!DNL Acxiom] réel [!DNL Real ID] stocké dans votre schéma de profil.
 
 | Nom du champ | Description | Obligatoire |
 | ---------- | ----------- | -------- |
@@ -246,9 +246,9 @@ Le champ cible **[!UICONTROL Real ID]** est prérempli automatiquement à l’é
 
 {style="table-layout:auto"}
 
-Dans la colonne **[!UICONTROL Source Field]** , saisissez le nom de l’attribut source à mapper au champ cible **[!UICONTROL Real ID]**. Ou sélectionnez **[!UICONTROL Select source field]** pour parcourir les champs sources disponibles. Sélectionnez ensuite **[!UICONTROL Next]**.
+Dans la colonne **[!UICONTROL Champ]**, saisissez le nom de l&#39;attribut source que vous souhaitez mapper au champ cible **[!UICONTROL ID réel]**. Ou sélectionnez **[!UICONTROL Sélectionner le champ source]** pour parcourir les champs source disponibles. Sélectionnez ensuite **[!UICONTROL Suivant]**.
 
-![Capture d’écran de l’écran de mappage affichant la colonne [!UICONTROL Source Field] et le panneau [!UICONTROL Select source field].](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png){zoomable="yes"}
+![Capture d’écran de l’écran de mappage affichant la colonne [!UICONTROL Champ Source] et le panneau [!UICONTROL Sélectionner le champ source].](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png){zoomable="yes"}
 
 Si vous n’utilisez pas le schéma standard de [!DNL Adobe], consultez le guide de l’interface utilisateur de [Query Service](/help/query-service/ui/overview.md) pour renseigner le schéma standard de [!DNL Adobe] avec vos noms de champ.
 
@@ -256,7 +256,7 @@ Si vous n’utilisez pas le schéma standard de [!DNL Adobe], consultez le guide
 
 Une fois toutes les étapes effectuées, vérifiez le statut de la connexion de destination et les détails de l’audience avant de l’activer. Les audiences que vous avez sélectionnées apparaissent dans une liste. Chaque audience est un appel distinct à l’API [!DNL Acxiom Real ID Audience Connection].
 
-Lorsque les résultats semblent corrects, sélectionnez **[!UICONTROL Finish]** pour activer la destination.
+Lorsque les résultats semblent corrects, sélectionnez **[!UICONTROL Terminer]** pour activer la destination.
 
 ![Copie d’écran de l’écran Vérifier affichant le statut de connexion de destination et les audiences sélectionnées avant l’activation.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png){zoomable="yes"}
 

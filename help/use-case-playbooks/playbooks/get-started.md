@@ -6,8 +6,8 @@ role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 source-git-commit: d6b62b9539a04be2d2adc7aa66436a294e08303a
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 10%
+source-wordcount: '1063'
+ht-degree: 9%
 
 ---
 
@@ -30,7 +30,7 @@ Regardez cette vidéo pour en savoir plus sur les étapes nécessaires à la cr�
 
 ## Créer une sandbox de développement {#create-development-sandbox}
 
-Les playbooks de cas d’utilisation utilisent un type spécial de sandbox de développement. Pour commencer et accéder à la fonctionnalité de [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md), [créez un nouveau sandbox de développement](/help/sandboxes/ui/user-guide.md#create) (veillez à ne pas sélectionner de sandbox de production) dont le nom (et non le titre) contient `-ucp` ou `-UCP` comme illustré ci-dessous.
+Les playbooks de cas d’utilisation utilisent un type spécial de sandbox de développement. Pour commencer et accéder à la fonctionnalité [[!UICONTROL Playbooks de cas d’utilisation]](/help/use-case-playbooks/playbooks/overview.md), [créez un nouveau sandbox de développement](/help/sandboxes/ui/user-guide.md#create) (veillez à ne pas sélectionner de sandbox de production) dont le nom (et non le titre) contient `-ucp` ou `-UCP` dans le suffixe, comme illustré ci-dessous.
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Les playbooks de cas d’utilisation utilisent un type spécial de sandbox de d�
 
 ![Créer une sandbox de développement pour les playbooks de cas d’utilisation](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-Vous devriez maintenant voir [!UICONTROL Playbooks] dans le rail de gauche sous [!UICONTROL Use Case Playbooks].
+Vous devriez maintenant voir [!UICONTROL Playbooks] dans le rail de gauche sous [!UICONTROL Playbooks de cas d’utilisation].
 
 ![Playbooks de cas d’utilisation dans l’interface utilisateur après la création d’une sandbox.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
@@ -47,7 +47,7 @@ Si vous ne voyez pas [!UICONTROL Playbooks] dans le rail de gauche, comme illust
 
 ## Accorder à votre équipe les autorisations d’accès requises {#grant-access-permissions}
 
-Pour commencer à utiliser [!UICONTROL Use Case Playbooks], les membres de votre équipe marketing doivent disposer des autorisations appropriées afin de pouvoir afficher la liste des playbooks créés ou en créer eux-mêmes.
+Pour commencer à utiliser les [!UICONTROL playbooks de cas d’utilisation], les membres de votre équipe marketing ont besoin des autorisations appropriées afin de pouvoir afficher la liste des playbooks créés ou créer des playbooks eux-mêmes.
 
 **Autorisations requises**
 
@@ -69,15 +69,15 @@ Dans le cadre des playbooks de cas d’utilisation, vous allez créer différent
 
 **Autorisations pour les schémas**
 
-Pour créer et gérer des schémas, utilisez les autorisations de modélisation des données : **[!UICONTROL Manage Schemas]**, **[!UICONTROL View Schemas]**, **[!UICONTROL Manage Relationships]**, **[!UICONTROL Manage Identity Metadata]**
+Pour créer et gérer des schémas, utilisez les autorisations de modélisation des données **[!UICONTROL Gérer les schémas]**, **[!UICONTROL Afficher les schémas]**, **[!UICONTROL Gérer les relations]** **[!UICONTROL Gérer les métadonnées d’identité]**
 
 **Autorisations pour les destinations**
 
-Pour créer et gérer des destinations, utilisez les autorisations de Destinations : **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, **[!UICONTROL Destination Authoring]**.
+Pour créer et gérer des destinations, utilisez les autorisations de destinations ; **[!UICONTROL Gérer]**, **[!UICONTROL Destinations]**, **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Activer le segment sans mappage]**, **[!UICONTROL Gérer et activer la destination du jeu de données]**, **[!UICONTROL Création de destinations]**.
 
 **Autorisations pour parcours**
 
-Pour créer et gérer des parcours, utilisez les autorisations des Parcours : **[!UICONTROL Manage Journeys]**, **[!UICONTROL View Journeys]**, **[!UICONTROL View Journeys Report]**, **[!UICONTROL Manage Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions]**, **[!UICONTROL View Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions, Publish Journeys]**.
+Pour créer et gérer des parcours, utilisez les autorisations des Parcours : **[!UICONTROL Gérer les Parcours]**, **[!UICONTROL Afficher les Parcours]**, **[!UICONTROL Afficher le rapport de Parcours]**, **[!UICONTROL Gérer les Parcours]**, **[!UICONTROL Événements]**, **[!UICONTROL Afficher les sources et actions]**, **[!UICONTROL Afficher les Parcours]**, **[!UICONTROL Afficher les sources et actions de données, Publier les Parcours]** **&#x200B;**.
 
 L’image ci-dessous présente un instantané des autorisations recommandées pour que les utilisateurs puissent afficher, créer et gérer des playbooks et les ressources générées par les playbooks.
 
@@ -95,7 +95,7 @@ Pour créer des instances de playbooks dans Journey Optimizer, vous devez config
 
 ### Surface du canal e-mail
 
-Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=fr).
+Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
 ### Surface du canal SMS
 
@@ -111,7 +111,7 @@ Vérifiez que les configurations de canal sont configurées à partir de l’int
 
 Sélectionnez ensuite le canal, les plateformes et les applications que vous avez examinés dans les configurations de canal. Sélectionnez **Envoyer** pour créer la surface de canal push.
 
-Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=fr).
+Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
 ## Étapes suivantes {#next-steps}
 

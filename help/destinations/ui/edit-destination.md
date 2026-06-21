@@ -11,8 +11,8 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 367
-ht-degree: 5%
+source-wordcount: 375
+ht-degree: 4%
 
 ---
 
@@ -26,16 +26,16 @@ Découvrez comment modifier différents composants d’une connexion de destinat
 
 ## Conditions préalables {#prerequisites}
 
-Pour modifier les connexions de destination, vous avez besoin de l’autorisation **[!UICONTROL Manage Destinations]** [contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+Pour modifier les connexions de destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 ## Modifier les connexions de destination {#edit}
 
 Pour modifier différents composants d’une connexion de destination existante :
 
-1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
+1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**.
 2. Sélectionnez la destination que vous souhaitez modifier.
-3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;pour modifier les connexions de destination existantes.
-4. Dans la fenêtre modale, modifiez tous les paramètres souhaités. Sélectionnez **[!UICONTROL Save]** lorsque vous avez terminé.
+3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier la destination](/help/images/icons/edit.png)**[!UICONTROL Modifier la destination &#x200B;]**&#x200B;pour modifier les connexions de destination existantes.
+4. Dans la fenêtre modale, modifiez tous les paramètres souhaités. Sélectionnez **[!UICONTROL Enregistrer]** lorsque vous avez terminé.
 
 Dans la fenêtre Modifier la destination , vous pouvez mettre à jour les paramètres que vous avez configurés lors de la connexion initiale à la destination. Ces paramètres sont différents en fonction de la plateforme de destination que vous mettez à jour.
 
@@ -67,6 +67,6 @@ Vous trouverez ci-dessous quelques exemples de paramètres que vous pouvez mettr
 
 ## Étapes suivantes {#next-steps}
 
-Vous avez correctement mis à jour les connexions de destination existantes à l’aide de l’espace de travail **[!UICONTROL destinations]**.
+Vous avez mis à jour les connexions de destination existantes à l’aide de l’espace de travail **[!UICONTROL destinations]**.
 
 Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../catalog/overview.md).

@@ -57,7 +57,7 @@ Pour générer des prédictions de résiliation client, le modèle dépend des c
 | `timestamp` | La date et l’heure exactes de chaque événement d’achat. |
 | `commerce.order.purchaseID` | Valeur requise qui confirme un achat terminé. |
 
-Le jeu de données doit contenir des enregistrements de transaction client historiques structurés, chaque ligne représentant un événement d’achat. Chaque événement doit inclure des horodatages dans un format date-heure approprié compatible avec la fonction SQL `DATEDIFF` (par exemple, AAAA-MM-JJ HH:MI:SS). En outre, chaque enregistrement doit contenir un Experience Cloud ID valide (`ECID`) dans le champ `identityMap` pour identifier les clients de manière unique.
+Le jeu de données doit contenir des enregistrements de transaction client historiques structurés, chaque ligne représentant un événement d’achat. Chaque événement doit inclure des horodatages dans un format date-heure approprié compatible avec la fonction SQL `DATEDIFF` (par exemple, AAAA-MM-JJ HH:MI:SS). En outre, chaque enregistrement doit contenir un Experience Cloud ID (`ECID`) valide dans le champ `identityMap` pour identifier les clients de manière unique.
 
 >[!TIP]
 >

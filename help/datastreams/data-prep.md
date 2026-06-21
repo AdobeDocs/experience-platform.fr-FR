@@ -28,7 +28,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1143
+source-wordcount: 1168
 ht-degree: 29%
 
 ---
@@ -56,7 +56,7 @@ La préparation des données pour la collecte de données est utile dans deux ca
 
 La couche de données existante doit être envoyée à l’aide de l’objet [`data`](/help/collection/js/commands/sendevent/data.md) dans la commande `sendEvent`.
 
-Si vous utilisez [!DNL Tags], vous devez utiliser le champ **[!UICONTROL Data]** du type d’action [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
+Si vous utilisez [!DNL Tags], vous devez utiliser le champ **[!UICONTROL Data]** de type d&#39;action [**[!UICONTROL Envoyer l&#39;événement]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
 
 Le reste de ce guide explique comment mapper la couche de données aux normes XDM après son envoi par le SDK Web.
 
@@ -76,7 +76,7 @@ Pour une démonstration rapide du processus de préparation des données pour la
 
 ## Fournir des exemples de données {#select-data}
 
-Sélectionnez **[!UICONTROL Save and Add Mapping]** après avoir terminé la configuration de base d’un flux de données et l’étape **[!UICONTROL Select data]** s’affiche. Ensuite, vous devez fournir un exemple d’objet JSON qui représente la structure des données que vous prévoyez d’envoyer à Experience Platform.
+Sélectionnez **[!UICONTROL Enregistrer et ajouter un mappage]** après avoir terminé la configuration de base d’un flux de données, et l’étape **[!UICONTROL Sélectionner des données]** s’affiche. Ensuite, vous devez fournir un exemple d’objet JSON qui représente la structure des données que vous prévoyez d’envoyer à Experience Platform.
 
 Pour capturer les propriétés directement à partir de la couche de données, l’objet JSON doit comporter une seule propriété racine `data`. Les sous-propriétés de l’objet `data` doivent ensuite être structurées de manière à correspondre aux propriétés de la couche de données que vous souhaitez capturer. Sélectionnez la section ci-dessous pour afficher un exemple d’objet JSON correctement formaté avec une racine `data`.
 
@@ -176,7 +176,7 @@ Les mêmes règles s’appliquent à l’objet JSON pour capturer les propriét�
 
 +++
 
-Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichier ou coller l’objet brut dans la zone de texte fournie. Si le fichier JSON est valide, un schéma d’aperçu s’affiche dans le panneau de droite. Sélectionnez **[!UICONTROL Next]** pour continuer.
+Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichier ou coller l’objet brut dans la zone de texte fournie. Si le fichier JSON est valide, un schéma d’aperçu s’affiche dans le panneau de droite. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Exemple JSON de données entrantes attendues.](assets/data-prep/select-data.png)
 
@@ -186,7 +186,7 @@ Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichie
 
 ## Mappage des données {#mapping}
 
-L’étape **[!UICONTROL Mapping]** s’affiche et vous permet de mapper les champs de vos données source à ceux du schéma d’événement cible dans Experience Platform. Ensuite, vous pouvez configurer le mappage de deux manières :
+L’étape **[!UICONTROL Mappage]** s’affiche et vous permet de mapper les champs de vos données source à ceux du schéma d’événement cible dans Experience Platform. Ensuite, vous pouvez configurer le mappage de deux manières :
 
 * [Créer des règles de mappage](#create-mapping) pour ce flux de données via un processus manuel.
 * [Importer des règles de mappage](#import-mapping) d’un flux de données existant.
@@ -197,19 +197,19 @@ L’étape **[!UICONTROL Mapping]** s’affiche et vous permet de mapper les cha
 
 ### Créer des règles de mappage {#create-mapping}
 
-Pour créer une règle de mappage, sélectionnez **[!UICONTROL Add new mapping]**.
+Pour créer une règle de mappage, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
 ![Ajout d’un nouveau mappage.](assets/data-prep/add-new-mapping.png)
 
-Sélectionnez l’icône de source (![icône du sélecteur de champ &#x200B;](/help/images/icons/source.png)), puis, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source à mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Select]** pour continuer.
+Sélectionnez l’icône de source (![icône du sélecteur de champ &#x200B;](/help/images/icons/source.png)), puis, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source à mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Sélectionner]** pour continuer.
 
 ![Sélection du champ à mapper dans le schéma source.](assets/data-prep/source-mapping.png)
 
-Sélectionnez ensuite l’icône de schéma (![icône du sélecteur de schéma cible](/help/images/icons/schema.png)) pour ouvrir une boîte de dialogue similaire pour le schéma d’événement cible. Sélectionnez le champ vers lequel vous souhaitez mapper les données avant de confirmer avec **[!UICONTROL Select]**.
+Sélectionnez ensuite l’icône de schéma (![icône du sélecteur de schéma cible](/help/images/icons/schema.png)) pour ouvrir une boîte de dialogue similaire pour le schéma d’événement cible. Sélectionnez le champ vers lequel vous souhaitez mapper les données avant de confirmer à l’aide de l’option **[!UICONTROL Sélectionner]**.
 
 ![Sélection du champ à mapper dans le schéma cible.](assets/data-prep/target-mapping.png)
 
-La page de mappage réapparaît et affiche le mappage des champs terminé. La section **[!UICONTROL Mapping progress]** est mise à jour pour refléter le nombre total de champs qui ont été mappés.
+La page de mappage réapparaît et affiche le mappage des champs terminé. La section **[!UICONTROL Progression du mappage]** est mise à jour pour refléter le nombre total de champs qui ont été mappés.
 
 ![Progression reflétée du champ mappé.](assets/data-prep/field-mapped.png)
 
@@ -227,11 +227,11 @@ Si vous avez précédemment créé un flux de données, vous pouvez réutiliser 
 >
 >L’importation de règles de mappage à partir d’un autre flux de données remplace tous les mappages de champs que vous avez ajoutés avant l’importation.
 
-Pour commencer, sélectionnez **[!UICONTROL Import Mapping]**.
+Pour commencer, sélectionnez **[!UICONTROL Importer le mappage]**.
 
 ![Bouton Importer le mappage sélectionné.](assets/data-prep/import-mapping-button.png)
 
-Dans la boîte de dialogue qui s’affiche, sélectionnez le flux de données dont vous souhaitez importer les règles de mappage. Une fois le flux de données choisi, sélectionnez **[!UICONTROL Preview]**.
+Dans la boîte de dialogue qui s’affiche, sélectionnez le flux de données dont vous souhaitez importer les règles de mappage. Une fois le flux de données choisi, sélectionnez **[!UICONTROL Aperçu]**.
 
 ![Sélection d’un flux de données existant.](assets/data-prep/select-mapping-rules.png)
 
@@ -239,7 +239,7 @@ Dans la boîte de dialogue qui s’affiche, sélectionnez le flux de données do
 >
 >Les flux de données peuvent uniquement être importés dans le même [sandbox](/help/sandboxes/home.md). Vous ne pouvez pas importer un flux de données d’un sandbox à un autre.
 
-L’écran suivant affiche un aperçu des règles de mappage enregistrées pour le flux de données sélectionné. Assurez-vous que les mappages affichés vous conviennent, puis sélectionnez **[!UICONTROL Import]** pour confirmer et ajouter les mappages au nouveau flux de données.
+L’écran suivant affiche un aperçu des règles de mappage enregistrées pour le flux de données sélectionné. Assurez-vous que les mappages affichés vous conviennent, puis sélectionnez **[!UICONTROL Importer]** pour confirmer et ajouter les mappages au nouveau flux de données.
 
 ![Règles de mappage à importer.](assets/data-prep/import-mapping-rules.png)
 
@@ -249,9 +249,9 @@ L’écran suivant affiche un aperçu des règles de mappage enregistrées pour 
 
 ### Terminer le mappage {#complete-mapping}
 
-Poursuivez le mappage des champs restants au schéma cible. Bien que vous ne deviez pas mapper tous les champs source disponibles, tous les champs du schéma cible qui sont définis comme obligatoires doivent être mappés pour terminer cette étape. Le compteur **[!UICONTROL Required fields]** indique le nombre de champs obligatoires qui ne sont pas encore mappés dans la configuration actuelle.
+Poursuivez le mappage des champs restants au schéma cible. Bien que vous ne deviez pas mapper tous les champs source disponibles, tous les champs du schéma cible qui sont définis comme obligatoires doivent être mappés pour terminer cette étape. Le compteur **[!UICONTROL Champs obligatoires]** indique le nombre de champs obligatoires qui ne sont pas encore mappés dans la configuration actuelle.
 
-Lorsque le nombre de champs requis atteint zéro et que le mappage vous convient, sélectionnez **[!UICONTROL Save]** pour finaliser les modifications.
+Lorsque le nombre de champs requis atteint zéro et que le mappage vous convient, sélectionnez **[!UICONTROL Enregistrer]** pour finaliser les modifications.
 
 ![L’interface de mappage affichant tous les champs obligatoires mappés avec un nombre de champs obligatoires nul.](assets/data-prep/mapping-complete.png)
 

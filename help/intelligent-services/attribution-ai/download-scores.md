@@ -15,7 +15,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1058
+source-wordcount: 1060
 ht-degree: 59%
 
 ---
@@ -32,7 +32,7 @@ En outre, pour accéder aux scores pour l’IA dédiée à l’attribution, vous
 
 ## Recherche de votre identifiant de jeu de données {#dataset-id}
 
-Dans votre instance de service pour les insights IA dédiée à l’attribution, cliquez sur le menu déroulant *Plus d’actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
+Dans votre instance de service pour les insights IA dédiée à l’attribution, cliquez sur le menu déroulant *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
 
 ![actions supplémentaires](./images/download-scores/more-actions.png)
 

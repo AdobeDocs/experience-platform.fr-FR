@@ -18,8 +18,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1471
-ht-degree: 25%
+source-wordcount: 1499
+ht-degree: 24%
 
 ---
 
@@ -47,11 +47,11 @@ Avant de commencer à utiliser les audiences de compte, passez en revue les diff
 
 ## Accès {#access}
 
-Pour accéder aux audiences du compte, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Accounts]** .
+Pour accéder aux audiences de compte, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Comptes]**.
 
 ![Le bouton Audiences est mis en surbrillance dans la section Comptes.](../images/types/account/select.png)
 
-La page [!UICONTROL Browse] s’affiche, affichant une liste de toutes les audiences de compte pour l’organisation.
+La page [!UICONTROL Parcourir] s’affiche, affichant une liste de toutes les audiences de compte pour l’organisation.
 
 ![Les audiences de compte appartenant à l’organisation s’affichent.](../images/types/account/browse.png)
 
@@ -65,15 +65,15 @@ Vous pouvez également utiliser la fonctionnalité de recherche et de filtrage p
 >
 >Les audiences de compte sont évaluées à l’aide de la segmentation **par lots** et seront évaluées toutes les 24 heures.
 
-Pour créer une audience de compte, sélectionnez **[!UICONTROL Create audience]** sur la page de [!UICONTROL Browse].
+Pour créer une audience de compte, sélectionnez **[!UICONTROL Créer une audience]** sur la page [!UICONTROL Parcourir].
 
-![Le bouton [!UICONTROL Create audience] est mis en surbrillance sur la page de navigation de l’audience du compte.](../images/types/account/select-create-audience.png)
+![Le bouton [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l’audience du compte.](../images/types/account/select-create-audience.png)
 
-Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributes] , vous pouvez ajouter des attributs créés par Experience Platform et des attributs personnalisés.
+Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributs], vous pouvez ajouter des attributs créés par Experience Platform et des attributs personnalisés.
 
 ![Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences s’affichent.](../images/types/account/segment-builder.png)
 
-Sous l’onglet [!UICONTROL Audiences] , vous pouvez ajouter des audiences basées sur les personnes créées précédemment à partir desquelles vous pouvez créer votre propre audience de compte.
+Sous l’onglet [!UICONTROL Audiences], vous pouvez ajouter des audiences basées sur les personnes créées précédemment à partir de lors de la création de votre propre audience de compte.
 
 ![L’onglet Audiences du créateur de segments est mis en surbrillance.](../images/types/account/audiences.png)
 
@@ -87,11 +87,11 @@ Pour utiliser les autres types de relation, sélectionnez ![icône des paramètr
 
 ![L’icône des paramètres est mise en surbrillance dans la section Champs.](../images/types/account/select-settings.png)
 
-Dans l’onglet [!UICONTROL Settings] , sélectionnez **[!UICONTROL Show relationship selectors]** dans la section **[!UICONTROL Relationship of fields]** .
+Sur l’onglet [!UICONTROL Paramètres], sélectionnez **[!UICONTROL Afficher les sélecteurs de relation]** dans la section **[!UICONTROL Relation des champs]**.
 
 ![Le bouton (bascule) Afficher les sélecteurs de relation est sélectionné dans la section Relation des champs de l’onglet Paramètres.](../images/types/account/show-relation-selectors.png)
 
-Sélectionnez à nouveau ![l’icône des paramètres](../../images/icons/settings.png) pour revenir à l’onglet [!UICONTROL Fields] . Vous pouvez maintenant voir la section **[!UICONTROL Establish relationships]** , qui vous permet d’établir comment le compte est connecté à la personne et comment la personne est connectée à l’opportunité.
+Sélectionnez à nouveau ![l’icône des paramètres](../../images/icons/settings.png) pour revenir à l’onglet [!UICONTROL Champs]. Vous pouvez maintenant voir la section **[!UICONTROL Établir des relations]**, qui vous permet d’établir comment le compte est connecté à la personne et comment la personne est connectée à l’opportunité.
 
 ![La section Établir des relations est mise en surbrillance, affichant les options permettant de connecter un compte à une personne et de connecter une personne à une opportunité.](../images/types/account/establish-relationships.png)
 
@@ -120,11 +120,11 @@ Après avoir établi la relation souhaitée, vous pouvez ajouter les personnes-a
 
 Après avoir créé l’audience de votre compte, vous pouvez activer l’audience pour d’autres services en aval.
 
-Sélectionnez l’audience à activer, puis **[!UICONTROL Activate to destination]**.
+Sélectionnez l’audience à activer, puis **[!UICONTROL Activer vers la destination]**.
 
-![Le bouton [!UICONTROL Activate to destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
+![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
 
-La page [!UICONTROL Activate destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
+La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
 
 ## Étapes suivantes {#next-steps}
 

@@ -21,14 +21,14 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1204
+source-wordcount: 1250
 ht-degree: 30%
 
 ---
 
 # Connexion [!DNL Algolia]
 
-## Vue d&#39;ensemble {#overview}
+## Vue d’ensemble {#overview}
 
 >[!IMPORTANT]
 >
@@ -60,8 +60,8 @@ Ensuite, utilisez le connecteur source de [[!DNL Algolia User Profiles]](/help/s
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**&#x200B;[&#x200B; &#x200B;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ## Identités prises en charge {#supported-identities}
 
@@ -105,7 +105,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 |---------|----------|---------|
 | Type d’exportation | **[!DNL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Algolia]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -113,16 +113,16 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations du jeu de données]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL Application ID]** : l’ID de l’application [!DNL Algolia] est un identifiant unique attribué à votre compte [!DNL Algolia].
-* **[!UICONTROL API Key]** : la clé API [!DNL Algolia] est une information d’identification utilisée pour authentifier et autoriser les requêtes API aux services de recherche et d’indexation d’[!DNL Algolia].
+* **[!UICONTROL ID de l’application]** : l’ID de l’application [!DNL Algolia] est un identifiant unique attribué à votre compte [!DNL Algolia].
+* **[!UICONTROL Clé API]** : la clé API [!DNL Algolia] est une information d’identification utilisée pour authentifier et autoriser les requêtes API aux services de recherche et d’indexation d’[!DNL Algolia].
 
 Pour plus d’informations sur ces informations d’identification, consultez la [!DNL Algolia] [documentation d’authentification](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
@@ -132,9 +132,9 @@ Pour plus d’informations sur ces informations d’identification, consultez la
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Name]** : renseignez le nom de votre choix pour cette destination.
+* **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : brève explication de l’objectif de la destination.
-* **[!UICONTROL Region]** : les options sont **États-Unis** ou **UE**. Sélectionnez la région dans laquelle les données client sont stockées.
+* **[!UICONTROL Region]** : les options sont **US** ou **EU**. Sélectionnez la région dans laquelle les données client sont stockées.
 
 
 ![Détails du compte](../../assets/catalog/personalization/algolia/account.png)
@@ -143,26 +143,26 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès Afficher le graphique [d’identités](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions).
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#mapping-attributes-identities}
 
-Pendant l’[!UICONTROL Mapping step], vous devez mapper l’identité source AlgoliaUserToken à l’identité cible userId.
+Au cours de l’étape [!UICONTROL Mappage], vous devez mapper l’identité source AlgoliaUserToken à l’identité cible userId.
 
 ![Mappage terminé](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
 ## Valider l’exportation des données {#exported-data}
 
-Pour vérifier si l’exportation des audiences vers les profils utilisateur a réussi, vérifiez le tableau de bord de votre [!DNL Algolia], accédez à **[!UICONTROL Advanced Personalization]** et cliquez sur **[!UICONTROL User Inspector]**. Recherchez un profil utilisateur associé à l’audience [!DNL Adobe Experience Platform] exportée et recherchez-le dans l’Inspecteur d’utilisateur. L’identifiant d’audience s’affiche dans la section de segment.
+Pour vérifier si l’exportation des audiences vers les profils utilisateur a réussi, vérifiez votre tableau de bord [!DNL Algolia] et accédez à **[!UICONTROL Personalization avancé]** puis cliquez sur **[!UICONTROL Inspecteur d’utilisateur]**. Recherchez un profil utilisateur associé à l’audience [!DNL Adobe Experience Platform] exportée et recherchez-le dans l’Inspecteur d’utilisateur. L’identifiant d’audience s’affiche dans la section de segment.
 
 ![Inspecteur des utilisateurs d’Algolie](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 

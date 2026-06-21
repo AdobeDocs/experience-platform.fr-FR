@@ -21,8 +21,8 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 489
-ht-degree: 62%
+source-wordcount: 506
+ht-degree: 60%
 
 ---
 
@@ -36,19 +36,19 @@ Pour créer des jeux de données à partir de l’interface utilisateur d’Adob
 
 1. Rédigez votre requête à l’aide d’un client connecté et validez la sortie. Pour savoir comment écrire des requêtes à l’aide de [!DNL Query Editor], lisez le guide de l’interface utilisateur [!DNL Query Editor] [sur l’écriture de requêtes](./user-guide.md#writing-queries).
 
-2. Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Queries]** puis à l’onglet **[!UICONTROL Templates]** et sélectionnez la requête que vous avez créée. Pour plus d’informations sur l’affichage des requêtes qui ont été créées et enregistrées pour votre organisation dans l’interface utilisateur d’Experience Platform, lisez la [[!DNL Query Service] présentation](./overview.md#browse).
+2. Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Requêtes]** suivi de l’onglet **[!UICONTROL Modèles]** et sélectionnez la requête que vous avez créée. Pour plus d’informations sur l’affichage des requêtes qui ont été créées et enregistrées pour votre organisation dans l’interface utilisateur d’Experience Platform, lisez la [[!DNL Query Service] présentation](./overview.md#browse).
 
-3. Dans le panneau Détails de la requête, sélectionnez **[!UICONTROL Run as CTAS]**.
+3. Dans le panneau Détails de la requête, sélectionnez **[!UICONTROL Exécuter en tant que CTAS]**.
 
-   ![Onglet [!UICONTROL Templates] de l’espace de travail Requêtes avec l’[!UICONTROL Run as CTAS] Sélectionner en surbrillance.](../images/ui/create-datasets/run-as-ctas.png)
+   ![Onglet Espace de travail Requêtes [!UICONTROL Modèles] avec l’option Sélectionner [!UICONTROL Exécuter en tant que CTAS] mise en surbrillance.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. Dans la boîte de dialogue qui s’affiche, saisissez un nom de jeu de données précédé de votre identifiant LDAP. Le nom du jeu de données ne doit pas nécessairement être unique ou compatible avec SQL. Notez que le nom du tableau de votre jeu de données sera généré en fonction du nom du jeu de données que vous créez ici.
 
-5. Ensuite, saisissez une description pour votre jeu de données dans le champ [!UICONTROL Description] et sélectionnez **[!UICONTROL Run as CTAS]**.
+5. Ensuite, saisissez une description pour votre jeu de données dans le champ [!UICONTROL Description] et sélectionnez **[!UICONTROL Exécuter en tant que CTAS]**.
 
-   ![La boîte de dialogue Jeu de données de sortie avec les détails du jeu de données et les [!UICONTROL Run as CTAS] en surbrillance](../images/ui/create-datasets/run-query.png)
+   ![Boîte de dialogue Jeu de données de sortie avec les détails du jeu de données et [!UICONTROL Exécuter en tant que CTAS] en surbrillance](../images/ui/create-datasets/run-query.png)
 
-6. Une fois l’exécution de la requête terminée, accédez à **[!UICONTROL Datasets]** pour afficher le jeu de données que vous avez créé. Pour en savoir plus sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur d’Experience Platform, consultez le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
+6. Une fois l’exécution de la requête terminée, accédez à **[!UICONTROL Jeux de données]** pour afficher le jeu de données que vous avez créé. Pour en savoir plus sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur d’Experience Platform, consultez le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
 
 Une fois qu’un jeu de données est créé, il est possible d’y accéder comme à tout autre jeu de données du [!DNL Data Lake] et de l’utiliser pour divers cas d’utilisation.
 

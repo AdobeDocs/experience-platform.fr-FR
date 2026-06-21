@@ -42,7 +42,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1496
+source-wordcount: 1500
 ht-degree: 87%
 
 ---
@@ -71,7 +71,7 @@ Pour obtenir des instructions détaillées sur la création de groupes et l’aj
 
 ## &#x200B;2. Connexion
 
-Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur d’Experience Platform ou à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’écran de connexion [&#128279;](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Data Collection]** ou **[!UICONTROL Experience Platform]**.
+Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur d’Experience Platform ou à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’écran de connexion [Experience Cloud](https://experience.adobe.com/), puis sélectionnez **[!UICONTROL Collecte de données]** ou **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >

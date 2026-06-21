@@ -9,14 +9,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 185
-ht-degree: 8%
+source-wordcount: 189
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Card Actions] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Actions de carte]
 
-[!UICONTROL Card Actions] groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un champ de `personalFinances.cardActions` unique à un schéma, qui capture les détails d’une action de carte, tels que le type de carte, le statut d’activation et le statut de verrouillage.
+[!UICONTROL Actions de carte] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un champ de `personalFinances.cardActions` unique à un schéma, qui capture les détails d’une action de carte, tels que le type de carte, le statut d’activation et le statut de verrouillage.
 
 ![](../../images/field-groups/card-actions.png)
 

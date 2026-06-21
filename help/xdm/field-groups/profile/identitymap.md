@@ -12,18 +12,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 153
-ht-degree: 60%
+source-wordcount: 161
+ht-degree: 57%
 
 ---
 
-# [!UICONTROL IdentityMap] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL IdentityMap]
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL IdentityMap] est un groupe de champs de schéma standard pour la classe [[!UICONTROL XDM ExperienceEvent] et un groupe de champs compatible &#x200B;](../../classes/experienceevent.md) la classe [[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur saisies par espace de noms.
+[!UICONTROL IdentityMap] est un groupe de champs de schéma standard pour la classe [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) et un groupe de champs compatible pour la classe [[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur saisies par espace de noms.
 
 ![Diagramme du groupe de champs de schéma [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
 

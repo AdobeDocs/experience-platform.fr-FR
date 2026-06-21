@@ -12,8 +12,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 79
-ht-degree: 46%
+source-wordcount: 83
+ht-degree: 44%
 
 ---
 
@@ -38,7 +38,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les espaces de noms dont la valeur « [!UICONTROL custom] » est « [!UICONTROL false] » sont des espaces de noms standard, tandis que ceux dont la valeur « [!UICONTROL custom] » est « [!UICONTROL true] » sont des espaces de noms créés par votre organisation.
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les espaces de noms dont la valeur « [!UICONTROL custom] » est définie sur « [!UICONTROL false] » sont des espaces de noms standard, tandis que ceux dont la valeur « [!UICONTROL custom] » est définie sur « [!UICONTROL true] » sont des espaces de noms créés par votre organisation.
 
 >[!NOTE]
 >

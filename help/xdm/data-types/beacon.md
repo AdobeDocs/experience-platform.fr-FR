@@ -13,14 +13,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 255
+source-wordcount: 258
 ht-degree: 6%
 
 ---
 
-# Type de données [!UICONTROL Beacon]
+# Type de données [!UICONTROL Balise]
 
-[!UICONTROL Beacon] est un type de données XDM standard qui décrit l’appareil sans fil qui communique des informations d’identité aux applications mobiles lorsque des appareils mobiles arrivent à portée.
+[!UICONTROL Balise] est un type de données XDM standard qui décrit l’appareil sans fil qui communique des informations d’identité aux applications mobiles lorsque des appareils mobiles arrivent à portée.
 
 ![](../images/data-types/beacon.png){width=450}
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur ce type de données, reportez-vous au référenti
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Beacon].
+La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Balise].
 
 ## Valeurs acceptées pour la proximité {#proximity}
 

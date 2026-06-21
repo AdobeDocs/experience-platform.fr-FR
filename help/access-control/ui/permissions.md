@@ -6,8 +6,8 @@ description: Le contrôle d’accès dans Adobe Experience Platform vous permet 
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 74%
+source-wordcount: '363'
+ht-degree: 31%
 
 ---
 
@@ -19,11 +19,11 @@ Immédiatement après la [création d’un nouveau profil de produit](#create-a-
 
 Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) et sa description. Reportez-vous au tableau de [Autorisations des ressources](/help/access-control/home.md#permissions) pour obtenir une répartition des autorisations disponibles pour chaque rôle.
 
-Sélectionnez nʼimporte quelle catégorie de la liste pour ouvrir la page **[!UICONTROL Modifier les autorisations]**.
+Sélectionnez une catégorie dans la liste pour ouvrir la page **[!UICONTROL Modifier les autorisations]**.
 
 ![modification des autorisations](../images/edit-permissions.png)
 
-La page **[!UICONTROL Modifier les autorisations]** fournit un espace de travail servant à ajouter et à supprimer des autorisations pour le profil de produit sélectionné. Le côté gauche de l’écran affiche une liste de catégories d’autorisation. Sélectionner une catégorie modifie les autorisations affichées sous **[!UICONTROL Éléments dʼautorisation disponibles]**.
+La page **[!UICONTROL Modifier les autorisations]** fournit un espace de travail permettant d’ajouter et de supprimer des autorisations du profil de produit sélectionné. Le côté gauche de l’écran affiche une liste de catégories d’autorisation. La sélection d’une catégorie modifie les autorisations affichées sous **[!UICONTROL Éléments d’autorisations disponibles]**.
 
 Par exemple, pour mettre à jour les autorisations pour la modélisation des données, sélectionnez **[!UICONTROL Modélisation des données]**.
 
@@ -35,9 +35,9 @@ Pour ajouter une autorisation, sélectionnez l’icône plus **(+)** en regard d
 
 >[!NOTE]
 >
->La liste des **[!UICONTROL Éléments d’autorisations inclus]** n’affiche que les autorisations ajoutées à partir de la catégorie actuellement sélectionnée.
+>La liste **[!UICONTROL Éléments d’autorisations inclus]** n’affiche que les autorisations ajoutées à partir de la catégorie actuellement sélectionnée.
 
-Pour supprimer une autorisation, sélectionnez lʼicône **X** à côté du nom de lʼautorisation ou sélectionnez **[!UICONTROL Supprimer tout]** pour supprimer toutes les autorisations sous la catégorie actuelle. Les autorisations supprimées réapparaissent sous **[!UICONTROL Éléments d’autorisation disponibles]**.
+Pour supprimer une autorisation, cliquez sur l’icône **X** en regard du nom de l’autorisation, ou sélectionnez **[!UICONTROL Supprimer tout]** pour supprimer toutes les autorisations sous la catégorie actuelle. Les autorisations supprimées réapparaissent sous **[!UICONTROL Éléments d’autorisation disponibles]**.
 
 Continuez à parcourir les catégories disponibles et ajoutez toutes les autorisations souhaitées. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 

@@ -25,8 +25,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2688
-ht-degree: 84%
+source-wordcount: 2499
+ht-degree: 85%
 
 ---
 
@@ -90,21 +90,21 @@ L’objet de configuration doit être structuré comme suit :
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Un objet du <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet valide enregistré à partir de la vue de configuration de l’extension. Puisque vous êtes le développeur de la vue de configuration, il est de votre responsabilité de vous assurer que tout objet settings enregistré correspond à ce schéma. Ce schéma sera également utilisé à des fins de validation lorsque les utilisateurs tentent d’enregistrer des données à l’aide des services Experience Platform.<br><br>Voici un exemple d’objet schéma :
+      <td>Objet <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet valide enregistré à partir de la vue de configuration de l’extension. Étant donné que vous êtes le développeur de la vue de configuration, il est de votre responsabilité de vous assurer que tout objet settings enregistré correspond à ce schéma. Ce schéma sera également utilisé à des fins de validation lorsque les utilisateurs tentent d’enregistrer des données à l’aide des services Experience Platform.<br><br>Voici un exemple d’objet de schéma :
 <pre class="JSON language-JSON hljs">
 &lbrace;
-  « $schema »: « http://json-schema.org/draft-04/schema# »,
-  « type » : « object »,
-  « properties »: &lbrace;
-    « delay » : &lbrace;
-      « type » : « number »,
-      « minimum » : 1
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": &lbrace;
+    "delay": &lbrace;
+      "type": "number",
+      "minimum": 1
     &rbrace;
   &rbrace;,
-  « required »: &lbrack;
-    « delay »
+  "required": &lbrack;
+    "delay"
   &rbrack;,
-  « additionalProperties » : false
+  "additionalProperties": false
 &rbrace;
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="https://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
@@ -150,21 +150,21 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Objet de <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet de paramètres valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à lʼaide de lʼinterface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. Dʼun autre côté, certains utilisateurs choisissent dʼutiliser les API de balises directement sans lʼaide dʼaucune interface utilisateur. Ce schéma permet à Experience Platform de vérifier correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
+      <td>Objet <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet de paramètres valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à l’aide de l’interface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. D’un autre côté, certains utilisateurs choisissent d’utiliser directement les API de balises sans l’aide d’aucune interface utilisateur. Ce schéma permet à Experience Platform de vérifier correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet de schéma <br>
 <pre class="JSON language-JSON hljs">
 &lbrace;
-  « $schema »: « http://json-schema.org/draft-04/schema# »,
-  « type » : « object »,
-  « properties »: &lbrace;
-    « delay » : &lbrace;
-      « type » : « number »,
-      « minimum » : 1
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": &lbrace;
+    "delay": &lbrace;
+      "type": "number",
+      "minimum": 1
     &rbrace;
   &rbrace;,
-  « required »: &lbrack;
-    « delay »
+  "required": &lbrack;
+    "delay"
   &rbrack;,
-  « additionalProperties » : false
+  "additionalProperties": false
 &rbrace;
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="https://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>

@@ -16,14 +16,14 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 341
+source-wordcount: 345
 ht-degree: 21%
 
 ---
 
-# Type de données [!UICONTROL Postal address]
+# [!UICONTROL Adresse postale] type de données
 
-[!UICONTROL Postal address] est un type de données XDM standard qui décrit les détails d’une adresse de publipostage.
+[!UICONTROL Adresse postale] est un type de données XDM standard qui décrit les détails d’une adresse de publipostage.
 
 ![](../images/data-types/postal-address.png){width=450}
 

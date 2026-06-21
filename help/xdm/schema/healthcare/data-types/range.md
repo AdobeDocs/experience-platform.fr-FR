@@ -11,21 +11,21 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 110
-ht-degree: 7%
+source-wordcount: 118
+ht-degree: 6%
 
 ---
 
-# Type de données [!UICONTROL Range]
+# [!UICONTROL Plage] type de données
 
-[!UICONTROL Range] est un type de données standard du modèle de données d’expérience (XDM) qui fournit un ensemble de valeurs liées par des valeurs faibles et élevées. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Plage] est un type de données standard du modèle de données d’expérience (XDM) qui fournit un ensemble de valeurs liées par des valeurs faibles et élevées. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure du type de données de plage](../../../images/healthcare/data-types/range.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
-| [!UICONTROL High] | `high` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | La limite la plus élevée. |
-| [!UICONTROL Low] | `low` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | La limite la plus basse. |
+| [!UICONTROL Élevé] | `high` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | La limite la plus élevée. |
+| [!UICONTROL Faible] | `low` | [[!UICONTROL Quantité simple]](../data-types/simple-quantity.md) | La limite la plus basse. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 

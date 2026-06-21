@@ -35,8 +35,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1197
-ht-degree: 89%
+source-wordcount: 1204
+ht-degree: 87%
 
 ---
 
@@ -115,9 +115,9 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Type de données | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Mise à jour du champ `authorized` d’un type booléen en une chaîne. `season` et `episode` ont été changés d’entiers en chaînes. |
-| Type de données | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` a été renommé `friendlyName` et `ID` a été renommé `name`. |
-| Type de données | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` a été renommé `name`. |
+| Type de données | [[!UICONTROL Informations détaillées sur la session]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Mise à jour du champ `authorized` d’un type booléen en une chaîne. `season` et `episode` ont été changés d’entiers en chaînes. |
+| Type de données | [[!UICONTROL Informations détaillées sur &#x200B;]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` a été renommé `friendlyName` et `ID` a été renommé `name`. |
+| Type de données | [[!UICONTROL Informations détaillées sur les erreurs]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` a été renommé `name`. |
 
 {style="table-layout:auto"}
 
@@ -131,11 +131,11 @@ Le service de requête vous permet d’utiliser le langage SQL standard pour int
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Surveiller les requêtes via l’interface utilisateur d’Experience Platform | L’onglet [!UICONTROL Scheduled Queries] de Query Service offre une visibilité améliorée du statut de tous les traitements de requête à travers l’interface utilisateur. Vous pouvez désormais trouver des informations importantes sur le statut de vos exécutions de requête, y compris des messages d’erreur et des codes en cas d’échec, à partir de [!UICONTROL Scheduled Queries]’onglet . Via l’interface utilisateur, vous pouvez également vous abonner à des alertes pour n’importe laquelle de ces requêtes, en fonction de son statut. Consultez le [document sur la surveillance des requêtes](../../query-service/ui/monitor-queries.md) pour en savoir plus sur cette fonctionnalité. |
+| Surveiller les requêtes via l’interface utilisateur d’Experience Platform | L’onglet [!UICONTROL Requêtes planifiées] de Query Service offre une meilleure visibilité du statut de tous les traitements de requête à travers l’interface utilisateur. Vous pouvez désormais trouver des informations importantes sur le statut de vos exécutions de requête, y compris des messages d’erreur et des codes en cas d’échec, à partir de l’onglet [!UICONTROL Requêtes planifiées]. Via l’interface utilisateur, vous pouvez également vous abonner à des alertes pour n’importe laquelle de ces requêtes, en fonction de son statut. Consultez le [document sur la surveillance des requêtes](../../query-service/ui/monitor-queries.md) pour en savoir plus sur cette fonctionnalité. |
 | Modèle de données d’informations de rapports accélérés par les requêtes | Dans le cadre du SKU Data Distiller, le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des informations importantes à partir de vos données. Avec le magasin d’accélération des requêtes, vous pouvez créer un modèle de données personnalisé et/ou étendre les modèles de données Adobe Real-time Customer Data Platform existants pour améliorer vos informations de rapports et leurs visualisations. Consultez le [document sur les informations de rapports du magasin d’accélération des requêtes](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md) pour en savoir plus sur cette fonctionnalité. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le service de requête, consultez la section [Présentation du service de requête](../../query-service/home.md).
-Nouvelles fonctionnalités d’Adobe Experience Platform :
+Pour plus d’informations sur Query Service, consultez la section [présentation de Query Service](../../query-service/home.md).
+Nouvelles fonctionnalités de Adobe Experience Platform :
 

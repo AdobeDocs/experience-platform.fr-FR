@@ -9,20 +9,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 120
+source-wordcount: 129
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL Bot Detection] le groupe de champs
+# Groupe de champs [!UICONTROL Détection de robots]
 
-[!UICONTROL Bot Detection] groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit des informations sur le trafic généré par les robots.
+[!UICONTROL Détection de robots] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit des informations sur le trafic généré par les robots.
 
-![Diagramme du groupe de champs [!UICONTROL Bot Detection].](../../images/field-groups/bot-detection-information.png)
+![Diagramme du groupe de champs [!UICONTROL Détection de robots].](../../images/field-groups/bot-detection-information.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |----------------------------|-----------------|-----------|---------------------------------------------------------|
-| [!UICONTROL Bot Detection] | `botDetection` | objet | Fournit des informations sur le trafic généré par les robots. |
+| [!UICONTROL Détection de robots] | `botDetection` | objet | Fournit des informations sur le trafic généré par les robots. |
 | [!UICONTROL Score] | `score` | nombre | Score de probabilité des robots compris entre zéro et un. Un score de zéro signifie que le trafic n’est pas un robot. |
 
 {style="table-layout:auto"}

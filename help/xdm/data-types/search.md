@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 182
 ht-degree: 16%
 
 ---
 
 # Type de données [!UICONTROL Search]
 
-[!UICONTROL Search] est un type de données standard du modèle de données d’expérience (XDM) qui contient des informations sur l’activité de recherche sur le web.
+[!UICONTROL Recherche] est un type de données standard du modèle de données d’expérience (XDM) qui contient des informations sur l’activité de recherche sur le web.
 
 ![rechercher une image](../images/data-types/search.PNG){width=500}
 

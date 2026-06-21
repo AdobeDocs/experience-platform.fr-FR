@@ -30,8 +30,8 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1084
-ht-degree: 95%
+source-wordcount: 1090
+ht-degree: 94%
 
 ---
 
@@ -56,7 +56,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mesures d’utilisation des destinations | De nouvelles mesures ont été ajoutées au tableau de bord de l’utilisation des licences. Les mesures **[!UICONTROL Audience Activation Size]** et **[!UICONTROL Data Export Size]** fournissent un moyen pratique de suivre la quantité de données que vous avez exportées hors d’Experience Platform par rapport à vos droits d’utilisation de licence. Consultez le document sur les [mesures disponibles](../../dashboards/guides/license-usage.md#available-metrics) pour obtenir des descriptions de ces mesures et d’autres mesures d’utilisation des licences. |
+| Mesures d’utilisation des destinations | De nouvelles mesures ont été ajoutées au tableau de bord de l’utilisation des licences. Les mesures **[!UICONTROL Taille d’]** et **[!UICONTROL Taille d’exportation des données]** permettent de suivre facilement la quantité de données que vous avez exportées hors d’Experience Platform par rapport à vos droits d’utilisation de licence. Consultez le document sur les [mesures disponibles](../../dashboards/guides/license-usage.md#available-metrics) pour obtenir des descriptions de ces mesures et d’autres mesures d’utilisation des licences. |
 
 {style="table-layout:auto"}
 

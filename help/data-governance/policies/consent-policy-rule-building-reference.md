@@ -21,7 +21,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1582
+source-wordcount: 1588
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 Utilisez cette référence sur la logique de règle avancée pour définir des règles précises et juridiquement valides dans la clause **[!UICONTROL Then]** du créateur de politique de consentement dans Adobe Experience Platform.
 
-![Interface du créateur de politiques de consentement qui met en surbrillance la section Clause de [!UICONTROL Then], où les utilisateurs définissent des conditions de règle.](../images/policies/multiple-rules.png)
+![Interface du créateur de politiques de consentement qui met en surbrillance la section Clause [!UICONTROL Then], dans laquelle les utilisateurs définissent des conditions de règle.](../images/policies/multiple-rules.png)
 
 Découvrez comment les règles de politique s’appliquent à la structure et aux types de vos données de consentement pour appliquer avec précision les préférences de consentement du client.
 
@@ -178,7 +178,7 @@ Result: Includes profiles who set the email frequency to weekly (for the "email_
 
 **Toute correspondance de clé**
 
-Utilisez l’option de case à cocher « **[!UICONTROL find any matching item]** » pour faire correspondre toutes les clés dynamiques d’un mappage.
+Utilisez l’option de case à cocher « **[!UICONTROL trouver tout élément correspondant]** » pour faire correspondre toutes les clés dynamiques d’un mappage.
 
 ![Créateur de règles affichant la case à cocher « Rechercher tout élément correspondant » pour Mapper les champs, utilisée pour faire correspondre les valeurs de toutes les clés dynamiques.](../images/policies/find-any-matching-item.png)
 

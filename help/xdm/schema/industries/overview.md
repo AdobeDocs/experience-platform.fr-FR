@@ -13,7 +13,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 350
+source-wordcount: 358
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ Il est également recommandé de consulter le [guide des bonnes pratiques de mod
 
 Les ERD sont fournis pour les secteurs verticaux suivants :
 
-* [[!UICONTROL Retail]](./retail.md)
-* [[!UICONTROL Financial services]](./financial.md)
-* [[!UICONTROL Healthcare]](./healthcare.md)
-* [[!UICONTROL Telecommunications]](./telecom.md)
-* [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
+* [[!UICONTROL Vente au détail]](./retail.md)
+* [[!UICONTROL Services financiers]](./financial.md)
+* [[!UICONTROL Santé]](./healthcare.md)
+* [[!UICONTROL &#x200B; Télécommunications &#x200B;]](./telecom.md)
+* [[!UICONTROL Voyage et hébergement]](./travel-hospitality.md)
 
 ## Étapes suivantes
 

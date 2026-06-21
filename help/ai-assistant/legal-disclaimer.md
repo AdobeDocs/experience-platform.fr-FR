@@ -1,10 +1,11 @@
 ---
 title: Clause de non-responsabilité légale - Données personnelles, prise en charge linguistique et vérification des réponses
 description: Découvrez les clauses de non-responsabilité légales concernant les données personnelles, l’assistance linguistique et la vérification des réponses lors de l’utilisation de l’assistant AI.
-source-git-commit: 11c21c9c09e070847e1c28508066d8ba494b97e2
+exl-id: 1a3c698e-49eb-4a3b-8e1d-4da909581d57
+source-git-commit: 343440ab4cb5f0ba3ff350cf2422b21b2d57b05a
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 22%
+source-wordcount: '232'
+ht-degree: 4%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 22%
 
 Lisez ce document pour plus d’informations sur les clauses de non-responsabilité légales concernant les données personnelles, la prise en charge linguistique et la vérification des réponses lors de l’utilisation de l’assistant Adobe Experience Platform AI.
 
-## Données Personnelles {#personal-data}
+## Données personnelles {#personal-data}
 
-L’Assistant IA utilise un chatbot automatisé. En utilisant ce chatbot automatisé, vous consentez à ce que les informations que vous fournissez lors de la session de chat soient collectées, utilisées, divulguées et conservées par Adobe et les prestataires de services agissant pour le compte d’Adobe, conformément aux dispositions du contrat conclu entre votre organisation et Adobe.
+AI Assistant utilise un chatbot automatisé. Votre utilisation de ce bot conversationnel automatisé constitue un consentement à ce que les informations que vous fournissez dans la session de conversation soient collectées, utilisées, divulguées et conservées par Adobe et les fournisseurs de services agissant pour le compte d’Adobe conformément aux termes de l’accord entre votre organisation et Adobe.
 
 Si vous devez inclure des données personnelles ici, ajoutez uniquement ce qui est nécessaire et uniquement si vous avez le droit de les utiliser.
 

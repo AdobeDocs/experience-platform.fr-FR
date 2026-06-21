@@ -13,14 +13,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 231
+source-wordcount: 235
 ht-degree: 0%
 
 ---
 
-# Type de données [!UICONTROL Email address]
+# [!UICONTROL Adresse e-mail] type de données
 
-[!UICONTROL Email address] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails d’une adresse e-mail.
+[!UICONTROL Adresse e-mail] est un type de données standard des modèles de données d’expérience (XDM) qui décrit les détails d’une adresse e-mail.
 
 ![](../images/data-types/email-address.png){width=450}
 

@@ -14,14 +14,14 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 139751142683b9bdfc2e8e4061eec18572d1b182
 workflow-type: tm+mt
-source-wordcount: 526
+source-wordcount: 570
 ht-degree: 5%
 
 ---
 
-# Type de données [!UICONTROL Advertising Details] Reporting
+# [!UICONTROL Détails Advertising &#x200B;] Type de données de rapport
 
-[!UICONTROL Advertising Details] Reporting est un type de données standard du modèle de données d’expérience (XDM) qui capture les attributs clés liés aux publicités. Elle contient des informations telles que l’ID de l’annonce, les ID de l’annonceur et de la campagne, la longueur, la position dans une séquence, les détails sur le lecteur qui effectue le rendu de l’annonce, etc. Vous pouvez utiliser ce type de données pour suivre et analyser divers aspects des performances et de l’engagement des publicités, et fournir des informations sur la manière dont les audiences interagissent avec différentes publicités et y répondent.
+[!UICONTROL Détails Advertising &#x200B;] la création de rapports est un type de données standard du modèle de données d’expérience (XDM) qui capture les attributs clés liés aux publicités. Elle contient des informations telles que l’ID de l’annonce, les ID de l’annonceur et de la campagne, la longueur, la position dans une séquence, les détails sur le lecteur qui effectue le rendu de l’annonce, etc. Vous pouvez utiliser ce type de données pour suivre et analyser divers aspects des performances et de l’engagement des publicités, et fournir des informations sur la manière dont les audiences interagissent avec différentes publicités et y répondent.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données Rapports détaillés Advertising .
 ![Diagramme du type de données Rapports détaillés Advertising.](../images/data-types/advertising-details-information.png)
@@ -35,19 +35,19 @@ Chaque nom d’affichage contient un lien vers des informations supplémentaires
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |---|---|---|---|
-| [[!UICONTROL Ad Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-name) | `friendlyName` | chaîne | Nom lisible par l’utilisateur de la publicité. |
-| [[!UICONTROL Ad ID]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad) | `name` | chaîne | Identifiant de l’annonce publicitaire. Toute combinaison de nombres entiers et/ou de lettres. |
-| [[!UICONTROL Ad Length Or Duration]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-length) | `length` | entier | Durée de la publicité en secondes. |
-| [[!UICONTROL Ad In Pod Position (Ad Start)]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-in-pod-position) | `podPosition` | integer | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. Par exemple, la première publicité a un index de 0 et la seconde un index de 1. |
-| [[!UICONTROL Ad Player Name]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-player-name) | `playerName` | chaîne | Nom du lecteur responsable du rendu de la publicité. |
-| [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/advertiser) | `advertiser` | chaîne | Société ou marque dont le produit apparaît dans la publicité. |
-| [[!UICONTROL Ad Campaign]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/campaign-id) | `campaignID` | chaîne | Identifiant de la campagne publicitaire. |
-| [[!UICONTROL Ad Creative ID]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/creative-id) | `creativeID` | chaîne | Identifiant du contenu publicitaire. |
-| [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/site-id) | `siteID` | chaîne | Identifiant du site publicitaire. |
-| [[!UICONTROL Ad Creative URL]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/creative-url) | `creativeURL` | chaîne | URL de la création publicitaire. |
-| [[!UICONTROL Ad Placement ID]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/placement-id) | `placementID` | chaîne | Identifiant d’emplacement de la publicité. |
-| [[!UICONTROL Ad Completed]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/ad-completes) | `isCompleted` | booléen | Indique si la publicité est terminée. |
-| [[!UICONTROL Ad Started]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/ad-starts) | `isStarted` | booléen | Indique si la publicité a commencé. |
-| [[!UICONTROL Ad Time Played]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/ad-time-spent) | `timePlayed` | entier | Durée totale (en secondes) passée à regarder la publicité (c’est-à-dire le nombre de secondes lues). |
+| [[!UICONTROL Nom de la publicité]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-name) | `friendlyName` | string | Nom lisible par l’utilisateur de la publicité. |
+| [[!UICONTROL ID de publicité]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad) | `name` | chaîne | Identifiant de l’annonce publicitaire. Toute combinaison de nombres entiers et/ou de lettres. |
+| [[!UICONTROL Durée Ou Longueur De L’Annonce Publicitaire]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-length) | `length` | integer | Durée de la publicité en secondes. |
+| [[!UICONTROL Position de l’annonce publicitaire dans la capsule (début de l’annonce publicitaire)]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-in-pod-position) | `podPosition` | integer | Index de la publicité à l’intérieur du début de la coupure publicitaire parent. Par exemple, la première publicité a un index de 0 et la seconde un index de 1. |
+| [[!UICONTROL Nom du lecteur de publicités]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/ad-player-name) | `playerName` | chaîne | Nom du lecteur responsable du rendu de la publicité. |
+| [[!UICONTROL Publicitaire]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/advertiser) | `advertiser` | chaîne | Société ou marque dont le produit apparaît dans la publicité. |
+| [[!UICONTROL Campagne publicitaire]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/campaign-id) | `campaignID` | chaîne | Identifiant de la campagne publicitaire. |
+| [[!UICONTROL ID de Creative publicitaire]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/creative-id) | `creativeID` | chaîne | Identifiant du contenu publicitaire. |
+| [[!UICONTROL ID du site publicitaire]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/site-id) | `siteID` | chaîne | Identifiant du site publicitaire. |
+| [[!UICONTROL URL Ad Creative]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/creative-url) | `creativeURL` | chaîne | URL de la création publicitaire. |
+| [[!UICONTROL ID d’emplacement publicitaire]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/dimensions/placement-id) | `placementID` | chaîne | Identifiant d’emplacement de la publicité. |
+| [[!UICONTROL Publicité terminée]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/ad-completes) | `isCompleted` | booléen | Indique si la publicité est terminée. |
+| [[!UICONTROL Annonce lancée]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/ad-starts) | `isStarted` | boolean | Indique si la publicité a commencé. |
+| [[!UICONTROL Temps de lecture de la publicité]](https://experienceleague.adobe.com/fr/docs/media-analytics/using/reporting/metrics/ad-time-spent) | `timePlayed` | entier | Durée totale (en secondes) passée à regarder la publicité (c’est-à-dire le nombre de secondes lues). |
 
 Voir [advertisingdetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) dans le référentiel XDM public pour la définition complète du schéma.

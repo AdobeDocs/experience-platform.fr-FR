@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 262
-ht-degree: 19%
+source-wordcount: 266
+ht-degree: 18%
 
 ---
 
-# Type de données [!UICONTROL Experience channel]
+# Type de données [!UICONTROL canal Experience]
 
-[!UICONTROL Experience channel] est un type de données standard du modèle de données d’expérience (XDM) qui décrit un canal d’expérience. Un canal d’expérience représente une méthode ou un chemin d’accès pour la manière dont les expériences numériques sont utilisées.
+[!UICONTROL Canal d’expérience] est un type de données standard du modèle de données d’expérience (XDM) qui décrit un canal d’expérience. Un canal d’expérience représente une méthode ou un chemin d’accès pour la manière dont les expériences numériques sont utilisées.
 
 Il existe plusieurs canaux d’expérience, chacun ayant des contraintes différentes sur la manière dont le contenu est diffusé, dont l’interaction client peut être observée et dont les données sont collectées. Au sein d’un canal, les expériences peuvent être diffusées à des emplacements spécifiques. Les emplacements et les types d’emplacements qui existent dans un canal varient d’un canal à l’autre.
 

@@ -24,8 +24,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2608
-ht-degree: 79%
+source-wordcount: 2618
+ht-degree: 78%
 
 ---
 
@@ -126,7 +126,7 @@ Pour plus d’informations sur la création de descripteurs d’identité dans l
 
 ### Définition des identités dans l’interface utilisateur
 
-Une fois votre schéma ouvert dans l’éditeur de schémas, sélectionnez le champ de la section **[!UICONTROL Structure]** de l’éditeur que vous souhaitez marquer comme identité. Sous **[!UICONTROL Field Properties]** sur le côté droit, cochez la case **[!UICONTROL Identity]** .
+Une fois votre schéma ouvert dans l’éditeur de schémas, sélectionnez le champ de la section **[!UICONTROL Structure]** de l’éditeur que vous souhaitez marquer comme identité. Sous **[!UICONTROL Propriétés du champ]** sur le côté droit, cochez la case **[!UICONTROL Identité]**.
 
 Pour plus d’informations sur la gestion des identités dans l’interface utilisateur, consultez la section sur la [définition des champs d’identité](./tutorials/create-schema-ui.md#identity-field) dans le tutoriel de l’éditeur de schémas.
 
@@ -150,9 +150,9 @@ Pour plus d’informations sur l’utilisation de l’API pour activer un schém
 
 ### Activation d’un schéma existant pour [!DNL Profile] à l’aide de l’interface utilisateur
 
-Dans [!DNL Experience Platform], sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche, puis sélectionnez le nom du schéma à activer dans la liste des schémas. Ensuite, dans la partie droite de l’éditeur, sous **[!UICONTROL Schema Properties]**, sélectionnez **[!UICONTROL Profile]** pour l’activer.
+Dans [!DNL Experience Platform], sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez le nom du schéma à activer dans la liste des schémas. Ensuite, dans la partie droite de l’éditeur, sous **[!UICONTROL Propriétés du schéma]**, sélectionnez **[!UICONTROL Profil]** pour l’activer.
 
-Pour plus d’informations, consultez la section sur [l’utilisation dans le profil client en temps réel](./tutorials/create-schema-ui.md#profile) dans le tutoriel [!UICONTROL Schema Editor].
+Pour plus d’informations, consultez la section sur [l’utilisation dans le profil client en temps réel](./tutorials/create-schema-ui.md#profile) dans le tutoriel [!UICONTROL Éditeur de schémas].
 
 ### Lorsque les données Adobe Analytics sont importées en tant que source, le schéma créé automatiquement est-il activé pour Profile ?
 

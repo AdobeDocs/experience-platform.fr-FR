@@ -136,7 +136,7 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 
 Problèmes connus
 
-* Aucun
+* None
 
 Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [&#128279;](../../privacy-service/home.md).
 
@@ -155,6 +155,6 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

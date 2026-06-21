@@ -16,8 +16,8 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 601
-ht-degree: 26%
+source-wordcount: 639
+ht-degree: 25%
 
 ---
 
@@ -63,19 +63,19 @@ Pour plus d’informations sur la prise en main, consultez [ce [!DNL Dynamics] d
 
 ## Connecter votre compte [!DNL Dynamics]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie [!UICONTROL CRM] , sélectionnez **[!UICONTROL Microsoft Dynamics]**, puis **[!UICONTROL Add data]**.
+Dans la catégorie [!UICONTROL CRM], sélectionnez **[!UICONTROL Microsoft Dynamics]**, puis **[!UICONTROL Ajouter des données]**.
 
 ![Le catalogue de sources avec Microsoft Dynamics sélectionné.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-La page **[!UICONTROL Connect Microsoft Dynamics account]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Microsoft Dynamics]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte [!DNL Dynamics] que vous souhaitez utiliser, puis sélectionnez **[!UICONTROL Next]** dans le coin supérieur droit pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte [!DNL Dynamics] que vous souhaitez utiliser, puis sélectionnez **[!UICONTROL Suivant]** dans le coin supérieur droit pour continuer.
 
 ![Interface du compte existant.](../../../../images/tutorials/create/ms-dynamics/existing.png)
 
@@ -85,7 +85,7 @@ Pour utiliser un compte existant, sélectionnez le compte [!DNL Dynamics] que vo
 >
 >Une fois créé, vous ne pouvez pas modifier le type d’authentification d’une connexion de base [!DNL Dynamics]. Pour modifier le type d’authentification, vous devez créer une connexion de base.
 
-Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom et une description facultative pour votre nouveau compte [!DNL Dynamics].
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description facultative pour votre nouveau compte [!DNL Dynamics].
 
 ![Nouvelle interface de création de compte.](../../../../images/tutorials/create/ms-dynamics/new.png)
 
@@ -95,17 +95,17 @@ Vous pouvez utiliser l’authentification de base ou l’authentification par pr
 
 >[!TAB  Authentification de base ]
 
-Pour créer un compte [!DNL Dynamics] avec une authentification de base, sélectionnez [!UICONTROL Basic authentication], puis fournissez les valeurs de vos [!UICONTROL Service URI], [!UICONTROL Username] et [!UICONTROL Password]. **Remarque** : l’authentification de base dans [!DNL Dynamics] peut être bloquée par l’authentification à deux facteurs, qui n’est actuellement pas prise en charge par Experience Platform. Dans ce cas, il est recommandé d’utiliser l’authentification par clé pour créer un connecteur source à l’aide de [!DNL Dynamics].
+Pour créer un compte [!DNL Dynamics] avec une authentification de base, sélectionnez [!UICONTROL Authentification de base] puis indiquez les valeurs de vos [!UICONTROL URI de service], [!UICONTROL Nom d’utilisateur] et [!UICONTROL Mot de passe]. **Remarque** : l’authentification de base dans [!DNL Dynamics] peut être bloquée par l’authentification à deux facteurs, qui n’est actuellement pas prise en charge par Experience Platform. Dans ce cas, il est recommandé d’utiliser l’authentification par clé pour créer un connecteur source à l’aide de [!DNL Dynamics].
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis patientez quelques instants le temps que le nouveau compte s’établisse.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que le nouveau compte s’établisse.
 
 ![L’interface d’authentification de base.](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
 
 >[!TAB Authentification principale et par clé du service]
 
-Pour créer un compte [!DNL Dynamics] avec authentification du principal de service et de la clé, sélectionnez **[!UICONTROL Service-principal and key authentication]** puis fournissez des valeurs pour vos [!UICONTROL Service principal ID] et [!UICONTROL Service principal key].
+Pour créer un compte [!DNL Dynamics] avec authentification du principal de service et de la clé, sélectionnez **[!UICONTROL Authentification du principal de service et de la clé]** puis fournissez les valeurs de votre [!UICONTROL ID du principal de service] et [!UICONTROL Clé du principal de service].
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** puis patientez quelques instants le temps que le nouveau compte s’établisse.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que le nouveau compte s’établisse.
 
 ![L’interface d’authentification de la clé service-principal.](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
 

@@ -18,7 +18,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 543
+source-wordcount: 553
 ht-degree: 10%
 
 ---
@@ -138,15 +138,15 @@ Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée
 
 >[!TAB Audience Portal]
 
-Dans Audience Portal, sélectionnez **[!UICONTROL Create audience]**.
+Dans Audience Portal, sélectionnez **[!UICONTROL Créer une audience]**.
 
 ![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/batch/select-create-audience.png)
 
-Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Build rules]** pour accéder au créateur de segments.
+Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Créer des règles]** pour accéder au créateur de segments.
 
 ![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/batch/select-build-rules.png)
 
-Après avoir créé votre définition de segment, sélectionnez **[!UICONTROL Batch]** comme **[!UICONTROL Evaluation method]**.
+Après avoir créé votre définition de segment, sélectionnez **[!UICONTROL Lot]** comme **[!UICONTROL Méthode d’évaluation]**.
 
 ![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation en flux continu.](../images/methods/batch/batch-evaluation-method.png)
 
@@ -289,7 +289,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation par 
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Update frequency]** et sélectionnez « [!UICONTROL Batch] ». L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation par lots.
+Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL Lot] ». L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation par lots.
 
 ![La fréquence de mise à jour par lots est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation par lots.](../images/methods/batch/filter-batch.png)
 

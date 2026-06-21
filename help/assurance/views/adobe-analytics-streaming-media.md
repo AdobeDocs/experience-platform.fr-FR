@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 407
+source-wordcount: 420
 ht-degree: 2%
 
 ---
@@ -48,19 +48,19 @@ Pour savoir comment installer Assurance dans votre application, veuillez lire le
 
 ## Utilisation d’Assurance avec Adobe Analytics for Streaming Media
 
-Une fois que vous êtes connecté et que vous avez configuré votre application pour Adobe Analytics, vous êtes prêt à la configurer pour Streaming Media Analytics. Dans la partie inférieure du panneau de gauche, sélectionnez **[!UICONTROL Configure]** pour ajouter la vue Événements Media Analytics et **Enregistrer**.
+Une fois que vous êtes connecté et que vous avez configuré votre application pour Adobe Analytics, vous êtes prêt à la configurer pour Streaming Media Analytics. Dans la partie inférieure du panneau de gauche, sélectionnez **[!UICONTROL Configurer]** pour ajouter la vue Événements Media Analytics et **Enregistrer**.
 
 ![Configuration](./images/adobe-analytics-streaming-media/configure.png)
 
-Une fois l’ajout effectué, sélectionnez la vue **[!UICONTROL Media Analytics Events]** dans la section **[!UICONTROL Adobe Analytics]** pour valider le suivi de votre session.
+Une fois l’ajout effectué, sélectionnez la vue **[!UICONTROL Événements Media Analytics]** dans la section **[!UICONTROL Adobe Analytics]** pour valider le suivi de votre session.
 
 ![&#x200B; Sélectionner &#x200B;](./images/adobe-analytics-streaming-media/select.png)
 
-Dans la vue **[!UICONTROL Media Analytics Events]**, vous pouvez rechercher et filtrer par ID de session (VSID) pour afficher une session multimédia spécifique. Pour afficher des détails supplémentaires sur l’événement, sélectionnez un événement spécifique.
+Dans la vue **[!UICONTROL Événements Media Analytics]**, vous pouvez rechercher et filtrer par ID de session (VSID) pour afficher une session multimédia spécifique. Pour afficher des détails supplémentaires sur l’événement, sélectionnez un événement spécifique.
 
 ![&#x200B; Événements multimédia &#x200B;](./images/adobe-analytics-streaming-media/media-events.png)
 
-Pour une vue plus succincte des appels d’API, vous pouvez également masquer les événements de mise à jour du curseur de lecture en sélectionnant le filtre **[!UICONTROL Hide Playhead Update events]**.
+Pour une vue plus succincte des appels d’API, vous pouvez également masquer les événements de mise à jour de la tête de lecture en sélectionnant le filtre **[!UICONTROL Masquer les événements de mise à jour de la tête de lecture]**.
 
 ![Masquer le curseur de lecture](./images/adobe-analytics-streaming-media/hide-playhead.png)
 

@@ -13,14 +13,14 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 592
-ht-degree: 94%
+source-wordcount: 593
+ht-degree: 93%
 
 ---
 
 # Rendre obsolète un champ XDM dans l’API
 
-Dans le modèle de données d’expérience (XDM), vous pouvez rendre obsolète un champ dans un schéma ou une ressource personnalisée à l’aide de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). En cas d’obsolescence d’un champ, il est masqué dans les IU en aval telles que l’espace de travail [!UICONTROL Profiles] et Customer Journey Analytics, mais il s’agit d’une modification sans rupture qui n’a pas d’incidence négative sur les flux de données existants.
+Dans le modèle de données d’expérience (XDM), vous pouvez rendre obsolète un champ dans un schéma ou une ressource personnalisée à l’aide de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). En cas d’obsolescence d’un champ, il est masqué dans les IU en aval telles que l’espace de travail [!UICONTROL Profils] et Customer Journey Analytics, mais il s’agit d’une modification sans rupture qui n’a pas d’incidence négative sur les flux de données existants.
 
 Ce document explique comment rendre obsolètes les champs pour différentes ressources XDM. Pour savoir comment rendre obsolète un champ XDM à l’aide de l’éditeur de schémas dans l’IU d’Experience Platform, consultez le tutoriel sur l’[obsolescence d’un champ XDM dans l’IU](./field-deprecation-ui.md).
 

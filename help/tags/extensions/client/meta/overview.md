@@ -30,7 +30,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 814
+source-wordcount: 843
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ Il est vivement recommandé d’utiliser [!DNL Meta Pixel] en combinaison avec l
 
 ## Installation l’extension
 
-Pour installer l’extension [!DNL Meta Pixel], accédez à l’interface utilisateur de la collecte de données ou d’Experience Platform et sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
+Pour installer l’extension [!DNL Meta Pixel], accédez à l’interface utilisateur de la collecte de données ou d’Experience Platform et sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété à laquelle ajouter l’extension ou créez-en une nouvelle.
 
-Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalog]** . Recherchez la carte [!UICONTROL Meta Pixel], puis sélectionnez **[!UICONTROL Install]**.
+Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Recherchez la carte [!UICONTROL Meta Pixel], puis sélectionnez **[!UICONTROL Installer]**.
 
-![Le bouton [!UICONTROL Install] sélectionné pour l’extension [!UICONTROL Meta Pixel] dans l’interface utilisateur de collecte de données.](../../../images/extensions/client/meta/install.png)
+![Le bouton [!UICONTROL Installer] sélectionné pour l’extension [!UICONTROL Meta Pixel] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/client/meta/install.png)
 
 Dans la vue de configuration qui s’affiche, vous devez fournir l’identifiant [!DNL Pixel] que vous avez copié précédemment pour lier l’extension à votre compte. Vous pouvez coller l’identifiant directement dans l’entrée ou sélectionner un élément de données existant à la place.
 
@@ -63,7 +63,7 @@ Dans la vue de configuration qui s’affiche, vous devez fournir l’identifiant
 
 Vous pouvez également fournir un identifiant d’événement à associer à l’extension. Il est utilisé pour dédupliquer des événements identiques entre [!DNL Meta Pixel] et le [!DNL Meta Conversions API]. Pour plus d’informations, consultez la section sur la [déduplication des événements](../../server/meta/overview.md#event-deduplication) dans la présentation de l’extension [!DNL Conversions API].
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 
 ![Identifiant [!DNL Pixel] fourni en tant qu’élément de données dans la vue de configuration de l’extension.](../../../images/extensions/client/meta/configure.png)
 
@@ -75,11 +75,11 @@ L’extension est installée et vous pouvez maintenant utiliser ses différentes
 
 À des fins de démonstration, cette section montre comment créer une règle qui envoie un événement de page vue à [!DNL Meta].
 
-Commencez à créer une règle de balise et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez **[!UICONTROL Meta Pixel]** pour l’extension, puis sélectionnez **[!UICONTROL Send Page View]** pour le type d’action.
+Commencez à créer une règle de balise et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, sélectionnez **[!UICONTROL Meta Pixel]** pour l’extension, puis sélectionnez **[!UICONTROL Envoyer la page vue]** pour le type d’action.
 
-![Type d’action [!UICONTROL Send Page View] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](../../../images/extensions/client/meta/select-action.png)
+![Type d’action [!UICONTROL &#x200B; Envoyer la page vue &#x200B;] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](../../../images/extensions/client/meta/select-action.png)
 
-Aucune configuration supplémentaire n’est requise pour l’action [!UICONTROL Send Page View]. Sélectionnez **[!UICONTROL Keep Changes]** pour ajouter l’action à la configuration de règle. Lorsque la règle vous convient, sélectionnez **[!UICONTROL Save to Library]**.
+Aucune configuration supplémentaire n’est requise pour l’action [!UICONTROL &#x200B; Envoyer la page vue &#x200B;]. Sélectionnez **[!UICONTROL Conserver les modifications]** pour ajouter l’action à la configuration de la règle. Lorsque la règle vous convient, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 
 Enfin, publiez une nouvelle balise [build](../../../ui/publishing/builds.md) pour activer les modifications apportées à la bibliothèque.
 
@@ -97,7 +97,7 @@ Pour plus d’informations sur les balises dans Experience Platform, consultez l
 
 Si vous souhaitez tester votre mise en œuvre dans des environnements de développement ou d’évaluation tout en préservant l’intégrité de vos analyses de [!DNL Meta Pixel] de production, vous pouvez utiliser un élément de données pour choisir de manière dynamique un identifiant d’[!DNL Pixel] approprié en fonction de l’environnement utilisé.
 
-Pour ce faire, vous pouvez utiliser un élément de données [!UICONTROL Custom Code] (fourni par l’extension [[!UICONTROL Core]](../core/overview.md)) en combinaison avec la variable libre [`turbine` &#x200B;](../../../extension-dev/turbine.md) . Dans le code JavaScript de l’élément de données, utilisez l’objet `turbine` pour rechercher l’étape d’environnement actuelle, puis renvoyez un identifiant d’[!DNL Pixel] approprié en fonction du résultat.
+Pour ce faire, vous pouvez utiliser un élément de données [!UICONTROL Code personnalisé] (fourni par l’extension [[!UICONTROL Core]](../core/overview.md)) en combinaison avec la variable libre [`turbine`](../../../extension-dev/turbine.md). Dans le code JavaScript de l’élément de données, utilisez l’objet `turbine` pour rechercher l’étape d’environnement actuelle, puis renvoyez un identifiant d’[!DNL Pixel] approprié en fonction du résultat.
 
 L’exemple suivant renvoie un `exampleProductionKey` d’ID de production factice lorsqu’il est utilisé dans l’environnement de production et un `exampleTestKey` d’ID différent lorsqu’un autre environnement est utilisé. Lors de l’implémentation de ce code, remplacez chaque valeur par vos ID de [!DNL Pixel] de production et de test réels.
 

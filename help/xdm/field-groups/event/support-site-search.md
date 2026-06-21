@@ -9,20 +9,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 82
+source-wordcount: 91
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Support Site Search] groupe de champs de schéma
+# [!UICONTROL Recherche de site d’assistance] groupe de champs de schéma
 
-[!UICONTROL Support Site Search] groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il fournit un objet `siteKnowledge.supportSiteSearch` unique à un schéma qui capture les informations relatives à une recherche de site d’assistance.
+[!UICONTROL Recherche de site d’assistance] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il fournit un objet `siteKnowledge.supportSiteSearch` unique à un schéma qui capture les informations relatives à une recherche de site d’assistance.
 
 ![](../../images/field-groups/support-site-search.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `supportSiteSearch` | [[!UICONTROL Internal Site Search]](../../data-types/internal-site-search.md) | Capture les détails de l’événement de recherche. |
+| `supportSiteSearch` | [[!UICONTROL Recherche interne au site]](../../data-types/internal-site-search.md) | Capture les détails de l’événement de recherche. |
 
 {style="table-layout:auto"}
 

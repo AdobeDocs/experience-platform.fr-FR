@@ -4,8 +4,8 @@ description: Découvrez comment enregistrer vos flux de données en tant que bro
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 3%
+source-wordcount: '594'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ Enregistrez la progression de votre workflow d’ingestion de données non termi
 
 Ce document décrit la procédure à suivre pour enregistrer vos flux de données lors de l’utilisation de l’espace de travail des sources dans l’interface utilisateur de Adobe Experience Platform.
 
-## Commencer
+## Prise en main
 
 Ce document nécessite une compréhension du fonctionnement des composants suivants de Adobe Experience Platform :
 
@@ -65,7 +65,7 @@ Une fois les configurations terminées, sélectionnez **[!UICONTROL Suivant]** p
 
 ![Étape des détails du flux de données du workflow des sources.](../../images/tutorials/draft/dataflow-detail.png)
 
-L’étape [!UICONTROL Mappage] apparaît. Au cours de cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation des données utilisées pour le mappage, consultez le [guide de l’interface utilisateur de la préparation des données](../../../data-prep/ui/mapping.md).
+L’étape [!UICONTROL Mappage] s’affiche. Au cours de cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation des données utilisées pour le mappage, consultez le [guide de l’interface utilisateur de la préparation des données](../../../data-prep/ui/mapping.md).
 
 Une fois la reconfiguration du mappage terminée, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 

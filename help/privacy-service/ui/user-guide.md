@@ -15,8 +15,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1721
-ht-degree: 45%
+source-wordcount: 1833
+ht-degree: 42%
 
 ---
 
@@ -37,7 +37,7 @@ Ce document décrit les étapes à suivre pour créer et gérer des demandes d�
 
 ## Parcourir le tableau de bord de l’interface utilisateur de [!DNL Privacy Service]
 
-Le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] fournit deux widgets qui vous permettent d’afficher le statut de vos tâches de confidentialité : « [!UICONTROL Status Report] » et « [!UICONTROL Job Requests] ». Le tableau de bord affiche également la réglementation actuellement sélectionnée pour les tâches affichées.
+Le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] fournit deux widgets qui vous permettent d’afficher le statut de vos tâches de confidentialité : « [!UICONTROL Rapport de statut] » et « [!UICONTROL Requêtes de tâche] ». Le tableau de bord affiche également la réglementation actuellement sélectionnée pour les tâches affichées.
 
 ![Tableau de bord de l’interface utilisateur](../images/user-guide/dashboard.png)
 
@@ -53,17 +53,17 @@ Reportez-vous à la [présentation des réglementations relatives à la confiden
 
 | Libellé de l’interface utilisateur | API `regulation_type` | Règlement |
 |-------------------------------------------|-----------------------|----------------|
-| [!UICONTROL APA_AUS (Australia)] | `apa_aus` | [!DNL Australia Privacy Act] |
-| [!UICONTROL CCCA (California)] | `ccpa` | [!DNL California Consumer Privacy Act] (CCPA) |
+| [!UICONTROL APA_AUS (Australie)] | `apa_aus` | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCCA (Californie)] | `ccpa` | [!DNL California Consumer Privacy Act] (CCPA) |
 | [!UICONTROL CPA_CO_USA (Colorado)] | `cpa_co_usa` | [!DNL Colorado Privacy Act] |
-| [!UICONTROL CPRA_CA_USA (California)] | `cpra_ca_usa` | [!DNL California Privacy Rights Act] (ACR) |
+| [!UICONTROL CPRA_CA_USA (Californie)] | `cpra_ca_usa` | [!DNL California Privacy Rights Act] (ACR) |
 | [!UICONTROL CTDPA_CT_USA (Connecticut)] | `ctdpa_ct_usa` | [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL DPDPA_DE_USA (Delaware)] | `dpdpa_de_usa` | [!DNL Delaware Personal Data Privacy Act] |
-| [!UICONTROL FDBR_FL_USA (Florida)] | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR (European Union)] | `gdpr` | La [!DNL General Data Protection Regulation] de l&#39;Union européenne |
-| [!UICONTROL HIPAA_USA (United States)] | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL FDBR_FL_USA (Floride)] | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL RGPD (Union européenne)] | `gdpr` | La [!DNL General Data Protection Regulation] de l&#39;Union européenne |
+| [!UICONTROL HIPAA_USA (États-Unis)] | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL ICDPALIA_USA (Iowa)] | `icdpa_ia_usa` | [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA (Brazil)] | `lgpd_bra` | La [!DNL Lei Geral de Proteção de Dados] « [!DNL General Data Protection Law] » du Brésil |
+| [!UICONTROL LGPD_BRA (Brésil) &#x200B;] | `lgpd_bra` | La [!DNL Lei Geral de Proteção de Dados] « [!DNL General Data Protection Law] » du Brésil |
 | [!UICONTROL MCDPA_MN_USA (Minnesota)] | `mcdpa_mn_usa` | [!DNL Minnesota Consumer Data Privacy Act] |
 | [!UICONTROL MCDPA_MT_USA (Montana)] | `mcdpa_mt_usa` | [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL MHMDA_WA_USA (Washington)] | `mhmda_wa_usa` | [!DNL Washington My Health My Data Act] |
@@ -71,15 +71,15 @@ Reportez-vous à la [présentation des réglementations relatives à la confiden
 | [!UICONTROL NDPA_NE_USA (Nebraska)] | `ndpa_ne_usa` | [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NHPA_NH_USA (New Hampshire)] | `nhpa_nh_usa` | [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_NJ_USA (New Jersey)] | `njdpa_nj_usa` | [!DNL New Jersey Data Protection Act] |
-| [!UICONTROL NZPA_NZL (New Zealand)] | `nzpa_nzl` | [!DNL Privacy Act] de Nouvelle-Zélande (PA) |
+| [!UICONTROL NZPA_NZL (Nouvelle-Zélande)] | `nzpa_nzl` | [!DNL Privacy Act] de Nouvelle-Zélande (PA) |
 | [!UICONTROL OCPA_OR_USA (Oregon)] | `ocpa_or_usa` | [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA (Thailand)] | `pdpa_tha` | [!DNL Personal Data Protection Act] de Thaïlande (PDPA) |
-| [!UICONTROL PIPA_KOR (South Korea)] | `pipa_kor` | [!DNL Personal Information Privacy Act] de Corée du Sud (PIPA) |
-| [!UICONTROL QL25_QC_CAN (Quebec)] | `ql25_qc_can` | [!DNL Quebec Law 25] |
+| [!UICONTROL PDPA_THA (Thaïlande)] | `pdpa_tha` | [!DNL Personal Data Protection Act] de Thaïlande (PDPA) |
+| [!UICONTROL PIPA_KOR (Corée du Sud)] | `pipa_kor` | [!DNL Personal Information Privacy Act] de Corée du Sud (PIPA) |
+| [!UICONTROL QL25_QC_CAN (Québec)] | `ql25_qc_can` | [!DNL Quebec Law 25] |
 | [!UICONTROL TDPSA_TX_USA (Texas)] | `tdpsa_tx_usa` | [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL TIPA_TN_USA (Tennessee)] | `tipa_tn_usa` | [!DNL Tennessee Information Protection Act] |
 | [!UICONTROL UCPA_UT_USA (Utah)] | `ucpa_ut_usa` | [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_VA_USA (Virginia)] | `vcdpa_va_usa` | [!DNL Virginia Consumer Data Protection Act] (CDPA) |
+| [!UICONTROL VCDPA_VA_USA (Virginie)] | `vcdpa_va_usa` | [!DNL Virginia Consumer Data Protection Act] (CDPA) |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ Reportez-vous à la [présentation des réglementations relatives à la confiden
 >
 >Consultez la présentation des [réglementations de confidentialité prises en charge](../regulations/overview.md) pour plus d’informations sur le contexte juridique de chaque réglementation.
 
-Les tâches pour chaque type de réglementation sont suivies séparément. Pour basculer entre les types de régulation, sélectionnez le menu déroulant **[!UICONTROL Regulation Type]** et sélectionnez la régulation souhaitée dans la liste.
+Les tâches pour chaque type de réglementation sont suivies séparément. Pour basculer entre les types de régulation, sélectionnez le menu déroulant **[!UICONTROL Type de régulation]** et sélectionnez la régulation souhaitée dans la liste.
 
 ![Console Privacy Service avec le menu déroulant Type de réglementation.](../images/user-guide/regulation.png)
 
@@ -121,13 +121,13 @@ Pour afficher plus de détails sur un point de données donné, sélectionnez le
 
 ### Requêtes de tâche {#job-requests}
 
-L’espace de travail [!UICONTROL Job Requests] répertorie les détails des demandes de traitement récentes dans votre organisation. Les détails incluent le type de demande, le statut actuel, la date d’échéance, l’adresse électronique du demandeur, etc. Des ensembles de 100 enregistrements sont chargés à la fois. Par défaut, les tâches les plus récemment créées s’affichent en haut avec plus d’ensembles d’enregistrements chargés lorsque vous faites défiler l’écran vers le bas.
+L’espace de travail [!UICONTROL Requêtes de tâche] répertorie les détails des requêtes de tâche récentes dans votre organisation. Les détails incluent le type de demande, le statut actuel, la date d’échéance, l’adresse électronique du demandeur, etc. Des ensembles de 100 enregistrements sont chargés à la fois. Par défaut, les tâches les plus récemment créées s’affichent en haut avec plus d’ensembles d’enregistrements chargés lorsque vous faites défiler l’écran vers le bas.
 
 >[!NOTE]
 >
 >Les données des tâches créées précédemment ne sont accessibles que pendant 30 jours après la date d’achèvement.
 
-Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de recherche située sous le titre du [!UICONTROL Job Requests]. La liste est automatiquement filtrée au fur et à mesure de votre saisie, et affiche les requêtes qui contiennent des valeurs correspondant aux termes de recherche. Le champ de recherche effectue une recherche « rapide » qui fait correspondre les ID de tâche de confidentialité aux tâches actuellement générées/chargées dans l’interface utilisateur. Il ne s’agit pas d’une recherche complète de toutes les tâches envoyées. Il s’agit plutôt d’un filtre appliqué aux résultats chargés. Utilisez l’API Privacy Service pour [renvoyer des tâches en fonction d’une réglementation spécifique, de périodes ou d’une seule tâche](../api/privacy-jobs.md#list).
+Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de recherche située sous le titre [!UICONTROL Requêtes de tâche]. La liste est automatiquement filtrée au fur et à mesure de votre saisie, et affiche les requêtes qui contiennent des valeurs correspondant aux termes de recherche. Le champ de recherche effectue une recherche « rapide » qui fait correspondre les ID de tâche de confidentialité aux tâches actuellement générées/chargées dans l’interface utilisateur. Il ne s’agit pas d’une recherche complète de toutes les tâches envoyées. Il s’agit plutôt d’un filtre appliqué aux résultats chargés. Utilisez l’API Privacy Service pour [renvoyer des tâches en fonction d’une réglementation spécifique, de périodes ou d’une seule tâche](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >
@@ -135,11 +135,11 @@ Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de reche
 
 ![La section Requête de tâche de la console de confidentialité avec le champ de recherche en surbrillance.](../images/user-guide/job-search.png)
 
-Vous pouvez également utiliser le bouton de recherche pour effectuer une requête de traitement des informations personnelles qui couvre une période spécifique. Cette action renvoie toutes les tâches de confidentialité envoyées par votre organisation pendant la période donnée. Sélectionnez le menu déroulant **[!UICONTROL Requested on]** pour choisir les dates de début et de fin de la requête. Les options disponibles sont les suivantes : [!UICONTROL Today], [!UICONTROL Last 7 Days], [!UICONTROL Last 2 Weeks], [!UICONTROL Last 30 Days] ou [!UICONTROL Custom]. Utilisée avec l’option [!UICONTROL Requested on], la fonction de recherche affiche uniquement les demandes de traitement envoyées entre les périodes sélectionnées.
+Vous pouvez également utiliser le bouton de recherche pour effectuer une requête de traitement des informations personnelles qui couvre une période spécifique. Cette action renvoie toutes les tâches de confidentialité envoyées par votre organisation pendant la période donnée. Sélectionnez le menu déroulant **[!UICONTROL Demandé le]** pour choisir les dates de début et de fin de la requête. Les options disponibles sont les suivantes : [!UICONTROL Aujourd’hui], [!UICONTROL 7 derniers jours], [!UICONTROL 2 dernières semaines], [!UICONTROL 30 derniers jours] ou [!UICONTROL Personnalisé]. Utilisée avec l’option [!UICONTROL Demandé le], la fonction de recherche affiche uniquement les demandes de traitement envoyées entre les périodes sélectionnées.
 
 ![La section Requête de tâche avec le champ de recherche, Demandé dans le menu déroulant et le bouton Rechercher en surbrillance.](../images/user-guide/requested-on-dropdown-menu.png)
 
-Pour afficher les détails d’une demande de traitement spécifique, sélectionnez l’ID de traitement de la demande dans la liste afin d’ouvrir la page de **[!UICONTROL Job Details]**.
+Pour afficher les détails d’une demande de traitement spécifique, sélectionnez l’ID de traitement de la demande dans la liste afin d’ouvrir la page **[!UICONTROL Détails du traitement]**.
 
 ![Interface utilisateur des Détails de la tâche pour le RGPD](../images/user-guide/job-details.png)
 
@@ -147,7 +147,7 @@ Cette boîte de dialogue contient des informations d’état sur chaque solution
 
 Si une solution a fourni des données supplémentaires, elles peuvent être consultées dans cette boîte de dialogue. Vous pouvez afficher ces données en sélectionnant des lignes de produits individuelles.
 
-Pour télécharger l’ensemble des données de tâche au format CSV, sélectionnez **[!UICONTROL Export to CSV]** en haut à droite de la boîte de dialogue.
+Pour télécharger l’ensemble des données de tâche au format CSV, sélectionnez **[!UICONTROL Exporter au format CSV]** dans le coin supérieur droit de la boîte de dialogue.
 
 ## Création d’une nouvelle requête de tâche de confidentialité {#create-a-new-privacy-job-request}
 
@@ -171,21 +171,21 @@ Les étapes d’utilisation de chacune de ces méthodes sont décrites dans les 
 
 À l’aide du créateur de requêtes, vous pouvez créer manuellement une nouvelle requête de tâche de confidentialité dans l’interface utilisateur. Il est préférable d’utiliser le créateur de requêtes pour les jeux de requêtes les plus simples et les plus petits, car les requêtes y sont limitées à un seul type d’identifiant par utilisateur. Pour les requêtes plus complexes, il serait plus pertinent de [charger un fichier JSON](#json) à la place.
 
-Pour commencer à utiliser le créateur de requêtes, sélectionnez **[!UICONTROL Create Request]** sous le widget Rapport d’état sur le côté droit de l’écran.
+Pour commencer à utiliser le créateur de requêtes, sélectionnez **[!UICONTROL Créer une requête]** sous le widget Rapport de statut sur la droite de l’écran.
 
 ![Sélectionnez Créer une demande](../images/user-guide/create-request.png)
 
-La boîte de dialogue **[!UICONTROL Create Request]** s’ouvre. Elle affiche les options disponibles pour soumettre une demande de traitement de la confidentialité pour le type de réglementation actuellement sélectionné.
+La boîte de dialogue **[!UICONTROL Créer une demande]** s’ouvre. Elle affiche les options disponibles pour envoyer une demande de traitement de la confidentialité pour le type de réglementation actuellement sélectionné.
 
 ![](../images/user-guide/request-builder.png){width=500}
 
-Sélectionnez le **[!UICONTROL Job Type]** de la demande (« Supprimer » ou « Accéder ») et un ou plusieurs produits disponibles dans la liste.
+Sélectionnez le **[!UICONTROL Type de tâche]** de la demande (« Supprimer » ou « Accéder ») et un ou plusieurs produits disponibles dans la liste.
 
-Privacy Service prend en charge deux types de demandes de traitement des données personnelles : [!UICONTROL Access] (lecture) et/ou [!UICONTROL Delete]. Vous pouvez envoyer une demande pour recevoir toutes les informations contenues dans le produit qui se rapportent à l&#39;objet de la demande ou demander la suppression de toutes les informations qui se rapportent à l&#39;objet de la demande.
+Privacy Service prend en charge deux types de demandes de traitement des données personnelles : [!UICONTROL Accès] (lecture) et/ou [!UICONTROL Suppression]. Vous pouvez envoyer une demande pour recevoir toutes les informations contenues dans le produit qui se rapportent à l&#39;objet de la demande ou demander la suppression de toutes les informations qui se rapportent à l&#39;objet de la demande.
 
 ![](../images/user-guide/type-and-products.png){width=500}
 
-Sous **[!UICONTROL Namespace type]**, sélectionnez le type d’espace de noms approprié pour les ID de client envoyés à [!DNL Privacy Service].
+Sous **[!UICONTROL Type d’espace de noms]**, sélectionnez le type d’espace de noms approprié pour les ID client envoyés à [!DNL Privacy Service].
 
 ![](../images/user-guide/namespace-type.png){width=500}
 
@@ -197,7 +197,7 @@ Lors de l’utilisation du type d’espace de noms personnalisé , vous devez sa
 
 ![](../images/user-guide/custom-namespace.png){width=500}
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Create]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
 
 ![](../images/user-guide/request-builder-create.png){width=500}
 
@@ -207,15 +207,15 @@ La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertori�
 
 Lorsque vous créez des requêtes plus complexes, comme celles qui utilisent plusieurs types d’identifiants pour chaque titulaire de données traité, vous pouvez créer une requête en chargeant un fichier JSON.
 
-Sélectionnez la flèche en regard de **[!UICONTROL Create Request]**, sous le widget Rapport de statut sur le côté droit de l’écran. Dans la liste des options qui s’affiche, sélectionnez **[!UICONTROL Upload JSON]**.
+Sélectionnez la flèche en regard de **[!UICONTROL Créer une requête]**, sous le widget Rapport de statut sur le côté droit de l’écran. Dans la liste des options qui s’affichent, sélectionnez **[!UICONTROL Télécharger un fichier JSON]**.
 
 ![Options de création de requête](../images/user-guide/create-options.png)
 
-La boîte de dialogue **[!UICONTROL Upload JSON]** s’affiche, vous permettant de glisser-déposer votre fichier JSON dans une fenêtre.
+La boîte de dialogue **[!UICONTROL Télécharger JSON]** s’affiche, vous permettant de faire un glisser-déposer de votre fichier JSON dans.
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-Si vous ne disposez pas d’un fichier JSON à charger, sélectionnez **[!UICONTROL Download Adobe-GDPR-Request.json]** pour télécharger un modèle que vous pouvez remplir en fonction des valeurs que vous avez collectées auprès de vos titulaires de données.
+Si vous ne disposez pas d’un fichier JSON à charger, sélectionnez **[!UICONTROL Télécharger Adobe-GDPR-Request.json]** pour télécharger un modèle que vous pouvez remplir en fonction des valeurs que vous avez collectées auprès de vos titulaires de données.
 
 
 ![](../images/user-guide/privacy-template.png){width=500}
@@ -223,7 +223,7 @@ Si vous ne disposez pas d’un fichier JSON à charger, sélectionnez **[!UICONT
 
 Trouvez le fichier JSON sur votre ordinateur et faites-le glisser dans la fenêtre de dialogue. Si le chargement est réussi, le nom du fichier s’affiche dans la boîte de dialogue. Vous pouvez continuer à ajouter d’autres fichiers JSON si nécessaire en les faisant glisser dans la boîte de dialogue.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Create]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Requêtes de tâche, où s’affiche également leur état de traitement actuel.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Requêtes de tâche, où s’affiche également leur état de traitement actuel.
 
 ### Étapes suivantes
 

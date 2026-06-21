@@ -13,7 +13,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 777
+source-wordcount: 791
 ht-degree: 18%
 
 ---
@@ -42,10 +42,10 @@ Suivez le tutoriel sur [l’abonnement aux notifications [!DNL I/O Event]](../ob
 
 >[!IMPORTANT]
 >
->Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Platform notifications]** comme fournisseur d’événements, puis sélectionnez les abonnements aux événements suivants :
+>Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications Platform]** comme fournisseur d’événements, puis sélectionnez les abonnements aux événements suivants :
 >
->* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
->* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
+>* **[!UICONTROL Exécution Du Flux Experience Platform Source Réussie]**
+>* **[!UICONTROL Échec De L’Exécution Du Flux Experience Platform Source]**
 
 ## Recevoir des notifications d’exécution de flux
 

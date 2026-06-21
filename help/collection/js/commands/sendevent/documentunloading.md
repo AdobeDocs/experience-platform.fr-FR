@@ -4,8 +4,8 @@ description: Utilisez l’API sendBeacon de JavaScript pour envoyer des données
 exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
 source-git-commit: a229cec4a53ab85d13590205a008612719019ebd
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 0%
+source-wordcount: '215'
+ht-degree: 4%
 
 ---
 
@@ -30,4 +30,4 @@ alloy("sendEvent", {
 
 ## Déchargement du document à l’aide de l’extension de balise Web SDK
 
-La case à cocher **[!UICONTROL Document will unload]** est disponible lors de la configuration d’une action [**[!UICONTROL Send event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#data-fields) lors de l’utilisation de l’extension de balise Web SDK.
+La case à cocher **[!UICONTROL Le document sera déchargé]** est disponible lors de la configuration d’une action [**[!UICONTROL Envoyer l’événement]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#data-fields) lors de l’utilisation de l’extension de balise Web SDK.

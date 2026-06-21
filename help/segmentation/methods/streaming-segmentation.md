@@ -19,7 +19,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2130
+source-wordcount: 2148
 ht-degree: 19%
 
 ---
@@ -222,15 +222,15 @@ Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée
 
 >[!TAB Audience Portal]
 
-Dans Audience Portal, sélectionnez **[!UICONTROL Create audience]**.
+Dans Audience Portal, sélectionnez **[!UICONTROL Créer une audience]**.
 
 ![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/streaming/select-create-audience.png)
 
-Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Build rules]** pour accéder au créateur de segments.
+Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Créer des règles]** pour accéder au créateur de segments.
 
 ![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/streaming/select-build-rules.png)
 
-Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [ensembles de règles éligibles](#eligible-rulesets). Si la définition de segment est admissible pour la segmentation en flux continu, vous pourrez sélectionner **[!UICONTROL Streaming]** comme **[!UICONTROL Evaluation method]**.
+Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [ensembles de règles éligibles](#eligible-rulesets). Si la définition de segment est admissible pour la segmentation en flux continu, vous pourrez sélectionner **[!UICONTROL Diffusion en flux continu]** comme **[!UICONTROL Méthode d’évaluation]**.
 
 ![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation en flux continu.](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -372,7 +372,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation en f
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Update frequency]** et sélectionnez « [!UICONTROL Streaming] ». L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
+Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL &#x200B; Diffusion en continu &#x200B;]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
 
 ![La fréquence de mise à jour en flux continu est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation en flux continu.](../images/methods/streaming/filter-streaming.png)
 
@@ -388,11 +388,11 @@ Après avoir sélectionné une audience sur Audience Portal, la page des détail
 
 ![La page Détails de l’audience s’affiche pour une audience évaluée à l’aide de la segmentation en flux continu.](../images/methods/streaming/audience-details.png)
 
-Pour les audiences activées pour la diffusion en continu, la carte **[!UICONTROL Profiles over time]** s’affiche, qui indique le nombre total de mesures qualifiées et la nouvelle audience mise à jour.
+Pour les audiences activées pour la diffusion en continu, la vignette **[!UICONTROL Profils au fil du temps]** s’affiche, affichant le total des mesures qualifiées et les nouvelles mesures d’audience mises à jour.
 
-La mesure **[!UICONTROL Total qualified]** représente le nombre total d’audiences qualifiées, en fonction des évaluations de lot et de diffusion en continu pour cette audience.
+La mesure **[!UICONTROL Total qualifié]** représente le nombre total d’audiences qualifiées, en fonction des évaluations de lot et de flux continu pour cette audience.
 
-La mesure **[!UICONTROL New audience updated]** est représentée par un graphique linéaire qui indique le changement de taille d’audience par le biais de la segmentation en flux continu. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
+La mesure **[!UICONTROL Nouvelle audience mise à jour]** est représentée par un graphique linéaire qui indique le changement de taille d’audience par le biais de la segmentation en flux continu. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
 
 ![La carte Profils au fil du temps est mise en surbrillance.](../images/methods/streaming/profiles-over-time.png)
 

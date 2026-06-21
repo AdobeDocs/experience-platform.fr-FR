@@ -14,7 +14,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 132
+source-wordcount: 143
 ht-degree: 0%
 
 ---
@@ -23,22 +23,22 @@ ht-degree: 0%
 
 Une fois que vous avez créé un insight personnalisé[&#128279;](./overview.md) avec [query pro mode](./overview.md#query-pro-mode), vous pouvez exporter vos données de graphique au format PDF. Cette action est effectuée à partir de la vue d’ensemble de votre tableau de bord personnalisé.
 
-Dans l’espace de travail Tableaux de bord , sélectionnez un tableau de bord personnalisé dans l’inventaire répertorié dans l’onglet [!UICONTROL Browse] .
+Dans l’espace de travail Tableaux de bord , sélectionnez un tableau de bord personnalisé dans l’inventaire répertorié dans l’onglet [!UICONTROL Parcourir].
 
 ![L’inventaire des tableaux de bord avec une entrée de tableau de bord personnalisé mise en surbrillance.](../images/sql-insights-query-pro-mode/dashboard-inventory-audience.png)
 
-Votre tableau de bord personnalisé s’affiche. Sélectionnez ensuite **[!UICONTROL Export]** dans le coin supérieur droit de l’interface utilisateur.
+Votre tableau de bord personnalisé s’affiche. Sélectionnez ensuite **[!UICONTROL Exporter]** dans le coin supérieur droit de l’interface utilisateur.
 
 >[!NOTE]
 >
->Les exportations destinées uniquement à la visualisation ne nécessitent pas l’autorisation [!UICONTROL Export Dashboard Data]. Pour plus d’informations[&#128279;](./view-more.md#export) consultez la documentation [!UICONTROL View more] .
+>Les exportations destinées uniquement à la visualisation ne nécessitent pas l’autorisation [!UICONTROL Exporter les données du tableau de bord]. Pour plus d’informations, consultez la documentation [[!UICONTROL En savoir plus] &#x200B;](./view-more.md#export) .
 
 ![Tableau de bord personnalisé avec l’option Exporter mise en surbrillance.](../images/sql-insights-query-pro-mode/export.png)
 
-La boîte de dialogue **[!UICONTROL Export file]** s’affiche. Enfin, sélectionnez **[!UICONTROL Download]**
+La boîte de dialogue **[!UICONTROL Exporter un fichier]** s’affiche. Enfin, sélectionnez **[!UICONTROL Télécharger]**
 
 ![Boîte de dialogue Exporter un fichier avec download.](../images/sql-insights-query-pro-mode/export-dialog.png)
 
-L’aperçu PDF s’affiche. Sélectionnez **[!UICONTROL Save]** pour terminer le processus.
+L’aperçu PDF s’affiche. Sélectionnez **[!UICONTROL Enregistrer]** pour terminer le processus.
 
 ![Boîte de dialogue d’aperçu avant impression avec Enregistrer en surbrillance.](../images/sql-insights-query-pro-mode/print-preview.png)

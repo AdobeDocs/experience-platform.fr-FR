@@ -13,24 +13,24 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 139
-ht-degree: 12%
+source-wordcount: 154
+ht-degree: 11%
 
 ---
 
-# Type de données [!UICONTROL Refund Item]
+# Type de données [!UICONTROL Article remboursé]
 
-[!UICONTROL Refund Item] est un type de données XDM (modèle de données d’expérience) standard qui décrit la capture des informations relatives à un remboursement associé à une commande.
+[!UICONTROL Article remboursé] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les informations relatives à un remboursement associé à une commande.
 
 ![Diagramme du type de données Article remboursé.](../images/data-types/refund-item.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |--------------------|-----------------------|-----------|---------------------------------------------------------------------------------------------------|
-| [!UICONTROL Transaction ID] | `transactionID` | chaîne | Identifiant de transaction unique pour cet article remboursé. |
-| [!UICONTROL Refund Amount] | `refundAmount` | nombre | Valeur du remboursement. |
-| [!UICONTROL Refund Reason] | `refundReason` | chaîne | Motif pour lequel un remboursement a été émis. |
-| [!UICONTROL Refund Payment Type] | `refundPaymentType` | chaîne | Mode de paiement pour cette commande. Les valeurs personnalisées sont autorisées. |
-| [!UICONTROL Currency Code] | `currencyCode` | chaîne | Code de devise ISO 4217 utilisé pour cet élément de remboursement. Par exemple : « USD », « EUR ». |
+| [!UICONTROL ID de transaction] | `transactionID` | chaîne | Identifiant de transaction unique pour cet article remboursé. |
+| [!UICONTROL &#x200B; Montant du remboursement &#x200B;] | `refundAmount` | nombre | Valeur du remboursement. |
+| [!UICONTROL Motif du remboursement] | `refundReason` | chaîne | Motif pour lequel un remboursement a été émis. |
+| [!UICONTROL Type de paiement du remboursement] | `refundPaymentType` | chaîne | Mode de paiement pour cette commande. Les valeurs personnalisées sont autorisées. |
+| [!UICONTROL Code de devise] | `currencyCode` | chaîne | Code de devise ISO 4217 utilisé pour cet élément de remboursement. Par exemple : « USD », « EUR ». |
 
 {style="table-layout:auto"}
 

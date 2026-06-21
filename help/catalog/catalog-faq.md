@@ -16,7 +16,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 489
+source-wordcount: 491
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ Par exemple, si vous appliquez une politique d’expiration de 30 jours le 15 ma
 
 +++Réponse
 
-Vous pouvez afficher la dernière taille de stockage au niveau du jeu de données dans le lac de données et le profil sous la forme de mesures distinctes sur la page d’inventaire des [!UICONTROL Datasets]. Vous pouvez également trier les colonnes pour identifier les jeux de données les plus volumineux et vous assurer que les politiques de conservation sont appliquées. L’utilisation au niveau du sandbox est disponible dans le tableau de bord Utilisation des licences . Reportez-vous à la [documentation relative à l’utilisation des licences](../dashboards/guides/license-usage.md) pour plus d’informations.
+Vous pouvez afficher la dernière taille de stockage au niveau du jeu de données dans le lac de données et le profil sous la forme de mesures distinctes sur la page d’inventaire [!UICONTROL Jeux de données]. Vous pouvez également trier les colonnes pour identifier les jeux de données les plus volumineux et vous assurer que les politiques de conservation sont appliquées. L’utilisation au niveau du sandbox est disponible dans le tableau de bord Utilisation des licences . Reportez-vous à la [documentation relative à l’utilisation des licences](../dashboards/guides/license-usage.md) pour plus d’informations.
 
 +++
 
@@ -85,7 +85,7 @@ Vous pouvez afficher la dernière taille de stockage au niveau du jeu de donnée
 
 +++Réponse
 
-Vous pouvez vérifier la date et l’heure de la dernière tâche de conservation des données dans l’[interface utilisateur de configuration de la conservation des jeux de données](./datasets/user-guide.md#data-retention-policy) et sur la page d’inventaire des [!UICONTROL Datasets]. Les rapports concernant l’utilisation des jeux de données historiques ne sont actuellement pas disponibles, mais sont prévus pour les prochaines versions.
+Vous pouvez vérifier la date et l’heure de la dernière tâche de conservation des données dans l’[interface utilisateur de configuration de la conservation des jeux de données](./datasets/user-guide.md#data-retention-policy) et sur la page d’inventaire [!UICONTROL Jeux de données]. Les rapports concernant l’utilisation des jeux de données historiques ne sont actuellement pas disponibles, mais sont prévus pour les prochaines versions.
 
 +++
 

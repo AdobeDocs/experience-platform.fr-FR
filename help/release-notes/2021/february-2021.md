@@ -34,7 +34,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1156
+source-wordcount: 1158
 ht-degree: 82%
 
 ---
@@ -115,7 +115,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mise à niveau de l’interface utilisateur de recherche | Les fonctionnalités de recherche améliorées sont désormais disponibles dans l’onglet [!UICONTROL Browse] de l’espace de travail [!UICONTROL Schemas] et dans la boîte de dialogue de sélection du groupe de champs de schéma de l’[!DNL Schema Editor].<br><br>Auparavant, lors de la recherche d’un terme, les résultats n’incluaient que les ressources XDM dont le nom correspondait à la requête. Désormais, outre les ressources dont le nom correspond à la requête, les ressources contenant des attributs individuels qui correspondent au terme sont également incluses. Cela vous permet de rechercher des ressources XDM en fonction des attributs qu’elles contiennent plutôt que par le biais de leur nom.<br><br>Pour plus d’informations, consultez les documents sur l’[exploration des ressources XDM](../../xdm/ui/explore.md) et ceux sur la [gestion des schémas](../../xdm/ui/resources/schemas.md) dans l’interface utilisateur. |
+| Mise à niveau de l’interface utilisateur de recherche | Les fonctionnalités de recherche améliorées sont désormais disponibles dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Schémas] et dans la boîte de dialogue de sélection des groupes de champs de schéma de l’[!DNL Schema Editor].<br><br>Auparavant, lors de la recherche d’un terme, les résultats n’incluaient que les ressources XDM dont le nom correspondait à la requête. Désormais, outre les ressources dont le nom correspond à la requête, les ressources contenant des attributs individuels qui correspondent au terme sont également incluses. Cela vous permet de rechercher des ressources XDM en fonction des attributs qu’elles contiennent plutôt que par le biais de leur nom.<br><br>Pour plus d’informations, consultez les documents sur l’[exploration des ressources XDM](../../xdm/ui/explore.md) et ceux sur la [gestion des schémas](../../xdm/ui/resources/schemas.md) dans l’interface utilisateur. |
 
 Pour des informations plus générales sur XDM, reportez-vous à la [présentation du système XDM](../../xdm/home.md).
 

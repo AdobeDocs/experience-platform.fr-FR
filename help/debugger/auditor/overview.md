@@ -18,8 +18,8 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 362
-ht-degree: 34%
+source-wordcount: 367
+ht-degree: 32%
 
 ---
 
@@ -30,7 +30,7 @@ Dans Adobe Experience Platform Debugger, vous pouvez utiliser l’onglet **[!UIC
 Pour utiliser cette fonctionnalité :
 
 1. Sélectionnez **[!UICONTROL Auditor]** dans le volet de navigation de gauche.
-1. Sélectionnez **[!UICONTROL Run Auditor Tests]**. Une fois les tests terminés, leurs résultats apparaissent ci-dessous.
+1. Sélectionnez **[!UICONTROL Exécuter les tests d’Auditor]**. Une fois les tests terminés, leurs résultats apparaissent ci-dessous.
 
 ![Capture d’écran des résultats du test dans l’onglet Auditor](../images/auditor-results.png)
 
@@ -44,7 +44,7 @@ Chaque test est pondéré et votre score de test est égal au poids attribué. S
 | --- | --- |
 | 0 | Vous avertit des problèmes que vous devez connaître, mais n’affectez pas votre score. |
 | 1 | Recommande une optimisation. Aucune incidence sur la précision des données. |
-| 2 | L’échec de ce test signifie que vous n’aurez pas accès aux dernières fonctionnalités et correctifs de Adobe Experience Cloud. |
+| 2 | L’échec de ce test signifie que vous n’aurez pas accès aux fonctionnalités et correctifs les plus récents d’Adobe Experience Cloud. |
 | 3 | Tests d’efficacité et de respect des bonnes pratiques lors de la mise en œuvre. |
 | 4 | L’échec signifie que vous collectez peut-être des données non fiables. |
 | 5 | Un échec peut entraîner une perte de données. |

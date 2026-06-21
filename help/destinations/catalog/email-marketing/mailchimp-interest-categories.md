@@ -19,8 +19,8 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 2530
-ht-degree: 15%
+source-wordcount: 2625
+ht-degree: 16%
 
 ---
 
@@ -50,7 +50,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables dans Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL Mailchimp Interest Categories], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créés dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL Mailchimp Interest Categories], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créés dans [!DNL Experience Platform].
 
 ### Conditions préalables pour la destination [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -128,8 +128,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Profile-based]** | <ul><li>Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Pour chaque audience sélectionnée dans Experience Platform, le statut du segment [!DNL Mailchimp Interest Categories] correspondant est mis à jour avec son statut d’audience à partir d’Experience Platform.</li></ul> |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li>Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités, *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> Pour chaque audience sélectionnée dans Experience Platform, le statut du segment [!DNL Mailchimp Interest Categories] correspondant est mis à jour avec son statut d’audience à partir d’Experience Platform.</li></ul> |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -137,26 +137,26 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, recherchez [!DNL Mailchimp Interest Categories]. Vous pouvez également localiser cet élément dans la catégorie **[!UICONTROL Email marketing]** .
+Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, recherchez [!DNL Mailchimp Interest Categories]. Vous pouvez également localiser cet élément dans la catégorie **[!UICONTROL Marketing par e-mail]**.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier auprès de la destination, renseignez les champs obligatoires ci-dessous et sélectionnez **[!UICONTROL Connect to destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs obligatoires ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 | Champ | Description |
 | --- | --- |
-| **[!UICONTROL Username]** | Votre nom d’utilisateur [!DNL Mailchimp Interest Categories]. |
-| **[!UICONTROL Password]** | Votre [!DNL Mailchimp] **clé API**, que vous avez notée dans la section [Collecter [!DNL Mailchimp] informations d’identification](#gather-credentials) <br>. Votre clé API se présente sous la forme d’une `{KEY}-{DC}`, où la partie `{KEY}` fait référence à la valeur indiquée dans la section [[!DNL Mailchimp] clé API](#gather-credentials) et la partie `{DC}` fait référence au [[!DNL Mailchimp] centre de données](#identify-data-center). <br>Vous pouvez fournir la partie `{KEY}` ou l’intégralité du formulaire.<br> Par exemple, si votre clé API est <br> vous pouvez fournir *`0123456789abcdef0123456789abcde`* ou *`0123456789abcdef0123456789abcde-us14`* comme valeur.<br>*`0123456789abcdef0123456789abcde-us14`* |
+| **[!UICONTROL Nom d’utilisateur]** | Votre nom d’utilisateur [!DNL Mailchimp Interest Categories]. |
+| **[!UICONTROL Mot de passe]** | Votre [!DNL Mailchimp] **clé API**, que vous avez notée dans la section [Collecter [!DNL Mailchimp] informations d’identification](#gather-credentials) <br>. Votre clé API se présente sous la forme d’une `{KEY}-{DC}`, où la partie `{KEY}` fait référence à la valeur indiquée dans la section [[!DNL Mailchimp] clé API](#gather-credentials) et la partie `{DC}` fait référence au [[!DNL Mailchimp] centre de données](#identify-data-center). <br>Vous pouvez fournir la partie `{KEY}` ou l’intégralité du formulaire.<br> Par exemple, si votre clé API est <br> vous pouvez fournir *`0123456789abcdef0123456789abcde`* ou *`0123456789abcdef0123456789abcde-us14`* comme valeur.<br>*`0123456789abcdef0123456789abcde-us14`* |
 
 {style="table-layout:auto"}
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment s’authentifier.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
-Si les détails fournis sont valides, l’interface utilisateur affiche un statut de **[!UICONTROL Connected]** avec une coche verte. Vous pouvez ensuite passer à l’étape suivante.
+Si les détails fournis sont valides, l’interface utilisateur affiche un statut **[!UICONTROL Connecté]** avec une coche verte. Vous pouvez ensuite passer à l’étape suivante.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -166,30 +166,30 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 | Champ | Description |
 | --- | --- |
-| **[!UICONTROL Name]** | Nom par lequel vous reconnaîtrez cette destination à l’avenir. |
+| **[!UICONTROL Nom]** | Nom par lequel vous reconnaîtrez cette destination à l’avenir. |
 | **[!UICONTROL Description]** | Une description qui vous aidera à identifier cette destination à l’avenir. |
-| **[!UICONTROL Data center]** | Votre compte [!DNL Mailchimp] est `data center`. Reportez-vous à la section [Identifier [!DNL Mailchimp] centre de données](#identify-data-center) pour obtenir des conseils. |
-| **[!UICONTROL Audience Name (Please select Data center first)]** | Une fois la **[!UICONTROL Data center]** sélectionnée, cette liste déroulante est automatiquement renseignée avec les noms des audiences de votre compte [!DNL Mailchimp]. Sélectionnez l’audience à mettre à jour avec les données d’Experience Platform. |
-| **[!UICONTROL Interest Category (Please select Data center and Audience Name first)]** | Une fois que vous avez sélectionné votre **[!UICONTROL Audience Name]**, cette liste déroulante est automatiquement renseignée avec les noms des catégories de groupes d’intérêt de votre compte [!DNL Mailchimp]. Sélectionnez le nom de la catégorie à mettre à jour avec les données d’Experience Platform. |
+| **[!UICONTROL Centre de données]** | Votre compte [!DNL Mailchimp] est `data center`. Reportez-vous à la section [Identifier [!DNL Mailchimp] centre de données](#identify-data-center) pour obtenir des conseils. |
+| **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner le centre de données)]** | Une fois que vous avez sélectionné votre **[!UICONTROL centre de données]**, cette liste déroulante est automatiquement renseignée avec les noms des audiences de votre compte [!DNL Mailchimp]. Sélectionnez l’audience à mettre à jour avec les données d’Experience Platform. |
+| **[!UICONTROL Catégorie d’intérêt (veuillez d’abord sélectionner le centre de données et le nom de l’audience)]** | Une fois que vous avez sélectionné votre **[!UICONTROL Nom de l’audience]**, cette liste déroulante est automatiquement renseignée avec les noms des catégories de groupes d’intérêt de votre compte [!DNL Mailchimp]. Sélectionnez le nom de la catégorie à mettre à jour avec les données d’Experience Platform. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> Si la clé API fournie dans le champ **[!UICONTROL Password]** ou la valeur **[!UICONTROL Data center]** est incorrecte, l’interface utilisateur affiche une réponse d’erreur d’API [!DNL Mailchimp] : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans le champ **[!UICONTROL Audience Name (Please select Data center first)]** . Pour corriger cette erreur, indiquez les valeurs correctes.
+> Si la clé API fournie dans le champ **[!UICONTROL Mot de passe]** ou la valeur **[!UICONTROL Centre de données]** est incorrecte, l’interface utilisateur affiche une réponse d’erreur d’API [!DNL Mailchimp] : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans le champ **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner Centre de données)]**. Pour corriger cette erreur, indiquez les valeurs correctes.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]**](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -199,9 +199,9 @@ Pour envoyer correctement vos données d’audience de [!DNL Adobe Experience Pl
 
 Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Mailchimp Interest Categories], procédez comme suit :
 
-1. À l’étape **[!UICONTROL Mapping]**, sélectionnez **[!UICONTROL Add new mapping]**. Une nouvelle ligne de mappage s’affiche désormais à l’écran.
-1. Dans la fenêtre **[!UICONTROL Select source field]** , choisissez la catégorie **[!UICONTROL Select attributes]** et sélectionnez l’attribut XDM ou choisissez le **[!UICONTROL Select identity namespace]** et sélectionnez une identité.
-1. Dans la fenêtre de **[!UICONTROL Select target field]**, choisissez le **[!UICONTROL Select identity namespace]** et sélectionnez une identité ou choisissez **[!UICONTROL Select attributes]** catégorie et sélectionnez dans la liste des attributs renseignée à partir de l’API [!DNL Mailchimp]. *Tous les attributs personnalisés que vous avez ajoutés à l’audience [!DNL Mailchimp] sélectionnée pourront également être sélectionnés en tant que champs cibles.*
+1. À l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affiche désormais à l’écran.
+1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez la catégorie **[!UICONTROL Sélectionner les attributs]** et sélectionnez l’attribut XDM ou choisissez l’espace de noms d’identité **[!UICONTROL Sélectionner]** et sélectionnez une identité.
+1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]**, choisissez la catégorie **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez une identité ou choisissez **[!UICONTROL Sélectionner des attributs]** et sélectionnez dans la liste des attributs renseignée à partir de l’API [!DNL Mailchimp]. *Tous les attributs personnalisés que vous avez ajoutés à l’audience [!DNL Mailchimp] sélectionnée pourront également être sélectionnés en tant que champs cibles.*
 
    Les mappages disponibles entre votre schéma de profil XDM et [!DNL Mailchimp Interest Categories] sont les suivants :
 
@@ -230,7 +230,7 @@ Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Mai
    Un exemple avec les mappages terminés est illustré ci-dessous :
    ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform montrant les mappages de champs.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
-Lorsque vous avez terminé de fournir les mappages pour votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de fournir les mappages pour votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Valider l’exportation des données {#exported-data}
 
@@ -255,7 +255,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ### Erreur rencontrée si les valeurs de [!DNL Mailchimp] clé API ou du centre de données sont incorrectes {#incorrect-credentials-error}
 
-Si la clé API fournie dans le champ **[!UICONTROL Password]** ou la valeur **[!UICONTROL Data center]** est incorrecte, l’interface utilisateur affiche une réponse d’erreur d’API [!DNL Mailchimp] : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans le champ **[!UICONTROL Audience Name (Please select Data center first)]** .
+Si la clé API fournie dans le champ **[!UICONTROL Mot de passe]** ou la valeur **[!UICONTROL Centre de données]** est incorrecte, l’interface utilisateur affiche une réponse d’erreur d’API [!DNL Mailchimp] : *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* comme illustré ci-dessous. Dans ce cas, vous ne pouvez pas sélectionner de valeur dans le champ **[!UICONTROL Nom de l’audience (veuillez d’abord sélectionner Centre de données)]**.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform affichant une erreur si la clé API Mailchimp ou les valeurs du centre de données sont incorrectes.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 

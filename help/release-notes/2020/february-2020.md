@@ -46,6 +46,6 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).

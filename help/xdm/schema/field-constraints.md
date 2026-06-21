@@ -11,8 +11,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 643
-ht-degree: 6%
+source-wordcount: 695
+ht-degree: 7%
 
 ---
 
@@ -162,16 +162,16 @@ Les sections ci-dessous décrivent comment chaque type XDM correspond à d’aut
 
 | Type XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | Type : `BYTE_ARRAY`<br>Annotation : `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Number] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Chaîne] | Type : `BYTE_ARRAY`<br>Annotation : `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Nombre] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type : `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Integer] | Type : `INT32`<br>Annotation : `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Short] | Type : `INT32`<br>Annotation : `INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL Byte] | Type : `INT32`<br>Annotation : `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Entier] | Type : `INT32`<br>Annotation : `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Court] | Type : `INT32`<br>Annotation : `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Octet] | Type : `INT32`<br>Annotation : `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Date] | Type : `INT32`<br>Annotation : `DATE` | `DateType` | `java.util.Date` |
-| [!UICONTROL DateTime] | Type : `INT64`<br>Annotation : `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL Boolean] | Type : `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Map] | Groupe `MAP`-annoté <br><br>(`<key-type>` doit être `STRING`) | `MapType`<br><br>(`keyType` doit être `StringType`) | `java.util.Map` |
+| [!UICONTROL DateHeure] | Type : `INT64`<br>Annotation : `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL booléen] | Type : `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Carte] | Groupe `MAP`-annoté <br><br>(`<key-type>` doit être `STRING`) | `MapType`<br><br>(`keyType` doit être `StringType`) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -179,16 +179,16 @@ Les sections ci-dessous décrivent comment chaque type XDM correspond à d’aut
 
 | Type XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Chaîne] | `String` | `System.String` | `String` |
+| [!UICONTROL Nombre] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
-| [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL Entier] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Court] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Octet] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL Map] | `Map` | (S/O) | `object` |
+| [!UICONTROL DateHeure] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL booléen] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Carte] | `Map` | (S/O) | `object` |
 
 {style="table-layout:auto"}
 
@@ -196,16 +196,16 @@ Les sections ci-dessous décrivent comment chaque type XDM correspond à d’aut
 
 | Type XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Number] | `double` | `Double` | `double` |
+| [!UICONTROL Chaîne] | `string` | `String` | `string` |
+| [!UICONTROL Nombre] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
-| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
-| [!UICONTROL Short] | `int` | `Integer` | `int32` |
-| [!UICONTROL Byte] | `int` | `Integer` | `int32` |
+| [!UICONTROL Entier] | `int` | `Integer` | `int32` |
+| [!UICONTROL Court] | `int` | `Integer` | `int32` |
+| [!UICONTROL Octet] | `int` | `Integer` | `int32` |
 | [!UICONTROL Date] | `date` | `Integer`<br> (Unix millisecondes) | `int64`<br> (Unix millisecondes) |
-| [!UICONTROL DateTime] | `timestamp` | `Integer`<br> (Unix millisecondes) | `int64`<br> (Unix millisecondes) |
-| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binaire) | `bool` |
-| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL DateHeure] | `timestamp` | `Integer`<br> (Unix millisecondes) | `int64`<br> (Unix millisecondes) |
+| [!UICONTROL booléen] | `bool` | `Integer`<br>(0/1 binaire) | `bool` |
+| [!UICONTROL Carte] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 

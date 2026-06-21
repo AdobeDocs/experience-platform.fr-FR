@@ -20,8 +20,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 469
-ht-degree: 73%
+source-wordcount: 444
+ht-degree: 75%
 
 ---
 
@@ -64,7 +64,7 @@ L’outil de génération de modèles automatique fournit ensuite des options po
 
 * [Vue de configuration de l’extension](./configuration.md) : la vue, fichier HTML, depuis laquelle une extension rassemble les paramètres globaux d’un utilisateur.
 * [Types d’événement](./web/event-types.md) : définit une activité d’observation. Par exemple, savoir quand un utilisateur fait défiler rapidement une page ou quand un utilisateur a interagi avec un élément de page. Les événements peuvent ensuite être utilisés dans les règles pour exécuter des actions.
-* [Types de condition](./web/condition-types.md) : les types de condition évaluent si un élément est vrai ou faux.
+* [Types de conditions](./web/condition-types.md) : les types de conditions évaluent si un élément est vrai ou faux.
 Par exemple, elle peut renvoyer la valeur si le navigateur de l’utilisateur est Chrome, s’il utilise une iPad ou si l’utilisateur se trouve sur un domaine spécifique.
 * [Types d’action](./web/action-types.md) : action à effectuer lorsqu’un événement se produit. Par exemple, envoyer une balise d’analyse, afficher une offre, enregistrer un cookie ou ouvrir une conversation d’assistance.
 * [Types d’éléments de données](./web/data-element-types.md) : un type d’élément de données récupère une donnée. Cette donnée peut se trouver dans un enregistrement local, dans un cookie, dans un élément DOM ou dans un emplacement personnalisé.

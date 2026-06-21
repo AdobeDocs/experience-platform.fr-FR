@@ -17,7 +17,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 3344
+source-wordcount: 3414
 ht-degree: 21%
 
 ---
@@ -165,12 +165,12 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Écrire dans un jeu de données en Python {#write-python}
 
-Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Write Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture avec le jeu de données sélectionné.
-- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
+- Utilisez **[!UICONTROL Explorer des données dans Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
 - Utilisez **[!UICONTROL Query Data in Notebook]** pour générer une cellule de requête de base avec le jeu de données sélectionné.
 
 Vous pouvez également copier et coller la cellule de code suivante. Remplacez les `{DATASET_ID}` et les `{PANDA_DATAFRAME}`.
@@ -190,7 +190,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
 
-L’interrogation de données à l’aide de [!DNL Query Service] nécessite que vous fournissiez le nom du jeu de données cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL Data explorer]** . Cliquez avec le bouton droit sur la liste des jeux de données et cliquez sur **[!UICONTROL Query Data in Notebook]** pour générer deux cellules de code dans votre notebook. Ces deux cellules sont décrites plus en détail ci-dessous.
+L’interrogation de données à l’aide de [!DNL Query Service] nécessite que vous fournissiez le nom du jeu de données cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL explorateur de données]**. Cliquez avec le bouton droit sur la liste des jeux de données et cliquez sur **[!UICONTROL Requête de données dans Notebook]** pour générer deux cellules de code dans votre notebook. Ces deux cellules sont décrites plus en détail ci-dessous.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -301,12 +301,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Écrire dans un jeu de données dans R {#write-r}
 
-Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Write Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture avec le jeu de données sélectionné.
-- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
+- Utilisez **[!UICONTROL Explorer des données dans Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
 
 Vous pouvez également copier et coller la cellule de code suivante :
 
@@ -413,9 +413,9 @@ Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écri
 
 Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab, mais en utilisant la méthode suivante :
 
-Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Write Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
-- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture.
+- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture.
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
@@ -545,11 +545,11 @@ df1.show(10)
 
 Vous pouvez générer automatiquement l’exemple ci-dessus dans JupyterLab à l’aide de la méthode suivante :
 
-Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Explore Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Jeux de données]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Explorer les données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 Et
 
-- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture.
+- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture.
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)

@@ -21,7 +21,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 786
+source-wordcount: 790
 ht-degree: 0%
 
 ---
@@ -758,4 +758,4 @@ sessionPromise.then(sessionID => {
 
 ## Envoi d’un événement multimédia à l’aide de l’extension de balise Web SDK
 
-L’extension de balise Web SDK équivalente à cette commande est l’action [**[!UICONTROL Send media event]**](/help/tags/extensions/client/web-sdk/actions/send-media-event.md).
+L’extension de balise Web SDK équivalente à cette commande est l’action [**[!UICONTROL Envoyer l’événement multimédia]**](/help/tags/extensions/client/web-sdk/actions/send-media-event.md).

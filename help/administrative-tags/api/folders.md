@@ -387,7 +387,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 Vous pouvez supprimer un dossier spécifique qui appartient à votre organisation en adressant une requête DELETE au `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
-***Format API**
+Format ***API**
 
 ```http
 DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}

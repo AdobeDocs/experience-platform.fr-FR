@@ -41,7 +41,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 3441
+source-wordcount: 3462
 ht-degree: 37%
 
 ---
@@ -285,13 +285,13 @@ Tout d’abord, accédez au **tableau de bord d’utilisation des licences** et 
 
 >[!TAB  Sandbox de production ]
 
-Utilisez l’interface [!UICONTROL Metrics] pour afficher les mesures d’utilisation des licences. L’interface affiche par défaut des informations sur votre sandbox de production.
+Utilisez l’interface [!UICONTROL Mesures] pour afficher les mesures d’utilisation des licences. L’interface affiche par défaut des informations sur votre sandbox de production.
 
 ![Interface utilisateur du tableau de bord d’utilisation de la licence affichant les mesures d’utilisation de la licence pour un sandbox de production.](../images/data-management/prod-sandbox.png)
 
 >[!TAB Sandbox de développement]
 
-Sélectionnez [!UICONTROL Development] pour afficher les mesures d’utilisation de licence liées à vos sandbox de développement.
+Sélectionnez [!UICONTROL Développement] pour afficher les mesures d’utilisation de licence liées à vos sandbox de développement.
 
 ![Interface utilisateur du tableau de bord d’utilisation de la licence affichant vos mesures d’utilisation de la licence pour les sandbox de développement.](../images/data-management/dev-sandbox.png)
 
@@ -301,7 +301,7 @@ Pour plus d’informations, consultez la documentation relative à l’[utilisat
 
 **Analyse de l’utilisation du stockage au niveau du jeu de données**
 
-Utilisez la **vue de navigation du jeu de données** pour consulter les mesures d’utilisation de votre jeu de données pour le lac de données et le profil client en temps réel. Sélectionnez les en-têtes de colonne pour **[!UICONTROL Data Lake Storage]** ou **[!UICONTROL Profile Storage]**, puis sélectionnez **[!UICONTROL Sort Descending]** dans le panneau pop-up.
+Utilisez la **vue de navigation du jeu de données** pour consulter les mesures d’utilisation de votre jeu de données pour le lac de données et le profil client en temps réel. Sélectionnez les en-têtes de colonne pour **[!UICONTROL Data Lake Storage]** ou **[!UICONTROL Profile Storage]**, puis sélectionnez **[!UICONTROL Trier par ordre décroissant]** dans le panneau pop-up.
 
 >[!BEGINTABS]
 
@@ -321,17 +321,17 @@ Les jeux de données dans le profil sont triés par taille de stockage. Utilisez
 
 **Évaluation et configuration des règles de rétention**
 
-Ensuite, déterminez si vos jeux de données disposent des politiques de conservation appropriées en fonction des limites de licence et des exigences commerciales pour Analytics et Segmentation. Pour afficher la politique de conservation d’un jeu de données, sélectionnez les points de suspension (`...`) à côté de votre jeu de données, puis sélectionnez **[!UICONTROL Set data retention policy]**.
+Ensuite, déterminez si vos jeux de données disposent des politiques de conservation appropriées en fonction des limites de licence et des exigences commerciales pour Analytics et Segmentation. Pour afficher la politique de conservation d’un jeu de données, sélectionnez les points de suspension (`...`) à côté de votre jeu de données, puis sélectionnez **[!UICONTROL Définir la politique de conservation des données]**.
 
 ![Le panneau pop-up avec des options de jeu de données, y compris « Définir une politique de conservation des données »](../images/data-management/set-retention-policy.png)
 
-L’interface *[!UICONTROL Set dataset retention]* s’affiche. Utilisez cette interface pour configurer une politique de rétention pour votre jeu de données. Vous pouvez également l’utiliser pour afficher la quantité d’espace de stockage consommée par votre jeu de données dans le lac de données ou le profil.
+L’interface *[!UICONTROL Définir la rétention du jeu de données]* s’affiche. Utilisez cette interface pour configurer une politique de rétention pour votre jeu de données. Vous pouvez également l’utiliser pour afficher la quantité d’espace de stockage consommée par votre jeu de données dans le lac de données ou le profil.
 
 ![Interface « Définir la conservation des jeux de données ».](../images/data-management/dataset-retention.png)
 
-Vous pouvez analyser plus en détail l’impact de la rétention de votre jeu de données à l’aide du prévisionniste d’impact. Sélectionnez **[!UICONTROL View ExperienceEvent data distribution]** pour afficher un graphique qui affiche votre fenêtre de conservation et le pourcentage total de stockage qui est défini pour expirer.
+Vous pouvez analyser plus en détail l’impact de la rétention de votre jeu de données à l’aide du prévisionniste d’impact. Sélectionnez **[!UICONTROL Afficher la répartition des données ExperienceEvent]** pour afficher un graphique qui affiche votre fenêtre de conservation et le pourcentage total de stockage défini pour expirer.
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 
 ![Le prévisionniste d’impact depuis l’interface de conservation des jeux de données.](../images/data-management/impact-forecaster.png)
 

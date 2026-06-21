@@ -11,7 +11,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 667
+source-wordcount: 693
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ La vue Messagerie In-App d’Adobe Experience Platform Assurance permet de valid
 
 ## Messages sur l’appareil
 
-En haut de l’onglet **[!UICONTROL Messages on Device]** se trouve une liste déroulante **[!UICONTROL Message]** . Cela inclut tous les messages qui ont été reçus dans la session Assurance. Si un message ne figure pas dans cette liste, cela signifie que l’application ne l’a jamais reçu.
+En haut de l’onglet **[!UICONTROL Messages sur l’appareil]** se trouve une liste déroulante **[!UICONTROL Message]**. Cela inclut tous les messages qui ont été reçus dans la session Assurance. Si un message ne figure pas dans cette liste, cela signifie que l’application ne l’a jamais reçu.
 
 ![Message](./images/in-app-messaging/message.png)
 
@@ -30,27 +30,27 @@ La sélection d’un message affiche une grande quantité d’informations sur c
 
 ### Aperçu du message
 
-Dans le volet de droite se trouve un volet **[!UICONTROL Message Preview]**, qui affiche un aperçu du message. Si vous sélectionnez **[!UICONTROL Simulate on Device]**, ce message sera envoyé à tous les appareils actuellement connectés à la session.
+Dans le panneau de droite se trouve un volet **[!UICONTROL Aperçu du message]** qui affiche un aperçu du message. Sélectionner **[!UICONTROL Simuler sur l’appareil]** enverra ce message à tous les appareils actuellement connectés à la session.
 
 ![Aperçu](./images/in-app-messaging/preview.png)
 
 ### Comportement des messages
 
-Sous le volet **[!UICONTROL Message Preview]** se trouve l’onglet **[!UICONTROL Message Behavior]** . Elle contient tous les détails sur l’affichage du message. Ces informations incluent les informations de positionnement, les animations, les mouvements de glissement et les paramètres d’aspect.
+Sous le volet **[!UICONTROL Aperçu du message]** se trouve l’onglet **[!UICONTROL Comportement du message]**. Elle contient tous les détails sur l’affichage du message. Ces informations incluent les informations de positionnement, les animations, les mouvements de glissement et les paramètres d’aspect.
 
 ![Comportement](./images/in-app-messaging/gestures.png)
 
 ### Onglet Infos
 
-Dans la section de gauche, quatre onglets affichent des détails sur le message. L’onglet **[!UICONTROL Info]** affiche les informations chargées depuis Adobe Journey Optimizer (AJO) au sujet de la campagne par messages.
+Dans la section de gauche, quatre onglets affichent des détails sur le message. L’onglet **[!UICONTROL Info]** affiche les informations chargées depuis Adobe Journey Optimizer (AJO) au sujet de la campagne par message.
 
-Vous pouvez également sélectionner **[!UICONTROL View campaign]** pour ouvrir le message dans AJO à des fins d’inspection ou de modification.
+Vous pouvez également sélectionner **[!UICONTROL Afficher la campagne]** pour afficher le message dans AJO à des fins d’inspection ou de modification.
 
 ![Info](./images/in-app-messaging/info.png)
 
 ### Onglet Règles
 
-L’onglet **[!UICONTROL Rules]** indique ce qui doit se passer pour que ce message s’affiche. Insight dispose ainsi de ce qui déclenchera l’affichage d’un message. En regardant cet exemple :
+L’onglet **[!UICONTROL Règles]** indique ce qui doit se passer pour que ce message s’affiche. Insight dispose ainsi de ce qui déclenchera l’affichage d’un message. En regardant cet exemple :
 
 ![Règles](./images/in-app-messaging/rules.png)
 
@@ -66,17 +66,17 @@ Si les trois conditions correspondent à l’événement actuel, le message s’
 
 ### Onglet Analyser
 
-L’onglet **[!UICONTROL Analyze]** fournit des informations supplémentaires sur les règles. Ici, nous filtrons chaque événement de la session en fonction de la proximité de la règle de message par rapport à l’événement.
+L’onglet **[!UICONTROL Analyser]** fournit des informations supplémentaires sur les règles. Ici, nous filtrons chaque événement de la session en fonction de la proximité de la règle de message par rapport à l’événement.
 
 ![&#x200B; Analyser &#x200B;](./images/in-app-messaging/analyze.png)
 
-Dans l’exemple de la section **[!UICONTROL Rules Tab]** , la règle comporte trois conditions. Cet onglet indique le pourcentage de la règle à laquelle correspond chaque événement. La majorité des événements correspondent à 33 % (l’une des trois conditions) et le reste à 100 %.
+Dans l’exemple de la section **[!UICONTROL Onglet Règles]**, la règle comporte trois conditions. Cet onglet indique le pourcentage de la règle à laquelle correspond chaque événement. La majorité des événements correspondent à 33 % (l’une des trois conditions) et le reste à 100 %.
 
 Par conséquent, vous pouvez trouver des événements qui sont proches de la correspondance, mais qui ne correspondent pas entièrement à la règle.
 
 ![Seuil](./images/in-app-messaging/threshold.png)
 
-Le curseur **[!UICONTROL Match Threshold]** permet de filtrer les événements à afficher. Par exemple, cette valeur peut être définie sur 50 % à 90 % afin d’obtenir une liste d’événements qui correspondent exactement à deux des trois conditions.
+Le curseur **[!UICONTROL Seuil de correspondance]** permet de filtrer les événements à afficher. Par exemple, cette valeur peut être définie sur 50 % à 90 % afin d’obtenir une liste d’événements qui correspondent exactement à deux des trois conditions.
 
 ### Onglet Interactions
 
@@ -96,7 +96,7 @@ La colonne de validation indique si l&#39;événement d&#39;interaction a été 
 
 ## Validation
 
-L’onglet **[!UICONTROL Validation]** exécute des validations sur votre session en cours, en vérifiant si l’application a été correctement configurée pour la messagerie in-app :
+L’onglet **[!UICONTROL Validation]** exécute des validations sur la session en cours, en vérifiant si l’application a été configurée correctement pour la messagerie In-App :
 
 ![&#x200B; Validation &#x200B;](./images/in-app-messaging/validation.png)
 
@@ -106,7 +106,7 @@ Si des erreurs ont été détectées, des détails sur la manière de les corrig
 
 ![&#x200B; Validation &#x200B;](./images/in-app-messaging/event-list.png)
 
-L’onglet **[!UICONTROL Event List]** donne un aperçu de tous les événements de la session Assurance liés à la messagerie In-App. Voici certains des événements que vous pouvez voir ici :
+L’onglet **[!UICONTROL Liste des événements]** donne un aperçu rapide de tous les événements de la session Assurance liés à la messagerie In-App. Voici certains des événements que vous pouvez voir ici :
 
 * Demandes et réponses pour récupérer les messages
 * Afficher les événements de message

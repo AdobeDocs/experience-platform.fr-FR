@@ -76,7 +76,7 @@ Un système de périphérie consolidé vous permet de gérer des campagnes publi
 
 ## Bibliothèques remplacées par le SDK Web {#sdks}
 
-Web SDK est une bibliothèque open source créée à partir de zéro pour intégrer les fonctionnalités des bibliothèques existantes. Elle résout les problèmes d’ordre de déclenchement des balises, d’incohérences de version et de gestion des dépendances, offrant ainsi un moyen de mettre en œuvre de nombreux produits Experience Cloud. Le SDK Web remplace la collecte de données pour les services suivants :
+Web SDK est une bibliothèque open source créée à partir de zéro pour intégrer les fonctionnalités des bibliothèques existantes. Elle résout les problèmes d’ordre de déclenchement des balises, d’incohérences de version et de gestion des dépendances, offrant ainsi un moyen d’implémenter de nombreux produits Experience Cloud. Le SDK Web remplace la collecte de données pour les services suivants :
 
 * Service d’identification des visiteurs Adobe Experience Platform (`Visitor.js`)
 * Adobe Analytics `AppMeasurement.js`)

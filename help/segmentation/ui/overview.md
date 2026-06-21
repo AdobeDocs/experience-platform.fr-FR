@@ -24,8 +24,8 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1040
-ht-degree: 64%
+source-wordcount: 1058
+ht-degree: 63%
 
 ---
 
@@ -50,11 +50,11 @@ Vous devriez également comprendre les termes clés suivants utilisés dans ce d
 
 ## Vue d’ensemble
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Overview]** affichant le tableau de bord [!UICONTROL Audiences].
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Présentation]** affichant le tableau de bord [!UICONTROL Audiences].
 
 >[!NOTE]
 >
->Si votre organisation débute avec Experience Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Audiences] n’est pas visible. À la place, l’onglet [!UICONTROL Overview] affiche des liens et de la documentation pour vous aider à prendre en main les audiences.
+>Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Audiences] n’est pas visible. À la place, l’onglet [!UICONTROL Aperçu] affiche des liens et de la documentation pour vous aider à prendre en main les audiences.
 
 ### Tableau de bord [!UICONTROL Audiences] {#segments-dashboard}
 
@@ -66,7 +66,7 @@ Pour en savoir plus, consultez le [guide du tableau de bord Audiences](../../das
 
 ## Parcourir {#browse}
 
-Sélectionnez l’onglet **[!UICONTROL Browse]** pour afficher Audience Portal. Le portail Audience fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre sandbox. Il inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
+Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher Audience Portal. Le portail Audience fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre sandbox. Il inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
 
 En outre, Audience Portal vous permet de créer de nouvelles audiences à l’aide du créateur de segments ou de la composition d’audiences, ainsi que d’importer des audiences générées en externe dans Experience Platform.
 
@@ -98,14 +98,14 @@ Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant êt
 
 | Champ | Description |
 | ----- | ----------- |
-| [!UICONTROL Name] | Nom de l’audience. |
-| [!UICONTROL Status] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive` et `Published`. |
-| [!UICONTROL Created] | Heure et date de création de l’audience. |
-| [!UICONTROL Created by] | Nom de la personne qui a créé l’audience. |
-| [!UICONTROL Updated] | Heure et date de la dernière mise à jour de l’audience. |
-| [!UICONTROL Updated by] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
+| [!UICONTROL Nom] | Nom de l’audience. |
+| [!UICONTROL Statut] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive` et `Published`. |
+| [!UICONTROL Créé] | Heure et date de création de l’audience. |
+| [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
+| [!UICONTROL Mis à jour] | Heure et date de la dernière mise à jour de l’audience. |
+| [!UICONTROL Mis à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 
-Pour voir comment l’audience est composée, sélectionnez le nom d’une audience dans l’onglet [!UICONTROL Audiences] .
+Pour voir comment l’audience est composée, sélectionnez le nom d’une audience dans l’onglet [!UICONTROL Audiences].
 
 La page Composition d’audiences s’affiche avec les blocs de création qui composent votre audience. Pour plus d’informations sur l’utilisation de la Composition d’audiences, consultez le [guide de l’interface utilisateur de la Composition d’audiences](./audience-composition.md).
 

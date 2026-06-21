@@ -86,7 +86,7 @@ Adobe Experience Platform Web SDK peut également envoyer des données directeme
 
 **Performances :** le SDK web est plus petit que l’utilisation de toutes les bibliothèques Adobe actuelles et fournit des chargements de page beaucoup plus rapides.
 
-**Simplicité :** la combinaison de XDM, de Web SDK, de balises, d’Edge Network, de solutions Adobe Experience Cloud et de Adobe Experience Platform permet de créer un récit de collecte de données facile à comprendre et simple à suivre.
+**Simplicité :** la combinaison de XDM, de Web SDK, de balises, d’Edge Network, des solutions Adobe Experience Cloud et de Adobe Experience Platform permet de créer un récit de collecte de données facile à comprendre et simple à suivre.
 
 * **XDM :** schéma indépendant de la solution que vous utilisez pour envoyer des données à Adobe. Plus de balisage pour les evars ou les mbox.
 * **Web SDK :** facilite l’envoi et la réception de données vers Adobe Experience Platform Edge Network.
@@ -111,7 +111,7 @@ Non. Tout client Adobe Digital Experience peut utiliser Adobe Experience Platfor
 * Les clients qui n’ont *accès* à Experience Platform ou à la plateforme de données clients en temps réel et qui souhaitent utiliser le [!DNL Web SDK] doivent configurer les autorisations appropriées pour créer des schémas et des flux de données dans l’interface utilisateur de collecte de données ou d’Experience Platform.
 * Les clients qui ont accès à Experience Platform ou à Real-Time CDP et souhaitent utiliser le [!DNL Web SDK] devront configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de collecte de données ou dans l’interface utilisateur Experience Platform.
 
-Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=fr).
+Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Qui doit utiliser le SDK web ?
 
@@ -121,7 +121,7 @@ Adobe Experience Platform Web SDK a été développé pour les clients suivants 
    * Si vous devez envoyer des données directement d’un appareil à Adobe Experience Platform, il s’agit de la méthode officiellement recommandée.
    * Adobe sait que l’utilisation du connecteur Adobe Analytics est plus rapide si vous disposez déjà d’Adobe Analytics, mais ce n’est pas la stratégie à long terme pour la collecte de données.
 
-* clients de la solution Adobe Experience Cloud
+* Clients de la solution Adobe Experience Cloud
    * Les nouveaux clients Adobe Analytics, Adobe Audience Manager et Adobe Target doivent commencer par la nouvelle SDK Web et ne pas utiliser les bibliothèques héritées.
    * Les clients existants qui souhaitent obtenir la mise en œuvre la plus optimisée possible doivent utiliser le nouveau SDK Web.
 
@@ -143,7 +143,7 @@ Le Web SDK évolue rapidement. D’autres cas d’utilisation sont en cours de t
 
 * **Une autre balise :** si le site est déjà balisé pour des solutions et que vous ne pouvez pas le rebaliser, mais que vous souhaitez envoyer des données à Adobe Experience Platform Edge Network pour des cas d’utilisation Experience Platform ou les fonctionnalités de transfert d’événement à venir (voir ci-dessous), vous pouvez ajouter la balise `alloy.js` au site, où elle fonctionne comme « une autre balise ».
 
-* **La seule et unique balise :** si vous souhaitez utiliser le Web SDK pour une solution Experience Cloud, vous devez l’utiliser pour _toutes_ les solutions de cette page. Par exemple, si votre site est déjà balisé pour Adobe Analytics et que vous souhaitez l’utiliser pour Target, vous devez l’utiliser pour les deux, ainsi que pour tout autre site à l’avenir.
+* **La seule et unique balise :** si vous souhaitez utiliser le SDK Web pour une solution Experience Cloud, vous devez l’utiliser pour _toutes_ les solutions de cette page. Par exemple, si votre site est déjà balisé pour Adobe Analytics et que vous souhaitez l’utiliser pour Target, vous devez l’utiliser pour les deux, ainsi que pour tout autre site à l’avenir.
 
 En d’autres termes, si vous décidez d’utiliser Adobe Experience Platform Web SDK pour des cas d’utilisation hors solution, vous pouvez baliser le site avec `alloy.js` et passer à autre chose comme s’il s’agissait d’une nouvelle solution. Si vous souhaitez l’utiliser pour Adobe Analytics, Target ou Audience Manager, ou pour des cas d’utilisation d’application, vous devrez peut-être supprimer l’un des codes hérités sur votre page.
 

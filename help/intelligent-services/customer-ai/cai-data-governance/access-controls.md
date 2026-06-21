@@ -27,8 +27,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 500
-ht-degree: 84%
+source-wordcount: 528
+ht-degree: 80%
 
 ---
 
@@ -52,11 +52,11 @@ En haut de la **page insights** de l’espace de travail de l’IA dédiée aux 
 
 ![L’espace de travail de l’IA dédiée aux clients avec les champs restreints du schéma mis en surbrillance.](../images/user-guide/access-restricted.png)
 
-Lorsque vous prévisualisez des jeux de données avec un schéma limité sur la page **[!UICONTROL Create model workflow]**, un avertissement s’affiche pour vous informer que [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+Lorsque vous prévisualisez des jeux de données avec un schéma limité sur la page **[!UICONTROL Créer un workflow de modèle]**, un avertissement s’affiche pour vous informer qu’[!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans l’aperçu du jeu de données.]
 
 ![L’espace de travail de l’IA dédiée aux clients avec les champs restreints des jeux de données d’aperçu avec les résultats de schéma limités mis en surbrillance.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
-Après avoir créé un modèle avec des informations restreintes et procédé à l’étape de **[!UICONTROL Define goal]**, un avertissement s’affiche en haut : [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+Après avoir créé un modèle contenant des informations restreintes, passez à l’étape **[!UICONTROL Définir un objectif]**, un avertissement s’affiche en haut de l’écran : [!UICONTROL En raison des restrictions d’accès, certaines informations ne s’affichent pas dans la configuration.]
 
 ![L’espace de travail de l’IA dédiée aux clients avec les champs restreints des résultats du modèle de service mis en surbrillance.](../images/user-guide/information-not-displayed-save-and-exit.png)
 

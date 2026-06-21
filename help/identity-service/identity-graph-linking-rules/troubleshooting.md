@@ -27,7 +27,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 3464
+source-wordcount: 3431
 ht-degree: 0%
 
 ---
@@ -240,8 +240,8 @@ L’algorithme d’optimisation des identités honore [les liens les plus récem
 Tout d’abord, vous devez collecter les informations suivantes :
 
 1. Le symbole d’identité (namespaceCode) de l’espace de noms du cookie (par exemple ECID) et de l’espace de noms de la personne (par exemple CRMID) qui ont été envoyés.
-1.1. Pour les implémentations de Web SDK, il s’agit généralement des espaces de noms inclus dans l’identityMap .
-1.2. Pour les implémentations du connecteur source Analytics, il s’agit de l’identifiant de cookie inclus dans l’identityMap . L’identifiant de personne est un champ eVar marqué comme une identité.
+1.1. Pour les implémentations de Web SDK, il s’agit généralement des espaces de noms inclus dans le mappage d’identité.
+1.2. Pour les implémentations du connecteur source Analytics, il s’agit de l’identifiant de cookie inclus dans l’identityMap. L’identifiant de personne est un champ eVar marqué comme une identité.
 2. Jeu de données dans lequel l’événement a été envoyé (dataset_name).
 3. Valeur d’identité de l’espace de noms de cookie à rechercher (identity_value).
 
@@ -318,7 +318,7 @@ Les graphiques d’identités adhèrent à l’espace de noms unique et à la pr
 
 **Étapes de dépannage**
 
-Vous pouvez utiliser la [visionneuse de graphiques d’identité](../features/identity-graph-viewer.md) pour vérifier si votre graphique a été ingéré avant ou après vos paramètres. Examinez la date et l’heure de la dernière mise à jour sous [!UICONTROL Link properties] pour savoir quand Identity Service a ingéré le graphique. Si la date et l’heure sont antérieures à la configuration, cela suggère que le graphique « réduit » a été créé avant l’activation de la fonctionnalité.
+Vous pouvez utiliser la [visionneuse de graphiques d’identité](../features/identity-graph-viewer.md) pour vérifier si votre graphique a été ingéré avant ou après vos paramètres. Consultez la date et l’heure de la dernière mise à jour sous [!UICONTROL Propriétés du lien] pour savoir quand Identity Service a ingéré le graphique. Si la date et l’heure sont antérieures à la configuration, cela suggère que le graphique « réduit » a été créé avant l’activation de la fonctionnalité.
 
 ![Visionneuse de graphiques d’identités avec un exemple de graphique.](../images/troubleshooting/graph_viewer.png)
 
@@ -446,4 +446,4 @@ En règle générale, les tests effectués sur un sandbox de développement doiv
 
 Utilisez l&#39;outil [simulation graphique](./graph-simulation.md) pour vérifier que la fonction fonctionne au niveau d&#39;un graphique individuel.
 
-Pour valider la fonctionnalité au niveau du sandbox, reportez-vous à la section [!UICONTROL Graph count with multiple namespaces] dans le tableau de bord des identités.
+Pour valider la fonctionnalité au niveau du sandbox, reportez-vous à la section [!UICONTROL Nombre de graphiques avec plusieurs espaces de noms] dans le tableau de bord des identités.

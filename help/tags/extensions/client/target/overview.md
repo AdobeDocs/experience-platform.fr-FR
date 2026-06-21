@@ -24,8 +24,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1170
-ht-degree: 93%
+source-wordcount: 1178
+ht-degree: 89%
 
 ---
 
@@ -39,9 +39,9 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 >
 > L’extension Adobe Target requiert at.js. Elle ne prend pas en charge mbox.js.
 
-Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Target et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension cible avec la souris et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/ext-target-config.png)
 
@@ -88,7 +88,7 @@ Pour plus d’informations sur le fonctionnement du délai d’expiration, consu
 
 #### Autres paramètres at.js disponibles dans l’interface utilisateur de Target
 
-Plusieurs paramètres disponibles sur la page [!UICONTROL Edit at.js settings] de l’interface utilisateur de Target ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
+Plusieurs des paramètres disponibles sur la page [!UICONTROL Modifier les paramètres at.js] de l’interface utilisateur de Target ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
 
 * Auto-create global mbox (Créer automatiquement la mbox globale) : ce paramètre est remplacé par l’action Fire Global Mbox (Déclencher la mbox globale) dans l’extension Target.
 * Library Header (En-tête de bibliothèque) : ce paramètre ne fait pas partie de l’extension Target. Placez le code devant être chargé avant at.js dans une action Core Extension (Extension Core) > Custom Code (Code personnalisé) avant d’utiliser l’action Load Target (Charger Target).

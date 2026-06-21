@@ -6,8 +6,8 @@ badge: label="Beta" type="Informative"
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 source-git-commit: 50bd5be385f62a290fefae60c6ed286d893e430a
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 31%
+source-wordcount: '1691'
+ht-degree: 30%
 
 ---
 
@@ -71,8 +71,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (adresses e-mail) utilisés dans la destination [!DNL Microsoft Ads Customer Match]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation de l’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (adresses e-mail) utilisés dans la destination [!DNL Microsoft Ads Customer Match]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -102,14 +102,14 @@ Si l’administrateur informatique n’a pas encore approuvé la demande, l’au
 
 Lors de la configuration de la destination, vous devez fournir les informations suivantes :
 
-* [!UICONTROL Customer ID] : votre ID de client (CID) [!DNL Microsoft Ads], au format entier. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID client.
-* [!UICONTROL Customer Account ID] : l’identifiant de votre compte client [!DNL Microsoft Ads]. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID de compte client.
+* [!UICONTROL ID de client] : votre ID de client (CID) [!DNL Microsoft Ads], au format entier. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID client.
+* [!UICONTROL Identifiant de compte client] : votre identifiant de compte client [!DNL Microsoft Ads]. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID de compte client.
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -140,12 +140,12 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Customer ID]** : votre ID de client [!DNL Microsoft Ads] (CID). Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID client.
-* **[!UICONTROL Customer Account ID]** : ID de votre compte client [!DNL Microsoft Ads]. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID de compte client.
-* **[!UICONTROL Membership Duration]** : nombre de jours pendant lesquels un utilisateur reste dans la liste de correspondance client. Les valeurs acceptées sont comprises entre 1 et 390 jours.
-* **[!UICONTROL Customer Match List Availability]** : sélectionnez la disponibilité de la liste de correspondance des clients. En [!DNL Microsoft Advertising], un ID de client peut comporter plusieurs ID de compte client (comptes publicitaires). Sélectionnez **[!UICONTROL Customer ID (all advertising accounts)]** pour que la liste soit disponible pour tous les comptes d’annonceurs sous votre ID client ou **[!UICONTROL Customer Account ID (single advertising account)]** pour limiter la liste à l’ID de compte client spécifique que vous avez fourni ci-dessus. Consultez la [documentation Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727) pour plus d’informations.
+* **[!UICONTROL ID de client]** : votre ID de client (CID) [!DNL Microsoft Ads]. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID client.
+* **[!UICONTROL Identifiant de compte client]** : l’identifiant de votre compte client [!DNL Microsoft Ads]. Consultez la [documentation Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) pour obtenir des instructions sur la recherche de votre ID de compte client.
+* **[!UICONTROL Durée d’abonnement]** : nombre de jours pendant lesquels un utilisateur reste dans la liste de correspondance client. Les valeurs acceptées sont comprises entre 1 et 390 jours.
+* **[!UICONTROL Disponibilité de la liste de correspondance client]** : sélectionnez la disponibilité de la liste de correspondance client. En [!DNL Microsoft Advertising], un ID de client peut comporter plusieurs ID de compte client (comptes publicitaires). Sélectionnez **[!UICONTROL ID client (tous les comptes publicitaires)]** pour rendre la liste disponible sur tous les comptes publicitaires sous votre ID client, ou **[!UICONTROL ID compte client (compte publicitaire unique)]** pour limiter la liste à l’ID de compte client spécifique que vous avez fourni ci-dessus. Consultez la [documentation Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727) pour plus d’informations.
 
   ![Image de l’interface utilisateur de Platform montrant les champs de détails de destination pour la destination de correspondance client Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
@@ -153,20 +153,20 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès [**[!UICONTROL View Identity Graph]** access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ### Mappage {#mapping}
 
-À l’étape **[!UICONTROL Mapping]**, vous devez mapper l’identité e-mail de vos profils sources à l’identité cible dans [!DNL Microsoft Ads Customer Match].
+À l’étape **[!UICONTROL Mappage]**, vous devez mapper l’identité de l’e-mail de vos profils sources à l’identité cible dans [!DNL Microsoft Ads Customer Match].
 
 * **Champ Source** : sélectionnez `IdentityMap: Email` comme champ source pour mapper les identités d’e-mail à partir de vos profils. Vous pouvez également sélectionner un attribut XDM tel que `personalEmail.address` comme champ source.
 * **Champ cible** : sélectionnez `Identity: email` comme champ cible.

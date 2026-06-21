@@ -14,8 +14,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 683
-ht-degree: 88%
+source-wordcount: 703
+ht-degree: 85%
 
 ---
 
@@ -35,11 +35,11 @@ Dans cette documentation, vous allez apprendre à rendre obsolètes les champs d
 
 ## Rendre obsolète un champ {#deprecate}
 
-Pour rendre obsolète un champ personnalisé, accédez à l’éditeur de schémas du schéma à modifier. Dans la section [!UICONTROL Structure] de la zone de travail, sélectionnez le champ que vous souhaitez rendre obsolète, puis **[!UICONTROL Deprecate]** dans la [!UICONTROL Field Properties].
+Pour rendre obsolète un champ personnalisé, accédez à l’éditeur de schémas du schéma à modifier. Dans la section [!UICONTROL Structure] de la zone de travail, sélectionnez le champ à rendre obsolète, puis cliquez sur **[!UICONTROL Rendre obsolète]** dans les [!UICONTROL Propriétés du champ].
 
 ![L’éditeur de schémas avec la sélection d’un champ et l’option Rendre obsolète mise en surbrillance.](../images/tutorials/field-deprecation/deprecate-single-field.png)
 
-Une boîte de dialogue s’affiche pour confirmer vos choix et vous informer que le champ sera supprimé de l’affichage de l’IU du schéma d’union et masqué des IU en aval. Pour terminer l’action, sélectionnez **[!UICONTROL Confirm]**.
+Une boîte de dialogue s’affiche pour confirmer vos choix et vous informer que le champ sera supprimé de l’affichage de l’IU du schéma d’union et masqué des IU en aval. Pour terminer l’action, sélectionnez **[!UICONTROL Confirmer]**.
 
 ![La boîte de dialogue Rendre obsolète le champ, avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
 
@@ -51,21 +51,21 @@ Le champ est maintenant supprimé de l’affichage de l’IU.
 
 ## Afficher les champs obsolètes {#show-deprecated}
 
-Pour afficher les champs précédemment rendus obsolètes, accédez au schéma approprié dans l’éditeur de schémas. Cochez la case **[!UICONTROL Show deprecated fields]** dans la section [!UICONTROL Composition] de la zone de travail.
+Pour afficher les champs précédemment rendus obsolètes, accédez au schéma approprié dans l’éditeur de schémas. Dans la section [!UICONTROL Composition] de la zone de travail, cochez la case **[!UICONTROL Afficher les champs obsolètes]**.
 
-Le champ obsolète s’affiche désormais dans l’affichage de l’IU. Sélectionnez **[!UICONTROL Save]** pour confirmer vos paramètres.
+Le champ obsolète s’affiche désormais dans l’affichage de l’IU. Sélectionnez **[!UICONTROL Enregistrer]** pour confirmer les paramètres.
 
 ![L’éditeur de schémas avec la sélection d’un champ et les options Afficher les champs obsolètes et Enregistrer mises en surbrillance.](../images/tutorials/field-deprecation/show-deprecated-fields.png)
 
 ## Annuler l’obsolescence des champs {#undeprecate-fields}
 
-Pour annuler l’obsolescence d’un champ, commencez par [afficher le champ obsolète](#show-deprecated) comme décrit ci-dessus, puis sélectionnez le champ obsolète dans la section [!UICONTROL Structure] de l’éditeur. Sélectionnez ensuite **[!UICONTROL Undeprecate]** dans la barre latérale [!UICONTROL Field properties], puis **[!UICONTROL Save]**.
+Pour annuler l’obsolescence d’un champ, commencez par [afficher le champ obsolète](#show-deprecated) comme décrit ci-dessus, puis sélectionnez le champ obsolète dans la section [!UICONTROL Structure] de l’éditeur. Sélectionnez ensuite **[!UICONTROL Annuler l’obsolescence]** dans la barre latérale [!UICONTROL Propriétés du champ] suivi de **[!UICONTROL Enregistrer]**.
 
 ![L’éditeur de schémas avec la sélection du champ obsolète et les options Annuler l’obsolescence et Enregistrer mises en surbrillance.](../images/tutorials/field-deprecation/undeprecate-single-field.png)
 
-La boîte de dialogue [!UICONTROL Undeprecate field] s’affiche. Pour confirmer vos modifications, sélectionnez **[!UICONTROL Confirm]**.
+La boîte de dialogue [!UICONTROL Annuler l’obsolescence du champ] s’affiche. Pour confirmer vos modifications, sélectionnez **[!UICONTROL Confirmer]**.
 
-![La boîte de dialogue [!UICONTROL Undeprecate field] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
+![&#x200B; Boîte de dialogue [!UICONTROL &#x200B; Annuler l’obsolescence du champ &#x200B;] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
 
 Le champ s’affiche désormais de manière standard dans l’affichage de l’IU et dans les IU en aval. Vous avez à présent la possibilité de rendre le champ obsolète à nouveau.
 

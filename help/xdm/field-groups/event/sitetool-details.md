@@ -9,14 +9,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 193
+source-wordcount: 197
 ht-degree: 12%
 
 ---
 
-# [!UICONTROL Sitetool Details] groupe de champs de schéma
+# [!UICONTROL Détails sur l’outil de site] groupe de champs de schéma
 
-[!UICONTROL Sitetool Details] groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `sitetool` à un schéma, qui capture les informations collectées par un outil de site.
+[!UICONTROL Sitetool Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `sitetool` à un schéma, qui capture les informations collectées par un outil de site.
 
 ![Structure du groupe de champs](../../images/field-groups/sitetool-details.png)
 

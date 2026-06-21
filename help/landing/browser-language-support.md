@@ -18,7 +18,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 250
+source-wordcount: 253
 ht-degree: 33%
 
 ---
@@ -66,9 +66,9 @@ Pour modifier la langue :
 
 1. Connectez-vous à votre compte Experience Platform.
 1. Appuyez sur `Ctrl + i` pour afficher le menu des informations du compte.
-1. Accédez à **[!UICONTROL Preferred Languages]**.
+1. Accédez à **[!UICONTROL Langues préférées]**.
 1. Sélectionnez vos préférences de première et de deuxième langue.
-1. Sélectionnez **[!UICONTROL Save]** et fermez la fenêtre.
+1. Sélectionnez **[!UICONTROL Enregistrer]** et fermez la fenêtre.
 
 >[!NOTE]
 >

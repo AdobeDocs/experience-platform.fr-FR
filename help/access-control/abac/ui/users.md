@@ -13,8 +13,8 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 937
-ht-degree: 9%
+source-wordcount: 1007
+ht-degree: 8%
 
 ---
 
@@ -37,27 +37,27 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!UICONTROL Permissions] manages access control for existing Experience Platform users. To add users to Experience Platform, navigate to Adobe Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add users through the Admin Console, follow the [adding users to Experience Platform](...){#target="_blank"} guide.
 -->
 
-Pour afficher les utilisateurs de votre organisation, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Users]** dans le panneau de gauche.
+Pour afficher les utilisateurs de votre organisation, accédez à **[!UICONTROL Autorisations]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Utilisateurs]** dans le panneau de gauche.
 
 ![Espace de travail Utilisateurs dans Autorisations.](../../images/ui/users/users-overview.png){zoomable="yes"}
 
 Une liste d’utilisateurs s’affiche. Sélectionnez l’utilisateur que vous souhaitez afficher dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher un utilisateur en saisissant son nom ou son adresse e-mail.
 
-L’onglet **[!UICONTROL Details]** donne un aperçu de l’utilisateur. L’aperçu affiche le **[!UICONTROL Name]**, le **[!UICONTROL Preferred languages]**, le **[!UICONTROL Account Type]**, le **[!UICONTROL Authentication ID]**, le **[!UICONTROL Email]**, le statut de **[!UICONTROL Email verified]**, le **[!UICONTROL Country code]** et le **[!UICONTROL Phone number]** de l’utilisateur ou de l’utilisatrice.
+L’onglet **[!UICONTROL Détails]** donne un aperçu de l’utilisateur. La vue d’ensemble affiche le **[!UICONTROL Nom]**, **[!UICONTROL Langues préférées]**, **[!UICONTROL Type de compte]**, **[!UICONTROL ID d’authentification]**, **[!UICONTROL E-mail]**, **[!UICONTROL E-mail vérifié]** statut, **[!UICONTROL Code de pays]** et **[!UICONTROL Numéro de téléphone]** de l’utilisateur.
 
 ![Espace de travail Détails d’un utilisateur.](../../images/ui/users/user-details.png){zoomable="yes"}
 
-Sélectionnez l’onglet **[!UICONTROL Roles]** pour afficher les rôles affectés à l’utilisateur.
+Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher les rôles auxquels l’utilisateur est affecté.
 
 ![Espace de travail Rôles d’un utilisateur.](../../images/ui/users/user-roles.png){zoomable="yes"}
 
 ### Ajouter un rôle à un utilisateur {#add-user-role}
 
-Pour ajouter un rôle à l’utilisateur, sélectionnez **[!UICONTROL Add Roles]**.
+Pour ajouter un rôle à l’utilisateur, sélectionnez **[!UICONTROL Ajouter des rôles]**.
 
 ![Espace de travail du rôle de l’utilisateur avec l’option Ajouter des rôles mise en surbrillance.](../../images/ui/users/user-add-roles.png){zoomable="yes"}
 
-La boîte de dialogue **[!UICONTROL Add Roles]** s’affiche. Sélectionnez le ou les rôles que vous souhaitez ajouter à l’utilisateur, puis sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Ajouter des rôles]** s’affiche. Sélectionnez le ou les rôles que vous souhaitez ajouter à l’utilisateur ou à l’utilisatrice, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![La boîte de dialogue Ajouter des rôles avec les rôles sélectionnés et l’option d’enregistrement mise en surbrillance.](../../images/ui/users/user-roles-add-roles-confirm.png){zoomable="yes"}
 
@@ -75,7 +75,7 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 
 ![Espace de travail Rôles d’un utilisateur avec l’option de suppression du rôle mise en surbrillance.](../../images/ui/users/user-roles-remove.png){zoomable="yes"}
 
-Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirm]** pour terminer la suppression du rôle.
+Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirmer]** pour terminer la suppression du rôle.
 
 ![La boîte de dialogue de confirmation pour supprimer un rôle avec l’option Confirmer mise en surbrillance.](../../images/ui/users/user-roles-remove.png){zoomable="yes"}
 
@@ -90,31 +90,31 @@ ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!UICONTROL Permissions] manages access control for existing Experience Platform user groups. To add user groups to Experience Platform, navigate to Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add user groups in the Admin Console, follow the [adding user groups to Experience Platform](...){#target="_blank"} guide.
 -->
 
-Pour afficher les utilisateurs de votre organisation, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}.Sélectionnez **[!UICONTROL Groups]** dans la section **[!UICONTROL Users]** du panneau de gauche.
+Pour afficher les utilisateurs de votre organisation, accédez à **[!UICONTROL Autorisations]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}.Sélectionnez **[!UICONTROL Groupes]** dans la section **[!UICONTROL Utilisateurs]** du panneau de gauche.
 
 ![L’espace de travail Groupes d’utilisateurs dans Autorisations.](../../images/ui/users/user-groups-overview.png){zoomable="yes"}
 
 Une liste de groupes d’utilisateurs s’affiche. Sélectionnez le groupe que vous souhaitez afficher dans la liste.
 
-L’onglet **[!UICONTROL Details]** donne un aperçu du groupe d’utilisateurs. La vue d’ensemble affiche les **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL User Count]** et **[!UICONTROL Admin count]** des groupes.
+L’onglet **[!UICONTROL Détails]** donne un aperçu du groupe d’utilisateurs. La présentation affiche le **[!UICONTROL nom]**, le **[!UICONTROL description]**, le **[!UICONTROL nombre d’utilisateurs]** et le **[!UICONTROL nombre d’administrateurs]** des groupes.
 
 ![Espace de travail Détails du groupe d’utilisateurs.](../../images/ui/users/user-group-details.png){zoomable="yes"}
 
-Sélectionnez l’onglet **[!UICONTROL Users]** pour afficher la liste des utilisateurs affectés au groupe.
+Sélectionnez l’onglet **[!UICONTROL Utilisateurs]** pour afficher la liste des utilisateurs affectés au groupe.
 
 ![Espace de travail Utilisateurs d’un groupe d’utilisateurs.](../../images/ui/users/user-group-users.png){zoomable="yes"}
 
-Sélectionnez l’onglet **[!UICONTROL Roles]** pour afficher la liste des rôles actuellement affectés au groupe.
+Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher la liste des rôles actuellement affectés au groupe.
 
 ![Espace de travail Rôles d’un groupe d’utilisateurs.](../../images/ui/users/user-group-roles.png){zoomable="yes"}
 
 ### Ajouter des rôles à un groupe d’utilisateurs {#add-user-group-role}
 
-Pour ajouter un nouveau rôle au groupe, sélectionnez **[!UICONTROL Add Roles]**.
+Pour ajouter un nouveau rôle au groupe, sélectionnez **[!UICONTROL Ajouter des rôles]**.
 
 ![Espace de travail Rôles d’un groupe d’utilisateurs avec l’option Ajouter des rôles mise en surbrillance.](../../images/ui/users/user-group-add-roles.png){zoomable="yes"}
 
-La boîte de dialogue **[!UICONTROL Add Roles]** s’affiche. Sélectionnez le ou les rôles que vous souhaitez ajouter, puis sélectionnez **[!UICONTROL Save]**. Les rôles seront ajoutés pour tous les utilisateurs appartenant au groupe d’utilisateurs.
+La boîte de dialogue **[!UICONTROL Ajouter des rôles]** s’affiche. Sélectionnez le ou les rôles à ajouter, puis sélectionnez **[!UICONTROL Enregistrer]**. Les rôles seront ajoutés pour tous les utilisateurs appartenant au groupe d’utilisateurs.
 
 ![La boîte de dialogue Ajouter des rôles avec un rôle sélectionné et l’option Enregistrer mise en surbrillance.](../../images/ui/users/user-group-add-roles-select.png){zoomable="yes"}
 
@@ -124,7 +124,7 @@ Pour supprimer un rôle du groupe d’utilisateurs, sélectionnez le **X** en re
 
 ![Espace de travail Rôles d’un groupe d’utilisateurs avec l’option de suppression d’un rôle mise en surbrillance.](../../images/ui/users/user-group-remove-role.png){zoomable="yes"}
 
-Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirm]** pour terminer la suppression du rôle.
+Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirmer]** pour terminer la suppression du rôle.
 
 ![La boîte de dialogue de confirmation pour supprimer un rôle avec l’option Confirmer mise en surbrillance.](../../images/ui/users/user-group-remove-role-confirm.png){zoomable="yes"}
 
@@ -136,31 +136,31 @@ Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL 
 
 Pour utiliser les API d’Experience Platform en tant qu’utilisateur ou développeur, un administrateur système doit ajouter des informations d’identification d’API en plus du jeu d’autorisations donné à un rôle. Les autorisations vous permettent d’affecter aux rôles des informations d’identification d’API créées précédemment et affectées au produit Experience Platform. Pour obtenir un guide complet sur la création et l’attribution des informations d’identification d’API, ainsi que les autorisations nécessaires, reportez-vous au tutoriel détaillé dans [Authentification et accès aux API Experience Platform](/help/landing/api-authentication.md){target="_blank"}.
 
-Pour afficher les informations d’identification d’API de votre organisation associées à Experience Platform, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL API Credentials]** dans la section **[!UICONTROL Users]** du panneau de gauche.
+Pour afficher les informations d’identification d’API de votre organisation associées à Experience Platform, accédez à **[!UICONTROL Autorisations]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Informations d’identification de l’API]** dans la section **[!UICONTROL Utilisateurs]** du panneau de gauche.
 
 ![Espace de travail Informations d’identification de l’API dans Autorisations.](../../images/ui/users/api-credentials-overview.png){zoomable="yes"}
 
 >[!NOTE]
 >
-> Pour afficher les informations d’identification de l’API de votre organisation pour tous les produits de votre organisation ou pour plus d’informations sur les informations d’identification, sélectionnez **[!UICONTROL Edit in admin console]**.
+> Pour afficher les informations d’identification de l’API de votre organisation pour tous les produits de votre organisation ou pour plus d’informations sur les informations d’identification, sélectionnez **[!UICONTROL Modifier dans Admin Console]**.
 
 Une liste des informations d’identification d’API s’affiche. Sélectionnez les informations d’identification d’API à afficher dans la liste.
 
-L’onglet **[!UICONTROL Details]** donne un aperçu des informations d’identification de l’API. La vue d’ensemble affiche le **[!UICONTROL Name]**, la date de **[!UICONTROL Modified]**, l’attribut de **[!UICONTROL Modified By]**, la date de **[!UICONTROL Created]**, l’attribut de **[!UICONTROL Created by]**, la **[!UICONTROL API key]**, la **[!UICONTROL Technical ID]** et la **[!UICONTROL Email]** des informations d’identification.
+L’onglet **[!UICONTROL Détails]** donne un aperçu des informations d’identification de l’API. La vue d’ensemble affiche l’attribut **[!UICONTROL Nom]**, **[!UICONTROL Modifié]** date, **[!UICONTROL Modifié par]**, **[!UICONTROL Créé]** date, **[!UICONTROL Créé par]** attribut, **[!UICONTROL API key]**, **[!UICONTROL Technical ID]** et **[!UICONTROL Email]** des informations d’identification.
 
 ![Espace de travail des détails des informations d’identification de l’API.](../../images/ui/users/api-credential-details.png){zoomable="yes"}
 
-Sélectionnez l’onglet **[!UICONTROL Roles]** . Une liste des rôles associés aux informations d’identification d’API s’affiche.
+Sélectionnez l’onglet **[!UICONTROL Rôles]**. Une liste des rôles associés aux informations d’identification d’API s’affiche.
 
 ![Espace de travail des rôles d’informations d’identification d’API.](../../images/ui/users/api-credential-roles.png){zoomable="yes"}
 
 ### Ajouter un rôle à des informations d’identification d’API {#add-api-credential-role}
 
-Pour ajouter un rôle aux informations d’identification d’API, sélectionnez **[!UICONTROL Add Roles]**.
+Pour ajouter un rôle aux informations d’identification d’API, sélectionnez **[!UICONTROL Ajouter des rôles]**.
 
 ![Espace de travail des informations d’identification de l’API avec l’option Ajouter des rôles mise en surbrillance.](../../images/ui/users/api-credential-add-roles.png){zoomable="yes"}
 
-La boîte de dialogue **[!UICONTROL Add Roles]** s’affiche. Sélectionnez le ou les rôles que vous souhaitez ajouter à l’utilisateur, puis sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Ajouter des rôles]** s’affiche. Sélectionnez le ou les rôles que vous souhaitez ajouter à l’utilisateur ou à l’utilisatrice, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![La boîte de dialogue Ajouter des rôles avec les rôles sélectionnés et l’option d’enregistrement mise en surbrillance.](../../images/ui/users/api-credential-add-roles-select.png){zoomable="yes"}
 
@@ -170,7 +170,7 @@ Pour supprimer un rôle des informations d’identification de l’API, sélecti
 
 ![Espace de travail Rôles d’informations d’identification d’API avec l’option de suppression d’un rôle mise en surbrillance.](../../images/ui/users/api-credential-remove-role.png){zoomable="yes"}
 
-Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirm]** pour terminer la suppression du rôle.
+Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Confirmer]** pour terminer la suppression du rôle.
 
 ![La boîte de dialogue de confirmation pour supprimer un rôle avec l’option Confirmer mise en surbrillance.](../../images/ui/users/api-credential-remove-role-confirm.png){zoomable="yes"}
 

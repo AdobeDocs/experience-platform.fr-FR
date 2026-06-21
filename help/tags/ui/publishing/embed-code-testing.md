@@ -21,8 +21,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 453
-ht-degree: 51%
+source-wordcount: 463
+ht-degree: 36%
 
 ---
 
@@ -40,7 +40,7 @@ Ce tutoriel nécessite également l’installation de l’extension de navigateu
 
 ## Ouvrez Experience Platform Debugger sur votre site web.
 
-À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Experience Platform Debugger. Le site auquel Experience Platform Debugger est actuellement connecté s’affiche au bas de la fenêtre. Si les balises sont en cours d’exécution sur votre site, celui-ci est répertorié dans l’onglet [!UICONTROL Summary] .
+À l’aide du navigateur de votre choix, accédez à votre site web et ouvrez l’extension Experience Platform Debugger. Le site auquel Experience Platform Debugger est actuellement connecté s’affiche au bas de la fenêtre. Si les balises sont en cours d’exécution sur votre site, celui-ci est répertorié dans l’onglet [!UICONTROL Résumé].
 
 ![](./images/embed-code-testing/summary.png)
 
@@ -50,21 +50,21 @@ Ce tutoriel nécessite également l’installation de l’extension de navigateu
 
 ## Remplacement des codes intégrés
 
-Une fois Experience Platform Debugger connecté à votre site, sélectionnez **[!UICONTROL Launch]** dans le volet de navigation de gauche. Vous trouverez ici des informations sur la version de bibliothèque en cours d’exécution sur votre site, y compris son environnement et les extensions associées. À partir de là, sélectionnez **[!UICONTROL Configuration]** pour afficher les commandes de gestion des codes intégrés.
+Une fois Experience Platform Debugger connecté à votre site, sélectionnez **[!UICONTROL Launch]** dans le volet de navigation de gauche. Vous trouverez ici des informations sur la version de bibliothèque en cours d’exécution sur votre site, y compris son environnement et les extensions associées. À partir de là, sélectionnez **[!UICONTROL Configuration]** pour afficher les commandes de gestion des codes incorporés.
 
 ![](./images/embed-code-testing/launch-tab.png)
 
-Sous [!UICONTROL Page Embed Codes], le code intégré actuellement utilisé par votre site s’affiche. Sélectionnez **[!UICONTROL Actions]** sur le côté droit du code intégré, puis sélectionnez **[!UICONTROL Replace]**.
+Sous [!UICONTROL Codes incorporés de la page], le code incorporé actuellement utilisé par votre site s’affiche. Sélectionnez **[!UICONTROL Actions]** sur le côté droit du code incorporé, puis sélectionnez **[!UICONTROL Remplacer]**.
 
 ![](./images/embed-code-testing/replace.png)
 
 Une fenêtre contextuelle s’affiche, vous invitant à fournir un code intégré pour remplacer le code actuel. Notez que le remplacement du code incorporé à l’aide d’Experience Platform Debugger ne modifie pas le code incorporé déployé sur votre site. Il remplace uniquement le code intégré s’exécutant localement afin que vous puissiez tester et déboguer son implémentation.
 
-Collez le code intégré à tester dans la zone de texte fournie, puis sélectionnez **[!UICONTROL Apply]**.
+Collez le code incorporé à tester dans la zone de texte fournie, puis sélectionnez **[!UICONTROL Appliquer]**.
 
 ![](./images/embed-code-testing/paste-code.png)
 
-L’onglet **[!UICONTROL Configuration]** réapparaît, indiquant que le code intégré actif a été remplacé par celui que vous avez fourni. Vous pouvez désormais utiliser le navigateur web pour déterminer si le code intégré que vous testez fonctionne comme prévu.
+L’onglet **[!UICONTROL Configuration]** réapparaît, indiquant que le code incorporé actif a été remplacé par celui que vous avez fourni. Vous pouvez désormais utiliser le navigateur web pour déterminer si le code intégré que vous testez fonctionne comme prévu.
 
 ![](./images/embed-code-testing/code-replaced.png)
 

@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 442
+source-wordcount: 460
 ht-degree: 5%
 
 ---
@@ -32,11 +32,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Mettre à jour des comptes
 
-Connectez-vous à l’[interface utilisateur d’](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Sélectionnez **[!UICONTROL Accounts]** dans l’en-tête supérieur pour afficher les comptes existants.
+Connectez-vous à l’[interface utilisateur d’](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Sélectionnez **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher les comptes existants.
 
 ![catalogue](../../images/tutorials/update/catalog.png)
 
-La page **[!UICONTROL Accounts]** s’affiche. Sur cette page, vous trouverez une liste des comptes visibles, y compris des informations sur leur source, leur nom d’utilisateur, le nombre de flux de données et la date de création.
+La page **[!UICONTROL Comptes]** s’affiche. Sur cette page, vous trouverez une liste des comptes visibles, y compris des informations sur leur source, leur nom d’utilisateur, le nombre de flux de données et la date de création.
 
 Sélectionnez l’icône de filtre ![filtre](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri.
 
@@ -48,11 +48,11 @@ Sélectionnez la source que vous souhaitez utiliser pour afficher la liste de se
 
 ![accounts-sort](../../images/tutorials/update/accounts-sort.png)
 
-Un menu déroulant s’affiche, vous offrant des options pour **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** et **[!UICONTROL Delete]**. Sélectionnez **[!UICONTROL Edit details]** dans le menu pour mettre à jour votre compte.
+Un menu déroulant s’affiche, vous fournissant des options pour **[!UICONTROL Ajouter des données]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]**. Sélectionnez **[!UICONTROL Modifier les détails]** dans le menu pour mettre à jour votre compte.
 
-![Mettre à jour](../../images/tutorials/update/update.png)
+![mettre à jour](../../images/tutorials/update/update.png)
 
-La boîte de dialogue **[!UICONTROL Edit account details]** vous permet de mettre à jour le nom, la description et les informations d’authentification d’un compte. Une fois que vous avez mis à jour les informations souhaitées, sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Modifier les détails du compte]** vous permet de mettre à jour le nom, la description et les informations d’authentification d’un compte. Une fois les informations mises à jour, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
@@ -62,6 +62,6 @@ Après quelques instants, une boîte de confirmation s’affiche au bas de l’�
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez utilisé l’espace de travail [!UICONTROL Sources] pour mettre à jour les informations d’un compte source existant.
+En suivant ce tutoriel, vous avez utilisé avec succès l’espace de travail [!UICONTROL Sources] pour mettre à jour les informations d’un compte source existant.
 
 Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [mise à jour des informations de connexion à l’aide de l’API Flow Service](../../tutorials/api/update.md).

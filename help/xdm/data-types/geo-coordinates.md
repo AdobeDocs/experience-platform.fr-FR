@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 127
+source-wordcount: 131
 ht-degree: 12%
 
 ---
 
-# Type de données [!UICONTROL Geo Coordinates]
+# [!UICONTROL Coordonnées géographiques] type de données
 
-[!UICONTROL Geo Coordinates] est un type de données XDM standard qui décrit les coordonnées géographiques d’un lieu. Ce type de données est basé sur la spécification publique documentée sur [schema.org](https://schema.org/GeoCoordinates).
+[!UICONTROL Coordonnées géographiques] est un type de données XDM standard qui décrit les coordonnées géographiques d’un lieu. Ce type de données est basé sur la spécification publique documentée sur [schema.org](https://schema.org/GeoCoordinates).
 
 ![](../images/data-types/geo-coordinates.png){width=400}
 

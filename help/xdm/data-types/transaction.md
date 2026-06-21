@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 87
-ht-degree: 4%
+source-wordcount: 93
+ht-degree: 7%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 4%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `transactionAmount` | [[!UICONTROL Currency]](./currency.md) | Décrit le montant de la devise échangée dans le cadre de la transaction. |
-| `transactionDate` | [!UICONTROL DateTime] | Date et heure du moment où la transaction a eu lieu. |
-| `transactionId` | [!UICONTROL String] | Identifiant unique de la transaction. |
-| `transactionType` | [!UICONTROL String] | Type de transaction utilisé par le visiteur ou la visiteuse. |
+| `transactionAmount` | [[!UICONTROL Devise]](./currency.md) | Décrit le montant de la devise échangée dans le cadre de la transaction. |
+| `transactionDate` | [!UICONTROL DateHeure] | Date et heure du moment où la transaction a eu lieu. |
+| `transactionId` | [!UICONTROL Chaîne] | Identifiant unique de la transaction. |
+| `transactionType` | [!UICONTROL Chaîne] | Type de transaction utilisé par le visiteur ou la visiteuse. |
 
 {style="table-layout:auto"}

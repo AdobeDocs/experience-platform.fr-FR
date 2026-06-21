@@ -16,7 +16,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 61
+source-wordcount: 63
 ht-degree: 6%
 
 ---
@@ -42,5 +42,5 @@ Les champs suivants sont disponibles lors de l’appel de cet objet.
 
 | Nom | Type | Description |
 |---|---|---|
-| **`id`** | `string` | Identifiant unique de l’environnement. Vous pouvez localiser l’identifiant d’environnement en sélectionnant l’icône **[!UICONTROL Install]** sous [[!UICONTROL Environments]](/help/tags/ui/publishing/environments.md) dans l’interface utilisateur des balises. |
+| **`id`** | `string` | Identifiant unique de l’environnement. Vous pouvez localiser l’ID d’environnement en sélectionnant l’icône **[!UICONTROL Installer]** sous [[!UICONTROL Environnements]](/help/tags/ui/publishing/environments.md) dans l’interface utilisateur des balises. |
 | **`stage`** | `development \| staging \| production` | Type d’environnement. |

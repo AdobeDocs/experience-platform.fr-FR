@@ -14,7 +14,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 482
+source-wordcount: 489
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ Suivez le guide expliquant comment [créer une connexion source Audience Manager
 
 Les audiences que vous importez dans Activation étendue à partir d’Audience Manager peuvent être affichées dans le tableau de bord **[!UICONTROL Audiences]**.
 
-Pour afficher vos audiences, accédez à **[!UICONTROL Customer]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Browse]**.
+Pour afficher vos audiences, accédez à **[!UICONTROL Client]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Parcourir]**.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant la page Audiences.](assets/audiences-browse.png)
 
@@ -64,7 +64,7 @@ Après avoir configuré votre connecteur source Audience Manager, passez à l’
 
 Avant d’envoyer vos audiences Audience Manager vers la plateforme de destination de votre choix, vous devez d’abord créer une connexion à une plateforme de destination.
 
-Dans la barre latérale gauche, accédez à **[!UICONTROL Connections]** -> **[!UICONTROL Destinations]** -> **[!UICONTROL Catalog]**.
+Dans la barre latérale gauche, accédez à **[!UICONTROL Connexions]** -> **[!UICONTROL Destinations]** -> **[!UICONTROL Catalogue]**.
 
 Les catégories de destination disponibles pour [!DNL Expanded Activation] sont [publicité](../destinations/catalog/advertising/overview.md) et [social](../destinations/catalog/social/overview.md).
 

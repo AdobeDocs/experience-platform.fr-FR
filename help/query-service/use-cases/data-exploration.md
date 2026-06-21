@@ -13,7 +13,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1163
+source-wordcount: 1177
 ht-degree: 0%
 
 ---
@@ -103,15 +103,15 @@ Ensuite, validez et vérifiez les enregistrements qui ont été ingérés dans l
 >
 >Pour récupérer l’ID de lot et les enregistrements de requête associés à cet ID de lot, vous devez d’abord créer un lot dans Experience Platform. Si vous souhaitez tester le processus vous-même, vous pouvez ingérer des données CSV dans Experience Platform. Lisez le guide sur la façon de [mapper un fichier CSV à un schéma XDM existant à l’aide de recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Une fois que vous avez ingéré un lot, vous devez accéder au [!UICONTROL Datasets activity tab] du jeu de données dans lequel vous avez ingéré des données.
+Une fois que vous avez ingéré un lot, vous devez accéder à l’onglet [!UICONTROL Activité des jeux de données] du jeu de données dans lequel vous avez ingéré des données.
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir le tableau de bord [!UICONTROL Datasets]. Sélectionnez ensuite le nom du jeu de données dans l’onglet [!UICONTROL Browse] pour accéder à l’écran [!UICONTROL Dataset activity].
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir le tableau de bord [!UICONTROL Jeux de données]. Sélectionnez ensuite le nom du jeu de données dans l’onglet [!UICONTROL Parcourir] pour accéder à l’écran [!UICONTROL Activité du jeu de données].
 
 ![Tableau de bord Jeux de données de l’interface utilisateur d’Experience Platform avec Jeux de données en surbrillance dans le volet de navigation de gauche.](../images/use-cases/datasets-workspace.png)
 
-La vue [!UICONTROL Dataset activity] s’affiche. Cette vue contient les détails du jeu de données sélectionné. Elle inclut tous les lots ingérés qui s’affichent au format tableau.
+La vue [!UICONTROL Activité du jeu de données] s’affiche. Cette vue contient les détails du jeu de données sélectionné. Elle inclut tous les lots ingérés qui s’affichent au format tableau.
 
-Sélectionnez un lot dans la liste des lots disponibles et copiez le [!UICONTROL Batch ID] à partir du panneau des détails à droite.
+Sélectionnez un lot dans la liste des lots disponibles et copiez le [!UICONTROL Identifiant du lot] dans le panneau des détails à droite.
 
 ![Interface utilisateur des jeux de données Experience Platform affichant les enregistrements ingérés avec un identifiant de lot en surbrillance.](../images/use-cases/batch-id.png)
 
@@ -123,7 +123,7 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-Le mot-clé `_ACP_BATCHID` est utilisé pour filtrer les [!UICONTROL Batch ID].
+Le mot-clé `_ACP_BATCHID` est utilisé pour filtrer l’[!UICONTROL ID de lot].
 
 >[!TIP]
 >

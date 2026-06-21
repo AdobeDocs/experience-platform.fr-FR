@@ -22,8 +22,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 752
-ht-degree: 95%
+source-wordcount: 761
+ht-degree: 87%
 
 ---
 
@@ -37,9 +37,9 @@ Utilisez cette extension pour intégrer le service d’identités d’Experience
 
 Cette section fournit des informations relatives aux options disponibles lors de la configuration de l’extension Experience Cloud ID.
 
-Si l’extension Experience Cloud ID n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Experience Cloud ID avec votre souris et cliquez sur **[!UICONTROL Install]**.
+Si l’extension Experience Cloud ID n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Experience Cloud ID et cliquez sur **[!UICONTROL Installer]**.
 
-Pour configurer l’extension, ouvrez l’onglet Extensions, survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
+Pour configurer l’extension, ouvrez l’onglet Extensions , placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
 
 ![](../../../images/optin.jpg)
 
@@ -57,7 +57,7 @@ L’ID Experience Cloud ID ne se charge pas si l’URL correspond à l’un des
 
 (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 
-Cliquez sur **[!UICONTROL Add]** pour exclure un autre chemin.
+Sélectionnez **[!UICONTROL Ajouter]** pour exclure un autre chemin.
 
 ### Opt-in (Accord préalable)
 
@@ -87,7 +87,7 @@ Utilisez ce paramètre facultatif pour spécifier le domaine dans lequel le cook
 
 Indiquez quand le cookie Opt-in (Accord préalable) expire si le stockage est activé, en secondes.
 
-Saisissez un nombre, puis sélectionnez une unité de temps dans la liste déroulante. Par exemple, saisissez 2 et sélectionnez **[!UICONTROL Weeks]** (Semaines). La valeur par défaut est de 13 mois.
+Saisissez un nombre, puis sélectionnez une unité de temps dans la liste déroulante. Par exemple, saisissez 2 et sélectionnez **[!UICONTROL Semaines]**. La valeur par défaut est de 13 mois.
 
 **Permissions?** (Autorisations ?)
 
@@ -131,5 +131,5 @@ Définissez un ou plusieurs ID de client.
    * Authenticated (Authentifié)
    * Logged out (Déconnecté)
 
-1. (Facultatif) Cliquez sur **[!UICONTROL Add]** pour définir d’autres ID de client.
-1. Sélectionner **[!UICONTROL Keep Changes]**.
+1. (Facultatif) Sélectionnez **[!UICONTROL Ajouter]** pour définir d’autres ID de client.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.

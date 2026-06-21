@@ -11,18 +11,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 178
+source-wordcount: 182
 ht-degree: 13%
 
 ---
 
-# [!UICONTROL Commerce Details] groupe de champs de schéma
+# [!UICONTROL Détails Commerce &#x200B;] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Commerce Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire les données commerciales telles que des informations sur le produit (SKU, nom, quantité) et les opérations standard du panier (commande, passage en caisse, abandon).
+[!UICONTROL Détails &#x200B;] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations de panier standard (commande, passage en caisse, abandon).
 
 ![](../../images/field-groups/commerce-details.png)
 

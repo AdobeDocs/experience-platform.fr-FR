@@ -15,8 +15,8 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 257
-ht-degree: 20%
+source-wordcount: 261
+ht-degree: 19%
 
 ---
 
@@ -30,15 +30,15 @@ ht-degree: 20%
 
 Une fois l’exécution du script de bootstrap terminée à partir du tutoriel [jeu de données et schéma de ventes au détail](./create-retails-sales-dataset.md). Les schémas et les jeux de données de sortie peuvent être affichés sur [!DNL Experience Platform]. Pour afficher les schémas et les jeux de données, suivez les étapes ci-dessous :
 
-Sélectionnez l’onglet **[!UICONTROL Schemas]** situé dans le volet de navigation de gauche et recherchez le schéma d’entrée créé par le script de bootstrap. Le nom du schéma correspondra à ce qui a été défini dans `config.yaml` à l’étape précédente. Affichez les détails du schéma et sa composition en cliquant dessus.
+Sélectionnez l’onglet **[!UICONTROL Schémas]** dans le volet de navigation de gauche et recherchez le schéma d’entrée créé par le script de bootstrap. Le nom du schéma correspondra à ce qui a été défini dans `config.yaml` à l’étape précédente. Affichez les détails du schéma et sa composition en cliquant dessus.
 
 ![](../images/models-recipes/access-data/schema.PNG)
 
-Sélectionnez l’onglet **[!UICONTROL Datasets]** situé dans le volet de navigation de gauche et ouvrez le jeu de données d’entrée qui a été créé en sélectionnant le nom du jeu de données. Le nom du jeu de données correspond à ce qui a été défini dans `config.yaml` à partir de l’étape précédente.
+Sélectionnez l’onglet **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche et ouvrez le jeu de données d’entrée qui a été créé en sélectionnant le nom du jeu de données. Le nom du jeu de données correspond à ce qui a été défini dans `config.yaml` à partir de l’étape précédente.
 
 ![](../images/models-recipes/access-data/dataset.PNG)
 
-Sélectionnez **[!UICONTROL Preview Dataset]** situé en haut à droite pour prévisualiser un sous-ensemble du jeu de données.
+Sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** en haut à droite pour prévisualiser un sous-ensemble du jeu de données.
 
 ![](../images/models-recipes/access-data/preview.PNG)
 

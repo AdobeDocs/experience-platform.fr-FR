@@ -23,7 +23,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 899
+source-wordcount: 902
 ht-degree: 71%
 
 ---
@@ -54,7 +54,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 **Problèmes connus**
 
-* Aucune
+* None
 
 Pour en savoir plus sur l’utilisation de XDM à l’aide de l’API [!DNL Schema Registry] et de [!DNL Schema Editor]’interface utilisateur, consultez la [documentation du système XDM](../../xdm/home.md).
 
@@ -74,7 +74,7 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 
 **Problèmes connus**
 
-* Aucune
+* None
 
 Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [&#128279;](../../privacy-service/home.md).
 
@@ -97,11 +97,11 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 | Catégorie | Autorisation | Description |
 |--- | --- | ---|
 | Ingestion de données | Gestion des sources | Accès à la lecture, la création, la modification et la désactivation des sources. |
-| Ingestion de données | Affichage des sources | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalog]** et aux sources authentifiées dans l’onglet **[!UICONTROL Browse]** . |
+| Ingestion de données | Affichage des sources | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).
 
@@ -120,11 +120,11 @@ Dans [&#128279;](../../rtcdp/overview.md), les destinations sont des intégratio
 | Catégorie | Autorisation | Description |
 |--- | --- | ---|
 | Destinations | Gestion des destinations | Accès à la lecture, la création, la modification et la désactivation des destinations. |
-| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalog]** et aux destinations authentifiées dans l’onglet **Parcourir**. |
+| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **Parcourir**. |
 | Destinations | Activation des destinations | Possibilité d’activer les données vers les destinations. Cette autorisation nécessite l’ajout de « Gestion des destinations » ou « Affichage des destinations » au profil de produits. |
 
 **Problèmes connus**
 
-* Aucun
+* None
 
 Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).

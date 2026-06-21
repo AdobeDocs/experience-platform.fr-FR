@@ -17,8 +17,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 315
-ht-degree: 68%
+source-wordcount: 318
+ht-degree: 67%
 
 ---
 
@@ -38,7 +38,7 @@ POST /acl/effective-policies
 
 **Requête**
 
-Les requêtes suivantes récupèrent des informations sur l’autorisation « [!UICONTROL Manage Datasets] » et l’accès au type de ressource « [!UICONTROL schemas] » pour l’utilisateur actuel.
+Les requêtes suivantes récupèrent des informations sur l’autorisation « [!UICONTROL Gérer les jeux de données] » et l’accès au type de ressource « [!UICONTROL schémas] » pour l’utilisateur actuel.
 
 ```shell
 curl -X POST \

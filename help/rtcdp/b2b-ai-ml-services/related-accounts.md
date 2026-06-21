@@ -16,7 +16,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 443
+source-wordcount: 449
 ht-degree: 22%
 
 ---
@@ -45,11 +45,11 @@ Utilisez cette fonctionnalité pour afficher les profils de compte associés pou
 
 ## Activer le service de comptes associés {#enable}
 
-Pour activer le service, sélectionnez **[!UICONTROL Profiles]** dans la barre latérale, puis **[!UICONTROL Settings]**.
+Pour activer le service, sélectionnez **[!UICONTROL Profils]** dans la barre latérale, puis **[!UICONTROL Paramètres]**.
 
 ![Interface utilisateur d’Experience Platform mettant en surbrillance les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Sélectionnez le bouton bascule en regard de [!UICONTROL Enable related accounts] pour activer le service, puis sélectionnez **[!UICONTROL Save]**.
+Sélectionnez le bouton bascule en regard de [!UICONTROL Activer les comptes associés] pour activer le service, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Écran des paramètres du compte mettant en surbrillance le bouton bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 

@@ -13,18 +13,18 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 285
+source-wordcount: 289
 ht-degree: 28%
 
 ---
 
-# [!UICONTROL Demographic Details] groupe de champs de schéma
+# [!UICONTROL Détails démographiques] groupe de champs de schéma
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Demographic Details] groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un objet `person` de niveau racine dont les sous-champs décrivent des informations sur une personne individuelle.
+[!UICONTROL Détails démographiques] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le groupe de champs fournit un objet `person` de niveau racine dont les sous-champs décrivent des informations sur une personne individuelle.
 
 ![](../../images/field-groups/demographic-details.png)
 

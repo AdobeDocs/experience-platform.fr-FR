@@ -26,7 +26,7 @@ topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 1253
+source-wordcount: 1254
 ht-degree: 30%
 
 ---
@@ -67,7 +67,7 @@ Pour plus d’informations sur les agents, consultez la [documentation &#x200B;]
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte via l’onglet [!UICONTROL Alerts] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par e-mail de notification.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -87,7 +87,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| [!DNL Adform] | Utilisez cette destination pour envoyer des audiences Adobe Real-Time CDP à [!DNL Adform] pour activation en fonction de l’Experience Cloud ID (ECID) et de l’ID Fusion de [!DNL Adform]. ID Fusion de [!DNL Adform] est un service de résolution d’ID qui vous permet d’activer vos audiences propriétaires en fonction de l’Experience Cloud ID (ECID). Lisez la [[!DNL Adform] documentation](../../destinations/catalog/advertising/adform.md) pour plus d’informations |
+| [!DNL Adform] | Utilisez cette destination pour envoyer des audiences Adobe Real-Time CDP à [!DNL Adform] pour activation en fonction d’Experience Cloud ID (ECID) et de [!DNL Adform]’ID Fusion. ID Fusion de [!DNL Adform] est un service de résolution d’ID qui vous permet d’activer vos audiences propriétaires en fonction de l’Experience Cloud ID (ECID). Lisez la [[!DNL Adform] documentation](../../destinations/catalog/advertising/adform.md) pour plus d’informations |
 | [!DNL Amazon Ads] | Ajout de la prise en charge des identifiants personnels. Cela inclut les champs tels que `firstName`, `lastName`, `street`, `city`, `state`, `zip` et `country`. Le mappage de ces champs en tant qu’identités cibles peut améliorer les taux de correspondance d’audience. Pour plus d’informations, consultez la [[!DNL Amazon Ads] documentation](../../destinations/catalog/advertising/amazon-ads.md) . |
 | [!DNL Snowflake Batch] (Disponibilité limitée) | Créez un partage de données Live [!DNL Snowflake] pour recevoir des mises à jour quotidiennes de l’audience directement sous forme de tables partagées dans votre compte . Cette intégration est actuellement disponible pour les organisations clientes configurées dans la région VA7. Pour plus d’informations, consultez la [[!DNL Snowflake Batch] documentation](../../destinations/catalog/warehouses/snowflake-batch.md) . |
 | [!DNL Snowflake Streaming] (Disponibilité limitée) | Créez un partage de données Live [!DNL Snowflake] pour recevoir des mises à jour d’audience en flux continu directement sous forme de tables partagées dans votre compte . Cette intégration est actuellement disponible pour les organisations clientes configurées dans la région VA7. Pour plus d’informations, consultez la [[!DNL Snowflake Streaming] documentation](../../destinations/catalog/warehouses/snowflake.md) . |

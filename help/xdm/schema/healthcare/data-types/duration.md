@@ -11,23 +11,23 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
 workflow-type: tm+mt
-source-wordcount: 170
+source-wordcount: 176
 ht-degree: 7%
 
 ---
 
-# Type de données [!UICONTROL Duration]
+# [!UICONTROL Durée] type de données
 
-[!UICONTROL Duration] est un type de données standard du modèle de données d’expérience (XDM) qui décrit une durée. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
+[!UICONTROL Durée] est un type de données standard des modèles de données d’expérience (XDM) qui décrit une durée. Ce type de données est créé conformément aux spécifications HL7 FHIR Release 5.
 
 ![Structure du type de données de durée](../../../images/healthcare/data-types/duration.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Code] | `code` | Chaîne | Forme codée de l’unité de temps. |
-| [!UICONTROL System] | `system` | Chaîne | Système qui décrit l’unité codée, représentée sous la forme d’un URI. |
-| [!UICONTROL Unit] | `unit` | Chaîne | Unité de temps représentée en millisecondes, secondes, minutes, heures, jours, semaines, mois ou années. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `ms` (ms) </li> <li> `s` (secondes) </li> <li> `min` (minutes) </li> <li> `h` (heures) </li>  <li> `d` (jours) </li> <li> `wk` (semaines) </li> <li> `mo` (mois) </li> <li> `a` (années) </li> |
-| [!UICONTROL Value] | `value` | Double | Valeur numérique pour l’unité de temps. |
+| [!UICONTROL Système] | `system` | Chaîne | Système qui décrit l’unité codée, représentée sous la forme d’un URI. |
+| [!UICONTROL Unité] | `unit` | Chaîne | Unité de temps représentée en millisecondes, secondes, minutes, heures, jours, semaines, mois ou années. Les valeurs de cette propriété doivent être égales à une ou plusieurs des valeurs d’énumération connues suivantes. <li> `ms` (ms) </li> <li> `s` (secondes) </li> <li> `min` (minutes) </li> <li> `h` (heures) </li>  <li> `d` (jours) </li> <li> `wk` (semaines) </li> <li> `mo` (mois) </li> <li> `a` (années) </li> |
+| [!UICONTROL Valeur] | `value` | Double | Valeur numérique pour l’unité de temps. |
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 
