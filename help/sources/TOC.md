@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 00c2cc19c006cb966ca99bf924fa61b4a8cea698
+source-git-commit: ef14ba4bc49f2b2d08718b2b39fdf095a22e485f
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1129'
 ht-degree: 87%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 87%
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
-         - {hide-from-toc}[Événements de streaming Kobie &#x200B;](tutorials/ui/create/loyalty/kobie-streaming.md)
+         - {hide-from-toc}[Événements de streaming Kobie ](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [LAVE](tutorials/ui/create/loyalty/lava.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur source Talon.One Batch](tutorials/ui/create/loyalty/talon-one-batch.md)
@@ -366,6 +366,7 @@ ht-degree: 87%
       - [Flux de données de connexion à l’automatisation marketing](tutorials/ui/dataflow/marketing-automation.md)
       - [Flux de données de connexion aux paiements](tutorials/ui/dataflow/payments.md)
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
+   - [Gestion des flux de données dans l’interface utilisateur](tutorials/ui/manage.md)
    - [Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur](tutorials/ui/templates.md)
    - {hide-from-toc}[Filtrer les objets sources](tutorials/ui/filter.md)
    - [Ingérer des données chiffrées](tutorials/ui/encryped-ingestion.md)
