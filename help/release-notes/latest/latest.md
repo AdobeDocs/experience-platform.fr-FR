@@ -27,7 +27,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 57884c36a2a1e05a5bf77c12ba33113e293559a1
+source-git-commit: 5610656d1061c0d0b99a30835b4bd4093f4f613a
 workflow-type: tm+mt
 source-wordcount: 1435
 ht-degree: 20%
@@ -156,7 +156,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | --- | --- |
 | Désactivation automatique des flux de données pour les flux de données sources ayant échoué | Les flux de données des sources qui échouent en continu pendant 30 jours sont automatiquement désactivés. Lorsqu’un flux de données est désactivé, passez en revue la raison de l’échec dans Surveillance, appliquez les mises à jour nécessaires et réactivez le flux de données. Les raisons d’échec courantes incluent les informations d’identification, les autorisations ou les modifications de configuration des schémas et des mappages. |
 | Prise en charge de l’authentification basée sur HMAC pour [!DNL Shopify Streaming] | L’authentification HMAC est désormais prise en charge pour le connecteur source [!DNL Shopify Streaming], disponible dans l’interface utilisateur et l’API. Voir la [[!DNL Shopify Streaming] présentation](../../sources/connectors/ecommerce/shopify-streaming.md) pour connaître le comportement de rotation des clés et les instructions de configuration. |
-| Amélioration de la gestion de l’inventaire des flux de données sources | L’inventaire des flux de données des sources a été modernisé avec une recherche et un filtrage avancés, la prise en charge des balises et des dossiers, des colonnes redimensionnables et davantage d’actions contextuelles pour aider les utilisateurs à organiser et gérer les flux de données plus efficacement. Pour plus d’informations, consultez la [documentation](../../sources/tutorials/ui/filter.md) . |
+| Amélioration de la gestion de l’inventaire des flux de données sources | L’inventaire des flux de données des sources a été modernisé avec une recherche et un filtrage avancés, la prise en charge des balises et des dossiers, des colonnes redimensionnables et davantage d’actions contextuelles pour aider les utilisateurs à organiser et gérer les flux de données plus efficacement. Pour plus d’informations, consultez la [documentation](../../sources/tutorials/ui/manage.md) . |
 
 {style="table-layout:auto"}
 
