@@ -2,7 +2,8 @@
 title: Quand activer
 description: Découvrez la fonctionnalité Quand activer pour les destinations de diffusion en streaming et comment l’utiliser pour contrôler quelles modifications de profil déclenchent des exportations vers vos destinations.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 83c30fb345f38aba65c47f16e3cb026dd2734066
+nudge: true
+source-git-commit: 4d82f110043af56d5d1c247817e3283b2565da4f
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 7%
