@@ -1,7 +1,7 @@
 ---
 title: LAVE
 description: En savoir plus sur la source LAVA sur Adobe Experience Platform
-source-git-commit: b1810a83a3eda5674d91a8c122f3ad858ef94aa1
+source-git-commit: 7eff25edcca1dd952a01d32aee4703f107ac8312
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 1%
@@ -147,7 +147,7 @@ Téléchargez le fichier [exemple de données d’événements comptables ici.](
 
 ### Événements combinés
 
-Utilisez ce [fichier d’exemple de données d’événement combiné](../../assets/lava/lava_transaction_sample.json) pour configurer un flux de données unique qui ingère tous les types d’événements.
+Utilisez ce [fichier d’exemple de données d’événement combiné](../../assets/lava/lava_combined_event_sample.json) pour configurer un flux de données unique qui ingère tous les types d’événements.
 
 ## Considérations relatives au déploiement
 
