@@ -3,9 +3,9 @@ title: Quand activer
 description: Découvrez la fonctionnalité Quand activer pour les destinations de diffusion en streaming et comment l’utiliser pour contrôler quelles modifications de profil déclenchent des exportations vers vos destinations.
 badgeBeta: label="Beta" type="Informative"
 nudge: true
-source-git-commit: 4d82f110043af56d5d1c247817e3283b2565da4f
+source-git-commit: 126e29d92face2aae6d5ef9b3b7ad192fe7c0249
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1156'
 ht-degree: 7%
 
 ---
@@ -62,6 +62,10 @@ Les trois types de déclencheur sont activés sur chaque flux de données nouvea
 ## Bonnes pratiques et recommandations {#best-practices}
 
 La meilleure configuration de déclenchement dépend de votre cas d’utilisation. Utilisez les conseils suivants comme point de départ.
+
+>[!WARNING]
+>
+>La modification des paramètres de déclencheur d’activation sur les flux de données de production existants peut interrompre les campagnes actives. Adobe recommande de tester toutes les modifications dans un sandbox de développement avant de les appliquer à la production.
 
 ![Arborescence de décision indiquant le déclencheur d’activation à désactiver en fonction du problème que vous résolvez : désactivez les modifications d’attribut pour réduire le volume d’exportation global, ou désactivez les modifications d’identité pour arrêter les déclencheurs de fournisseur de services de messagerie indésirables des nouvelles connexions d’appareil.](../assets/ui/when-to-activate/trigger-decision-tree-figma.png)
 
