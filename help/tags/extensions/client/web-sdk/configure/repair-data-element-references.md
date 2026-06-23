@@ -1,19 +1,19 @@
 ---
-title: Réparer les références d’élément de données
+title: Corriger les références d’élément de données
 description: Découvrez comment analyser et réparer les références d’éléments de données obsolètes dans toutes les actions d’extension de Web SDK dans une propriété de balise.
 source-git-commit: 6a7591682bc019be2672f543dbcc495b356b1c09
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
-# Réparer les références d’élément de données {#repair-data-element-references}
+# Corriger les références d’élément de données {#repair-data-element-references}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_repairreferences"
->title="Réparer les références d’élément de données"
->abstract="Analyse chaque action de cette propriété qui appartient à l’extension AEP Web SDK et met à jour toute action qui fait référence à un élément de données qui n’est plus présent sur cette propriété."
+>title="Corriger les références d’élément de données"
+>abstract="Analyse chaque action de cette propriété qui appartient à l’extension du SDK web AEP et met à jour toute action qui fait référence à un élément de données qui n’est plus présent sur cette propriété."
 
 La fonction **[!UICONTROL Réparer les références d’élément de données]** analyse chaque action de la propriété de balise active et identifie toutes les actions comportant des références d’élément de données obsolètes. Si un élément de données portant le même nom existe dans la propriété , la référence obsolète est remplacée automatiquement. Les actions qui ne peuvent pas être réparées automatiquement sont signalées afin que vous puissiez les corriger manuellement. Adobe recommande d’utiliser cette fonctionnalité après avoir copié une extension ou des règles contenant des actions **[!UICONTROL Mettre à jour l’élément de données]** sur une autre propriété, car les actions copiées peuvent toujours référencer des éléments de données de la propriété source qui ne sont plus présents dans la destination. Il est disponible à partir de la version 2.37.0 de l’extension de balise.
 
