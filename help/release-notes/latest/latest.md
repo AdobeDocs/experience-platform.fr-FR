@@ -67,7 +67,7 @@ Utilisez Agent Orchestrator pour automatiser les workflows et impliquer les clie
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Valider vos données dans l’assistant d’IA | Identifiez plus rapidement les problèmes de qualité des données et fiez-vous davantage à vos jeux de données Adobe Experience Platform grâce à la validation des données dans l’assistant AI. Optimisée par Agent Orchestrator, cette fonctionnalité analyse les jeux de données, identifie les problèmes de qualité des données et fournit des informations exploitables pour faciliter le diagnostic et la résolution des problèmes. Pour plus d’informations, consultez le guide sur la [validation de vos données dans l’assistant AI](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/data-validation). |
+| Valider vos données dans l’assistant d’IA | Identifiez plus rapidement les problèmes de qualité des données et fiez-vous davantage à vos jeux de données Adobe Experience Platform grâce à la validation des données dans l’assistant AI. Optimisée par Agent Orchestrator, cette fonctionnalité analyse les jeux de données, identifie les problèmes de qualité des données et fournit des informations exploitables pour faciliter le diagnostic et la résolution des problèmes. Pour plus d’informations, consultez le guide sur la [validation de vos données dans l’assistant AI](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/data-validation). |
 
 {style="table-layout:auto"}
 
