@@ -22,14 +22,19 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: cb8d5ff04fdcdd8a55ff25a32348e1f743d00990
+source-git-commit: 3a362b65a2a6e781993efe6c0f5b8e46fb3d0d5e
 workflow-type: tm+mt
-source-wordcount: 928
-ht-degree: 90%
+source-wordcount: 959
+ht-degree: 87%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
+
+## Version 1.7.1 - 24 Juin 2026
+
+* Correction d’un problème en raison duquel le remplacement de l’identifiant du flux de données pouvait ne pas prendre effet.
+* Correction d’un problème en raison duquel le débogage d’Analytics pouvait corrompre les données contextuelles dans les requêtes Analytics.
 
 ## Version 1.7.0 - 27 Mai 2026
 
