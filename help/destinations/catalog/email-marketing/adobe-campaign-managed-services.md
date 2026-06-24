@@ -155,7 +155,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Sélectionner une instance]** : votre instance marketing **[!DNL Campaign]**.
-* **[!UICONTROL Mapping de ciblage]** : sélectionnez le mapping de ciblage que vous utilisez dans **[!DNL Adobe Campaign]** pour envoyer des diffusions. [En savoir plus](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Mapping de ciblage]** : sélectionnez le mapping de ciblage que vous utilisez dans **[!DNL Adobe Campaign]** pour envoyer des diffusions. [En savoir plus](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=fr).
 * **[!UICONTROL Sélectionnez le type de synchronisation]** :
 
    * **[!UICONTROL Synchronisation des audiences]** : utilisez cette option pour envoyer des audiences [!DNL Adobe Experience Platform] à [!DNL Adobe Campaign].

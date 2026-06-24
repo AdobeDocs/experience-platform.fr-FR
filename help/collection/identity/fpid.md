@@ -77,7 +77,7 @@ Les cookies propriétaires sont plus efficaces lorsqu’ils sont définis à l�
 >
 >Les cookies définis à l’aide de la méthode de `document.cookie` JavaScript (y compris à l’aide de la méthode de balise [`cookie.set()`](../tags/cookie.md)) ne sont presque jamais protégés des politiques de navigateur qui limitent la durée des cookies.
 
-Notez que les enregistrements `A` ou `AAAA` ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un `CNAME` DNS. Les FPID sont définis à l’aide d’un enregistrement `A` ou `AAAA` et envoyés à Adobe à l’aide d’un `CNAME` . Le [Programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) vous permet de configurer un `CNAME` pour la collecte de données.
+Notez que les enregistrements `A` ou `AAAA` ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un `CNAME` DNS. Les FPID sont définis à l’aide d’un enregistrement `A` ou `AAAA` et envoyés à Adobe à l’aide d’un `CNAME` . Le [Programme de certificat géré par &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr#adobe-managed-certificate-program) vous permet de configurer un `CNAME` pour la collecte de données.
 
 ### Quand définir le cookie {#when-to-set-cookie}
 
@@ -199,7 +199,7 @@ Si vous migrez vers des identifiants d’appareil propriétaires à partir d’u
 
 | Visite | Description |
 | --- | --- |
-| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie FPID. L’ECID contenu dans le [cookie AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
+| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie FPID. L’ECID contenu dans le [cookie AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
 | Deuxième visite | Le déploiement de la solution FPID a commencé. L’ECID existant est toujours présent et reste l’identifiant principal pour l’identification des visiteurs. |
 | Troisième visite | Entre la deuxième et la troisième visite, il s’est écoulé suffisamment de temps pour que l’ECID ait été supprimé en raison d’une politique de navigateur. Cependant, comme le FPID a été défini à l’aide d’un enregistrement `A` DNS, le FPID persiste. Le FPID est désormais considéré comme l’ID principal et est utilisé pour amorcer l’ECID, qui est écrit sur l’appareil de l’utilisateur final. L’utilisateur est désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |
 | Quatrième visite | Entre la troisième et la quatrième visite, il s’est écoulé suffisamment de temps pour que l’ECID ait été supprimé en raison d’une politique de navigateur. Comme lors de la visite précédente, le FPID reste en raison de la manière dont il a été défini. Cette fois, le même ECID que celui de la visite précédente est généré. L’utilisateur est vu dans toutes les solutions Adobe Experience Platform et Experience Cloud comme le même utilisateur que la visite précédente. |

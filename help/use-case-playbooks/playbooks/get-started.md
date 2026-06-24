@@ -95,7 +95,7 @@ Pour créer des instances de playbooks dans Journey Optimizer, vous devez config
 
 ### Surface du canal e-mail
 
-Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=fr).
 
 ### Surface du canal SMS
 
@@ -111,7 +111,7 @@ Vérifiez que les configurations de canal sont configurées à partir de l’int
 
 Sélectionnez ensuite le canal, les plateformes et les applications que vous avez examinés dans les configurations de canal. Sélectionnez **Envoyer** pour créer la surface de canal push.
 
-Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=fr).
 
 ## Étapes suivantes {#next-steps}
 
