@@ -1,7 +1,7 @@
 ---
 title: B2B edition du modèle de données d’informations Real-Time Customer Data Platform
 description: Découvrez comment utiliser des requêtes SQL avec les modèles de données Real-Time Customer Data Platform Insights (B2B edition) pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et de KPI.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
 TQID: https://experienceleague.adobe.com/5zA8YXF364wlpGwZsTXqu99TOhFsSWGboM3KPEzt3qg
 product_v2:

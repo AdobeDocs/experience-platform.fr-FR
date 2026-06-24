@@ -178,11 +178,11 @@ Consultez ces trois vidéos d’introduction pour mieux comprendre Real-Time CDP
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=fr">
       <img alt="Vidéo Real-Time CDP dans le cadre d’Adobe Experience Cloud" src="/help/rtcdp/assets/platform-apps-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=fr">
     <strong>Real-Time CDP dans le cadre d’Adobe Experience Cloud</strong>
     </a>
     </div>
@@ -191,11 +191,11 @@ Consultez ces trois vidéos d’introduction pour mieux comprendre Real-Time CDP
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=fr">
       <img alt="image miniature de la vidéo « Architecture de base de Adobe Experience Platform »" src="/help/rtcdp/assets/platform-architecture-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=fr">
     <strong> Architecture de base de Adobe Experience Platform </strong>
     </a>
     </div>

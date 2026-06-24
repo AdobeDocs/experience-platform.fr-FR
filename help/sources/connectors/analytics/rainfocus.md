@@ -107,7 +107,7 @@ Pour créer votre schéma pour les données [!DNL RainFocus], consultez la docum
 >[!IMPORTANT]
 >
 >* Le schéma doit étendre la classe **XDM ExperienceEvent**.
->* Vous devez vous assurer que le schéma inclut une **identité principale** et est **activé pour Profil**. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* Vous devez vous assurer que le schéma inclut une **identité principale** et est **activé pour Profil**. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=fr)
 >* Vous pouvez remplacer l’exemple d’identité (E-mail) par un autre identifiant approprié, tel qu’un e-mail sha256 ou un ECID.
 
 ### Création d’un profil d’intégration dans Rainfocus {#create-an-integration-profile-in-rainfocus}

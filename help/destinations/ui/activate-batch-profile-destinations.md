@@ -668,7 +668,7 @@ Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#rev
 >id="platform_destinations_enrichment_attributes_source_field"
 >title="Champ source"
 >abstract="Sélectionnez un attribut d’enrichissement à exporter. Pour les champs à l’intérieur d’un tableau, la source est automatiquement renseignée avec une expression de transformation. Pour exporter plusieurs champs dans un mappage, ajoutez un champ en premier, puis modifiez l’expression source. Voir la documentation pour plus de détails."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-multiple-array-fields" text="Exporter plusieurs champs d’un tableau"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#export-multiple-array-fields" text="Exporter plusieurs champs d’un tableau"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_target_field"

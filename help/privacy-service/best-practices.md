@@ -92,7 +92,7 @@ Si une tâche spécifique est toujours en attente ou a renvoyé une erreur, vous
 
 ## Données de demande d’accès {#access-request-data}
 
-Lorsque des informations sur les titulaires de données sont demandées, chaque service renvoie des données dans un format compatible avec la manière dont ils stockent et utilisent ces données. Une fois que tous les services ont terminé la requête, une URL de fichier d’archive .ZIP est fournie dans les détails de la tâche pour permettre le téléchargement de ces données. Consultez le guide de dépannage pour plus d’informations sur [&#x200B; comment télécharger les résultats des tâches de confidentialité &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
+Lorsque des informations sur les titulaires de données sont demandées, chaque service renvoie des données dans un format compatible avec la manière dont ils stockent et utilisent ces données. Une fois que tous les services ont terminé la requête, une URL de fichier d’archive .ZIP est fournie dans les détails de la tâche pour permettre le téléchargement de ces données. Consultez le guide de dépannage pour plus d’informations sur [&#x200B; comment télécharger les résultats des tâches de confidentialité &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=fr#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
 
 Les principaux points à noter concernant la gestion de l&#39;archive de données sont les suivants :
 

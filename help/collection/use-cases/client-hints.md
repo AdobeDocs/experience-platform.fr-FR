@@ -153,7 +153,7 @@ La dimension [&#x200B; Système d’exploitation &#x200B;](https://experiencelea
 
 ### Caractéristiques d’Audience Manager reposant sur des indications du client à entropie élevée {#aam}
 
-[!DNL Google] a mis à jour la fonctionnalité du navigateur [!DNL Chrome] afin de minimiser les informations collectées via l’en-tête `User-Agent`. Par conséquent, les clients Audience Manager utilisant [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevront plus d’informations fiables pour les caractéristiques basées sur [clés au niveau de la plateforme](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] a mis à jour la fonctionnalité du navigateur [!DNL Chrome] afin de minimiser les informations collectées via l’en-tête `User-Agent`. Par conséquent, les clients Audience Manager utilisant [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevront plus d’informations fiables pour les caractéristiques basées sur [clés au niveau de la plateforme](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=fr).
 
 Les clients Audience Manager qui utilisent des clés au niveau de la plateforme pour le ciblage doivent passer à la [collecte de données Adobe Experience Platform](/help/collection/home.md) au lieu de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) et permettre à [Client Hints à entropie élevée](#enabling-high-entropy-client-hints) de continuer à recevoir des données de caractéristiques fiables.
 

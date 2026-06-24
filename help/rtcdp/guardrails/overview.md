@@ -43,7 +43,7 @@ Commencez ici et suivez les liens ci-dessous pour découvrir tous les mécanisme
 
 >[!TIP]
 >
->Consultez également la page [Plans directeurs de l’expérience digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) pour obtenir plus d’informations, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+>Consultez également la page [Plans directeurs de l’expérience digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr) pour obtenir plus d’informations, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
 
 ## Types de mécanismes de sécurisation {#guardrail-types}
 
@@ -69,7 +69,7 @@ Consultez également les liens de description du produit ci-dessous pour obtenir
 
 Des mécanismes de sécurisation similaires existent pour d’autres applications Experience Platform. Pour plus d’informations, consultez les liens ci-dessous :
 
-* [Mécanismes de sécurisation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Mécanismes de sécurisation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=fr)
 * [Mécanismes de sécurisation de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=fr)
 
 ## Étapes suivantes
