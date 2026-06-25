@@ -3,11 +3,33 @@ title: Présentation de l’extension AEM Asset Insights
 description: Découvrez lʼextension de balise AEM Asset Insights dans Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 TQID: https://experienceleague.adobe.com/UdpYmtVjF9G9Du5Wmk46RDFsTRFP2ZAwsGzjcv5YDgU
-product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d09181b5-a36a-43de-ba01-36641440bc43id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: ae478996-b206-4712-9b0c-dc78a2644453id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: b3f03848-ae12-48b2-8aab-cad18567eb32id: c20d46e7-1c7d-476c-a50e-3961d4dce35fid: da0dfbce-df02-4f8b-b32d-a4e3b1d05085id: e08599ea-8888-4294-ba74-3ba0a7762a46id: e17747bc-9b7b-44e6-a443-f54229a02620id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: ae478996-b206-4712-9b0c-dc78a2644453
+  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+  - id: e17747bc-9b7b-44e6-a443-f54229a02620
+  - id: eb9732ab-8232-4b21-bc4c-89de86dbe4d7
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: ea5d5bb4c18ef6857987682d7cf5a4b887b73b67
 workflow-type: tm+mt
 source-wordcount: 1140
@@ -56,7 +78,7 @@ Cette section décrit comment configurer AEM avec des balises dans Adobe Experi
 
 ### Intégration d’AEM avec des balises
 
-L’intégration recommandée d’[](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=fr) avec Adobe Experience Manager s’effectue via Adobe I/O.
+L’intégration recommandée d’[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=fr) avec Adobe Experience Manager s’effectue via Adobe I/O.
 
 1. [Connexion d’AEM à Launch à l’aide d’Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=fr).
 
