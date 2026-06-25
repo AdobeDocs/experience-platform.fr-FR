@@ -30,10 +30,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: ea5d5bb4c18ef6857987682d7cf5a4b887b73b67
 workflow-type: tm+mt
-source-wordcount: 1132
-ht-degree: 93%
+source-wordcount: 1140
+ht-degree: 92%
 
 ---
 
@@ -64,7 +64,7 @@ L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Pla
 
 1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, sélectionnez **[!UICONTROL Outils > Assets]**, puis ouvrez le panneau **[!UICONTROL Configuration d’Insights]**.
 
-1. Désactivez le suivi UUID.
+1. Activez le suivi UUID en désélectionnant le paramètre de configuration **[!UICONTROL Désactiver le suivi UUID]**.
 
    >[!IMPORTANT]
    >
