@@ -2,10 +2,10 @@
 title: Contexte dans les modules d’extension Edge
 description: Découvrez l’objet Contexte ainsi que son rôle dans l’interaction avec les modules Bibliothèque dans les extensions de balises des propriétés Edge.
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 96%
+source-wordcount: '720'
+ht-degree: 94%
 
 ---
 
@@ -138,7 +138,7 @@ L’objet contient les valeurs suivantes :
 | Propriété | Description |
 | --- | --- |
 | `turbineVersion` | Version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) utilisée dans la bibliothèque actuelle. |
-| `turbineBuildDate` | Date ISO 8601 de création de la version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) utilisée dans le conteneur. |
+| `turbineBuildDate` | Date [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) à laquelle la version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) utilisée à l’intérieur du conteneur a été créée. |
 | `buildDate` | Date ISO 8601 de la création de la bibliothèque actuelle. |
 | `environment` | Environnement pour lequel cette bibliothèque a été créée. Les valeurs possibles sont les suivantes : `development`, `staging` et `production.` |
 

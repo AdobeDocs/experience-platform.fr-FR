@@ -5,16 +5,13 @@ title: Présentation de l’API d’ingestion par lots
 description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système CRM (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 TQID: https://experienceleague.adobe.com/tEpXMJkU-0HQD3FyI02pbPBSO9By9dCiwj7BmjvCzWY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 1416
-ht-degree: 65%
+source-wordcount: 1363
+ht-degree: 64%
 
 ---
 
@@ -22,7 +19,7 @@ ht-degree: 65%
 
 L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être des données de profil d’un fichier plat (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
 
-La [&#x200B; Référence de l’API Batch Ingestion &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
+La [ Référence de l’API Batch Ingestion ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
 
 Le diagramme suivant décrit le processus d’ingestion par lots :
 
@@ -63,22 +60,22 @@ Lors de l’ingestion de données, il est important de comprendre le fonctionnem
 
 Il existe une certaine flexibilité lors de l’ingestion de données : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties en type cible exprimé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV n’ont de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées à l’aide de [chaînes au format ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (« 2018-07-10T15:05:59.000-08:00 ») ou d’Unix Time au format millisecondes (1531263959000) et sont converties au moment de l’ingestion en type XDM cible.
+Par exemple, ni JSON ni CSV n’ont de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) ou en temps Unix, en millisecondes (`1531263959000`), et sont converties au moment de l’ingestion en type XDM cible.
 
 Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
 | Entrant (ligne) / Cible (colonne) | Chaîne | Octet | Court | Entier | Long | Double | Date | Date et heure | Objet | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Chaîne | X | X | X | X | X | X | X | X |   |   |
-| Octet | X | X | X | X | X | X |   |   |   |   |
-| Court | X | X | X | X | X | X |   |   |   |   |
-| Entier | X | X | X | X | X | X |   |   |   |   |
-| Long | X | X | X | X | X | X | X | X |   |   |
-| Double | X | X | X | X | X | X |   |   |   |   |
-| Date |   |   |   |   |   |   | X |   |   |   |
-| Date et heure |   |   |   |   |   |   |   | X |   |   |
-| Objet |   |   |   |   |   |   |   |   | X | X |
-| Map |   |   |   |   |   |   |   |   | X | X |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Chaîne | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Octet | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Court | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Entier | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Long | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Double | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Date |   |   |   |   |   |   | ✓ |   |   |   |
+| Date et heure |   |   |   |   |   |   |   | ✓ |   |   |
+| Objet |   |   |   |   |   |   |   |   | ✓ | ✓ |
+| Map |   |   |   |   |   |   |   |   | ✓ | ✓ |
 
 >[!NOTE]
 >
@@ -153,7 +150,7 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Cepen
 
 >[!NOTE]
 >
->L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [&#128279;](api-overview.md).
+>L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [](api-overview.md).
 
 >[!INFO]
 >

@@ -5,14 +5,12 @@ title: Gestion des formats de données avec la préparation des données
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 TQID: https://experienceleague.adobe.com/C2IVb0smhO7BczWeWgum2xhCJ2dSzBeO3ZpnEUogedo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 626
-ht-degree: 94%
+source-wordcount: 632
+ht-degree: 91%
 
 ---
 
@@ -34,7 +32,7 @@ La préparation de données prend en charge les fonctions de date, à la fois so
 
 ### Format de la fonction Date
 
-La fonction de date convertit les chaînes et les objets datetime en objet ZonedDateTime au format ISO 8601.
+La fonction de date convertit les chaînes et les objets datetime en un objet `ZonedDateTime` au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).
 
 **Format**
 

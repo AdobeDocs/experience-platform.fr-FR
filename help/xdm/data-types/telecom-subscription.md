@@ -5,15 +5,12 @@ title: Type de données d'abonnement aux télécommunications
 description: Découvrez le type de données Modèle de données d’expérience d’abonnement aux télécommunications (XDM).
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 TQID: https://experienceleague.adobe.com/Uq0AcydyH9L8YhSGcJ4ymUajAg3-Fp5ocevOGNVg31g
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 623
+source-wordcount: 619
 ht-degree: 17%
 
 ---
@@ -33,21 +30,21 @@ ht-degree: 17%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `devices` | Tableau d’objets | Décrit une liste d’appareils et/ou d’accessoires associés à la formule. Voir la [section ci-dessous](#devices) pour plus d’informations sur la structure attendue de chaque élément de tableau. |
-| `subscriber` | [[!UICONTROL &#x200B; Personne &#x200B;]](./person.md) | Décrit le propriétaire de l’abonnement. |
+| `subscriber` | [[!UICONTROL  Personne ]](./person.md) | Décrit le propriétaire de l’abonnement. |
 | `ID` | Chaîne | Identifiant unique de l’instance d’abonnement. |
 | `billingPeriod` | Chaîne | Durée entre deux facturations. |
-| `billingStartDate` | Date | Date de début de la période de facturation. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
+| `billingStartDate` | Date | Date de début de la période de facturation. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |
 | `chargeMethod` | Chaîne | Méthode de configuration de la facturation pour facturer les frais au client. |
 | `contractID` | Chaîne | ID unique du contrat régissant cet abonnement. |
 | `country` | Chaîne | Pays dans lequel les termes du contrat et de l’accord d’abonnement trouvent leur origine. |
-| `endDate` | Date | Date à laquelle l’abonnement actuel se termine. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
-| `paymentDueDate` | Date | Date d’échéance du paiement de l’abonnement. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
+| `endDate` | Date | Date à laquelle l’abonnement actuel se termine. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |
+| `paymentDueDate` | Date | Date d’échéance du paiement de l’abonnement. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |
 | `paymentMethod` | Chaîne | Mode de paiement des paiements récurrents. |
 | `paymentStatus` | Chaîne | État de paiement du compte. |
 | `planName` | Chaîne | Nom lisible par l’utilisateur de l’abonnement. |
 | `reason` | Chaîne | Intention générale du membre quant à l’utilisation de l’abonnement. |
 | `renew` | Chaîne | La manière dont l’abonnement peut continuer après la date de fin. |
-| `startDate` | Date | Date du début de l’abonnement. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
+| `startDate` | Date | Date du début de l’abonnement. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |
 | `status` | Chaîne | Statut actuel de l’abonnement. |
 | `subscriptionCategory` | Chaîne | Catégorisation de niveau supérieur principale de ce type d’abonnement. |
 | `subscriptionSKU` | Chaîne | Unité de stock (SKU) de l’abonnement. |

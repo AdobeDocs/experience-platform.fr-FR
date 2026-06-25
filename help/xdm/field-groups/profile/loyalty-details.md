@@ -5,16 +5,13 @@ title: Groupe de champs de schéma des détails de fidélité
 description: Documentation de référence pour le groupe de champs de schéma XDM Détails de fidélité . Couvre les champs d’état de fidélité, y compris les soldes de points, les affectations de niveau, les récompenses, les défis et les détails de carte pour la classe XDM Individual Profile.
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
 TQID: https://experienceleague.adobe.com/ejWOFx2swDsfq7xDXuppY0yaqCFCbgcrH8IxdLHh7AQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: a9e52c7fac0e37b0183c23fce6c35f63832399d3
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 1060
-ht-degree: 4%
+source-wordcount: 1067
+ht-degree: 5%
 
 ---
 
@@ -50,7 +47,7 @@ L’objet `loyalty` contient les propriétés suivantes.
 | `cardsDetails` | Tableau d’objets | Répertorie les cartes de fidélité associées au membre. Voir la sous-section [cardsDetails](#cardsDetails) pour plus d’informations. |
 | `challenges` | Tableau d’objets | Répertorie les défis de fidélité associés au membre. Pour plus d’informations, consultez la [sous-section des défis](#challenges). |
 | `expiredPoints` | Double | Nombre total de points ayant expiré et ne pouvant plus être utilisés. |
-| `joinDate` | DateTime | Date et heure ISO 8601 indiquant le moment où la personne a rejoint le programme de fidélité. |
+| `joinDate` | DateTime | Date et heure [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) indiquant le moment où la personne a rejoint le programme de fidélité. |
 | `lifetimePoints` | Double | Total de points gagnés tout au long de l’adhésion au programme de fidélité du client. |
 | `lifetimePurchases` | Double | Valeur monétaire totale de tous les achats effectués tout au long de l’adhésion au programme de fidélité du client. |
 | `loyaltyID` | Tableau de chaînes | Identifiants du programme de fidélité associé au membre. |

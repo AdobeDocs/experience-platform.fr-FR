@@ -3,21 +3,13 @@ title: contexte
 description: Collectez automatiquement les données relatives à l’appareil, à l’environnement ou à l’emplacement.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
 TQID: https://experienceleague.adobe.com/9rYD-3NrLBMxgby-DnScJGouV7mrCy-YDJfVa0dyu18
-product_v2:
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 980
+source-wordcount: 987
 ht-degree: 13%
 
 ---
@@ -28,90 +20,90 @@ La propriété `context` est un tableau de chaînes qui détermine ce que le SDK
 
 ## Mots-clés de contexte et éléments XDM
 
-Si vous incluez un mot-clé de contexte donné, le SDK Web renseigne automatiquement tous ses éléments XDM associés. Si vous souhaitez omettre un élément XDM spécifique tout en en autorisant d’autres, vous pouvez effacer les valeurs à l’aide de [`onBeforeEventSend`](onbeforeeventsend.md). Si vous envoyez plusieurs événements sur une page, le SDK Web inclut ces champs à chaque appel `SendEvent`.
+Si vous incluez un mot-clé de contexte donné, le SDK Web renseigne automatiquement tous ses éléments XDM associés. Si vous souhaitez omettre un élément XDM spécifique tout en en autorisant d’autres, vous pouvez effacer des valeurs individuelles à l’aide de [`onBeforeEventSend`](onbeforeeventsend.md). Si vous envoyez plusieurs événements sur une page, le SDK Web inclut ces champs à chaque appel [`SendEvent`](../sendevent/overview.md).
 
 ### Web
 
-Le mot-clé `"web"` collecte des informations sur la page active.
+Le mot-clé **`"web"`** collecte des informations sur la page active.
 
 | Dimension | Description | Chemin XDM | Exemple de valeur |
 | --- | --- | --- | --- |
-| Page URL (URL de la page) | URL de la page active. | `xdm.web.webPageDetails.URL` | `https://example.com/index.html` |
-| URL du référent | URL de la page précédemment visitée. | `xdm.web.webReferrer.URL` | `http://example.org/linkedpage.html` |
+| Page URL (URL de la page) | URL de la page active. | [`xdm.web.webPageDetails.URL`](/help/xdm/data-types/webpage-details.md) | `https://example.com/index.html` |
+| URL du référent | URL de la page précédemment visitée. | [`xdm.web.webReferrer.URL`](/help/xdm/data-types/web-information.md) | `http://example.org/linkedpage.html` |
 
 ### Appareil
 
-Le mot-clé `"device"` collecte des informations sur l’appareil de l’utilisateur.
+Le mot-clé **`"device"`** collecte des informations sur l’appareil de l’utilisateur.
 
 | Dimension | Description | Chemin XDM | Exemple de valeur |
 | --- | --- | --- | --- |
-| Hauteur d’écran | Hauteur de l’écran en pixels. | `xdm.device.screenHeight` | `900` |
-| Largeur d’écran | Largeur de l’écran en pixels. | `xdm.device.screenWidth` | `1440` |
-| Orientation de l’écran | Orientation de l’écran. | `xdm.device.screenOrientation` | `landscape` ou `portrait`. |
+| Hauteur d’écran | Hauteur de l’écran en pixels. | [`xdm.device.screenHeight`](/help/xdm/data-types/device.md) | `900` |
+| Largeur d’écran | Largeur de l’écran en pixels. | [`xdm.device.screenWidth`](/help/xdm/data-types/device.md) | `1440` |
+| Orientation de l’écran | Orientation de l’écran. | [`xdm.device.screenOrientation`](/help/xdm/data-types/device.md) | `landscape` ou `portrait`. |
 
 ### Environnement
 
-Le mot-clé `"environment"` collecte des informations sur le navigateur de l’utilisateur.
+Le mot-clé **`"environment"`** collecte des informations sur le navigateur de l’utilisateur.
 
 | Dimension | Description | Chemin XDM | Exemple de valeur |
 | --- | --- | --- | --- |
-| Type d’environnement | Type d’environnement à travers lequel l’expérience a fait surface. Le SDK Web définit toujours ce champ sur `browser`. | `xdm.environment.type` | `browser` |
-| Hauteur de la fenêtre d’affichage | Hauteur de la zone de contenu du navigateur en pixels. | `xdm.environment.browserDetails.viewportHeight` | `679` |
-| Largeur de la fenêtre d’affichage | Largeur de la zone de contenu du navigateur en pixels. | `xdm.environment.browserDetails.viewportWidth` | `642` |
+| Type d’environnement | Type d’environnement à travers lequel l’expérience a fait surface. Le SDK Web définit toujours ce champ sur `browser`. | [`xdm.environment.type`](/help/xdm/data-types/environment.md) | `browser` |
+| Hauteur de la fenêtre d’affichage | Hauteur de la zone de contenu du navigateur en pixels. | [`xdm.environment.browserDetails.viewportHeight`](/help/xdm/data-types/browser-details.md) | `679` |
+| Largeur de la fenêtre d’affichage | Largeur de la zone de contenu du navigateur en pixels. | [`xdm.environment.browserDetails.viewportWidth`](/help/xdm/data-types/browser-details.md) | `642` |
 
 ### Contexte de l’emplacement
 
-Le mot-clé `"placeContext"` collecte des informations sur l’emplacement de l’utilisateur.
+Le mot-clé **`"placeContext"`** collecte des informations sur l’emplacement de l’utilisateur.
 
 | Dimension | Description | Chemin XDM | Exemple de valeur |
 | --- | --- | --- | --- |
-| Heure locale | Horodatage local pour l’utilisateur final au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) étendu simplifié. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
-| Décalage du fuseau horaire local | Nombre de minutes pendant lesquelles l’utilisateur ou l’utilisatrice est décalé par rapport au GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
-| Code pays | Code pays de l’utilisateur final. | `xdm.placeContext.geo.countryCode` | `US` |
-| Province de l&#39;État | Code province de l’état de l’utilisateur final. | `xdm.placeContext.geo.stateProvince` | `CA` |
-| Latitude | La latitude de l’emplacement de l’utilisateur final. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
-| Longitude | Longitude de l’emplacement de l’utilisateur final. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
-| Fuseau horaire IANA | Fuseau horaire IANA de l’utilisateur final. Inclus dans les versions de bibliothèque 2.32.0 ou ultérieures. | `xdm.placeContext.ianaTimezone` | `America/Denver` |
+| Heure locale | Horodatage local pour l’utilisateur final au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) simplifié, sans décalage de fuseau horaire. | [`xdm.placeContext.localTime`](/help/xdm/data-types/place-context.md) | `YYYY-07-04T12:08:56` |
+| Décalage du fuseau horaire local | Nombre de minutes pendant lesquelles l’heure locale de l’utilisateur ou de l’utilisatrice est décalée par rapport au UTC. | [`xdm.placeContext.localTimezoneOffset`](/help/xdm/data-types/place-context.md) | `360` |
+| Code pays | Code pays de l’utilisateur final. | [`xdm.placeContext.geo.countryCode`](/help/xdm/data-types/geo.md) | `US` |
+| Province de l&#39;État | Code province de l’état de l’utilisateur final. | [`xdm.placeContext.geo.stateProvince`](/help/xdm/data-types/geo.md) | `CA` |
+| Latitude | La latitude de l’emplacement de l’utilisateur final. | [`xdm.placeContext.geo._schema.latitude`](/help/xdm/data-types/geo-coordinates.md) | `37.3307447` |
+| Longitude | Longitude de l’emplacement de l’utilisateur final. | [`xdm.placeContext.geo._schema.longitude`](/help/xdm/data-types/geo-coordinates.md) | `-121.8945965` |
+| Fuseau horaire IANA | Fuseau horaire IANA de l’utilisateur final. Inclus dans les versions de bibliothèque 2.32.0 ou ultérieures. | [`xdm.placeContext.ianaTimezone`](/help/xdm/data-types/place-context.md) | `America/Denver` |
 
 ### Date et heure
 
-Le mot-clé `"timestamp"` collecte des informations sur la date et l’heure de l’événement. Ce contexte est toujours inclus et ne peut pas être supprimé.
+Le mot-clé **`"timestamp"`** collecte des informations sur la date et l’heure de l’événement. Ce contexte est toujours inclus et ne peut pas être supprimé.
 
 | Dimension | Description | Chemin XDM | Exemple de valeur |
 | --- | --- | --- | --- |
-| Date et heure de l’événement | Date et heure UTC de l’utilisateur final au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) étendu simplifié. | `xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
+| Date et heure de l’événement | Date et heure UTC de l’utilisateur final au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) étendu simplifié. | [`xdm.timestamp`](/help/xdm/classes/experienceevent.md) | `YYYY-08-07T22:47:17.129Z` |
 
 ### Détails d’implémentation
 
-Le mot-clé `implementationDetails` collecte des informations sur la version de SDK utilisée pour collecter l’événement.
+Le mot-clé **`implementationDetails`** collecte des informations sur la version de SDK utilisée pour collecter l’événement.
 
 | Dimension | Description | Chemin XDM | Exemple de valeur |
 | --- | --- | --- | --- |
-| Nom | Identifiant du kit de développement logiciel (SDK). Ce champ utilise un URI pour améliorer l’unicité entre les identifiants fournis par différentes bibliothèques de logiciels. | `xdm.implementationDetails.name` | Lorsque la bibliothèque autonome est utilisée, la valeur est `https://ns.adobe.com/experience/alloy`. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est `https://ns.adobe.com/experience/alloy+reactor`. |
-| Version | Version du kit de développement logiciel (SDK). | `xdm.implementationDetails.version` | Lorsque la bibliothèque autonome est utilisée, la valeur correspond à la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est la version de la bibliothèque et la version de l’extension de balise jointes à une `+`. Par exemple, si la version de la bibliothèque est `2.1.0` et que la version de l’extension de balise est `2.1.3`, la valeur est `2.1.0+2.1.3`. |
-| Environnement | Environnement dans lequel les données ont été collectées. Ce champ est toujours défini sur `browser` lors de l’utilisation de la bibliothèque JavaScript. | `xdm.implementationDetails.environment` | `browser` |
+| Nom | Identifiant du kit de développement logiciel (SDK). Ce champ utilise un URI pour améliorer l’unicité entre les identifiants fournis par différentes bibliothèques de logiciels. | [`xdm.implementationDetails.name`](/help/xdm/data-types/implementation-details.md) | Lorsque la bibliothèque autonome est utilisée, la valeur est `https://ns.adobe.com/experience/alloy`. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est `https://ns.adobe.com/experience/alloy+reactor`. |
+| Version | Version du kit de développement logiciel (SDK). | [`xdm.implementationDetails.version`](/help/xdm/data-types/implementation-details.md) | Lorsque la bibliothèque autonome est utilisée, la valeur correspond à la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est la version de la bibliothèque et la version de l’extension de balise jointes à une `+`. Par exemple, si la version de la bibliothèque est `2.1.0` et que la version de l’extension de balise est `2.1.3`, la valeur est `2.1.0+2.1.3`. |
+| Environnement | Environnement dans lequel les données ont été collectées. Ce champ est toujours défini sur `browser` lors de l’utilisation de la bibliothèque JavaScript. | [`xdm.implementationDetails.environment`](/help/xdm/data-types/implementation-details.md) | `browser` |
 
 ### Indications du client à entropie élevée {#high-entropy-client-hints}
 
-Le mot-clé `"highEntropyUserAgentHints"` collecte des informations détaillées sur l’appareil de l’utilisateur. Ces données sont incluses dans l’en-tête HTTP de la requête envoyée à Adobe. Une fois les données arrivées au réseau Edge, l’objet XDM renseigne son chemin XDM respectif. Si vous définissez le chemin XDM correspondant dans votre appel `sendEvent`, il est prioritaire sur la valeur de l’en-tête HTTP.
+Le mot-clé **`"highEntropyUserAgentHints"`** collecte des informations détaillées sur l’appareil de l’utilisateur. Ces données sont incluses dans l’en-tête HTTP de la requête envoyée à Adobe. Une fois les données arrivées au réseau Edge, l’objet XDM renseigne son chemin XDM respectif. Si vous définissez le chemin XDM correspondant dans votre appel `sendEvent`, il est prioritaire sur la valeur de l’en-tête HTTP.
 
 Si vous utilisez les recherches d’appareil lors de la [configuration de votre flux de données](/help/datastreams/configure.md), les données peuvent être effacées au profit des valeurs de recherche d’appareil. Certains champs d’indications du client et champs de recherche de l’appareil ne peuvent pas exister dans le même accès.
 
 | Propriété | Description | En-tête HTTP | Chemin XDM | Exemple |
 | --- | --- | --- | --- | --- |
-| Version du système d’exploitation | Version du système d’exploitation. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
-| Architecture | Architecture CPU sous-jacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
-| Modèle d’appareil | Nom de l’appareil utilisé. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
-| Bitness | Nombre de bits pris en charge par l’architecture CPU sous-jacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
-| Fournisseur du navigateur | Société qui a créé le navigateur. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
-| Nom du navigateur | Le navigateur utilisé. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
-| Version du navigateur | Version significative du navigateur. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
+| Version du système d’exploitation | Version du système d’exploitation. | `Sec-CH-UA-Platform-Version` | [`xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion`](/help/xdm/data-types/browser-details.md) | `10.15.7` |
+| Architecture | Architecture CPU sous-jacente. | `Sec-CH-UA-Arch` | [`xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture`](/help/xdm/data-types/browser-details.md) | `x86` |
+| Modèle d’appareil | Nom de l’appareil utilisé. | `Sec-CH-UA-Model` | [`xdm.environment.browserDetails.`<br>`userAgentClientHints.model`](/help/xdm/data-types/browser-details.md) | `Intel Mac OS X 10_15_7` |
+| Bitness | Nombre de bits pris en charge par l’architecture CPU sous-jacente. | `Sec-CH-UA-Bitness` | [`xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness`](/help/xdm/data-types/browser-details.md) | `64` |
+| Fournisseur du navigateur | Société qui a créé le navigateur. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. | `Sec-CH-UA-Full-Version-List` | [`xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor`](/help/xdm/data-types/browser-details.md) | `Google` |
+| Nom du navigateur | Le navigateur utilisé. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | [`xdm.environment.browserDetails.`<br>`userAgentClientHints.brand`](/help/xdm/data-types/browser-details.md) | `Chrome` |
+| Version du navigateur | Version significative du navigateur. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | [`xdm.environment.browserDetails.`<br>`userAgentClientHints.version`](/help/xdm/data-types/browser-details.md) | `105` |
 
-Voir [&#x200B; Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
+Voir [ Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
 
 ### Référent unique pour Analytics {#one-time-analytics-referrer}
 
-Le mot-clé `"oneTimeAnalyticsReferrer"` envoie une valeur de référent à Adobe Analytics uniquement lors du premier appel de `sendEvent` non décisionnelle pour une page. Le principal cas d’utilisation de ce mot-clé de contexte consiste à empêcher le gonflement de la dimension [Référent](https://experienceleague.adobe.com/fr/docs/analytics/components/dimensions/referrer) dans Adobe Analytics par les accès principalement utilisés dans les intégrations Analytics et Target.
+Le mot-clé **`"oneTimeAnalyticsReferrer"`** envoie une valeur de référent à Adobe Analytics uniquement lors du premier appel de `sendEvent` non décisionnelle pour une page. Le principal cas d’utilisation de ce mot-clé de contexte consiste à empêcher le gonflement de la dimension [Référent](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) dans Adobe Analytics par les accès principalement utilisés dans les intégrations Analytics et Target.
 
 Si une commande de `sendEvent` donnée utilise un type d’événement de prise de décision (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), elle est ignorée lors du calcul de la première `sendEvent` d’une page. Si la valeur du référent change sur la page et qu’une autre `sendEvent` est déclenchée, la nouvelle valeur du référent est incluse dans la payload. Cette condition permet d’utiliser la fonction avec des applications monopages.
 

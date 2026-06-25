@@ -4,31 +4,14 @@ title: Type de données Consentements et préférences
 description: Le type de données Consentement pour les préférences de confidentialité, de Personalization et de marketing est destiné à prendre en charge la collecte des autorisations et des préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources à partir de vos opérations de données.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 TQID: https://experienceleague.adobe.com/BczJoJ-NbKoASMEVP6YZHr0d5vFmGUoEvS2wak977Ps
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9id: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 2399
+source-wordcount: 2406
 ht-degree: 1%
 
 ---
@@ -37,7 +20,7 @@ ht-degree: 1%
 
 Le type de données [!UICONTROL Consentement pour les préférences de confidentialité, de Personalization et de marketing] (ci-après dénommé « type de données [!UICONTROL Consentements et préférences] ») est un type de données [!DNL Experience Data Model] (XDM) destiné à prendre en charge la collecte des autorisations et des préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources à partir de vos opérations de données.
 
-Ce document couvre la structure et l’utilisation prévue des champs fournis par le type de données [!UICONTROL &#x200B; Consentements et préférences &#x200B;].
+Ce document couvre la structure et l’utilisation prévue des champs fournis par le type de données [!UICONTROL  Consentements et préférences ].
 
 ## Conditions préalables {#prerequisites}
 
@@ -50,7 +33,7 @@ Ce document nécessite une compréhension pratique de XDM et de l’utilisation 
 
 >[!IMPORTANT]
 >
->Le type de données [!UICONTROL &#x200B; Consentements et préférences &#x200B;] est conçu pour couvrir un large éventail de cas d’utilisation de la gestion des préférences et du consentement. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la façon d’interpréter l’utilisation de ces champs. Veuillez consulter votre équipe juridique en charge de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente ces choix de consentement et de préférence à vos clients.
+>Le type de données [!UICONTROL  Consentements et préférences ] est conçu pour couvrir un large éventail de cas d’utilisation de la gestion des préférences et du consentement. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la façon d’interpréter l’utilisation de ces champs. Veuillez consulter votre équipe juridique en charge de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente ces choix de consentement et de préférence à vos clients.
 
 Le type de données [!UICONTROL Consentements et préférences] fournit plusieurs champs utilisés pour capturer des informations de **consentement** et **préférence**.
 
@@ -255,7 +238,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 | `push` | Indique si le client autorise la réception de notifications push. |
 | `sms` | Indique si le client accepte de recevoir des SMS. |
 | `val` | Préférence fournie par le client ou la cliente pour le cas d’utilisation spécifié. Dans les cas où le client n’a pas besoin d’être invité à donner son consentement, la valeur de ce champ doit indiquer la base sur laquelle le cas d’utilisation marketing doit avoir lieu. Voir l’[annexe](#choice-values) pour connaître les valeurs et définitions acceptées. |
-| `time` | Date et heure ISO 8601 du moment où la préférence marketing a changé, le cas échéant. Notez que si l’horodatage d’une préférence individuelle est identique à celui fourni sous `metadata`, ce champ ne doit pas être défini pour cette préférence. |
+| `time` | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) du moment où la préférence marketing a changé, le cas échéant. Notez que si l’horodatage d’une préférence individuelle est identique à celui fourni sous `metadata`, ce champ ne doit pas être défini pour cette préférence. |
 | `reason` | Lorsqu’un client se désinscrit d’un cas d’utilisation marketing, ce champ de chaîne représente la raison pour laquelle le client s’est désinscrit. |
 
 {style="table-layout:auto"}
@@ -272,7 +255,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 
 | Propriété | Description |
 | --- | --- |
-| `time` | Date et heure ISO 8601 de la dernière mise à jour des consentements et préférences du client. Vous pouvez utiliser ce champ au lieu d’appliquer des horodatages à des préférences individuelles afin de réduire la charge et la complexité. La fourniture d’une valeur `time` sous une préférence individuelle remplace l’horodatage `metadata` de cette préférence particulière. |
+| `time` | Un horodatage ISO 8601 (`yyyy-MM-dd'T'HH:mm:ssXXX`) indiquant la dernière fois que l’un des consentements et préférences du client a été mis à jour. Vous pouvez utiliser ce champ au lieu d’appliquer des horodatages à des préférences individuelles afin de réduire la charge et la complexité. La fourniture d’une valeur `time` sous une préférence individuelle remplace l’horodatage `metadata` de cette préférence particulière. |
 
 {style="table-layout:auto"}
 
@@ -280,7 +263,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 
 Pour utiliser le type de données [!UICONTROL Consentements et préférences] afin d’ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma contenant ce type de données.
 
-Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_fr) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Consentements et préférences], reportez-vous à la section relative à la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Consentements et préférences], reportez-vous à la section relative à la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
 >
