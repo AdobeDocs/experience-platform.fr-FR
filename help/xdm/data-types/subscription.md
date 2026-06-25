@@ -9,10 +9,10 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 430
-ht-degree: 24%
+source-wordcount: 427
+ht-degree: 25%
 
 ---
 
@@ -29,19 +29,19 @@ ht-degree: 24%
 | `subscriber` | [[!UICONTROL &#x200B; Personne &#x200B;]](./person.md) | Décrit une personne. Elle peut également représenter une personne jouant différents rôles, tels que client, contact ou propriétaire. |
 | `SKU` | Chaîne | Unité de gestion des stocks (SKU), identifiant unique d’un produit. |
 | `billingPeriod` | Chaîne | Durée entre deux facturations. |
-| `billingStartDate` | Date | Date d’exigibilité de la première facture. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
+| `billingStartDate` | Date | Date d’exigibilité de la première facture. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |
 | `category` | Chaîne | Catégorisation de niveau supérieur principale de ce type d’abonnement. |
 | `chargeMethod` | Chaîne | Méthode de configuration de la facturation pour facturer les frais au client. |
 | `contractID` | Chaîne | ID unique du contrat régissant cet abonnement. |
 | `country` | Chaîne | Pays dans lequel les termes du contrat et de l’accord d’abonnement trouvent leur origine. |
-| `endDate` | Date | Date à laquelle l’abonnement actuel se termine. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
+| `endDate` | Date | Date à laquelle l’abonnement actuel se termine. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |
 | `paymentMethod` | Chaîne | Mode de paiement des paiements récurrents. |
 | `paymentStatus` | Chaîne | État de paiement du compte. |
 | `planName` | Chaîne | Nom lisible par l’utilisateur de l’abonnement. |
 | `reason` | Chaîne | Intention générale du membre quant à l’utilisation de l’abonnement. |
 | `renew` | Chaîne | La manière dont l’abonnement peut continuer après la date de fin. |
 | `revision` | Chaîne | Identification entre abonnements du même nom et de la même hiérarchie de catégories. |
-| `startDate` | Date | Date du début de l’abonnement. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |
+| `startDate` | Date | Date du début de l’abonnement. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |
 | `status` | Chaîne | Statut actuel de l’abonnement. |
 | `subCategory` | Chaîne | Sous-catégorisation spécifique de l’abonnement. |
 | `term` | Entier | Valeur numérique de la durée d’abonnement. |

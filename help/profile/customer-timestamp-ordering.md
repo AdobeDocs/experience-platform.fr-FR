@@ -12,9 +12,9 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 433
+source-wordcount: 417
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Pendant cette version bêta privée, les contraintes suivantes s’appliquent lo
 - Vous pouvez uniquement utiliser l’ordre d’horodatage client sur les sandbox **hors production**.
 - Vous pouvez uniquement appliquer l’ordre d’horodatage client aux jeux de données **5** par sandbox.
 - Vous **ne pouvez pas** utiliser des upserts en flux continu pour envoyer des mises à jour de lignes partielles dans un jeu de données pour lequel l’ordre d’horodatage client est activé.
-- Le champ `extSourceSystemAudit.lastUpdatedDate` **doit** doit être au format [ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html). Lors de l’utilisation du format ISO 8601, il **doit** être une date-heure complète au format `yyyy-MM-ddTHH:mm:ss.sssZ` (par exemple, `2028-11-13T15:06:49.001Z`).
+- Le champ `extSourceSystemAudit.lastUpdatedDate` **doit** être un horodatage UTC [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) avec une précision en millisecondes (`yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`).
 - Toutes les lignes de données ingérées **doivent** contiennent le champ `extSourceSystemAudit.lastUpdatedDate` en tant que groupe de champs de niveau supérieur. Cela signifie que ce champ **doit** ne pas être imbriqué dans le schéma XDM. Si ce champ est manquant ou son format est incorrect, l’enregistrement incorrect n’est **pas** ingéré et un message d’erreur correspondant est envoyé.
 - Tout jeu de données activé pour la commande d’horodatage client **doit** être un nouveau jeu de données sans données précédemment ingérées.
 - Pour un fragment de profil donné, seules les lignes contenant un `extSourceSystemAudit.lastUpdatedDate` plus récent seront ingérées. Les lignes contenant un `extSourceSystemAudit.lastUpdatedDate` plus ancien ou du même âge seront ignorées.

@@ -9,9 +9,9 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 695
+source-wordcount: 693
 ht-degree: 7%
 
 ---
@@ -142,7 +142,7 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
   </tbody>
 </table>
 
-** Toutes les chaînes formatées en date doivent être conformes à la norme ISO 8601 ([RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+** Toutes les chaînes formatées en date doivent être conformes à la norme ISO 8601 ([RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6)).*
 
 ## Faire correspondre les types XDM à d’autres formats
 

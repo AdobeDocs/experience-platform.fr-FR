@@ -9,10 +9,10 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 362
-ht-degree: 3%
+source-wordcount: 369
+ht-degree: 5%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 | --- | --- | --- |
 | `acquiredByCampaignKey` | Source B2B[&#128279;](../../data-types/b2b-source.md) | Identifiant composite de la campagne qui a acquis ce membre de campagne. |
 | `acquiredByCampaignID` | [!UICONTROL Chaîne] | Identifiant de chaîne de la campagne qui a acquis ce membre de campagne. |
-| `firstRespondedDate` | [!UICONTROL DateHeure] | Date et heure ISO 8601 de la première réponse de la personne à la campagne. |
+| `firstRespondedDate` | [!UICONTROL DateHeure] | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) du moment où la personne a répondu pour la première fois à la campagne. |
 | `hasReachedSuccess` | [!UICONTROL booléen] | Indique si ce membre de la campagne a abouti à une conversion. |
 | `hasResponded` | [!UICONTROL booléen] | Indique si ce membre de la campagne a répondu à la campagne. |
 | `isDeleted` | [!UICONTROL booléen] | Indique si ce membre de la campagne a été supprimé dans Marketo Engage.<br><br>Lors de l’utilisation du connecteur source [Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans le profil client en temps réel. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` sur `true`, vous pouvez utiliser le champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
@@ -37,7 +37,7 @@ ht-degree: 3%
 | `membershipDate` | [!UICONTROL DateHeure] | Raison du statut actuel du membre de la campagne. |
 | `nurtureCadence` | [!UICONTROL Chaîne] | Cadence temporelle selon laquelle les informations relatives à la campagne doivent être présentées au membre de la campagne. |
 | `nurtureTrackName` | [!UICONTROL Chaîne] | Nom du programme d’éducation auquel ce membre de la campagne est soumis. |
-| `reachedSuccessDate` | [!UICONTROL DateHeure] | Horodatage ISO 8601 indiquant le moment où une conversion réussie a été effectuée pour le membre de la campagne. |
+| `reachedSuccessDate` | [!UICONTROL DateHeure] | Horodatage ISO 8601 (`yyyy-MM-dd'T'HH:mm:ssXXX`) indiquant le moment où une conversion réussie a été effectuée pour le membre de la campagne. |
 | `webinarConfirmationUrl` | [!UICONTROL Chaîne] | URL de confirmation du webinaire pour le membre de la campagne. |
 | `webinarRegistrationID` | [!UICONTROL Chaîne] | ID d’enregistrement du webinaire pour le membre de la campagne. |
 

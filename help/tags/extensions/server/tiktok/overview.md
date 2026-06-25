@@ -30,9 +30,9 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 1140
+source-wordcount: 1147
 ht-degree: 4%
 
 ---
@@ -92,7 +92,7 @@ Les événements et paramètres Web contiennent des informations générales sur
 | Entrée | Description |
 | --- | --- |
 | Nom de l’événement | Nom de l’événement. Il s’agit d’actions avec des noms prédéfinis créées par [!DNL TikTok] et qui constituent un champ obligatoire. Pour plus d’informations sur les événements pris en charge, consultez la documentation de l’[[!DNL TikTok] API marketing](https://business-api.tiktok.com/portal/docs?id=1741601162187777). |
-| Heure de l’événement | Date et heure sous forme de chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Ce champ est obligatoire. |
+| Heure de l’événement | Date et heure sous forme de chaîne au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) ou au format `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Ce champ est obligatoire. |
 | Identifiant d’événement | Identifiant unique généré par les annonceurs pour indiquer chaque événement. Il s’agit d’un champ facultatif qui est utilisé pour la déduplication. |
 
 {style="table-layout:auto"}

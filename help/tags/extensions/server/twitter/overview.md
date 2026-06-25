@@ -31,10 +31,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 1191
-ht-degree: 5%
+source-wordcount: 1198
+ht-degree: 6%
 
 ---
 
@@ -124,7 +124,7 @@ Après la sélection, des commandes supplémentaires apparaissent pour configure
 
 | Nom du champ | Description | Exemple | Obligatoire |
 | --- | --- | --- | --- |
-| [!UICONTROL Heure de conversion] | Date et heure sous forme de chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | 2022-02-:14:00.603Z | Oui |
+| [!UICONTROL Heure de conversion] | Date et heure sous forme de chaîne au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) ou au format `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | 2022-02-:14:00.603Z | Oui |
 | [!UICONTROL Identifiant de l’événement] | Identifiant base-36 d’un événement spécifique. Cet identifiant doit correspondre à un événement préconfiguré contenu dans votre compte publicitaire [!DNL Twitter]. Il s’agit de l’identifiant de l’événement correspondant dans le gestionnaire d’événements. | o87ne ou tw-o8z6j-o87ne (tw-pixel_id-event-id) | Oui |
 | [!UICONTROL Nombre d’éléments] | Nombre d’articles achetés dans l’événement. Il doit s&#39;agir d&#39;un nombre positif supérieur à 0. | 4 | Non |
 | [!UICONTROL Devise] | Devise des articles achetés dans l’événement. Ce montant est exprimé en ISO-4217 et, s’il n’est pas fourni, la valeur par défaut sera USD. | USD | Non |

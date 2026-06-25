@@ -19,10 +19,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 580
-ht-degree: 97%
+source-wordcount: 587
+ht-degree: 94%
 
 ---
 
@@ -49,7 +49,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | Propriété | Description |
 | --- | --- |
 | `turbineVersion` | Version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilisée dans la bibliothèque actuelle. |
-| `turbineBuildDate` | Date ISO 8601 de création de la version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilisée dans le conteneur. |
+| `turbineBuildDate` | Date [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) à laquelle la version de [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) utilisée à l’intérieur du conteneur a été créée. |
 | `buildDate` | Date ISO 8601 de la création de la bibliothèque actuelle. |
 
 {style="table-layout:auto"}

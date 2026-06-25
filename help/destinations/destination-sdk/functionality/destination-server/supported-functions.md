@@ -13,9 +13,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 585
+source-wordcount: 588
 ht-degree: 91%
 
 ---
@@ -68,7 +68,7 @@ Pour illustrer comment les fonctions de [!DNL Pebble] sont utilisées dans Desti
 
 ### Cas d’utilisation {#date-use-case}
 
-Vous souhaitez modifier la date et l’heure `lastQualificationTime` de la valeur [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601) par défaut qu’Experience Platform exporte par une autre valeur préférée par la destination.
+Vous souhaitez modifier la date et l’heure `lastQualificationTime` de la valeur [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) par défaut qu’Experience Platform exporte par une autre valeur préférée par la destination.
 
 ### Exemple {#date-example}
 

@@ -12,10 +12,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 908
-ht-degree: 1%
+source-wordcount: 915
+ht-degree: 2%
 
 ---
 
@@ -35,7 +35,7 @@ Le [!UICONTROL champ générique de préférences marketing avec abonnements] es
 | --- | --- | --- |
 | `reason` | Chaîne | Lorsqu’un client se désinscrit d’un cas d’utilisation marketing, ce champ de chaîne représente la raison pour laquelle le client s’est désinscrit. |
 | `subscriptions` | Carte | Carte des préférences marketing des clients pour des abonnements spécifiques. Pour plus d’informations, consultez la section sur les [abonnements](#subscriptions). |
-| `time` | DateTime | Date et heure ISO 8601 du moment où la préférence marketing a changé, le cas échéant. |
+| `time` | DateTime | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) du moment où la préférence marketing a changé, le cas échéant. |
 | `val` | Chaîne | Choix de préférence fourni par le client pour ce cas d’utilisation marketing. Voir la [section suivante](#val) pour connaître les valeurs et définitions acceptées. |
 
 {style="table-layout:auto"}
@@ -106,7 +106,7 @@ Le fichier JSON suivant représente un exemple de champ marketing pour un canal 
 | `val` | [valeur de consentement](#val) pour l’abonnement. |
 | `type` | Type d’abonnement. Il peut s’agir de n’importe quelle chaîne descriptive, à condition qu’elle comporte 15 caractères ou moins. |
 | `topics` | Tableau de chaînes qui représentent les centres d’intérêt auxquels un client ou une cliente s’est abonné et qui peuvent être utilisées pour lui envoyer du contenu pertinent. |
-| `subscribers` | Champ facultatif de type map qui représente un ensemble d’identifiants (tels que des adresses e-mails ou des numéros de téléphone) qui se sont abonnés à un abonnement particulier. Chaque clé de cet objet représente l’identifiant en question et contient deux sous-propriétés : <ul><li>`time` : date et heure ISO 8601 du moment où l’identité s’est abonnée, le cas échéant.</li><li>`source` : source d’où provient l’abonné. Il peut s’agir de n’importe quelle chaîne descriptive, à condition qu’elle comporte 15 caractères ou moins.</li></ul> |
+| `subscribers` | Champ facultatif de type map qui représente un ensemble d’identifiants (tels que des adresses e-mails ou des numéros de téléphone) qui se sont abonnés à un abonnement particulier. Chaque clé de cet objet représente l’identifiant en question et contient deux sous-propriétés : <ul><li>`time` : date et heure ISO 8601 (`yyyy-MM-dd'T'HH:mm:ssXXX`) du moment où l’identité s’est abonnée, le cas échéant.</li><li>`source` : source d’où provient l’abonné. Il peut s’agir de n’importe quelle chaîne descriptive, à condition qu’elle comporte 15 caractères ou moins.</li></ul> |
 
 {style="table-layout:auto"}
 

@@ -13,10 +13,10 @@ role_v2:
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 678
-ht-degree: 1%
+source-wordcount: 685
+ht-degree: 2%
 
 ---
 
@@ -35,7 +35,7 @@ Le [!UICONTROL champ générique de préférences marketing] est un type de donn
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `reason` | Chaîne | Lorsqu’un client se désinscrit d’un cas d’utilisation marketing, ce champ de chaîne représente la raison pour laquelle le client s’est désinscrit. |
-| `time` | DateTime | Date et heure ISO 8601 du moment où la préférence marketing a changé, le cas échéant. |
+| `time` | DateTime | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) du moment où la préférence marketing a changé, le cas échéant. |
 | `val` | Chaîne | Choix de préférence fourni par le client pour ce cas d’utilisation marketing. Consultez le tableau ci-dessous pour connaître les valeurs et définitions acceptées. |
 
 {style="table-layout:auto"}

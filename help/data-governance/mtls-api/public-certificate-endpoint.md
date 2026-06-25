@@ -14,10 +14,10 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 491
-ht-degree: 3%
+source-wordcount: 497
+ht-degree: 4%
 
 ---
 
@@ -114,7 +114,7 @@ Une réponse réussie renvoie un état HTTP 200 et répertorie les certificats p
 | --- | --- |
 | `certCommonName` | Nom commun (NC) du certificat, qui représente généralement le nom ou l’identité du serveur ou de l’entité auquel le certificat est délivré. |
 | `publicCertificate` | Certificat public réel au format de chaîne, utilisé pour authentifier et chiffrer les communications. |
-| `expiryDate` | Date et heure d’expiration du certificat public, au format ISO 8601 (UTC). |
+| `expiryDate` | Date et heure d’expiration du certificat public, au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ss'Z'`). |
 
 {style="table-layout:auto"}
 

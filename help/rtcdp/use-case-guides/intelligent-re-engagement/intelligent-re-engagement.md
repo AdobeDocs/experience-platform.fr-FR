@@ -19,10 +19,10 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
 source-wordcount: 4124
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -113,7 +113,7 @@ Pour réaliser chacune des étapes des présentations de haut niveau ci-dessus, 
 
 Les ressources du modèle de données d’expérience (XDM) sont gérées dans l’espace de travail [!UICONTROL Schémas] de [!DNL Adobe Experience Platform]. Vous pouvez afficher et explorer les ressources de base fournies par [!DNL Adobe] (par exemple, les groupes de champs) et créer des ressources et des schémas personnalisés pour votre organisation.
 
-Pour plus d’informations sur la création de [schémas](/help/xdm/home.md), consultez le tutoriel [création de schémas](/help/xdm/tutorials/create-schema-ui.md). et [Modéliser vos données d’expérience client avec XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
+Pour plus d’informations sur la création de [schémas](/help/xdm/home.md), consultez le tutoriel [création de schémas](/help/xdm/tutorials/create-schema-ui.md). et [Modéliser vos données d’expérience client avec XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=fr).
 
 Quatre conceptions de schéma sont utilisées dans le cas d’utilisation de réengagement. Chaque schéma nécessite la configuration de champs spécifiques. Vous devez activer l’inclusion du schéma dans le profil client en temps réel. Pour plus d’informations sur l’activation du schéma à utiliser dans le profil client en temps réel, lisez [activer un schéma pour le profil client en temps réel](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
 
@@ -157,7 +157,7 @@ Le groupe de champs [Consentements et préférences](/help/xdm/field-groups//pro
 
 +++Détails du test de profil (groupe de champs)
 
-Ce groupe de champs vous permet de tester votre parcours avant sa publication à l’aide de profils de test. Pour plus d’informations sur la création de profils de test, consultez les tutoriels [créer des profils de test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) et [tester le parcours &#x200B;](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=fr).
+Ce groupe de champs vous permet de tester votre parcours avant sa publication à l’aide de profils de test. Pour plus d’informations sur la création de profils de test, consultez les tutoriels [créer des profils de test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=fr) et [tester le parcours &#x200B;](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=fr).
 
 +++
 
@@ -174,7 +174,7 @@ La classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 | Champs | Description |
 | --- | --- |
 | `_id` | Identifie de manière unique les événements individuels qui sont ingérés dans [!DNL Adobe Experience Platform]. |
-| `timestamp` | Horodatage ISO 8601 du moment où l’événement s’est produit, formaté selon la norme RFC 3339 (section 5.6). Cet horodatage doit se produire dans le passé. |
+| `timestamp` | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) du moment où l’événement s’est produit. Cet horodatage doit se produire dans le passé. |
 | `eventType` | Chaîne indiquant le type de catégorie de l’événement. |
 
 +++
@@ -232,7 +232,7 @@ La classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 | Champs | Description |
 | --- | --- |
 | `_id` | Identifie de manière unique les événements individuels qui sont ingérés dans [!DNL Adobe Experience Platform]. |
-| `timestamp` | Horodatage ISO 8601 du moment où l’événement s’est produit, formaté selon la norme RFC 3339 (section 5.6). Cet horodatage doit se produire dans le passé. |
+| `timestamp` | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) du moment où l’événement s’est produit. Cet horodatage doit se produire dans le passé. |
 | `eventType` | Chaîne indiquant le type de catégorie de l’événement. |
 
 +++
@@ -290,7 +290,7 @@ La classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 | Champs | Description |
 | --- | --- |
 | `_id` | Identifie de manière unique les événements individuels qui sont ingérés dans [!DNL Adobe Experience Platform]. |
-| `timestamp` | Horodatage ISO 8601 du moment où l’événement s’est produit, formaté selon la norme RFC 3339 (section 5.6). Cet horodatage doit se produire dans le passé. |
+| `timestamp` | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) du moment où l’événement s’est produit. Cet horodatage doit se produire dans le passé. |
 | `eventType` | Chaîne indiquant le type de catégorie de l’événement. |
 
 +++

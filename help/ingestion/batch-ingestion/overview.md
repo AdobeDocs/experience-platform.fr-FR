@@ -11,10 +11,10 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 1416
-ht-degree: 65%
+source-wordcount: 1363
+ht-degree: 64%
 
 ---
 
@@ -63,22 +63,22 @@ Lors de l’ingestion de données, il est important de comprendre le fonctionnem
 
 Il existe une certaine flexibilité lors de l’ingestion de données : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties en type cible exprimé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV n’ont de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées à l’aide de [chaînes au format ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (« 2018-07-10T15:05:59.000-08:00 ») ou d’Unix Time au format millisecondes (1531263959000) et sont converties au moment de l’ingestion en type XDM cible.
+Par exemple, ni JSON ni CSV n’ont de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) ou en temps Unix, en millisecondes (`1531263959000`), et sont converties au moment de l’ingestion en type XDM cible.
 
 Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
 | Entrant (ligne) / Cible (colonne) | Chaîne | Octet | Court | Entier | Long | Double | Date | Date et heure | Objet | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Chaîne | X | X | X | X | X | X | X | X |   |   |
-| Octet | X | X | X | X | X | X |   |   |   |   |
-| Court | X | X | X | X | X | X |   |   |   |   |
-| Entier | X | X | X | X | X | X |   |   |   |   |
-| Long | X | X | X | X | X | X | X | X |   |   |
-| Double | X | X | X | X | X | X |   |   |   |   |
-| Date |   |   |   |   |   |   | X |   |   |   |
-| Date et heure |   |   |   |   |   |   |   | X |   |   |
-| Objet |   |   |   |   |   |   |   |   | X | X |
-| Map |   |   |   |   |   |   |   |   | X | X |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Chaîne | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Octet | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Court | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Entier | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Long | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Double | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Date |   |   |   |   |   |   | ✓ |   |   |   |
+| Date et heure |   |   |   |   |   |   |   | ✓ |   |   |
+| Objet |   |   |   |   |   |   |   |   | ✓ | ✓ |
+| Map |   |   |   |   |   |   |   |   | ✓ | ✓ |
 
 >[!NOTE]
 >

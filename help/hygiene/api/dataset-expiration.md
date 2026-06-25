@@ -12,9 +12,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 2354
+source-wordcount: 2362
 ht-degree: 19%
 
 ---
@@ -131,7 +131,7 @@ Une réponse réussie répertorie les expirations de jeux de données obtenues. 
 | `description` | Description de la configuration d’expiration. |
 | `imsOrg` | Identifiant d’organisation unique. |
 | `status` | Statut actuel de l’expiration. Un de : `pending`, `executing`, `cancelled`, `completed`. |
-| `expiry` | Date et heure d’expiration planifiées (format ISO 8601). |
+| `expiry` | Date et heure d’expiration planifiées au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). |
 | `updatedAt` | Date et heure de la dernière mise à jour de cette configuration. |
 | `updatedBy` | Identifiant et adresse e-mail de l’utilisateur ou du service qui a mis à jour la configuration pour la dernière fois. |
 | `current_page` | Index de la page de résultats active (basé sur zéro). |

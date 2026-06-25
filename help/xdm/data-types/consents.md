@@ -26,9 +26,9 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 2399
+source-wordcount: 2406
 ht-degree: 1%
 
 ---
@@ -255,7 +255,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 | `push` | Indique si le client autorise la réception de notifications push. |
 | `sms` | Indique si le client accepte de recevoir des SMS. |
 | `val` | Préférence fournie par le client ou la cliente pour le cas d’utilisation spécifié. Dans les cas où le client n’a pas besoin d’être invité à donner son consentement, la valeur de ce champ doit indiquer la base sur laquelle le cas d’utilisation marketing doit avoir lieu. Voir l’[annexe](#choice-values) pour connaître les valeurs et définitions acceptées. |
-| `time` | Date et heure ISO 8601 du moment où la préférence marketing a changé, le cas échéant. Notez que si l’horodatage d’une préférence individuelle est identique à celui fourni sous `metadata`, ce champ ne doit pas être défini pour cette préférence. |
+| `time` | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd'T'HH:mm:ssXXX`) du moment où la préférence marketing a changé, le cas échéant. Notez que si l’horodatage d’une préférence individuelle est identique à celui fourni sous `metadata`, ce champ ne doit pas être défini pour cette préférence. |
 | `reason` | Lorsqu’un client se désinscrit d’un cas d’utilisation marketing, ce champ de chaîne représente la raison pour laquelle le client s’est désinscrit. |
 
 {style="table-layout:auto"}
@@ -272,7 +272,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 
 | Propriété | Description |
 | --- | --- |
-| `time` | Date et heure ISO 8601 de la dernière mise à jour des consentements et préférences du client. Vous pouvez utiliser ce champ au lieu d’appliquer des horodatages à des préférences individuelles afin de réduire la charge et la complexité. La fourniture d’une valeur `time` sous une préférence individuelle remplace l’horodatage `metadata` de cette préférence particulière. |
+| `time` | Un horodatage ISO 8601 (`yyyy-MM-dd'T'HH:mm:ssXXX`) indiquant la dernière fois que l’un des consentements et préférences du client a été mis à jour. Vous pouvez utiliser ce champ au lieu d’appliquer des horodatages à des préférences individuelles afin de réduire la charge et la complexité. La fourniture d’une valeur `time` sous une préférence individuelle remplace l’horodatage `metadata` de cette préférence particulière. |
 
 {style="table-layout:auto"}
 

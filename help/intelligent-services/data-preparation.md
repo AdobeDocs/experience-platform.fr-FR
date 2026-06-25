@@ -13,9 +13,9 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d00e9f03-e50b-4162-b143-0c0817c937c2
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 3047
+source-wordcount: 3054
 ht-degree: 1%
 
 ---
@@ -159,7 +159,7 @@ Ensuite, vous devez fournir un **[!UICONTROL Espace de noms d’identité]** à 
 
 #### xdm:timestamp {#timestamp}
 
-Ce champ représente la date et l’heure auxquelles l’événement s’est produit. Cette valeur doit être fournie sous la forme d’une chaîne, conformément à la norme ISO 8601.
+Ce champ représente la date et l’heure auxquelles l’événement s’est produit. Cette valeur doit être fournie sous la forme d’une chaîne, conformément à la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6).
 
 #### xdm:channel {#channel}
 

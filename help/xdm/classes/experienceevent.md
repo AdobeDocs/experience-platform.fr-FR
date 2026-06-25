@@ -22,9 +22,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d00e9f03-e50b-4162-b143-0c0817c937c2
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7cbff5408d4afa94936e3b650cd80f78c8d24922
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 2865
+source-wordcount: 2860
 ht-degree: 32%
 
 ---
@@ -46,7 +46,7 @@ La classe [!DNL XDM ExperienceEvent] elle-même fournit plusieurs champs tempore
 | `eventType` | Chaîne indiquant le type ou la catégorie de l’événement. Ce champ peut être utilisé pour distinguer différents types d’événements au sein dʼun même schéma et dʼun même jeu de données. Par exemple, pour une société active dans la vente au détail, vous pouvez souhaiter distinguer un événement de consultation de produit d’un événement dʼajout au panier.<br><br>Les valeurs standard de cette propriété sont fournies dans la [section annexe](#eventType), y compris des descriptions de leur cas d’utilisation prévu. Ce champ est une énumération extensible, ce qui signifie que vous pouvez également utiliser vos propres chaînes de type d’événement pour classer les événements dont vous effectuez le suivi.<br><br>`eventType` La propriété vous limite à l’utilisation d’un seul événement par accès sur votre application. Par conséquent, vous devez utiliser des champs calculés pour indiquer au système quel événement est le plus important. Pour plus d’informations, consultez la section dédiée aux [bonnes pratiques relatives aux champs calculés](#calculated). |
 | `producedBy` | Valeur de chaîne qui décrit le déclencheur ou l’origine de l’événement. Ce champ peut être utilisé, si nécessaire, pour filtrer certains déclencheurs d’événements à des fins de segmentation.<br><br>Certaines valeurs suggérées pour cette propriété sont indiquées dans la [section annexe](#producedBy). Ce champ est une énumération extensible, ce qui signifie que vous pouvez également utiliser vos propres chaînes pour représenter différents déclencheurs d’événements. |
 | `identityMap` | Champ de mappage contenant un jeu d’identités d’espace de noms pour l’individu auquel l’événement s’applique. Ce champ est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Pour utiliser correctement ce champ pour [Real-Time Customer Profile](../../profile/home.md), n’essayez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../schema/composition.md#identityMap). |
-| `timestamp`<br>**(Obligatoire)** | Horodatage ISO 8601 du moment où l’événement s’est produit, formaté selon la norme [RFC 3339 (section 5.6)](https://datatracker.ietf.org/doc/html/rfc3339). Cet horodatage **doit** se produire dans le passé, mais **doit** a lieu à partir de 1970. Pour connaître les bonnes pratiques relatives à l’utilisation de ce champ, consultez la section ci-dessous relative aux [horodatages](#timestamps). |
+| `timestamp`<br>**(Obligatoire)** | Horodatage [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) du moment où l’événement s’est produit. Cet horodatage **doit** se produire dans le passé, mais **doit** a lieu à partir de 1970. Pour connaître les bonnes pratiques relatives à l’utilisation de ce champ, consultez la section ci-dessous relative aux [horodatages](#timestamps). |
 
 {style="table-layout:auto"}
 

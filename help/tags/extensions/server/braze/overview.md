@@ -33,9 +33,9 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
-source-wordcount: 1835
+source-wordcount: 1842
 ht-degree: 3%
 
 ---
@@ -137,7 +137,7 @@ Après avoir installé l’extension, créez une nouvelle [règle](../../../ui/m
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
 | [!UICONTROL Nom de l’événement &#x200B;] | Nom de l’événement. | Oui |
-| [!UICONTROL Heure de l’événement] | Date et heure sous forme de chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | Oui |
+| [!UICONTROL Heure de l’événement] | Date et heure sous forme de chaîne au format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) ou au format `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | Oui |
 | [!UICONTROL Identifiant de l’application] | L’identifiant d’application ou <strong>app_id</strong> est un paramètre associant une activité à une application spécifique de votre groupe d’applications. Il désigne l’application au sein du groupe d’applications avec lequel vous interagissez. En savoir plus sur les [types d’identifiants d’API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propriétés des événements &#x200B;] | Un objet JSON contenant les propriétés personnalisées de l’événement. |  |
 
