@@ -5,9 +5,12 @@ title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
 source-wordcount: 6041
@@ -393,11 +396,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5B |
+| &lbrack; | %5B |
 | `\|` | %5C |
-| ] | %5J |
+| &rbrack; | %5J |
 | ^ | %5E |
-| ` | %60 |
+| &grave; | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

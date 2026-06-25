@@ -5,8 +5,10 @@ title: Type de données d’abonnement
 description: Découvrez le type de données du modèle de données d’expérience d’abonnement (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 TQID: https://experienceleague.adobe.com/hTew21hpJsNfeTrpKS7Ew8gSOBcpy6FduG-EzzAA2d0
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
 source-wordcount: 427
@@ -24,7 +26,7 @@ ht-degree: 25%
 | --- | --- | --- |
 | `device` | [[!UICONTROL Appareil]](./device.md) | Décrit les détails sur l’appareil associé à l’abonnement. |
 | `environment` | [[!UICONTROL Environnement]](./environment.md) | Contient des informations sur la situation dans laquelle l’observation de l’événement s’est produite ; il s’agit notamment d’informations éphémères, telles que les versions logicielles ou réseau. |
-| `subscriber` | [[!UICONTROL  Personne ]](./person.md) | Décrit une personne. Elle peut également représenter une personne jouant différents rôles, tels que client, contact ou propriétaire. |
+| `subscriber` | [[!UICONTROL &#x200B; Personne &#x200B;]](./person.md) | Décrit une personne. Elle peut également représenter une personne jouant différents rôles, tels que client, contact ou propriétaire. |
 | `SKU` | Chaîne | Unité de gestion des stocks (SKU), identifiant unique d’un produit. |
 | `billingPeriod` | Chaîne | Durée entre deux facturations. |
 | `billingStartDate` | Date | Date d’exigibilité de la première facture. Le format de date (sans heure) doit suivre la norme [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) (`yyyy-MM-dd`). |

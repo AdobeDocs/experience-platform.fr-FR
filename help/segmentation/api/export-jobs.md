@@ -5,10 +5,16 @@ description: Les tâches d’exportation sont des processus asynchrones utilisé
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
 TQID: https://experienceleague.adobe.com/2JJ7os9adwfeed-vKOYR8L9rlScxeBtbWcyqyfpUq88
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
 source-wordcount: 1700
@@ -22,7 +28,7 @@ Les tâches d’exportation sont des processus asynchrones utilisés pour conser
 
 >[!NOTE]
 >
->Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [ tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
+>Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [&#x200B; tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
 
 ## Prise en main
 

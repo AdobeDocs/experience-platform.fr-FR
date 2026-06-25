@@ -5,11 +5,23 @@ title: Classe XDM ExperienceEvent
 description: Découvrez la classe XDM ExperienceEvent et les bonnes pratiques pour la modélisation des données d’événement.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 TQID: https://experienceleague.adobe.com/p32ANGxnF35Q3a7ZoZVtNUvf4s0v4inzr0rje0nVFgo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: b784da9a-7978-4766-bf1f-5ab2b23d894aid: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d00e9f03-e50b-4162-b143-0c0817c937c2id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
 source-wordcount: 2860
@@ -21,7 +33,7 @@ ht-degree: 32%
 
 [!DNL XDM ExperienceEvent] est une classe XDM (modèle de données d’expérience) standard. Utilisez cette classe pour créer un instantané horodaté du système lorsqu’un événement spécifique se produit ou qu’un certain ensemble de conditions a été atteint.
 
-Un événement dʼexpérience est un enregistrement factuel de ce qui s’est passé, y compris le moment et l’identité de la personne impliquée. Les événements peuvent être explicites (actions humaines directement observables) ou implicites (obtenus sans action humaine directe) et sont enregistrés sans agrégation ni interprétation. Pour plus d’informations détaillées sur l’utilisation de cette classe dans l’écosystème Experience Platform, reportez-vous à la [ présentation de XDM](../home.md#data-behaviors).
+Un événement dʼexpérience est un enregistrement factuel de ce qui s’est passé, y compris le moment et l’identité de la personne impliquée. Les événements peuvent être explicites (actions humaines directement observables) ou implicites (obtenus sans action humaine directe) et sont enregistrés sans agrégation ni interprétation. Pour plus d’informations détaillées sur l’utilisation de cette classe dans l’écosystème Experience Platform, reportez-vous à la [&#x200B; présentation de XDM](../home.md#data-behaviors).
 
 La classe [!DNL XDM ExperienceEvent] elle-même fournit plusieurs champs temporels à un schéma. Deux de ces champs (`_id` et `timestamp`) sont **obligatoires** pour tous les schémas basés sur cette classe, tandis que les autres sont facultatifs. Les valeurs de certains champs sont automatiquement renseignées lors de l’ingestion des données.
 
@@ -56,7 +68,7 @@ En séparant l’horodatage au niveau de la classe des autres valeurs datetime a
 
 Certaines interactions dans vos applications d’expérience peuvent entraîner plusieurs événements associés partageant techniquement le même horodatage d’événement et pouvant donc être représentés comme un seul enregistrement d’événement. Si, par exemple, un client consulte un produit sur votre site web, un enregistrement d’événement comportant deux valeurs `eventType` potentielles peut être généré : un événement « vue du produit » (`commerce.productViews`) ou un événement générique « page vue » (`web.webpagedetails.pageViews`). Dans ces cas, vous pouvez utiliser des champs calculés pour capturer les attributs les plus importants lors d’une capture de plusieurs événements dans un seul accès.
 
-Utilisez la préparation de données [](../../data-prep/home.md) pour mapper, transformer et valider les données vers et depuis XDM. En utilisant les [fonctions de mappage](../../data-prep/functions.md) fournies par le service, vous pouvez appeler des opérateurs logiques pour prioriser, transformer et/ou consolider des données provenant d’enregistrements multi-événements lors de leur ingestion dans Experience Platform. Dans l’exemple ci-dessus, vous pouvez désigner `eventType` comme champ calculé qui donne la priorité à une « vue du produit » plutôt qu’à une « vue de page » lorsquʼelles se produisent toutes les deux.
+Utilisez la préparation de données [&#128279;](../../data-prep/home.md) pour mapper, transformer et valider les données vers et depuis XDM. En utilisant les [fonctions de mappage](../../data-prep/functions.md) fournies par le service, vous pouvez appeler des opérateurs logiques pour prioriser, transformer et/ou consolider des données provenant d’enregistrements multi-événements lors de leur ingestion dans Experience Platform. Dans l’exemple ci-dessus, vous pouvez désigner `eventType` comme champ calculé qui donne la priorité à une « vue du produit » plutôt qu’à une « vue de page » lorsquʼelles se produisent toutes les deux.
 
 Si vous ingérez manuellement des données dans Experience Platform via l’interface utilisateur, consultez le guide sur les [champs calculés](../../data-prep/ui/mapping.md#calculated-fields) pour obtenir des instructions spécifiques sur la création de champs calculés.
 

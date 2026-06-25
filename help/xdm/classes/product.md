@@ -3,8 +3,10 @@ title: Classe de produit
 description: Découvrez la classe de produits dans le modèle de données d’expérience (XDM).
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
 TQID: https://experienceleague.adobe.com/sCziat3nUG4ol9xb26ssVJmkwKVvz-1ya5pqjx8CsSA
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
 source-wordcount: 209

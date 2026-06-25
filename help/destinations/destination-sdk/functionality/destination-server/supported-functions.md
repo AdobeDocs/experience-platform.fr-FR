@@ -3,10 +3,16 @@ description: Experience Platform Destination SDK utilise des modèles Pebble, ce
 title: Fonctions de transformation prises en charge dans Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
 TQID: https://experienceleague.adobe.com/Ffcr9a1289gNnWda79YxgEHcwuJCF9uYq2wEMroMo-A
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
 workflow-type: tm+mt
 source-wordcount: 588
@@ -16,7 +22,7 @@ ht-degree: 91%
 
 # Fonctions de transformation prises en charge dans Destination SDK
 
-Experience Platform Destination SDK utilise des modèles [[!DNL Pebble] ](https://pebbletemplates.io/), ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
+Experience Platform Destination SDK utilise des modèles [[!DNL Pebble] &#x200B;](https://pebbletemplates.io/), ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
 
 L’implémentation [!DNL Pebble] d’Experience Platform comporte quelques modifications par rapport à la version prête à l’emploi fournie par [!DNL Pebble]. En outre, en plus des fonctions prêtes à l’emploi fournies par [!DNL Pebble], Adobe a créé des fonctions supplémentaires que vous pouvez utiliser avec Destination SDK.
 
