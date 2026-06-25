@@ -1,28 +1,28 @@
 ---
-title: Amazon Ads v2
-description: Amazon Ads v2 offre toute une gamme d’options pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs, les marchands de livres, les auteurs Kindle Direct Publishing (KDP), les développeurs d’applications ou les agences peuvent tirer parti de ces options. L’intégration d’Amazon Ads v2 à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads.
+title: Amazon Ads
+description: Amazon Ads propose toute une gamme d’options pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteurs et autrices Kindle Direct Publishing (KDP), les développeurs et développeuses d’applications ou les agences peuvent tirer parti de ces options. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads.
 last-substantial-update: 2026-03-31T00:00:00Z
 exl-id: 8656e114-af22-4696-b109-ffdf99b5316e
-source-git-commit: 76c2059a94d629aadc379985bb4fb907c9cfcc33
+source-git-commit: 139f289ebba4a11a2d9d05cfd0d1e97561b9fbd7
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 15%
+source-wordcount: '1960'
+ht-degree: 14%
 
 ---
 
-# Connexion Amazon Ads v2 {#amazon-ads-v2}
+# Connexion Amazon Ads {#amazon-ads-v2}
 
 ## Vue d’ensemble {#overview}
 
-[!DNL Amazon Ads v2] permet aux annonceurs d’ingérer, de gérer, d’activer et de réutiliser efficacement les données d’audience dans les produits [!DNL Amazon Ads].
+[!DNL Amazon Ads] permet aux annonceurs d’ingérer, de gérer, d’activer et de réutiliser efficacement les données d’audience dans les produits [!DNL Amazon Ads].
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Ads v2] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [&#x200B; (héritée) [!DNL Amazon Ads]](./amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads v2] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [&#x200B; (hérité) [!DNL Amazon Ads]](./amazon-ads.md).
+>[!DNL Amazon Ads] est la destination actuelle de toutes les nouvelles connexions [!DNL Amazon Ads]. Si vous disposez d’une connexion [&#x200B; (héritée) [!DNL Amazon Ads]](./amazon-ads.md) existante, elle continue à fonctionner sans aucune modification requise. [!DNL Amazon Ads] se connecte à [!DNL Ads Data Manager], qui prend en charge les types d’identité étendus, les champs liés aux adresses et le partage de données entre les produits [!DNL Amazon Ads], ce qui améliore le ciblage et les taux de correspondance d’audience par rapport à [&#x200B; (hérité) [!DNL Amazon Ads]](./amazon-ads.md).
 >
->Après la fin avril 2026, [!DNL Amazon Ads v2] sera renommé [!DNL Amazon Ads] et la carte héritée sera masquée, laissant une seule carte de destination dans le catalogue. Les flux de données hérités existants continueront à fonctionner et vous pourrez les gérer dans l’onglet **[!UICONTROL Parcourir]** au-delà de cette date.
+>Après la fin avril 2026, la carte de destination [!DNL Amazon Ads] remplacera la carte héritée, laissant une seule carte de destination dans le catalogue. Les flux de données hérités existants continueront à fonctionner et vous pourrez les gérer dans l’onglet **[!UICONTROL Parcourir]** au-delà de cette date.
 
-L’intégration de [!DNL Amazon Ads v2] à [!DNL Adobe Experience Platform] fournit une connexion directe pour ingérer des membres d’audience dans [!DNL Amazon Ads]. Les audiences chargées sont disponibles dans la console [!DNL Ads Data Manager (ADM)] dans [!DNL Amazon Ads]. Vous pouvez utiliser la console [!DNL Ads Data Manager] pour partager des données entre différents produits [!DNL Amazon Ads].
+L’intégration de [!DNL Amazon Ads] à [!DNL Adobe Experience Platform] fournit une connexion directe pour ingérer des membres d’audience dans [!DNL Amazon Ads]. Les audiences chargées sont disponibles dans la console [!DNL Ads Data Manager (ADM)] dans [!DNL Amazon Ads]. Vous pouvez utiliser la console [!DNL Ads Data Manager] pour partager des données entre différents produits [!DNL Amazon Ads].
 
 Pour en savoir plus sur [!DNL Ads Data Manager], voir :
 
@@ -36,23 +36,33 @@ Pour en savoir plus sur [!DNL Ads Data Manager], voir :
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Amazon Ads v2], consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Amazon Ads], consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Ingestion et activation des audiences {#activation-and-targeting}
 
-Une marque de vêtements de sport souhaite atteindre ses clients existants avec des publicités pertinentes dans tout le [!DNL Amazon Ads]. La marque peut ingérer les adresses e-mail des clients de son CRM dans [!DNL Adobe Experience Platform], créer des audiences à l’aide de ses données hors ligne propriétaires et activer ces audiences pour les [!DNL Amazon Ads] via la destination [!DNL Amazon Ads v2]. Après l’activation, vous pouvez utiliser ces audiences pour cibler les annonces publicitaires vers ces clients dans [!DNL Amazon Ads] inventaire, ce qui permet à la marque de réengager des clients connus et de générer des achats répétés. Pour en savoir plus, voir [Gérer les données](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data).
+Une marque de vêtements de sport souhaite atteindre ses clients existants avec des publicités pertinentes dans tout le [!DNL Amazon Ads]. La marque peut ingérer les adresses e-mail des clients de son CRM dans [!DNL Adobe Experience Platform], créer des audiences à l’aide de ses données hors ligne propriétaires et activer ces audiences pour les [!DNL Amazon Ads] via la destination [!DNL Amazon Ads]. Après l’activation, vous pouvez utiliser ces audiences pour cibler les annonces publicitaires vers ces clients dans [!DNL Amazon Ads] inventaire, ce qui permet à la marque de réengager des clients connus et de générer des achats répétés. Pour en savoir plus, voir [Gérer les données](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data).
+
+### Analyses et mesures {#analytics-and-measurement}
+
+Un annonceur souhaite comprendre l’impact global de ses campagnes publicitaires sur l’inventaire Amazon. En utilisant la destination [!DNL Amazon Ads], l’annonceur peut transmettre des audiences de [!DNL Real-Time CDP] à [!DNL Amazon Marketing Cloud] ([!DNL AMC]), joindre les données d’audience avec des signaux [!DNL Amazon Ads] et effectuer des analyses personnalisées sur des sujets tels que l’impact des médias, le chevauchement des audiences et les parcours des clients dans un format conforme à la confidentialité. Par exemple, l’annonceur peut charger une liste de clients existants pour connaître les performances agrégées d’une campagne publicitaire ou les statistiques agrégées d’événements de conversion sur Amazon, tels que l’affichage de la page des détails d’un produit, l’ajout d’un produit à un panier ou l’achat d’un produit.
+
+Les annonceurs peuvent également utiliser [!DNL Amazon Marketing Cloud] SQL pour effectuer régulièrement des analyses de chevauchement, des suppressions, des ajouts ou des optimisations sur les audiences, avant de créer une audience prête pour l’activation dans [!DNL Amazon DSP] pour le ciblage.
+
+Pour plus d’informations, voir :
+
+* [Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser la connexion [!DNL Amazon Ads v2] avec [!DNL Adobe Experience Platform], vous devez avoir accès à **[!DNL Amazon Ads Data Manager]** à l’aide d’un compte [Manager](https://advertising.amazon.com/help/G69CDSR9MNSWJH95). Pour plus d’informations, consultez [Prise en main d’Amazon Ads Data Manager](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview).
+Pour utiliser la connexion [!DNL Amazon Ads] avec [!DNL Adobe Experience Platform], vous devez avoir accès à **[!DNL Amazon Ads Data Manager]** à l’aide d’un compte [Manager](https://advertising.amazon.com/help/G69CDSR9MNSWJH95). Pour plus d’informations, consultez [Prise en main d’Amazon Ads Data Manager](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview).
 
 ### Accepter les conditions générales du gestionnaire de données Amazon Ads {#accept-terms}
 
-Avant de configurer la destination [!DNL Amazon Ads v2], connectez-vous à votre compte [!DNL Amazon Ads] et acceptez les conditions générales de [!DNL Ads Data Manager]. Accédez à la console [!DNL Ads Data Manager] dans [!DNL Amazon Ads] et acceptez les conditions lorsque vous y êtes invité. Si vous n’acceptez pas les conditions générales, les audiences ne sont pas créées dans [!DNL Amazon Ads].
+Avant de configurer la destination [!DNL Amazon Ads], connectez-vous à votre compte [!DNL Amazon Ads] et acceptez les conditions générales [!DNL Ads Data Manager]. Accédez à la console [!DNL Ads Data Manager] dans [!DNL Amazon Ads] et acceptez les conditions lorsque vous y êtes invité. Si vous n’acceptez pas les conditions générales, les audiences ne sont pas créées dans [!DNL Amazon Ads].
 
 ## Identités prises en charge {#supported-identities}
 
-La destination [!DNL Amazon Ads v2] prend en charge l’activation des identités suivantes. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
+La destination [!DNL Amazon Ads] prend en charge l’activation des identités suivantes. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
@@ -126,7 +136,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 
 ![Boîte de dialogue Se connecter à la destination dans Experience Platform pour Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
 
-Vous êtes redirigé vers l’interface [!DNL Amazon Ads v2]. Sélectionnez **[!UICONTROL Autoriser]** pour vous connecter à votre compte Amazon.
+Vous êtes redirigé vers l’interface [!DNL Amazon Ads]. Sélectionnez **[!UICONTROL Autoriser]** pour vous connecter à votre compte Amazon.
 
 ![Invite d’autorisation OAuth Amazon Ads demandant à l’utilisateur d’autoriser](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png)
 
@@ -136,7 +146,7 @@ Après l’authentification, vous êtes redirigé vers [!DNL Adobe Experience Pl
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Champs de configuration de destination Amazon Ads v2 dans Experience Platform](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
+![Champs de configuration de destination Amazon Ads dans Experience Platform](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaissez cette destination.
 * **[!UICONTROL Description]** : description qui vous aide à identifier cette destination.
@@ -161,14 +171,14 @@ Consultez la section [Activer les profils et les audiences vers les destinations
 
 ### Mappages obligatoires {#map}
 
-La destination [!DNL Amazon Ads v2] nécessite que vous configuriez les mappages suivants pour une activation réussie des données.
+La destination [!DNL Amazon Ads] nécessite que vous configuriez les mappages suivants pour une activation réussie des données.
 
 | Champ source | Champ cible | Description |
 |---------|----------|---------|
 | `IdentityMap: Email_LC_SHA256` ou `IdentityMap: Email`. | `Identity: email` | Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | `xdm: homeAddress.countryCode` | `Identity: countryCode` | Pays de l&#39;utilisateur (code ISO à 2 caractères) |
 
-![Configuration du mappage des champs d’identité pour la destination Amazon Ads v2](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
+![Configuration du mappage des champs d’identité pour la destination Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
 
 ### Bonnes pratiques de mappage {#mapping-best-practices}
 

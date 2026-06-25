@@ -27,9 +27,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: f1b2daeefb4a32054e9e7a77f1354752a6ca8872
+source-git-commit: f209a56fe2e8a5598c678692e5e568b4c9ca3675
 workflow-type: tm+mt
-source-wordcount: 1557
+source-wordcount: 1584
 ht-degree: 19%
 
 ---
@@ -88,6 +88,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | [[!DNL Google Ad Manager 360]](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) désormais généralement disponible | La destination [!DNL Google Ad Manager 360] (anciennement en version Beta) est désormais disponible pour tous. |
 | [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md) désormais généralement disponible | La destination [!DNL Google Customer Match + Display & Video 360] (anciennement en disponibilité limitée) est désormais disponible pour tous. |
 | [Rapports au niveau de l’audience pour les destinations supplémentaires](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Les rapports au niveau de l’audience sont désormais disponibles pour plusieurs destinations à forte utilisation : [Facebook](../../destinations/catalog/social/facebook.md), [TikTok](../../destinations/catalog/social/tiktok.md), [(hérité) Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md), [Braze](../../destinations/catalog/mobile-engagement/braze.md), [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin.md), [(Entreprises) LinkedIn](../../destinations/catalog/social/linkedin-b2b.md), [Twitter Custom Audiences](../../destinations/catalog/social/twitter.md), [Pinterest Customer List](../../destinations/catalog/advertising/pinterest.md), [Salesforce CRM](../../destinations/catalog/crm/salesforce.md), [Mailchimp Tags](../../destinations/catalog/email-marketing/mailchimp-tags.md), [Gainsight PX](../../destinations/catalog/analytics/gainsight-px.md) et [Demandbase People](../../destinations/catalog/advertising/demandbase-people.md). Auparavant, ces destinations ne prenaient en charge que les rapports au niveau de l’exécution du flux de données, ce qui rendait plus difficile la compréhension du nombre de profils activés pour chaque audience. Pour plus d’informations, consultez la documentation sur la [vue au niveau de l’audience](../../dataflows/ui/monitor-destinations.md#audience-level-view). <br> ![Tableau de bord de surveillance présentant l’onglet Audiences de clients avec les mesures d’activation au niveau de l’audience, y compris les enregistrements activés, exclus et ayant échoué par audience.](../2026/assets/june/audience-level-reporting.png){zoomable="yes"} |
+| [[!DNL Amazon Ads]](../../destinations/catalog/advertising/amazon-ads-v2.md) renommé [!DNL Amazon Ads v2] | [!DNL Amazon Ads] (anciennement [!DNL Amazon Ads v2]) est désormais la destination recommandée pour l’exportation de données vers [!DNL Amazon Ads]. La carte de destination [(héritée) Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) sera masquée à la fin du mois de juillet 2026. |
 
 {style="table-layout:auto"}
 
