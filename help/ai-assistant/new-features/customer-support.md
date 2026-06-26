@@ -77,6 +77,6 @@ Une fois ces étapes effectuées, tous les administrateurs de l’assistance de 
 
 Pour plus d’informations, regardez la vidéo suivante pour découvrir comment utiliser l’agent du support produit afin de résoudre en toute simplicité les problèmes sans quitter vos workflows.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443185?captions=fre_fr&learn=on)
 
 
