@@ -3,21 +3,11 @@ title: Agent du support technique du produit
 description: Découvrez comment utiliser l’agent du support produit dans l’Assistant IA pour rationaliser le dépannage et le processus de classement des tickets du service clientèle.
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
 TQID: https://experienceleague.adobe.com/HelspNNVYqrWzDMOq6f0-LBiNE-eeVZXOflxOlJek2U
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 46581bd3c297529af40677ea42e9549cd9e4c9e1
 workflow-type: tm+mt
 source-wordcount: 410
 ht-degree: 89%
@@ -77,5 +67,6 @@ Une fois ces étapes effectuées, tous les administrateurs de l’assistance de 
 
 Pour plus d’informations, regardez la vidéo suivante pour découvrir comment utiliser l’agent du support produit afin de résoudre en toute simplicité les problèmes sans quitter vos workflows.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443185?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
 
