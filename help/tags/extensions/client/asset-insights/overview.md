@@ -30,7 +30,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: ea5d5bb4c18ef6857987682d7cf5a4b887b73b67
+source-git-commit: 46581bd3c297529af40677ea42e9549cd9e4c9e1
 workflow-type: tm+mt
 source-wordcount: 1140
 ht-degree: 92%
@@ -178,3 +178,4 @@ Si `a.assets.clickedid` n’est pas dans la requête d’image, c’est certaine
 Dans la demande d’image Analytics qui en résulte, si `a.assets.clickedid` comporte l’identifiant de ressource, la règle fonctionne correctement.
 
 Si `a.assets.clickedid` n’est pas dans la requête d’image, c’est certainement parce que [Statistiques sur les ressources](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr) n’était pas activé sur la ressource ayant fait l’objet d’un clic dans AEM.
+
