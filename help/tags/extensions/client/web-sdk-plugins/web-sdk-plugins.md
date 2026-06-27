@@ -217,7 +217,7 @@ Si l’argument `vtc` et la valeur du cookie correspondent, cette méthode renvo
 >
 >Cet élément de données définit les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getVisitDuration` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html). L’élément de données `getVisitDuration` effectue le suivi de la durée, en minutes, pendant laquelle le visiteur a séjourné sur le site jusqu’à ce point.
+Permet d’installer et de configurer le plug-in [`getVisitDuration` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html?lang=fr). L’élément de données `getVisitDuration` effectue le suivi de la durée, en minutes, pendant laquelle le visiteur a séjourné sur le site jusqu’à ce point.
 
 L’élément de données `getVisitDuration` n’utilise aucun argument. Elle renvoie l’une des valeurs suivantes :
 

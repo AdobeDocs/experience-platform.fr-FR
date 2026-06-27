@@ -94,7 +94,7 @@ Dans [!DNL Adobe Target], assurez-vous que l’utilisateur dispose des élément
 * Accès à l’espace de travail [par défaut](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=fr#default-workspace) ;
 * Le **rôle** [approbateur](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=fr#roles-and-permissions).
 
-En savoir plus sur l’octroi d’autorisations pour [&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=fr#section_8C425E43E5DD4111BBFC734A2B7ABC80) et pour [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
+En savoir plus sur l’octroi d’autorisations pour [&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=fr#section_8C425E43E5DD4111BBFC734A2B7ABC80) et pour [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=fr#roles-permissions).
 
 ## Audiences prises en charge {#supported-audiences}
 
