@@ -20,10 +20,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7624fa99da99f97b217f1811c4f9a148ba1b98d1
+source-git-commit: 044c97ef80010c30d98c45ce1e6eb3bc2e2770da
 workflow-type: tm+mt
-source-wordcount: 1029
-ht-degree: 3%
+source-wordcount: 1150
+ht-degree: 10%
 
 ---
 
@@ -69,6 +69,10 @@ Les configurations de flux de données dynamiques comportent des limites et des 
 | Nombre maximal de [!DNL Dynamic Datastream Configurations] par flux de données pour [!DNL Adobe Audience Manager] | 5 | Mécanisme de sécurisation des performances |
 | Nombre maximal de conditions (prédicats) que vous pouvez combiner dans une seule règle | 100 | Mécanisme de sécurisation des performances |
 | Durée maximale autorisée pour évaluer toutes les [!DNL Dynamic Datastream Configurations] par flux de données avant expiration | 25 ms | Mécanisme de sécurisation mis en œuvre par le système |
+
+>[!NOTE]
+>
+>L’Edge Network évalue toutes les règles d’un flux de données avec un budget de 25 ms. Lorsque l’évaluation dépasse cette limite, Edge Network expire et applique la configuration de train de données par défaut pour cet événement. Aucune erreur n’est renvoyée.
 
 ## Configurations de train de données dynamiques et remplacements de la configuration de train de données {#dynamic-versus-overrides}
 
