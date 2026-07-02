@@ -28,7 +28,7 @@ topic_v2:
 source-git-commit: 915d23b6d4698d5d5d9d1435828c50b389837011
 workflow-type: tm+mt
 source-wordcount: 1891
-ht-degree: 16%
+ht-degree: 20%
 
 ---
 
@@ -159,7 +159,7 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_privatelink"
 >title="Lien privé activé"
->abstract="Sélectionnez Vrai si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>La sélection de True sur un compte qui n’utilise pas de lien privé ignore la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que vous sélectionnez Faux, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
+>abstract="Sélectionnez Vrai si le lien privé est activé pour votre compte Snowflake et que l’accès public aux points d’entrée du service Snowflake est désactivé.<br>La sélection de Vrai sur un compte qui n’utilise pas de lien privé contourne la validation du compte et peut entraîner des échecs de connexion ou de partage de données. Si votre compte nécessite un lien privé et que vous sélectionnez Faux, Adobe ne peut pas résoudre votre compte ni partager les données d’audience."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 

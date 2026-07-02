@@ -23,7 +23,7 @@ topic_v2:
 source-git-commit: 160096d79724c2869b56d3a25f805bf8234a9bfe
 workflow-type: tm+mt
 source-wordcount: 1993
-ht-degree: 19%
+ht-degree: 23%
 
 ---
 
@@ -167,7 +167,7 @@ Sélectionnez **[!UICONTROL Débit]** pour afficher des informations sur la quan
 >[!CONTEXTUALHELP]
 >id="platform_dataflow_metrics_refresh_rates"
 >title="Intervalles d’actualisation des mesures"
->abstract="Les mesures agrégées affichées dans la carte du classement sont actualisées toutes les minutes. En revanche, les exécutions de flux de données sont générées dans des fenêtres horaires et mises à jour toutes les 15 minutes. Par conséquent, un certain retard dans les mesures au niveau de l’exécution du flux de données est attendu."
+>abstract="Les mesures agrégées affichées dans la carte de classement sont actualisées toutes les minutes. En revanche, les exécutions de flux de données sont générées dans des fenêtres horaires et mises à jour toutes les 15 minutes. Par conséquent, un certain retard dans les mesures au niveau de l’exécution du flux de données est attendu."
 
 
 Le tableau des flux de données répertorie toutes les activités d’ingestion en flux continu avec l’ensemble de mesures correspondant pour le profil client en temps réel. Chaque flux de données est répertorié avec son jeu de données correspondant.
@@ -182,7 +182,7 @@ Ensuite, utilisez l’interface des mesures de flux de données pour sélectionn
 
 >[!NOTE]
 >
->Les mesures agrégées affichées dans la carte du classement sont actualisées toutes les minutes. En revanche, les exécutions de flux de données sont générées dans des fenêtres horaires et mises à jour toutes les 15 minutes. Par conséquent, un certain retard dans les mesures au niveau de l’exécution du flux de données est attendu.
+>Les mesures agrégées affichées dans la carte de classement sont actualisées toutes les minutes. En revanche, les exécutions de flux de données sont générées dans des fenêtres horaires et mises à jour toutes les 15 minutes. Par conséquent, un certain retard dans les mesures au niveau de l’exécution du flux de données est attendu.
 
 ![Interface des mesures de flux de données.](../assets/ui/streaming-profiles/flows.png)
 
