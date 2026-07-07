@@ -23,7 +23,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 1158
 ht-degree: 13%
@@ -76,7 +76,7 @@ Pour plus d’informations sur le mappage des champs d’Audience Manager à XDM
 
 Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes) et qui est rendu disponible par une connexion aux données. Les données Audience Manager se composent de données en temps réel, de données entrantes et de données de profil. Pour localiser vos jeux de données Audience Manager, utilisez la fonction de recherche de l’interface utilisateur en utilisant les conventions de dénomination fournies pour chaque type de données.
 
-Les jeux de données Audience Manager sont désactivés pour le profil par défaut et les utilisateurs peuvent activer ou désactiver les jeux de données en fonction de leurs cas d’utilisation. Il n’est pas recommandé de désactiver les jeux de données qui seront utilisés pour l’appartenance à un segment dans le profil.
+Les jeux de données Audience Manager sont désactivés pour le profil par défaut et les utilisateurs peuvent activer ou désactiver les jeux de données en fonction de leurs cas d’utilisation. Il n’est pas recommandé de désactiver les jeux de données qui seront utilisés pour l’appartenance de l’audience au profil.
 
 >[!NOTE]
 >

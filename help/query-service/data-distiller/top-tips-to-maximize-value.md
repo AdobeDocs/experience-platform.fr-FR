@@ -27,9 +27,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 3779
+source-wordcount: 3794
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ L’ID du client est `pfreportingonprod`.
 
 ## Présentation du modèle RFM {#rfm-overview}
 
-RFM, abréviation de Récence (R), Fréquence (F) et Monétaire (M), est une approche axée sur les données de la segmentation et de l’analyse des clients. Cette méthodologie évalue trois aspects clés du comportement du client : la date à laquelle un client a effectué un achat, la fréquence à laquelle il s’engage et le montant qu’il dépense. En quantifiant ces facteurs, les entreprises peuvent obtenir des informations exploitables sur les segments de clientèle et développer des stratégies marketing ciblées qui répondent mieux aux besoins individuels des clients.
+RFM, abréviation de Récence (R), Fréquence (F) et Monétaire (M), est une approche axée sur les données de la segmentation et de l’analyse des clients. Cette méthodologie évalue trois aspects clés du comportement du client : la date à laquelle un client a effectué un achat, la fréquence à laquelle il s’engage et le montant qu’il dépense. En quantifiant ces facteurs, les entreprises peuvent obtenir des informations exploitables sur les audiences des clients et développer des stratégies marketing ciblées qui répondent mieux aux besoins individuels des clients.
 
 ## Comprendre le comportement des clients avec le modèle RFM {#understand-customer-behavior}
 
@@ -72,7 +72,7 @@ En combinant ces facteurs, les entreprises attribuent des scores numériques (g�
 
 Chaque technique de modélisation marketing implique des compromis, offrant à la fois des avantages et des limites. La modélisation RFM est un outil précieux pour comprendre le comportement des clients et affiner les stratégies marketing. Ses avantages incluent la segmentation des clients pour personnaliser les messages, optimiser les recettes et améliorer les taux de réponse, la rétention, la satisfaction et la valeur de durée de vie du client (CLTV).
 
-Cependant, la modélisation RFM présente des limites. Il suppose une uniformité au sein des segments en fonction de la récence, de la fréquence et de la valeur monétaire, ce qui peut simplifier à l’excès le comportement des clients. Le modèle attribue également un poids égal à ces facteurs, ce qui peut donner une valeur client erronée. En outre, il ne prend pas en compte le contexte, comme les caractéristiques spécifiques au produit ou les préférences du client, ce qui peut entraîner de fausses interprétations du comportement d’achat.
+Cependant, la modélisation RFM présente des limites. Elle suppose une uniformité au sein des audiences en fonction de la récence, de la fréquence et de la valeur monétaire, ce qui peut simplifier à l’excès le comportement des clients. Le modèle attribue également un poids égal à ces facteurs, ce qui peut donner une valeur client erronée. En outre, il ne prend pas en compte le contexte, comme les caractéristiques spécifiques au produit ou les préférences du client, ce qui peut entraîner de fausses interprétations du comportement d’achat.
 
 ## Créer une audience SQL dynamique basée sur les scores RFM {#build-a-dynamic-rfm-audience}
 
@@ -464,7 +464,7 @@ Dans cette instruction SQL :
 
 >[!NOTE]
 >
->L’espace de noms « E-mail » est un [espace de noms d’identité standard](../../identity-service/features/namespaces.md#standard) dans Adobe Experience Platform. Lors de la définition de champs d’identité, assurez-vous que l’espace de noms approprié est spécifié pour faciliter la résolution précise des identités. &#x200B;
+>L’espace de noms « E-mail » est un [espace de noms d’identité standard](../../identity-service/features/namespaces.md#standard) dans Adobe Experience Platform. Lors de la définition de champs d’identité, assurez-vous que l’espace de noms approprié est spécifié pour faciliter une résolution d’identité précise. 
 >
 >Pour plus d’informations sur la définition des champs d’identité et l’utilisation des espaces de noms d’identité, reportez-vous à la [documentation du service d’identités](../../identity-service/home.md) ou au guide sur la [définition d’un champ d’identité dans l’interface utilisateur de Adobe Experience Platform](../../xdm/ui/fields/identity.md).
 
@@ -643,7 +643,7 @@ WHERE FALSE;
 
 #### Insertion de profils dans une audience existante {#insert-an-audience}
 
-Pour ajouter des profils à une audience existante, utilisez la commande INSÉRER DANS . Vous pouvez ainsi ajouter des profils individuels ou des segments d’audience entiers à un jeu de données d’audience existant.
+Pour ajouter des profils à une audience existante, utilisez la commande INSÉRER DANS . Vous pouvez ainsi ajouter des profils individuels ou des audiences entières à un jeu de données d’audience existant.
 
 ```sql
 -- Insert profiles into the audience dataset

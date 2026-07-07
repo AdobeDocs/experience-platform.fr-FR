@@ -2,9 +2,9 @@
 title: Présentation des caractéristiques
 description: Découvrez comment utiliser les caractéristiques, qui sont un moyen léger et plus efficace de stocker l’activité des profils. Vous pouvez utiliser les caractéristiques pour maintenir la conformité aux droits de licence de votre profil tout en préservant l’activation enrichie des profils.
 hide: true
-source-git-commit: dd91b0f34db97515e9fd0cd284353b2c6466119f
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 3%
 
 ---

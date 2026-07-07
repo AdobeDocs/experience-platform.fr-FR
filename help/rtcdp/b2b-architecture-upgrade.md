@@ -14,9 +14,9 @@ topic_v2:
   - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 1193
+source-wordcount: 1192
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Les fonctionnalités suivantes ont été mises à jour dans le cadre des mises �
 
 Dans le cadre de la nouvelle mise à niveau de l’architecture, les filtres d’événement d’expérience ne peuvent plus être utilisés dans une audience unique à entités multiples qui inclut des attributs B2B.
 
-Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [&#x200B; ajouter des audiences et des audiences de référence &#x200B;](../segmentation/ui/segment-builder.md#adding-audiences)
+Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [ajouter des audiences et des audiences de référence](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Par exemple :
 
@@ -89,7 +89,7 @@ Une fois la mise à niveau terminée, toute nouvelle audience d’entités multi
 
 >[!TIP]
 >
->Un **segment de segments** est toute définition de segment contenant un ou plusieurs segments par lots ou Edge. **Remarque** : si vous utilisez un segment de segments, la disqualification du profil se produit **toutes les 24 heures**.
+>Un **segment de segments** est toute définition de segment contenant une ou plusieurs audiences par lots ou Edge. **Remarque** : si vous utilisez un segment de segments, la disqualification du profil se produit **toutes les 24 heures**.
 
 ### Résolution d’entité et fusion de la priorité temporelle dans les audiences B2B
 

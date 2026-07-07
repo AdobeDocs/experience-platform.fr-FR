@@ -21,7 +21,7 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 2176
 ht-degree: 2%
@@ -137,24 +137,24 @@ Compte tenu des configurations décrites ci-dessus, les actions des utilisateurs
 
 {style="table-layout:auto"}
 
-## Segmentation Service : stockage des métadonnées d’appartenance à un segment
+## Segmentation Service : stockage des métadonnées d’appartenance à une audience
 
-![Diagramme de stockage de l’appartenance à un segment.](../images/namespace-priority/segment-membership-storage.png "Diagramme de stockage de l’appartenance à un segment."){zoomable="yes"}
+![Diagramme de stockage de l’appartenance à une audience.](../images/namespace-priority/segment-membership-storage.png "Diagramme de stockage de l’appartenance à une audience."){zoomable="yes"}
 
-Pour un profil fusionné donné, les appartenances aux segments seront stockées par rapport à l’identité avec la priorité d’espace de noms la plus élevée.
+Pour un profil fusionné donné, les appartenances à l’audience seront stockées par rapport à l’identité avec la priorité d’espace de noms la plus élevée.
 
 Supposons, par exemple, qu’il existe deux profils :
 
 * Le profil 1 représente Jean.
-   * Le profil de John est éligible pour S1 (appartenance à un segment 1). Par exemple, S1 peut faire référence à un segment de clients qui s’identifient comme étant de sexe masculin.
-   * Le profil de John est également éligible pour S2 (appartenance à un segment 2). Il peut s’agir d’un segment de clients dont le statut de fidélité est Gold.
+   * Le profil de John est éligible pour S1 (appartenance à l’audience 1). Par exemple, S1 peut faire référence à une audience de clients qui s’identifient comme étant de sexe masculin.
+   * Le profil de John est également admissible pour S2 (appartenance à l’audience 2). Il peut s’agir d’une audience de clients dont le statut de fidélité est Gold.
 * Le profil 2 représente Jane.
-   * Le profil de Jane est éligible pour S3 (appartenance à un segment 3). Il peut s’agir d’un segment de clients qui s’identifient comme étant de sexe féminin.
-   * Le profil de Jane est également éligible pour S4 (appartenance à un segment 4). Il peut s’agir d’un segment de clients dont le statut de fidélité est platine.
+   * Le profil de Jane est éligible pour S3 (appartenance à l’audience 3). Il peut s’agir d’une audience de clientes qui s’identifient comme étant de sexe féminin.
+   * Le profil de Jane est également éligible pour S4 (abonnement à l’audience 4). Cela peut faire référence à une audience de clients dont le statut de fidélité est platine.
 
-Si John et Jane partagent un appareil, l’ECID (navigateur web) est transféré d’une personne à une autre. Toutefois, cela n’influence pas les informations d’appartenance à un segment stockées contre John et Jane.
+Si John et Jane partagent un appareil, l’ECID (navigateur web) est transféré d’une personne à une autre. Toutefois, cela n’influence pas les informations d’appartenance à l’audience stockées contre John et Jane.
 
-Si les critères de qualification du segment étaient uniquement basés sur des événements anonymes stockés par rapport à l’ECID, Jane serait éligible à ce segment.
+Si les critères de qualification de l’audience étaient uniquement basés sur des événements anonymes stockés sur l’ECID, Jane serait éligible à cette audience.
 
 ## Implications sur les autres services Experience Platform {#implications}
 
@@ -223,7 +223,7 @@ Dans le cadre de la [!DNL Identity Graph Linking Rules], il existe deux changeme
 
 #### Segmentation Edge
 
-Dans un événement donné, assurez-vous que tous vos espaces de noms qui représentent une entité de personne sont inclus dans le `identityMap`, car les [identités envoyées sous forme de champs XDM](/help/xdm/ui/fields/identity.md) sont ignorées et ne sont pas utilisées pour le stockage des métadonnées d’appartenance à un segment.
+Dans un événement donné, assurez-vous que tous vos espaces de noms qui représentent une entité de personne sont inclus dans le `identityMap`, car les [identités envoyées sous forme de champs XDM](/help/xdm/ui/fields/identity.md) sont ignorées et ne sont pas utilisées pour le stockage des métadonnées d’appartenance à l’audience.
 
 * **Applicabilité des événements** : ce comportement s’applique uniquement aux événements envoyés directement à Edge Network (tels que WebSDK et Mobile SDK). Les événements ingérés à partir du [hub &#x200B;](/help/landing/edge-and-hub-comparison.md) tels que ceux ingérés avec la source d’API HTTP, d’autres sources de diffusion en continu et des sources par lots, ne sont pas soumis à cette limitation.
 * **Spécificité de la segmentation Edge** : ce comportement est spécifique à la segmentation Edge. La segmentation par lots et en flux continu sont des services distincts évalués sur le hub et ne suivent pas le même processus. Lisez le [guide de segmentation Edge](/help/segmentation/methods/edge-segmentation.md) pour plus d’informations.

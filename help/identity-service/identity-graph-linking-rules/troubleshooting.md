@@ -25,10 +25,10 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 3431
-ht-degree: 0%
+source-wordcount: 3461
+ht-degree: 1%
 
 ---
 
@@ -239,9 +239,7 @@ L’algorithme d’optimisation des identités honore [les liens les plus récem
 
 Tout d’abord, vous devez collecter les informations suivantes :
 
-1. Le symbole d’identité (namespaceCode) de l’espace de noms du cookie (par exemple ECID) et de l’espace de noms de la personne (par exemple CRMID) qui ont été envoyés.
-1.1. Pour les implémentations de Web SDK, il s’agit généralement des espaces de noms inclus dans le mappage d’identité.
-1.2. Pour les implémentations du connecteur source Analytics, il s’agit de l’identifiant de cookie inclus dans l’identityMap. L’identifiant de personne est un champ eVar marqué comme une identité.
+1. Le symbole d’identité (namespaceCode) de l’espace de noms du cookie (par exemple ECID) et de l’espace de noms de la personne (par exemple CRMID) qui ont été envoyés.1.1. Pour les implémentations de Web SDK, il s’agit généralement des espaces de noms inclus dans l’identityMap .1.2. Pour les implémentations du connecteur source Analytics, il s’agit de l’identifiant de cookie inclus dans l’identityMap . L’identifiant de personne est un champ eVar marqué comme une identité.
 2. Jeu de données dans lequel l’événement a été envoyé (dataset_name).
 3. Valeur d’identité de l’espace de noms de cookie à rechercher (identity_value).
 
@@ -437,7 +435,7 @@ En règle générale, les tests effectués sur un sandbox de développement doiv
 | Cas de test | Étapes de test | Résultat attendu |
 | --- | --- | --- |
 | Représentation exacte de l’entité de personne | <ul><li>Imiter la navigation anonyme</li><li>Reproduit la connexion de deux personnes (John, Jane) à l’aide du même appareil</li></ul> | <ul><li>John et Jane doivent être associés à leurs attributs et événements authentifiés.</li><li>Le dernier utilisateur authentifié doit être associé aux événements de navigation anonymes.</li></ul> |
-| Segmentation | Créez quatre définitions de segment (**REMARQUE** : pour chaque paire de définitions de segment, l’une doit être évaluée à l’aide d’un traitement par lots et l’autre par flux.) <ul><li>Définition du segment A : qualification du segment basée sur les événements et/ou attributs authentifiés de John.</li><li>Définition de segment B : qualification du segment basée sur les événements et/ou attributs authentifiés de Jane.</li></ul> | Quels que soient les scénarios d’appareil partagé, John et Jane doivent toujours se qualifier pour leurs segments respectifs. |
+| Segmentation | Créez quatre définitions de segment (**REMARQUE** : pour chaque paire de définitions de segment, l’une doit être évaluée à l’aide d’un traitement par lots et l’autre par flux.) <ul><li>Définition du segment A : qualification de l’audience basée sur les événements et/ou attributs authentifiés de John.</li><li>Définition de segment B : qualification de l’audience basée sur les événements et/ou attributs authentifiés de Jane.</li></ul> | Quels que soient les scénarios d’appareil partagé, John et Jane doivent toujours se qualifier pour leurs segments respectifs. |
 | Qualification d’audience/parcours unitaires sur Adobe Journey Optimizer | <ul><li>Créez un parcours commençant par une activité de qualification d’audience (comme la segmentation en flux continu créée ci-dessus).</li><li>Créez un parcours commençant par un événement unitaire. Cet événement unitaire doit être un événement authentifié.</li><li>Vous devez désactiver la rentrée lors de la création de ces parcours.</li></ul> | <ul><li>Quels que soient les scénarios d’appareil partagé, John et Jane doivent déclencher les parcours respectifs qu’ils doivent entrer.</li><li>John et Jane ne doivent pas entrer à nouveau dans le parcours lorsque l’ECID leur est transféré.</li></ul> |
 
 {style="table-layout:auto"}

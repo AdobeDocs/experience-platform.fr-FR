@@ -30,16 +30,16 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1615
+source-wordcount: 1614
 ht-degree: 1%
 
 ---
 
 # Traitement du consentement dans Adobe Experience Platform
 
-Adobe Experience Platform vous permet de traiter les données de consentement que vous avez collectées auprès de vos clients et de les intégrer dans vos profils clients stockés. Ces données peuvent ensuite être utilisées par des processus en aval pour déterminer si la collecte de données a lieu pour un client spécifique ou si leurs profils sont utilisés à des fins spécifiques. Par exemple, les données de consentement pour un profil particulier peuvent déterminer si elles peuvent être incluses dans un segment d’audience exporté ou si elles peuvent participer à des canaux marketing spécifiques tels que les e-mails, les SMS ou les notifications push.
+Adobe Experience Platform vous permet de traiter les données de consentement que vous avez collectées auprès de vos clients et de les intégrer dans vos profils clients stockés. Ces données peuvent ensuite être utilisées par des processus en aval pour déterminer si la collecte de données a lieu pour un client spécifique ou si leurs profils sont utilisés à des fins spécifiques. Par exemple, les données de consentement pour un profil particulier peuvent déterminer si elles peuvent être incluses dans une audience exportée ou si elles peuvent participer à des canaux marketing spécifiques tels que les e-mails, les SMS ou les notifications push.
 
 Ce document présente un aperçu de la configuration de vos opérations de données Experience Platform pour ingérer les données de consentement client générées par une plateforme de gestion du consentement (CMP) et intégrer ces données dans les profils client pour les cas d’utilisation en aval.
 
@@ -152,6 +152,6 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 ## Étapes suivantes
 
-Ce guide explique comment configurer vos opérations Experience Platform pour traiter les données de consentement des clients à l’aide de la norme Adobe et faire en sorte que ces attributs soient représentés dans les profils clients. Vous pouvez désormais intégrer les préférences de consentement des clients en tant que facteur déterminant dans la qualification de segment et dans d’autres cas d’utilisation en aval.
+Ce guide explique comment configurer vos opérations Experience Platform pour traiter les données de consentement des clients à l’aide de la norme Adobe et faire en sorte que ces attributs soient représentés dans les profils clients. Vous pouvez désormais intégrer les préférences de consentement des clients comme facteur déterminant dans la qualification de l’audience et dans d’autres cas d’utilisation en aval.
 
 Pour plus d’informations sur les fonctionnalités Experience Platform relatives à la confidentialité, consultez la présentation de la [&#x200B; gouvernance, confidentialité et sécurité dans Experience Platform](../../overview.md).

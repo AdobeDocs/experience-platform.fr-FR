@@ -5,7 +5,7 @@ solution: Experience Platform
 type: Documentation
 role: Admin, User
 exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
-source-git-commit: 22a6402a33d348e2508e37dfd9700ce098ef67b3
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Les contrôles de l’intégrité analysent vos schémas, identités et jeux de données dans votre sandbox et fournissent un résumé des problèmes que vous pouvez explorer et résoudre avec l’assistant AI.
 
-Des configurations de schéma et d’identité médiocres entraînent d’importants problèmes en aval, notamment une création de profil incorrecte, un échec de la qualification du segment et une activation inexacte. Ces problèmes sont difficiles à détecter et nécessitent souvent une expertise spécialisée pour les diagnostiquer. Les contrôles d’intégrité font évoluer votre approche du dépannage réactif vers une maintenance proactive et préventive.
+Des configurations de schéma et d’identité médiocres entraînent d’importants problèmes en aval, notamment une création de profil incorrecte, un échec de qualification de l’audience et une activation inexacte. Ces problèmes sont difficiles à détecter et nécessitent souvent une expertise spécialisée pour les diagnostiquer. Les contrôles d’intégrité font évoluer votre approche du dépannage réactif vers une maintenance proactive et préventive.
 
 Grâce aux contrôles d’intégrité, vous pouvez :
 

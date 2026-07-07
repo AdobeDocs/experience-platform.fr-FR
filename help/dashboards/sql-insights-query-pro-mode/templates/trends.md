@@ -18,9 +18,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 599
+source-wordcount: 598
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Le graphique **[!UICONTROL Tendances de la taille des audiences]** indique le no
 
 ### Tendances des identités d’audience {#audience-identities-trends}
 
-Le graphique **[!UICONTROL Tendances des identités d’audience]** fournit des informations sur le nombre total d’identités dans le segment d’audience. Utilisez ce graphique pour comprendre comment les identités uniques contribuent à la taille globale de l’audience. Cela fournit une indication de la stabilité et de l’engagement de l’audience.
+Le graphique **[!UICONTROL Tendances des identités d’audience]** fournit des informations sur le nombre total d’identités dans l’audience. Utilisez ce graphique pour comprendre comment les identités uniques contribuent à la taille globale de l’audience. Cela fournit une indication de la stabilité et de l’engagement de l’audience.
 
 ![Graphique de tendance des identités d’audience.](../../images/sql-insights-query-pro-mode/templates/audience-identities-trends.png)
 

@@ -17,9 +17,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1173
+source-wordcount: 1171
 ht-degree: 24%
 
 ---
@@ -56,7 +56,7 @@ Les éditeurs ou les fournisseurs de données souhaitent envoyer des audiences d
 
 ## Conditions préalables {#prerequisites}
 
-Contactez votre gestionnaire de compte [!DNL PubMatic] pour vous assurer que votre compte est correctement configuré et prend en charge l’intégration des segments ciblés. Ils s’assureront également que vous disposez de tous les détails pertinents pour utiliser cette destination et vous fournir une assistance pendant la configuration.
+Contactez votre gestionnaire de compte [!DNL PubMatic] pour vous assurer que votre compte est correctement configuré et prend en charge l’intégration des audiences. Ils s’assureront également que vous disposez de tous les détails pertinents pour utiliser cette destination et vous fournir une assistance pendant la configuration.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -101,8 +101,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 | ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination PubMatic Connect. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination PubMatic Connect. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

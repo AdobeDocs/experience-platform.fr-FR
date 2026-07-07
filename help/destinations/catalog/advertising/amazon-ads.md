@@ -18,9 +18,9 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d00e9f03-e50b-4162-b143-0c0817c937c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 2327
+source-wordcount: 2326
 ht-degree: 27%
 
 ---
@@ -39,9 +39,9 @@ ht-degree: 27%
 
 L’intégration [!DNL Amazon Ads] à [!DNL Adobe Experience Platform] offre une intégration clé en main aux produits [!DNL Amazon Ads], y compris aux [!DNL Amazon DSP] (ADSP) et [!DNL Amazon Marketing Cloud] (AMC).
 
-En utilisant la destination [!DNL Amazon Ads] dans [!DNL Adobe Experience Platform], vous pouvez définir les audiences de l’annonceur pour le ciblage et l’activation sur le [!DNL Amazon DSP]. Vous pouvez également charger vos données dans [!DNL Amazon Marketing Cloud] pour connaître les performances par audience, dimensions fournies par l’annonceur, appartenance à des segments Amazon ou autres signaux disponibles dans AMC. Après avoir chargé les audiences de l’annonceur vers l’AMC, les utilisateurs peuvent utiliser [!DNL Amazon Marketing Cloud] pour modifier, améliorer ou ajouter aux membres de l’audience à l’aide des signaux Amazon dans [!DNL Amazon Marketing Cloud].
+En utilisant la destination [!DNL Amazon Ads] dans [!DNL Adobe Experience Platform], vous pouvez définir les audiences de l’annonceur pour le ciblage et l’activation sur le [!DNL Amazon DSP]. Vous pouvez également charger vos données dans [!DNL Amazon Marketing Cloud] pour connaître les performances par audience, dimensions fournies par l’annonceur, appartenance à des audiences Amazon ou autres signaux disponibles dans AMC. Après avoir chargé les audiences de l’annonceur vers l’AMC, les utilisateurs peuvent utiliser [!DNL Amazon Marketing Cloud] pour modifier, améliorer ou ajouter aux membres de l’audience à l’aide des signaux Amazon dans [!DNL Amazon Marketing Cloud].
 
-L’AMC rassemble des signaux uniques provenant des propriétés détenues et exploitées par Amazon, couvrant les médias, notamment l’affichage, la vidéo, la télévision en flux continu, l’audio et les publicités sponsorisées. Vous pouvez envoyer des segments sélectionnés de [!DNL Adobe Experience Platform] à AMC pour améliorer l’apprentissage, tels que les groupes sur le marché des audiences, les cohortes de style de vie et les modèles d’engagement de la marque. Utilisez les segments augmentés pour optimiser les activations de médias dans [!DNL Amazon DSP].
+L’AMC rassemble des signaux uniques provenant des propriétés détenues et exploitées par Amazon, couvrant les médias, notamment l’affichage, la vidéo, la télévision en flux continu, l’audio et les publicités sponsorisées. Vous pouvez envoyer des audiences sélectionnées de [!DNL Adobe Experience Platform] à AMC pour améliorer l’apprentissage, comme les groupes sur le marché, les cohortes de style de vie et les modèles d’engagement de la marque. Utilisez les audiences augmentées pour optimiser les activations de médias dans [!DNL Amazon DSP].
 
 >[!IMPORTANT]
 >
@@ -57,7 +57,7 @@ Cette intégration à [!DNL Amazon DSP] permet aux annonceurs [!DNL Amazon Ads] 
 
 ### Analyses et mesures {#analytics-and-measurement}
 
-Cette intégration à [!DNL Amazon Marketing Cloud] (AMC) permet aux annonceurs [!DNL Amazon Ads] de transmettre des segments CDP de [!DNL Adobe Experience Platform] à AMC. Vous pouvez ensuite joindre les entrées CDP avec des signaux [!DNL Amazon Ads] et effectuer des analyses personnalisées sur des sujets tels que l’impact du média, les segments d’audience et les parcours client dans un format conforme à la confidentialité. Vous pouvez, par exemple, charger une liste de clients existants pour connaître les performances agrégées des campagnes publicitaires ou les statistiques agrégées des événements de conversion on-Amazon, tels que l’affichage de la page des détails d’un produit, l’ajout d’un produit à un panier ou l’achat d’un produit.
+Cette intégration à [!DNL Amazon Marketing Cloud] (AMC) permet aux annonceurs [!DNL Amazon Ads] de transmettre les audiences CDP de [!DNL Adobe Experience Platform] à AMC. Vous pouvez ensuite joindre les entrées CDP avec des signaux [!DNL Amazon Ads] et effectuer des analyses personnalisées sur des sujets tels que l’impact du média, les audiences et les parcours client dans un format conforme à la confidentialité. Vous pouvez, par exemple, charger une liste de clients existants pour connaître les performances agrégées des campagnes publicitaires ou les statistiques agrégées des événements de conversion on-Amazon, tels que l’affichage de la page des détails d’un produit, l’ajout d’un produit à un panier ou l’achat d’un produit.
 
 ### Optimisation d’Advertising {#advertising-optimization}
 

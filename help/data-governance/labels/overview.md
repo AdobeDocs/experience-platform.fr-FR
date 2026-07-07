@@ -21,10 +21,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 830
-ht-degree: 88%
+source-wordcount: 828
+ht-degree: 69%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 88%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
 >title="Contrôler l’accès aux données sensibles et protégées"
->abstract="<h2>Description</h2><p>Contrôlez l’accès à des attributs et/ou segments de données spécifiques afin de concevoir des workflows flexibles pour les différentes personnes et équipes qui élaborent les cas d’utilisation d’Experience Platform.</p>"
+>abstract="<h2>Description</h2><p>Contrôlez l’accès à des attributs de données et/ou audiences spécifiques afin de concevoir des workflows flexibles pour les différentes personnes et équipes qui élaborent les cas d’utilisation d’Experience Platform.</p>"
 
 Adobe Experience Platform vous permet d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des [politiques de gouvernance des données](../policies/overview.md) et des [politiques de contrôle d’accès](../../access-control/abac/ui/policies.md) associées.
 
@@ -49,17 +49,17 @@ Les libellés d’utilisation des données appliqués au niveau du jeu de donné
 
 Outre les libellés fournis par Adobe, vous pouvez également définir vos propres libellés personnalisés pour votre entreprise. Pour plus d’informations, consultez la section sur la [gestion des libellés](#manage-labels).
 
-## Héritage de libellé pour les segments d’audience
+## Héritage de libellé pour les audiences
 
-Tous les segments d’audience créés par le [service de segmentation d’Adobe Experience Platform](../../segmentation/home.md) héritent des libellés d’utilisation de leurs jeux de données correspondants. Cela permet à Experience Platform d’appliquer automatiquement la politique lors de l’activation de segments vers des destinations.
+Toutes les audiences créées par [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) héritent des libellés d’utilisation de leurs jeux de données correspondants. Cela permet à Experience Platform d’appliquer automatiquement la politique lors de l’activation des audiences vers les destinations.
 
-Outre l’héritage de libellés au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Par conséquent, vous pouvez identifier plus facilement les attributs à exclure de vos segments et les empêcher d’hériter des libellés de champs exclus.
+Outre l’héritage de libellés au niveau des jeux de données, les audiences héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Par conséquent, vous pouvez identifier plus facilement les attributs à exclure de vos audiences et les empêcher d’hériter des libellés de champs exclus.
 
 Pour plus d’informations sur le fonctionnement de l’application automatique dans Experience Platform, consultez la présentation de l’[&#x200B; application automatique des politiques &#x200B;](../enforcement/auto-enforcement.md).
 
 ### Héritage des contrôles d’exportation de données d’Adobe Audience Manager
 
-[!DNL Experience Platform] permet de partager des segments avec Adobe Audience Manager. Les contrôles d’exportation de données appliqués aux segments d’Audience Manager sont convertis en libellés équivalents et en actions marketing reconnues par la gouvernance des données [!DNL Experience Platform].
+[!DNL Experience Platform] permet de partager des audiences avec Adobe Audience Manager. Les contrôles d’exportation de données appliqués aux audiences Audience Manager sont convertis en libellés équivalents et en actions marketing reconnues par la gouvernance des données [!DNL Experience Platform].
 
 Pour savoir comment des contrôles d‘exportation de données spécifiques se mappent aux libellés d’utilisation des données dans [!DNL Experience Platform], consultez la [documentation sur Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#aam-data-export-control-in-aep).
 
@@ -68,7 +68,7 @@ Pour savoir comment des contrôles d‘exportation de données spécifiques se m
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Instructions"
->abstract="<ul><li>Étiquetez et classez les champs et segments XDM dont vous souhaitez restreindre l’accès.</li><li>Étiquetez les rôles et définissez les restrictions applicables aux membres de ce rôle.</li><li>Créez des stratégies et associez les libellés sur les objets libellés, tels que les champs et les segments XDM, aux libellés sur les rôles. Si les libellés correspondent, un accès autorisé ou restreint peut être défini.</li></ul>"
+>abstract="<ul><li>Étiquetez les champs et les segments XDM pour classer les champs et/ou les audiences auxquels vous souhaitez restreindre l’accès.</li><li>Étiquetez les rôles et définissez les restrictions applicables aux membres de ce rôle.</li><li>Créez des stratégies et associez les libellés sur les objets libellés, tels que les champs et les segments XDM, aux libellés sur les rôles. Si les libellés correspondent, un accès autorisé ou restreint peut être défini.</li></ul>"
 
 Vous pouvez gérer les libellés d’utilisation des données à l’aide des API [!DNL Experience Platform] ou de l’interface utilisateur. Consultez les sous-sections ci-dessous pour plus de détails sur chaque option.
 

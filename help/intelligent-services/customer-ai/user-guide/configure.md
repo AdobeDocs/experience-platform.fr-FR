@@ -18,9 +18,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 3115
+source-wordcount: 3113
 ht-degree: 6%
 
 ---
@@ -257,7 +257,7 @@ En suivant cette section, vous avez configuré une instance de l’IA dédiée a
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez configuré une instance de Customer AI et généré des scores de propension. Vous pouvez désormais choisir d’utiliser le créateur de segments pour [créer des segments de clients avec les scores prévus](./create-segment.md) ou [découvrir des informations avec l’IA dédiée aux clients](./discover-insights.md).
+En suivant ce tutoriel, vous avez configuré une instance de Customer AI et généré des scores de propension. Vous pouvez désormais choisir d’utiliser le créateur de segments pour [créer des audiences avec les scores prévus](./create-segment.md) ou [découvrir des informations avec l’IA dédiée aux clients](./discover-insights.md).
 
 ## Ressources supplémentaires
 

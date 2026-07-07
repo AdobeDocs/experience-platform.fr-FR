@@ -14,9 +14,9 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 668
+source-wordcount: 667
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Pour recibler efficacement les utilisateurs à forte intention, créez des audie
 
 Une fois que vous avez créé votre audience, activez-la sur plusieurs plateformes pour interagir avec les utilisateurs.
 
-1. **Vérifier les audiences** : assurez-vous que les segments d’audience reflètent les comportements appropriés.
+1. **Vérifier les audiences** : assurez-vous que les audiences reflètent les comportements appropriés.
 
 2. **Créer des règles d’activation** : définissez des conditions pour savoir quand et comment les utilisateurs sont engagés en fonction des actions.
 

@@ -1,6 +1,6 @@
 ---
 title: Échange d'index
-description: Connectez-vous à Index Exchange (Index) et activez vos données afin que vos segments d’audience puissent être ciblés par les offres créées dans l’interface utilisateur d’Index.
+description: Connectez-vous à Index Exchange (Index) et activez vos données afin que vos audiences puissent être ciblées par des offres créées dans l’interface utilisateur d’Index.
 last-substantial-update: 2026-01-27T00:00:00.000Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
 TQID: https://experienceleague.adobe.com/PcCWbPpK-WfhbfGIkB7s93rJR-nvPcyJ71OogVOKMFw
@@ -17,10 +17,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1193
-ht-degree: 17%
+source-wordcount: 1230
+ht-degree: 16%
 
 ---
 
@@ -30,9 +30,9 @@ ht-degree: 17%
 
 [!DNL Index] est une plateforme publicitaire mondiale axée sur l’offre qui aide les propriétaires de médias à maximiser la valeur de leur contenu sur chaque écran. Fort de plus de 20 ans de leadership dans le secteur, [!DNL Index] met en relation les plus grandes marques du monde avec des créateurs d’expériences haut de gamme afin de proposer des expériences client de haute qualité.
 
-Utilisez ce connecteur de destination pour exporter des segments d’audience de [!DNL Adobe Experience Platform] directement vers la plateforme publicitaire programmatique d’[!DNL Index Exchange].
+Utilisez ce connecteur de destination pour exporter directement des audiences d’[!DNL Adobe Experience Platform] vers la plateforme de publicité programmatique d’[!DNL Index Exchange].
 
-Une fois exportés, ces segments d’audience ciblent les offres des propriétaires de médias, des partenaires de marketplace ou partagées avec les éditeurs et les conservateurs par les fournisseurs de marketplace.
+Une fois exportées, ces audiences ciblent les offres des propriétaires de médias, des partenaires de marketplace, ou partagées avec les éditeurs et les conservateurs par les fournisseurs de marketplace.
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ Les propriétaires de médias, les partenaires de marketplace ou les fournisseur
 
 ## Conditions préalables {#prerequisites}
 
-Les segments d’audience doivent être enregistrés auprès de [!DNL Index] à l’aide d’un processus supplémentaire lors de l’utilisation de cette destination avant d’apparaître dans votre compte. Contactez votre représentant de compte [!DNL Index Exchange] pour obtenir de l’aide sur ce processus.
+Les audiences doivent être enregistrées auprès de [!DNL Index] à l’aide d’un processus supplémentaire lors de l’utilisation de cette destination avant d’apparaître dans votre compte. Contactez votre représentant de compte [!DNL Index Exchange] pour obtenir de l’aide sur ce processus.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -104,7 +104,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 | --------- | ---------- | --------- |
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Exporte tous les membres d’un segment (audience) ainsi que les identifiants (IDFA, GAID ou autres) utilisés dans la destination [!DNL Index Exchange]. |
+| Type d’exportation | **[!UICONTROL Exportation des segments]** | Exporte tous les membres d’une audience avec les identifiants (IDFA, GAID ou autres) utilisés dans la destination [!DNL Index Exchange]. |
 | Fréquence des exportations | **[!UICONTROL Lot]** | Exporte des fichiers vers des plateformes en aval à intervalles de 3, 6, 8, 12 ou 24 heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -144,8 +144,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 ### Activer les alertes {#enable-alerts}
 
-Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers cette destination. Sélectionnez une ou plusieurs alertes dans la liste pour vous abonner aux notifications de statut de votre flux de données. Pour plus d’informations, consultez le guide sur [l’abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers cette destination. Sélectionnez une ou plusieurs alertes dans la liste pour vous abonner aux notifications de statut de votre flux de données. Pour plus d’informations, consultez le guide sur [l’abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
@@ -154,7 +153,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
@@ -168,13 +167,13 @@ Sélection des champs cibles :
 
 ![Mappage des attributs et des identités](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
-### Enregistrement des segments avec [!DNL Index] {#register-segments}
+### Enregistrement des audiences avec [!DNL Index] {#register-segments}
 
-Avant ou après l’activation des données vers la destination, contactez votre représentant [!DNL Index] pour enregistrer les segments que vous prévoyez d’activer. Votre représentant vous fournira des instructions sur la manière d’enregistrer des détails de segment supplémentaires, y compris les noms, identifiants, descriptions et prix, le cas échéant.
+Avant ou après l’activation des données vers la destination, contactez votre représentant [!DNL Index] pour enregistrer les audiences que vous prévoyez d’activer. Votre représentant vous fournira des instructions sur la manière d’enregistrer des détails d’audience supplémentaires, y compris les noms, identifiants, descriptions et prix, le cas échéant.
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
-Une fois l’enregistrement terminé, les segments seront disponibles pour le ciblage dans votre compte [!DNL Index]. Pour confirmer que les données sont correctement reçues, contactez votre représentant [!DNL Index], qui peut fournir des détails sur le volume de données de segment reçues.
+Une fois l’enregistrement terminé, les audiences seront disponibles pour le ciblage dans votre compte [!DNL Index]. Pour confirmer que les données sont correctement reçues, contactez votre représentant [!DNL Index], qui peut fournir des détails sur le volume de données d’audience reçues.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

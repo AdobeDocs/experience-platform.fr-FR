@@ -19,9 +19,9 @@ role_v2:
 topic_v2:
   - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 73387ee674dac6ba2ee167c66dbfda52a4b48466
 workflow-type: tm+mt
-source-wordcount: 1630
+source-wordcount: 1629
 ht-degree: 47%
 
 ---
@@ -59,7 +59,7 @@ Toutes les requêtes POST, PUT et PATCH requièrent un en-tête supplémentaire�
 
 - Content-Type: application/json
 
-## Évaluation d’une définition de segment {#evaluate-a-segment}
+## Évaluation d’une définition de segment {#evaluate-an-audience}
 
 Une fois votre définition de segment développée, testée et enregistrée, vous pouvez l’évaluer au moyen d’une évaluation planifiée ou d’une évaluation à la demande.
 
@@ -99,7 +99,7 @@ L’évaluation à la demande vous permet de créer une tâche de segmentation a
 
 ### Création d’une tâche de segmentation
 
-Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Elle fait référence à une définition de segment, ainsi qu’à toute politique de fusion contrôlant la manière dont [!DNL Real-Time Customer Profile] fusionne les attributs qui se chevauchent dans vos fragments de profil. Une fois la tâche de segmentation terminée, vous pouvez collecter de nombreuses informations sur la définition de segment, telles que les erreurs qui peuvent s’être produites pendant le traitement et la taille finale de votre audience. Une tâche de segmentation doit être exécutée chaque fois que vous souhaitez actualiser l’audience que la définition de segment qualifie actuellement.
+Une tâche de segmentation est un processus asynchrone qui crée une audience à la demande. Elle fait référence à une définition de segment, ainsi qu’à toute politique de fusion contrôlant la manière dont [!DNL Real-Time Customer Profile] fusionne les attributs qui se chevauchent dans vos fragments de profil. Une fois la tâche de segmentation terminée, vous pouvez collecter de nombreuses informations sur la définition de segment, telles que les erreurs qui peuvent s’être produites pendant le traitement et la taille finale de votre audience. Une tâche de segmentation doit être exécutée chaque fois que vous souhaitez actualiser l’audience que la définition de segment qualifie actuellement.
 
 Vous pouvez créer une tâche de segmentation en effectuant une requête POST vers le point d’entrée `/segment/jobs` dans l’API [!DNL Real-Time Customer Profile].
 
@@ -142,7 +142,7 @@ L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregi
 
 | Propriété | Description |
 | -------- | ----------- |
-| `lastQualificationTime` | Date et heure auxquelles l’assertion d’appartenance à un segment a été effectuée et le profil a rejoint ou quitté la définition de segment. |
+| `lastQualificationTime` | La date et l’heure auxquelles l’assertion d’appartenance à l’audience a été effectuée et le profil a rejoint ou quitté la définition de segment. |
 | `status` | Statut de participation de la définition de segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`realized` : l’entité est éligible pour la définition de segment.</li><li>`exited` : l’entité quitte la définition de segment.</li></ul> |
 
 >[!NOTE]
@@ -159,7 +159,7 @@ Les sections suivantes décrivent ces options de manière plus détaillée.
 
 Si vous connaissez le profil spécifique auquel vous souhaitez accéder, vous pouvez le faire à l’aide de l’API [!DNL Real-Time Customer Profile]. Les étapes complètes d’accès aux profils individuels sont disponibles dans le tutoriel [Accéder aux données du profil client en temps réel à l’aide de l’API Profile](../../profile/api/entities.md).
 
-## Exportation d’un segment {#export}
+## Exporter une audience {#export}
 
 Une fois la tâche de segmentation terminée (la valeur de l’attribut `status` correspond à &quot;SUCCEEDED&quot;), vous pouvez exporter votre audience vers un jeu de données permettant son accès et son utilisation.
 

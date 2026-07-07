@@ -18,9 +18,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 2094
+source-wordcount: 2093
 ht-degree: 0%
 
 ---
@@ -210,15 +210,15 @@ Voici une liste d’exemples de questions qui ne sont actuellement pas prises en
 ### Informations opérationnelles
 
 * Combien de profils de ce sandbox vivent en Californie ? (**Remarque** : pour des questions similaires, vous devez fournir un critère spécifique afin de fournir suffisamment de contexte pour votre demande, dans ce cas, le critère spécifique est « en Californie »).
-* Quels sont les segments dans lesquels se trouve ce profil {PROFILE_INFO/ATTRIBUTE_VALUE} ?
+* Quelles sont les audiences dans lesquelles se trouve ce profil {PROFILE_INFO/ATTRIBUTE_VALUE} ?
 * Combien de profils du jeu de données ont un e-mail ?
 * Quel jeu de données constitue le nombre maximal de profils dans ce sandbox ?
-* Combien de segments ont été supprimés en {RELATIVE_DATE} ?
+* Combien d’audiences ont été supprimées en {RELATIVE_DATE} ?
 * Donnez-moi un profil dans la {AUDIENCE_NAME}.
 * Quel est le nombre total de profils dans mon sandbox ?
 * Combien d’espaces de noms d’identité sont associés aux {AUDIENCE_NAME} d’audience ?
-* Afficher un rapport de tous les segments d’audience évalués aujourd’hui
-* Combien de segments ont des profils qui se chevauchent ?
+* Me montrer un rapport de toutes les audiences évaluées aujourd’hui
+* Combien d’audiences ont des profils qui se chevauchent ?
 * Nombre de lots chargés dans {DATASET_NAME}
 * Combien d’offres actives ai-je ?
 * Combien de campagnes actives ai-je ?

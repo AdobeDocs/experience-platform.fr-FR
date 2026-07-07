@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;IAB;IAB 2.0;consentement;Consentement
 solution: Experience Platform
 title: Prise en charge de l’IAB TCF 2.0 dans Experience Platform
-description: Découvrez comment configurer vos opérations et schémas de données pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
+description: Découvrez comment configurer vos opérations et schémas de données pour transmettre les choix de consentement des clients lors de l’activation d’audiences vers des destinations dans Adobe Experience Platform.
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
@@ -30,9 +30,9 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 2622
+source-wordcount: 2620
 ht-degree: 2%
 
 ---
@@ -45,13 +45,13 @@ Le [!DNL Transparency & Consent Framework] (TCF), tel que défini par le [!DNL I
 >
 >Vous trouverez plus d&#39;informations sur le TCF 2.0 sur le site web [IAB Europe](https://iabeurope.eu/), y compris les supports et les spécifications techniques.
 
-Adobe Experience Platform fait partie de la liste de fournisseurs [IAB TCF 2.0](https://iabeurope.eu/vendor-list-tcf/) enregistrée sous l’ID **565**. Conformément aux exigences de TCF 2.0, Experience Platform vous permet de collecter les données de consentement des clients et de les intégrer à vos profils clients stockés. Ces données de consentement peuvent ensuite être prises en compte pour déterminer si les profils sont inclus dans les segments d’audience exportés, selon leur cas d’utilisation.
+Adobe Experience Platform fait partie de la liste de fournisseurs [IAB TCF 2.0](https://iabeurope.eu/vendor-list-tcf/) enregistrée sous l’ID **565**. Conformément aux exigences de TCF 2.0, Experience Platform vous permet de collecter les données de consentement des clients et de les intégrer à vos profils clients stockés. Ces données de consentement peuvent ensuite être prises en compte pour déterminer si les profils sont inclus dans les audiences exportées, selon leur cas d’utilisation.
 
 >[!IMPORTANT]
 >
 >Experience Platform peut uniquement se conformer à la version 2.0 du TCF (ou ultérieure). Les versions précédentes du TCF ne sont pas prises en charge.
 
-Ce document présente un aperçu de la configuration de vos opérations de données et de vos schémas de profil pour accepter les données de consentement client générées par votre plateforme de gestion du consentement (CMP). Elle explique également comment Experience Platform transmet les choix de consentement des utilisateurs et utilisatrices lors de l’exportation de segments.
+Ce document présente un aperçu de la configuration de vos opérations de données et de vos schémas de profil pour accepter les données de consentement client générées par votre plateforme de gestion du consentement (CMP). Elle explique également comment Experience Platform transmet les choix de consentement des utilisateurs lors de l’exportation d’audiences.
 
 ## Conditions préalables
 
@@ -95,7 +95,7 @@ Une fois les données de consentement TCF ingérées avec succès, les processus
 
 1. [!DNL Real-Time Customer Profile] met à jour les données de consentement stockées pour le profil de ce client.
 1. Experience Platform traite les ID client uniquement si l’autorisation du fournisseur pour Experience Platform (565) est fournie pour chaque ID d’un cluster.
-1. Lors de l’exportation de segments vers des destinations appartenant aux membres de la liste des fournisseurs TCF 2.0, Experience Platform n’inclut que les profils si les autorisations de fournisseur pour Experience Platform (565) *et* la destination individuelle sont fournies pour chaque identifiant d’un cluster.
+1. Lors de l’exportation d’audiences vers des destinations appartenant aux membres de la liste des fournisseurs TCF 2.0, Experience Platform n’inclut que les profils si les autorisations de fournisseur pour Experience Platform (565) *et* la destination individuelle sont fournies pour chaque identifiant d’un cluster.
 
 Le reste des sections de ce document fournit des conseils sur la configuration d’Experience Platform et de vos opérations de données pour répondre aux exigences de collecte et d’application décrites ci-dessus.
 
@@ -128,7 +128,7 @@ Les données de consentement du client doivent être envoyées aux jeux de donn�
 
 Une fois que vous avez créé un jeu de données compatible avec [!DNL Profile] pour la collecte des données de consentement, vous devez vous assurer que vos politiques de fusion ont été configurées pour toujours inclure les champs de consentement TCF dans vos profils de clients. Cela implique de définir la priorité du jeu de données afin que votre jeu de données de consentement soit prioritaire sur les autres jeux de données potentiellement conflictuels.
 
-Pour plus d’informations sur l’utilisation des politiques de fusion, reportez-vous à la [&#x200B; présentation des politiques de fusion &#x200B;](/help/profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos segments incluent tous les attributs de consentement requis fournis par le [groupe de champs de schéma de confidentialité XDM](./dataset.md#privacy-field-group), comme indiqué dans le guide sur la préparation des jeux de données.
+Pour plus d’informations sur l’utilisation des politiques de fusion, reportez-vous à la [&#x200B; présentation des politiques de fusion &#x200B;](/help/profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos audiences incluent tous les attributs de consentement requis fournis par le [groupe de champs de schéma de confidentialité XDM](./dataset.md#privacy-field-group), comme indiqué dans le guide sur la préparation des jeux de données.
 
 ## Intégrer Experience Platform Web SDK pour collecter les données de consentement des clients {#sdk}
 
@@ -250,17 +250,17 @@ alloy("sendEvent", {
 
 De nombreuses commandes Web SDK renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation au client. Voir [Réponses des commandes](/help/collection/js/commands/command-responses.md) pour plus d’informations.
 
-## Exporter les segments {#export}
+## Exporter les audiences {#export}
 
 >[!NOTE]
 >
->Avant de commencer à exporter des segments, vous devez vous assurer que vos segments incluent tous les champs de consentement obligatoires. Pour plus d’informations, consultez la section sur la [configuration des politiques de fusion](#merge-policies).
+>Avant de commencer à exporter des audiences, vous devez vous assurer que vos audiences incluent tous les champs de consentement obligatoires. Pour plus d’informations, consultez la section sur la [configuration des politiques de fusion](#merge-policies).
 
-Une fois que vous avez collecté les données de consentement des clients et que vous avez créé des segments d’audience contenant les attributs de consentement requis, vous pouvez appliquer la conformité TCF 2.0 lors de l’exportation de ces segments vers des destinations en aval.
+Une fois que vous avez collecté les données de consentement des clients et créé des audiences contenant les attributs de consentement requis, vous pouvez appliquer la conformité TCF 2.0 lors de l’exportation de ces audiences vers des destinations en aval.
 
 Si le `gdprApplies` de paramètre de consentement est défini sur `true` pour un ensemble de profils client, toutes les données de ces profils exportées vers des destinations en aval sont filtrées en fonction des préférences de consentement TCF pour chaque profil. Tout profil qui ne répond pas aux préférences de consentement requises est ignoré pendant le processus d’exportation.
 
-Les clients doivent consentir aux fins suivantes (comme indiqué par les [politiques TCF 2.0](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) pour que leurs profils soient inclus dans les segments qui sont exportés vers les destinations :
+Les clients doivent consentir aux fins suivantes (comme indiqué par les politiques [TCF 2.0](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) pour que leurs profils soient inclus dans les audiences exportées vers les destinations :
 
 * **Objectif 1** : Stocker et/ou accéder à des informations sur un appareil
 * **Objectif 10** : Développer et améliorer les produits
@@ -269,11 +269,11 @@ TCF 2.0 exige également que la source de données vérifie l’autorisation du 
 
 >[!NOTE]
 >
->Tous les segments partagés avec Adobe Audience Manager contiennent les mêmes valeurs de consentement TCF 2.0 que leurs homologues Experience Platform. Comme [!DNL Audience Manager] partage le même ID de fournisseur qu’Experience Platform (565), les mêmes objectifs et autorisations de fournisseur sont requis. Pour plus d’informations, consultez le document sur le plug-in [Adobe Audience Manager pour IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=fr).
+>Toutes les audiences partagées avec Adobe Audience Manager contiennent les mêmes valeurs de consentement TCF 2.0 que leurs homologues Experience Platform. Comme [!DNL Audience Manager] partage le même ID de fournisseur qu’Experience Platform (565), les mêmes objectifs et autorisations de fournisseur sont requis. Pour plus d’informations, consultez le document sur le plug-in [Adobe Audience Manager pour IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=fr).
 
 ## Tester votre implémentation {#test-implementation}
 
-Une fois que vous avez configuré votre implémentation TCF 2.0 et que vous avez exporté des segments vers les destinations, toutes les données qui ne répondent pas aux exigences de consentement ne sont pas exportées. Pour vérifier si les profils client corrects ont été filtrés pendant l’exportation, vous devez vérifier manuellement les magasins de données sur vos destinations pour voir si le consentement a été correctement appliqué.
+Une fois que vous avez configuré votre implémentation TCF 2.0 et que vous avez exporté des audiences vers les destinations, toutes les données qui ne répondent pas aux exigences de consentement ne seront pas exportées. Pour vérifier si les profils client corrects ont été filtrés pendant l’exportation, vous devez vérifier manuellement les magasins de données sur vos destinations pour voir si le consentement a été correctement appliqué.
 
 >[!IMPORTANT]
 >

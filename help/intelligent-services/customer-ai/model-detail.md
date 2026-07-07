@@ -19,7 +19,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
 source-wordcount: 1040
 ht-degree: 0%
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 ## Solidité {#robustness}
 
-**Robustesse du modèle** : le modèle maintient une forte généralisation aux nouveaux enregistrements de consommateurs. Les performances restent stables sur différents segments de consommateurs, mais se dégradent légèrement lorsque le comportement des utilisateurs s’écarte considérablement des modèles historiques.
+**Robustesse du modèle** : le modèle maintient une forte généralisation aux nouveaux enregistrements de consommateurs. Les performances restent stables pour différentes audiences de consommateurs, mais se dégradent légèrement lorsque le comportement des utilisateurs s’écarte considérablement des modèles historiques.
 
 ## Considérations éthiques {#ethical-considerations}
 

@@ -21,10 +21,10 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 2165b294f87139a07bec0553b380aba4699b1d40
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: 4902
-ht-degree: 24%
+source-wordcount: 4896
+ht-degree: 23%
 
 ---
 
@@ -80,7 +80,7 @@ Notez que vous ne devez **pas** inclure d’informations de consentement avec un
 
 ### Puis-je utiliser une audience générée en externe pour créer d’autres audiences ?
 
-Oui, les audiences générées en externe apparaîtront dans l’inventaire des audiences. elles peuvent être utilisés lors de la création d’audiences dans le [Créateur de segments](./ui/segment-builder.md).
+Oui, toute audience générée de manière externe apparaîtra dans l’inventaire des audiences et pourra être utilisée lors de la création d’audiences dans le [créateur de segments](./ui/segment-builder.md).
 
 ### À quelle fréquence les audiences générées en externe sont-elles évaluées ?
 
@@ -293,7 +293,7 @@ La section suivante répertorie les questions relatives à la composition de l�
 
 La composition de l’audience et le créateur de segments jouent tous deux un rôle important dans la création d’audiences dans Experience Platform.
 
-Le créateur de segments est plus adapté à la création d’audiences **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée au traitement et à la personnalisation de l’audience **pour créer de nouvelles audiences basées sur une audience existante**.
+Le créateur de segments est plus adapté à l’audience **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée au **traitement et personnalisation** (pour créer de nouvelles audiences basées sur une audience existante).
 
 Le tableau suivant illustre la différence entre les deux services :
 
@@ -401,7 +401,7 @@ Supposons, par exemple, que vous ayez créé deux audiences qui s’excluent mut
 
 Lorsque le traitement d’évaluation de segmentation par lots s’exécute, le profil 1 passe à l’audience A, tandis que le profil 2 passe à l’audience B. Plus tard, mais avant l’exécution du traitement d’évaluation de segmentation par lots du lendemain, un événement qui réconcilie les deux profils entre dans Experience Platform. Par conséquent, un seul profil fusionné contenant les profils 1 et 2 est créé.
 
-Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivante, le nouveau profil fusionné aura une appartenance à l’audience dans **les deux** profil 1 et profil 2. Par conséquent, cela signifie qu’elle sera membre des **à la fois** audience A et audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la **exactement la même situation** qu’avant la connexion des profils, puisqu’il n’y avait toujours qu’une seule personne concernée et qu’Experience Platform ne disposait tout simplement **pas** d’informations suffisantes pour connecter les deux profils.
+Jusqu’à l’exécution de la tâche d’évaluation d’audience par lots suivante, le nouveau profil fusionné aura une appartenance à l’audience dans **les deux** profil 1 et profil 2. Par conséquent, cela signifie qu’elle sera membre des **à la fois** audience A et audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la **exactement la même situation** qu’avant la connexion des profils, puisqu’il n’y avait toujours qu’une seule personne concernée et qu’Experience Platform ne disposait tout simplement **pas** d’informations suffisantes pour connecter les deux profils.
 
 Si vous utilisez la recherche de profil pour récupérer le profil nouvellement créé et examiner son appartenance à l’audience, elle indique qu’elle est membre des **deux** audience A et audience B, malgré le fait que ces deux audiences ont des définitions contradictoires. Une fois la tâche d’évaluation de segmentation par lots quotidienne exécutée, l’appartenance à l’audience sera mise à jour pour refléter cet état mis à jour des données de profil.
 

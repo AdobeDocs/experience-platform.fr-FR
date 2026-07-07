@@ -17,7 +17,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 398
 ht-degree: 79%
@@ -40,7 +40,7 @@ Les réglementations légales relatives à la confidentialité, telles que le [!
 
 ## Fonctionnalités de désinscription
 
-[!DNL Real-Time CDP] permet aux clients de refuser (opt-out) que leurs données personnelles soient incluses dans les cas d’utilisation de segmentation. Les préférences de désinscription des clients sont capturées et stockées par [!DNL Real-Time Customer Profile] et peuvent être appliquées en excluant les utilisateurs qui se sont désinscrits d’une audience à l’aide d’une logique booléenne (« AND NOT ») dans le prédicat de segment.
+[!DNL Real-Time CDP] permet aux clients de refuser (opt-out) que leurs données personnelles soient incluses dans les cas d’utilisation de segmentation. Les préférences de désinscription des clients sont capturées et stockées par [!DNL Real-Time Customer Profile] et peuvent être appliquées en excluant les utilisateurs qui se sont désinscrits d’une audience à l’aide d’une logique booléenne (« AND NOT ») dans le prédicat d’audience.
 
 Consultez le document sur le [respect des demandes de désinscription](../../segmentation/tutorials/consents.md) dans la documentation du service de segmentation d’Adobe Experience Platform pour plus d’informations.
 

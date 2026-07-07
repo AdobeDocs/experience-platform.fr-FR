@@ -25,9 +25,9 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: 689
+source-wordcount: 688
 ht-degree: 2%
 
 ---
@@ -75,7 +75,7 @@ Lors de la création d’une définition de segment dans l’interface utilisate
 
 ![](../images/tutorials/opt-outs/consents.png)
 
-Sélectionnez d’abord la catégorie **[!UICONTROL Collecte de données]**, puis faites glisser **[!UICONTROL Valeur de choix]** dans le créateur de segments. Lors de l’ajout de l’attribut à la définition de segment, vous pouvez spécifier les [valeurs de consentement](../../xdm/field-groups/profile/consents.md#choice-values) qui doivent être incluses ou exclues.
+Commencez par sélectionner la catégorie **[!UICONTROL Collecte de données]**, puis faites glisser **[!UICONTROL Valeur de choix]** dans le créateur de segments. Lors de l’ajout de l’attribut à la définition de segment, vous pouvez spécifier les [valeurs de consentement](../../xdm/field-groups/profile/consents.md#choice-values) qui doivent être incluses ou exclues.
 
 ![](../images/tutorials/opt-outs/consent-values.png)
 

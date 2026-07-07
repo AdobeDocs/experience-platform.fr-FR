@@ -44,7 +44,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 5507
 ht-degree: 1%
@@ -267,9 +267,9 @@ Utilisez Customer Journey Analytics pour effectuer une analyse cross-marché et 
 
 Le sandbox global permet également aux équipes marketing internationales de définir et de gérer des audiences à plus grande échelle. À l’aide des outils de sandbox, ces audiences globales (définitions uniquement, et non données) peuvent être exportées du sandbox global vers des sandbox individuels de marque ou régionaux, ce qui permet aux équipes marketing locales de les évaluer et de les activer dans leurs marchés respectifs.
 
-En outre, vous pouvez utiliser la correspondance de segments Experience Platform, une fonctionnalité de Platform qui permet le partage de segments entre sandbox (audience qualifiée) entre différentes entités organisationnelles ou commerciales.
+En outre, vous pouvez utiliser la correspondance de segments Experience Platform, une fonctionnalité de Platform qui permet le partage d’audiences entre sandbox (audience qualifiée) entre différentes entités organisationnelles ou commerciales.
 
-Ce service de partage de segments permet à deux utilisateurs ou plus d’échanger des données de segment de manière sécurisée, contrôlée et respectueuse de la vie privée.
+Ce service de partage d’audience permet à deux utilisateurs ou plus d’échanger des données d’audience de manière sécurisée, contrôlée et respectueuse de la vie privée.
 
 Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/segment-match/overview).
 

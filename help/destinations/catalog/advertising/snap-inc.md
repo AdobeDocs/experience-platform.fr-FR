@@ -17,9 +17,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1205
+source-wordcount: 1212
 ht-degree: 21%
 
 ---
@@ -46,9 +46,9 @@ Pour utiliser cette destination, vous devez disposer d’un compte Snapchat Ads.
 
 ## Limites {#limitations}
 
-* Snap Inc ne prend pas en charge les identités multiples pour un segment d’audience donné. Mappez une seule identité lors de l’activation d’un segment.
-* Snap Inc ne prend pas en charge le changement de nom des segments. Pour renommer un segment, vous devez le désactiver, le renommer, puis l’activer.
-* Il n’est pas possible de définir une période de conservation pour les membres d’un segment ciblé. Tous les membres disposent d’une rétention à vie et resteront dans l’audience jusqu’à leur suppression.
+* Snap Inc ne prend pas en charge les identités multiples pour une audience donnée. Veuillez ne mapper qu’une seule identité lors de l’activation d’une audience.
+* Snap Inc ne prend pas en charge le changement de nom des audiences. Pour renommer une audience, vous devez la désactiver, la renommer, puis l’activer.
+* Il n’est pas possible de définir une période de conservation pour les membres d’une audience. Tous les membres ont une rétention à vie et resteront dans l’audience jusqu’à leur suppression.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -122,8 +122,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 Pour vous authentifier auprès de la destination, procédez comme suit :
 
 1. Recherchez la destination *Snap Inc* dans le Catalogue de destinations d’[!DNL Adobe Experience Platform] et sélectionnez **Configurer**.
-2. Sélectionnez **[!UICONTROL Se connecter à la destination]**. Vous serez redirigé vers l’écran suivant :
-   ![Écran d’authentification 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
+2. Sélectionnez **[!UICONTROL Se connecter à la destination]**. Vous serez redirigé vers l’écran suivant :   ![Écran d’authentification 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Saisissez vos identifiants Snapchat et sélectionnez **Connexion**.
 4. Les données Snapchat auxquelles [!DNL Adobe Experience Platform] pourrez accéder vous seront présentées. Sélectionnez **Continuer** pour poursuivre le processus de connexion.
 

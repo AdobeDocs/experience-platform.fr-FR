@@ -21,7 +21,7 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 1327
 ht-degree: 0%
@@ -147,4 +147,4 @@ L’assistant AI ne peut actuellement pas répondre aux questions basées sur le
 
 ### Mises À Jour Des Données En Temps Réel
 
-Les estimations fournies par l’assistant AI sont basées sur des instantanés de données récents, mais pas en temps réel. Les données sont actualisées toutes les 24 à 48 heures, de sorte que les informations reflètent ce retard. Cette limitation signifie que les utilisateurs et utilisatrices ne peuvent pas recevoir de mises à jour instantanées si un segment ou un jeu de données change considérablement dans un court laps de temps.
+Les estimations fournies par l’assistant AI sont basées sur des instantanés de données récents, mais pas en temps réel. Les données sont actualisées toutes les 24 à 48 heures, de sorte que les informations reflètent ce retard. Cette limitation signifie que les utilisateurs et utilisatrices ne peuvent pas recevoir de mises à jour instantanées si une audience ou un jeu de données change considérablement dans un court laps de temps.

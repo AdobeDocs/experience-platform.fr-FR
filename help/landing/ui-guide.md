@@ -30,9 +30,9 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1973
 ht-degree: 3%
 
 ---
@@ -51,7 +51,7 @@ Après vous être connecté à Adobe Experience Platform, vous êtes sur la page
 
 ### Mesures
 
-Le tableau de bord des mesures fournit des cartes qui vous donnent des informations sur les jeux de données, les profils, les segments et les destinations au sein de votre organisation.
+Le tableau de bord des mesures fournit des cartes qui vous donnent des informations sur les jeux de données, les profils, les audiences et les destinations au sein de votre organisation.
 
 ![](images/user-guide/homepage-dashboard.png)
 
@@ -59,13 +59,13 @@ La section **[!UICONTROL Jeux de données]** indique le nombre de jeux de donné
 
 La section **[!UICONTROL Profils]** indique le nombre total de personnes disposant de profils au sein de votre organisation, à l’exclusion des fragments de profil. Ce nombre total de personnes représente l’audience adressable totale et est mis à jour une fois toutes les 24 heures. Pour plus d’informations sur les profils, consultez la [présentation du profil client en temps réel](../profile/home.md).
 
-La section **[!UICONTROL Segments]** indique le nombre total de segments créés dans votre organisation. Ce nombre est mis à jour lorsqu’un nouveau segment est créé. Pour plus d’informations sur les segments, consultez la [présentation de Segmentation Service](../segmentation/home.md).
+La section **[!UICONTROL Audiences]** indique le nombre total d’audiences créées au sein de votre organisation. Ce nombre est mis à jour lorsqu’une nouvelle audience est créée. Pour plus d’informations sur les audiences, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
 La section **[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation. Ce nombre est mis à jour lorsqu’une nouvelle destination est créée. Vous trouverez plus d’informations sur les destinations dans la [présentation des destinations](../destinations/home.md).
 
 ### Données récentes
 
-Le tableau de bord des données récentes fournit des informations sur les jeux de données, les sources, les segments et les destinations récemment créés.
+Le tableau de bord des données récentes fournit des informations sur les jeux de données, les sources, les audiences et les destinations récemment créés.
 
 ![](images/user-guide/homepage-recent.png)
 
@@ -73,7 +73,7 @@ La section **[!UICONTROL Jeux de données récents]** répertorie les cinq jeux 
 
 La section **[!UICONTROL Sources récentes]** répertorie les cinq connecteurs source les plus récemment créés au sein de votre organisation. Cette liste est mise à jour chaque fois qu’un nouveau connecteur source est créé. Vous pouvez sélectionner une connexion source dans la liste pour l’afficher. Vous trouverez plus d’informations sur le connecteur spécifié ou sélectionnez **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les connexions source créées. Pour plus d’informations sur les sources, reportez-vous à la [présentation des sources](../sources/home.md).
 
-La section **[!UICONTROL Segments récents]** répertorie les cinq définitions de segment créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une définition de segment est créée. Vous pouvez sélectionner une définition de segment dans la liste à afficher. Vous pouvez trouver des informations supplémentaires sur la définition de segment spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les définitions de segment créées. Pour plus d’informations sur les segments, consultez la [présentation de Segmentation Service](../segmentation/home.md).
+La section **[!UICONTROL Audiences récentes]** répertorie les cinq dernières audiences créées au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle audience est créée. Vous pouvez sélectionner une audience dans la liste pour l’afficher. Vous trouverez plus d’informations sur l’audience spécifiée ou sélectionnez **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les audiences créées. Pour plus d’informations sur les audiences, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
 La section **[!UICONTROL Destinations récentes]** répertorie les cinq destinations créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle destination est créée. Vous pouvez sélectionner une destination dans la liste à afficher. Vous pouvez trouver des informations supplémentaires sur la destination spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les destinations créées. Vous trouverez plus d’informations sur les destinations dans la [présentation des destinations](../destinations/home.md).
 
@@ -155,7 +155,7 @@ La section **[!UICONTROL Destinations]** vous permet de créer, mettre à jour e
 
 La section **[!UICONTROL Profils]** vous permet de parcourir les profils client, d’afficher les mesures des profils, de créer et de gérer des politiques de fusion et d’afficher des schémas d’union. Pour en savoir plus sur l’utilisation de la section [!UICONTROL Profils], veuillez lire le [[!DNL Profile] guide d’utilisation](../profile/ui/user-guide.md). Pour plus d’informations sur le profil client en temps réel, consultez la [présentation du profil client en temps réel](../profile/home.md).
 
-La section **[!UICONTROL Audiences]** vous permet de créer et de gérer des définitions de segment. Pour en savoir plus sur l’utilisation de la section [!UICONTROL Audiences], veuillez lire le guide d’utilisation de la [segmentation](../segmentation/ui/overview.md). Pour plus d’informations sur Segmentation Service, consultez la [présentation de Segmentation Service](../segmentation/home.md).
+La section **[!UICONTROL Audiences]** vous permet de créer et de gérer des audiences. Pour en savoir plus sur l’utilisation de la section [!UICONTROL Audiences], veuillez lire le guide d’utilisation de la [segmentation](../segmentation/ui/overview.md). Pour plus d’informations sur Segmentation Service, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
 La section **[!UICONTROL Identités]** vous permet de créer et de gérer des espaces de noms d’identité. Pour plus d’informations sur la section [!UICONTROL Identités], y compris des informations sur les espaces de noms d’identité et sur l’utilisation des identités dans l’interface utilisateur d’Experience Platform, reportez-vous à la [présentation des espaces de noms d’identité](../identity-service/features/namespaces.md).
 

@@ -19,10 +19,10 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 1852
-ht-degree: 90%
+ht-degree: 89%
 
 ---
 
@@ -118,7 +118,7 @@ Computed attributes are functions used to aggregate event-level data into profil
 
 ## Profils et audiences
 
-Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audiences nécessaires à l’optimisation de l’expérience de chaque client et cliente. Lorsqu’une audience est créée, l’identifiant de cette audience est ajouté à la liste d’appartenance à l’audience pour tous les profils éligibles. Les règles de segmentation sont créées et appliquées aux données du [!DNL Real-Time Customer Profile] à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, commencez pas lire la [Présentation de Segmentation Service](../segmentation/home.md).
+Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audiences nécessaires à l’optimisation de l’expérience de chaque client et cliente. Lorsqu’une audience est créée, l’identifiant de cette audience est ajouté à la liste d’appartenance à l’audience pour tous les profils éligibles. Les règles d’audience sont créées et appliquées aux données [!DNL Real-Time Customer Profile] à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, commencez pas lire la [Présentation de Segmentation Service](../segmentation/home.md).
 
 ### Ingestion en flux continu et segmentation par flux
 

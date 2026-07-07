@@ -10,7 +10,7 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 584
 ht-degree: 55%
@@ -37,7 +37,7 @@ Adobe vous recommande de classer vos segments comme suit :
 
 >[!TIP]
 >
->Adobe Real-Time CDP propose [trois types d’évaluation des segments](/help/segmentation/home.md#evaluate-segments) : [!UICONTROL lot], [!UICONTROL streaming] et [!UICONTROL Edge]. Les clientes et clients qui utilisent des segments en temps réel dans Audience Manager peuvent être restreint(e)s par la limitation actuelle de 500 segments de streaming dans Real-Time CDP. En savoir plus sur les [mécanismes de sécurisation de la segmentation](/help/profile/guardrails.md).
+>Adobe Real-Time CDP propose [trois types d’évaluation des audiences](/help/segmentation/home.md#evaluate-segments) : [!UICONTROL lot], [!UICONTROL streaming] et [!UICONTROL Edge]. Les clientes et clients qui utilisent des segments en temps réel dans Audience Manager peuvent être restreint(e)s par la limitation actuelle de 500 segments de streaming dans Real-Time CDP. En savoir plus sur les [mécanismes de sécurisation de la segmentation](/help/profile/guardrails.md).
 
 ## &#x200B;2. Quels segments sont essentiels à l’envoi par l’intermédiaire du connecteur Audience Manager Source  ?
 

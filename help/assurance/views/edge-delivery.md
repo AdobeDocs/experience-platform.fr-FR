@@ -19,7 +19,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 971
 ht-degree: 1%
@@ -76,10 +76,10 @@ Cette section fournit une présentation générale de la requête sélectionnée
 
 ### Profile
 
-Cette section fournit des informations sur les données de profil utilisées lors du traitement de la requête, y compris le mappage d’identité, l’appartenance à un segment et les paramètres de consentement.\
-La section [!UICONTROL Profil] est très utile pour résoudre les problèmes tels que le mauvais fonctionnement de la diffusion en raison d’une appartenance à un segment manquante ou retardée ou des paramètres de consentement d’opt-out.
+Cette section fournit des informations sur les données de profil utilisées lors du traitement de la requête, y compris le mappage d’identité, l’appartenance à l’audience et les paramètres de consentement.\
+La section [!UICONTROL Profil] est très utile pour résoudre les problèmes tels que le mauvais fonctionnement de la diffusion en raison d’une appartenance à l’audience manquante ou retardée ou des paramètres de consentement d’opt-out.
 
-![La section Profil comprend le mappage d’identité, l’appartenance à un segment et les paramètres de consentement](./images/edge-delivery/profile.png)
+![La section Profil comprend le mappage d’identité, l’appartenance à l’audience et les paramètres de consentement](./images/edge-delivery/profile.png)
 
 ### Activités qualifiées
 

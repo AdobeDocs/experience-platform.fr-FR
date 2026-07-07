@@ -12,7 +12,7 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 1048
 ht-degree: 3%
@@ -54,7 +54,7 @@ Lisez les guides sur [la connexion à une destination](/help/destinations/ui/con
 
 ## Déjà disponible : application des libellés d’accès à d’autres ressources Experience Platform {#apply-labels-other-resources}
 
-Bien que cette version vous permette d’accorder aux utilisateurs et utilisatrices l’accès au niveau de l’objet à des flux de données de destination spécifiques, la fonctionnalité d’octroi du contrôle d’accès au niveau de l’objet est déjà disponible pour d’autres ressources Experience Platform, telles que [audiences](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments).
+Bien que cette version vous permette d’accorder aux utilisateurs et utilisatrices l’accès au niveau de l’objet à des flux de données de destination spécifiques, la fonctionnalité d’octroi du contrôle d’accès au niveau de l’objet est déjà disponible pour d’autres ressources Experience Platform, telles que [audiences](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-audiences).
 
 ## Exemple de cas d’utilisation {#use-case-example}
 

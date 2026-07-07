@@ -14,9 +14,9 @@ subfeature_v2:
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
-source-wordcount: 1868
+source-wordcount: 1867
 ht-degree: 7%
 
 ---
@@ -198,7 +198,7 @@ Les mesures suivantes sont disponibles pour les tâches de segmentation :
 | Mesure | Description |
 | ------ | ----------- |
 | **[!UICONTROL Traitement de segmentation]** | Indique le nom de la tâche de segmentation. |
-| **[!UICONTROL Type]** | Indique le type de tâche de segmentation : exportation ou évaluation. Notez que dans les deux cas, la tâche de segmentation évalue ou exporte **toutes** les audiences appartenant à une organisation. Pour en savoir plus sur les tâches d’exportation, consultez le guide sur le point d’entrée [tâches d’exportation](../../segmentation/api/export-jobs.md). Pour en savoir plus sur les tâches d’évaluation, consultez le tutoriel sur [l’évaluation d’une définition de segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Type]** | Indique le type de tâche de segmentation : exportation ou évaluation. Notez que dans les deux cas, la tâche de segmentation évalue ou exporte **toutes** les audiences appartenant à une organisation. Pour en savoir plus sur les tâches d’exportation, consultez le guide sur le point d’entrée [tâches d’exportation](../../segmentation/api/export-jobs.md). Pour en savoir plus sur les tâches d’évaluation, consultez le tutoriel sur [l’évaluation d’une audience](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-an-audience). |
 | **[!UICONTROL Début du traitement]** | Date et heure de début de la tâche de segmentation. |
 | **[!UICONTROL Fin de la tâche]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
 | **[!UICONTROL Statut]** | Statut de la tâche terminée. Les statuts possibles de la tâche de segmentation sont Succès ou Échec. |

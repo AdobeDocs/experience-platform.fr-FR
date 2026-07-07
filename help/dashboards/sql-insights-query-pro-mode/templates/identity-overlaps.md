@@ -20,9 +20,9 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
-source-wordcount: 908
+source-wordcount: 906
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Utilisez des filtres personnalisés pour une analyse ciblée d’audiences et de
 
 La boîte de dialogue **[!UICONTROL Filtres]** s’affiche. Dans cette vue, choisissez les filtres globaux pour configurer votre audience, la politique de fusion et les identités à comparer. Sélectionnez les paramètres à analyser dans le menu déroulant de chaque section
 
-1. Sélectionnez un **[!UICONTROL Audience]** : choisissez le segment d’audience à analyser (par exemple, **Canada - Alberta**).
+1. Sélectionnez une **[!UICONTROL Audience]** : choisissez l’audience à analyser (par exemple, **Canada - Alberta**).
 2. Spécifiez une **[!UICONTROL Politique de fusion]** : définissez la politique de fusion qui détermine la manière dont les identités sont combinées dans l’audience sélectionnée (dans l’exemple de capture d’écran, la politique **basée sur la durée par défaut** est sélectionnée).
 3. Sélectionnez une **[!UICONTROL Identité A]** et **[!UICONTROL Identité B]** à comparer **&#x200B; : choisissez les deux types d’identité à comparer. Dans l’exemple, &#x200B;** Identité A **&#x200B; est sélectionné comme « crmId » et &#x200B;** Identité B** est sélectionné comme « e-mail ».
 4. **Définir une période** : sélectionnez une période prédéfinie telle que « Aujourd’hui » ou définissez manuellement les dates de début et de fin à l’aide des champs de calendrier.
@@ -64,7 +64,7 @@ Le tableau **[!UICONTROL Chevauchements d’identités d’audience]** affiche l
 
 | Nom de la colonne | Description |
 |-----------------|-------------------------------|
-| **[!UICONTROL Nom de l’audience]** | Nom de l’audience en cours d’analyse. Cette colonne identifie le segment d’audience en cours de révision afin de s’assurer que les informations sont axées sur le groupe cible prévu. |
+| **[!UICONTROL Nom de l’audience]** | Nom de l’audience en cours d’analyse. Cette colonne identifie l’audience en cours de révision afin de s’assurer que les informations sont axées sur le groupe cible prévu. |
 | **[!UICONTROL Identité A]** et **[!UICONTROL Identité B]** | Identités comparées (par exemple, `crmId` et `email`). Savoir quels types d’identité sont comparés vous permet d’identifier les stratégies de résolution d’identité qui contribuent au chevauchement des audiences et d’optimiser ces relations. |
 | **[!UICONTROL Nombre de chevauchements]** | Nombre de profils où les deux identités sont présentes. Cette mesure fournit des informations sur l’ampleur du chevauchement des identités dans l’audience. Ces informations sont essentielles pour évaluer l’efficacité de la résolution de plusieurs identités en profils unifiés, ce qui peut améliorer les stratégies de ciblage et de personnalisation. |
 | **[!UICONTROL Nombre d’identités A]** | Nombre total de profils dans l’audience sélectionnée qui contiennent **Identité A**. Utilisez ces informations pour comprendre la prévalence du type d’identité principale au sein de l’audience et évaluer son rôle dans l’analyse de chevauchement. |

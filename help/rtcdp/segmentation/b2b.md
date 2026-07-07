@@ -13,9 +13,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 1700
+source-wordcount: 1697
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Une fois ces exigences remplies, vous pouvez combiner ces attributs pour des cas
 
 ## Prise en main {#getting-started}
 
-Une fois que les schémas d’union des classes B2B ont des relations établies et ont été utilisés pour ingérer des données, leurs attributs sont disponibles dans le rail gauche du créateur de segments.
+Une fois que les schémas d’union pour les classes B2B ont des relations établies et ont été utilisés pour ingérer des données, leurs attributs sont disponibles dans le rail gauche du créateur de segments.
 
 Les classes B2B et leurs attributs sont ajoutés avec un libellé `B2B` dans l’espace de travail Segmentation pour les différencier de ceux disponibles en standard dans Real-Time Customer Data Platform.
 
@@ -73,9 +73,9 @@ Sélectionnez le schéma approprié dans la liste disponible, puis sélectionnez
 
 ![exemple de clé source utilisant la relation personnes dans l’espace de travail des schémas](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
-Cette relation est reflétée dans le créateur de segments par l’utilisation de dossiers `Key`, comme illustré dans l’image ci-dessous.
+Cette relation se reflète dans le créateur de segments par l’utilisation de dossiers `Key`, comme illustré dans l’image ci-dessous.
 
-![exemple de clé source à l’aide du créateur de segments dans l’espace de travail segmentation](../assets/segmentation/b2b/source-key-segmentation-example.png)
+![exemple de clé source à l’aide du créateur de segments dans l’espace de travail de segmentation](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
 Reportez-vous à la section [schémas dans la documentation Real-Time Customer Data Platform B2B edition](../schemas/b2b.md) pour plus d’informations sur les classes B2B disponibles.
 
@@ -83,7 +83,7 @@ Les cas d’utilisation ci-dessous fournissent des informations sur les classes 
 
 ## Exemples de différents cas d’utilisation de segmentation {#use-cases}
 
-Les cas d’utilisation suivants sont disponibles pour la segmentation avec B2B edition. Chaque exemple fournit une description de ce que fait l’audience et une description des classes utilisées pour les créer. Les images fournies mettent en surbrillance le chemin d’accès au fichier dans le rail latéral [!UICONTROL Attributs] qui reflète la structure du schéma. La section [!UICONTROL Propriétés du segment] à droite de l’affichage contient une répartition écrite des attributs de l’audience.
+Les cas d’utilisation suivants sont disponibles pour la segmentation avec B2B edition. Chaque exemple fournit une description de ce que fait l’audience et une description des classes utilisées pour les créer. Les images fournies mettent en surbrillance le chemin d’accès au fichier dans le rail latéral [!UICONTROL Attributs] qui reflète la structure du schéma. La section [!UICONTROL Propriétés de l’audience] à droite de l’affichage contient une répartition écrite des attributs de l’audience.
 
 ### Exemple 1 : trouver des « décideurs » pour les opportunités B2B {#find-decision-maker}
 

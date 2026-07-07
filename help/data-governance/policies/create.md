@@ -17,10 +17,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1211
-ht-degree: 100%
+source-wordcount: 1210
+ht-degree: 98%
 
 ---
 
@@ -434,6 +434,6 @@ Une réponse réussie renvoie un état HTTP 200 (OK) et les détails de la poli
 
 En suivant ce tutoriel, vous avez créé une politique d’utilisation des données pour une action marketing. Vous pouvez maintenant continuer avec le tutoriel sur l’[application des politiques d’utilisation des données](../enforcement/api-enforcement.md) afin d’apprendre à rechercher les violations de politique et à les traiter dans votre application d’expérience.
 
-Pour plus d’informations sur les différentes opérations disponibles dans l’API [!DNL Policy Service], consultez le [guide de développement de Policy Service](../api/getting-started.md). Pour plus d’informations sur l’application des politiques pour les données du [!DNL Real-Time Customer Profile], consultez le tutoriel sur l’[application de la conformité de l’utilisation des données aux segments d’audience](../../segmentation/tutorials/governance.md).
+Pour plus d’informations sur les différentes opérations disponibles dans l’API [!DNL Policy Service], consultez le [guide de développement de Policy Service](../api/getting-started.md). Pour plus d’informations sur l’application des politiques pour les données [!DNL Real-Time Customer Profile], consultez le tutoriel sur [l’application de la conformité d’utilisation des données aux audiences](../../segmentation/tutorials/governance.md).
 
 Pour découvrir comment gérer les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform], consultez le [guide d’utilisation des politiques](user-guide.md).

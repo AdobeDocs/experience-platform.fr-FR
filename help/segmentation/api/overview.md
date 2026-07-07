@@ -14,9 +14,9 @@ subfeature_v2:
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 73387ee674dac6ba2ee167c66dbfda52a4b48466
 workflow-type: tm+mt
-source-wordcount: 622
+source-wordcount: 621
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 
 ## Tâches d’exportation
 
-Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres des segments d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée `/export/jobs` pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
+Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée `/export/jobs` pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
 
 Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [&#x200B; guide des points d’entrée des tâches d’exportation](./export-jobs.md).
 

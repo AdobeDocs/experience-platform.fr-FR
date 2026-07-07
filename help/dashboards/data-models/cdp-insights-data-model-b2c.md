@@ -25,7 +25,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 4be356e7e58f8140c98e7d4becdc633f890f1202
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 1403
 ht-degree: 5%
@@ -192,7 +192,7 @@ Le tableau `adwh_fact_profile_by_segment_trendlines` est un jeu de données syst
 | --- | --- |
 | `count_of_profiles` | Nombre total de profils dans l’audience au moment de l’enregistrement quotidien. |
 | `count_of_calculated_realized_profiles` | Nombre de profils qui ont eu un événement de qualification hier. Nombre de profils qui ont eu un événement de qualification hier. |
-| `count_of_calculated_existing_profiles` | Nombre de profils dont le dernier événement de qualification s’est produit avant hier. Ces profils existent toujours dans le segment depuis leur dernier événement de qualification. |
+| `count_of_calculated_existing_profiles` | Nombre de profils dont le dernier événement de qualification s’est produit avant hier. Ces profils existent toujours dans l’audience depuis leur dernier événement de qualification. |
 | `count_of_calculated_exited_profiles` | Nombre de profils qui ont quitté l’audience hier. |
 
 >[!NOTE]

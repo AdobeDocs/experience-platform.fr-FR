@@ -21,9 +21,9 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: 1933
+source-wordcount: 1929
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Recherchez vos attributs de consentement parmi les options disponibles. Sélecti
 
 Vous trouverez plus d’informations sur la [gestion du consentement dans la documentation sur la segmentation](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation).
 
-![Créateur de segments avec le dossier d’attributs [!UICONTROL Consentement et préférences] en surbrillance.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
+![Créateur de segments avec le dossier d’attributs [!UICONTROL Consentement et Préférences] en surbrillance.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
 Les différentes options de consentement et de préférence s’affichent. Comme cette démonstration porte sur le consentement pour contacter via divers canaux marketing, sélectionnez **[!UICONTROL Préférences marketing]**.
 

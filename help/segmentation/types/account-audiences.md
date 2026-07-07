@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: 1499
-ht-degree: 24%
+source-wordcount: 1496
+ht-degree: 23%
 
 ---
 
@@ -71,13 +71,13 @@ Pour créer une audience de compte, sélectionnez **[!UICONTROL Créer une audie
 
 Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributs], vous pouvez ajouter des attributs créés par Experience Platform et des attributs personnalisés.
 
-![Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences s’affichent.](../images/types/account/segment-builder.png)
+![&#x200B; Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences s’affichent.](../images/types/account/segment-builder.png)
 
 Sous l’onglet [!UICONTROL Audiences], vous pouvez ajouter des audiences basées sur les personnes créées précédemment à partir de lors de la création de votre propre audience de compte.
 
 ![L’onglet Audiences du créateur de segments est mis en surbrillance.](../images/types/account/audiences.png)
 
-Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](../ui/segment-builder.md).
+Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [guide de l’interface utilisateur du créateur de segments](../ui/segment-builder.md).
 
 ### Établir des relations {#relationships}
 

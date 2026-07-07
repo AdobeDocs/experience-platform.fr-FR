@@ -11,9 +11,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 953
+source-wordcount: 950
 ht-degree: 14%
 
 ---
@@ -34,7 +34,7 @@ Le widget [!UICONTROL Prise en main du profil client en temps réel] est divisé
 
 * **Ingérer des données dans Experience Platform** : ce widget vous dirige vers le catalogue des sources. Utilisez le catalogue de sources pour sélectionner une source et ingérer vos données dans Experience Platform. Sélectionnez **[Configurer les sources]** pour accéder au catalogue de sources. Pour plus d’informations, consultez la [vue d’ensemble des sources](../sources/home.md).
 * **Structures de données de modèle** : ce widget vous dirige vers la présentation des schémas. Utilisez la présentation des schémas pour rechercher des schémas existants ou créer un plan directeur qui décrit la structure de vos données. Sélectionnez **[!UICONTROL Créer un schéma]** pour accéder à l’interface de création de schéma. Pour plus d’informations, consultez la [présentation des schémas](../xdm/home.md).
-* **Créer des audiences** : ce widget vous dirige vers le créateur de segments dans l’interface utilisateur. Utilisez le Créateur de segments pour interagir avec les éléments de données Profil et définir les critères de votre définition de segment. Sélectionnez **[!UICONTROL Créer une audience]** pour accéder au créateur de segments. Pour plus d’informations, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../segmentation/home.md).
+* **Créer des audiences** : ce widget vous dirige vers le créateur de segments dans l’interface utilisateur. Utilisez le créateur de segments pour interagir avec les éléments de données de profil et définir les critères de votre définition de segment. Sélectionnez **[!UICONTROL Créer une audience]** pour accéder au créateur de segments. Pour plus d’informations, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../segmentation/home.md).
 * **Envoyer les données aux destinations** : ce widget vous dirige vers le catalogue des destinations. Utilisez le catalogue des destinations pour sélectionner une destination à laquelle vous pouvez ensuite vous connecter et envoyer des audiences. Sélectionnez **[!UICONTROL Configurer des destinations]** pour accéder au catalogue des destinations. Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../destinations/home.md).
 
 ![Page d’accueil de l’interface utilisateur d’Experience Platform affichant le widget de prise en main](assets/platform-home/getting-started-widget.png)

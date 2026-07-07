@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 73387ee674dac6ba2ee167c66dbfda52a4b48466
 workflow-type: tm+mt
-source-wordcount: 1621
+source-wordcount: 1620
 ht-degree: 12%
 
 ---
@@ -85,7 +85,7 @@ L’objet d’annonce décrit les détails de l’annonce numérique, tels que s
 | `keywordID` | Chaîne | Identifiant du mot-clé saisi par l’utilisateur dans une requête de recherche qui a déclenché cet événement. |
 | `keyword` | Chaîne | Mot-clé de liste sur lequel le client a enchéri. |
 | `isDynamicSearchAd` | Booléen | Indique si l’événement provient d’une publicité de recherche dynamique. |
-| `audienceID` | Chaîne | Identifiant du segment ciblé par l’annonce publicitaire. |
+| `audienceID` | Chaîne | Identifiant de l’audience ciblée par la publicité. |
 | `adGroupID` | Chaîne | Identifiant du groupe publicitaire associé à l’annonce publicitaire qui a déclenché cet événement. |
 | `campaignID` | Chaîne | Identifiant de la campagne associée à l’annonce publicitaire qui a déclenché cet événement. |
 | `networkType` | Chaîne | Type de réseau sur lequel l’événement s’est produit. Valeurs possibles : <ul><li>`search` : la publicité a été affichée sur le réseau de recherche.</li><li>`content` : la publicité s&#39;affichait sur le réseau de contenu.</li></ul> |

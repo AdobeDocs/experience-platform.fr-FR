@@ -15,16 +15,16 @@ subfeature_v2:
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 73387ee674dac6ba2ee167c66dbfda52a4b48466
 workflow-type: tm+mt
-source-wordcount: 1240
-ht-degree: 19%
+source-wordcount: 1241
+ht-degree: 16%
 
 ---
 
 # Point d’entrée des tâches de segmentation
 
-Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Elle fait référence à une [définition de segment](./segment-definitions.md), ainsi qu’à toute [politique de fusion](../../profile/api/merge-policies.md) qui contrôle la manière dont [!DNL Real-Time Customer Profile] fusionne les attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
+Une tâche de segmentation est un processus asynchrone qui crée une audience à la demande. Elle fait référence à une [définition de segment](./segment-definitions.md), ainsi qu’à toute [politique de fusion](../../profile/api/merge-policies.md) qui contrôle la manière dont [!DNL Real-Time Customer Profile] fusionne les attributs qui se chevauchent dans vos fragments de profil. Une fois la tâche de segmentation terminée, vous pouvez collecter de nombreuses informations sur la définition de segment, telles que les erreurs qui peuvent s’être produites pendant le traitement et la taille finale de votre audience.
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les tâches de segmentation et inclut des exemples d’appels API pour exécuter des actions de base à l’aide de l’API.
 
@@ -193,7 +193,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de seg
 | `metrics` | Objet contenant des informations de diagnostic sur la tâche de segmentation. |
 | `metrics.totalTime` | Objet contenant des informations sur les heures de début et de fin de la tâche de segmentation, ainsi que la durée totale prise. |
 | `metrics.profileSegmentationTime` | Objet contenant des informations sur les heures de début et de fin de l’évaluation de segmentation, ainsi que la durée totale prise. |
-| `metrics.segmentProfileCounter` | Nombre de profils qualifiés par segment. |
+| `metrics.segmentProfileCounter` | Nombre de profils qualifiés par définition de segment. |
 | `metrics.segmentedProfileByNamespaceCounter` | Le nombre de profils qualifiés pour chaque espace de noms d’identité sur la base de la définition de segment. |
 | `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque statut. Les trois statuts pris en charge sont les suivants : <ul><li>« réalisé » : nombre de profils qui remplissent les critères de la définition de segment.</li><li>« exited » : nombre de profils qui n’existent plus dans la définition de segment.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Nombre total de profils fusionnés par politique de fusion. |

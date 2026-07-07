@@ -15,7 +15,7 @@ role_v2:
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 484
 ht-degree: 2%
@@ -53,7 +53,7 @@ Les résultats d’apprentissage suivants sont abordés dans le cours Workspace 
 - Le rôle des hyper-paramètres dans le développement de modèles
 - Publication de modèles formés en tant que service
 - Comment utiliser le Workspace de science des données pour enrichir vos données de profil client en temps réel
-- Comment créer un segment en flux continu avec la sortie de votre modèle
+- Comment créer une audience de diffusion en continu avec la sortie de votre modèle
 
 ## Leçons
 

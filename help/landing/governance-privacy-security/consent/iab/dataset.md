@@ -19,7 +19,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 1697
 ht-degree: 2%
@@ -37,7 +37,7 @@ Plus précisément, deux jeux de données sont requis pour capturer les données
 
 >[!IMPORTANT]
 >
->Experience Platform applique uniquement les chaînes TCF collectées dans le jeu de données Profil individuel. Bien qu’un jeu de données ExperienceEvent soit toujours nécessaire pour créer un flux de données dans le cadre de ce workflow, il vous suffit d’ingérer des données dans le jeu de données de profil. Le jeu de données ExperienceEvent peut toujours être utilisé si vous souhaitez suivre les événements de changement de consentement au fil du temps, mais ces valeurs ne sont pas utilisées dans lors de l’application sur l’activation des segments.
+>Experience Platform applique uniquement les chaînes TCF collectées dans le jeu de données Profil individuel. Bien qu’un jeu de données ExperienceEvent soit toujours nécessaire pour créer un flux de données dans le cadre de ce workflow, il vous suffit d’ingérer des données dans le jeu de données de profil. Le jeu de données ExperienceEvent peut toujours être utilisé si vous souhaitez suivre les événements de changement de consentement au fil du temps, mais ces valeurs ne sont pas utilisées dans lors de l’application sur l’activation de l’audience.
 
 Ce document décrit les étapes à suivre pour configurer ces deux jeux de données. Pour une présentation du workflow complet de configuration des opérations de données Experience Platform pour le TCF 2.0, reportez-vous à la section [Présentation de la conformité au TCF 2.0 de l’IAB](./overview.md).
 

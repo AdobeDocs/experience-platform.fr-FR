@@ -3,10 +3,10 @@ title: Plateforme Marketing Zeta
 description: Zeta Marketing Platform (ZMP) est un système basé sur le cloud qui vous permet d'acquérir, de développer et de fidéliser plus efficacement les clients, grâce à l'intelligence artificielle (données propriétaires et IA).
 hide: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 0e902b50cce148e0fbbb8e33c227165942b08832
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 17%
+source-wordcount: '1494'
+ht-degree: 18%
 
 ---
 
@@ -24,9 +24,9 @@ Grâce au connecteur de plateforme marketing Zeta disponible dans [!DNL Adobe Ex
 
 ## Cas d’utilisation {#use-cases}
 
-### Créer des segments d’audience {#use-case-build-audiences}
+### Créer des audiences {#use-case-build-audiences}
 
-Un spécialiste marketing souhaite créer des profils d’audience uniques, identifier ses segments les plus importants et les utiliser sur tous les canaux numériques pris en charge par la plateforme marketing Zeta. Ils veulent créer une véritable vue 360 d’un profil de consommateur, créer et activer des audiences significatives. Vous trouverez plus d’informations sur les canaux pris en charge par la plateforme marketing Zeta [ici](https://zetaglobal.com/platform/integrations/).
+Un spécialiste marketing souhaite créer des profils d’audience uniques, identifier ses audiences les plus importantes et les utiliser sur tous les canaux numériques pris en charge par la plateforme marketing Zeta. Ils veulent créer une véritable vue 360 d’un profil de consommateur, créer et activer des audiences significatives. Vous trouverez plus d’informations sur les canaux pris en charge par la plateforme marketing Zeta [ici](https://zetaglobal.com/platform/integrations/).
 
 ### Cibler les utilisateurs avec des publicités {#use-case-target-users}
 
@@ -78,7 +78,7 @@ Consultez le tableau ci-dessous pour plus d’informations sur le type et la fr�
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

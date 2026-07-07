@@ -24,9 +24,9 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 2609
+source-wordcount: 2608
 ht-degree: 20%
 
 ---
@@ -79,7 +79,7 @@ Sélectionnez une carte pour ouvrir l’accélérateur. Utilisez cette section p
 
 Les accélérateurs liés au tableau de bord suivants sont disponibles :
 
-- **[[!UICONTROL Chevauchements d’audience avancés]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)** : analysez les intersections entre les segments d’audience pour identifier les modèles de chevauchement et affiner la segmentation.
+- **[[!UICONTROL Chevauchements d’audiences avancés]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)** : analysez les intersections entre les audiences pour identifier les modèles de chevauchement et affiner la segmentation.
 - **[[!UICONTROL Comparaison des audiences]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)** : comparez les mesures clés entre deux audiences, y compris la taille, la composition et les modifications au fil du temps.
 - **[[!UICONTROL Tendances d’audience]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)** : suivez l’évolution des mesures d’audience au fil du temps, y compris la taille de l’audience et le nombre d’identités.
 - **[[!UICONTROL Chevauchements d’identités d’audience]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)** : examinez comment les types d’identité se chevauchent dans les audiences pour prendre en charge la combinaison d’identités et la précision de segmentation.

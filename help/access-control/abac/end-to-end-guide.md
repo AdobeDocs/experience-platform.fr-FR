@@ -21,10 +21,10 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1653
-ht-degree: 13%
+source-wordcount: 1651
+ht-degree: 12%
 
 ---
 
@@ -45,7 +45,7 @@ Ce tutoriel nécessite une connaissance pratique des composants Experience Platf
 * [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [Service de segmentation Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Experience Platform] utilisé pour créer des segments d’audience à partir de vos profils clients en fonction du comportement et des attributs des clients.
+* [Segmentation Service d’Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Experience Platform] utilisé pour créer des audiences à partir de vos profils clients en fonction du comportement et des attributs de la clientèle.
 
 ### Vue d’ensemble de cas d’utilisation
 
@@ -62,7 +62,7 @@ Tu pourras :
 
 * [Étiqueter les rôles pour vos utilisateurs](#label-roles) : utilisez l&#39;exemple d&#39;un fournisseur de soins de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
 * [Étiqueter vos ressources (champs et audiences de schéma)](#label-resources) : attribuez le libellé **[!UICONTROL ISP/Données de santé réglementées]** aux ressources et audiences de schéma.
-* [Activer la politique qui les liera](#policy) : activez la politique par défaut pour empêcher l’accès aux champs de schéma et aux audiences en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs avec les libellés correspondants auront alors accès au champ et au segment du schéma dans tous les sandbox.
+* [Activer la politique qui les liera](#policy) : activez la politique par défaut pour empêcher l’accès aux champs de schéma et aux audiences en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs avec les libellés correspondants auront alors accès au champ de schéma et à l’audience dans tous les sandbox.
 
 ## Autorisations
 
@@ -72,7 +72,7 @@ Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles e
 
 Contactez votre administrateur système pour obtenir l’accès si vous ne disposez pas des privilèges d’administrateur.
 
-Une fois que vous disposez des privilèges d’administrateur, accédez à [&#128279;](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail en vue de votre intégration Experience Platform.
+Une fois que vous disposez des privilèges d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail en vue de votre intégration Experience Platform.
 
 ![Image illustrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -145,7 +145,7 @@ Sélectionnez **[!UICONTROL Glucose sanguin > 100]** (en fonction du nom de l’
 
 ![Image montrant la glycémie >100 sélectionnée dans l’onglet Audiences](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
-L’écran **[!UICONTROL Détails]** du segment s’affiche. Sélectionnez **[!UICONTROL Gérer l’accès]**.
+L’écran **[!UICONTROL Détails]** de l’audience s’affiche. Sélectionnez **[!UICONTROL Gérer l’accès]**.
 
 ![Image illustrant la sélection de Gère l’accès](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
@@ -157,7 +157,7 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
 >[!NOTE]
 >
-> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Autorisations] (comme les libellés de segment ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide de [Contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/access-control/object-based-access). »
+> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Autorisations] (tels que les libellés d’audience ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide de [&#x200B; Contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/access-control/object-based-access).
 
 ## Activer la politique de contrôle d’accès {#policy}
 

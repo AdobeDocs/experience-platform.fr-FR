@@ -3,9 +3,9 @@ title: Connexion Adobe Advertising DSP
 description: Découvrez comment partager des audiences propriétaires authentifiées et non authentifiées avec Adobe Advertising Demand-Side Platform (DSP) à l’aide de plusieurs types d’identité.
 feature: Destinations
 exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1585'
 ht-degree: 19%
 
 ---
@@ -38,11 +38,11 @@ Cette connexion remplace la [connexion Adobe Advertising DSP héritée](adobe-ad
 
 Cette destination permet aux annonceurs d’atteindre leur audience sur plusieurs navigateurs avec et sans cookies.
 
-Les annonceurs ont le choix de partager des segments avec des identifiants propriétaires authentifiés (tels que [!DNL RampID] et [!DNL UID2.0]) ou sous la forme d’identifiants non authentifiés (tels que des cookies et des MAID).
+Les annonceurs ont le choix de partager des audiences avec des identifiants propriétaires authentifiés (tels que [!DNL RampID] et [!DNL UID2.0]) ou sous la forme d’identifiants non authentifiés (tels que des cookies et des MAID).
 
 ## Conditions préalables {#prerequisites}
 
-* Par [!DNL RampID activation], [!DNL DSP] les paramètres au niveau du compte et de la campagne pour activer le partage d’audience avec [!DNL LiveRamp RampID], qui convertit les données client en [!DNL RampIDs] pour créer des segments cibles. Votre équipe de compte Adobe effectuera cette configuration. [!DNL RampID] est disponible via un partenariat entre [!DNL DSP] et [!DNL LiveRamp], et vous n’avez pas besoin de votre propre adhésion à [!DNL LiveRamp] pour l’utiliser.
+* Par [!DNL RampID activation], [!DNL DSP] les paramètres au niveau du compte et de la campagne pour activer le partage d’audience avec [!DNL LiveRamp RampID], qui convertit les données client en [!DNL RampIDs] pour créer des audiences cibles. Votre équipe de compte Adobe effectuera cette configuration. [!DNL RampID] est disponible via un partenariat entre [!DNL DSP] et [!DNL LiveRamp], et vous n’avez pas besoin de votre propre adhésion à [!DNL LiveRamp] pour l’utiliser.
 
 * ID d’audience :
 
@@ -81,8 +81,8 @@ La destination Adobe Advertising DSP prend en charge l’activation des identit�
 | Identité cible | Description | Considérations |
 | --------------- | ----------- | -------------- |
 | `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Experience Platform prend en charge le texte brut et les adresses e-mail hachées SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour qu’Experience Platform hache automatiquement les données lors de l’activation. |
-| `ECID` | Cookie propriétaire pour Experience Cloud | Obligatoire pour créer des segments basés sur des cookies. |
-| `adcloud` | Cookie tiers pour Adobe Advertising | Obligatoire pour créer des segments basés sur des cookies. |
+| `ECID` | Cookie propriétaire pour Experience Cloud | Obligatoire pour créer des audiences basées sur des cookies. |
+| `adcloud` | Cookie tiers pour Adobe Advertising | Obligatoire pour créer des audiences basées sur des cookies. |
 | `GAID` | ID d’appareil [!DNL Android] | Requis pour le ciblage des appareils [!DNL Android]. |
 | `IDFA` | ID d’appareil [!DNL iOS] | Requis pour le ciblage des appareils [!DNL iOS]. |
 
@@ -190,7 +190,7 @@ Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 >[!IMPORTANT]
 >
->**ECID est requis pour que l’exportation basée sur les cookies réussisse.** Les profils sans ECID ne seront pas inclus dans les segments basés sur des cookies. Pour les segments d’audience authentifiés utilisant [!DNL RampID] ou [!DNL UID2.0], les profils doivent contenir des identifiants d’e-mail hachés.
+>**ECID est requis pour que l’exportation basée sur les cookies réussisse.** Les profils sans ECID ne seront pas inclus dans les audiences basées sur des cookies. Pour les audiences authentifiées utilisant [!DNL RampID] ou [!DNL UID2.0], les profils doivent contenir des identifiants d’e-mail hachés.
 
 Pour obtenir des instructions, voir [Mappage des attributs et des identités](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
@@ -202,7 +202,7 @@ Pour vérifier que les données d’audience ont été partagées avec Adobe Adv
 
 * Dans DSP, l&#39;audience est disponible lorsque vous créez ou modifiez une audience à partir de **[!UICONTROL Audiences]** > **[!UICONTROL Toutes les audiences]** ou à partir de la section **[!UICONTROL Ciblage d&#39;audience]** des paramètres d&#39;emplacement. L’audience doit être visible dans l’onglet [!UICONTROL Segments &#x200B;] sous le dossier [!UICONTROL Real-Time CDP].
 
-![Copie d’écran de l’interface Audiences DSP présentant un dossier [!DNL Real-Time CDP] avec des segments d’audience importés répertoriés sous l’onglet Segments Adobe.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Copie d’écran de l’interface Audiences DSP présentant un dossier [!DNL Real-Time CDP] avec des audiences importées répertoriées sous l’onglet Segments Adobe.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

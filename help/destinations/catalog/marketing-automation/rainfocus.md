@@ -18,10 +18,10 @@ role_v2:
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1122
-ht-degree: 30%
+source-wordcount: 1121
+ht-degree: 27%
 
 ---
 
@@ -45,7 +45,7 @@ Une grande entreprise technologique est sur le point de s’inscrire pour sa pro
 
 ### Cas d’utilisation #2 {#use-case-2}
 
-Une marque de services financiers doit organiser une série de tournées destinées aux nouveaux clients et aux clients existants. Il dispose d’une série de segments ciblés avec des clients cibles dans [!DNL Adobe Experience Platform]. À l’aide du connecteur de destination [!DNL RainFocus], ils peuvent facilement envoyer ces profils à [!DNL RainFocus] pour activation.
+Une marque de services financiers doit organiser une série de tournées destinées aux nouveaux clients et aux clients existants. Ils disposent d’une série d’audiences avec des clients cibles en [!DNL Adobe Experience Platform]. À l’aide du connecteur de destination [!DNL RainFocus], ils peuvent facilement envoyer ces profils à [!DNL RainFocus] pour activation.
 
 ## Conditions préalables {#prerequisites}
 
@@ -98,8 +98,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom), tels qu’ils ont été choisis dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

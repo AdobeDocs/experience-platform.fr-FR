@@ -12,9 +12,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 4be356e7e58f8140c98e7d4becdc633f890f1202
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
-source-wordcount: 1718
+source-wordcount: 1717
 ht-degree: 3%
 
 ---
@@ -211,7 +211,7 @@ Consultez la documentation du widget [&#x200B; Audiences mappées au statut de d
 
 Questions traitées par cette insight :
 
-- Quel segment d’audience a la plus grande taille ?
+- Quelle audience a la plus grande taille ?
 - Quelles sont les cinq audiences les plus importantes ?
 - Comment la distribution de la taille de l’audience change-t-elle au fil du temps pour la première audience ?
 

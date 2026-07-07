@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 73387ee674dac6ba2ee167c66dbfda52a4b48466
 workflow-type: tm+mt
-source-wordcount: 597
+source-wordcount: 596
 ht-degree: 18%
 
 ---
@@ -79,7 +79,7 @@ Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICON
 
 ## Étapes suivantes
 
-Lorsqu’un flux de données Audience Manager est actif, les données entrantes sont automatiquement ingérées dans les profils clients en temps réel. Vous pouvez désormais utiliser ces données entrantes et créer des segments d’audience à l’aide du service de segmentation d’Experience Platform. Consultez les documents suivants pour plus d’informations :
+Lorsqu’un flux de données Audience Manager est actif, les données entrantes sont automatiquement ingérées dans les profils clients en temps réel. Vous pouvez désormais utiliser ces données entrantes et créer des audiences à l’aide d’Experience Platform Segmentation Service. Consultez les documents suivants pour plus d’informations :
 
 * [Vue d’ensemble du profil client en temps réel](../../../../../profile/home.md)
 * [Présentation de Segmentation Service](../../../../../segmentation/home.md)

@@ -32,7 +32,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 1976
 ht-degree: 71%
@@ -97,7 +97,7 @@ La disponibilité du contrôle d’accès basé sur les attributs est limitée p
 
 * Interface des autorisations : permet de définir les rôles utilisateur, les autorisations et les politiques pour le contrôle d’accès basé sur les attributs.
 
-* Étiquetage : permet d’ajouter, de modifier et de supprimer les libellés des rôles utilisateur, des champs de schéma, des segments et d’autres objets pris en charge, afin d’exploiter les politiques de contrôle d’accès. **Remarque :** tout segment qui utilise un attribut étiqueté doit également être étiqueté si vous souhaitez que les mêmes restrictions d’accès lui soient appliquées.
+* Étiquetage : permet d’ajouter, de modifier et de supprimer les libellés des rôles utilisateur, des champs de schéma, des audiences et d’autres objets pris en charge, afin d’exploiter les politiques de contrôle d’accès. **Remarque :** toute audience qui utilise un attribut étiqueté doit également être étiquetée si vous souhaitez lui appliquer les mêmes restrictions d’accès.
 
 Les workflows d’administration pour toutes les applications Experience Platform exécutées depuis Admin Console sont en cours de basculement vers la nouvelle interface d’autorisations.
 
@@ -122,7 +122,7 @@ En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contr�
 >
 >En résumé, souvenez-vous des implications suivantes quand vous utilisez des destinations et un contrôle d’accès basé sur les attributs :
 >
->* Vous pouvez activer uniquement les audiences auxquelles vous avez l’autorisation d’accéder et que vous pouvez afficher dans [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) et [l’étape de sélection de segment](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) du workflow d’activation.
+>* Vous pouvez activer uniquement les audiences auxquelles vous avez l’autorisation d’accéder et que vous pouvez afficher dans [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) et [l’étape de sélection d’audience](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) du workflow d’activation.
 >* Dans l’[étape de mappage du processus d’activation](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), vous pouvez uniquement afficher et sélectionner pour activation les champs auxquels vous avez accès.
 >* Si vous souhaitez activer des segments supplémentaires vers une destination existante et que vous n’avez pas accès à tous les champs mappés à l’exportation, le workflow d’activation est bloqué pour vous.
 

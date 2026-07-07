@@ -21,9 +21,9 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 752
+source-wordcount: 751
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Le tableau de bord [!UICONTROL Comparaison des audiences] compare et met en cont
 
 ## Définir des comparaisons d’audience {#set-audience-comparisons}
 
-Pour obtenir des informations et des comparaisons plus pertinentes, utilisez les filtres système pour cibler précisément les segments d’audience et la période que vous souhaitez analyser. Sélectionnez l’icône de filtre (![L’icône de filtre.](../../../images/icons/filter-icon-white.png)). pour choisir deux audiences différentes ([!UICONTROL Audience A] et [!UICONTROL Audience B]) et définir des paramètres spécifiques à comparer.
+Pour obtenir des informations et des comparaisons plus pertinentes, utilisez les filtres système pour cibler précisément les audiences et la période que vous souhaitez analyser. Sélectionnez l’icône de filtre (![L’icône de filtre.](../../../images/icons/filter-icon-white.png)). pour choisir deux audiences différentes ([!UICONTROL Audience A] et [!UICONTROL Audience B]) et définir des paramètres spécifiques à comparer.
 
 ![Boîte de dialogue Filtres du tableau de bord de comparaison des audiences.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters.png)
 

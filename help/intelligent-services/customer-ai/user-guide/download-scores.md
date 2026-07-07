@@ -19,10 +19,10 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 990
-ht-degree: 68%
+ht-degree: 63%
 
 ---
 
@@ -39,7 +39,7 @@ De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une 
 Actuellement, il existe deux manières de télécharger les scores Customer AI :
 
 1. Si vous souhaitez télécharger les scores au niveau individuel et/ou que le profil client en temps réel n’est pas activé, commencez par accéder à [recherche de votre identifiant de jeu de données](#dataset-id).
-2. Si Profile est activé et que vous souhaitez télécharger les segments que vous avez configurés à l’aide de Customer AI, [téléchargez un segment configuré avec Customer AI](#segment).
+2. Si le profil est activé et que vous souhaitez télécharger les audiences que vous avez configurées à l’aide de l’IA dédiée aux clients, accédez à [télécharger une audience configurée avec l’IA dédiée aux clients](#audience).
 
 ## Recherche de votre identifiant de jeu de données {#dataset-id}
 
@@ -292,7 +292,7 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ![Exemple de réponse de terminal affichant un appel API réussi.](../images/download-scores/response.png)
 
-## Télécharger un segment configuré avec l’IA dédiée aux clients {#segment}
+## Télécharger une audience configurée avec l’IA dédiée aux clients {#audience}
 
 Vous pouvez aussi télécharger vos données de score en exportant votre audience vers un jeu de données. Une fois la tâche de segmentation terminée (la valeur de l’attribut `status` est « SUCCEEDED »), vous pouvez exporter votre audience vers un jeu de données permettant son accès et son utilisation. Pour en savoir plus sur la segmentation, consultez la [présentation de la segmentation](../../../segmentation/home.md).
 
@@ -300,7 +300,7 @@ Vous pouvez aussi télécharger vos données de score en exportant votre audienc
 >
 >Pour utiliser cette méthode d’exportation, le profil client en temps réel doit être activé pour le jeu de données.
 
-La section [Exportation d’un segment](../../../segmentation/tutorials/evaluate-a-segment.md) du guide d’évaluation des segments décrit les étapes requises pour exporter un jeu de données d’audience. Le guide décrit les étapes suivantes et fournit des exemples de celles-ci :
+La section [exporter une audience](../../../segmentation/tutorials/evaluate-a-segment.md) du guide d’évaluation de l’audience couvre les étapes requises pour exporter un jeu de données d’audience. Le guide décrit les étapes suivantes et fournit des exemples de celles-ci :
 
 - **Création d’un jeu de données cible :** créez le jeu de données pour retenir les membres de l’audience.
 - **Génération de profils d’audience dans le jeu de données :** renseignez le jeu de données avec des profils individuels XDM en fonction des résultats d’une tâche de segmentation.

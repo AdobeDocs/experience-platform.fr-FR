@@ -16,10 +16,10 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: f5b4eb416748a8cb543a9131a5e74f5d12b9ca15
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: 2839
-ht-degree: 43%
+source-wordcount: 2838
+ht-degree: 42%
 
 ---
 
@@ -43,7 +43,7 @@ Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise e
 
 >[!NOTE]
 >
->Ce guide explique comment créer des audiences à l’aide de la composition d’audiences. Pour savoir comment créer des audiences par le biais de définitions de segment à l’aide du Créateur de segments, veuillez lire le [Guide de l’interface utilisateur du Créateur de segments](./segment-builder.md).
+>Ce guide explique comment créer des audiences à l’aide de la composition d’audiences. Pour savoir comment créer des audiences par le biais de définitions de segment à l’aide du créateur de segments, consultez le [guide de l’interface utilisateur du créateur de segments](./segment-builder.md).
 
 La composition d’audiences offre un espace de travail permettant de créer et de modifier des audiences à l’aide de blocs utilisés pour représenter différentes actions.
 

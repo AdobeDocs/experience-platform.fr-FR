@@ -18,9 +18,9 @@ role_v2:
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1771
+source-wordcount: 1819
 ht-degree: 12%
 
 ---
@@ -40,8 +40,7 @@ Les audiences Adobe [!DNL Real-Time CDP] peuvent être diffusées sur la platefo
 En résumé : si vous souhaitez diffuser les audiences Adobe [!DNL Real-Time CDP] une seule fois par jour, vous utiliserez la destination Magnite : Batch uniquement et les audiences seront diffusées une fois par jour. Si vous souhaitez diffuser des audiences Adobe [!DNL Real-Time CDP] en temps réel, vous utiliserez *à la fois* la destination Magnite : par lots et la destination Magnite en temps réel. Pour plus d’informations, contactez Magnite : Streaming.
 
 
-Poursuivez la lecture ci-dessous pour plus d’informations sur la destination Magnite : Batch, sur la manière de s’y connecter et d’activer Adobe [!DNL Real-Time CDP] les audiences qui s’y connectent.
-Pour plus d’informations sur la destination en temps réel, voir [cette page de documentation](magnite-streaming.md) à la place.
+Poursuivez la lecture ci-dessous pour plus d’informations sur la destination Magnite : Batch, sur la manière de s’y connecter et d’activer Adobe [!DNL Real-Time CDP] les audiences qui s’y connectent.Pour plus d’informations sur la destination en temps réel, voir [cette page de documentation](magnite-streaming.md) à la place.
 
 >[!IMPORTANT]
 >
@@ -174,7 +173,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
@@ -182,8 +181,7 @@ Dans le champ **&#x200B;**&#x200B;vous pouvez sélectionner n’importe quel att
 ![mapper les champs de données souhaités au champ device_id](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 Dans le champ **[!UICONTROL Cible]** :
-![sélectionnez l’identité cible du type d’appareil approprié](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Consultez [Identités prises en charge](#supported-identities) pour plus d’informations.
-Dans cet exemple, nous avons sélectionné le **[!UICONTROL champ cible]** : magnite_deviceId_CUSTOM, car notre champ **[!UICONTROL Source]** a été défini comme un IdentityMap personnalisé : DeviceID.
+![sélectionnez l’identité cible du type d’appareil approprié](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Consultez [Identités prises en charge](#supported-identities) pour plus d’informations.Dans cet exemple, nous avons sélectionné le **[!UICONTROL champ cible]** : magnite_deviceId_CUSTOM, car notre champ **[!UICONTROL Source]** a été défini comme un IdentityMap personnalisé : DeviceID.
 
 >[!NOTE]
 >
@@ -204,11 +202,11 @@ Sur l’écran « Configurer un nom de fichier et un planning d’exportation po
 
 Une fois vos audiences chargées, vous pouvez vérifier qu’elles ont été créées et chargées correctement.
 
-* La destination Magnite : Batch diffuse des fichiers S3 en flux continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences/segments doivent apparaître dans la diffusion en continu Magnite et peuvent être appliqués à une offre. Vous pouvez le confirmer en recherchant l’identifiant du segment ou le nom du segment qui a été partagé lors des étapes d’activation dans la [!DNL Adobe Experience Platform].
+* La destination Magnite : Batch diffuse des fichiers S3 en flux continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences doivent apparaître dans la diffusion en continu Magnite et peuvent être appliquées à une offre. Vous pouvez le confirmer en recherchant l’ID d’audience ou le nom d’audience partagé lors des étapes d’activation dans la [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >
->Audiences activées/diffusées vers Magnite : la destination par lots *remplacera* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel Magnite. Si vous recherchez un segment à l’aide du nom de segment, vous pouvez ne pas trouver le segment en temps réel, jusqu’à ce que le lot ait été ingéré et traité par la plateforme de streaming Magnite.
+>Audiences activées/diffusées vers Magnite : la destination par lots *remplacera* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel Magnite. Si vous recherchez une audience à l’aide du nom de l’audience, vous pouvez ne pas la trouver en temps réel, jusqu’à ce que le lot ait été ingéré et traité par la plateforme de streaming Magnite.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

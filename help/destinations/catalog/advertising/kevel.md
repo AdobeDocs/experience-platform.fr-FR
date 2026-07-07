@@ -22,7 +22,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 1185
 ht-degree: 8%
@@ -165,7 +165,7 @@ Pour arrêter complètement le ciblage dans [!DNL Kevel], assurez-vous que le se
 [!DNL Kevel] requiert :
 
 - **Espaces de noms d’identité** — Jusqu’à trois espaces de noms d’identité mappés à [!DNL Kevel] emplacements d’identités.
-- **Appartenance à un segment** — Aucune mise en correspondance manuelle n’est requise ; Experience Platform transmet automatiquement les identifiants et les alias d’appartenance à un segment.
+- **Appartenance à une audience** — Aucune mise en correspondance manuelle n’est requise ; Experience Platform transmet automatiquement les identifiants et les alias d’appartenance à une audience.
 
 Lors de l’activation, sélectionnez les espaces de noms d’identité que vous avez configurés pour [!DNL Kevel]. Chaque identité génère son propre appel de mise à jour UserDB.
 

@@ -2,7 +2,7 @@
 title: Créer et configurer des flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 19e297602d67a360a3b6bcdd6d5403fb6090de7f
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: '3212'
 ht-degree: 21%
@@ -101,7 +101,7 @@ Pour accéder aux options de configuration avancées, sélectionnez **[!UICONTRO
 | [!UICONTROL ID de conteneur de synchronisation d’identifiants tiers] | L’identifiant numérique du conteneur à utiliser pour la synchronisation des identifiants tiers.<br><br>**Remarque :** le flux de données fait référence à l’identifiant de conteneur Audience Manager par défaut, qui est 0. Si vous disposez de plusieurs identifiants de conteneur de synchronisation d’Audience Manager ID, contactez votre consultant Audience Manager pour identifier et résoudre correctement la configuration de synchronisation des identifiants. |
 | [!UICONTROL Remplacements d’ID de conteneur] | Dans cette section, vous pouvez définir d’autres identifiants de conteneur de synchronisation d’identifiants tiers que vous pouvez utiliser pour remplacer l’identifiant par défaut. |
 | [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est sélectionnée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser Web SDK ou [Mobile SDK](https://developer.adobe.com/client-sdks/home/), ainsi que l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est sélectionnée, Edge Network accepte uniquement les demandes authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Edge Network et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
-| [!UICONTROL &#x200B; Media Analytics &#x200B;] | Permet le traitement des données de tracking en flux continu pour l’intégration [!DNL Edge Network] via les SDK Experience Platform ou [l’API Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Découvrez Media Analytics dans la [documentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=fr). |
+| [!UICONTROL Media Analytics] | Permet le traitement des données de tracking en flux continu pour l’intégration [!DNL Edge Network] via les SDK Experience Platform ou [l’API Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Découvrez Media Analytics dans la [documentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=fr). |
 
 Ensuite, si vous configurez le flux de données d’Experience Platform, suivez le tutoriel sur la [Préparation des données pour la collecte de données](/help/datastreams/data-prep.md) pour mapper les données à un schéma d’événement d’Experience Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
 
@@ -163,8 +163,8 @@ Activez ce service pour envoyer des données à [!DNL Adobe Audience Manager]. L
 
 | Paramètre | Description |
 | --- | --- |
-| [!UICONTROL Destinations de cookie activées] | Permet au SDK de partager des informations sur les segments via [destinations de cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html?lang=fr) à partir de [!DNL Audience Manager]. |
-| [!UICONTROL Destinations URL activées] | Permet au SDK de partager des informations sur les segments via [destinations d’URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html?lang=fr) à partir de [!DNL Audience Manager]. |
+| [!UICONTROL Destinations de cookie activées] | Permet au SDK de partager des informations d’audience via [destinations de cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html?lang=fr) à partir de [!DNL Audience Manager]. |
+| [!UICONTROL Destinations URL activées] | Permet au SDK de partager des informations d’audience via [destinations d’URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html?lang=fr) à partir de [!DNL Audience Manager]. |
 
 ### Paramètres d’Adobe Experience Platform {#aep}
 
