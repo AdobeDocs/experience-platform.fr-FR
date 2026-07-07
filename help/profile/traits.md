@@ -2,9 +2,9 @@
 title: Présentation des caractéristiques
 description: Découvrez comment utiliser les caractéristiques, qui sont un moyen léger et plus efficace de stocker l’activité des profils. Vous pouvez utiliser les caractéristiques pour maintenir la conformité aux droits de licence de votre profil tout en préservant l’activation enrichie des profils.
 hide: true
-source-git-commit: dd91b0f34db97515e9fd0cd284353b2c6466119f
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 3%
 
 ---
@@ -84,7 +84,7 @@ La fenêtre contextuelle **[!UICONTROL Activer le jeu de données pour les carac
 
 Maintenant que vous disposez d’un jeu de données compatible avec les caractéristiques, vous pouvez créer votre caractéristique. Sélectionnez **[!UICONTROL Créer une caractéristique]** pour afficher le créateur de caractéristiques.
 
-![&#x200B; La fenêtre contextuelle Jeu de données activé pour les caractéristiques s’affiche. Le bouton Créer une caractéristique est mis en surbrillance.](/help/profile/images/traits/select-create-trait.png)
+![ La fenêtre contextuelle Jeu de données activé pour les caractéristiques s’affiche. Le bouton Créer une caractéristique est mis en surbrillance.](/help/profile/images/traits/select-create-trait.png)
 
 Si vous avez déjà activé un jeu de données pour les caractéristiques, vous pouvez également sélectionner **[!UICONTROL Créer une caractéristique]** dans la page de navigation des caractéristiques pour ouvrir le créateur de caractéristiques.
 

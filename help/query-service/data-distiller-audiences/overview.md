@@ -3,22 +3,14 @@ title: Créer des audiences à l’aide de SQL
 description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie des audiences, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler les destinations basées sur des fichiers.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
 TQID: https://experienceleague.adobe.com/ayllPzdQ3X6WL0xkYYQXzTKBy9l8Zbfwqi-WJiGjvVE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1858
+source-wordcount: 1856
 ht-degree: 3%
 
 ---
@@ -27,7 +19,7 @@ ht-degree: 3%
 
 Utilisez l’extension d’audience SQL pour créer des audiences avec des données du lac de données, y compris toutes les entités de dimension existantes (telles que les attributs du client ou les informations sur le produit).
 
-L’utilisation de cette extension SQL améliore votre capacité à créer des audiences, car vous n’avez pas besoin de données brutes dans vos profils lors de la définition des segments d’audience. Les audiences créées à l’aide de cette méthode sont automatiquement enregistrées dans l’espace de travail Audience , où vous pouvez les cibler davantage vers des destinations basées sur des fichiers.
+L’utilisation de cette extension SQL améliore votre capacité à créer des audiences, car vous n’avez pas besoin de données brutes dans vos profils lors de la définition des audiences. Les audiences créées à l’aide de cette méthode sont automatiquement enregistrées dans l’espace de travail Audience , où vous pouvez les cibler davantage vers des destinations basées sur des fichiers.
 
 ![Infographie présentant le workflow d’extension d’audience SQL. Les étapes incluent la création d’audiences avec Query Service à l’aide de commandes SQL, leur gestion dans l’interface utilisateur d’Experience Platform et leur activation dans des destinations basées sur des fichiers.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
@@ -35,7 +27,7 @@ Ce document explique comment utiliser l’extension d’audience SQL dans Adobe 
 
 ## Cycle de vie de la création d’audiences dans Data Distiller {#audience-creation-lifecycle}
 
-Pour créer, gérer et activer vos audiences, procédez comme suit. Les audiences créées s’intègrent de manière transparente dans le « flux d’audience ». Vous pouvez ainsi créer des segments à partir d’audiences de base et cibler des destinations basées sur des fichiers (par exemple, des chargements CSV ou des emplacements d’espace de stockage) pour la sensibilisation des clients. « Flux d’audience » fait référence à l’ensemble du processus de création, de gestion et d’activation des audiences, assurant ainsi une intégration transparente entre les destinations.
+Pour créer, gérer et activer vos audiences, procédez comme suit. Les audiences créées s’intègrent de manière transparente dans le « flux d’audience ». Vous pouvez ainsi créer des audiences à partir d’audiences de base et cibler des destinations basées sur des fichiers (par exemple, des chargements CSV ou des emplacements d’espace de stockage) pour la sensibilisation des clients. « Flux d’audience » fait référence à l’ensemble du processus de création, de gestion et d’activation des audiences, assurant ainsi une intégration transparente entre les destinations.
 
 Dans le cadre de votre « flux d’audience », utilisez les commandes SQL suivantes pour [créer](#create-audience), [modifier](#add-profiles-to-audience) et [supprimer](#delete-audience) des audiences dans Adobe Experience Platform.
 
@@ -117,7 +109,7 @@ SELECT userId, orders, total_revenue, recency, frequency, monetization FROM cust
 
 ### Remplacer les données d&#39;audience (INSERT OVERWRITE) {#replace-audience}
 
-Utilisez la commande `INSERT OVERWRITE INTO` pour remplacer tous les profils existants d’une audience par les résultats d’une nouvelle requête SQL. Cette commande est utile pour gérer les segments d’audience dynamiques en vous permettant d’actualiser entièrement le contenu d’une audience en une seule étape.
+Utilisez la commande `INSERT OVERWRITE INTO` pour remplacer tous les profils existants d’une audience par les résultats d’une nouvelle requête SQL. Cette commande est utile pour la gestion des audiences dynamiques en vous permettant d’actualiser entièrement le contenu d’une audience en une seule étape.
 
 >[!AVAILABILITY]
 >
@@ -229,7 +221,7 @@ SELECT
 WHERE false;
 ```
 
-Après avoir créé l’audience, renseignez-la avec des données client et segmentez les profils en fonction de leurs scores RFM. L’instruction SQL ci-dessous utilise la fonction `NTILE(4)` pour classer les clients en quartiles en fonction de leurs scores RFM (Récence, Fréquence, Monétisation). Ces scores classent les clients en six segments, tels que « Principal », « Fidèle » et « Baleines ». Les données client segmentées sont ensuite insérées dans le tableau des `adls_rfm_profile` d’audience. »
+Après avoir créé l’audience, renseignez-la avec des données client et segmentez les profils en fonction de leurs scores RFM. L’instruction SQL ci-dessous utilise la fonction `NTILE(4)` pour classer les clients en quartiles en fonction de leurs scores RFM (Récence, Fréquence, Monétisation). Ces scores classent les clients en six audiences, telles que « Principal », « Fidèle » et « Baleines ». Les données client segmentées sont ensuite insérées dans le tableau des `adls_rfm_profile` d’audience. »
 
 ```sql
 INSERT INTO Audience adls_rfm_profile
@@ -362,7 +354,7 @@ Oui, le jeu de données associé à l’audience est créé sur le lac de donné
 
 +++Réponse
 
-Non. Les attributs enrichis de l’audience peuvent être utilisés dans les destinations d’entreprise par lots et basées sur des fichiers. Si vous rencontrez une erreur du type « Les identifiants de segment suivants comportent des espaces de noms qui ne sont pas autorisés pour cette destination : e917f626-a038-42f7-944c-xyxyxyx », créez un segment dans Data Distiller et utilisez-le avec toute destination disponible.
+Non. Les attributs enrichis de l’audience peuvent être utilisés dans les destinations d’entreprise par lots et basées sur des fichiers. Si vous rencontrez une erreur du type « Les ID d’audience suivants comportent des espaces de noms qui ne sont pas autorisés pour cette destination : e917f626-a038-42f7-944c-xyxyxyx », créez une audience dans Data Distiller et utilisez-la avec toute destination disponible.
 
 +++
 

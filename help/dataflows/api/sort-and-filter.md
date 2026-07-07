@@ -3,11 +3,9 @@ title: Tri et filtrage des réponses dans l’API Flow Service
 description: Ce tutoriel décrit la syntaxe pour le tri et le filtrage à l’aide de paramètres de requête dans l’API Flow Service, y compris certains cas d’utilisation avancés.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 TQID: https://experienceleague.adobe.com/f5WCgSH7n95jQGrAMPA5OvvtayXlTaFGB2EtM7TggXc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 889
 ht-degree: 3%
@@ -57,7 +55,7 @@ Le filtrage peut être appliqué de manière générique à n’importe quelle p
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Renvoie tous les flux pour un identifiant de segment spécifique :**
+**Renvoyer tous les flux pour un ID d’audience spécifique :**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -67,7 +65,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 Plusieurs filtres `property` peuvent être inclus dans une requête à condition qu’ils soient séparés par des caractères « et » (`&`). Une relation AND est supposée lors de la combinaison de filtres, ce qui signifie qu’une entité doit satisfaire tous les filtres pour être incluse dans la réponse.
 
-**Renvoyer tous les flux activés pour un identifiant de segment :**
+**Renvoyer tous les flux activés pour un ID d’audience :**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -95,7 +93,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 GET /sourceConnections?property=params.columns[].name==firstName
 ```
 
-**Recherchez l’identifiant d’exécution de flux pour une destination en filtrant sur l’identifiant de segment :**
+**Recherchez l’identifiant d’exécution de flux pour une destination en filtrant sur l’identifiant d’audience :**
 
 ```http
 GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id==segment:068d6e2c-b546-4c73-bfb7-9a9d33375659

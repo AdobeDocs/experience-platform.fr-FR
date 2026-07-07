@@ -4,19 +4,13 @@ title: Glossaire Adobe Experience Platform Destination SDK
 description: comprendre la terminologie importante lors de la création d’une destination à l’aide d’Experience Platform Destination SDK ;
 exl-id: d65f390a-a980-49b8-9570-840f03534553
 TQID: https://experienceleague.adobe.com/WNp9QltZI8-cZsW2iN7TGQrdAoZtqIDk-wFK9iRSf5s
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 676
+source-wordcount: 675
 ht-degree: 3%
 
 ---
@@ -29,7 +23,7 @@ Voir ce glossaire pour connaître la définition des termes utilisés dans Desti
 
 **Politique d’agrégation** : lors de la configuration de la manière dont les données doivent être exportées vers votre destination de diffusion en continu en temps réel, vous pouvez définir la manière dont les données de profil sont agrégées avant d’être envoyées à votre plateforme de destination. Cela permet d’optimiser la diffusion des données en regroupant les enregistrements de données en fonction de critères spécifiques, en réduisant la fréquence des appels API et en améliorant l’efficacité globale. Différentes politiques peuvent être configurées pour répondre aux différentes exigences de destination, afin de s’assurer que les données sont compilées et diffusées de la manière la plus efficace possible. [En savoir plus](/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md).
 
-**Configuration des métadonnées d’audience** : une configuration de métadonnées d’audience fait référence à la configuration structurée et aux paramètres définis dans les [!DNL Adobe Experience Platform] qui permettent la création, la mise à jour et la suppression par programmation de segments d’audience dans une destination spécifiée. Cette configuration utilise des modèles de métadonnées d’audience pour s’aligner sur les spécifications de l’API marketing de la plateforme de destination. En savoir plus sur la [configuration des métadonnées d’audience](/help/destinations/destination-sdk/functionality/audience-metadata-management.md) et les [macros disponibles](/help/destinations/destination-sdk/functionality/audience-metadata-management.md#macros).
+**Configuration des métadonnées d’audience** : une configuration de métadonnées d’audience fait référence à la configuration structurée et aux paramètres définis dans les [!DNL Adobe Experience Platform] qui permettent la création, la mise à jour et la suppression par programmation d’audiences dans une destination spécifiée. Cette configuration utilise des modèles de métadonnées d’audience pour s’aligner sur les spécifications de l’API marketing de la plateforme de destination. En savoir plus sur la [configuration des métadonnées d’audience](/help/destinations/destination-sdk/functionality/audience-metadata-management.md) et les [macros disponibles](/help/destinations/destination-sdk/functionality/audience-metadata-management.md#macros).
 
 ## D {#d}
 

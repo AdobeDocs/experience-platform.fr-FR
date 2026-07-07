@@ -3,22 +3,15 @@ title: Notation prédictive des prospects et des comptes dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et plus d’informations sur la fonctionnalité de notation prédictive des prospects et des comptes dans Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 TQID: https://experienceleague.adobe.com/wAdoZx66wLkOyYYD77z-gW0-huyURQfg1MB27zkYV-Y
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 877
+source-wordcount: 876
 ht-degree: 14%
 
 ---
@@ -31,7 +24,7 @@ Les comptes sont les entités ultimes qui achètent des produits et services B2B
 
 Le marketing basé sur les comptes, en particulier, permet de définir les comptes stratégiques comme cibles marketing. Les scores de propension à acheter du compte aident grandement les spécialistes du marketing B2B à établir des priorités parmi les comptes afin de maximiser leur retour sur investissement.
 
-Le service de notation prédictive des prospects et des comptes résout les problèmes ci-dessus en tirant parti des événements de conversion de l’étape d’opportunité, en les prédisant et en agrégeant les activités de personne au niveau du compte pour produire les notes de compte. Les scores sont facilement disponibles en tant que champs personnalisés sur les profils de personne et de compte, et peuvent facilement être inclus en tant que critères de segment pour affiner votre audience. Les principaux facteurs d’influence sont également disponibles au niveau des agrégats et des unités afin d’aider les spécialistes du marketing B2B à mieux comprendre les éléments qui ont motivé les scores.
+Le service de notation prédictive des prospects et des comptes résout les problèmes ci-dessus en tirant parti des événements de conversion de l’étape d’opportunité, en les prédisant et en agrégeant les activités de personne au niveau du compte pour produire les notes de compte. Les scores sont facilement disponibles en tant que champs personnalisés sur les profils de personne et de compte, et peuvent facilement être inclus en tant que critères pour affiner votre audience. Les principaux facteurs d’influence sont également disponibles au niveau des agrégats et des unités afin d’aider les spécialistes du marketing B2B à mieux comprendre les éléments qui ont motivé les scores.
 
 ## Comprendre la notation prédictive des prospects et des comptes {#how-it-works}
 

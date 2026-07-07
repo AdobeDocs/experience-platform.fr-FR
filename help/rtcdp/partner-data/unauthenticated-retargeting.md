@@ -4,19 +4,13 @@ description: Découvrez comment recibler des utilisateurs non authentifiés à l
 feature: Use Cases, Customer Acquisition
 exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
 TQID: https://experienceleague.adobe.com/uZfXyZZF-DhKPRFHFaCZRgjjMcK-oebDfJggdt7CPnw
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: fd2e3797-f2ea-4b36-a9af-52acf5e90513id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 668
+source-wordcount: 667
 ht-degree: 0%
 
 ---
@@ -65,7 +59,7 @@ Pour recibler efficacement les utilisateurs à forte intention, créez des audie
 
 Une fois que vous avez créé votre audience, activez-la sur plusieurs plateformes pour interagir avec les utilisateurs.
 
-1. **Vérifier les audiences** : assurez-vous que les segments d’audience reflètent les comportements appropriés.
+1. **Vérifier les audiences** : assurez-vous que les audiences reflètent les comportements appropriés.
 
 2. **Créer des règles d’activation** : définissez des conditions pour savoir quand et comment les utilisateurs sont engagés en fonction des actions.
 
@@ -87,7 +81,7 @@ Configurez un transfert d’événement dans Platform pour envoyer les données 
 
 Assurez-vous que l’extension de reciblage hors site est associée à une règle d’événement valide dans la collecte de données Adobe Experience Platform. En règle générale, une règle globale doit être créée pour se déclencher sur des actions clés, telles que des `page load` ou des interactions utilisateur spécifiques.
 
-Pour en savoir plus sur la configuration de l’extension, consultez la documentation [Transfert d’événement](https://experienceleague.adobe.com/fr/docs/experience-platform/tags/event-forwarding/getting-started).
+Pour en savoir plus sur la configuration de l’extension, consultez la documentation [Transfert d’événement](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started).
 
 ## Autres cas d’utilisation {#other-use-cases}
 

@@ -1,22 +1,16 @@
 ---
 title: Mises à niveau de l’architecture vers Real-Time CDP B2B edition
 description: Lisez ce document pour en savoir plus sur les mises à niveau complètes de l’architecture vers Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
 TQID: https://experienceleague.adobe.com/YExK9V4S2wvr2jdEAcCNzCfCze5S3QtgwQcJOlNkTfU
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b4dd41a7-ccf8-4e9d-918e-acaab534a307id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 1193
+source-wordcount: 1192
 ht-degree: 1%
 
 ---
@@ -76,7 +70,7 @@ Les fonctionnalités suivantes ont été mises à jour dans le cadre des mises �
 
 Dans le cadre de la nouvelle mise à niveau de l’architecture, les filtres d’événement d’expérience ne peuvent plus être utilisés dans une audience unique à entités multiples qui inclut des attributs B2B.
 
-Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [&#x200B; ajouter des audiences et des audiences de référence &#x200B;](../segmentation/ui/segment-builder.md#adding-audiences)
+Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [ajouter des audiences et des audiences de référence](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Par exemple :
 
@@ -89,7 +83,7 @@ Une fois la mise à niveau terminée, toute nouvelle audience d’entités multi
 
 >[!TIP]
 >
->Un **segment de segments** est toute définition de segment contenant un ou plusieurs segments par lots ou Edge. **Remarque** : si vous utilisez un segment de segments, la disqualification du profil se produit **toutes les 24 heures**.
+>Un **segment de segments** est toute définition de segment contenant une ou plusieurs audiences par lots ou Edge. **Remarque** : si vous utilisez un segment de segments, la disqualification du profil se produit **toutes les 24 heures**.
 
 ### Résolution d’entité et fusion de la priorité temporelle dans les audiences B2B
 

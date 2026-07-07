@@ -3,19 +3,14 @@ title: Rendre obsolète un champ XDM dans l’IU
 description: Découvrez comment rendre obsolètes les champs de modèle de données d’expérience (XDM) à l’aide de l’éditeur de schémas dans Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 TQID: https://experienceleague.adobe.com/I1k95rHbY66tqi81Bj1nE2Z6ssgepZx62HGKNWk4g9Q
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: 703
-ht-degree: 85%
+source-wordcount: 702
+ht-degree: 80%
 
 ---
 
@@ -23,7 +18,7 @@ ht-degree: 85%
 
 Le modèle de données d’expérience (XDM) vous offre la possibilité de gérer votre modèle de données en fonction des besoins de votre entreprise en rendant obsolètes les champs de schéma une fois les données ingérées. Les champs superflus peuvent être rendus obsolètes. Ils seront alors supprimés de l’affichage de l’IU et masqués des IU en aval. Pour votre confort, une case à cocher dans l’éditeur de schémas permet d’afficher les champs obsolètes et, le cas échéant, d’annuler l’obsolescence.
 
-Comme les champs obsolètes sont masqués de l’IU par défaut, cela simplifie votre schéma dans l’éditeur de schémas et empêche l’ajout de champs non souhaités aux dépendances en aval telles que le créateur de segments, le concepteur de parcours, etc. L’obsolescence des champs est également rétrocompatible. Les autres systèmes qui utilisent les champs obsolètes, tels que les audiences et les requêtes, continueront à les évaluer comme prévu. Un champ obsolète utilisé dans une audience existante garde toute sa validité : le champ s’affiche comme prévu dans la zone de travail du créateur de segments et il est évalué en fonction des données disponibles dans les champs obsolètes. Il s’agit d’un changement sans rupture qui n’a aucune incidence négative sur les flux de données existants.
+Étant donné que les champs obsolètes sont masqués dans l’interface utilisateur par défaut, votre schéma est rationalisé dans l’éditeur de schémas et les champs indésirables ne peuvent pas être ajoutés à des dépendances en aval telles que le créateur de segments, le concepteur de parcours, etc. L’obsolescence des champs est également rétrocompatible. Les autres systèmes qui utilisent les champs obsolètes, tels que les audiences et les requêtes, continueront à les évaluer comme prévu. Un champ obsolète utilisé dans une audience existante garde toute sa validité : le champ s’affiche comme prévu dans la zone de travail du créateur de segments et il est évalué en fonction des données disponibles dans les champs obsolètes. Il s’agit d’un changement sans rupture qui n’a aucune incidence négative sur les flux de données existants.
 
 >[!NOTE]
 >
@@ -65,7 +60,7 @@ Pour annuler l’obsolescence d’un champ, commencez par [afficher le champ obs
 
 La boîte de dialogue [!UICONTROL Annuler l’obsolescence du champ] s’affiche. Pour confirmer vos modifications, sélectionnez **[!UICONTROL Confirmer]**.
 
-![&#x200B; Boîte de dialogue [!UICONTROL &#x200B; Annuler l’obsolescence du champ &#x200B;] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
+![ Boîte de dialogue [!UICONTROL  Annuler l’obsolescence du champ ] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
 
 Le champ s’affiche désormais de manière standard dans l’affichage de l’IU et dans les IU en aval. Vous avez à présent la possibilité de rendre le champ obsolète à nouveau.
 

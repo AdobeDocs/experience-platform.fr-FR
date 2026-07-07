@@ -3,9 +3,9 @@ title: Utilisation de cas d’utilisation de l’expérience client pour atteind
 description: Utilisez un cadre pratique prêt pour l’atelier afin de définir, de hiérarchiser et d’activer les cas d’utilisation d’expérience client liés à des résultats commerciaux mesurables. Appliquez un modèle simple Pourquoi → Qui/Quoi/Où → Comment pour aligner les équipes, guider l’exécution et obtenir un impact.
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Passez de cas d’utilisation uniques à des expériences client évolutives et 
 ## Cas d’utilisation : pourquoi → qui / quoi / où → comment
 
 - **Pourquoi :** l’objectif commercial et l’indicateur de performance clé North Star. *Le pourquoi justifie tout le reste.*
-- **Qui :** audience ou segment défini(e)
+- **Qui :** Audience définie
 - **Quoi :** Message, offre ou call to action
 - **Où :** canal ou point de contact
 - **Comment :** exécution sur cinq piliers : données, audience, parcours, mesure et *de contenu (par exemple, entrées de données, logique de segmentation, orchestration, test/contrôle, ressources de contenu)*

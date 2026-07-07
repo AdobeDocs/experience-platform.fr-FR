@@ -3,33 +3,21 @@ title: Chevauchements avancés des audiences
 description: Découvrez comment analyser les intersections des audiences et prendre des décisions pilotées par les données à l’aide du tableau de bord Avancé sur les chevauchements d’audiences. Filtrer les audiences, comparer les chevauchements et exporter des informations pour améliorer les stratégies de ciblage.
 exl-id: 8a974b97-6fa0-4700-891c-73a72c8c84dc
 TQID: https://experienceleague.adobe.com/7QEjI6rlHIf47FaN4Fst7i0Pl3G8BMRtjB2n-ZA-PpA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 502
+source-wordcount: 501
 ht-degree: 2%
 
 ---
 
 # Chevauchements avancés des audiences
 
-Obtenez des informations précieuses pour optimiser vos stratégies de ciblage et de segmentation d’audience en analysant la manière dont différents segments d’audience interagissent avec le tableau de bord [!UICONTROL Chevauchements d’audience avancés]. Examinez les mesures tabulées pour identifier les chevauchements, affiner la segmentation et réduire les messages redondants. En fin de compte, vous pouvez utiliser ces informations pour créer des campagnes plus ciblées et des efforts marketing efficaces. Sur ce tableau de bord, vous pouvez examiner les intersections des audiences, appliquer des filtres et effectuer une analyse de chevauchement détaillée pour prendre des décisions basées sur les données et améliorer les résultats d’engagement.
+Obtenez des informations précieuses pour optimiser vos stratégies de ciblage et de segmentation d’audience en analysant la manière dont différentes audiences interagissent avec le tableau de bord [!UICONTROL Chevauchements d’audience avancés]. Examinez les mesures tabulées pour identifier les chevauchements, affiner la segmentation et réduire les messages redondants. En fin de compte, vous pouvez utiliser ces informations pour créer des campagnes plus ciblées et des efforts marketing efficaces. Sur ce tableau de bord, vous pouvez examiner les intersections des audiences, appliquer des filtres et effectuer une analyse de chevauchement détaillée pour prendre des décisions basées sur les données et améliorer les résultats d’engagement.
 
 ## Filtrer les audiences {#filter-audiences}
 

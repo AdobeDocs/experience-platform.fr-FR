@@ -3,27 +3,14 @@ title: Comparaison des audiences
 description: Découvrez comment comparer des mesures clés entre différents groupes d’audiences à l’aide du tableau de bord de comparaison d’audiences. Définissez des filtres d’audience, analysez les tendances et exportez des informations pour les décisions axées sur les données
 exl-id: cccd53f3-3d10-4044-ab4a-984f6f4a6e90
 TQID: https://experienceleague.adobe.com/sJcEBM0H2RPFTdzJ75-DMJRFBAJAVpx9ux6OKyaesx0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 752
+source-wordcount: 751
 ht-degree: 0%
 
 ---
@@ -34,7 +21,7 @@ Le tableau de bord [!UICONTROL Comparaison des audiences] compare et met en cont
 
 ## Définir des comparaisons d’audience {#set-audience-comparisons}
 
-Pour obtenir des informations et des comparaisons plus pertinentes, utilisez les filtres système pour cibler précisément les segments d’audience et la période que vous souhaitez analyser. Sélectionnez l’icône de filtre (![L’icône de filtre.](../../../images/icons/filter-icon-white.png)). pour choisir deux audiences différentes ([!UICONTROL Audience A] et [!UICONTROL Audience B]) et définir des paramètres spécifiques à comparer.
+Pour obtenir des informations et des comparaisons plus pertinentes, utilisez les filtres système pour cibler précisément les audiences et la période que vous souhaitez analyser. Sélectionnez l’icône de filtre (![L’icône de filtre.](../../../images/icons/filter-icon-white.png)). pour choisir deux audiences différentes ([!UICONTROL Audience A] et [!UICONTROL Audience B]) et définir des paramètres spécifiques à comparer.
 
 ![Boîte de dialogue Filtres du tableau de bord de comparaison des audiences.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters.png)
 

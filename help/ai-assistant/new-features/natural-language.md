@@ -4,24 +4,12 @@ description: Découvrez comment utiliser les fonctionnalités d’estimation du 
 badge: Alpha
 exl-id: 7997c84f-288b-4b48-9f88-8de4addbae36
 TQID: https://experienceleague.adobe.com/tMbm4Vdg5CiVkv4NpyJCO5dl1YWTiWq6-iMrwVNFWfs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-subfeature_v2:
-  - id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2: id: af7d4edc-6e6b-4176-bf14-907faf40ebd4
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 1327
 ht-degree: 0%
@@ -147,4 +135,4 @@ L’assistant AI ne peut actuellement pas répondre aux questions basées sur le
 
 ### Mises À Jour Des Données En Temps Réel
 
-Les estimations fournies par l’assistant AI sont basées sur des instantanés de données récents, mais pas en temps réel. Les données sont actualisées toutes les 24 à 48 heures, de sorte que les informations reflètent ce retard. Cette limitation signifie que les utilisateurs et utilisatrices ne peuvent pas recevoir de mises à jour instantanées si un segment ou un jeu de données change considérablement dans un court laps de temps.
+Les estimations fournies par l’assistant AI sont basées sur des instantanés de données récents, mais pas en temps réel. Les données sont actualisées toutes les 24 à 48 heures, de sorte que les informations reflètent ce retard. Cette limitation signifie que les utilisateurs et utilisatrices ne peuvent pas recevoir de mises à jour instantanées si une audience ou un jeu de données change considérablement dans un court laps de temps.

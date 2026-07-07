@@ -5,25 +5,12 @@ title: Présentation d’Audience Manager Source
 description: La source Adobe Audience Manager diffuse des données propriétaires collectées dans Audience Manager vers Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
 TQID: https://experienceleague.adobe.com/LuP2iKWYUHNzM9J5M0-rwo4DmpV12taWFvL5hauxnFs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-  - id: f5efb499-54f9-432b-ac5c-599dbac103af
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: de9975b2-c43a-4287-9698-4f4cad92b83fid: f5efb499-54f9-432b-ac5c-599dbac103af
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 1158
 ht-degree: 13%
@@ -54,7 +41,7 @@ XDM est une spécification documentée publiquement qui fournit un cadre normali
 
 Le respect des normes XDM permet d’intégrer uniformément les données de l’expérience client, ce qui facilite la diffusion des données et la collecte des informations.
 
-Pour plus d’informations sur l’utilisation de XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../../xdm/home.md). Pour en savoir plus sur la structure des schémas XDM entre les profils et les événements, lisez les [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
+Pour plus d’informations sur l’utilisation de XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../../xdm/home.md). Pour en savoir plus sur la structure des schémas XDM entre les profils et les événements, lisez les [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
 
 ## Exemples de schémas XDM
 
@@ -76,7 +63,7 @@ Pour plus d’informations sur le mappage des champs d’Audience Manager à XDM
 
 Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes) et qui est rendu disponible par une connexion aux données. Les données Audience Manager se composent de données en temps réel, de données entrantes et de données de profil. Pour localiser vos jeux de données Audience Manager, utilisez la fonction de recherche de l’interface utilisateur en utilisant les conventions de dénomination fournies pour chaque type de données.
 
-Les jeux de données Audience Manager sont désactivés pour le profil par défaut et les utilisateurs peuvent activer ou désactiver les jeux de données en fonction de leurs cas d’utilisation. Il n’est pas recommandé de désactiver les jeux de données qui seront utilisés pour l’appartenance à un segment dans le profil.
+Les jeux de données Audience Manager sont désactivés pour le profil par défaut et les utilisateurs peuvent activer ou désactiver les jeux de données en fonction de leurs cas d’utilisation. Il n’est pas recommandé de désactiver les jeux de données qui seront utilisés pour l’appartenance de l’audience au profil.
 
 >[!NOTE]
 >

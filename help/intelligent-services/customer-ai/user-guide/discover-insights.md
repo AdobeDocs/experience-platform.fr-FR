@@ -6,27 +6,15 @@ title: Découvrir des informations avec l’IA dédiée aux clients
 description: Ce document sert de guide pour interagir avec les informations d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 TQID: https://experienceleague.adobe.com/ChexcCvlaKGZ43eoXm7xpgpJKkOJcZ6HX979rcMIabg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 2461
-ht-degree: 17%
+source-wordcount: 2457
+ht-degree: 15%
 
 ---
 
@@ -111,7 +99,7 @@ Pour modifier une instance, sélectionnez **[!UICONTROL Modifier]** dans le vole
 
 La boîte de dialogue de modification s’affiche, vous permettant de modifier le nom, la description, le statut et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, sélectionnez **[!UICONTROL Enregistrer]** dans le coin inférieur droit.
 
-![&#x200B; Fenêtre contextuelle Modifier l’instance affichant des options pour modifier le nom, la description, le statut et la fréquence de notation d’une instance IA dédiée aux clients &#x200B;](../images/insights/edit-instance.png)
+![ Fenêtre contextuelle Modifier l’instance affichant des options pour modifier le nom, la description, le statut et la fréquence de notation d’une instance IA dédiée aux clients ](../images/insights/edit-instance.png)
 
 ### Actions supplémentaires
 
@@ -156,35 +144,35 @@ Survoler l’un des principaux facteurs d’influence permet de ventiler davanta
 
 ![Visualisation détaillée présentant une répartition détaillée des facteurs d’influence pour un compartiment de propension sélectionné.](../images/insights/drilldown.png)
 
-De plus, les analyses en profondeur vous permettent de comparer un facteur de distribution s’il se produit dans plusieurs regroupements de propension et de créer des segments plus spécifiques avec ces valeurs. L’exemple suivant illustre le premier cas d’utilisation :
+De plus, les analyses en profondeur vous permettent de comparer un facteur de distribution s’il se produit dans plusieurs intervalles de propension et de créer des audiences plus spécifiques avec ces valeurs. L’exemple suivant illustre le premier cas d’utilisation :
 
 ![Comparaison des facteurs de distribution entre les intervalles de propension, mettant en évidence les différences entre les facteurs d’influence.](../images/insights/drilldown-compare.png)
 
 Vous pouvez constater que les profils à faible propension à la conversion sont moins susceptibles d’avoir récemment consulté les pages web adobe.com. Le facteur « Jours depuis la dernière webVisit » n’a qu’une couverture de 8 %, contre 26 % dans les profils à propension moyenne. À l’aide de ces nombres, vous pouvez comparer la distribution dans chaque intervalle pour le facteur. Ces informations peuvent être utilisées pour inférer que la récence de la visite web n’a pas autant d’influence dans le compartiment à faible propension, qu’elle en a dans le compartiment à propension moyenne.
 
-### Création d’un segment
+### Créer une audience
 
-Cliquer sur le bouton **[!UICONTROL Créer un segment]** dans l’un des compartiments pour les propensions faible, moyenne et élevée vous redirige vers le créateur de segments.
-
->[!NOTE]
->
->Le bouton **[!UICONTROL Créer un segment]** n’est disponible que si le profil client en temps réel est activé pour le jeu de données. Pour plus d’informations sur l’activation du profil client en temps réel, consultez la [présentation du profil client en temps réel](../../../rtcdp/overview.md).
-
-![Bouton pour créer un segment à partir de facteurs d’influence dans les informations de l’IA dédiée aux clients.](../images/insights/influential-factors-create-segment.png)
-
-![Bouton pour créer un segment à partir de facteurs d’influence dans les informations de l’IA dédiée aux clients.](../images/insights/create-segment.png)
-
-Le créateur de segments permet de définir un segment. Lors de la sélection de **[!UICONTROL Créer un segment]** dans la page Insights, l’IA dédiée aux clients ajoute automatiquement les informations des intervalles sélectionnés au segment. Pour terminer la création de votre segment, il vous suffit de renseigner les conteneurs **Nom** et **Description** situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description au segment, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit.
+Cliquer sur le bouton **[!UICONTROL Créer une audience]** dans l’un des compartiments pour une propension faible, moyenne et élevée vous redirige vers le créateur de segments.
 
 >[!NOTE]
 >
->Puisque les scores de propension sont écrits sur le profil individuel, ils sont disponibles dans le créateur de segments comme tout autre attribut de profil. Lorsque vous accédez au créateur de segments pour créer des segments, vous pouvez voir tous les scores de propension sous le Customer AI de votre espace de noms.
+>Le bouton **[!UICONTROL Créer une audience]** n’est disponible que si le profil client en temps réel est activé pour le jeu de données. Pour plus d’informations sur l’activation du profil client en temps réel, consultez la [présentation du profil client en temps réel](../../../rtcdp/overview.md).
 
-![Interface d’enregistrement des segments affichant les champs pour saisir le nom et la description du segment avant l’enregistrement.](../images/insights/segment-saving.png)
+![Bouton pour créer une audience à partir de facteurs d’influence dans les informations de l’IA dédiée aux clients.](../images/insights/influential-factors-create-segment.png)
 
-Pour afficher votre nouveau segment dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page **[!UICONTROL Parcourir]** s’affiche et affiche tous les segments disponibles.
+![Bouton pour créer une audience à partir de facteurs d’influence dans les informations de l’IA dédiée aux clients.](../images/insights/create-segment.png)
 
-![Tableau de bord des segments affichant la liste de tous les segments disponibles dans l’interface utilisateur d’Experience Platform.](../images/insights/Segments-dashboard.png)
+Le créateur de segments est utilisé pour créer une audience. Lors de la sélection de **[!UICONTROL Créer une audience]** dans la page Insights, l’IA dédiée aux clients ajoute automatiquement les informations des intervalles sélectionnés à l’audience. Pour terminer la création de votre audience, remplissez simplement les conteneurs **Nom** et **Description** situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description à l’audience, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit.
+
+>[!NOTE]
+>
+>Puisque les scores de propension sont écrits sur le profil individuel, ils sont disponibles dans le créateur de segments comme tout autre attribut de profil. Lorsque vous accédez au créateur de segments pour créer de nouvelles audiences, vous pouvez voir tous les différents scores de propension sous l’IA dédiée aux clients de votre espace de noms.
+
+![Interface d’enregistrement d’audience affichant des champs pour saisir le nom et la description de l’audience avant d’effectuer l’enregistrement.](../images/insights/segment-saving.png)
+
+Pour afficher votre nouvelle audience dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche. La page **[!UICONTROL Parcourir]** s’affiche et affiche toutes les audiences disponibles.
+
+![Tableau de bord des audiences affichant la liste de toutes les audiences disponibles dans l’interface utilisateur d’Experience Platform.](../images/insights/Segments-dashboard.png)
 
 ## Performances historiques {#historical-performance}
 
@@ -216,7 +204,7 @@ Outre le suivi des résultats prévus et réels au fil du temps sur l’onglet P
 
 ### Graphique de courbe d’élévation
 
-Graphique de courbe d’élévation ![&#x200B; montrant l’amélioration du modèle prédictif par rapport au ciblage aléatoire. Les valeurs élevées de la courbe de portance des déciles précoces indiquent un modèle fort.](../images/user-guide/lift-chart.png)
+Graphique de courbe d’élévation ![ montrant l’amélioration du modèle prédictif par rapport au ciblage aléatoire. Les valeurs élevées de la courbe de portance des déciles précoces indiquent un modèle fort.](../images/user-guide/lift-chart.png)
 
 Le graphique de courbe d’élévation mesure l’amélioration apportée par l’utilisation d’un modèle prédictif plutôt que d’un ciblage aléatoire.
 
@@ -249,4 +237,4 @@ Ce document décrit les informations fournies par une instance de service Custom
 
 La vidéo suivante montre comment utiliser l’IA dédiée aux clients pour afficher la sortie des modèles et des facteurs d’influence.
 
->[!VIDEO](https://video.tv.adobe.com/v/36547?captions=fre_fr&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)

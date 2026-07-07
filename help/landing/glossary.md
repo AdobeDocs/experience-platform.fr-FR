@@ -5,44 +5,15 @@ title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 TQID: https://experienceleague.adobe.com/BamtoDSzzhu0E1flZK7kaWvPXgD-xq9Qv2iQfBdaTt4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: addf009e-030a-4310-8534-776a3e62ed48
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: addf009e-030a-4310-8534-776a3e62ed48id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080bid: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 8444
-ht-degree: 12%
+source-wordcount: 8463
+ht-degree: 11%
 
 ---
 
@@ -56,25 +27,27 @@ ht-degree: 12%
 
 **Action** : dans le contexte des balises, une action est un type spécifique de composant de règle qui définit ce qui doit se produire une fois qu’un événement se produit et que les conditions sont évaluées et transmises.
 
-**Activer** : l’activation est l’action effectuée par un utilisateur pour mapper un segment ou des profils à une destination telle que [!DNL Oracle Eloqua], [!DNL Google] ou [!DNL Salesforce Marketing Cloud].
+**Activer** : l’activation est l’action effectuée par un utilisateur pour mapper une audience ou des profils à une destination telle que [!DNL Oracle Eloqua], [!DNL Google] ou [!DNL Salesforce Marketing Cloud].
 
 **Activité** : dans [!DNL Offer Decisioning], une activité contient la logique qui sous-tend la sélection d’une offre.
 
 **Administrateur** : au moins une personne de votre organisation peut configurer et personnaliser les autorisations pour Experience Platform dans Adobe Admin Console.
 
-**&#x200B;**&#x200B;: Adobe Admin Console fournit un emplacement central pour la gestion des droits et des accès aux produits Adobe pour votre organisation. Par le biais de la console, les administrateurs et administratrices peuvent accorder des autorisations d’accès à des groupes d’utilisateurs et d’utilisatrices pour diverses fonctionnalités d’Experience Platform, telles que « Gérer les jeux de données », « Afficher les jeux de données » ou « Gérer les profils ».
+**** : Adobe Admin Console fournit un emplacement central pour la gestion des droits et des accès aux produits Adobe pour votre organisation. Par le biais de la console, les administrateurs et administratrices peuvent accorder des autorisations d’accès à des groupes d’utilisateurs et d’utilisatrices pour diverses fonctionnalités d’Experience Platform, telles que « Gérer les jeux de données », « Afficher les jeux de données » ou « Gérer les profils ».
+
+**Adobe AI ML Framework** : Adobe AI ML Framework est un framework de machine learning (ML) unifié qui utilise les données Experience Platform pour permettre aux spécialistes des données de développer des services intelligents pilotés par ML de manière plus rapide, évolutive et réutilisable.
 
 **Adobe Experience Platform** : Adobe Experience Platform normalise les données et le contenu dans l’ensemble de l’entreprise, alimentant les profils consommateurs en temps réel, permettant l’utilisation de la science des données et accélérant la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience sur le parcours client.
 
 **Adobe Experience Platform Query Service** : permet aux analystes de données d’interroger les événements et les profils à utiliser dans les analyses et le machine learning. Grâce à Query Service, les analystes et les spécialistes des données peuvent extraire tous leurs jeux de données stockés dans Experience Platform (y compris les données comportementales, les points de vente, la gestion de la relation client, etc.) et interroger ces jeux de données pour répondre à des questions spécifiques sur les données.
 
-**Adobe Experience Platform Segmentation Service** : permet de créer des segments et de générer des audiences à partir de vos données du profil client en temps réel. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le lac de données.
+**Adobe Experience Platform Segmentation Service** : permet de créer et de générer des audiences à partir de vos données du profil client en temps réel. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le lac de données.
 
 **Adobe Intelligent Services** : les services intelligents tels que l’IA dédiée à l’attribution et l’IA dédiée aux clients sont des modèles d’apprentissage automatique basés sur l’intelligence artificielle qui sont conçus spécifiquement et qui nécessitent l’exécution et le fonctionnement d’Experience Platform.
 
-**&#x200B;**&#x200B;: Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Experience Platform, y compris aux API, aux événements, à la console de développement et aux outils utiles.
+**** : Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Experience Platform, y compris aux API, aux événements, à la console de développement et aux outils utiles.
 
-**&#x200B;**&#x200B;: Adobe AI est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**** : Adobe AI est le cadre d’intelligence artificielle qui alimente Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
 **Compartiment Amazon S3** : les compartiments [!DNL Amazon S3] sont les conteneurs de base pour les données stockées dans l’écosystème [!DNL Amazon]. Les compartiments contiennent des objets, chaque objet est stocké et récupéré à l’aide d’une clé unique attribuée par le développeur.
 
@@ -94,11 +67,21 @@ ht-degree: 12%
 
 **IA dédiée à l’attribution** : [!DNL Attribution AI] est un service intelligent optimisé par Adobe AI qui offre des fonctionnalités d’attribution algorithmique multicanal tout au long du cycle de vie du client.
 
-**Audience** : une audience est l’ensemble des profils ainsi obtenus qui répondent aux critères d’une définition de segment.
+**Audience** : une audience est un ensemble de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment (audience générée par Experience Platform) ou à partir de sources externes (audience générée en externe).
 
-**Taille de l’audience** : une taille d’audience est le nombre total de profils qui répondent aux critères d’une définition de segment et qui remplissent les critères d’appartenance à l’audience.
+**Méthode d’évaluation de l’audience** : il existe trois méthodes d’évaluation de l’audience : par lots, en flux continu et Edge. La segmentation par lots vous permet de déplacer les données de profil en même temps pour créer une audience correspondante. La segmentation en flux continu vous permet d’évaluer les audiences en temps quasi réel afin de segmenter les données de flux dès leur arrivée dans Experience Platform. La segmentation Edge vous permet d’évaluer les audiences en temps quasi réel pour des cas d’utilisation de la même page et de la personnalisation.
 
-**Instantané d’audience** : un instantané d’audience capture tous les profils qui remplissent les critères du segment au moment de la segmentation.
+**Exportation de l’audience** : l’exportation de l’audience est l’un des deux types de destinations dans Experience Platform. Avec l’exportation d’audiences, vous pouvez envoyer les profils qui remplissent les critères et qui ont été mappés à la destination. Utilise les ID d’audience et d’utilisateur et les données pseudonymes, et s’intègre généralement aux réseaux sociaux et autres plateformes numériques cibles.
+
+**Identifiant d’audience** : un identifiant d’audience est un identifiant généré automatiquement et associé à une audience.
+
+**Appartenance à une audience** : l’appartenance à une audience affiche la ou les audiences auxquelles un profil appartient actuellement.
+
+**Règles d’audience** : les règles d’audience définissent les conditions qui déterminent si un profil est admissible pour une audience.
+
+**Taille de l’audience** : une taille d’audience est le nombre total de profils qui répondent aux critères d’une audience et qui remplissent les critères d’appartenance à l’audience.
+
+**Instantané d’audience** : un instantané d’audience capture tous les profils qui remplissent les critères d’audience au moment de la segmentation.
 
 ## B
 
@@ -112,7 +95,7 @@ ht-degree: 12%
 
 **Ingestion par lots** : l’ingestion par lots vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
 
-**Segmentation par lots** : la segmentation par lots est une alternative à un processus de sélection de données en cours et déplace toutes les données de profil à la fois dans les définitions de segment pour produire des audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin de pouvoir être exporté en vue de son utilisation.
+**Segmentation par lots** : la segmentation par lots est une alternative à un processus de sélection de données en cours et déplace toutes les données de profil à la fois dans les définitions de segment pour produire des audiences correspondantes. Une fois créée, cette audience est enregistrée et stockée afin de pouvoir être exportée pour utilisation.
 
 **Version** : dans le contexte des balises, une version est un fichier ou un ensemble de fichiers contenant toutes les configurations et le code nécessaires à l’exécution de la logique commerciale contenue dans une bibliothèque, ce qui vous permet de déployer cette bibliothèque sur votre site web ou votre application mobile.
 
@@ -200,7 +183,7 @@ ht-degree: 12%
 
 **Libellés du jeu de données** : les libellés d’utilisation des données peuvent être ajoutés aux jeux de données. Tous les champs de ce jeu de données héritent des libellés du jeu de données.
 
-Workspace de science des données **: [!DNL Data Science Workspace] dans Experience Platform permet aux clients de créer des modèles de machine learning à l’aide de données dans les applications Experience Platform et Adobe, afin de créer des segments intelligents, de générer des informations et de fournir des prédictions, ce qui vous permet d’améliorer considérablement les expériences digitales des utilisateurs finaux.**
+Workspace de science des données **: la [!DNL Data Science Workspace] dans Experience Platform permet aux clients de créer des modèles de machine learning à l’aide de données dans les applications Experience Platform et Adobe, afin de créer des audiences intelligentes, de générer des informations et de fournir des prédictions, ce qui vous permet d’améliorer considérablement les expériences digitales des utilisateurs finaux.**
 
 **Source de données** : une source de données est une origine de données désignée par l’utilisateur. Une source de données peut être, par exemple, une application mobile, des événements de profil et/ou d’expérience, des événements de profil de site web ou un CRM.
 
@@ -270,9 +253,9 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Événement d’expérience** : un événement d’expérience représente un instantané du système lorsqu’une interaction ou un événement lié à une expérience client a lieu. Les événements d’expérience sont des enregistrements de faits non modifiables de ce qui s’est produit et représentent ce qui s’est produit sans agrégation ni interprétation. Dans le modèle de données d’expérience (XDM), ce concept est capturé par la classe [!DNL XDM ExperienceEvent].
 
-**Exporter un fichier complet** : fichier d’exportation contenant un cliché instantané complet de toutes les qualifications de profil pour le segment sélectionné.
+**Exporter un fichier complet** : fichier d’exportation contenant un cliché instantané complet de toutes les qualifications de profil pour l’audience sélectionnée.
 
-**Exporter des fichiers incrémentiels** : une série de fichiers exportés où le premier fichier est un cliché instantané complet de toutes les qualifications de profil pour le segment sélectionné, et les fichiers suivants sont des qualifications de profil incrémentielles depuis l’exportation précédente.
+**Exporter des fichiers incrémentiels** : une série de fichiers exportés où le premier fichier est un cliché instantané complet de toutes les qualifications de profil pour l’audience sélectionnée, et les fichiers suivants sont des qualifications de profil incrémentielles depuis l’exportation précédente.
 
 **Extension** : dans le contexte des balises, une extension est un package de fonctionnalités ajoutées à une propriété de balise. Une extension est généralement axée sur une solution marketing ou analytique spécifique et fournit les outils nécessaires au déploiement de cette technologie dans un environnement client.
 
@@ -364,7 +347,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Bibliothèque** : dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [&#x200B; relation de schéma &#x200B;](../xdm/tutorials/relationship-ui.md).
+**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [ relation de schéma ](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
@@ -470,7 +453,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 ## R
 
-**&#x200B;**&#x200B;: Adobe Real-Time Customer Data Platform (Real-Time CDP) rassemble des données client connues et inconnues pour créer des profils client de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
+**** : Adobe Real-Time Customer Data Platform (Real-Time CDP) rassemble des données client connues et inconnues pour créer des profils client de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
 
 **Real-Time Customer Profile** : le profil client en temps réel (parfois appelé Profil) fournit une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos données client en profils individuels offrant des comptes horodatés et exploitables de chaque interaction client.
 
@@ -500,7 +483,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Sandbox** : un sandbox est une structure virtuelle qui partitionne une instance Experience Platform unique en un environnement virtuel distinct, afin de favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-**Réinitialisation du sandbox** : une réinitialisation du sandbox supprime toutes les données, y compris les données, les profils et les segments, d’un sandbox. Les réinitialisations de sandbox peuvent affecter les données connectées à des destinations internes ou externes.
+**Réinitialisation du sandbox** : une réinitialisation du sandbox supprime toutes les données, y compris les données, les profils et les audiences, d’un sandbox. Les réinitialisations de sandbox peuvent affecter les données connectées à des destinations internes ou externes.
 
 **Sélecteur de sandbox** : le sélecteur de sandbox d’Experience Platform permet aux utilisateurs de naviguer entre les sandbox auxquels ils ont accès. Le fait de changer de sandbox modifie tout le contenu et peut modifier l’accès aux fonctionnalités en fonction des autorisations.
 
@@ -518,25 +501,11 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 **Clé d’accès secrète** : une clé d’accès secrète est une clé S3 [!DNL Amazon] utilisée conjointement avec l’ID de clé d’accès pour signer les requêtes AWS.
 
-**Segment** : un segment est un ensemble de règles qui inclut des attributs et des données d’événement qui qualifient un certain nombre de profils pour devenir une audience.
+**Créateur de segments** : le [!DNL Segment Builder] est un environnement de développement visuel utilisé pour créer des audiences. Il sert de composant commun à toutes les applications utilisant Experience Platform Segmentation Service.
 
-**Créateur de segments** : le [!DNL Segment Builder] est un environnement de développement visuel utilisé pour créer des définitions de segment. Il sert de composant commun à toutes les applications utilisant Experience Platform Segmentation Service.
-
-**Définition d’un segment** : une définition de segment est l’ensemble de règles utilisé pour décrire les caractéristiques ou le comportement clés d’une audience cible. Une fois conceptualisées, les règles décrites dans une définition de segment sont utilisées pour déterminer les membres de l’audience admissibles à un segment.
-
-**Méthode d’évaluation de segment** : il existe deux méthodes d’évaluation de segment : planifiée et à la demande. L’évaluation planifiée active une planification récurrente pour exécuter une tâche d’exportation à un moment spécifique, tandis que l’évaluation à la demande implique la création d’une tâche de segmentation pour créer l’audience immédiatement.
-
-**Exportation des segments** : l’exportation de segments est l’un des deux types de destinations dans Experience Platform. Avec l’exportation de segments, vous pouvez envoyer les profils qui remplissent les critères et qui ont été mappés à la destination. Elle utilise les identifiants de segment et d’utilisateur, ainsi que les données pseudonymes, et s’intègre généralement aux réseaux sociaux et aux autres plateformes cible de médias numériques.
-
-**Identifiant de segment** : un identifiant de segment est un identifiant généré automatiquement et associé à un segment.
-
-**Appartenance à un segment** : l’appartenance à un segment affiche le ou les segments dont fait actuellement partie un profil.
-
-**Règles de segment** : les règles de segment définissent les conditions qui déterminent si un profil est admissible pour un segment.
+**Définition d’un segment** : une définition de segment est l’ensemble de règles utilisé pour décrire les caractéristiques ou le comportement clés d’une audience cible. Une fois conceptualisées, les règles décrites dans une définition de segment sont utilisées pour déterminer les membres admissibles d’une audience.
 
 **Segmentation** : la segmentation est le processus de division d’un groupe important de clients, de prospects ou de consommateurs en groupes plus petits qui partagent des attributs similaires et qui réagissent de la même manière à des stratégies marketing spécifiques.
-
-**Adobe AI ML Framework** : Adobe AI ML Framework est un framework de machine learning (ML) unifié qui utilise les données Experience Platform pour permettre aux spécialistes des données de développer des services intelligents pilotés par ML de manière plus rapide, évolutive et réutilisable.
 
 **Libellés sensibles (« S »)** : les libellés sensibles (« S ») sont utilisés pour catégoriser les données considérées comme sensibles, telles que les différents types de données comportementales ou géographiques que vous souhaitez marquer comme sensibles.
 
@@ -548,7 +517,7 @@ Workspace de science des données **: [!DNL Data Science Workspace] dans Experie
 
 Libellé d’utilisation des données **S2** : un libellé d’utilisation des données `S2` est utilisé pour classer les données qui peuvent être utilisées pour déterminer une zone de limite géographique plus large.
 
-**&#x200B;**&#x200B;: source est un terme général pour tout connecteur d’entrée dans Experience Platform. Voir aussi : Connecteur Source
+**** : source est un terme général pour tout connecteur d’entrée dans Experience Platform. Voir aussi : Connecteur Source
 
 **Attribut Source** : un attribut source est un champ dans le jeu de données source. Les attributs sources sont mappés aux champs de schémas sources.
 
@@ -564,7 +533,7 @@ Libellé d’utilisation des données **S2** : un libellé d’utilisation des d
 
 **Ingestion par flux** : l’ingestion par flux vous permet d’envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
 
-**Segmentation par flux** : la segmentation par flux est un processus continu de sélection des données qui met à jour les segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-Time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
+**Segmentation par flux** : la segmentation par flux est un processus continu de sélection des données qui met à jour les audiences en réponse à l’activité des utilisateurs. Une fois qu’une audience a été créée et enregistrée, la définition de segment est appliquée aux données entrantes dans [!DNL Real-Time Customer Profile]. Les ajouts et les suppressions sont traités régulièrement, ce qui garantit que votre audience reste pertinente.
 
 **Vue du système** : la vue du système est une représentation visuelle des jeux de données sources qui transitent par les [!DNL Real-Time Customer Profile] vers les destinations.
 

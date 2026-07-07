@@ -5,17 +5,11 @@ title: Cours sur le Workspace de la science des données
 description: Ce document fournit un lien et une description pour le cours Adobe Experience Platform Data Science Workspace .
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
 TQID: https://experienceleague.adobe.com/pTsvNlJOSEGs8VwjcYSEEtHkcRD-5mfVFq66CpHdQ6w
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 484
 ht-degree: 2%
@@ -53,7 +47,7 @@ Les résultats d’apprentissage suivants sont abordés dans le cours Workspace 
 - Le rôle des hyper-paramètres dans le développement de modèles
 - Publication de modèles formés en tant que service
 - Comment utiliser le Workspace de science des données pour enrichir vos données de profil client en temps réel
-- Comment créer un segment en flux continu avec la sortie de votre modèle
+- Comment créer une audience de diffusion en continu avec la sortie de votre modèle
 
 ## Leçons
 

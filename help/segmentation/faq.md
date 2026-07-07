@@ -3,28 +3,15 @@ title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
 TQID: https://experienceleague.adobe.com/uIgNpBdbgynUJcsisLGwpNGOnRZ-Wkws2YlWzQIJFWY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 2165b294f87139a07bec0553b380aba4699b1d40
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e0eb8757-182f-49f3-94a4-1587d16f5094id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
-source-wordcount: 4902
-ht-degree: 24%
+source-wordcount: 4896
+ht-degree: 23%
 
 ---
 
@@ -80,7 +67,7 @@ Notez que vous ne devez **pas** inclure d’informations de consentement avec un
 
 ### Puis-je utiliser une audience générée en externe pour créer d’autres audiences ?
 
-Oui, les audiences générées en externe apparaîtront dans l’inventaire des audiences. elles peuvent être utilisés lors de la création d’audiences dans le [Créateur de segments](./ui/segment-builder.md).
+Oui, toute audience générée de manière externe apparaîtra dans l’inventaire des audiences et pourra être utilisée lors de la création d’audiences dans le [créateur de segments](./ui/segment-builder.md).
 
 ### À quelle fréquence les audiences générées en externe sont-elles évaluées ?
 
@@ -205,7 +192,7 @@ Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL &#x200B; Désactiver &#x200B;].
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL  Désactiver ].
 
 ### Comment republier une audience ?
 
@@ -293,7 +280,7 @@ La section suivante répertorie les questions relatives à la composition de l�
 
 La composition de l’audience et le créateur de segments jouent tous deux un rôle important dans la création d’audiences dans Experience Platform.
 
-Le créateur de segments est plus adapté à la création d’audiences **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée au traitement et à la personnalisation de l’audience **pour créer de nouvelles audiences basées sur une audience existante**.
+Le créateur de segments est plus adapté à l’audience **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée au **traitement et personnalisation** (pour créer de nouvelles audiences basées sur une audience existante).
 
 Le tableau suivant illustre la différence entre les deux services :
 
@@ -401,7 +388,7 @@ Supposons, par exemple, que vous ayez créé deux audiences qui s’excluent mut
 
 Lorsque le traitement d’évaluation de segmentation par lots s’exécute, le profil 1 passe à l’audience A, tandis que le profil 2 passe à l’audience B. Plus tard, mais avant l’exécution du traitement d’évaluation de segmentation par lots du lendemain, un événement qui réconcilie les deux profils entre dans Experience Platform. Par conséquent, un seul profil fusionné contenant les profils 1 et 2 est créé.
 
-Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivante, le nouveau profil fusionné aura une appartenance à l’audience dans **les deux** profil 1 et profil 2. Par conséquent, cela signifie qu’elle sera membre des **à la fois** audience A et audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la **exactement la même situation** qu’avant la connexion des profils, puisqu’il n’y avait toujours qu’une seule personne concernée et qu’Experience Platform ne disposait tout simplement **pas** d’informations suffisantes pour connecter les deux profils.
+Jusqu’à l’exécution de la tâche d’évaluation d’audience par lots suivante, le nouveau profil fusionné aura une appartenance à l’audience dans **les deux** profil 1 et profil 2. Par conséquent, cela signifie qu’elle sera membre des **à la fois** audience A et audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la **exactement la même situation** qu’avant la connexion des profils, puisqu’il n’y avait toujours qu’une seule personne concernée et qu’Experience Platform ne disposait tout simplement **pas** d’informations suffisantes pour connecter les deux profils.
 
 Si vous utilisez la recherche de profil pour récupérer le profil nouvellement créé et examiner son appartenance à l’audience, elle indique qu’elle est membre des **deux** audience A et audience B, malgré le fait que ces deux audiences ont des définitions contradictoires. Une fois la tâche d’évaluation de segmentation par lots quotidienne exécutée, l’appartenance à l’audience sera mise à jour pour refléter cet état mis à jour des données de profil.
 

@@ -4,21 +4,14 @@ description: Moengage est une plateforme d’engagement client qui alimente en t
 last-substantial-update: 2023-10-11T00:00:00.000Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
 TQID: https://experienceleague.adobe.com/eKdUOuVZfDcHjXk-egiNwVLIUZBVqx4P7urYuZCMAIg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1172
-ht-degree: 26%
+source-wordcount: 1194
+ht-degree: 27%
 
 ---
 
@@ -26,7 +19,7 @@ ht-degree: 26%
 
 ## Vue d’ensemble {#overview}
 
-Utilisez la destination [!DNL Moengage] pour connecter et mapper vos données Adobe (attributs utilisateur, segments et événements) à MoEngage en temps réel. Les clients et clientes peuvent alors agir sur ces données, en proposant des expériences ciblées et personnalisées.
+Utilisez la destination [!DNL Moengage] pour connecter et mapper vos données Adobe (attributs utilisateur, audiences et événements) à MoEngage en temps réel. Les clients et clientes peuvent alors agir sur ces données, en proposant des expériences ciblées et personnalisées.
 
 Avec Adobe, l’intégration est très simple et intuitive. Prenez n’importe quel profil utilisateur Adobe et mappez-le à un attribut utilisateur MoEngage.
 
@@ -36,7 +29,7 @@ Avec Adobe, l’intégration est très simple et intuitive. Prenez n’importe q
 
 ## Cas d’utilisation {#use-cases}
 
-Un spécialiste marketing souhaite cibler un segment d’utilisateurs ([!DNL Adobe Experience Platform] intégré) par le biais de campagnes [!DNL Moengage]. En outre, ils souhaitent personnaliser le contenu de la campagne en fonction des attributs des profils [!DNL Adobe Experience Platform]. Avec cette intégration, les utilisateurs et les attributs sont mis à jour dans MoEngage dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
+Un spécialiste marketing souhaite cibler une audience d’utilisateurs ([!DNL Adobe Experience Platform] intégré) par le biais de campagnes [!DNL Moengage]. En outre, ils souhaitent personnaliser le contenu de la campagne en fonction des attributs des profils [!DNL Adobe Experience Platform]. Avec cette intégration, les utilisateurs et les attributs sont mis à jour dans MoEngage dès que les audiences et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
 
 ## Conditions préalables {#prerequisites}
 
@@ -75,7 +68,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -87,8 +80,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 |---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (user_id, anonymous_id) ainsi que les attributs personnalisés que vous avez définis et que vous avez exportés vers [!DNL Moengage]. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’une audience avec les identifiants (user_id, anonyme_id) ainsi que les attributs personnalisés définis par vous exportés vers [!DNL Moengage]. |
+| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -96,7 +89,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -108,8 +101,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 
 ### Renseigner les détails de la destination {#destination-details}
 
-Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
-![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/settings.png)
+Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/settings.png)
 
 * **[!UICONTROL NOM D’UTILISATEUR]** : ID D’APPLICATION DE DONNÉES de la page des paramètres [!DNL Moengage] tableau de bord.
 * **[!UICONTROL MOT DE PASSE]** : CLÉ DE L’APPLICATION DE DONNÉES de la page paramètres [!DNL Moengage] tableau de bord.
@@ -130,9 +122,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Voir [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
@@ -150,7 +142,7 @@ Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Moe
 
 ![Moengage Destination Ajouter un mappage](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
-Dans la section [!UICONTROL Champ &#x200B;], sélectionnez le bouton fléché en regard du champ vide.
+Dans la section [!UICONTROL Champ ], sélectionnez le bouton fléché en regard du champ vide.
 
 ![Mappage Moengage Destination Source](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
@@ -168,8 +160,8 @@ Dans la section [!UICONTROL Champ cible], sélectionnez l’icône de mappage si
 
 Dans la fenêtre [!UICONTROL Sélectionner le champ cible], vous pouvez choisir entre deux catégories de champs cibles :
 
-* [!UICONTROL Sélectionner un espace de noms d’identité &#x200B;] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Experience Platform] aux espaces de noms d’identité [!DNL Moengage].
-* [!UICONTROL Sélectionner des attributs personnalisés &#x200B;] : utilisez cette option pour mapper les attributs XDM aux attributs [!DNL Moengage] personnalisés que vous avez définis dans votre compte [!DNL Moengage]. <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Moengage]. Par exemple, le mappage d’un attribut XDM `lastName` à un attribut `Last_Name` personnalisé dans [!DNL Moengage] crée l’attribut `Last_Name` dans [!DNL Moengage], s’il n’existe pas déjà, et lui associe l’attribut XDM `lastName`.
+* [!UICONTROL Sélectionner un espace de noms d’identité ] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Experience Platform] aux espaces de noms d’identité [!DNL Moengage].
+* [!UICONTROL Sélectionner des attributs personnalisés ] : utilisez cette option pour mapper les attributs XDM aux attributs [!DNL Moengage] personnalisés que vous avez définis dans votre compte [!DNL Moengage]. <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Moengage]. Par exemple, le mappage d’un attribut XDM `lastName` à un attribut `Last_Name` personnalisé dans [!DNL Moengage] crée l’attribut `Last_Name` dans [!DNL Moengage], s’il n’existe pas déjà, et lui associe l’attribut XDM `lastName`.
 
 ![Champs de mappage de destination Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 

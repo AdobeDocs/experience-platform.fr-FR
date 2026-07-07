@@ -3,20 +3,14 @@ keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;real time 
 title: Présentation de l’édition B2B de Real-time CDP
 description: Présentation du compte de l’édition B2B de Real-Time Customer Data Platform
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 TQID: https://experienceleague.adobe.com/hevyfE6SW6i4kV1xcoXK5gfKGCL90BEDxPPO0BzHTTE
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2:
-  - id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 1113
 ht-degree: 85%
@@ -80,7 +74,7 @@ Consultez la documentation [sources dans Real-Time CDP B2B edition](./sources/b2
 
 ## Destinations B2B
 
-Les destinations d’Experience Platform telles que Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads et Google Ad Manager sont disponibles et entièrement prises en charge par l’édition B2B de Real-time CDP. La destination Marketo Engage diffuse également les données d’appartenance aux segments en dehors d’Experience Platform et les rend disponibles sous forme de listes dans Marketo.
+Les destinations d’Experience Platform telles que Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads et Google Ad Manager sont disponibles et entièrement prises en charge par l’édition B2B de Real-time CDP. La destination Marketo Engage diffuse également les données d’appartenance à l’audience en dehors d’Experience Platform et les rend disponibles sous forme de listes dans Marketo.
 
 Consultez la présentation de la [Destination de Marketo Engage](../destinations/catalog/adobe/marketo-engage.md) pour plus d’informations.
 

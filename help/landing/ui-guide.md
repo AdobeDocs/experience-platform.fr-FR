@@ -5,34 +5,14 @@ title: Présentation de l’interface utilisateur d’Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 TQID: https://experienceleague.adobe.com/tKBCxQeNLontE9tNPZ7OxIjd28cAg-ICqVAbfW6eRdc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: adf04a6a-050f-44bc-a52c-db79ccb22ebfid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: eb30f47f-d87a-400f-8f78-63ce7979ff56id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1973
 ht-degree: 3%
 
 ---
@@ -51,7 +31,7 @@ Après vous être connecté à Adobe Experience Platform, vous êtes sur la page
 
 ### Mesures
 
-Le tableau de bord des mesures fournit des cartes qui vous donnent des informations sur les jeux de données, les profils, les segments et les destinations au sein de votre organisation.
+Le tableau de bord des mesures fournit des cartes qui vous donnent des informations sur les jeux de données, les profils, les audiences et les destinations au sein de votre organisation.
 
 ![](images/user-guide/homepage-dashboard.png)
 
@@ -59,13 +39,13 @@ La section **[!UICONTROL Jeux de données]** indique le nombre de jeux de donné
 
 La section **[!UICONTROL Profils]** indique le nombre total de personnes disposant de profils au sein de votre organisation, à l’exclusion des fragments de profil. Ce nombre total de personnes représente l’audience adressable totale et est mis à jour une fois toutes les 24 heures. Pour plus d’informations sur les profils, consultez la [présentation du profil client en temps réel](../profile/home.md).
 
-La section **[!UICONTROL Segments]** indique le nombre total de segments créés dans votre organisation. Ce nombre est mis à jour lorsqu’un nouveau segment est créé. Pour plus d’informations sur les segments, consultez la [présentation de Segmentation Service](../segmentation/home.md).
+La section **[!UICONTROL Audiences]** indique le nombre total d’audiences créées au sein de votre organisation. Ce nombre est mis à jour lorsqu’une nouvelle audience est créée. Pour plus d’informations sur les audiences, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
 La section **[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation. Ce nombre est mis à jour lorsqu’une nouvelle destination est créée. Vous trouverez plus d’informations sur les destinations dans la [présentation des destinations](../destinations/home.md).
 
 ### Données récentes
 
-Le tableau de bord des données récentes fournit des informations sur les jeux de données, les sources, les segments et les destinations récemment créés.
+Le tableau de bord des données récentes fournit des informations sur les jeux de données, les sources, les audiences et les destinations récemment créés.
 
 ![](images/user-guide/homepage-recent.png)
 
@@ -73,7 +53,7 @@ La section **[!UICONTROL Jeux de données récents]** répertorie les cinq jeux 
 
 La section **[!UICONTROL Sources récentes]** répertorie les cinq connecteurs source les plus récemment créés au sein de votre organisation. Cette liste est mise à jour chaque fois qu’un nouveau connecteur source est créé. Vous pouvez sélectionner une connexion source dans la liste pour l’afficher. Vous trouverez plus d’informations sur le connecteur spécifié ou sélectionnez **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les connexions source créées. Pour plus d’informations sur les sources, reportez-vous à la [présentation des sources](../sources/home.md).
 
-La section **[!UICONTROL Segments récents]** répertorie les cinq définitions de segment créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une définition de segment est créée. Vous pouvez sélectionner une définition de segment dans la liste à afficher. Vous pouvez trouver des informations supplémentaires sur la définition de segment spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les définitions de segment créées. Pour plus d’informations sur les segments, consultez la [présentation de Segmentation Service](../segmentation/home.md).
+La section **[!UICONTROL Audiences récentes]** répertorie les cinq dernières audiences créées au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle audience est créée. Vous pouvez sélectionner une audience dans la liste pour l’afficher. Vous trouverez plus d’informations sur l’audience spécifiée ou sélectionnez **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les audiences créées. Pour plus d’informations sur les audiences, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
 La section **[!UICONTROL Destinations récentes]** répertorie les cinq destinations créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle destination est créée. Vous pouvez sélectionner une destination dans la liste à afficher. Vous pouvez trouver des informations supplémentaires sur la destination spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les destinations créées. Vous trouverez plus d’informations sur les destinations dans la [présentation des destinations](../destinations/home.md).
 
@@ -155,7 +135,7 @@ La section **[!UICONTROL Destinations]** vous permet de créer, mettre à jour e
 
 La section **[!UICONTROL Profils]** vous permet de parcourir les profils client, d’afficher les mesures des profils, de créer et de gérer des politiques de fusion et d’afficher des schémas d’union. Pour en savoir plus sur l’utilisation de la section [!UICONTROL Profils], veuillez lire le [[!DNL Profile] guide d’utilisation](../profile/ui/user-guide.md). Pour plus d’informations sur le profil client en temps réel, consultez la [présentation du profil client en temps réel](../profile/home.md).
 
-La section **[!UICONTROL Audiences]** vous permet de créer et de gérer des définitions de segment. Pour en savoir plus sur l’utilisation de la section [!UICONTROL Audiences], veuillez lire le guide d’utilisation de la [segmentation](../segmentation/ui/overview.md). Pour plus d’informations sur Segmentation Service, consultez la [présentation de Segmentation Service](../segmentation/home.md).
+La section **[!UICONTROL Audiences]** vous permet de créer et de gérer des audiences. Pour en savoir plus sur l’utilisation de la section [!UICONTROL Audiences], veuillez lire le guide d’utilisation de la [segmentation](../segmentation/ui/overview.md). Pour plus d’informations sur Segmentation Service, consultez la [présentation de Segmentation Service](../segmentation/home.md).
 
 La section **[!UICONTROL Identités]** vous permet de créer et de gérer des espaces de noms d’identité. Pour plus d’informations sur la section [!UICONTROL Identités], y compris des informations sur les espaces de noms d’identité et sur l’utilisation des identités dans l’interface utilisateur d’Experience Platform, reportez-vous à la [présentation des espaces de noms d’identité](../identity-service/features/namespaces.md).
 
@@ -163,11 +143,11 @@ La section **[!UICONTROL Identités]** vous permet de créer et de gérer des es
 
 La section **[!UICONTROL Politiques]** vous permet de créer et de gérer des politiques d’utilisation des données. Pour en savoir plus sur l’utilisation de la section Politiques , consultez le guide d’utilisation des [politiques d’utilisation des données](../data-governance/policies/user-guide.md). Pour plus d’informations sur les politiques d’utilisation des données, consultez la [présentation des politiques d’utilisation des données](../data-governance/policies/overview.md).
 
-La section **[!UICONTROL Demandes]** vous permet de créer et de gérer des demandes d’accès à des informations personnelles. Pour accéder à l’interface utilisateur de Privacy Service, vous devez être placé sur la liste autorisée. Pour en savoir plus sur l’utilisation de la section Demandes , veuillez lire le guide d’utilisation de [&#128279;](../privacy-service/ui/user-guide.md). Vous trouverez plus d&#39;informations sur Privacy Service dans la présentation de [Privacy Service](../privacy-service/home.md).
+La section **[!UICONTROL Demandes]** vous permet de créer et de gérer des demandes d’accès à des informations personnelles. Pour accéder à l’interface utilisateur de Privacy Service, vous devez être placé sur la liste autorisée. Pour en savoir plus sur l’utilisation de la section Demandes , veuillez lire le guide d’utilisation de [](../privacy-service/ui/user-guide.md). Vous trouverez plus d&#39;informations sur Privacy Service dans la présentation de [Privacy Service](../privacy-service/home.md).
 
 ### [!UICONTROL Science des données]
 
-La section **[!UICONTROL Notebooks]** permet d’accéder à JupyterLab, un environnement de développement interactif qui vous permet d’explorer, d’analyser et de modéliser vos données. Pour en savoir plus sur l’utilisation de la section Notebooks , veuillez lire le guide d’utilisation de [JupyterLab](../data-science-workspace/jupyterlab/overview.md). Vous trouverez plus d’informations sur le Workspace de science des données dans la [&#x200B; Présentation du Workspace de science des données &#x200B;](../data-science-workspace/home.md)
+La section **[!UICONTROL Notebooks]** permet d’accéder à JupyterLab, un environnement de développement interactif qui vous permet d’explorer, d’analyser et de modéliser vos données. Pour en savoir plus sur l’utilisation de la section Notebooks , veuillez lire le guide d’utilisation de [JupyterLab](../data-science-workspace/jupyterlab/overview.md). Vous trouverez plus d’informations sur le Workspace de science des données dans la [ Présentation du Workspace de science des données ](../data-science-workspace/home.md)
 
 La section **[!UICONTROL Modèles]** vous permet d’utiliser le machine learning et l’intelligence artificielle pour créer, développer, entraîner et ajuster des modèles afin de faire des prédictions. Vous trouverez plus d’informations sur la section Modèles dans le tutoriel sur [la formation et l’évaluation d’un modèle](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
@@ -185,7 +165,7 @@ La section **[!UICONTROL Surveillance]** vous permet de surveiller l’ingestion
 
 ### [!UICONTROL Données fédérées]
 
-La section **[!UICONTROL Modèles]** vous permet de concevoir et de créer des modèles et des schémas de données qui définissent la structure, les relations et les contraintes de vos données. Pour plus d’informations sur les modèles et schémas de données, consultez le guide d’utilisation [Federated Audience Composition](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/config/datamodel/schemas).
+La section **[!UICONTROL Modèles]** vous permet de concevoir et de créer des modèles et des schémas de données qui définissent la structure, les relations et les contraintes de vos données. Pour plus d’informations sur les modèles et schémas de données, consultez le guide d’utilisation [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
 
 La section **[!UICONTROL Journal d’audit]** fournit un enregistrement détaillé et chronologique de toutes les actions et de tous les événements qui ont été effectués dans votre environnement en temps réel. Pour plus d’informations sur le journal d’audit, consultez le guide d’utilisation [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
 

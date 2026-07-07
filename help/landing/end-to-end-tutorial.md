@@ -4,29 +4,14 @@ title: Exemple de workflow complet de Adobe Experience Platform
 description: Découvrez le workflow de base de bout en bout pour Adobe Experience Platform à un niveau élevé.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
 TQID: https://experienceleague.adobe.com/WmodBks576CJjMwfzfSBLdjFJwOFVGUiSDMtqrXIE8Q
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
-source-wordcount: 1894
+source-wordcount: 1895
 ht-degree: 12%
 
 ---
@@ -37,7 +22,7 @@ Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexible
 
 Basé sur des API RESTful, Experience Platform offre toutes les fonctionnalités du système aux développeurs, en facilitant l’intégration des solutions d’entreprise à l’aide d’outils courants. Experience Platform vous permet d’obtenir une vue d’ensemble de vos clients en ingérant vos données client, en segmentant vos données aux audiences que vous souhaitez cibler et en activant ces audiences vers une destination externe. Le tutoriel suivant présente un workflow de bout en bout, montrant toutes les étapes de l’ingestion par le biais de sources à l’activation d’audiences par le biais de destinations.
 
-![Workflow de bout en bout &#x200B;](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
+![Workflow de bout en bout ](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
 
 ## Prise en main
 
@@ -77,33 +62,33 @@ Lors du premier chargement de données vers un nouveau jeu de données ou de la 
 
 ## Évaluation des données
 
-Une fois que vous avez généré des profils à partir des données ingérées, vous pouvez évaluer les données à l’aide de la segmentation. La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble d’individus de votre banque de profils, afin de distinguer un groupe de clients potentiels de votre base de clients. Pour en savoir plus sur la segmentation, veuillez lire la [&#x200B; présentation du service de segmentation &#x200B;](../segmentation/home.md).
+Une fois que vous avez généré des profils à partir des données ingérées, vous pouvez évaluer les données à l’aide de la segmentation. La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble d’individus de votre banque de profils, afin de distinguer un groupe de clients potentiels de votre base de clients. Pour en savoir plus sur la segmentation, veuillez lire la [ présentation du service de segmentation ](../segmentation/home.md).
 
 ### Création d’une définition de segment
 
-Pour commencer, vous devez créer une définition de segment pour regrouper vos clients afin de créer votre audience cible. Une définition de segment est un ensemble de règles que vous pouvez utiliser pour définir l’audience que vous souhaitez cibler. Pour créer une définition de segment, vous pouvez suivre les instructions du guide de l’interface utilisateur lors de l’utilisation du [créateur de segments](../segmentation/ui/segment-builder.md) ou du tutoriel de l’API sur la [création d’un segment](../segmentation/tutorials/create-a-segment.md).
+Pour commencer, vous devez créer une définition de segment pour regrouper vos clients afin de créer votre audience cible. Une définition de segment est un ensemble de règles que vous pouvez utiliser pour définir l’audience que vous souhaitez cibler. Pour créer une définition de segment, vous pouvez suivre les instructions du guide de l’interface utilisateur lors de l’utilisation du [créateur de segments](../segmentation/ui/segment-builder.md) ou du tutoriel de l’API sur la [création d’une définition de segment](../segmentation/tutorials/create-a-segment.md).
 
 Une fois que vous avez créé une définition de segment, veillez à conserver une note sur l’identifiant de définition de segment.
 
 ### Évaluation de votre définition de segment
 
-Après avoir créé votre définition de segment, vous pouvez créer une tâche de segmentation pour évaluer le segment en tant qu’instance unique ou créer un planning pour évaluer le segment de manière continue.
+Après avoir créé votre définition de segment, vous pouvez créer une tâche de segmentation pour évaluer la définition de segment en tant qu’instance unique ou créer un planning pour évaluer la définition de segment de manière continue.
 
-Pour évaluer une définition de segment à la demande, vous pouvez créer une tâche de segmentation. Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience en fonction de la définition de segment et des politiques de fusion référencées. Une politique de fusion est un ensemble de règles utilisé par Experience Platform pour déterminer quelles données seront utilisées pour créer des profils clients et quelles données seront prioritaires en cas d’incohérence entre les sources. Pour savoir comment utiliser les politiques de fusion, consultez le guide de l’interface utilisateur [politiques de fusion](../profile/merge-policies/ui-guide.md).
+Pour évaluer une définition de segment à la demande, vous pouvez créer une tâche de segmentation. Une tâche de segmentation est un processus asynchrone qui crée une audience en fonction de la définition de segment et des politiques de fusion référencées. Une politique de fusion est un ensemble de règles utilisé par Experience Platform pour déterminer quelles données seront utilisées pour créer des profils clients et quelles données seront prioritaires en cas d’incohérence entre les sources. Pour savoir comment utiliser les politiques de fusion, consultez le guide de l’interface utilisateur [politiques de fusion](../profile/merge-policies/ui-guide.md).
 
-Une fois la tâche de segmentation créée et évaluée, vous pouvez obtenir des informations sur le segment, telles que la taille de votre audience ou les erreurs qui peuvent s’être produites pendant le traitement. Pour savoir comment créer une tâche de segmentation, y compris tous les détails que vous devez fournir, veuillez lire le guide de développement [tâche de segmentation](../segmentation/api/segment-jobs.md).
+Une fois la tâche de segmentation créée et évaluée, vous pouvez obtenir des informations sur la définition de segment, telles que la taille de votre audience ou les erreurs qui peuvent s’être produites pendant le traitement. Pour savoir comment créer une tâche de segmentation, y compris tous les détails que vous devez fournir, veuillez lire le guide de développement [tâche de segmentation](../segmentation/api/segment-jobs.md).
 
 Pour évaluer une définition de segment de manière continue, vous pouvez créer et activer un planning. Une planification est un outil qui peut être utilisé pour exécuter automatiquement une tâche de segmentation une fois par jour à une heure donnée. Pour savoir comment créer et activer un planning, vous pouvez suivre les instructions du guide de l’API sur le point d’entrée [plannings](../segmentation/api/schedules.md).
 
 ## Exporter les données évaluées
 
-Après avoir créé votre tâche de segmentation ponctuelle ou votre planification continue, vous pouvez créer une tâche d’exportation de segments pour exporter les résultats vers un jeu de données ou exporter les résultats vers une destination. Les sections suivantes fournissent des conseils sur ces deux options.
+Après avoir créé votre tâche de segmentation ponctuelle ou votre planification continue, vous pouvez créer une tâche d’exportation pour exporter les résultats vers un jeu de données ou exporter les résultats vers une destination. Les sections suivantes fournissent des conseils sur ces deux options.
 
 ### Exporter vos données évaluées vers un jeu de données
 
-Après avoir créé votre tâche de segmentation unique ou votre planification continue, vous pouvez exporter les résultats en créant une tâche d’exportation de segments. Une tâche d’exportation de segments est une tâche asynchrone qui envoie des informations sur l’audience évaluée à un jeu de données.
+Après avoir créé votre tâche de segmentation ponctuelle ou votre planification continue, vous pouvez exporter les résultats en créant une tâche d’exportation. Une tâche d’exportation est une tâche asynchrone qui envoie des informations sur l’audience évaluée à un jeu de données.
 
-Avant de créer une tâche d’exportation, vous devez d’abord créer un jeu de données vers lequel exporter les données. Pour savoir comment créer un jeu de données, consultez la section sur la [création d’un jeu de données cible](../segmentation/tutorials/evaluate-a-segment.md#create-dataset) dans le tutoriel sur l’évaluation d’un segment, en vous assurant de noter l’identifiant du jeu de données après sa création. Après avoir créé un jeu de données, vous pouvez créer une tâche d’exportation. Pour savoir comment créer une tâche d’exportation, vous pouvez suivre les instructions du guide de l’API relatif au point d’entrée [tâches d’exportation](../segmentation/api/export-jobs.md).
+Avant de créer une tâche d’exportation, vous devez d’abord créer un jeu de données vers lequel exporter les données. Pour savoir comment créer un jeu de données, consultez la section sur la [création d’un jeu de données cible](../segmentation/tutorials/evaluate-a-segment.md#create-dataset) dans le tutoriel sur l’évaluation d’une définition de segment, en vous assurant de noter l’identifiant du jeu de données après sa création. Après avoir créé un jeu de données, vous pouvez créer une tâche d’exportation. Pour savoir comment créer une tâche d’exportation, vous pouvez suivre les instructions du guide de l’API relatif au point d’entrée [tâches d’exportation](../segmentation/api/export-jobs.md).
 
 ### Exporter vos données évaluées vers une destination
 

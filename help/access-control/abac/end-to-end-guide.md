@@ -5,26 +5,15 @@ description: Ce document fournit un guide complet sur le contrôle d’accès ba
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 TQID: https://experienceleague.adobe.com/2Pb2COgXO195Flde-cU-t-TWdgsSlcmJIVAtUZJQGm4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1653
-ht-degree: 13%
+source-wordcount: 1651
+ht-degree: 12%
 
 ---
 
@@ -45,7 +34,7 @@ Ce tutoriel nécessite une connaissance pratique des composants Experience Platf
 * [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [Service de segmentation Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Experience Platform] utilisé pour créer des segments d’audience à partir de vos profils clients en fonction du comportement et des attributs des clients.
+* [Segmentation Service d’Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Experience Platform] utilisé pour créer des audiences à partir de vos profils clients en fonction du comportement et des attributs de la clientèle.
 
 ### Vue d’ensemble de cas d’utilisation
 
@@ -62,7 +51,7 @@ Tu pourras :
 
 * [Étiqueter les rôles pour vos utilisateurs](#label-roles) : utilisez l&#39;exemple d&#39;un fournisseur de soins de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
 * [Étiqueter vos ressources (champs et audiences de schéma)](#label-resources) : attribuez le libellé **[!UICONTROL ISP/Données de santé réglementées]** aux ressources et audiences de schéma.
-* [Activer la politique qui les liera](#policy) : activez la politique par défaut pour empêcher l’accès aux champs de schéma et aux audiences en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs avec les libellés correspondants auront alors accès au champ et au segment du schéma dans tous les sandbox.
+* [Activer la politique qui les liera](#policy) : activez la politique par défaut pour empêcher l’accès aux champs de schéma et aux audiences en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs avec les libellés correspondants auront alors accès au champ de schéma et à l’audience dans tous les sandbox.
 
 ## Autorisations
 
@@ -72,7 +61,7 @@ Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles e
 
 Contactez votre administrateur système pour obtenir l’accès si vous ne disposez pas des privilèges d’administrateur.
 
-Une fois que vous disposez des privilèges d’administrateur, accédez à [&#128279;](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail en vue de votre intégration Experience Platform.
+Une fois que vous disposez des privilèges d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail en vue de votre intégration Experience Platform.
 
 ![Image illustrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -94,7 +83,7 @@ Pour commencer, sélectionnez **[!UICONTROL Rôles]** dans le volet de navigatio
 
 Sélectionnez ensuite **[!UICONTROL Libellés]** puis sélectionnez **[!UICONTROL Ajouter des libellés]**.
 
-![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés &#x200B;](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
 Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter l’étiquette pour **[!UICONTROL ISP/données réglementées en matière de santé]** puis sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -114,7 +103,7 @@ Dans le volet de navigation supérieur, sélectionnez le **sélecteur d’applic
 
 Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
-![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas &#x200B;](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas ](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
 Sélectionnez ensuite **[!UICONTROL Libellés]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des libellés à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL Glucose sanguin]** et **[!UICONTROL Niveau d’insuline]**, puis sélectionnez **[!UICONTROL Appliquer l’accès et les étiquettes de gouvernance des données]**.
 
@@ -145,7 +134,7 @@ Sélectionnez **[!UICONTROL Glucose sanguin > 100]** (en fonction du nom de l’
 
 ![Image montrant la glycémie >100 sélectionnée dans l’onglet Audiences](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
-L’écran **[!UICONTROL Détails]** du segment s’affiche. Sélectionnez **[!UICONTROL Gérer l’accès]**.
+L’écran **[!UICONTROL Détails]** de l’audience s’affiche. Sélectionnez **[!UICONTROL Gérer l’accès]**.
 
 ![Image illustrant la sélection de Gère l’accès](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
@@ -157,7 +146,7 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
 >[!NOTE]
 >
-> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Autorisations] (comme les libellés de segment ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide de [Contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/access-control/object-based-access). »
+> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Autorisations] (tels que les libellés d’audience ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide de [ Contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
 
 ## Activer la politique de contrôle d’accès {#policy}
 
@@ -165,7 +154,7 @@ La politique de contrôle d’accès par défaut utilise des libellés pour déf
 
 Pour activer la politique de contrôle d’accès, sélectionnez [!UICONTROL Autorisations] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Politiques]**.
 
-![&#x200B; Liste des politiques affichées &#x200B;](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ Liste des politiques affichées ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Sélectionnez ensuite les points de suspension (`...`) à côté du **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche alors les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
 
@@ -186,19 +175,19 @@ Une confirmation d’activation de la politique est reçue et vous revenez à la
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=fr" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=fr#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=fr#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
@@ -266,4 +255,4 @@ Pour plus d’informations sur le contrôle d’accès basé sur les attributs, 
 
 La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451829?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

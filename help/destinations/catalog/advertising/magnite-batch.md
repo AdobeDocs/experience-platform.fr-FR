@@ -4,23 +4,14 @@ description: Utilisez cette destination pour diffuser des audiences Adobe CDP ve
 last-substantial-update: 2024-11-18T00:00:00.000Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 TQID: https://experienceleague.adobe.com/P6fNpC1cTwoQImY7TqxqMulwr-A2qAbPs3SgIYIesvU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
-source-wordcount: 1771
+source-wordcount: 1819
 ht-degree: 12%
 
 ---
@@ -40,8 +31,7 @@ Les audiences Adobe [!DNL Real-Time CDP] peuvent être diffusées sur la platefo
 En résumé : si vous souhaitez diffuser les audiences Adobe [!DNL Real-Time CDP] une seule fois par jour, vous utiliserez la destination Magnite : Batch uniquement et les audiences seront diffusées une fois par jour. Si vous souhaitez diffuser des audiences Adobe [!DNL Real-Time CDP] en temps réel, vous utiliserez *à la fois* la destination Magnite : par lots et la destination Magnite en temps réel. Pour plus d’informations, contactez Magnite : Streaming.
 
 
-Poursuivez la lecture ci-dessous pour plus d’informations sur la destination Magnite : Batch, sur la manière de s’y connecter et d’activer Adobe [!DNL Real-Time CDP] les audiences qui s’y connectent.
-Pour plus d’informations sur la destination en temps réel, voir [cette page de documentation](magnite-streaming.md) à la place.
+Poursuivez la lecture ci-dessous pour plus d’informations sur la destination Magnite : Batch, sur la manière de s’y connecter et d’activer Adobe [!DNL Real-Time CDP] les audiences qui s’y connectent.Pour plus d’informations sur la destination en temps réel, voir [cette page de documentation](magnite-streaming.md) à la place.
 
 >[!IMPORTANT]
 >
@@ -100,7 +90,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -171,19 +161,18 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
-Dans le champ **&#x200B;**&#x200B;vous pouvez sélectionner n’importe quel attribut ou identité pour vos appareils. Dans cet exemple, nous avons sélectionné une carte des identités personnalisée appelée « DeviceId »
+Dans le champ **** vous pouvez sélectionner n’importe quel attribut ou identité pour vos appareils. Dans cet exemple, nous avons sélectionné une carte des identités personnalisée appelée « DeviceId »
 ![mapper les champs de données souhaités au champ device_id](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 Dans le champ **[!UICONTROL Cible]** :
-![sélectionnez l’identité cible du type d’appareil approprié](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Consultez [Identités prises en charge](#supported-identities) pour plus d’informations.
-Dans cet exemple, nous avons sélectionné le **[!UICONTROL champ cible]** : magnite_deviceId_CUSTOM, car notre champ **[!UICONTROL Source]** a été défini comme un IdentityMap personnalisé : DeviceID.
+![sélectionnez l’identité cible du type d’appareil approprié](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Consultez [Identités prises en charge](#supported-identities) pour plus d’informations.Dans cet exemple, nous avons sélectionné le **[!UICONTROL champ cible]** : magnite_deviceId_CUSTOM, car notre champ **[!UICONTROL Source]** a été défini comme un IdentityMap personnalisé : DeviceID.
 
 >[!NOTE]
 >
@@ -204,11 +193,11 @@ Sur l’écran « Configurer un nom de fichier et un planning d’exportation po
 
 Une fois vos audiences chargées, vous pouvez vérifier qu’elles ont été créées et chargées correctement.
 
-* La destination Magnite : Batch diffuse des fichiers S3 en flux continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences/segments doivent apparaître dans la diffusion en continu Magnite et peuvent être appliqués à une offre. Vous pouvez le confirmer en recherchant l’identifiant du segment ou le nom du segment qui a été partagé lors des étapes d’activation dans la [!DNL Adobe Experience Platform].
+* La destination Magnite : Batch diffuse des fichiers S3 en flux continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences doivent apparaître dans la diffusion en continu Magnite et peuvent être appliquées à une offre. Vous pouvez le confirmer en recherchant l’ID d’audience ou le nom d’audience partagé lors des étapes d’activation dans la [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >
->Audiences activées/diffusées vers Magnite : la destination par lots *remplacera* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel Magnite. Si vous recherchez un segment à l’aide du nom de segment, vous pouvez ne pas trouver le segment en temps réel, jusqu’à ce que le lot ait été ingéré et traité par la plateforme de streaming Magnite.
+>Audiences activées/diffusées vers Magnite : la destination par lots *remplacera* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel Magnite. Si vous recherchez une audience à l’aide du nom de l’audience, vous pouvez ne pas la trouver en temps réel, jusqu’à ce que le lot ait été ingéré et traité par la plateforme de streaming Magnite.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
