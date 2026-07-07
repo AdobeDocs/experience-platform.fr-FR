@@ -5,18 +5,12 @@ badge: Alpha
 hide: true
 exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
 TQID: https://experienceleague.adobe.com/-dXeZqH5-zPYNKFnEZa44lUtTWNkkUhdJso9flRSUQo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: e6b31afb0c9c48e8dd2acbe107983b5aabeff926
 workflow-type: tm+mt
-source-wordcount: 352
+source-wordcount: 353
 ht-degree: 1%
 
 ---
@@ -43,3 +37,4 @@ Lisez le tableau suivant pour connaître les modèles de requête et d’invite 
 | Invite pour obtenir des descriptions améliorées avec des noms de champ | {FIELD_DISCOVERY_QUERY}. Incluez également des descriptions améliorées. | <ul><li>Afficher les champs XDM utilisés pour représenter les données de consentement. Incluez également la description améliorée du champ.</li><li>Afficher les champs XDM liés aux détails de l’interaction. Incluez également la description améliorée du champ.</li></ul> |
 
 {style="table-layout:auto"}
+

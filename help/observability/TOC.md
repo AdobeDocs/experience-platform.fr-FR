@@ -5,7 +5,7 @@ user-guide-description: Découvrez comment surveiller les activités d’Experie
 feature: Observability
 role: Developer
 nudge: true
-source-git-commit: b6abe265f340487f0eae12237ba320cd4afbd2d8
+source-git-commit: 515c81c49b5220d24e8ba8054af845fdfcffa2e6
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 87%

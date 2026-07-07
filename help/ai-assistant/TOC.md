@@ -6,7 +6,7 @@ description: Ce document répertorie la table des matières de l’assistant AI 
 feature: AI Assistant
 role: Admin,User,Developer,Leader
 nudge: true
-source-git-commit: 07f87e09a951e99658e5a91fc2cd85a994031fa1
+source-git-commit: 515c81c49b5220d24e8ba8054af845fdfcffa2e6
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 33%
@@ -35,4 +35,3 @@ ht-degree: 33%
    * [Langage d’informations opérationnelles naturelles de l’assistant d’IA (hérité) pour SQL](./model-details/natural-language-to-sql.md)
    * {hide-from-toc}[Optimisation de l’heure d’envoi](./model-details/send-time-optimization.md)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
-
