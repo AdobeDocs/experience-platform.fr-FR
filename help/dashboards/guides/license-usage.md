@@ -5,11 +5,27 @@ description: Adobe Experience Platform fournit un tableau de bord grâce auquel 
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 TQID: https://experienceleague.adobe.com/97bnVxc0akQEIY20NZW6Sq6SRLLYfDbVH0lqqnd-G-0
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773id: f11df5ff-8102-4532-a00c-0b119f4bc11did: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 3936
@@ -148,7 +164,7 @@ Pour une présentation générale de l’interface utilisateur d’Experience Pl
 
 ## [!UICONTROL Utilisation des licences] données du tableau de bord
 
-Le tableau de bord [!UICONTROL  Utilisation des licences ] affiche la liste de tous les produits Experience Platform que vous avez achetés et de tous les modules complémentaires associés. Depuis ce tableau de bord, vous pouvez obtenir un instantané des données liées aux licences de l’entreprise pour Experience Platform dans n’importe quel sandbox associé.
+Le tableau de bord [!UICONTROL &#x200B; Utilisation des licences &#x200B;] affiche la liste de tous les produits Experience Platform que vous avez achetés et de tous les modules complémentaires associés. Depuis ce tableau de bord, vous pouvez obtenir un instantané des données liées aux licences de l’entreprise pour Experience Platform dans n’importe quel sandbox associé.
 
 Les données de ce tableau de bord s’affichent exactement telles qu’elles s’affichaient au moment précis où l’instantané a été pris. Il ne s’agit pas d’une approximation ou d’un échantillon, mais le tableau de bord n’est pas mis à jour en temps réel.
 
@@ -164,13 +180,13 @@ Pour accéder au tableau de bord d’utilisation de la licence dans l’interfac
 
 >[!NOTE]
 >
->Le tableau de bord d’utilisation de la licence n’est pas activé par défaut. Pour y accéder, vous devez disposer de l’autorisation **« Afficher le tableau [!UICONTROL  bord d’utilisation des licences ] »**.
+>Le tableau de bord d’utilisation de la licence n’est pas activé par défaut. Pour y accéder, vous devez disposer de l’autorisation **« Afficher le tableau [!UICONTROL &#x200B; bord d’utilisation des licences &#x200B;] »**.
 >
 >Si votre entreprise dispose d’une licence pour les applications Adobe Experience Platform, accordez cette autorisation dans le profil de produit et le sandbox applicables.
 >
 >Pour les organisations qui ne disposent pas d’une application Adobe Experience Platform (par exemple, les organisations AEM uniquement ou les organisations Workflow uniquement), cette autorisation est disponible dans Adobe Admin Console sous la fiche produit Adobe Experience Platform (si elle est configurée pour votre organisation). Un administrateur doit ajouter l’autorisation à un profil de produits avant que les utilisateurs puissent afficher le tableau de bord.
 
-## Onglet [!UICONTROL  Mesures ] {#metrics-tab}
+## Onglet [!UICONTROL &#x200B; Mesures &#x200B;] {#metrics-tab}
 
 L’onglet **[!UICONTROL Mesures]** fournit une vue centralisée de toutes les mesures d’utilisation des licences de votre organisation. Comme la plupart des mesures sont partagées entre les produits, il n’existe pas de répartition distincte par produit pour ces mesures.
 
@@ -262,7 +278,7 @@ L’onglet **[!UICONTROL Produits]** présente les données d’utilisation des 
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=fr" text="Expirations automatisées des jeux de données"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
 
-Gérez et optimisez vos ressources de licence de manière proactive avec des prévisions d’utilisation précises et à jour. La colonne [!UICONTROL  Utilisation prévue ] prévoit l’utilisation future des licences au niveau du sandbox pour tous les sandbox de production et de développement pour tous les produits achetés. Les prévisions sont désormais mises à jour chaque semaine, fournissant des prévisions sur six semaines basées sur les dernières données d’utilisation. Chaque prédiction comprend une limite inférieure et une limite supérieure pour prendre en charge une planification éclairée.
+Gérez et optimisez vos ressources de licence de manière proactive avec des prévisions d’utilisation précises et à jour. La colonne [!UICONTROL &#x200B; Utilisation prévue &#x200B;] prévoit l’utilisation future des licences au niveau du sandbox pour tous les sandbox de production et de développement pour tous les produits achetés. Les prévisions sont désormais mises à jour chaque semaine, fournissant des prévisions sur six semaines basées sur les dernières données d’utilisation. Chaque prédiction comprend une limite inférieure et une limite supérieure pour prendre en charge une planification éclairée.
 
 >[!IMPORTANT]
 >
@@ -288,7 +304,7 @@ Le pourcentage d&#39;utilisation prévu est déterminé comme suit :
 
 La fonctionnalité d’utilisation prévue prend en charge les mesures suivantes :
 
-- [!UICONTROL  Audience adressable ]
+- [!UICONTROL &#x200B; Audience adressable &#x200B;]
 - [!UICONTROL Profils professionnels]
 - [!UICONTROL Heures de calcul]
 - [!UICONTROL Nombre de lignes de l’audience du Parcours client]
@@ -299,9 +315,9 @@ La fonctionnalité d’utilisation prévue prend en charge les mesures suivantes
 
 >[!IMPORTANT]
 >
->À compter du 20 août, les clients disposant de droits pour « [!UICONTROL Richesse moyenne du profil] » et « [!UICONTROL Stockage total] » ont plutôt vu « [!UICONTROL Volume total de données] » dans le tableau de bord d’utilisation des licences. Les droits des clients n’ont pas été modifiés, mais les mesures de suivi ont été simplifiées. Le [!UICONTROL  Volume total de données ] représente les données disponibles dans le profil client en temps réel pour les workflows d’engagement et de personnalisation. Cette mesure simplifiée a amélioré la gestion et la mesure de l’utilisation du profil client en temps réel. Nous recommandons aux clients de contacter leur représentant Adobe pour plus d’informations sur cette modification.
+>À compter du 20 août, les clients disposant de droits pour « [!UICONTROL Richesse moyenne du profil] » et « [!UICONTROL Stockage total] » ont plutôt vu « [!UICONTROL Volume total de données] » dans le tableau de bord d’utilisation des licences. Les droits des clients n’ont pas été modifiés, mais les mesures de suivi ont été simplifiées. Le [!UICONTROL &#x200B; Volume total de données &#x200B;] représente les données disponibles dans le profil client en temps réel pour les workflows d’engagement et de personnalisation. Cette mesure simplifiée a amélioré la gestion et la mesure de l’utilisation du profil client en temps réel. Nous recommandons aux clients de contacter leur représentant Adobe pour plus d’informations sur cette modification.
 
-Les mesures qui s’affichent dans votre tableau de bord dépendent des produits et des droits associés à votre organisation. Si votre entreprise participe à la version d’évaluation liée à l’utilisation des agents Adobe Experience Platform [](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) ou si elle obtient des licences pour les agents Adobe Experience Platform, le tableau de bord inclut la mesure [!UICONTROL crédits AI]. Si votre entreprise ne dispose pas d’une licence Adobe Experience Platform, l’utilisation du crédit IA s’affiche en tant que mesure principale.
+Les mesures qui s’affichent dans votre tableau de bord dépendent des produits et des droits associés à votre organisation. Si votre entreprise participe à la version d’évaluation liée à l’utilisation des agents Adobe Experience Platform [&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) ou si elle obtient des licences pour les agents Adobe Experience Platform, le tableau de bord inclut la mesure [!UICONTROL crédits AI]. Si votre entreprise ne dispose pas d’une licence Adobe Experience Platform, l’utilisation du crédit IA s’affiche en tant que mesure principale.
 
 | Mesure | Description |
 |---|---|
@@ -318,7 +334,7 @@ Les mesures qui s’affichent dans votre tableau de bord dépendent des produits
 | [!UICONTROL Data Lake Storage] | Quantité utilisée du magasin de données analytiques dans Adobe Experience Platform. |
 | [!UICONTROL Audience engageable] | Groupe de profils de personnes dans le profil client en temps réel que vous avez tenté d’impliquer au cours des 12 derniers mois à l’aide des fonctionnalités de création, de prise de décision, de diffusion, d’expérimentation ou d’orchestration de Journey Optimizer. |
 | [!UICONTROL Audiences semblables] | Une audience semblable d’un consommateur est une audience générée en modélisant une audience de consommateurs existante pour identifier les profils de personnes avec des attributs ou des comportements similaires. |
-| [!UICONTROL  Nombre de modèles AMM ] | Comptage du modèle de machine learning (intégré à Adobe Mix Modeler) utilisé pour mesurer et/ou prédire un résultat spécifique en fonction de vos investissements. |
+| [!UICONTROL &#x200B; Nombre de modèles AMM &#x200B;] | Comptage du modèle de machine learning (intégré à Adobe Mix Modeler) utilisé pour mesurer et/ou prédire un résultat spécifique en fonction de vos investissements. |
 | [!UICONTROL Nombre de sandbox] | Nombre de séparations logiques au sein de votre instance de tout service à la demande Adobe qui accède aux données et opérations d’isolation d’Adobe Experience Platform. |
 | [!UICONTROL Richesse du profil - Nombre de packs] | Augmentation de votre volume total de données autorisé de 25 Ko par profil pour chaque pack de richesse de profil supplémentaire. |
 | [!UICONTROL Heures de calcul de Query Service] | Mesure du temps nécessaire aux moteurs de service de requête pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée. |
@@ -338,8 +354,8 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 | --- | --- |
 | <ul><li>:OD LITE</li><li>:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM :OD LOURD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM :OD</li></ul> | [Experience Platform, App Services et Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT PLATEFORME DE DONNÉES CLIENTS :OD PRFL À 10 MILLIONS</li><li>RT PLATEFORME DE DONNÉES CLIENTS:OD PRFL À 50 MILLIONS</li></ul> | [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>:OD ACTIVATION</li><li>:OD ACTIVATION PRFL À 10M</li><li>:OD PRFL D’ACTIVATION JUSQU’À 50 MILLIONS</li></ul> | [Activation de ](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT PLATEFORME DE DONNÉES CLIENTS :OD PRFL À 10 MILLIONS</li><li>RT PLATEFORME DE DONNÉES CLIENTS:OD PRFL À 50 MILLIONS</li></ul> | [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>:OD ACTIVATION</li><li>:OD ACTIVATION PRFL À 10M</li><li>:OD PRFL D’ACTIVATION JUSQU’À 50 MILLIONS</li></ul> | [Activation de &#x200B;](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP :OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT :OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE :OD</li><li>DÉPLOYER AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>REAL-TIME CDP UNP :OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-journey-optimizer.html) |
 

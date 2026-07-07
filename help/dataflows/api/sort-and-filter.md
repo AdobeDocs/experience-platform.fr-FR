@@ -3,8 +3,10 @@ title: Tri et filtrage des réponses dans l’API Flow Service
 description: Ce tutoriel décrit la syntaxe pour le tri et le filtrage à l’aide de paramètres de requête dans l’API Flow Service, y compris certains cas d’utilisation avancés.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 TQID: https://experienceleague.adobe.com/f5WCgSH7n95jQGrAMPA5OvvtayXlTaFGB2EtM7TggXc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
 workflow-type: tm+mt
 source-wordcount: 889

@@ -84,7 +84,7 @@ La fenêtre contextuelle **[!UICONTROL Activer le jeu de données pour les carac
 
 Maintenant que vous disposez d’un jeu de données compatible avec les caractéristiques, vous pouvez créer votre caractéristique. Sélectionnez **[!UICONTROL Créer une caractéristique]** pour afficher le créateur de caractéristiques.
 
-![ La fenêtre contextuelle Jeu de données activé pour les caractéristiques s’affiche. Le bouton Créer une caractéristique est mis en surbrillance.](/help/profile/images/traits/select-create-trait.png)
+![&#x200B; La fenêtre contextuelle Jeu de données activé pour les caractéristiques s’affiche. Le bouton Créer une caractéristique est mis en surbrillance.](/help/profile/images/traits/select-create-trait.png)
 
 Si vous avez déjà activé un jeu de données pour les caractéristiques, vous pouvez également sélectionner **[!UICONTROL Créer une caractéristique]** dans la page de navigation des caractéristiques pour ouvrir le créateur de caractéristiques.
 

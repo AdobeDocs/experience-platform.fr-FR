@@ -5,11 +5,22 @@ description: Ce document fournit un guide complet sur le contrôle d’accès ba
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 TQID: https://experienceleague.adobe.com/2Pb2COgXO195Flde-cU-t-TWdgsSlcmJIVAtUZJQGm4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
 source-wordcount: 1651
@@ -83,7 +94,7 @@ Pour commencer, sélectionnez **[!UICONTROL Rôles]** dans le volet de navigatio
 
 Sélectionnez ensuite **[!UICONTROL Libellés]** puis sélectionnez **[!UICONTROL Ajouter des libellés]**.
 
-![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés &#x200B;](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
 Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter l’étiquette pour **[!UICONTROL ISP/données réglementées en matière de santé]** puis sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -103,7 +114,7 @@ Dans le volet de navigation supérieur, sélectionnez le **sélecteur d’applic
 
 Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
-![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas ](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas &#x200B;](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
 Sélectionnez ensuite **[!UICONTROL Libellés]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des libellés à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL Glucose sanguin]** et **[!UICONTROL Niveau d’insuline]**, puis sélectionnez **[!UICONTROL Appliquer l’accès et les étiquettes de gouvernance des données]**.
 
@@ -146,7 +157,7 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
 >[!NOTE]
 >
-> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Autorisations] (tels que les libellés d’audience ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide de [ Contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
+> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Autorisations] (tels que les libellés d’audience ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide de [&#x200B; Contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
 
 ## Activer la politique de contrôle d’accès {#policy}
 
@@ -154,7 +165,7 @@ La politique de contrôle d’accès par défaut utilise des libellés pour déf
 
 Pour activer la politique de contrôle d’accès, sélectionnez [!UICONTROL Autorisations] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Politiques]**.
 
-![ Liste des politiques affichées ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![&#x200B; Liste des politiques affichées &#x200B;](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Sélectionnez ensuite les points de suspension (`...`) à côté du **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche alors les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
 

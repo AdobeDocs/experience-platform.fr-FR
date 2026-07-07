@@ -3,10 +3,15 @@ title: Rendre obsolète un champ XDM dans l’IU
 description: Découvrez comment rendre obsolètes les champs de modèle de données d’expérience (XDM) à l’aide de l’éditeur de schémas dans Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 TQID: https://experienceleague.adobe.com/I1k95rHbY66tqi81Bj1nE2Z6ssgepZx62HGKNWk4g9Q
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
 source-wordcount: 702
@@ -60,7 +65,7 @@ Pour annuler l’obsolescence d’un champ, commencez par [afficher le champ obs
 
 La boîte de dialogue [!UICONTROL Annuler l’obsolescence du champ] s’affiche. Pour confirmer vos modifications, sélectionnez **[!UICONTROL Confirmer]**.
 
-![ Boîte de dialogue [!UICONTROL  Annuler l’obsolescence du champ ] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
+![&#x200B; Boîte de dialogue [!UICONTROL &#x200B; Annuler l’obsolescence du champ &#x200B;] avec l’option Confirmer mise en surbrillance.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
 
 Le champ s’affiche désormais de manière standard dans l’affichage de l’IU et dans les IU en aval. Vous avez à présent la possibilité de rendre le champ obsolète à nouveau.
 

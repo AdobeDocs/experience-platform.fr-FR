@@ -3,11 +3,30 @@ title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2026
 description: Notes de mise à jour de janvier 2026 pour Adobe Experience Platform.
 exl-id: becc62ba-b21b-4bbb-9f20-8281a3a6e009
 TQID: https://experienceleague.adobe.com/Q6LSfZHtVu--3AKmjSKt7Vum5zkOkag7hGBnmbwTbrw
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
-subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16id: d1823595-9241-4128-8a33-e4ac3bf08773id: e0c8953a-a203-4291-bef3-3560160d3041id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
 workflow-type: tm+mt
 source-wordcount: 1686
@@ -46,7 +65,7 @@ Agent Orchestrator vous permet de créer et de déployer des agents optimisés p
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Essai des agents Adobe Experience Platform lié à l’utilisation | **Certains clients bénéficient désormais d’un accès gratuit à titre d’essai aux agents Adobe Experience Platform**. Vous pouvez utiliser la version d&#39;évaluation pour explorer les agents et interagir avec eux par le biais de l&#39;interface de l&#39;assistant AI optimisée par Adobe Experience Platform Agent Orchestrator. L’essai offre une expérience pratique avec des agents d’IA qui opèrent dans le contexte des produits et environnements Experience Cloud existants des clients, ce qui permet aux équipes d’évaluer la valeur avant de s’engager à effectuer un achat complet. Les agents Adobe Experience Platform sont guidés par les entrées et la supervision des utilisateurs et respectent les contrôles d’accès existants au niveau du produit, ce qui garantit que les utilisateurs peuvent uniquement effectuer des actions ou afficher des données pour lesquelles ils sont autorisés dans les applications Experience Cloud sous-jacentes. Lisez la présentation de l’essai lié à l’utilisation des agents Experience Platform [](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) pour plus d’informations sur la prise en main. |
+| Essai des agents Adobe Experience Platform lié à l’utilisation | **Certains clients bénéficient désormais d’un accès gratuit à titre d’essai aux agents Adobe Experience Platform**. Vous pouvez utiliser la version d&#39;évaluation pour explorer les agents et interagir avec eux par le biais de l&#39;interface de l&#39;assistant AI optimisée par Adobe Experience Platform Agent Orchestrator. L’essai offre une expérience pratique avec des agents d’IA qui opèrent dans le contexte des produits et environnements Experience Cloud existants des clients, ce qui permet aux équipes d’évaluer la valeur avant de s’engager à effectuer un achat complet. Les agents Adobe Experience Platform sont guidés par les entrées et la supervision des utilisateurs et respectent les contrôles d’accès existants au niveau du produit, ce qui garantit que les utilisateurs peuvent uniquement effectuer des actions ou afficher des données pour lesquelles ils sont autorisés dans les applications Experience Cloud sous-jacentes. Lisez la présentation de l’essai lié à l’utilisation des agents Experience Platform [&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) pour plus d’informations sur la prise en main. |
 
 {style="table-layout:auto"}
 
@@ -65,8 +84,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Prise en charge des points d’entrée régionaux pour les connexions Braze | Tous les points d’entrée [spécifiques à une région](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pris en charge par [!DNL Braze] peuvent désormais être sélectionnés pendant le flux de configuration de destination. Demandez à votre représentant [!DNL Braze] quelle instance de point d’entrée vous devez utiliser. |
 | Prise en charge de la planification hebdomadaire et mensuelle pour l’intégration [Liveramp](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Vous pouvez désormais configurer des plannings d’exportation hebdomadaires et mensuels pour la destination d’intégration Liveramp. <br> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. |
 | Expérience d’activation améliorée pour les destinations [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) et [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Les destinations Trade Desk et Microsoft Bing incluent désormais des mappages obligatoires prédéfinis pour une expérience d’activation optimisée.  <br> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. ![Image montrant les mappages prédéfinis pour The Trade Desk](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Image montrant les mappages prédéfinis pour Microsoft Bing](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
-| Prise en charge de l’activation des numéros de téléphone pour la connexion [ The Trade Desk - CRM ](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | La destination Trade Desk - CRM prend désormais en charge l’activation des numéros de téléphone en plus des adresses e-mail. Vous pouvez activer les numéros de téléphone non hachés au format E.164 et les numéros de téléphone hachés (format SHA256_E.164) sur votre compte Trade Desk pour le ciblage et la suppression d’audiences en fonction des données CRM. Les numéros de téléphone doivent être normalisés au format E.164 avant activation. |
-| [Mises à jour de destination par lots de ](../../destinations/catalog/warehouses/snowflake-batch.md) | La destination par lots Snowflake comprend désormais une fonctionnalité de sélection de région lors de la configuration de la destination. Vous pouvez désormais sélectionner la région Snowflake spécifique dans laquelle votre instance est configurée, ce qui garantit un transfert de données optimal et la conformité aux exigences régionales. En outre, la restriction par défaut de la politique de fusion a été supprimée, ce qui vous permet d’exporter des audiences mappées à n’importe quelle politique de fusion. <br> Actuellement, la destination par lots [!DNL Snowflake] n’est disponible que pour les clients Real-Time CDP configurés dans la région Experience Platform VA7. |
+| Prise en charge de l’activation des numéros de téléphone pour la connexion [&#x200B; The Trade Desk - CRM &#x200B;](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | La destination Trade Desk - CRM prend désormais en charge l’activation des numéros de téléphone en plus des adresses e-mail. Vous pouvez activer les numéros de téléphone non hachés au format E.164 et les numéros de téléphone hachés (format SHA256_E.164) sur votre compte Trade Desk pour le ciblage et la suppression d’audiences en fonction des données CRM. Les numéros de téléphone doivent être normalisés au format E.164 avant activation. |
+| [Mises à jour de destination par lots de &#x200B;](../../destinations/catalog/warehouses/snowflake-batch.md) | La destination par lots Snowflake comprend désormais une fonctionnalité de sélection de région lors de la configuration de la destination. Vous pouvez désormais sélectionner la région Snowflake spécifique dans laquelle votre instance est configurée, ce qui garantit un transfert de données optimal et la conformité aux exigences régionales. En outre, la restriction par défaut de la politique de fusion a été supprimée, ce qui vous permet d’exporter des audiences mappées à n’importe quelle politique de fusion. <br> Actuellement, la destination par lots [!DNL Snowflake] n’est disponible que pour les clients Real-Time CDP configurés dans la région Experience Platform VA7. |
 
 
 <!-- |AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <ul><li>**[!UICONTROL Default]**: Data will be encrypted at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm configured on your S3 bucket**.</li></ul> This release is being rolled out gradually and will be complete by January 30th.| -->
@@ -75,9 +94,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mise à jour des limites du mécanisme de sécurisation pour les destinations [](../../destinations/catalog/personalization/adobe-target-connection.md) | Le nombre maximal d’audiences pouvant être mappées à une seule destination Adobe Target est passé de 50 à 250. Cela aligne Adobe Target sur la limite d’audience standard pour d’autres destinations, offrant ainsi une plus grande flexibilité pour les workflows d’activation des audiences. Vous pouvez désormais activer davantage d’audiences vers les destinations Adobe Target sans avoir à créer plusieurs flux de données. |
+| Mise à jour des limites du mécanisme de sécurisation pour les destinations [&#128279;](../../destinations/catalog/personalization/adobe-target-connection.md) | Le nombre maximal d’audiences pouvant être mappées à une seule destination Adobe Target est passé de 50 à 250. Cela aligne Adobe Target sur la limite d’audience standard pour d’autres destinations, offrant ainsi une plus grande flexibilité pour les workflows d’activation des audiences. Vous pouvez désormais activer davantage d’audiences vers les destinations Adobe Target sans avoir à créer plusieurs flux de données. |
 | [Modifier les destinations](/help/destinations/ui/edit-destination.md) et [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) disponibilité générale | L’option permettant de modifier les destinations et les actions marketing est désormais disponible pour tous les utilisateurs et utilisatrices. |
-| Activez/désactivez les noms d’affichage des champs dans l’[ Mappage ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) | Lors du mappage des champs de schéma à une destination, vous pouvez désormais basculer entre l’affichage du nom complet du champ XDM et l’affichage uniquement du nom d’affichage. <br> ![Enregistrement d’écran affichant le bouton bascule du nom d’affichage.](/help/release-notes/2026/assets/january/show-display-names.gif) |
+| Activez/désactivez les noms d’affichage des champs dans l’[&#x200B; Mappage &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) | Lors du mappage des champs de schéma à une destination, vous pouvez désormais basculer entre l’affichage du nom complet du champ XDM et l’affichage uniquement du nom d’affichage. <br> ![Enregistrement d’écran affichant le bouton bascule du nom d’affichage.](/help/release-notes/2026/assets/january/show-display-names.gif) |
 
 {style="table-layout:auto"}
 

@@ -7,10 +7,18 @@ role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 TQID: https://experienceleague.adobe.com/lNKR5I6NU-BhOOCEs1P4CL-PsjJc5uWOMhbg-hv9iYg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
 workflow-type: tm+mt
 source-wordcount: 1697
@@ -53,7 +61,7 @@ Les sections ci-dessous expliquent la structure de chacun de ces groupes de cham
 
 Pour les schémas basés sur [!DNL XDM Individual Profile], le groupe de champs [!UICONTROL Détails du consentement IAB TCF 2.0] fournit un champ unique de type map, `identityPrivacyInfo`, qui mappe les identités des clients à leurs préférences de consentement TCF. Ce groupe de champs doit être inclus dans un schéma basé sur les enregistrements activé pour le profil client en temps réel pour que l’application automatique ait lieu.
 
-Pour en savoir plus sur sa structure et son cas d’utilisation](../../../../xdm/field-groups/profile/iab.md) consultez le [ guide de référence pour ce groupe de champs .
+Pour en savoir plus sur sa structure et son cas d’utilisation[&#128279;](../../../../xdm/field-groups/profile/iab.md) consultez le  guide de référence pour ce groupe de champs .
 
 ### Groupe de champs Événement {#event-field-group}
 
@@ -61,7 +69,7 @@ Si vous souhaitez effectuer le suivi des événements de changement de consentem
 
 Si vous ne prévoyez pas de suivre les événements de changement de consentement au fil du temps, vous n’avez pas besoin d’inclure ce groupe de champs dans votre schéma d’événement. Lors de l’application automatique des valeurs de consentement TCF, Experience Platform utilise uniquement les dernières informations de consentement ingérées dans le [groupe de champs de profil](#profile-field-group). Les valeurs de consentement capturées par les événements ne participent pas aux workflows d’application automatiques.
 
-Pour plus d’informations sur sa structure et son cas d’utilisation](../../../../xdm/field-groups/event/iab.md) consultez le [ guide de référence pour ce groupe de champs .
+Pour plus d’informations sur sa structure et son cas d’utilisation[&#128279;](../../../../xdm/field-groups/event/iab.md) consultez le  guide de référence pour ce groupe de champs .
 
 ## Création de schémas de consentement client {#create-schemas}
 

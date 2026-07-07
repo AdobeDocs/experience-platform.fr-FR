@@ -68,7 +68,7 @@ La synchronisation des identifiants est une condition préalable au partage de c
 
 **Activer la synchronisation des identifiants tiers avec[!DNL Web SDK]**
 
-Si vous utilisez [!DNL Experience Platform Web SDK], activez la synchronisation des identifiants tiers sur votre flux de données en configurant l’option [!UICONTROL  Synchronisation des identifiants tiers ] dans les paramètres avancés. Pour obtenir des instructions, voir [Configurer les options avancées](/help/datastreams/configure.md#advanced-options) dans la documentation sur les flux de données.
+Si vous utilisez [!DNL Experience Platform Web SDK], activez la synchronisation des identifiants tiers sur votre flux de données en configurant l’option [!UICONTROL &#x200B; Synchronisation des identifiants tiers &#x200B;] dans les paramètres avancés. Pour obtenir des instructions, voir [Configurer les options avancées](/help/datastreams/configure.md#advanced-options) dans la documentation sur les flux de données.
 
 **Activer la synchronisation des identifiants tiers avec le[!DNL Experience Cloud ID Service]**
 
@@ -105,7 +105,7 @@ Audiences prises en charge par type de données d’audience :
 | -------------------- | --------- | ----------- | --------- |
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -125,7 +125,7 @@ Reportez-vous au tableau suivant pour plus d’informations sur le type et la fr
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions) pour Experience Platform. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions) pour Experience Platform. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à la destination, suivez les instructions [création d’une connexion de destination](/help/destinations/ui/connect-destination.md) à l’aide de l’interface utilisateur d’Experience Platform. Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les sous-sections ci-dessous.
 
@@ -162,8 +162,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -200,7 +200,7 @@ Pour vérifier que les données d’audience ont été partagées avec Adobe Adv
 
 * Le flux de données dans la destination [!DNL Real-Time CDP] a réussi.
 
-* Dans DSP, l&#39;audience est disponible lorsque vous créez ou modifiez une audience à partir de **[!UICONTROL Audiences]** > **[!UICONTROL Toutes les audiences]** ou à partir de la section **[!UICONTROL Ciblage d&#39;audience]** des paramètres d&#39;emplacement. L’audience doit être visible dans l’onglet [!UICONTROL Segments ] sous le dossier [!UICONTROL Real-Time CDP].
+* Dans DSP, l&#39;audience est disponible lorsque vous créez ou modifiez une audience à partir de **[!UICONTROL Audiences]** > **[!UICONTROL Toutes les audiences]** ou à partir de la section **[!UICONTROL Ciblage d&#39;audience]** des paramètres d&#39;emplacement. L’audience doit être visible dans l’onglet [!UICONTROL Segments &#x200B;] sous le dossier [!UICONTROL Real-Time CDP].
 
 ![Copie d’écran de l’interface Audiences DSP présentant un dossier [!DNL Real-Time CDP] avec des audiences importées répertoriées sous l’onglet Segments Adobe.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 

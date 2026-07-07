@@ -4,10 +4,18 @@ description: Découvrez comment recibler des utilisateurs non authentifiés à l
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
 TQID: https://experienceleague.adobe.com/L9PoZg8xhIlLGyyuBQqkm1UsWUeZWZFkyHj1spsYujE
-product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-feature_v2: id: ba929a52-9339-4154-9487-317dc875a3c7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
 source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
 workflow-type: tm+mt
 source-wordcount: 1487
@@ -134,7 +142,7 @@ Vous avez maintenant créé une audience qui recherche les visiteurs à forte in
 
 Après avoir créé votre audience, vous pouvez maintenant l’activer vers des destinations en aval. Sélectionnez **[!UICONTROL Audiences]** sur le rail de navigation de gauche, recherchez l’audience que vous venez de créer, sélectionnez l’icône représentant des points de suspension, puis sélectionnez **[!UICONTROL Activer vers la destination]**.
 
-![Le bouton [!UICONTROL  Activer vers la destination] est mis en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
+![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
