@@ -27,9 +27,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: f209a56fe2e8a5598c678692e5e568b4c9ca3675
+source-git-commit: a4c267a9be1fcf7379e8cd169106c8844f3a52df
 workflow-type: tm+mt
-source-wordcount: 1584
+source-wordcount: 1639
 ht-degree: 19%
 
 ---
@@ -128,6 +128,7 @@ Le profil client en temps réel offre une vue complète de chaque client en comb
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Ingestion de profils par lots | L’ingestion de profils par lots applique désormais la validation du format sur les valeurs de `_id` des événements d’expérience. Les enregistrements contenant des caractères restreints dans le champ `_id` sont rejetés au moment de l’ingestion dans le magasin de profils. Cette validation est appliquée au niveau des enregistrements. Les lots continuent à être traités avec succès, tandis que seuls les enregistrements non conformes sont ignorés par le magasin de profils. Les clients et clientes peuvent corriger les valeurs de `_id` non valides et renvoyer les enregistrements concernés, sans perte de données permanente. Pour plus d’informations, consultez la documentation de la classe [XDM ExperienceEvent](/help/xdm/classes/experienceevent.md). |
+| Mises à jour de l’API des tâches système | Le format de réponse de l’API des tâches système a été mis à jour. Avec cette mise à jour, les noms de champ, les formats de date et la structure de réponse peuvent différer des versions précédentes, avec l’ajout de certains champs et la suppression d’autres. Consultez le schéma de réponse mis à jour avant d’intégrer ou de mettre à jour les intégrations existantes. Pour plus d’informations, consultez le [guide de l’API des tâches système](/help/profile/api/profile-system-jobs.md). |
 
 ## Exécuter et exploiter {#run-and-operate}
 

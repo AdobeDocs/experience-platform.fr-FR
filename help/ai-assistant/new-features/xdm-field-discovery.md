@@ -14,9 +14,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: e6b31afb0c9c48e8dd2acbe107983b5aabeff926
 workflow-type: tm+mt
-source-wordcount: 352
+source-wordcount: 353
 ht-degree: 1%
 
 ---
@@ -43,3 +43,4 @@ Lisez le tableau suivant pour connaître les modèles de requête et d’invite 
 | Invite pour obtenir des descriptions améliorées avec des noms de champ | {FIELD_DISCOVERY_QUERY}. Incluez également des descriptions améliorées. | <ul><li>Afficher les champs XDM utilisés pour représenter les données de consentement. Incluez également la description améliorée du champ.</li><li>Afficher les champs XDM liés aux détails de l’interaction. Incluez également la description améliorée du champ.</li></ul> |
 
 {style="table-layout:auto"}
+
