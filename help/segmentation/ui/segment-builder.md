@@ -18,9 +18,9 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
+source-git-commit: c5ed6ee78893bf74482b4222f65579eb36594120
 workflow-type: tm+mt
-source-wordcount: 6948
+source-wordcount: 7058
 ht-degree: 41%
 
 ---
@@ -648,3 +648,17 @@ Le créateur de segments fournit un workflow complet qui vous permet d’isoler 
 - activer des définitions de segment spécifiques pour la segmentation par flux.
 
 Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation et compléter votre apprentissage en regardant les vidéos associées. Pour en savoir plus sur les autres parties de l’interface utilisateur de [!DNL Segmentation Service], veuillez lire le [[!DNL Segmentation Service] guide d’utilisation](./overview.md).
+
+## Annexe {#appendix}
+
+L’annexe suivante répertorie des informations supplémentaires sur le créateur de segments.
+
+### Erreur de dépendance d’audience non prise en charge {#error}
+
+Si l’erreur `100128-400: Audience dependency not currently supported. One or more of the audience filters you've added is not currently supported. Please contact Adobe team for details.` s’affiche lors de l’enregistrement de votre audience, suivez les instructions suivantes :
+
+Lorsque cette erreur se produit, vous avez deux audiences : Audience 1 (A1), qui contient Audience 2 (A2).
+
+Vous devrez d’abord annuler les modifications que vous avez apportées dans A2. Une fois que vous avez annulé les modifications apportées dans A2, ouvrez A1 et supprimez la dépendance d’audience sur A2.
+
+Une fois la dépendance d’audience supprimée, rouvrez A2 et ajoutez à nouveau les modifications initiales à cette audience. Maintenant que ces modifications ont été ajoutées de nouveau, vous pouvez ajouter à nouveau la dépendance sur A2 à A1.
