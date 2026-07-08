@@ -2,20 +2,16 @@
 title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 TQID: https://experienceleague.adobe.com/oIUjDYEGD0j8r2vn-nItHAoL7GIhtDRUUlEftr87hT0
-product_v2:
-  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: efd99630e88fc5bfe703565fc8a365b06e76e931
+product_v2: id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 96318b7efc6656e9f7adc32e776f3a17e6f7d048
 workflow-type: tm+mt
-source-wordcount: 1185
-ht-degree: 9%
+source-wordcount: 1295
+ht-degree: 8%
 
 ---
 
@@ -159,3 +155,17 @@ Vous **pouvez pas** la méthode d’évaluation pour les audiences de compte, ca
 Le Créateur d’audience fournit un workflow complet qui vous permet de créer des audiences à partir des données de votre compte professionnel XDM.
 
 Pour en savoir plus sur Segmentation Service pour les données de profil client, veuillez lire la [présentation de Segmentation Service](../../segmentation/home.md){target="_blank"}.
+
+## Annexe {#appendix}
+
+L’annexe suivante répertorie des informations supplémentaires sur le Créateur d’audience.
+
+### Erreur de dépendance d’audience non prise en charge {#error}
+
+Si l’erreur `100128-400: Audience dependency not currently supported. One or more of the audience filters you've added is not currently supported. Please contact Adobe team for details.` s’affiche lors de l’enregistrement de votre audience, suivez les instructions suivantes :
+
+Lorsque cette erreur se produit, vous avez deux audiences : Audience 1 (A1), qui contient Audience 2 (A2).
+
+Vous devrez d’abord annuler les modifications que vous avez apportées dans A2. Une fois que vous avez annulé les modifications apportées dans A2, ouvrez A1 et supprimez la dépendance d’audience sur A2.
+
+Une fois la dépendance d’audience supprimée, rouvrez A2 et ajoutez à nouveau les modifications initiales à cette audience. Maintenant que ces modifications ont été ajoutées de nouveau, vous pouvez ajouter à nouveau la dépendance sur A2 à A1.

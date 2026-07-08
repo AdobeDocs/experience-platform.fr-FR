@@ -4,23 +4,14 @@ title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur de Adobe Experience Platform offre un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 TQID: https://experienceleague.adobe.com/-WKclcOvYGl1pg6jrUR2UwrXy9BAw9j--sXM3DxRILo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f0c9f224-75f2-4864-8de6-859ae7856690
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: dc8284dbcac9762b1513a50bb759f537f828d617
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f0c9f224-75f2-4864-8de6-859ae7856690
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: c5ed6ee78893bf74482b4222f65579eb36594120
 workflow-type: tm+mt
-source-wordcount: 6948
+source-wordcount: 7058
 ht-degree: 41%
 
 ---
@@ -166,7 +157,7 @@ Vous pouvez utiliser les opérateurs suivants pour les types de données respect
 | Plage de roulement | La valeur s’est produite entre les deux dates relatives. | La date du dernier achat est comprise entre sept jours et trois jours. |
 | Dans suivant | La valeur est survenue au cours de la période suivante sélectionnée. | L’abandon du panier aura lieu dans 2 jours |
 
-Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [&#x200B; Contraintes de temps &#x200B;](#time-constraints).
+Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [ Contraintes de temps ](#time-constraints).
 
 +++
 
@@ -202,7 +193,7 @@ En outre, l’attribut possède un **[!UICONTROL type d’ingestion]**. Le type 
 
 Les attributs calculés sont des champs calculés à partir d’autres attributs à l’aide d’agrégations ou de formules. Vous pouvez utiliser des attributs calculés si vous avez besoin de données agrégées telles que des sommes, des décomptes ou des moyennes sur plusieurs événements ou si vous créez des audiences fréquemment utilisées qui nécessitent des calculs complexes.
 
-Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [&#x200B; présentation des attributs calculés &#x200B;](/help/profile/computed-attributes/overview.md).
+Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [ présentation des attributs calculés ](/help/profile/computed-attributes/overview.md).
 
 ### Événements
 
@@ -374,7 +365,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
@@ -625,7 +616,7 @@ La section **[!UICONTROL Propriétés de l’audience]** vous permet également 
 
 Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](/help/images/icons/folder-search.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
 
-L’[!UICONTROL &#x200B; Éligibilité de la méthode d’évaluation &#x200B;] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](../methods/streaming-segmentation.md#query-types) ou la [segmentation Edge](../methods/edge-segmentation.md#query-types).
+L’[!UICONTROL  Éligibilité de la méthode d’évaluation ] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](../methods/streaming-segmentation.md#query-types) ou la [segmentation Edge](../methods/edge-segmentation.md#query-types).
 
 Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez terminé de la créer. Si vous modifiez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous ne pourrez **pas** la remodifier en Edge ou en Streaming. La modification de la méthode d’évaluation **uniquement** prend effet une fois que vous avez sélectionné **[!UICONTROL Enregistrer]** dans la fenêtre contextuelle. L’annulation de la boîte de dialogue **conserve** la méthode d’évaluation d’origine.
 
@@ -648,3 +639,17 @@ Le créateur de segments fournit un workflow complet qui vous permet d’isoler 
 - activer des définitions de segment spécifiques pour la segmentation par flux.
 
 Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation et compléter votre apprentissage en regardant les vidéos associées. Pour en savoir plus sur les autres parties de l’interface utilisateur de [!DNL Segmentation Service], veuillez lire le [[!DNL Segmentation Service] guide d’utilisation](./overview.md).
+
+## Annexe {#appendix}
+
+L’annexe suivante répertorie des informations supplémentaires sur le créateur de segments.
+
+### Erreur de dépendance d’audience non prise en charge {#error}
+
+Si l’erreur `100128-400: Audience dependency not currently supported. One or more of the audience filters you've added is not currently supported. Please contact Adobe team for details.` s’affiche lors de l’enregistrement de votre audience, suivez les instructions suivantes :
+
+Lorsque cette erreur se produit, vous avez deux audiences : Audience 1 (A1), qui contient Audience 2 (A2).
+
+Vous devrez d’abord annuler les modifications que vous avez apportées dans A2. Une fois que vous avez annulé les modifications apportées dans A2, ouvrez A1 et supprimez la dépendance d’audience sur A2.
+
+Une fois la dépendance d’audience supprimée, rouvrez A2 et ajoutez à nouveau les modifications initiales à cette audience. Maintenant que ces modifications ont été ajoutées de nouveau, vous pouvez ajouter à nouveau la dépendance sur A2 à A1.
