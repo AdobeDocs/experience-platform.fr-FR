@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 681
+source-wordcount: 731
 ht-degree: 8%
 
 ---
@@ -44,8 +44,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **Requête**
 
-La requête suivante crée une configuration de serveur de destination, configurée en fonction des paramètres fournis dans la payload.
-La payload ci-dessous comprend une configuration de [!DNL Data Landing Zone] générique, avec des paramètres de configuration [formatage de fichier CSV](../../functionality/destination-server/file-formatting.md) personnalisés que les utilisateurs peuvent définir dans l’interface utilisateur d’Experience Platform.
+La requête suivante crée une configuration de serveur de destination, configurée en fonction des paramètres fournis dans la payload.La payload ci-dessous comprend une configuration de [!DNL Data Landing Zone] générique, avec des paramètres de configuration [formatage de fichier CSV](../../functionality/destination-server/file-formatting.md) personnalisés que les utilisateurs peuvent définir dans l’interface utilisateur d’Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -336,7 +335,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.io/apis/experienceplatform.html",
+      "documentationLink":"https://developer.adobe.com/experience-platform-apis/",
       "category":"DLZ",
       "connectionType":"Server-to-server",
       "frequency":"Batch",
@@ -436,11 +435,9 @@ Lorsque vous renseignez les détails sur la destination, remarquez comment les c
 
 ![renseigner les détails de la destination](../../assets/guides/batch/file-configuration-options.gif)
 
-Lors de la planification des intervalles d’exportation, notez que les champs qui apparaissent sont ceux que vous avez configurés dans la configuration de `batchConfig`.
-![options de planification de l’exportation](../../assets/guides/batch/file-export-scheduling.png)
+Lors de la planification des intervalles d’exportation, notez que les champs qui apparaissent sont ceux que vous avez configurés dans la configuration de `batchConfig`.![options de planification de l’exportation](../../assets/guides/batch/file-export-scheduling.png)
 
-Lors de l’affichage des options de configuration de nom de fichier, remarquez comment les champs affichés représentent les options de `filenameConfig` que vous avez configurées dans la configuration.
-![options de configuration de nom de fichier](../../assets/guides/batch/file-naming-options.gif)
+Lors de l’affichage des options de configuration de nom de fichier, remarquez comment les champs affichés représentent les options de `filenameConfig` que vous avez configurées dans la configuration.![options de configuration de nom de fichier](../../assets/guides/batch/file-naming-options.gif)
 
 Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez les [étapes 1](#create-server-file-configuration) et [2](#create-destination-configuration) pour modifier les configurations en fonction de vos besoins.
 

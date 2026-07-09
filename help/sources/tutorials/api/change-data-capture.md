@@ -9,9 +9,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: f22655c99ef0353225df840eb843206fd9d3cda8
 workflow-type: tm+mt
-source-wordcount: 1336
+source-wordcount: 1536
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Les deux approches nécessitent Data Mirror avec des schémas relationnels pour 
 
 >[!AVAILABILITY]
 >
->Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
+>Les schémas Data Mirror et relationnels sont disponibles par défaut pour tous les clients disposant d’une licence avec les éditions B2P et B2B de Real-Time CDP.
 
 >[!NOTE]
 >
@@ -124,6 +124,58 @@ Activez la capture de données de modification pour les sources d’espace de st
 
 Toutes les sources d’espace de stockage utilisent le même format de colonne `_change_request_type` décrit dans la section [Sources basées sur des fichiers](#file-based-sources) ci-dessus.
 
+**Exemple : activer la capture de données de modification lors de la création d’une connexion source d’espace de stockage**
+
+Lors de la création de votre connexion source d’espace de stockage, définissez `params.cdcEnabled` sur `true` pour activer la capture de données de modification. Pour les sources basées sur des fichiers, les opérations de modification reposent également sur la colonne de contrôle `_change_request_type` décrite ci-dessus.
+
+**Format d’API**
+
+```http
+POST /sourceConnections
+```
+
+**Requête**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Cloud Storage source connection with CDC enabled",
+    "description": "Source connection for ingesting change data from cloud storage",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "data": {
+      "format": "delimited"
+    },
+    "params": {
+      "path": "/acme/cdc/account.csv",
+      "type": "file",
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "{CONNECTION_SPEC_ID}",
+      "version": "1.0"
+    }
+  }'
+```
+
+**Réponse**
+
+La réponse renvoie l’identifiant unique de la connexion source qui vient d’être créée. Vous pouvez utiliser cet identifiant à l’étape suivante de votre workflow lors de la création d’un flux de données.
+
+```json
+{
+  "id": "26b53912-1005-49f0-b539-12100559f0e2",
+  "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+Pour le workflow complet d’espace de stockage, notamment le schéma, le jeu de données, la connexion cible, le mappage et la création de flux de données, consultez [Création d’un flux de données pour les sources d’espace de stockage à l’aide de l’API [!DNL Flow Service] &#x200B;](../api/collect/cloud-storage.md#create-a-source-connection).
+
 ## Sources de base de données {#database-sources}
 
 ### [!DNL Azure Databricks]
@@ -201,3 +253,81 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 
 * [Créer une connexion  [!DNL Snowflake]  base](../api/create/databases/snowflake.md).
 * [Créer une connexion source pour une base de données](../api/collect/database-nosql.md#create-a-source-connection).
+
+**Exemple : activer la capture de données de modification lors de la création d’une connexion source à la base de données**
+
+Pour les sources de base de données prises en charge, définissez `params.cdcEnabled` sur `true` lors de la création de votre connexion source pour activer la capture de données de modification. Avant d’utiliser cette option, assurez-vous que le suivi des modifications est activé dans votre système source et que Data Mirror avec schémas relationnels est configuré dans Experience Platform.
+
+Cet exemple s’applique aux sources de base de données prises en charge qui utilisent les exportations CDC natives, telles que [!DNL Azure Databricks], [!DNL Google BigQuery] et [!DNL Snowflake].
+
+**Format d’API**
+
+```http
+POST /sourceConnections
+```
+
+**Requête**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Database source connection with CDC enabled",
+    "description": "Source connection for ingesting change data from a database source",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "{TABLE_NAME}",
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "lastModified",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      ],
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "{CONNECTION_SPEC_ID}",
+      "version": "1.0"
+    }
+  }'
+```
+
+**Réponse**
+
+La réponse renvoie l’identifiant unique de la connexion source qui vient d’être créée. Vous pouvez utiliser cet identifiant à l’étape suivante de votre workflow lors de la création d’un flux de données.
+
+```json
+{
+  "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
+  "etag": "\"ef05d265-0000-0200-0000-6019e0080000\""
+}
+```
+
+Pour connaître l’ensemble du workflow d’ingestion de base de données, notamment la connexion cible, le mappage et la création de flux de données, consultez [Créer un flux de données pour les sources de base de données à l’aide de l’API  [!DNL Flow Service] &#x200B;](../api/collect/database-nosql.md#create-a-source-connection).
