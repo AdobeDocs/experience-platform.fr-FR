@@ -5,10 +5,14 @@ title: Guide de l’API d’ingestion par lots
 description: Ce document fournit un guide complet aux développeurs qui travaillent avec des API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 TQID: https://experienceleague.adobe.com/oCAUvP0cM4dw1wEXnVCbjIkNGIlwSKb31A5h5s3-MTM
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 2532
@@ -18,7 +22,7 @@ ht-degree: 62%
 
 # Guide de développement de l’ingestion par lots
 
-Ce document fournit un guide complet sur l’utilisation des points d’entrée [API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, commencez par lire la [ présentation de l’API d’ingestion par lots ](overview.md).
+Ce document fournit un guide complet sur l’utilisation des points d’entrée [API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, commencez par lire la [&#x200B; présentation de l’API d’ingestion par lots &#x200B;](overview.md).
 
 L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
@@ -26,7 +30,7 @@ L’annexe de ce document fournit des informations sur le [formatage des donnée
 
 Les points d’entrée d’API utilisés dans ce guide font partie de l’[API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion). L’ingestion par lots est fournie par le biais d’une API RESTful où vous pouvez effectuer des opérations CRUD de base sur les types d’objets pris en charge.
 
-Avant de poursuivre, consultez la présentation de l’API d’ingestion par lots [batch ingestion](overview.md) et le [ guide de prise en main](getting-started.md).
+Avant de poursuivre, consultez la présentation de l’API d’ingestion par lots [batch ingestion](overview.md) et le [&#x200B; guide de prise en main](getting-started.md).
 
 ## Ingestion de fichiers JSON
 
@@ -926,7 +930,7 @@ La section suivante contient des informations supplémentaires sur l’ingestion
 
 ### Transformation des données pour l’ingestion par lots
 
-Pour ingérer un fichier de données dans Experience Platform, la structure hiérarchique du fichier doit être conforme au schéma [ Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
+Pour ingérer un fichier de données dans Experience Platform, la structure hiérarchique du fichier doit être conforme au schéma [&#x200B; Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
 
 Vous trouverez des informations sur le mappage d’un fichier CSV pour être conforme à un schéma XDM dans le document traitant des [exemples de transformations](../../etl/transformations.md), ainsi qu’un exemple de fichier de données JSON correctement formaté. Les exemples de fichiers fournis dans ce document se trouvent ici :
 

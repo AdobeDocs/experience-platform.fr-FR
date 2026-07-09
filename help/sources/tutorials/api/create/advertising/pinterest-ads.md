@@ -5,8 +5,10 @@ badge: Beta
 hide: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
 TQID: https://experienceleague.adobe.com/cxTTKeEFwJ0gZFMhv0TcOKsf6y2-CDpA4rcmI5-Lk58
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 2370

@@ -21,7 +21,7 @@ ht-degree: 79%
    - [Vue d’ensemble](streaming-ingestion/overview.md)
    - [Connecteur Kafka](streaming-ingestion/kafka.md)
    - [Résolution des problèmes](streaming-ingestion/troubleshooting.md)
-   - {hide-from-toc}[Adresse IP Plaçant sur la liste autorisée ](streaming-ingestion/allowlisting.md)
+   - {hide-from-toc}[Adresse IP Plaçant sur la liste autorisée &#x200B;](streaming-ingestion/allowlisting.md)
 - Ingestion par lots{#batch}
    - [Prise en main des API d’ingestion par lots](batch-ingestion/getting-started.md)
    - [Présentation de l’API](batch-ingestion/overview.md)

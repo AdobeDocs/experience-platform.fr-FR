@@ -15,7 +15,7 @@ Dans le contexte des balises de collecte de données, les règles contrôlent le
 
 >[!NOTE]
 >
->Ce document explique comment gérer les règles dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles dans l’interface utilisateur, reportez-vous au [ guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
+>Ce document explique comment gérer les règles dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles dans l’interface utilisateur, reportez-vous au [&#x200B; guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
 
 Une règle appartient à une seule [propriété](./properties.md). Une propriété peut comporter de nombreuses règles.
 

@@ -6,9 +6,12 @@ description: Le point d’entrée /sandbox de l’API Sandbox vous permet de gé
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
 TQID: https://experienceleague.adobe.com/EC2I30Bvl49lt1B0hLmPJrhk-JAkXE5qr58jbUUwf3M
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1517
@@ -188,7 +191,7 @@ Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `ti
 | --- | --- |
 | `name` | Le nom du sandbox. Cette propriété est utilisée à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage du sandbox. |
-| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>**création** : le sandbox a été créé, mais le système continue de le configurer.</li><li>**actif **: le sandbox est créé et actif.</li><li>**échec** : en raison d’une erreur, le système n’a pas pu configurer le sandbox et ce dernier a été désactivé.</li><li>**supprimé** : le sandbox a été désactivé manuellement.</li></ul> |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>**création** : le sandbox a été créé, mais le système continue de le configurer.</li><li>**actif &#x200B;**: le sandbox est créé et actif.</li><li>**échec** : en raison d’une erreur, le système n’a pas pu configurer le sandbox et ce dernier a été désactivé.</li><li>**supprimé** : le sandbox a été désactivé manuellement.</li></ul> |
 | `type` | Type de sandbox. Les types de sandbox actuellement pris en charge sont les suivants : `development` et `production`. |
 | `isDefault` | Une propriété booléenne indiquant s’il s’agit du sandbox par défaut de l’organisation. Il s’agit généralement du sandbox de production. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |

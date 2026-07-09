@@ -5,10 +5,18 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la génération du rapport de chevauchement de jeux de données à l’aide de l’API Real-Time Customer Profile.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
 TQID: https://experienceleague.adobe.com/G65tQIdmuEqNSc-Dbs4nGZXgDYGbhKm3dmGyslY-H-k
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 902
@@ -73,7 +81,7 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchem
 
 ### Générer un rapport de chevauchement de jeux de données à l’aide de Postman
 
-Postman est une plateforme collaborative de développement d’API qui s’avère utile pour visualiser les appels d’API. Il peut être téléchargé gratuitement à partir du site Web [](https://www.postman.com) et fournit une interface utilisateur facile à utiliser pour effectuer des appels API. Les captures d’écran suivantes utilisent l’interface de Postman.
+Postman est une plateforme collaborative de développement d’API qui s’avère utile pour visualiser les appels d’API. Il peut être téléchargé gratuitement à partir du site Web [&#128279;](https://www.postman.com) et fournit une interface utilisateur facile à utiliser pour effectuer des appels API. Les captures d’écran suivantes utilisent l’interface de Postman.
 
 **Requête**
 

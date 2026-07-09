@@ -5,9 +5,12 @@ title: Explorer un système de protocole à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer les applications de protocoles.
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
 TQID: https://experienceleague.adobe.com/6n8i6LEphVXR5yXqklAds3BaNuECNik8rZRVnffT5vU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 594

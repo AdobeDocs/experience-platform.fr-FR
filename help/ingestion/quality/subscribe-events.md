@@ -21,9 +21,9 @@ Pour faciliter la surveillance du processus d’ingestion, [!DNL Experience Plat
 
 ## Enregistrer un webhook pour les notifications d’ingestion de données
 
-Pour recevoir des notifications d’ingestion de données, vous devez utiliser [](https://www.adobe.com/go/devs_console_ui) pour enregistrer un webhook auprès de votre intégration Experience Platform.
+Pour recevoir des notifications d’ingestion de données, vous devez utiliser [&#128279;](https://www.adobe.com/go/devs_console_ui) pour enregistrer un webhook auprès de votre intégration Experience Platform.
 
-Suivez le tutoriel sur [l’abonnement aux notifications [!DNL Adobe I/O Event]  ](../../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
+Suivez le tutoriel sur [l’abonnement aux notifications [!DNL Adobe I/O Event]  &#x200B;](../../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
 
 >[!IMPORTANT]
 >

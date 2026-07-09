@@ -3,10 +3,15 @@ title: Référence de test de présence de balise
 description: Découvrez comment l’auditeur teste la présence de balises dans Adobe Experience Platform Debugger.
 exl-id: 8f01f89e-2a3b-41bc-b971-f3c60d0ae3fa
 TQID: https://experienceleague.adobe.com/cXxLoQFNTcSSROkTutWNWo5pvebzQjWNRkIuqhMlXdg
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
 source-wordcount: 576

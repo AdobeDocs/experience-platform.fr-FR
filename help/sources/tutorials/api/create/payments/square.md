@@ -4,8 +4,10 @@ title: Créer une connexion de base carrée à l’aide de l’API Flow Service
 description: Découvrez comment connecter Square à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 TQID: https://experienceleague.adobe.com/oS1CgG-kSi1BlAkluNq8GfLAd0LQsyX1I7-mEZdU78o
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 556

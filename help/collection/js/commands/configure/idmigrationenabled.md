@@ -3,10 +3,16 @@ title: idMigrationEnabled
 description: Permet au SDK Web de lire les cookies AMCV.
 exl-id: 33b9d645-0fbe-4fe4-8847-e6f9e78557b6
 TQID: https://experienceleague.adobe.com/hbyGQRiwdHakLAJboWijFbU7V7rdNb64W2-jJqwGB-s
-product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: e08599ea-8888-4294-ba74-3ba0a7762a46
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
 source-wordcount: 872
@@ -52,7 +58,7 @@ Pour vous guider, attendez que la durée de vie maximale du cookie AMCV soit éc
 
 ## Mises à jour des caractéristiques Audience Manager
 
-Lorsque des données au format XDM sont envoyées dans Audience Manager pendant la migration, ces données doivent être converties en signaux. Vos caractéristiques doivent être mises à jour pour refléter les nouvelles clés fournies par XDM. Ce processus est facilité par l’utilisation de l’outil [ BAAAM ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management).
+Lorsque des données au format XDM sont envoyées dans Audience Manager pendant la migration, ces données doivent être converties en signaux. Vos caractéristiques doivent être mises à jour pour refléter les nouvelles clés fournies par XDM. Ce processus est facilité par l’utilisation de l’outil [&#x200B; BAAAM &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management).
 
 ## Migration d’ID tiers {#third-party-id}
 
@@ -90,4 +96,4 @@ alloy("configure", {
 
 ## Activer la migration des identifiants visiteur à l’aide de l’extension de balise Web SDK
 
-Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [ Paramètres de configuration des identités ](/help/tags/extensions/client/web-sdk/configure/identity.md).
+Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [&#x200B; Paramètres de configuration des identités &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md).
