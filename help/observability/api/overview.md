@@ -11,10 +11,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 162
-ht-degree: 18%
+ht-degree: 13%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 18%
 
 L’API [!DNL Observability Insights] fournit un point d’entrée qui vous permet de récupérer et de surveiller par programmation les données de mesure pour diverses fonctionnalités de Adobe Experience Platform. Ce point d’entrée est décrit ci-dessous. Consultez le guide du point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture des exemples d’appels API, etc.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’[[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’[[!DNL Observability Insights] API](https://developer.adobe.com/experience-platform-apis/references/observability-insights).
 
 ## Mesures
 

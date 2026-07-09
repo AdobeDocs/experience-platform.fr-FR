@@ -19,7 +19,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1654
 ht-degree: 35%
@@ -180,7 +180,7 @@ Sélectionnez l’alerte souhaitée dans la liste et abonnez-vous à des notific
 
 ## Gestion des journaux d’audit dans l’API
 
-Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuvent également être effectuées à l’aide d’appels API. Voir le [document de référence des API](https://www.adobe.io/experience-platform-apis/references/audit-query/) pour plus d’informations.
+Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuvent également être effectuées à l’aide d’appels API. Voir le [document de référence des API](https://developer.adobe.com/experience-platform-apis/references/audit-query) pour plus d’informations.
 
 ## Gestion des journaux d’audit pour Adobe Admin Console
 

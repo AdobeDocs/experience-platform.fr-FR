@@ -11,10 +11,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 791
-ht-degree: 18%
+source-wordcount: 786
+ht-degree: 15%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 18%
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) est utilisé pour collecter et centraliser les données client provenant de diverses sources dans [!DNL Experience Platform]. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge peuvent être connectées.
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) est utilisé pour collecter et centraliser les données client provenant de diverses sources dans [!DNL Experience Platform]. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge peuvent être connectées.
 
 Avec Adobe I/O Events, vous pouvez vous abonner à des événements et utiliser des Webhooks pour recevoir des notifications concernant le statut de vos exécutions de flux. Ces notifications contiennent des informations sur le succès de l’exécution de votre flux ou sur les erreurs qui ont contribué à l’échec d’une exécution.
 
@@ -32,7 +32,7 @@ Ce document décrit la procédure à suivre pour vous abonner à des événement
 
 Ce tutoriel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller l’exécution du flux. Si vous n’avez pas encore configuré de connexion source, commencez par consulter la [présentation des sources](./home.md) pour configurer la source de votre choix avant de revenir à ce guide.
 
-Ce document nécessite également une compréhension pratique des Webhooks et de la connexion d’un webhook d’une application à une autre. Pour en savoir plus sur les Webhooks, consultez la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
+Ce document nécessite également une compréhension pratique des Webhooks et de la connexion d’un webhook d’une application à une autre. Pour en savoir plus sur les Webhooks, consultez la [[!DNL I/O Events] documentation](https://developer.adobe.com/events/docs/guides/runtime-webhooks/).
 
 ## Enregistrer un webhook pour les notifications d’exécution de flux
 

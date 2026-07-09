@@ -16,10 +16,10 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 278
-ht-degree: 37%
+source-wordcount: 271
+ht-degree: 35%
 
 ---
 
@@ -33,7 +33,7 @@ Le point d’entrée de `/audiences` POST peut être utilisé pour créer les m�
 >
 >Les points d’entrée de ce guide sont précédés du préfixe `/core/ais`, par opposition à `/core/ups`.
 
-Pour utiliser les API Experience Platform, vous devez avoir suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
+Pour utiliser les API Experience Platform, vous devez avoir suivi le tutoriel [authentification](/help/landing/api-authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

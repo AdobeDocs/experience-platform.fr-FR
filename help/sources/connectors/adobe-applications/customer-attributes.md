@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 410
+source-wordcount: 409
 ht-degree: 20%
 
 ---
@@ -43,7 +43,7 @@ Vous ne pouvez pas sélectionner d’espace de noms existant pour l’identité 
 
 Pour que les données [!DNL Customer Attributes] soient liées à d’autres jeux de données [!DNL Profile], leurs données et identités doivent pouvoir être associées à un Experience Cloud ID.
 
-Vous pouvez établir l’espace de noms d’`CORE` en définissant l’Experience Cloud ID du visiteur à l’aide de [Identité dans la collecte de données](/help/collection/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) ou l’API [Experience Cloud ID Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
+Vous pouvez établir l’espace de noms `CORE` en définissant l’Experience Cloud ID du visiteur à l’aide de l’API [Identité dans la collecte de données](/help/collection/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) ou [API du service d’identification des visiteurs](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
 
 Le fichier [!DNL Customer Attributes] ne renseigne pas d’autres relations d’identité. Par exemple, si un jeu de données source [!DNL Customer Attributes] contient un champ **E-mail** et **Identifiant de fidélité**, ces champs doivent être libellés comme des champs d’identité dans le schéma afin d’être traités en [!DNL Identity Service].
 

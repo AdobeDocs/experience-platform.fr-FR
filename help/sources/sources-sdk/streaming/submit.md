@@ -10,10 +10,10 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1288
-ht-degree: 13%
+ht-degree: 12%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 13%
 
 Les dernières étapes pour intégrer votre nouvelle source à Adobe Experience Platform à l’aide des sources en libre-service (streaming SDK) consistent à tester et à envoyer votre nouvelle source. Une fois que vous avez terminé votre spécification de connexion et mis à jour la spécification du flux de diffusion en continu, vous pouvez commencer à tester la fonctionnalité de votre source via l’API ou l’interface utilisateur. Une fois l’opération réussie, vous pouvez envoyer votre nouvelle source en contactant votre représentant Adobe.
 
-Le document suivant décrit les étapes à suivre pour tester et déboguer votre source à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le document suivant décrit les étapes à suivre pour tester et déboguer votre source à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 

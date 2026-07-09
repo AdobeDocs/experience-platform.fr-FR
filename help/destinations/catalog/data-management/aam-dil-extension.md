@@ -25,10 +25,10 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 504
-ht-degree: 38%
+source-wordcount: 508
+ht-degree: 37%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 38%
 
 ## Vue d’ensemble {#overview}
 
-Il s’agit de l’extension de la bibliothèque d’intégration des données (mise en œuvre côté client) d’Adobe Audience Manager. Remarque : cette extension n’est pas destinée à être utilisée pour le transfert côté serveur (SSF) des données [!DNL Adobe Analytics]. Pour SSF, utilisez l’extension [!DNL Adobe Analytics]. Important : à partir de la version 8.0, DIL dépend fortement du service [!DNL Experience Cloud] ID, version 3.3 ou ultérieure. Mettez en œuvre [!DNL Experience Cloud] service d’ID et DIL pour des fonctionnalités d’intégration de données [!DNL Audience Manager] complètes.
+Il s’agit de l’extension de la bibliothèque d’intégration des données (mise en œuvre côté client) d’Adobe Audience Manager. Remarque : cette extension n’est pas destinée à être utilisée pour le transfert côté serveur (SSF) des données [!DNL Adobe Analytics]. Pour SSF, utilisez l’extension [!DNL Adobe Analytics]. Important : à partir de la version 8.0, DIL dépend fortement du service d’identification des visiteurs Adobe, version 3.3 ou ultérieure. Mettez en œuvre le service d’identification des visiteurs et DIL pour des fonctionnalités d’intégration de données [!DNL Audience Manager] complètes.
 
 [!DNL Audience Manager] DIL est une extension de la plateforme de gestion des données (DMP) disponible dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension [&#128279;](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
 

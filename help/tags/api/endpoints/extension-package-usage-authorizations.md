@@ -2,10 +2,10 @@
 title: Point D’Entrée Des Autorisations D’Utilisation Du Package D’Extension
 description: Découvrez comment effectuer des appels au point d’entrée d’autorisations /extension_package_usage dans l’API Reactor.
 exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
-source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 17%
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ Un package d’extension appartient à la [société](./companies.md) du dévelo
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
 ## Récupérer les autorisations d’utilisation de package d’extension pour un package d’extension {#list}
 

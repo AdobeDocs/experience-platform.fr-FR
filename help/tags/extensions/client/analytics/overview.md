@@ -31,9 +31,9 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 2495
+source-wordcount: 2510
 ht-degree: 80%
 
 ---
@@ -159,8 +159,7 @@ _satellite.cookie.set("sat_track", "true");
 
 Détermine le mode d’encodage de la demande d’image. Si votre mise en œuvre ou votre site utilise des caractères non ASCII, il est important de définir le jeu de caractères ici. Vous pouvez sélectionner un jeu de caractères prédéfini ou spécifier un jeu de caractères personnalisé. Adobe recommande d’utiliser le même codage de caractères que sur votre site. En règle générale, cette valeur est UTF-8.
 
-Le jeu de caractères peut être défini dans le code personnalisé Analytics à l’aide de la variable `s.charSet`.
-Pour plus d’informations sur les jeux de caractères, consultez la documentation de [charSet](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=fr).
+Un jeu de caractères peut être défini dans un code personnalisé Analytics à l’aide de la variable `s.charSet`.Pour plus d’informations sur les jeux de caractères, consultez la [documentation charSet](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=fr).
 
 ### Currency Code (Code de devise)
 
@@ -170,7 +169,7 @@ Pour plus d’informations sur les codes de devise pris en charge, consultez [cu
 
 ### Serveur de suivi
 
-Utilisé pour les mises en œuvre de cookies propriétaires afin de déterminer l’emplacement de celui-ci. Si vous utilisez le service Experience Cloud ID, Adobe conseille de ne pas renseigner ce champ.
+Utilisé pour les mises en œuvre de cookies propriétaires afin de déterminer l’emplacement de celui-ci. Si vous utilisez l’extension de balise « [!UICONTROL Experience Cloud ID Service] », Adobe vous conseille de ne pas renseigner ce champ.
 
 Un serveur de suivi peut être défini dans un code personnalisé Analytics à l’aide de la variable `s.trackingServer`.
 
@@ -178,7 +177,7 @@ Voir [trackingServer](https://experienceleague.adobe.com/docs/analytics/implemen
 
 ### Serveur de suivi SSL
 
-Utilisé pour les mises en œuvre de cookies propriétaires SSL afin de déterminer l’emplacement de ce dernier. Si vous utilisez le service Experience Cloud ID, Adobe conseille de ne pas renseigner ce champ. Si elles ne sont pas définies, les données SSL utilisent le serveur de suivi.
+Utilisé pour les mises en œuvre de cookies propriétaires SSL afin de déterminer l’emplacement de ce dernier. Si vous utilisez l’extension de balise « [!UICONTROL Experience Cloud ID Service] », Adobe vous conseille de ne pas renseigner ce champ. Si elles ne sont pas définies, les données SSL utilisent le serveur de suivi.
 
 Un serveur de suivi SSL peut être défini dans un code personnalisé Analytics à l’aide de la variable `s.trackingServerSecure`.
 

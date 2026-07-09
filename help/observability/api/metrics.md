@@ -15,10 +15,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1311
-ht-degree: 25%
+ht-degree: 24%
 
 ---
 
@@ -28,11 +28,11 @@ Les mesures d’observabilité fournissent des informations sur les statistiques
 
 >[!NOTE]
 >
->La version précédente du point d’entrée des mesures (V1) a été abandonnée. Ce document se concentre exclusivement sur la version actuelle (V2). Pour plus d’informations sur le point d’entrée V1 pour les implémentations héritées, reportez-vous à la référence [API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>La version précédente du point d’entrée des mesures (V1) a été abandonnée. Ce document se concentre exclusivement sur la version actuelle (V2). Pour plus d’informations sur le point d’entrée V1 pour les implémentations héritées, reportez-vous à la référence [API](https://developer.adobe.com/experience-platform-apis/references/observability-insights#operation/retrieveMetricsV1).
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Observability Insights] API](https://developer.adobe.com/experience-platform-apis/references/observability-insights). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Récupération des mesures d’observabilité
 

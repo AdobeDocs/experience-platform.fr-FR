@@ -19,10 +19,10 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 940
-ht-degree: 74%
+source-wordcount: 939
+ht-degree: 72%
 
 ---
 
@@ -32,7 +32,7 @@ Pour exécuter Adobe Experience Platform Debugger, ouvrez la page à examiner da
 
 ![](images/summary.jpg)
 
-Cet écran affiche également des informations sur chaque solution Adobe Experience Cloud. Les informations affichées varient selon la solution, mais comprennent généralement des données telles que la bibliothèque et la version de la solution (par exemple, « AppMeasurement v2.9 ») et les identifiants de compte (tels que l’identifiant de suite de rapports Analytics, le code client Target, l’identifiant partenaire d’Audience Manager, etc.).
+Cet écran affiche des informations sur chaque solution Adobe CX Enterprise. Les informations affichées varient selon la solution, mais comprennent généralement des données telles que la bibliothèque et la version de la solution (par exemple, « AppMeasurement v2.9 ») et les identifiants de compte (tels que l’identifiant de suite de rapports Analytics, le code client Target, l’identifiant partenaire d’Audience Manager, etc.).
 
 ## Informations affichées dans Experience Platform Debugger
 
@@ -142,12 +142,12 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
  </tbody> 
 </table>
 
-**Service Adobe Experience Cloud ID**
+**Service d’identification des visiteurs**
 
 <table id="table_274CFCEFA8F34D16BB546B4669EC0209"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <p>Experience Cloud Org ID (ID d’organisation d’Experience Cloud) </p> </td> 
+   <td colname="col1"> <p>Identifiant d’organisation de l’entreprise CX </p> </td> 
    <td colname="col2"> <p>Votre <a href="https://experiencecloud.adobe.com/resources/help/fr_FR/mcvid/" format="https" scope="external"> ID d’organisation</a>. </p> </td> 
   </tr> 
   <tr> 

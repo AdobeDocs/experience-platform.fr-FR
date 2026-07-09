@@ -6,10 +6,10 @@ user-guide-description: Associez les identités des clients, quel que soit l’a
 feature: Identities
 role: Admin,Developer
 nudge: true
-source-git-commit: 0cd7986ba2407a6db367245cacb06a8befa234c1
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '160'
-ht-degree: 63%
+ht-degree: 58%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 63%
    - [Répertorier les espaces de noms disponibles](api/list-namespaces.md)
    - [Création d’un espace de noms personnalisé](api/create-custom-namespace.md)
    - [Répertorier l’identifiant natif d’une identité](api/list-native-id.md)
-   - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/identity-service)
+   - [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/identity-service)
 - {hide-from-toc}[Définir des champs d’identité dans l’interface utilisateur](label-identities.md)
 - [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 - [Guide de dépannage](troubleshooting-guide.md)

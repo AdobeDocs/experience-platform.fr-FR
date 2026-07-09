@@ -17,10 +17,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 661
-ht-degree: 36%
+source-wordcount: 660
+ht-degree: 35%
 
 ---
 
@@ -42,9 +42,9 @@ Le service d’identités d’Adobe Experience Platform conserve un stock d’
 
 ## ECID et service d’accord préalable
 
-Adobe Experience Cloud [!DNL Identity Service] sert de cadre d’identification commun pour les [!DNL Experience Cloud] et attribue un identifiant persistant unique à chaque visiteur du site. L’identifiant [!DNL Experience Cloud] (ECID) suit l’activité d’un client par l’intermédiaire d’un cookie propriétaire, peut identifier de manière unique un appareil dans plusieurs applications et vous permet d’identifier un même visiteur du site et ses données dans différentes applications [!DNL Experience Cloud]. Pour plus d’informations, consultez la [présentation du du service d’identités d’Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
+L’[!DNL Visitor ID Service] Adobe sert de cadre d’identification commun pour les [!DNL Experience Cloud] et attribue un identifiant persistant unique à chaque visiteur du site. L’identifiant [!DNL Experience Cloud] (ECID) suit l’activité d’un client par l’intermédiaire d’un cookie propriétaire, peut identifier de manière unique un appareil dans plusieurs applications et vous permet d’identifier un même visiteur du site et ses données dans différentes applications [!DNL Experience Cloud]. Pour plus d’informations, consultez la [présentation du service d’identification des visiteurs](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr) .
 
-Le service Opt-in, une extension d’[!DNL Experience Cloud Identity Service], vous permet de configurer des protocoles sur votre application pour permettre aux visiteurs de choisir si vous pouvez ou non enregistrer un cookie sur leur appareil ou navigateur. Pour des informations plus détaillées sur le service d’accord préalable, y compris sur la configuration du service pour votre application, consultez la [documentation du service d’accord préalable](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=fr).
+Le service Opt-in, une extension du [!DNL Visitor ID Service], vous permet de configurer des protocoles sur votre application pour permettre aux visiteurs de déterminer s’ils peuvent ou non enregistrer un cookie sur leur appareil ou navigateur. Pour des informations plus détaillées sur le service d’accord préalable, y compris sur la configuration du service pour votre application, consultez la [documentation du service d’accord préalable](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=fr).
 
 Une fois que les visiteurs et visiteuses de votre site se sont vus attribuer des ECID, vous pouvez utiliser l’[!DNL Privacy JavaScript Library] Adobe pour récupérer ces ID en vue de les utiliser dans des demandes d’accès à des informations personnelles, comme décrit dans la section suivante.
 

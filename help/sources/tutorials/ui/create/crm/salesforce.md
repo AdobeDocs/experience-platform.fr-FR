@@ -12,10 +12,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 24f758354adbd6127f1a6699142efceb215a91ec
 workflow-type: tm+mt
-source-wordcount: 751
-ht-degree: 17%
+source-wordcount: 861
+ht-degree: 15%
 
 ---
 
@@ -33,6 +33,13 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 Si vous disposez déjà d’un compte [!DNL Salesforce] authentifié, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [la configuration d’un flux de données pour les données CRM](../../dataflow/crm.md).
+
+### Configuration de l’application connectée [!DNL Salesforce]
+
+Avant de [!DNL Salesforce] connecter à Adobe Experience Platform, assurez-vous que l’application [!DNL Salesforce] connectée que vous utilisez pour l’authentification inclut la portée OAuth **Gérer les données utilisateur via des API** (`api`). Cette portée est requise pour qu’Experience Platform accède aux données à partir de [!DNL Salesforce]. Si cette portée est manquante, l’authentification peut échouer.
+
+* Pour plus d’informations sur l’authentification, consultez le [[!DNL Salesforce] guide d’authentification](../../../../connectors/crm/salesforce.md#prerequisites).
+* Pour plus d’informations sur les portées OAuth disponibles, consultez la [[!DNL Salesforce] documentation sur les portées OAuth](https://help.salesforce.com/s/articleView?id=xcloud.remoteaccess_oauth_tokens_scopes.htm&type=5).
 
 ### Collecter les informations d’identification requises {#gather-required-credentials}
 
@@ -80,8 +87,11 @@ Pour les informations d’identification du client OAuth 2, sélectionnez **[!UI
 * Version de l’API
 * Inclure les objets supprimés
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]**.
+>[!IMPORTANT]
+>
+>Assurez-vous que l’application connectée [!DNL Salesforce] utilisée pour cette connexion inclut la portée OAuth **Gérer les données utilisateur via les API** (`api`). Si cette portée est manquante, l’authentification peut échouer lorsqu’Experience Platform tente de lire les données de [!DNL Salesforce].
 
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![Interface dans laquelle vous pouvez créer un compte Salesforce en fournissant les informations d’authentification appropriées.](../../../../images/tutorials/create/salesforce/new.png)
 

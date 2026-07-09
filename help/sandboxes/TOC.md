@@ -5,10 +5,10 @@ breadcrumb-title: Guide des sandbox
 user-guide-description: Découvrez le fonctionnement des sandbox et la partition d’une instance Experience Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
 feature: Sandboxes
 nudge: true
-source-git-commit: ddcaf43820dc4ab464b548a3f28f0e4e2ad1be99
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '98'
-ht-degree: 74%
+ht-degree: 67%
 
 ---
 
@@ -38,5 +38,5 @@ ht-degree: 74%
    * [Configurations d’objet de sauvegarde](use-cases/backup-object-configuration.md)
    * [Centre d&#39;excellence](use-cases/center-of-excellence.md)
 * [Guide de dépannage](troubleshooting-guide.md)
-* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/sandbox)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/sandbox)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

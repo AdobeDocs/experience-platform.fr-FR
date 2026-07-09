@@ -30,9 +30,9 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 2620
+source-wordcount: 2623
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ Experience Platform vous permet de collecter les données de consentement des cl
 
 Outre les commandes SDK déclenchées par les hooks de changement de consentement CMP, les données de consentement peuvent également être transmises à Experience Platform par le biais de données XDM générées par le client ou la cliente et chargées directement dans un jeu de données compatible avec les [!DNL Profile].
 
-Tous les segments partagés avec Experience Platform par Adobe Audience Manager (par le biais du connecteur source [!DNL Audience Manager] ou autre) peuvent également contenir des données de consentement si les champs appropriés ont été appliqués à ces segments par le biais de [!DNL Experience Cloud Identity Service]. Pour plus d’informations sur la collecte de données de consentement dans [!DNL Audience Manager], consultez le document sur le plug-in [Adobe Audience Manager pour IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=fr).
+Tous les segments partagés avec Experience Platform par Adobe Audience Manager (par le biais du connecteur source [!DNL Audience Manager] ou autre) peuvent également contenir des données de consentement si les champs appropriés ont été appliqués à ces segments par le biais du [!DNL Visitor ID Service]. Pour plus d’informations sur la collecte de données de consentement dans [!DNL Audience Manager], consultez le document sur le plug-in [Adobe Audience Manager pour IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=fr).
 
 ### Application du consentement en aval
 
@@ -134,9 +134,9 @@ Pour plus d’informations sur l’utilisation des politiques de fusion, reporte
 
 >[!NOTE]
 >
->L’utilisation d’Experience Platform Web SDK est nécessaire pour traiter les données de consentement directement dans Adobe Experience Platform. [!DNL Experience Cloud Identity Service] n’est pas pris en charge.
+>L’utilisation d’Experience Platform Web SDK est nécessaire pour traiter les données de consentement directement dans Adobe Experience Platform. Le [!DNL Visitor ID Service] n’est pas pris en charge.
 >
->Cependant, [!DNL Experience Cloud Identity Service] est toujours pris en charge pour le traitement du consentement dans Adobe Audience Manager et la conformité à TCF 2.0 nécessite uniquement que la bibliothèque soit mise à jour vers [&#x200B; version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>Cependant, le [!DNL Visitor ID Service] est toujours pris en charge pour le traitement du consentement dans Adobe Audience Manager et la conformité au TCF 2.0 nécessite uniquement que la bibliothèque soit mise à jour vers la [version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Une fois que vous avez configuré votre CMP pour générer des chaînes de consentement, vous devez intégrer Experience Platform Web SDK pour collecter ces chaînes et les envoyer à Experience Platform. Experience Platform SDK fournit deux commandes qui peuvent être utilisées pour envoyer des données de consentement TCF à Experience Platform (expliquées dans les sous-sections ci-dessous). Ces commandes doivent être utilisées lorsqu’un client ou une cliente fournit des informations de consentement pour la première fois, et chaque fois que le consentement change par la suite.
 

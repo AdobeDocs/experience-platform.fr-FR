@@ -16,10 +16,10 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1397
-ht-degree: 28%
+ht-degree: 27%
 
 ---
 
@@ -33,7 +33,7 @@ Bien que les relations de schéma puissent être déduites par l’utilisation d
 >
 >L’API Schema Registry fait référence aux schémas de référence en tant que « schémas de destination ». Ils ne doivent pas être confondus avec les schémas de destination dans les [jeux de mappages de la préparation des données](../../data-prep/mapping-set.md) ou les schémas pour les [connexions de destination](../../destinations/home.md).
 
-Ce document fournit un tutoriel expliquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’[[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) .
+Ce document fournit un tutoriel expliquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’[[!DNL Schema Registry API]](https://developer.adobe.com/experience-platform-apis/references/schema-registry) .
 
 ## Prise en main
 

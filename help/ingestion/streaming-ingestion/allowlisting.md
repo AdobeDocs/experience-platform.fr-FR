@@ -11,9 +11,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 465
+source-wordcount: 474
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ La fonction de filtrage des adresses IP fonctionne comme suit :
 
 ## Considérations principales
 
-* La fonction de limitation des adresses IP s’applique uniquement à l’[API d’ingestion en flux continu](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) (`dcs.adobedc.net`) et ne s’applique **pas** aux `server.adobedc.net` ou aux `edge.adobedc.net`.
+* La fonction de limitation des adresses IP s’applique uniquement à l’[API d’ingestion en flux continu](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion) (`dcs.adobedc.net`) et ne s’applique **pas** aux `server.adobedc.net` ou aux `edge.adobedc.net`.
 * Les nouveaux sandbox sont ouverts par défaut jusqu’à ce que la fonction de liste autorisée soit activée.
 * La suppression d’un sandbox de la place sur la liste autorisée le rouvre sur Internet.
 * Vous devez tenir à jour la liste complète des mappages sandbox-vers-adresses IP de votre côté et toujours envoyer la liste complète dans le formulaire de liste autorisée des adresses IP. Les mises à jour incrémentielles ne sont pas prises en charge.

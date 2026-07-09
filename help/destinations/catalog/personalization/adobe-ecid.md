@@ -20,9 +20,9 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 456
+source-wordcount: 457
 ht-degree: 33%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 33%
 
 ## Vue d’ensemble {#overview}
 
-Cette extension met en œuvre le service [!DNL Experience Cloud] ID, qui identifie les visiteurs sur l’ensemble des solutions [!DNL Experience Cloud].
+Cette extension met en œuvre le service d’identification des visiteurs, qui identifie les visiteurs dans toutes les solutions [!DNL Experience Cloud].
 
 Le service [!DNL Experience Cloud] ID est une extension de personnalisation d’[!DNL Adobe Experience Platform]. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page d’extension du service [Experience Cloud ID](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
 

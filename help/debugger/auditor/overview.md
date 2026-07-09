@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 367
-ht-degree: 32%
+source-wordcount: 366
+ht-degree: 31%
 
 ---
 
@@ -62,7 +62,7 @@ La fonction d’audit peut évaluer les technologies Adobe suivantes :
 * Adobe Advertising DSP
 * Recherche Adobe Advertising
 * Adobe Analytics
-* Service d’identités d’Adobe Experience Cloud
+* Service d’identification des visiteurs Adobe
 * Adobe Target
 * Balises (anciennement Adobe Experience Platform Launch)
 

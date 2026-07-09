@@ -18,9 +18,9 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 60dfb3bf6044036be567e46c3807b48408ea3477
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 291
+source-wordcount: 295
 ht-degree: 9%
 
 ---
@@ -46,7 +46,7 @@ Les options disponibles sont les suivantes :
 
 ## [!UICONTROL Migration de l’ECID depuis VisitorAPI]
 
-Case à cocher qui permet au SDK Web de lire les cookies `AMCV` et `s_ecid` et de définir le cookie `AMCV` utilisé par `Visitor.js`. Cette fonctionnalité est importante lors de la migration des bibliothèques qui utilisent `VisitorAPI.js` vers Web SDK, car certaines pages peuvent encore utiliser `Visitor.js`. Cette option permet au SDK de continuer à utiliser le même ECID, de sorte que les utilisateurs ne soient pas identifiés comme deux utilisateurs distincts. La bibliothèque JavaScript équivalente à cette case à cocher est [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
+Une case à cocher qui permet au SDK Web de lire les cookies `AMCV` et `s_ecid` et de définir le cookie `AMCV` utilisé par le service d’identification des visiteurs. Cette fonctionnalité est importante lors de la migration des bibliothèques qui utilisent `VisitorAPI.js` vers Web SDK, car certaines pages peuvent encore utiliser `VisitorAPI.js`. Cette option permet au SDK de continuer à utiliser le même ECID, de sorte que les utilisateurs ne soient pas identifiés comme deux utilisateurs distincts. La bibliothèque JavaScript équivalente à cette case à cocher est [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
 
 ## [!UICONTROL Utiliser des cookies tiers]
 

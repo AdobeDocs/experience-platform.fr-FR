@@ -10,10 +10,10 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1719
-ht-degree: 31%
+ht-degree: 30%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 31%
 
 Le service de flux est utilisé pour collecter et centraliser les données client provenant de différentes sources dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge peuvent être connectées.
 
-Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour vous guider tout au long des étapes de création d’une connexion en continu à l’aide de l’API [!DNL Flow Service].
+Ce tutoriel utilise l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) pour vous guider tout au long des étapes de création d’une connexion en continu à l’aide de l’API [!DNL Flow Service].
 
 ## Prise en main
 
@@ -340,7 +340,7 @@ Une réponse réussie renvoie le statut HTTP 201 avec les détails de la connexi
 
 Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
 

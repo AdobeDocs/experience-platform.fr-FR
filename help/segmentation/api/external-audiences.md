@@ -15,10 +15,10 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 2884
-ht-degree: 9%
+source-wordcount: 2877
+ht-degree: 8%
 
 ---
 
@@ -42,7 +42,7 @@ Les audiences externes vous permettent de charger des données de profil à part
 >
 >Les points d’entrée de ce guide sont précédés du préfixe `/core/ais`, par opposition à `/core/ups`.
 
-Pour utiliser les API Experience Platform, vous devez avoir suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
+Pour utiliser les API Experience Platform, vous devez avoir suivi le tutoriel [authentification](/help/landing/api-authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Modèle de libre-service de documentation
 description: Découvrez comment connecter Adobe Experience Platform à YOURSOURCE à l’aide de l’API Flow Service.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: '2157'
-ht-degree: 51%
+source-wordcount: '2176'
+ht-degree: 50%
 
 ---
 
@@ -47,7 +47,7 @@ Pour plus d’informations sur ces informations d’identification, consultez la
 
 ## Connectez *YOURSOURCE* à Experience Platform à l’aide de l’API [!DNL Flow Service]
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source *YOURSOURCE* et de création d’un flux de données pour importer les données *YOURSOURCE* dans Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source *YOURSOURCE* et de création d’un flux de données pour importer les données *YOURSOURCE* dans Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ### Créer une connexion de base {#base-connection}
 
@@ -112,8 +112,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Explorer votre source {#explore}
 
-À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
-Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer en [!DNL Experience Platform] :
+À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer en [!DNL Experience Platform] :
 
 **Format d’API**
 
@@ -369,7 +368,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ### Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans la payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) avec des mappages de données définis dans la payload de la requête.
 
 **Format d’API**
 

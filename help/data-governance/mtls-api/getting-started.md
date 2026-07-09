@@ -11,10 +11,10 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 227
-ht-degree: 36%
+source-wordcount: 220
+ht-degree: 34%
 
 ---
 
@@ -30,7 +30,7 @@ La documentation de l’API du service MTLS fournit un exemple d’appel API pou
 
 ## En-têtes requis
 
-La documentation de l’API exige également que vous ayez suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers des points d’entrée Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
+La documentation de l’API exige également que vous ayez suivi le tutoriel [authentification](/help/landing/api-authentication.md) afin d’effectuer avec succès des appels vers des points d’entrée Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

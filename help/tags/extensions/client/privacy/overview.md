@@ -27,10 +27,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 857
-ht-degree: 73%
+source-wordcount: 854
+ht-degree: 72%
 
 ---
 
@@ -55,7 +55,7 @@ L’écran suivant vous permet de configurer les sources et solutions à partir 
 * Adobe Analytics (AA)
 * Adobe Audience Manager (AAM)
 * Adobe Target
-* Service d’identités d’Adobe Experience Cloud (Visiteur ou ECID)
+* Service d’identification des visiteurs Adobe (ECID)
 * Adobe Advertising
 
 Sélectionnez une ou plusieurs solutions, puis sélectionnez **[!UICONTROL Mettre à jour]**.

@@ -44,9 +44,9 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 447
+source-wordcount: 445
 ht-degree: 5%
 
 ---
@@ -78,7 +78,7 @@ Un système de périphérie consolidé vous permet de gérer des campagnes publi
 
 Web SDK est une bibliothèque open source créée à partir de zéro pour intégrer les fonctionnalités des bibliothèques existantes. Elle résout les problèmes d’ordre de déclenchement des balises, d’incohérences de version et de gestion des dépendances, offrant ainsi un moyen d’implémenter de nombreux produits Experience Cloud. Le SDK Web remplace la collecte de données pour les services suivants :
 
-* Service d’identification des visiteurs Adobe Experience Platform (`Visitor.js`)
+* Service d’identification des visiteurs Adobe (`VisitorAPI.js`)
 * Adobe Analytics `AppMeasurement.js`)
 * Adobe Target `AT.js`)
 * Adobe Audience Manager `DIL.js`)

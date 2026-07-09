@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 322
+source-wordcount: 321
 ht-degree: 75%
 
 ---
@@ -53,7 +53,7 @@ Utilisez la section [!UICONTROL Balises &#x200B;] pour afficher les requêtes de
 
 ## [!UICONTROL Identifiant Experience Cloud] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-Utilisez l’onglet [!UICONTROL &#x200B; Experience Cloud ID &#x200B;] pour afficher les requêtes [Service Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
+Utilisez l’onglet [!UICONTROL Experience Cloud ID] pour afficher les requêtes [Service d’identification des visiteurs](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
 
 ## [!UICONTROL Dynamic Tag Management]
 

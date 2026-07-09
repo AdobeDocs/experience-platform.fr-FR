@@ -6,10 +6,10 @@ user-guide-description: Utilisez les profils de produit dans Adobe Admin Conso
 feature: Access Control
 role: Admin
 nudge: true
-source-git-commit: e638023f470f97c54cb64516ce5ccd360a6d34a2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 92%
+ht-degree: 86%
 
 ---
 
@@ -50,5 +50,5 @@ ht-degree: 92%
    * [Liste des noms des autorisations et des types de ressources](api/permissions-and-resource-types.md)
    * [Affichage des politiques efficaces](api/effective-policies.md)
 * [Guide de dépannage](troubleshooting-guide.md)
-* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/access-control/)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/access-control)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

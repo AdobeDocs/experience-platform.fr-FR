@@ -10,10 +10,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 404
-ht-degree: 35%
+ht-degree: 33%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 35%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 

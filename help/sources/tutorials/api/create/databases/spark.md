@@ -12,10 +12,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 510
-ht-degree: 48%
+ht-degree: 47%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 48%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL Apache Spark] sur [!DNL Azure HDInsights] (ci-après dénommée « [!DNL Spark] ») à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL Apache Spark] sur [!DNL Azure HDInsights] (ci-après dénommée « [!DNL Spark] ») à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 

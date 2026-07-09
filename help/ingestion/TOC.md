@@ -6,10 +6,10 @@ user-guide-description: Importez vos données dans Experience Platform via une 
 feature: Data Ingestion
 role: Developer
 nudge: true
-source-git-commit: b6abe265f340487f0eae12237ba320cd4afbd2d8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 88%
+ht-degree: 79%
 
 ---
 
@@ -48,6 +48,6 @@ ht-degree: 88%
    - [Validation de l’ingestion en flux continu](quality/streaming-validation.md)
 - [Barrières de sécurité pour l’ingestion de données](guardrails.md)
 - [Connecteurs source](source-connectors.md)
-- [Référence de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [Référence de l’API d’ingestion en flux continu](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [Référence de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion)
+- [Référence de l’API d’ingestion en flux continu](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion)
 - [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

@@ -10,10 +10,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 851
-ht-degree: 21%
+ht-degree: 20%
 
 ---
 
@@ -103,7 +103,7 @@ La page [!UICONTROL Aperçu de l’exécution du flux de données] s’affiche. 
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
+La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://developer.adobe.com/experience-platform-apis/references/data-access) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 

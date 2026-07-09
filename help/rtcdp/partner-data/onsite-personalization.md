@@ -21,9 +21,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 2778
+source-wordcount: 2780
 ht-degree: 69%
 
 ---
@@ -195,7 +195,7 @@ Dans l’écran de configuration de Web SDK, accédez à la section **[!UICONTRO
 
 Obtenez des informations complètes sur la [procédure d’installation du SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=fr).
 
-#### Installer l’extension du service d’ID
+#### Installation de l’extension du service Experience Cloud ID
 
 Utilisez l’[Extension du service Experience Cloud ID](/help/tags/extensions/client/id-service/overview.md) pour créer une identité propriétaire unique basée sur les appareils pour les visiteurs et visiteuses de toutes les solutions Experience Cloud. Recherchez **[!UICONTROL Service d’ID]** dans le catalogue d’extensions, puis installez-le. Conservez tous les paramètres par défaut lors de l’installation de l’extension.
 

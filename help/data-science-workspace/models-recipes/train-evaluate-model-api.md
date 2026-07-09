@@ -15,10 +15,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 1248
-ht-degree: 78%
+source-wordcount: 1247
+ht-degree: 79%
 
 ---
 
@@ -36,7 +36,7 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez le tutoriel [Authentification de l’API &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
+Suivez le tutoriel [Authentification de l’API &#x200B;](/help/landing/api-authentication.md) pour commencer à effectuer des appels API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
@@ -226,8 +226,7 @@ La réponse de la création de l’expérience ressemble à ceci.
 }
 ```
 
-`{EXPERIMENT_ID}` : identifiant qui représente l’expérience que vous venez de créer.
-`{INSTANCE_ID}` : ID qui représente l’instance MLI.
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience que vous venez de créer.`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
 
 ### Création d’une expérience planifiée pour la formation
 

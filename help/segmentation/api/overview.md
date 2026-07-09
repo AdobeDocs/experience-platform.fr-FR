@@ -14,10 +14,10 @@ subfeature_v2:
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 73387ee674dac6ba2ee167c66dbfda52a4b48466
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 621
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Segmentation Service] vous permet de créer des 
 
 L’API [!DNL Segmentation Service] fournit plusieurs points d’entrée qui vous permettent de gérer par programmation vos opérations de segmentation dans [!DNL Experience Platform]. Ce document de présentation fournit des présentations générales de chacun de ces points d’entrée et des liens vers les guides des points d’entrée associés pour plus d’informations. Avant de lire les guides des points d’entrée individuels, reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture des exemples d’appels API, etc.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, reportez-vous à la [référence de l’API Segmentation Service](https://www.adobe.io/experience-platform-apis/references/segmentation/).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, reportez-vous à la [référence de l’API Segmentation Service](https://developer.adobe.com/experience-platform-apis/references/segmentation).
 
 ## Audiences
 

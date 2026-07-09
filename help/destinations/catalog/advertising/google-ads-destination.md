@@ -18,9 +18,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 1072
+source-wordcount: 1135
 ht-degree: 65%
 
 ---
@@ -40,7 +40,7 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL Google Ads] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service Experience Cloud ID (avec Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations Google dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL Google Ads] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’identification des visiteurs d’Adobe (avec Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations Google dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -106,8 +106,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!NOTE]
 >
->La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ads] dans Experience Platform. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.
->L’exception à cette règle concerne les clients [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer aux étapes suivantes.
+>La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ads] dans Experience Platform. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.Une exception à cette règle s’applique aux clients d’[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
 
 Avant de créer la destination [!DNL Google Ads] dans Experience Platform, vous devez contacter [!DNL Google] pour qu’Adobe soit placé sur la liste des fournisseurs de données autorisés et pour que votre compte soit ajouté à la place sur la liste autorisée. Contactez [!DNL Google] et fournissez les informations suivantes :
 

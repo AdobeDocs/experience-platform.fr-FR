@@ -35,10 +35,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 6a7591682bc019be2672f543dbcc495b356b1c09
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 3426
-ht-degree: 80%
+source-wordcount: 3445
+ht-degree: 79%
 
 ---
 
@@ -368,7 +368,7 @@ Contient la version 2.14.0 du SDK Web Adobe Experience Platform.
 
 ## Version 2.14.1 - 13 octobre 2022
 
-- Correction d’un problème dans lequel le SDK Web n’honore pas l’ID d’Experience Cloud ID Service.
+- Correction d’un problème en raison duquel Web SDK n’honore pas l’identifiant du service d’identification des visiteurs.
 
 Contient la version 2.13.1 de la bibliothèque SDK Web Adobe Experience Platform.
 
@@ -520,8 +520,7 @@ Contient la version 2.3.0 de la bibliothèque SDK Web Adobe Experience Platfo
 - Changements liés à `Get Decisions` :
    - Suppression de la commande `getDecisions`.
    - Ajout d’une option `scopes` à la commande `sendEvent`. Les décisions sont renvoyées dans la promesse `sendEvent` résolue.
-   - Ajout d’une portée de `__view__` intégrée qui se traduira par le retour d’offres à l’échelle de la page/vue. (Offres du compositeur d’expérience visuelle dans Target, par exemple).
-Ces décisions sont renvoyées à partir de la commande `sendEvent` uniquement si `renderDecisions` est défini sur false.
+   - Ajout d’une portée intégrée `__view__` qui résultera en un renvoi d’offres à l’échelle de la page/vue. (Offres du compositeur d’expérience visuelle dans Target, par exemple).Ces décisions sont renvoyées à partir de la commande `sendEvent` uniquement si `renderDecisions` est défini sur false.
    - Ajout d’un événement `Decisions Received`, qui se déclenche lorsque des décisions deviennent disponibles.
 - Combinaison de plusieurs notifications de personnalisation sous un seul appel de serveur.
 - Correction d’un problème en raison duquel l’ID de fusion des événements était réinitialisé chaque fois que l’élément de données était référencé.

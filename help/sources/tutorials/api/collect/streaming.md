@@ -15,16 +15,16 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1241
-ht-degree: 39%
+ht-degree: 37%
 
 ---
 
 # Créer un flux de données en continu pour les données brutes à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données brutes d’un connecteur source de diffusion en continu et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données brutes d’un connecteur source de diffusion en continu et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 
@@ -53,7 +53,7 @@ Ce tutoriel nécessite également que vous disposiez d’un identifiant de conne
 
 Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources. Ce schéma XDM cible étend également la classe XDM [!DNL Individual Profile].
 
-Pour créer un schéma XDM cible, envoyez une requête POST au point d’entrée `/schemas` de l’[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Pour créer un schéma XDM cible, envoyez une requête POST au point d’entrée `/schemas` de l’[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 **Format d’API**
 
@@ -161,7 +161,7 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ## Créer un jeu de données cible
 
-Après avoir créé un schéma XDM cible et son `$id` unique, vous pouvez désormais créer un jeu de données cible pour contenir vos données source. Pour créer un jeu de données cible, envoyez une requête POST au point d’entrée `dataSets` de l’[API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) et indiquez l’identifiant du schéma cible dans la payload.
+Après avoir créé un schéma XDM cible et son `$id` unique, vous pouvez désormais créer un jeu de données cible pour contenir vos données source. Pour créer un jeu de données cible, envoyez une requête POST au point d’entrée `dataSets` de l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog) et indiquez l’identifiant du schéma cible dans la payload.
 
 **Format d’API**
 

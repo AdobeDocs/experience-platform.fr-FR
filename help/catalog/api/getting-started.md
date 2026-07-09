@@ -13,10 +13,10 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 613
-ht-degree: 59%
+source-wordcount: 606
+ht-degree: 57%
 
 ---
 
@@ -42,7 +42,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ## Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -72,6 +72,6 @@ Comme certaines requêtes peuvent surcharger l’API, des limites globales ont �
 
 Dans ce document, vous avez découvert les connaissances préalables requises pour effectuer des appels vers l’API [!DNL Catalog]. Vous pouvez désormais procéder aux exemples d&#39;appel fournis dans ce guide de développement et suivre leurs instructions.
 
-La plupart des exemples de ce guide utilisent le point d’entrée `/dataSets`, mais les principes peuvent être appliqués à d’autres points d’entrée dans [!DNL Catalog] (tels que `/batches`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
+La plupart des exemples de ce guide utilisent le point d’entrée `/dataSets`, mais les principes peuvent être appliqués à d’autres points d’entrée dans [!DNL Catalog] (tels que `/batches`). Consultez la [référence de l’API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
 
 Pour un workflow détaillé qui explique comment l’API [!DNL Catalog] est impliquée dans l’ingestion de données, consultez le tutoriel sur la [création d’un jeu de données](../datasets/create.md).

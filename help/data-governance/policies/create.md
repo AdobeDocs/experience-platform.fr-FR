@@ -17,16 +17,16 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1210
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
 # Créer une politique de gouvernance des données dans l’API
 
-L’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de créer et de gérer des politiques de gouvernance des données afin de déterminer quelles actions marketing peuvent être appliquées aux données qui contiennent certains libellés d’utilisation des données.
+L’[API Policy Service](https://developer.adobe.com/experience-platform-apis/references/policy-service) vous permet de créer et de gérer des politiques de gouvernance des données afin de déterminer quelles actions marketing peuvent être appliquées aux données qui contiennent certains libellés d’utilisation des données.
 
 Ce document fournit un tutoriel détaillé sur la création d’une politique de gouvernance à l’aide de l’API [!DNL Policy Service].
 

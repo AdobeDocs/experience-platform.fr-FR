@@ -17,9 +17,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 909
+source-wordcount: 902
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Ce tutoriel décrit les étapes nécessaires à la génération du rapport de ch
 
 ## Prise en main
 
-Pour utiliser les API Adobe Experience Platform, vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin de rassembler les valeurs dont vous avez besoin pour les en-têtes requis. Pour en savoir plus sur les API d&#39;Experience Platform, reportez-vous à la documentation [Prise en main des API d&#39;Experience Platform](../../landing/api-guide.md).
+Pour utiliser les API Adobe Experience Platform, vous devez d’abord suivre le [tutoriel d’authentification](/help/landing/api-authentication.md) afin de rassembler les valeurs dont vous avez besoin pour les en-têtes requis. Pour en savoir plus sur les API d&#39;Experience Platform, reportez-vous à la documentation [Prise en main des API d&#39;Experience Platform](../../landing/api-guide.md).
 
 Les en-têtes requis pour tous les appels API de ce tutoriel sont les suivants :
 

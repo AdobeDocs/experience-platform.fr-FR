@@ -6,10 +6,10 @@ user-guide-description: Découvrez une vue d’ensemble du système de modèle d
 feature: Schemas
 role: Developer
 nudge: true
-source-git-commit: 312423949f8a5d6d8ea3b835a3e575d49f444948
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 71%
+ht-degree: 70%
 
 ---
 
@@ -289,5 +289,5 @@ ht-degree: 71%
    * [Gérer les libellés d’utilisation des données pour un schéma](tutorials/labels.md)
    * [Créer un schéma ad hoc](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
-* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/schema-registry)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

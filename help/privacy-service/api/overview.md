@@ -11,7 +11,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 268
 ht-degree: 17%
@@ -26,7 +26,7 @@ L’API Privacy Service fournit plusieurs points d’entrée vous permettant de 
 >
 >Ce guide explique comment utiliser l’API [!DNL Privacy Service]. Pour plus d’informations sur l’utilisation de l’interface utilisateur, consultez la présentation de l’interface utilisateur de Privacy Service [&#128279;](../ui/overview.md).
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez la référence de l’API Privacy Service [&#128279;](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez la référence de l’API Privacy Service [&#128279;](https://developer.adobe.com/experience-platform-apis/references/privacy-service).
 
 ## Tâches de confidentialité
 

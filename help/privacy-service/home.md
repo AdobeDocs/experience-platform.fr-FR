@@ -13,9 +13,9 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 1673
+source-wordcount: 1674
 ht-degree: 44%
 
 ---
@@ -69,7 +69,7 @@ En fonction des applications [!DNL Experience Cloud] que vous utilisez, vous dev
 
 Pour que Privacy Service puisse traiter une demande d’accès à des informations personnelles émanant d’un client, il faut qu’au moins une valeur d’identité unique soit fournie pour ce client dans la demande elle-même. Une valeur d’identité unique désigne tout élément d’information pouvant être utilisé pour identifier une personne et ses données personnelles stockées dans vos magasins de données [!DNL Experience Cloud]. Privacy Service utilise ces informations d’identité pour localiser et traiter les données personnelles du client en fonction de la nature de la demande (accès, suppression ou désinscription).
 
-Le type et le nombre de valeurs d’identité que vous devez fournir pour chaque client varient en fonction des applications [!DNL Experience Cloud] utilisées par votre système CRM. Certaines applications utilisent leurs propres valeurs d’ID client internes (tels que les ID Adobe Target), tandis que d’autres solutions reposent sur des identifiants globaux d’Adobe [!DNL Experience Cloud Identity Service] (ECID) qui effectuent le suivi de l’activité client dans toutes les applications [!DNL Experience Cloud]. En outre, des informations personnelles génériques telles qu’une adresse e-mail ou un numéro de téléphone peuvent également servir de données d’identité valides.
+Le type et le nombre de valeurs d’identité que vous devez fournir pour chaque client varient en fonction des applications [!DNL Experience Cloud] utilisées par votre système CRM. Certaines applications utilisent leurs propres valeurs d’ID client internes (tels que les ID Adobe Target), tandis que d’autres solutions reposent sur des identifiants globaux du [!DNL Visitor ID Service] Adobe (ECID) qui effectuent le suivi de l’activité client dans toutes les applications [!DNL Experience Cloud]. En outre, des informations personnelles génériques telles qu’une adresse e-mail ou un numéro de téléphone peuvent également servir de données d’identité valides.
 
 Lisez le document sur [les données d’identité pour les demandes d’accès à des informations personnelles](./identity-data.md) pour plus d’informations sur les types d’informations d’identité acceptées pour Privacy Service. Le document fournit également des conseils sur l’application des technologies Adobe pour récupérer efficacement les informations d’identité appropriées de vos clients lorsqu’ils interagissent avec votre site web et envoyer ces données à Privacy Service dans des requêtes d’API.
 

@@ -13,7 +13,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 958
 ht-degree: 8%
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 # Intégration du journal d’audit [!DNL Query Service]
 
-L’intégration du journal d’audit Adobe Experience Platform [!DNL Query Service] fournit des enregistrements des actions utilisateur liées aux requêtes. Les journaux d’audit sont un outil essentiel pour résoudre les problèmes et respecter les politiques de gestion des données d’entreprise et les exigences réglementaires. Cette fonctionnalité vous permet de renvoyer un journal d’actions pour de nombreux types d’événements, ainsi que de filtrer et d’exporter les enregistrements. Les journaux sont accessibles via l’interface utilisateur d’Experience Platform ou l’[API Audit Query](https://www.adobe.io/experience-platform-apis/references/audit-query/) et téléchargés au format CSV ou JSON.
+L’intégration du journal d’audit Adobe Experience Platform [!DNL Query Service] fournit des enregistrements des actions utilisateur liées aux requêtes. Les journaux d’audit sont un outil essentiel pour résoudre les problèmes et respecter les politiques de gestion des données d’entreprise et les exigences réglementaires. Cette fonctionnalité vous permet de renvoyer un journal d’actions pour de nombreux types d’événements, ainsi que de filtrer et d’exporter les enregistrements. Les journaux sont accessibles via l’interface utilisateur d’Experience Platform ou l’[API Audit Query](https://developer.adobe.com/experience-platform-apis/references/audit-query) et téléchargés au format CSV ou JSON.
 
 Pour en savoir plus sur l’interface utilisateur des journaux d’audit, consultez le document [présentation des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md). Pour en savoir plus sur l’émission d’appels vers les API Experience Platform, consultez le guide [API des journaux d’audit](../../landing/api-guide.md).
 

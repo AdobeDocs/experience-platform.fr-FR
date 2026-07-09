@@ -10,16 +10,16 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 481
-ht-degree: 17%
+ht-degree: 16%
 
 ---
 
 # Explorer des tableaux de données à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la structure et le contenu de vos tableaux de données à l’aide de l’API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la structure et le contenu de vos tableaux de données à l’aide de l’API [[!DNL Flow Service]](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >

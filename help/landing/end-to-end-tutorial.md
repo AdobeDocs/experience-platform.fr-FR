@@ -24,7 +24,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: eaa89f1252ffc001c299b985e479afb8ac33d053
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1895
 ht-degree: 12%
@@ -69,7 +69,7 @@ Experience Platform permet d’ingérer des données à partir de sources extern
 
 Si vous utilisez Amazon S3 comme connecteur source, vous pouvez suivre les instructions du tutoriel de l’API sur la [création d’un connecteur Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md) ou du tutoriel de l’interface utilisateur sur la [création d’un connecteur Amazon S3](../sources/tutorials/ui/create/cloud-storage/s3.md) pour apprendre à créer des données dans le connecteur, à s’y connecter et à les ingérer.
 
-Pour obtenir des instructions plus détaillées sur les connecteurs source, consultez la [présentation des connecteurs source](../sources/home.md). Pour en savoir plus sur le service de flux, l’API sur laquelle les sources sont basées, consultez la [référence de l’API du service de flux](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Pour obtenir des instructions plus détaillées sur les connecteurs source, consultez la [présentation des connecteurs source](../sources/home.md). Pour en savoir plus sur le service de flux, l’API sur laquelle les sources sont basées, consultez la [référence de l’API du service de flux](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 Une fois que vos données sont importées dans Experience Platform par le biais du connecteur source et stockées dans votre jeu de données activé pour Profil, les profils clients sont automatiquement créés en fonction des données d’identité que vous avez configurées dans votre schéma XDM.
 

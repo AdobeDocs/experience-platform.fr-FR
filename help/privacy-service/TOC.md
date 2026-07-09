@@ -6,7 +6,7 @@ user-guide-description: Gérez les demandes de données des clients afin de resp
 feature: Privacy
 role: User,Admin
 nudge: true
-source-git-commit: b6abe265f340487f0eae12237ba320cd4afbd2d8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 94%
@@ -39,5 +39,5 @@ ht-degree: 94%
    * [Terminologie](./regulations/terminology.md)
 * [Bonnes pratiques](./best-practices.md)
 * [Guide de dépannage](./troubleshooting-guide.md)
-* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/privacy-service)
 * [Notes de mise à jour](./release-notes.md)

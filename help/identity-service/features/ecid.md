@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 281
-ht-degree: 81%
+source-wordcount: 282
+ht-degree: 76%
 
 ---
 
@@ -41,7 +41,7 @@ L’identification de vos utilisateurs et utilisatrices en ligne nécessite l’
 
 La documentation suivante fournit d’autres ressources sur la compréhension de l’ECID dans différentes applications Experience Platform et Experience Cloud :
 
-* Pour utiliser l’ECID avec l’implémentation de site web, consultez la documentation sur le [Service d’identités Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
+* Pour utiliser l’ECID avec l’implémentation de site web, consultez la documentation du [service d’identification des visiteurs (ECID)](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
 * Pour découvrir comment l’ECID est utilisé avec les applications et le contenu web mobile, consultez la documentation sur le [suivi des visiteurs entre une application et le web mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=fr#sdk-reference-ios).
 * Le déploiement de ces outils peut être simple et facile à gérer si vous utilisez des [balises](../../tags/home.md).
 * Consultez la [Documentation de Privacy Service](../../privacy-service/identity-data.md) pour plus d’informations sur l’utilisation de l’ECID afin de faciliter la conformité aux réglementations de confidentialité comme le RGPD.

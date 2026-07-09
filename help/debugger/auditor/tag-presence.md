@@ -12,10 +12,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 580
-ht-degree: 14%
+source-wordcount: 576
+ht-degree: 12%
 
 ---
 
@@ -38,10 +38,8 @@ Les tests de présence de balises évaluent si certaines balises existent sur la
 | Launch - Ne comporte pas plusieurs scripts incorporés | 5 | Les sites de production ne doivent charger qu’un seul code incorporé par page. | Vérifiez que seule la bibliothèque de production est en cours de chargement sur la page. |
 | Launch - `pageBottom` rappel existe dans `<body>` | 5 | Le rappel `_satellite.pageBottom()` obligatoire est introuvable dans le `<body>` de la page. Ce test échoue si l’appel de `pageBottom` est introuvable sur la page ou s’il se trouve dans la balise `<head>` (ou à un autre emplacement inattendu). Il ne sera transmis que si `pageBottom` se trouve quelque part dans la balise `<body>`. | Ajoutez le script intégré juste avant la balise `</body>` de fermeture pour garantir le bon fonctionnement des balises.<br><br>[Informations supplémentaires](../../tags/ui/client-side/asynchronous-deployment.md) |
 | Launch : le rappel `pageBottom` ne doit pas exister en cas de déploiement asynchrone | 5 | Le rappel `_satellite.pageBottom()` a été trouvé sur la page, ce qui ne devrait pas être le cas lorsque les balises sont déployées de manière asynchrone. | Supprimez le script `_satellite.pageBottom()` pour activer la fonctionnalité de balises appropriée. <br><br>[Informations supplémentaires](../../tags/ui/client-side/asynchronous-deployment.md) |
-| Service Experience Cloud ID : présence du code | 5 | Le code du service Experience Cloud ID est introuvable. L’utilisation des Experience Cloud ID (ECID) est vivement recommandée pour vous assurer de tirer le meilleur parti de vos solutions Experience Cloud et elle est essentielle pour la gestion des identifiants dans les solutions Experience Cloud. | Installer la version la plus récente d’ECID.<br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr) |
-| Service Experience Cloud ID : présence du cookie | 5 | Le cookie `AMCV_` est introuvable. Vous devez instancier un objet visiteur à partir du code `VisitorAPI.js`. | S’il s’agit d’une implémentation de balises, vérifiez que l’ID d’organisation Adobe est correctement saisi dans l’outil ECID. <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr) |
-| Service Experience Cloud ID : présence de la valeur MID | 5 | La valeur MID est introuvable dans le cookie `AMCV_`. | Testez à nouveau pour vérifier la latence de l’API ECID. Si le problème persiste, contactez l’Assistance clientèle d’Adobe. <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr) |
+| Service d’identification des visiteurs - Présence du code | 5 | Le code du service d’identification des visiteurs est introuvable. L’utilisation des Experience Cloud ID (ECID) est vivement recommandée pour vous assurer de tirer le meilleur parti de vos solutions Experience Cloud et elle est essentielle pour la gestion des identifiants dans les solutions Experience Cloud. | Installer la version la plus récente d’ECID.<br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr) |
+| Service d’identification des visiteurs - Présence du cookie | 5 | Le cookie `AMCV_` est introuvable. Vous devez instancier un objet visiteur à partir du code `VisitorAPI.js`. | S’il s’agit d’une implémentation de balises, vérifiez que l’ID d’organisation Adobe est correctement saisi dans l’outil ECID. <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr) |
+| Service d’identification des visiteurs - Présence de la valeur MID | 5 | La valeur MID est introuvable dans le cookie `AMCV_`. | Testez à nouveau pour vérifier la latence de l’API ECID. Si le problème persiste, contactez l’Assistance clientèle d’Adobe. <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr) |
 | Cible - Présence du code | 5 | Adobe Target doit être défini dans le DOM. | Installez la version la plus récente de Target (at.js). <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html?lang=fr) |
 | Target - Bibliothèque chargée en `<head>` | 4 | La bibliothèque Target doit être chargée dans la balise `<head>`. | Vérifiez que la bibliothèque Target est chargée dans la balise `<head>`. <br><br>[Informations supplémentaires](https://experienceleague.adobe.com/docs/target/using/implement-target/implementing-target.html?lang=fr) |
-
-{style="table-layout:auto"}

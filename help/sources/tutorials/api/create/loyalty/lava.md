@@ -1,7 +1,7 @@
 ---
 title: Créez une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’API Flow Service
 description: Découvrez comment importer des données de flux de LAVA vers Adobe Experience Platform à l’aide de l’API Flow Service.
-source-git-commit: b1810a83a3eda5674d91a8c122f3ad858ef94aa1
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 39%
@@ -164,7 +164,7 @@ curl -X GET \
 
 ## Connexion de [!DNL LAVA] à Experience Platform à l’aide de l’API [!DNL Flow Service]
 
-Le tutoriel suivant vous guide tout au long des étapes nécessaires à la création d’une connexion source [!DNL LAVA] et d’un flux de données pour importer des données [!DNL LAVA] dans Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes nécessaires à la création d’une connexion source [!DNL LAVA] et d’un flux de données pour importer des données [!DNL LAVA] dans Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ### Créer une connexion source {#source-connection}
 

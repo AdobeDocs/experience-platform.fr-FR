@@ -25,7 +25,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 1d1baca838be7d394b5172efb333e59df76f85e2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 993
 ht-degree: 78%
@@ -81,7 +81,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe
 
 ## Sandbox dans les API Experience Platform
 
-Lors d’appels aux API Experience Platform, un nom de sandbox doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à l’[[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) pour visualiser tous les jeux de données dans le sandbox de production, le nom du sandbox (« prod ») est renseigné comme en-tête dans la requête API :
+Lors d’appels aux API Experience Platform, un nom de sandbox doit être renseigné sous l’en-tête `x-sandbox-name`. Par exemple, lors d’un appel à l’[[!DNL Catalog Service API]](https://developer.adobe.com/experience-platform-apis/references/catalog) pour visualiser tous les jeux de données dans le sandbox de production, le nom du sandbox (« prod ») est renseigné comme en-tête dans la requête API :
 
 ```shell
 curl -X GET \

@@ -20,10 +20,10 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 1033
-ht-degree: 88%
+source-wordcount: 1032
+ht-degree: 87%
 
 ---
 
@@ -38,7 +38,7 @@ Les fonctionnalités de cette extension sont transférées vers une nouvelle ext
 | Extension Experience Platform Demo | SDK web Experience Platform |
 | ------------------ | ----------- |
 | Prise en charge des ID client personnalisés | Prise en charge des ID client personnalisés |
-| Interface utilisateur de mappage côté client pour XDM | Création dans ECID (pas besoin de visitor.js) |
+| Interface utilisateur de mappage côté client pour XDM | Créer dans ECID (pas besoin de `VisitorAPI.js`) |
 | Possibilité de créer une connexion continu | Prise en charge de l’inclusion |
 | | Prise en charge de XDM en tant qu’élément de données |
 | | Prise en charge des domaines de premier niveau |

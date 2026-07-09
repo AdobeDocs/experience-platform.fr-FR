@@ -26,9 +26,9 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 5533
+source-wordcount: 5563
 ht-degree: 59%
 
 ---
@@ -240,7 +240,7 @@ Une réponse réussie renvoie un statut HTTP 200 et contient le tableau `errors
 }
 ```
 
-La [documentation de référence sur l’API Query Service](https://www.adobe.io/experience-platform-apis/references/query-service/) fournit plus d’informations sur tous les points d’entrée disponibles.
+La [documentation de référence sur l’API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service) fournit plus d’informations sur tous les points d’entrée disponibles.
 +++
 
 ### Que signifie « Erreur de validation du schéma » ?
@@ -808,8 +808,7 @@ Oui, les clients de bureau tiers peuvent être connectés à Query Service par l
 ### Pourquoi mes informations d’identification non expirantes ne fonctionnent-elles pas ?
 
 +++Réponse
-La valeur des informations d’identification non expirantes sont les arguments concaténés du `technicalAccountID` et les `credential` extraits du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
-Pour plus d’informations sur la [connexion à des clients externes à l’aide d’informations d’identification](./ui/credentials.md#using-credentials-to-connect-to-external-clients), consultez la documentation.
+La valeur des informations d’identification non expirantes sont les arguments concaténés du `technicalAccountID` et les `credential` extraits du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.Pour plus d’informations sur la [connexion à des clients externes à l’aide d’informations d’identification](./ui/credentials.md#using-credentials-to-connect-to-external-clients), consultez la documentation.
 +++
 
 ### Existe-t-il des restrictions sur les caractères spéciaux pour les mots de passe d’informations d’identification non expirants ?

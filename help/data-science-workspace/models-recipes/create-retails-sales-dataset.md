@@ -13,10 +13,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 587
-ht-degree: 42%
+source-wordcount: 580
+ht-degree: 41%
 
 ---
 
@@ -35,7 +35,7 @@ Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 - Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
-- Autorisation d’effectuer des appels API [!DNL Experience Platform]. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
+- Autorisation d’effectuer des appels API [!DNL Experience Platform]. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](/help/landing/api-authentication.md) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key : `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`

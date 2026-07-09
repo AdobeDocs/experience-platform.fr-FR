@@ -3,7 +3,7 @@ title: Connexion Adobe Advertising DSP
 description: Découvrez comment partager des audiences propriétaires authentifiées et non authentifiées avec Adobe Advertising Demand-Side Platform (DSP) à l’aide de plusieurs types d’identité.
 feature: Destinations
 exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
-source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
 source-wordcount: '1585'
 ht-degree: 19%
@@ -48,7 +48,7 @@ Les annonceurs ont le choix de partager des audiences avec des identifiants prop
 
    * Pour [!DNL RampID] et [!DNL UID2.0], les profils doivent contenir des identifiants d’e-mail hachés.
 
-   * Pour les cookies, configurez un processus de synchronisation des cookies avec [!DNL Web SDK] flux de données ou l’[!DNL Experience Cloud ID Service] . Voir [Configurer la synchronisation des identifiants pour partager des cookies](#cookie-sync) ci-dessous.
+   * Pour les cookies, configurez un processus de synchronisation des cookies avec [!DNL Web SDK] flux de données ou l’[!DNL Visitor ID Service] . Voir [Configurer la synchronisation des identifiants pour partager des cookies](#cookie-sync) ci-dessous.
 
    * Pour les profils avec MAID :
 
@@ -64,15 +64,15 @@ Les annonceurs ont le choix de partager des audiences avec des identifiants prop
 
 ### Configurer la synchronisation des identifiants pour partager des cookies {#cookie-sync}
 
-La synchronisation des identifiants est une condition préalable au partage de cookies tiers. Configurez un processus de synchronisation des cookies avec [!DNL Web SDK] flux de données ou le [!DNL Experience Cloud ID Service] . Pour plus d’informations sur la gestion des identités pour les cookies tiers, consultez [Destinations Advertising reposant sur des intégrations de cookies tiers](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations).
+La synchronisation des identifiants est une condition préalable au partage de cookies tiers. Configurez un processus de synchronisation des cookies avec [!DNL Web SDK] flux de données ou le [!DNL Visitor ID Service] . Pour plus d’informations sur la gestion des identités pour les cookies tiers, consultez [Destinations Advertising reposant sur des intégrations de cookies tiers](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations).
 
 **Activer la synchronisation des identifiants tiers avec[!DNL Web SDK]**
 
 Si vous utilisez [!DNL Experience Platform Web SDK], activez la synchronisation des identifiants tiers sur votre flux de données en configurant l’option [!UICONTROL &#x200B; Synchronisation des identifiants tiers &#x200B;] dans les paramètres avancés. Pour obtenir des instructions, voir [Configurer les options avancées](/help/datastreams/configure.md#advanced-options) dans la documentation sur les flux de données.
 
-**Activer la synchronisation des identifiants tiers avec le[!DNL Experience Cloud ID Service]**
+**Activer la synchronisation des identifiants tiers avec le[!DNL Visitor ID Service]**
 
-Si vous utilisez des balises [!DNL Experience Platform] avec le [!DNL Experience Cloud ID Service], configurez la synchronisation des identifiants tiers à l’aide de l’extension du service [Experience Cloud ID](/help/tags/extensions/client/id-service/overview.md). Cela permet au cookie Adobe Advertising correspondant à l’ECID donné d’être disponible lorsque vous activez l’audience à partir de [!DNL Real-Time CDP].
+Si vous utilisez des balises [!DNL Experience Platform] avec le [!DNL Visitor ID Service], configurez la synchronisation des identifiants tiers à l’aide de l’extension du service [Experience Cloud ID](/help/tags/extensions/client/id-service/overview.md). Cela permet au cookie Adobe Advertising correspondant à l’ECID donné d’être disponible lorsque vous activez l’audience à partir de [!DNL Real-Time CDP].
 
 ## Identités prises en charge {#supported-identities}
 

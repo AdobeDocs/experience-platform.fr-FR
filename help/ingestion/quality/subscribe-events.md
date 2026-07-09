@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Notifications d’ingestion de données
 description: Pour faciliter la surveillance du processus d’ingestion, Adobe Experience Platform permet de s’abonner à un ensemble d’événements publiés pour chaque étape du processus, vous informant de l’état des données ingérées et des échecs possibles.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 22%
+source-wordcount: '674'
+ht-degree: 19%
 
 ---
 
 # Notifications d’ingestion de données
 
-Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Une fois que vous avez identifié les fichiers de données qui doivent être ingérés dans [!DNL Experience Platform], le processus d’ingestion commence et chaque étape se produit de manière consécutive jusqu’à ce que les données soient correctement ingérées ou échouent. Il est possible d’initier le processus d’ingestion à l’aide de l’API [Adobe Experience Platform Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) ou de l’interface utilisateur [!DNL Experience Platform].
+Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Une fois que vous avez identifié les fichiers de données qui doivent être ingérés dans [!DNL Experience Platform], le processus d’ingestion commence et chaque étape se produit de manière consécutive jusqu’à ce que les données soient correctement ingérées ou échouent. Il est possible d’initier le processus d’ingestion à l’aide de l’API [Adobe Experience Platform Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) ou de l’interface utilisateur [!DNL Experience Platform].
 
 Les données chargées dans [!DNL Experience Platform] doivent passer par plusieurs étapes pour atteindre leur destination, le [!DNL Data Lake] ou le magasin de données [!DNL Real-Time Customer Profile]. Chaque étape implique le traitement des données, leur validation, puis leur stockage avant de passer à l’étape suivante. En fonction de la quantité de données ingérée, ce processus peut devenir chronophage et il existe toujours une possibilité qu’il échoue en raison d’erreurs de validation, de sémantique ou de traitement. En cas d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’ingestion doit être redémarré en utilisant des fichiers de données corrigés.
 
@@ -71,7 +71,7 @@ Pour afficher le schéma complet des notifications d’événement, reportez-vou
 
 ## Étapes suivantes
 
-Une fois que vous avez enregistré des notifications [!DNL Experience Platform] dans votre projet, vous pouvez afficher les événements reçus à partir de la [!UICONTROL Présentation du projet]. Reportez-vous au guide sur le [suivi de Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) pour obtenir des instructions détaillées sur la manière de suivre vos événements.
+Une fois que vous avez enregistré des notifications [!DNL Experience Platform] dans votre projet, vous pouvez afficher les événements reçus à partir de la [!UICONTROL Présentation du projet]. Reportez-vous au guide sur le [suivi de Adobe I/O Events](https://developer.adobe.com/events/docs/support/tracing) pour obtenir des instructions détaillées sur la manière de suivre vos événements.
 
 ## Annexe
 

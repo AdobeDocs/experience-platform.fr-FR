@@ -15,10 +15,10 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 2909
-ht-degree: 31%
+ht-degree: 30%
 
 ---
 
@@ -1161,7 +1161,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Vous pouvez répertorier les valeurs « xdm :namespace » disponibles ou en créer de nouvelles à l’aide de l’[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) . La valeur de « xdm :property » peut être « xdm :code » ou « xdm :id », selon le « xdm :namespace » utilisé.
+>Vous pouvez répertorier les valeurs « xdm :namespace » disponibles ou en créer de nouvelles à l’aide de l’[[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service) . La valeur de « xdm :property » peut être « xdm :code » ou « xdm :id », selon le « xdm :namespace » utilisé.
 
 **Réponse**
 

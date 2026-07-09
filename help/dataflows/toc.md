@@ -5,10 +5,10 @@ user-guide-description: Découvrez les flux de données et comment les configure
 feature: Dataflows
 role: Developer
 nudge: true
-source-git-commit: 27b3100c721209280175b496e1767a55f1c7b90b
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '82'
-ht-degree: 45%
+ht-degree: 35%
 
 ---
 
@@ -31,4 +31,4 @@ ht-degree: 45%
    - [Surveiller les flux de données dans Edge](./ui/monitor-edge.md)
    - Surveillance B2B {#b2b}
       - [Surveillance des tâches d’enrichissement des profils](./ui/b2b/monitor-profile-enrichment.md)
-- [API Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [API Flow Service](https://developer.adobe.com/experience-platform-apis/references/flow-service)

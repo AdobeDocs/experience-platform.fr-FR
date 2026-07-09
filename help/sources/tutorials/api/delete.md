@@ -10,16 +10,16 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 346
-ht-degree: 92%
+ht-degree: 90%
 
 ---
 
 # Supprimer un compte à l’aide de l’API Flow Service
 
-Vous pouvez supprimer des comptes sources contenant des erreurs ou obsolètes à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Vous pouvez supprimer des comptes sources contenant des erreurs ou obsolètes à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 Suivez les étapes du tutoriel suivant pour supprimer un compte à l’aide de l’API.
 

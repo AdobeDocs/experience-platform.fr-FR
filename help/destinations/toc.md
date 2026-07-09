@@ -7,7 +7,7 @@ feature: Destinations
 role: Admin,User
 nudge: true
 debug: true
-source-git-commit: 7871cb54ee20295b04ec7ecc0c9a659ec67721f1
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 69%
@@ -291,7 +291,7 @@ ht-degree: 69%
          * [Configurer une destination SFTP avec des options de formatage de fichiers prédéfinies et une configuration de noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurer une destination basée sur des fichiers pour exporter des audiences de prospects](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Référence de l’API de création de destinations {#authoring-api}
-      * [Référence de l’API Destination SDK (création de destinations)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Référence de l’API Destination SDK (création de destinations)](https://developer.adobe.com/experience-platform-apis/references/destination-authoring)
       * Opérations du serveur de destination {#server-operations}
          * [Création d’une configuration de serveur de destination](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Récupération d’une configuration de serveur de destination](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)

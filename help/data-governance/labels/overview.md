@@ -21,10 +21,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 828
-ht-degree: 69%
+ht-degree: 67%
 
 ---
 
@@ -82,9 +82,9 @@ L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur d
 
 ### Utilisation des API
 
-Le point d’entrée `/labels` de l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) vous permet de gérer par programmation les libellés d’utilisation des données, y compris la création de libellés personnalisés. Pour plus d’informations, consultez le [guide des points d’entrée des libellés](../api/labels.md).
+Le point d’entrée `/labels` de l’[API Policy Service](https://developer.adobe.com/experience-platform-apis/references/policy-service) vous permet de gérer par programmation les libellés d’utilisation des données, y compris la création de libellés personnalisés. Pour plus d’informations, consultez le [guide des points d’entrée des libellés](../api/labels.md).
 
-L’[API Dataset Service](https://www.adobe.io/experience-platform-apis/references/dataset-service/) est utilisée pour gérer les libellés des jeux de données et des champs. Pour plus d’informations, consultez le guide sur la [gestion des libellés de jeux de données](./dataset-api.md).
+L’[API Dataset Service](https://developer.adobe.com/experience-platform-apis/references/dataset-service) est utilisée pour gérer les libellés des jeux de données et des champs. Pour plus d’informations, consultez le guide sur la [gestion des libellés de jeux de données](./dataset-api.md).
 
 ## Étapes suivantes
 

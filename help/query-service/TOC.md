@@ -6,10 +6,10 @@ user-guide-description: Utilisez le langage SQL standard pour interroger les don
 feature: Queries
 role: User,Developer
 nudge: true
-source-git-commit: 304c93b5cc4979650722198b385f1dabdb3ec7f0
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '439'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
@@ -147,5 +147,5 @@ ht-degree: 67%
    - [Instructions préparées](sql/prepared-statements.md)
 - [Questions fréquentes](troubleshooting-guide.md)
 - [Liste autorisée d’adresses IP](ip-address-allowlist.md)
-- [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
+- [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/query-service)
 - [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

@@ -35,9 +35,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 2cffcfd0dd4a076ba938286af1548677d76c2a9a
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 1501
+source-wordcount: 1494
 ht-degree: 21%
 
 ---
@@ -50,7 +50,7 @@ Les API de chaque service Experience Platform partagent toutes le même ensemble
 
 ## Authentification et en-têtes
 
-Pour passer avec succès des appels à des points d’entrée Experience Platform, vous devez suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
+Pour passer avec succès des appels à des points d’entrée Experience Platform, vous devez suivre le tutoriel [authentification](/help/landing/api-authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`

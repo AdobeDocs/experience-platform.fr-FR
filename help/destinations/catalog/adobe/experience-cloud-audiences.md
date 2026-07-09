@@ -28,9 +28,9 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 1956
+source-wordcount: 1994
 ht-degree: 12%
 
 ---
@@ -77,7 +77,7 @@ L’ancienne intégration de partage d’audiences ne permettait pas un contrôl
 
 Les audiences que vous envoyez à la destination Audiences Experience Cloud n’apparaissent pas automatiquement dans [!DNL Adobe Analytics].
 
-Avant d’envoyer des audiences à [!DNL Adobe Analytics], vous devez [mettre en œuvre le service Experience Cloud Identity pour Analytics et Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=fr).
+Avant d’envoyer des audiences à [!DNL Adobe Analytics], vous devez [mettre en œuvre le service d’identification des visiteurs pour Analytics et Audience Manager](https://experienceleague.adobe.com/fr/docs/id-service/using/implementation/setup-aam-analytics).
 
 >[!IMPORTANT]
 >
@@ -227,8 +227,7 @@ La population complète sera visible dans Audience Manager au bout de 72 heures 
 
 Lors de la gestion de vos données, toutes les destinations [!DNL Real-Time CDP] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
 
-La gouvernance des données dans [!DNL Real-Time CDP] est appliquée à la fois par les [libellés d’utilisation des données](/help/data-governance/labels/reference.md) et les actions marketing.
-Les libellés d’utilisation des données sont transférés vers les applications, contrairement aux actions marketing. Cela signifie qu’une fois qu’elles arrivent dans Audience Manager, les audiences d’[!DNL Real-Time CDP] peuvent être exportées vers n’importe quelle destination disponible. Dans Audience Manager, vous pouvez utiliser des [contrôles d’exportation des données](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=fr) pour bloquer l’exportation d’audiences vers certaines destinations.
+La gouvernance des données dans [!DNL Real-Time CDP] est appliquée à la fois par les [libellés d’utilisation des données](/help/data-governance/labels/reference.md) et les actions marketing.Les libellés d’utilisation des données sont transférés vers les applications, contrairement aux actions marketing. Cela signifie qu’une fois qu’elles arrivent dans Audience Manager, les audiences d’[!DNL Real-Time CDP] peuvent être exportées vers n’importe quelle destination disponible. Dans Audience Manager, vous pouvez utiliser des [contrôles d’exportation des données](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=fr) pour bloquer l’exportation d’audiences vers certaines destinations.
 
 Les audiences marquées avec l’action marketing [!DNL HIPAA] ne sont pas envoyées de [!DNL Real-Time CDP] vers Audience Manager.
 

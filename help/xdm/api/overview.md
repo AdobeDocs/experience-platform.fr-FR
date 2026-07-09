@@ -14,10 +14,10 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1161
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -33,7 +33,7 @@ Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque po
 >
 >XDM utilise la mise en forme de schéma JSON pour décrire et valider la structure des données d’expérience client ingérées. Avant de travailler avec l’API Schema Registry, il est vivement recommandé de consulter la [documentation officielle sur les schémas JSON](https://json-schema.org/) pour mieux comprendre cette technologie sous-jacente.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez la [référence de l’API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez la [référence de l’API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 ## Schémas
 

@@ -12,10 +12,10 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 276
-ht-degree: 39%
+source-wordcount: 269
+ht-degree: 38%
 
 ---
 
@@ -31,7 +31,7 @@ La documentation de l’API Balises unifiées fournit des exemples d’appels AP
 
 ## En-têtes requis
 
-La documentation de l’API exige également que vous ayez suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers des points d’entrée Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
+La documentation de l’API exige également que vous ayez suivi le tutoriel [authentification](/help/landing/api-authentication.md) afin d’effectuer avec succès des appels vers des points d’entrée Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

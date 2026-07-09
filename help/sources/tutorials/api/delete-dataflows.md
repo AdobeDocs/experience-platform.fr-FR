@@ -10,16 +10,16 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 332
-ht-degree: 92%
+ht-degree: 89%
 
 ---
 
 # Supprimer un flux de données à l’aide de l’API Flow Service
 
-Vous pouvez supprimer des flux de données de lots et de diffusion en continu contenant des erreurs ou devenus obsolètes à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Vous pouvez supprimer des flux de données de lots et de diffusion en continu contenant des erreurs ou devenus obsolètes à l’aide de l’ [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 Ce tutoriel décrit les étapes à suivre pour supprimer des flux de données créés avec des sources de lots et de diffusion en continu à l’aide de lʼAPI [!DNL Flow Service].
 

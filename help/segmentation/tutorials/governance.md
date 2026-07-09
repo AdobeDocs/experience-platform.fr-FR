@@ -18,10 +18,10 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 1372
-ht-degree: 43%
+source-wordcount: 1365
+ht-degree: 42%
 
 ---
 
@@ -50,7 +50,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -199,7 +199,7 @@ Une réponse réussie renvoie les détails de la politique de fusion.
 >
 > Cette étape suppose que vous disposez d’au moins une politique d’utilisation des données active qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certains libellés. Si vous ne disposez d’aucune politique d’utilisation applicable pour les jeux de données évalués, suivez le [tutoriel sur la création de politiques](../../data-governance/policies/create.md) pour en créer une avant de poursuivre cette étape.
 
-Une fois que vous avez obtenu les identifiants des jeux de données source de la politique de fusion, vous pouvez utiliser l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de vérifier les violations de la politique d’utilisation des données.
+Une fois que vous avez obtenu les identifiants des jeux de données source de la politique de fusion, vous pouvez utiliser l’[API Policy Service](https://developer.adobe.com/experience-platform-apis/references/policy-service) pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de vérifier les violations de la politique d’utilisation des données.
 
 Pour évaluer les jeux de données, vous devez fournir le nom de l’action marketing dans le chemin d’accès d’une requête POST, tout en fournissant les identifiants du jeu de données dans le corps de la requête, comme illustré dans l’exemple ci-dessous.
 

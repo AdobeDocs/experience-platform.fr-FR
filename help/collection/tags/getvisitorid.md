@@ -1,6 +1,6 @@
 ---
 title: getVisitorId
-description: Récupérez l’instance d’extension de balise du service d’identifiant visiteur Experience Cloud.
+description: Récupérez l’instance d’extension de balise du service d’identification des visiteurs.
 exl-id: ecfd4325-1881-47a9-bc3c-abfc780ce52f
 TQID: https://experienceleague.adobe.com/QphQk2-krztWgDLMsnqrcOVsWPleioQMEDRplRDp1LY
 product_v2:
@@ -18,22 +18,22 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 224
+source-wordcount: 221
 ht-degree: 4%
 
 ---
 
 # `getVisitorId()`
 
-La méthode `_satellite.getVisitorId()` renvoie une instance du [service Adobe Experience Cloud ID](https://experienceleague.adobe.com/fr/docs/id-service/using/home) dans votre propriété de balise, **si** l’extension du service d’ID est installée et publiée. Cette méthode s’avère utile lorsque vous souhaitez un accès direct à l’instance d’identifiant visiteur pour une utilisation dans des blocs de code personnalisés, une configuration avancée d’élément de données ou la résolution de problèmes d’identité des visiteurs.
+La méthode `_satellite.getVisitorId()` renvoie une instance du [service d’identification des visiteurs](https://experienceleague.adobe.com/fr/docs/id-service/using/home) dans votre propriété de balise, **si** l’extension « [!UICONTROL service Adobe Experience Cloud ID] » est installée et publiée. Cette méthode s’avère utile lorsque vous souhaitez un accès direct au service d’identification des visiteurs pour une utilisation dans des blocs de code personnalisés, une configuration avancée d’éléments de données ou la résolution de problèmes d’identité des visiteurs.
 
 >[!IMPORTANT]
 >
->Cette méthode s’applique uniquement aux propriétés qui incluent l’extension de balise de service Experience Cloud ID autonome. Elle ne s’applique pas aux fonctionnalités du service d’ID implicite disponibles dans l’extension de balise Web SDK. Voir la commande [`getIdentity`](/help/collection/js/commands/getidentity.md) si vous devez obtenir une identité de visiteur à l’aide des fonctionnalités du service d’ID implicite de SDK Web.
+>Cette méthode s’applique uniquement aux propriétés qui incluent l’extension de balise autonome « [!UICONTROL Adobe Experience Cloud ID Service] ». Elle ne s’applique pas aux fonctionnalités d’identité implicite disponibles dans l’extension de balise Web SDK. Voir la commande [`getIdentity`](/help/collection/js/commands/getidentity.md) si vous devez obtenir une identité de visiteur à l’aide des fonctionnalités d’identité implicite de SDK Web.
 
-Si vous appelez cette méthode avec l’extension du service d’ID installée et publiée, un objet est renvoyé, similaire à l’objet obtenu après avoir appelé la méthode [`Visitor.getInstance()`](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/getinstance). Si vous appelez cette méthode alors que l’extension du service d’ID n’est ni installée ni publiée, la méthode renvoie `null`.
+Si vous appelez cette méthode avec l’extension « [!UICONTROL Adobe Experience Cloud ID Service] » installée et publiée, un objet est renvoyé, similaire à l’objet obtenu après avoir appelé la méthode [`Visitor.getInstance()`](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/getinstance). Si vous appelez cette méthode alors que l’extension de balise « [!UICONTROL Adobe Experience Cloud ID Service] » n’est ni installée ni publiée, la méthode renvoie `null`.
 
 ```ts
 _satellite.getVisitorId(): Visitor | null
@@ -41,7 +41,7 @@ _satellite.getVisitorId(): Visitor | null
 
 ## Champs et méthodes disponibles
 
-Consultez le service Experience Cloud ID [Méthodes](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/get-set) dans la documentation du service d’identification des visiteurs Experience Cloud pour savoir quels champs et méthodes sont disponibles.
+Consultez la documentation du service d’identification des visiteurs [Méthodes](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/get-set) pour savoir quels champs et méthodes sont disponibles.
 
 ```js
 // Retrieve a visitor's ECID

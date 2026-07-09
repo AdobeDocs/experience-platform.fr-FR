@@ -17,9 +17,9 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 640
+source-wordcount: 633
 ht-degree: 58%
 
 ---
@@ -46,7 +46,7 @@ L’IA dédiée à l’attribution nécessite que les jeux de données soient co
 >
 >Si vous n’avez pas besoin de télécharger les scores bruts, vous pouvez ignorer cette étape et passer aux [étapes suivantes](#next-steps).
 
-Le téléchargement des scores de l’IA dédiée à l’attribution est effectué par le biais d’une combinaison d’appels API. Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Le téléchargement des scores de l’IA dédiée à l’attribution est effectué par le biais d’une combinaison d’appels API. Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](/help/landing/api-authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

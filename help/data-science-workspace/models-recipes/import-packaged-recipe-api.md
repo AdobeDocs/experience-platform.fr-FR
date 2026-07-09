@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 1035
+source-wordcount: 1028
 ht-degree: 49%
 
 ---
@@ -49,7 +49,7 @@ Ce tutoriel nécessite un fichier de recette empaqueté sous la forme d’une UR
 
 - `{DOCKER_URL}` : adresse URL d’une image Docker d’un service intelligent.
 
-Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers les API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience Platform](/help/landing/api-authentication.md) afin d’effectuer avec succès des appels vers les API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
 - `{ORG_ID}` : informations d’identification de votre organisation, qui se trouvent dans votre intégration Adobe Experience Platform unique.

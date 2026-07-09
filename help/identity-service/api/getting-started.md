@@ -15,10 +15,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 784
-ht-degree: 58%
+source-wordcount: 777
+ht-degree: 56%
 
 ---
 
@@ -42,7 +42,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -89,7 +89,7 @@ Lorsqu’une identité est conservée, [!DNL Identity Service] génère et affec
 
 Pour limiter le payload dans les réponses, les API adaptent leurs réponses au type de construction d’identité utilisée. En d’autres termes, si vous transmettez un XID, vos réponses auront des XID, si vous transmettez des identités composites, la réponse suivra la structure utilisée dans la requête.
 
-Les exemples de ce document ne couvrent pas l’ensemble des fonctionnalités de l’API [!DNL Identity Service]. Pour l’API complète, voir le [guide de référence de l’API Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
+Les exemples de ce document ne couvrent pas l’ensemble des fonctionnalités de l’API [!DNL Identity Service]. Pour l’API complète, voir le [guide de référence de l’API Swagger](https://developer.adobe.com/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >

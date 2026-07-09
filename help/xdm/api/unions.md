@@ -18,10 +18,10 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 914
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
@@ -45,7 +45,7 @@ Le tableau `timeSeriesEvents` est une liste d’événements de série temporell
 
 ### Mappage de l’appartenance à des segments
 
-La carte `segmentMembership` stocke les résultats de l’évaluation d’une définition de segment. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://www.adobe.io/experience-platform-apis/references/segmentation/), le mappage est mis à jour. `segmentMembership` stocke également toutes les audiences pré-évaluées qui sont ingérées dans Experience Platform, permettant l’intégration avec d’autres solutions comme Adobe Audience Manager. Pour plus d’informations, consultez le tutoriel sur la [création d’audiences à l’aide d’API](../../segmentation/tutorials/create-a-segment.md).
+La carte `segmentMembership` stocke les résultats de l’évaluation d’une définition de segment. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://developer.adobe.com/experience-platform-apis/references/segmentation), le mappage est mis à jour. `segmentMembership` stocke également toutes les audiences pré-évaluées qui sont ingérées dans Experience Platform, permettant l’intégration avec d’autres solutions comme Adobe Audience Manager. Pour plus d’informations, consultez le tutoriel sur la [création d’audiences à l’aide d’API](../../segmentation/tutorials/create-a-segment.md).
 
 ## Récupération d’une liste d’unions {#list}
 

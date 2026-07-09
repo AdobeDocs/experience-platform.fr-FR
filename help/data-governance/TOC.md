@@ -6,10 +6,10 @@ user-guide-description: Faites respecter les restrictions d’utilisation des do
 feature: Data Governance
 role: User,Developer,Admin
 nudge: true
-source-git-commit: b0047fdb3881d1d9a7f3f3c026e0430ab592d901
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 85%
+ht-degree: 78%
 
 ---
 
@@ -43,5 +43,5 @@ ht-degree: 85%
    * [Politiques](api/policies.md)
    * [Actions marketing](api/marketing-actions.md)
    * [Évaluation](api/evaluation.md)
-* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/policy-service)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

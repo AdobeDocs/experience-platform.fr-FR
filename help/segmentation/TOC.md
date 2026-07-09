@@ -6,10 +6,10 @@ user-guide-description: Créez des audiences à partir de vos données de profil
 feature: Segments
 role: User
 nudge: true
-source-git-commit: ddcaf43820dc4ab464b548a3f28f0e4e2ad1be99
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 66%
+ht-degree: 63%
 
 ---
 
@@ -85,5 +85,5 @@ ht-degree: 66%
    - [Fonctions diverses](pql/misc-functions.md)
 - {hide-from-toc}[Mise à jour des critères d’éligibilité](./eligibility-criteria-update.md)
 - [Questions fréquentes](./faq.md)
-- [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
+- [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/segmentation)
 - [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

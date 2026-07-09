@@ -12,16 +12,16 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 584
-ht-degree: 16%
+source-wordcount: 570
+ht-degree: 14%
 
 ---
 
 # Prise en main du balisage de contenu
 
-[!DNL Content tagging] utilise les API Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+[!DNL Content tagging] utilise les API Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel [authentification](/help/landing/api-authentication.md).
 
 Cependant, lorsque vous accédez à l’étape **Ajouter une API**, l’API se trouve sous Creative Cloud au lieu de Adobe Experience Platform, comme illustré dans la capture d’écran suivante :
 
@@ -53,7 +53,7 @@ Vous êtes redirigé et invité à sélectionner un fichier d’environnement su
 
 ![](./images/click-open.png)
 
-Vous êtes redirigé vers l’onglet *Gérer les environnements* avec un nouveau nom d’environnement renseigné. Sélectionnez le nom de l’environnement pour afficher et modifier les variables disponibles dans Postman. Vous devez toujours renseigner manuellement les `JWT_TOKEN` et les `ACCESS_TOKEN`. Ces valeurs doivent avoir été obtenues en suivant le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Vous êtes redirigé vers l’onglet *Gérer les environnements* avec un nouveau nom d’environnement renseigné. Sélectionnez le nom de l’environnement pour afficher et modifier les variables disponibles dans Postman. Vous devez toujours renseigner manuellement les `JWT_TOKEN` et les `ACCESS_TOKEN`. Ces valeurs doivent avoir été obtenues en suivant le tutoriel [authentification](/help/landing/api-authentication.md).
 
 ![](./images/re-direct-updated.png)
 

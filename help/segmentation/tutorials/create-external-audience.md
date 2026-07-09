@@ -15,10 +15,10 @@ subfeature_v2:
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 909
-ht-degree: 9%
+source-wordcount: 902
+ht-degree: 8%
 
 ---
 
@@ -36,7 +36,7 @@ Ce tutoriel nécessite une compréhension pratique des différents services Expe
 
 ### En-têtes requis
 
-Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](/help/landing/api-authentication.md) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

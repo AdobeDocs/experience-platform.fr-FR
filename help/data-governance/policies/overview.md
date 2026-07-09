@@ -20,7 +20,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1236
 ht-degree: 91%
@@ -60,7 +60,7 @@ Un exemple d’action marketing peut être le souhait d’exporter un jeu de don
 >
 >En tant que telles, les actions marketing ne limitent pas l’utilisation des données. Elles doivent être incluses dans les politiques d’utilisation des données activées afin que ces actions soient évaluées en cas de violation des politiques.
 
-Lorsque des données sont utilisées dans le service de votre organisation, les actions marketing appropriées doivent être indiquées afin que toute violation de politique puisse être identifiée. Vous pouvez ensuite utiliser l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) pour vérifier les violations de politique dans votre intégration.
+Lorsque des données sont utilisées dans le service de votre organisation, les actions marketing appropriées doivent être indiquées afin que toute violation de politique puisse être identifiée. Vous pouvez ensuite utiliser l’[API Policy Service](https://developer.adobe.com/experience-platform-apis/references/policy-service) pour vérifier les violations de politique dans votre intégration.
 
 >[!NOTE]
 >

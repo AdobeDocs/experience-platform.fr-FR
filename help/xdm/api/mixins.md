@@ -15,10 +15,10 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1209
-ht-degree: 17%
+ht-degree: 16%
 
 ---
 
@@ -34,7 +34,7 @@ Les mixins sont des composants réutilisables qui définissent un ou plusieurs c
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de l’API [&#128279;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). [!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/schema-registry). [!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de mixins {#list}
 

@@ -14,10 +14,10 @@ topic_v2:
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 289
-ht-degree: 44%
+source-wordcount: 282
+ht-degree: 42%
 
 ---
 
@@ -35,7 +35,7 @@ Ce guide de développement décrit les étapes à suivre pour commencer à utili
 
 ## Prise en main
 
-Vous devez avoir suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour pouvoir accéder aux en-têtes de requête suivants afin de passer des appels aux API [!DNL Adobe Experience Platform] :
+Vous devez avoir suivi le tutoriel [authentification](/help/landing/api-authentication.md) pour pouvoir accéder aux en-têtes de requête suivants afin de passer des appels aux API [!DNL Adobe Experience Platform] :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`

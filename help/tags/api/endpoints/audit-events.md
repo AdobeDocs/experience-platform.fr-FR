@@ -2,10 +2,10 @@
 title: Point d’entrée des événements d’audit
 description: Découvrez comment effectuer des appels au point d’entrée /audit_events dans l’API Reactor.
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -39,7 +39,7 @@ Les événements suivants sont pris en charge pour chaque type de ressource :
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la marche à suivre pour s’authentifier auprès de l’API.
 
 ## Récupération d’une liste d’événements d’audit {#list}
 

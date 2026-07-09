@@ -1,6 +1,6 @@
 ---
-title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
-description: Dernières notes de mise à jour pour l’extension Service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
+title: Notes de mise à jour de l’extension du service Adobe Experience Cloud ID
+description: Dernières notes de mise à jour pour l’extension du service de balises Adobe Experience Cloud ID dans Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 TQID: https://experienceleague.adobe.com/EgQQOzGQ6-G5So513F-YTlTLFLj56DmCeOscpe429EY
 product_v2:
@@ -22,16 +22,16 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 671
-ht-degree: 74%
+source-wordcount: 676
+ht-degree: 59%
 
 ---
 
-# Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
+# Notes de mise à jour de l’extension du service Adobe Experience Cloud ID
 
-Ce document présente les notes de mise à jour de l’extension de balises du service d’identités d’Adobe Experience Cloud. Pour les notes de mise à jour du service d’identités Experience Cloud lui-même, reportez-vous à la [documentation du service d’identités](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
+Ce document présente les notes de mise à jour de l’extension du service de balises d’Adobe Experience Cloud ID. Pour les notes de mise à jour du service d’identification des visiteurs lui-même, reportez-vous à la [documentation du service d’identification des visiteurs](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
 
 ## 17 Oct 2022
 
@@ -74,8 +74,7 @@ Ce document présente les notes de mise à jour de l’extension de balises du s
 
 ### Extension 5.1.0 d’Experience Cloud ID
 
-* Ajout de `sameSiteCookie` configuration pour spécifier l’attribut `SameSite` du cookie `AMCV`.
-Cette configuration prend en charge les valeurs suivantes pour `SameSite` attribut :
+* Ajouter la configuration `sameSiteCookie` pour spécifier l’attribut `SameSite` du cookie `AMCV`.Cette configuration prend en charge les valeurs suivantes pour l’attribut `SameSite` :
 
    * `Strict`
    * `Lax`
@@ -100,7 +99,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.6.0 d’Experience Cloud ID
 
-* L’indicateur `loadSSL` est activé par défaut. Tous les appels au service d’identités seront par défaut en `https`. Les clients peuvent définir ce paramètre sur false s’ils souhaitent appeler le service d’identités en HTTP à partir de leurs pages non SSL.
+* L’indicateur `loadSSL` est activé par défaut. Tous les appels au service d’identification des visiteurs seront activés `https` par défaut. Les clients peuvent le définir sur false s’ils souhaitent appeler le service d’identification des visiteurs sur http à partir de leurs pages non-ssl.
 * Mise à jour de la fonction utilisée pour détecter la version d’Internet-Explorer (IE), afin de corriger un problème signalé par ESLint.
 * Correction d’un bogue pour un problème de performances sur Internet-Explorer (IE) 11 lorsque l’inclusion pre-approval est accordée à ECID et que ce dernier est mis à jour ultérieurement.
 
@@ -108,7 +107,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.5.2 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 4.5.2.
+* Mise à jour d’`VisitorAPI.js` vers la version 4.5.2.
 * La version 4.5.1 du fichier visitor.js comprend un correctif relatif au plug-in IAB pour l’inclusion.
 * Mise à jour de la méthode `setCustomerIDs` pour rejeter les ID vides envoyés.
 
@@ -116,7 +115,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.4.2 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 4.4.2.
+* Mise à jour d’`VisitorAPI.js` vers la version 4.4.2.
 * Améliorations de la méthode `getVisitorValues` pour récupérer les valeurs plus rapidement.
 
 
@@ -124,7 +123,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.4.1 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 4.4.1
+* Mise à jour d’`VisitorAPI.js` vers la version 4.4.1.
 * Correction d’un bogue concernant l’obtention de l’entrée de preApprovals en opt-in
 * VIDEO_ANALYTICS renommé MEDIA_ANALYTICS dans preOptInApprovals
 
@@ -134,7 +133,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.4.0 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 4.4.0
+* Mise à jour d’`VisitorAPI.js` vers la version 4.4.0
 * Ajout de la prise en charge du hachage SHA-256 pour setCustomerIDs
 
   ![](../../../images/ecid-setCustomerIDs-hash.png)
@@ -143,7 +142,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.3.1 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 4.3
+* Mise à jour d’`VisitorAPI.js` vers la version 4.3.
 * Type d’élément de données ajouté pour ECID dans le cadre de l’extension de balise
 
   ![](../../../images/ecid-data-element.png)
@@ -152,19 +151,19 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.2.0 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 4.2 incluant la prise en charge du plug-in IAB TCF pour Audience Manager.
+* Mise à jour d’`VisitorAPI.js` vers la version 4.2, qui incluait la prise en charge du module externe Audience Manager IAB TCF
 
 ## mardi 25 février 2019
 
 ### Extension 4.1.0 d’Experience Cloud ID
 
-* Mise à jour de visitor.js vers la version 4.1, qui mettait à jour publishDestinations par nouvelle modification de l’API. Avec cette mise à jour, les informations du référent de la page peuvent être exposées pendant la synchronisation ID, si nécessaire.
+* Mise à jour d’`VisitorAPI.js` vers la version 4.1 qui a mis à jour publishDestinations selon la nouvelle modification d’API. Avec cette mise à jour, les informations du référent de la page peuvent être exposées pendant la synchronisation ID, si nécessaire.
 
 ## samedi 15 février 2019
 
 ### Extension 4.0.0 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 4.0
+* Mise à jour d’`VisitorAPI.js` vers la version 4.0
 * Ajout d’options de configuration pour le nouvel objet intégré d’accord préalable. Les paramètres d’accord préalable peuvent être utilisés pour supprimer les cookies et les appels de balises des solutions Adobe pour mieux prendre en charge les réglementations comme le RGPD
 
   ![](../../../images/ext-mcid-opt-in.png)
@@ -173,5 +172,5 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 3.1.0 d’Experience Cloud ID
 
-* Mise à jour du fichier visitor.js vers la version 3.1
+* Mise à jour d’`VisitorAPI.js` vers la version 3.1.
 * Ajout de deux propriétés de configuration : `resetBeforeVersion` et `serverState`.
