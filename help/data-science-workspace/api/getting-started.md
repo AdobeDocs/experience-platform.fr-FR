@@ -6,18 +6,13 @@ description: L’API Adobe AI Machine Learning permet aux développeurs d’effe
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 TQID: https://experienceleague.adobe.com/CXuMFUClC9RJvEH6Q4Cbp7L8D4XclUrm42eGM75VNJE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 174459ef2ef609e1294fbcb31d429eff48d9b559
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 289
-ht-degree: 44%
+source-wordcount: 282
+ht-degree: 42%
 
 ---
 
@@ -35,7 +30,7 @@ Ce guide de développement décrit les étapes à suivre pour commencer à utili
 
 ## Prise en main
 
-Vous devez avoir suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour pouvoir accéder aux en-têtes de requête suivants afin de passer des appels aux API [!DNL Adobe Experience Platform] :
+Vous devez avoir suivi le tutoriel [authentification](/help/landing/api-authentication.md) pour pouvoir accéder aux en-têtes de requête suivants afin de passer des appels aux API [!DNL Adobe Experience Platform] :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`

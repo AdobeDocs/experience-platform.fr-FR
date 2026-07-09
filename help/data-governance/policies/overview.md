@@ -5,22 +5,11 @@ title: Présentation des politiques dʼutilisation des données
 description: Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 TQID: https://experienceleague.adobe.com/nLzYV-Grtp7Ek5mOtCjNAm0Y6qm-mA9wsDV1IXeWsrQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1236
 ht-degree: 91%
@@ -60,7 +49,7 @@ Un exemple d’action marketing peut être le souhait d’exporter un jeu de don
 >
 >En tant que telles, les actions marketing ne limitent pas l’utilisation des données. Elles doivent être incluses dans les politiques d’utilisation des données activées afin que ces actions soient évaluées en cas de violation des politiques.
 
-Lorsque des données sont utilisées dans le service de votre organisation, les actions marketing appropriées doivent être indiquées afin que toute violation de politique puisse être identifiée. Vous pouvez ensuite utiliser l’[API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) pour vérifier les violations de politique dans votre intégration.
+Lorsque des données sont utilisées dans le service de votre organisation, les actions marketing appropriées doivent être indiquées afin que toute violation de politique puisse être identifiée. Vous pouvez ensuite utiliser l’[API Policy Service](https://developer.adobe.com/experience-platform-apis/references/policy-service) pour vérifier les violations de politique dans votre intégration.
 
 >[!NOTE]
 >
@@ -74,7 +63,7 @@ Voir l’annexe du présent document pour obtenir une liste des [actions marketi
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=fr).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestion des politiques d’utilisation des données {#manage}

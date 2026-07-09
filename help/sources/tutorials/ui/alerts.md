@@ -4,16 +4,13 @@ description: Vous pouvez vous abonner à des alertes lors de la création d’un
 title: Abonnement aux alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 TQID: https://experienceleague.adobe.com/SX2Md-aGUY5mQx6ywSPvINLs8-syTbwPhQt6mjA699k
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 851
-ht-degree: 21%
+ht-degree: 20%
 
 ---
 
@@ -103,7 +100,7 @@ La page [!UICONTROL Aperçu de l’exécution du flux de données] s’affiche. 
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
+La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://developer.adobe.com/experience-platform-apis/references/data-access) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -123,7 +120,7 @@ Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Aperçu 
 
 Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données existant dans la page [!UICONTROL Flux de données]. Recherchez le flux de données que vous créez dans la liste, puis sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL S’abonner aux alertes]** pour modifier les paramètres d’alerte de votre flux de données.
 
-![options &#x200B;](../../images/tutorials/alerts/options.png)
+![options ](../../images/tutorials/alerts/options.png)
 
 Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de sources. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 

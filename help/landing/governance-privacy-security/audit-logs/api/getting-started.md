@@ -5,20 +5,13 @@ role: Developer
 feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
 TQID: https://experienceleague.adobe.com/2mK88Is4LiMHBTyme7kMDW2Tv09jp6yq7crqQuMlcc0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 404
-ht-degree: 45%
+source-wordcount: 397
+ht-degree: 44%
 
 ---
 
@@ -38,7 +31,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Ce guide nécessite que vous ayez suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Ce guide nécessite que vous ayez suivi le tutoriel [authentification](/help/landing/api-authentication.md) pour passer avec succès des appels aux API Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`

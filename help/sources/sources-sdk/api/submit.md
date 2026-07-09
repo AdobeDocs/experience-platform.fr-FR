@@ -4,14 +4,12 @@ title: Envoyer votre Source
 description: Le document suivant décrit les étapes à suivre pour tester et vérifier une nouvelle source à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service (SDK par lots).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
 TQID: https://experienceleague.adobe.com/IsP-D4nIT4tayfQukgV38M7kn3tIq2I3UyDeOgx0mb8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 841
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
@@ -19,14 +17,14 @@ ht-degree: 11%
 
 La dernière étape de l’intégration de votre nouvelle source à Adobe Experience Platform à l’aide de sources en libre-service (SDK par lots) consiste à tester votre source à des fins de vérification. Une fois l’opération réussie, vous pouvez envoyer votre nouvelle source en contactant votre représentant Adobe.
 
-Le document suivant décrit les étapes à suivre pour tester et déboguer votre source à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le document suivant décrit les étapes à suivre pour tester et déboguer votre source à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 
 * Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 * Pour plus d’informations sur la génération de vos informations d’identification pour les API Experience Platform, consultez le tutoriel sur l’[authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
 * Pour plus d’informations sur la configuration de [!DNL Postman] pour les API Experience Platform, consultez le tutoriel sur [configuration de Developer Console et  [!DNL Postman]](../../../landing/postman.md).
-* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service [&#128279;](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.
+* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service ](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.[
 
 ## Tester votre source
 

@@ -5,20 +5,14 @@ title: Guide de dépannage du service d’identités
 description: Ce document fournit des réponses aux questions fréquentes sur le service d’identités d’Adobe Experience Platform, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 TQID: https://experienceleague.adobe.com/CkZNMxP3j8J7cExgVAM9aJJeb32p8bFqtVWglAluo98
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 2218
-ht-degree: 96%
+source-wordcount: 2197
+ht-degree: 95%
 
 ---
 
@@ -88,11 +82,11 @@ Les espaces de noms d’identité standard sont des espaces de noms disponibles 
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 
-À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
+À l’aide de l’[API Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
 
 ## Comment créer un espace de noms personnalisé pour mon organisation ?
 
-À l’aide de l’[API Service d’identités](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Service d’identités.
+À l’aide de l’[API Service d’identités](https://developer.adobe.com/experience-platform-apis/references/identity-service), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Service d’identités.
 
 ## Que sont les identités composites et les XID ?
 
@@ -229,7 +223,7 @@ Ce message d’erreur s’affiche lorsque votre organisation n’a pas reçu les
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](/help/landing/api-authentication.md).
 
 ### Jeton de service d’autorisation non valide
 
@@ -241,7 +235,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](/help/landing/api-authentication.md).
 
 ### Le jeton utilisateur n’a pas de contexte de produit valide
 
@@ -253,7 +247,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d
 }
 ```
 
-Ce message d’erreur s’affiche lorsque votre jeton d’accès n’a pas été généré à partir d’une intégration [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de nouveaux jetons d’accès pour une intégration [!DNL Experience Platform], consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Ce message d’erreur s’affiche lorsque votre jeton d’accès n’a pas été généré à partir d’une intégration [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de nouveaux jetons d’accès pour une intégration [!DNL Experience Platform], consultez le [tutoriel sur l’authentification](/help/landing/api-authentication.md).
 
 ### Erreur interne lors de l’obtention du XID natif à partir d’un code d’identité et d’espace de noms
 
@@ -295,7 +289,7 @@ Cette erreur s’affiche lorsqu’une exception inattendue se produit lors de l�
 
 [!DNL Identity Service] ingère des données d’identité à partir des données d’enregistrement et de série temporelle téléchargées dans [!DNL Experience Platform] à l’aide de la fonction d’ingestion par lots. L’ingestion par lots est un processus asynchrone, vous devez afficher les détails d’un lot pour voir les erreurs. Les erreurs s’accumulent au fur et à mesure que le lot avance, jusqu’à ce que le traitement du lot soit terminé.
 
-Voici une liste des messages d’erreur dans [!DNL Identity Service], que vous pouvez rencontrer lors de l’utilisation de l’[API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
+Voici une liste des messages d’erreur dans [!DNL Identity Service], que vous pouvez rencontrer lors de l’utilisation de l’[API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion).
 
 ### Schéma XDM inconnu
 

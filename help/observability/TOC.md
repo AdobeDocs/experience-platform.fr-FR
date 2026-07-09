@@ -5,10 +5,10 @@ user-guide-description: Découvrez comment surveiller les activités d’Experie
 feature: Observability
 role: Developer
 nudge: true
-source-git-commit: 515c81c49b5220d24e8ba8054af845fdfcffa2e6
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 87%
+ht-degree: 77%
 
 ---
 
@@ -26,5 +26,5 @@ ht-degree: 87%
    * [Guide de l’interface utilisateur du](./alerts/ui.md)
    * [Abonnement aux notifications d’événement I/O](./alerts/subscribe.md)
    * [Intégration de Slack](./alerts/slack-integration.md)
-* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/observability-insights)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

@@ -5,17 +5,12 @@ title: Récupération des diagnostics d’erreur d’ingestion de données
 description: Ce document fournit des informations sur la surveillance de l’ingestion par lots, la gestion des erreurs d’ingestion par lots partiels ainsi qu’une référence pour les types d’ingestion par lots partiels.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 TQID: https://experienceleague.adobe.com/ADy-GBCnvhuhZRfhBGuG6OOYwqVrmSx7Hwv6FtDghyc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 986
+source-wordcount: 979
 ht-degree: 36%
 
 ---
@@ -39,7 +34,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -141,7 +136,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Réponse**
 
-Une réponse réussie renvoie des objets JSON contenant des objets `path` indiquant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [&#x200B; Lignes JSON &#x200B;](https://jsonlines.readthedocs.io/en/latest/).
+Une réponse réussie renvoie des objets JSON contenant des objets `path` indiquant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [ Lignes JSON ](https://jsonlines.readthedocs.io/en/latest/).
 
 ```json
 {"path": "F1.json"}

@@ -6,27 +6,15 @@ description: Cette section contient des instructions détaillées sur l’utilis
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 TQID: https://experienceleague.adobe.com/Y49HlAMbsTxBwGRmCEBzeaD35cKBLrdYF1mZF6p0w3o
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 3516
-ht-degree: 67%
+source-wordcount: 3509
+ht-degree: 66%
 
 ---
 
@@ -34,11 +22,11 @@ ht-degree: 67%
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions).
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions).
 >
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -83,7 +71,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecter des valeurs pour les en-têtes obligatoires et facultatifs {#gather-values-headers}
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -103,7 +91,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation de référence sur les API {#api-reference-documentation}
 
-Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons d’utiliser ce tutoriel et la documentation de référence sur les API en parallèle.
+Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://developer.adobe.com/experience-platform-apis/references/flow-service). Nous vous recommandons d’utiliser ce tutoriel et la documentation de référence sur les API en parallèle.
 
 ## Obtenir la liste des destinations disponibles {#get-the-list-of-available-destinations}
 
@@ -952,7 +940,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Attribuez un nom au flux de données que vous êtes en train de créer. |
 | `description` | Vous pouvez éventuellement fournir une description du flux de données. |
-| `flowSpec.Id` | Utilisez l’identifiant de spécification de flux pour la destination par lots à laquelle vous souhaitez vous connecter. Pour récupérer l’identifiant de spécification du flux, effectuez une opération GET sur le point d’entrée `flowspecs`, tel qu’indiqué dans la section [Documentation de référence de l’API des spécifications de flux](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Dans la réponse, recherchez `upsTo` et copiez l’identifiant correspondant à la destination par lots à laquelle vous souhaitez vous connecter. Par exemple, pour [!DNL Adobe Campaign], recherchez `upsToCampaign` et copiez le paramètre `id` . |
+| `flowSpec.Id` | Utilisez l’identifiant de spécification de flux pour la destination par lots à laquelle vous souhaitez vous connecter. Pour récupérer l’identifiant de spécification du flux, effectuez une opération GET sur le point d’entrée `flowspecs`, tel qu’indiqué dans la section [Documentation de référence de l’API des spécifications de flux](https://developer.adobe.com/experience-platform-apis/references/flow-service#operation/retrieveFlowSpec). Dans la réponse, recherchez `upsTo` et copiez l’identifiant correspondant à la destination par lots à laquelle vous souhaitez vous connecter. Par exemple, pour [!DNL Adobe Campaign], recherchez `upsToCampaign` et copiez le paramètre `id` . |
 | `sourceConnectionIds` | Utilisez l’identifiant de connexion source obtenu à l’étape [Se connecter aux données Experience Platform](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | Utilisez l’identifiant de connexion cible obtenu à l’étape [Seconnecter à une destination par lots](#connect-to-batch-destination). |
 | `transformations` | À l’étape suivante, vous allez remplir cette section avec les audiences et les attributs de profil à activer. |
@@ -1060,7 +1048,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
 | `{ETAG}` | Récupérez le `{ETAG}` à partir de la réponse de l’étape précédente, [Créer un flux de données](#create-dataflow). Le format de réponse de l’étape précédente contient des guillemets d’échappement. Vous devez utiliser les valeurs sans échappement dans l’en-tête de la requête. Voir l’exemple ci-dessous : <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre demande : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur etag est mise à jour avec chaque mise à jour réussie d’un flux de données. |
-| `{SEGMENT_ID}` | Indiquez l’identifiant de l’audience que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des audiences que vous souhaitez activer, voir [récupérer une définition d’audience](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
+| `{SEGMENT_ID}` | Indiquez l’identifiant de l’audience que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des audiences que vous souhaitez activer, voir [récupérer une définition d’audience](https://developer.adobe.com/experience-platform-apis/references/segmentation#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"` |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter une audience à un flux de données, utilisez l’opération `add` . |
 | `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’une audience à un flux de données, utilisez le chemin spécifié dans l’exemple. |

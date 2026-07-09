@@ -6,25 +6,20 @@ type: Tutorial
 description: Découvrez comment supprimer des flux de données vers des destinations par lots et en flux continu à l’aide de l’API Flow Service.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
 TQID: https://experienceleague.adobe.com/UjNmqWmjr33OaRiWvDt2emCS8dTpuTzMFU6IKxVEWdI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 567
-ht-degree: 46%
+source-wordcount: 560
+ht-degree: 44%
 
 ---
 
 # Supprimer un flux de données de destination à l’aide de l’API Flow Service
 
-Vous pouvez supprimer des flux de données contenant des erreurs ou obsolètes à l’aide de l’API [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Vous pouvez supprimer des flux de données contenant des erreurs ou obsolètes à l’aide de l’API [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 Ce tutoriel décrit les étapes à suivre pour supprimer des flux de données vers des destinations par lots et de diffusion en continu à l’aide de [!DNL Flow Service].
 
@@ -45,7 +40,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis {#gather-values-for-required-headers}
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

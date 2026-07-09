@@ -2,10 +2,10 @@
 title: Point d’entrée des entreprises
 description: Découvrez comment effectuer des appels vers le point d’entrée dans l’API Reactor.
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '242'
-ht-degree: 95%
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ Le point d’entrée `/companies` de l’API Reactor vous permet de récupérer 
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
 ## Récupération dʼune liste de sociétés {#list}
 

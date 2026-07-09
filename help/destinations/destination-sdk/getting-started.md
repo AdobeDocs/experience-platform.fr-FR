@@ -3,17 +3,13 @@ description: Cette page décrit comment vous authentifier et commencer à utilis
 title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 TQID: https://experienceleague.adobe.com/alsuk2QIp1-FinuS1dwhkNCC-3HQINeVZeriwDClrKo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 658
-ht-degree: 77%
+source-wordcount: 659
+ht-degree: 74%
 
 ---
 
@@ -25,34 +21,17 @@ Cette page décrit comment vous authentifier et commencer à utiliser [!DNL Adob
 
 ## Terminologie {#terminology}
 
-Ce guide utilise des concepts spécifiques à Experience Platform, tels que l’organisation et les sandbox. Consultez le [glossaire &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=fr) pour connaître la définition de ces termes. Consultez le glossaire [&#128279;](/help/destinations/destination-sdk/glossary.md) pour connaître les termes directement associés à cette fonctionnalité.
+Ce guide utilise des concepts spécifiques à Experience Platform, tels que l’organisation et les sandbox. Consultez le [glossaire ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=fr) pour connaître la définition de ces termes. Consultez le glossaire [](/help/destinations/destination-sdk/glossary.md) pour connaître les termes directement associés à cette fonctionnalité.
 
 ## Obtenir les informations d’authentification requises {#obtain-authentication-credentials}
 
-Destination SDK utilise la passerelle [Adobe I/O](https://www.adobe.io/) pour l’authentification. Pour effectuer des appels API vers des points d’entrée de Destination SDK, vous devez fournir certains en-têtes dans vos appels API. Demandez à l’équipe dʼAdobe Exchange de configurer votre authentification dans [Adobe Developer Console](https://developer.adobe.com/console).
+Destination SDK utilise la passerelle Adobe I/O pour l’authentification. Pour effectuer des appels API vers des points d’entrée de Destination SDK, vous devez fournir certains en-têtes dans vos appels API. Demandez à l’équipe dʼAdobe Exchange de configurer votre authentification dans [Adobe Developer Console](https://developer.adobe.com/console).
 
-Pour réaliser des appels aux points d’entrée de l’API Destination SDK, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir de l’étape « [&#x200B; Générer une clé API, un identifiant d’organisation et un secret client »](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#api-ims-secret). L’équipe dʼAdobe Exchange effectuera les étapes précédentes à votre place. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels à l’API Destination SDK, tel qu’indiqué ci-dessous :
+Pour réaliser des appels aux points d’entrée de l’API Destination SDK, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir de l’étape « [ Générer une clé API, un identifiant d’organisation et un secret client »](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#api-ims-secret). L’équipe dʼAdobe Exchange effectuera les étapes précédentes à votre place. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels à l’API Destination SDK, tel qu’indiqué ci-dessous :
 
 * `x-api-key: {API_KEY}`, également appelé identifiant client.
 * `x-gw-ims-org-id: {ORG_ID}`, également appelé identifiant d’organisation.
 * `Authorization: Bearer {ACCESS_TOKEN}`. Le jeton d’accès a un délai d’expiration de 24 heures, exprimé en millisecondes, vous devrez donc l’actualiser. Pour actualiser le jeton d’accès, répétez les étapes décrites dans le tutoriel sur l’authentification.
-
-<!--
-
-### Obtain `Authorization: Bearer {ACCESS_TOKEN}`
-
-To obtain the `{ACCESS_TOKEN}`, you must generate a JWT token and exchange it for the access token. Follow the steps below:
-
-1. Follow the instructions in the [Generate JWT section](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) in the credentials guide.
-2. Follow the instructions in [Step 3: try it](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) in the Service account connection guide.
-
-You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {ORG_ID}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
-
->[!NOTE]
->
->The access token has an expiration time of 24 hours, expressed in milliseconds, so you will have to refresh it. To refresh the access token, repeat the steps outlined in this section.
-
--->
 
 ## Propriété de la destination et du sandbox {#destination-ownership}
 
@@ -88,5 +67,5 @@ En suivant les étapes décrites dans cet article, vous avez obtenu des informat
    * [Utiliser Destination SDK pour configurer une destination de diffusion en streaming](guides/configure-destination-instructions.md)
    * [Utilisation de Destination SDK pour configurer une destination basée sur des fichiers](guides/configure-file-based-destination-instructions.md)
 
-* Pour toutes les opérations, consultez la [documentation de l’API de création de destinations](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* Utilisez la [Collection Postman de l’API de création de destinations](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) pour configurer votre destination à l’aide des points d’entrée de l’API Destination SDK. Pour commencer à utiliser Postman, suivez les [étapes dʼimportation des environnements et des collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) et consultez le [Guide vidéo de création de l’environnement Postman](https://video.tv.adobe.com/v/31635?captions=fre_fr).
+* Pour toutes les opérations, consultez la [documentation de l’API de création de destinations](https://developer.adobe.com/experience-platform-apis/references/destination-authoring).
+* Utilisez la [Collection Postman de l’API de création de destinations](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) pour configurer votre destination à l’aide des points d’entrée de l’API Destination SDK. Pour commencer à utiliser Postman, suivez les [étapes dʼimportation des environnements et des collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) et consultez le [Guide vidéo de création de l’environnement Postman](https://video.tv.adobe.com/v/28832).

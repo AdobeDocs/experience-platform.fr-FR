@@ -3,30 +3,28 @@ title: Tri et filtrage des réponses dans l’API Flow Service
 description: Ce tutoriel décrit la syntaxe pour le tri et le filtrage à l’aide de paramètres de requête dans l’API Flow Service, y compris certains cas d’utilisation avancés.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 TQID: https://experienceleague.adobe.com/f5WCgSH7n95jQGrAMPA5OvvtayXlTaFGB2EtM7TggXc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd911d71995db0514f5e1a90a30849601284b222
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 889
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
 # Tri et filtrage des réponses dans l’API Flow Service
 
-Lors de l’exécution de requêtes de liste (GET) dans l’[API Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/), vous pouvez utiliser des paramètres de requête pour trier et filtrer les réponses. Ce guide fournit une référence sur l’utilisation de ces paramètres pour différents cas d’utilisation.
+Lors de l’exécution de requêtes de liste (GET) dans l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/flow-service), vous pouvez utiliser des paramètres de requête pour trier et filtrer les réponses. Ce guide fournit une référence sur l’utilisation de ces paramètres pour différents cas d’utilisation.
 
 ## Tri
 
 Vous pouvez trier les réponses à l’aide d’un paramètre de requête `orderby`. Les ressources suivantes peuvent être triées dans l’API :
 
-* [Connexions](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Connexions Source](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
-* [Connexions Target](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
-* [Flux](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
-* [Exécutions](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
+* [Connexions](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Connections)
+* [Connexions Source](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Source-connections)
+* [Connexions Target](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Target-connections)
+* [Flux](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Flows)
+* [Exécutions](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Runs)
 
 Pour utiliser le paramètre , vous devez définir sa valeur sur la propriété spécifique selon laquelle vous souhaitez effectuer un tri (par exemple, `?orderby=name`). Vous pouvez ajouter le signe plus (`+`) comme signe plus (croissant) ou le signe moins (`-`) comme signe moins (décroissant). Si aucun préfixe de tri n’est fourni, la liste est triée par défaut par ordre croissant.
 

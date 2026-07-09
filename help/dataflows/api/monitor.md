@@ -6,19 +6,14 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution de flux à l’aide de l’API Flow Service.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
 TQID: https://experienceleague.adobe.com/GJ106bgXNxjDGVMjuraphQyBOtHDzZ0V74ml-tGbhiQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 770
-ht-degree: 57%
+source-wordcount: 763
+ht-degree: 55%
 
 ---
 
@@ -28,7 +23,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 [!DNL Flow Service] est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources et destinations prises en charge peuvent être connectées.
 
-Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution des flux à l’aide de l’[[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) .
+Ce tutoriel décrit les étapes de surveillance de l’exhaustivité, des erreurs et des mesures relatives aux données d’exécution des flux à l’aide de l’[[!DNL Flow Service API]](https://developer.adobe.com/experience-platform-apis/references/flow-service) .
 
 ## Prise en main
 
@@ -48,7 +43,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -212,4 +207,4 @@ Une réponse réussie renvoie des informations concernant votre exécution de fl
 
 En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur la surveillance des flux de données pour les sources, consultez le tutoriel [surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md). Pour plus d’informations sur la surveillance des flux de données pour les destinations, consultez le tutoriel [surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md).
 
-Pour envoyer plusieurs entités XDM à un flux de données, utilisez un tableau `messages` dans votre requête HTTP ou chargez un fichier (CSV, JSON ou Parquet) contenant plusieurs enregistrements. Pour obtenir des conseils détaillés et connaître les bonnes pratiques, lisez [&#x200B; Comment envoyer plusieurs entités XDM à un flux de données &#x200B;](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
+Pour envoyer plusieurs entités XDM à un flux de données, utilisez un tableau `messages` dans votre requête HTTP ou chargez un fichier (CSV, JSON ou Parquet) contenant plusieurs enregistrements. Pour obtenir des conseils détaillés et connaître les bonnes pratiques, lisez [ Comment envoyer plusieurs entités XDM à un flux de données ](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).

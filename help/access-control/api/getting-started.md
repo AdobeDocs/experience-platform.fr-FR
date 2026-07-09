@@ -6,18 +6,14 @@ description: Le contrôle d’accès dans Adobe Experience Platform vous permet 
 role: Developer
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 TQID: https://experienceleague.adobe.com/hKLt9hw3SC38NcVW1ug-AL-afkpmaWM6QRpKSz-HZZE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 402
-ht-degree: 92%
+source-wordcount: 395
+ht-degree: 89%
 
 ---
 
@@ -25,7 +21,7 @@ ht-degree: 92%
 
 [!DNL Access control] pour [!DNL Experience Platform] est géré à l’aide d’[Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des sandbox. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../home.md).
 
-Ce guide de développement fournit des informations sur la manière de formater vos requêtes dans l’[[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/) et couvre les opérations suivantes :
+Ce guide de développement fournit des informations sur la manière de formater vos requêtes dans l’[[!DNL Access Control API]](https://developer.adobe.com/experience-platform-apis/references/access-control) et couvre les opérations suivantes :
 
 - [Liste des noms des autorisations et des types de ressources](./permissions-and-resource-types.md)
 - [Afficher des politiques d’accès efficaces pour l’utilisateur actuel](./effective-policies.md)
@@ -40,7 +36,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

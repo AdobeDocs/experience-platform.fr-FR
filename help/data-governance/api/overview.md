@@ -6,16 +6,13 @@ description: L’API Policy Service permet aux développeurs de gérer les libel
 role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 TQID: https://experienceleague.adobe.com/q-dQMKjMUo4POyFpH7ZYr505wTEKhpbYAcE02o6--sE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 553
-ht-degree: 87%
+ht-degree: 85%
 
 ---
 
@@ -25,7 +22,7 @@ La gouvernance des données d’Adobe Experience Platform vous permet de gére
 
 L’API [!DNL Policy Service] fournit plusieurs points d’entrée vous permettant de gérer par programmation les libellés et les politiques d’utilisation des données, ainsi que d’évaluer les actions marketing en cas de violation de ces politiques. Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’[[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez le document Swagger de l’[[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service).
 
 ## Étiquettes
 

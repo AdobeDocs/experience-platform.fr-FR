@@ -3,15 +3,12 @@ title: Créer une connexion Source et un flux de données pour Mixpanel à l’a
 description: Découvrez comment connecter Adobe Experience Platform à Mixpanel à l’aide de l’API Flow Service.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
 TQID: https://experienceleague.adobe.com/CqROpTBrGDtBoM5lUyltgj2XCLuwCinKQuJaOhoNbDc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 2041
+source-wordcount: 2059
 ht-degree: 53%
 
 ---
@@ -37,7 +34,7 @@ Pour connecter [!DNL Mixpanel] à Experience Platform, vous devez fournir des va
 | --- | --- | --- |
 | `username` | Nom d’utilisateur du compte de service qui correspond à votre compte [!DNL Mixpanel]. Pour plus d’informations, consultez la [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account). | `Test8.6d4ee7.mp-service-account` |
 | `password` | Mot de passe du compte de service qui correspond à votre compte [!DNL Mixpanel]. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| `projectId` | Identifiant de projet [!DNL Mixpanel]. Cet identifiant est requis pour créer une connexion source. Pour plus d’informations[&#128279;](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) consultez la [!DNL Mixpanel] documentation sur les paramètres de projet et le [[!DNL Mixpanel] guide sur la création et la gestion de projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
+| `projectId` | Identifiant de projet [!DNL Mixpanel]. Cet identifiant est requis pour créer une connexion source. Pour plus d’informations](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) consultez la [[!DNL Mixpanel] documentation sur les paramètres de projet et le [[!DNL Mixpanel] guide sur la création et la gestion de projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
 | `timezone` | Fuseau horaire qui correspond à votre projet [!DNL Mixpanel]. Le fuseau horaire est requis pour créer une connexion source. Pour plus d’informations, consultez la [documentation sur les paramètres du projet Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings). | `Pacific Standard Time` |
 
 Pour plus d’informations sur l’authentification de votre source [!DNL Mixpanel], consultez la [[!DNL Mixpanel] présentation de la source](../../../../connectors/analytics/mixpanel.md).
@@ -106,8 +103,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ## Explorer votre source {#explore}
 
-À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
-Utilisez les appels suivants pour rechercher le chemin d’accès au fichier que vous souhaitez importer dans Experience Platform :
+À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.Utilisez les appels suivants pour rechercher le chemin d’accès au fichier que vous souhaitez importer dans Experience Platform :
 
 **Format d’API**
 
@@ -407,7 +403,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../../xdm/api/schemas.md).
 
@@ -479,7 +475,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ## Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans la payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) avec des mappages de données définis dans la payload de la requête.
 
 **Format d’API**
 

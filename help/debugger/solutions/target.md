@@ -3,28 +3,15 @@ title: Tester une mise en œuvre Adobe Target avec Adobe Experience Platform Deb
 description: Découvrez comment utiliser Adobe Experience Platform Debugger pour tester et déboguer un site web activé avec Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
 TQID: https://experienceleague.adobe.com/0rONlTRlBMQqPKeAhd8-mq62xqVwgH4jFjr5dcirr3o
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-  - id: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9bid: c3d7a45c-ad17-435d-8b71-882abbe8f27eid: e2b4267c-3fe4-4c51-b9f5-7aefcfa5996c
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
 source-wordcount: 1260
-ht-degree: 84%
+ht-degree: 80%
 
 ---
 
@@ -88,7 +75,7 @@ Les valeurs suivantes sont capturées :
 | [!DNL clientCode] | Identifiant du compte de votre organisation, tel qu’il est reconnu par Target. |
 | [!DNL requestType] | API utilisée pour la requête. Si vous utilisez at.js 1.x, la valeur est `/json`. Si vous utilisez at.js 2.x, la valeur est `delivery`. |
 | [!DNL Audience Manager Blob] | Fournit des informations sur les métadonnées chiffrées d’Audience Manager appelées « blob ». |
-| [!DNL Audience Location Hint] | ID de la région de collecte de données. Il s’agit d’un identifiant numérique pour l’emplacement géographique d’un centre de données de service d’ID spécifique. Pour plus d’informations, voir la documentation sur Audience Manager dans [Identifiants de zone géographique, emplacements et noms d’hôte du serveur de collecte de données](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=fr) et le guide Service d’identités d’Experience Cloud sur [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=fr#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | ID de la région de collecte de données. Il s’agit d’un identifiant numérique pour l’emplacement géographique d’un centre de données particulier du service d’identification des visiteurs d’Adobe. Pour plus d’informations, consultez la documentation d’Audience Manager sur [les identifiants de zone géographique, les emplacements et les noms d’hôte du serveur de collecte de données](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=fr) et le guide du service d’identification des visiteurs sur [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | Hauteur du navigateur en pixels. |
 | [!DNL Browser Time Offset] | Décalage horaire du navigateur associé à son fuseau horaire. |
 | [!DNL Browser Width] | Largeur du navigateur en pixels. |
@@ -110,7 +97,7 @@ Les valeurs suivantes sont capturées :
 | [!DNL Screen Height] | Hauteur de l’écran en pixels. |
 | [!DNL Screen Width] | Largeur de l’écran en pixels. |
 | [!DNL Supplemental Data ID] | Identifiant généré par le système utilisé pour faire correspondre les visiteurs aux appels Adobe Target et Adobe Analytics correspondants. Voir le [guide de dépannage A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?lang=fr?#section_75002584FA63456D8D9086172925DD8D) pour plus d’informations. |
-| [!DNL vst] | La [configuration de l’API Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html?lang=fr). |
+| [!DNL vst] | La [configuration de l’API du service d’identification des visiteurs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html?lang=fr). |
 | [!DNL webGLRenderer] | Fournit des informations sur le moteur de rendu WebGL utilisé sur la page, le cas échéant. |
 
 {style="table-layout:auto"}

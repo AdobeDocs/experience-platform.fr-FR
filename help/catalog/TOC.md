@@ -5,10 +5,10 @@ user-guide-description: Explorez la traçabilité des données, les métadonnée
 feature: Catalog
 role: Developer
 nudge: true
-source-git-commit: d2becb8fb7d209a9f52d9714797ac41cd7f8e7f0
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 97%
+ht-degree: 92%
 
 ---
 
@@ -37,6 +37,6 @@ ht-degree: 97%
    * [Activer un jeu de données pour les mises à jour de profil (upsert)](datasets/enable-upsert.md)
    * [Conservation du jeu de données d’événement d’expérience dans le lac de données](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [Traitement des demandes d’accès à des informations personnelles dans le lac de données](privacy.md)
-* [Référence d’API](https://www.adobe.io/experience-platform-apis/references/catalog/)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/catalog)
 * [Questions fréquentes](catalog-faq.md)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

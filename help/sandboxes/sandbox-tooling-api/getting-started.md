@@ -3,19 +3,13 @@ title: Prise en main de l’API d’outils Sandbox
 description: Utilisez l’API Sandbox tooling pour examiner les artefacts et exporter et importer un instantané des configurations de sandbox entre les sandbox. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
 TQID: https://experienceleague.adobe.com/VKRQcGBs4APKpgOVXmLil-IKxCc-c9pEFg05pltyAvI
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 318
-ht-degree: 64%
+source-wordcount: 311
+ht-degree: 63%
 
 ---
 
@@ -29,7 +23,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ## Collecte des valeurs des en-têtes requis {#headers}
 
-Ce guide nécessite que vous ayez suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Ce guide nécessite que vous ayez suivi le tutoriel [authentification](/help/landing/api-authentication.md) pour passer avec succès des appels aux API Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

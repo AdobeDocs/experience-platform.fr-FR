@@ -6,17 +6,13 @@ type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels sur l’espace de travail de science des données d’Adobe Experience Platform. Une fois l’opération terminée, le schéma et les jeux de données de ventes au détail seront disponibles pour vous et les membres de votre organisation sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 TQID: https://experienceleague.adobe.com/2vsG8MTypwkIp59v95c4uYmWIGac5jgvdtylh3L0T-0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 587
-ht-degree: 42%
+source-wordcount: 580
+ht-degree: 41%
 
 ---
 
@@ -35,7 +31,7 @@ Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 - Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
-- Autorisation d’effectuer des appels API [!DNL Experience Platform]. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
+- Autorisation d’effectuer des appels API [!DNL Experience Platform]. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](/help/landing/api-authentication.md) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key : `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`

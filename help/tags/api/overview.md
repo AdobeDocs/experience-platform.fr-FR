@@ -3,28 +3,15 @@ title: Guide de lʼAPI Reactor
 description: L’API Reactor permet aux développeurs de gérer toutes les ressources de balises par programme dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 TQID: https://experienceleague.adobe.com/MVdHov0RQcrbXFqVeN4dUSKG5vTfRgkgbIR9wJeiGD8
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: abc02dd6-664f-446a-9aaa-675bc0f2fe4aid: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1086
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
@@ -34,7 +21,7 @@ L’API Reactor fournit plusieurs points d’entrée qui vous permettent de gér
 
 Ces points d’entrée sont décrits ci-dessous. Consultez les guides des différents points dʼentrée pour obtenir plus dʼinformations et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur la manière de vous authentifier auprès de lʼAPI.
 
-Pour afficher tous les points dʼentrée et opérations CRUD disponibles, consultez la section [Informations de référence sur lʼAPI Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/).
+Pour afficher tous les points dʼentrée et opérations CRUD disponibles, consultez la section [Informations de référence sur lʼAPI Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor).
 
 ## Sociétés
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: ef14ba4bc49f2b2d08718b2b39fdf095a22e485f
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '1129'
-ht-degree: 87%
+ht-degree: 86%
 
 ---
 
@@ -327,7 +327,7 @@ ht-degree: 87%
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidélité {#loyalty}
          - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
-         - {hide-from-toc}[Événements de streaming Kobie &#x200B;](tutorials/ui/create/loyalty/kobie-streaming.md)
+         - {hide-from-toc}[Événements de streaming Kobie ](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [LAVE](tutorials/ui/create/loyalty/lava.md)
          - [Événements de streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Connecteur source Talon.One Batch](tutorials/ui/create/loyalty/talon-one-batch.md)
@@ -416,5 +416,5 @@ ht-degree: 87%
 - [Notifications d’exécution de flux](notifications.md)
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
-- [Référence d’API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/flow-service)
 - [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

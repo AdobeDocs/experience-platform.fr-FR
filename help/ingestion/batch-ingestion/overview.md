@@ -5,16 +5,13 @@ title: Présentation de l’API d’ingestion par lots
 description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système CRM (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 TQID: https://experienceleague.adobe.com/tEpXMJkU-0HQD3FyI02pbPBSO9By9dCiwj7BmjvCzWY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 74579d9ca311b241313a3d89b564f217cd3476c7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1363
-ht-degree: 64%
+ht-degree: 63%
 
 ---
 
@@ -22,7 +19,7 @@ ht-degree: 64%
 
 L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être des données de profil d’un fichier plat (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
 
-La [&#x200B; Référence de l’API Batch Ingestion &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
+La [ Référence de l’API Batch Ingestion ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) fournit des informations supplémentaires sur ces appels API.
 
 Le diagramme suivant décrit le processus d’ingestion par lots :
 
@@ -30,7 +27,7 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ### Conditions préalables de [!DNL Data Ingestion]
 
@@ -153,7 +150,7 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Cepen
 
 >[!NOTE]
 >
->L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [&#128279;](api-overview.md).
+>L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [](api-overview.md).
 
 >[!INFO]
 >

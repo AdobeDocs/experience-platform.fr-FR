@@ -6,21 +6,15 @@ description: Les sandbox d’Adobe Experience Platform fournissent des environ
 role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
 TQID: https://experienceleague.adobe.com/hYkGh77BuGUV8IvcSj1xTTgbTcR5nkxaTqyMo301AVc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-subfeature_v2:
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+subfeature_v2: id: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 334
-ht-degree: 39%
+ht-degree: 37%
 
 ---
 
@@ -28,7 +22,7 @@ ht-degree: 39%
 
 L’API [!DNL Sandbox] fournit plusieurs points d’entrée qui vous permettent de gérer par programmation tous les sandbox disponibles au sein de votre organisation. Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
-Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez la [[!DNL Sandbox] référence de l’API](https://www.adobe.io/experience-platform-apis/references/sandbox).
+Pour afficher tous les points d’entrée et opérations CRUD disponibles, consultez la [[!DNL Sandbox] référence de l’API](https://developer.adobe.com/experience-platform-apis/references/sandbox).
 
 ## Sandbox disponibles
 

@@ -5,23 +5,19 @@ title: Prise en main du balisage de contenu
 description: Le balisage de contenu utilise les API Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel sur l’authentification.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 TQID: https://experienceleague.adobe.com/HOT682PuFoU2fyxdRtKHScIOQSxRSVthbsyd9Yxz8os
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 584
-ht-degree: 16%
+source-wordcount: 570
+ht-degree: 14%
 
 ---
 
 # Prise en main du balisage de contenu
 
-[!DNL Content tagging] utilise les API Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+[!DNL Content tagging] utilise les API Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel [authentification](/help/landing/api-authentication.md).
 
 Cependant, lorsque vous accédez à l’étape **Ajouter une API**, l’API se trouve sous Creative Cloud au lieu de Adobe Experience Platform, comme illustré dans la capture d’écran suivante :
 
@@ -41,7 +37,7 @@ Une fois que vous avez configuré votre projet et votre API dans Adobe Developer
 
 Une fois le fichier téléchargé, ouvrez Postman et sélectionnez l’icône **engrenage** en haut à droite pour ouvrir la boîte de dialogue **gérer les environnements**.
 
-![&#x200B; icône d’engrenage &#x200B;](./images/select-gear-icon.png)
+![ icône d’engrenage ](./images/select-gear-icon.png)
 
 Sélectionnez ensuite **Importer** dans la boîte de dialogue **Gérer les environnements**.
 
@@ -53,7 +49,7 @@ Vous êtes redirigé et invité à sélectionner un fichier d’environnement su
 
 ![](./images/click-open.png)
 
-Vous êtes redirigé vers l’onglet *Gérer les environnements* avec un nouveau nom d’environnement renseigné. Sélectionnez le nom de l’environnement pour afficher et modifier les variables disponibles dans Postman. Vous devez toujours renseigner manuellement les `JWT_TOKEN` et les `ACCESS_TOKEN`. Ces valeurs doivent avoir été obtenues en suivant le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Vous êtes redirigé vers l’onglet *Gérer les environnements* avec un nouveau nom d’environnement renseigné. Sélectionnez le nom de l’environnement pour afficher et modifier les variables disponibles dans Postman. Vous devez toujours renseigner manuellement les `JWT_TOKEN` et les `ACCESS_TOKEN`. Ces valeurs doivent avoir été obtenues en suivant le tutoriel [authentification](/help/landing/api-authentication.md).
 
 ![](./images/re-direct-updated.png)
 
@@ -75,6 +71,6 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 Une fois que vous disposez de toutes vos informations d’identification, vous êtes prêt à configurer un programme de travail personnalisé pour [!DNL Content tagging]. Les documents suivants aident à comprendre le framework d’extensibilité et la configuration de l’environnement.
 
-Pour en savoir plus sur le framework d’extensibilité, commencez par lire le document [introduction à l’extensibilité](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=fr). Ce document décrit les conditions préalables et les exigences d’approvisionnement.
+Pour en savoir plus sur le framework d’extensibilité, commencez par lire le document [introduction à l’extensibilité](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html). Ce document décrit les conditions préalables et les exigences d’approvisionnement.
 
-Pour en savoir plus sur la configuration d’un environnement pour [!DNL Content tagging], commencez par lire le guide de [configuration d’un environnement de développement](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=fr). Ce document fournit des instructions de configuration qui vous permettent de développer pour le service Asset Compute.
+Pour en savoir plus sur la configuration d’un environnement pour [!DNL Content tagging], commencez par lire le guide de [configuration d’un environnement de développement](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Ce document fournit des instructions de configuration qui vous permettent de développer pour le service Asset Compute.

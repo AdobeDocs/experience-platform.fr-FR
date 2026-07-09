@@ -6,18 +6,14 @@ description: Une fois les actions marketing créées et les politiques définies
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
 TQID: https://experienceleague.adobe.com/ukXQJtJ3MKbRjBG2zSO0WGWVbMIHvAbtbCJHgmaPxOo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 4dc42211e2b8b01bc008a53276bcc57998145539
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1569
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -35,7 +31,7 @@ Les requêtes d’évaluation peuvent être effectuées de trois façons :
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Évaluation des violations de politique à l’aide de libellés d’utilisation des données {#labels}
 
@@ -180,7 +176,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
 
 **Réponse**
 
@@ -428,7 +424,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
 | `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeurs JSON. Consultez la section sur les [pointeurs JSON](../../landing/api-fundamentals.md#json-pointer) dans le guide des principes de base de l’API pour obtenir plus d’informations sur la syntaxe acceptée pour ces chaînes. |
 
 **Réponse**

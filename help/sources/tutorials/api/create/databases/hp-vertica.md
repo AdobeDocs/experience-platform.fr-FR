@@ -6,14 +6,12 @@ type: Tutorial
 description: Découvrez comment connecter HP Vertica à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 TQID: https://experienceleague.adobe.com/MuRf-AOCtSwqWMY-olaYUXtlgUsyBOPhBR3pxdWBGJU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 487
-ht-degree: 44%
+ht-degree: 43%
 
 ---
 
@@ -21,11 +19,11 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Le connecteur [!DNL HP Vertica] est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur [!DNL HP Vertica] est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL HP Vertica] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL HP Vertica] à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 
@@ -113,4 +111,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base [!DNL HP Vertica] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

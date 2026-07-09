@@ -4,22 +4,19 @@ title: Explorer des dossiers d’espace de stockage à l’aide de l’API Flow 
 description: Ce tutoriel utilise l’API Flow Service pour explorer un système de stockage cloud tiers.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 TQID: https://experienceleague.adobe.com/Pvy6OInQXlukyhhuOkPWf6TB-sGKuFKHpxgjXzRkTtk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 712
-ht-degree: 16%
+ht-degree: 14%
 
 ---
 
 # Explorer vos dossiers de stockage dans le cloud à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la structure et le contenu de votre espace de stockage dans le cloud à l’aide de l’API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la structure et le contenu de votre espace de stockage dans le cloud à l’aide de l’API [[!DNL Flow Service]](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -165,7 +162,7 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 
 ## Utiliser des paramètres de requête {#query}
 
-L’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) prend en charge l’utilisation de paramètres de requête pour prévisualiser et inspecter différents types de fichiers.
+L’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) prend en charge l’utilisation de paramètres de requête pour prévisualiser et inspecter différents types de fichiers.
 
 | Paramètre | Description |
 | --------- | ----------- |

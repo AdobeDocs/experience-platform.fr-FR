@@ -4,19 +4,14 @@ description: Vous pouvez vous abonner à des alertes lors de la création d’un
 title: S’abonner aux alertes de destination contextuelles
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 TQID: https://experienceleague.adobe.com/GMeMcADJlZhf8aj0rjYZr32wzHoL-BeDF1xfT-X8fFw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 942
-ht-degree: 15%
+ht-degree: 14%
 
 ---
 
@@ -95,7 +90,7 @@ La page [!UICONTROL Détails de l’exécution du flux de données] s’affiche.
 
 ![Image de l’interface utilisateur affichant la page des détails de l’exécution du flux de données.](../assets/ui/alerts/dataflow-overview.png)
 
-La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
+La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://developer.adobe.com/experience-platform-apis/references/data-access) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
 
 ![Image de l’interface utilisateur affichant la page de détails de l’exécution du flux de données, avec une mise en surbrillance sur la section Erreurs.](../assets/ui/alerts/dataflow-run-error.png)
 

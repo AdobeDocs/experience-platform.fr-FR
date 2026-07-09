@@ -5,21 +5,13 @@ title: Prise en main dans l’IA dédiée à l’attribution
 description: Les guides ci-dessous nécessitent une compréhension des différents services impliqués dans l’utilisation d’Attribution AI. Avant de commencer les tutoriels, veuillez consulter les documents suivants.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 TQID: https://experienceleague.adobe.com/mQIUSi-d-vHHbd7rLsB1-peyf4QrwSP5lgH0RckiDX0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 640
+source-wordcount: 633
 ht-degree: 58%
 
 ---
@@ -32,7 +24,7 @@ Les guides suivants nécessitent une compréhension des différents services de 
 - [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : ce document présente les schémas XDM ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas à utiliser dans [!DNL Adobe Experience Platform].
 - [Création de schémas](../../xdm/tutorials/create-schema-ui.md) : ce tutoriel décrit les étapes de la création d’un schéma à l’aide de l’éditeur de schémas dans Experience Platform.
 
-L’IA dédiée à l’attribution nécessite que les jeux de données soient conformes au schéma CEE (Consumer Experience Events), qui est un groupe de champs de schéma [&#x200B; Modèle de données d’expérience (XDM)](../../xdm/home.md). Veuillez contacter l’assistance d’Adobe à l’adresse attributionai-support@adobe.com pour mettre en œuvre ou apporter des modifications à ces données. Si des données de dépenses médias sont présentes, vous pouvez effectuer une analyse supplémentaire par exemple du chiffre d’affaires incrémentiel et du retour sur investissement. Si des données de profil client sont disponibles, vous pouvez attribuer davantage de crédits au niveau de profil du client.
+L’IA dédiée à l’attribution nécessite que les jeux de données soient conformes au schéma CEE (Consumer Experience Events), qui est un groupe de champs de schéma [ Modèle de données d’expérience (XDM)](../../xdm/home.md). Veuillez contacter l’assistance d’Adobe à l’adresse attributionai-support@adobe.com pour mettre en œuvre ou apporter des modifications à ces données. Si des données de dépenses médias sont présentes, vous pouvez effectuer une analyse supplémentaire par exemple du chiffre d’affaires incrémentiel et du retour sur investissement. Si des données de profil client sont disponibles, vous pouvez attribuer davantage de crédits au niveau de profil du client.
 
 ## Terminologie
 
@@ -46,7 +38,7 @@ L’IA dédiée à l’attribution nécessite que les jeux de données soient co
 >
 >Si vous n’avez pas besoin de télécharger les scores bruts, vous pouvez ignorer cette étape et passer aux [étapes suivantes](#next-steps).
 
-Le téléchargement des scores de l’IA dédiée à l’attribution est effectué par le biais d’une combinaison d’appels API. Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Le téléchargement des scores de l’IA dédiée à l’attribution est effectué par le biais d’une combinaison d’appels API. Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](/help/landing/api-authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`

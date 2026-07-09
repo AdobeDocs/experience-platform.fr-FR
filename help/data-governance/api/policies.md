@@ -6,13 +6,10 @@ description: Les politiques de gouvernance des données sont des règles adopté
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 TQID: https://experienceleague.adobe.com/drRzpVXCNSmAKAM-rzNng6NOtjkFH83whP0IxCkFaiE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1873
 ht-degree: 98%
@@ -29,7 +26,7 @@ Les politiques de gouvernance des données sont des règles qui décrivent les t
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Récupération dʼune liste de politiques {#list}
 

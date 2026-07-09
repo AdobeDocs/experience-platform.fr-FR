@@ -2,10 +2,10 @@
 title: Point dʼentrée des rappels
 description: Découvrez comment effectuer des appels vers le point dʼentrée /callbacks dans lʼAPI Reactor.
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
-source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
@@ -35,7 +35,7 @@ Un rappel appartient à une seule [propriété](./properties.md). Une propriét�
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la manière de sʼauthentifier auprès de lʼAPI.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la manière de sʼauthentifier auprès de lʼAPI.
 
 ## Liste des rappels {#list}
 

@@ -5,17 +5,13 @@ description: Ce document décrit la procédure à suivre pour sʼabonner aux not
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 TQID: https://experienceleague.adobe.com/YbSl4WsK5jaiQOq3bWBBBYX4AKA9WDTSI0Ss0CkEamU
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 810
-ht-degree: 68%
+source-wordcount: 805
+ht-degree: 66%
 
 ---
 
@@ -27,7 +23,7 @@ Ce document décrit la procédure à suivre pour vous abonner aux notifications 
 
 ## Prise en main
 
-Ce document nécessite une compréhension pratique des Webhooks et de la manière de connecter un Webhook dʼune application à une autre. Pour en savoir plus sur les Webhooks, consultez la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
+Ce document nécessite une compréhension pratique des Webhooks et de la manière de connecter un Webhook dʼune application à une autre. Pour en savoir plus sur les Webhooks, consultez la [[!DNL I/O Events] documentation](https://developer.adobe.com/events/docs/guides/runtime-webhooks/).
 
 ## Création dʼun Webhook
 
@@ -95,7 +91,7 @@ Dans l’écran suivant, indiquez le nom et la description de l’enregistrement
 
 ![](../images/notifications/registration-details.png)
 
-Plus bas sur le même écran, sous la section [!UICONTROL Comment recevoir des événements &#x200B;], vous pouvez éventuellement configurer comment vous souhaitez recevoir les événements. **[!UICONTROL Webhook]** vous permet de fournir une adresse webhook personnalisée pour recevoir les événements, tandis que **[!UICONTROL l’action Runtime]** vous permet de faire de même à l’aide de [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Plus bas sur le même écran, sous la section [!UICONTROL Comment recevoir des événements ], vous pouvez éventuellement configurer comment vous souhaitez recevoir les événements. **[!UICONTROL Webhook]** vous permet de fournir une adresse webhook personnalisée pour recevoir les événements, tandis que **[!UICONTROL l’action Runtime]** vous permet de faire de même à l’aide de [Adobe I/O Runtime](https://developer.adobe.com/app-builder/docs/intro_and_overview/).
 
 Pour ce tutoriel, sélectionnez **[!UICONTROL Webhook]** et fournissez l’URL du webhook que vous avez créé précédemment. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Enregistrer les événements configurés]** pour terminer l’enregistrement de l’événement.
 

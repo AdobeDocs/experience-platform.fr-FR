@@ -6,26 +6,15 @@ description: Le profil client en temps réel vous permet de créer une vue uniqu
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 TQID: https://experienceleague.adobe.com/rrTDCR2xMO8kL0YtKiLjy29x-PKylWu3ntMCc9hCZYw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1542
-ht-degree: 53%
+ht-degree: 52%
 
 ---
 
@@ -37,9 +26,9 @@ Ce document fournit des instructions détaillées sur la création et la gestion
 
 >[!NOTE]
 >
->Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Profile API]. Pour plus d’informations sur la gestion des tâches d’exportation pour Adobe Experience Platform Segmentation Service, consultez le guide sur les [&#x200B; tâches d’exportation dans l’API Segmentation](../../profile/api/export-jobs.md).
+>Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Profile API]. Pour plus d’informations sur la gestion des tâches d’exportation pour Adobe Experience Platform Segmentation Service, consultez le guide sur les [ tâches d’exportation dans l’API Segmentation](../../profile/api/export-jobs.md).
 
-Outre la création d’une tâche d’exportation, vous pouvez également accéder aux données [!DNL Profile] à l’aide du point d’entrée `/entities`, également appelé « [!DNL Profile Access] ». Pour plus d’informations, consultez le [&#x200B; guide des points d’entrée des entités &#x200B;](./entities.md). Pour savoir comment accéder aux données [!DNL Profile] à l’aide de l’interface utilisateur, reportez-vous au [guide d’utilisation](../ui/user-guide.md).
+Outre la création d’une tâche d’exportation, vous pouvez également accéder aux données [!DNL Profile] à l’aide du point d’entrée `/entities`, également appelé « [!DNL Profile Access] ». Pour plus d’informations, consultez le [ guide des points d’entrée des entités ](./entities.md). Pour savoir comment accéder aux données [!DNL Profile] à l’aide de l’interface utilisateur, reportez-vous au [guide d’utilisation](../ui/user-guide.md).
 
 ## Prise en main
 
@@ -53,7 +42,7 @@ L’exportation de données [!DNL Profile] nécessite d’abord la création d�
 
 Lors de l’exportation de données [!DNL Profile], un jeu de données cible doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l’exportation.
 
-Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter des données de profil, le jeu de données doit être basé sur le schéma d’union [!DNL XDM Individual Profile] (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma généré par le système en lecture seule qui agrège les champs des schémas partageant la même classe. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile]. Pour plus d’informations sur les schémas d’affichage d’union, consultez la section [&#x200B; union dans les principes de base du guide de composition de schémas](../../xdm/schema/composition.md#union).
+Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter des données de profil, le jeu de données doit être basé sur le schéma d’union [!DNL XDM Individual Profile] (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma généré par le système en lecture seule qui agrège les champs des schémas partageant la même classe. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile]. Pour plus d’informations sur les schémas d’affichage d’union, consultez la section [ union dans les principes de base du guide de composition de schémas](../../xdm/schema/composition.md#union).
 
 Les étapes qui suivent ce tutoriel expliquent comment créer un jeu de données qui fait référence au schéma d’union [!DNL XDM Individual Profile] à l’aide de l’API [!DNL Catalog]. Vous pouvez également utiliser l’interface utilisateur [!DNL Experience Platform] pour créer un jeu de données qui fait référence au schéma d’union. Les étapes d’utilisation de l’interface utilisateur sont décrites dans [ce tutoriel sur l’interface utilisateur pour l’exportation d’audiences](../../segmentation/tutorials/create-dataset-export-segment.md) mais sont également applicables ici. Une fois que vous avez terminé, vous pouvez revenir à ce tutoriel pour suivre les étapes de [lancement d’une nouvelle tâche d’exportation](#initiate).
 
@@ -445,7 +434,7 @@ Une requête de suppression réussie renvoie un état HTTP 204 (No Content) et 
 
 ## Étapes suivantes
 
-Une fois l’exportation terminée, vos données sont disponibles dans le lac de données d’Experience Platform. Vous pouvez ensuite utiliser l’[API Data Access](https://www.adobe.io/experience-platform-apis/references/data-access/) pour accéder aux données à l’aide du `batchId` associé à l’exportation. Selon la taille de l’exportation, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
+Une fois l’exportation terminée, vos données sont disponibles dans le lac de données d’Experience Platform. Vous pouvez ensuite utiliser l’[API Data Access](https://developer.adobe.com/experience-platform-apis/references/data-access) pour accéder aux données à l’aide du `batchId` associé à l’exportation. Selon la taille de l’exportation, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
 
 Pour obtenir des instructions détaillées sur l’utilisation de l’API Data Access afin d’accéder aux fichiers de lot et les télécharger, suivez le [tutoriel portant sur l’accès aux données](../../data-access/tutorials/dataset-data.md).
 
@@ -509,4 +498,4 @@ Pour créer une tâche d’exportation contenant uniquement des données d’év
 
 ### Export d’audiences
 
-Vous pouvez également utiliser le point d’entrée des tâches d’exportation pour exporter des audiences plutôt que des données [!DNL Profile]. Pour plus d’informations, consultez le guide sur les tâches d’exportation [&#x200B; dans l’API Segmentation](../../segmentation/api/export-jobs.md).
+Vous pouvez également utiliser le point d’entrée des tâches d’exportation pour exporter des audiences plutôt que des données [!DNL Profile]. Pour plus d’informations, consultez le guide sur les tâches d’exportation [ dans l’API Segmentation](../../segmentation/api/export-jobs.md).

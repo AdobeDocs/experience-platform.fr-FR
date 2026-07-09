@@ -6,19 +6,14 @@ type: Tutorial
 description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 TQID: https://experienceleague.adobe.com/gXtWRb4BLfmtveJKf1zH6nnh5pNyjxlbM876kmdjliY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 2909
-ht-degree: 31%
+ht-degree: 30%
 
 ---
 
@@ -26,7 +21,7 @@ ht-degree: 31%
 
 Le [!DNL Schema Registry] permet d’accéder au [!DNL Schema Library] dans Adobe Experience Platform. Le [!DNL Schema Library] contient les ressources mises à votre disposition par Adobe, les partenaires [!DNL Experience Platform] et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
 
-Ce tutoriel utilise l’API [!DNL Schema Registry] pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [&#x200B; &#x200B;](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+Ce tutoriel utilise l’API [!DNL Schema Registry] pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [ ](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
 
 >[!NOTE]
 >
@@ -231,7 +226,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Requête**
 
-Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Détails démographiques] &#x200B;](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Détails démographiques] ](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 En ajoutant le groupe de champs `profile-person-details` , le schéma Membres du programme de fidélité capture désormais les informations démographiques des membres du programme de fidélité, telles que leur prénom, leur nom et leur anniversaire.
 
@@ -1161,7 +1156,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Vous pouvez répertorier les valeurs « xdm :namespace » disponibles ou en créer de nouvelles à l’aide de l’[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) . La valeur de « xdm :property » peut être « xdm :code » ou « xdm :id », selon le « xdm :namespace » utilisé.
+>Vous pouvez répertorier les valeurs « xdm :namespace » disponibles ou en créer de nouvelles à l’aide de l’[[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service) . La valeur de « xdm :property » peut être « xdm :code » ou « xdm :id », selon le « xdm :namespace » utilisé.
 
 **Réponse**
 
@@ -1395,7 +1390,7 @@ La zone de travail des schémas affiche la structure complète de votre schéma.
 * Tous les groupes de champs standard que vous avez ajoutés apparaissent dans la zone de travail.
 * Votre groupe de champs personnalisés apparaît dans la structure et est développé pour afficher ses champs.
 
-![&#x200B; Zone de travail des schémas affichant la structure complète du schéma avec les groupes de champs standard et personnalisés développés.](../images/tutorials/create-schema/schema-canvas.png)
+![ Zone de travail des schémas affichant la structure complète du schéma avec les groupes de champs standard et personnalisés développés.](../images/tutorials/create-schema/schema-canvas.png)
 
 ### Vérifier les propriétés du schéma
 

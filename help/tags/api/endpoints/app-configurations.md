@@ -2,10 +2,10 @@
 title: Point d’entrée des configurations d’application
 description: Découvrez comment effectuer des appels vers le point d’entrée /app_configurations dans l’API Reactor.
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
-source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '569'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
@@ -19,7 +19,7 @@ Les configurations dʼapplication permettent de stocker et de récupérer les in
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, veuillez consulter le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor). Avant de poursuivre, veuillez consulter le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
 ## Récupération d’une liste de configurations d’application {#list}
 

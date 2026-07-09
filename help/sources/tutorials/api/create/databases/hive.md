@@ -6,16 +6,13 @@ type: Tutorial
 description: Découvrez comment connecter Apache Hive sur Azure HDInsights à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 TQID: https://experienceleague.adobe.com/cy9e7oxt6I4t32AIXIofVeZLYRNTlpdmaNjEivIJi9o
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 495
-ht-degree: 47%
+ht-degree: 45%
 
 ---
 
@@ -23,11 +20,11 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Le connecteur [!DNL Apache Hive] sur [!DNL Azure HDInsights] est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur [!DNL Apache Hive] sur [!DNL Azure HDInsights] est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL Apache Hive] sur [!DNL Azure HDInsights] (ci-après dénommée « [!DNL Hive] ») à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL Apache Hive] sur [!DNL Azure HDInsights] (ci-après dénommée « [!DNL Hive] ») à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 
@@ -116,4 +113,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une [!DNL Apache Hive] sur [!DNL Azure HDInsights] connexion de base à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

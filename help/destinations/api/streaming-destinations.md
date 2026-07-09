@@ -6,21 +6,14 @@ description: Ce document couvre la création de destinations de diffusion en con
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 TQID: https://experienceleague.adobe.com/ggi4Jebs6PEwz6T-mWe6sIa9h48krK85CdosyI8DBCg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 2293
-ht-degree: 39%
+source-wordcount: 2286
+ht-degree: 38%
 
 ---
 
@@ -28,9 +21,9 @@ ht-degree: 39%
 
 >[!IMPORTANT]
 >
->Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions).
 >
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions).
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions).
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -65,7 +58,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte de valeurs pour les en-têtes requis et facultatifs {#gather-values}
 
-Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le tutoriel [authentification](/help/landing/api-authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -85,7 +78,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation Swagger {#swagger-docs}
 
-Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Nous vous recommandons d’utiliser ce tutoriel et la page de documentation Swagger en parallèle.
+Ce tutoriel vous permet de trouver dans Swagger la documentation de référence relative à tous les appels API. Voir la [Documentation de l’API Flow Service sur Adobe I/O](https://developer.adobe.com/experience-platform-apis/references/flow-service). Nous vous recommandons d’utiliser ce tutoriel et la page de documentation Swagger en parallèle.
 
 ## Obtention de la liste des destinations de streaming disponibles {#get-the-list-of-available-streaming-destinations}
 
@@ -486,7 +479,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
 | `{ETAG}` | Récupérez le `{ETAG}` à partir de la réponse de l’étape précédente, [Créer un flux de données](#create-dataflow). Le format de réponse de l’étape précédente contient des guillemets d’échappement. Vous devez utiliser les valeurs sans échappement dans l’en-tête de la requête. Voir l’exemple ci-dessous : <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre demande : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur etag est mise à jour avec chaque mise à jour réussie d’un flux de données. |
-| `{SEGMENT_ID}` | Indiquez l’identifiant de l’audience que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des audiences que vous souhaitez activer, voir [récupérer une définition d’audience](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
+| `{SEGMENT_ID}` | Indiquez l’identifiant de l’audience que vous souhaitez exporter vers cette destination. Pour récupérer les identifiants des audiences que vous souhaitez activer, voir [récupérer une définition d’audience](https://developer.adobe.com/experience-platform-apis/references/segmentation#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"` |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter une audience à un flux de données, utilisez l’opération `add` . |
 | `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’une audience à un flux de données, utilisez le chemin spécifié dans l’exemple. |
@@ -577,7 +570,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 >[!IMPORTANT]
 >
-> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=fr), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
+> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
 
 ```json
 {

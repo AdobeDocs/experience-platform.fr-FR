@@ -2,7 +2,7 @@
 title: Point d’entrée des extensions
 description: Découvrez comment effectuer des appels au point d’entrée /extensions dans l’API Reactor.
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 98%
@@ -17,7 +17,7 @@ Une extension appartient à une seule propriété. Une propriété peut avoir de
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la façon de s’authentifier auprès de l’API.
 
 ## Récupération dʼune liste dʼextensions {#list}
 

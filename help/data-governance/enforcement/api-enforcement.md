@@ -6,15 +6,10 @@ type: Tutorial
 description: Une fois que vous avez créé des libellés d’utilisation pour vos données et des politiques d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’API Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la politique. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de politique en fonction de la réponse de l’API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
 TQID: https://experienceleague.adobe.com/eordh1Zdh55wHA9XzXWN0MTQH3WRiAk8JEjN6MKflVc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1034
 ht-degree: 95%
@@ -23,7 +18,7 @@ ht-degree: 95%
 
 # Application des politiques d’utilisation des données à l’aide de l’API [!DNL Policy Service]
 
-Une fois que vous avez créé des libellés d’utilisation pour vos données et des politiques d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’[[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la politique. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de politique en fonction de la réponse de l’API.
+Une fois que vous avez créé des libellés d’utilisation pour vos données et des politiques d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’[[!DNL Policy Service API]](https://developer.adobe.com/experience-platform-apis/references/policy-service) pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la politique. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de politique en fonction de la réponse de l’API.
 
 >[!NOTE]
 >

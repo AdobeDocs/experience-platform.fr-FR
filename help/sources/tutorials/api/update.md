@@ -3,16 +3,13 @@ title: Mettre à jour des comptes à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’un compte à l’aide de l’API Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 TQID: https://experienceleague.adobe.com/l3lJf6eNMSAImgLB-EDui5rMuM1u5ih8Iv0G6UQfaM0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 551
-ht-degree: 77%
+ht-degree: 76%
 
 ---
 
@@ -20,7 +17,7 @@ ht-degree: 77%
 
 Dans certains cas, il peut être nécessaire de mettre à jour les détails d’une connexion de base existante. [!DNL Flow Service] vous permet d’ajouter, de modifier et de supprimer les détails d’un lot ou d’une connexion de diffusion en continu existante, y compris son nom, sa description et ses informations d’identification.
 
-Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’une connexion à l’aide de lʼ[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’une connexion à l’aide de lʼ[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!TIP]
 >

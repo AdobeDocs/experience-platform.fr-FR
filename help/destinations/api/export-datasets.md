@@ -5,19 +5,13 @@ description: Découvrez comment utiliser l’API Flow Service pour exporter des 
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 TQID: https://experienceleague.adobe.com/QgDkRqCY8-yoCXo7ba1-62pKKwUlSgxhILGoLuejv9c
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: afa6c119431878f87165cf9ab5c56f16e19aadab
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 5253
+source-wordcount: 5345
 ht-degree: 12%
 
 ---
@@ -73,7 +67,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
@@ -83,7 +77,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecter des valeurs pour les en-têtes obligatoires et facultatifs {#gather-values-headers}
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [Authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [Authentification Experience Platform](/help/landing/api-authentication.md). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -1627,8 +1621,7 @@ En utilisant la spécification ci-dessus, vous pouvez créer une demande de conn
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation sur la destination [!DNL Amazon S3].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation sur la destination [!DNL Amazon S3].Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1680,8 +1673,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation sur la destination [!DNL Azure Blob Storage].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation sur la destination [!DNL Azure Blob Storage].Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1734,8 +1726,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation sur la destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation sur la destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1786,8 +1777,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1838,8 +1828,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination [!DNL Google Cloud Storage].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination [!DNL Google Cloud Storage].Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1892,8 +1881,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination SFTP.
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination SFTP.Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 

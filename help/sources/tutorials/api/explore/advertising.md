@@ -5,14 +5,12 @@ title: Explorer un système Advertising à l’aide de l’API Flow Service
 description: Le service de flux est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge peuvent être connectées. Ce tutoriel utilise l’API Flow Service pour explorer les systèmes publicitaires.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
 TQID: https://experienceleague.adobe.com/D-5QZa41FqhL6hvGzA9gqIOsWJsYCxq5-auweRCnfOk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 510
-ht-degree: 16%
+ht-degree: 14%
 
 ---
 
@@ -20,7 +18,7 @@ ht-degree: 16%
 
 Une fois la connexion de base créée, vous pouvez désormais utiliser l’identifiant de connexion de base unique pour parcourir et explorer la structure et le contenu des données de votre source. Vous pouvez ainsi identifier les éléments spécifiques, ainsi que leurs types et formats de données respectifs, avant de créer un flux de données et de les importer dans Adobe Experience Platform.
 
-Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour explorer les systèmes publicitaires.
+Ce tutoriel utilise l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) pour explorer les systèmes publicitaires.
 
 ## Prise en main
 

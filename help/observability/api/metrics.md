@@ -5,20 +5,14 @@ title: Point d’entrée de l’API Metrics
 description: Découvrez comment récupérer des mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 TQID: https://experienceleague.adobe.com/vflDr3xjVkgrXnW48LSezGNIVPESrvQx1xAPYLRooQs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1311
-ht-degree: 25%
+ht-degree: 24%
 
 ---
 
@@ -28,11 +22,11 @@ Les mesures d’observabilité fournissent des informations sur les statistiques
 
 >[!NOTE]
 >
->La version précédente du point d’entrée des mesures (V1) a été abandonnée. Ce document se concentre exclusivement sur la version actuelle (V2). Pour plus d’informations sur le point d’entrée V1 pour les implémentations héritées, reportez-vous à la référence [API](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>La version précédente du point d’entrée des mesures (V1) a été abandonnée. Ce document se concentre exclusivement sur la version actuelle (V2). Pour plus d’informations sur le point d’entrée V1 pour les implémentations héritées, reportez-vous à la référence [API](https://developer.adobe.com/experience-platform-apis/references/observability-insights#operation/retrieveMetricsV1).
 
 ## Prise en main
 
-Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Observability Insights] API](https://developer.adobe.com/experience-platform-apis/references/observability-insights). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Récupération des mesures d’observabilité
 

@@ -2,10 +2,10 @@
 title: Point d’entrée d’environnements
 description: Découvrez comment effectuer des appels au point d’entrée /environments dans l’API Reactor.
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: '1006'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -36,7 +36,7 @@ Pour des informations plus générales sur les environnements, consultez la sect
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
 ## Récupération dʼune liste dʼenvironnements {#list}
 

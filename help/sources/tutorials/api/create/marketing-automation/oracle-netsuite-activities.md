@@ -3,20 +3,18 @@ title: Créer une connexion source et un flux de données pour les activités Or
 description: Découvrez comment créer une connexion source et un flux de données pour importer les données d’événements Oracle NetSuite dans Experience Platform à l’aide de l’API Flow Service.
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
 TQID: https://experienceleague.adobe.com/zOO7eWS6pQLEYvmv5dWdfF5Xm548RYcwrVUygdycJco
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 2044
-ht-degree: 47%
+ht-degree: 46%
 
 ---
 
 # Créer une connexion source et un flux de données pour [!DNL Oracle NetSuite Activities] à l’aide de l’API Flow Service
 
-Lisez le tutoriel suivant pour savoir comment importer des données d’événements de votre compte [!DNL Oracle NetSuite Activities] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez le tutoriel suivant pour savoir comment importer des données d’événements de votre compte [!DNL Oracle NetSuite Activities] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main
 
@@ -461,7 +459,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ### Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans la payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) avec des mappages de données définis dans la payload de la requête.
 
 **Format d’API**
 

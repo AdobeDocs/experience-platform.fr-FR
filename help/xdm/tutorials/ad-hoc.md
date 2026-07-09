@@ -6,20 +6,14 @@ description: Dans des cas spécifiques, il peut être nécessaire de créer un s
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 TQID: https://experienceleague.adobe.com/n9jvNih1JyBVcYO6zPgASueCDKLxOoZobhDkxUpoEiA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 856
-ht-degree: 74%
+ht-degree: 73%
 
 ---
 
@@ -27,7 +21,7 @@ ht-degree: 74%
 
 Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma [!DNL Experience Data Model] (XDM) avec des champs dont l’espace de noms n’est utilisable que par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans divers workflows d’ingestion de données pour [!DNL Experience Platform], notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
 
-Ce document décrit les étapes générales de création d’un schéma ad hoc à l’aide de l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Il est destiné à être utilisé conjointement avec d’autres tutoriels [!DNL Experience Platform] qui nécessitent la création d’un schéma ad hoc dans le cadre de leur workflow. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc pour son cas d’utilisation spécifique.
+Ce document décrit les étapes générales de création d’un schéma ad hoc à l’aide de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry). Il est destiné à être utilisé conjointement avec d’autres tutoriels [!DNL Experience Platform] qui nécessitent la création d’un schéma ad hoc dans le cadre de leur workflow. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc pour son cas d’utilisation spécifique.
 
 ## Prise en main
 

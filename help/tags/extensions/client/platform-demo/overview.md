@@ -3,27 +3,15 @@ title: Présentation de l’extension Adobe Experience Platform Demo
 description: Découvrez l’extension Adobe Experience Platform Demo dans Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 TQID: https://experienceleague.adobe.com/35mc-I8OjRXMHmm8-eATMXCnOxxEWy8Y5f2ORdyATU4
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e43347a8-f2c5-4aa4-8623-6f13875d7e3aid: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 1033
-ht-degree: 88%
+source-wordcount: 1032
+ht-degree: 87%
 
 ---
 
@@ -38,7 +26,7 @@ Les fonctionnalités de cette extension sont transférées vers une nouvelle ext
 | Extension Experience Platform Demo | SDK web Experience Platform |
 | ------------------ | ----------- |
 | Prise en charge des ID client personnalisés | Prise en charge des ID client personnalisés |
-| Interface utilisateur de mappage côté client pour XDM | Création dans ECID (pas besoin de visitor.js) |
+| Interface utilisateur de mappage côté client pour XDM | Créer dans ECID (pas besoin de `VisitorAPI.js`) |
 | Possibilité de créer une connexion continu | Prise en charge de l’inclusion |
 | | Prise en charge de XDM en tant qu’élément de données |
 | | Prise en charge des domaines de premier niveau |
@@ -65,7 +53,7 @@ Si vous sélectionnez **[!UICONTROL Créer une connexion en continu]** une fenê
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plusieurs connexions en continu, n’oubliez pas que le champ Source de données **doit être unique.**&#x200B;[!UICONTROL &#x200B; Toute tentative visant à créer une autre connexion en continu à l’aide d’une Source de données &#x200B;]&#x200B;**déjà utilisée sur une autre connexion échouera.**
+Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plusieurs connexions en continu, n’oubliez pas que le champ Source de données ]**doit être unique.**[!UICONTROL  Toute tentative visant à créer une autre connexion en continu à l’aide d’une Source de données ]**déjà utilisée sur une autre connexion échouera.**[!UICONTROL 
 
 Une fois que vous avez sélectionné un point d’entrée de connexion en continu, l’URL et la source du point d’entrée de connexion en continu s’affichent.
 

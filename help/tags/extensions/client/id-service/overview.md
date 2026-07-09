@@ -1,37 +1,25 @@
 ---
-title: Présentation de lʼextension Service d’identités d’Adobe Experience Cloud
-description: Découvrez lʼextension de balises du service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
+title: Présentation de l’extension du service Adobe Experience Cloud ID
+description: Découvrez l’extension de balise du service Adobe Experience Cloud ID dans Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 TQID: https://experienceleague.adobe.com/p0fm5HTNKzXVXYxi2mvAhAIHG46WdcWApvuQ0eGnFLo
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
-feature_v2:
-  - id: c975b431-530e-4c29-9216-0301b9e204c1
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+feature_v2: id: c975b431-530e-4c29-9216-0301b9e204c1id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 761
-ht-degree: 87%
+source-wordcount: 759
+ht-degree: 77%
 
 ---
 
-# Présentation de lʼextension Service d’identités d’Adobe Experience Cloud
+# Présentation de l’extension du service Adobe Experience Cloud ID
 
 Cette référence vous permet dʼobtenir plus dʼinformations sur la configuration de lʼextension du service Experience Cloud ID dʼAdobe et sur les options disponibles lors de lʼutilisation de cette extension afin de créer une règle.
 
-Utilisez cette extension pour intégrer le service d’identités d’Experience Cloud à votre propriété. Grâce au service d’identités d’Experience Cloud, vous pouvez créer et stocker des identifiants uniques et persistants pour les personnes qui visitent votre site.
+Utilisez cette extension pour intégrer le service d’identification des visiteurs Adobe à votre propriété. Grâce au service d’identification des visiteurs, vous pouvez créer et stocker des identifiants uniques et persistants pour les visiteurs de votre site.
 
 ## Configuration de l’extension Experience Cloud ID
 
@@ -103,7 +91,7 @@ Définissez les catégories qui sont approuvées ou refusées lorsqu’aucune pr
 
 ### Variables
 
-Définissez les paires nom-valeur comme propriétés d’instance Experience Cloud ID. Utilisez la liste déroulante pour sélectionner une variable, puis saisissez ou sélectionnez une valeur. Pour plus dʼinformations sur chaque variable, reportez-vous à la [documentation sur le service d’identités d’Experience Cloud](https://experiencecloud.adobe.com/resources/help/fr_FR/mcvid/mcvid-overview.html).
+Définissez les paires nom-valeur comme propriétés d’instance Experience Cloud ID. Utilisez la liste déroulante pour sélectionner une variable, puis saisissez ou sélectionnez une valeur. Pour plus d’informations sur chaque variable, consultez la [documentation du service d’identification des visiteurs](https://experiencecloud.adobe.com/resources/help/fr_FR/mcvid/mcvid-overview.html).
 
 ## Types d’actions de l’extension Experience Cloud ID
 

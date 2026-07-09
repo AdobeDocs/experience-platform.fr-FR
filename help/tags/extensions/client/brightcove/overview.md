@@ -3,29 +3,14 @@ title: Présentation de l’extension de suivi vidéo BrightCove
 description: Découvrez lʼextension de balise de suivi vidéo BrightCove dans Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 TQID: https://experienceleague.adobe.com/C1JZ1MziVRvUeDbCRaS-BURurIAcr904-rfdHS9Qks4
-product_v2:
-  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
-  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
-  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06
-  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: a829a185-511f-4bf8-8dcf-9e684f8011cfid: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87id: e55547f1-a1ff-40c6-8978-026e40ab7fa4id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: c153fd90-23e1-4614-81d3-3cc7571227f7id: e08599ea-8888-4294-ba74-3ba0a7762a46id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2f54212d8592c5ebc45b847c5f8269ddddfeb622
 workflow-type: tm+mt
-source-wordcount: 887
+source-wordcount: 886
 ht-degree: 97%
 
 ---
@@ -37,7 +22,7 @@ ht-degree: 97%
 Pour chaque propriété de balise Adobe Experience Platform, les extensions suivantes doivent être installées et configurées dans l’écran Extension :
 
 * Adobe Analytics
-* du service d’identification des visiteurs Experience Cloud
+* [!UICONTROL Service Experience Cloud ID]
 * Extensions Core installées
 
 Utilisez le fragment de code « code intégré sur la page (avancé) » dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit apparaître. Lʼextrait de code HTML « code intégré sur la page (avancé) » se trouve dans la [documentation Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Le lien suivant fournit des informations supplémentaires sur [la manière de générer du code incorporé pour les lecteurs vidéo d’aperçu et de vidéos publiées](https://fr.studio.support.brightcove.com/players/generating-player-embed-code.html).

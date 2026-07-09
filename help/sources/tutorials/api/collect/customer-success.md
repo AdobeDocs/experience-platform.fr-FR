@@ -6,24 +6,20 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 TQID: https://experienceleague.adobe.com/c7nu-pPHdE9NysJ4AXOP8fWXwplJjpsq8uHVt2i79RY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1302
-ht-degree: 76%
+ht-degree: 75%
 
 ---
 
 # Créez un flux de données pour les sources de succès client à l’aide de l’API [!DNL Flow Service].
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source de succès client et les importer dans Experience Platform à l’aide d’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source de succès client et les importer dans Experience Platform à l’aide d’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -147,7 +143,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 

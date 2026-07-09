@@ -4,26 +4,23 @@ title: Explorer un Source tabulaire à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer le contenu et la structure d’une source basée sur des tableaux.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
 TQID: https://experienceleague.adobe.com/cSaXWkL4Bl5tp1uPvaLVh-1Wd2iLtOKRfygpDA0nnJA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 481
-ht-degree: 17%
+ht-degree: 16%
 
 ---
 
 # Explorer des tableaux de données à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la structure et le contenu de vos tableaux de données à l’aide de l’API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la structure et le contenu de vos tableaux de données à l’aide de l’API [[!DNL Flow Service]](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
-> Pour explorer vos tables de données, vous devez déjà disposer d’un identifiant de connexion de base valide pour une source tabulaire. Si vous ne disposez pas de cet identifiant, consultez les tutoriels suivants pour savoir comment créer un identifiant de connexion de base pour une source tabulaire : <ul><li>[Publicité](../../../home.md#advertising)</li><li>[&#x200B; CRM &#x200B;](../../../home.md#customer-relationship-management)</li><li>[Succès client](../../../home.md#customer-success)</li><li>[Base de données](../../../home.md#database)</li><li>[E-commerce](../../../home.md#ecommerce)</li><li>[Automatisation du marketing](../../../home.md#marketing-automation)</li><li>[&#x200B; Paiements &#x200B;](../../../home.md#payments)</li><li>[Protocoles](../../../home.md#protocols)</li></ul>
+> Pour explorer vos tables de données, vous devez déjà disposer d’un identifiant de connexion de base valide pour une source tabulaire. Si vous ne disposez pas de cet identifiant, consultez les tutoriels suivants pour savoir comment créer un identifiant de connexion de base pour une source tabulaire : <ul><li>[Publicité](../../../home.md#advertising)</li><li>[ CRM ](../../../home.md#customer-relationship-management)</li><li>[Succès client](../../../home.md#customer-success)</li><li>[Base de données](../../../home.md#database)</li><li>[E-commerce](../../../home.md#ecommerce)</li><li>[Automatisation du marketing](../../../home.md#marketing-automation)</li><li>[ Paiements ](../../../home.md#payments)</li><li>[Protocoles](../../../home.md#protocols)</li></ul>
 
 ## Prise en main
 

@@ -6,23 +6,14 @@ type: Tutorial
 description: Ce document fournit un tutoriel permettant d’envoyer plusieurs messages vers Adobe Experience Platform dans une seule requête HTTP à l’aide de l’ingestion par flux.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 TQID: https://experienceleague.adobe.com/2xJYZLgRjlCRLNbPmn4Fox1YanluEgSMMpdHJRErpiY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
-  - id: d1a87129-ba05-4f15-98b1-233618f1774a
-  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: ae2cba0e-54f2-464b-a3b3-ad371e8a886aid: d1a87129-ba05-4f15-98b1-233618f1774aid: de9975b2-c43a-4287-9698-4f4cad92b83f
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 1713
+source-wordcount: 1723
 ht-degree: 50%
 
 ---
@@ -40,7 +31,7 @@ Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform 
 - [Présentation de Data Ingestion](../home.md) : couvre les concepts de base de la [!DNL Experience Platform Data Ingestion], notamment les méthodes d’ingestion et les connecteurs de données.
 - [Présentation de l’ingestion par flux](../streaming-ingestion/overview.md) : processus et blocs de création de l’ingestion par flux, tels que les connexions par flux, les jeux de données, les [!DNL XDM Individual Profile] et les [!DNL XDM ExperienceEvent].
 
-Pour passer à ce tutoriel, vous devez également avoir terminé le tutoriel [Authentification à Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers les API [!DNL Experience Platform]. Terminer le tutoriel d’authentification fournit la valeur de l’en-tête d’autorisation requise par tous les appels API de ce tutoriel. L’en-tête est affiché dans les appels d’échantillon de la manière suivante :
+Pour passer à ce tutoriel, vous devez également avoir terminé le tutoriel [Authentification à Adobe Experience Platform](/help/landing/api-authentication.md) afin d’effectuer avec succès des appels vers les API [!DNL Experience Platform]. Terminer le tutoriel d’authentification fournit la valeur de l’en-tête d’autorisation requise par tous les appels API de ce tutoriel. L’en-tête est affiché dans les appels d’échantillon de la manière suivante :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -58,7 +49,7 @@ Après l’enregistrement d’une connexion en continu, vous, en tant que produc
 
 L’exemple suivant vous montre comment envoyer plusieurs messages vers un jeu de données spécifique au sein d’une requête HTTP unique. Insérez l’identifiant du jeu de données dans l’en-tête du message pour que ce message soit directement ingéré.
 
-Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [&#128279;](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Jeux de données]**, en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Infos]**. Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
+Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de [!DNL Experience Platform] ou d’une opération de liste dans l’API . L’ID du jeu de données se trouve sur [](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Jeux de données]**, en cliquant sur le jeu de données dont vous souhaitez récupérer l’ID et en copiant la chaîne depuis le champ ID du jeu de données de l’onglet **[!UICONTROL Infos]**. Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
 
 Au lieu d’utiliser un jeu de données existant, vous pouvez créer un nouveau jeu de données. Pour plus d’informations sur la création d’un jeu de données à l’aide d’API, lisez le tutoriel [Création d’un jeu de données à l’aide d’API](../../catalog/api/create-dataset.md).
 
@@ -524,14 +515,13 @@ Le deuxième message a échoué parce qu’il manquait un corps de message. Pour
     },
 ```
 
-Le troisième message a échoué en raison d’un ID d’organisation non valide utilisé dans l’en-tête . L’organisation doit correspondre au {CONNECTION_ID} vers lequel vous essayez de publier. Pour déterminer l’ID d’organisation correspondant à la connexion en continu que vous utilisez, vous pouvez effectuer une requête `GET inlet` à l’aide de l’[[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) . Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
+Le troisième message a échoué en raison d’un ID d’organisation non valide utilisé dans l’en-tête . L’organisation doit correspondre au {CONNECTION_ID} vers lequel vous essayez de publier. Pour déterminer l’ID d’organisation correspondant à la connexion en continu que vous utilisez, vous pouvez effectuer une requête `GET inlet` à l’aide de l’[[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion) . Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
 
 Le quatrième message a échoué, car il ne suivait pas le schéma XDM attendu. Les éléments `xdmSchema` inclus dans l’en-tête et dans le corps de la requête ne correspondent pas au schéma XDM de `{DATASET_ID}`. La correction du schéma dans l’en-tête et le corps du message lui permet de réussir la validation DCCS et d’être envoyé avec succès à [!DNL Experience Platform]. Le corps du message doit également être mis à jour pour correspondre au schéma XDM du `{DATASET_ID}` afin qu’il transmette la validation de diffusion en continu sur [!DNL Experience Platform]. Pour plus d’informations sur le sort des messages qui diffusent avec succès vers Experience Platform, consultez la section [confirmer les messages ingérés](#confirm-messages-ingested) de ce tutoriel.
 
 ### Récupérer les messages ayant échoué depuis [!DNL Experience Platform]
 
-Les messages en échec sont identifiés par un code de statut d’erreur dans le tableau de réponse.
-Les messages non valides sont collectés et stockés dans un lot « error » dans le jeu de données spécifié par `{DATASET_ID}`.
+Les messages en échec sont identifiés par un code d’état d’erreur dans le tableau de réponse.Les messages invalides sont collectés et stockés dans un lot « erreur » au sein du jeu de données spécifié par `{DATASET_ID}`.
 
 Pour plus d’informations sur la récupération des messages par lots en échec, lisez le guide [Récupération des messages en échec](../quality/retrieve-failed-batches.md).
 
@@ -567,7 +557,7 @@ Utilisez cette méthode lorsque vous :
 - Travaillent avec des exportations basées sur des fichiers provenant de systèmes en amont.
 - Préférez l’ingestion planifiée ou en bloc.
 
-Voir [&#x200B; Guide d’ingestion par lots](../batch-ingestion/api-overview.md) pour obtenir des instructions détaillées.
+Voir [ Guide d’ingestion par lots](../batch-ingestion/api-overview.md) pour obtenir des instructions détaillées.
 
 >[!ENDTABS]
 
